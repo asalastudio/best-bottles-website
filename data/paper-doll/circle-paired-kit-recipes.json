@@ -1,0 +1,1805 @@
+{
+  "family": "Circle",
+  "cohort": "Exact-current structurally separable Circle PSD kits",
+  "reviewedAt": "2026-09-08",
+  "rows": [
+    {
+      "websiteSku": "LBCrcl50LtnClOvrCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "dcf50a1bdd654efc1c53c10d82e115ff17061b74f0fd5a43e3823aadca299ae7",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/27. LBCrcl50LtnClOvrCap.psd",
+      "offSourceSha256": "bd8e5167c3e241ca167daf1a6923d903d3c9886f5b54046f4a38dae017421845",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl30SpryMattGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "07fea1c7d6e88f6fe14e9cdb13239c2754dbe405cf5d7564894ed433a0138809",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl30SpryMattSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "cbba3397a8021ad3dd7e043be51ca564bc3f9362f4e78670ad6e90b356b1b1f1",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl30SpryShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "86a8d78fd53d12c8266eae6de72c1d3a31947208efe8b8ebffca8ff695d354b9",
+      "onBodyLayer": 2,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            },
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "on",
+              "index": 4
+            },
+            {
+              "source": "on",
+              "index": 5
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl30SpryShSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "3a0f17760e67b1edba8dc00b5aaab5c4178c8f1a5f0cce5656b612969c90c61b",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrclFrst100LtnCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "362251e73b3c78dd437b488f33527d7d030708a41fb57af1da5ac4f1fd3d3ef7",
+      "onBodyLayer": 2,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrclFrst100LtnMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "4714375ddd77a576de5c88ad7d39ca691ebf5e02b279b6c9506a617343d3f155",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/14. LBCrclFrst100LtnMtGl.psd",
+      "offSourceSha256": "14efc4ba01a8c0fda8f2f3c51da9569cc4a8ab465219b63bea9637cf84a8e33d",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl100LtnCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "4016010fefde727031c038cb0f1a2865fadeb32077cf055d4b8a383c2f6c34cc",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl100LtnShnSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "6276d6b2c25130ea3b431808630ee88b80460966fc6570e2d267ce5866934960",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/31. LBCrcl100LtnShnSl.psd",
+      "offSourceSha256": "63a2c535b76d701ff86808896d60db6be561eddae8774aed9a62d970aa248019",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl100LtnMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "0be6d6c453190619e92babe81f762b9e89d9b5c50cb28b8b269e56fd4ac5e02a",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/25. LBCrcl100LtnMtSl.psd",
+      "offSourceSha256": "437a37f35d64a7dc455c47e4158d37e839abf95313badd99c0bef71606a76b1d",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl100LtnShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "23e42086c53fba317a1ef5ba139528beb581a834bfdb2271cb0a1639b0baaa5c",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/20. LBCrcl100LtnShnBlk.psd",
+      "offSourceSha256": "f8efec9a4e72752527e01668a5417c4c844d8e0832c01f486d3287806aa6d8d6",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl100LtnShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "8e92b127c9a130d154b8e1accaa9ae5c2952190cebb5e335ef2d5db86e3b6bc4",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/16. LBCrcl100LtnShnGl.psd",
+      "offSourceSha256": "b0a3776c1aa212e328bc7dd4a1a40c1d1be6b1ac8dd348ac9abd3bdd4a42dd4e",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl100LtnMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "41f772fd0314886736e309a13d541d0758b2e071a7b52c393ffb5f648226d2a3",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/14. LBCrcl100LtnMtGl.psd",
+      "offSourceSha256": "e107d4928b57d3a43d349d5846748aeee3d59a7bb767382cf22eca73eb173614",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl50LtnShnSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "23f58dcb885042a6996345d5b111946785262d8628083f8945ba7a579005f18d",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/31. LBCrcl50LtnShnSl.psd",
+      "offSourceSha256": "48463abd1f1d01ca65c1552afbdab1da1828ccf68e5ccf230d02bcc536504bd9",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl50LtnMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "ae00a9a2cd0caee9ae195cd399d27a117da64c0ea17a1fac47deb92db16e2c67",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/25. LBCrcl50LtnMtSl.psd",
+      "offSourceSha256": "28dcc9b1df0600010c734825038b35dffe12ad4ca2056df2780dda2ac6c038db",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl50LtnShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "23dea603b7922c26294f18844ecd60a7bc07b984b7eda8b3837777bb03864e0c",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/20. LBCrcl50LtnShnBlk.psd",
+      "offSourceSha256": "8475c8a431f25fe239dd6272bc4093ff0c95f481e8669ddccef96dc35ba3cfcc",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl50LtnShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "04d7ef785dbf1e5664766d5b9a1e59668adc108259dbc2682b5ae4dd5070b3e9",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/16. LBCrcl50LtnShnGl.psd",
+      "offSourceSha256": "244215564849321c7e30dc55751ca55055b4a1eb641595362458e8f7a1a42df5",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl50LtnMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "43963e6cf42eb37541959a0370171a028be64ad02582f43cc2cb4f4828b647a1",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/14. LBCrcl50LtnMtGl.psd",
+      "offSourceSha256": "b60638473ba2d0e568adc0601aae1089c6b639cacec10a8a58ec40eb40f4aa7a",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrclFrst100SpryShnSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "1d5123b5207cca62474ab0bc7b5b22a38f6de948d8b57f435ec9cedf9558436b",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/31. LBCrclFrst100LtnShnSl.psd",
+      "offSourceSha256": "78a1aeb0f609642bece46bd322763dbd2b035e0d37d17a8c188a805b5951321f",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrclFrst100SpryMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "4ffce7b3efea27f23f6ea95b35ac386b1e7bff01b276371f61756bfccdf2e172",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/25. LBCrclFrst100LtnMtSl.psd",
+      "offSourceSha256": "0857fdd1e75900230107aec152c29739d76385a9cd940e7641df50d6cd503d07",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrclFrst100SpryShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "b5f55670a47fac00d55ed9af00d68865ba0b52f8a95ad7362c4c6b67ba2a655c",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/20. LBCrclFrst100LtnShnBlk.psd",
+      "offSourceSha256": "2f20974d2842eecb28b3136d12894e7206701f604e83f05a359c402d9e2f884e",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrclFrst100SpryShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "7098c314ec3df100d8032f48674b83b8954f177b5d4cc4296cca5ace77c331c3",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/16. LBCrclFrst100LtnShnGl.psd",
+      "offSourceSha256": "9ebd3011d1ec0e6593302bae67a528daf023a920e0dfb7c4efeebe7a58d2d152",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrclFrst100SpryMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "897b22ee8021c47b429fadb4e39a47a68069faaad64813e22f0dd068bbb2d766",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/13. GBCrclFrst100SpryMtGl.psd",
+      "offSourceSha256": "cbdcd819f264579fb7fda0560f6d58f23bd3cb373907c92e0d16384b85f84aef",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl100SpryShnSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "2256f05ac60e3fc9c22234995dfac21d03ace7999b21db4063b66f809381f626",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/29. GBCrcl100SpryShnSl.psd",
+      "offSourceSha256": "4f9eab57f0dc196057a1a86151015461a4de2fcd333b5f9a70ddd6913beaa937",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl100SpryMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "eb66b8a3b6d5ff649b8fddc11b0de54d4c92ca2601da86ad8ce1f0fa54c4a626",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/23. GBCrcl100SpryMtSl.psd",
+      "offSourceSha256": "35c3282c8e29edd7a30c8778db4e38b60f38aeb877e3de46a459fed582c799de",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl100SpryShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "49b32b06f3432d33d62afe379b4f5f03f18c2c238c1192551b286d3ab9aeb77d",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/19. GBCrcl100SpryShnBlk.psd",
+      "offSourceSha256": "c29a8d1c4f1c414572c7285449e7663ebf1c4a8dc0adeb649cd1575c547e8a29",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl100SpryShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "a1b6b743848fb7ed6696ad305bc072e1f6f71a8a6933ccdb027a1b9f10701ce6",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/15. GBCrcl100SpryShnGl.psd",
+      "offSourceSha256": "c194c86e5014e41f3fc0b606c916841636a6991f492db344772d83f61143a425",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl100SpryMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "eb6d0041e04e3c18346df4b409e14d82851af9b372466cf141c7d22f9a30b7bf",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/13. GBCrcl100SpryMtGl.psd",
+      "offSourceSha256": "81c1c206b874206fdca21c9e5974e89b830b39c815b5ed1ad838f551162fff71",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl30SlCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "4cdbc953c98f09095864fc474f20634bf4170b952f1d63bd1fa9411da0f4fbad",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl30GlCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "5b9bf4625640322a273f1d5aaa7edd7ba2872c93d7bee06fd57f32d761b128d8",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrclFrst100SpryCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "1489a6616d86d749c0fdeedc9fe336a4fa37f6cd89bca53c294c52671b181715",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/54. GBCrclFrst100SpryCu.psd",
+      "offSourceSha256": "928b703973ccc868099d61c0706a2aeaf3afdd7638709beac173b5224aed6a23",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl100SpryCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "6ee81a7bb3ed89404408ab1133e5fe53571a9901d1c53678a7eb674f66cb6d4c",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl50SpryCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "5616c1b00976716d55c0cf226b0ca4b99ebf1fe525c985c5cf44f5dad147effb",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl30SpryBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "907fdb27226af4fec3b8f122df7bc65a86111ecfe90ea0432e6011dbb9280355",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl50SpryShnSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "a62c5ef473597007a6835d18339329d81bc85a2c0576e5d8f2e0dc5e5a6c6874",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/29. GBCrcl50SpryShnSl.psd",
+      "offSourceSha256": "b868b71fc36b28ef2028109855a9b727a54c9f629ad05f1b5927a864cfb1885e",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl50SpryShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "9be05172ad3dfe64b6804abeb6b24640b315b080b24eedf36819f1fabf4129db",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/19. GBCrcl50SpryShnBlk.psd",
+      "offSourceSha256": "1596976634391082ef17f123c392f2a0b43ac18be602492a01516bdbe1f50c3f",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl50SpryShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "d219b33af0ec906a19f7af8634627198d51633de5fea4b19fc4a5893c08a20e9",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/15. GBCrcl50SpryShnGl.psd",
+      "offSourceSha256": "f4be6337928cdc28ebf6fca846fd0d55966859140de91688a3d3436072741098",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl50SpryMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "9b5ed6da1ee227f8c4295c478e4fced35dda65d3930aba122291e8649058ed55",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/13. GBCrcl50SpryMtGl.psd",
+      "offSourceSha256": "b44413c01b22976c92c2094b849671623f7333f55cc3e6b7cce2be7ade1db519",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBCrcl50SpryMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "a88a14ef47afd87d3cb02de7f6aadaa747ea5142f05c9151e84369ee11be40e3",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/23. GBCrcl50SpryMtSl.psd",
+      "offSourceSha256": "8cdc48afb42ca9625044a5ab2d7b0cb350f6fa2f8945f98712b73b9245f58312",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrclFrst100LtnClOvrCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "e2a79e10fb3ce9d593e82aa628a16672eea46e44aa68f9fbbbbef672d99cd1a3",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/27. LBCrclFrst100LtnClOvrCap.psd",
+      "offSourceSha256": "99017133b9227d2d2cc1d2da82012548517751797ac058b564267d6b367a8130",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBCrcl100LtnClOvrCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "abeef4065a49bd510c3e408e56940879d1b6c73acb8eb2d77f6d762418f892b2",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/27. LBCrcl100LtnClOvrCap.psd",
+      "offSourceSha256": "1fd7095a65d2c0fcef447051b1cc6054fb78bbd3f49ca5aeae257da5f3f17793",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -84,13 +84,77 @@ def parity(composite,plate):
 
 def place_exploded(parts):
     """Separate the photographed parts without cropping or hiding overlap."""
-    ceiling=next(p['bounds']['top'] for p in parts if p['slot']=='body')
-    for part in sorted((p for p in parts if p['slot']!='body'),key=lambda p:p['explodeIndex']):
-        dy=min(-120*part['explodeIndex'],ceiling-part['bounds']['bottom']-32)
-        if part['bounds']['top']+dy<8:
+    body=next(p for p in parts if p['slot']=='body')
+    ceiling=body['bounds']['top']
+    movable=sorted((p for p in parts if p['slot']!='body'),key=lambda p:p['explodeIndex'])
+    for part in movable:
+        # Match the reviewed-family builder's established spacing. The older
+        # 32 px / 120 px rule needlessly clipped valid tall-bottle caps while
+        # leaving the assembled registration untouched.
+        desired=min(-90*part['explodeIndex'],ceiling-part['bounds']['bottom']-24)
+        dy=max(desired,8-part['bounds']['top'])
+        if ceiling-(part['bounds']['bottom']+dy)>=16:
+            part['exploded']={'dx':0,'dy':dy}
+            ceiling=part['bounds']['top']+dy
+            continue
+        # A tall bottle and cap can be individually valid while their combined
+        # heights cannot fit vertically. For a single removable part, place it
+        # beside the bottle on the shared baseline, as in the catalog heroes.
+        if len(movable)!=1:
+            # A photographed spray or lotion assembly can expose both its
+            # fitment and removable overcap as independent layers. Keep each
+            # part at its true assembled Y registration and arrange the full
+            # set beside the bottle. render_exploded() then fits the union into
+            # the shared review frame without changing assembled coordinates.
+            cursor=body['bounds']['right']+24
+            for item in movable:
+                dx=cursor-item['bounds']['left']
+                item['exploded']={'dx':dx,'dy':0}
+                cursor=item['bounds']['right']+dx+24
+            return
+        # Preserve the source assembly's vertical registration. The exploded
+        # view moves hardware sideways only, so a cap's lower edge continues
+        # to show its true shoulder/seat height and does not imply a lower swap
+        # position.
+        baseline_dy=0
+        right_dx=body['bounds']['right']+24-part['bounds']['left']
+        left_dx=body['bounds']['left']-24-part['bounds']['right']
+        if part['bounds']['right']+right_dx<=992:
+            dx=right_dx
+        elif part['bounds']['left']+left_dx>=8:
+            dx=left_dx
+        else:
+            # Wide bodies such as Round leave no horizontal room. Keep the
+            # assembly registration intact and stack the part above the body;
+            # the shared exploded-frame transform fits the complete union.
+            dy=ceiling-part['bounds']['bottom']-24
+            part['exploded']={'dx':0,'dy':dy}
+            ceiling=part['bounds']['top']+dy
+            continue
+        if part['bounds']['top']+baseline_dy<8 or part['bounds']['bottom']+baseline_dy>1092:
             raise ValueError(f"{part['slot']} exploded bounds would leave the frame; explicit spacing review required")
-        part['exploded']={'dx':0,'dy':dy}
-        ceiling=part['bounds']['top']+dy
+        part['exploded']={'dx':dx,'dy':baseline_dy}
+
+def render_exploded(parts, output):
+    """Render the exact exploded offsets, fitting their complete union."""
+    left=min(p['bounds']['left']+p['exploded']['dx'] for p in parts)
+    right=max(p['bounds']['right']+p['exploded']['dx'] for p in parts)
+    top=min(p['bounds']['top']+p['exploded']['dy'] for p in parts)
+    bottom=max(p['bounds']['bottom']+p['exploded']['dy'] for p in parts)
+    scale=min(952/max(1,right-left),1052/max(1,bottom-top),1.0)
+    frame_x=round((1000-(right-left)*scale)/2-left*scale)
+    frame_y=round((1100-(bottom-top)*scale)/2-top*scale)
+    exploded=Image.new('RGBA',(1000,1100),'white')
+    for part in parts:
+        offset=part['exploded']
+        layer=Image.open(output/part['image']).convert('RGBA')
+        if scale != 1.0:
+            layer=layer.resize((round(layer.width*scale),round(layer.height*scale)),Image.Resampling.LANCZOS)
+        exploded.alpha_composite(
+            layer,
+            (round(frame_x+offset['dx']*scale),round(frame_y+offset['dy']*scale)),
+        )
+    return exploded
 
 def main():
     ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--batch',type=Path,required=True);ap.add_argument('--part-map',type=Path);ap.add_argument('--sku',action='append');args=ap.parse_args()
@@ -147,8 +211,7 @@ def main():
             pg=parity(composite,Image.open(plate_path))
             if not pg['ok']:raise ValueError(f'plate parity failed: {pg}')
             sku_dir=output/row['familyId']/sku;sku_dir.mkdir(parents=True,exist_ok=True);composite.convert('RGB').save(sku_dir/'assembled.webp',quality=90)
-            exploded=Image.new('RGBA',(1000,1100),'white')
-            for part in part_rows:exploded.alpha_composite(Image.open(output/part['image']).convert('RGBA'),(0,part['exploded']['dy']))
+            exploded=render_exploded(part_rows,output)
             exploded.convert('RGB').save(sku_dir/'exploded.webp',quality=90)
             record.update({'status':'candidate','publishable':False,'reviewRequired':'visual component and exploded-frame review before publishing','websiteSku':sku,'graceSku':products[sku]['graceSku'],
                 'plateSha256':src['sha256'],'canvas':{'width':1000,'height':1100},'parts':part_rows,'completeness':'full',

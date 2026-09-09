@@ -1,0 +1,15 @@
+{
+  "LBDiva100LtnCu": {
+    "sourceSha256": "512561075e606c74cee19af26b38830c35695cbc4b52f8d793329222d98b8702",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/diva-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2
+      ]
+    }
+  }
+}

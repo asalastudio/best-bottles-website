@@ -1,0 +1,1037 @@
+{
+  "family": "Diva",
+  "cohort": "Exact-current structurally separable Diva PSD kits",
+  "reviewedAt": "2026-09-08",
+  "rows": [
+    {
+      "websiteSku": "GBDiva30SpryShnSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "c5c005fb0ad06f38bf16ef00fbe18e67a75929c4bc513d2cfdb213b439d0534f",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /31. LBDiva30LtnShnSl.psd",
+      "offSourceSha256": "11470fed44b5638d077685acf5d174c17fc39361e282019bb8387f489008910f",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva30SpryMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "e609367d825916edeeb565f77180265d098cb9bdd46654756e2bae4d7f7b5296",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /25. LBDiva30LtnMtSl.psd",
+      "offSourceSha256": "61552b2f422f1dec935de27f7e6c34db8116e73d08e542ef56088fe2c65de2c6",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva30SpryShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "ecc1bb63e30ef9d172389a5c24bf9e6db350ed43fa780993ae5157d509731dab",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /20. LBDiva30LtnShnBlk.psd",
+      "offSourceSha256": "7a50a438cb7bf535a30d5937ff9682f58db20eeb1071341184db9457998474cf",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva30SpryShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "30181529ba53bcf20721faa3da39c2f04ee9d05659af96186a2f79da6b773ea2",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /16. LBDiva30LtnShnGl.psd",
+      "offSourceSha256": "0c7de0261fadc7c589f0ca5099bf2f5ae647f14ec5b56f2300f72edbd0b09656",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva30SpryMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "6f313f91da08db800b1e918bff9e834027e56f9ce1ef09970839e2b73c854c94",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /14. LBDiva30LtnMtGl.psd",
+      "offSourceSha256": "e0b9d2a804798af3b58eb7b0656f821c35b6c3cc68ce92047c5bf75ba1da081a",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBDiva46LtnClOvrCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "ee99b881c694a5ec1e5e031dd4b55c9ae7176f759fe8626eaa78c4aab28ecc32",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/27. LBDiva46LtnClOvrCap.psd",
+      "offSourceSha256": "a1c87c0acd3f249b8eb7837d2bfac328b5665c6a7af599624414bd8d0aac9a36",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBDiva30LtnClOvrCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "e3e6b745be39d43139299433ea0d1e5af3cec3925a773f82d6820d07d650ef01",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /27. LBDiva30LtnClOvrCap.psd",
+      "offSourceSha256": "175091ba24146103fd42cdadf48986d17dfb53441cfea3847f1a297c83345bd8",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBDiva100LtnCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "512561075e606c74cee19af26b38830c35695cbc4b52f8d793329222d98b8702",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/56. LBDiva100LtnCu.psd",
+      "offSourceSha256": "448d50aa7d73076f2c3d958398ab2e9f9fb484c708ff4bb22fa63d44054846f9",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBDiva46LtnCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "5dcdbd25a568c3c86c6c854664be3ef1cef31413f3cf3a62f96e7bf1d96f8630",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBDiva46LtnShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "75c6d91ca4c300489142fe6a57e7f96941fe7bfeb0345b2e119cee62fbbfc086",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/16. LBDiva46LtnShnGl.psd",
+      "offSourceSha256": "fe4c2b50a663e8b56af7985e122d2e9b19b338b241d7ea584f1d41dd9ceb2f26",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBDiva30LtnCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "63b23ca21d296b47af99b5e0e6a90f2f1eaf06d3cd1d4038bff044a4c38072d0",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva100SpryShnSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "d5596a1a000833fe60209ffb9954429697cfd60070a3c49655ea40a60cfa4328",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/31. LBDiva100LtnShnSl.psd",
+      "offSourceSha256": "22b8ac05b9f696fb5e90b4d1185c1a5d72d407bc67e3c20b5deecb3133b9e956",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva100SpryMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "2f1338031d60ad16245d0574b631c7fb24c064a4d5ea127209b776fbcf9710f9",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/25. LBDiva100LtnMtSl.psd",
+      "offSourceSha256": "420ba38ce0621789aecc4deeb4ea71f37c5adce11bf87b111a504c3235c934eb",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva100SpryShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "91547e546eba5aa0e20cc00d594a1662bf2353b6c909b1269e608fe3edee27f8",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/20. LBDiva100LtnShnBlk.psd",
+      "offSourceSha256": "4caf107e0dd2e0e8261fbbfef254e2b465b3c65c89983b29d482372bef1e6f69",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva100SpryShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "5c42e02d17827ec94442fe35477e4ab8b43f4d23db1625982e3f59286be8d86d",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/16. LBDiva100LtnShnGl.psd",
+      "offSourceSha256": "e48fcaa4194205f153591a656cdede15a187e91888d1c41eae87b75a6e350980",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva100SpryMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "483d8c4eb2add30520b182ed5d21a75ab32292a013aa27a23d65cca198855a5d",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/14. LBDiva100LtnMtGl.psd",
+      "offSourceSha256": "5a70f9f17551eadc9e3e3aaa9f5857be4b14cd426aa79ce2ff2d82df54a61730",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva100SpryCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "7a9dfb68f36a29f0093e631f1756c808f28940e17bfd0db208cee2e13b2432ba",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/54. GBDiva100SpryCu.psd",
+      "offSourceSha256": "b2cfb92175a98baefec3acfa533fc4c0404f86db6c487714188b260fc407eeeb",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva46SpryCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "9b113969731f964fe1eac346bf6cccbc4ac2b714f1db67364ac40fb0dcb2bfef",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva30SpryCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "7b14a039e37d4a40821f3b1af17bcd82166ade7c046af0c6feddb5aedc4b3f3f",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva46SpryShnSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "6d8057e4eca89640effcd9042fbf95b3d770bdf65a20ee341e01ce01a37af69c",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/32. LBDiva46LtnShnSl.psd",
+      "offSourceSha256": "2eb67fe64184b3f8921be1fe172a2e1f59cb490f52fb0f7c0e506c83dccc2527",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva46SpryMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "93982dc43d653456a9a521142afdc67e456c21e01b1621e8ade19ea2f320e1b7",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/25. LBDiva46LtnMtSl.psd",
+      "offSourceSha256": "932297acde38b6bf1d25670621d4604ab92f071040066b6557793411c46f995e",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva46SpryShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "4c29958f0606191e354f45a102a8eea6a06c14047bd7751ef05ac957848e02c5",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/20. LBDiva46LtnShnBlk.psd",
+      "offSourceSha256": "c356f92a745a08e356cf7dc062f99e2dc11a767464939f3aac4d0cc7ba43d160",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva46SpryShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "0bf09a15188292a539803df0b6beb761d0a5d57c6991baefebd70b3bfdf458cb",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/15. GBDiva46SpryShnGl.psd",
+      "offSourceSha256": "6bdcc012fc8d7fef8cc0316abfb94455c1df2110bd719129e38416ac2966e011",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBDiva46SpryMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "815709a7a548faabd2b62fa517c479477557624060936fa8348451320fd9e8b9",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/12. LBDiva46LtnMtGl.psd",
+      "offSourceSha256": "329c69a1cbc3f3ef6213bbabca0c67d3e992b995e6dbc60b6cf0f063aeb1623d",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBDiva100LtnClOvrCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "7647bf96cfadc5b977092f73664e72dd7b143a6864acb7ae0d9b82145caf7b5c",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/27. LBDiva100LtnClOvrCap.psd",
+      "offSourceSha256": "e533c586d71328ee9d9a8a1b747c4a97a54ba091b52c9971936bb9a7124a13c2",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

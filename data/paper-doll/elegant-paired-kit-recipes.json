@@ -1,0 +1,2876 @@
+{
+  "family": "Elegant",
+  "cohort": "Exact-current structurally separable Elegant PSD kits",
+  "reviewedAt": "2026-09-08",
+  "rows": [
+    {
+      "websiteSku": "GBElgFrst15MtlRollBlkSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "ff2fb6d46caa33a0e0053046a48dfab3593a5db4b8c8f5e348c40a34f8b3c8a3",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/24. GBElgFrst15MtlRollBlkSh.psd",
+      "offSourceSha256": "2d29a44ecc2f1defe5d5cdc3e1939c395cc8cdec554166c26ea7b2fb73415259",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15MtlRollCuMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "e157d7963580fc6e8b91ac97acd5d76f03f6922db264a054e2fbf0c5f928e86f",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/22. GBElgFrst15MtlRollCuMatt.psd",
+      "offSourceSha256": "5163530086eea060ec2d2d48b5c477402a2fd02da2557b7f70dd077fa49d57dc",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15MtlRollSlSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "1988ac5c132d0678d7d9e681a33b53ddb6d6814ed20a1ec9a6bb3cf913adfc1c",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/20. GBElgFrst15MtlRollSlSh.psd",
+      "offSourceSha256": "878ae14ace2bd1ffd2e1f5c37f289e875800e235c1502fb8e8fb49b5c62d862f",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15MtlRollGlSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "9355414883122d99335b3815c24b038ad200e1c833c004ff729be0cdb8605e0a",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/18. GBElgFrst15MtlRollGlSh.psd",
+      "offSourceSha256": "50105bf3912eb8781acb6fe220ec74ac368eb8400f1db28f2130ad7e82d824bb",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBElg100WhtClOvrCp",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "224e8baa5ac2693e61b3cd9842859cb115dd25a7089c94bfb9b9a5bbe63dedee",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15MtlRollSlMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "6082695f7aff76dc24929af205e3ab7a8c497a368f83b3a59124e8177dfcec06",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/14. GBElgFrst15MtlRollSlMatt.psd",
+      "offSourceSha256": "55f32c6b6c26707e02749121a948b03ecb7aa198026435e8337bd73fe636e7ad",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15MtlRollPinkDot",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "448960e786c5fbab3512208215131eea4403daf41185a727316bc94d34e395a0",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/12. GBElgFrst15MtlRollPinkDot.psd",
+      "offSourceSha256": "24eff5c9b20ca8ace98a81bd23bdb0c915f81e42c8a7ad83aa6369aa260801a2",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15MtlRollSlDot",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "eb7a4d29db34235647b0637f5be87e7d3cb3be64e540a4783307a46829f80be2",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/10. GBElgFrst15MtlRollSlDot.psd",
+      "offSourceSha256": "3ac5be6494fb9ab3d095f7d5e0cf73f166333dcf5ffdb48e8202dd2821c0d76e",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15MtlRollBlkSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "66d4d6740c6253f7e90a8b73cce181a1ecf1865ff6cacacd99291c58b9575322",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/25. GBElg15RollBlkSh.psd",
+      "offSourceSha256": "e1ea405ca4ec8721078e61fad7b71286616a7463cb58c5a7a10a99c847957098",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15MtlRollSlSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "a523678cc9da8b525bcd1ca513fa0f5187f1c899bbe543a469b3754af4f287f5",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/21. GBElg15RollSlSh.psd",
+      "offSourceSha256": "dd33fbbb0336c91da5b3321b5bfa1b06ca19d697e4d1349c3cbda37a16437ea1",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15MtlRollSlMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "60c34c7eb5cfc3177f06d6e9f218b59bb2ef27aa60e98f19a2f29da587717e54",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/15. GBElg15RollSlMatt.psd",
+      "offSourceSha256": "c74c3dd5640379bbe447e9f00387665b52d6eb934dad904ca98d74cc1bc554cb",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15MtlRollSlDot",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "9e15c05786c5c814ac62a7d045a1b8b8ea2deb6b7885974c76a6857ad8cee2c0",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/11. GBElg15RollSlDot.psd",
+      "offSourceSha256": "49dc617d631775d0c630a5b5e67c83a8e007e3cf436d9d8b71da23e5292855fe",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15MtlRollPinkDot",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "2c2524f3413db8af354ab871332cab4fb0eece70f62287454480289d5753bc51",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/13. GBElg15RollPinkDot.psd",
+      "offSourceSha256": "4a5024aa6c154192b2ded9a218d65275461d53fc53f918a192522349712990d0",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15MtlRollGlSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "50a1908dd47f93988e6ff48ae68bd480bc5b3f53b31fa82ccc527ccb4db2da18",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/19. GBElg15RollGlSh.psd",
+      "offSourceSha256": "6e32a9c0bb595c069779e2b1705b1661c126af37ccfe43867230b3946f80bd2a",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15MtlRollGlMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "2c0d8757b01d7405e493ce04f080c65a00a6690e930ebf26e5fc6b7d15cfe12b",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/17. GBElg15RollGlMatt.psd",
+      "offSourceSha256": "8a20d7c1601208148ff5179535560aa1cc69680fc716b6175a5d5337bd0419b3",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15MtlRollCuMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "6941f1e172f65bbd142fdfb67863071eaaff3631987de15f99057cbf5d00f81e",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/23. GBElg15RollCuMatt.psd",
+      "offSourceSha256": "a6e158c6d5c3c1ad528c6d5b1bbe50c389c9673fc07d697685739ae9900adbe4",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15SpryCuMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "d7ee87d298ac87ce29709ce7b552bf27299d2cf0e680e3dbacd121fb9bdd3bbc",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/30. GBElgFrst15SpryCuMatt.psd",
+      "offSourceSha256": "642b2e0141d4f319190d94669efb79cb26a2eea2295c0a2ffd47ba13fbadccdf",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15SprySlSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "0cebf41f06c58efd5eed847d8cac0a1d7d0d539c4d7b4a3f46b27666b82ca7fa",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/9. GBElgFrst15SprySlSh.psd",
+      "offSourceSha256": "b180256536940f400c5655da600ca17f7b789538ea5f8c89645a7df16ddd209d",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15SprySlMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "bbd3724d4b8f6eeedc6b14d382e7f93b28b4b914eb90c40dc30f0e691442ab5c",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/8. GBElgFrst15SprySlMatt.psd",
+      "offSourceSha256": "028e7675e2924c97c5a49e59d325c5f7200d4f512f6be595264ba37df2635ac0",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15SpryGlSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "d8496c796a5f8e2ff097099c2b9af02f44d0590474cb7865738c7be147c33e32",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/6. GBElgFrst15SpryGlSh.psd",
+      "offSourceSha256": "9b3f7dc7064d79d28f66a28fcd6559feb50e9a43def2a8edfa480ee7f07656bd",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15SpryBluMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "d75c423cabea6881e60fcec2550958847759c328a477a8b377def51a563102cf",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/5. GBElgFrst15SpryBluMatt.psd",
+      "offSourceSha256": "366dfa9635f3f362debef0df3ccf19e8bd42e56ad905c5dc1a19815303f3690d",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15SpryBlkSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "bd506f9305cd2e2756f01b3b09b0dd25da2692be932a05091fde10cfaf91effa",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/4. GBElgFrst15SpryBlkSh.psd",
+      "offSourceSha256": "57a2383961f500ceb494496bcad01e3e70ab1ea55d8fdc866cb2c21bbd8c1876",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15SpryGlMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "5412492f250e4dad4dbe1f5c171c102d71d3025b0158308d852015aca23befae",
+      "onBodyLayer": 2,
+      "completeness": "full",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/7. GBElg15SpryGlMatt.psd",
+      "offSourceSha256": "0507560e00846e557327137e699dbe9b3dca05700b07b68adcb71a5b1879c5de",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15SpryCuMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "0831b5e71fd7385fca09f01662313acb9f63eba901c36ada9e16a64d3fcd669c",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/30. GBElg15SpryCuMatt.psd",
+      "offSourceSha256": "3c3414b85f8e157b038b97f5967a6fa1c75fa4032e13bd45d205991f331327ed",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15SpryBluMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "58444344471a3c0ed1f2f7e024e96f6cf9be15991de912992d85af7f87265f8b",
+      "onBodyLayer": 2,
+      "completeness": "full",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/5. GBElg15SpryBluMatt.psd",
+      "offSourceSha256": "e88fcfc3610f103453f6e5766072af8d6e851d02a77254a300169d9dd2b6906e",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15SprySlSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "a9d1b78882c5d2d20e63103b07d67e74485480974c9d84cfa2c6ddab7e70851a",
+      "onBodyLayer": 2,
+      "completeness": "full",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/9. GBElg15SprySlSh.psd",
+      "offSourceSha256": "05e9c899759f181a2276fb47035d223c3b4e8de4282a456a2645464e493381af",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15SprySlMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "289b63a586559c55307f25fa024dbddd15985787a83ce18d1dc52538f89fdfed",
+      "onBodyLayer": 2,
+      "completeness": "full",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/8. GBElg15SprySlMatt.psd",
+      "offSourceSha256": "a225e70a62e14df864b5141265bb6800ad9ed1a761b8aead02900374b97312a0",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15SpryGlSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "e2de90339a707106ab06b3c14609db846f8fced8933cc7eb8a9702f431ef3cc4",
+      "onBodyLayer": 2,
+      "completeness": "full",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/6. GBElg15SpryGlSh.psd",
+      "offSourceSha256": "d368d3da6cef9738a812fc8780b9566d916bc951466782a7dcbcf808cb95d498",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15SpryBlkSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "eb6a89746fb1701343f11afaa37c798e518665339f82983745fa32c9ef17c2c0",
+      "onBodyLayer": 2,
+      "completeness": "full",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/4. GBElg15SpryBlkSh.psd",
+      "offSourceSha256": "86b5dc4a55b87e45d7ea25719aa5a030fe196aa457b9025420fbf70b32604016",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBElgFrst60LtnCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "3042ef6800743b8b5fcaaa5afcd3ab0c3f5859341759ee8e4df6b33d04abe70d",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBElg60WhtClOvrCp",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "e3c3b0bdb503d7ae1ad809268b4b8bea15749bb771cece96471334b52f5f7fe1",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15MtlRollBlkDot",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "3f0422f9686bf9c9036bd607c7353195fff904952df56f34a47c65e367c0cbd1",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/26. GBElgFrst15MtlRollBlkDot.psd",
+      "offSourceSha256": "1facb6346bdc5576804138728a861ac0eafaba7ce883fffd6ea871f732afb639",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15MtlRollBlkDot",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "220abf36082e3950d74e88887f1c223487e659a6d12f085a463a6141a7eb0a56",
+      "onBodyLayer": 3,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/27. GBElg15RollBlkDot.psd",
+      "offSourceSha256": "dc820b0acab8e3f8b8a63ca93fbbc5379baec0e4518e21da6ca8915b672fc15f",
+      "offBodyLayer": 3,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15RollBlkDot",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "20b365b49385925e63f7680cc1eedab2b19b9a5f039ee3548b37046e619d4482",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/27. GBElgFrst15RollBlkDot.psd",
+      "offSourceSha256": "ebd88642c7bdbb92f941d93da501b60dee558b3f450360848ff4ff925951a280",
+      "offBodyLayer": 3,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst30SlCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "e6d9e9fb43a5fad15feb6bceaed0894acd25adb30c57082252f66f3fad18480d",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg30SlCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "5b7c125e6d9a2bfb8e5332e3e3c202434aac0d7843749038954d5a4a7593a738",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst100SpryMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "7fd4a74e7c2b637b1b5fc95288a00685478c580bd6011e2779dad017092eba3a",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/13. GBElgFrst100SpryMtGl.psd",
+      "offSourceSha256": "5a4cb0e3ef5a6444d46fa2cd98b438567c57a87af51b922372681e06791885bb",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst100SpryMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "8fbab608d334ae507014b7593a4a5b2ad132a2cd37d3c6ce2c7d17f90cc18d74",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/23. GBElgFrst100SpryMtSl.psd",
+      "offSourceSha256": "b5f8080dc340477cf77c9ae0d35c91000241772e0ec467856c80aa4ef0ea5ae0",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst100SpryShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "c02451081c8ea80605a8983c546c40f2cba8c55d5f133221b836652c294c5053",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/16. LBElgFrst100LtnShnGl.psd",
+      "offSourceSha256": "8d53a83e7a304facbfb753c3e9d21b01d9a6542d36c51a47761d0bdfff412b36",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst100SpryShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "dfa8de5008ea61ec173e043ac168d396db1e73ac50315ed38baa4db0cb4b0c36",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/20. LBElgFrst100LtnShnBlk.psd",
+      "offSourceSha256": "b638c7ed35f62b31f82336080e540dc75cee530c7fd812f557175eeda0e211e7",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst30GlCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "62d09a3816911eba0a913acb700dcf5f07a924f2f5509131ee6623f57c1b9414",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg30GlCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "b76c6e3dd575259604c84b5e73dc4d59e2a749eeaa813227038509af038977ab",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst100SpryCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "b532ab9453de4d97ad3bc9ce652387a4dd3a8d4c7cf16dfae561615a05dc95a3",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15Sl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "b4328973ede6a7966e06513f2c5db7d79d08064360760464fd5fe49bd0ad3270",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15Gl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "fa87eac27d15639effe1d3e83fc9c279d9e263d51f19439e5e55988e38327801",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15BlkSht",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "c2625029b3c88dc750f643041004cc02d33537e59edff2d3aec256a384e19789",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15WhtSht",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "6e41272742ad0cb0fa3397efc22f23cf4cb3f1542a50e96b02f4c73ceb92901c",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "9c650be222b96bbc2f06cb403a0468c5fcefda646caffd11782a6ec1c827314f",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15BlkSht",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "34532112e8971e44f4cfd15d9bbf04ec9cc4e8ecb09a2406dfa6916fb907a647",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15Gl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "f257a519647cad323c273c7ea302073c6cd4128149b1e950eea08512f7eaa329",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15WhtSht",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "1ace5871ed86210f6155b715545057c23125e228d54f73c68698411686914c1c",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15Sl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "8f12f366bc68fcf000195057380967f4b0ca0fe6f4d107424c87c30010df8c3a",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst30SpryBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "6dddac906f0af5bc1e65834783b0e23d0efdd7bf5a65d0c27dce58ded4d8e742",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg30SpryBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "909fde2f419f3c143f53ee1c36cfb115eb2bfac988bb9d829c31223ec3abe276",
+      "onBodyLayer": 2,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            },
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15SpryBlkMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "25c2a3b198a4f2b79f4ed4cc596a30f15157790676ec452a55c5a7e458b18311",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/3. GBElgFrst15SpryBlkMatt.psd",
+      "offSourceSha256": "77eb2a6727be24595b2596df9356a6c10905146d8c4f7107ef1c5f8704d425dc",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg15SpryBlkMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "a573a11f28faee1b0a367dcbcdaff402550378edc519e91e0f48a35ee170bb36",
+      "onBodyLayer": 2,
+      "completeness": "full",
+      "offSourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/3. GBElg15SpryBlkMatt.psd",
+      "offSourceSha256": "3f0a8b48b8f0b80f37bb36236d1acc9f645eab1c46cac0980027495b7c5434c4",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15RollBlkSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "b8166962ec3f12cdcdfc90d8e413328c70cb4ba1d22c5183067039adf27a47c7",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/25. GBElgFrst15RollBlkSh.psd",
+      "offSourceSha256": "7fc08d50a71f8cf72dfb9c294b975a44b5a94e2ff927b862f9f5f2427e1fb683",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15RollCuMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "6f55742e6f7857b734e8c84524ad77586075324668dc611fcac301ab2b2e8468",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/23. GBElgFrst15RollCuMatt.psd",
+      "offSourceSha256": "a1fd859b8a53e37ec3a3776b21f5666f8e2d67941b362fb379f689b1d4f2cd5d",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15RollSlSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "618e96ac901afd19e6cc5d3d5606436f2a6b2f507b4decbc1d4a262ed6ad4c94",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/21. GBElgFrst15RollSlSh.psd",
+      "offSourceSha256": "deca478760de063dcca03df52f76c2cedd7489060b9c55aa014d60d760a64065",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15RollGlSh",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "75b76a71ee6c807b73cfeea20f711b4e9f6ce9f20d4d54d7ee3d5e3abf3abc1e",
+      "onBodyLayer": 2,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/19. GBElgFrst15RollGlSh.psd",
+      "offSourceSha256": "66a64eadf6effa221db5dcf13bee5f3411de0051d48d5e8bcd1fe814dc131b45",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15RollSlMatt",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "b93da4c09d99791a6b09272113f81d09c63df40ff01618a33ce15aff044cd785",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/15. GBElgFrst15RollSlMatt.psd",
+      "offSourceSha256": "287f6af13eb1a1b7340e4bc092fb514cb1a2039f7f4807d27eeeebea520bd63d",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15RollPinkDot",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "7fda63c5112f024095475275a1d499187e35b88566ab9b3f936bfab506d5ed9d",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/13. GBElgFrst15RollPinkDot.psd",
+      "offSourceSha256": "26d604883a2daf710c59c1f3dad201691f4c21cf0401117e144a5a4615ee59f9",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst15RollSlDot",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "02932163780958a087dd9ce9868516a8921a613abd58b1bd993e0522042c5669",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/11. GBElgFrst15RollSlDot.psd",
+      "offSourceSha256": "2fe8dea4b98ac9fcdff72b215b9ce9cc0becc577efc4c77004ed659bf338933d",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "roller",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst30SpryMattGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "746424b2cbc8682057f246e3a0274ca3b2e624ec2eb59a0572d063d3b2979cbb",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst30SpryMattSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "7e0d8ce119fa31a03b39bbaaa05dcd5e5448090a94dc11dbdda50a98b2a46e54",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst30SpryShSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "41932e61bee0772f657fe5b758d3d2b22a5d047620b9877d8bdc498aea006de7",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElgFrst30SpryShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "0ba758d288a393ba9afaef64eaa79613914f06551a07eb7fc67dd90505999782",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg30SpryMattGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "e2422ea30404581d22ebc6abfabbaa23cdeee7cfa6c6bd738fa563f91bab66a2",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "on",
+              "index": 4
+            },
+            {
+              "source": "on",
+              "index": 5
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBElgFrst100LtnCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "40d4636329a6e818ea0b4eebd85e605c51adaea532acc291d03cb9e1810af8a3",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBElg30SpryMattSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "87afaaa8cbbb1d4c8eee73f371dfca69a5e7708a373c7124c938df2e4d82f793",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "on",
+              "index": 4
+            },
+            {
+              "source": "on",
+              "index": 5
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 6
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBElgFrst100LtnMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "aae7936b934eac87be8d5461a0fc5ea314560bf1945b3d2e530d58fc4a2ff124",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "offSourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/25. LBElgFrst100LtnMtSl.psd",
+      "offSourceSha256": "5d2f113d5c74606b73ce5ed4a8ea512d1b2be13911a9344a66e103b542ee15df",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBElgFrst100LtnMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "onSourceSha256": "7ad59bd4144db6860fff584ad2b75f1e1a63ef006da48da3f524850c2f741d04",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

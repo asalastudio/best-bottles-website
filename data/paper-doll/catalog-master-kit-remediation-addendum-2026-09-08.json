@@ -1,0 +1,2026 @@
+{
+  "generatedAt": "2026-09-08T21:08:41.532488+00:00",
+  "publicationStatus": "held for reconciliation; no publication performed",
+  "rows": [
+    {
+      "websiteSku": "GBCrcl100AnSpTslBlk",
+      "family": "Circle",
+      "familyId": "circle-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBCrcl100AnSpTslBlk.psd",
+      "sourceSha256": "891ae9611a4111f6102b0564c26fae2a74265e28ab99db83022da50d9aff8ba1",
+      "plateSha256": "fe956ebfa0bde38811112b5054482c634c76f4b7d0acfd813825f3ca41b13f07"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslIvySl",
+      "family": "Circle",
+      "familyId": "circle-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 4 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBCrcl100AnSpTslIvySl.psd",
+      "sourceSha256": "bb6b9cb5e63806ce8cbb7846a98f876309e59adf5bcfb226a687d4ef6a99a959",
+      "plateSha256": "b805393388cffa23ba460a29bdf854d5b52172abe5a048e0084af94c617f7914"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslMtSl",
+      "family": "Circle",
+      "familyId": "circle-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBCrcl100AnSpTslMtSl.psd",
+      "sourceSha256": "6b8a70720778a4e47b8d32d6d8f200b3afaffb05d4dc262243012f0ed4172b9f",
+      "plateSha256": "622fef0e49491f34285f1dea71acdf742ed90103793264ed5911d4ce413a6ae6"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslRed",
+      "family": "Circle",
+      "familyId": "circle-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBCrcl100AnSpTslRed.psd",
+      "sourceSha256": "52264318f449c8b76c4de221733d9fb4c107f2c81a43a2558c79453dc0d7ceaa",
+      "plateSha256": "55f2423e01abd37df3c88bcf1f0daeab07ef2a438706e446db42e08fe95a918d"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslWht",
+      "family": "Circle",
+      "familyId": "circle-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBCrcl100AnSpTslWht.psd",
+      "sourceSha256": "3f3ee866adda04627481f7ef6b2d4c84e07cd03a17a05fdbb1f54d82acd2bf36",
+      "plateSha256": "06b42b807b325905e7aed01163be87b499c0428236998f5e1039a6bc5f472c1d"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollBlkDot",
+      "family": "Circle",
+      "familyId": "circle-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "cap alpha gate failed: {'transparentFraction': 0.9138, 'semiTransparentPixels': 5257, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/26. GBCrcl15MtlRollBlkDot.psd",
+      "sourceSha256": "ff1feb33735a659b5e5af4551b24da3a38589a1b84198eee1fbaf03d2cfd7e58",
+      "plateSha256": "efca7efe094778e339b9dff36f98302eb001fada58458fedcab34648a1881682"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslGl",
+      "family": "Circle",
+      "familyId": "circle-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBCrclFrst100AnSpTslGl.psd",
+      "sourceSha256": "bcd627aa8f443039d9f8e0036d90e21fd7861fce454b5ab4c3aac67ff329d338",
+      "plateSha256": "240b148a750ea4d387bdb223d8d3bc177d81aa469673a8bd71606a27748341a0"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslIvyGl",
+      "family": "Circle",
+      "familyId": "circle-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBCrclFrst100AnSpTslIvyGl.psd",
+      "sourceSha256": "a0aa951a9a0ed901d8611dbd9211a0022a454c8725eb8ee06b7290fd6243075b",
+      "plateSha256": "dc2ebfd397071acd5499af7134925de2755bee3b32dd920b4ffe25fe4b2d8365"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslIvySl",
+      "family": "Circle",
+      "familyId": "circle-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBCrclFrst100AnSpTslIvySl.psd",
+      "sourceSha256": "ef157908a40c6781aa6c8b72a3cb6bff3870d0e7f0b3f00e60180440d4864e51",
+      "plateSha256": "a24cf3266c346c98807a3fef6d8171a93524c3e48d59d678388da786b786e044"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslLvn",
+      "family": "Circle",
+      "familyId": "circle-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBCrclFrst100AnSpTslLvn.psd",
+      "sourceSha256": "72ba154b0459a1768b3e98f3b720d9e951d20cffbb3ca4b82813ea3b6b8b2a41",
+      "plateSha256": "11ae9c129d16bdaf970060179d78a49bc808b2152eca789ffeed9176b6bc0649"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslMtSl",
+      "family": "Circle",
+      "familyId": "circle-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBCrclFrst100AnSpTslMtSl.psd",
+      "sourceSha256": "0605caa119f517f364878945865e1fb71e4ee24aaaf2c5292736688f6b11ddd7",
+      "plateSha256": "f99e97e06433e1b845c56f6113aecfbfcb687c23705a3272f46b82045890aa66"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslBlk",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBCrclFrst50AnSpTslBlk.psd",
+      "sourceSha256": "c18c94bd54f708a1797cf91ca6f837fc3ba6bad3e1eabb0f088be46ccae43512",
+      "plateSha256": "93f7be45cafef23d8ffecf2eed4e5bacfd615611903afb3472fa2441c697cb2c"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslIvyGl",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBCrclFrst50AnSpTslIvyGl.psd",
+      "sourceSha256": "cb3ea82c3146b8ef8ecf3b901768c5c321fcc3015527b9c89352bc53cd1b8b3d",
+      "plateSha256": "c333d50f94a7d254fa3d35ec0271d5f065493d2fb59d5e5517b72dcb5de310ee"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslIvySl",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBCrclFrst50AnSpTslIvySl.psd",
+      "sourceSha256": "519780b9347e558e52380c5e45b95cd964cd245e65fb81808f5bc67b8d0f3f8a",
+      "plateSha256": "4a4c6ef35aad6cbfffeaf4834e71ab1b3e539f30365ad8df2815d3fb35403b9c"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslLvn",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBCrclFrst50AnSpTslLvn.psd",
+      "sourceSha256": "4c72f9041fa29a66ce6ff964b942c7f7c5f007a9ae243a5c14c6f509b206fe38",
+      "plateSha256": "94f59734cd4f9d433887bbbb433313a984dfbd623b21f6106c6df1c211617c8e"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslMtSl",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBCrclFrst50AnSpTslMtSl.psd",
+      "sourceSha256": "d8b294b5844a6aaf173605602e8fa039fd579069c1eb055a38145132e587002f",
+      "plateSha256": "66714d327a30acfc9ac87fe62f15dd51f1926849698b98a4073edb6de4e5b99b"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslPnk",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBCrclFrst50AnSpTslPnk.psd",
+      "sourceSha256": "31f05b46b1ee42d78bb39d96ee2fd6b98207318af25f5ea93e071f6786814dd9",
+      "plateSha256": "aa5b521f7aada4d4d8280163fa39b538f9df5efe4a95ca50aeea803a246fba09"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslRed",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBCrclFrst50AnSpTslRed.psd",
+      "sourceSha256": "7ec1f44a0357dea44eaaa61d9ffef052d537791f98b4644ce6385b6d33bc9790",
+      "plateSha256": "2eb41b39b097c29ded105fe452a256f13838b9e2c0c422b5e70564e00f8503f3"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslWht",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBCrclFrst50AnSpTslWht.psd",
+      "sourceSha256": "9ab4e7feaff92c844bfe857631c95c2ab98c2c27dc02772862c6f66e7c6122cb",
+      "plateSha256": "1dcfc1f2e0d67b8d87089826f500bb011c7af2634ea15081bf4c9a2efd1a053b"
+    },
+    {
+      "websiteSku": "GBElg15MtlRollBlkDot",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "cap alpha gate failed: {'transparentFraction': 0.7233, 'semiTransparentPixels': 8124, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Elegant 15ml (Capped) PSD/26. GBElg15MtlRollBlkDot.psd",
+      "sourceSha256": "220abf36082e3950d74e88887f1c223487e659a6d12f085a463a6141a7eb0a56",
+      "plateSha256": "3db9750d16b930742df760dbc29cc46d87479c1ff9e64d30fcb3f9bfc1d6bed4"
+    },
+    {
+      "websiteSku": "GBElg15SpryCuMatt",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "sprayer alpha gate failed: {'transparentFraction': 0.911, 'semiTransparentPixels': 7325, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Elegant 15ml (Capped) PSD/30. GBElg15SpryCuMatt.psd",
+      "sourceSha256": "0831b5e71fd7385fca09f01662313acb9f63eba901c36ada9e16a64d3fcd669c",
+      "plateSha256": "a40cd91f1f9aee5f8bae54d13d6e8aa2d11f2c807bd6ecb10ce5f1c83a52573b"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslPnk",
+      "family": "Elegant",
+      "familyId": "elegant-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 2 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBElgFrst100AnSpTslPnk.psd",
+      "sourceSha256": "c354a9206856e39cb979d50d0e4f315bc179b35220f8752017bfccb49ebd0880",
+      "plateSha256": "616a7c617ca16759252216e48d7cc2d18d60aef0641c83d66d2278e0d5ef7fdb"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslRed",
+      "family": "Elegant",
+      "familyId": "elegant-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 2 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBElgFrst100AnSpTslRed.psd",
+      "sourceSha256": "18b254ac4620ac633670dc83276809d55152aae65b6eca420ed9d32a8ada35a0",
+      "plateSha256": "1c5a17ac2b954c365c63acbecb6ef33c2ec5f376a7b5710a90471855b71d6df5"
+    },
+    {
+      "websiteSku": "GBElgFrst100SpryShnSl",
+      "family": "Elegant",
+      "familyId": "elegant-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/30. GBElgFrst100SpryShnSl.psd",
+      "sourceSha256": "c87b87599ba4d8cf427dcb060e5f6ce9f337396b90884f2e5980f1ba17d11ca1",
+      "plateSha256": "5d9e09fcfd590962d8c2e243aa031792eaf41428d4ae835ca2fa0ed4a3bf59db"
+    },
+    {
+      "websiteSku": "GBElgFrst15MtlRollBlkDot",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-frosted-13-415",
+      "status": "held_with_reason",
+      "reason": "cap alpha gate failed: {'transparentFraction': 0.725, 'semiTransparentPixels': 7263, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/26. GBElgFrst15MtlRollBlkDot.psd",
+      "sourceSha256": "3f0422f9686bf9c9036bd607c7353195fff904952df56f34a47c65e367c0cbd1",
+      "plateSha256": "56f7e3e31f8206501389004e9fa54cfa1e5963e5c6a1d1dd6148de1fb8f0b3c0"
+    },
+    {
+      "websiteSku": "GBElgFrst15RollBlkDot",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-frosted-13-415",
+      "status": "held_with_reason",
+      "reason": "cap alpha gate failed: {'transparentFraction': 0.725, 'semiTransparentPixels': 7263, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/27. GBElgFrst15RollBlkDot.psd",
+      "sourceSha256": "20b365b49385925e63f7680cc1eedab2b19b9a5f039ee3548b37046e619d4482",
+      "plateSha256": "56f7e3e31f8206501389004e9fa54cfa1e5963e5c6a1d1dd6148de1fb8f0b3c0"
+    },
+    {
+      "websiteSku": "GBElgFrst15SpryCuMatt",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-frosted-13-415",
+      "status": "held_with_reason",
+      "reason": "sprayer alpha gate failed: {'transparentFraction': 0.9218, 'semiTransparentPixels': 3641, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/30. GBElgFrst15SpryCuMatt.psd",
+      "sourceSha256": "d7ee87d298ac87ce29709ce7b552bf27299d2cf0e680e3dbacd121fb9bdd3bbc",
+      "plateSha256": "21decdbb90d91ba343e4162f98f5cbbbab9614a965018380223a69e073f5e15e"
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryMtGl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/11. GBElgFrst60SpryMtGl.psd",
+      "sourceSha256": "a3409013c720d6f489d5a296c8a4b671131a9ea07721d0ec21023262a916a018",
+      "plateSha256": "a3c252b0af26a219f70f3759445529142d90245a494b73214a449f4bbe10136b"
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryMtSl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/24. GBElgFrst60SpryMtSl.psd",
+      "sourceSha256": "ec3ab02711bbf8758ddc9238f9ba334c7cf68c0c5edb8767bcb82ea3d20af765",
+      "plateSha256": "d07eb6226e93dbfa5e0e585493aeb40007c3d59e9d1c933d2e87b7162a80cce4"
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryShnBlk",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/21. GBElgFrst60SpryShnBlk.psd",
+      "sourceSha256": "fdb1c8a2dac67bcf5bd7dc1b8d7b4264d5261449ca3d73f5d5a1ac52c9fd482d",
+      "plateSha256": "04045c5f7391d623a2066d5d216ad6890677ba664e1b1c3e35689fae40bfa14e"
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryShnGl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/17. GBElgFrst60SpryShnGl.psd",
+      "sourceSha256": "58327669a58c0b054cdacde14e3c0d3923be13b8c9ed40ad71b07b9b4123651e",
+      "plateSha256": "6088fefece9bd75fb3a9263a8c5294036fa7a7f3bcdd0fe75b216e104a069139"
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryShnSl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/30. GBElgFrst60SpryShnSl.psd",
+      "sourceSha256": "a1fb46ad8b715006db0cd7a39938992195bda26abc9a00b0a33a2a5c1c54b0b0",
+      "plateSha256": "5554248bddae05ad4cccc55f57c7dc615539ec0b90df01cebcdb126ed2d9f6e3"
+    },
+    {
+      "websiteSku": "LBElgFrst100LtnClOvrCap",
+      "family": "Elegant",
+      "familyId": "elegant-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/28. LBElgFrst100LtnClOvrCap.psd",
+      "sourceSha256": "f8404a62793c7b8567312a74505400d4ca024971e2ce5019403595a1e756db53",
+      "plateSha256": "775501c3a9993f2f95e98e87b3185ee54ede4a3b60524773028027547dc97d16"
+    },
+    {
+      "websiteSku": "LBElgFrst100WhtClOvrCp",
+      "family": "Elegant",
+      "familyId": "elegant-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/53. LBElgFrst100WhtClOvrCp.psd",
+      "sourceSha256": "a8a8eeeb39697abb37c8ef6c79a5857ce8a6111e274868ef14c9c6ab20ab99e8",
+      "plateSha256": "fa348627a1d06f62b621a141b8128bdf8bf6e918a2582362526d478438de6564"
+    },
+    {
+      "websiteSku": "LBElgFrst60LtnClOvrCap",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/28. LBElgFrst60LtnClOvrCap.psd",
+      "sourceSha256": "e7fb9b28afb65ac8a545d4abb9a7886bf1ba875376beb21315cd8032222fbad1",
+      "plateSha256": "e0786e8e17407fc66673b60965ff299ccc60f042247b67d2dc8b1b08d8b89b4b"
+    },
+    {
+      "websiteSku": "LBElgFrst60LtnMtSl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/26. LBElgFrst60LtnMtSl.psd",
+      "sourceSha256": "5385df79c9dba99ba25448bab55c106d309c07546314c37079e6a8ba97322b46",
+      "plateSha256": "d07eb6226e93dbfa5e0e585493aeb40007c3d59e9d1c933d2e87b7162a80cce4"
+    },
+    {
+      "websiteSku": "LBElgFrst60LtnShnSl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/32. LBElgFrst60LtnShnSl.psd",
+      "sourceSha256": "62268d8fee6ee694b62600b10c201addcee78f632213b164943838b27d1bfe4d",
+      "plateSha256": "5554248bddae05ad4cccc55f57c7dc615539ec0b90df01cebcdb126ed2d9f6e3"
+    },
+    {
+      "websiteSku": "LBElgFrst60WhtClOvrCp",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/55. LBElgFrst60WhtClOvrCp.psd",
+      "sourceSha256": "2ee20a18170d53bc166edd46f7c489097f1281d0455fff0a2800a89bb27e5f80",
+      "plateSha256": "1319c9b0fa0c1c2f26bf8e50c45b0ffe2a480943f3c10ee77707138ef8ea23f1"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslBlk",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/48. GBEmp50AnSpTslBlk.psd",
+      "sourceSha256": "55ed017ddbdfe6b9b3bdce0971ee0a042d4765cc618484c6c7adbdc04fcb4920",
+      "plateSha256": "b89a4efa4350ab59e8c89c3133ba927d9b6556da933d5c5858278789206c1707"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslGl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/50. GBEmp50AnSpTslGl.psd",
+      "sourceSha256": "add0c3afdf3cc58c6c05e46154ea712e9feb814f58adee5fb93f344dbf5f6b2e",
+      "plateSha256": "fbff546c6d38c1fa13ca5ec8f618ad82a77b01a12d7785e8763282d490199ef7"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslIvySl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 4 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/44. GBEmp50AnSpTslIvySl.psd",
+      "sourceSha256": "a94eb861305a7a03ba5b646afdd96ad73ff0e9e3217e82c34cc0072769e718ba",
+      "plateSha256": "48dd8b19351a514d225b45184048f99008688ee2631f5dfea9149d3b40aa3323"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslMtSl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/49. GBEmp50AnSpTslMtSl.psd",
+      "sourceSha256": "be2b5042af70ac968efc1db2e1a577c9ec0f1aa22f5943f3aa5aa895561ff500",
+      "plateSha256": "7eed9858ac6c60aff26ffb3f993b807bf524475c7f68c61282ebafbaa8b952c5"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslPnk",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/46. GBEmp50AnSpTslPnk.psd",
+      "sourceSha256": "a3371a25c3ffc484729d7ff49d209857a39e98dfde34ed2390e1b94e6ae54966",
+      "plateSha256": "dd489cbe441c996115aa0e09684286c9da82c1413d62f3eb0f92e44ae6eaa773"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslRed",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/47. GBEmp50AnSpTslRed.psd",
+      "sourceSha256": "b6f7a2ca457c582126f7fa3ee85c929f1f01b6a786ea92b941a308ddd6401dd1",
+      "plateSha256": "6b2edfe1564e97661129080c3c4849a316980604c9f965afcf92da0080dab08b"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslIvySl",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 4 requires source review",
+      "sourcePath": "21. Tassels/Original Tassels/44. GBGrce55AnSpTslIvySl.psd",
+      "sourceSha256": "0ddce28512feb5ebe0cebf2c7a2a06cc45ac0b3919253df53299787dc5f81601",
+      "plateSha256": "a61da535be9107cbfbd5ddc4a9f0e0583dca3caac6488919bdef3a70fa966b4c"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslLvn",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/42. GBGrce55AnSpTslLvn.psd",
+      "sourceSha256": "39334fdf60fb7f5995a53d953c478c449fb46ca6a29aec53cc3776410627f910",
+      "plateSha256": "2a8b1132e9e64ac885598e8946486bf8ec8a60c3e452269d658f8216be7bf2ab"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslMtSl",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/49. GBGrce55AnSpTslMtSl.psd",
+      "sourceSha256": "7638668ccb4b68105c341a4a4e4a1d8c69b3e3283dfffb27a2639145d3040f19",
+      "plateSha256": "ef44f8f39f9c5aef88f74e5978f3903c5bd08e6dca92de98e02fb3b5e87b4352"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslPnk",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/46. GBGrce55AnSpTslPnk.psd",
+      "sourceSha256": "b269995e9ec6da600f1a176a87dfea21fac3a668edcf0f0e96ff7657f4c59080",
+      "plateSha256": "ac846773963520d5b58d3b95ac2006c62c693c666e555f7f320cd8c80ff5f4ab"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslRed",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/47. GBGrce55AnSpTslRed.psd",
+      "sourceSha256": "428a4b5e766087148e6dd347a96fe2f82df148e005fd13f595369b7d465cb833",
+      "plateSha256": "9a3535d88a6d8aa0adaae8caa38a7a75cb9a40401c6fe359050546d547a24b53"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrShnBlkTall",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/2. GBGrce55RdcrShnBlkTall.psd",
+      "sourceSha256": "608046568827df30a048968ff8964aa77c1f0c1c9d99b2df2f5cea1360ace91e",
+      "plateSha256": "7649ff09ba61d5df86d7e4459ca29e317008fd30642963c4ba9d5b2b3f65dfe3"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslBlk",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBRnd78AnSpTslBlk.psd",
+      "sourceSha256": "36651c2713adfa003fdc7cba669fbfcd4bdd21489173eb1f3241e15313caadc9",
+      "plateSha256": "9f8e07cda38afa22452c06d6d893cb15f2a6a3104d8508f9ab46a45e7dd5f248"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslGl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBRnd78AnSpTslGl.psd",
+      "sourceSha256": "58bdd70bce845cd78fce355655f1d93a1db29341cd7f5ba974729f873869cc8a",
+      "plateSha256": "fdcc8cacb4559045799ca1fab56ad7ac55bd6e0270778daed843c0795e10bd90"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslIvyGl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 4 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBRnd78AnSpTslIvyGl.psd",
+      "sourceSha256": "f3e81c4eb2253bb686a91d4149fa9ed0f4f095bf2a057150bcbb6780311cbe0a",
+      "plateSha256": "7f9f0246ac06040b3b19bc522010a921f570476377bb75af173b3c1a7a5e3ca2"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslIvySl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 4 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBRnd78AnSpTslIvySl.psd",
+      "sourceSha256": "833ab013ce98e56d1f29f77d36f044768a936374c1f1f877e5aef5aa47e9249b",
+      "plateSha256": "5a1ecf84994cf3bd7ae3f4d4168c175df2ef6dad9b11e46c8e1748ddfdbec49f"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslMtSl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBRnd78AnSpTslMtSl.psd",
+      "sourceSha256": "2d2ccd2e4e8c6351f068eaf325b947798cc91d02a11d7aed2a4f0b0e193fa54e",
+      "plateSha256": "cacbba764a0ee9c0af2fe606c2077d1f8ab58af91b09a533085a290d16214e6b"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslPnk",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBRnd78AnSpTslPnk.psd",
+      "sourceSha256": "2facd8ec81577c4d49d765beb8cc7d428de2a1582f87c4336d942319a239cea9",
+      "plateSha256": "54f85a6a89c610e4b255c3a01c9682a23cd0dde32cdc7e3b0015aaecd9301c8f"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslRed",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBRnd78AnSpTslRed.psd",
+      "sourceSha256": "3590c5e9ae68ae9f04b53fc6aa9ba22f2e1902a9e2e129ad2e7c0776a59b294f",
+      "plateSha256": "c4e8d8997a0f17b73b0f5ddffb050370c581e6c7dbe50352c6f87e548e58ba5a"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslWht",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBRnd78AnSpTslWht.psd",
+      "sourceSha256": "95f785070a5d3004f4418ea8dc6972490d3e39b5baed8e2f1eb7315e3ad3c337",
+      "plateSha256": "1faeb0f570f0537f17ce8037551d7379da5cf3a660e1e737292228a70aba8924"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslBlk",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "layer 2 blending/opacity requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBRndFrst78AnSpTslBlk.psd",
+      "sourceSha256": "53858021e8f6be9041f625758d68ccc73dcd63870b7c69008d83a8c61277215e",
+      "plateSha256": "9d0b088009c469daebaa8198de60ee8cb2b4a89aa9f5b82d98987238e112b63b"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslRed",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "layer 1 blending/opacity requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBRndFrst78AnSpTslRed.psd",
+      "sourceSha256": "4a0d06259c5c6eb86cf23863133efaeda756ed9164b55a96f7ad69981dbd7060",
+      "plateSha256": "54c1287de7a823f9f84d56a4bd9cad8ec78d5f70928e6d768deec3c525f80916"
+    },
+    {
+      "websiteSku": "LBRnd128LtnClOvrCap",
+      "family": "Round",
+      "familyId": "round-128ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "pump alpha gate failed: {'transparentFraction': 0.9155, 'semiTransparentPixels': 5770, 'touchesOwnEdge': True}",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/7.  128ml Round, Ltn & Spry, capped/28. LBRnd128LtnClOvrCap.psd",
+      "sourceSha256": "6f02d7e218d7cd3cd420380851e6b8869fabc5b6e7e6c162c249631d12ff41b7",
+      "plateSha256": "1d86ebcfd2cdd3e8f42936253e24d6244b203ce6ed5db61330b3c2ddad18c664"
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslLvn",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBSlm100AnSpTslLvn.psd",
+      "sourceSha256": "4bb09acfece574e959b146eeb7c7f4c5bf4a2ab2bf24a9979942d14219ba0c07",
+      "plateSha256": "8f4ec577a1e0a5f282f0ee1ab556607b605c19ec56a77340264245533ff88ccb"
+    },
+    {
+      "websiteSku": "GBBstn15BlkDrp",
+      "family": "Boston Round",
+      "familyId": "boston-round-15ml-clear-18-400",
+      "status": "held_with_reason",
+      "reason": "Drp requires manual semantic mapping",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/5.  GBBstn15BlkDrp.psd",
+      "sourceSha256": "e8f6d3867cd3702cc7b3d13bc33adc8d8fe98eb92272250985e5b44f1dac8c27",
+      "plateSha256": "d24d28e35799cdfe3d069726b5015fe2f97be109bd6892ee0068f4ccca663235"
+    },
+    {
+      "websiteSku": "GBBstn1ozBlkDrp",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "Drp requires manual semantic mapping",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/16. GBBstn1ozBlkDrp.psd",
+      "sourceSha256": "c78f2650d025101227e594f807ee755f1e94849f872d630a77ee8b22b714673c",
+      "plateSha256": "12d5b95f4de0b2ef36e34ef927a56b10dc0a096d68809f1ee021a7fd3690dec7"
+    },
+    {
+      "websiteSku": "GBBstn1ozBlkDrpShnGlTrim",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "Drp requires manual semantic mapping",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/12. GBBstn1ozBlkDrpShnGlTrim.psd",
+      "sourceSha256": "c9f5c1d3a99fd543dbdbf147d4553bcffcee473ddd5dcfe6b9091a9dd18623bf",
+      "plateSha256": "45fcd642194824b4a5b06a87f0be48b160e25f31d332df5e2a5a4f30449af77c"
+    },
+    {
+      "websiteSku": "GBBstn1ozMtlRollonBlk",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/18. GBBstn1ozMtlRollonBlk.psd",
+      "sourceSha256": "3eb8328785fefa535abb13a48b88eeb40b0c53c0b849d698f08e717aa8eee171",
+      "plateSha256": "3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c"
+    },
+    {
+      "websiteSku": "GBBstn1ozMtlRollonGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/4. GBBstn1ozMtlRollonGl.psd",
+      "sourceSha256": "77fcf7e30fd3e667bcb1860c61822fe39ab400f564a08b6ac6866956e460a9c7",
+      "plateSha256": "f2b188b4ae452d26cc3f4f470435cee868f3742312ffead2bcbc5f9b33cdcaa6"
+    },
+    {
+      "websiteSku": "GBBstn1ozMtlRollonMattBlk",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/3. GBBstn1ozMtlRollonMattBlk.psd",
+      "sourceSha256": "2c91570ac025f4a938cba08b7a31b6d01ed631c9154587f8e77f376385966a95",
+      "plateSha256": "a3b8781417158f64b072594afd3c9a4369b7d29032e880664695dac3c525befd"
+    },
+    {
+      "websiteSku": "GBBstn1ozMtlRollonMattGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/5. GBBstn1ozMtlRollonMattGl.psd",
+      "sourceSha256": "461d348bab429d087f2ed62f985ef6d840ed0b0028c60dbbfb9232cea9b83160",
+      "plateSha256": "cd7dd82f079d9e0b65461daf0d53cffef70cae7edf8f86fccff3477f9e5556cc"
+    },
+    {
+      "websiteSku": "GBBstn1ozMtlRollonMattSl",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/1. GBBstn1ozMtlRollonMattSl.psd",
+      "sourceSha256": "59e291a10a6ff5d8114f0dfa5b79a8cafed5d41954e141bd45cc6eb971fe17d7",
+      "plateSha256": "88ff100cfbe3481e6190c3dfe0451897b7a72b17237692a2b814621288b9ad7a"
+    },
+    {
+      "websiteSku": "GBBstn1ozMtlRollonShnSl",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/2. GBBstn1ozMtlRollonShnSl.psd",
+      "sourceSha256": "c284917fd07f5cf47196a2f76f1a342f9fd3ee03878719f05b60dee7a14b3471",
+      "plateSha256": "a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94"
+    },
+    {
+      "websiteSku": "GBBstn1ozWhtDrp",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "Drp requires manual semantic mapping",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/11. GBBstn1ozWhtDrp.psd",
+      "sourceSha256": "5c0042a857b967022bc8eb0890c4ca3b16db2b8d74284a11542ccda8eb58a821",
+      "plateSha256": "6d0f3e7dcc95ff4b8d15a232f1d1daf717ffd946cf861105109499fe205a4017"
+    },
+    {
+      "websiteSku": "GBBstn1ozWhtDrpShnGlTrim",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "Drp requires manual semantic mapping",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/13. GBBstn1ozWhtDrpShnGlTrim.psd",
+      "sourceSha256": "bacfe9086834cbc553475cf9f10fc807a9148b26d7b939d1e91923bfe8f778a4",
+      "plateSha256": "d1d70f934e8327f8d0967cd41ad7ddec21c1fb6ad35a9c1edbe3b68955cc9c13"
+    },
+    {
+      "websiteSku": "GBBstn1ozWhtDrpShnSlTrim",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "Drp requires manual semantic mapping",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/14. GBBstn1ozWhtDrpShnSlTrim.psd",
+      "sourceSha256": "b80014ea216645b8a3ef912cfd5700ee17b53eb09db97a307db90fdad1a08c72",
+      "plateSha256": "52537eca5cabfd43163cc9d2b4965357198d80c0218989450c293b57ac84916a"
+    },
+    {
+      "websiteSku": "GBBstn2ozRollonMattGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-clear-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/10. GBBstn2ozRollonMattGl.psd",
+      "sourceSha256": "75f0eea1eb20812b4ad9fc86d380fe5f45b5dc3cd66581e924838655e608b9d2",
+      "plateSha256": "c8acff47d12a22b5be9eb6d245a53ee1f3ac2237a82857b1d334b9863763ce3c"
+    },
+    {
+      "websiteSku": "GBBstnAmb15mlBlkCapSht",
+      "family": "Boston Round",
+      "familyId": "boston-round-15ml-amber-18-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6911, 'semiTransparentPixels': 20695, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/1. GBBstnAmb15mlBlkCapSht.psd",
+      "sourceSha256": "8aefa739fdcf1e5fa736877c4bff380725b8e8d7a2aba8b85d3129a497eb1d72",
+      "plateSha256": "cb5fd6a6964f6ab8543ef4e99a0b9c8f4cd094cae711d565e363f6eb6a6da053"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozBlkCapSht",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4256, 'semiTransparentPixels': 7449, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/17. GBBstnAmb1ozBlkCapSht.psd",
+      "sourceSha256": "d55c3911e6f42992f21851b6e4705038291fb559a5d8a2898d0ff72e61e62bf5",
+      "plateSha256": "5d84d04e2772063de96644e8669d73370d213d91b3ca1162a8e75215239f1ed3"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozMtlRollonGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 32.8604, 'tailOver40': 0.201337}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/4. GBBstnAmb1ozMtlRollonGl.psd",
+      "sourceSha256": "85ba453305116c426a318ddcff0319ab68bce589aa8af9b6365c98ab37a6b689",
+      "plateSha256": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozMtlRollonMattGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 30.9174, 'tailOver40': 0.219065}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/5. GBBstnAmb1ozMtlRollonMattGl.psd",
+      "sourceSha256": "2b1d2bb865170ed38fe2376be380718af904cfe1f850653109290723de83ef59",
+      "plateSha256": "a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozMtlRollonShnBlk",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 25.2045, 'tailOver40': 0.142166}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/19. GBBstnAmb1ozMtlRollonShnBlk.psd",
+      "sourceSha256": "c046a5e94cb2398f8ee742516c87ebf6b5542160280f053545f545eae69dfa85",
+      "plateSha256": "6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozRollonMattGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 30.4423, 'tailOver40': 0.217877}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/10. GBBstnAmb1ozRollonMattGl.psd",
+      "sourceSha256": "df5dbd1554be453a1bebda0476d77064e15c983321e59030df4869c333af780a",
+      "plateSha256": "ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozRollonShnBlk",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 25.917, 'tailOver40': 0.14461}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/18. GBBstnAmb1ozRollonShnBlk.psd",
+      "sourceSha256": "2808ffb4203749b077ff1180be9fc4c9f02b2e1279e37486724bc11cb6673109",
+      "plateSha256": "184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozBlkCapSht",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.3499, 'semiTransparentPixels': 7980, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/17. GBBstnAmb2ozBlkCapSht.psd",
+      "sourceSha256": "7a4b430ed4f984a8e27134f4e47a65d0f5257536f649af042fc2288495d89281",
+      "plateSha256": "36f2b2939e7c82ec37cc9dc10122d09d1401e823db6c489af85111d1b0f94b81"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6218, 'semiTransparentPixels': 5766, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/15. GBBstnAmb2ozBlkDropperShnGlTrim.psd",
+      "sourceSha256": "c6ea2af8f754f21bf614203b960dc2dc0a2e61e0d513c7174815ec93be1254e4",
+      "plateSha256": "e232d5aab5ca083a917f13c204b2d9332eb7760b48e9bd55cb4ade52099cb8e3"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozMtlRollonGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4253, 'semiTransparentPixels': 4668, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/4. GBBstnAmb2ozMtlRollonGl.psd",
+      "sourceSha256": "aa7187883626472629d738b40052ae6f1fbbb55d573e836f610761d1ac8ec6f8",
+      "plateSha256": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozMtlRollonMattBlk",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4253, 'semiTransparentPixels': 5658, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/3. GBBstnAmb2ozMtlRollonMattBlk.psd",
+      "sourceSha256": "529cf86f071d23c8d1c86659cb2a102de67d4918af7a2d80105b0a6a361f1bc9",
+      "plateSha256": "2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozMtlRollonMattGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4313, 'semiTransparentPixels': 5617, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/5. GBBstnAmb2ozMtlRollonMattGl.psd",
+      "sourceSha256": "804f542a73f6b7ecc3e6c355a66a050b6ace8e4fcc02c054cd781467f1907490",
+      "plateSha256": "c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozMtlRollonMattSl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4333, 'semiTransparentPixels': 5628, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/1. GBBstnAmb2ozMtlRollonMattSl.psd",
+      "sourceSha256": "3841bd5896fec6516d9bd826c56fa4394b599f1e830b767fcf016b83e87cab20",
+      "plateSha256": "4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozMtlRollonShnSl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4293, 'semiTransparentPixels': 5628, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/2. GBBstnAmb2ozMtlRollonShnSl.psd",
+      "sourceSha256": "afdf38129f0b00a1a084ac11293611d41e722c45d703b0cdd255261b0bacf6ba",
+      "plateSha256": "2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozRollonMattGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4313, 'semiTransparentPixels': 4604, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/10. GBBstnAmb2ozRollonMattGl.psd",
+      "sourceSha256": "affd170f842e459b6c32b4053d8ca3ca01ba8bbc9b9ca8e131fd47f79be3555a",
+      "plateSha256": "ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozRollonShnBlk",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4273, 'semiTransparentPixels': 5759, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/19. GBBstnAmb2ozRollonShnBlk.psd",
+      "sourceSha256": "b855ab433b6edf896efe64c1ed0a01524598733f41d54c3db0fcf6e93dd64001",
+      "plateSha256": "acaa98c4d94ab9bc55aeafd439557ca787f729d21146e23f6b0c6fbc659567f5"
+    },
+    {
+      "websiteSku": "GBBstnBlu15BlkCapSht",
+      "family": "Boston Round",
+      "familyId": "boston-round-15ml-cobalt-blue-18-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6911, 'semiTransparentPixels': 20695, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/1. GBBstnBlu15BlkCapSht.psd",
+      "sourceSha256": "82e6548471ca8742eaafd65839f93b1a69fc44d7d718e7bdc59d67f63d21a297",
+      "plateSha256": "a369622563f186545615ef06f2e3905096bd03ca03489f441254c542060bf96c"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozBlkCapSht",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4109, 'semiTransparentPixels': 8078, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/17. GBBstnBlu1ozBlkCapSht.psd",
+      "sourceSha256": "05d0e8c6355727ddfa084c31bbeedeecfe53bf3d2c7e02f4c3db87d41a892d4c",
+      "plateSha256": "7471b44e7761178f216b68416dc4741302f0b783208946f3300ff6d025dd2817"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozMtlRollonGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/4. GBBstnBlu1ozMtlRollonGl.psd",
+      "sourceSha256": "451b2a56158579a7ce1cf0e961f5ec76013223a564b9aa57934a414a42dc3953",
+      "plateSha256": "b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozRollonMattGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-30ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/10. GBBstnBlu1ozRollonMattGl.psd",
+      "sourceSha256": "ce0f6333b774584e8527d1ce328b92a587d57ab60294ec39ae07fb3ca0387c59",
+      "plateSha256": "4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozBlkCapSht",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "assembled source exposes no independent component layer",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/17. GBBstnBlu2ozBlkCapSht.psd",
+      "sourceSha256": "e741ba2b1c3b62e8912ddc95e824bbfaf4eca2c8eda98bb7a5006b2814c9fc7e",
+      "plateSha256": "47b2e424baf5745545d39cdd6388f00dc48d13a2ec9e3982c0a75eeda84ffb18"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozBlkDropper",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "assembled source exposes no independent component layer",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/16. GBBstnBlu2ozBlkDropper.psd",
+      "sourceSha256": "4947f20ea9d0d38e41a982c6d14a0e14c27dc8e44ffc66dfb16b50775bcae429",
+      "plateSha256": "a018ae15d225c01c4215f34822690a2093972ea9b2d88e1f923f337a5794f632"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 31.6304, 'tailOver40': 0.620589}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/12. GBBstnBlu2ozBlkDropperShnGlTrim.psd",
+      "sourceSha256": "046df716445cc443b0583cf08b05cfa624aadfac0454dea23b4ec84a5c244766",
+      "plateSha256": "7aa2489da1ed54c9df7d4432bb41851785d76a627ee57d093e8502b6f0d4d6ec"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozMtlRollonGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/4. GBBstnBlu2ozMtlRollonGl.psd",
+      "sourceSha256": "50a1a0f681b45e3a599307862743dd625be2ac1475b266c310c01642a6e995e4",
+      "plateSha256": "0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozMtlRollonMattBlk",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/3. GBBstnBlu2ozMtlRollonMattBlk.psd",
+      "sourceSha256": "fa9ccb9069c09f8961ee99e8b6ad73174b2de5175e0b51bbeb2c737e03b33509",
+      "plateSha256": "f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozMtlRollonMattGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/5. GBBstnBlu2ozMtlRollonMattGl.psd",
+      "sourceSha256": "e515158ddfda9c2d36b0c50e79fefab78abfe5507cefc40f6d2faae347904834",
+      "plateSha256": "d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozMtlRollonMattSl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/1. GBBstnBlu2ozMtlRollonMattSl.psd",
+      "sourceSha256": "08139af30fe39451fb1785440b3831948d141246019f68560674f4459ce1bffd",
+      "plateSha256": "beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozMtlRollonShnSl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/2. GBBstnBlu2ozMtlRollonShnSl.psd",
+      "sourceSha256": "024db0c89fe93a4e448928b023ac3052aab44e702756a851f32fb690e69d2928",
+      "plateSha256": "be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozRollonGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/9. GBBstnBlu2ozRollonGl.psd",
+      "sourceSha256": "0a8dabdc1efec450adc9dcf35666256e924be3586fb813da5daf59720bce3062",
+      "plateSha256": "adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozRollonMattBlk",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/8. GBBstnBlu2ozRollonMattBlk.psd",
+      "sourceSha256": "def7b36298b008682bb680142070e3d8b762a74989f0813d51ea66fcc175dbfe",
+      "plateSha256": "f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozRollonMattGl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/10. GBBstnBlu2ozRollonMattGl.psd",
+      "sourceSha256": "bd36dbcfadd7d040b5a5bd4f9a1e28b21f662ec4e05a8c1f6ede3da40241d726",
+      "plateSha256": "34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozRollonMattSl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6341, 'semiTransparentPixels': 5436, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/6. GBBstnBlu2ozRollonMattSl.psd",
+      "sourceSha256": "15bf007de2d4e86b8b8018e771720e8fe931da8551c179f42ac0abfc0cb5cbfc",
+      "plateSha256": "84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozRollonShnBlk",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/19. GBBstnBlu2ozRollonShnBlk.psd",
+      "sourceSha256": "b31ff3dd187d72d809c3a052687f01ac315ee7decd4d2e79b3673573105aab65",
+      "plateSha256": "4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozRollonShnSl",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6334, 'semiTransparentPixels': 6478, 'touchesOwnEdge': True}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/7. GBBstnBlu2ozRollonShnSl.psd",
+      "sourceSha256": "7787faf01be27428a47d6e300f6a86f0cc58513d254a1d4fc5cb12a04525a0c5",
+      "plateSha256": "a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozWhtDropper",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 30.3185, 'tailOver40': 0.616941}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/11. GBBstnBlu2ozWhtDropper.psd",
+      "sourceSha256": "12e9397a376a41701fc777eb858943362cf0c6938a9eb92700851cc75995af77",
+      "plateSha256": "ed37984df5fa1fbc4dc141fcbe570765c68ba6efa9773fd5d492247e4d4d1ce5"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozWhtDropperShnGlTrim",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 31.2208, 'tailOver40': 0.613449}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/13. GBBstnBlu2ozWhtDropperShnGlTrim.psd",
+      "sourceSha256": "a006ee9976b45156788a87f2ca1d01454d417f78da4289c0414f06ed37a52c43",
+      "plateSha256": "fd08d80563c735587794f50b05966159fb4f1fb46f35b8ec1af315c56301c3a0"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozWhtDropperShnSlTrim",
+      "family": "Boston Round",
+      "familyId": "boston-round-60ml-cobalt-blue-20-400",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 31.6954, 'tailOver40': 0.623347}",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/14. GBBstnBlu2ozWhtDropperShnSlTrim.psd",
+      "sourceSha256": "3b0ca42c4f303e56109030d5f78202d9dd2b77e46e144da6af40891fb667a89c",
+      "plateSha256": "2cac833430ce93b2ffeb756bc45662ceb8fbe71181a0461c127199be89e9c9fd"
+    },
+    {
+      "websiteSku": "GBRect10BlkSht",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 44.8526, 'tailOver40': 0.255528}",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/1. GBRect10BlkSht.psd",
+      "sourceSha256": "936e5cdd3b64180283f36f9dc6d9015bc90be91f67c33df1e3181aa814319bee",
+      "plateSha256": "c4bc2a488798fd96dd510e9f1c5f14130442cce17b3c34544aabc7a98ceb827e"
+    },
+    {
+      "websiteSku": "GBRect10MtlRollBlkDot",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/27. GBRect10MtlRollBlkDot.psd",
+      "sourceSha256": "596bbfbcd76ac49475a7964794e2b6f8881004df55c8cfd761a3fa61e9a6bd05",
+      "plateSha256": "083650b774f50ee626cb95c9d9bffcf59295f32ba245eeaa45d095ab62e84311"
+    },
+    {
+      "websiteSku": "GBRect10MtlRollBlkSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/24. GBRect10MtlRollBlkSh.psd",
+      "sourceSha256": "7d0b1edb9ff2c28a6e99a9455dd6ea866a630c6588568ca2942a85f3a190849a",
+      "plateSha256": "605250c95f339df100d87507c81fa53348c099490e8aa2827c0d04703dba3b96"
+    },
+    {
+      "websiteSku": "GBRect10MtlRollCuMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/22. GBRect10MtlRollCuMatt.psd",
+      "sourceSha256": "5abf7b7677c482ac81e08fc21356cb0a4c782808fcaf54a97bea3b190fff64e6",
+      "plateSha256": "432425c6af6cadc160c0606c05491adb69ee62a75e346b7036f05aa57486baf4"
+    },
+    {
+      "websiteSku": "GBRect10MtlRollGlMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/16. GBRect10MtlRollGlMatt.psd",
+      "sourceSha256": "e873d11307c97338f4af5a9616d55b5c7af87dcdf8feebd456c46ed3cbcaa5f1",
+      "plateSha256": "fc536d9300c7b195c6ba9c53c00833bc37090ff8bba8e2a76cd3373144fc60eb"
+    },
+    {
+      "websiteSku": "GBRect10MtlRollGlSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/18. GBRect10MtlRollGlSh.psd",
+      "sourceSha256": "4ed20da9e14ea07ee940714265614c2b1bc3a7f214e8a45df5c7b9fc7f406ed3",
+      "plateSha256": "8c9718f99b9277c24f10fa4bed994d960eea449cc88ea7ac2d5e8d05d49073e0"
+    },
+    {
+      "websiteSku": "GBRect10MtlRollPinkDot",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/12. GBRect10MtlRollPinkDot.psd",
+      "sourceSha256": "eea7c685be0fe53064a5cea6d0a5fc824a5f73e18d3784cb58cf9453dfe1f268",
+      "plateSha256": "608b07877e23613000c6528562e5ac562bde479776bd7b2b56926e4f4e48ec24"
+    },
+    {
+      "websiteSku": "GBRect10MtlRollSlDot",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/10. GBRect10MtlRollSlDot.psd",
+      "sourceSha256": "2bcc017f8dd3eabf52d23d081b274be40af762b06e609874b2a37b7cfaea483e",
+      "plateSha256": "d23cc4915cfd8616af24f1c6f02707b200e9599275cb462fd104c88042d07164"
+    },
+    {
+      "websiteSku": "GBRect10MtlRollSlSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/20. GBRect10MtlRollSlSh.psd",
+      "sourceSha256": "fae71228ee426a1b30cb98a8780f8b7486c7b515db0655b46bf54603b01f97ae",
+      "plateSha256": "47bd6b3521912bdad2819df7d4132fecab0739bfba2d7c61e6a910412349bca1"
+    },
+    {
+      "websiteSku": "GBRect10RollBlkDot",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/26. GBRect10RollBlkDot.psd",
+      "sourceSha256": "58495fd63bea4fe007741a0dd6521e2db713db4c122db8776bc79711e9a6eae8",
+      "plateSha256": "083650b774f50ee626cb95c9d9bffcf59295f32ba245eeaa45d095ab62e84311"
+    },
+    {
+      "websiteSku": "GBRect10RollBlkSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/25. GBRect10RollBlkSh.psd",
+      "sourceSha256": "f4877a7a7a10bcae15fbeaa7fc9124aa76c6a520fb996f7d986adf0166fddc0b",
+      "plateSha256": "605250c95f339df100d87507c81fa53348c099490e8aa2827c0d04703dba3b96"
+    },
+    {
+      "websiteSku": "GBRect10RollCuMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/23. GBRect10RollCuMatt.psd",
+      "sourceSha256": "352ca5f0c8fb3e9947f9511bb064ad8255cf1eea9937b03d8be36a414ac4d274",
+      "plateSha256": "432425c6af6cadc160c0606c05491adb69ee62a75e346b7036f05aa57486baf4"
+    },
+    {
+      "websiteSku": "GBRect10RollGlMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/17. GBRect10RollGlMatt.psd",
+      "sourceSha256": "e61518908114cb58d300b5a22a856dd86fd42f99220962b2f13d461ce87c07d4",
+      "plateSha256": "fc536d9300c7b195c6ba9c53c00833bc37090ff8bba8e2a76cd3373144fc60eb"
+    },
+    {
+      "websiteSku": "GBRect10RollGlSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/19. GBRect10RollGlSh.psd",
+      "sourceSha256": "da4b089753064d6122774fd79cb08a7b8c444955a2ccc062904558ddf5fd1557",
+      "plateSha256": "8c9718f99b9277c24f10fa4bed994d960eea449cc88ea7ac2d5e8d05d49073e0"
+    },
+    {
+      "websiteSku": "GBRect10RollPinkDot",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/13. GBRect10RollPinkDot.psd",
+      "sourceSha256": "cd74fb220111a8744ab86a333924ca9de4a43e39c5a24d76b2e260c7bc1c6a1d",
+      "plateSha256": "608b07877e23613000c6528562e5ac562bde479776bd7b2b56926e4f4e48ec24"
+    },
+    {
+      "websiteSku": "GBRect10RollSlDot",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/11. GBRect10RollSlDot.psd",
+      "sourceSha256": "e5ed816e75c5bee29fd7f1505b4cbeed02b0234e52f0649fa865497e42f5b77a",
+      "plateSha256": "d23cc4915cfd8616af24f1c6f02707b200e9599275cb462fd104c88042d07164"
+    },
+    {
+      "websiteSku": "GBRect10RollSlMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/15. GBRect10RollSlMatt.psd",
+      "sourceSha256": "bc7eeb0ed72f3b7142cad8000e933efcefa0945b115bb4ee97bd9f6bce4b5a32",
+      "plateSha256": "6e791da4b2d8fb11b72e0341320e3a5afc0102ee712a6222e7389428bf331aea"
+    },
+    {
+      "websiteSku": "GBRect10RollSlSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/21. GBRect10RollSlSh.psd",
+      "sourceSha256": "709aca6b73bce6db19a09b49fbe8e2c53978215293b98ea149cf8ee59c139a2b",
+      "plateSha256": "47bd6b3521912bdad2819df7d4132fecab0739bfba2d7c61e6a910412349bca1"
+    },
+    {
+      "websiteSku": "GBRect10SpryCuMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: overcap alpha gate failed: {'transparentFraction': 0.9034, 'semiTransparentPixels': 4729, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/30. GBRect10SpryCuMatt.psd",
+      "sourceSha256": "54a60684f8a835c759a487126a8908a2f3d442ab75ec61ca7fd633ef90f94486",
+      "plateSha256": "a50de1fa2cae602ce0d1d8c75fbf093fb586896b5177268a70003870f577a62f"
+    },
+    {
+      "websiteSku": "GBRect10SprySlSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 24.5822, 'tailOver40': 0.1444}",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/9. GBRect10SprySlSh.psd",
+      "sourceSha256": "11dd44f9c37a6795c6b9b703fcde3eaa5a21acd46957a79b5b6e05dfab8bd771",
+      "plateSha256": "26b9e164e66341ce2b0ae2ba42561cac0a66fabf760ad4609fc43d25af591aa0"
+    },
+    {
+      "websiteSku": "GBSQSTBlue",
+      "family": "Rectangle",
+      "familyId": "rectangle-9ml-clear-ground",
+      "status": "held_with_reason",
+      "reason": "assembled source exposes no independent component layer",
+      "sourcePath": "17. Additional Bottles/GBSQSTBlue...psd",
+      "sourceSha256": "150a90e702f1653818f362c42e3a38493b6427399e4d74aa05f8bdc20423ac41",
+      "plateSha256": "cbf4a26ceedda0c0eab5caeeeae580422270e5ba97d162a13e598108bb2cac6b"
+    },
+    {
+      "websiteSku": "GBSQSTClear",
+      "family": "Rectangle",
+      "familyId": "rectangle-9ml-clear-ground",
+      "status": "held_with_reason",
+      "reason": "assembled source exposes no independent component layer",
+      "sourcePath": "17. Additional Bottles/GBSQSTClear...psd",
+      "sourceSha256": "a4bc5791c8088fc4ccd522b5dd3642a929bdf31841162d41f30a58679aa82869",
+      "plateSha256": "8bb5fe5072b1fb9fc54f299274b537a74eabece79eda33ca4fb1818c18e7bf09"
+    },
+    {
+      "websiteSku": "GBSQSTGREEN",
+      "family": "Rectangle",
+      "familyId": "rectangle-9ml-clear-ground",
+      "status": "held_with_reason",
+      "reason": "assembled source exposes no independent component layer",
+      "sourcePath": "17. Additional Bottles/GBSQSTGREEN...psd",
+      "sourceSha256": "a5eaac582d9d92144d57dfc17a40b630dcc43ff7a64d8f42ccbe75c387cab70d",
+      "plateSha256": "1ccb81bb88cef11976c602840cfeebaec60e97081acef9f36e08a3f8e8632372"
+    },
+    {
+      "websiteSku": "GBTallRect10BlkSht",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8598, 'semiTransparentPixels': 31650, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /1. GBTallRect10BlkSht.psd",
+      "sourceSha256": "dafb642f7a6cef91f29a2e3d7a26dca363a4cf0fe3791aa5e86e8e65441c0f53",
+      "plateSha256": "ea540db5889a64b8d3a597231bae49889e27c81feb8b7c4977a72001fc572a07"
+    },
+    {
+      "websiteSku": "GBTallRect10Gl",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8599, 'semiTransparentPixels': 31445, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /28. GBTallRect10Gl.psd",
+      "sourceSha256": "7145131382898528f6d3f8ed6799d12f15897147ea4a492e85ee9335d53f3545",
+      "plateSha256": "4e11e916fc6fca0820909014346d67f73a348463f4fdbd243a6258a7b0334f97"
+    },
+    {
+      "websiteSku": "GBTallRect10MtlRollBlkSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /24. GBTallRect10MtlRollBlkSh.psd",
+      "sourceSha256": "05122360b6f99755a8699a4b8ac4d86d5b279adcdc54de66cdee7317356a7184",
+      "plateSha256": "f1bbb7f9c416b740b677a6eeae74381f60b497553ecdea4b59af8c4afbb1ecbb"
+    },
+    {
+      "websiteSku": "GBTallRect10MtlRollCuMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /22. GBTallRect10MtlRollCuMatt.psd",
+      "sourceSha256": "72e0ea95ac3707a73fef9d46f67bcb3aa953dc1536f9586ce0c8c18c68645bef",
+      "plateSha256": "8f3bb9b3fed49d273de966d220564b1835423da96c72eb943fd223c79903c881"
+    },
+    {
+      "websiteSku": "GBTallRect10MtlRollGlMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /16. GBTallRect10MtlRollGlMatt.psd",
+      "sourceSha256": "ba14bc5e38cd9c1f76becc07d2731084d91b6631fcb28a52013684b55180bd4b",
+      "plateSha256": "197aa096f6ae723dba6a05a069d181c82654142ab1ac3d41b179b0a9db8a29f0"
+    },
+    {
+      "websiteSku": "GBTallRect10MtlRollGlSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /18. GBTallRect10MtlRollGlSh.psd",
+      "sourceSha256": "dc7eae37324475159d8c0885189348976d14f1fbf35c7e37582ec78690a071c4",
+      "plateSha256": "de597bfba590cf8e047c9c5a75b6116ae349ea66acad5bde53b2188d6b8dc163"
+    },
+    {
+      "websiteSku": "GBTallRect10MtlRollSlDot",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /10. GBTallRect10MtlRollSlDot.psd",
+      "sourceSha256": "0b3b8e5fcbfeb88c9a17a6cefe68627ff7e264401d9b0dc62d7da4aa2d6a7a35",
+      "plateSha256": "f8dc0f55b80a28042a08aeb3561022a6cfb00fa342244e57e586cd8c0686c8ba"
+    },
+    {
+      "websiteSku": "GBTallRect10MtlRollSlMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /14. GBTallRect10MtlRollSlMatt.psd",
+      "sourceSha256": "a52185d857d36121296c8b34019acb20ccb0ce86988f7eec066eb5b109b125f3",
+      "plateSha256": "531766bd7348d291fa97811be6f65d28148b064649dab2074cfccd595842dd50"
+    },
+    {
+      "websiteSku": "GBTallRect10MtlRollSlSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /20. GBTallRect10MtlRollSlSh.psd",
+      "sourceSha256": "3655e6c124329eeb7a3dfd85af665a0ed8e92728a90566cbd5a1cdced4b9b8b0",
+      "plateSha256": "f92b47952a568483def5d9c03f5e91747103bb9cb863ca1a1dcf0fb16b68ab3b"
+    },
+    {
+      "websiteSku": "GBTallRect10RollPinkDot",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /13. GBTallRect10RollPinkDot.psd",
+      "sourceSha256": "93afc7856481959413eccdd57afa6f4d077b308693944f41b940a64346409826",
+      "plateSha256": "4a02477396ef3ab87ce68b0fde07ddb10329846c89e663c3d3e92d6e3486625f"
+    },
+    {
+      "websiteSku": "GBTallRect10Sl",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8599, 'semiTransparentPixels': 31445, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /29. GBTallRect10Sl.psd",
+      "sourceSha256": "6dec5cb2c9fbdf636e83f6ed77c8f2ce25e320b7945c139c4bbfeeb56c5c97cb",
+      "plateSha256": "1fed7eb6b2f5d12624bc4e27231b07c65b3468846bb730f6e07bdcdf1c9114b2"
+    },
+    {
+      "websiteSku": "GBTallRect10SpryBlkMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8598, 'semiTransparentPixels': 31682, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /3. GBTallRect10SpryBlkMatt.psd",
+      "sourceSha256": "0e60697ad7442320dd4e71ff42a03ee6d43d4e49d96052a77417d6bd925fb59f",
+      "plateSha256": "8979651f833f8221051114c0c881b537d85344cfbaae0587d073675e1b6892a7"
+    },
+    {
+      "websiteSku": "GBTallRect10SpryBlkSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8599, 'semiTransparentPixels': 31566, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /4. GBTallRect10SpryBlkSh.psd",
+      "sourceSha256": "7519127a11d7d83fb66560828343ef217bc516ef4df838fba02fe2c32112fa10",
+      "plateSha256": "c7bbab5142030f78205d8dafeac1fc855796ae93fd4ee51f3311188a253889f1"
+    },
+    {
+      "websiteSku": "GBTallRect10SpryBluMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8599, 'semiTransparentPixels': 31512, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /5. GBTallRect10SpryBluMatt.psd",
+      "sourceSha256": "6a5a0b6a6e988ae09fd5f5757899e177d1a6ddf1aaf845d599363d1d013583cd",
+      "plateSha256": "e6c8e44b1bc45572548ba07a7d27e419082c133431949f6e220741fc267a4f7f"
+    },
+    {
+      "websiteSku": "GBTallRect10SpryCuMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8599, 'semiTransparentPixels': 31539, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /30. GBTallRect10SpryCuMatt.psd",
+      "sourceSha256": "bbec57e223373173e8885209eeb078c4d27b46ae672cffc642c27f0588ec6fd5",
+      "plateSha256": "dffd0a81416df09683807688cd87be8b537aacc8c160660f1b4302de99047735"
+    },
+    {
+      "websiteSku": "GBTallRect10SpryGlMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8598, 'semiTransparentPixels': 31682, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /7. GBTallRect10SpryGlMatt.psd",
+      "sourceSha256": "b4e0f24439df8baaf0dfee1c9d3b6f0675498eb11b296d2706c22b5074cdd78a",
+      "plateSha256": "e22feb50b50b784a2f11f9664f2cbbfdf4f444de5a4a714c99c678a842b8ebf8"
+    },
+    {
+      "websiteSku": "GBTallRect10SpryGlSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8598, 'semiTransparentPixels': 31635, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /6. GBTallRect10SpryGlSh.psd",
+      "sourceSha256": "34ea294f00fe4970ea850320d403ca1df91b51be8edd25b9c0c9594024c53a16",
+      "plateSha256": "d733d038067c09e39a788fdf40d34dffcb15a4ea6563546882187d32784ac718"
+    },
+    {
+      "websiteSku": "GBTallRect10SprySlMatt",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8599, 'semiTransparentPixels': 31403, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /8. GBTallRect10SprySlMatt.psd",
+      "sourceSha256": "6dd79b0c095a41af5fec494f7e731be1b137ae984a554bf60d83ff2ad6395d46",
+      "plateSha256": "6d009e6a1a5319f56622d0f15cd2ab9a6826bf6215a0af4accee01fa2788962c"
+    },
+    {
+      "websiteSku": "GBTallRect10SprySlSh",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: overcap alpha gate failed: {'transparentFraction': 0.8598, 'semiTransparentPixels': 31635, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /9. GBTallRect10SprySlSh.psd",
+      "sourceSha256": "121444c96752128a132fde5200415cf41dbd73cbe4ca8294a068f4074a3926f8",
+      "plateSha256": "fe425ae0a46e1736fcfe3bec4a593f23e4bd550e83c4b5334b6328652d80a40f"
+    },
+    {
+      "websiteSku": "GBTallRect10WhtSht",
+      "family": "Rectangle",
+      "familyId": "rectangle-10ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.8598, 'semiTransparentPixels': 31648, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /2. GBTallRect10WhtSht.psd",
+      "sourceSha256": "d0349d601522913231d8734fcd92bf579c53ff22e0949c6d555a0f7243e8e200",
+      "plateSha256": "c6afb146ab125d7ca31085b505c700eb38c9bc9cbb55d78bd5b63cf1b5aad744"
+    },
+    {
+      "websiteSku": "GBTulip6BlkSht",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: cap alpha gate failed: {'transparentFraction': 0.619, 'semiTransparentPixels': 12099, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /1. GBTulip6BlkSht.psd",
+      "sourceSha256": "b629820069aa5482641b888c40ec9798a10d038aec91ba1de2d582f1e84099a8",
+      "plateSha256": "53196e2fae69b5cce26b563915478d89b27287709eea7ce804f785c382e2e883"
+    },
+    {
+      "websiteSku": "GBTulip6Gl",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6026, 'semiTransparentPixels': 13381, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /28. GBTulip6Gl.psd",
+      "sourceSha256": "89074c18354463cfebf3d1efe162ccaf4e3e2061aba3d39be3939dfbb9a957ae",
+      "plateSha256": "1e63afc82d1c6bb491855e2ab87f530838adbb6cc11a132d3d79cb3482c7be6a"
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollBlkDot",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.603, 'semiTransparentPixels': 13336, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /26. GBTulip6MtlRollBlkDot.psd",
+      "sourceSha256": "8efff3ca88f30536e59be7a4f07e9abcdec2222cebd6278c9eb574cf0be77203",
+      "plateSha256": "8b372a3199d44d46608151440bb308d52ea7ec5b52b3d3aeac02d2ed66755847"
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollBlkSh",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6029, 'semiTransparentPixels': 13186, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /24. GBTulip6MtlRollBlkSh.psd",
+      "sourceSha256": "fc31300dbbf6ff53368b1117b6f058628dac8df442d5b381d4a99d4e12c29c04",
+      "plateSha256": "a643140b9bdbbe306c145598b0da2bbc8692df3a026215d7e2fea750aceb5aa4"
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollCuMatt",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6029, 'semiTransparentPixels': 13186, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /22. GBTulip6MtlRollCuMatt.psd",
+      "sourceSha256": "e9b837cf64931cee2e65dc6a88d68e977eb71e87d4ef991e86aa68f0f333e607",
+      "plateSha256": "fe8a8768d89b58a243ed0e7b15ca22dff2ba2b74b642356c4971f2fce8867df4"
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollGlMatt",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6027, 'semiTransparentPixels': 13270, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /16. GBTulip6MtlRollGlMatt.psd",
+      "sourceSha256": "7074b738eeeb668d31cdf9f9b157e0b59a0f270c686200f2ed6c72a620c75791",
+      "plateSha256": "7219dd17856aa810b67c8c9d34bbedc7de37bc1268d69004b99c405047528995"
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollGlSh",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6028, 'semiTransparentPixels': 13268, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /18. GBTulip6MtlRollGlSh.psd",
+      "sourceSha256": "65197761c0f457ca4f463add5a188601b46b85ae5e3f80c2b6e1168f79687b67",
+      "plateSha256": "d9161a82855685e738e46125eab34bc38ca57e9c57d78acce67ebd3fe9a0e1a1"
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollPinkDot",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6028, 'semiTransparentPixels': 13268, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /12. GBTulip6MtlRollPinkDot.psd",
+      "sourceSha256": "e4fac2b5f0aa8c0f6442eba6f0b21e923cbae7bf0ea7b20149a13bb71b842bf2",
+      "plateSha256": "0dd3902085eec75d780c1243c8ffdfe44432c76f01fbc923d3082d2e04d0eb90"
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollSlDot",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6027, 'semiTransparentPixels': 13264, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /10. GBTulip6MtlRollSlDot.psd",
+      "sourceSha256": "98dbf8a1b0393dd05e68224fba87203d275943ac3e2a8b023d1d7a19661ce459",
+      "plateSha256": "db15080da39b63fc3491d36ec5c8b25f0d320fdf0cd2c2e73353ee3b73c54244"
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollSlMatt",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6027, 'semiTransparentPixels': 13264, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /14. GBTulip6MtlRollSlMatt.psd",
+      "sourceSha256": "dd92d414ae4fc1d7766fcae3a6da6ba45bea7254ad8400388eebc855f73f6216",
+      "plateSha256": "740dc87f444e87248efbcb5e45a5153f718c395d4a78500a90b44f015cdf6f8c"
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollSlSh",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6025, 'semiTransparentPixels': 13399, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /20. GBTulip6MtlRollSlSh.psd",
+      "sourceSha256": "ee090673112f2050baf32d9e3a2e7058a52c860af96903422cc765241ca00a53",
+      "plateSha256": "6692cc80dfcaf5e70554ce7d5097688999c2848655cedb9da842fa5872bfb066"
+    },
+    {
+      "websiteSku": "GBTulip6Sl",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6027, 'semiTransparentPixels': 13264, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /29. GBTulip6Sl.psd",
+      "sourceSha256": "2d3dfe9e24aca619918e437217397da4e9f2d7220965148b8424318aed915711",
+      "plateSha256": "b01e80111890e799ea3fec57ac54243232240bca45729d771b73e0efbe597806"
+    },
+    {
+      "websiteSku": "GBTulip6SpryBlkSh",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6026, 'semiTransparentPixels': 13382, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /4. GBTulip6SpryBlkSh.psd",
+      "sourceSha256": "febad5c5e1fd2167c9339cee6c8c723fff4fb51d6b6dc8302194e42d225d2b53",
+      "plateSha256": "f701e4126a2cd88f790e5afe90e92c1ed613c886cc3b6bebf016dd94b72715ef"
+    },
+    {
+      "websiteSku": "GBTulip6SpryBluMatt",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6027, 'semiTransparentPixels': 13269, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /5. GBTulip6SpryBluMatt.psd",
+      "sourceSha256": "4a69e73a185c2b4b661497f2226a54db4fd53af9aeb269093f423fa21afd5cda",
+      "plateSha256": "abc1746f30c2154d7ece6b63f5395ffcaa5cdf01e9acee47771502723ead18f9"
+    },
+    {
+      "websiteSku": "GBTulip6SpryCuMatt",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6027, 'semiTransparentPixels': 13269, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /30. GBTulip6SpryCuMatt.psd",
+      "sourceSha256": "c3b1168774aa08079a02a5a185203b06be1db1afc65cd6eb2fc6faed3ce724ff",
+      "plateSha256": "1c552955e4469b1dd9934b2657cff04b6125b49d529004b0e2c14349fa6ebfe5"
+    },
+    {
+      "websiteSku": "GBTulip6SpryGlMatt",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6027, 'semiTransparentPixels': 13327, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /7. GBTulip6SpryGlMatt.psd",
+      "sourceSha256": "6dc6b717f244f4c4811becd2371a72363b33248584c4d1c5fe01d88655788340",
+      "plateSha256": "dac70704f778a83a1b68cc8271d64b99a36ba9a07978cfc40877be6c0639b7c8"
+    },
+    {
+      "websiteSku": "GBTulip6SpryGlSh",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6027, 'semiTransparentPixels': 13327, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /6. GBTulip6SpryGlSh.psd",
+      "sourceSha256": "2bfdbd2de0fb2dc7761eb1dc013d70c25026b78d16424888dac0adb5cd8bf837",
+      "plateSha256": "d5d741abd92e9638cde8cc44f4bc25af9fe21defa42b252cb5983e967b37801e"
+    },
+    {
+      "websiteSku": "GBTulip6SprySlMatt",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6028, 'semiTransparentPixels': 13269, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /8. GBTulip6SprySlMatt.psd",
+      "sourceSha256": "3aac83c992f47a4a5c4a287f117d72c9a346623349dee10959ae67dc1c29d7a1",
+      "plateSha256": "0af16f380e334ecab320b014f18d3d38d2b18bccfe619a7c13fb5414b558cffe"
+    },
+    {
+      "websiteSku": "GBTulip6SprySlSh",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6027, 'semiTransparentPixels': 13327, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /9. GBTulip6SprySlSh.psd",
+      "sourceSha256": "08e40b058a90aa82f3d2c484d18d73d57ce8addc4abe88917609e715d55c958f",
+      "plateSha256": "302e6ee43f6333f5fe4f1ec7f29b38014b2d111b9afeedd4209f9311814ea0b4"
+    },
+    {
+      "websiteSku": "GBTulip6WhtSht",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: cap alpha gate failed: {'transparentFraction': 0.6191, 'semiTransparentPixels': 12126, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /2. GBTulip6WhtSht.psd",
+      "sourceSha256": "f290847cc4f29eaf5b3a0d1c6adf232f0074bb710c679f44190a8da0dc8ea01e",
+      "plateSha256": "de1033c6be5b2a7fb09be5031860f18d1896479fa803a97f08f669207a497b9e"
+    },
+    {
+      "websiteSku": "GBTulipAmb5Gl",
+      "family": "Tulip",
+      "familyId": "tulip-5ml-amber-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 19.1885, 'tailOver40': 0.128913}",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/28. GBTulipAmb5Gl.psd",
+      "sourceSha256": "b2dad27e84b25800c19f508c58bdbbf79084dbde47360f41ae83dcf4616ad012",
+      "plateSha256": "ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollBlkDot",
+      "family": "Tulip",
+      "familyId": "tulip-5ml-amber-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/26. GBTulipAmb5MtlRollBlkDot.psd",
+      "sourceSha256": "23e0d5e2aee39ddda19e4cf7927e72329f78d17a4bc1a63d7a53c4ed50c026ba",
+      "plateSha256": "734fad3a219bee64873a35c3b1b485419dd721bf5dfea4cea38d24622f38c114"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollBlkSh",
+      "family": "Tulip",
+      "familyId": "tulip-5ml-amber-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/24. GBTulipAmb5MtlRollBlkSh.psd",
+      "sourceSha256": "50921e9390d0549e0817127fb6d35385b11c0e2b8e8cbb31b1843a80d707386c",
+      "plateSha256": "7e1b83974fa001731acdb9bd41559b23730783ca1c35d5b4c440abac9b145da8"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollCuMatt",
+      "family": "Tulip",
+      "familyId": "tulip-5ml-amber-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/22. GBTulipAmb5MtlRollCuMatt.psd",
+      "sourceSha256": "0807357ec8dbd57160adaf86774adcc4622e0dae6e70d3f48ecd2cc8cc562903",
+      "plateSha256": "acaed0128405497106da55f769d79edf1dd20a0606a8b3f8219b63cb63f436ea"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollGlMatt",
+      "family": "Tulip",
+      "familyId": "tulip-5ml-amber-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/16. GBTulipAmb5MtlRollGlMatt.psd",
+      "sourceSha256": "b6ffdb0000ee0d6c96fd4c6ff752d8d40495c5ce1efc507beb835c78a87e023a",
+      "plateSha256": "370a4661bd119ba69fde0d15a4a2276e97414f7b684a910c32b520ab523ddc62"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollGlSh",
+      "family": "Tulip",
+      "familyId": "tulip-5ml-amber-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/18. GBTulipAmb5MtlRollGlSh.psd",
+      "sourceSha256": "04a2f593e054d6f0e52fcec82bdc0c50dbddb38bc4a3fd306ea1e6655b2b48a0",
+      "plateSha256": "ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f"
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollCuMatt",
+      "family": "Tulip",
+      "familyId": "tulip-5ml-amber-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/23. GBTulipAmb5RollCuMatt.psd",
+      "sourceSha256": "e24f4e2cfb25f0e19c2f25515c4dff279677c45b991cfcdde24b79dc089945ef",
+      "plateSha256": "acaed0128405497106da55f769d79edf1dd20a0606a8b3f8219b63cb63f436ea"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryCuMatt",
+      "family": "Tulip",
+      "familyId": "tulip-5ml-amber-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: overcap alpha gate failed: {'transparentFraction': 0.8777, 'semiTransparentPixels': 6309, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/30. GBTulipAmb5SpryCuMatt.psd",
+      "sourceSha256": "5834ef97fbb1d34fb5e16d57de88b84e3dfa39e2e3bf7e85ca4549e58d780591",
+      "plateSha256": "3202d114928cf796cee5814199e150eca700365194240b8e0f98aa455e0bf058"
+    },
+    {
+      "websiteSku": "GBFlair15BlkSht",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 9.5737, 'tailOver40': 0.054354}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/1. GBFlair15BlkSht.psd",
+      "sourceSha256": "31fa82107b8d489de66a86c39d465109b9ad0f9216bb713bf70b7885a71f1a12",
+      "plateSha256": "4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollBlkSh",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 24.2919, 'tailOver40': 0.108732}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/24. GBFlair15MtlRollBlkSh.psd",
+      "sourceSha256": "5afb4d2b7b40cde32384425179d7d6a81a6e74db88a45b935f53537cc7d35dad",
+      "plateSha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollCuMatt",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/22. GBFlair15MtlRollCuMatt.psd",
+      "sourceSha256": "dc654042262eb3f75dcdb5d5a928104ec1eb6eededb30730075094f56a5802e9",
+      "plateSha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollGlMatt",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 13.2537, 'tailOver40': 0.132775}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/16. GBFlair15MtlRollGlMatt.psd",
+      "sourceSha256": "40fbd0563be6417be9829f2b08db7fbd8a27149a2265ca79a6f82168fc06ccff",
+      "plateSha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollGlSh",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 16.7039, 'tailOver40': 0.127862}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/18. GBFlair15MtlRollGlSh.psd",
+      "sourceSha256": "93a14437c4de153ecbfb85f35529ef41b15bf85493acdaeb39b9d7dc1625263b",
+      "plateSha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollPinkDot",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 8.2317, 'tailOver40': 0.068023}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/12. GBFlair15MtlRollPinkDot.psd",
+      "sourceSha256": "c07446f312c058b5c02956977677a10ccb67d5e100e90662c1f41316071663d3",
+      "plateSha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollSlDot",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 7.5392, 'tailOver40': 0.055944}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/10. GBFlair15MtlRollSlDot.psd",
+      "sourceSha256": "c44c0ca4e37985a656def07c99997e6c421206a804226f79d29c66897fe93cce",
+      "plateSha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollSlMatt",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 8.0972, 'tailOver40': 0.082239}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/14. GBFlair15MtlRollSlMatt.psd",
+      "sourceSha256": "6e195909acb43e85c4f9abf3e76faf0242760ee99c6024a1bc836184a2ea7666",
+      "plateSha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollSlSh",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 15.0616, 'tailOver40': 0.060489}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/20. GBFlair15MtlRollSlSh.psd",
+      "sourceSha256": "bbaddec97a93dfec0c5fb2901c0d5adbcb902cb63b6b8699c11d747cffbc26a1",
+      "plateSha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d"
+    },
+    {
+      "websiteSku": "GBFlair15SpryBluMatt",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 15.8708, 'tailOver40': 0.164424}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/5. GBFlair15SpryBluMatt.psd",
+      "sourceSha256": "ba30d7e91f39155fecb4b516db1df55dd83d842a16f2863714403a798203a65d",
+      "plateSha256": "392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e"
+    },
+    {
+      "websiteSku": "GBFlair15SpryCuMatt",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: overcap alpha gate failed: {'transparentFraction': 0.9425, 'semiTransparentPixels': 3007, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/30. GBFlair15SpryCuMatt.psd",
+      "sourceSha256": "04aacd28df263e59dfd9d1f4f2382f6db63873e5276260350c37b00c8a02205a",
+      "plateSha256": "36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75"
+    },
+    {
+      "websiteSku": "GBFlair15SprySlSh",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 17.4651, 'tailOver40': 0.074924}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/9. GBFlair15SprySlSh.psd",
+      "sourceSha256": "69360d1c97ce594586f06f90c1abc24481529816e4b3aa1f8dfa5180c8979a03",
+      "plateSha256": "e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e"
+    },
+    {
+      "websiteSku": "GBFlair15WhtSht",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 4.2659, 'tailOver40': 0.027778}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/2. GBFlair15WhtSht.psd",
+      "sourceSha256": "c9211e1bed373e48e08254512ca95db3dcc5289af2328bdfb78488e07323e69c",
+      "plateSha256": "6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea"
+    },
+    {
+      "websiteSku": "GBMtlCylGl",
+      "family": "Royal",
+      "familyId": "royal-14ml-clear-11mm",
+      "status": "held_with_reason",
+      "reason": "assembled source exposes no independent component layer",
+      "sourcePath": "18. Perfume Glass Bottles with Metal Decoration/GBMtlCylGl.psd",
+      "sourceSha256": "1a851fa33d3f5d4962e243ecbaa9a3e7e6e3c42f101cf4c81144a526c8f01e58",
+      "plateSha256": "9c778b130b212cf2e3fe2d818eea909506272028faf6d89a822450597cb0c263"
+    },
+    {
+      "websiteSku": "GBRoyal13BlkSht",
+      "family": "Royal",
+      "familyId": "royal-13ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 22.4809, 'tailOver40': 0.12949}",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/1. GBRoyal13BlkSht.psd",
+      "sourceSha256": "4d9cfb9c1fa2395d53229f2d177aae0f12211e284f5df888bcb1940c9a67539a",
+      "plateSha256": "4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollBlkDot",
+      "family": "Royal",
+      "familyId": "royal-13ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: roller alpha gate failed: {'transparentFraction': 0.975, 'semiTransparentPixels': 1386, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/26. GBRoyal13MtlRollBlkDot.psd",
+      "sourceSha256": "ebe69107d038a0d24b40e11042fbbbe06be64e2fda6715ceb2b86b678be235aa",
+      "plateSha256": "7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollSlSh",
+      "family": "Royal",
+      "familyId": "royal-13ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 2.8796, 'tailOver40': 0.013249}",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/20. GBRoyal13MtlRollSlSh.psd",
+      "sourceSha256": "25bfb96f4b4dbe9af9544edacb04db9e36bca5b7c42e396958dcb97ee6d70b0c",
+      "plateSha256": "85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354"
+    },
+    {
+      "websiteSku": "GBRoyal13SpryBlkSh",
+      "family": "Royal",
+      "familyId": "royal-13ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 22.5608, 'tailOver40': 0.130617}",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/4. GBRoyal13SpryBlkSh.psd",
+      "sourceSha256": "fc8ed67e62f1a131cb65d6fc2807cadcb00ac9e4c0cd5d4f7b668526014a459f",
+      "plateSha256": "d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d"
+    },
+    {
+      "websiteSku": "GBSqr15WhtSht",
+      "family": "Square",
+      "familyId": "square-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 4.8479, 'tailOver40': 0.028527}",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/2. GBSqr15WhtSht.psd",
+      "sourceSha256": "6b91e8254dd01a88456988521beadb9df48d45e7e4052166c42a93ccfc1a63bb",
+      "plateSha256": "f1c0d18e3a74c902d3a03d47dd1b98b391614b56a11f8f11587751db6791ecaa"
+    }
+  ]
+}

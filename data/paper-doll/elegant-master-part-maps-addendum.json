@@ -1,0 +1,285 @@
+{
+  "GBElgFrst15MtlRollBlkDot": {
+    "sourceSha256": "3f0422f9686bf9c9036bd607c7353195fff904952df56f34a47c65e367c0cbd1",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "cap": [
+        2
+      ]
+    }
+  },
+  "GBElgFrst15RollBlkDot": {
+    "sourceSha256": "20b365b49385925e63f7680cc1eedab2b19b9a5f039ee3548b37046e619d4482",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "cap": [
+        2
+      ]
+    }
+  },
+  "GBElgFrst15SpryCuMatt": {
+    "sourceSha256": "d7ee87d298ac87ce29709ce7b552bf27299d2cf0e680e3dbacd121fb9bdd3bbc",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2
+      ]
+    }
+  },
+  "GBElg15MtlRollBlkDot": {
+    "sourceSha256": "220abf36082e3950d74e88887f1c223487e659a6d12f085a463a6141a7eb0a56",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBElg15SpryCuMatt": {
+    "sourceSha256": "0831b5e71fd7385fca09f01662313acb9f63eba901c36ada9e16a64d3fcd669c",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBElgFrst100AnSpTslBlk": {
+    "sourceSha256": "16afc1c82d9bf04378a9e5a605294eb18fe1f2cd3b16dccb0a9af13159800842",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2
+      ]
+    }
+  },
+  "GBElgFrst100AnSpTslGl": {
+    "sourceSha256": "41b1029ebe823204d3f7bce6bdc587e71acc2080d0e7f92ff9fc9efb32469a61",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2
+      ]
+    }
+  },
+  "GBElgFrst100AnSpTslIvyGl": {
+    "sourceSha256": "94b8ea0c72edd688e169adec697dc8a58914ed6145f4689bad0a6c1e85152a1c",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2
+      ]
+    }
+  },
+  "GBElgFrst100AnSpTslIvySl": {
+    "sourceSha256": "bc13a64e570d337e2bf1fc72d6ad241f5332a0f5de70b5d9e498114c1be5ba14",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2
+      ]
+    }
+  },
+  "GBElgFrst100AnSpTslLvn": {
+    "sourceSha256": "6de5c028c9bb40fa252ed39f0ff5e6b842cb33f7f448e11eecb0f86098ea6d8d",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2
+      ]
+    }
+  },
+  "GBElgFrst100AnSpTslMtSl": {
+    "sourceSha256": "4f0c3301939056a8b9e07a399b84d4f03793b5a9959b4f63336216e7ca721e3d",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2
+      ]
+    }
+  },
+  "GBElgFrst100AnSpTslWht": {
+    "sourceSha256": "2a2753c0d901898d35c3891e0d6ee1aadf81639e5e14d91b2f84781eed702048",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2
+      ]
+    }
+  },
+  "GBElg100AnSpTslBlk": {
+    "sourceSha256": "069a00b8c1d1e2473d780b5448e4dae551c9f88f64ca63cc72d0b41b85490af8",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-02.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBElg100AnSpTslGl": {
+    "sourceSha256": "1443ff43b07b528598333a578d051edd079bf2591a02c84f440a81a439f0ef17",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-02.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBElg100AnSpTslIvyGl": {
+    "sourceSha256": "e5cb0a72dacab75aedda217aa8d5eefecd3302556aa418854e4b2ce1de6ac1b1",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-02.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBElg100AnSpTslIvySl": {
+    "sourceSha256": "ce2d42f9e2951d1bcc6852851cb983150943b0e86b06d6f2a6e37fbcd5eaa4ba",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-02.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBElg100AnSpTslLvn": {
+    "sourceSha256": "9d4b45aab7fa782f2df42f327bba3d8bbab87f6e9fa4a1b3d79a3147046a5297",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-03.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBElg100AnSpTslMtSl": {
+    "sourceSha256": "7c38f77c5cd54a115924162113c25d24978b9b87cce2cff95bd4465811a52b42",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-03.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBElg100AnSpTslPnk": {
+    "sourceSha256": "63cb80bcac35d265fe1d0698298719dc764513ab4f8989dc5f5898d2a0a688ee",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-03.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBElg100AnSpTslRed": {
+    "sourceSha256": "53b194d81808d434e66b035960064cbcdef63623ae74be45b32a1a85b44867f0",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-03.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBElg100AnSpTslWht": {
+    "sourceSha256": "79aba03f386b0221b52d9de18a2a4e74c5b720645d84e51ce3c3860a86d8d2c3",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/elegant-new-layers-03.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  }
+}
