@@ -1,0 +1,190 @@
+[
+  {
+    "width": 390,
+    "status": 200,
+    "overflow": false,
+    "panels": [
+      {
+        "alt": "Amber 1, 1.5, and 2 milliliter sample vials beside a cobalt 4 milliliter dram",
+        "loaded": true,
+        "width": 348,
+        "height": 232,
+        "ratio": 1.5,
+        "fit": "cover"
+      },
+      {
+        "alt": "Two antique perfume bottles with black and red bulb sprayers arranged on a sketched vanity",
+        "loaded": true,
+        "width": 348,
+        "height": 232,
+        "ratio": 1.5,
+        "fit": "cover"
+      },
+      {
+        "alt": "Amber and clear cream jars with silver and pink caps on a sketched stone vanity",
+        "loaded": true,
+        "width": 348,
+        "height": 232,
+        "ratio": 1.5,
+        "fit": "cover"
+      },
+      {
+        "alt": "Decorative cobalt, clear, and heart-shaped gift bottles with a traditional octagonal bottle on a sketched tray",
+        "loaded": true,
+        "width": 348,
+        "height": 232,
+        "ratio": 1.5,
+        "fit": "cover"
+      },
+      {
+        "alt": "An organza bottle bag, velvet pouch, gold filling funnel, and patterned window carton",
+        "loaded": true,
+        "width": 348,
+        "height": 232,
+        "ratio": 1.5,
+        "fit": "cover"
+      }
+    ]
+  },
+  {
+    "width": 768,
+    "status": 200,
+    "overflow": false,
+    "panels": [
+      {
+        "alt": "Amber 1, 1.5, and 2 milliliter sample vials beside a cobalt 4 milliliter dram",
+        "loaded": true,
+        "width": 717.984375,
+        "height": 478.65625,
+        "ratio": 1.5,
+        "fit": "cover"
+      },
+      {
+        "alt": "Two antique perfume bottles with black and red bulb sprayers arranged on a sketched vanity",
+        "loaded": true,
+        "width": 717.984375,
+        "height": 478.65625,
+        "ratio": 1.5,
+        "fit": "cover"
+      },
+      {
+        "alt": "Amber and clear cream jars with silver and pink caps on a sketched stone vanity",
+        "loaded": true,
+        "width": 717.984375,
+        "height": 478.65625,
+        "ratio": 1.5,
+        "fit": "cover"
+      },
+      {
+        "alt": "Decorative cobalt, clear, and heart-shaped gift bottles with a traditional octagonal bottle on a sketched tray",
+        "loaded": true,
+        "width": 717.984375,
+        "height": 478.65625,
+        "ratio": 1.5,
+        "fit": "cover"
+      },
+      {
+        "alt": "An organza bottle bag, velvet pouch, gold filling funnel, and patterned window carton",
+        "loaded": true,
+        "width": 717.984375,
+        "height": 478.65625,
+        "ratio": 1.5,
+        "fit": "cover"
+      }
+    ]
+  },
+  {
+    "width": 1024,
+    "status": 200,
+    "overflow": false,
+    "panels": [
+      {
+        "alt": "Amber 1, 1.5, and 2 milliliter sample vials beside a cobalt 4 milliliter dram",
+        "loaded": true,
+        "width": 555.765625,
+        "height": 370.515625,
+        "ratio": 1.499978914519462,
+        "fit": "cover"
+      },
+      {
+        "alt": "Two antique perfume bottles with black and red bulb sprayers arranged on a sketched vanity",
+        "loaded": true,
+        "width": 549.484375,
+        "height": 366.328125,
+        "ratio": 1.4999786734911496,
+        "fit": "cover"
+      },
+      {
+        "alt": "Amber and clear cream jars with silver and pink caps on a sketched stone vanity",
+        "loaded": true,
+        "width": 549.484375,
+        "height": 366.328125,
+        "ratio": 1.4999786734911496,
+        "fit": "cover"
+      },
+      {
+        "alt": "Decorative cobalt, clear, and heart-shaped gift bottles with a traditional octagonal bottle on a sketched tray",
+        "loaded": true,
+        "width": 549.484375,
+        "height": 366.328125,
+        "ratio": 1.4999786734911496,
+        "fit": "cover"
+      },
+      {
+        "alt": "An organza bottle bag, velvet pouch, gold filling funnel, and patterned window carton",
+        "loaded": true,
+        "width": 592.5,
+        "height": 395,
+        "ratio": 1.5,
+        "fit": "cover"
+      }
+    ]
+  },
+  {
+    "width": 1357,
+    "status": 200,
+    "overflow": false,
+    "panels": [
+      {
+        "alt": "Amber 1, 1.5, and 2 milliliter sample vials beside a cobalt 4 milliliter dram",
+        "loaded": true,
+        "width": 752.21875,
+        "height": 501.484375,
+        "ratio": 1.4999844212494158,
+        "fit": "cover"
+      },
+      {
+        "alt": "Two antique perfume bottles with black and red bulb sprayers arranged on a sketched vanity",
+        "loaded": true,
+        "width": 743.734375,
+        "height": 495.828125,
+        "ratio": 1.49998424353197,
+        "fit": "cover"
+      },
+      {
+        "alt": "Amber and clear cream jars with silver and pink caps on a sketched stone vanity",
+        "loaded": true,
+        "width": 743.734375,
+        "height": 495.828125,
+        "ratio": 1.49998424353197,
+        "fit": "cover"
+      },
+      {
+        "alt": "Decorative cobalt, clear, and heart-shaped gift bottles with a traditional octagonal bottle on a sketched tray",
+        "loaded": true,
+        "width": 743.734375,
+        "height": 495.828125,
+        "ratio": 1.49998424353197,
+        "fit": "cover"
+      },
+      {
+        "alt": "An organza bottle bag, velvet pouch, gold filling funnel, and patterned window carton",
+        "loaded": true,
+        "width": 688.5,
+        "height": 459,
+        "ratio": 1.5,
+        "fit": "cover"
+      }
+    ]
+  }
+]
