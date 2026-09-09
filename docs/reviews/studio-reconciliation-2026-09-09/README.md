@@ -32,6 +32,8 @@ This branch rebuilds the rendering delta from #69 onto main `0417a361`, after #1
 - TypeScript: passed with current main's locked dependencies.
 - Vitest: 1561 passed, 7 skipped.
 - Changed rendering TypeScript lint: zero errors, eight warnings.
-- Production Webpack build: pending at report creation.
+- Production Webpack build: passed using public CI configuration.
 
 Photographic plate and kit approvals, SKU records, Shopify/Convex data, and production releases are separate from this draft.
+
+Archived patch files intentionally preserve original whitespace and CRLF bytes; whitespace checks apply to active source files.
