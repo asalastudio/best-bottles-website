@@ -1,12 +1,13 @@
 {
-  "writtenAt": "2026-09-09T13:19:45.678Z",
+  "writtenAt": "2026-09-09T13:53:03.194Z",
   "registry": "src/lib/products/catalog-heroes.json",
   "note": "Restore each `from` to undo the Round premium repoint.",
   "rows": [
     {
       "websiteSku": "GBRnd78AnSpGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRnd78AnSpGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78AnSpGl.premium-aligned-v4.png",
+        "manifestSha256": "a0bb3dcbca1058237f5cca695d80237644c6d5dd38178da0311fdedb4d70e8f8"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78AnSpGl.premium-aligned-v4.png",
@@ -18,7 +19,8 @@
     {
       "websiteSku": "GBRnd78AnSpTslGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRnd78AnSpTslGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78AnSpTslGl.premium-aligned-v4.png",
+        "manifestSha256": "b38af17ecd8f1998c7a42027c6bb1862a29d19baa93152ff36a8f212eb636396"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78AnSpTslGl.premium-aligned-v4.png",
@@ -30,7 +32,8 @@
     {
       "websiteSku": "LBRnd78LtnCu",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/LBRnd78LtnCu.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/LBRnd78LtnCu.premium-aligned-v4.png",
+        "manifestSha256": "716428e6c943ed355823b0dbd53bcebf5372b8388930b60b46f43d3215115f4a"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/LBRnd78LtnCu.premium-aligned-v4.png",
@@ -42,7 +45,8 @@
     {
       "websiteSku": "GBRnd78SpryCu",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRnd78SpryCu.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78SpryCu.premium-aligned-v4.png",
+        "manifestSha256": "8487c5b3b22ac17572756bda69f5084c955d0a33041bfe5b8130b6feedf90610"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78SpryCu.premium-aligned-v4.png",
@@ -54,7 +58,8 @@
     {
       "websiteSku": "GBRnd78RdcrShnGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRnd78RdcrShnGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78RdcrShnGl.premium-aligned-v4.png",
+        "manifestSha256": "28288e0b0309e5e79823f36e8b4be0c8314e462b2c00dcba7c0029dbd4149876"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78RdcrShnGl.premium-aligned-v4.png",
@@ -66,7 +71,8 @@
     {
       "websiteSku": "GBRndFrst78AnSpGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78AnSpGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78AnSpGl.premium-aligned-v4.png",
+        "manifestSha256": "13397bf40a375f8df7a9da944a4e188f08888a1e8aaef1dfe64063518b0c77fc"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78AnSpGl.premium-aligned-v4.png",
@@ -78,7 +84,8 @@
     {
       "websiteSku": "GBRndFrst78AnSpTslGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78AnSpTslGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78AnSpTslGl.premium-aligned-v4.png",
+        "manifestSha256": "bd1158fe75e90123c8ee55588c0e15562f0218ef94df3cd486a2c7d40f7a35fa"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78AnSpTslGl.premium-aligned-v4.png",
@@ -90,7 +97,8 @@
     {
       "websiteSku": "LBRndFrst78LtnMtGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/LBRndFrst78LtnMtGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/LBRndFrst78LtnMtGl.premium-aligned-v4.png",
+        "manifestSha256": "726e8878278604af0e684eb240f7f660f919b11602772aca126ff13f27a2cc6b"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/LBRndFrst78LtnMtGl.premium-aligned-v4.png",
@@ -102,7 +110,8 @@
     {
       "websiteSku": "GBRndFrst78SpryMtGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78SpryMtGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78SpryMtGl.premium-aligned-v4.png",
+        "manifestSha256": "80a935b482abe08e1fb5b6905816368f0dd9e76b8717d69e1462764bf1910d2f"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78SpryMtGl.premium-aligned-v4.png",
@@ -114,7 +123,8 @@
     {
       "websiteSku": "GBRndFrst78RdcrShnGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78RdcrShnGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78RdcrShnGl.premium-aligned-v4.png",
+        "manifestSha256": "13fd816dbf6beddd60f3dd8625f7cb28fd5b96b3c237ab5dd4ae4c063fbdde5c"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78RdcrShnGl.premium-aligned-v4.png",
@@ -126,7 +136,8 @@
     {
       "websiteSku": "GBRnd128AnSpGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRnd128AnSpGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpGl.premium-aligned-v4.png",
+        "manifestSha256": "2dc36838c9a4aee47661f42ed9a1a7a45d52fccf6b31bc4b397274b2e10bbdf7"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpGl.premium-aligned-v4.png",
@@ -138,7 +149,8 @@
     {
       "websiteSku": "GBRnd128AnSpTslIvyGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRnd128AnSpTslIvyGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpTslIvyGl.premium-aligned-v4.png",
+        "manifestSha256": "f0b7526447eec65de5293ec0124b643f61cec475149e818d824c5f2b8e23f669"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpTslIvyGl.premium-aligned-v4.png",
@@ -150,7 +162,8 @@
     {
       "websiteSku": "GBRnd128DrpGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRnd128DrpGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128DrpGl.premium-aligned-v4.png",
+        "manifestSha256": "75d3dcf831af2c1e73d5652ca4ff096352fb6832c0ca6c5db6b7268eb3c881b1"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128DrpGl.premium-aligned-v4.png",
@@ -162,7 +175,8 @@
     {
       "websiteSku": "LBRnd128LtnMtGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/LBRnd128LtnMtGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/LBRnd128LtnMtGl.premium-aligned-v4.png",
+        "manifestSha256": "cd4b50ccbf6ba0f0cc103088091da5a6cd885d915fab611e345fe78e286d6538"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/LBRnd128LtnMtGl.premium-aligned-v4.png",
@@ -174,7 +188,8 @@
     {
       "websiteSku": "GBRnd128SpryMtGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRnd128SpryMtGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128SpryMtGl.premium-aligned-v4.png",
+        "manifestSha256": "7777d929b4f74d842c6e48935fc4675445e57c3f2a23d213c6d1338df69d45e6"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128SpryMtGl.premium-aligned-v4.png",
@@ -186,7 +201,8 @@
     {
       "websiteSku": "GBRnd128RdcrShnGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRnd128RdcrShnGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128RdcrShnGl.premium-aligned-v4.png",
+        "manifestSha256": "e83bb690f7a13be79263f328ea22f4a127f4df8ae1d3b2c4e523586a0c673e80"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128RdcrShnGl.premium-aligned-v4.png",
@@ -198,7 +214,8 @@
     {
       "websiteSku": "GBRndFrst128AnSpGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128AnSpGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128AnSpGl.premium-aligned-v4.png",
+        "manifestSha256": "6da18fd1b1fd5e20addd3849328b27037d98f99e59663bcd3d0f5687dfef554d"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128AnSpGl.premium-aligned-v4.png",
@@ -210,7 +227,8 @@
     {
       "websiteSku": "GBRndFrst128DrpGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128DrpGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128DrpGl.premium-aligned-v4.png",
+        "manifestSha256": "fe916282f3cb5101bac33fc4861d35292919c7f2ef77da671390bca7cb8945a1"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128DrpGl.premium-aligned-v4.png",
@@ -222,7 +240,8 @@
     {
       "websiteSku": "LBRndFrst128LtnMtGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/LBRndFrst128LtnMtGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/LBRndFrst128LtnMtGl.premium-aligned-v4.png",
+        "manifestSha256": "46aca6399410f07318ae226f2b75abab9640c7829f6af1f16d6e69c13ca813d9"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/LBRndFrst128LtnMtGl.premium-aligned-v4.png",
@@ -234,7 +253,8 @@
     {
       "websiteSku": "GBRndFrst128SpryMtGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128SpryMtGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128SpryMtGl.premium-aligned-v4.png",
+        "manifestSha256": "6b2267387e6327b13ca650e20b3aefc90a86e6d5ea187ceb4f257fa082a58e1c"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128SpryMtGl.premium-aligned-v4.png",
@@ -246,7 +266,8 @@
     {
       "websiteSku": "GBRndFrst128RdcrShnGl",
       "from": {
-        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128RdcrShnGl.premium-aligned-v2.png"
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128RdcrShnGl.premium-aligned-v4.png",
+        "manifestSha256": "3ff8604b4f8d7c7efe75a65aec5fb75b8dc97a366bef7c6a27d0c0129449a2e3"
       },
       "to": {
         "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128RdcrShnGl.premium-aligned-v4.png",
