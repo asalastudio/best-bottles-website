@@ -66,8 +66,8 @@ describe("focused PDP purchase panel", () => {
     it("canonically navigates to a deterministic real roller fallback when a finish is unavailable", () => {
         // The rule lives in the shared guided resolver so the mobile picker's
         // preview and the desktop commit land on the same variant.
-        expect(pdp).toContain("resolveGuidedVariant(variants, { applicator: nextApplicator, capOption: nextCapOption }, GUIDED_VARIANT_DEPS)");
-        expect(pdp).toContain("capFinish: (variant) => resolveVariantCapFinish(variant).swatchName");
+        expect(pdp).toContain("resolveGuidedVariant(variants, { applicator: nextApplicator, capOption: nextCapOption }, presentedVariantDeps)");
+        expect(pdp).toContain("capFinish: (variant) => resolvePresentedVariantOption(variant).swatchName");
         const resolver = read("src/lib/products/guided-variant-resolver.ts");
         expect(resolver).toContain("deps.capFinish(variant) === selection.capOption");
         expect(resolver).toContain("?? candidates[0] ?? null");

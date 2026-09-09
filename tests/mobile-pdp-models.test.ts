@@ -7,6 +7,7 @@ import {
     closureFinishLabels,
     confirmLabelFor,
 } from "@/lib/products/mobile-pdp-config-rows";
+import { focusedProductOptionLabel, focusedProductPresentation } from "@/lib/products/focused-product-presentation";
 import {
     mobilePdpToolbarPaddingTop,
     visualViewportOverlayTop,
@@ -225,6 +226,50 @@ describe("mobile PDP picker reducer", () => {
 });
 
 describe("mobile PDP configuration rows", () => {
+    it("uses gift-bag identity and does not expose bottle-only glass controls", () => {
+        const presentation = focusedProductPresentation("Packaging", "Gift Bag");
+        const { rows, facts } = buildMobileConfigRows({
+            closureBase: "none",
+            productKind: presentation.kind,
+            glass: { options: [{ id: "clear", label: "Clear" }], selectedId: "clear" },
+            capFinish: {
+                options: [{ id: "Red", label: "Red" }, { id: "Black", label: "Black" }],
+                selectedId: "Red",
+            },
+        });
+
+        expect(presentation.configureHeading).toBe("Choose your bag");
+        expect(rows.map((row) => row.label)).toEqual(["Bag Color"]);
+        expect(rows[0]?.title).toBe("Select Bag Color");
+        expect(facts).toEqual([]);
+        expect(focusedProductOptionLabel(presentation, { color: "Red", itemName: "Red organza bag. Size: 4 inches x 6 inches" })).toBe("Red · 4 × 6 in");
+        expect(focusedProductOptionLabel(presentation, { capColor: "Pink", itemName: "Pink organza bag. Size: 4 inches x 6 inches" })).toBe("Pink · 4 × 6 in");
+    });
+
+    it("presents funnel variants as materials and keeps bottle controls out", () => {
+        const presentation = focusedProductPresentation("Accessory", "Tool");
+        const { rows, facts } = buildMobileConfigRows({
+            closureBase: "none",
+            productKind: presentation.kind,
+            glass: { options: [{ id: "clear", label: "Clear" }], selectedId: "clear" },
+            capFinish: {
+                options: [
+                    { id: "Gold", label: "Gold Metal" },
+                    { id: "Silver", label: "Silver Metal" },
+                    { id: "Plastic", label: "Plastic" },
+                ],
+                selectedId: "Gold",
+            },
+        });
+
+        expect(presentation.configureHeading).toBe("Choose your funnel");
+        expect(rows.map((row) => row.label)).toEqual(["Funnel Material"]);
+        expect(rows[0]?.title).toBe("Select Funnel Material");
+        expect(facts).toEqual([]);
+        expect(focusedProductOptionLabel(presentation, { itemName: "Small Gold Metal Funnel." })).toBe("Brass");
+        expect(focusedProductOptionLabel(presentation, { websiteSku: "Plastic", itemName: "Small plastic funnel." })).toBe("Plastic");
+    });
+
     it("turns single-option properties into facts, keeps physical order, and picks layouts", () => {
         const { rows, facts } = buildMobileConfigRows({
             closureBase: "roller",

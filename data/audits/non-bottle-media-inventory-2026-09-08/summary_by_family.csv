@@ -1,0 +1,11 @@
+category,family,current_products,exact_plate_or_fallback,healthy_remote_only,needs_recovery_now,master_psd_available,no_exact_psd,legacy_reference_ready,identity_review_before_generation,source_recovery_required
+Accessory,Tool,3,0,2,1,0,3,3,0,0
+Component,Cap/Closure,20,14,6,0,20,0,0,0,0
+Component,Dropper,21,21,0,0,21,0,0,0,0
+Component,Lotion Pump,3,3,0,0,3,0,0,0,0
+Component,Roll-On Cap,39,39,0,0,39,0,0,0,0
+Component,Sprayer,45,39,6,0,44,1,1,0,0
+Component,Unclassified component,2,0,2,0,2,0,0,0,0
+Packaging,Gift Bag,21,0,21,0,0,21,20,1,0
+Packaging,Gift Box,14,0,14,0,0,14,14,0,0
+Packaging,Packaging Supply,12,0,11,1,0,12,11,0,1

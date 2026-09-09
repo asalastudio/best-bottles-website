@@ -1,0 +1,21 @@
+{
+  "generatedAt": "2026-09-08",
+  "currentCatalogSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/data/grace_products_final.v2.csv",
+  "liveMediaAudit": "/tmp/bestbottles-media-gap-audit-nonbottle-2026-09-08/audit.json",
+  "masterPsdRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+  "legacyListings": [
+    "https://www.bestbottles.com/all-bottles/accessories/velvet-bags-organza-gusseted-bags-gift-box-purchase.php",
+    "https://www.bestbottles.com/all-bottles/accessories/caps-plugs-sprayers.php"
+  ],
+  "counts": {
+    "products": 180,
+    "exact": 116,
+    "remote": 62,
+    "recovery": 2,
+    "psd": 129,
+    "no_psd": 51,
+    "legacy_ref": 49
+  },
+  "legacyMissingExactSkus": 10,
+  "legacyMissingReadyReferences": 4
+}

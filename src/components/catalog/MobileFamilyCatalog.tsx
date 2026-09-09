@@ -179,7 +179,7 @@ export default function MobileFamilyCatalog(p: Props) {
         </div>
       )}
       <details className={styles.about}>
-        <summary>About {p.family} bottles</summary>
+        <summary>About {p.family === "Atomizer" ? "Atomizers" : `${p.family} bottles`}</summary>
         <p>{p.story}</p>
         {/* Existing editorial photography is retained below the listings. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
