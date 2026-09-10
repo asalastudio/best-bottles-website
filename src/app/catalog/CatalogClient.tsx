@@ -16,7 +16,7 @@ import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
 import { getCatalogHero, getCatalogHeroProductHref, type CatalogHero } from "@/lib/products/catalog-heroes";
 import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
-import CatalogCardPurchase, { useCatalogTierPanels } from "@/components/catalog/CatalogCardPurchase";
+import CatalogCardPurchase from "@/components/catalog/CatalogCardPurchase";
 import { resolveCatalogCardPurchaseVariant } from "@/lib/products/catalog-card-purchase";
 import { catalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -275,8 +275,6 @@ function ProductGroupCard({
     primaryWebsiteSku,
     matchSearch = false,
     catalogHero,
-    tierPanelOpen = false,
-    onTierPanelToggle,
 }: {
     group: CatalogGroup;
     index: number;
@@ -290,8 +288,6 @@ function ProductGroupCard({
     primaryWebsiteSku?: string | null;
     matchSearch?: boolean;
     catalogHero?: CatalogHero | null;
-    tierPanelOpen?: boolean;
-    onTierPanelToggle?: (open: boolean) => void;
 }) {
     const selected = matchSearch ? variantPreviews?.[0] : null;
     const href = catalogHero
@@ -355,8 +351,7 @@ function ProductGroupCard({
                     category: group.category,
                     neckThreadSize: group.neckThreadSize,
                 }}
-                expanded={onTierPanelToggle ? tierPanelOpen : undefined}
-                onToggle={onTierPanelToggle}
+                imageUrl={catalogHero?.url ?? defaultImageUrl}
             />
         </motion.article>
     );
@@ -1557,7 +1552,6 @@ export default function CatalogClient({
     const visibleProducts = filtered;
     const visualApplicatorParam = filters.applicators.length === 1 ? filters.applicators[0] : null;
     const variantPreviewRows = activeResult.variantPreviewRows;
-    const tierPanels = useCatalogTierPanels();
     const variantSourceMap = useMemo(
         () => new Map(variantPreviewRows.map((row) => [row.groupId, row.variants])),
         [variantPreviewRows],
@@ -2322,8 +2316,6 @@ export default function CatalogClient({
                                             primaryGraceSku={primarySkuMetaMap.get(group._id)?.graceSku}
                                             primaryWebsiteSku={primarySkuMetaMap.get(group._id)?.websiteSku}
                                             variantSources={variantSourceMap.get(group._id)}
-                                            tierPanelOpen={tierPanels.isOpen(group._id)}
-                                            onTierPanelToggle={(open) => tierPanels.toggle(group._id, open)}
                                         />
                                     ))}
                                 </CatalogProductGrid>
