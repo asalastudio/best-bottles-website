@@ -45,8 +45,8 @@ describe("continuous catalog product grid", () => {
         const fallback = readFileSync(join(process.cwd(), "src/lib/catalogSearchFallback.ts"), "utf8");
         const convex = readFileSync(join(process.cwd(), "convex/products.ts"), "utf8");
 
-        for (const field of ["stockStatus", "caseQuantity", "webPrice1pc", "shopifyVariantId", "shopifySellable"]) {
-            expect(fallback).toContain(`${field}:`);
+        for (const field of ["stockStatus", "caseQuantity", "webPrice1pc", "shopifyVariantId", "shopifySellable", "webPrice10pc", "webPrice12pc", "priceTiers"]) {
+            expect(fallback).toMatch(new RegExp(`${field}\\??:`));
             expect(convex).toContain(`${field}: variant.${field} ?? null`);
         }
     });

@@ -16,6 +16,8 @@ import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
 import { getCatalogHero, getCatalogHeroProductHref, type CatalogHero } from "@/lib/products/catalog-heroes";
 import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
+import CatalogCardPurchase, { useCatalogTierPanels } from "@/components/catalog/CatalogCardPurchase";
+import { resolveCatalogCardPurchaseVariant } from "@/lib/products/catalog-card-purchase";
 import { catalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
@@ -267,20 +269,29 @@ function ProductGroupCard({
     index,
     applicatorParam,
     variantPreviews,
+    variantSources,
     thumbnailUrl,
+    primaryGraceSku,
+    primaryWebsiteSku,
     matchSearch = false,
     catalogHero,
+    tierPanelOpen = false,
+    onTierPanelToggle,
 }: {
     group: CatalogGroup;
     index: number;
     applicatorParam?: string | null;
     variantPreviews?: ProductCardVariantPreview[];
+    /** Raw search rows for the group — carry the price ladder and Shopify sellability the card sells from. */
+    variantSources?: ProductCardVariantPreviewSource[];
     displayName?: string;
     thumbnailUrl?: string | null;
     primaryGraceSku?: string | null;
     primaryWebsiteSku?: string | null;
     matchSearch?: boolean;
     catalogHero?: CatalogHero | null;
+    tierPanelOpen?: boolean;
+    onTierPanelToggle?: (open: boolean) => void;
 }) {
     const selected = matchSearch ? variantPreviews?.[0] : null;
     const href = catalogHero
@@ -297,6 +308,14 @@ function ProductGroupCard({
         group.neckThreadSize,
         catalogHero?.bottleColor ?? group.color,
     ].filter(Boolean).join(" · ");
+    // The card sells exactly the assembly it pictures (hero SKU, else the
+    // search-ranked or primary SKU) so quick add and the PDP link agree.
+    const picturedSku = catalogHero?.websiteSku ?? selected?.websiteSku ?? selected?.graceSku ?? null;
+    const primarySku = primaryWebsiteSku ?? primaryGraceSku ?? null;
+    const purchaseVariant = useMemo(
+        () => resolveCatalogCardPurchaseVariant(variantSources, { picturedSku, primarySku, productTitle: customerDisplayName }),
+        [variantSources, picturedSku, primarySku, customerDisplayName],
+    );
 
 
     return (
@@ -322,10 +341,23 @@ function ProductGroupCard({
             <Link href={href} className="flex flex-1 flex-col px-4 pb-5 pt-4 sm:px-5">
                 <h4 className="text-lg font-medium leading-snug text-obsidian">{customerDisplayName}</h4>
                 <p data-testid="catalog-card-specs" className="mt-2 text-xs leading-relaxed text-slate">{cardSpecs}</p>
-                <span className="mt-auto pt-5 text-lg font-semibold text-obsidian">
-                    {group.priceRangeMin != null ? `from ${formatPrice(group.priceRangeMin)}/ea` : "Request pricing"}
-                </span>
             </Link>
+            <CatalogCardPurchase
+                productId={group.slug}
+                title={customerDisplayName}
+                href={href}
+                variant={purchaseVariant}
+                groupStartingPrice={group.priceRangeMin}
+                context={{
+                    family: group.family,
+                    capacity: group.capacity,
+                    color: group.color,
+                    category: group.category,
+                    neckThreadSize: group.neckThreadSize,
+                }}
+                expanded={onTierPanelToggle ? tierPanelOpen : undefined}
+                onToggle={onTierPanelToggle}
+            />
         </motion.article>
     );
 }
@@ -1525,6 +1557,11 @@ export default function CatalogClient({
     const visibleProducts = filtered;
     const visualApplicatorParam = filters.applicators.length === 1 ? filters.applicators[0] : null;
     const variantPreviewRows = activeResult.variantPreviewRows;
+    const tierPanels = useCatalogTierPanels();
+    const variantSourceMap = useMemo(
+        () => new Map(variantPreviewRows.map((row) => [row.groupId, row.variants])),
+        [variantPreviewRows],
+    );
     const catalogHeroMap = useMemo(() => {
         const rowsByGroupId = new Map(variantPreviewRows.map((row) => [row.groupId, row.variants]));
         return new Map(visibleProducts.map((group) => [group._id, getCatalogHero(group.slug, rowsByGroupId.get(group._id) ?? [])]));
@@ -2284,6 +2321,9 @@ export default function CatalogClient({
                                             thumbnailUrl={catalogThumbnailMap.get(group._id)}
                                             primaryGraceSku={primarySkuMetaMap.get(group._id)?.graceSku}
                                             primaryWebsiteSku={primarySkuMetaMap.get(group._id)?.websiteSku}
+                                            variantSources={variantSourceMap.get(group._id)}
+                                            tierPanelOpen={tierPanels.isOpen(group._id)}
+                                            onTierPanelToggle={(open) => tierPanels.toggle(group._id, open)}
                                         />
                                     ))}
                                 </CatalogProductGrid>

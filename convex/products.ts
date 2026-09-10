@@ -1006,6 +1006,9 @@ export const searchCatalog = query({
                     webPrice1pc: variant.webPrice1pc ?? null,
                     shopifyVariantId: variant.shopifyVariantId ?? null,
                     shopifySellable: variant.shopifySellable ?? null,
+                    webPrice10pc: variant.webPrice10pc ?? null,
+                    webPrice12pc: variant.webPrice12pc ?? null,
+                    priceTiers: variant.priceTiers ?? null,
                 })),
             };
         }));
@@ -1151,6 +1154,9 @@ export const getCatalogGroupVariantPreviewData = query({
                 webPrice1pc: number | null;
                 shopifyVariantId: string | null;
                 shopifySellable: boolean | null;
+                webPrice10pc: number | null;
+                webPrice12pc: number | null;
+                priceTiers: Array<{ minQty: number; totalPrice: number; unitPrice: number }> | null;
             }>;
         }[] = [];
 
@@ -1188,6 +1194,9 @@ export const getCatalogGroupVariantPreviewData = query({
                             webPrice1pc: variant.webPrice1pc ?? null,
                             shopifyVariantId: variant.shopifyVariantId ?? null,
                             shopifySellable: variant.shopifySellable ?? null,
+                            webPrice10pc: variant.webPrice10pc ?? null,
+                            webPrice12pc: variant.webPrice12pc ?? null,
+                            priceTiers: variant.priceTiers ?? null,
                         })),
                     };
                 }),
