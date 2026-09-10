@@ -1,9 +1,10 @@
 /**
  * Family landing-page heroes (`/catalog/<family>`).
  *
- * Each image is a locked composite of real bottle cutouts from the PSD masters,
- * placed at ONE px/mm on a generated stone set and re-rendered as glass with the
- * silhouettes gated — geometry from the catalogue, beautification from the model.
+ * Each image is a locked composite of real assemblies (bottle + its closure, pump,
+ * sprayer or roller, cut from the PSD masters) placed at ONE px/mm on a generated
+ * stone set and re-rendered as glass with the silhouettes gated — geometry from the
+ * catalogue, beautification from the model. Every fitment is an in-stock SKU.
  * Sanity `productFamilyContent.familyHeroImage` still wins when an editor sets one;
  * this map is the code-owned fallback in front of the homepage mosaic.
  */
@@ -16,15 +17,15 @@ export type FamilyHeroImage = {
 export const FAMILY_HERO_IMAGES: Readonly<Record<string, FamilyHeroImage>> = {
     Circle: {
         src: "/assets/family-heroes/circle.webp",
-        alt: "Circle bottles in 15, 50 and 100 mL, clear and frosted glass, standing on travertine blocks",
+        alt: "Circle bottles on travertine: 100 mL with matte silver spray pump, 50 mL with matte gold spray pump, 50 mL with shiny black lotion pump, and 15 mL roll-on with matte gold cap",
     },
     Cylinder: {
         src: "/assets/family-heroes/cylinder.webp",
-        alt: "Cylinder bottles in 9, 25, 50 and 100 mL clear glass, standing on limestone blocks",
+        alt: "Cylinder bottles on limestone: 50 mL with matte gold spray pump, 25 mL with matte silver lotion pump, 9 mL fine mist sprayer, and 9 mL roll-on with black dot cap",
     },
     Elegant: {
         src: "/assets/family-heroes/elegant.webp",
-        alt: "Elegant bottles in 15, 60 and 100 mL, clear and frosted glass, standing on white travertine blocks",
+        alt: "Elegant bottles on white travertine: 100 mL with matte gold spray pump, 15 mL with matte black fine mist sprayer, 60 mL with shiny black lotion pump, and 15 mL roll-on with black dot cap",
     },
     "Boston Round": {
         src: "/assets/family-heroes/boston-round.webp",
