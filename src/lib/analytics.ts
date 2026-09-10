@@ -617,6 +617,53 @@ export const analytics = {
     adapter.track("paper_doll_configuration_resolved", properties);
   },
 
+  // ── Catalog grid quick add ───────────────────────────────────────────────
+  // snake_case names are the PRD contract for the wholesale tier-pricing cards
+  // (docs: collapsible tier pricing on product cards). Every event carries the
+  // product group slug, the assembly SKU, the quantity, and the active tier.
+
+  catalogTierPricingToggled(properties: {
+    open: boolean;
+    productId: string;
+    sku: string | null;
+    quantity: number;
+    tier: string | null;
+  }) {
+    const { open, ...rest } = properties;
+    adapter.track(open ? "tier_pricing_opened" : "tier_pricing_closed", rest);
+  },
+
+  catalogTierSelected(properties: {
+    productId: string;
+    sku: string | null;
+    quantity: number;
+    tier: string | null;
+  }) {
+    adapter.track("tier_selected", properties);
+  },
+
+  catalogQuantityChanged(properties: {
+    productId: string;
+    sku: string | null;
+    quantity: number;
+    tier: string | null;
+    source: "stepper" | "input";
+  }) {
+    adapter.track("quantity_changed", properties);
+  },
+
+  catalogQuickAdd(properties: {
+    stage: "clicked" | "success" | "error";
+    productId: string;
+    sku: string | null;
+    quantity: number;
+    tier: string | null;
+    error?: string;
+  }) {
+    const { stage, ...rest } = properties;
+    adapter.track(`quick_add_${stage}`, rest);
+  },
+
   // ── Cart & Checkout ──────────────────────────────────────────────────────
 
   cartItemAdded(properties: {

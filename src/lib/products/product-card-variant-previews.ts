@@ -35,6 +35,15 @@ export type ProductCardVariantPreviewSource = {
     capStyle?: string | null;
     capHeight?: string | null;
     ballMaterial?: string | null;
+    // Purchase fields carried by the catalog search rows (see convex/products.ts
+    // searchCatalog). Optional so preview-only callers stay unchanged.
+    stockStatus?: string | null;
+    caseQuantity?: number | null;
+    webPrice1pc?: number | null;
+    webPrice10pc?: number | null;
+    webPrice12pc?: number | null;
+    priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
+    shopifySellable?: boolean | null;
 };
 
 export function getProductCardPreviewAccessibleLabel(

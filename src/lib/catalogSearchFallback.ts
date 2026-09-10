@@ -69,6 +69,10 @@ export interface CatalogSearchVariantPreviewRow {
         webPrice1pc: number | null;
         shopifyVariantId: string | null;
         shopifySellable: boolean | null;
+        webPrice10pc?: number | null;
+        webPrice12pc?: number | null;
+        /** Published quantity-break ladder (site truth); drives the grid card tier table. */
+        priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
     }>;
 }
 
