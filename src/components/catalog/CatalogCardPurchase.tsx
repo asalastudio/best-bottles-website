@@ -285,36 +285,6 @@ export default function CatalogCardPurchase({
                     )}
                 </div>
             </div>
-            {purchasable ? (
-                <button
-                    type="button"
-                    data-testid="catalog-card-add"
-                    onClick={handleAdd}
-                    disabled={qty == null}
-                    className={PRIMARY_BUTTON}
-                    aria-label={`Add ${qty ?? ""} ${title} to cart`.replace(/\s+/g, " ")}
-                >
-                    {added != null ? <><Check className="h-3.5 w-3.5" aria-hidden />Added</> : "Add to cart"}
-                </button>
-            ) : (
-                <Link href={quoteHref} data-testid="catalog-card-quote" className={SECONDARY_BUTTON}>
-                    Request quote
-                </Link>
-            )}
-
-            {added != null && (
-                <p role="status" className="mt-1.5 flex items-center gap-2 text-[11px] text-obsidian" data-testid="catalog-card-added">
-                    <span>Added {added.toLocaleString("en-US")} to your cart.</span>
-                    <button
-                        type="button"
-                        onClick={() => window.dispatchEvent(new Event("open-cart-drawer"))}
-                        className={`min-h-11 font-semibold underline underline-offset-2 sm:min-h-0 ${FOCUS_RING}`}
-                    >
-                        View cart
-                    </button>
-                </p>
-            )}
-
             {tiers.length > 0 && (
                 <>
                     <button
@@ -323,7 +293,7 @@ export default function CatalogCardPurchase({
                         aria-expanded={isOpen}
                         aria-controls={panelId}
                         onClick={() => setOpen(!isOpen)}
-                        className={`mt-2 flex min-h-11 w-full items-center justify-between gap-2 text-xs font-semibold text-obsidian transition-colors motion-reduce:transition-none hover:text-muted-gold sm:min-h-9 ${FOCUS_RING}`}
+                        className={`mt-1 flex min-h-11 w-full items-center justify-between gap-2 text-xs font-semibold text-obsidian transition-colors motion-reduce:transition-none hover:text-muted-gold sm:min-h-9 ${FOCUS_RING}`}
                     >
                         <span>{isOpen ? "Hide tier pricing" : "View tier pricing"}</span>
                         <CaretDown
@@ -396,6 +366,36 @@ export default function CatalogCardPurchase({
                     </div>
                 </>
             )}
+            {purchasable ? (
+                <button
+                    type="button"
+                    data-testid="catalog-card-add"
+                    onClick={handleAdd}
+                    disabled={qty == null}
+                    className={PRIMARY_BUTTON}
+                    aria-label={`Add ${qty ?? ""} ${title} to cart`.replace(/\s+/g, " ")}
+                >
+                    {added != null ? <><Check className="h-3.5 w-3.5" aria-hidden />Added</> : "Add to cart"}
+                </button>
+            ) : (
+                <Link href={quoteHref} data-testid="catalog-card-quote" className={SECONDARY_BUTTON}>
+                    Request quote
+                </Link>
+            )}
+
+            {added != null && (
+                <p role="status" className="mt-1.5 flex items-center gap-2 text-[11px] text-obsidian" data-testid="catalog-card-added">
+                    <span>Added {added.toLocaleString("en-US")} to your cart.</span>
+                    <button
+                        type="button"
+                        onClick={() => window.dispatchEvent(new Event("open-cart-drawer"))}
+                        className={`min-h-11 font-semibold underline underline-offset-2 sm:min-h-0 ${FOCUS_RING}`}
+                    >
+                        View cart
+                    </button>
+                </p>
+            )}
+
         </div>
     );
 }

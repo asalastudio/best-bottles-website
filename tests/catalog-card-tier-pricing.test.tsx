@@ -64,6 +64,10 @@ describe("collapsible tier pricing on the catalog card", () => {
         expect(toggle.getAttribute("aria-expanded")).toBe("false");
         expect(toggle.getAttribute("aria-controls")).toBe(panel.id);
         expect(toggle.textContent).toContain("View tier pricing");
+        // Reads top-down: quantity → tier pricing → Add to cart.
+        const after = (a: Element, b: Element) => Boolean(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING);
+        expect(after($("catalog-card-qty"), toggle)).toBe(true);
+        expect(after(panel, $("catalog-card-add"))).toBe(true);
         expect(panel.hasAttribute("inert")).toBe(true);
         expect(panel.getAttribute("aria-hidden")).toBe("true");
 
