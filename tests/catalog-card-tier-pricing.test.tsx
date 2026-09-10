@@ -123,7 +123,8 @@ describe("tier pricing dialog on the catalog card", () => {
         expect(dialogQty.value).toBe("144");
         expect($$("catalog-card-tier-row").map((row) => row.dataset.tierActive)).toEqual(["false", "false", "false", "true", "false"]);
         for (const live of $$("catalog-card-active-tier")) {
-            expect(live.textContent).toBe("$0.56/ea · 144–499Save 39% · Subtotal $80.64");
+            expect(live.textContent).toBe("$0.56/ea · 144–499Save 39% · Quote subtotal $80.64");
+            expect(live.querySelector('[data-testid="catalog-card-subtotal"]')?.getAttribute("data-quote")).toBe("true");
             expect(live.getAttribute("aria-live")).toBe("polite");
         }
         expect(track.mock.calls.at(-1)).toEqual(["tier_selected", { ...base, quantity: 144, tier: "144–499" }]);
@@ -131,7 +132,7 @@ describe("tier pricing dialog on the catalog card", () => {
         type(dialogQty, "600");
         expect(cardQty.value).toBe("600");
         expect($$("catalog-card-tier-row").map((row) => row.dataset.tierActive)).toEqual(["false", "false", "false", "false", "true"]);
-        expect($("catalog-card-active-tier").textContent).toBe("$0.53/ea · 500+Save 42% · Subtotal $318.00");
+        expect($("catalog-card-active-tier").textContent).toBe("$0.53/ea · 500+Save 42% · Quote subtotal $318.00");
         act(() => { dialogQty.dispatchEvent(new FocusEvent("focusout", { bubbles: true })); });
         expect(track.mock.calls.at(-1)).toEqual(["quantity_changed", { ...base, quantity: 600, tier: "500+", source: "input" }]);
 
@@ -151,6 +152,7 @@ describe("tier pricing dialog on the catalog card", () => {
         click(minus);
         expect(qty.value).toBe("2");
         expect($("catalog-card-active-tier").textContent).toBe("$0.92/ea · 1–11Subtotal $1.84");
+        expect($("catalog-card-subtotal").getAttribute("data-quote")).toBeNull();
 
         type(qty, "0");
         expect($("catalog-card-qty-error").textContent).toBe("Enter a quantity of 1 or more.");
@@ -192,6 +194,23 @@ describe("tier pricing dialog on the catalog card", () => {
         expect($("catalog-card-tier-toggle").getAttribute("aria-expanded")).toBe("false");
         expect($("catalog-card-added").textContent).toContain("Added 48 to your cart.");
         expect(events()).toEqual(["tier_pricing_opened", "tier_selected", "quick_add_clicked", "Cart Item Added", "quick_add_success", "tier_pricing_closed"]);
+    });
+
+    it("still adds to the cart and reports success when telemetry throws", () => {
+        card();
+        type($("catalog-card-qty") as HTMLInputElement, "12");
+        track.mockImplementation((event: string) => {
+            if (event === "quick_add_clicked" || event === "Cart Item Added") throw new Error("mixpanel down");
+        });
+        try {
+            click($("catalog-card-add"));
+        } finally {
+            track.mockReset();
+        }
+        expect(addItems).toHaveBeenCalledTimes(1);
+        expect(addItems.mock.calls[0][0][0]).toMatchObject({ graceSku: "CYL5-ROLL-BLK", quantity: 12 });
+        expect($("catalog-card-added").textContent).toContain("Added 12 to your cart.");
+        expect($("catalog-card-add").textContent).toContain("Added");
     });
 
     it("keeps the card usable without a ladder and hides the trigger", () => {

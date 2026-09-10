@@ -39,6 +39,15 @@ import { formatVolumeQtyRange, type DisplayVolumeTier } from "@/lib/volumePricin
 
 const usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2 });
 
+/** Telemetry is best-effort: a tracking failure must never block or misreport a cart update. */
+function track(send: () => void) {
+    try {
+        send();
+    } catch {
+        // Ignore — analytics outages are invisible to the customer.
+    }
+}
+
 const FOCUS_RING = "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold";
 const STEP_BUTTON = `flex h-11 w-11 shrink-0 items-center justify-center text-slate transition-colors motion-reduce:transition-none hover:bg-travertine hover:text-obsidian disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:bg-transparent sm:h-9 sm:w-9 ${FOCUS_RING} focus-visible:outline-offset-[-2px]`;
 const PRIMARY_BUTTON = `inline-flex min-h-11 w-full items-center justify-center gap-1.5 whitespace-nowrap rounded-sm bg-obsidian px-4 text-xs font-bold uppercase tracking-wider text-white transition-colors motion-reduce:transition-none hover:bg-muted-gold disabled:cursor-not-allowed disabled:bg-champagne/70 disabled:text-slate sm:min-h-10 ${FOCUS_RING}`;
@@ -102,7 +111,7 @@ export default function CatalogCardPurchase({
         if (!dialog || dialog.open) return;
         dialog.showModal();
         setTiersOpen(true);
-        analytics.catalogTierPricingToggled({ open: true, ...eventBase });
+        track(() => analytics.catalogTierPricingToggled({ open: true, ...eventBase }));
         tierRefs.current[Math.max(activeIndex, 0)]?.focus({ preventScroll: true });
     };
 
@@ -114,7 +123,7 @@ export default function CatalogCardPurchase({
     // Fires for the close button, Esc, backdrop clicks, and a successful add.
     const handleDialogClose = () => {
         setTiersOpen(false);
-        analytics.catalogTierPricingToggled({ open: false, ...eventBase });
+        track(() => analytics.catalogTierPricingToggled({ open: false, ...eventBase }));
         triggerRef.current?.focus({ preventScroll: true });
     };
 
@@ -128,8 +137,8 @@ export default function CatalogCardPurchase({
         if (clamped === committedQty.current) return;
         committedQty.current = clamped;
         const tier = catalogTierLabel(activeCatalogTier(tiers, clamped));
-        if (source === "tier") analytics.catalogTierSelected({ productId, sku, quantity: clamped, tier });
-        else analytics.catalogQuantityChanged({ productId, sku, quantity: clamped, tier, source });
+        if (source === "tier") track(() => analytics.catalogTierSelected({ productId, sku, quantity: clamped, tier }));
+        else track(() => analytics.catalogQuantityChanged({ productId, sku, quantity: clamped, tier, source }));
     };
 
     const selectTier = (tier: DisplayVolumeTier) => {
@@ -150,30 +159,33 @@ export default function CatalogCardPurchase({
     };
 
     const handleAdd = () => {
-        analytics.catalogQuickAdd({ stage: "clicked", ...eventBase });
+        track(() => analytics.catalogQuickAdd({ stage: "clicked", ...eventBase }));
         if (!isCatalogVariantPurchasable(variant) || qty == null) {
-            analytics.catalogQuickAdd({ stage: "error", ...eventBase, error: error ?? "not-purchasable" });
+            track(() => analytics.catalogQuickAdd({ stage: "error", ...eventBase, error: error ?? "not-purchasable" }));
             return;
         }
+        // Only the cart mutation is inside the try: telemetry after it must not
+        // turn a completed add into a reported error.
         try {
             addItems([buildCatalogCartItem(variant, qty, { ...context, title, productGroupSlug: productId })]);
-            analytics.cartItemAdded({
-                sku: variant.graceSku,
-                name: title,
-                quantity: qty,
-                unitPrice: variant.webPrice1pc,
-                family: context.family ?? undefined,
-                capacity: context.capacity ?? undefined,
-                source: "catalog",
-            });
-            analytics.catalogQuickAdd({ stage: "success", ...eventBase });
-            setAdded(qty);
-            if (addedTimer.current != null) window.clearTimeout(addedTimer.current);
-            addedTimer.current = window.setTimeout(() => setAdded(null), 4000);
-            closeTiers();
         } catch (caught) {
-            analytics.catalogQuickAdd({ stage: "error", ...eventBase, error: caught instanceof Error ? caught.message : "unknown" });
+            track(() => analytics.catalogQuickAdd({ stage: "error", ...eventBase, error: caught instanceof Error ? caught.message : "unknown" }));
+            return;
         }
+        track(() => analytics.cartItemAdded({
+            sku: variant.graceSku,
+            name: title,
+            quantity: qty,
+            unitPrice: variant.webPrice1pc,
+            family: context.family ?? undefined,
+            capacity: context.capacity ?? undefined,
+            source: "catalog",
+        }));
+        track(() => analytics.catalogQuickAdd({ stage: "success", ...eventBase }));
+        setAdded(qty);
+        if (addedTimer.current != null) window.clearTimeout(addedTimer.current);
+        addedTimer.current = window.setTimeout(() => setAdded(null), 4000);
+        closeTiers();
     };
 
     if (!variant || variant.webPrice1pc == null || variant.webPrice1pc <= 0) {
@@ -267,8 +279,9 @@ export default function CatalogCardPurchase({
                         {activeTier && activeTier.savePct > 0 && (
                             <><span className="font-semibold text-emerald-800">Save {activeTier.savePct}%</span> · </>
                         )}
-                        <span className="whitespace-nowrap" data-testid="catalog-card-subtotal">
-                            Subtotal <span className="font-semibold text-obsidian">{usd.format((qty ?? 0) * activeUnitPrice)}</span>
+                        <span className="whitespace-nowrap" data-testid="catalog-card-subtotal" data-quote={activeTier && !activeTier.appliesAtCheckout ? "true" : undefined}>
+                            {activeTier && !activeTier.appliesAtCheckout ? "Quote subtotal" : "Subtotal"}{" "}
+                            <span className="font-semibold text-obsidian">{usd.format((qty ?? 0) * activeUnitPrice)}</span>
                         </span>
                     </span>
                 </p>
