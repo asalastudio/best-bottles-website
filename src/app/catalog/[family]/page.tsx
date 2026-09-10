@@ -8,6 +8,7 @@ import { familyCatalogSurface } from "@/lib/catalogSurface";
 import { HOME_FAMILY_MOSAIC } from "@/lib/homepageMerchandising";
 import { familyFromSlug, familyToSlug } from "@/lib/products/focused-shopping";
 import { getProductFamilyPageContent } from "@/sanity/lib/queries";
+import { getFamilyHeroImage } from "@/lib/products/family-hero-images";
 import { SITE_URL } from "@/lib/seo";
 import FamilyPageClient from "./FamilyPageClient";
 
@@ -27,7 +28,9 @@ function toURLSearchParams(input: Record<string, string | string[] | undefined>)
 }
 
 function familyHeroFallback(family: string): string {
-    return HOME_FAMILY_MOSAIC.find((card) => card.family === family)?.image ?? "/assets/Hero-BB.png";
+    return getFamilyHeroImage(family)?.src
+        ?? HOME_FAMILY_MOSAIC.find((card) => card.family === family)?.image
+        ?? "/assets/Hero-BB.png";
 }
 
 export async function generateMetadata({

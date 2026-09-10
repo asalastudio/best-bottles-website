@@ -31,6 +31,7 @@ import { buildGuidedFinderFamilies, conflictingRefinement } from "@/lib/products
 import { buildCylinderApplicationOptions } from "@/lib/products/cylinder-family-page";
 import { familyFinderPath, familyToSlug, parseBrowseContext } from "@/lib/products/focused-shopping";
 import type { ProductFamilyPageContent } from "@/sanity/lib/queries";
+import { getFamilyHeroImage } from "@/lib/products/family-hero-images";
 
 type Props = {
     family: string;
@@ -385,7 +386,7 @@ export default function FamilyPageClient({
     }, []);
 
     const heroImageUrl = editorial?.familyHeroImageUrl || heroFallback;
-    const heroAlt = editorial?.familyHeroAlt || `${family} bottle and compatible closure`;
+    const heroAlt = editorial?.familyHeroAlt || (editorial?.familyHeroImageUrl ? null : getFamilyHeroImage(family)?.alt) || `${family} bottle and compatible closure`;
     const story = editorial?.familyStory || defaultFamilyStory(family);
 
     return (
