@@ -31,7 +31,8 @@ import { buildGuidedFinderFamilies, conflictingRefinement } from "@/lib/products
 import { buildCylinderApplicationOptions } from "@/lib/products/cylinder-family-page";
 import { familyFinderPath, familyToSlug, parseBrowseContext } from "@/lib/products/focused-shopping";
 import type { ProductFamilyPageContent } from "@/sanity/lib/queries";
-import { getFamilyHeroImage } from "@/lib/products/family-hero-images";
+import { getFamilyHeroImage, getFamilyHeroSlides } from "@/lib/products/family-hero-images";
+import FamilyHeroSlider from "@/components/catalog/FamilyHeroSlider";
 
 type Props = {
     family: string;
@@ -386,6 +387,8 @@ export default function FamilyPageClient({
     }, []);
 
     const heroImageUrl = editorial?.familyHeroImageUrl || heroFallback;
+    // The carousel only runs on the code-owned slides; a Sanity hero is a single editorial image.
+    const heroSlides = editorial?.familyHeroImageUrl ? [] : getFamilyHeroSlides(family);
     const heroAlt = editorial?.familyHeroAlt || (editorial?.familyHeroImageUrl ? null : getFamilyHeroImage(family)?.alt) || `${family} bottle and compatible closure`;
     const story = editorial?.familyStory || defaultFamilyStory(family);
 
@@ -427,15 +430,19 @@ export default function FamilyPageClient({
                             </div>
                         </div>
                         <div className="relative min-h-[340px] overflow-hidden bg-travertine sm:min-h-[460px]">
-                            <Image
-                                src={heroImageUrl}
-                                alt={heroAlt}
-                                fill
-                                priority
-                                unoptimized={heroImageUrl.startsWith("http")}
-                                className="object-cover"
-                                sizes="(max-width: 1024px) 100vw, 55vw"
-                            />
+                            {heroSlides.length > 1 ? (
+                                <FamilyHeroSlider family={family} slides={heroSlides} />
+                            ) : (
+                                <Image
+                                    src={heroImageUrl}
+                                    alt={heroAlt}
+                                    fill
+                                    priority
+                                    unoptimized={heroImageUrl.startsWith("http")}
+                                    className="object-cover"
+                                    sizes="(max-width: 1024px) 100vw, 55vw"
+                                />
+                            )}
                         </div>
                     </div>
                 </section>

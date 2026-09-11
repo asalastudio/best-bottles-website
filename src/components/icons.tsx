@@ -7,6 +7,7 @@
 export {
     ArrowRight,
     ArrowLeft,
+    CaretLeft,
     CaretRight,
     CaretDown,
     CaretUp,
