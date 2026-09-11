@@ -18,7 +18,7 @@ export type HomepageFamilyCard = {
  * the headline. Overrides the CMS slide image; a CMS video slide still plays.
  */
 export const HOME_HERO_ART = {
-    src: "/assets/home-hero/diva-grace-vintage-bulbs-21x9.webp",
+    src: "/assets/home-hero/diva-grace-vintage-bulbs-21x9-v2.webp",
     alt: "Frosted Diva bottle with a red vintage bulb atomizer and a Grace bottle with a black tassel bulb atomizer on silver travertine blocks",
 } as const;
 
