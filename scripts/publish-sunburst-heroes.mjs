@@ -5,6 +5,8 @@ import { fileURLToPath } from "node:url";
 
 // Index the Sunburst 2.5 heroes Jordan approved (visual sign-off, locked by
 // image hash) into the catalog registry and the approved-release manifest.
+// One release per family pass: `node scripts/publish-sunburst-heroes.mjs release-2`
+// reads docs/reviews/sunburst-heroes-release-2/approved-lock.json.
 // Same shape as publish-round-premium-to-registry.mjs: both files move
 // together because catalog-approved-heroes.test.ts hashes the bytes behind
 // every registry url against the manifest. It is an indexing step, not a
@@ -21,10 +23,16 @@ import { fileURLToPath } from "node:url";
 // nudge must not be applied on top of them.
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const lockPath = path.join(root, "docs/reviews/sunburst-heroes-release-1/approved-lock.json");
+const release = process.argv[2];
+if (!/^release-\d+$/.test(release ?? "")) {
+  console.error("Usage: node scripts/publish-sunburst-heroes.mjs release-<n>");
+  process.exit(1);
+}
+const releaseDir = path.join(root, "docs/reviews/sunburst-heroes-" + release);
+const lockPath = path.join(releaseDir, "approved-lock.json");
 const registryPath = path.join(root, "src/lib/products/catalog-heroes.json");
 const manifestPath = path.join(root, "docs/reviews/catalog-complete-hero-release-2026-09-07.json");
-const rollbackPath = path.join(root, "docs/reviews/sunburst-heroes-release-1/registry-rollback-2026-09-10.json");
+const rollbackPath = path.join(releaseDir, "registry-rollback.json");
 const targetDir = path.join(root, "public/images/catalog/bone-review");
 const BONE = [245, 243, 239];
 

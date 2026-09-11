@@ -29,7 +29,7 @@ size, corners, hero resolution) — green.
 the row (group slug, variant) is a follow-up, not a repoint.
 
 **Rollback:** `registry-rollback-2026-09-10.json` holds every `from` (url, manifest sha256, framing);
-restoring those undoes this release. Reproduce with `node scripts/publish-sunburst-release-1.mjs`.
+restoring those undoes this release. Reproduce with `node scripts/publish-sunburst-heroes.mjs release-1`.
 
 This is an indexing step. It changes what the storefront renders on its next build; it touches no
 Shopify, Convex or hosted media.
