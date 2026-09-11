@@ -3674,7 +3674,7 @@
     "family": "Apothecary",
     "capacityMl": 15,
     "bottleColor": "Cobalt Blue",
-    "url": "/images/catalog/bone-review/GB15ApthBlue.39d30e5fc224.png",
+    "url": "/images/catalog/bone-review/GB15ApthBlue.db2ca82a7ccd.png",
     "alt": "15 ml Cobalt Blue Apothecary Applicator Bottle",
     "width": 1560,
     "height": 1716,
@@ -3682,7 +3682,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -3769,7 +3769,7 @@
     "family": "Atomizer",
     "capacityMl": 5,
     "bottleColor": "Black",
-    "url": "/images/catalog/bone-review/GBAtom5Blk.b1e8cffeadfc.png",
+    "url": "/images/catalog/bone-review/GBAtom5Blk.3b600a28ceb3.png",
     "alt": "5 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -3777,7 +3777,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -3788,7 +3788,7 @@
     "family": "Atomizer",
     "capacityMl": 5,
     "bottleColor": "Black",
-    "url": "/images/catalog/bone-review/GBAtom5BlkDot.a731ff4128f2.png",
+    "url": "/images/catalog/bone-review/GBAtom5BlkDot.3fd30f533eee.png",
     "alt": "5 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -3796,7 +3796,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -3807,7 +3807,7 @@
     "family": "Atomizer",
     "capacityMl": 5,
     "bottleColor": "Cobalt Blue",
-    "url": "/images/catalog/bone-review/GBAtom5Blu.593db879da91.png",
+    "url": "/images/catalog/bone-review/GBAtom5Blu.3f87150071d8.png",
     "alt": "5 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -3815,7 +3815,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -3845,7 +3845,7 @@
     "family": "Atomizer",
     "capacityMl": 5,
     "bottleColor": "Pink",
-    "url": "/images/catalog/bone-review/GBAtom5PnkDot.d1fdb947ff78.png",
+    "url": "/images/catalog/bone-review/GBAtom5PnkDot.cc74330ba77a.png",
     "alt": "5 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -3853,7 +3853,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -3997,7 +3997,7 @@
     "family": "Atomizer",
     "capacityMl": 10,
     "bottleColor": "Black",
-    "url": "/images/catalog/bone-review/GBAtom10Blk.3439cdff1275.png",
+    "url": "/images/catalog/bone-review/GBAtom10Blk.5c2e4a045eb1.png",
     "alt": "10 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -4005,7 +4005,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4016,7 +4016,7 @@
     "family": "Atomizer",
     "capacityMl": 10,
     "bottleColor": "Black",
-    "url": "/images/catalog/bone-review/GBAtom10BlkDot.8b169fb16353.png",
+    "url": "/images/catalog/bone-review/GBAtom10BlkDot.3f96013aad1a.png",
     "alt": "10 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -4024,7 +4024,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4035,7 +4035,7 @@
     "family": "Atomizer",
     "capacityMl": 10,
     "bottleColor": "Cobalt Blue",
-    "url": "/images/catalog/bone-review/GBAtom10Blu.abb6f9d074b6.png",
+    "url": "/images/catalog/bone-review/GBAtom10Blu.4997592e9827.png",
     "alt": "10 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -4043,7 +4043,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4054,7 +4054,7 @@
     "family": "Atomizer",
     "capacityMl": 10,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GBAtom10Gl.7d69eba8b90b.png",
+    "url": "/images/catalog/bone-review/GBAtom10Gl.e6059c9d0c99.png",
     "alt": "10 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -4062,7 +4062,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4073,7 +4073,7 @@
     "family": "Atomizer",
     "capacityMl": 10,
     "bottleColor": "Green",
-    "url": "/images/catalog/bone-review/GBAtom10Gr.f3f95fa0bd39.png",
+    "url": "/images/catalog/bone-review/GBAtom10Gr.d191428a5513.png",
     "alt": "10 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -4081,7 +4081,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4092,7 +4092,7 @@
     "family": "Atomizer",
     "capacityMl": 10,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GBAtom10Lv.25c192e991fe.png",
+    "url": "/images/catalog/bone-review/GBAtom10Lv.ed24857780e7.png",
     "alt": "10 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -4100,7 +4100,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4111,7 +4111,7 @@
     "family": "Atomizer",
     "capacityMl": 10,
     "bottleColor": "Pink",
-    "url": "/images/catalog/bone-review/GBAtom10Pnk.9be76cb80d94.png",
+    "url": "/images/catalog/bone-review/GBAtom10Pnk.bce25761537f.png",
     "alt": "10 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -4119,7 +4119,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4130,7 +4130,7 @@
     "family": "Atomizer",
     "capacityMl": 10,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GBAtom10Red.a7fdb936b0dd.png",
+    "url": "/images/catalog/bone-review/GBAtom10Red.ce3108e4e3a8.png",
     "alt": "10 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -4138,7 +4138,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4187,7 +4187,7 @@
     "family": "Atomizer",
     "capacityMl": 10,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GBAtom10SlStars.51721d3834f6.png",
+    "url": "/images/catalog/bone-review/GBAtom10SlStars.ff6ffcab9274.png",
     "alt": "10 ml Atomizer Bottle",
     "width": 1560,
     "height": 1716,
@@ -4195,7 +4195,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4206,7 +4206,7 @@
     "family": "Bell",
     "capacityMl": 10,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GBBell10BlkShSht.9ed2c6ec12a5.png",
+    "url": "/images/catalog/bone-review/GBBell10BlkShSht.e4ef66bc078b.png",
     "alt": "10 ml Clear Bell Bottle",
     "width": 1560,
     "height": 1716,
@@ -4214,7 +4214,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4225,7 +4225,7 @@
     "family": "Bell",
     "capacityMl": 10,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GBBell10MtlRollBlkDot.546f75b9fbb0.png",
+    "url": "/images/catalog/bone-review/GBBell10MtlRollBlkDot.2d3e7993e79f.png",
     "alt": "10 ml Clear Bell Roll-On Bottle",
     "width": 1560,
     "height": 1716,
@@ -4233,7 +4233,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4244,7 +4244,7 @@
     "family": "Bell",
     "capacityMl": 10,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GBBell10SpryBlkSh.b8753aff858f.png",
+    "url": "/images/catalog/bone-review/GBBell10SpryBlkSh.7b6c85618c7c.png",
     "alt": "10 ml Clear Bell Fine Mist Spray Bottle",
     "width": 1560,
     "height": 1716,
@@ -4252,7 +4252,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4700,7 +4700,7 @@
     "family": "Decorative",
     "capacityMl": 3,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GB3TPlGl.c2523f1e9953.png",
+    "url": "/images/catalog/bone-review/GB3TPlGl.358aeaaf70a4.png",
     "alt": "3 ml Clear Tola Bottle",
     "width": 1560,
     "height": 1716,
@@ -4708,7 +4708,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4738,7 +4738,7 @@
     "family": "Decorative",
     "capacityMl": 4,
     "bottleColor": "Frosted",
-    "url": "/images/catalog/bone-review/GBHeartFrst4TslRed.e57cb4bcafdb.png",
+    "url": "/images/catalog/bone-review/GBHeartFrst4TslRed.bfc64e86fae1.png",
     "alt": "4 ml Frosted Heart Bottle with Tassel",
     "width": 1560,
     "height": 1716,
@@ -4746,7 +4746,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4757,7 +4757,7 @@
     "family": "Decorative",
     "capacityMl": 5,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GBMtlMrblSmall.0936b089d8a1.png",
+    "url": "/images/catalog/bone-review/GBMtlMrblSmall.5336a5cf4ae7.png",
     "alt": "5 ml Clear Marble Bottle",
     "width": 1560,
     "height": 1716,
@@ -4765,7 +4765,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4776,7 +4776,7 @@
     "family": "Decorative",
     "capacityMl": 6,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GB6TPlGl.e04b3bac3108.png",
+    "url": "/images/catalog/bone-review/GB6TPlGl.371fee692bdc.png",
     "alt": "6 ml Clear Tola Bottle",
     "width": 1560,
     "height": 1716,
@@ -4784,7 +4784,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4795,7 +4795,7 @@
     "family": "Decorative",
     "capacityMl": 10,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GBMtlMrblLarge.2b674e2ff984.png",
+    "url": "/images/catalog/bone-review/GBMtlMrblLarge.84bad4a4ae8e.png",
     "alt": "10 ml Clear Marble Bottle",
     "width": 1560,
     "height": 1716,
@@ -4803,7 +4803,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4814,7 +4814,7 @@
     "family": "Decorative",
     "capacityMl": 32,
     "bottleColor": "Cobalt Blue",
-    "url": "/images/catalog/bone-review/GB1ozGenieBl.17f87b06f627.png",
+    "url": "/images/catalog/bone-review/GB1ozGenieBl.b0ecef963829.png",
     "alt": "32 ml Cobalt Blue Genie Bottle",
     "width": 1560,
     "height": 1716,
@@ -4822,7 +4822,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4833,7 +4833,7 @@
     "family": "Decorative",
     "capacityMl": 32,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GB1ozGenieCl.e56a724b97bc.png",
+    "url": "/images/catalog/bone-review/GB1ozGenieCl.80c67dd52ba9.png",
     "alt": "32 ml Clear Genie Bottle",
     "width": 1560,
     "height": 1716,
@@ -4841,7 +4841,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -4909,7 +4909,7 @@
     "family": "Decorative",
     "capacityMl": 355,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GBCB12ozPear.e07393c73774.png",
+    "url": "/images/catalog/bone-review/GBCB12ozPear.f88ac19f77fc.png",
     "alt": "355 ml Clear Pear Bottle with Stopper",
     "width": 1560,
     "height": 1716,
@@ -4917,7 +4917,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -6315,7 +6315,7 @@
     "family": "Vial",
     "capacityMl": 9,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GB09BlackCapApp.caa0cc953ced.png",
+    "url": "/images/catalog/bone-review/GB09BlackCapApp.ef0a4e27861e.png",
     "alt": "9 ml Clear Vial Applicator Bottle",
     "width": 1560,
     "height": 1716,
@@ -6323,7 +6323,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -6334,7 +6334,7 @@
     "family": "Vial",
     "capacityMl": 9,
     "bottleColor": "Clear",
-    "url": "/images/catalog/bone-review/GB09BlackCapSht.a73c4c604dbd.png",
+    "url": "/images/catalog/bone-review/GB09BlackCapSht.273b3d8be3b3.png",
     "alt": "9 ml Clear Vial Bottle with Cap",
     "width": 1560,
     "height": 1716,
@@ -6342,7 +6342,7 @@
     "framing": {
       "scale": 1,
       "translateXPercent": 0,
-      "translateYPercent": -0.02564102564102882
+      "translateYPercent": 0
     }
   },
   {
@@ -6353,7 +6353,7 @@
     "family": "Dropper",
     "capacityMl": 0,
     "bottleColor": "White",
-    "url": "/images/catalog/bone-review/Drp18-40015mlWhiteBulb.a5be45e6f21b.png",
+    "url": "/images/catalog/bone-review/Drp18-40015mlWhiteBulb.5e4730af9bae.png",
     "alt": "White rubber bulb dropper with white cap. Glass stem length is 66 mm, Thread size 18-400",
     "width": 1560,
     "height": 1716,
@@ -6372,7 +6372,7 @@
     "family": "Dropper",
     "capacityMl": 0,
     "bottleColor": "White",
-    "url": "/images/catalog/bone-review/Drp20-4001ozWhiteBulb.a5be45e6f21b.png",
+    "url": "/images/catalog/bone-review/Drp20-4001ozWhiteBulb.1ff71828d196.png",
     "alt": "White rubber bulb dropper with white cap. Glass stem length is 76 mm, Thread size 20-400",
     "width": 1560,
     "height": 1716,
@@ -6391,7 +6391,7 @@
     "family": "Dropper",
     "capacityMl": 0,
     "bottleColor": "White",
-    "url": "/images/catalog/bone-review/Drp18-415Gl.ec331e3f3cf5.png",
+    "url": "/images/catalog/bone-review/Drp18-415Gl.bbbbeda5f813.png",
     "alt": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
     "width": 1560,
     "height": 1716,
@@ -6714,7 +6714,7 @@
     "family": "Tool",
     "capacityMl": 0,
     "bottleColor": "Gold",
-    "url": "/images/catalog/bone-review/FunnelMetalGl.d01f5de8abd2.png",
+    "url": "/images/catalog/bone-review/FunnelMetalGl.42533e4072ba.png",
     "alt": "Small Gold Metal Funnel.",
     "width": 1560,
     "height": 1716,
@@ -6733,7 +6733,7 @@
     "family": "Tool",
     "capacityMl": 0,
     "bottleColor": "Silver",
-    "url": "/images/catalog/bone-review/FunnelMetalSl.d77e83cc28ab.png",
+    "url": "/images/catalog/bone-review/FunnelMetalSl.5b0a2b695911.png",
     "alt": "Small Silver Metal Funnel.",
     "width": 1560,
     "height": 1716,
