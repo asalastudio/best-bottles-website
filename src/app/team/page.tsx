@@ -82,6 +82,12 @@ const tools = [
         badge: "B2B",
     },
     {
+        name: "Visual Asset Ledger",
+        href: "/team/asset-ledger",
+        description: "Every SKU with the state of its hero, plate and kit imagery, read from every store at once.",
+        badge: "Imagery",
+    },
+    {
         name: "Backend Shopify Admin",
         href: getShopifyAdminHref(),
         description: "Open the Shopify backend for orders, inventory, refunds, and product publishing.",

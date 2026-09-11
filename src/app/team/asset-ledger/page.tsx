@@ -1,9 +1,13 @@
+import { auth, currentUser } from "@clerk/nextjs/server";
 import ledgerJson from "@/lib/asset-ledger/ledger.json";
 import { compact, DONE, type Kind, type Ledger } from "@/lib/asset-ledger/types";
 import LedgerTable from "./LedgerTable";
+import { getUserEmailAddresses, hasTeamHubAccess } from "@/lib/teamAccess";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = {
-    title: "Asset ledger — Best Bottles lab",
+    title: { absolute: "Visual asset ledger — Best Bottles" },
     robots: { index: false, follow: false },
 };
 
@@ -26,7 +30,24 @@ const pct = (n: number, d: number) => (d ? Math.round((n / d) * 100) : 0);
  * the review library and the kit ledgers. Commit the file to update this page.
  * Nothing here publishes, approves or changes any asset.
  */
-export default function Page() {
+/** The Team Hub's own local-preview escape hatch, for sandboxes that run with Clerk disabled. Never in production. */
+function isLocalPreview(params: Record<string, string | string[] | undefined> | undefined) {
+    if (process.env.NODE_ENV === "production") return false;
+    const preview = params?.preview;
+    return (Array.isArray(preview) ? preview : [preview]).some((v) => v === "1" || v === "true");
+}
+
+export default async function Page({ searchParams }: { searchParams?: Promise<Record<string, string | string[] | undefined>> }) {
+    // Same gate as the rest of the Team Hub: this page lists every SKU we sell
+    // and the state of its imagery, which is internal operational truth.
+    if (!isLocalPreview(searchParams ? await searchParams : undefined)) {
+        const { userId, redirectToSignIn } = await auth();
+        if (!userId) return redirectToSignIn({ returnBackUrl: "/team/asset-ledger" });
+        const user = await currentUser();
+        const emailAddresses = getUserEmailAddresses(user);
+        if (!hasTeamHubAccess(user?.publicMetadata, { emailAddresses })) return <AccessPending />;
+    }
+
     const rows = ledger.rows;
     const products = rows.filter((r) => r.productRecord).length;
     const indexedByGeneration = rows.reduce<Record<string, number>>((acc, r) => {
@@ -50,13 +71,15 @@ export default function Page() {
         <main className="min-h-screen bg-linen text-obsidian">
             <div className="mx-auto max-w-7xl px-6 py-10">
                 <header className="mb-8">
-                    <p className="text-xs uppercase tracking-[0.2em] text-slate">Best Bottles · lab</p>
+                    <p className="text-xs uppercase tracking-[0.2em] text-slate">
+                        <a href="/team" className="hover:text-obsidian">Team Hub</a> · asset ledger
+                    </p>
                     <h1 className="mt-1 font-serif text-3xl">Visual asset ledger</h1>
                     <p className="mt-2 max-w-3xl text-sm text-slate">
                         One row per SKU, one state per asset kind, read from every store at once. Snapshot taken{" "}
                         <time dateTime={ledger.generatedAt}>{ledger.generatedAt.replace("T", " ").slice(0, 16)} UTC</time>
                         {ledger.deployment ? <> against Convex <code className="rounded bg-travertine px-1">{ledger.deployment}</code></> : null}.
-                        Refresh with <code className="rounded bg-travertine px-1">node scripts/asset-ledger/build.mjs</code>.
+                        Refresh with <code className="rounded bg-travertine px-1">npm run ledger:build</code>, then commit the snapshot.
                     </p>
                 </header>
 
@@ -140,6 +163,21 @@ export default function Page() {
                         ))}
                     </ul>
                 </section>
+            </div>
+        </main>
+    );
+}
+
+function AccessPending() {
+    return (
+        <main className="min-h-screen bg-bone px-6 py-24">
+            <div className="mx-auto max-w-[640px] rounded-xl border border-champagne/40 bg-white px-8 py-8">
+                <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-muted-gold">Staff only</p>
+                <h1 className="mb-3 font-serif text-3xl text-obsidian">You don&rsquo;t have access to the asset ledger</h1>
+                <p className="text-sm leading-relaxed text-slate">
+                    The ledger is limited to Best Bottles staff. If you should have access, ask an administrator to add
+                    you to the Team Hub.
+                </p>
             </div>
         </main>
     );
