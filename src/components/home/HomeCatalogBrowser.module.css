@@ -13,7 +13,7 @@
 .photo { object-fit:cover; object-position:50% 50%; }
 .caption { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; align-items:flex-start; padding:18px; background:linear-gradient(transparent 35%,#0009); color:white; }
 .caption h3 { font-family:var(--font-eb-garamond),Georgia,serif; font-size:32px; line-height:1.05; margin-bottom:8px; font-weight:500; }
-.caption span { display:inline-flex; align-items:center; gap:16px; min-height:36px; padding:6px 13px; border:1px solid #ffffffb3; background:#252523dd; font-size:12px; }
+.caption span { display:inline-flex; align-items:center; gap:16px; min-height:36px; padding:6px 13px; background:#252523dd; font-size:12px; }
 .catalog { margin-top:28px; }
 .viewAll { display:flex; gap:5px; align-items:center; flex-shrink:0; color:var(--home-gold); text-decoration:underline; text-underline-offset:4px; font-size:14px; }
 .tabs { display:flex; gap:20px; border-bottom:1px solid var(--home-line); margin-bottom:10px; }
