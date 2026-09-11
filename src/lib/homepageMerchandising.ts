@@ -11,6 +11,17 @@ export type HomepageFamilyCard = {
     applications?: string[];
 };
 
+/**
+ * Code-owned homepage hero art: a 21:9 studio composite of real assemblies from the
+ * PSD masters (frosted Diva with a red vintage bulb, Grace with a black tassel bulb) on
+ * silver travertine, glass-passed with silhouettes gated. The left half is kept clear for
+ * the headline. Overrides the CMS slide image; a CMS video slide still plays.
+ */
+export const HOME_HERO_ART = {
+    src: "/assets/home-hero/diva-grace-vintage-bulbs-21x9.webp",
+    alt: "Frosted Diva bottle with a red vintage bulb atomizer and a Grace bottle with a black tassel bulb atomizer on silver travertine blocks",
+} as const;
+
 export const HOME_FAMILY_MOSAIC: readonly HomepageFamilyCard[] = [
     {
         family: "Cylinder",

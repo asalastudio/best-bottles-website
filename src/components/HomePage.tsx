@@ -27,6 +27,7 @@ import {
     HOME_APPLICATION_LINKS,
     HOME_EDITORIAL_STORIES,
     HOME_SAMPLE_FEATURE,
+    HOME_HERO_ART,
 } from "@/lib/homepageMerchandising";
 
 const FadeUp = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -112,7 +113,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
     const showVideo = mediaType === "video" && videoUrl;
 
     return (
-        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative h-[78dvh] min-h-[620px] max-h-[700px] w-full items-end overflow-hidden bg-bone pb-12 pt-[96px] lg:h-[66dvh] lg:min-h-[540px] lg:max-h-[680px] lg:items-center lg:pb-0 lg:pt-[120px]`}>
+        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative h-[78dvh] min-h-[620px] max-h-[700px] w-full items-end overflow-hidden bg-bone pb-12 pt-[96px] lg:aspect-[21/9] lg:h-auto lg:min-h-[480px] lg:max-h-[640px] lg:items-center lg:pb-0 lg:pt-[120px]`}>
             <div className="absolute inset-0 z-0 bg-travertine">
                 {isMultiSlide ? (
                     slides.map((s, i) => {
@@ -130,6 +131,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                                 ? urlFor(s.videoPoster)
                                 : img;
                         const isVideo = s?.mediaType === "video" && vidUrl;
+                        const art = i === 0 && !isVideo ? HOME_HERO_ART : null;
                         return (
                             <div
                                 key={i}
@@ -138,7 +140,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                                 {isVideo && vidUrl ? (
                                     <video src={vidUrl} poster={vidPoster || "/assets/Hero-BB.png"} autoPlay muted loop playsInline className="w-full h-full object-cover object-[80%_78%] md:object-[70%_center]" />
                                 ) : (
-                                    <Image src={img || "/assets/Hero-BB.png"} alt="" fill className="object-cover object-[80%_78%] md:object-[70%_center]" unoptimized={!!img} />
+                                    <Image src={art?.src ?? (img || "/assets/Hero-BB.png")} alt={art?.alt ?? ""} fill className="object-cover object-[80%_78%] md:object-[70%_center] lg:object-right" unoptimized={!art && !!img} />
                                 )}
                             </div>
                         );
@@ -148,7 +150,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                         {showVideo ? (
                             <video src={videoUrl} poster={posterUrl || undefined} autoPlay muted loop playsInline className="w-full h-full object-cover object-[80%_78%] md:object-[70%_center]" />
                         ) : (
-                            <Image src={imageUrl || "/assets/Hero-BB.png"} alt="Luxury perfume glass atomizer bottle" fill className="object-cover object-[80%_78%] md:object-[70%_center]" priority unoptimized={!!imageUrl} />
+                            <Image src={HOME_HERO_ART.src} alt={HOME_HERO_ART.alt} fill className="object-cover object-[80%_78%] md:object-[70%_center] lg:object-right" priority />
                         )}
                     </motion.div>
                 )}
