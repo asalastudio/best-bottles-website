@@ -22,6 +22,8 @@ import path from "node:path";
 import { execSync } from "node:child_process";
 
 const root = process.cwd();
+// `npm run ledger:build` should just work: pick up NEXT_PUBLIC_CONVEX_URL from .env.local without sourcing it first
+if (!process.env.NEXT_PUBLIC_CONVEX_URL && existsSync(path.join(root, ".env.local"))) { try { process.loadEnvFile(path.join(root, ".env.local")); } catch { /* fall through to the explicit error below */ } }
 const gitCommon = execSync("git rev-parse --git-common-dir", { cwd: root }).toString().trim();
 const mainCheckout = path.resolve(root, gitCommon, "..");
 const readJson = (p) => JSON.parse(readFileSync(p, "utf8"));
