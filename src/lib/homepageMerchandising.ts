@@ -4,6 +4,8 @@ export type HomepageFamilyCard = {
     family: string;
     title: string;
     image: string;
+    /** Portrait 2:3 bare-glass family card (real bodies at one px/mm on stone); wins over the CMS still when present. */
+    card?: string;
     layout: "feature" | "standard" | "wide";
     description?: string;
     applications?: string[];
@@ -14,6 +16,7 @@ export const HOME_FAMILY_MOSAIC: readonly HomepageFamilyCard[] = [
         family: "Cylinder",
         title: "Cylinder",
         image: "/assets/Cylinder-BB.png",
+        card: "/assets/family-cards/cylinder.webp",
         layout: "feature",
         description: "Clean, versatile, made for roll-on, spray, pump, or cap.",
         applications: ["Roll-on", "Spray", "Pump", "Cap"],
@@ -22,18 +25,21 @@ export const HOME_FAMILY_MOSAIC: readonly HomepageFamilyCard[] = [
         family: "Elegant",
         title: "Elegant",
         image: "/assets/Slim-BB.png",
+        card: "/assets/family-cards/elegant.webp",
         layout: "standard",
     },
     {
         family: "Circle",
         title: "Circle",
         image: "/assets/CreamJars-BB.png",
+        card: "/assets/family-cards/circle.webp",
         layout: "standard",
     },
     {
         family: "Boston Round",
         title: "Boston Round",
         image: "/assets/collection_amber.png",
+        card: "/assets/family-cards/boston-round.webp",
         layout: "wide",
     },
 ] as const;

@@ -18,7 +18,7 @@ const initial:Saved={tab:'families',expanded:false,popular:0,positions:{}};
 
 function CardImage({card,featured=false}:{card:HomeBrowseCard;featured?:boolean}) {
  const [failed,setFailed]=useState(false);
- return card.image && !failed ? <Image src={card.image} alt="" fill sizes={featured?'(min-width: 1024px) 33vw, 82vw':'(min-width: 1024px) 24vw, 43vw'} className={featured?styles.photo:styles.product} onError={()=>setFailed(true)} unoptimized={card.image.startsWith('http')} /> : <span className={styles.missing}>Browse {card.label}</span>;
+ return card.image && !failed ? <Image src={card.image} alt="" fill sizes={featured?'(min-width: 1024px) 33vw, 82vw':'(min-width: 1024px) 16vw, 43vw'} className={featured?styles.photo:styles.product} onError={()=>setFailed(true)} unoptimized={card.image.startsWith('http')} /> : <span className={styles.missing}>Browse {card.label}</span>;
 }
 function Arrows({label,previous,next,onMove}:{label:string;previous:boolean;next:boolean;onMove:(direction:number)=>void}) {
  return <div className={styles.arrows}><button type="button" aria-label={`Previous ${label}`} disabled={!previous} onClick={()=>onMove(-1)}><ArrowLeft size={19}/></button><button type="button" aria-label={`Next ${label}`} disabled={!next} onClick={()=>onMove(1)}><ArrowRight size={19}/></button></div>;
@@ -33,7 +33,8 @@ export default function HomeCatalogBrowser({data,designFamilyCards}:{data:HomeBr
  const featured=HOME_FAMILY_MOSAIC.flatMap(f=>{
   const found=data?.families.find(c=>c.id===f.family);if(!found)return [];
   const editorial=designFamilyCards?.find(c=>c.family===f.family);
-  return [{...found,image:editorial?.image?urlFor(editorial.image):f.image}];
+  // A generated, gated bare-glass card (true relative scale) outranks the CMS still for that family.
+  return [{...found,image:f.card??(editorial?.image?urlFor(editorial.image):f.image)}];
  });
  function persist(){try{sessionStorage.setItem(storageKey,JSON.stringify(saved.current));}catch{/* Storage is optional in private browsing. */}}
  function sync(which:'popular'|'catalog'){

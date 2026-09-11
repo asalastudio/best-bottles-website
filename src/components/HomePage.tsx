@@ -112,7 +112,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
     const showVideo = mediaType === "video" && videoUrl;
 
     return (
-        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative h-[78dvh] min-h-[620px] max-h-[700px] w-full items-end overflow-hidden bg-bone pb-12 pt-[96px] lg:h-[100dvh] lg:min-h-0 lg:max-h-none lg:items-center lg:pb-0 lg:pt-[120px]`}>
+        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative h-[78dvh] min-h-[620px] max-h-[700px] w-full items-end overflow-hidden bg-bone pb-12 pt-[96px] lg:h-[66dvh] lg:min-h-[540px] lg:max-h-[680px] lg:items-center lg:pb-0 lg:pt-[120px]`}>
             <div className="absolute inset-0 z-0 bg-travertine">
                 {isMultiSlide ? (
                     slides.map((s, i) => {
@@ -684,13 +684,13 @@ function SampleTestersFeature() {
                                 Explore Small Formats <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                             </span>
                         </div>
-                        <div className="relative min-h-[270px] overflow-hidden sm:min-h-[330px] md:min-h-[380px]" style={{ backgroundColor: HOME_SAMPLE_FEATURE.matte }}>
+                        <div className="relative aspect-[16/9] overflow-hidden" style={{ backgroundColor: HOME_SAMPLE_FEATURE.matte }}>
                             <Image
                                 src={HOME_SAMPLE_FEATURE.image}
                                 alt={HOME_SAMPLE_FEATURE.imageAlt}
                                 fill
                                 sizes="(min-width: 768px) 58vw, 100vw"
-                                className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+                                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
                             />
                         </div>
                     </Link>
@@ -718,7 +718,7 @@ function EditorialStories() {
                                 <article className="grid overflow-hidden border border-champagne/55 bg-linen lg:grid-cols-12">
                                     <Link
                                         href={story.href}
-                                        className={`${imageOnRight ? "lg:order-2" : ""} group relative aspect-[4/3] overflow-hidden sm:aspect-[16/9] lg:col-span-7 lg:aspect-auto lg:min-h-[410px] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold`}
+                                        className={`${imageOnRight ? "lg:order-2" : ""} group relative aspect-[16/9] overflow-hidden lg:col-span-7 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold`}
                                         style={{ backgroundColor: story.matte }}
                                     >
                                         <Image
@@ -726,8 +726,7 @@ function EditorialStories() {
                                             alt={story.imageAlt}
                                             fill
                                             sizes="(min-width: 1024px) 58vw, 100vw"
-                                            className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.01]"
-                                            style={{ objectPosition: story.imagePosition }}
+                                            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.01]"
                                         />
                                     </Link>
                                     <div className={`${imageOnRight ? "lg:order-1" : ""} flex flex-col justify-center p-7 sm:p-10 lg:col-span-5 lg:p-12 xl:p-14`}>
@@ -755,7 +754,7 @@ function PackagingAccessoriesStory() {
                 <FadeUp className="grid overflow-hidden border border-champagne/60 bg-warm-white md:grid-cols-[1.08fr_0.92fr]">
                     <Link
                         href={HOME_ACCESSORY_STORY.href}
-                        className="group relative min-h-[290px] overflow-hidden sm:min-h-[350px] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold"
+                        className="group relative aspect-[16/9] overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold"
                         style={{ backgroundColor: HOME_ACCESSORY_STORY.matte }}
                     >
                         <Image
@@ -763,7 +762,7 @@ function PackagingAccessoriesStory() {
                             alt={HOME_ACCESSORY_STORY.imageAlt}
                             fill
                             sizes="(min-width: 768px) 54vw, 100vw"
-                            className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+                            className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
                         />
                     </Link>
                     <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
