@@ -1,0 +1,47 @@
+Conservatively retouch the supplied original product photograph.
+This is a restoration of an existing photograph, not a new rendering.
+
+The original image is the authority for the product’s shape, material,
+colour, exposure, and surface shading.
+
+PRIMARY REQUIREMENT — PRESERVE THE FROSTED BODY
+Preserve the bottle body’s existing continuous milky, pale gray-white
+finish exactly as it appears in the original.
+
+The white finish is part of the product. It is not haze, blur, dirt,
+overexposure, or background that needs to be removed.
+
+Retain the original pale gray-white midtones across the broad central
+face, along with the original soft shading at the shoulders, sides,
+and base. Keep the centre visibly present as a finished surface.
+
+Do not brighten the body, lift its midtones toward the background
+colour, increase transparency, or replace its soft surface shading
+with clear-glass reflections. Do not create a glossy transparent rim
+or a clearer base than the original.
+
+Preserve the existing surface texture. Do not invent additional
+grain, mottling, sparkling particles, or sandblasted texture.
+
+PERMITTED CHANGES
+Reduce obvious compression artifacts and conservatively clarify
+existing details. Keep the body’s overall exposure and tonal
+gradients unchanged. When detail is ambiguous, preserve the original
+rather than inventing it.
+
+Preserve all component colours and finishes. Clarify existing details
+in the cap, atomizer, cord, or tassel only where those components
+are present. Do not restyle them.
+
+PRESERVE COMPOSITION
+Keep the original silhouette, proportions, framing, relative scale,
+placement, and component arrangement. Add or remove nothing.
+
+FOR THIS TEST
+Leave the background, lighting direction, and shadows unchanged.
+Do not apply global relighting, whitening, dehazing, or a new
+editorial photography style.
+
+Success means the original product looks slightly cleaner and
+better defined while retaining the same visible material.
+A sharper image with a different finish is a failed result.
