@@ -14,7 +14,7 @@ export const metadata = {
 const ledger = ledgerJson as unknown as Ledger;
 const KINDS: Array<{ kind: Kind; label: string; key: "heroes" | "plates" | "kits"; doneLabel: string }> = [
     { kind: "hero", label: "Heroes", key: "heroes", doneLabel: "in the catalogue registry" },
-    { kind: "plate", label: "Plates", key: "plates", doneLabel: "served by the plate index" },
+    { kind: "plate", label: "Plates", key: "plates", doneLabel: "served, right size, from the PSD master" },
     { kind: "kit", label: "Kits", key: "kits", doneLabel: "served by the kit index" },
 ];
 
@@ -120,8 +120,8 @@ export default async function Page({ searchParams }: { searchParams?: Promise<Re
                         </p>
                     </div>
                     <p className="mb-3 max-w-3xl text-xs text-slate">
-                        A family turns green when all three are done: a published hero for every product group, a plate
-                        with its cap-off view for every SKU, and a published kit for every SKU that takes one. Heroes are
+                        A family turns green when all three are done: a published hero for every product group, a correct plate
+                        for every bottle, and a published kit for every SKU that takes one. Heroes are
                         counted per <strong>product group</strong>, not per SKU, because the catalogue shows one hero per
                         group. “What’s left” names exactly what is standing between the family and green.
                     </p>
@@ -133,7 +133,7 @@ export default async function Page({ searchParams }: { searchParams?: Promise<Re
                                     <th className="px-3 py-2">Status</th>
                                     <th className="px-3 py-2 text-right">SKUs</th>
                                     <th className="px-3 py-2 text-right" title="product groups with a published hero, of all product groups">Heroes (groups)</th>
-                                    <th className="px-3 py-2 text-right" title="SKUs with a plate including its cap-off view">Plates (SKUs)</th>
+                                    <th className="px-3 py-2 text-right" title="SKUs with a correct plate, of the SKUs that are bottles">Plates (SKUs)</th>
                                     <th className="px-3 py-2 text-right" title="SKUs with a published kit, of those that take one">Kits (SKUs)</th>
                                     <th className="px-3 py-2">What’s left</th>
                                 </tr>
@@ -155,7 +155,7 @@ export default async function Page({ searchParams }: { searchParams?: Promise<Re
                                         </td>
                                         <td className="px-3 py-1.5 text-right tabular-nums">{f.skus}</td>
                                         <Cell n={f.groupsWithHero} d={f.groups} done={f.heroComplete} waiting={f.heroWaiting} />
-                                        <Cell n={f.platedFull} d={f.skus} done={f.plateComplete} />
+                                        <Cell n={f.platedFull} d={f.plateApplicable} done={f.plateComplete} />
                                         <Cell n={f.kitLive} d={f.kitApplicable} done={f.kitComplete} waiting={f.kitWaiting} />
                                         <td className="px-3 py-1.5 text-xs text-slate">
                                             {f.blockers.length ? f.blockers.join(" · ") : <span className="text-emerald-800">nothing — this family is done</span>}

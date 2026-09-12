@@ -17,9 +17,10 @@ export type LedgerRow = {
     capacityMl: number | null;
     color: string | null;
     groupSlug: string | null;
+    applicator?: string | null;
     productRecord: boolean;
     hero: { state: string; generation?: string; url?: string; sha256?: string | null; lock?: string; why?: string; review?: ReviewDecision; collections?: number };
-    plate: { state: string; familyId?: string; sha256?: string | null; hold?: string; reason?: string; issues?: string[] };
+    plate: { state: string; familyId?: string; sha256?: string | null; hold?: string; reason?: string; issues?: string[]; capOff?: boolean; bodyWidth?: number; expectedWidth?: number | null; sizeDeviation?: number | null; legacySource?: boolean };
     kit: { state: string; completeness?: string; parts?: number; reason?: string; review?: ReviewDecision; issues?: string[] };
 };
 
@@ -34,6 +35,7 @@ export type FamilySummary = {
     /** SKUs with any plate, and with the cap-off view that the configurator needs. */
     plated: number;
     platedFull: number;
+    plateApplicable: number;
     kitLive: number;
     kitApplicable: number;
     heroComplete: boolean;
@@ -60,7 +62,7 @@ export type Ledger = {
 /** The states that count as "done" for the storefront: the asset is served today. */
 export const DONE: Record<Kind, string[]> = {
     hero: ["indexed"],
-    plate: ["plated", "plated-cap-on-only"],
+    plate: ["plated", "plated-no-capoff-by-design"],
     kit: ["live"],
 };
 
@@ -70,6 +72,7 @@ export type CompactRow = {
     family: string;
     category: string | null;
     groupSlug: string | null;
+    applicator?: string | null;
     productRecord: boolean;
     hero: string;
     heroDetail: string;
@@ -85,7 +88,8 @@ export function compact(r: LedgerRow): CompactRow {
     const hero = r.hero.state === "indexed" || r.hero.state.startsWith("indexed-")
         ? `${r.hero.generation ?? ""}${r.hero.lock ? " · lock " + r.hero.lock : ""}${r.hero.url ? " · " + r.hero.url.split("/").pop() : ""}`
         : r.hero.review ? when(r.hero.review) : r.hero.why ?? (r.hero.collections ? `${r.hero.collections} card(s), no decision` : "");
-    const plate = r.plate.familyId ? `${r.plate.familyId}${r.plate.sha256 ? " · " + r.plate.sha256.slice(0, 12) : ""}${r.plate.hold ? " · hold: " + r.plate.hold : ""}${r.plate.issues?.length ? " · " + r.plate.issues.join("; ") : ""}` : r.plate.reason ?? "";
+    const size = r.plate.expectedWidth && r.plate.sizeDeviation != null ? ` · glass ${r.plate.bodyWidth}px, bottle median ${r.plate.expectedWidth}px (${r.plate.sizeDeviation > 0 ? "+" : ""}${Math.round(r.plate.sizeDeviation * 100)}%)` : "";
+    const plate = r.plate.familyId ? `${r.plate.familyId}${size}${r.plate.legacySource ? " · legacy source" : ""}${r.plate.hold ? " · hold: " + r.plate.hold : ""}${r.plate.issues?.length ? " · " + r.plate.issues.join("; ") : ""}` : r.plate.reason ?? "";
     const kit = r.kit.state === "live" ? `${r.kit.completeness ?? ""}${r.kit.parts ? " · " + r.kit.parts + " parts" : ""}` : r.kit.review ? when(r.kit.review) : [r.kit.reason, r.kit.issues?.join("; ")].filter(Boolean).join(" · ");
     return { sku: r.sku, family: r.family, category: r.category, groupSlug: r.groupSlug, productRecord: r.productRecord, hero: r.hero.state, heroDetail: hero, plate: r.plate.state, plateDetail: plate, kit: r.kit.state, kitDetail: kit };
 }
