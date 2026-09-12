@@ -68,6 +68,38 @@ def dhash(gray, size: int = 8) -> str:
     return f"{int(''.join(bits), 2):016x}"
 
 
+def demote_lone_blob_guess(entry: dict) -> bool:
+    """A blob count cannot prove a cap was removed. When it is the only thing we have, say so.
+
+    `ink_blobs` calls a photograph "cap off" whenever it finds more than one dark shape,
+    on the reasoning that a removed cap sits beside its bottle as a second blob. That
+    holds for a bottle photographed with its cap next to it. It cannot read a product
+    that IS several pieces: an atomizer is three objects, an antique bulb sprayer with a
+    tassel is five. Those come back "cap off" though nothing was ever taken off, and the
+    renderer then refuses them for want of a capped source — 499 kits were held this way
+    while the correct photograph sat in the master library.
+
+    So when a stem's ONLY source is an 'off' state resting on a blob count, the state is
+    recorded as 'unknown' instead: we have one photograph of this product and no evidence
+    about its cap. `build_plates.source_of` already accepts 'unknown' as a front source,
+    so the product builds from the picture we actually have.
+
+    Deliberately narrow. Untouched: any stem that also has a real capped source (the
+    label is harmless there), and any state resting on explicit evidence — a filename or
+    a curated component folder — which outranks a guess and always did.
+    """
+    chosen = {state: rec for state, rec in entry["states"].items() if rec.get("chosen")}
+    if set(chosen) != {"off"}:
+        return False
+    record = chosen["off"]
+    if not str(record.get("stateEvidence", "")).startswith("blob-count"):
+        return False
+    record["stateEvidence"] = "unknown-from-" + record["stateEvidence"]
+    record["demotedFrom"] = "off"
+    entry["states"]["unknown"] = entry["states"].pop("off")
+    return True
+
+
 def hamming(a: str, b: str) -> int:
     return bin(int(a, 16) ^ int(b, 16)).count("1")
 
@@ -273,6 +305,7 @@ def main():
                 conflicts.append({"stem": key, "state": state, "candidates": [best_loc(s)["relPath"] for s in [chosen] + rivals],
                                   "distances": {best_loc(s)["relPath"]: notes[s] for s in rivals}, "reason": "SAME_STEM_DIFFERENT_PHOTOGRAPH"})
             entry["states"][state] = record
+        demote_lone_blob_guess(entry)
         selection[key] = entry
 
     facts.save()
