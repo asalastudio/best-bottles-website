@@ -63,7 +63,12 @@ for (const [sku, entry] of Object.entries(lock).sort()) {
     const { data, info } = await sharp(bytes).removeAlpha().raw().toBuffer({ resolveWithObject: true });
     if (info.width !== 1560 || info.height !== 1716) { skipped.push({ sku, why: `wrong size ${info.width}x${info.height}` }); continue; }
     const corners = [[0, 0], [1559, 0], [0, 1715], [1559, 1715]].map(([x, y]) => [...data.subarray((y * info.width + x) * 3, (y * info.width + x) * 3 + 3)]);
-    if (!corners.every((c) => c.every((v, i) => v === BONE[i]))) { skipped.push({ sku, why: `corner not bone: ${JSON.stringify(corners)}` }); continue; }
+    // The plate must be bone, but demand it within 2/255 rather than exactly. The guard exists to catch an image
+    // shot on the wrong background — white, transparent, a different plate — which is off by tens of units. The
+    // enhancement pass returns its own plate reconstructed a unit or two from the source, which is invisible and
+    // must not block a hero Jordan has approved by hash.
+    const CORNER_TOLERANCE = 2;
+    if (!corners.every((c) => c.every((v, i) => Math.abs(v - BONE[i]) <= CORNER_TOLERANCE))) { skipped.push({ sku, why: `corner not bone within ${CORNER_TOLERANCE}: ${JSON.stringify(corners)}` }); continue; }
   }
   const url = `/images/catalog/bone-review/${sku}.${sha256.slice(0, 12)}.png`;
   const file = path.join(root, "public", url);
