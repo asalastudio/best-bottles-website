@@ -234,11 +234,6 @@
     "family": "Boston Round",
     "approvedAt": "2026-09-12T02:19:40.420Z",
     "lockedAt": "2026-09-12T02:22:56.917846+00:00",
-    "sizingRequest": {
-      "heightPercent": 42.5,
-      "measurement": "bottle_with_fitment",
-      "baselinePercent": 91
-    },
     "supersedes": {
       "sha256": "5a17952162234aed03bb269b00683d2208e93f7ed85dfc3ddc1508a51d80d013",
       "card": "sunburst-all-heroes-latest-2026-09-09-r4"
@@ -251,11 +246,6 @@
     "family": "Boston Round",
     "approvedAt": "2026-09-12T02:19:41.296Z",
     "lockedAt": "2026-09-12T02:22:56.917846+00:00",
-    "sizingRequest": {
-      "heightPercent": 42.5,
-      "measurement": "bottle_with_fitment",
-      "baselinePercent": 91
-    },
     "supersedes": {
       "sha256": "cc0faf6f067a1a5c041da44b3ced5d0be0c1b7f4ed176b82d4d5a1293ba18801",
       "card": "sunburst-all-heroes-latest-2026-09-09-r4"
@@ -268,11 +258,6 @@
     "family": "Boston Round",
     "approvedAt": "2026-09-12T02:18:58.842Z",
     "lockedAt": "2026-09-12T02:22:56.917846+00:00",
-    "sizingRequest": {
-      "heightPercent": 51.5,
-      "measurement": "bottle_with_fitment",
-      "baselinePercent": 91
-    },
     "supersedes": {
       "sha256": "3394b07f25e03dc9b4194a7ddd254b1d4c9cc42659d7424587611fdf05bedc66",
       "card": "sunburst-all-heroes-latest-2026-09-09-r4"
@@ -285,11 +270,6 @@
     "family": "Boston Round",
     "approvedAt": "2026-09-12T02:18:54.435Z",
     "lockedAt": "2026-09-12T02:22:56.917846+00:00",
-    "sizingRequest": {
-      "heightPercent": 51.5,
-      "measurement": "bottle_with_fitment",
-      "baselinePercent": 91
-    },
     "supersedes": {
       "sha256": "545c8006788267d454719c5ed8eff4e720c6f267af2220d3355dc9c8a30553ec",
       "card": "sunburst-all-heroes-latest-2026-09-09-r4"

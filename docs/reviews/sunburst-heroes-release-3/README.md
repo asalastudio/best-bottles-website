@@ -72,22 +72,14 @@ the same seven named in release 2.
 `GBBstn1ozRollonShBlk` also still shows its bottle floating above its cap, which
 is a render fault rather than a placement one.
 
-## Four open sizing requests
+## Four sizing requests, withdrawn
 
-Four approvals carry a saved target height that has NOT been acted on here, and
-is recorded on the lock entry as `sizingRequest`:
-
-| SKU | height today | target saved | siblings at that capacity |
-|---|---|---|---|
-| `GBBstn1ozBlkCapSht` | 53.3 % | 42.5 % | 12 rows, median 60.6 % |
-| `GBBstn1ozRollonShBlk` | 62.5 % | 42.5 % | 12 rows, median 60.6 % |
-| `GBBstn2ozBlkCapSht` | 65.0 % | 51.5 % | 12 rows, median 74.6 % |
-| `GBBstn2ozBlkDrprShnGlTrim` | 78.0 % | 51.5 % | 12 rows, median 74.6 % |
-
-Applying them would make each of these the smallest bottle in its capacity by a
-wide margin, which runs against the stated goal of one size per body. They are
-left unapplied and flagged rather than guessed at. This release changes placement
-only.
+Four approvals arrived carrying a saved target height (1 oz at 42.5 %, 2 oz at
+51.5 %). Each would have made that bottle the smallest in its capacity by a wide
+margin — the twelve 1 oz rows sit around 60 % and the twelve 2 oz around 75 % —
+so they were flagged rather than applied. Jordan confirmed on 2026-09-12 that the
+slider had been saved by accident while clicking through, and that the heights
+stay as they were. The requests are removed from the lock and nothing was resized.
 
 ## Scope
 
