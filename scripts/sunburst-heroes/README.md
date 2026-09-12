@@ -8,37 +8,46 @@ cleanly.
 
 ## `prompts/frosted.txt` — approved 2026-09-12
 
-Use this, unchanged, for every frosted bottle.
+The whole prompt is two lines:
 
-**Why it exists.** The shared prompt used for clear glass attached a second
-reference image for "glass rendering quality", and that clause ended with
+```
+1. Keep geometry locked
+2. Enhance the quality
+```
+
+Use it unchanged. Do not add to it.
+
+**Why it is this short.** The shared prompt used for clear glass attached a
+second reference image for "glass rendering quality", and that clause ended with
 `true refraction, no milky haze`. On a frosted bottle that is a direct
-instruction to remove the etch — the milky body *is* the product. All 104
-frosted prompts in the 2026-09-10 run carried it, and the frost came back thinned
-or polished toward clear glass every time. Jordan: "the frost is getting rubbed
+instruction to remove the etch — the milky body *is* the product. All 104 frosted
+prompts in the 2026-09-10 run carried it, and the frost came back thinned or
+polished toward clear glass every time. Jordan: "the frost is getting rubbed
 off."
 
-Three of my own rewrites failed in different ways before this one: a "uniform
-milky" version washed the body to flat white, a "defined etch" version read too
-dark, and a "micro-texture" version hollowed out the centre of each disc, leaving
-frost at the rim and near-background in the middle. The approved prompt is
-Jordan's own, and it works because it frames the job as **photo restoration**
-rather than rendering, and names the frost as part of the product rather than a
-defect to clean up.
+Four longer rewrites then failed, each in a different way:
+
+| attempt | what it said | how it failed |
+|---|---|---|
+| A | enhancement only, no clear-glass reference | silhouette drifted 3.4 % |
+| B/C | "uniform density", "sandblasted micro-texture" | hollowed the centre of each disc, frost only at the rim |
+| earlier | "even etch, cooler and deeper" | read too dark |
+| E | a careful photo-restoration brief naming the frost as part of the product | fixed the centre, then washed out the base so the bottle read as a dome with nothing under it |
+
+The pattern is consistent: **the more the prompt argues about what frosted glass
+is, the more the model treats the material as something to decide about, and it
+keeps deciding the pale parts are background.** Saying almost nothing leaves the
+material alone. Two lines beat every careful brief we wrote.
 
 **How it is run.** One image only — the bottle's own current hero. Do **not**
-attach a clear-glass quality reference. The prompt is SKU-agnostic: it refers to
-"the supplied original product photograph" and mentions cap, atomizer, cord and
-tassel only where present, so it needs no per-SKU substitution.
+attach a clear-glass quality reference. Model `gpt-image-2.5-sunburst`, size
+2080x2288, quality `high`. About 35 s and $0.11 per image.
 
-Model `gpt-image-2.5-sunburst`, size 2080x2288, quality `high`. About 35 s and
-$0.11 per image.
-
-**Known behaviour.** On a dense frosted body the pass still lightens it slightly
-(measured: one bottle's frost density fell about a fifth, from 25.4 to 20.2 on a
-distance-from-background scale; a lighter bottle came back unchanged at 20.7).
-The silhouette can drift 1-2 %, which the sizing step corrects by matching the
-approved frame. Neither was enough to matter at review.
+**Why enhance at all, rather than use the original photograph.** The approved
+Circle sizes are larger than the original shots, so using an original means
+enlarging it and it goes soft. The enhancement renders at 2080 px and comes down
+to 1560, so the base keeps a real edge and the metal stays crisp. Measured on
+three bottles, the enhanced base has definition the enlarged original has lost.
 
 ## Sizing is separate
 
