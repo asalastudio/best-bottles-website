@@ -170,16 +170,60 @@ for (const sku of [...skus].sort()) {
     rows.push({ sku, graceSku: p?.graceSku ?? reg?.graceSku ?? kc?.graceSku ?? null, family, category: p?.category ?? kc?.category ?? null, capacityMl: p?.capacityMl ?? reg?.capacityMl ?? null, color: p?.color ?? reg?.bottleColor ?? null, groupSlug: g?.slug ?? reg?.groupSlug ?? null, productRecord: !!p, hero, plate, kit });
 }
 
+const DONE_PLATE = ["plated", "plated-cap-on-only"];
+
 // ---------- summaries ----------
 const count = (list, pick) => { const c = {}; for (const r of list) { const k = pick(r); c[k] = (c[k] ?? 0) + 1; } return Object.fromEntries(Object.entries(c).sort((a, b) => b[1] - a[1])); };
 const summary = { skus: rows.length, productRecords: rows.filter((r) => r.productRecord).length, heroes: count(rows, (r) => r.hero.state), plates: count(rows, (r) => r.plate.state), kits: count(rows, (r) => r.kit.state) };
-const famMap = new Map(); for (const r of rows) { famMap.set(r.family, [...(famMap.get(r.family) ?? []), r]); }
-const families = [...famMap.entries()].sort((a, b) => b[1].length - a[1].length).map(([family, list]) => ({ family, skus: list.length, heroes: count(list, (r) => r.hero.state), plates: count(list, (r) => r.plate.state), kits: count(list, (r) => r.kit.state) }));
+
+// A hero is published once per PRODUCT GROUP — the catalogue shows one image per
+// group, not one per SKU — so counting indexed heroes against the SKU total reads
+// as 12 % when the family is actually finished. Heroes are scored against groups.
+const HERO_WAITING = ["approved-not-locked", "approved-not-indexed", "indexed-stale", "pending", "rendered"];
+const HERO_PROBLEM = ["changes_requested", "rejected", "indexed-missing-file", "indexed-manifest-mismatch", "indexed-stale"];
+const KIT_WAITING = ["approved-not-published", "candidate", "rendered", "pending"];
+const KIT_PROBLEM = ["changes_requested", "rejected", "stale", "held"];
+const has = (list, keys) => keys.reduce((n, k) => n + (list[k] ?? 0), 0);
+
+const famMap = new Map();
+for (const r of rows) famMap.set(r.family, [...(famMap.get(r.family) ?? []), r]);
+const families = [...famMap.entries()].sort((a, b) => b[1].length - a[1].length).map(([family, list]) => {
+    const heroes = count(list, (r) => r.hero.state), plates = count(list, (r) => r.plate.state), kits = count(list, (r) => r.kit.state);
+    const groups = new Set(list.filter((r) => r.groupSlug).map((r) => r.groupSlug));
+    const groupsWithHero = new Set(list.filter((r) => r.hero.state === "indexed" && r.groupSlug).map((r) => r.groupSlug));
+    const skusNoGroup = list.filter((r) => !r.groupSlug).length;
+    // plates and kits are per SKU; a SKU with no plate cannot have a kit, and some products take no kit at all
+    const plated = has(plates, DONE_PLATE), platedFull = plates["plated"] ?? 0;
+    const kitApplicable = list.length - (kits["not-applicable"] ?? 0);
+    const blockers = [];
+    if (groups.size && groupsWithHero.size < groups.size) blockers.push(`${groups.size - groupsWithHero.size} product group(s) with no indexed hero`);
+    if (has(heroes, HERO_PROBLEM)) blockers.push(`${has(heroes, HERO_PROBLEM)} hero(es) flagged or stale`);
+    if (plated < list.length) blockers.push(`${list.length - plated} SKU(s) with no plate`);
+    if (platedFull < plated) blockers.push(`${plated - platedFull} plate(s) with no cap-off view`);
+    if ((kits["live"] ?? 0) < kitApplicable) blockers.push(`${kitApplicable - (kits["live"] ?? 0)} SKU(s) without a published kit`);
+    if (skusNoGroup) blockers.push(`${skusNoGroup} SKU(s) with no product group`);
+    return {
+        family, skus: list.length, groups: groups.size, groupsWithHero: groupsWithHero.size,
+        heroWaiting: has(heroes, HERO_WAITING), kitWaiting: has(kits, KIT_WAITING),
+        plated, platedFull, kitLive: kits["live"] ?? 0, kitApplicable,
+        heroComplete: groups.size > 0 && groupsWithHero.size === groups.size && has(heroes, HERO_PROBLEM) === 0,
+        plateComplete: list.length > 0 && platedFull === list.length,
+        kitComplete: kitApplicable > 0 && (kits["live"] ?? 0) === kitApplicable,
+        blockers, heroes, plates, kits,
+    };
+}).map((f) => ({ ...f, complete: f.heroComplete && f.plateComplete && f.kitComplete }));
+
 const out = { generatedAt: new Date().toISOString(), deployment, sources, states: {
-    hero: { indexed: "registry row, file on disk, bytes match the manifest", "indexed-stale": "indexed, but a newer approved lock exists — a release will repoint it", "approved-not-indexed": "approved and locked by hash; no registry row yet", "approved-not-locked": "approved on a card; not yet locked", changes_requested: "Jordan asked for a change on the latest card", rejected: "rejected on the latest card", pending: "on a card, decision pending", rendered: "an image exists on a card; no decision", none: "no hero image anywhere" },
-    plate: { plated: "front + cap-off plate served by Convex", "plated-cap-on-only": "front plate only", hold: "held with a reason, no plate", none: "no plate", unknown: "Convex not read" },
+    hero: { indexed: "registry row, file on disk, bytes match the manifest", "indexed-stale": "indexed, but a newer approved lock exists — a release will repoint it", "indexed-missing-file": "registry row points at a file that is not on disk", "indexed-manifest-mismatch": "the file on disk does not match the manifest hash", "approved-not-indexed": "approved and locked by hash; no registry row yet", "approved-not-locked": "approved on a card; not yet locked", changes_requested: "Jordan asked for a change on the latest card", rejected: "rejected on the latest card", pending: "on a card, decision pending", rendered: "an image exists on a card; no decision", none: "no hero image anywhere" },
+    plate: { plated: "front + cap-off plate served by Convex", "plated-cap-on-only": "front plate only, no cap-off view", hold: "held with a reason, no plate", none: "no plate", unknown: "Convex not read" },
     kit: { live: "kit served by Convex and registered to the current plate", stale: "kit exists but not registered to the served plate", "approved-not-published": "approved on a kit card; not published", changes_requested: "change requested on the latest kit card", rejected: "rejected on the latest kit card", pending: "on a kit card, decision pending", candidate: "kit candidate (2026-09-08 ledger)", held: "held with a reason (2026-09-08 ledger)", "not-applicable": "no kit for this product kind", rendered: "kit image on a card, no decision", none: "plated, no kit work", "no-plate": "no plate, so no kit" },
+}, scoring: {
+    hero: "per PRODUCT GROUP — the catalogue shows one hero per group, so a family is scored on groups covered, not SKUs",
+    plate: "per SKU, and complete only when the cap-off view exists too",
+    kit: "per SKU that can take a kit (SKUs marked not-applicable are excluded)",
+    complete: "a family is complete when heroes, plates and kits are all complete and nothing is flagged or stale",
 }, summary, families, rows };
+
 mkdirSync(path.join(root, "src/lib/asset-ledger"), { recursive: true });
 writeFileSync(path.join(root, "src/lib/asset-ledger/ledger.json"), JSON.stringify(out, null, 1) + "\n");
 console.log(JSON.stringify({ generatedAt: out.generatedAt, deployment, ...summary }, null, 2));

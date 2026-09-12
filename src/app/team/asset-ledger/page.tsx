@@ -57,15 +57,9 @@ export default async function Page({ searchParams }: { searchParams?: Promise<Re
     const groups = new Set(rows.filter((r) => r.productRecord && r.groupSlug).map((r) => r.groupSlug));
     const groupsWithHero = new Set(rows.filter((r) => r.hero.state === "indexed" && r.groupSlug).map((r) => r.groupSlug));
     const compactRows = rows.map(compact);
-    const families = ledger.families.map((f) => ({
-        family: f.family,
-        skus: f.skus,
-        hero: sum(f.heroes, DONE.hero),
-        plate: sum(f.plates, DONE.plate),
-        kit: sum(f.kits, DONE.kit),
-        heroWaiting: sum(f.heroes, ["approved-not-locked", "approved-not-indexed", "indexed-stale"]),
-        kitWaiting: sum(f.kits, ["approved-not-published", "candidate"]),
-    }));
+    const families = ledger.families;
+    const doneFamilies = families.filter((f) => f.complete).length;
+    const heroDoneFamilies = families.filter((f) => f.heroComplete).length;
 
     return (
         <main className="min-h-screen bg-linen text-obsidian">
@@ -118,31 +112,54 @@ export default async function Page({ searchParams }: { searchParams?: Promise<Re
                 </section>
 
                 <section className="mt-10">
-                    <h2 className="text-lg font-medium">By family</h2>
-                    <p className="mb-3 text-xs text-slate">Done counts per family. “Waiting” = approved or candidate work that is not served yet.</p>
+                    <div className="flex flex-wrap items-baseline justify-between gap-2">
+                        <h2 className="text-lg font-medium">By family</h2>
+                        <p className="text-xs text-slate">
+                            <strong className="text-obsidian">{doneFamilies}</strong> of {families.length} families complete ·{" "}
+                            <strong className="text-obsidian">{heroDoneFamilies}</strong> have every hero published
+                        </p>
+                    </div>
+                    <p className="mb-3 max-w-3xl text-xs text-slate">
+                        A family turns green when all three are done: a published hero for every product group, a plate
+                        with its cap-off view for every SKU, and a published kit for every SKU that takes one. Heroes are
+                        counted per <strong>product group</strong>, not per SKU, because the catalogue shows one hero per
+                        group. “What’s left” names exactly what is standing between the family and green.
+                    </p>
                     <div className="overflow-x-auto rounded-lg border border-champagne bg-warm-white">
                         <table className="w-full text-sm">
                             <thead className="bg-travertine text-left text-xs uppercase tracking-wide text-slate">
                                 <tr>
                                     <th className="px-3 py-2">Family</th>
+                                    <th className="px-3 py-2">Status</th>
                                     <th className="px-3 py-2 text-right">SKUs</th>
-                                    <th className="px-3 py-2 text-right">Heroes</th>
-                                    <th className="px-3 py-2 text-right">Hero waiting</th>
-                                    <th className="px-3 py-2 text-right">Plates</th>
-                                    <th className="px-3 py-2 text-right">Kits</th>
-                                    <th className="px-3 py-2 text-right">Kit waiting</th>
+                                    <th className="px-3 py-2 text-right" title="product groups with a published hero, of all product groups">Heroes (groups)</th>
+                                    <th className="px-3 py-2 text-right" title="SKUs with a plate including its cap-off view">Plates (SKUs)</th>
+                                    <th className="px-3 py-2 text-right" title="SKUs with a published kit, of those that take one">Kits (SKUs)</th>
+                                    <th className="px-3 py-2">What’s left</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {families.map((f) => (
-                                    <tr key={f.family} className="border-t border-champagne/60">
-                                        <td className="px-3 py-1.5">{f.family}</td>
+                                    <tr key={f.family} className={`border-t border-champagne/60 ${f.complete ? "bg-emerald-50/60" : ""}`}>
+                                        <td className="px-3 py-1.5 font-medium">{f.family}</td>
+                                        <td className="px-3 py-1.5">
+                                            {f.complete ? (
+                                                <span className="inline-flex items-center gap-1 rounded-full bg-emerald-600/15 px-2 py-0.5 text-xs font-semibold text-emerald-800">
+                                                    ● Complete
+                                                </span>
+                                            ) : (
+                                                <span className="inline-flex items-center gap-1 rounded-full bg-champagne/60 px-2 py-0.5 text-xs text-slate">
+                                                    ○ In progress
+                                                </span>
+                                            )}
+                                        </td>
                                         <td className="px-3 py-1.5 text-right tabular-nums">{f.skus}</td>
-                                        <Cell n={f.hero} d={f.skus} />
-                                        <td className="px-3 py-1.5 text-right tabular-nums text-slate">{f.heroWaiting || ""}</td>
-                                        <Cell n={f.plate} d={f.skus} />
-                                        <Cell n={f.kit} d={f.skus} />
-                                        <td className="px-3 py-1.5 text-right tabular-nums text-slate">{f.kitWaiting || ""}</td>
+                                        <Cell n={f.groupsWithHero} d={f.groups} done={f.heroComplete} waiting={f.heroWaiting} />
+                                        <Cell n={f.platedFull} d={f.skus} done={f.plateComplete} />
+                                        <Cell n={f.kitLive} d={f.kitApplicable} done={f.kitComplete} waiting={f.kitWaiting} />
+                                        <td className="px-3 py-1.5 text-xs text-slate">
+                                            {f.blockers.length ? f.blockers.join(" · ") : <span className="text-emerald-800">nothing — this family is done</span>}
+                                        </td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -183,14 +200,16 @@ function AccessPending() {
     );
 }
 
-function Cell({ n, d }: { n: number; d: number }) {
+function Cell({ n, d, done, waiting }: { n: number; d: number; done?: boolean; waiting?: number }) {
     const p = pct(n, d);
     return (
         <td className="px-3 py-1.5 text-right tabular-nums">
             <span className="mr-2 inline-block h-1.5 w-16 rounded bg-travertine align-middle">
-                <span className="block h-1.5 rounded bg-muted-gold" style={{ width: `${p}%` }} />
+                <span className={`block h-1.5 rounded ${done ? "bg-emerald-600" : "bg-muted-gold"}`} style={{ width: `${p}%` }} />
             </span>
-            {n}
+            <span className={done ? "font-semibold text-emerald-800" : ""}>{n}/{d}</span>
+            {waiting ? <span className="ml-1 text-xs text-slate" title="approved or candidate work that is not published yet">(+{waiting})</span> : null}
         </td>
     );
 }
+

@@ -26,6 +26,21 @@ export type LedgerRow = {
 export type FamilySummary = {
     family: string;
     skus: number;
+    /** Heroes are published one per PRODUCT GROUP, so a family is scored on groups covered, not SKUs. */
+    groups: number;
+    groupsWithHero: number;
+    heroWaiting: number;
+    kitWaiting: number;
+    /** SKUs with any plate, and with the cap-off view that the configurator needs. */
+    plated: number;
+    platedFull: number;
+    kitLive: number;
+    kitApplicable: number;
+    heroComplete: boolean;
+    plateComplete: boolean;
+    kitComplete: boolean;
+    complete: boolean;
+    blockers: string[];
     heroes: Record<string, number>;
     plates: Record<string, number>;
     kits: Record<string, number>;
@@ -36,6 +51,7 @@ export type Ledger = {
     deployment: string | null;
     sources: Array<Record<string, string | number>>;
     states: Record<Kind, Record<string, string>>;
+    scoring: Record<string, string>;
     summary: { skus: number; productRecords: number; heroes: Record<string, number>; plates: Record<string, number>; kits: Record<string, number> };
     families: FamilySummary[];
     rows: LedgerRow[];

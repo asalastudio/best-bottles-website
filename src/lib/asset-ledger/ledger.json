@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-11T17:58:27.018Z",
+ "generatedAt": "2026-09-12T02:46:08.844Z",
  "deployment": "helpful-elephant-638",
  "sources": [
   {
@@ -33,6 +33,12 @@
    "rows": 29
   },
   {
+   "name": "hero.lock",
+   "path": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/lineup/heroes/approved-lock.json",
+   "rows": 83,
+   "newerThanReleases": 63
+  },
+  {
    "name": "review.root",
    "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/hero-reviews",
    "collections": 9,
@@ -41,17 +47,10 @@
   },
   {
    "name": "review.root",
-   "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/priority-family-kits/hero-reviews",
-   "collections": 17,
-   "rows": 2737,
-   "decisions": 49
-  },
-  {
-   "name": "review.root",
    "path": "/Users/jordanrichter/.codex/visualizations/2026/09/09/01a083e8-52fb-7dc3-bb73-4af44d38cf7f/plates-kits-heroes-handoff/hero-reviews",
    "collections": 92,
    "rows": 7451,
-   "decisions": 1770
+   "decisions": 1842
   },
   {
    "name": "convex.productPlates",
@@ -88,6 +87,8 @@
   "hero": {
    "indexed": "registry row, file on disk, bytes match the manifest",
    "indexed-stale": "indexed, but a newer approved lock exists — a release will repoint it",
+   "indexed-missing-file": "registry row points at a file that is not on disk",
+   "indexed-manifest-mismatch": "the file on disk does not match the manifest hash",
    "approved-not-indexed": "approved and locked by hash; no registry row yet",
    "approved-not-locked": "approved on a card; not yet locked",
    "changes_requested": "Jordan asked for a change on the latest card",
@@ -98,7 +99,7 @@
   },
   "plate": {
    "plated": "front + cap-off plate served by Convex",
-   "plated-cap-on-only": "front plate only",
+   "plated-cap-on-only": "front plate only, no cap-off view",
    "hold": "held with a reason, no plate",
    "none": "no plate",
    "unknown": "Convex not read"
@@ -118,16 +119,23 @@
    "no-plate": "no plate, so no kit"
   }
  },
+ "scoring": {
+  "hero": "per PRODUCT GROUP — the catalogue shows one hero per group, so a family is scored on groups covered, not SKUs",
+  "plate": "per SKU, and complete only when the cap-off view exists too",
+  "kit": "per SKU that can take a kit (SKUs marked not-applicable are excluded)",
+  "complete": "a family is complete when heroes, plates and kits are all complete and nothing is flagged or stale"
+ },
  "summary": {
   "skus": 2572,
   "productRecords": 2536,
   "heroes": {
    "none": 1422,
    "approved-not-locked": 642,
-   "indexed": 391,
+   "indexed": 336,
    "rendered": 88,
-   "changes_requested": 18,
-   "approved-not-indexed": 7,
+   "indexed-stale": 55,
+   "changes_requested": 17,
+   "approved-not-indexed": 8,
    "rejected": 2,
    "pending": 2
   },
@@ -151,6 +159,24 @@
   {
    "family": "Cylinder",
    "skus": 443,
+   "groups": 52,
+   "groupsWithHero": 52,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 436,
+   "platedFull": 299,
+   "kitLive": 420,
+   "kitApplicable": 440,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "10 hero(es) flagged or stale",
+    "7 SKU(s) with no plate",
+    "137 plate(s) with no cap-off view",
+    "20 SKU(s) without a published kit",
+    "7 SKU(s) with no product group"
+   ],
    "heroes": {
     "none": 381,
     "indexed": 52,
@@ -166,11 +192,29 @@
     "held": 13,
     "no-plate": 7,
     "not-applicable": 3
-   }
+   },
+   "complete": false
   },
   {
    "family": "Elegant",
    "skus": 290,
+   "groups": 33,
+   "groupsWithHero": 33,
+   "heroWaiting": 181,
+   "kitWaiting": 75,
+   "plated": 224,
+   "platedFull": 224,
+   "kitLive": 0,
+   "kitApplicable": 290,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "2 hero(es) flagged or stale",
+    "66 SKU(s) with no plate",
+    "290 SKU(s) without a published kit",
+    "36 SKU(s) with no product group"
+   ],
    "heroes": {
     "approved-not-locked": 181,
     "none": 74,
@@ -187,11 +231,29 @@
     "candidate": 51,
     "changes_requested": 27,
     "approved-not-published": 24
-   }
+   },
+   "complete": false
   },
   {
    "family": "Diva",
    "skus": 228,
+   "groups": 21,
+   "groupsWithHero": 21,
+   "heroWaiting": 95,
+   "kitWaiting": 25,
+   "plated": 120,
+   "platedFull": 120,
+   "kitLive": 0,
+   "kitApplicable": 228,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "1 hero(es) flagged or stale",
+    "108 SKU(s) with no plate",
+    "228 SKU(s) without a published kit",
+    "49 SKU(s) with no product group"
+   ],
    "heroes": {
     "none": 111,
     "approved-not-locked": 95,
@@ -206,16 +268,36 @@
     "no-plate": 108,
     "held": 95,
     "candidate": 25
-   }
+   },
+   "complete": false
   },
   {
    "family": "Circle",
    "skus": 209,
+   "groups": 27,
+   "groupsWithHero": 7,
+   "heroWaiting": 173,
+   "kitWaiting": 83,
+   "plated": 192,
+   "platedFull": 192,
+   "kitLive": 0,
+   "kitApplicable": 209,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "20 product group(s) with no indexed hero",
+    "20 hero(es) flagged or stale",
+    "17 SKU(s) with no plate",
+    "209 SKU(s) without a published kit",
+    "4 SKU(s) with no product group"
+   ],
    "heroes": {
     "approved-not-locked": 152,
     "none": 29,
-    "indexed": 27,
-    "changes_requested": 1
+    "indexed-stale": 20,
+    "indexed": 7,
+    "approved-not-indexed": 1
    },
    "plates": {
     "plated": 192,
@@ -227,11 +309,28 @@
     "no-plate": 17,
     "approved-not-published": 6,
     "changes_requested": 5
-   }
+   },
+   "complete": false
   },
   {
    "family": "Sleek",
    "skus": 192,
+   "groups": 21,
+   "groupsWithHero": 21,
+   "heroWaiting": 9,
+   "kitWaiting": 50,
+   "plated": 113,
+   "platedFull": 113,
+   "kitLive": 0,
+   "kitApplicable": 192,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "79 SKU(s) with no plate",
+    "192 SKU(s) without a published kit",
+    "6 SKU(s) with no product group"
+   ],
    "heroes": {
     "none": 162,
     "indexed": 21,
@@ -246,11 +345,29 @@
     "no-plate": 79,
     "held": 63,
     "candidate": 50
-   }
+   },
+   "complete": false
   },
   {
    "family": "Round",
    "skus": 186,
+   "groups": 21,
+   "groupsWithHero": 21,
+   "heroWaiting": 124,
+   "kitWaiting": 32,
+   "plated": 141,
+   "platedFull": 140,
+   "kitLive": 0,
+   "kitApplicable": 186,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "45 SKU(s) with no plate",
+    "1 plate(s) with no cap-off view",
+    "186 SKU(s) without a published kit",
+    "8 SKU(s) with no product group"
+   ],
    "heroes": {
     "approved-not-locked": 124,
     "none": 41,
@@ -265,11 +382,29 @@
     "held": 109,
     "no-plate": 45,
     "approved-not-published": 32
-   }
+   },
+   "complete": false
   },
   {
    "family": "Slim",
    "skus": 129,
+   "groups": 15,
+   "groupsWithHero": 15,
+   "heroWaiting": 45,
+   "kitWaiting": 18,
+   "plated": 27,
+   "platedFull": 19,
+   "kitLive": 0,
+   "kitApplicable": 129,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "102 SKU(s) with no plate",
+    "8 plate(s) with no cap-off view",
+    "129 SKU(s) without a published kit",
+    "6 SKU(s) with no product group"
+   ],
    "heroes": {
     "none": 69,
     "rendered": 38,
@@ -285,14 +420,34 @@
     "no-plate": 102,
     "candidate": 18,
     "held": 9
-   }
+   },
+   "complete": false
   },
   {
    "family": "Boston Round",
    "skus": 123,
+   "groups": 23,
+   "groupsWithHero": 8,
+   "heroWaiting": 21,
+   "kitWaiting": 25,
+   "plated": 90,
+   "platedFull": 52,
+   "kitLive": 0,
+   "kitApplicable": 123,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "15 product group(s) with no indexed hero",
+    "15 hero(es) flagged or stale",
+    "33 SKU(s) with no plate",
+    "38 plate(s) with no cap-off view",
+    "123 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 94,
-    "indexed": 23,
+    "indexed-stale": 15,
+    "indexed": 8,
     "approved-not-indexed": 6
    },
    "plates": {
@@ -304,11 +459,29 @@
     "held": 65,
     "no-plate": 33,
     "candidate": 25
-   }
+   },
+   "complete": false
   },
   {
    "family": "Empire",
    "skus": 95,
+   "groups": 11,
+   "groupsWithHero": 11,
+   "heroWaiting": 56,
+   "kitWaiting": 21,
+   "plated": 65,
+   "platedFull": 42,
+   "kitLive": 0,
+   "kitApplicable": 95,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "30 SKU(s) with no plate",
+    "23 plate(s) with no cap-off view",
+    "95 SKU(s) without a published kit",
+    "4 SKU(s) with no product group"
+   ],
    "heroes": {
     "approved-not-locked": 34,
     "none": 28,
@@ -325,11 +498,29 @@
     "no-plate": 30,
     "candidate": 21,
     "changes_requested": 6
-   }
+   },
+   "complete": false
   },
   {
    "family": "Sprayer",
    "skus": 64,
+   "groups": 7,
+   "groupsWithHero": 7,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 35,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 29,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "29 SKU(s) with no plate",
+    "35 plate(s) with no cap-off view",
+    "29 SKU(s) without a published kit",
+    "21 SKU(s) with no product group"
+   ],
    "heroes": {
     "none": 57,
     "indexed": 7
@@ -341,11 +532,29 @@
    "kits": {
     "not-applicable": 35,
     "no-plate": 29
-   }
+   },
+   "complete": false
   },
   {
    "family": "Rectangle",
    "skus": 63,
+   "groups": 7,
+   "groupsWithHero": 7,
+   "heroWaiting": 0,
+   "kitWaiting": 10,
+   "plated": 60,
+   "platedFull": 58,
+   "kitLive": 0,
+   "kitApplicable": 63,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "1 hero(es) flagged or stale",
+    "3 SKU(s) with no plate",
+    "2 plate(s) with no cap-off view",
+    "63 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 55,
     "indexed": 7,
@@ -361,11 +570,28 @@
     "candidate": 9,
     "no-plate": 2,
     "rendered": 1
-   }
+   },
+   "complete": false
   },
   {
    "family": "Tulip",
    "skus": 60,
+   "groups": 6,
+   "groupsWithHero": 6,
+   "heroWaiting": 0,
+   "kitWaiting": 14,
+   "plated": 59,
+   "platedFull": 59,
+   "kitLive": 0,
+   "kitApplicable": 60,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "2 hero(es) flagged or stale",
+    "1 SKU(s) with no plate",
+    "60 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 52,
     "indexed": 6,
@@ -379,11 +605,28 @@
     "held": 45,
     "candidate": 14,
     "no-plate": 1
-   }
+   },
+   "complete": false
   },
   {
    "family": "Diamond",
    "skus": 45,
+   "groups": 5,
+   "groupsWithHero": 5,
+   "heroWaiting": 27,
+   "kitWaiting": 0,
+   "plated": 30,
+   "platedFull": 30,
+   "kitLive": 0,
+   "kitApplicable": 45,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "15 SKU(s) with no plate",
+    "45 SKU(s) without a published kit",
+    "2 SKU(s) with no product group"
+   ],
    "heroes": {
     "approved-not-locked": 27,
     "none": 13,
@@ -396,11 +639,29 @@
    "kits": {
     "held": 30,
     "no-plate": 15
-   }
+   },
+   "complete": false
   },
   {
    "family": "Grace",
    "skus": 45,
+   "groups": 5,
+   "groupsWithHero": 5,
+   "heroWaiting": 5,
+   "kitWaiting": 25,
+   "plated": 38,
+   "platedFull": 18,
+   "kitLive": 0,
+   "kitApplicable": 45,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "7 SKU(s) with no plate",
+    "20 plate(s) with no cap-off view",
+    "45 SKU(s) without a published kit",
+    "2 SKU(s) with no product group"
+   ],
    "heroes": {
     "none": 35,
     "approved-not-locked": 5,
@@ -415,11 +676,29 @@
     "candidate": 25,
     "held": 13,
     "no-plate": 7
-   }
+   },
+   "complete": false
   },
   {
    "family": "Cap/Closure",
    "skus": 39,
+   "groups": 10,
+   "groupsWithHero": 4,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 18,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 21,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "6 product group(s) with no indexed hero",
+    "21 SKU(s) with no plate",
+    "18 plate(s) with no cap-off view",
+    "21 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 35,
     "indexed": 4
@@ -431,11 +710,28 @@
    "kits": {
     "no-plate": 21,
     "not-applicable": 18
-   }
+   },
+   "complete": false
   },
   {
    "family": "Unknown",
    "skus": 36,
+   "groups": 0,
+   "groupsWithHero": 0,
+   "heroWaiting": 36,
+   "kitWaiting": 8,
+   "plated": 0,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 36,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "36 SKU(s) with no plate",
+    "36 SKU(s) without a published kit",
+    "36 SKU(s) with no product group"
+   ],
    "heroes": {
     "rendered": 28,
     "approved-not-locked": 8
@@ -446,11 +742,29 @@
    "kits": {
     "no-plate": 28,
     "approved-not-published": 8
-   }
+   },
+   "complete": false
   },
   {
    "family": "Roll-On Cap",
    "skus": 35,
+   "groups": 7,
+   "groupsWithHero": 6,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 34,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 1,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "1 product group(s) with no indexed hero",
+    "1 SKU(s) with no plate",
+    "34 plate(s) with no cap-off view",
+    "1 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 29,
     "indexed": 6
@@ -462,11 +776,27 @@
    "kits": {
     "not-applicable": 34,
     "no-plate": 1
-   }
+   },
+   "complete": false
   },
   {
    "family": "Flair",
    "skus": 30,
+   "groups": 3,
+   "groupsWithHero": 3,
+   "heroWaiting": 0,
+   "kitWaiting": 8,
+   "plated": 30,
+   "platedFull": 30,
+   "kitLive": 0,
+   "kitApplicable": 30,
+   "heroComplete": false,
+   "plateComplete": true,
+   "kitComplete": false,
+   "blockers": [
+    "1 hero(es) flagged or stale",
+    "30 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 26,
     "indexed": 3,
@@ -478,11 +808,29 @@
    "kits": {
     "held": 22,
     "candidate": 8
-   }
+   },
+   "complete": false
   },
   {
    "family": "Royal",
    "skus": 30,
+   "groups": 4,
+   "groupsWithHero": 4,
+   "heroWaiting": 1,
+   "kitWaiting": 16,
+   "plated": 29,
+   "platedFull": 27,
+   "kitLive": 0,
+   "kitApplicable": 30,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "1 hero(es) flagged or stale",
+    "1 SKU(s) with no plate",
+    "2 plate(s) with no cap-off view",
+    "30 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 24,
     "indexed": 4,
@@ -498,11 +846,27 @@
     "candidate": 16,
     "held": 13,
     "no-plate": 1
-   }
+   },
+   "complete": false
   },
   {
    "family": "Square",
    "skus": 29,
+   "groups": 3,
+   "groupsWithHero": 3,
+   "heroWaiting": 0,
+   "kitWaiting": 19,
+   "plated": 29,
+   "platedFull": 29,
+   "kitLive": 0,
+   "kitApplicable": 29,
+   "heroComplete": false,
+   "plateComplete": true,
+   "kitComplete": false,
+   "blockers": [
+    "1 hero(es) flagged or stale",
+    "29 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 25,
     "indexed": 3,
@@ -514,14 +878,34 @@
    "kits": {
     "candidate": 19,
     "held": 10
-   }
+   },
+   "complete": false
   },
   {
    "family": "Vial",
    "skus": 26,
+   "groups": 17,
+   "groupsWithHero": 16,
+   "heroWaiting": 1,
+   "kitWaiting": 0,
+   "plated": 19,
+   "platedFull": 13,
+   "kitLive": 0,
+   "kitApplicable": 26,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "1 product group(s) with no indexed hero",
+    "1 hero(es) flagged or stale",
+    "7 SKU(s) with no plate",
+    "6 plate(s) with no cap-off view",
+    "26 SKU(s) without a published kit"
+   ],
    "heroes": {
-    "indexed": 17,
-    "none": 9
+    "indexed": 16,
+    "none": 9,
+    "indexed-stale": 1
    },
    "plates": {
     "plated": 13,
@@ -531,13 +915,32 @@
    "kits": {
     "held": 19,
     "no-plate": 7
-   }
+   },
+   "complete": false
   },
   {
    "family": "Atomizer",
    "skus": 25,
+   "groups": 2,
+   "groupsWithHero": 2,
+   "heroWaiting": 11,
+   "kitWaiting": 0,
+   "plated": 21,
+   "platedFull": 21,
+   "kitLive": 0,
+   "kitApplicable": 25,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "11 hero(es) flagged or stale",
+    "4 SKU(s) with no plate",
+    "25 SKU(s) without a published kit",
+    "2 SKU(s) with no product group"
+   ],
    "heroes": {
-    "indexed": 23,
+    "indexed": 12,
+    "indexed-stale": 11,
     "none": 2
    },
    "plates": {
@@ -547,11 +950,29 @@
    "kits": {
     "held": 21,
     "no-plate": 4
-   }
+   },
+   "complete": false
   },
   {
    "family": "Dropper",
    "skus": 22,
+   "groups": 4,
+   "groupsWithHero": 3,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 21,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 1,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "1 product group(s) with no indexed hero",
+    "1 SKU(s) with no plate",
+    "21 plate(s) with no cap-off view",
+    "1 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 19,
     "indexed": 3
@@ -563,11 +984,27 @@
    "kits": {
     "not-applicable": 21,
     "no-plate": 1
-   }
+   },
+   "complete": false
   },
   {
    "family": "Gift Bag",
    "skus": 21,
+   "groups": 11,
+   "groupsWithHero": 11,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 0,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 21,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "21 SKU(s) with no plate",
+    "21 SKU(s) without a published kit"
+   ],
    "heroes": {
     "indexed": 11,
     "none": 10
@@ -577,11 +1014,27 @@
    },
    "kits": {
     "no-plate": 21
-   }
+   },
+   "complete": false
   },
   {
    "family": "Cream Jar",
    "skus": 19,
+   "groups": 13,
+   "groupsWithHero": 13,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 14,
+   "platedFull": 14,
+   "kitLive": 0,
+   "kitApplicable": 19,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "5 SKU(s) with no plate",
+    "19 SKU(s) without a published kit"
+   ],
    "heroes": {
     "indexed": 13,
     "none": 6
@@ -593,11 +1046,27 @@
    "kits": {
     "held": 14,
     "no-plate": 5
-   }
+   },
+   "complete": false
   },
   {
    "family": "Gift Box",
    "skus": 14,
+   "groups": 7,
+   "groupsWithHero": 7,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 0,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 14,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "14 SKU(s) with no plate",
+    "14 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 7,
     "indexed": 7
@@ -607,13 +1076,33 @@
    },
    "kits": {
     "no-plate": 14
-   }
+   },
+   "complete": false
   },
   {
    "family": "Decorative",
    "skus": 12,
+   "groups": 12,
+   "groupsWithHero": 8,
+   "heroWaiting": 4,
+   "kitWaiting": 0,
+   "plated": 9,
+   "platedFull": 7,
+   "kitLive": 0,
+   "kitApplicable": 12,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "4 product group(s) with no indexed hero",
+    "4 hero(es) flagged or stale",
+    "3 SKU(s) with no plate",
+    "2 plate(s) with no cap-off view",
+    "12 SKU(s) without a published kit"
+   ],
    "heroes": {
-    "indexed": 12
+    "indexed": 8,
+    "indexed-stale": 4
    },
    "plates": {
     "plated": 7,
@@ -623,11 +1112,27 @@
    "kits": {
     "held": 9,
     "no-plate": 3
-   }
+   },
+   "complete": false
   },
   {
    "family": "Packaging Supply",
    "skus": 12,
+   "groups": 2,
+   "groupsWithHero": 2,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 0,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 12,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "12 SKU(s) with no plate",
+    "12 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 10,
     "indexed": 2
@@ -637,11 +1142,29 @@
    },
    "kits": {
     "no-plate": 12
-   }
+   },
+   "complete": false
   },
   {
    "family": "Lotion Pump",
    "skus": 10,
+   "groups": 1,
+   "groupsWithHero": 1,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 7,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 3,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "3 SKU(s) with no plate",
+    "7 plate(s) with no cap-off view",
+    "3 SKU(s) without a published kit",
+    "3 SKU(s) with no product group"
+   ],
    "heroes": {
     "none": 9,
     "indexed": 1
@@ -653,11 +1176,28 @@
    "kits": {
     "not-applicable": 7,
     "no-plate": 3
-   }
+   },
+   "complete": false
   },
   {
    "family": "Aluminum Bottle",
    "skus": 8,
+   "groups": 7,
+   "groupsWithHero": 7,
+   "heroWaiting": 1,
+   "kitWaiting": 0,
+   "plated": 5,
+   "platedFull": 3,
+   "kitLive": 0,
+   "kitApplicable": 8,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "3 SKU(s) with no plate",
+    "2 plate(s) with no cap-off view",
+    "8 SKU(s) without a published kit"
+   ],
    "heroes": {
     "indexed": 7,
     "approved-not-locked": 1
@@ -670,14 +1210,34 @@
    "kits": {
     "held": 5,
     "no-plate": 3
-   }
+   },
+   "complete": false
   },
   {
    "family": "Bell",
    "skus": 6,
+   "groups": 3,
+   "groupsWithHero": 1,
+   "heroWaiting": 3,
+   "kitWaiting": 0,
+   "plated": 0,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 6,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "2 product group(s) with no indexed hero",
+    "2 hero(es) flagged or stale",
+    "6 SKU(s) with no plate",
+    "6 SKU(s) without a published kit",
+    "2 SKU(s) with no product group"
+   ],
    "heroes": {
-    "indexed": 3,
+    "indexed-stale": 2,
     "none": 2,
+    "indexed": 1,
     "approved-not-indexed": 1
    },
    "plates": {
@@ -685,13 +1245,33 @@
    },
    "kits": {
     "no-plate": 6
-   }
+   },
+   "complete": false
   },
   {
    "family": "Apothecary",
    "skus": 5,
+   "groups": 5,
+   "groupsWithHero": 4,
+   "heroWaiting": 1,
+   "kitWaiting": 0,
+   "plated": 4,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 5,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "1 product group(s) with no indexed hero",
+    "1 hero(es) flagged or stale",
+    "1 SKU(s) with no plate",
+    "4 plate(s) with no cap-off view",
+    "5 SKU(s) without a published kit"
+   ],
    "heroes": {
-    "indexed": 5
+    "indexed": 4,
+    "indexed-stale": 1
    },
    "plates": {
     "plated-cap-on-only": 4,
@@ -700,11 +1280,27 @@
    "kits": {
     "held": 4,
     "no-plate": 1
-   }
+   },
+   "complete": false
   },
   {
    "family": "Pillar",
    "skus": 4,
+   "groups": 2,
+   "groupsWithHero": 2,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 0,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 4,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "4 SKU(s) with no plate",
+    "4 SKU(s) without a published kit"
+   ],
    "heroes": {
     "none": 2,
     "indexed": 2
@@ -714,11 +1310,28 @@
    },
    "kits": {
     "no-plate": 4
-   }
+   },
+   "complete": false
   },
   {
    "family": "Lotion Bottle",
    "skus": 4,
+   "groups": 3,
+   "groupsWithHero": 3,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 2,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 4,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "2 SKU(s) with no plate",
+    "2 plate(s) with no cap-off view",
+    "4 SKU(s) without a published kit"
+   ],
    "heroes": {
     "indexed": 3,
     "none": 1
@@ -730,11 +1343,28 @@
    "kits": {
     "no-plate": 2,
     "held": 2
-   }
+   },
+   "complete": false
   },
   {
    "family": "Plastic Bottle",
    "skus": 4,
+   "groups": 2,
+   "groupsWithHero": 2,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 2,
+   "platedFull": 1,
+   "kitLive": 0,
+   "kitApplicable": 4,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "2 SKU(s) with no plate",
+    "1 plate(s) with no cap-off view",
+    "4 SKU(s) without a published kit"
+   ],
    "heroes": {
     "indexed": 2,
     "none": 2
@@ -747,24 +1377,60 @@
    "kits": {
     "no-plate": 2,
     "held": 2
-   }
+   },
+   "complete": false
   },
   {
    "family": "Tool",
    "skus": 3,
+   "groups": 3,
+   "groupsWithHero": 2,
+   "heroWaiting": 1,
+   "kitWaiting": 0,
+   "plated": 0,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 3,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "1 product group(s) with no indexed hero",
+    "1 hero(es) flagged or stale",
+    "3 SKU(s) with no plate",
+    "3 SKU(s) without a published kit"
+   ],
    "heroes": {
-    "indexed": 3
+    "indexed": 2,
+    "indexed-stale": 1
    },
    "plates": {
     "none": 3
    },
    "kits": {
     "no-plate": 3
-   }
+   },
+   "complete": false
   },
   {
    "family": "Teardrop",
    "skus": 3,
+   "groups": 3,
+   "groupsWithHero": 3,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 2,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 3,
+   "heroComplete": true,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "1 SKU(s) with no plate",
+    "2 plate(s) with no cap-off view",
+    "3 SKU(s) without a published kit"
+   ],
    "heroes": {
     "indexed": 3
    },
@@ -775,11 +1441,28 @@
    "kits": {
     "held": 2,
     "no-plate": 1
-   }
+   },
+   "complete": false
   },
   {
    "family": "Plug/Applicator",
    "skus": 2,
+   "groups": 0,
+   "groupsWithHero": 0,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 0,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 2,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "2 SKU(s) with no plate",
+    "2 SKU(s) without a published kit",
+    "2 SKU(s) with no product group"
+   ],
    "heroes": {
     "none": 2
    },
@@ -788,11 +1471,28 @@
    },
    "kits": {
     "no-plate": 2
-   }
+   },
+   "complete": false
   },
   {
    "family": "Tall Cylinder",
    "skus": 1,
+   "groups": 0,
+   "groupsWithHero": 0,
+   "heroWaiting": 0,
+   "kitWaiting": 0,
+   "plated": 0,
+   "platedFull": 0,
+   "kitLive": 0,
+   "kitApplicable": 1,
+   "heroComplete": false,
+   "plateComplete": false,
+   "kitComplete": false,
+   "blockers": [
+    "1 SKU(s) with no plate",
+    "1 SKU(s) without a published kit",
+    "1 SKU(s) with no product group"
+   ],
    "heroes": {
     "none": 1
    },
@@ -801,7 +1501,8 @@
    },
    "kits": {
     "no-plate": 1
-   }
+   },
+   "complete": false
   }
  ],
  "rows": [
@@ -5138,18 +5839,18 @@
    "groupSlug": "tool-0ml-gold",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/FunnelMetalGl.42533e4072ba.png",
     "sha256": "42533e4072baed5ba13c68a9eefbae00ab02b7999cc2732ac68e018001427127",
     "manifestSha256": "42533e4072baed5ba13c68a9eefbae00ab02b7999cc2732ac68e018001427127",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "tool-0ml-gold",
     "review": {
      "status": "approved",
-     "sha256": "42533e4072baed5ba13c68a9eefbae00ab02b7999cc2732ac68e018001427127",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:36:39.958Z"
+     "sha256": "cd3bde0eb208e60222a65b14693a59bdb89b5eed6e41ccd25e1a490ac18e432a",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:04.848Z"
     }
    },
    "plate": {
@@ -5200,18 +5901,18 @@
    "groupSlug": "vial-9ml-clear-18-400-glasswand",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GB09BlackCapApp.ef0a4e27861e.png",
     "sha256": "ef0a4e27861eb4a80e3286fa677f13df305444a6353b7d50e161184aa5d209c1",
     "manifestSha256": "ef0a4e27861eb4a80e3286fa677f13df305444a6353b7d50e161184aa5d209c1",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "vial-9ml-clear-18-400-glasswand",
     "review": {
      "status": "approved",
-     "sha256": "ef0a4e27861eb4a80e3286fa677f13df305444a6353b7d50e161184aa5d209c1",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:38:30.950Z"
+     "sha256": "3e70fd89b054a0d7a9292e19cd5875e55589c70b9042b9708877e41abc5492de",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:09.811Z"
     }
    },
    "plate": {
@@ -5270,18 +5971,18 @@
    "groupSlug": "apothecary-15ml-cobalt-blue-Ground-glassapplicator",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GB15ApthBlue.db2ca82a7ccd.png",
     "sha256": "db2ca82a7ccd7b4bad0c31000b8d39e18516392ef2bac1e2cd5b78e6d3a535dd",
     "manifestSha256": "db2ca82a7ccd7b4bad0c31000b8d39e18516392ef2bac1e2cd5b78e6d3a535dd",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "apothecary-15ml-cobalt-blue-Ground-glassapplicator",
     "review": {
      "status": "approved",
-     "sha256": "db2ca82a7ccd7b4bad0c31000b8d39e18516392ef2bac1e2cd5b78e6d3a535dd",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:41:29.530Z"
+     "sha256": "fbf439e639162d02b7fb7b69e0511ab57e75eb855a09f295a69d3d58507b6925",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:12.690Z"
     }
    },
    "plate": {
@@ -5560,18 +6261,18 @@
    "groupSlug": "genie-32ml-clear-Ground",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GB1ozGenieCl.80c67dd52ba9.png",
     "sha256": "80c67dd52ba93f59b8b972aa1f029f56ee08347dca1168713bcdb6fac1087348",
     "manifestSha256": "80c67dd52ba93f59b8b972aa1f029f56ee08347dca1168713bcdb6fac1087348",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "genie-32ml-clear-Ground",
     "review": {
      "status": "approved",
-     "sha256": "80c67dd52ba93f59b8b972aa1f029f56ee08347dca1168713bcdb6fac1087348",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:42:16.736Z"
+     "sha256": "2f951f4bbc06b65903b85685da96abf06a7605dd27517b04454f74e00d2b2810",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:26.382Z"
     }
    },
    "plate": {
@@ -5595,18 +6296,18 @@
    "groupSlug": "tola-3ml-clear-14.3mm",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GB3TPlGl.358aeaaf70a4.png",
     "sha256": "358aeaaf70a48882ef2e2084fdbedf8f8582436a71e75d923c51ef50eec5db06",
     "manifestSha256": "358aeaaf70a48882ef2e2084fdbedf8f8582436a71e75d923c51ef50eec5db06",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "tola-3ml-clear-14.3mm",
     "review": {
      "status": "approved",
-     "sha256": "358aeaaf70a48882ef2e2084fdbedf8f8582436a71e75d923c51ef50eec5db06",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:42:17.425Z"
+     "sha256": "3f8144514e31abecc5664b2f63df9fa858f7584bec88ac1d42716a6a9ab3d878",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:25.831Z"
     }
    },
    "plate": {
@@ -5684,18 +6385,18 @@
    "groupSlug": "atomizer-10ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom10Blk.5c2e4a045eb1.png",
     "sha256": "5c2e4a045eb1a983f190315e5a248e69dd9df13a003385ce385c5046fb64a11a",
     "manifestSha256": "5c2e4a045eb1a983f190315e5a248e69dd9df13a003385ce385c5046fb64a11a",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-10ml",
     "review": {
      "status": "approved",
-     "sha256": "5c2e4a045eb1a983f190315e5a248e69dd9df13a003385ce385c5046fb64a11a",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:01.612Z"
+     "sha256": "93294ef8c12759dd8c2906444c0e18209ae2f456259f4de01db0935c9f62f130",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:42.094Z"
     }
    },
    "plate": {
@@ -5754,18 +6455,18 @@
    "groupSlug": "atomizer-10ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom10Blu.4997592e9827.png",
     "sha256": "4997592e9827f7eea2833a3b03536083bc2f1dca716aab6d5d90e54c751609e8",
     "manifestSha256": "4997592e9827f7eea2833a3b03536083bc2f1dca716aab6d5d90e54c751609e8",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-10ml",
     "review": {
      "status": "approved",
-     "sha256": "4997592e9827f7eea2833a3b03536083bc2f1dca716aab6d5d90e54c751609e8",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:02.888Z"
+     "sha256": "0bdcb429bba6db90721bd1fb7e048539b5e78da84dd12404b5c52fe733825485",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:42.605Z"
     }
    },
    "plate": {
@@ -5789,18 +6490,18 @@
    "groupSlug": "atomizer-10ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom10Gl.e6059c9d0c99.png",
     "sha256": "e6059c9d0c99a56f9c762acb7ba4666398cf1691bd5c236ded26a6c6db9bc11e",
     "manifestSha256": "e6059c9d0c99a56f9c762acb7ba4666398cf1691bd5c236ded26a6c6db9bc11e",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-10ml",
     "review": {
      "status": "approved",
-     "sha256": "e6059c9d0c99a56f9c762acb7ba4666398cf1691bd5c236ded26a6c6db9bc11e",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:03.445Z"
+     "sha256": "c34d6b3683299d39e1fd173a5ac228ffbd488511bf80e92d8b34cf6551308113",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:43.415Z"
     }
    },
    "plate": {
@@ -5824,18 +6525,18 @@
    "groupSlug": "atomizer-10ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom10Gr.d191428a5513.png",
     "sha256": "d191428a55137984387bb3200ceb0bee3f3d3912b97948e50e1f0eac13c0f9d3",
     "manifestSha256": "d191428a55137984387bb3200ceb0bee3f3d3912b97948e50e1f0eac13c0f9d3",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-10ml",
     "review": {
      "status": "approved",
-     "sha256": "d191428a55137984387bb3200ceb0bee3f3d3912b97948e50e1f0eac13c0f9d3",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:12.949Z"
+     "sha256": "f28979d78ba8671022042cfc40d476253f62303e655b5b6b7722b76588b0d2dd",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:43.965Z"
     }
    },
    "plate": {
@@ -5859,18 +6560,18 @@
    "groupSlug": "atomizer-10ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom10Lv.ed24857780e7.png",
     "sha256": "ed24857780e7325db95e18a87c379cfcd42be9d63c63721351056263eb3b05c3",
     "manifestSha256": "ed24857780e7325db95e18a87c379cfcd42be9d63c63721351056263eb3b05c3",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-10ml",
     "review": {
      "status": "approved",
-     "sha256": "ed24857780e7325db95e18a87c379cfcd42be9d63c63721351056263eb3b05c3",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:12.382Z"
+     "sha256": "b10e2702abc8ce47590b6f7f3d78cf72ee0ebe67925d02177306c10c8dac1fbe",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:50.396Z"
     }
    },
    "plate": {
@@ -5894,18 +6595,18 @@
    "groupSlug": "atomizer-10ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom10Pnk.bce25761537f.png",
     "sha256": "bce25761537f4f54f8366fc730cf5bbd6eaed7970eaeea91edaed625314d19d6",
     "manifestSha256": "bce25761537f4f54f8366fc730cf5bbd6eaed7970eaeea91edaed625314d19d6",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-10ml",
     "review": {
      "status": "approved",
-     "sha256": "bce25761537f4f54f8366fc730cf5bbd6eaed7970eaeea91edaed625314d19d6",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:11.796Z"
+     "sha256": "5afcb965c86fb65d693a648a6622fdb0e797619b36db9ac69036d3f36bd58f55",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:49.825Z"
     }
    },
    "plate": {
@@ -5929,18 +6630,18 @@
    "groupSlug": "atomizer-10ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom10Red.ce3108e4e3a8.png",
     "sha256": "ce3108e4e3a837e057f18dc4c080ff4a383b597a1ab469c3954b908d287924df",
     "manifestSha256": "ce3108e4e3a837e057f18dc4c080ff4a383b597a1ab469c3954b908d287924df",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-10ml",
     "review": {
      "status": "approved",
-     "sha256": "ce3108e4e3a837e057f18dc4c080ff4a383b597a1ab469c3954b908d287924df",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:11.154Z"
+     "sha256": "0d131e700a12f5dc7f5548d03400df880c1cebbbd20a77c7b64823b6700b5c4a",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:49.266Z"
     }
    },
    "plate": {
@@ -6033,18 +6734,18 @@
    "groupSlug": "atomizer-10ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom10SlStars.ff6ffcab9274.png",
     "sha256": "ff6ffcab9274d5389064807776d61980f41c44b70cf7e74346f813f6cf92a9c1",
     "manifestSha256": "ff6ffcab9274d5389064807776d61980f41c44b70cf7e74346f813f6cf92a9c1",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-10ml",
     "review": {
      "status": "approved",
-     "sha256": "ff6ffcab9274d5389064807776d61980f41c44b70cf7e74346f813f6cf92a9c1",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:27.524Z"
+     "sha256": "769d44f12dc85ee9e5dbc3b1b6c3c2e953f93a4a1684b6e242f82b74fec5a052",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:48.666Z"
     }
    },
    "plate": {
@@ -6068,18 +6769,18 @@
    "groupSlug": "atomizer-5ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom5Blk.3b600a28ceb3.png",
     "sha256": "3b600a28ceb3993b2b4bc44c79e0c52b94e8d7610f7ec325945e7f412c0ea97e",
     "manifestSha256": "3b600a28ceb3993b2b4bc44c79e0c52b94e8d7610f7ec325945e7f412c0ea97e",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-5ml",
     "review": {
      "status": "approved",
-     "sha256": "3b600a28ceb3993b2b4bc44c79e0c52b94e8d7610f7ec325945e7f412c0ea97e",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:33.268Z"
+     "sha256": "309f38bf503bc4d7150aef1f967181090cc1060b19ed195f71b7311fea969e4e",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:57.823Z"
     }
    },
    "plate": {
@@ -6103,18 +6804,18 @@
    "groupSlug": "atomizer-5ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom5BlkDot.3fd30f533eee.png",
     "sha256": "3fd30f533eee35712683119c300182d30f34a6b28b46ba4c4db4a470a3ce1c04",
     "manifestSha256": "3fd30f533eee35712683119c300182d30f34a6b28b46ba4c4db4a470a3ce1c04",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-5ml",
     "review": {
      "status": "approved",
-     "sha256": "3fd30f533eee35712683119c300182d30f34a6b28b46ba4c4db4a470a3ce1c04",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:39.623Z"
+     "sha256": "0707c61450295c89a3fd4588b059718bf338140eabe33fba0dd437c30bb47393",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:58.582Z"
     }
    },
    "plate": {
@@ -6157,18 +6858,18 @@
    "groupSlug": "atomizer-5ml",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBAtom5Blu.3f87150071d8.png",
     "sha256": "3f87150071d896849336f7c55d1f58715da6544b09eada9de92bca03e0ee8dbf",
     "manifestSha256": "3f87150071d896849336f7c55d1f58715da6544b09eada9de92bca03e0ee8dbf",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "atomizer-5ml",
     "review": {
      "status": "approved",
-     "sha256": "3f87150071d896849336f7c55d1f58715da6544b09eada9de92bca03e0ee8dbf",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:45:38.988Z"
+     "sha256": "5439ec02621911302f7e3c6a7dd9ea27d83fd89d2d2ed2c5dc793241a3da6aea",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:59.290Z"
     }
    },
    "plate": {
@@ -6546,18 +7247,18 @@
    "groupSlug": "bell-10ml-clear-13-415-rollon",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBell10MtlRollBlkDot.2d3e7993e79f.png",
     "sha256": "2d3e7993e79f694a35ef7472e2ca336a762837aef6957e49bb48d35dc39293c7",
     "manifestSha256": "2d3e7993e79f694a35ef7472e2ca336a762837aef6957e49bb48d35dc39293c7",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "bell-10ml-clear-13-415-rollon",
     "review": {
      "status": "approved",
-     "sha256": "2d3e7993e79f694a35ef7472e2ca336a762837aef6957e49bb48d35dc39293c7",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:48:24.866Z"
+     "sha256": "cd58c576dfe1a3004f5f624520f4b5169da2dea63d5ef8cb05191f2ee7e54913",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:18:04.860Z"
     }
    },
    "plate": {
@@ -6597,14 +7298,14 @@
    "productRecord": true,
    "hero": {
     "state": "approved-not-indexed",
-    "sha256": "fb786648a09ec46a72d555de2a181a8c646c723f210467dbea50c1723cd651b7",
-    "lock": "release-1",
+    "sha256": "2551a792cd982de9fb9f68af5bf2149cfd1d777312e124dc185eac324b34a21e",
+    "lock": "working-lock",
     "why": "no registry row for this product yet",
     "review": {
      "status": "approved",
-     "sha256": "fb786648a09ec46a72d555de2a181a8c646c723f210467dbea50c1723cd651b7",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:48:25.412Z"
+     "sha256": "2551a792cd982de9fb9f68af5bf2149cfd1d777312e124dc185eac324b34a21e",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:18:04.162Z"
     }
    },
    "plate": {
@@ -6643,18 +7344,18 @@
    "groupSlug": "bell-10ml-clear-13-415-finemist",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBell10SpryBlkSh.7b6c85618c7c.png",
     "sha256": "7b6c85618c7c112e47d8503953581408781ad02e181a8e53a201d071cfc5313d",
     "manifestSha256": "7b6c85618c7c112e47d8503953581408781ad02e181a8e53a201d071cfc5313d",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "bell-10ml-clear-13-415-finemist",
     "review": {
      "status": "approved",
-     "sha256": "7b6c85618c7c112e47d8503953581408781ad02e181a8e53a201d071cfc5313d",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:48:26.157Z"
+     "sha256": "5f41d01e9a4c48ff6c1f390c24922ede04a35ebc168152a783e24916d187efbd",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:18:03.533Z"
     }
    },
    "plate": {
@@ -6732,18 +7433,19 @@
    "groupSlug": "boston-round-30ml-clear-20-400",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.5a1795216223.png",
     "sha256": "5a17952162234aed03bb269b00683d2208e93f7ed85dfc3ddc1508a51d80d013",
     "manifestSha256": "5a17952162234aed03bb269b00683d2208e93f7ed85dfc3ddc1508a51d80d013",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-30ml-clear-20-400",
     "review": {
      "status": "approved",
-     "sha256": "5a17952162234aed03bb269b00683d2208e93f7ed85dfc3ddc1508a51d80d013",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:33:01.632Z"
+     "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:19:40.420Z",
+     "targetHeight": 42.5
     }
    },
    "plate": {
@@ -7033,14 +7735,15 @@
    "productRecord": true,
    "hero": {
     "state": "approved-not-indexed",
-    "sha256": "cc0faf6f067a1a5c041da44b3ced5d0be0c1b7f4ed176b82d4d5a1293ba18801",
-    "lock": "release-2",
+    "sha256": "2a923f5d21f818efa63b1d46d1c8bde10fbdbe79cca0bc18b890481c0aa55244",
+    "lock": "working-lock",
     "why": "no registry row for this product yet",
     "review": {
      "status": "approved",
-     "sha256": "cc0faf6f067a1a5c041da44b3ced5d0be0c1b7f4ed176b82d4d5a1293ba18801",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:33:13.392Z"
+     "sha256": "2a923f5d21f818efa63b1d46d1c8bde10fbdbe79cca0bc18b890481c0aa55244",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:19:41.296Z",
+     "targetHeight": 42.5
     }
    },
    "plate": {
@@ -7167,18 +7870,19 @@
    "groupSlug": "boston-round-60ml-clear-20-400",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstn2ozBlkCapSht.3394b07f25e0.png",
     "sha256": "3394b07f25e03dc9b4194a7ddd254b1d4c9cc42659d7424587611fdf05bedc66",
     "manifestSha256": "3394b07f25e03dc9b4194a7ddd254b1d4c9cc42659d7424587611fdf05bedc66",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-60ml-clear-20-400",
     "review": {
      "status": "approved",
-     "sha256": "3394b07f25e03dc9b4194a7ddd254b1d4c9cc42659d7424587611fdf05bedc66",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:33:23.126Z"
+     "sha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:18:58.842Z",
+     "targetHeight": 51.5
     }
    },
    "plate": {
@@ -7221,18 +7925,19 @@
    "groupSlug": "boston-round-60ml-clear-20-400-dropper",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstn2ozBlkDrprShnGlTrim.545c80067882.png",
     "sha256": "545c8006788267d454719c5ed8eff4e720c6f267af2220d3355dc9c8a30553ec",
     "manifestSha256": "545c8006788267d454719c5ed8eff4e720c6f267af2220d3355dc9c8a30553ec",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-60ml-clear-20-400-dropper",
     "review": {
      "status": "approved",
-     "sha256": "545c8006788267d454719c5ed8eff4e720c6f267af2220d3355dc9c8a30553ec",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:33:23.910Z"
+     "sha256": "28965cd6cec063c5aa47524add4cc3e7f4b2890d9597c18121450e77b9bc9317",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:18:54.435Z",
+     "targetHeight": 51.5
     }
    },
    "plate": {
@@ -7291,14 +7996,14 @@
    "productRecord": true,
    "hero": {
     "state": "approved-not-indexed",
-    "sha256": "0c4af72c30448089abaa1ad4ddd3785fe041bc91742d6d7e5ed433b1df43d655",
-    "lock": "release-2",
+    "sha256": "cb4a33cbfcf38f4c9a659c09cd570cd1ba9c93923cf0db192bf1d10c30c57784",
+    "lock": "working-lock",
     "why": "no registry row for this product yet",
     "review": {
      "status": "approved",
-     "sha256": "0c4af72c30448089abaa1ad4ddd3785fe041bc91742d6d7e5ed433b1df43d655",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:33:24.632Z"
+     "sha256": "cb4a33cbfcf38f4c9a659c09cd570cd1ba9c93923cf0db192bf1d10c30c57784",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:19:34.681Z"
     }
    },
    "plate": {
@@ -7708,18 +8413,18 @@
    "groupSlug": "boston-round-15ml-amber-18-400-dropper",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnAmb15mlWhtDropperGlTrim.c187b126126c.png",
     "sha256": "c187b126126c81a5963706e052da006a7daaaa014a7c9dd8fdf1cf82fff48edd",
     "manifestSha256": "c187b126126c81a5963706e052da006a7daaaa014a7c9dd8fdf1cf82fff48edd",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-15ml-amber-18-400-dropper",
     "review": {
      "status": "approved",
-     "sha256": "c187b126126c81a5963706e052da006a7daaaa014a7c9dd8fdf1cf82fff48edd",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:04.127Z"
+     "sha256": "328611f750e9d8064545727a040da7e45f372730d3737ae41e082a79522f1891",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:19:33.420Z"
     }
    },
    "plate": {
@@ -7766,18 +8471,18 @@
    "groupSlug": "boston-round-30ml-amber-20-400",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnAmb1ozBlkCapSht.6faf4b8b6c10.png",
     "sha256": "6faf4b8b6c104d5eb38d820b1f584d191990956057490f7fe2dfce098dd78a87",
     "manifestSha256": "6faf4b8b6c104d5eb38d820b1f584d191990956057490f7fe2dfce098dd78a87",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-30ml-amber-20-400",
     "review": {
      "status": "approved",
-     "sha256": "6faf4b8b6c104d5eb38d820b1f584d191990956057490f7fe2dfce098dd78a87",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:03.153Z"
+     "sha256": "862068a58da1641185d127450dcd5496e19cca80f47f6d9f79f53cf96aba421e",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:19:31.707Z"
     }
    },
    "plate": {
@@ -7912,18 +8617,18 @@
    "groupSlug": "boston-round-30ml-amber-20-400-rollon",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnAmb1ozMtlRollonMattSl.6dd238ef1080.png",
     "sha256": "6dd238ef1080e2ff288498e40ce4af8a4cf7991c8e91a32b19b5ec6f00375b16",
     "manifestSha256": "6dd238ef1080e2ff288498e40ce4af8a4cf7991c8e91a32b19b5ec6f00375b16",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-30ml-amber-20-400-rollon",
     "review": {
      "status": "approved",
-     "sha256": "6dd238ef1080e2ff288498e40ce4af8a4cf7991c8e91a32b19b5ec6f00375b16",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:15.401Z"
+     "sha256": "c8abdf0ac6d2471ae3e259798caeb96b64fdd00f2b62e619c14d86fa0412a4f8",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:19:31.121Z"
     }
    },
    "plate": {
@@ -8040,14 +8745,14 @@
    "productRecord": true,
    "hero": {
     "state": "approved-not-indexed",
-    "sha256": "ce480442d0b54ef99c7a27f315cc453b0bf7d6801f51647ff39000c9383087f0",
-    "lock": "release-2",
+    "sha256": "1265d93107afd5b09c3c347726d83cf11d17b5430b068a6b9615ad81dc7e243d",
+    "lock": "working-lock",
     "why": "no registry row for this product yet",
     "review": {
      "status": "approved",
-     "sha256": "ce480442d0b54ef99c7a27f315cc453b0bf7d6801f51647ff39000c9383087f0",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:15.990Z"
+     "sha256": "1265d93107afd5b09c3c347726d83cf11d17b5430b068a6b9615ad81dc7e243d",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:19:55.451Z"
     }
    },
    "plate": {
@@ -8163,18 +8868,18 @@
    "groupSlug": "boston-round-30ml-amber-20-400-dropper",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnAmb1ozWhtDropperShnGlTrim.88c732f88850.png",
     "sha256": "88c732f88850b4241bab816b0f25eca7214195f8453c07269cd7c985b495c4af",
     "manifestSha256": "88c732f88850b4241bab816b0f25eca7214195f8453c07269cd7c985b495c4af",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-30ml-amber-20-400-dropper",
     "review": {
      "status": "approved",
-     "sha256": "88c732f88850b4241bab816b0f25eca7214195f8453c07269cd7c985b495c4af",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:16.606Z"
+     "sha256": "7ca9ea270a2f451cc13dfa2eddce87b5dda54bc30cc8d27c99eb68e4037149ea",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:19:54.800Z"
     }
    },
    "plate": {
@@ -8217,18 +8922,18 @@
    "groupSlug": "boston-round-60ml-amber-20-400",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkCapSht.0a049bf81a7e.png",
     "sha256": "0a049bf81a7e58bf50a78ae7b75794c4754f02639c43c142edc20b29663bb188",
     "manifestSha256": "0a049bf81a7e58bf50a78ae7b75794c4754f02639c43c142edc20b29663bb188",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-60ml-amber-20-400",
     "review": {
      "status": "approved",
-     "sha256": "0a049bf81a7e58bf50a78ae7b75794c4754f02639c43c142edc20b29663bb188",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:17.258Z"
+     "sha256": "1ed776afb876d9efcc3ac0c9cef518802dc518d3a3b21d696e2db8e7295689ea",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:19:54.201Z"
     }
    },
    "plate": {
@@ -8252,18 +8957,18 @@
    "groupSlug": "boston-round-60ml-amber-20-400-dropper",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkDropperShnGlTrim.1a16a706700b.png",
     "sha256": "1a16a706700b4cd2c9fcabb12e899a50029648512795044ff5d8d5f32a8391ef",
     "manifestSha256": "1a16a706700b4cd2c9fcabb12e899a50029648512795044ff5d8d5f32a8391ef",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-60ml-amber-20-400-dropper",
     "review": {
      "status": "approved",
-     "sha256": "1a16a706700b4cd2c9fcabb12e899a50029648512795044ff5d8d5f32a8391ef",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:31.665Z"
+     "sha256": "b8fb228d863ee858ce20e6e5b5a31ed38550b9574a6e4e13004b55c2527073b5",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:19:53.732Z"
     }
    },
    "plate": {
@@ -8371,18 +9076,18 @@
    "groupSlug": "boston-round-60ml-amber-20-400-rollon",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnAmb2ozMtlRollonMattGl.dcf1ad432414.png",
     "sha256": "dcf1ad432414b5b3794b30fb720ad9e0f55fcb055fadf4dbc643a30a6d199ca4",
     "manifestSha256": "dcf1ad432414b5b3794b30fb720ad9e0f55fcb055fadf4dbc643a30a6d199ca4",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-60ml-amber-20-400-rollon",
     "review": {
      "status": "approved",
-     "sha256": "dcf1ad432414b5b3794b30fb720ad9e0f55fcb055fadf4dbc643a30a6d199ca4",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:30.998Z"
+     "sha256": "45ed3646a6bea88e4f5b7088a0dd413cc77221829655743ec0e473a45cefa87a",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:00.603Z"
     }
    },
    "plate": {
@@ -8499,14 +9204,14 @@
    "productRecord": true,
    "hero": {
     "state": "approved-not-indexed",
-    "sha256": "28655e81cdcd096e13215d34b207391349599f5b98c0d893c06756d409a547a9",
-    "lock": "release-2",
+    "sha256": "5b727e39ed91c9b84bb50b110f0774725b25d0d02323db23a223e47f732ae1c4",
+    "lock": "working-lock",
     "why": "no registry row for this product yet",
     "review": {
      "status": "approved",
-     "sha256": "28655e81cdcd096e13215d34b207391349599f5b98c0d893c06756d409a547a9",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:30.035Z"
+     "sha256": "5b727e39ed91c9b84bb50b110f0774725b25d0d02323db23a223e47f732ae1c4",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:01.343Z"
     }
    },
    "plate": {
@@ -8664,18 +9369,18 @@
    "groupSlug": "boston-round-15ml-cobalt-blue-18-400",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnBlu15BlkCapSht.62ea28710ce8.png",
     "sha256": "62ea28710ce8c9287aa7b93a05fcace99a2d14467b5a7f22153090a470f8988f",
     "manifestSha256": "62ea28710ce8c9287aa7b93a05fcace99a2d14467b5a7f22153090a470f8988f",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-15ml-cobalt-blue-18-400",
     "review": {
      "status": "approved",
-     "sha256": "62ea28710ce8c9287aa7b93a05fcace99a2d14467b5a7f22153090a470f8988f",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:29.074Z"
+     "sha256": "a79ca8c075a42407e25fde99196e8762e7634573ff10406d9c869b4e1e23f202",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:02.142Z"
     }
    },
    "plate": {
@@ -8794,18 +9499,18 @@
    "groupSlug": "boston-round-15ml-cobalt-blue-18-400-dropper",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnBlu15mlBlkDropperSlTrim.ccca37eb05b3.png",
     "sha256": "ccca37eb05b38c7e9d915354d66f8f735bb201a83aadefb9652a7b450a339f3d",
     "manifestSha256": "ccca37eb05b38c7e9d915354d66f8f735bb201a83aadefb9652a7b450a339f3d",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-15ml-cobalt-blue-18-400-dropper",
     "review": {
      "status": "approved",
-     "sha256": "ccca37eb05b38c7e9d915354d66f8f735bb201a83aadefb9652a7b450a339f3d",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:42.422Z"
+     "sha256": "b70a912a72eab5190d1398d83b28b33136d03c8ad1041fe82ab0b263d9ddf139",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:02.682Z"
     }
    },
    "plate": {
@@ -8887,18 +9592,18 @@
    "groupSlug": "boston-round-30ml-cobalt-blue-20-400-dropper",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkDropperShnGlTrim.1ff1776e2635.png",
     "sha256": "1ff1776e26351cd1494b4e3206ecc76eca2d905826c8695c1fb8ab792e5163ef",
     "manifestSha256": "1ff1776e26351cd1494b4e3206ecc76eca2d905826c8695c1fb8ab792e5163ef",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-30ml-cobalt-blue-20-400-dropper",
     "review": {
      "status": "approved",
-     "sha256": "1ff1776e26351cd1494b4e3206ecc76eca2d905826c8695c1fb8ab792e5163ef",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:43.176Z"
+     "sha256": "036590a86c6e4929a61628aa6f3bb72fced37e2a3f5ec1722ab7a4ca9fedda77",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:10.887Z"
     }
    },
    "plate": {
@@ -9073,14 +9778,14 @@
    "productRecord": true,
    "hero": {
     "state": "approved-not-indexed",
-    "sha256": "6b3453e11b51b798025b06209c0e1a0418d1600dc95626290997162fc73aa74d",
-    "lock": "release-2",
+    "sha256": "538c7caa02ec82a0e8b331664979d10178da2bed6e1f5f1993ab38fdffc3d75f",
+    "lock": "working-lock",
     "why": "no registry row for this product yet",
     "review": {
      "status": "approved",
-     "sha256": "6b3453e11b51b798025b06209c0e1a0418d1600dc95626290997162fc73aa74d",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:53.298Z"
+     "sha256": "538c7caa02ec82a0e8b331664979d10178da2bed6e1f5f1993ab38fdffc3d75f",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:11.512Z"
     }
    },
    "plate": {
@@ -9265,18 +9970,18 @@
    "groupSlug": "boston-round-60ml-cobalt-blue-20-400",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkCapSht.2ca680e98a02.png",
     "sha256": "2ca680e98a022db8a71487c502bfad2dde869abc5264f2c46e08a0a328fa19b7",
     "manifestSha256": "2ca680e98a022db8a71487c502bfad2dde869abc5264f2c46e08a0a328fa19b7",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-60ml-cobalt-blue-20-400",
     "review": {
      "status": "approved",
-     "sha256": "2ca680e98a022db8a71487c502bfad2dde869abc5264f2c46e08a0a328fa19b7",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:52.693Z"
+     "sha256": "289623853ece3f8a30aaebd41cef8c7f309912a91c02b78c13a12a69380ecc02",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:12.114Z"
     }
    },
    "plate": {
@@ -9323,18 +10028,18 @@
    "groupSlug": "boston-round-60ml-cobalt-blue-20-400-dropper",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkDropperShnGlTrim.18de2c402cad.png",
     "sha256": "18de2c402caddcd0c454f1a671da7b772a66399dd011efee93665d22c8c6501f",
     "manifestSha256": "18de2c402caddcd0c454f1a671da7b772a66399dd011efee93665d22c8c6501f",
-    "lock": "release-2",
+    "lock": "working-lock",
     "groupSlug": "boston-round-60ml-cobalt-blue-20-400-dropper",
     "review": {
      "status": "approved",
-     "sha256": "18de2c402caddcd0c454f1a671da7b772a66399dd011efee93665d22c8c6501f",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:51.815Z"
+     "sha256": "650b424ffa6e448dedb5f0be7b14d5eb48a735ad6c71264f1fe4f76dae971bd7",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:12.955Z"
     }
    },
    "plate": {
@@ -9532,14 +10237,14 @@
    "productRecord": true,
    "hero": {
     "state": "approved-not-indexed",
-    "sha256": "908001ee2e5cbfda4c775c2129bb490f156cdb7d5e1690c9107eeefb4cec252c",
-    "lock": "release-2",
+    "sha256": "4752f301b07b2a9befb4d45c9da7d785400e7ead2ada66cf9717a76ab34e85e5",
+    "lock": "working-lock",
     "why": "no registry row for this product yet",
     "review": {
      "status": "approved",
-     "sha256": "908001ee2e5cbfda4c775c2129bb490f156cdb7d5e1690c9107eeefb4cec252c",
-     "collection": "r5-boston-round-2026-09-10",
-     "updatedAt": "2026-09-11T06:34:56.432Z"
+     "sha256": "4752f301b07b2a9befb4d45c9da7d785400e7ead2ada66cf9717a76ab34e85e5",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:17.006Z"
     }
    },
    "plate": {
@@ -9701,18 +10406,18 @@
    "groupSlug": "pear-355ml-clear-Ground-glassapplicator",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCB12ozPear.f88ac19f77fc.png",
     "sha256": "f88ac19f77fcabf2dad4d147c0196cd2216f89805c3b21d44c25779a3708057c",
     "manifestSha256": "f88ac19f77fcabf2dad4d147c0196cd2216f89805c3b21d44c25779a3708057c",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "pear-355ml-clear-Ground-glassapplicator",
     "review": {
      "status": "approved",
-     "sha256": "f88ac19f77fcabf2dad4d147c0196cd2216f89805c3b21d44c25779a3708057c",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:42:36.699Z"
+     "sha256": "39042325635d8d3c0c3bb484d77685345f86a491b4604d0ee9326e368f6d5226",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:24.613Z"
     }
    },
    "plate": {
@@ -9766,18 +10471,18 @@
    "groupSlug": "circle-100ml-clear-18-415-antiquespray",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl100AnSpGl.7643993ab799.png",
     "sha256": "7643993ab7998fb2fa35e453e4524e4c47ea9a7e037ca55bf28fb06595d0e643",
     "manifestSha256": "7643993ab7998fb2fa35e453e4524e4c47ea9a7e037ca55bf28fb06595d0e643",
+    "lock": "working-lock",
     "groupSlug": "circle-100ml-clear-18-415-antiquespray",
     "review": {
-     "status": "changes_requested",
-     "sha256": "ff5379d93aa6d1aa19dfb772b52aa620a296994c0ffbb5cda158193aae8bc594",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:08:26.566Z",
-     "targetHeight": 55
+     "status": "approved",
+     "sha256": "3a2c2437214d6378e9664a2f30179861c93b73b88f6218d1c5ca1a773ef135c7",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:21:49.150Z"
     }
    },
    "plate": {
@@ -10016,19 +10721,18 @@
    "groupSlug": "circle-100ml-clear-18-415-antiquespray-tassel",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.b6d92daf8fea.png",
     "sha256": "b6d92daf8fea976609858131ed63ae2a1068ce42bf3ba209d61768090c981fee",
     "manifestSha256": "b6d92daf8fea976609858131ed63ae2a1068ce42bf3ba209d61768090c981fee",
+    "lock": "working-lock",
     "groupSlug": "circle-100ml-clear-18-415-antiquespray-tassel",
     "review": {
-     "status": "changes_requested",
-     "sha256": "efada2e9ac6bde7c3ea774957bf6e5dcd293c72b0e3490babec857c9032c387e",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:08:27.387Z",
-     "notes": "too small for the tassel image",
-     "targetHeight": 55
+     "status": "approved",
+     "sha256": "2c000bcb5058fe4c1131514ea4b90c6bdf4724288cd6b27575cefb28541d26c1",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:21:49.771Z"
     }
    },
    "plate": {
@@ -10601,18 +11305,18 @@
    "groupSlug": "circle-100ml-clear-18-415-reducer",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.1559dfd93201.png",
     "sha256": "1559dfd932016e2efd40abf36ddecca3e90d75a916e8856a95903fe793f44892",
     "manifestSha256": "1559dfd932016e2efd40abf36ddecca3e90d75a916e8856a95903fe793f44892",
+    "lock": "working-lock",
     "groupSlug": "circle-100ml-clear-18-415-reducer",
     "review": {
-     "status": "changes_requested",
-     "sha256": "c0bee888a687da91e3b56037e09ead8096545594ac9e66864c68e8869e8ad646",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:08:28.305Z",
-     "targetHeight": 55
+     "status": "approved",
+     "sha256": "c3a382b304822d2ebdfc5247d132a3d2045b12bb8d235a6b213eadeeb7157fe6",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:21:50.382Z"
     }
    },
    "plate": {
@@ -10725,18 +11429,18 @@
    "groupSlug": "circle-100ml-clear-18-415-perfumespray",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl100SpryMtGl.9f1a45956a0b.png",
     "sha256": "9f1a45956a0b07e684dddfa34cfda68e750f9090700e7efcd43aefc698a336dc",
     "manifestSha256": "9f1a45956a0b07e684dddfa34cfda68e750f9090700e7efcd43aefc698a336dc",
+    "lock": "working-lock",
     "groupSlug": "circle-100ml-clear-18-415-perfumespray",
     "review": {
-     "status": "changes_requested",
-     "sha256": "01df59fd19c6199d93567b9433d4a1db3b86775619c587c6ee091d54304d053f",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:08:29.029Z",
-     "targetHeight": 55
+     "status": "approved",
+     "sha256": "ad83dd72f22218660742b344514f19faf4b7f9fb2db7a955e9b533928d8cf992",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:21:51.058Z"
     }
    },
    "plate": {
@@ -10907,18 +11611,18 @@
    "groupSlug": "circle-15ml-clear-13-415",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl15Gl.5df997af94d3.png",
     "sha256": "5df997af94d302f0a4e3a2d91083184d9a181a77b24ca780bed6fd66fe1205b3",
     "manifestSha256": "5df997af94d302f0a4e3a2d91083184d9a181a77b24ca780bed6fd66fe1205b3",
+    "lock": "working-lock",
     "groupSlug": "circle-15ml-clear-13-415",
     "review": {
-     "status": "changes_requested",
-     "sha256": "23d84f83c33c19803b8071649e8f137270f5edfe2f83c7b2c9be63a9447c5d60",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:09:23.481Z",
-     "targetHeight": 39
+     "status": "approved",
+     "sha256": "bd0ae9e1f4748d1c117c0fae4956ce3e010602beb8ee1807ab2fa75c33a4952d",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:21:57.750Z"
     }
    },
    "plate": {
@@ -11045,18 +11749,18 @@
    "groupSlug": "circle-15ml-clear-13-415-rollon",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl15MtlRollGlMatt.6047bfebd74f.png",
     "sha256": "6047bfebd74f9558b380822315b88fc5d5154fb467af5343536d9766ea2886e5",
     "manifestSha256": "6047bfebd74f9558b380822315b88fc5d5154fb467af5343536d9766ea2886e5",
+    "lock": "working-lock",
     "groupSlug": "circle-15ml-clear-13-415-rollon",
     "review": {
-     "status": "changes_requested",
-     "sha256": "a1c032bb33d0ab46079a2090fc6880fdecb342f469527186a0456dbca997cb8a",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:09:24.247Z",
-     "targetHeight": 39
+     "status": "approved",
+     "sha256": "a5ef1cec6db749aa663d0f6f01d8f2c42577da220a01e2e05a372239400eff43",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:21:58.420Z"
     }
    },
    "plate": {
@@ -11265,13 +11969,15 @@
    "groupSlug": "circle-15ml-clear-13-415-rollon",
    "productRecord": true,
    "hero": {
-    "state": "changes_requested",
+    "state": "approved-not-indexed",
+    "sha256": "2c830a1e23cd99f63edf9c3fd5cbcaf23f0c2d647ee31e3ade5a5f5dcb2c5bc1",
+    "lock": "working-lock",
+    "why": "no registry row for this product yet",
     "review": {
-     "status": "changes_requested",
-     "sha256": "6a2362db364f5ae48b2b66b19a4c56cb1a281b518b89296d2bfbe74a8a8ba941",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:09:25.132Z",
-     "targetHeight": 39
+     "status": "approved",
+     "sha256": "2c830a1e23cd99f63edf9c3fd5cbcaf23f0c2d647ee31e3ade5a5f5dcb2c5bc1",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:21:59.150Z"
     }
    },
    "plate": {
@@ -11616,18 +12322,18 @@
    "groupSlug": "circle-15ml-clear-13-415-finemist",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl15SpryGlMatt.892101b98163.png",
     "sha256": "892101b98163c86b373062f193f590aaa5fa8b9d3ad11c5a64025fafbdfef758",
     "manifestSha256": "892101b98163c86b373062f193f590aaa5fa8b9d3ad11c5a64025fafbdfef758",
+    "lock": "working-lock",
     "groupSlug": "circle-15ml-clear-13-415-finemist",
     "review": {
-     "status": "changes_requested",
-     "sha256": "132c62334de131e5eb85e438a2a9df8dd414dbb6affb7a56b08d16739ce8058e",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:09:25.861Z",
-     "targetHeight": 39
+     "status": "approved",
+     "sha256": "4abc2162d678817f81e7338535fa2339e7d9107822e58dcf19fbdbcf5e987642",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:21:59.760Z"
     }
    },
    "plate": {
@@ -11772,18 +12478,18 @@
    "groupSlug": "circle-30ml-clear-15-415",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl30GlCap.01eecbbe4d85.png",
     "sha256": "01eecbbe4d8503c6e1fe97e9e4200eed8a11383244b6d3363c5a10b8b07227c1",
     "manifestSha256": "01eecbbe4d8503c6e1fe97e9e4200eed8a11383244b6d3363c5a10b8b07227c1",
+    "lock": "working-lock",
     "groupSlug": "circle-30ml-clear-15-415",
     "review": {
-     "status": "changes_requested",
-     "sha256": "e8036bbd36e473bcce13d210874aa59b248182d528da7d8b80d16cdfa892559e",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:10:08.800Z",
-     "targetHeight": 45
+     "status": "approved",
+     "sha256": "73169e784ffd11ca53be695fd2e7694e14690c2dc1f0dcb4e5271154e045f6a5",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:22:12.729Z"
     }
    },
    "plate": {
@@ -11864,18 +12570,18 @@
    "groupSlug": "circle-30ml-clear-15-415-perfumespray",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl30SpryMattGl.60279e0b076c.png",
     "sha256": "60279e0b076c61f560513118f82b867f5451bb20efcf6559347b398e488a0fba",
     "manifestSha256": "60279e0b076c61f560513118f82b867f5451bb20efcf6559347b398e488a0fba",
+    "lock": "working-lock",
     "groupSlug": "circle-30ml-clear-15-415-perfumespray",
     "review": {
-     "status": "changes_requested",
-     "sha256": "01f731497a1fb4fb2d8d000ba0e9e85fa27e2eb54debc4a84194e15c3786372b",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:10:08.092Z",
-     "targetHeight": 45
+     "status": "approved",
+     "sha256": "267edc5e626c770cb5ffa91a025e7c523ab54da432a5bcce5d3b9abfb3251f92",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:22:13.313Z"
     }
    },
    "plate": {
@@ -12015,18 +12721,18 @@
    "groupSlug": "circle-50ml-clear-18-415-antiquespray",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl50AnSpGl.f8607e109e90.png",
     "sha256": "f8607e109e90239aaad431b8feee8be2b9884df44625fe0ddb80387c2d01528e",
     "manifestSha256": "f8607e109e90239aaad431b8feee8be2b9884df44625fe0ddb80387c2d01528e",
+    "lock": "working-lock",
     "groupSlug": "circle-50ml-clear-18-415-antiquespray",
     "review": {
-     "status": "changes_requested",
-     "sha256": "ab3e8d182a8d125c1649b92dbd179badd61ec67018b61ea00ff7e90166dea020",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:10:07.361Z",
-     "targetHeight": 50
+     "status": "approved",
+     "sha256": "300d01758f982aac210468f690a6e19655e1861405e69b4cbf997a85b45315b8",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:22:14.067Z"
     }
    },
    "plate": {
@@ -12290,18 +12996,19 @@
    "groupSlug": "circle-50ml-clear-18-415-antiquespray-tassel",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.b3cd7abc53c1.png",
     "sha256": "b3cd7abc53c1b2120bc67b916277c3abf0b191ac047a9610f2388e9d7b37c418",
     "manifestSha256": "b3cd7abc53c1b2120bc67b916277c3abf0b191ac047a9610f2388e9d7b37c418",
+    "lock": "working-lock",
     "groupSlug": "circle-50ml-clear-18-415-antiquespray-tassel",
     "review": {
-     "status": "changes_requested",
-     "sha256": "e11f4d108108af32e947d07b72a8c38610b2f5db1ccf5a48bd9d199e23729b82",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:10:06.240Z",
-     "targetHeight": 50
+     "status": "approved",
+     "sha256": "78d4c9ed55be7020c6e815a07d90784e1b1dd23faf5bbfcd98b771039f5bcad0",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:22:54.443Z",
+     "notes": "I'm making an exception on this because of the tassel. I know that it's above the baseline, but I'm assuming that this is the best we can do for now without having to change the geometry of the hose and tassel bulb."
     }
    },
    "plate": {
@@ -12565,18 +13272,18 @@
    "groupSlug": "circle-50ml-clear-18-415-dropper",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl50DrpGl.1c4ffae8961f.png",
     "sha256": "1c4ffae8961f61ce9a017b6136b698dcf4dd85c02215e58e8bf4c02eb82a3ada",
     "manifestSha256": "1c4ffae8961f61ce9a017b6136b698dcf4dd85c02215e58e8bf4c02eb82a3ada",
+    "lock": "working-lock",
     "groupSlug": "circle-50ml-clear-18-415-dropper",
     "review": {
-     "status": "changes_requested",
-     "sha256": "bb5adf4ee1a07f4d0c19bcd8939e8b86997ad6d3c2c7542f6753de5173eab585",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:10:43.235Z",
-     "targetHeight": 50
+     "status": "approved",
+     "sha256": "0e6daa55097b7817b76344a4f951fdd4721647acefa40c14e2140a90f1058ebc",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:23:04.942Z"
     }
    },
    "plate": {
@@ -12938,18 +13645,18 @@
    "groupSlug": "circle-50ml-clear-18-415-reducer",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.19d05867b478.png",
     "sha256": "19d05867b478b5d7637cfb0b6937d3110a28cf668b1043380e41e9071bd39f3e",
     "manifestSha256": "19d05867b478b5d7637cfb0b6937d3110a28cf668b1043380e41e9071bd39f3e",
+    "lock": "working-lock",
     "groupSlug": "circle-50ml-clear-18-415-reducer",
     "review": {
-     "status": "changes_requested",
-     "sha256": "34d4aafa323faf495c57f61f5f3f9615d760c75b2c7b429d53d87bf224f4f9b9",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:10:42.195Z",
-     "targetHeight": 50
+     "status": "approved",
+     "sha256": "50c74f388d2b86be373f140a625fff82be1bccdd05b42725ab21c7802016efa5",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:23:04.214Z"
     }
    },
    "plate": {
@@ -13062,18 +13769,18 @@
    "groupSlug": "circle-50ml-clear-18-415-perfumespray",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrcl50SpryMtGl.26b991568b84.png",
     "sha256": "26b991568b84ddd15fcc8f00c6c4a9599af7b3cb56b59774904a9542de2fbc2f",
     "manifestSha256": "26b991568b84ddd15fcc8f00c6c4a9599af7b3cb56b59774904a9542de2fbc2f",
+    "lock": "working-lock",
     "groupSlug": "circle-50ml-clear-18-415-perfumespray",
     "review": {
-     "status": "changes_requested",
-     "sha256": "123dafa4080e12ef24953ea79ffd852e3b2b3d5345eb6c391c9a601f54df0319",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:10:41.390Z",
-     "targetHeight": 50
+     "status": "approved",
+     "sha256": "bdd15bd979b8693a9efabd3f67508f050e11f9abd71ba22666330e6e503e23ab",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:23:02.072Z"
     }
    },
    "plate": {
@@ -13242,18 +13949,18 @@
    "groupSlug": "circle-100ml-frosted-18-415-antiquespray",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrclFrst100AnSpGl.d3221edf5374.png",
     "sha256": "d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2",
     "manifestSha256": "d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2",
+    "lock": "working-lock",
     "groupSlug": "circle-100ml-frosted-18-415-antiquespray",
     "review": {
-     "status": "changes_requested",
-     "sha256": "a98f02a7c8ef7f7d362f669c4c1b9c628c8511e59a9c489abf754003c2e1319e",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:10:40.456Z",
-     "targetHeight": 55
+     "status": "approved",
+     "sha256": "221434785dd42a219267d705f2ae60b30944f180765b937d532eb824d0ea7e7d",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:22:59.362Z"
     }
    },
    "plate": {
@@ -13530,11 +14237,10 @@
     "groupSlug": "circle-100ml-frosted-18-415-antiquespray-tassel",
     "review": {
      "status": "changes_requested",
-     "sha256": "210401ebd5c33f192ff904e6c1b00d0ccc545c670b1626e3568b138a62925960",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:11:18.274Z",
-     "notes": "frsted materia; is rubbe doff",
-     "targetHeight": 55
+     "sha256": "06330b07ac503466a23f320c60bf450fba2c8649b3d88bb927a1ba640199d6f9",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:23:37.438Z",
+     "notes": "Frosted looks a little bit too dark."
     }
    },
    "plate": {
@@ -14062,18 +14768,18 @@
    "groupSlug": "circle-100ml-frosted-18-415-reducer",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrclFrst100RdcrShnGl.b6f7d42ff8f7.png",
     "sha256": "b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f",
     "manifestSha256": "b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f",
+    "lock": "working-lock",
     "groupSlug": "circle-100ml-frosted-18-415-reducer",
     "review": {
-     "status": "changes_requested",
-     "sha256": "f8c1f17548800c80fb3499e7e80ee0022f3c701e3f255d1f1622c5e46560d7af",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:11:17.511Z",
-     "targetHeight": 55
+     "status": "approved",
+     "sha256": "25795f39b7c80a352cfc8548544761513f608f722491b38ef8191c6f49488836",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:23:13.387Z"
     }
    },
    "plate": {
@@ -14186,18 +14892,18 @@
    "groupSlug": "circle-100ml-frosted-18-415-perfumespray",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrclFrst100SpryMtGl.309d2da00f87.png",
     "sha256": "309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9",
     "manifestSha256": "309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9",
+    "lock": "working-lock",
     "groupSlug": "circle-100ml-frosted-18-415-perfumespray",
     "review": {
-     "status": "changes_requested",
-     "sha256": "0825cc541764f0df8a6533b04bcb3b0c6843bc8aa8360ddf0bff1d9d4dee87b1",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:11:16.895Z",
-     "targetHeight": 55
+     "status": "approved",
+     "sha256": "51a21c13e4b772e4984f313c003c096528e405b45b036c8ac962b78aebf3c88d",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:23:19.475Z"
     }
    },
    "plate": {
@@ -14366,18 +15072,18 @@
    "groupSlug": "circle-50ml-frosted-18-415-antiquespray",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBCrclFrst50AnSpGl.a73dadbb94f0.png",
     "sha256": "a73dadbb94f0f6feb10666994d62c0946058eaa0597c119049fb8ac10b0a14c5",
     "manifestSha256": "a73dadbb94f0f6feb10666994d62c0946058eaa0597c119049fb8ac10b0a14c5",
+    "lock": "working-lock",
     "groupSlug": "circle-50ml-frosted-18-415-antiquespray",
     "review": {
-     "status": "changes_requested",
-     "sha256": "56326278fb7f8ec96a128276bdedd0dd79306ab957a1e8ea855e34ca551a50fd",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:11:12.785Z",
-     "targetHeight": 50
+     "status": "approved",
+     "sha256": "046e7ab96b6c620a9a41c22999483f638c20ae6e2f2b5be285d88345e0de8c0e",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:23:22.119Z"
     }
    },
    "plate": {
@@ -14905,10 +15611,10 @@
     "groupSlug": "circle-50ml-frosted-18-415-dropper",
     "review": {
      "status": "changes_requested",
-     "sha256": "f4bc6b43ddfabfc9d416add35787dbb4153f2ce3d44f2814b54518a7b678acfc",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:11:45.934Z",
-     "targetHeight": 50
+     "sha256": "2b8a581b82219c3f13d45176c8c45c540c2a5f0b18c8985e8b4217fd8b1958f1",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:24:30.338Z",
+     "notes": "Frosted is looking faded it's important to note that all we need to do is just leverage 2.5 Sunburst just as an enhancer. We don't need to change the material on the bottle. We just want to enhance it. The frost is getting rubbed off. I've left notes on it."
     }
    },
    "plate": {
@@ -15030,10 +15736,10 @@
     "groupSlug": "circle-50ml-frosted-18-400-reducer",
     "review": {
      "status": "changes_requested",
-     "sha256": "43fab34a8c6618742cd87773f0c285489f3feef46cb27e31087371e376634fb2",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:11:45.266Z",
-     "targetHeight": 50
+     "sha256": "1a1b93c6d8a381c9a912e0cd1c551278f09cb60bd771b632d7a3e0648c07f1cd",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:24:29.777Z",
+     "notes": "Frosted is looking faded it's important to note that all we need to do is just leverage 2.5 Sunburst just as an enhancer. We don't need to change the material on the bottle. We just want to enhance it. The frost is getting rubbed off. I've left notes on it."
     }
    },
    "plate": {
@@ -15234,10 +15940,10 @@
     "groupSlug": "circle-50ml-frosted-18-415-reducer",
     "review": {
      "status": "changes_requested",
-     "sha256": "e15c4f60a9b2d163b543f6939e37031600bd3d814b873e3461c2808827c1142c",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:11:44.721Z",
-     "targetHeight": 50
+     "sha256": "c540b4261b03936a813a5a6236ce049516011a1e668424ef6fcb29d2b95c6573",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:24:29.187Z",
+     "notes": "Frosted is looking faded it's important to note that all we need to do is just leverage 2.5 Sunburst just as an enhancer. We don't need to change the material on the bottle. We just want to enhance it. The frost is getting rubbed off. I've left notes on it."
     }
    },
    "plate": {
@@ -15348,10 +16054,10 @@
     "groupSlug": "circle-50ml-frosted-18-415-perfumespray",
     "review": {
      "status": "changes_requested",
-     "sha256": "8b85b0d83d59af07365d7d83b5ef08e658a505c270c6606f3db9dfd396bae4e5",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:11:44.125Z",
-     "targetHeight": 50
+     "sha256": "54d2431c8870a4ce809bd5eebd904b4d307f3b0dabc45b772abe64dd1c2f6a49",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:24:28.520Z",
+     "notes": "Frosted is looking faded it's important to note that all we need to do is just leverage 2.5 Sunburst just as an enhancer. We don't need to change the material on the bottle. We just want to enhance it. The frost is getting rubbed off. I've left notes on it."
     }
    },
    "plate": {
@@ -40483,19 +41189,18 @@
    "groupSlug": "heart-4ml-frosted-8mm-tassel-glassapplicator",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "sunburst-approved",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/GBHeartFrst4TslRed.bfc64e86fae1.png",
     "sha256": "bfc64e86fae1e3092fc8b8e1f8d5be3b2dfa1c7cba30c84ed57cff2297fca505",
     "manifestSha256": "bfc64e86fae1e3092fc8b8e1f8d5be3b2dfa1c7cba30c84ed57cff2297fca505",
-    "lock": "release-1",
+    "lock": "working-lock",
     "groupSlug": "heart-4ml-frosted-8mm-tassel-glassapplicator",
     "review": {
      "status": "approved",
-     "sha256": "bfc64e86fae1e3092fc8b8e1f8d5be3b2dfa1c7cba30c84ed57cff2297fca505",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:44:37.127Z",
-     "targetHeight": 35
+     "sha256": "72085c2aa1830c424b586ce9dd5abab7179bafce0d7b2899c7854c62058259b5",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:17:25.242Z"
     }
    },
    "plate": {
@@ -40559,10 +41264,10 @@
     "lock": "release-1",
     "groupSlug": "marble-10ml-clear-17.52mm",
     "review": {
-     "status": "approved",
-     "sha256": "84bad4a4ae8ef6f401c53f9c83e9528b249e0a691463a9b3ed533b96e2c237ab",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:44:53.567Z"
+     "status": "rejected",
+     "sha256": "5ee2a077baa93300d201d3fc5e1d9e2c65eb83bea8fdfce40fd238c738264ddc",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:31.738Z"
     }
    },
    "plate": {
@@ -40594,10 +41299,10 @@
     "lock": "release-1",
     "groupSlug": "marble-5ml-clear-17.52mm",
     "review": {
-     "status": "approved",
-     "sha256": "5336a5cf4ae73cdb3af135577bd8fb834667e27ec86fdcc03e9e5804523b8a2a",
-     "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
-     "updatedAt": "2026-09-11T01:44:54.361Z"
+     "status": "rejected",
+     "sha256": "24f84e04e154e6571dfc3b29946abf1b1bc1d984bdedad6f71ac65f449f6f589",
+     "collection": "r7-resettle-approved-2026-09-11",
+     "updatedAt": "2026-09-12T02:20:31.030Z"
     }
    },
    "plate": {
@@ -59604,18 +60309,18 @@
    "groupSlug": "circle-100ml-clear-18-415-lotionpump",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/LBCrcl100LtnMtGl.986f220e426c.png",
     "sha256": "986f220e426c256b80981e0eb6ffb8d6c140b436e1851574bfc8f62b131768bd",
     "manifestSha256": "986f220e426c256b80981e0eb6ffb8d6c140b436e1851574bfc8f62b131768bd",
+    "lock": "working-lock",
     "groupSlug": "circle-100ml-clear-18-415-lotionpump",
     "review": {
-     "status": "changes_requested",
-     "sha256": "d10051a67a8c03faaa4ecd0d326d7e5ff4b474058299b629befa632bfa68db49",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:12:31.684Z",
-     "targetHeight": 55
+     "status": "approved",
+     "sha256": "6d2b895243c48234dfcd48c82983d74fd60081f2141b1f44e7c3ef81378dca02",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:24:37.239Z"
     }
    },
    "plate": {
@@ -59806,18 +60511,18 @@
    "groupSlug": "circle-50ml-clear-18-415-lotionpump",
    "productRecord": true,
    "hero": {
-    "state": "indexed",
-    "generation": "prior-release",
+    "state": "indexed-stale",
+    "generation": "stale",
     "url": "/images/catalog/bone-review/LBCrcl50LtnMtGl.f2d59ea6b8ff.png",
     "sha256": "f2d59ea6b8ffb391a9be268f2fda23d7bf22fa7560b471a3a5e864de40517899",
     "manifestSha256": "f2d59ea6b8ffb391a9be268f2fda23d7bf22fa7560b471a3a5e864de40517899",
+    "lock": "working-lock",
     "groupSlug": "circle-50ml-clear-18-415-lotionpump",
     "review": {
-     "status": "changes_requested",
-     "sha256": "ce88263f37de7a9ff98d1717288638715539fda3bcb6ce1ad9e21db836261366",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:12:30.920Z",
-     "targetHeight": 50
+     "status": "approved",
+     "sha256": "0a9d66084dc5ffd66d02d6cbc37b4aabb87e78013d89d65ca1d4bb4225d3d0ce",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:24:43.792Z"
     }
    },
    "plate": {
@@ -60025,10 +60730,10 @@
     "groupSlug": "circle-100ml-frosted-18-415-lotionpump",
     "review": {
      "status": "changes_requested",
-     "sha256": "bb4005e8eac7e9f1581867d934a2e334b519a9c3be50bf54a4582eb7f67d4748",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:12:30.347Z",
-     "targetHeight": 55
+     "sha256": "70a233b6796e58c5a3592d0724428b7d7c0bf092d9cca0b51d2310edad72c210",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:24:49.721Z",
+     "notes": "Frosted is looking faded it's important to note that all we need to do is just leverage 2.5 Sunburst just as an enhancer. We don't need to change the material on the bottle. We just want to enhance it. The frost is getting rubbed off. I've left notes on it."
     }
    },
    "plate": {
@@ -60189,10 +60894,10 @@
     "groupSlug": "circle-50ml-frosted-18-415-lotionpump",
     "review": {
      "status": "changes_requested",
-     "sha256": "ab9c772f368bc739af00bac25c240612bd8f3739d2336bae93d2d4564b7de09a",
-     "collection": "r5-circle-2026-09-10",
-     "updatedAt": "2026-09-11T07:12:29.613Z",
-     "targetHeight": 50
+     "sha256": "20da467422cd595f2c056ca33e706d16ce0b8eb3bd3a8272b48be48b2893dbe6",
+     "collection": "r6-circle-settled-2026-09-11",
+     "updatedAt": "2026-09-12T02:24:54.952Z",
+     "notes": "Frosted is looking faded it's important to note that all we need to do is just leverage 2.5 Sunburst just as an enhancer. We don't need to change the material on the bottle. We just want to enhance it. The frost is getting rubbed off. I've left notes on it."
     }
    },
    "plate": {
