@@ -176,9 +176,9 @@ export function parseCapacityLabelMl(label: string): number | null {
 // Used by: HomePage start-here cards, GuidedSelector dispensers, Navbar mega menu.
 // Each nav category maps to one or more fine-grained APPLICATOR_BUCKETS values.
 export const APPLICATOR_NAV = [
-    { value: "rollon", label: "Roll-On", subtitle: "Perfume oils, essential oils, topicals", buckets: ["rollon"] as ApplicatorBucket[] },
+    { value: "rollon", label: "Roll-On", subtitle: "Perfume oils, attars, aromatherapy, body oils", buckets: ["rollon"] as ApplicatorBucket[] },
     { value: "spray", label: "Fine Mist & Spray", subtitle: "Fragrance, room scent, setting spray", buckets: ["finemist", "perfumespray"] as ApplicatorBucket[] },
-    { value: "dropper", label: "Dropper", subtitle: "Serums, tinctures, CBD, essential oils", buckets: ["dropper"] as ApplicatorBucket[] },
+    { value: "dropper", label: "Dropper", subtitle: "Serums, facial oils, tinctures, essential oils", buckets: ["dropper"] as ApplicatorBucket[] },
     { value: "lotionpump", label: "Lotion Pump", subtitle: "Skincare, body care, serums", buckets: ["lotionpump"] as ApplicatorBucket[] },
     { value: "reducer", label: "Reducer", subtitle: "Aftershave, cologne, beard oil", buckets: ["reducer"] as ApplicatorBucket[] },
 ] as const;

@@ -1,0 +1,750 @@
+[
+ {
+  "sku": "GBBell10RollBlkDot",
+  "family": "Bell",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBBell10RollBlkDot.png",
+  "group": [
+   "Bell",
+   "10 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 1,
+  "psd": "5.  13-415 Bottles/7. Bell 12ml/1. Bell 12ml (Uncapped) PSD/27. GBBell12RollBlkDot.psd",
+  "sibling": "GBBell10MtlRollBlkDot.sized.png",
+  "scale": 1.774,
+  "body": "Layer 1",
+  "fitted": [
+   "Layer 28"
+  ],
+  "loose": [
+   "Layer 29"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBBstnAmb1ozRollonMattGl",
+  "family": "Boston Round",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBBstnAmb1ozRollonMattGl.png",
+  "group": [
+   "Boston Round",
+   "30 ml",
+   "Amber",
+   "20-400",
+   "Plastic Roller Ball"
+  ],
+  "n": 6,
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/10. GBBstnAmb1ozRollonMattGl.psd",
+  "sibling": "GBBstnAmb1ozMtlRollonMattSl.sized.png",
+  "scale": 1.202,
+  "body": "matte:tallest-component",
+  "fitted": [],
+  "loose": [
+   "component@x588-886"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": "",
+  "method": "composite-matte"
+ },
+ {
+  "sku": "GBBstn1ozRollonShBlk",
+  "family": "Boston Round",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBBstn1ozRollonShBlk.png",
+  "group": [
+   "Boston Round",
+   "30 ml",
+   "Clear",
+   "20-400",
+   "Plastic Roller Ball"
+  ],
+  "n": 6,
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/19. GBBstn1ozRollShBlk.psd",
+  "sibling": "GBBstnAmb1ozMtlRollonMattSl.sized.png",
+  "scale": 1.189,
+  "body": "matte:tallest-component",
+  "fitted": [],
+  "loose": [
+   "component@x589-883"
+  ],
+  "dropped": [],
+  "zdiff": 0.02,
+  "flag": "",
+  "method": "composite-matte"
+ },
+ {
+  "sku": "GBBstnBlu1ozRollonMattBlk",
+  "family": "Boston Round",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBBstnBlu1ozRollonMattBlk.png",
+  "group": [
+   "Boston Round",
+   "30 ml",
+   "Cobalt Blue",
+   "20-400",
+   "Plastic Roller Ball"
+  ],
+  "n": 6,
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /8. GBBstnBlu1ozRollonMattBlk.psd",
+  "sibling": "GBBstnAmb1ozMtlRollonMattSl.sized.png",
+  "scale": 1.202,
+  "body": "matte:tallest-component",
+  "fitted": [],
+  "loose": [
+   "component@x562-853"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": "",
+  "method": "composite-matte"
+ },
+ {
+  "sku": "GBBstnAmb2ozRollonMattGl",
+  "family": "Boston Round",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBBstnAmb2ozRollonMattGl.png",
+  "group": [
+   "Boston Round",
+   "60 ml",
+   "Amber",
+   "20-400",
+   "Plastic Roller Ball"
+  ],
+  "n": 6,
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/1. Amber Bottle (2 ounce:60 ml)/Amber - Alternating Caps/10. GBBstnAmb2ozRollonMattGl.psd",
+  "sibling": "GBBstn2ozBlkDrprShnGlTrim.sized.png",
+  "scale": 1.093,
+  "body": "matte:tallest-component",
+  "fitted": [],
+  "loose": [
+   "component@x588-886"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": "",
+  "method": "composite-matte"
+ },
+ {
+  "sku": "GBBstn2ozMtlRollGl",
+  "family": "Boston Round",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBBstn2ozMtlRollGl.png",
+  "group": [
+   "Boston Round",
+   "60 ml",
+   "Clear",
+   "20-400",
+   "Metal Roller Ball"
+  ],
+  "n": 6,
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/4. GBBstn2ozMtlRollonGl.psd",
+  "sibling": "GBBstn2ozBlkDrprShnGlTrim.sized.png",
+  "scale": 1.088,
+  "body": "matte:tallest-component",
+  "fitted": [],
+  "loose": [
+   "component@x588-887"
+  ],
+  "dropped": [],
+  "zdiff": 0.03,
+  "flag": "",
+  "method": "composite-matte"
+ },
+ {
+  "sku": "GBBstnBlu2ozRollonMattGl",
+  "family": "Boston Round",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBBstnBlu2ozRollonMattGl.png",
+  "group": [
+   "Boston Round",
+   "60 ml",
+   "Cobalt Blue",
+   "20-400",
+   "Plastic Roller Ball"
+  ],
+  "n": 6,
+  "psd": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (2 ounce:60 ml)/Cobalt Blue 2oz - Alternating Caps  /10. GBBstnBlu2ozRollonMattGl.psd",
+  "sibling": "GBBstn2ozBlkDrprShnGlTrim.sized.png",
+  "scale": 1.062,
+  "body": "matte:tallest-component",
+  "fitted": [],
+  "loose": [
+   "component@x588-886"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": "",
+  "method": "composite-matte"
+ },
+ {
+  "sku": "GBCrcl15RollBlkSh",
+  "family": "Circle",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBCrcl15RollBlkSh.png",
+  "group": [
+   "Circle",
+   "15 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /25. GBCrcl15RollBlkSh.psd",
+  "sibling": "GBCrcl15RollBlkSh.sized.png",
+  "scale": 1.109,
+  "body": "Layer 7",
+  "fitted": [
+   "Layer 33"
+  ],
+  "loose": [
+   "Layer 32"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBCyl5RollBlkDot",
+  "family": "Cylinder",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBCyl5RollBlkDot.png",
+  "group": [
+   "Cylinder",
+   "5 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /27. GBCyl5RollBlkDot.psd",
+  "sibling": "GBCyl5RollBlkDot.sized.png",
+  "scale": 1.292,
+  "body": "Layer 27",
+  "fitted": [
+   "Layer 23"
+  ],
+  "loose": [
+   "Layer 21",
+   "Layer 26"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBCylBlu5RollBlkDot",
+  "family": "Cylinder",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBCylBlu5RollBlkDot.png",
+  "group": [
+   "Cylinder",
+   "5 ml",
+   "Cobalt Blue",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/27. GBCylBlu5RollBlkDot.psd",
+  "sibling": "GBCyl5RollBlkDot.sized.png",
+  "scale": 1.286,
+  "body": "Layer 17",
+  "fitted": [
+   "Layer 16"
+  ],
+  "loose": [
+   "Layer 18"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBCyl50RollWht",
+  "family": "Cylinder",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBCyl50RollWht.png",
+  "group": [
+   "Cylinder",
+   "50 ml",
+   "Clear",
+   "16mm",
+   "Plastic Roller Ball"
+  ],
+  "n": 2,
+  "psd": "13. 16 mm/4. 50ml Uncapped/2. GBCyl50RollWht.psd",
+  "sibling": "GBCyl50RollWht.sized.png",
+  "scale": 0.838,
+  "body": "Layer 13",
+  "fitted": [
+   "Layer 6",
+   "Layer 14"
+  ],
+  "loose": [
+   "Layer 8"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBCylAmb9RollBlkDot",
+  "family": "Cylinder",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBCylAmb9RollBlkDot.png",
+  "group": [
+   "Cylinder",
+   "9 ml",
+   "Amber",
+   "17-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 10,
+  "psd": "3.  17-415 Bottles/3. Amber 9ml (Uncapped)/12. GBCylAmb9RollBlkDot.psd",
+  "sibling": "LBCyl9LtnGl.sized.png",
+  "scale": 1.017,
+  "body": "Layer 12",
+  "fitted": [
+   "Layer 13"
+  ],
+  "loose": [
+   "Layer 10"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBTallCyl9RollBlkDot",
+  "family": "Cylinder",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBTallCyl9RollBlkDot.png",
+  "group": [
+   "Cylinder",
+   "9 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/27. GBTallCyl9RollBlkDot.psd",
+  "sibling": "GBTallCylFrst9MtlRollBlkDot.sized.png",
+  "scale": 0.935,
+  "body": "Layer 13",
+  "fitted": [
+   "Layer 9",
+   "Layer 14",
+   "Layer 15"
+  ],
+  "loose": [
+   "Layer 10"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBCyl9RollBlkDot",
+  "family": "Cylinder",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBCyl9RollBlkDot.png",
+  "group": [
+   "Cylinder",
+   "9 ml",
+   "Clear",
+   "17-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 10,
+  "psd": "3.  17-415 Bottles/9. Clear  (Uncapped)/12. GBCyl9RollBlkDot.psd",
+  "sibling": "LBCyl9LtnGl.sized.png",
+  "scale": 0.963,
+  "body": "Layer 16",
+  "fitted": [
+   "Layer 7",
+   "Layer 17"
+  ],
+  "loose": [
+   "Layer 10"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBCylBlu9RollBlkDot",
+  "family": "Cylinder",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBCylBlu9RollBlkDot.png",
+  "group": [
+   "Cylinder",
+   "9 ml",
+   "Cobalt Blue",
+   "17-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 10,
+  "psd": "3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/12. GBCylBlu9RollBlkDot.psd",
+  "sibling": "LBCyl9LtnGl.sized.png",
+  "scale": 1.017,
+  "body": "Layer 11",
+  "fitted": [
+   "Layer 12"
+  ],
+  "loose": [
+   "Layer 10"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBTallCylFrst9RollBlkDot",
+  "family": "Cylinder",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBTallCylFrst9RollBlkDot.png",
+  "group": [
+   "Cylinder",
+   "9 ml",
+   "Frosted",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/27. GBTallCylFrst9RollBlkDot.psd",
+  "sibling": "GBTallCylFrst9MtlRollBlkDot.sized.png",
+  "scale": 0.981,
+  "body": "Layer 16",
+  "fitted": [
+   "Layer 9"
+  ],
+  "loose": [
+   "Layer 10"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBCylFrst9RollBlkDot",
+  "family": "Cylinder",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBCylFrst9RollBlkDot.png",
+  "group": [
+   "Cylinder",
+   "9 ml",
+   "Frosted",
+   "17-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 10,
+  "psd": "3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/12. GBCylFrst9RollBlkDot.psd",
+  "sibling": "LBCyl9LtnGl.sized.png",
+  "scale": 0.996,
+  "body": "Layer 14",
+  "fitted": [
+   "Layer 15"
+  ],
+  "loose": [
+   "Layer 10"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBCylSwrl9RollBlkDot",
+  "family": "Cylinder",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBCylSwrl9RollBlkDot.png",
+  "group": [
+   "Cylinder",
+   "9 ml",
+   "Swirl",
+   "17-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 11,
+  "psd": "3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/12. GBCylSwrl9RollBlkDot.psd",
+  "sibling": "LBCyl9LtnGl.sized.png",
+  "scale": 0.971,
+  "body": "Layer 14",
+  "fitted": [
+   "Layer 15"
+  ],
+  "loose": [
+   "Layer 10"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBDiva46DrpSl",
+  "family": "Diva",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBDiva46DrpSl.png",
+  "group": [
+   "Diva",
+   "46 ml",
+   "Frosted",
+   "18-415",
+   "Dropper"
+  ],
+  "n": 1,
+  "psd": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/51. GBDiva46DrpSl.psd",
+  "sibling": "GBDivaFrst46AnSpGl.sized.png",
+  "scale": 0.511,
+  "body": "Layer 1",
+  "fitted": [
+   "Layer 26"
+  ],
+  "loose": [],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBElg15RollSlSh",
+  "family": "Elegant",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBElg15RollSlSh.png",
+  "group": [
+   "Elegant",
+   "15 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/21. GBElg15RollSlSh.psd",
+  "sibling": "GBElg15RollSlSh.sized.png",
+  "scale": 1.401,
+  "body": "Layer 29",
+  "fitted": [
+   "Layer 28"
+  ],
+  "loose": [
+   "Layer 27"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBElgFrst15RollSlDot",
+  "family": "Elegant",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBElgFrst15RollSlDot.png",
+  "group": [
+   "Elegant",
+   "15 ml",
+   "Frosted",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 10,
+  "psd": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/11. GBElgFrst15RollSlDot.psd",
+  "sibling": "GBElg15RollSlSh.sized.png",
+  "scale": 1.391,
+  "body": "Layer 26",
+  "fitted": [
+   "Layer 23"
+  ],
+  "loose": [
+   "Layer 22"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBFlair15RollSlDot",
+  "family": "Flair",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBFlair15RollSlDot.png",
+  "group": [
+   "Flair",
+   "15 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 11,
+  "psd": "5.  13-415 Bottles/11. Flair 15ml/1. Flair 15ml  (uncapped) PSD /11. GBFlair15RollSlDot.psd",
+  "sibling": "GBFlair15RollSlDot.sized.png",
+  "scale": 0.805,
+  "body": "Layer 25",
+  "fitted": [
+   "Layer 33"
+  ],
+  "loose": [
+   "Layer 32"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBRect10RollBlkDot",
+  "family": "Rectangle",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBRect10RollBlkDot.png",
+  "group": [
+   "Rectangle",
+   "10 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 18,
+  "psd": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/1. Footed Rect 10ml (Uncapped) PSD/26. GBRect10RollBlkDot.psd",
+  "sibling": "GBTallRect10SpryGlMatt.sized.png",
+  "scale": 0.627,
+  "body": "Layer 27",
+  "fitted": [
+   "Layer 24"
+  ],
+  "loose": [
+   "Layer 25"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBRoyal13RollSlDot",
+  "family": "Royal",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBRoyal13RollSlDot.png",
+  "group": [
+   "Royal",
+   "13 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 11,
+  "psd": "5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /11. GBRoyal13RollSlDot.psd",
+  "sibling": "GBRoyal13SpryGlMatt.sized.png",
+  "scale": 1.539,
+  "body": "Layer 1",
+  "fitted": [
+   "Layer 19"
+  ],
+  "loose": [
+   "Layer 18"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBSleek5RollBlkDot",
+  "family": "Sleek",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBSleek5RollBlkDot.png",
+  "group": [
+   "Sleek",
+   "5 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/5. Sleek 5ml/1. Sleek 5ml PSD (Uncapped) /27. GBSleek5RollBlkDot.psd",
+  "sibling": "GBSleek5Gl.sized.png",
+  "scale": 0.986,
+  "body": "matte:tallest-component",
+  "fitted": [],
+  "loose": [
+   "component@x328-529"
+  ],
+  "dropped": [],
+  "zdiff": 15.91,
+  "flag": "",
+  "method": "composite-matte"
+ },
+ {
+  "sku": "GBSleek8RollBlkDot",
+  "family": "Sleek",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBSleek8RollBlkDot.png",
+  "group": [
+   "Sleek",
+   "8 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/6. Sleek 8ml/1. Sleek 8ml (Uncapped) PSD /27. GBSleek8RollBlkDot.psd",
+  "sibling": "GBSleek8MtlRollGlMatt.sized.png",
+  "scale": 0.975,
+  "body": "Layer 34",
+  "fitted": [
+   "Layer 32"
+  ],
+  "loose": [
+   "Layer 33"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBSqr15RollSlSh",
+  "family": "Square",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBSqr15RollSlSh.png",
+  "group": [
+   "Square",
+   "15 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/12. Square 15ml/1. Square 15ml (Uncapped) PSD /21. GBSqr15RollSlSh.psd",
+  "sibling": "GBSqr15SpryGlMatt.sized.png",
+  "scale": 1.698,
+  "body": "Layer 4",
+  "fitted": [
+   "Layer 3"
+  ],
+  "loose": [
+   "Layer 2"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": ""
+ },
+ {
+  "sku": "GBTulipAmb5RollBlkDot",
+  "family": "Tulip",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBTulipAmb5RollBlkDot.png",
+  "group": [
+   "Tulip",
+   "5 ml",
+   "Amber",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /27. GBTulipAmb5RollBlkDot.psd",
+  "sibling": "GBTulipAmb5Gl.sized.png",
+  "scale": 1.6,
+  "body": "matte:tallest-component",
+  "fitted": [],
+  "loose": [
+   "component@x360-553"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": "",
+  "method": "composite-matte"
+ },
+ {
+  "sku": "GBTulip6RollBlkDot",
+  "family": "Tulip",
+  "hero": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-threejs-blender-render-location-96d90c/d8eea6e4-189b-4e12-bd58-ad68f8718777/scratchpad/lineup/missing/built-v2/GBTulip6RollBlkDot.png",
+  "group": [
+   "Tulip",
+   "6 ml",
+   "Clear",
+   "13-415",
+   "Plastic Roller Ball"
+  ],
+  "n": 9,
+  "psd": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /27. GBTulip6RollBlkDot.psd",
+  "sibling": "GBTulip6SpryGlMatt.sized.png",
+  "scale": 1.789,
+  "body": "matte:tallest-component",
+  "fitted": [],
+  "loose": [
+   "component@x440-641"
+  ],
+  "dropped": [],
+  "zdiff": 0.0,
+  "flag": "",
+  "method": "composite-matte"
+ }
+]
