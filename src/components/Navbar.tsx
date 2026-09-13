@@ -10,6 +10,7 @@ import {
 } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import CartDrawer from "./CartDrawer";
+import BrandWordmark from "./BrandWordmark";
 import { useMegaMenuPanels } from "./SanityMegaMenuProvider";
 import { urlFor } from "@/sanity/lib/image";
 import { MEGA_MENU_PANELS, type MegaMenuId, type MegaMenuPanelContent } from "@/lib/megaMenu";
@@ -352,7 +353,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
 
                 {builderMobile && <div className="builder-mobile-brand">
                     <Link href="/catalog" aria-label="Back to bottles"><ArrowLeft size={22} /></Link>
-                    <Link href="/" className="font-cormorant">BEST BOTTLES</Link>
+                    <Link href="/" aria-label="Best Bottles home"><BrandWordmark /></Link>
                     <button aria-label={`Cart${mounted && isCartHydrated ? `, ${itemCount} items` : ""}`} onClick={() => setCartOpen(true)}><ShoppingBag size={24} />{mounted && isCartHydrated && itemCount > 0 && <span>{itemCount > 99 ? "99+" : itemCount}</span>}</button>
                     <button aria-label="Open menu" onClick={() => setMobileMenuOpen(true)}><List size={20} /></button>
                 </div>}
@@ -366,19 +367,21 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         >
                             <List size={20} weight="regular" />
                         </button>
-                        {/* Mobile logo — text, Cormorant, left-aligned */}
+                        {/* Mobile wordmark */}
                         <Link
                             href="/"
-                            className="xl:hidden ml-1 font-cormorant text-lg font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
+                            aria-label="Best Bottles home"
+                            className="xl:hidden ml-1 flex min-h-11 shrink-0 items-center"
                         >
-                            BEST BOTTLES
+                            <BrandWordmark />
                         </Link>
-                        {/* Desktop logo — Cormorant font */}
+                        {/* Desktop wordmark */}
                         <Link
                             href="/"
-                            className="hidden xl:flex shrink-0 xl:mr-2 2xl:mr-4 font-cormorant text-2xl font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
+                            aria-label="Best Bottles home"
+                            className="hidden min-h-11 items-center xl:flex shrink-0 xl:mr-2 2xl:mr-4"
                         >
-                            BEST BOTTLES
+                            <BrandWordmark />
                         </Link>
                         <nav
                             className="hidden xl:flex items-center xl:gap-x-6 2xl:gap-x-12 text-sm font-medium text-obsidian tracking-wide normal-case shrink-0"
@@ -585,10 +588,11 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                             <Link
                                 href="/"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="font-cormorant text-2xl font-semibold tracking-tight text-obsidian"
+                                aria-label="Best Bottles home"
+                                className="flex min-h-11 items-center"
                                 data-testid="mobile-menu-wordmark"
                             >
-                                BEST BOTTLES
+                                <BrandWordmark />
                             </Link>
                             <button
                                 aria-label="Close menu"
