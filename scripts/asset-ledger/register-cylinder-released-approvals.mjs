@@ -1,0 +1,40 @@
+// Carry Jordan's recorded approval to the exact, now-indexed release bytes.
+// This records an existing human decision; it never approves different renders.
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {readPlateSheet,savePlateBatch} from './plate-contact-sheet.mjs';
+const root=process.cwd(),dir='docs/reviews/cylinder-capoff-final-2026-09-12';
+const read=async file=>JSON.parse(await readFile(file,'utf8'));
+const hash=async file=>createHash('sha256').update(await readFile(file)).digest('hex');
+const manifestFile='dist/paper-doll/cylinder-approved-release-2026-09-12/manifest.json';
+const manifest=await read(manifestFile),authorization=await read(dir+'/ship-authorization.json');
+const verification=await read(dir+'/published-verification.json');
+assert.equal(await hash(manifestFile),authorization.manifestSha256);
+assert.equal(verification.manifestSha256,authorization.manifestSha256);
+assert.equal(verification.uniqueViewAssets,50);assert.equal(verification.rows,25);
+assert.equal(await hash('data/asset-ledger/cylinder-capoff-final-decisions.json'),manifest.approvalFileSha256);
+assert.equal(await hash(dir+'/prepared.json'),manifest.reviewPacketSha256);
+const original=await read(dir+'/decisions-before-ship.json');
+const decisionsPath='data/asset-ledger/family-plate-decisions/cylinder.json';
+let sheet=await readPlateSheet(root,'Cylinder');
+const selected=manifest.rows.map(release=>{
+ const row=sheet.rows.find(r=>r.sku===release.websiteSku);assert.ok(row);
+ assert.equal(row.productGroupId,release.productGroupId);
+ assert.deepEqual(row.views.map(v=>v.sha256),[release.plate.sha256,release.plateCapOff.sha256]);
+ assert.equal(row.eligible,true,row.sku+': '+row.reason);
+ return row;
+});
+const notes='Jordan approved these exact bytes on the final Cylinder comparison sheet and then instructed ship. Approval packet '+manifest.reviewPacketSha256+'. Release manifest '+authorization.manifestSha256+'.';
+let saved=await read(decisionsPath);
+const pending=selected.filter(r=>saved.decisions[r.sku+':'+r.binding]?.status!=='approved');
+if(pending.length)sheet=await savePlateBatch(root,{family:'Cylinder',token:sheet.token,revision:sheet.revision,decisions:pending.map(r=>({sku:r.sku,binding:r.binding,status:'approved',notes}))});
+saved=await read(decisionsPath);
+const appearances=sheet.rows.filter(r=>manifest.rows.some(m=>m.websiteSku===r.sku)&&saved.decisions[r.sku+':'+r.appearanceBinding]?.status!=='approved');
+if(appearances.length)sheet=await savePlateBatch(root,{family:'Cylinder',scope:'cap-on-appearance',token:sheet.token,revision:sheet.revision,decisions:appearances.map(r=>({sku:r.sku,binding:r.appearanceBinding,status:'approved',notes}))});
+saved=await read(decisionsPath);
+assert.deepEqual(saved.history.slice(0,original.history.length),original.history);
+for(const [key,value] of Object.entries(original.decisions))assert.deepEqual(saved.decisions[key],value,'Existing approval changed');
+const report={registeredAt:new Date().toISOString(),manifestSha256:authorization.manifestSha256,approvedPairs:25,newPairBindings:pending.length,newAppearanceBindings:appearances.length,existingHistoryPreserved:original.history.length,revision:saved.revision};
+await writeFile(dir+'/registered-approvals.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report));

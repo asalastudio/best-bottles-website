@@ -1,0 +1,58 @@
+[
+  {
+    "sku": "GBCyl1ozRollWht",
+    "sourceSha256": "6f63bd84d0ababc7a48ab3c26c6804c7ca2e19e032c6828dcbda1fc1534534d0",
+    "sourcePath": "13. 16 mm/2. 28ml  Uncapped/4.  GBCyl28RollWht.psd",
+    "capLayerIndex": 3,
+    "capLayerBounds": [
+      773,
+      1313,
+      1269,
+      1828
+    ],
+    "inspectedBy": "Codex",
+    "inspection": "Visible cap layer inspected in loose-cap-layers-1.png and loose-cap-layers-2.png; original layer pixels only; no shadow processing."
+  },
+  {
+    "sku": "GBMtlRoll28Blk",
+    "sourceSha256": "50d44a77f0efb65fe6c3b4e569d2138799acbe4a0136fd5708cba59286fb958c",
+    "sourcePath": "13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd",
+    "capLayerIndex": 3,
+    "capLayerBounds": [
+      825,
+      1313,
+      1255,
+      1822
+    ],
+    "inspectedBy": "Codex",
+    "inspection": "Visible cap layer inspected in loose-cap-layers-1.png and loose-cap-layers-2.png; original layer pixels only; no shadow processing."
+  },
+  {
+    "sku": "GBMtlRoll28Wht",
+    "sourceSha256": "14a4c0e68cc5821aa0da5f8f4f1a1ad9578c5850eb3e8f80fd28c5666faf1bd4",
+    "sourcePath": "13. 16 mm/2. 28ml  Uncapped/2.  GBCyl28MtlRollWht.psd",
+    "capLayerIndex": 3,
+    "capLayerBounds": [
+      773,
+      1313,
+      1269,
+      1828
+    ],
+    "inspectedBy": "Codex",
+    "inspection": "Visible cap layer inspected in loose-cap-layers-1.png and loose-cap-layers-2.png; original layer pixels only; no shadow processing."
+  },
+  {
+    "sku": "GBRoll28Blk",
+    "sourceSha256": "27e61c60b32e4fb7c762a46239de914bbabeb54b0f90009bde6f69774a395745",
+    "sourcePath": "13. 16 mm/2. 28ml  Uncapped/3. GBCyl28RollBlk.psd",
+    "capLayerIndex": 4,
+    "capLayerBounds": [
+      825,
+      1313,
+      1255,
+      1822
+    ],
+    "inspectedBy": "Codex",
+    "inspection": "Visible cap layer inspected in loose-cap-layers-1.png and loose-cap-layers-2.png; original layer pixels only; no shadow processing."
+  }
+]

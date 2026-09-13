@@ -1,0 +1,19 @@
+# Boston kit intake — local review only
+
+Started the kit phase without changing plate, kit, hero, or release approvals. The workbench now has `?preview=1&view=kits`, linked from its Boston section. This is an initial review queue, not a completed kit batch or interactive kit trial.
+
+All 123 workbench configurations remain accounted for: 21 existing candidates match preserved plates, four existing candidates need registration against corrected plates, and 98 need preparation/source reconciliation (65 historical holds and 33 unindexed plates). All 25 candidate source hashes match BB-PSD-Files-Master. The 75 saved plate/reconstruction/exploded images were hashed and copied unchanged; all use 1000 × 1100 canvases and display at equal widths. Original component files and current alpha/registration/parity still need validation. Previous gate results are historical evidence only.
+
+Visual findings: the first Amber 15 mL black dropper preview separates the bulb/collar while retaining its pipette with the body. Four Amber 30 mL matte-black/matte-silver metal/plastic roll-on candidates share identical exploded preview bytes across roller materials. These five rows carry explicit component concerns, not approval eligibility. Verify and rebuild only what the exact master layer evidence supports. Never synthesize a stem or roller.
+
+No approval controls are offered until component validation is complete. The user approved the finish-photo correction, not these newly reviewed kit parts. The pending 61-plate batch remains pending. No publication was requested or performed.
+
+Validation: HTTP 200; 21/4/98 queue counts; size filtering; 390px layout without overflow; decoded comparison images; no browser page errors; TypeScript passes. No new source or product image render was made. Before/after ledger counts are expected to remain unchanged because this step adds review access and findings only.
+
+Next: recover or reconstruct exact original component files from the retained master sources and explicit source mappings; revalidate the 21 candidates against preserved plate hashes, resolve the flagged dropper/roller semantics, then prepare a small real layered PDP pilot. Recheck four against proposed plate geometry, prepare remaining sources, and request distinct kit approval only when complete. A saved reconstructed image is not sufficient proof of reusable parts.
+
+## 30 mL Amber pilot
+
+The existing local pilot is the four exact 30 mL Amber Boston roll-on records: metal Matte Black, metal Matte Silver, plastic Matte Black, and plastic Matte Silver. It loads only when the URL includes `assetPreview=boston` and the development host is local. The pilot uses the locked 30 mL glass registration, original master PSD source hashes, and separate assembled/cap-off outputs. Finish/material changes navigate through the exact catalog record; the roller remains seated and the cap-off view removes only the cap. This pilot has no live-kit mutation, approval control, or publication path.
+
+The pilot preparation script is `scripts/asset-ledger/prepare-boston-kit-pilot.py`; it must be run with the bundled asset-ledger Python environment because it uses PSD/image dependencies. It verifies the master source hashes, plate hashes, alpha gates, reconstruction parity, shared body stability, and distinct metal/plastic roller pixels before writing `data/asset-ledger/boston-kit-pilot.json`. The browser check confirms the pilot banner, pilot image loading, exact Matte Silver navigation from Matte Black, and local-only gating. A temporary browser timeout during an earlier network-idle run did not change files; a direct DOM check confirmed the pilot loaded and the finish navigation resolved to `GBBstnAmb1ozMtlRollonMattSl`. Use the local product URL to test it manually before scaling the rule.

@@ -1,0 +1,186 @@
+{
+  "at": "2026-09-13T07:19:26.527Z",
+  "global": {
+    "total": 2305,
+    "complete": 661,
+    "review": 456,
+    "reconcile": 677,
+    "missing": 511
+  },
+  "family": {
+    "family": "Cylinder",
+    "total": 436,
+    "complete": 373,
+    "review": 25,
+    "reconcile": 38,
+    "missing": 0,
+    "sizes": [
+      3.3,
+      4,
+      5,
+      5.5,
+      9,
+      25,
+      28,
+      30,
+      50,
+      100,
+      114,
+      227,
+      454
+    ],
+    "unlinked": 0
+  },
+  "released": [
+    {
+      "sku": "GBCyl1ozRollWht",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCylBlu5RollBlkSh",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCylBlu5RollCuMatt",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCylBlu5RollGlMatt",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCylBlu5RollPinkDot",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCylBlu5RollSlDot",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBMtlRoll28Wht",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBTallCyl9RollGlMatt",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBTallCyl9RollGlSh",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBTallCyl9RollSlMatt",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "state": "plated",
+      "checksPassed": true,
+      "complete": false
+    }
+  ]
+}

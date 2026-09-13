@@ -1,5 +1,7 @@
 "use client";
 
+import { decodeImage } from "@/lib/paper-doll/decode-image";
+import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
 import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
 import { normalizeImportedCapColor } from "@/lib/products/cap-finish-evidence";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
@@ -44,6 +46,7 @@ import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { focusedProductOptionLabel, focusedProductPresentation } from "@/lib/products/focused-product-presentation";
 import cylinderCapThumbnails from "@/lib/products/cylinder-cap-thumbnails.generated.json";
+import { bostonClosurePhoto } from "@/lib/products/boston-closure-photos";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
@@ -1078,6 +1081,9 @@ export interface SiblingGroup {
 
 export default function ProductDetailClient({
     platesBySku = {},
+    localKits = {},
+    localAssetPreview = false,
+    localAssetVersion = '',
     slug,
     initialData,
     initialPdpBlocks = [],
@@ -1092,9 +1098,23 @@ export default function ProductDetailClient({
     initialCompatibility?: PdpCompatibilityPayload | null;
     siblingGroups?: SiblingGroup[];
     /** static paper-doll plates for this catalogue, keyed by graceSku or websiteSku (the productPlates index; bytes on Vercel Blob) */
-    platesBySku?: Record<string, { image: string; imageCapOff: string | null }>;
+    platesBySku?: Record<string, { image: string; imageCapOff: string | null; localCandidate?: boolean; reviewStatus?: string }>;
+    localKits?: Record<string, LocalKitPilot>;
+    localAssetPreview?: boolean;
+    localAssetVersion?: string;
 }) {
     const router = useRouter();
+    useEffect(() => {
+        const urls = new Set(Object.values(localKits).flatMap(kit => [...kit.on.parts, ...kit.off.parts].map(part => part.image.url)));
+        for (const url of urls) void decodeImage(url).catch(() => {});
+    }, [localKits]);
+    useEffect(()=>{
+        if(!localAssetPreview)return;
+        let active=true;
+        const update=async()=>{if(document.hidden)return;try{const response=await fetch('/api/asset-ledger/plate-completion',{cache:'no-store'});if(!response.ok)return;const data=await response.json();if(active&&data.version!==localAssetVersion)router.refresh();}catch{/* Keep the current image during a local rebuild. */}};
+        const timer=window.setInterval(update,10000);window.addEventListener('focus',update);
+        return()=>{active=false;window.clearInterval(timer);window.removeEventListener('focus',update);};
+    },[localAssetPreview,localAssetVersion,router]);
     const convex = useConvex();
     const glassNavigationRequest = useRef(0);
     const [glassNavigationError, setGlassNavigationError] = useState<string | null>(null);
@@ -1295,10 +1315,11 @@ export default function ProductDetailClient({
     const capOptionThumbnails = useMemo(() => {
         const exactPhotos: Record<string, string> = cylinderCapThumbnails;
         return Object.fromEntries(variantsForApplicator.flatMap((variant) => {
-            const photo = variant.websiteSku ? exactPhotos[variant.websiteSku] : undefined;
+            const photo = bostonClosurePhoto(activeSlug, variant)
+                ?? (variant.websiteSku ? exactPhotos[variant.websiteSku] : undefined);
             return photo ? [[resolvePresentedVariantOption(variant).swatchName, photo]] : [];
         }));
-    }, [variantsForApplicator, resolvePresentedVariantOption]);
+    }, [activeSlug, variantsForApplicator, resolvePresentedVariantOption]);
 
     const primaryCapColor = primaryVariant && (primaryVariant.applicator ?? null) === (activeApplicator ?? null)
         ? resolvePresentedVariantOption(primaryVariant).swatchName
@@ -1390,6 +1411,7 @@ export default function ProductDetailClient({
             ?? (selectedVariant.websiteSku ? platesBySku[selectedVariant.websiteSku] : undefined)
             ?? null
         : null;
+    const selectedPilot = localAssetPreview && selectedVariant?.websiteSku ? localKits[selectedVariant.websiteSku] : undefined;
     const selectedKitQuery = useQuery(
         api.productKits.forSku,
         selectedVariant?.graceSku || selectedVariant?.websiteSku
@@ -1684,10 +1706,11 @@ export default function ProductDetailClient({
         if (!sku) return null;
         const params = new URLSearchParams();
         params.set("sku", sku);
+        if (localAssetPreview) params.set("assetPreview", "boston");
         if (qty > 1) params.set("qty", String(qty));
         if (safeFrom) params.set("from", safeFrom);
         return `/products/${activeSlug}?${params.toString()}`;
-    }, [activeSlug, qty, safeFrom]);
+    }, [activeSlug, qty, safeFrom, localAssetPreview]);
 
     const handleGuidedVariantSelection = useCallback((selection: { rollerVariant?: "metal" | "plastic"; capOption?: string; applicator?: string }) => {
         const nextApplicator = selection.applicator ?? (selection.rollerVariant
@@ -1745,9 +1768,10 @@ export default function ProductDetailClient({
             }
         }
         if (safeFrom) target.searchParams.set("from", safeFrom);
+        if (localAssetPreview) target.searchParams.set("assetPreview", "boston");
         if (qty > 1) target.searchParams.set("qty", String(qty));
         router.replace(`${target.pathname}${target.search}`, { scroll: false });
-    }, [convex, qty, router, safeFrom, selectedVariant, presentedVariantDeps, resolvePresentedVariantOption]);
+    }, [convex, qty, router, safeFrom, selectedVariant, presentedVariantDeps, resolvePresentedVariantOption, localAssetPreview]);
 
     useEffect(() => {
         const onPlate = (event: Event) => {
@@ -2083,6 +2107,7 @@ export default function ProductDetailClient({
         >
             <Navbar hideMobileSearch />
             <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px]" data-mobile-pdp-frame="">
+                {localAssetPreview && <aside className="mx-4 mb-4 rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm text-obsidian" data-asset-preview="boston"><strong>{selectedPilot ? "30 mL Amber · interactive kit pilot" : "Boston Round · local image review"}</strong><p>{selectedPilot ? "Original glass/roller and cap layers are active after loading. Test Matte Black and Matte Silver with both roller materials and cap-on/off. Other finishes use their existing plates. Local review only." : selectedPlate?.localCandidate ? `Showing a prepared plate · ${selectedPlate.reviewStatus === 'approved' ? 'locally approved; awaiting release' : 'awaiting your image approval'}.` : 'Showing the current indexed image for this configuration.'} Kits and Sunburst heroes keep their current status.</p><a className="underline" href="/team/asset-ledger?preview=1&view=completion">Review the family contact sheet</a><button type="button" className="ml-4 min-h-11 underline" onClick={()=>router.refresh()}>Refresh latest images</button></aside>}
                 {glassNavigationError && <p role="alert" className="mx-4 mb-4 text-sm text-obsidian">{glassNavigationError}</p>}
                 {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
                 <div className={isFocusedPurchasePdp ? "hidden md:block" : undefined}>
@@ -2102,6 +2127,7 @@ export default function ProductDetailClient({
                             selectedVariant={selectedVariant ?? null}
                             platesBySku={platesBySku}
                             selectedKitQuery={selectedKitQuery}
+                            localKits={localKits}
                             skuImageFallbacks={pdpSkuImageFallbacks}
                             displayName={customerDisplayName}
                             inStock={inStock}
@@ -2143,15 +2169,18 @@ export default function ProductDetailClient({
                     {isFocusedPurchasePdp && group.slug ? (
                         <div className="mb-8 lg:mb-14">
                             <ConfiguratorPdp
+                                applicator={activeApplicator}
+                                catalogFamily={group.family}
                                 currentSlug={group.slug}
                                 variantImageUrl={getPdpSkuFallbackImage(selectedVariant?.websiteSku) ?? usableProductImageUrl(selectedVariant?.imageUrl) ?? null}
                                 plateImage={selectedPlate?.image ?? null}
-                                plateImageCapOff={verifiedCapOffPhoto(selectedVariant?.websiteSku) ?? selectedPlate?.imageCapOff ?? null}
+                                plateImageCapOff={selectedPlate?.localCandidate ? selectedPlate.imageCapOff : verifiedCapOffPhoto(selectedVariant?.websiteSku) ?? selectedPlate?.imageCapOff ?? null}
                                 heightWithCap={selectedVariant?.heightWithCap ?? null}
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
                                 diameter={selectedVariant?.diameter ?? null}
                                 hasApproved3d={focusedPdpCapabilities.has3dMode}
                                 kitQuery={selectedKitQuery}
+                                localKitPilot={selectedPilot}
                                 selectedGraceSku={selectedVariant?.graceSku ?? null}
                                 groupTitle={productPresentation.kind === "bottle"
                                     ? `${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()

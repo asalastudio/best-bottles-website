@@ -37,6 +37,8 @@ import { explodedKitFrame, orderExplodedOvercap } from "@/lib/products/kit-frame
 import { useGLTF } from "@react-three/drei";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import FocusedPdpLayout from "./FocusedPdpLayout";
+import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
+import { requiresAssembledClosure, allowsExplodedClosure } from "@/lib/products/closure-presentation";
 import PdpStageModeDock from "./PdpStageModeDock";
 import {
   getPdpStageModes,
@@ -134,7 +136,7 @@ export default function ConfiguratorPdp({
   onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
   heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false, kitQuery, selectedGraceSku,
-  productPresentation,
+  productPresentation, applicator, catalogFamily, localKitPilot,
 }: {
   currentSlug: string;
   /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
@@ -153,6 +155,10 @@ export default function ConfiguratorPdp({
   kitQuery?: FunctionReturnType<typeof api.productKits.forSku>;
   selectedGraceSku?: string | null;
   productPresentation?: FocusedProductPresentation;
+  /** Selected catalog applicator; controls photographic view policy. */
+  applicator?: string | null;
+  catalogFamily?: string | null;
+  localKitPilot?: LocalKitPilot;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
@@ -222,6 +228,8 @@ export default function ConfiguratorPdp({
   };
   const rollerOffered = (variant: "metal" | "plastic") =>
     !rollerVariantsAvailable || rollerVariantsAvailable.includes(variant);
+  const assembledOnly = requiresAssembledClosure(applicator, websiteSku);
+  const allowExploded = allowsExplodedClosure(applicator, catalogFamily, websiteSku);
   const [withCap, setWithCap] = useState(false);
   // Photographs lead; the 3D viewer is opened by the customer, never for
   // them. Nothing about it -- its chunk, a WebGL context, the GLB -- is
@@ -238,14 +246,15 @@ export default function ConfiguratorPdp({
   // Exploded: the kit's parts slide apart along the axis by the offsets the
   // builder recorded (`exploded.dx/dy`, plate pixels). Only a kitted SKU has
   // them, so the mode is offered only when the stack is on screen.
-  const exploded = requestedStageMode === "exploded";
+  const exploded = allowExploded && requestedStageMode === "exploded";
   const [skuCopied, setSkuCopied] = useState(false);
   // URLs whose image element fired onError this session: the stage falls through to
   // the catalogue photograph instead of showing a broken image on white.
   const [brokenPlates, setBrokenPlates] = useState<ReadonlySet<string>>(() => new Set());
   // A pending next-SKU query never inherits a prior kit. The preferred mode
   // may survive loading, but only this SKU's stored kit can expose its layers.
-  const kit = resolveSelectedSkuKit({ websiteSku, graceSku: selectedGraceSku }, kitQuery);
+  const pilot = localKitPilot?.sku === websiteSku ? localKitPilot : undefined;
+  const kit = resolveSelectedSkuKit({ websiteSku, graceSku: selectedGraceSku }, pilot ? (withCap ? pilot.on : pilot.off) : kitQuery);
 
   // "Without cap" on a kitted SKU removes the cap PART. The cap-off PLATE swap
   // below still happens, but the kit stacks above the plate, so with the cap
@@ -255,15 +264,15 @@ export default function ConfiguratorPdp({
   const targetParts = useMemo(() => {
     if (!kit?.parts?.length) return null;
     const parts = orderExplodedOvercap([...kit.parts].sort((a, b) => a.zOrder - b.zOrder));
-    return withCap ? parts : parts.filter((p) => !REMOVABLE_SLOTS.has(p.slot));
-  }, [kit, withCap]);
+    return pilot || assembledOnly || withCap ? parts : parts.filter((p) => !REMOVABLE_SLOTS.has(p.slot));
+  }, [kit, withCap, assembledOnly, pilot]);
   // What is actually on screen: a fully decoded set owned by the current kit.
   // The synchronous SKU gate below prevents an old state value from painting
   // between render and effect cleanup during a variant transition.
   const [shownKit, setShownKit] = useState<{ sku: string; parts: NonNullable<typeof targetParts> } | null>(null);
   useEffect(() => {
     // Pending or no exact kit: never keep another SKU's layers on this stage.
-    if (kitQuery === undefined) { setShownKit(null); return; }
+    if (!pilot && kitQuery === undefined) { setShownKit(null); return; }
     // Resolved with no kit — a SKU that was never kitted. The stale stack would
     // otherwise keep showing the PREVIOUS bottle, which is worse than a flat plate.
     if (!kit?.sku || !targetParts?.length) { setShownKit(null); return; }
@@ -272,11 +281,11 @@ export default function ConfiguratorPdp({
       .then(() => { if (!cancelled) setShownKit({ sku: kit.sku, parts: targetParts }); })
       .catch(() => { if (!cancelled) setShownKit(null); });   // fall back to the plate
     return () => { cancelled = true; };
-  }, [kit, kitQuery, targetParts]);
+  }, [kit, kitQuery, targetParts, pilot]);
   // A published kit for this exact SKU is capability truth; decoding only
   // controls when its layers are safe to paint.
   const releasedKitAvailable = Boolean(kit?.parts?.length);
-  const kitReady = Boolean(kit?.sku && shownKit?.sku === kit.sku && shownKit.parts.length);
+  const kitReady = Boolean(kit?.sku && shownKit?.sku === kit.sku && shownKit.parts === targetParts && shownKit.parts.length);
   const kitParts = kitReady ? shownKit!.parts : null;
   const explodedFrame = explodedKitFrame(kitParts ?? []);
   const markPlateBroken = (url: string) => {
@@ -400,7 +409,7 @@ export default function ConfiguratorPdp({
   // between colourways — it disables and says why (2026-09-02: on 5 ml
   // cobalt roll-on, 8 of 18 colourways have no cap-off plate yet, and the
   // control disappearing read as "the toggle is broken").
-  const canCap = CAPPABLE[activeBase] != null;
+  const canCap = !assembledOnly && CAPPABLE[activeBase] != null;
   const capToggleLive = canCap
     && ((show3d && Boolean(fam) && !fam?.photoOnly) || Boolean(plateImageCapOff) || kitHasCap);
   const closureFor = (base: ClosureBase) =>
@@ -411,10 +420,10 @@ export default function ConfiguratorPdp({
 
   /* ---------------------------------------------------------- the stage */
   // the plate for the selected SKU; cap-off plate when the cap is lifted
-  const wantedPlate = (!withCap && plateImageCapOff) ? plateImageCapOff : plateImage;
+  const wantedPlate = (!assembledOnly && !withCap && plateImageCapOff) ? plateImageCapOff : plateImage;
   const plate = wantedPlate && !brokenPlates.has(wantedPlate) ? wantedPlate : null;
   // Prefer exact assembled photographs; retain layers for exploded or missing states.
-  const showKitLayers = kitReady && (exploded || !plate || (!withCap && !plateImageCapOff));
+  const showKitLayers = kitReady && (Boolean(pilot) || exploded || !plate || (!assembledOnly && !withCap && !plateImageCapOff));
   // A photo-only family (no approved geometry) never shows 3D; otherwise the
   // customer opens it. A plate outranks the catalogue photo: it is the exact
   // configuration, the photo is the group's hero.
@@ -438,7 +447,7 @@ export default function ConfiguratorPdp({
           </div>
         </div>
       ) : showPlate ? (
-        <div className="relative h-full w-full bg-white">
+        <div className="relative h-full w-full bg-white" data-paper-doll={showKitLayers ? "kit" : "plate"}>
           {/* The flat plate: first paint, and what stays if the kit never arrives.
               Once the stack is up the plate is dropped entirely — leaving it
               mounted made every colourway change refetch a plate nobody sees. */}
@@ -557,13 +566,14 @@ export default function ConfiguratorPdp({
     hasApprovedImageOrPlate: Boolean(plate || photoFallback),
     hasApprovedGeometry: has3d,
     hasReleasedExplodedKit: releasedKitAvailable,
+    applicator, websiteSku,
     dimensions,
     photoOnly: fam?.photoOnly,
-    productFamily: displayName?.toLowerCase().includes("diva") ? "Diva" : groupTitle.split(" ")[0],
+    productFamily: catalogFamily ?? (displayName?.toLowerCase().includes("diva") ? "Diva" : groupTitle.split(" ")[0]),
   });
   const stageMode: PdpStageMode | null = showDimensions
     ? "dimensions"
-    : requestedStageMode === "exploded" && releasedKitAvailable
+    : exploded && releasedKitAvailable
       ? "exploded"
     : showLive3d
       ? "3d"
@@ -575,7 +585,7 @@ export default function ConfiguratorPdp({
     // Mode capabilities are primitive truth values; keeping the array out of
     // this dependency list prevents an effect on every render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [requestedStageMode, has3d, releasedKitAvailable, plate, photoFallback, heightWithCap, heightWithoutCap, diameter, kitQuery]);
+  }, [requestedStageMode, has3d, releasedKitAvailable, plate, photoFallback, heightWithCap, heightWithoutCap, diameter, kitQuery, assembledOnly, allowExploded]);
   const stageToggle = (
     <PdpStageModeDock modes={modes} activeMode={stageMode} onModeChange={pickMode} />
   );

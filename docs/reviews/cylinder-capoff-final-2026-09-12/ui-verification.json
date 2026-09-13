@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-09-13T07:18:02.720Z",
+  "baseUrl": "http://localhost:3040",
+  "desktop": {
+    "viewport": {
+      "width": 1331,
+      "height": 1085
+    },
+    "sku": "GBMtlRoll28Wht",
+    "capOn": "1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed",
+    "capOff": "1965ae0e7295e119219e6eff890d8f88a98cb5072d00fed3f2fa57bef96afac9",
+    "bothLoaded": true,
+    "overflow": false
+  },
+  "mobile": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "sku": "GBMtlRoll28Wht",
+    "capOnLoaded": true,
+    "capOffLoaded": true,
+    "returnedToCapOn": true,
+    "overflow": false,
+    "viewportReset": true
+  },
+  "finishSwap": {
+    "skus": [
+      "GBCyl5RollSlSh",
+      "GBCyl5RollPinkDot"
+    ],
+    "capOffLoaded": true,
+    "capOnLoaded": true,
+    "overflow": false
+  },
+  "evidence": "Actual browser controls, DOM image URLs/load states, and screenshots inspected in this Codex turn. No user repeat review requested.",
+  "workbench": {
+    "url": "http://localhost:3040/team/asset-ledger?preview=1&family=Cylinder",
+    "httpStatus": 200,
+    "observedInBrowser": true,
+    "complete": 398,
+    "total": 436,
+    "reconcile": 38,
+    "review": 0,
+    "missing": 0,
+    "appearanceApproved": 436,
+    "openedForJordan": true
+  },
+  "releasePage": {
+    "heading": "Your 25 approved pairs are published.",
+    "published": 25,
+    "reviewedTechnicalHolds": 6,
+    "otherSourceHolds": 32,
+    "observedInBrowser": true
+  }
+}

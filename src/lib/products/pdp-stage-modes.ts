@@ -1,3 +1,5 @@
+import { allowsExplodedClosure } from "./closure-presentation";
+
 export type PdpStageMode = "photo" | "3d" | "exploded" | "dimensions";
 
 export type PdpDimensions = {
@@ -7,6 +9,8 @@ export type PdpDimensions = {
 };
 
 export type PdpStageModeCapabilities = {
+    applicator?: string | null;
+    websiteSku?: string | null;
     hasApprovedImageOrPlate?: boolean;
     hasApprovedGeometry?: boolean;
     hasReleasedExplodedKit?: boolean;
@@ -37,7 +41,7 @@ export function getPdpStageModes(capabilities: PdpStageModeCapabilities): PdpSta
 
     if (capabilities.hasApprovedImageOrPlate) modes.push({ id: "photo", label: "Photo" });
     if (capabilities.hasApprovedGeometry && !photoOnly) modes.push({ id: "3d", label: "3D" });
-    if (capabilities.hasReleasedExplodedKit) modes.push({ id: "exploded", label: "Exploded" });
+    if (capabilities.hasReleasedExplodedKit && allowsExplodedClosure(capabilities.applicator, capabilities.productFamily, capabilities.websiteSku)) modes.push({ id: "exploded", label: "Exploded" });
     if (hasRealPdpDimensions(capabilities.dimensions)) modes.push({ id: "dimensions", label: "Dimensions" });
 
     return modes;

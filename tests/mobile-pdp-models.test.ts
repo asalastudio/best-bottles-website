@@ -460,7 +460,7 @@ describe("mobile PDP wiring", () => {
         // The viewer paints the same shown variant / plate the stage does, with its own cap state.
         expect(mobile).toContain("const viewerMode = coerceMobileViewMode(viewerView, viewCaps)");
         expect(mobile).toContain("viewerOpen ? plateUrlFor(viewerMode) : null");
-        expect(mobile).toContain("viewerOpen ? shownKitQuery : undefined");
+        expect(mobile).toContain("viewerOpen ? (pilot ? (viewerMode === \"capOff\" ? pilot.off : pilot.on) : shownKitQuery) : undefined");
         expect(mobile).toContain("onRestoreFocus={restoreViewerFocus}");
         // No scroll repositioning around open/close: the page is never moved.
         expect(viewer).not.toContain("scrollTo");

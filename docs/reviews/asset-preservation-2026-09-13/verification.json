@@ -1,0 +1,49 @@
+{
+  "at": "2026-09-13T15:20:20.076519+00:00",
+  "scope": "Boston and Cylinder Git preservation; no media or database publishing",
+  "typescript": "passed",
+  "webpackProductionBuild": "passed",
+  "lint": {
+    "errors": 0,
+    "warnings": 64
+  },
+  "vitest": {
+    "passed": 1674,
+    "skipped": 7,
+    "filesPassed": 181,
+    "filesSkipped": 2
+  },
+  "python": {
+    "paperdollPassed": 45,
+    "measurementPassed": 3
+  },
+  "archive": {
+    "verifiedFiles": 406,
+    "uniqueObjects": 372,
+    "restoredFiles": 406,
+    "restoredCylinderLockMatches": true
+  },
+  "cylinderFinal": {
+    "approvedAndLocked": 38,
+    "views": 76,
+    "sourceAcceptances": 27,
+    "publishedThisTurn": 0
+  },
+  "secretsScan": {
+    "matches": 0,
+    "filesOver100MB": 0
+  },
+  "runtime": "production-runtime.json",
+  "measurement": {
+    "plates": 1909,
+    "fetchFailures": 0,
+    "measurementFailures": 0
+  },
+  "counts": "counts-after-lock.json",
+  "checksNotes": [
+    "Fixed a fresh-checkout import of an ignored Boston kit manifest by using a versioned snapshot.",
+    "Replaced transient ledger-dependent test selections with explicit pending-state fixtures.",
+    "Preserved original CommonJS review scripts with the same lint allowance as the existing review server.",
+    "Verified ordinary production-mode requests cannot use local image candidates; the review API rejects them."
+  ]
+}

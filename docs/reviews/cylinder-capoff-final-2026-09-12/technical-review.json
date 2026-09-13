@@ -1,0 +1,606 @@
+{
+  "schemaVersion": 1,
+  "batchId": "cylinder-capoff-final-2026-09-12",
+  "reviewPacketSha256": "efdd955f5f8c0ba573546fe5190bd6bdaee0a340713f297870186bf0a731bc11",
+  "checkedAt": "2026-09-13T06:51:49.379337+00:00",
+  "checkedBy": "Codex",
+  "inspectionSheets": [
+    "overview-1.jpg",
+    "overview-2.jpg",
+    "overview-3.jpg",
+    "overview-4.jpg",
+    "overview-5.jpg",
+    "overview-6.jpg"
+  ],
+  "approvedImageBytesUnchanged": true,
+  "rows": [
+    {
+      "sku": "GBCyl1ozRollWht",
+      "binding": "a090482718bcf2fb249acc8e6c1cc234ceb12d74784307baafb32dc4e9e201b9",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCyl1ozRollWht",
+        "bodyMeanError": 1.043,
+        "region": [
+          375,
+          521,
+          619,
+          991
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "binding": "ea44890d83321ef6aada8ff7b58d7fe1142c834c9f331a2afc28ac58c3b5b838",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCyl5RollBlkSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          599,
+          603,
+          1051
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "binding": "7673fbfef9ae2d1d687d9c72d6a740ac0d441c7d280ead32a7c19f85a2597323",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCyl5RollCuMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          598,
+          603,
+          1050
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "binding": "84385a566cc54130ae06c48d6a02a07a83dfe4a41609644d6749bd8d4374835b",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCyl5RollGlMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          603,
+          603,
+          1050
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "binding": "38fcb43a94eeb340102064aaf6091184662798bc88039691845aec5f1bb9b174",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCyl5RollGlSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          599,
+          603,
+          1051
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "binding": "aa92b114b2dbbc8e9b07ec040cdecb98a453ef1de76f642cbeb6c799b7109400",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCyl5RollPinkDot",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          607,
+          603,
+          1050
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "binding": "093b39c86f4a15594ec5be034d3d5e93cda0b0f76953eec1563f98d521377afd",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCyl5RollSlMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          603,
+          603,
+          1051
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "binding": "730dcadc8ca5c58bc9996c70ac0f354550d104cadd632d5edb5e8fee9d27cf94",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCyl5RollSlSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          399,
+          599,
+          603,
+          1051
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "binding": "6b41d75fc6de6bf29dccabbe122f4745fecb21709a6ce4470b5fbefb742953b5",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCyl5WhtSht",
+        "bodyMeanError": 0.942,
+        "region": [
+          398,
+          670,
+          604,
+          1049
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "binding": "c52caf2ab1707b5ee3ed60649c4e477122e96584f539e62a4223172b1f8b5557",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCylBlu5RollBlkDot",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          595,
+          604,
+          1043
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollBlkSh",
+      "binding": "50923b0a36480441cf96c2d4d2906e2c7bd32b6a37ad93d08167bb9839b758a0",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCylBlu5RollBlkSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          598,
+          604,
+          1043
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollCuMatt",
+      "binding": "ebc55a3b66fe0b7662805adb67950d93b285330677e5e54fcdf5efb96855b4bc",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCylBlu5RollCuMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          594,
+          604,
+          1043
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollGlMatt",
+      "binding": "0dbdd2d2c4ce35f91cae5addf54f20da4fd875c6ed091997af28c3ef1e23ba6c",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCylBlu5RollGlMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          598,
+          604,
+          1043
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "binding": "8930042dd1848af6c7e76110947ab3e1230a55b7491381ef4d41fba8d83f4932",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCylBlu5RollGlSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          594,
+          604,
+          1043
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollPinkDot",
+      "binding": "e6cb8fe2287acbe0310ae57294f734a3340dcb6e53ed5412fe884d5f342bd121",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCylBlu5RollPinkDot",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          602,
+          604,
+          1043
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollSlDot",
+      "binding": "b5da50f4654ae6b392ce3ec313d6b427a7755fb386a5934917188a3c7b5e90cd",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCylBlu5RollSlDot",
+        "bodyMeanError": 0.0,
+        "region": [
+          400,
+          602,
+          606,
+          1043
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "binding": "3855c2dd75635849ef4aff901d87d9d0083d988766d324c34a095dd6cf12042c",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCylBlu5RollSlMatt",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          602,
+          604,
+          1043
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "binding": "c0047f396ca43fa248d294cc4bd8f098915fcca5e6adc93a87041306b4ea9461",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBCylBlu5RollSlSh",
+        "bodyMeanError": 0.0,
+        "region": [
+          398,
+          594,
+          604,
+          1043
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "binding": "2e82eaafff86688c59af32ac2e9afd62abd54c3fbf1bffb07abecba52e5c3178",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBMtlRoll28Blk",
+        "bodyMeanError": 1.04,
+        "region": [
+          375,
+          520,
+          619,
+          991
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBMtlRoll28Wht",
+      "binding": "2db6396557339bc82563b6469df9cf12e142143fb48469dd46c7d081cd32a2ec",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBMtlRoll28Wht",
+        "bodyMeanError": 1.04,
+        "region": [
+          375,
+          521,
+          619,
+          991
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "binding": "b4a3fe24e814dd00dfe86028c4b92aeacb7dfde520f088f9e0d0f2fce9fb999b",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBRoll28Blk",
+        "bodyMeanError": 1.038,
+        "region": [
+          375,
+          519,
+          619,
+          991
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBSpry1ozSl",
+      "binding": "b607dbb01ce4b7d20e1e18b9a3171dfb84f5c9a111a0bf66de4a91a44f3c9d2e",
+      "eligible": false,
+      "holds": [
+        "off: body registration needs correction",
+        "Master cap-on source still needs reconciliation",
+        "Visual inspection confirms the recovered source remains capped; it cannot supply a cap-off view"
+      ],
+      "viewCorrections": [
+        {
+          "sha256": "377aaa894912b95e36135de2c9ff2908a562b34d450d777e121f7dba554770f5",
+          "actualView": "cap-on",
+          "sourceSha256": "c1f3997dac5a55dc8cf90bc3ac2f3ad715fbf4a4b12f440947877417ba91ba6a",
+          "evidence": "sprayer-pair.png"
+        }
+      ],
+      "pairCheck": {
+        "sku": "GBSpry1ozSl",
+        "bodyMeanError": 6.229,
+        "region": [
+          372,
+          302,
+          544,
+          549
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "binding": "c8c2f83d54a3d52b689ac87c3d77c027c70301c7f63eba334b4ea9872c9b62e0",
+      "eligible": false,
+      "holds": [
+        "Historical size finding remains separate from appearance approval"
+      ],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBTallCyl9MtlRollBlkDot",
+        "bodyMeanError": 1.575,
+        "region": [
+          440,
+          577,
+          568,
+          1049
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "binding": "f30dfc20b03d7a25d0c86edefea05af14e9ac4a0cb0623e37c0405a2de41453c",
+      "eligible": false,
+      "holds": [
+        "Historical size finding remains separate from appearance approval",
+        "Existing cap-off body alignment differs from the approved cap-on; retained image is not release-cleared"
+      ],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBTallCyl9RollBlkDot",
+        "bodyMeanError": 29.247,
+        "region": [
+          443,
+          579,
+          571,
+          1049
+        ],
+        "passed": false
+      }
+    },
+    {
+      "sku": "GBTallCyl9RollBlkSh",
+      "binding": "7339d0c67ec74eb663470ace5f62b732160e924c531a1e97c467d45b0f604af3",
+      "eligible": false,
+      "holds": [
+        "Historical size finding remains separate from appearance approval"
+      ],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBTallCyl9RollBlkSh",
+        "bodyMeanError": 1.177,
+        "region": [
+          441,
+          582,
+          569,
+          1051
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBTallCyl9RollCuMatt",
+      "binding": "4852bc5cef6b7c27806dc1271e3e98e6dfbf8b1b0c7107c706687322bd085d4e",
+      "eligible": false,
+      "holds": [
+        "Historical size finding remains separate from appearance approval"
+      ],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBTallCyl9RollCuMatt",
+        "bodyMeanError": 1.177,
+        "region": [
+          441,
+          583,
+          569,
+          1051
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBTallCyl9RollGlMatt",
+      "binding": "49e2731bfced4e32b30860363189b0cb7fb8ec1ddd8d830948d8f4ac53316361",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBTallCyl9RollGlMatt",
+        "bodyMeanError": 1.176,
+        "region": [
+          441,
+          582,
+          569,
+          1050
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBTallCyl9RollGlSh",
+      "binding": "dc2aec9039977b1e754b1214331afc69e0ebacc2488cddc436b6018a338df23f",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBTallCyl9RollGlSh",
+        "bodyMeanError": 1.176,
+        "region": [
+          441,
+          582,
+          569,
+          1050
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBTallCyl9RollSlMatt",
+      "binding": "d2b8b63b73ee58d93605cd7295a9302d5ea941e044e9acd9522d0b9ef0d134b9",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBTallCyl9RollSlMatt",
+        "bodyMeanError": 1.176,
+        "region": [
+          441,
+          583,
+          569,
+          1051
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBTallCyl9RollSlSh",
+      "binding": "380c38a0fe3baf2cf141c0913fb53e77cc5022df45c086ae0b8950e81eaed0f2",
+      "eligible": false,
+      "holds": [
+        "Historical size finding remains separate from appearance approval"
+      ],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBTallCyl9RollSlSh",
+        "bodyMeanError": 1.177,
+        "region": [
+          441,
+          582,
+          569,
+          1051
+        ],
+        "passed": true
+      }
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "binding": "e5ce91d7cc286596c653e0337cf5c67f6f88d5d855bb3f81a554e86fd081895d",
+      "eligible": true,
+      "holds": [],
+      "viewCorrections": [],
+      "pairCheck": {
+        "sku": "GBTallCylFrst9MtlRollBlkDot",
+        "bodyMeanError": 0.747,
+        "region": [
+          440,
+          575,
+          562,
+          1048
+        ],
+        "passed": true
+      }
+    }
+  ],
+  "summary": {
+    "releaseCandidates": 25,
+    "heldReviewedRows": 6,
+    "verifiedNewCapOffViews": 29,
+    "heldCappedSourceSamples": 1,
+    "remainingSourceRows": 32,
+    "totalRemainingAfterCandidateRelease": 38
+  }
+}

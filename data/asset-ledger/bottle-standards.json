@@ -1,0 +1,1665 @@
+{
+  "schemaVersion": 1,
+  "policy": "One physical bottle shape and capacity shares a glass-size standard across glass colors and closures. Image approval never edits the standard. Changed images require new byte-bound approval; approved siblings are preserved.",
+  "identityEvidence": "Jordan explicitly confirmed Boston 15, 30 and 60 mL sharing across clear, amber and cobalt on 2026-09-12. Membership uses the current catalog group IDs and fields, never SKU parsing.",
+  "standards": [
+    {
+      "id": "boston-round-standard-15ml",
+      "family": "Boston Round",
+      "profile": "Standard Boston Round",
+      "capacityMl": 15,
+      "neckFinishes": [
+        "18-400"
+      ],
+      "colors": [
+        "Amber",
+        "Clear",
+        "Cobalt Blue"
+      ],
+      "productGroupIds": [
+        "kh7bbete9a8hmk9j8r6ngfb0bs8dqv80",
+        "kh70b67y176d4jftmy5xyd930x8dp2jn",
+        "kh7em1j4z5a71s14sknz63zgk98dpm9w",
+        "kh70nt59vyfdnkts72wkf17km58dpvy3",
+        "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a"
+      ],
+      "version": 1,
+      "state": "locked",
+      "reference": {
+        "sku": "GBBstn15BlkCapSht",
+        "url": "/images/bottle-standards/boston-2026-09-12/15ml-proposed-glass.8d965f273927d8a8.png",
+        "sha256": "8d965f273927d8a8dcc29073fa4c10f95fd0866355bf56e642a853c6aff66bc8",
+        "sharedHeightApproved": true
+      },
+      "targets": {
+        "hero": {
+          "measurement": "full_glass",
+          "glassHeightPercent": 46.73887278590374,
+          "baselinePercent": 91,
+          "canvas": {
+            "width": 1560,
+            "height": 1716
+          }
+        }
+      },
+      "approval": {
+        "id": "2b721d1a-7cf5-4471-af24-f96ad991be6b",
+        "action": "lock",
+        "at": "2026-09-13T00:10:38.367Z",
+        "actor": "Local workbench · explicit review action",
+        "standardVersion": 1,
+        "referenceSha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+        "standardHash": "9f13428c4e744d5b999c7b8ad480278616dff87eda69d9e7af4b7b96742cf788",
+        "sha256": "8d965f273927d8a8dcc29073fa4c10f95fd0866355bf56e642a853c6aff66bc8",
+        "packetHash": "424b1b6b2030e80198b6d1e93edc43455e6e35fe70a83fe28fc0d9ed7d0cc3ae"
+      },
+      "hold": "",
+      "history": [
+        {
+          "sku": "GBBstnBlu15BlkCapSht",
+          "capacityMl": 15,
+          "color": "Cobalt Blue",
+          "status": "approved",
+          "target": {
+            "heightPercent": 37,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "2b6c4a21a65c6cc898cfbdb8c0efcf6ef3557bceb7c29236ed486d61a46043e7",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r4",
+          "updatedAt": "2026-09-11T02:07:47.642Z"
+        },
+        {
+          "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+          "capacityMl": 15,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 45,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "7b8933b291855de41c440c07ed5463c4af63cb192e617554fc51302e737efe15",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:03:42.330Z"
+        },
+        {
+          "sku": "GBBstnBlu15BlkCapSht",
+          "capacityMl": 15,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 45,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "cdb97c69d084c6e30b7a84b96baca465209c77147a7d470a8f1f6991480e2a3c",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:03:22.505Z"
+        },
+        {
+          "sku": "GBBstnAmb15mlBlkCapSht",
+          "capacityMl": 15,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 45,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "dfbce9f51280b01a127b10aaeb2727f4575448d71ec0975e9440b3b7e12c0710",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:01:58.611Z"
+        },
+        {
+          "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+          "capacityMl": 15,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 45,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "d22ec7f234b79bb8606d99b3c1d3bbba9ce6f79c881f153887bb2a8bce65ae98",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:01:58.012Z"
+        },
+        {
+          "sku": "GBBstn15BlkCapSht",
+          "capacityMl": 15,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 45,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "0a19cc55da7314eed2cf9eef7ef5897e950d5ac41902be2978357804e1065b36",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:01:06.911Z"
+        },
+        {
+          "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+          "capacityMl": 15,
+          "color": "Cobalt Blue",
+          "status": "pending",
+          "target": {
+            "heightPercent": 75,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "fc4bd6e03b4b1e87cce241051b04b8a8a5747c41b8678eec1233632db061de2e",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:09.647Z"
+        },
+        {
+          "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+          "capacityMl": 15,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 75,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "3fb4aa86a252b13f6ebef7185e52c3beb7caf80147a20818386984fe4ad822b4",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:09.632Z"
+        },
+        {
+          "sku": "GBBstn15BlkCapSht",
+          "capacityMl": 15,
+          "color": "Clear",
+          "status": "rejected",
+          "target": {
+            "heightPercent": 60,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "3486de64837957a98863721c3e0b95134f43e5de6d461ab39606632cfb09763c",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:09.624Z"
+        },
+        {
+          "sku": "GBBstnBlu15BlkCapSht",
+          "capacityMl": 15,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 60,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "c1f88e9dedbeb136005a50462424901a7a103eb653ac42488503e553ff92befe",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T15:47:00.294Z"
+        },
+        {
+          "sku": "GBBstnAmb15mlBlkCapSht",
+          "capacityMl": 15,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 60,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "bbadef9a8f3a671d0c71867f98a45d2afad60ab3b93f2adaf010272e0e330730",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T15:45:41.419Z"
+        }
+      ],
+      "referenceDecision": {
+        "id": "ca2c5c11-a48a-4203-840a-e8bd3141ed9b",
+        "action": "approve-reference",
+        "at": "2026-09-12T23:52:48.029Z",
+        "actor": "Local workbench · explicit review action",
+        "standardVersion": 1,
+        "referenceSha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+        "standardHash": "553648b3278361262835616a2741a3fdc7e830cedb6a1aeaea73bd4e35aa7762",
+        "sha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40"
+      },
+      "reviewEvents": [
+        {
+          "id": "ca2c5c11-a48a-4203-840a-e8bd3141ed9b",
+          "action": "approve-reference",
+          "at": "2026-09-12T23:52:48.029Z",
+          "actor": "Local workbench · explicit review action",
+          "standardVersion": 1,
+          "referenceSha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+          "standardHash": "553648b3278361262835616a2741a3fdc7e830cedb6a1aeaea73bd4e35aa7762"
+        },
+        {
+          "id": "54e3e186-0008-454f-814d-3bee4057cc1f",
+          "action": "request-sizing",
+          "at": "2026-09-13T00:00:22.777Z",
+          "actor": "Jordan · confirmed conversation instruction",
+          "standardVersion": 1,
+          "referenceSha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+          "standardHash": "156e4a146d3517310c7a6efdfaa0a0f5f0369f4c6cb6193600e13dd59c127f84",
+          "percent": 0,
+          "note": "Keep current glass size, as Jordan explicitly confirmed in the conversation. Prepare the verified master-glass comparison for final standard approval."
+        },
+        {
+          "id": "2b721d1a-7cf5-4471-af24-f96ad991be6b",
+          "action": "lock",
+          "at": "2026-09-13T00:10:38.367Z",
+          "actor": "Local workbench · explicit review action",
+          "standardVersion": 1,
+          "referenceSha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+          "standardHash": "9f13428c4e744d5b999c7b8ad480278616dff87eda69d9e7af4b7b96742cf788"
+        }
+      ],
+      "sizingRequest": {
+        "id": "54e3e186-0008-454f-814d-3bee4057cc1f",
+        "action": "request-sizing",
+        "at": "2026-09-13T00:00:22.777Z",
+        "actor": "Jordan · confirmed conversation instruction",
+        "standardVersion": 1,
+        "referenceSha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+        "standardHash": "156e4a146d3517310c7a6efdfaa0a0f5f0369f4c6cb6193600e13dd59c127f84",
+        "percent": 0,
+        "note": "Keep current glass size, as Jordan explicitly confirmed in the conversation. Prepare the verified master-glass comparison for final standard approval.",
+        "status": "approved",
+        "baselinePercent": 91,
+        "measurement": "full_glass"
+      },
+      "preparedReview": {
+        "kind": "bare-glass-standard",
+        "preparedAt": "2026-09-13T00:00:23.192222+00:00",
+        "requestId": "54e3e186-0008-454f-814d-3bee4057cc1f",
+        "standardVersion": 1,
+        "referenceSha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+        "referenceImage": {
+          "url": "/images/catalog/bone-review/GBBstn15BlkCapSht.871d96733ee5.png",
+          "sha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40"
+        },
+        "measurement": "full_glass",
+        "before": {
+          "url": "/images/bottle-standards/boston-2026-09-12/15ml-current-glass.8d965f273927d8a8.png",
+          "sha256": "8d965f273927d8a8dcc29073fa4c10f95fd0866355bf56e642a853c6aff66bc8"
+        },
+        "after": {
+          "url": "/images/bottle-standards/boston-2026-09-12/15ml-proposed-glass.8d965f273927d8a8.png",
+          "sha256": "8d965f273927d8a8dcc29073fa4c10f95fd0866355bf56e642a853c6aff66bc8"
+        },
+        "bareGlass": {
+          "url": "/images/bottle-standards/boston-2026-09-12/15ml-source-glass.78b7f558ca3e7294.png",
+          "sha256": "78b7f558ca3e7294d4bbd18b6aa018f3bb72f39feb8197f986b3cd6ff79ae1bd",
+          "identityVerified": true,
+          "verifiedBy": "Codex · exact catalog crosswalk and visual PSD layer inspection",
+          "verifiedAt": "2026-09-13T00:00:23.192222+00:00",
+          "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+          "sourceSha256": "1c994a66c9d0eb524d3aff308514532efe560d0659f2df9c99860e4e4891fa71",
+          "layerIndex": 1,
+          "layerName": "Layer 4"
+        },
+        "canvas": {
+          "width": 1560,
+          "height": 1716
+        },
+        "glass": {
+          "rimY": 759.5209429938918,
+          "baseY": 1561.56
+        },
+        "beforeGlass": {
+          "rimY": 759.5209429938918,
+          "baseY": 1561.56
+        },
+        "baselinePercent": 91,
+        "registrationVerified": true,
+        "assemblyBoundsVerified": true,
+        "scopeVerified": true,
+        "productGroupIds": [
+          "kh7bbete9a8hmk9j8r6ngfb0bs8dqv80",
+          "kh70b67y176d4jftmy5xyd930x8dp2jn",
+          "kh7em1j4z5a71s14sknz63zgk98dpm9w",
+          "kh70nt59vyfdnkts72wkf17km58dpvy3",
+          "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a"
+        ],
+        "affectedSkus": [
+          "GBBstn15BlkCapSht",
+          "GBBstn15BlkDrp",
+          "GBBstnAmb15mlBlkCapSht",
+          "GBBstnAmb15mlBlkDropper",
+          "GBBstnAmb15mlBlkDropperGlTrim",
+          "GBBstnAmb15mlBlkDropperSlTrim",
+          "GBBstnAmb15mlWhtDropper",
+          "GBBstnAmb15mlWhtDropperGlTrim",
+          "GBBstnAmb15mlWhtDropperSlTrim",
+          "GBBstnBlu15BlkCapSht",
+          "GBBstnBlu15BlkDrpr",
+          "GBBstnBlu15BlkDrprGlTrim",
+          "GBBstnBlu15WhtDrpr",
+          "GBBstnBlu15WhtDrprGlTrim",
+          "GBBstnBlu15WhtDrprSlTrim",
+          "GBBstnBlu15mlBlkDropperSlTrim"
+        ],
+        "registration": {
+          "sku": "GBBstn15BlkCapSht",
+          "capacity": 15,
+          "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+          "layerIndex": 1,
+          "layerName": "Layer 4",
+          "layerOffset": [
+            137,
+            312
+          ],
+          "rimLocalY": 2,
+          "baseLocalY": 809,
+          "scale": 0.9938526109121538,
+          "translateX": 621.9413657077889,
+          "translateY": 756.9732377720676,
+          "glassHeight": 802.0390570061081,
+          "baseY": 1561,
+          "registrationMedianPx": 1.9458827421798333,
+          "registrationP95Px": 9.414935922186412
+        },
+        "transform": {
+          "before": {
+            "scale": 0.9938526109121538,
+            "x": 621.9413657077889,
+            "y": 757.5332377720675
+          },
+          "after": {
+            "scale": 0.9938526109121538,
+            "x": 621.9413657077889,
+            "y": 757.5332377720675
+          },
+          "relativePercent": 0
+        },
+        "note": "Bare-glass standard from the exact master layer. Current framing is calibrated to the approved hero body. Existing hero pixels and shadows are untouched. Registration residuals are recorded; no claim that generated hero pixels exactly match the master."
+      },
+      "priorStandards": [],
+      "appearanceReference": {
+        "sku": "GBBstn15BlkCapSht",
+        "url": "/images/catalog/bone-review/GBBstn15BlkCapSht.871d96733ee5.png",
+        "sha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+        "imageApproval": "existing Sunburst lock matches current image",
+        "sharedHeightApproved": false
+      }
+    },
+    {
+      "id": "boston-round-standard-30ml",
+      "family": "Boston Round",
+      "profile": "Standard Boston Round",
+      "capacityMl": 30,
+      "neckFinishes": [
+        "20-400"
+      ],
+      "colors": [
+        "Amber",
+        "Clear",
+        "Cobalt Blue"
+      ],
+      "productGroupIds": [
+        "kh701bf09an4958zyxw5e110wd8dppyt",
+        "kh76cthp5ysk49hky1ceay825s8dpqmm",
+        "kh78vztmsmmv18mr8cvbb01mxx8dq9kr",
+        "kh7bb32zgnejqh02fd0bm6cgwx8dq3bd",
+        "kh70av3cknps9zwv11j1h53ag18dpb4z",
+        "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+        "kh78xmwqbv64gbbjxzkrhg7qms8dqpes",
+        "kh73sfz15bankpnj62myjyh54n8dppwh",
+        "kh77jqvwd4zc959n8zp80502658dq64d"
+      ],
+      "version": 1,
+      "state": "locked",
+      "reference": {
+        "sku": "GBBstn1ozBlkCapSht",
+        "url": "/images/bottle-standards/boston-2026-09-12/30ml-proposed-glass.5bf522a337373602.png",
+        "sha256": "5bf522a3373736025c7bf77cd075ca486877e2624ea58288336dd52fdc7aff77",
+        "sharedHeightApproved": true
+      },
+      "targets": {
+        "hero": {
+          "measurement": "full_glass",
+          "glassHeightPercent": 52.43044795187855,
+          "baselinePercent": 91,
+          "canvas": {
+            "width": 1560,
+            "height": 1716
+          }
+        }
+      },
+      "approval": {
+        "id": "30b1523b-2550-456e-916c-39609a9f354d",
+        "action": "lock",
+        "at": "2026-09-13T00:10:03.292Z",
+        "actor": "Local workbench · explicit review action",
+        "standardVersion": 1,
+        "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+        "standardHash": "47ea64e140bc0c12314f9bf63af0e2c18bad5718c68fdaf210476d027bd0f8f3",
+        "sha256": "5bf522a3373736025c7bf77cd075ca486877e2624ea58288336dd52fdc7aff77",
+        "packetHash": "d9d75b764732ab9b499eed0d75194c56156c21142f65136fb995931474dd8490"
+      },
+      "hold": "",
+      "history": [
+        {
+          "sku": "GBBstn1ozRollonShBlk",
+          "capacityMl": 30,
+          "color": "Clear",
+          "status": "approved",
+          "target": {
+            "heightPercent": 42.5,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "2a923f5d21f818efa63b1d46d1c8bde10fbdbe79cca0bc18b890481c0aa55244",
+          "collection": "r7-resettle-approved-2026-09-11",
+          "updatedAt": "2026-09-12T02:19:41.296Z"
+        },
+        {
+          "sku": "GBBstn1ozBlkCapSht",
+          "capacityMl": 30,
+          "color": "Clear",
+          "status": "approved",
+          "target": {
+            "heightPercent": 42.5,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+          "collection": "r7-resettle-approved-2026-09-11",
+          "updatedAt": "2026-09-12T02:19:40.420Z"
+        },
+        {
+          "sku": "GBBstnBlu1ozRollonMattBlk",
+          "capacityMl": 30,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "950656f388a24c1bc7f4526a51bd7d5de75f2e01411527c7beab77e19ac12e0f",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:04:13.851Z"
+        },
+        {
+          "sku": "GBBstnBlu1ozBlkCapSht",
+          "capacityMl": 30,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "9e479af892ce4d29488f1dc923aa4a5de27f24f6a7bd806b9911896321433a9c",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:03:41.610Z"
+        },
+        {
+          "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+          "capacityMl": 30,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "6d87fb03d838f1cfe4668256efbaeec17f679f7c0b1c9f4c97f5621e5c629086",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:03:41.023Z"
+        },
+        {
+          "sku": "GBBstnBlu1ozMtlRollonMattSl",
+          "capacityMl": 30,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "8f6f8ce658f7a669e9a0b811442553f5f6b400116769097a76e4753ea10aba4f",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:03:40.421Z"
+        },
+        {
+          "sku": "GBBstnAmb1ozMtlRollonMattSl",
+          "capacityMl": 30,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "91d4697dd3f491e6fb64370158dfb1ddbad53716f64df549651787d6fb00a8ae",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:02:32.482Z"
+        },
+        {
+          "sku": "GBBstnAmb1ozRollonMattGl",
+          "capacityMl": 30,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "b772a83be5708fc340bedd8ed833047edcff00c33c156335c8e96dc44e822ca9",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:02:31.523Z"
+        },
+        {
+          "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+          "capacityMl": 30,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "ba0f04cbab38de1e0dbc57832f5525d27537e6a330cfc840bdadac27dc48e3a6",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:02:30.748Z"
+        },
+        {
+          "sku": "GBBstnAmb1ozBlkCapSht",
+          "capacityMl": 30,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "e72bae19a58e2e1e857e3ec2489fe8594ca678fc9399528d76bae8eb2d28fcf6",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:01:56.669Z"
+        },
+        {
+          "sku": "GBBstn1ozBlkCapSht",
+          "capacityMl": 30,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "2e744906feea46cd1a6f433c4080a57431a6eb2c37696c21dd7809004952923c",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:01:06.320Z"
+        },
+        {
+          "sku": "GBBstn1ozBlkDrpShnGlTrim",
+          "capacityMl": 30,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "a7f91db90e8f74abfb4c2d241d168e6dee82cc5aab8cdbe9ffb2e51ec68f0d63",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:01:05.633Z"
+        },
+        {
+          "sku": "GBBstn1ozMtlRollonMattGl",
+          "capacityMl": 30,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "67ec7529fa96ba54703820025a7e15c3650b6699ce89fa71f887277410728041",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:01:05.052Z"
+        },
+        {
+          "sku": "GBBstn1ozRollonShBlk",
+          "capacityMl": 30,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "574d638cd79eb23c76d4efe0fdfc5f34a1408df512e7813bc81089bbda319fb8",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:00:57.533Z"
+        },
+        {
+          "sku": "GBBstnBlu1ozRollonMattBlk",
+          "capacityMl": 30,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 52,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "3449592d506cb59d3325ad57091a3ed0fb884402e52ccb65980bd83de43e3284",
+          "collection": "sunburst-v2-missing-groups-2026-09-09",
+          "updatedAt": "2026-09-10T05:25:13.024Z"
+        },
+        {
+          "sku": "GBBstn1ozRollonShBlk",
+          "capacityMl": 30,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 52,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "96cacacccd5bdcad7dc44aea4894f9bb987745051102ebbf7bd968acb5133cc6",
+          "collection": "sunburst-v2-missing-groups-2026-09-09",
+          "updatedAt": "2026-09-10T05:25:12.282Z"
+        },
+        {
+          "sku": "GBBstnAmb1ozRollonMattGl",
+          "capacityMl": 30,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 52,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "b9c6d4b45a7e77daed385be5d9ae7a9d2b37dc7a4ad003a4b374f565a7531aad",
+          "collection": "sunburst-v2-missing-groups-2026-09-09",
+          "updatedAt": "2026-09-10T05:25:11.518Z"
+        },
+        {
+          "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+          "capacityMl": 30,
+          "color": "Cobalt Blue",
+          "status": "pending",
+          "target": {
+            "heightPercent": 75,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "3bdaaa73f7e2c0037737d8e83de1b195c2c0b8ee7863b1595c30614fc47bf9b3",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:10.119Z"
+        },
+        {
+          "sku": "GBBstnBlu1ozBlkCapSht",
+          "capacityMl": 30,
+          "color": "Cobalt Blue",
+          "status": "pending",
+          "target": {
+            "heightPercent": 75,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "d3c423fab0bca0df8e07c7202e48086e89aeccb13c06e44e097a96297602873f",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:09.784Z"
+        },
+        {
+          "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+          "capacityMl": 30,
+          "color": "Amber",
+          "status": "pending",
+          "target": {
+            "heightPercent": 75,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "5e0abed9450923bf3852f9097a2adaa919e240c3d042ef48c60b962e3622a772",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:09.775Z"
+        },
+        {
+          "sku": "GBBstnAmb1ozBlkCapSht",
+          "capacityMl": 30,
+          "color": "Amber",
+          "status": "pending",
+          "target": {
+            "heightPercent": 75,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "bb308fbb7ca40d333a402963abe52df6b99cc2836ec6f7c922ee1a5c11c5be91",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:09.769Z"
+        },
+        {
+          "sku": "GBBstn1ozMtlRollonMattGl",
+          "capacityMl": 30,
+          "color": "Clear",
+          "status": "pending",
+          "target": {
+            "heightPercent": 75,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "b4a6adfe6db9ed44b564a592bd609b5a24ea3b2d4ad9dca741f847036a6f59e2",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:09.743Z"
+        },
+        {
+          "sku": "GBBstn1ozBlkDrpShnGlTrim",
+          "capacityMl": 30,
+          "color": "Clear",
+          "status": "rejected",
+          "target": {
+            "heightPercent": 75,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "8b03f2ee9d64e438a6546bce9f13a457363a9d83cc382c6943b4a265864b527a",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:09.734Z"
+        },
+        {
+          "sku": "GBBstn1ozBlkCapSht",
+          "capacityMl": 30,
+          "color": "Clear",
+          "status": "rejected",
+          "target": {
+            "heightPercent": 75,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "87cc84ce0a1cafdc03c20ddb385250a4f9f5405b075670392aa8e4c5de84cd98",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:09.683Z"
+        },
+        {
+          "sku": "GBBstnAmb1ozMtlRollonMattSl",
+          "capacityMl": 30,
+          "color": "Amber",
+          "status": "rejected",
+          "target": {
+            "heightPercent": 75,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "03785cfd36232ca7bd6e84e7b4f84a648bdd23ef718f4ae491ca75e52a6da297",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T15:49:09.806Z"
+        }
+      ],
+      "sizingRequest": {
+        "id": "2bba7570-a281-4b67-93bb-e7ba82307f01",
+        "action": "request-sizing",
+        "at": "2026-09-12T23:52:15.857Z",
+        "actor": "Local workbench · explicit review action",
+        "standardVersion": 1,
+        "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+        "standardHash": "b740c9bbb79ce7e1660cbbac88b6acf3b8093f330a2e04da08c0756ddc98d1da",
+        "percent": 3,
+        "note": "Jordan requested a slightly taller 30 mL Boston Round. Prepare a same-zoom measured comparison before choosing the increase. Keep 15 mL and 60 mL unchanged.",
+        "status": "approved",
+        "baselinePercent": 91,
+        "measurement": "full_glass"
+      },
+      "reviewEvents": [
+        {
+          "id": "f3340de1-14dc-4592-8423-478c7b435cbb",
+          "action": "request-sizing",
+          "at": "2026-09-12T23:44:45.657Z",
+          "actor": "Jordan · conversation request",
+          "standardVersion": 1,
+          "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+          "percent": null,
+          "note": "Jordan requested a slightly taller 30 mL Boston Round. Prepare a same-zoom measured comparison before choosing the increase. Keep 15 mL and 60 mL unchanged."
+        },
+        {
+          "id": "a68f3f45-312b-458a-9596-eafad36d55cf",
+          "action": "request-sizing",
+          "at": "2026-09-12T23:46:00.851Z",
+          "actor": "Codex · UI control verification",
+          "standardVersion": 1,
+          "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+          "standardHash": "d333a3ae1c91420db1bf87f8bbe2abd149068b483ea31a0e5db42c1ff520e8e7",
+          "percent": 3,
+          "note": "Jordan requested a slightly taller 30 mL Boston Round. Prepare a same-zoom measured comparison before choosing the increase. Keep 15 mL and 60 mL unchanged.",
+          "correction": "This was a UI control test, not a user-selected sizing amount. Superseded by the following request with no percentage."
+        },
+        {
+          "id": "f76eba83-12f5-428f-b42f-e637d996be31",
+          "action": "request-sizing",
+          "at": "2026-09-12T23:47:01.697Z",
+          "actor": "Local workbench · explicit review action",
+          "standardVersion": 1,
+          "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+          "standardHash": "ec0df02906365f96f09c790391f5d19a5f504f745348c64a27df9161cd04d3da",
+          "percent": null,
+          "note": "Jordan requested a slightly taller 30 mL Boston Round. Prepare a same-zoom measured comparison before choosing the increase. Keep 15 mL and 60 mL unchanged."
+        },
+        {
+          "id": "2d73f545-3dad-46e6-bc2b-4999a257beda",
+          "action": "request-sizing",
+          "at": "2026-09-12T23:52:07.132Z",
+          "actor": "Local workbench · explicit review action",
+          "standardVersion": 1,
+          "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+          "standardHash": "60de3a6b96ef5bcac157cb20b4b08b2b573370c7cefa5655e5c8f3a22cd771e4",
+          "percent": 3,
+          "note": "Jordan requested a slightly taller 30 mL Boston Round. Prepare a same-zoom measured comparison before choosing the increase. Keep 15 mL and 60 mL unchanged."
+        },
+        {
+          "id": "9cd659a8-cc18-4346-9afb-536e2023a327",
+          "action": "approve-reference",
+          "at": "2026-09-12T23:52:10.097Z",
+          "actor": "Local workbench · explicit review action",
+          "standardVersion": 1,
+          "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+          "standardHash": "7e4625abe15d33b74ce7a1e20fa3bb509ac8e41ac5104111a3b7380f085bf8ef"
+        },
+        {
+          "id": "2bba7570-a281-4b67-93bb-e7ba82307f01",
+          "action": "request-sizing",
+          "at": "2026-09-12T23:52:15.857Z",
+          "actor": "Local workbench · explicit review action",
+          "standardVersion": 1,
+          "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+          "standardHash": "b740c9bbb79ce7e1660cbbac88b6acf3b8093f330a2e04da08c0756ddc98d1da",
+          "percent": 3,
+          "note": "Jordan requested a slightly taller 30 mL Boston Round. Prepare a same-zoom measured comparison before choosing the increase. Keep 15 mL and 60 mL unchanged."
+        },
+        {
+          "id": "30b1523b-2550-456e-916c-39609a9f354d",
+          "action": "lock",
+          "at": "2026-09-13T00:10:03.292Z",
+          "actor": "Local workbench · explicit review action",
+          "standardVersion": 1,
+          "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+          "standardHash": "47ea64e140bc0c12314f9bf63af0e2c18bad5718c68fdaf210476d027bd0f8f3"
+        }
+      ],
+      "referenceDecision": {
+        "id": "9cd659a8-cc18-4346-9afb-536e2023a327",
+        "action": "approve-reference",
+        "at": "2026-09-12T23:52:10.097Z",
+        "actor": "Local workbench · explicit review action",
+        "standardVersion": 1,
+        "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+        "standardHash": "7e4625abe15d33b74ce7a1e20fa3bb509ac8e41ac5104111a3b7380f085bf8ef",
+        "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401"
+      },
+      "preparedReview": {
+        "kind": "bare-glass-standard",
+        "preparedAt": "2026-09-13T00:00:23.192222+00:00",
+        "requestId": "2bba7570-a281-4b67-93bb-e7ba82307f01",
+        "standardVersion": 1,
+        "referenceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+        "referenceImage": {
+          "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.d1ca21c8a1dd.png",
+          "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401"
+        },
+        "measurement": "full_glass",
+        "before": {
+          "url": "/images/bottle-standards/boston-2026-09-12/30ml-current-glass.191dcb3ff17f9d32.png",
+          "sha256": "191dcb3ff17f9d32e5970b80a825b6d31fa774d9f9669ad58a1cf1aada6e896d"
+        },
+        "after": {
+          "url": "/images/bottle-standards/boston-2026-09-12/30ml-proposed-glass.5bf522a337373602.png",
+          "sha256": "5bf522a3373736025c7bf77cd075ca486877e2624ea58288336dd52fdc7aff77"
+        },
+        "bareGlass": {
+          "url": "/images/bottle-standards/boston-2026-09-12/30ml-source-glass.700b94b2a41f3748.png",
+          "sha256": "700b94b2a41f3748ff1cf935d895df2bfb6cf48025232207a2b535a1a157f9a5",
+          "identityVerified": true,
+          "verifiedBy": "Codex · exact catalog crosswalk and visual PSD layer inspection",
+          "verifiedAt": "2026-09-13T00:00:23.192222+00:00",
+          "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+          "sourceSha256": "8f3adeb586877cc3a1ca8b58901f43022fe388187aa2c5b8d11bfa8edc4f6f1e",
+          "layerIndex": 1,
+          "layerName": "Layer 22"
+        },
+        "canvas": {
+          "width": 1560,
+          "height": 1716
+        },
+        "glass": {
+          "rimY": 661.853513145764,
+          "baseY": 1561.56
+        },
+        "beforeGlass": {
+          "rimY": 688.0585564521982,
+          "baseY": 1561.56
+        },
+        "baselinePercent": 91,
+        "registrationVerified": true,
+        "assemblyBoundsVerified": true,
+        "scopeVerified": true,
+        "productGroupIds": [
+          "kh701bf09an4958zyxw5e110wd8dppyt",
+          "kh76cthp5ysk49hky1ceay825s8dpqmm",
+          "kh78vztmsmmv18mr8cvbb01mxx8dq9kr",
+          "kh7bb32zgnejqh02fd0bm6cgwx8dq3bd",
+          "kh70av3cknps9zwv11j1h53ag18dpb4z",
+          "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+          "kh78xmwqbv64gbbjxzkrhg7qms8dqpes",
+          "kh73sfz15bankpnj62myjyh54n8dppwh",
+          "kh77jqvwd4zc959n8zp80502658dq64d"
+        ],
+        "affectedSkus": [
+          "GBBstn1ozBlkCapSht",
+          "GBBstn1ozBlkDrp",
+          "GBBstn1ozBlkDrpShnGlTrim",
+          "GBBstn1ozMtlRollonBlk",
+          "GBBstn1ozMtlRollonGl",
+          "GBBstn1ozMtlRollonMattBlk",
+          "GBBstn1ozMtlRollonMattGl",
+          "GBBstn1ozMtlRollonMattSl",
+          "GBBstn1ozMtlRollonShnSl",
+          "GBBstn1ozRollonMattBlk",
+          "GBBstn1ozRollonMattGl",
+          "GBBstn1ozRollonMattSl",
+          "GBBstn1ozRollonShBlk",
+          "GBBstn1ozRollonShGl",
+          "GBBstn1ozRollonShnSl",
+          "GBBstn1ozWhtDrp",
+          "GBBstn1ozWhtDrpShnGlTrim",
+          "GBBstn1ozWhtDrpShnSlTrim",
+          "GBBstnAmb1ozBlkCapSht",
+          "GBBstnAmb1ozBlkDropper",
+          "GBBstnAmb1ozBlkDrpShnGl",
+          "GBBstnAmb1ozMtlRollonGl",
+          "GBBstnAmb1ozMtlRollonMattBlk",
+          "GBBstnAmb1ozMtlRollonMattGl",
+          "GBBstnAmb1ozMtlRollonMattSl",
+          "GBBstnAmb1ozMtlRollonShnBlk",
+          "GBBstnAmb1ozMtlRollonShnSl",
+          "GBBstnAmb1ozRollonGl",
+          "GBBstnAmb1ozRollonMattBlk",
+          "GBBstnAmb1ozRollonMattGl",
+          "GBBstnAmb1ozRollonMattSl",
+          "GBBstnAmb1ozRollonShnBlk",
+          "GBBstnAmb1ozRollonShnSl",
+          "GBBstnAmb1ozWhtDropper",
+          "GBBstnAmb1ozWhtDropperShnGlTrim",
+          "GBBstnAmb1ozWhtDrprShnSlTrim",
+          "GBBstnBlu1ozBlkCapSht",
+          "GBBstnBlu1ozBlkDropper",
+          "GBBstnBlu1ozBlkDropperShnGlTrim",
+          "GBBstnBlu1ozMtlRollonGl",
+          "GBBstnBlu1ozMtlRollonMattBlk",
+          "GBBstnBlu1ozMtlRollonMattGl",
+          "GBBstnBlu1ozMtlRollonMattSl",
+          "GBBstnBlu1ozMtlRollonShnSl",
+          "GBBstnBlu1ozRollonGl",
+          "GBBstnBlu1ozRollonMattBlk",
+          "GBBstnBlu1ozRollonMattGl",
+          "GBBstnBlu1ozRollonMattSl",
+          "GBBstnBlu1ozRollonShnBlk",
+          "GBBstnBlu1ozRollonShnSl",
+          "GBBstnBlu1ozWhtDropper",
+          "GBBstnBlu1ozWhtDropperShnGlTrim",
+          "GBBstnBlu1ozWhtDropperShnSlTrim"
+        ],
+        "registration": {
+          "sku": "GBBstn1ozBlkCapSht",
+          "capacity": 30,
+          "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+          "layerIndex": 1,
+          "layerName": "Layer 22",
+          "layerOffset": [
+            76,
+            468
+          ],
+          "rimLocalY": 3,
+          "baseLocalY": 946,
+          "scale": 0.926300576402759,
+          "translateX": 588.177211058966,
+          "translateY": 684.71965472299,
+          "glassHeight": 873.5014435478017,
+          "baseY": 1561,
+          "registrationMedianPx": 2.003078627492698,
+          "registrationP95Px": 15.159220791949812
+        },
+        "transform": {
+          "before": {
+            "scale": 0.926300576402759,
+            "x": 588.177211058966,
+            "y": 685.2796547229899
+          },
+          "after": {
+            "scale": 0.9540895936948418,
+            "x": 582.422527390735,
+            "y": 658.9912443646796
+          },
+          "relativePercent": 3
+        },
+        "note": "Bare-glass standard from the exact master layer. Current framing is calibrated to the approved hero body. Existing hero pixels and shadows are untouched. Registration residuals are recorded; no claim that generated hero pixels exactly match the master."
+      },
+      "priorStandards": [],
+      "appearanceReference": {
+        "sku": "GBBstn1ozBlkCapSht",
+        "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.d1ca21c8a1dd.png",
+        "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+        "imageApproval": "existing Sunburst lock matches current image",
+        "sharedHeightApproved": false
+      }
+    },
+    {
+      "id": "boston-round-standard-60ml",
+      "family": "Boston Round",
+      "profile": "Standard Boston Round",
+      "capacityMl": 60,
+      "neckFinishes": [
+        "20-400"
+      ],
+      "colors": [
+        "Amber",
+        "Clear",
+        "Cobalt Blue"
+      ],
+      "productGroupIds": [
+        "kh74fjj3ngy8a25a6r9bybsm6n8dp9s0",
+        "kh777dtpw7yx3x5g09s5vggbs98dpm7a",
+        "kh79h0rk045gy6sxmgx2y856f98dp0xq",
+        "kh71hqj8fks931wf2yqfahgjqx8dpeat",
+        "kh79sm9atpya350awcq2xqv4z98dqy71",
+        "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+        "kh7d04rmj7hs17c440qg5xb4cn8dpg5a",
+        "kh7e5h1vzrdbtz42t9rqcg81sx8dq4sz",
+        "kh7fa6r13e1h081b1n7ganfcan8dp5mh"
+      ],
+      "version": 1,
+      "state": "locked",
+      "reference": {
+        "sku": "GBBstn2ozBlkCapSht",
+        "url": "/images/bottle-standards/boston-2026-09-12/60ml-proposed-glass.2ac7ac0f29be4d70.png",
+        "sha256": "2ac7ac0f29be4d70c31dd133aebdb7676f74a00e06729faf9e887aa449b9462d",
+        "sharedHeightApproved": true
+      },
+      "targets": {
+        "hero": {
+          "measurement": "full_glass",
+          "glassHeightPercent": 62.389727171078604,
+          "baselinePercent": 91,
+          "canvas": {
+            "width": 1560,
+            "height": 1716
+          }
+        }
+      },
+      "approval": {
+        "id": "7fc92d99-fe7d-4e0f-b5ef-6feb85fbada2",
+        "action": "lock",
+        "at": "2026-09-13T00:10:29.175Z",
+        "actor": "Local workbench · explicit review action",
+        "standardVersion": 1,
+        "referenceSha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+        "standardHash": "74ebbac612d9c1629af3b090b2c9e3e2c443fdfa5c3b2b2fc533c053782f2e4e",
+        "sha256": "2ac7ac0f29be4d70c31dd133aebdb7676f74a00e06729faf9e887aa449b9462d",
+        "packetHash": "9fa3e43a7e985ed300fc709f5410db00f115f223093cba9396d1baf09484987d"
+      },
+      "hold": "",
+      "history": [
+        {
+          "sku": "GBBstn2ozBlkCapSht",
+          "capacityMl": 60,
+          "color": "Clear",
+          "status": "approved",
+          "target": {
+            "heightPercent": 51.5,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+          "collection": "r7-resettle-approved-2026-09-11",
+          "updatedAt": "2026-09-12T02:18:58.842Z"
+        },
+        {
+          "sku": "GBBstn2ozBlkDrprShnGlTrim",
+          "capacityMl": 60,
+          "color": "Clear",
+          "status": "approved",
+          "target": {
+            "heightPercent": 51.5,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "28965cd6cec063c5aa47524add4cc3e7f4b2890d9597c18121450e77b9bc9317",
+          "collection": "r7-resettle-approved-2026-09-11",
+          "updatedAt": "2026-09-12T02:18:54.435Z"
+        },
+        {
+          "sku": "GBBstnBlu2ozRollonMattGl",
+          "capacityMl": 60,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "2576a564b7824725a7afd4749a5c575f0f04a1e2b53507102c76a74a9a0663a6",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:04:20.490Z"
+        },
+        {
+          "sku": "GBBstnBlu2ozBlkCapSht",
+          "capacityMl": 60,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "ef0fd7fb7560333f9efa991bc56dbcb60a639ba0dab3c2355c3e7d97ee0919c9",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:04:13.293Z"
+        },
+        {
+          "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+          "capacityMl": 60,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "b904b511d6bd1731c0f34846decb1657ff09b2c4af278f663fe171e3bfcb0ddc",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:04:12.740Z"
+        },
+        {
+          "sku": "GBBstnBlu2ozMtlRollonMattSl",
+          "capacityMl": 60,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "cf56dd4b49053c2491c87aa4b1437ac826de3df295bdbdfb1dcb1460ca6e81fb",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:04:11.962Z"
+        },
+        {
+          "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+          "capacityMl": 60,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "227dfd2cf5898e2f7a1d451abfc95e964adce7080cf61a83d54c3cd734cecb84",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:03:24.594Z"
+        },
+        {
+          "sku": "GBBstnAmb2ozMtlRollonMattGl",
+          "capacityMl": 60,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "3e32581cc0e536033e44ce06a0ee8bdbd4f301de20a3b1ee8a78a6e2bed4e25f",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:03:23.915Z"
+        },
+        {
+          "sku": "GBBstnAmb2ozRollonMattGl",
+          "capacityMl": 60,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "de696bbefcd7ba28fd9d8ae7a917319940421793fcb88f861102c6ef936dcf3a",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:03:23.291Z"
+        },
+        {
+          "sku": "GBBstnAmb2ozBlkCapSht",
+          "capacityMl": 60,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 50,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "538865bbf42dde46847b669794a2fd5581cec7dde65025078d57a83bd74ae60f",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:02:30.038Z"
+        },
+        {
+          "sku": "GBBstn2ozRollonMattGl",
+          "capacityMl": 60,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "819c2e3d8ec76407fe4766288886dfc313ca2b0ce6e0a980d31bbdb2d7d31e8b",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:01:59.386Z"
+        },
+        {
+          "sku": "GBBstn2ozMtlRollGl",
+          "capacityMl": 60,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "309d5ba21bdcb0a9f2a8784f987fc6205a63f4fc081d2eb69550f3a56d5767ab",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:00:59.612Z"
+        },
+        {
+          "sku": "GBBstn2ozBlkDrprShnGlTrim",
+          "capacityMl": 60,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "2dce561b74ba2c25e8124a17596a7965e9565f006b0331436d0414a77d115dfe",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:00:59.000Z"
+        },
+        {
+          "sku": "GBBstn2ozBlkCapSht",
+          "capacityMl": 60,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 57,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "b8b1d234f7a3da36e9d1ab0002c74b712f3d20436366a13ed039633a900fed72",
+          "collection": "sunburst-all-heroes-latest-2026-09-09-r3",
+          "updatedAt": "2026-09-10T07:00:58.267Z"
+        },
+        {
+          "sku": "GBBstnBlu2ozRollonMattGl",
+          "capacityMl": 60,
+          "color": "Cobalt Blue",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 60,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "a0f705c991c0ba5b9185ca2a04144974760c1076106821efa2914f7dbf835837",
+          "collection": "sunburst-v2-missing-groups-2026-09-09",
+          "updatedAt": "2026-09-10T05:35:55.248Z"
+        },
+        {
+          "sku": "GBBstn2ozMtlRollGl",
+          "capacityMl": 60,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 60,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "925bf031faa1fe63e2dedb19e5bcd3350c190fe857b1191b3e602723a5e2ce28",
+          "collection": "sunburst-v2-missing-groups-2026-09-09",
+          "updatedAt": "2026-09-10T05:35:52.731Z"
+        },
+        {
+          "sku": "GBBstnAmb2ozRollonMattGl",
+          "capacityMl": 60,
+          "color": "Amber",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 52,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "2f2316fc6ab1e6480228a9d35727a66683b942f3d592963ef41fa6bb9f1e9b68",
+          "collection": "sunburst-v2-missing-groups-2026-09-09",
+          "updatedAt": "2026-09-10T05:25:13.774Z"
+        },
+        {
+          "sku": "GBBstn2ozRollonMattGl",
+          "capacityMl": 60,
+          "color": "Clear",
+          "status": "rejected",
+          "target": {
+            "heightPercent": 80,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "2b1b06310483776d930f9cc28529568a32a66f886b2b85dc643b69088de705dd",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:30.009Z"
+        },
+        {
+          "sku": "GBBstnBlu2ozMtlRollonMattSl",
+          "capacityMl": 60,
+          "color": "Cobalt Blue",
+          "status": "pending",
+          "target": {
+            "heightPercent": 80,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "ca922b2770a4238abb237537ea9fd2ae190ac1849ea244bae1957594ac63d9b5",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:17.707Z"
+        },
+        {
+          "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+          "capacityMl": 60,
+          "color": "Cobalt Blue",
+          "status": "pending",
+          "target": {
+            "heightPercent": 80,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "2e1910a37470ce1f4d17cf2f392bdc36250f31643409c42180c4e8cfcfac3629",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:17.700Z"
+        },
+        {
+          "sku": "GBBstnBlu2ozBlkCapSht",
+          "capacityMl": 60,
+          "color": "Cobalt Blue",
+          "status": "pending",
+          "target": {
+            "heightPercent": 80,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "3bbb2cc78fd52182855b14005738c3e9c89d4c74964346465b680ef8a1c69c24",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:17.688Z"
+        },
+        {
+          "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+          "capacityMl": 60,
+          "color": "Amber",
+          "status": "pending",
+          "target": {
+            "heightPercent": 80,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "aa2cafadd6dbbda2626e98a5420e2d44d62505925d380edcac12827bebe2cae1",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:17.681Z"
+        },
+        {
+          "sku": "GBBstnAmb2ozBlkCapSht",
+          "capacityMl": 60,
+          "color": "Amber",
+          "status": "pending",
+          "target": {
+            "heightPercent": 80,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "adcc893f8238822085d03c943ad268b3cdfb2f8ab2fee5a35ce568f56c661071",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T16:31:17.673Z"
+        },
+        {
+          "sku": "GBBstn2ozBlkDrprShnGlTrim",
+          "capacityMl": 60,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 80,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "a817ca463d051d47943e390003636cf0ad2fd68d3aa05b49dd7efb83367ca453",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T15:50:18.056Z"
+        },
+        {
+          "sku": "GBBstn2ozBlkCapSht",
+          "capacityMl": 60,
+          "color": "Clear",
+          "status": "changes_requested",
+          "target": {
+            "heightPercent": 80,
+            "measurement": "bottle_with_fitment",
+            "baselinePercent": 91
+          },
+          "sha256": "1a44cc3f16b8b0e65b0574f2effa3bcd14bafb15853570aa5cef96dcd02a62db",
+          "collection": "catalog-replacements-2026-09-07",
+          "updatedAt": "2026-09-07T15:50:16.642Z"
+        }
+      ],
+      "referenceDecision": {
+        "id": "1d9b48fe-9e22-4db8-a39d-b772767f7f34",
+        "action": "approve-reference",
+        "at": "2026-09-12T23:53:02.372Z",
+        "actor": "Local workbench · explicit review action",
+        "standardVersion": 1,
+        "referenceSha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+        "standardHash": "64dbc4225ddc6c7e67d9e5e52932623f7f1ea1734a5cf80d045cdcd6c111b035",
+        "sha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc"
+      },
+      "reviewEvents": [
+        {
+          "id": "1d9b48fe-9e22-4db8-a39d-b772767f7f34",
+          "action": "approve-reference",
+          "at": "2026-09-12T23:53:02.372Z",
+          "actor": "Local workbench · explicit review action",
+          "standardVersion": 1,
+          "referenceSha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+          "standardHash": "64dbc4225ddc6c7e67d9e5e52932623f7f1ea1734a5cf80d045cdcd6c111b035"
+        },
+        {
+          "id": "7b1f0360-96b8-47c4-bf92-dff28e8eb206",
+          "action": "request-sizing",
+          "at": "2026-09-13T00:00:22.782Z",
+          "actor": "Jordan · confirmed conversation instruction",
+          "standardVersion": 1,
+          "referenceSha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+          "standardHash": "3ea0cfc0baf5242628fbeb6931156cf11d9b6d6835112eec6979bca73b6a9f73",
+          "percent": 0,
+          "note": "Keep current glass size, as Jordan explicitly confirmed in the conversation. Prepare the verified master-glass comparison for final standard approval."
+        },
+        {
+          "id": "7fc92d99-fe7d-4e0f-b5ef-6feb85fbada2",
+          "action": "lock",
+          "at": "2026-09-13T00:10:29.175Z",
+          "actor": "Local workbench · explicit review action",
+          "standardVersion": 1,
+          "referenceSha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+          "standardHash": "74ebbac612d9c1629af3b090b2c9e3e2c443fdfa5c3b2b2fc533c053782f2e4e"
+        }
+      ],
+      "sizingRequest": {
+        "id": "7b1f0360-96b8-47c4-bf92-dff28e8eb206",
+        "action": "request-sizing",
+        "at": "2026-09-13T00:00:22.782Z",
+        "actor": "Jordan · confirmed conversation instruction",
+        "standardVersion": 1,
+        "referenceSha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+        "standardHash": "3ea0cfc0baf5242628fbeb6931156cf11d9b6d6835112eec6979bca73b6a9f73",
+        "percent": 0,
+        "note": "Keep current glass size, as Jordan explicitly confirmed in the conversation. Prepare the verified master-glass comparison for final standard approval.",
+        "status": "approved",
+        "baselinePercent": 91,
+        "measurement": "full_glass"
+      },
+      "preparedReview": {
+        "kind": "bare-glass-standard",
+        "preparedAt": "2026-09-13T00:00:23.192222+00:00",
+        "requestId": "7b1f0360-96b8-47c4-bf92-dff28e8eb206",
+        "standardVersion": 1,
+        "referenceSha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+        "referenceImage": {
+          "url": "/images/catalog/bone-review/GBBstn2ozBlkCapSht.6f5506b0bf8f.png",
+          "sha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc"
+        },
+        "measurement": "full_glass",
+        "before": {
+          "url": "/images/bottle-standards/boston-2026-09-12/60ml-current-glass.2ac7ac0f29be4d70.png",
+          "sha256": "2ac7ac0f29be4d70c31dd133aebdb7676f74a00e06729faf9e887aa449b9462d"
+        },
+        "after": {
+          "url": "/images/bottle-standards/boston-2026-09-12/60ml-proposed-glass.2ac7ac0f29be4d70.png",
+          "sha256": "2ac7ac0f29be4d70c31dd133aebdb7676f74a00e06729faf9e887aa449b9462d"
+        },
+        "bareGlass": {
+          "url": "/images/bottle-standards/boston-2026-09-12/60ml-source-glass.8cc3883ca1ae5328.png",
+          "sha256": "8cc3883ca1ae53284d4f016f96938abfdbacbc5f44cb69fd328b51817303c0bc",
+          "identityVerified": true,
+          "verifiedBy": "Codex · exact catalog crosswalk and visual PSD layer inspection",
+          "verifiedAt": "2026-09-13T00:00:23.192222+00:00",
+          "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+          "sourceSha256": "82dacf0eeb9397d6ead784ff4dad5144d7882f6e843b12e511505ee16f87cdf0",
+          "layerIndex": 1,
+          "layerName": "Layer 6"
+        },
+        "canvas": {
+          "width": 1560,
+          "height": 1716
+        },
+        "glass": {
+          "rimY": 490.9522817442911,
+          "baseY": 1561.56
+        },
+        "beforeGlass": {
+          "rimY": 490.9522817442911,
+          "baseY": 1561.56
+        },
+        "baselinePercent": 91,
+        "registrationVerified": true,
+        "assemblyBoundsVerified": true,
+        "scopeVerified": true,
+        "productGroupIds": [
+          "kh74fjj3ngy8a25a6r9bybsm6n8dp9s0",
+          "kh777dtpw7yx3x5g09s5vggbs98dpm7a",
+          "kh79h0rk045gy6sxmgx2y856f98dp0xq",
+          "kh71hqj8fks931wf2yqfahgjqx8dpeat",
+          "kh79sm9atpya350awcq2xqv4z98dqy71",
+          "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+          "kh7d04rmj7hs17c440qg5xb4cn8dpg5a",
+          "kh7e5h1vzrdbtz42t9rqcg81sx8dq4sz",
+          "kh7fa6r13e1h081b1n7ganfcan8dp5mh"
+        ],
+        "affectedSkus": [
+          "GBBstn2ozBlkCapSht",
+          "GBBstn2ozBlkDrpr",
+          "GBBstn2ozBlkDrprShnGlTrim",
+          "GBBstn2ozBlkDrprShnSlTrim",
+          "GBBstn2ozMtlRollBlk",
+          "GBBstn2ozMtlRollGl",
+          "GBBstn2ozMtlRollMattBlk",
+          "GBBstn2ozMtlRollMattGl",
+          "GBBstn2ozMtlRollMattSl",
+          "GBBstn2ozMtlRollShnSl",
+          "GBBstn2ozRollGl",
+          "GBBstn2ozRollMattBlk",
+          "GBBstn2ozRollMattSl",
+          "GBBstn2ozRollShnBlk",
+          "GBBstn2ozRollShnSl",
+          "GBBstn2ozRollonMattGl",
+          "GBBstn2ozWhtDrpr",
+          "GBBstn2ozWhtDrprShnGlTrim",
+          "GBBstn2ozWhtDrprShnSlTrim",
+          "GBBstnAmb2ozBlkCapSht",
+          "GBBstnAmb2ozBlkDropperShnGlTrim",
+          "GBBstnAmb2ozBlkDrpr",
+          "GBBstnAmb2ozBlkDrprShnSlTrim",
+          "GBBstnAmb2ozMtlRollonGl",
+          "GBBstnAmb2ozMtlRollonMattBlk",
+          "GBBstnAmb2ozMtlRollonMattGl",
+          "GBBstnAmb2ozMtlRollonMattSl",
+          "GBBstnAmb2ozMtlRollonShnSl",
+          "GBBstnAmb2ozRollonGl",
+          "GBBstnAmb2ozRollonMattBlk",
+          "GBBstnAmb2ozRollonMattGl",
+          "GBBstnAmb2ozRollonMattSl",
+          "GBBstnAmb2ozRollonShnBlk",
+          "GBBstnAmb2ozRollonShnSl",
+          "GBBstnAmb2ozWhtDropperShnGlTrim",
+          "GBBstnAmb2ozWhtDropperShnSlTrim",
+          "GBBstnAmb2ozWhtDrpr",
+          "GBBstnBlu2ozBlkCapSht",
+          "GBBstnBlu2ozBlkDropper",
+          "GBBstnBlu2ozBlkDropperShnGlTrim",
+          "GBBstnBlu2ozMtlRollonGl",
+          "GBBstnBlu2ozMtlRollonMattBlk",
+          "GBBstnBlu2ozMtlRollonMattGl",
+          "GBBstnBlu2ozMtlRollonMattSl",
+          "GBBstnBlu2ozMtlRollonShnSl",
+          "GBBstnBlu2ozRollonGl",
+          "GBBstnBlu2ozRollonMattBlk",
+          "GBBstnBlu2ozRollonMattGl",
+          "GBBstnBlu2ozRollonMattSl",
+          "GBBstnBlu2ozRollonShnBlk",
+          "GBBstnBlu2ozRollonShnSl",
+          "GBBstnBlu2ozWhtDropper",
+          "GBBstnBlu2ozWhtDropperShnGlTrim",
+          "GBBstnBlu2ozWhtDropperShnSlTrim"
+        ],
+        "registration": {
+          "sku": "GBBstn2ozBlkCapSht",
+          "capacity": 60,
+          "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+          "layerIndex": 1,
+          "layerName": "Layer 6",
+          "layerOffset": [
+            50,
+            314
+          ],
+          "rimLocalY": 1,
+          "baseLocalY": 1155,
+          "scale": 0.927736324311706,
+          "translateX": 532.1522003469074,
+          "translateY": 489.46454541997946,
+          "glassHeight": 1070.6077182557087,
+          "baseY": 1561,
+          "registrationMedianPx": 2.0320539623965033,
+          "registrationP95Px": 12.980997938281808
+        },
+        "transform": {
+          "before": {
+            "scale": 0.927736324311706,
+            "x": 532.1522003469074,
+            "y": 490.0245454199794
+          },
+          "after": {
+            "scale": 0.927736324311706,
+            "x": 532.1522003469074,
+            "y": 490.0245454199794
+          },
+          "relativePercent": 0
+        },
+        "note": "Bare-glass standard from the exact master layer. Current framing is calibrated to the approved hero body. Existing hero pixels and shadows are untouched. Registration residuals are recorded; no claim that generated hero pixels exactly match the master."
+      },
+      "priorStandards": [],
+      "appearanceReference": {
+        "sku": "GBBstn2ozBlkCapSht",
+        "url": "/images/catalog/bone-review/GBBstn2ozBlkCapSht.6f5506b0bf8f.png",
+        "sha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+        "imageApproval": "existing Sunburst lock matches current image",
+        "sharedHeightApproved": false
+      }
+    }
+  ]
+}

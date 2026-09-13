@@ -1,0 +1,23 @@
+const p=require('puppeteer-core');const fs=require('fs');const assert=require('assert/strict');
+(async()=>{const b=await p.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});try{
+ const page=await b.newPage();await page.setViewport({width:1440,height:1100,deviceScaleFactor:1});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const res=await page.goto('http://localhost:3040/team/asset-ledger?preview=1&view=plates',{waitUntil:'networkidle2'});assert.equal(res.status(),200);
+ await page.waitForFunction(()=>[...document.querySelectorAll('main img')].length===142&&[...document.querySelectorAll('main img')].every(i=>i.complete&&i.naturalWidth===1000));
+ assert.equal(await page.$$eval('article[data-sku]',els=>els.length),123);
+ await page.screenshot({path:'docs/reviews/boston-contact-sheet-2026-09-12/desktop.png'});
+ await page.$eval('section[aria-label="15 mL plates"]',e=>e.scrollIntoView());await page.screenshot({path:'docs/reviews/boston-contact-sheet-2026-09-12/plates-desktop.png'});
+ const click=async text=>{const yes=await page.evaluate(text=>{const e=[...document.querySelectorAll('main button')].find(e=>e.textContent===text);e?.click();return !!e;},text);assert(yes,text);};
+ await click('15 mL · 16');await page.waitForFunction(()=>document.querySelectorAll('article[data-sku]').length===16);
+ assert(await page.evaluate(()=>[...document.querySelectorAll('button')].find(e=>e.textContent==='Approve 7 eligible plates').disabled));
+ await page.$eval('article[data-sku] button[aria-label^="Enlarge"]',e=>e.click());await page.waitForSelector('[role="dialog"]');await page.keyboard.press('Escape');await page.waitForSelector('[role="dialog"]',{hidden:true});
+ const first=await page.$eval('article[data-sku]',e=>e.dataset.sku);await page.$eval('article[data-sku] button[aria-pressed]',e=>e.click());await page.waitForSelector('textarea');
+ await page.type('textarea','Test exception - browser request will be intercepted; not saved');await page.click('input[type="checkbox"]');
+ await page.waitForFunction(()=>[...document.querySelectorAll('button')].some(e=>e.textContent==='Approve 6 eligible plates & save exceptions'&&!e.disabled));
+ let submitted=null;await page.setRequestInterception(true);page.on('request',r=>{if(r.method()==='POST'&&r.url().includes('/api/asset-ledger/plate-contact-sheet')){submitted=JSON.parse(r.postData());r.respond({status:409,contentType:'application/json',body:JSON.stringify({error:'Test intercepted: no decisions were saved.'})});}else r.continue();});
+ await click('Approve 6 eligible plates & save exceptions');await page.waitForSelector('[role="alert"]');assert.equal(submitted.decisions.length,7);assert.equal(submitted.decisions.filter(d=>d.status==='approved').length,6);assert.equal(submitted.decisions.find(d=>d.sku===first).status,'changes_requested');
+ page.removeAllListeners('request');await page.setRequestInterception(false);await page.reload({waitUntil:'networkidle2'});assert((await page.$eval('main',e=>e.innerText)).includes('0\napproved here / current'));
+ await page.setViewport({width:390,height:844,deviceScaleFactor:1});await page.screenshot({path:'docs/reviews/boston-contact-sheet-2026-09-12/mobile.png'});
+ await click('15 mL · 16');await page.waitForFunction(()=>document.querySelectorAll('article[data-sku]').length===16);await page.$eval('section[aria-label="15 mL plates"]',e=>e.scrollIntoView());await page.screenshot({path:'docs/reviews/boston-contact-sheet-2026-09-12/plates-mobile.png'});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.deepEqual(errors,[]);
+ const report={http:200,rows:123,imagesLoaded:142,viewsUnchanged:true,mobileOverflow:false,errors,approvalRequestIntercepted:true,approvalWrites:0,batchPayload:{approved:6,exceptions:1},checks:['whole family visible','15 mL filter','approval disabled before acknowledgment','exception removes only one eligible plate','cap-on/cap-off enlargement','Escape closes enlargement','atomic mixed batch payload','server error displayed','mobile layout']};fs.writeFileSync('docs/reviews/boston-contact-sheet-2026-09-12/browser-verification.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));
+}finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});

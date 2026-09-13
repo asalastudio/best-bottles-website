@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "scope": "Plate work accounting only. Preserve catalog records, assets and approval history.",
+  "entries": [
+    {
+      "sku": "GBCyl100RdcrMtSl__RETIRED__GB-CYL-CLR-100ML-RDC-MSLV-01__kd76rfaq3a35zw8zgqx2azycnx86ajzj",
+      "canonicalSku": "GBCyl100RdcrMtSl",
+      "recordSha256": "e293e3d13eaa74fa5e0f5d9fb0fd447ef1f7f1cc13545ae494d020a54d7635a0",
+      "canonicalSha256": "23a2543ca12dd631fbe3c0074efc9f3d9b73abcda14d3cfbb60c9063a4381f8d",
+      "reason": "Retired duplicate. The canonical product is already counted in the family plate queue.",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T06:04:04.609Z",
+      "decision": "All of these needs of plates are just duplicates or ghost files",
+      "evidence": "docs/reviews/catalog-plate-ledger-2026-09-12/cylinder-duplicate-identity-evidence.json"
+    },
+    {
+      "sku": "GBCyl100RdcrShnBlk__RETIRED__GB-CYL-CLR-100ML-RDC-SBLK-01__kd7656hhftpfrsjv2a719heg9h86ahtd",
+      "canonicalSku": "GBCyl100RdcrShnBlk",
+      "recordSha256": "f905fa61d62f81381155234f54baefd60dba606ee26773bbb052b7a921e909e1",
+      "canonicalSha256": "961ca363eea10364af21a32ca7cb02ddaeb935486b808a45227b0b9d193d9fc5",
+      "reason": "Retired duplicate. The canonical product is already counted in the family plate queue.",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T06:04:04.609Z",
+      "decision": "All of these needs of plates are just duplicates or ghost files",
+      "evidence": "docs/reviews/catalog-plate-ledger-2026-09-12/cylinder-duplicate-identity-evidence.json"
+    },
+    {
+      "sku": "GBCyl50RdcrMtSl__RETIRED__GB-CYL-CLR-50ML-RDC-MSLV-01__kd7a3y0btqvr24m2hv8fsj24qx86aj5y",
+      "canonicalSku": "GBCyl50RdcrMtSl",
+      "recordSha256": "e9f7c7719b006518183a6e5584693d2a893365ddaf83c5a352de5130afae73c0",
+      "canonicalSha256": "6e884a5573f4732e249c53ee2e6289872c85b7824d9b549630ac35d6a22922e3",
+      "reason": "Retired duplicate. The canonical product is already counted in the family plate queue.",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T06:04:04.609Z",
+      "decision": "All of these needs of plates are just duplicates or ghost files",
+      "evidence": "docs/reviews/catalog-plate-ledger-2026-09-12/cylinder-duplicate-identity-evidence.json"
+    },
+    {
+      "sku": "GBCyl50RdcrShnBlk__RETIRED__GB-CYL-CLR-50ML-RDC-SBLK-01__kd755tjzwd7a06m6f36m8knffd86bawg",
+      "canonicalSku": "GBCyl50RdcrShnBlk",
+      "recordSha256": "855c632a706d2eaf9cf7c29610723178c6fc3ae465804f14769425964e26fbd9",
+      "canonicalSha256": "428158f353a3529fac0635060d275400a793cbaab7c6988eb62d50ecdc7fdee8",
+      "reason": "Retired duplicate. The canonical product is already counted in the family plate queue.",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T06:04:04.609Z",
+      "decision": "All of these needs of plates are just duplicates or ghost files",
+      "evidence": "docs/reviews/catalog-plate-ledger-2026-09-12/cylinder-duplicate-identity-evidence.json"
+    },
+    {
+      "sku": "GBCyl5WhtSht__RETIRED__GBCyl5WhtSht__kd7227hkh2tsrhwwz9mg4hqjw985cf47",
+      "canonicalSku": "GBCyl5WhtSht",
+      "recordSha256": "83d5a572089de9167aff331465548d1016f43b0b36b07c7ba5f98569f939667a",
+      "canonicalSha256": "838a240bdfacfccb11ff800e88acd72bb61d0f58667cc6a52a2e49102b71a172",
+      "reason": "Retired duplicate. The canonical product is already counted in the family plate queue.",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T06:04:04.609Z",
+      "decision": "All of these needs of plates are just duplicates or ghost files",
+      "evidence": "docs/reviews/catalog-plate-ledger-2026-09-12/cylinder-duplicate-identity-evidence.json"
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollWht__RETIRED__GBCylSwrl9MtlRollWht__kd7avtmhsf7k6hvfvkx8p5mbrh85c01x",
+      "canonicalSku": "GBCylSwrl9MtlRollWht",
+      "recordSha256": "76c31421d5d4b0cf00a58f810aed2c5109157d1f62322fa92a069fd976ec75bb",
+      "canonicalSha256": "569149e1368ff33e297041d99763878390975db328a00d95929526fc135a8b2a",
+      "reason": "Retired duplicate. The canonical product is already counted in the family plate queue.",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T06:04:04.609Z",
+      "decision": "All of these needs of plates are just duplicates or ghost files",
+      "evidence": "docs/reviews/catalog-plate-ledger-2026-09-12/cylinder-duplicate-identity-evidence.json"
+    },
+    {
+      "sku": "GBCylSwrl9RollWht__RETIRED__GBCylSwrl9RollWht__kd777kxnjf1rv2vxj6h4bh95gx85cpjm",
+      "canonicalSku": "GBCylSwrl9RollWht",
+      "recordSha256": "3d0e47e398976491295f4cf6abee552f7d24138c54ca389a19862781ea7d5672",
+      "canonicalSha256": "66ac2b996763ca63a91062f45747e77326350552c84c870b0157bdc8491aba0f",
+      "reason": "Retired duplicate. The canonical product is already counted in the family plate queue.",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T06:04:04.609Z",
+      "decision": "All of these needs of plates are just duplicates or ghost files",
+      "evidence": "docs/reviews/catalog-plate-ledger-2026-09-12/cylinder-duplicate-identity-evidence.json"
+    }
+  ]
+}

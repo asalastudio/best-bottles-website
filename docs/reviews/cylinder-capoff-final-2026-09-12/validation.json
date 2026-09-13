@@ -1,0 +1,284 @@
+{
+  "ledgerBeforeAt": "2026-09-13T06:18:04.355Z",
+  "ledgerAfterAt": "2026-09-13T06:53:23.862Z",
+  "globalBefore": {
+    "total": 2305,
+    "complete": 661,
+    "review": 431,
+    "reconcile": 702,
+    "missing": 511
+  },
+  "globalAfter": {
+    "total": 2305,
+    "complete": 661,
+    "review": 431,
+    "reconcile": 702,
+    "missing": 511
+  },
+  "familyBefore": {
+    "family": "Cylinder",
+    "total": 436,
+    "complete": 373,
+    "review": 0,
+    "reconcile": 63,
+    "missing": 0,
+    "sizes": [
+      3.3,
+      4,
+      5,
+      5.5,
+      9,
+      25,
+      28,
+      30,
+      50,
+      100,
+      114,
+      227,
+      454
+    ],
+    "unlinked": 0
+  },
+  "familyAfter": {
+    "family": "Cylinder",
+    "total": 436,
+    "complete": 373,
+    "review": 0,
+    "reconcile": 63,
+    "missing": 0,
+    "sizes": [
+      3.3,
+      4,
+      5,
+      5.5,
+      9,
+      25,
+      28,
+      30,
+      50,
+      100,
+      114,
+      227,
+      454
+    ],
+    "unlinked": 0
+  },
+  "expectedMovement": "No indexed completion change before a release. New local image approvals are recorded separately.",
+  "sourceSetsApproved": 31,
+  "newImageFilesApproved": 52,
+  "stagedPairs": 25,
+  "reviewedTechnicalHolds": 6,
+  "otherSourceHolds": 32,
+  "protectedFiles": [
+    {
+      "file": "data/asset-ledger/family-plate-decisions/cylinder.json",
+      "sha256": "067dd04432582127c548ce0e1ad320b1f0dfa11f17e1af9fd4fe825a23b4aa46",
+      "unchanged": true
+    },
+    {
+      "file": "data/asset-ledger/family-plate-sheets/cylinder.json",
+      "sha256": "b0f16fe27689b2a9630859896c7e801de96b4aaee6be7d48e3bf1e779fa177ed",
+      "unchanged": true
+    },
+    {
+      "file": "data/asset-ledger/bottle-standards.json",
+      "sha256": "45326ffda8e2a52d34167a9b269ca5e86f0c51a9c69e0179dff8a7febc461af3",
+      "unchanged": true
+    },
+    {
+      "file": "data/asset-ledger/cylinder-approved-capoff-sources.json",
+      "sha256": "a90cc90a69646d77da1a215ff23798072f984c291d4d5745b2749af6dd2b57ce",
+      "unchanged": true
+    }
+  ],
+  "technicalSummary": {
+    "releaseCandidates": 25,
+    "heldReviewedRows": 6,
+    "verifiedNewCapOffViews": 29,
+    "heldCappedSourceSamples": 1,
+    "remainingSourceRows": 32,
+    "totalRemainingAfterCandidateRelease": 38
+  },
+  "publicationAuthorized": true,
+  "finalReleasePreflight": {
+    "ledgerAt": "2026-09-13T06:59:38.386Z",
+    "familyCounts": {
+      "family": "Cylinder",
+      "total": 436,
+      "complete": 373,
+      "review": 0,
+      "reconcile": 63,
+      "missing": 0,
+      "sizes": [
+        3.3,
+        4,
+        5,
+        5.5,
+        9,
+        25,
+        28,
+        30,
+        50,
+        100,
+        114,
+        227,
+        454
+      ],
+      "unlinked": 0
+    },
+    "globalCounts": {
+      "total": 2305,
+      "complete": 661,
+      "review": 431,
+      "reconcile": 702,
+      "missing": 511
+    },
+    "dryRunExitCode": 0,
+    "missingProductIdentities": 0,
+    "duplicateProductIdentities": 0,
+    "stagedPairs": 25,
+    "uploaded": 0,
+    "indexed": 0
+  },
+  "publication": {
+    "release": "Cylinder paired plate release 2026-09-12",
+    "shipInstruction": "ship",
+    "manifestSha256": "a85d0e21099429cf0c8266ff39020176696a3fd63ac03b24a532f7cab0bc90bf",
+    "verifiedAt": "2026-09-13T07:16:34.904Z",
+    "rows": 25,
+    "uniqueViewAssets": 50,
+    "familyMetadataUnchanged": 5,
+    "scope": "Development catalog used by localhost; no website deployment",
+    "approvalRegistration": {
+      "registeredAt": "2026-09-13T07:20:07.148Z",
+      "manifestSha256": "a85d0e21099429cf0c8266ff39020176696a3fd63ac03b24a532f7cab0bc90bf",
+      "approvedPairs": 25,
+      "newPairBindings": 25,
+      "newAppearanceBindings": 19,
+      "existingHistoryPreserved": 827,
+      "revision": 5
+    },
+    "deferredKitDependency": {
+      "newStaleBindings": 19,
+      "globalStaleBefore": 10,
+      "globalStaleAfter": 29,
+      "kitRecordsMutated": false
+    }
+  },
+  "contactSheet": {
+    "rows": 436,
+    "views": 742,
+    "errors": 0,
+    "sheetSha256": "c76f648b6aacf22488daf4add1895795088763412b1dea3a6142aeb0170563f1"
+  },
+  "uiVerification": "ui-verification.json",
+  "publisherRecord": "publisher-record.json",
+  "shipCompletion": {
+    "release": "Cylinder paired plate release 2026-09-12",
+    "status": "verified",
+    "completedAt": "2026-09-13T07:23:40.659Z",
+    "reviewPacketSha256": "efdd955f5f8c0ba573546fe5190bd6bdaee0a340713f297870186bf0a731bc11",
+    "manifestSha256": "a85d0e21099429cf0c8266ff39020176696a3fd63ac03b24a532f7cab0bc90bf",
+    "deployment": "https://helpful-elephant-638.convex.cloud",
+    "scope": "Publish the 25 approved paired plates to the development catalog used by localhost:3040. Preserve other rows and family metadata. No kits, heroes or website deployment.",
+    "skus": [
+      "GBCyl1ozRollWht",
+      "GBCyl5RollBlkSh",
+      "GBCyl5RollCuMatt",
+      "GBCyl5RollGlMatt",
+      "GBCyl5RollGlSh",
+      "GBCyl5RollPinkDot",
+      "GBCyl5RollSlMatt",
+      "GBCyl5RollSlSh",
+      "GBCyl5WhtSht",
+      "GBCylBlu5RollBlkDot",
+      "GBCylBlu5RollBlkSh",
+      "GBCylBlu5RollCuMatt",
+      "GBCylBlu5RollGlMatt",
+      "GBCylBlu5RollGlSh",
+      "GBCylBlu5RollPinkDot",
+      "GBCylBlu5RollSlDot",
+      "GBCylBlu5RollSlMatt",
+      "GBCylBlu5RollSlSh",
+      "GBMtlRoll28Blk",
+      "GBMtlRoll28Wht",
+      "GBRoll28Blk",
+      "GBTallCyl9RollGlMatt",
+      "GBTallCyl9RollGlSh",
+      "GBTallCyl9RollSlMatt",
+      "GBTallCylFrst9MtlRollBlkDot"
+    ],
+    "countsBefore": {
+      "at": "2026-09-13T07:13:58.009Z",
+      "global": {
+        "total": 2305,
+        "complete": 661,
+        "review": 431,
+        "reconcile": 702,
+        "missing": 511
+      },
+      "family": {
+        "family": "Cylinder",
+        "total": 436,
+        "complete": 373,
+        "review": 0,
+        "reconcile": 63,
+        "missing": 0,
+        "sizes": [
+          3.3,
+          4,
+          5,
+          5.5,
+          9,
+          25,
+          28,
+          30,
+          50,
+          100,
+          114,
+          227,
+          454
+        ],
+        "unlinked": 0
+      }
+    },
+    "countsAfter": {
+      "at": "2026-09-13T07:23:19.385Z",
+      "global": {
+        "total": 2305,
+        "complete": 686,
+        "review": 431,
+        "reconcile": 677,
+        "missing": 511
+      },
+      "family": {
+        "family": "Cylinder",
+        "total": 436,
+        "complete": 398,
+        "review": 0,
+        "reconcile": 38,
+        "missing": 0,
+        "sizes": [
+          3.3,
+          4,
+          5,
+          5.5,
+          9,
+          25,
+          28,
+          30,
+          50,
+          100,
+          114,
+          227,
+          454
+        ],
+        "unlinked": 0
+      }
+    },
+    "verification": "published-verification.json",
+    "approvalRegistration": "registered-approvals.json",
+    "uiVerification": "ui-verification.json",
+    "remainingHolds": 38
+  }
+}
