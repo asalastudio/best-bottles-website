@@ -20,6 +20,8 @@ import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryR
 import type { PdpCompatibilityComponent, PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
 import { analytics } from "@/lib/analytics";
 import type { PlateRef } from "@/lib/paper-doll/plates";
+import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
+import { requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
@@ -111,6 +113,7 @@ export type MobileProductPdpProps = {
     activeCapOption: string | null;
     capOptionPhotoKeys: Record<string, string[]>;
     capOptionThumbnails?: Record<string, string>;
+    localKits?: Record<string, LocalKitPilot>;
     resolveCapFinish: (variant: ProductVariant) => { label: string; swatchName: string };
     variantSku: (variant: ProductVariant) => string | null;
     onCommitVariant: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string; applicator?: string }) => void;
@@ -131,7 +134,7 @@ export type MobileProductPdpProps = {
 function plateFor(platesBySku: Record<string, PlateRef>, variant: ProductVariant | null | undefined): PlateRef | null {
     if (!variant) return null;
     const plate = platesBySku[variant.graceSku] ?? (variant.websiteSku ? platesBySku[variant.websiteSku] : undefined) ?? null;
-    const capOff = verifiedCapOffPhoto(variant.websiteSku);
+    const capOff = plate?.localCandidate ? null : verifiedCapOffPhoto(variant.websiteSku);
     return capOff && plate ? { ...plate, imageCapOff: capOff } : plate;
 }
 
@@ -149,7 +152,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         addedFlash, onAddToCart, quoteHref, qty, onQtyChange, cartCount, backHref, cartAnchorRef, glassOptions,
         rollerOptions, activeApplicator, capOptions, activeCapOption, capOptionPhotoKeys, capOptionThumbnails, resolveCapFinish, variantSku,
         onCommitVariant, onCommitGlass, onPickerOpenChange, onAskGrace, description, relations, initialCompatibility,
-        volumePricing, onAddComponent,
+        volumePricing, onAddComponent, localKits = {},
     } = props;
 
     const isMobile = useViewportIsMobile();
@@ -234,16 +237,20 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const shownVariant = previewSibling?.variant ?? previewInGroup ?? selectedVariant;
     const shownPlate = previewSibling ? previewSibling.plate : previewInGroup ? plateFor(platesBySku, previewInGroup) : committedPlate;
     const previewing = Boolean(previewSibling?.variant || (previewInGroup && previewInGroup._id !== selectedVariant?._id));
+    const assembledOnly = requiresAssembledClosure(shownVariant?.applicator, shownVariant?.websiteSku);
+    const pilot = shownVariant?.websiteSku ? localKits[shownVariant.websiteSku] : undefined;
     const shownKitQuery: KitQueryResult = previewing ? undefined : selectedKitQuery;
     const { kit: shownKit, parts: kitPartsWithCap } = useDecodedKitParts(
         { websiteSku: shownVariant?.websiteSku, graceSku: shownVariant?.graceSku },
-        shownKitQuery,
-        picker.viewMode !== "capOff",
+        pilot ? (picker.viewMode === "capOff" ? pilot.off : pilot.on) : shownKitQuery,
+        Boolean(pilot) || assembledOnly || picker.viewMode !== "capOff",
     );
 
     const viewCaps = useMemo<MobileViewCapabilities>(() => ({
-        hasCapOffAsset: Boolean(shownPlate?.imageCapOff) || kitHasRemovableCap(shownKit),
-    }), [shownPlate?.imageCapOff, shownKit]);
+        hasCapOffAsset: !assembledOnly && (Boolean(shownPlate?.imageCapOff) || kitHasRemovableCap(shownKit)),
+        applicator: shownVariant?.applicator,
+        websiteSku: shownVariant?.websiteSku,
+    }), [shownPlate?.imageCapOff, shownKit, assembledOnly, shownVariant?.applicator, shownVariant?.websiteSku]);
     const viewModes = useMemo(() => getMobileViewModes(viewCaps), [viewCaps]);
     // The stage always paints the configured bottle; "capOff" here only comes
     // from the roller picker's preview or a Grace plate command.
@@ -261,8 +268,8 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const viewerPlate = useDecodedPlate(viewerOpen ? plateUrlFor(viewerMode) : null, markPlateBroken);
     const { parts: viewerKitParts } = useDecodedKitParts(
         { websiteSku: shownVariant?.websiteSku, graceSku: shownVariant?.graceSku },
-        viewerOpen ? shownKitQuery : undefined,
-        viewerMode !== "capOff",
+        viewerOpen ? (pilot ? (viewerMode === "capOff" ? pilot.off : pilot.on) : shownKitQuery) : undefined,
+        Boolean(pilot) || viewerMode !== "capOff",
     );
     const openViewer = () => {
         setViewerView(viewMode);
@@ -520,7 +527,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             <MobileProductHero
                 ref={heroRef}
                 plateUrl={decodedPlate.url}
-                kitParts={decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
+                kitParts={pilot ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
                 fallbackImageUrl={decodedPlate.url ? null : fallbackImageUrl}
                 alt={`${displayName}${previewingLabel ? ` — previewing ${previewingLabel}` : ""}`}
                 backHref={backHref}
@@ -659,7 +666,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 viewModes={viewModes}
                 onViewModeChange={changeViewerView}
                 plateUrl={viewerPlate.url}
-                kitParts={viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
+                kitParts={pilot ? viewerKitParts : viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
                 fallbackImageUrl={viewerPlate.url ? null : fallbackImageUrl}
                 alt={displayName}
                 onPlateError={markPlateBroken}

@@ -55,6 +55,9 @@ export type PlateFamilySummary = {
 
 /** What the product page needs per SKU. */
 export type PlateRef = {
+    /** Development-only candidate; never supplied by the published index. */
+    localCandidate?: boolean;
+    reviewStatus?: string;
     image: string;
     imageCapOff: string | null;
     thumb?: string;

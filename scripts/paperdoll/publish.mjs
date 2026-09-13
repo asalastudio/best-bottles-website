@@ -6,6 +6,7 @@
 //   add --family <id> or --neck <id> (e.g. 13-415) to limit, --apply to actually write (dry run by default),
 //   a SKU that already carries a plate on the target is SKIPPED unless --replace is passed,
 //   --allow-orphans to index SKUs the catalogue does not carry yet (normally skipped)
+//   --preserve-family-metadata for a partial release into existing families
 //   --dist publishing requires tokens.json.reviewedAt (Jordan's sign-off); --skip-token-review for dev only
 //
 // Order of operations per plate, and the reason it is this order: hash the
@@ -74,6 +75,12 @@ async function main() {
 
     console.log(`${apply ? "PUBLISH" : "DRY RUN"} → ${convexUrl}`);
     const convex = new ConvexHttpClient(convexUrl);
+    const preserveFamilyMetadata = Boolean(args["preserve-family-metadata"]);
+    if (preserveFamilyMetadata) {
+        const known = new Set((await convex.query(api.productPlates.families, {})).map(f => f.familyId));
+        for (const family of families) if (!known.has(family.familyId)) fail(`cannot preserve missing family metadata: ${family.familyId}`);
+        console.log("Existing family metadata will be preserved for this partial release.");
+    }
 
     // A SKU that already has a plate on the target is left alone unless --replace
     // says otherwise. --neck 17-415 would otherwise have re-published the five
@@ -179,7 +186,7 @@ async function main() {
                 else familyReport.written++;
             }
         }
-        await convex.mutation(api.productPlates.upsertFamilies, {
+        if (!preserveFamilyMetadata) await convex.mutation(api.productPlates.upsertFamilies, {
             writeToken,
             families: [{
                 familyId: family.familyId,
