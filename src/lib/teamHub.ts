@@ -176,3 +176,10 @@ export function getShopifyAdminHref() {
 export function getMadisonStudioHref() {
     return process.env.NEXT_PUBLIC_MADISON_STUDIO_URL?.trim() || "https://app.madisonstudio.io";
 }
+
+/** Keep Team Hub hops on full paths so preview never resolves to `/new`. */
+export function teamPreviewHref(href: string, previewMode: boolean) {
+    if (href.startsWith("http")) return href;
+    if (!previewMode || !href.startsWith("/team")) return href;
+    return href.includes("?") ? `${href}&preview=1` : `${href}?preview=1`;
+}

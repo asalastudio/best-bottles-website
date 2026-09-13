@@ -46,6 +46,12 @@ describe("Team Hub links", () => {
         expect(source).toContain("Team Hub access pending");
     });
 
+    it("aliases /team/new to the Create Products desk", () => {
+        const alias = readFileSync(resolve(process.cwd(), "src/app/team/new/page.tsx"), "utf8");
+        expect(alias).toContain("/team/products/new");
+        expect(alias).toContain("redirect");
+    });
+
     it("lets a denied signed-in user switch to a team email", () => {
         expect(source).toContain("SwitchAccountButton");
         expect(source).toContain("Use another team email");
