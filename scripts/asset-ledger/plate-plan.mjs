@@ -1,13 +1,16 @@
 export const plateStages = {
     complete: {label: 'Approved & indexed', detail: 'Current plate checks and image-byte approval pass.'},
+    release: {label: 'Approved · awaiting release', detail: 'The final images are approved. Publication and indexing remain.'},
     review: {label: 'Ready for review', detail: 'Reuse the existing plate. Family visual review is still owed.'},
     reconcile: {label: 'Needs reconciliation', detail: 'Resolve source, sizing, pairing, or technical findings.'},
     missing: {label: 'Needs a plate', detail: 'No indexed plate. Match the master source and prepare a candidate.'},
 };
 
 export function plateStage(plate) {
-    if (plate.scopeHold) return 'reconcile';
+    if (plate.scopeHold || plate.completionReviewHold) return 'reconcile';
     if (plate.complete) return 'complete';
+    const prepared=plate.finalPreparation;
+    if (prepared?.status==='approved' && prepared.paired && prepared.alignmentPassed && prepared.sourceDecisionRequired===false) return 'release';
     if (plate.completionReviewHold || plate.batchReviewHold) return 'reconcile';
     if (plate.checksPassed) return 'review';
     if (['none','hold'].includes(plate.state) && !plate.imageUrl) return 'missing';
@@ -17,6 +20,8 @@ export function plateStage(plate) {
 export function plateReasons(row) {
     const p = row.plate, stage = plateStage(p), reasons = [];
     if (stage === 'complete') return ['Approved current image bytes; preserve this plate.'];
+    if (stage === 'release') return ['Final image and source approval is recorded. No repeat review is needed for these exact bytes. Publish the named release, verify its hosted files, and register the indexed views.'];
+    if (p.completionReviewHold) return [p.completionReviewHold];
     if (p.finalPreparation?.paired && p.finalPreparation.alignmentPassed) return [
         'The final cap-on/cap-off pair is prepared and alignment passes. Open the final Cylinder batch review.',
         p.finalPreparation.sourceDecisionRequired ? 'Accept the documented original legacy source or provide its exact master counterpart.' : 'Register final batch approval and release-specific ship before indexing.',
@@ -40,7 +45,7 @@ export function plateReasons(row) {
 // Exactly one work stage per applicable catalog record. Review-only artifacts
 // remain outside the denominator, and missing group links remain explicit.
 export function buildPlatePlan(ledger) {
-    const empty = () => ({total:0,complete:0,review:0,reconcile:0,missing:0});
+    const empty = () => ({total:0,complete:0,release:0,review:0,reconcile:0,missing:0});
     const rows = ledger.rows.filter(r => r.productRecord && r.plate.state !== 'not-applicable' && !r.plate.scopeExclusion).map(r => ({
         sku:r.sku,graceSku:r.graceSku,family:r.family,capacityMl:r.capacityMl,color:r.color,
         itemName:r.itemName || r.sku,applicator:r.applicator,capColor:r.capColor,

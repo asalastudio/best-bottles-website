@@ -1,0 +1,9 @@
+
+/Users/jordanrichter/Projects/Clients/Nemat-International/bb-asset-release-pr-2026-09-13/src/app/team/asset-ledger/PlateCatalog.tsx
+  80:107  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/jordanrichter/Projects/Clients/Nemat-International/bb-asset-release-pr-2026-09-13/src/app/team/asset-ledger/PlateContactSheet.tsx
+  57:292  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  70:465  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+✖ 3 problems (0 errors, 3 warnings)

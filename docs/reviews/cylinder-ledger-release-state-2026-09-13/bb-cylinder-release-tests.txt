@@ -1,0 +1,12 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/Projects/Clients/Nemat-International/bb-asset-release-pr-2026-09-13
+
+ ✓ tests/plate-plan.test.ts (11 tests) 5ms
+ ✓ tests/cylinder-final-plates.test.ts (7 tests) 6ms
+ ✓ tests/plate-scope.test.ts (10 tests) 6ms
+ ✓ tests/cylinder-final-release.test.ts (15 tests) 15ms
+
+ Test Files  4 passed (4)
+      Tests  43 passed (43)
+   Start at  08:39:51
+   Duration  429ms (transform 127ms, setup 0ms, collect 229ms, tests 32ms, environment 0ms, prepare 301ms)

@@ -2,6 +2,7 @@ import {createHash,randomUUID} from 'node:crypto';
 import {readFile,writeFile,open,rename,unlink,realpath} from 'node:fs/promises';
 import path from 'node:path';
 import {livePlates,remoteHash} from './plate-contact-sheet.mjs';
+import {readCylinderFinalRelease} from './cylinder-final-release.mjs';
 
 const MASTER='/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master';
 const packetPath='docs/reviews/cylinder-final38-2026-09-13/prepared-v2.json';
@@ -28,6 +29,7 @@ export async function readCylinderFinalPlates(root,{master=MASTER}={}){
     const raw=await readFile(path.join(root,packetPath));const data=JSON.parse(raw);const token=hash(raw);
     let decisions;try{decisions=await json(path.join(root,decisionPath));}catch(e){if(e.code!=='ENOENT')throw e;decisions={revision:0,history:[]};}
     const ledger=await json(path.join(root,'src/lib/asset-ledger/ledger.json'));
+    const released=await readCylinderFinalRelease(root);
     const cache=new Map();
     async function check(file,expected,base){
         const resolved=await realpath(file),allowed=await realpath(base);
@@ -42,7 +44,7 @@ export async function readCylinderFinalPlates(root,{master=MASTER}={}){
         const matches=ledger.rows.filter(r=>r.productRecord&&r.family==='Cylinder'&&r.sku===row.sku&&!r.plate.scopeExclusion);
         const current=matches[0];
         if(matches.length!==1||['productGroupId','capacityMl','color','applicator','capColor','graceSku'].some(k=>current[k]!==row[k]))throw Error('Catalog identity changed for '+row.sku+'.');
-        if(current.plate.sha256!==row.referenceSha256)throw Error('The indexed reference changed for '+row.sku+'. Prepare a new review.');
+        if(current.plate.sha256!==row.referenceSha256&&!(released?.manifest.rows.some(r=>r.websiteSku===row.sku&&r.plate.sha256===current.plate.sha256)))throw Error('The indexed reference changed for '+row.sku+'. Prepare a new review.');
         for(const v of [...row.before,...row.views])await check(path.join(root,'public',v.url),v.sha256,path.join(root,'public/images'));
         for(const s of row.sources){
             if(s.kind?.startsWith('master-psd'))await check(path.join(master,s.sourcePath),s.sourceSha256,master);
@@ -58,6 +60,7 @@ export async function readCylinderFinalPlates(root,{master=MASTER}={}){
     const currentDecision=decisions.history.findLast(d=>d.token===token);
     const approved=currentDecision?.entries?.length===data.rows.length&&data.rows.every(r=>currentDecision.entries.some(d=>d.sku===r.sku&&d.binding===r.binding&&d.status==='approved'));
     return {...data,token,revision:decisions.revision,status:approved?'approved':'pending',reviewUrl,
+        publicationState:released&&data.rows.every(r=>ledger.rows.find(p=>p.productRecord&&p.sku===r.sku)?.plate.complete)?'released':'awaiting-release',
         preparedPairs:data.rows.length,legacySourceDecisions:data.rows.filter(r=>legacyKinds.has(r.classification)).length,
         alignmentFailures:data.rows.filter(r=>!r.pairCheck?.passed).length};
 }
