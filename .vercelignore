@@ -6,8 +6,13 @@
 # Madison paper-doll source library (~36 GB of PSDs/renders)
 pipeline/
 
-# Local research, audit, and scrape artifacts
-data/
+# Local research, audit, and scrape artifacts. The two Boston kit manifests
+# below are imported by the internal asset-ledger route at build time.
+data/*
+!data/asset-ledger/
+data/asset-ledger/*
+!data/asset-ledger/boston-kit-intake.json
+!data/asset-ledger/boston-kit-release.json
 docs/
 reference_images/
 Best-Bottles-Orphan-urls/
