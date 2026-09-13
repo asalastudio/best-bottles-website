@@ -1,9 +1,12 @@
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import {
     TEAM_HUB_SECTIONS,
     buildTeamHubTools,
     filterTeamHubTools,
     groupTeamHubTools,
+    teamPreviewHref,
 } from "@/lib/teamHub";
 
 describe("Team Hub dashboard catalog", () => {
@@ -79,5 +82,18 @@ describe("Team Hub dashboard catalog", () => {
         const matches = filterTeamHubTools(tools, "certificate");
         expect(matches.map((tool) => tool.name)).toEqual(["Certificate Review Queue"]);
         expect(groupTeamHubTools(matches).map((group) => group.section.id)).toEqual(["operations"]);
+    });
+
+    it("keeps preview links on the full Team Hub path", () => {
+        expect(teamPreviewHref("/team/products/new", true)).toBe("/team/products/new?preview=1");
+        expect(teamPreviewHref("/team/products/new", false)).toBe("/team/products/new");
+        expect(teamPreviewHref("/portal", true)).toBe("/portal");
+    });
+
+    it("server-renders the tool cards instead of a client-only directory", () => {
+        const dashboard = readFileSync(resolve(process.cwd(), "src/components/team/TeamHubDashboard.tsx"), "utf8");
+        expect(dashboard).toContain('data-testid="team-hub-cards"');
+        expect(dashboard).toContain("{tool.name}");
+        expect(dashboard).not.toContain("TeamHubDirectory");
     });
 });
