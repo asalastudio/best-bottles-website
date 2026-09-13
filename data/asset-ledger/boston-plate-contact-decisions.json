@@ -1,0 +1,3031 @@
+{
+  "revision": 1,
+  "decisions": {
+    "GBBstn1ozBlkDrp:43c66dc2f5386966408398da44bde556fa0c633cc29e47b84f62e679132d49de": {
+      "sku": "GBBstn1ozBlkDrp",
+      "binding": "43c66dc2f5386966408398da44bde556fa0c633cc29e47b84f62e679132d49de",
+      "sha256": "12d5b95f4de0b2ef36e34ef927a56b10dc0a096d68809f1ee021a7fd3690dec7",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozBlkDrp/12d5b95f4de0b2ef36e34ef927a56b10dc0a096d68809f1ee021a7fd3690dec7.front-on-1000x1100.webp",
+          "sha256": "12d5b95f4de0b2ef36e34ef927a56b10dc0a096d68809f1ee021a7fd3690dec7",
+          "url": "/images/plate-contact-sheets/12d5b95f4de0b2ef36e34ef927a56b10dc0a096d68809f1ee021a7fd3690dec7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstn1ozBlkDrpShnGlTrim:381f6d1acefabc90b4581d276ccdcd5eb0be8e7163140b764b5b579debe6f591": {
+      "sku": "GBBstn1ozBlkDrpShnGlTrim",
+      "binding": "381f6d1acefabc90b4581d276ccdcd5eb0be8e7163140b764b5b579debe6f591",
+      "sha256": "45fcd642194824b4a5b06a87f0be48b160e25f31d332df5e2a5a4f30449af77c",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozBlkDrpShnGlTrim/45fcd642194824b4a5b06a87f0be48b160e25f31d332df5e2a5a4f30449af77c.front-on-1000x1100.webp",
+          "sha256": "45fcd642194824b4a5b06a87f0be48b160e25f31d332df5e2a5a4f30449af77c",
+          "url": "/images/plate-contact-sheets/45fcd642194824b4a5b06a87f0be48b160e25f31d332df5e2a5a4f30449af77c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstn1ozMtlRollonBlk:445c188b5567ff103fdecad9547c775805c8b9a57f5f14fbbb621296b419c548": {
+      "sku": "GBBstn1ozMtlRollonBlk",
+      "binding": "445c188b5567ff103fdecad9547c775805c8b9a57f5f14fbbb621296b419c548",
+      "sha256": "3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonBlk/3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c.front-on-1000x1100.webp",
+          "sha256": "3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c",
+          "url": "/images/plate-contact-sheets/3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonBlk/d04635e9b1fde374f460065bf1f315e25d4ebc9e19b61287d960047a04010308.front-off-1000x1100.webp",
+          "sha256": "d04635e9b1fde374f460065bf1f315e25d4ebc9e19b61287d960047a04010308",
+          "url": "/images/plate-contact-sheets/d04635e9b1fde374f460065bf1f315e25d4ebc9e19b61287d960047a04010308.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstn1ozMtlRollonShnSl:a472249855a53fceb586c76c794245fa059f3eb97770ef19b2fae6a9fffc8bd8": {
+      "sku": "GBBstn1ozMtlRollonShnSl",
+      "binding": "a472249855a53fceb586c76c794245fa059f3eb97770ef19b2fae6a9fffc8bd8",
+      "sha256": "a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonShnSl/a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94.front-on-1000x1100.webp",
+          "sha256": "a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94",
+          "url": "/images/plate-contact-sheets/a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonShnSl/40dcebbe1930dac5fbfaf44ae9e2ad7be561863d976d81b42b987271aae80513.front-off-1000x1100.webp",
+          "sha256": "40dcebbe1930dac5fbfaf44ae9e2ad7be561863d976d81b42b987271aae80513",
+          "url": "/images/plate-contact-sheets/40dcebbe1930dac5fbfaf44ae9e2ad7be561863d976d81b42b987271aae80513.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstn1ozWhtDrp:d258b7e40c4810d9850d852b7b4c7ce36a1afc94dea22695aedcf7b0fb133159": {
+      "sku": "GBBstn1ozWhtDrp",
+      "binding": "d258b7e40c4810d9850d852b7b4c7ce36a1afc94dea22695aedcf7b0fb133159",
+      "sha256": "6d0f3e7dcc95ff4b8d15a232f1d1daf717ffd946cf861105109499fe205a4017",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozWhtDrp/6d0f3e7dcc95ff4b8d15a232f1d1daf717ffd946cf861105109499fe205a4017.front-on-1000x1100.webp",
+          "sha256": "6d0f3e7dcc95ff4b8d15a232f1d1daf717ffd946cf861105109499fe205a4017",
+          "url": "/images/plate-contact-sheets/6d0f3e7dcc95ff4b8d15a232f1d1daf717ffd946cf861105109499fe205a4017.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstn1ozWhtDrpShnGlTrim:d76dfa7f3e49a3144bee99f7827f91783cd76f7ce7593d60ebefe1cd3fbafbd5": {
+      "sku": "GBBstn1ozWhtDrpShnGlTrim",
+      "binding": "d76dfa7f3e49a3144bee99f7827f91783cd76f7ce7593d60ebefe1cd3fbafbd5",
+      "sha256": "d1d70f934e8327f8d0967cd41ad7ddec21c1fb6ad35a9c1edbe3b68955cc9c13",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozWhtDrpShnGlTrim/d1d70f934e8327f8d0967cd41ad7ddec21c1fb6ad35a9c1edbe3b68955cc9c13.front-on-1000x1100.webp",
+          "sha256": "d1d70f934e8327f8d0967cd41ad7ddec21c1fb6ad35a9c1edbe3b68955cc9c13",
+          "url": "/images/plate-contact-sheets/d1d70f934e8327f8d0967cd41ad7ddec21c1fb6ad35a9c1edbe3b68955cc9c13.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstn1ozWhtDrpShnSlTrim:670e949ab8f0e9845888cd91bf4ac62937196073f4dd5588c7c43f20273eb525": {
+      "sku": "GBBstn1ozWhtDrpShnSlTrim",
+      "binding": "670e949ab8f0e9845888cd91bf4ac62937196073f4dd5588c7c43f20273eb525",
+      "sha256": "52537eca5cabfd43163cc9d2b4965357198d80c0218989450c293b57ac84916a",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozWhtDrpShnSlTrim/52537eca5cabfd43163cc9d2b4965357198d80c0218989450c293b57ac84916a.front-on-1000x1100.webp",
+          "sha256": "52537eca5cabfd43163cc9d2b4965357198d80c0218989450c293b57ac84916a",
+          "url": "/images/plate-contact-sheets/52537eca5cabfd43163cc9d2b4965357198d80c0218989450c293b57ac84916a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb15mlBlkDropper:e230432c2123c57d97e2945a2d26bd3ee6bd9bf126bfbb2c600915b5a3250a96": {
+      "sku": "GBBstnAmb15mlBlkDropper",
+      "binding": "e230432c2123c57d97e2945a2d26bd3ee6bd9bf126bfbb2c600915b5a3250a96",
+      "sha256": "8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlBlkDropper/8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13.front-on-1000x1100.webp",
+          "sha256": "8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13",
+          "url": "/images/plate-contact-sheets/8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb15mlBlkDropperGlTrim:53e8a1dfe3c038266b412dc53d98cc55e4387dd5fcb3a01e2d36b72b517391b1": {
+      "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+      "binding": "53e8a1dfe3c038266b412dc53d98cc55e4387dd5fcb3a01e2d36b72b517391b1",
+      "sha256": "d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlBlkDropperGlTrim/d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f.front-on-1000x1100.webp",
+          "sha256": "d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f",
+          "url": "/images/plate-contact-sheets/d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb15mlBlkDropperSlTrim:ec481486cdba6071b28263a02e5a01ff9feff0d55dc43b2dc3bd9532d6ef0404": {
+      "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+      "binding": "ec481486cdba6071b28263a02e5a01ff9feff0d55dc43b2dc3bd9532d6ef0404",
+      "sha256": "08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlBlkDropperSlTrim/08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6.front-on-1000x1100.webp",
+          "sha256": "08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6",
+          "url": "/images/plate-contact-sheets/08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb15mlWhtDropper:1d20d96dc47d1b5140a69fe7728f9ebcd6ebfcde5e86feafb106841d98ec5fc8": {
+      "sku": "GBBstnAmb15mlWhtDropper",
+      "binding": "1d20d96dc47d1b5140a69fe7728f9ebcd6ebfcde5e86feafb106841d98ec5fc8",
+      "sha256": "b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlWhtDropper/b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f.front-on-1000x1100.webp",
+          "sha256": "b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f",
+          "url": "/images/plate-contact-sheets/b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb15mlWhtDropperGlTrim:56a41da385d46babcd1841b37dfee5582cc454a9f0f60e1d83d40f1915b7d8c0": {
+      "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+      "binding": "56a41da385d46babcd1841b37dfee5582cc454a9f0f60e1d83d40f1915b7d8c0",
+      "sha256": "05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlWhtDropperGlTrim/05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8.front-on-1000x1100.webp",
+          "sha256": "05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8",
+          "url": "/images/plate-contact-sheets/05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb15mlWhtDropperSlTrim:3c87f3bc2557ec76235f28f69223944584d871c8669b17282e12154c998fdbb0": {
+      "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+      "binding": "3c87f3bc2557ec76235f28f69223944584d871c8669b17282e12154c998fdbb0",
+      "sha256": "a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlWhtDropperSlTrim/a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8.front-on-1000x1100.webp",
+          "sha256": "a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8",
+          "url": "/images/plate-contact-sheets/a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozBlkDropper:a64201be52ec298408cf775c981ca5056e45c8381fd337fdd4bd79f1f98890b0": {
+      "sku": "GBBstnAmb1ozBlkDropper",
+      "binding": "a64201be52ec298408cf775c981ca5056e45c8381fd337fdd4bd79f1f98890b0",
+      "sha256": "a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozBlkDropper/a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4.front-on-1000x1100.webp",
+          "sha256": "a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4",
+          "url": "/images/plate-contact-sheets/a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozMtlRollonMattBlk:46e6bf3e45315566d87a87afddf74b15767f69daed65fcb2b961231c551cac22": {
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "binding": "46e6bf3e45315566d87a87afddf74b15767f69daed65fcb2b961231c551cac22",
+      "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp",
+          "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+          "url": "/images/plate-contact-sheets/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/8f07ee56d31ec00badd20a45c086c02b1e5b6a5dec9df8bd5a020080bac54a76.front-off-1000x1100.webp",
+          "sha256": "8f07ee56d31ec00badd20a45c086c02b1e5b6a5dec9df8bd5a020080bac54a76",
+          "url": "/images/plate-contact-sheets/8f07ee56d31ec00badd20a45c086c02b1e5b6a5dec9df8bd5a020080bac54a76.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozMtlRollonMattGl:190643a9a0f3bd4a59fd6b03c4a98263a625da7fb4725fdc0f87aa1c294a77dd": {
+      "sku": "GBBstnAmb1ozMtlRollonMattGl",
+      "binding": "190643a9a0f3bd4a59fd6b03c4a98263a625da7fb4725fdc0f87aa1c294a77dd",
+      "sha256": "a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattGl/a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d.front-on-1000x1100.webp",
+          "sha256": "a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d",
+          "url": "/images/plate-contact-sheets/a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattGl/2ed214ae8a641ffecba825363ca8de84c2c626fc8f0d0169e1dddbc39c80558d.front-off-1000x1100.webp",
+          "sha256": "2ed214ae8a641ffecba825363ca8de84c2c626fc8f0d0169e1dddbc39c80558d",
+          "url": "/images/plate-contact-sheets/2ed214ae8a641ffecba825363ca8de84c2c626fc8f0d0169e1dddbc39c80558d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozMtlRollonMattSl:0480f7cacb4eb43678e6b110349d0f65d6c1c17b6cbf81edfb1f351d22050396": {
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "binding": "0480f7cacb4eb43678e6b110349d0f65d6c1c17b6cbf81edfb1f351d22050396",
+      "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattSl/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.front-on-1000x1100.webp",
+          "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+          "url": "/images/plate-contact-sheets/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattSl/4d4f4b8e8243cff8661e9b59d30d4a799327880bc495b0a8aed1efc3ebd12b84.front-off-1000x1100.webp",
+          "sha256": "4d4f4b8e8243cff8661e9b59d30d4a799327880bc495b0a8aed1efc3ebd12b84",
+          "url": "/images/plate-contact-sheets/4d4f4b8e8243cff8661e9b59d30d4a799327880bc495b0a8aed1efc3ebd12b84.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozMtlRollonShnBlk:db4e56d48bfa2e28dbd9ddf2f18adc0e542bff1f482880d396657da9cb3ee3ee": {
+      "sku": "GBBstnAmb1ozMtlRollonShnBlk",
+      "binding": "db4e56d48bfa2e28dbd9ddf2f18adc0e542bff1f482880d396657da9cb3ee3ee",
+      "sha256": "6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonShnBlk/6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db.front-on-1000x1100.webp",
+          "sha256": "6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db",
+          "url": "/images/plate-contact-sheets/6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonShnBlk/0f8b3e4cd358070b37ff9b5b33a98b15a0269e0a8b09b26bcbd414271ea8633b.front-off-1000x1100.webp",
+          "sha256": "0f8b3e4cd358070b37ff9b5b33a98b15a0269e0a8b09b26bcbd414271ea8633b",
+          "url": "/images/plate-contact-sheets/0f8b3e4cd358070b37ff9b5b33a98b15a0269e0a8b09b26bcbd414271ea8633b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozRollonGl:c53e03bea44663e24f3cc2c6596c601e907810257267fb183a94dce2be72f91a": {
+      "sku": "GBBstnAmb1ozRollonGl",
+      "binding": "c53e03bea44663e24f3cc2c6596c601e907810257267fb183a94dce2be72f91a",
+      "sha256": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonGl/eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176.front-on-1000x1100.webp",
+          "sha256": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176",
+          "url": "/images/plate-contact-sheets/eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonGl/4322ed2e412996730527f703ba02fdc882df964f087c881285aa24d979ebcf91.front-off-1000x1100.webp",
+          "sha256": "4322ed2e412996730527f703ba02fdc882df964f087c881285aa24d979ebcf91",
+          "url": "/images/plate-contact-sheets/4322ed2e412996730527f703ba02fdc882df964f087c881285aa24d979ebcf91.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozRollonMattBlk:df17c01a4cb84f46bddc35b32744981d3db1c6bdff9f2b5b31bf2dd084587682": {
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "binding": "df17c01a4cb84f46bddc35b32744981d3db1c6bdff9f2b5b31bf2dd084587682",
+      "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp",
+          "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+          "url": "/images/plate-contact-sheets/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattBlk/08e563e8bea279e76e163f35e6e450833af04ca2d1e90613cb2813a807451cbf.front-off-1000x1100.webp",
+          "sha256": "08e563e8bea279e76e163f35e6e450833af04ca2d1e90613cb2813a807451cbf",
+          "url": "/images/plate-contact-sheets/08e563e8bea279e76e163f35e6e450833af04ca2d1e90613cb2813a807451cbf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozRollonMattGl:3ef0dfab2b1ef90d59b61f17b02a89cc369a863739d84e932d3d9880fc744017": {
+      "sku": "GBBstnAmb1ozRollonMattGl",
+      "binding": "3ef0dfab2b1ef90d59b61f17b02a89cc369a863739d84e932d3d9880fc744017",
+      "sha256": "ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattGl/ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81.front-on-1000x1100.webp",
+          "sha256": "ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81",
+          "url": "/images/plate-contact-sheets/ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattGl/529869c298c1eefdfc89f859399f7a5744d521c25f74226726b5916acec5eabb.front-off-1000x1100.webp",
+          "sha256": "529869c298c1eefdfc89f859399f7a5744d521c25f74226726b5916acec5eabb",
+          "url": "/images/plate-contact-sheets/529869c298c1eefdfc89f859399f7a5744d521c25f74226726b5916acec5eabb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozRollonMattSl:cd71c9584b51c5c7b6397b8f2436aff50ce77bfc2a4bd55b43d745e5b42f64ef": {
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "binding": "cd71c9584b51c5c7b6397b8f2436aff50ce77bfc2a4bd55b43d745e5b42f64ef",
+      "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattSl/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.front-on-1000x1100.webp",
+          "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+          "url": "/images/plate-contact-sheets/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattSl/cd0c633fb653847ec382326186f384e488149fa0700875fc566a5b9d2afc0ad1.front-off-1000x1100.webp",
+          "sha256": "cd0c633fb653847ec382326186f384e488149fa0700875fc566a5b9d2afc0ad1",
+          "url": "/images/plate-contact-sheets/cd0c633fb653847ec382326186f384e488149fa0700875fc566a5b9d2afc0ad1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozRollonShnBlk:8f186d1bab329e2d7178b19561151e229352e926183da77d6ea08d34ea7e3b59": {
+      "sku": "GBBstnAmb1ozRollonShnBlk",
+      "binding": "8f186d1bab329e2d7178b19561151e229352e926183da77d6ea08d34ea7e3b59",
+      "sha256": "184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonShnBlk/184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17.front-on-1000x1100.webp",
+          "sha256": "184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17",
+          "url": "/images/plate-contact-sheets/184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonShnBlk/9c8c435a6ab889d875c01ab7eaab6e8b073c8c947b3c49f56bbecd062574c9a9.front-off-1000x1100.webp",
+          "sha256": "9c8c435a6ab889d875c01ab7eaab6e8b073c8c947b3c49f56bbecd062574c9a9",
+          "url": "/images/plate-contact-sheets/9c8c435a6ab889d875c01ab7eaab6e8b073c8c947b3c49f56bbecd062574c9a9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozRollonShnSl:104bc5dbccb055059bb6bbb54d65dc375781c3d389bee28d7761068882ed4f38": {
+      "sku": "GBBstnAmb1ozRollonShnSl",
+      "binding": "104bc5dbccb055059bb6bbb54d65dc375781c3d389bee28d7761068882ed4f38",
+      "sha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonShnSl/34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec.front-on-1000x1100.webp",
+          "sha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec",
+          "url": "/images/plate-contact-sheets/34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonShnSl/d9d15a1d39ec7546b3b0d88cb4c07d95a0ef0e17891d5bd93ca5602e22dc22ad.front-off-1000x1100.webp",
+          "sha256": "d9d15a1d39ec7546b3b0d88cb4c07d95a0ef0e17891d5bd93ca5602e22dc22ad",
+          "url": "/images/plate-contact-sheets/d9d15a1d39ec7546b3b0d88cb4c07d95a0ef0e17891d5bd93ca5602e22dc22ad.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozWhtDropper:d7760770582228163b23006cf039d307338689971db21be2dc9913c4ec4614c8": {
+      "sku": "GBBstnAmb1ozWhtDropper",
+      "binding": "d7760770582228163b23006cf039d307338689971db21be2dc9913c4ec4614c8",
+      "sha256": "f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozWhtDropper/f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2.front-on-1000x1100.webp",
+          "sha256": "f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2",
+          "url": "/images/plate-contact-sheets/f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb1ozWhtDropperShnGlTrim:a5de4ade0cb2fde55e0af4e7973c984d53db136dea084a0c886f0b9213b99e88": {
+      "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+      "binding": "a5de4ade0cb2fde55e0af4e7973c984d53db136dea084a0c886f0b9213b99e88",
+      "sha256": "670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozWhtDropperShnGlTrim/670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03.front-on-1000x1100.webp",
+          "sha256": "670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03",
+          "url": "/images/plate-contact-sheets/670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb2ozBlkDropperShnGlTrim:395a571c3e870f983af930e400761fd74be4815a5f4d06a490221470457978f1": {
+      "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+      "binding": "395a571c3e870f983af930e400761fd74be4815a5f4d06a490221470457978f1",
+      "sha256": "e232d5aab5ca083a917f13c204b2d9332eb7760b48e9bd55cb4ade52099cb8e3",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozBlkDropperShnGlTrim/e232d5aab5ca083a917f13c204b2d9332eb7760b48e9bd55cb4ade52099cb8e3.front-on-1000x1100.webp",
+          "sha256": "e232d5aab5ca083a917f13c204b2d9332eb7760b48e9bd55cb4ade52099cb8e3",
+          "url": "/images/plate-contact-sheets/e232d5aab5ca083a917f13c204b2d9332eb7760b48e9bd55cb4ade52099cb8e3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb2ozMtlRollonGl:3ccf5a6beddec06a6bfb43f447796bee79cccbfbfe0b7b59e6f929576b8826b1": {
+      "sku": "GBBstnAmb2ozMtlRollonGl",
+      "binding": "3ccf5a6beddec06a6bfb43f447796bee79cccbfbfe0b7b59e6f929576b8826b1",
+      "sha256": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonGl/b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d.front-on-1000x1100.webp",
+          "sha256": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d",
+          "url": "/images/plate-contact-sheets/b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonGl/193d91f24dad7e45ff615bc24a6b5239b65ee72b4ecdf7531d655d559ad60af4.front-off-1000x1100.webp",
+          "sha256": "193d91f24dad7e45ff615bc24a6b5239b65ee72b4ecdf7531d655d559ad60af4",
+          "url": "/images/plate-contact-sheets/193d91f24dad7e45ff615bc24a6b5239b65ee72b4ecdf7531d655d559ad60af4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb2ozMtlRollonMattBlk:440a53fdd6574749a591201142893e9adfbcfd261eaf004f0894186cf2438187": {
+      "sku": "GBBstnAmb2ozMtlRollonMattBlk",
+      "binding": "440a53fdd6574749a591201142893e9adfbcfd261eaf004f0894186cf2438187",
+      "sha256": "2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattBlk/2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608.front-on-1000x1100.webp",
+          "sha256": "2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608",
+          "url": "/images/plate-contact-sheets/2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattBlk/6dce1de5b7aacced34e6c87c4eec0535c8fde2c11e42236744abb836279093f1.front-off-1000x1100.webp",
+          "sha256": "6dce1de5b7aacced34e6c87c4eec0535c8fde2c11e42236744abb836279093f1",
+          "url": "/images/plate-contact-sheets/6dce1de5b7aacced34e6c87c4eec0535c8fde2c11e42236744abb836279093f1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb2ozMtlRollonMattGl:0a73b0fd2414f65260f9cc87733a26035624019cd6c0f7050335ce09e70fbc77": {
+      "sku": "GBBstnAmb2ozMtlRollonMattGl",
+      "binding": "0a73b0fd2414f65260f9cc87733a26035624019cd6c0f7050335ce09e70fbc77",
+      "sha256": "c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattGl/c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490.front-on-1000x1100.webp",
+          "sha256": "c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490",
+          "url": "/images/plate-contact-sheets/c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattGl/1b82d206568a50c9d715f7966375df81b6171b04487c676ec6d7005dc363e73a.front-off-1000x1100.webp",
+          "sha256": "1b82d206568a50c9d715f7966375df81b6171b04487c676ec6d7005dc363e73a",
+          "url": "/images/plate-contact-sheets/1b82d206568a50c9d715f7966375df81b6171b04487c676ec6d7005dc363e73a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb2ozRollonMattGl:adbc026b198e5729c398c662223f5ea5ddea4548bf081a2f0650e0869ce9a93c": {
+      "sku": "GBBstnAmb2ozRollonMattGl",
+      "binding": "adbc026b198e5729c398c662223f5ea5ddea4548bf081a2f0650e0869ce9a93c",
+      "sha256": "ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattGl/ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3.front-on-1000x1100.webp",
+          "sha256": "ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3",
+          "url": "/images/plate-contact-sheets/ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattGl/d3ea6343b6ffd281ad25444ec5550416d7352a2d09cf9ad45cb8e95c49a5ec35.front-off-1000x1100.webp",
+          "sha256": "d3ea6343b6ffd281ad25444ec5550416d7352a2d09cf9ad45cb8e95c49a5ec35",
+          "url": "/images/plate-contact-sheets/d3ea6343b6ffd281ad25444ec5550416d7352a2d09cf9ad45cb8e95c49a5ec35.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb2ozRollonMattSl:2f6a52c7c78ee02970263e3c18af6214b67e81030ac5e22072d28d4984933d5c": {
+      "sku": "GBBstnAmb2ozRollonMattSl",
+      "binding": "2f6a52c7c78ee02970263e3c18af6214b67e81030ac5e22072d28d4984933d5c",
+      "sha256": "4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattSl/4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d.front-on-1000x1100.webp",
+          "sha256": "4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d",
+          "url": "/images/plate-contact-sheets/4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattSl/de170618634570dcaf85307e46fa31a75eac5fc36ef674cdf25acd3e31a0d872.front-off-1000x1100.webp",
+          "sha256": "de170618634570dcaf85307e46fa31a75eac5fc36ef674cdf25acd3e31a0d872",
+          "url": "/images/plate-contact-sheets/de170618634570dcaf85307e46fa31a75eac5fc36ef674cdf25acd3e31a0d872.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb2ozRollonShnSl:eb2037c50bd9ebf14e98e808fb29c1bfe3854a63db4c3db9572bd93b9625f034": {
+      "sku": "GBBstnAmb2ozRollonShnSl",
+      "binding": "eb2037c50bd9ebf14e98e808fb29c1bfe3854a63db4c3db9572bd93b9625f034",
+      "sha256": "2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonShnSl/2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1.front-on-1000x1100.webp",
+          "sha256": "2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1",
+          "url": "/images/plate-contact-sheets/2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonShnSl/24e4fe16479c7770dc8b6ee698ff43195f4c2e3e5ff49bf0cd597f889c24969f.front-off-1000x1100.webp",
+          "sha256": "24e4fe16479c7770dc8b6ee698ff43195f4c2e3e5ff49bf0cd597f889c24969f",
+          "url": "/images/plate-contact-sheets/24e4fe16479c7770dc8b6ee698ff43195f4c2e3e5ff49bf0cd597f889c24969f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb2ozWhtDropperShnGlTrim:a9097044ab7bf2ecef77b72db0edf77ba3c1bfdbc206e633e71fcc4ac81388c9": {
+      "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+      "binding": "a9097044ab7bf2ecef77b72db0edf77ba3c1bfdbc206e633e71fcc4ac81388c9",
+      "sha256": "2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozWhtDropperShnGlTrim/2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6.front-on-1000x1100.webp",
+          "sha256": "2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6",
+          "url": "/images/plate-contact-sheets/2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnAmb2ozWhtDropperShnSlTrim:dfd69ff08a71ae43a57467493dc21c0e81d723f5cd3395aebfba3540f196336f": {
+      "sku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+      "binding": "dfd69ff08a71ae43a57467493dc21c0e81d723f5cd3395aebfba3540f196336f",
+      "sha256": "bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozWhtDropperShnSlTrim/bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079.front-on-1000x1100.webp",
+          "sha256": "bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079",
+          "url": "/images/plate-contact-sheets/bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu15mlBlkDropperSlTrim:036e14cf54ab7f1e542345b8593d0894f7aae6365bab341690a6d4010ca61513": {
+      "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+      "binding": "036e14cf54ab7f1e542345b8593d0894f7aae6365bab341690a6d4010ca61513",
+      "sha256": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15mlBlkDropperSlTrim/5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c.front-on-1000x1100.webp",
+          "sha256": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c",
+          "url": "/images/plate-contact-sheets/5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu1ozBlkDropper:f812d6b0a431e7d0fb866d71479ba1955bd69226f41f42df2fe3e9d0818ffdd3": {
+      "sku": "GBBstnBlu1ozBlkDropper",
+      "binding": "f812d6b0a431e7d0fb866d71479ba1955bd69226f41f42df2fe3e9d0818ffdd3",
+      "sha256": "a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozBlkDropper/a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d.front-on-1000x1100.webp",
+          "sha256": "a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d",
+          "url": "/images/plate-contact-sheets/a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu1ozBlkDropperShnGlTrim:619964066c308bb54d2a6924fce2121d578ce04ff58ea85e2f0603dc0117a182": {
+      "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "binding": "619964066c308bb54d2a6924fce2121d578ce04ff58ea85e2f0603dc0117a182",
+      "sha256": "9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozBlkDropperShnGlTrim/9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea.front-on-1000x1100.webp",
+          "sha256": "9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea",
+          "url": "/images/plate-contact-sheets/9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu1ozMtlRollonMattBlk:df44ebb235b63e9ac732dd1709e82863a41178dc909e6fa96805754322836138": {
+      "sku": "GBBstnBlu1ozMtlRollonMattBlk",
+      "binding": "df44ebb235b63e9ac732dd1709e82863a41178dc909e6fa96805754322836138",
+      "sha256": "4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattBlk/4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e.front-on-1000x1100.webp",
+          "sha256": "4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e",
+          "url": "/images/plate-contact-sheets/4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattBlk/3dfc97c4ec92c348c951c7a5eb36732bc163cb0b683f9cb19a97593591208f4b.front-off-1000x1100.webp",
+          "sha256": "3dfc97c4ec92c348c951c7a5eb36732bc163cb0b683f9cb19a97593591208f4b",
+          "url": "/images/plate-contact-sheets/3dfc97c4ec92c348c951c7a5eb36732bc163cb0b683f9cb19a97593591208f4b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu1ozMtlRollonMattGl:e4fdd579460e7e6a795c879e85a57759b74628be588163eb94604ab9026c779c": {
+      "sku": "GBBstnBlu1ozMtlRollonMattGl",
+      "binding": "e4fdd579460e7e6a795c879e85a57759b74628be588163eb94604ab9026c779c",
+      "sha256": "4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattGl/4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef.front-on-1000x1100.webp",
+          "sha256": "4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef",
+          "url": "/images/plate-contact-sheets/4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattGl/951945ee983a12021bb8f09543c4f92c3b28edbc3d5535bdd0929945b84d96f3.front-off-1000x1100.webp",
+          "sha256": "951945ee983a12021bb8f09543c4f92c3b28edbc3d5535bdd0929945b84d96f3",
+          "url": "/images/plate-contact-sheets/951945ee983a12021bb8f09543c4f92c3b28edbc3d5535bdd0929945b84d96f3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu1ozRollonGl:eb9e93892c405b54352c3be56897077fca1481f4305e228f53dcdcd492c8159d": {
+      "sku": "GBBstnBlu1ozRollonGl",
+      "binding": "eb9e93892c405b54352c3be56897077fca1481f4305e228f53dcdcd492c8159d",
+      "sha256": "b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonGl/b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466.front-on-1000x1100.webp",
+          "sha256": "b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466",
+          "url": "/images/plate-contact-sheets/b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonGl/6c1e7bb7d85aaf6fcdc1fc5c05810d9bc320b7b8b091e7828a12e6c2d6e0c13a.front-off-1000x1100.webp",
+          "sha256": "6c1e7bb7d85aaf6fcdc1fc5c05810d9bc320b7b8b091e7828a12e6c2d6e0c13a",
+          "url": "/images/plate-contact-sheets/6c1e7bb7d85aaf6fcdc1fc5c05810d9bc320b7b8b091e7828a12e6c2d6e0c13a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu1ozRollonShnBlk:2d8c45410f078f3b415554d440c3f8cc8aef31e3200d0826db5affb0a4a58c51": {
+      "sku": "GBBstnBlu1ozRollonShnBlk",
+      "binding": "2d8c45410f078f3b415554d440c3f8cc8aef31e3200d0826db5affb0a4a58c51",
+      "sha256": "2ec2df24211a89f4d516f16784c1c6f7dae3ebd74883576106d2c437392332ba",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonShnBlk/2ec2df24211a89f4d516f16784c1c6f7dae3ebd74883576106d2c437392332ba.front-on-1000x1100.webp",
+          "sha256": "2ec2df24211a89f4d516f16784c1c6f7dae3ebd74883576106d2c437392332ba",
+          "url": "/images/plate-contact-sheets/2ec2df24211a89f4d516f16784c1c6f7dae3ebd74883576106d2c437392332ba.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonShnBlk/e175c98195b1830d0907c6f4736333d5e92e043a886a8655db8848abfb9f1f03.front-off-1000x1100.webp",
+          "sha256": "e175c98195b1830d0907c6f4736333d5e92e043a886a8655db8848abfb9f1f03",
+          "url": "/images/plate-contact-sheets/e175c98195b1830d0907c6f4736333d5e92e043a886a8655db8848abfb9f1f03.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu1ozRollonShnSl:77848759ac6bb05455b445da441653e8dad27b769c12d08742a3fb1c7077e591": {
+      "sku": "GBBstnBlu1ozRollonShnSl",
+      "binding": "77848759ac6bb05455b445da441653e8dad27b769c12d08742a3fb1c7077e591",
+      "sha256": "7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonShnSl/7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8.front-on-1000x1100.webp",
+          "sha256": "7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8",
+          "url": "/images/plate-contact-sheets/7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonShnSl/e569d56cc73d48469ed105db02674f4492c1e4a5fda9eede7ecfa08c0c9f49e9.front-off-1000x1100.webp",
+          "sha256": "e569d56cc73d48469ed105db02674f4492c1e4a5fda9eede7ecfa08c0c9f49e9",
+          "url": "/images/plate-contact-sheets/e569d56cc73d48469ed105db02674f4492c1e4a5fda9eede7ecfa08c0c9f49e9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu1ozWhtDropper:e31defdc47880073ebbcda58dbfc01f43cc992a535ba8c49b0445f8e4f265b6e": {
+      "sku": "GBBstnBlu1ozWhtDropper",
+      "binding": "e31defdc47880073ebbcda58dbfc01f43cc992a535ba8c49b0445f8e4f265b6e",
+      "sha256": "0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozWhtDropper/0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d.front-on-1000x1100.webp",
+          "sha256": "0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d",
+          "url": "/images/plate-contact-sheets/0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu1ozWhtDropperShnGlTrim:7074351a775ec178f6a12921e2d02e8bd81e4292727dc3d306e71a4221f8cce4": {
+      "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+      "binding": "7074351a775ec178f6a12921e2d02e8bd81e4292727dc3d306e71a4221f8cce4",
+      "sha256": "d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozWhtDropperShnGlTrim/d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1.front-on-1000x1100.webp",
+          "sha256": "d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1",
+          "url": "/images/plate-contact-sheets/d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu1ozWhtDropperShnSlTrim:9070520734cb94a1f1ab10ee7f7271e8fdf1a29e9116e67dc1c43e67eeacd87e": {
+      "sku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+      "binding": "9070520734cb94a1f1ab10ee7f7271e8fdf1a29e9116e67dc1c43e67eeacd87e",
+      "sha256": "83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozWhtDropperShnSlTrim/83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46.front-on-1000x1100.webp",
+          "sha256": "83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46",
+          "url": "/images/plate-contact-sheets/83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozBlkDropper:886341fad12cb101d8607d6b049a7cd8ebc76e9acf125da285b3d4c54e3a2dd4": {
+      "sku": "GBBstnBlu2ozBlkDropper",
+      "binding": "886341fad12cb101d8607d6b049a7cd8ebc76e9acf125da285b3d4c54e3a2dd4",
+      "sha256": "a018ae15d225c01c4215f34822690a2093972ea9b2d88e1f923f337a5794f632",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozBlkDropper/a018ae15d225c01c4215f34822690a2093972ea9b2d88e1f923f337a5794f632.front-on-1000x1100.webp",
+          "sha256": "a018ae15d225c01c4215f34822690a2093972ea9b2d88e1f923f337a5794f632",
+          "url": "/images/plate-contact-sheets/a018ae15d225c01c4215f34822690a2093972ea9b2d88e1f923f337a5794f632.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozBlkDropperShnGlTrim:039d26c80ef52762c30bfa52e45f2b2d4c59c816371328324616f56fa5312fba": {
+      "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "binding": "039d26c80ef52762c30bfa52e45f2b2d4c59c816371328324616f56fa5312fba",
+      "sha256": "7aa2489da1ed54c9df7d4432bb41851785d76a627ee57d093e8502b6f0d4d6ec",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozBlkDropperShnGlTrim/7aa2489da1ed54c9df7d4432bb41851785d76a627ee57d093e8502b6f0d4d6ec.front-on-1000x1100.webp",
+          "sha256": "7aa2489da1ed54c9df7d4432bb41851785d76a627ee57d093e8502b6f0d4d6ec",
+          "url": "/images/plate-contact-sheets/7aa2489da1ed54c9df7d4432bb41851785d76a627ee57d093e8502b6f0d4d6ec.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozMtlRollonGl:04e205e6009d7ce9a8a1e8ce64e26a2b71a54e7ce1d03abfe843f4fd35da3f56": {
+      "sku": "GBBstnBlu2ozMtlRollonGl",
+      "binding": "04e205e6009d7ce9a8a1e8ce64e26a2b71a54e7ce1d03abfe843f4fd35da3f56",
+      "sha256": "0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonGl/0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d.front-on-1000x1100.webp",
+          "sha256": "0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d",
+          "url": "/images/plate-contact-sheets/0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonGl/b7f6735b99ac45d58dbc2f02b46180ebcaa0986fb551b881dd7ecbbcc3046d75.front-off-1000x1100.webp",
+          "sha256": "b7f6735b99ac45d58dbc2f02b46180ebcaa0986fb551b881dd7ecbbcc3046d75",
+          "url": "/images/plate-contact-sheets/b7f6735b99ac45d58dbc2f02b46180ebcaa0986fb551b881dd7ecbbcc3046d75.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozMtlRollonMattBlk:2f60fa800a13b9ad73bca71ead11538649ff76d54346846a006605dfe2b23ebc": {
+      "sku": "GBBstnBlu2ozMtlRollonMattBlk",
+      "binding": "2f60fa800a13b9ad73bca71ead11538649ff76d54346846a006605dfe2b23ebc",
+      "sha256": "f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattBlk/f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586.front-on-1000x1100.webp",
+          "sha256": "f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586",
+          "url": "/images/plate-contact-sheets/f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattBlk/4ee8bb758470cf5621b5c1df29449f6e863118c2d4c6605f1c9d1ae297b2d744.front-off-1000x1100.webp",
+          "sha256": "4ee8bb758470cf5621b5c1df29449f6e863118c2d4c6605f1c9d1ae297b2d744",
+          "url": "/images/plate-contact-sheets/4ee8bb758470cf5621b5c1df29449f6e863118c2d4c6605f1c9d1ae297b2d744.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozMtlRollonMattGl:f1fb3af2ad1cc71afc533e057713943a85a9edc11c2852b32f40c94c091cd596": {
+      "sku": "GBBstnBlu2ozMtlRollonMattGl",
+      "binding": "f1fb3af2ad1cc71afc533e057713943a85a9edc11c2852b32f40c94c091cd596",
+      "sha256": "d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattGl/d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda.front-on-1000x1100.webp",
+          "sha256": "d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda",
+          "url": "/images/plate-contact-sheets/d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattGl/0e884b0690fd7e72b3195cd1fb661a7104341e50c8c08f81fa6cdc6679fc6228.front-off-1000x1100.webp",
+          "sha256": "0e884b0690fd7e72b3195cd1fb661a7104341e50c8c08f81fa6cdc6679fc6228",
+          "url": "/images/plate-contact-sheets/0e884b0690fd7e72b3195cd1fb661a7104341e50c8c08f81fa6cdc6679fc6228.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozMtlRollonMattSl:2176527ab8bd8ab4a1a0fd8e4af351fe9a3adebae1b4fc9972a6cd713865459f": {
+      "sku": "GBBstnBlu2ozMtlRollonMattSl",
+      "binding": "2176527ab8bd8ab4a1a0fd8e4af351fe9a3adebae1b4fc9972a6cd713865459f",
+      "sha256": "beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattSl/beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06.front-on-1000x1100.webp",
+          "sha256": "beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06",
+          "url": "/images/plate-contact-sheets/beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattSl/a5eaac58cc3fa8db8ae23afdf95dc1bf4ea1976cdb5c3ccd04d3ab81ea02906b.front-off-1000x1100.webp",
+          "sha256": "a5eaac58cc3fa8db8ae23afdf95dc1bf4ea1976cdb5c3ccd04d3ab81ea02906b",
+          "url": "/images/plate-contact-sheets/a5eaac58cc3fa8db8ae23afdf95dc1bf4ea1976cdb5c3ccd04d3ab81ea02906b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozMtlRollonShnSl:7cfedd07967a844e8abe7b397c40bc6c27a37202bb9432e161e694c5c46c6a7c": {
+      "sku": "GBBstnBlu2ozMtlRollonShnSl",
+      "binding": "7cfedd07967a844e8abe7b397c40bc6c27a37202bb9432e161e694c5c46c6a7c",
+      "sha256": "be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonShnSl/be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f.front-on-1000x1100.webp",
+          "sha256": "be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f",
+          "url": "/images/plate-contact-sheets/be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonShnSl/968436bc636d2c9b0acd51595c9b8248663a9af06695cf1b015486b12fc68dab.front-off-1000x1100.webp",
+          "sha256": "968436bc636d2c9b0acd51595c9b8248663a9af06695cf1b015486b12fc68dab",
+          "url": "/images/plate-contact-sheets/968436bc636d2c9b0acd51595c9b8248663a9af06695cf1b015486b12fc68dab.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozRollonGl:ea7a70211779e6064a6eba9344f57f07f07b3728041b2c55dbbb261e1c59165f": {
+      "sku": "GBBstnBlu2ozRollonGl",
+      "binding": "ea7a70211779e6064a6eba9344f57f07f07b3728041b2c55dbbb261e1c59165f",
+      "sha256": "adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonGl/adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384.front-on-1000x1100.webp",
+          "sha256": "adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384",
+          "url": "/images/plate-contact-sheets/adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonGl/6110d571a1d2ae8381e2060de3d869c06ce59b0f9b26a2feeebd3e8254880afb.front-off-1000x1100.webp",
+          "sha256": "6110d571a1d2ae8381e2060de3d869c06ce59b0f9b26a2feeebd3e8254880afb",
+          "url": "/images/plate-contact-sheets/6110d571a1d2ae8381e2060de3d869c06ce59b0f9b26a2feeebd3e8254880afb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozRollonMattBlk:c1f170bc40854da6bf600606b304c4d4f2e187a98d038e49941e5d151d24e62c": {
+      "sku": "GBBstnBlu2ozRollonMattBlk",
+      "binding": "c1f170bc40854da6bf600606b304c4d4f2e187a98d038e49941e5d151d24e62c",
+      "sha256": "f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattBlk/f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6.front-on-1000x1100.webp",
+          "sha256": "f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6",
+          "url": "/images/plate-contact-sheets/f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattBlk/1c2f36f2d0d5ac20299c9698c087f77e65396b686d71f146c42bfad68b58f4f5.front-off-1000x1100.webp",
+          "sha256": "1c2f36f2d0d5ac20299c9698c087f77e65396b686d71f146c42bfad68b58f4f5",
+          "url": "/images/plate-contact-sheets/1c2f36f2d0d5ac20299c9698c087f77e65396b686d71f146c42bfad68b58f4f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozRollonMattGl:b7b1a324f9ed8d993442b90f920d2b3ee3e57ce3c1df67000495e6b14d02ffd1": {
+      "sku": "GBBstnBlu2ozRollonMattGl",
+      "binding": "b7b1a324f9ed8d993442b90f920d2b3ee3e57ce3c1df67000495e6b14d02ffd1",
+      "sha256": "34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattGl/34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186.front-on-1000x1100.webp",
+          "sha256": "34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186",
+          "url": "/images/plate-contact-sheets/34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattGl/b8534433f472f3f7ec6f82ab771c0305060c8f33960f1b4934c852edf07585c6.front-off-1000x1100.webp",
+          "sha256": "b8534433f472f3f7ec6f82ab771c0305060c8f33960f1b4934c852edf07585c6",
+          "url": "/images/plate-contact-sheets/b8534433f472f3f7ec6f82ab771c0305060c8f33960f1b4934c852edf07585c6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozRollonMattSl:3dd08c7dc914f869aaa94ebe4c4045a4aab0b83b344b9784c8551fe62de25a4f": {
+      "sku": "GBBstnBlu2ozRollonMattSl",
+      "binding": "3dd08c7dc914f869aaa94ebe4c4045a4aab0b83b344b9784c8551fe62de25a4f",
+      "sha256": "84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattSl/84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc.front-on-1000x1100.webp",
+          "sha256": "84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc",
+          "url": "/images/plate-contact-sheets/84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattSl/27c7d674a03fa0453dc91e2bb1ae9aa77f57c15575e5e09af30f428f9a84c9b0.front-off-1000x1100.webp",
+          "sha256": "27c7d674a03fa0453dc91e2bb1ae9aa77f57c15575e5e09af30f428f9a84c9b0",
+          "url": "/images/plate-contact-sheets/27c7d674a03fa0453dc91e2bb1ae9aa77f57c15575e5e09af30f428f9a84c9b0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozRollonShnBlk:2ec229d82609735b21fd9dc3c1b660a1a141d62fde455f63fc3c1a3af462206b": {
+      "sku": "GBBstnBlu2ozRollonShnBlk",
+      "binding": "2ec229d82609735b21fd9dc3c1b660a1a141d62fde455f63fc3c1a3af462206b",
+      "sha256": "4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonShnBlk/4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c.front-on-1000x1100.webp",
+          "sha256": "4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c",
+          "url": "/images/plate-contact-sheets/4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonShnBlk/26f03924f7f40f0f46f7cf5f1e8d4ae84890d7bbd82102c91f765f08a949398c.front-off-1000x1100.webp",
+          "sha256": "26f03924f7f40f0f46f7cf5f1e8d4ae84890d7bbd82102c91f765f08a949398c",
+          "url": "/images/plate-contact-sheets/26f03924f7f40f0f46f7cf5f1e8d4ae84890d7bbd82102c91f765f08a949398c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozRollonShnSl:6db4318b8b7ac7a19fb54590bea25e920425a0a87166f4aba3e17bea4d6517a3": {
+      "sku": "GBBstnBlu2ozRollonShnSl",
+      "binding": "6db4318b8b7ac7a19fb54590bea25e920425a0a87166f4aba3e17bea4d6517a3",
+      "sha256": "a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonShnSl/a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d.front-on-1000x1100.webp",
+          "sha256": "a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d",
+          "url": "/images/plate-contact-sheets/a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonShnSl/ac8b1bd4ce33774abd9b35da00bbf6ff0d9dec0143131ce6c21a79cf78263226.front-off-1000x1100.webp",
+          "sha256": "ac8b1bd4ce33774abd9b35da00bbf6ff0d9dec0143131ce6c21a79cf78263226",
+          "url": "/images/plate-contact-sheets/ac8b1bd4ce33774abd9b35da00bbf6ff0d9dec0143131ce6c21a79cf78263226.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozWhtDropper:a074fad16cbb2f5311f8deccecb22988943703e86f66c949939b2614b9bb48dc": {
+      "sku": "GBBstnBlu2ozWhtDropper",
+      "binding": "a074fad16cbb2f5311f8deccecb22988943703e86f66c949939b2614b9bb48dc",
+      "sha256": "ed37984df5fa1fbc4dc141fcbe570765c68ba6efa9773fd5d492247e4d4d1ce5",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozWhtDropper/ed37984df5fa1fbc4dc141fcbe570765c68ba6efa9773fd5d492247e4d4d1ce5.front-on-1000x1100.webp",
+          "sha256": "ed37984df5fa1fbc4dc141fcbe570765c68ba6efa9773fd5d492247e4d4d1ce5",
+          "url": "/images/plate-contact-sheets/ed37984df5fa1fbc4dc141fcbe570765c68ba6efa9773fd5d492247e4d4d1ce5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozWhtDropperShnGlTrim:625d26f255e59ab006a56f8066039317e87b29b70bf8623ccef6189c84876f4e": {
+      "sku": "GBBstnBlu2ozWhtDropperShnGlTrim",
+      "binding": "625d26f255e59ab006a56f8066039317e87b29b70bf8623ccef6189c84876f4e",
+      "sha256": "fd08d80563c735587794f50b05966159fb4f1fb46f35b8ec1af315c56301c3a0",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozWhtDropperShnGlTrim/fd08d80563c735587794f50b05966159fb4f1fb46f35b8ec1af315c56301c3a0.front-on-1000x1100.webp",
+          "sha256": "fd08d80563c735587794f50b05966159fb4f1fb46f35b8ec1af315c56301c3a0",
+          "url": "/images/plate-contact-sheets/fd08d80563c735587794f50b05966159fb4f1fb46f35b8ec1af315c56301c3a0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBBstnBlu2ozWhtDropperShnSlTrim:1b0bf7198113c16d5fe6980c6f568523ffbd9726fb61cb125df00e37e2dcf8c6": {
+      "sku": "GBBstnBlu2ozWhtDropperShnSlTrim",
+      "binding": "1b0bf7198113c16d5fe6980c6f568523ffbd9726fb61cb125df00e37e2dcf8c6",
+      "sha256": "2cac833430ce93b2ffeb756bc45662ceb8fbe71181a0461c127199be89e9c9fd",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozWhtDropperShnSlTrim/2cac833430ce93b2ffeb756bc45662ceb8fbe71181a0461c127199be89e9c9fd.front-on-1000x1100.webp",
+          "sha256": "2cac833430ce93b2ffeb756bc45662ceb8fbe71181a0461c127199be89e9c9fd",
+          "url": "/images/plate-contact-sheets/2cac833430ce93b2ffeb756bc45662ceb8fbe71181a0461c127199be89e9c9fd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "GBBstn1ozBlkDrp",
+      "binding": "43c66dc2f5386966408398da44bde556fa0c633cc29e47b84f62e679132d49de",
+      "sha256": "12d5b95f4de0b2ef36e34ef927a56b10dc0a096d68809f1ee021a7fd3690dec7",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozBlkDrp/12d5b95f4de0b2ef36e34ef927a56b10dc0a096d68809f1ee021a7fd3690dec7.front-on-1000x1100.webp",
+          "sha256": "12d5b95f4de0b2ef36e34ef927a56b10dc0a096d68809f1ee021a7fd3690dec7",
+          "url": "/images/plate-contact-sheets/12d5b95f4de0b2ef36e34ef927a56b10dc0a096d68809f1ee021a7fd3690dec7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstn1ozBlkDrpShnGlTrim",
+      "binding": "381f6d1acefabc90b4581d276ccdcd5eb0be8e7163140b764b5b579debe6f591",
+      "sha256": "45fcd642194824b4a5b06a87f0be48b160e25f31d332df5e2a5a4f30449af77c",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozBlkDrpShnGlTrim/45fcd642194824b4a5b06a87f0be48b160e25f31d332df5e2a5a4f30449af77c.front-on-1000x1100.webp",
+          "sha256": "45fcd642194824b4a5b06a87f0be48b160e25f31d332df5e2a5a4f30449af77c",
+          "url": "/images/plate-contact-sheets/45fcd642194824b4a5b06a87f0be48b160e25f31d332df5e2a5a4f30449af77c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonBlk",
+      "binding": "445c188b5567ff103fdecad9547c775805c8b9a57f5f14fbbb621296b419c548",
+      "sha256": "3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonBlk/3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c.front-on-1000x1100.webp",
+          "sha256": "3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c",
+          "url": "/images/plate-contact-sheets/3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonBlk/d04635e9b1fde374f460065bf1f315e25d4ebc9e19b61287d960047a04010308.front-off-1000x1100.webp",
+          "sha256": "d04635e9b1fde374f460065bf1f315e25d4ebc9e19b61287d960047a04010308",
+          "url": "/images/plate-contact-sheets/d04635e9b1fde374f460065bf1f315e25d4ebc9e19b61287d960047a04010308.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonShnSl",
+      "binding": "a472249855a53fceb586c76c794245fa059f3eb97770ef19b2fae6a9fffc8bd8",
+      "sha256": "a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonShnSl/a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94.front-on-1000x1100.webp",
+          "sha256": "a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94",
+          "url": "/images/plate-contact-sheets/a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozMtlRollonShnSl/40dcebbe1930dac5fbfaf44ae9e2ad7be561863d976d81b42b987271aae80513.front-off-1000x1100.webp",
+          "sha256": "40dcebbe1930dac5fbfaf44ae9e2ad7be561863d976d81b42b987271aae80513",
+          "url": "/images/plate-contact-sheets/40dcebbe1930dac5fbfaf44ae9e2ad7be561863d976d81b42b987271aae80513.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstn1ozWhtDrp",
+      "binding": "d258b7e40c4810d9850d852b7b4c7ce36a1afc94dea22695aedcf7b0fb133159",
+      "sha256": "6d0f3e7dcc95ff4b8d15a232f1d1daf717ffd946cf861105109499fe205a4017",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozWhtDrp/6d0f3e7dcc95ff4b8d15a232f1d1daf717ffd946cf861105109499fe205a4017.front-on-1000x1100.webp",
+          "sha256": "6d0f3e7dcc95ff4b8d15a232f1d1daf717ffd946cf861105109499fe205a4017",
+          "url": "/images/plate-contact-sheets/6d0f3e7dcc95ff4b8d15a232f1d1daf717ffd946cf861105109499fe205a4017.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstn1ozWhtDrpShnGlTrim",
+      "binding": "d76dfa7f3e49a3144bee99f7827f91783cd76f7ce7593d60ebefe1cd3fbafbd5",
+      "sha256": "d1d70f934e8327f8d0967cd41ad7ddec21c1fb6ad35a9c1edbe3b68955cc9c13",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozWhtDrpShnGlTrim/d1d70f934e8327f8d0967cd41ad7ddec21c1fb6ad35a9c1edbe3b68955cc9c13.front-on-1000x1100.webp",
+          "sha256": "d1d70f934e8327f8d0967cd41ad7ddec21c1fb6ad35a9c1edbe3b68955cc9c13",
+          "url": "/images/plate-contact-sheets/d1d70f934e8327f8d0967cd41ad7ddec21c1fb6ad35a9c1edbe3b68955cc9c13.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstn1ozWhtDrpShnSlTrim",
+      "binding": "670e949ab8f0e9845888cd91bf4ac62937196073f4dd5588c7c43f20273eb525",
+      "sha256": "52537eca5cabfd43163cc9d2b4965357198d80c0218989450c293b57ac84916a",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-clear-20-400/GBBstn1ozWhtDrpShnSlTrim/52537eca5cabfd43163cc9d2b4965357198d80c0218989450c293b57ac84916a.front-on-1000x1100.webp",
+          "sha256": "52537eca5cabfd43163cc9d2b4965357198d80c0218989450c293b57ac84916a",
+          "url": "/images/plate-contact-sheets/52537eca5cabfd43163cc9d2b4965357198d80c0218989450c293b57ac84916a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropper",
+      "binding": "e230432c2123c57d97e2945a2d26bd3ee6bd9bf126bfbb2c600915b5a3250a96",
+      "sha256": "8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlBlkDropper/8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13.front-on-1000x1100.webp",
+          "sha256": "8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13",
+          "url": "/images/plate-contact-sheets/8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+      "binding": "53e8a1dfe3c038266b412dc53d98cc55e4387dd5fcb3a01e2d36b72b517391b1",
+      "sha256": "d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlBlkDropperGlTrim/d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f.front-on-1000x1100.webp",
+          "sha256": "d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f",
+          "url": "/images/plate-contact-sheets/d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+      "binding": "ec481486cdba6071b28263a02e5a01ff9feff0d55dc43b2dc3bd9532d6ef0404",
+      "sha256": "08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlBlkDropperSlTrim/08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6.front-on-1000x1100.webp",
+          "sha256": "08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6",
+          "url": "/images/plate-contact-sheets/08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropper",
+      "binding": "1d20d96dc47d1b5140a69fe7728f9ebcd6ebfcde5e86feafb106841d98ec5fc8",
+      "sha256": "b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlWhtDropper/b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f.front-on-1000x1100.webp",
+          "sha256": "b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f",
+          "url": "/images/plate-contact-sheets/b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+      "binding": "56a41da385d46babcd1841b37dfee5582cc454a9f0f60e1d83d40f1915b7d8c0",
+      "sha256": "05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlWhtDropperGlTrim/05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8.front-on-1000x1100.webp",
+          "sha256": "05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8",
+          "url": "/images/plate-contact-sheets/05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+      "binding": "3c87f3bc2557ec76235f28f69223944584d871c8669b17282e12154c998fdbb0",
+      "sha256": "a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-amber-18-400/GBBstnAmb15mlWhtDropperSlTrim/a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8.front-on-1000x1100.webp",
+          "sha256": "a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8",
+          "url": "/images/plate-contact-sheets/a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkDropper",
+      "binding": "a64201be52ec298408cf775c981ca5056e45c8381fd337fdd4bd79f1f98890b0",
+      "sha256": "a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozBlkDropper/a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4.front-on-1000x1100.webp",
+          "sha256": "a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4",
+          "url": "/images/plate-contact-sheets/a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "binding": "46e6bf3e45315566d87a87afddf74b15767f69daed65fcb2b961231c551cac22",
+      "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp",
+          "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+          "url": "/images/plate-contact-sheets/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/8f07ee56d31ec00badd20a45c086c02b1e5b6a5dec9df8bd5a020080bac54a76.front-off-1000x1100.webp",
+          "sha256": "8f07ee56d31ec00badd20a45c086c02b1e5b6a5dec9df8bd5a020080bac54a76",
+          "url": "/images/plate-contact-sheets/8f07ee56d31ec00badd20a45c086c02b1e5b6a5dec9df8bd5a020080bac54a76.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattGl",
+      "binding": "190643a9a0f3bd4a59fd6b03c4a98263a625da7fb4725fdc0f87aa1c294a77dd",
+      "sha256": "a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattGl/a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d.front-on-1000x1100.webp",
+          "sha256": "a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d",
+          "url": "/images/plate-contact-sheets/a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattGl/2ed214ae8a641ffecba825363ca8de84c2c626fc8f0d0169e1dddbc39c80558d.front-off-1000x1100.webp",
+          "sha256": "2ed214ae8a641ffecba825363ca8de84c2c626fc8f0d0169e1dddbc39c80558d",
+          "url": "/images/plate-contact-sheets/2ed214ae8a641ffecba825363ca8de84c2c626fc8f0d0169e1dddbc39c80558d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "binding": "0480f7cacb4eb43678e6b110349d0f65d6c1c17b6cbf81edfb1f351d22050396",
+      "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattSl/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.front-on-1000x1100.webp",
+          "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+          "url": "/images/plate-contact-sheets/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattSl/4d4f4b8e8243cff8661e9b59d30d4a799327880bc495b0a8aed1efc3ebd12b84.front-off-1000x1100.webp",
+          "sha256": "4d4f4b8e8243cff8661e9b59d30d4a799327880bc495b0a8aed1efc3ebd12b84",
+          "url": "/images/plate-contact-sheets/4d4f4b8e8243cff8661e9b59d30d4a799327880bc495b0a8aed1efc3ebd12b84.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonShnBlk",
+      "binding": "db4e56d48bfa2e28dbd9ddf2f18adc0e542bff1f482880d396657da9cb3ee3ee",
+      "sha256": "6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonShnBlk/6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db.front-on-1000x1100.webp",
+          "sha256": "6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db",
+          "url": "/images/plate-contact-sheets/6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonShnBlk/0f8b3e4cd358070b37ff9b5b33a98b15a0269e0a8b09b26bcbd414271ea8633b.front-off-1000x1100.webp",
+          "sha256": "0f8b3e4cd358070b37ff9b5b33a98b15a0269e0a8b09b26bcbd414271ea8633b",
+          "url": "/images/plate-contact-sheets/0f8b3e4cd358070b37ff9b5b33a98b15a0269e0a8b09b26bcbd414271ea8633b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonGl",
+      "binding": "c53e03bea44663e24f3cc2c6596c601e907810257267fb183a94dce2be72f91a",
+      "sha256": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonGl/eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176.front-on-1000x1100.webp",
+          "sha256": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176",
+          "url": "/images/plate-contact-sheets/eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonGl/4322ed2e412996730527f703ba02fdc882df964f087c881285aa24d979ebcf91.front-off-1000x1100.webp",
+          "sha256": "4322ed2e412996730527f703ba02fdc882df964f087c881285aa24d979ebcf91",
+          "url": "/images/plate-contact-sheets/4322ed2e412996730527f703ba02fdc882df964f087c881285aa24d979ebcf91.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "binding": "df17c01a4cb84f46bddc35b32744981d3db1c6bdff9f2b5b31bf2dd084587682",
+      "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp",
+          "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+          "url": "/images/plate-contact-sheets/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattBlk/08e563e8bea279e76e163f35e6e450833af04ca2d1e90613cb2813a807451cbf.front-off-1000x1100.webp",
+          "sha256": "08e563e8bea279e76e163f35e6e450833af04ca2d1e90613cb2813a807451cbf",
+          "url": "/images/plate-contact-sheets/08e563e8bea279e76e163f35e6e450833af04ca2d1e90613cb2813a807451cbf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattGl",
+      "binding": "3ef0dfab2b1ef90d59b61f17b02a89cc369a863739d84e932d3d9880fc744017",
+      "sha256": "ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattGl/ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81.front-on-1000x1100.webp",
+          "sha256": "ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81",
+          "url": "/images/plate-contact-sheets/ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattGl/529869c298c1eefdfc89f859399f7a5744d521c25f74226726b5916acec5eabb.front-off-1000x1100.webp",
+          "sha256": "529869c298c1eefdfc89f859399f7a5744d521c25f74226726b5916acec5eabb",
+          "url": "/images/plate-contact-sheets/529869c298c1eefdfc89f859399f7a5744d521c25f74226726b5916acec5eabb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "binding": "cd71c9584b51c5c7b6397b8f2436aff50ce77bfc2a4bd55b43d745e5b42f64ef",
+      "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattSl/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.front-on-1000x1100.webp",
+          "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+          "url": "/images/plate-contact-sheets/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattSl/cd0c633fb653847ec382326186f384e488149fa0700875fc566a5b9d2afc0ad1.front-off-1000x1100.webp",
+          "sha256": "cd0c633fb653847ec382326186f384e488149fa0700875fc566a5b9d2afc0ad1",
+          "url": "/images/plate-contact-sheets/cd0c633fb653847ec382326186f384e488149fa0700875fc566a5b9d2afc0ad1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonShnBlk",
+      "binding": "8f186d1bab329e2d7178b19561151e229352e926183da77d6ea08d34ea7e3b59",
+      "sha256": "184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonShnBlk/184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17.front-on-1000x1100.webp",
+          "sha256": "184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17",
+          "url": "/images/plate-contact-sheets/184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonShnBlk/9c8c435a6ab889d875c01ab7eaab6e8b073c8c947b3c49f56bbecd062574c9a9.front-off-1000x1100.webp",
+          "sha256": "9c8c435a6ab889d875c01ab7eaab6e8b073c8c947b3c49f56bbecd062574c9a9",
+          "url": "/images/plate-contact-sheets/9c8c435a6ab889d875c01ab7eaab6e8b073c8c947b3c49f56bbecd062574c9a9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonShnSl",
+      "binding": "104bc5dbccb055059bb6bbb54d65dc375781c3d389bee28d7761068882ed4f38",
+      "sha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonShnSl/34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec.front-on-1000x1100.webp",
+          "sha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec",
+          "url": "/images/plate-contact-sheets/34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonShnSl/d9d15a1d39ec7546b3b0d88cb4c07d95a0ef0e17891d5bd93ca5602e22dc22ad.front-off-1000x1100.webp",
+          "sha256": "d9d15a1d39ec7546b3b0d88cb4c07d95a0ef0e17891d5bd93ca5602e22dc22ad",
+          "url": "/images/plate-contact-sheets/d9d15a1d39ec7546b3b0d88cb4c07d95a0ef0e17891d5bd93ca5602e22dc22ad.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDropper",
+      "binding": "d7760770582228163b23006cf039d307338689971db21be2dc9913c4ec4614c8",
+      "sha256": "f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozWhtDropper/f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2.front-on-1000x1100.webp",
+          "sha256": "f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2",
+          "url": "/images/plate-contact-sheets/f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+      "binding": "a5de4ade0cb2fde55e0af4e7973c984d53db136dea084a0c886f0b9213b99e88",
+      "sha256": "670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozWhtDropperShnGlTrim/670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03.front-on-1000x1100.webp",
+          "sha256": "670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03",
+          "url": "/images/plate-contact-sheets/670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+      "binding": "395a571c3e870f983af930e400761fd74be4815a5f4d06a490221470457978f1",
+      "sha256": "e232d5aab5ca083a917f13c204b2d9332eb7760b48e9bd55cb4ade52099cb8e3",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozBlkDropperShnGlTrim/e232d5aab5ca083a917f13c204b2d9332eb7760b48e9bd55cb4ade52099cb8e3.front-on-1000x1100.webp",
+          "sha256": "e232d5aab5ca083a917f13c204b2d9332eb7760b48e9bd55cb4ade52099cb8e3",
+          "url": "/images/plate-contact-sheets/e232d5aab5ca083a917f13c204b2d9332eb7760b48e9bd55cb4ade52099cb8e3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonGl",
+      "binding": "3ccf5a6beddec06a6bfb43f447796bee79cccbfbfe0b7b59e6f929576b8826b1",
+      "sha256": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonGl/b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d.front-on-1000x1100.webp",
+          "sha256": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d",
+          "url": "/images/plate-contact-sheets/b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonGl/193d91f24dad7e45ff615bc24a6b5239b65ee72b4ecdf7531d655d559ad60af4.front-off-1000x1100.webp",
+          "sha256": "193d91f24dad7e45ff615bc24a6b5239b65ee72b4ecdf7531d655d559ad60af4",
+          "url": "/images/plate-contact-sheets/193d91f24dad7e45ff615bc24a6b5239b65ee72b4ecdf7531d655d559ad60af4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattBlk",
+      "binding": "440a53fdd6574749a591201142893e9adfbcfd261eaf004f0894186cf2438187",
+      "sha256": "2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattBlk/2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608.front-on-1000x1100.webp",
+          "sha256": "2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608",
+          "url": "/images/plate-contact-sheets/2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattBlk/6dce1de5b7aacced34e6c87c4eec0535c8fde2c11e42236744abb836279093f1.front-off-1000x1100.webp",
+          "sha256": "6dce1de5b7aacced34e6c87c4eec0535c8fde2c11e42236744abb836279093f1",
+          "url": "/images/plate-contact-sheets/6dce1de5b7aacced34e6c87c4eec0535c8fde2c11e42236744abb836279093f1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattGl",
+      "binding": "0a73b0fd2414f65260f9cc87733a26035624019cd6c0f7050335ce09e70fbc77",
+      "sha256": "c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattGl/c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490.front-on-1000x1100.webp",
+          "sha256": "c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490",
+          "url": "/images/plate-contact-sheets/c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozMtlRollonMattGl/1b82d206568a50c9d715f7966375df81b6171b04487c676ec6d7005dc363e73a.front-off-1000x1100.webp",
+          "sha256": "1b82d206568a50c9d715f7966375df81b6171b04487c676ec6d7005dc363e73a",
+          "url": "/images/plate-contact-sheets/1b82d206568a50c9d715f7966375df81b6171b04487c676ec6d7005dc363e73a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattGl",
+      "binding": "adbc026b198e5729c398c662223f5ea5ddea4548bf081a2f0650e0869ce9a93c",
+      "sha256": "ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattGl/ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3.front-on-1000x1100.webp",
+          "sha256": "ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3",
+          "url": "/images/plate-contact-sheets/ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattGl/d3ea6343b6ffd281ad25444ec5550416d7352a2d09cf9ad45cb8e95c49a5ec35.front-off-1000x1100.webp",
+          "sha256": "d3ea6343b6ffd281ad25444ec5550416d7352a2d09cf9ad45cb8e95c49a5ec35",
+          "url": "/images/plate-contact-sheets/d3ea6343b6ffd281ad25444ec5550416d7352a2d09cf9ad45cb8e95c49a5ec35.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattSl",
+      "binding": "2f6a52c7c78ee02970263e3c18af6214b67e81030ac5e22072d28d4984933d5c",
+      "sha256": "4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattSl/4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d.front-on-1000x1100.webp",
+          "sha256": "4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d",
+          "url": "/images/plate-contact-sheets/4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonMattSl/de170618634570dcaf85307e46fa31a75eac5fc36ef674cdf25acd3e31a0d872.front-off-1000x1100.webp",
+          "sha256": "de170618634570dcaf85307e46fa31a75eac5fc36ef674cdf25acd3e31a0d872",
+          "url": "/images/plate-contact-sheets/de170618634570dcaf85307e46fa31a75eac5fc36ef674cdf25acd3e31a0d872.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonShnSl",
+      "binding": "eb2037c50bd9ebf14e98e808fb29c1bfe3854a63db4c3db9572bd93b9625f034",
+      "sha256": "2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonShnSl/2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1.front-on-1000x1100.webp",
+          "sha256": "2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1",
+          "url": "/images/plate-contact-sheets/2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozRollonShnSl/24e4fe16479c7770dc8b6ee698ff43195f4c2e3e5ff49bf0cd597f889c24969f.front-off-1000x1100.webp",
+          "sha256": "24e4fe16479c7770dc8b6ee698ff43195f4c2e3e5ff49bf0cd597f889c24969f",
+          "url": "/images/plate-contact-sheets/24e4fe16479c7770dc8b6ee698ff43195f4c2e3e5ff49bf0cd597f889c24969f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+      "binding": "a9097044ab7bf2ecef77b72db0edf77ba3c1bfdbc206e633e71fcc4ac81388c9",
+      "sha256": "2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozWhtDropperShnGlTrim/2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6.front-on-1000x1100.webp",
+          "sha256": "2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6",
+          "url": "/images/plate-contact-sheets/2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+      "binding": "dfd69ff08a71ae43a57467493dc21c0e81d723f5cd3395aebfba3540f196336f",
+      "sha256": "bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-amber-20-400/GBBstnAmb2ozWhtDropperShnSlTrim/bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079.front-on-1000x1100.webp",
+          "sha256": "bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079",
+          "url": "/images/plate-contact-sheets/bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+      "binding": "036e14cf54ab7f1e542345b8593d0894f7aae6365bab341690a6d4010ca61513",
+      "sha256": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-15ml-cobalt-blue-18-400/GBBstnBlu15mlBlkDropperSlTrim/5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c.front-on-1000x1100.webp",
+          "sha256": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c",
+          "url": "/images/plate-contact-sheets/5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu1ozBlkDropper",
+      "binding": "f812d6b0a431e7d0fb866d71479ba1955bd69226f41f42df2fe3e9d0818ffdd3",
+      "sha256": "a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozBlkDropper/a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d.front-on-1000x1100.webp",
+          "sha256": "a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d",
+          "url": "/images/plate-contact-sheets/a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "binding": "619964066c308bb54d2a6924fce2121d578ce04ff58ea85e2f0603dc0117a182",
+      "sha256": "9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozBlkDropperShnGlTrim/9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea.front-on-1000x1100.webp",
+          "sha256": "9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea",
+          "url": "/images/plate-contact-sheets/9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonMattBlk",
+      "binding": "df44ebb235b63e9ac732dd1709e82863a41178dc909e6fa96805754322836138",
+      "sha256": "4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattBlk/4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e.front-on-1000x1100.webp",
+          "sha256": "4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e",
+          "url": "/images/plate-contact-sheets/4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattBlk/3dfc97c4ec92c348c951c7a5eb36732bc163cb0b683f9cb19a97593591208f4b.front-off-1000x1100.webp",
+          "sha256": "3dfc97c4ec92c348c951c7a5eb36732bc163cb0b683f9cb19a97593591208f4b",
+          "url": "/images/plate-contact-sheets/3dfc97c4ec92c348c951c7a5eb36732bc163cb0b683f9cb19a97593591208f4b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonMattGl",
+      "binding": "e4fdd579460e7e6a795c879e85a57759b74628be588163eb94604ab9026c779c",
+      "sha256": "4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattGl/4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef.front-on-1000x1100.webp",
+          "sha256": "4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef",
+          "url": "/images/plate-contact-sheets/4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozMtlRollonMattGl/951945ee983a12021bb8f09543c4f92c3b28edbc3d5535bdd0929945b84d96f3.front-off-1000x1100.webp",
+          "sha256": "951945ee983a12021bb8f09543c4f92c3b28edbc3d5535bdd0929945b84d96f3",
+          "url": "/images/plate-contact-sheets/951945ee983a12021bb8f09543c4f92c3b28edbc3d5535bdd0929945b84d96f3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonGl",
+      "binding": "eb9e93892c405b54352c3be56897077fca1481f4305e228f53dcdcd492c8159d",
+      "sha256": "b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonGl/b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466.front-on-1000x1100.webp",
+          "sha256": "b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466",
+          "url": "/images/plate-contact-sheets/b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonGl/6c1e7bb7d85aaf6fcdc1fc5c05810d9bc320b7b8b091e7828a12e6c2d6e0c13a.front-off-1000x1100.webp",
+          "sha256": "6c1e7bb7d85aaf6fcdc1fc5c05810d9bc320b7b8b091e7828a12e6c2d6e0c13a",
+          "url": "/images/plate-contact-sheets/6c1e7bb7d85aaf6fcdc1fc5c05810d9bc320b7b8b091e7828a12e6c2d6e0c13a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonShnBlk",
+      "binding": "2d8c45410f078f3b415554d440c3f8cc8aef31e3200d0826db5affb0a4a58c51",
+      "sha256": "2ec2df24211a89f4d516f16784c1c6f7dae3ebd74883576106d2c437392332ba",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonShnBlk/2ec2df24211a89f4d516f16784c1c6f7dae3ebd74883576106d2c437392332ba.front-on-1000x1100.webp",
+          "sha256": "2ec2df24211a89f4d516f16784c1c6f7dae3ebd74883576106d2c437392332ba",
+          "url": "/images/plate-contact-sheets/2ec2df24211a89f4d516f16784c1c6f7dae3ebd74883576106d2c437392332ba.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonShnBlk/e175c98195b1830d0907c6f4736333d5e92e043a886a8655db8848abfb9f1f03.front-off-1000x1100.webp",
+          "sha256": "e175c98195b1830d0907c6f4736333d5e92e043a886a8655db8848abfb9f1f03",
+          "url": "/images/plate-contact-sheets/e175c98195b1830d0907c6f4736333d5e92e043a886a8655db8848abfb9f1f03.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonShnSl",
+      "binding": "77848759ac6bb05455b445da441653e8dad27b769c12d08742a3fb1c7077e591",
+      "sha256": "7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonShnSl/7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8.front-on-1000x1100.webp",
+          "sha256": "7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8",
+          "url": "/images/plate-contact-sheets/7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozRollonShnSl/e569d56cc73d48469ed105db02674f4492c1e4a5fda9eede7ecfa08c0c9f49e9.front-off-1000x1100.webp",
+          "sha256": "e569d56cc73d48469ed105db02674f4492c1e4a5fda9eede7ecfa08c0c9f49e9",
+          "url": "/images/plate-contact-sheets/e569d56cc73d48469ed105db02674f4492c1e4a5fda9eede7ecfa08c0c9f49e9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu1ozWhtDropper",
+      "binding": "e31defdc47880073ebbcda58dbfc01f43cc992a535ba8c49b0445f8e4f265b6e",
+      "sha256": "0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozWhtDropper/0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d.front-on-1000x1100.webp",
+          "sha256": "0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d",
+          "url": "/images/plate-contact-sheets/0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+      "binding": "7074351a775ec178f6a12921e2d02e8bd81e4292727dc3d306e71a4221f8cce4",
+      "sha256": "d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozWhtDropperShnGlTrim/d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1.front-on-1000x1100.webp",
+          "sha256": "d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1",
+          "url": "/images/plate-contact-sheets/d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+      "binding": "9070520734cb94a1f1ab10ee7f7271e8fdf1a29e9116e67dc1c43e67eeacd87e",
+      "sha256": "83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-cobalt-blue-20-400/GBBstnBlu1ozWhtDropperShnSlTrim/83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46.front-on-1000x1100.webp",
+          "sha256": "83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46",
+          "url": "/images/plate-contact-sheets/83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozBlkDropper",
+      "binding": "886341fad12cb101d8607d6b049a7cd8ebc76e9acf125da285b3d4c54e3a2dd4",
+      "sha256": "a018ae15d225c01c4215f34822690a2093972ea9b2d88e1f923f337a5794f632",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozBlkDropper/a018ae15d225c01c4215f34822690a2093972ea9b2d88e1f923f337a5794f632.front-on-1000x1100.webp",
+          "sha256": "a018ae15d225c01c4215f34822690a2093972ea9b2d88e1f923f337a5794f632",
+          "url": "/images/plate-contact-sheets/a018ae15d225c01c4215f34822690a2093972ea9b2d88e1f923f337a5794f632.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "binding": "039d26c80ef52762c30bfa52e45f2b2d4c59c816371328324616f56fa5312fba",
+      "sha256": "7aa2489da1ed54c9df7d4432bb41851785d76a627ee57d093e8502b6f0d4d6ec",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozBlkDropperShnGlTrim/7aa2489da1ed54c9df7d4432bb41851785d76a627ee57d093e8502b6f0d4d6ec.front-on-1000x1100.webp",
+          "sha256": "7aa2489da1ed54c9df7d4432bb41851785d76a627ee57d093e8502b6f0d4d6ec",
+          "url": "/images/plate-contact-sheets/7aa2489da1ed54c9df7d4432bb41851785d76a627ee57d093e8502b6f0d4d6ec.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonGl",
+      "binding": "04e205e6009d7ce9a8a1e8ce64e26a2b71a54e7ce1d03abfe843f4fd35da3f56",
+      "sha256": "0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonGl/0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d.front-on-1000x1100.webp",
+          "sha256": "0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d",
+          "url": "/images/plate-contact-sheets/0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonGl/b7f6735b99ac45d58dbc2f02b46180ebcaa0986fb551b881dd7ecbbcc3046d75.front-off-1000x1100.webp",
+          "sha256": "b7f6735b99ac45d58dbc2f02b46180ebcaa0986fb551b881dd7ecbbcc3046d75",
+          "url": "/images/plate-contact-sheets/b7f6735b99ac45d58dbc2f02b46180ebcaa0986fb551b881dd7ecbbcc3046d75.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonMattBlk",
+      "binding": "2f60fa800a13b9ad73bca71ead11538649ff76d54346846a006605dfe2b23ebc",
+      "sha256": "f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattBlk/f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586.front-on-1000x1100.webp",
+          "sha256": "f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586",
+          "url": "/images/plate-contact-sheets/f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattBlk/4ee8bb758470cf5621b5c1df29449f6e863118c2d4c6605f1c9d1ae297b2d744.front-off-1000x1100.webp",
+          "sha256": "4ee8bb758470cf5621b5c1df29449f6e863118c2d4c6605f1c9d1ae297b2d744",
+          "url": "/images/plate-contact-sheets/4ee8bb758470cf5621b5c1df29449f6e863118c2d4c6605f1c9d1ae297b2d744.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonMattGl",
+      "binding": "f1fb3af2ad1cc71afc533e057713943a85a9edc11c2852b32f40c94c091cd596",
+      "sha256": "d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattGl/d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda.front-on-1000x1100.webp",
+          "sha256": "d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda",
+          "url": "/images/plate-contact-sheets/d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattGl/0e884b0690fd7e72b3195cd1fb661a7104341e50c8c08f81fa6cdc6679fc6228.front-off-1000x1100.webp",
+          "sha256": "0e884b0690fd7e72b3195cd1fb661a7104341e50c8c08f81fa6cdc6679fc6228",
+          "url": "/images/plate-contact-sheets/0e884b0690fd7e72b3195cd1fb661a7104341e50c8c08f81fa6cdc6679fc6228.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonMattSl",
+      "binding": "2176527ab8bd8ab4a1a0fd8e4af351fe9a3adebae1b4fc9972a6cd713865459f",
+      "sha256": "beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattSl/beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06.front-on-1000x1100.webp",
+          "sha256": "beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06",
+          "url": "/images/plate-contact-sheets/beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonMattSl/a5eaac58cc3fa8db8ae23afdf95dc1bf4ea1976cdb5c3ccd04d3ab81ea02906b.front-off-1000x1100.webp",
+          "sha256": "a5eaac58cc3fa8db8ae23afdf95dc1bf4ea1976cdb5c3ccd04d3ab81ea02906b",
+          "url": "/images/plate-contact-sheets/a5eaac58cc3fa8db8ae23afdf95dc1bf4ea1976cdb5c3ccd04d3ab81ea02906b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonShnSl",
+      "binding": "7cfedd07967a844e8abe7b397c40bc6c27a37202bb9432e161e694c5c46c6a7c",
+      "sha256": "be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonShnSl/be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f.front-on-1000x1100.webp",
+          "sha256": "be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f",
+          "url": "/images/plate-contact-sheets/be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozMtlRollonShnSl/968436bc636d2c9b0acd51595c9b8248663a9af06695cf1b015486b12fc68dab.front-off-1000x1100.webp",
+          "sha256": "968436bc636d2c9b0acd51595c9b8248663a9af06695cf1b015486b12fc68dab",
+          "url": "/images/plate-contact-sheets/968436bc636d2c9b0acd51595c9b8248663a9af06695cf1b015486b12fc68dab.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonGl",
+      "binding": "ea7a70211779e6064a6eba9344f57f07f07b3728041b2c55dbbb261e1c59165f",
+      "sha256": "adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonGl/adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384.front-on-1000x1100.webp",
+          "sha256": "adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384",
+          "url": "/images/plate-contact-sheets/adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonGl/6110d571a1d2ae8381e2060de3d869c06ce59b0f9b26a2feeebd3e8254880afb.front-off-1000x1100.webp",
+          "sha256": "6110d571a1d2ae8381e2060de3d869c06ce59b0f9b26a2feeebd3e8254880afb",
+          "url": "/images/plate-contact-sheets/6110d571a1d2ae8381e2060de3d869c06ce59b0f9b26a2feeebd3e8254880afb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattBlk",
+      "binding": "c1f170bc40854da6bf600606b304c4d4f2e187a98d038e49941e5d151d24e62c",
+      "sha256": "f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattBlk/f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6.front-on-1000x1100.webp",
+          "sha256": "f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6",
+          "url": "/images/plate-contact-sheets/f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattBlk/1c2f36f2d0d5ac20299c9698c087f77e65396b686d71f146c42bfad68b58f4f5.front-off-1000x1100.webp",
+          "sha256": "1c2f36f2d0d5ac20299c9698c087f77e65396b686d71f146c42bfad68b58f4f5",
+          "url": "/images/plate-contact-sheets/1c2f36f2d0d5ac20299c9698c087f77e65396b686d71f146c42bfad68b58f4f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattGl",
+      "binding": "b7b1a324f9ed8d993442b90f920d2b3ee3e57ce3c1df67000495e6b14d02ffd1",
+      "sha256": "34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattGl/34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186.front-on-1000x1100.webp",
+          "sha256": "34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186",
+          "url": "/images/plate-contact-sheets/34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattGl/b8534433f472f3f7ec6f82ab771c0305060c8f33960f1b4934c852edf07585c6.front-off-1000x1100.webp",
+          "sha256": "b8534433f472f3f7ec6f82ab771c0305060c8f33960f1b4934c852edf07585c6",
+          "url": "/images/plate-contact-sheets/b8534433f472f3f7ec6f82ab771c0305060c8f33960f1b4934c852edf07585c6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattSl",
+      "binding": "3dd08c7dc914f869aaa94ebe4c4045a4aab0b83b344b9784c8551fe62de25a4f",
+      "sha256": "84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattSl/84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc.front-on-1000x1100.webp",
+          "sha256": "84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc",
+          "url": "/images/plate-contact-sheets/84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonMattSl/27c7d674a03fa0453dc91e2bb1ae9aa77f57c15575e5e09af30f428f9a84c9b0.front-off-1000x1100.webp",
+          "sha256": "27c7d674a03fa0453dc91e2bb1ae9aa77f57c15575e5e09af30f428f9a84c9b0",
+          "url": "/images/plate-contact-sheets/27c7d674a03fa0453dc91e2bb1ae9aa77f57c15575e5e09af30f428f9a84c9b0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonShnBlk",
+      "binding": "2ec229d82609735b21fd9dc3c1b660a1a141d62fde455f63fc3c1a3af462206b",
+      "sha256": "4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonShnBlk/4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c.front-on-1000x1100.webp",
+          "sha256": "4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c",
+          "url": "/images/plate-contact-sheets/4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonShnBlk/26f03924f7f40f0f46f7cf5f1e8d4ae84890d7bbd82102c91f765f08a949398c.front-off-1000x1100.webp",
+          "sha256": "26f03924f7f40f0f46f7cf5f1e8d4ae84890d7bbd82102c91f765f08a949398c",
+          "url": "/images/plate-contact-sheets/26f03924f7f40f0f46f7cf5f1e8d4ae84890d7bbd82102c91f765f08a949398c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonShnSl",
+      "binding": "6db4318b8b7ac7a19fb54590bea25e920425a0a87166f4aba3e17bea4d6517a3",
+      "sha256": "a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonShnSl/a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d.front-on-1000x1100.webp",
+          "sha256": "a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d",
+          "url": "/images/plate-contact-sheets/a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozRollonShnSl/ac8b1bd4ce33774abd9b35da00bbf6ff0d9dec0143131ce6c21a79cf78263226.front-off-1000x1100.webp",
+          "sha256": "ac8b1bd4ce33774abd9b35da00bbf6ff0d9dec0143131ce6c21a79cf78263226",
+          "url": "/images/plate-contact-sheets/ac8b1bd4ce33774abd9b35da00bbf6ff0d9dec0143131ce6c21a79cf78263226.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozWhtDropper",
+      "binding": "a074fad16cbb2f5311f8deccecb22988943703e86f66c949939b2614b9bb48dc",
+      "sha256": "ed37984df5fa1fbc4dc141fcbe570765c68ba6efa9773fd5d492247e4d4d1ce5",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozWhtDropper/ed37984df5fa1fbc4dc141fcbe570765c68ba6efa9773fd5d492247e4d4d1ce5.front-on-1000x1100.webp",
+          "sha256": "ed37984df5fa1fbc4dc141fcbe570765c68ba6efa9773fd5d492247e4d4d1ce5",
+          "url": "/images/plate-contact-sheets/ed37984df5fa1fbc4dc141fcbe570765c68ba6efa9773fd5d492247e4d4d1ce5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozWhtDropperShnGlTrim",
+      "binding": "625d26f255e59ab006a56f8066039317e87b29b70bf8623ccef6189c84876f4e",
+      "sha256": "fd08d80563c735587794f50b05966159fb4f1fb46f35b8ec1af315c56301c3a0",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozWhtDropperShnGlTrim/fd08d80563c735587794f50b05966159fb4f1fb46f35b8ec1af315c56301c3a0.front-on-1000x1100.webp",
+          "sha256": "fd08d80563c735587794f50b05966159fb4f1fb46f35b8ec1af315c56301c3a0",
+          "url": "/images/plate-contact-sheets/fd08d80563c735587794f50b05966159fb4f1fb46f35b8ec1af315c56301c3a0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBBstnBlu2ozWhtDropperShnSlTrim",
+      "binding": "1b0bf7198113c16d5fe6980c6f568523ffbd9726fb61cb125df00e37e2dcf8c6",
+      "sha256": "2cac833430ce93b2ffeb756bc45662ceb8fbe71181a0461c127199be89e9c9fd",
+      "status": "approved",
+      "notes": "",
+      "updatedAt": "2026-09-13T01:07:31.760Z",
+      "batchId": "c70831f8-32a0-4edb-b2fe-b23f8e9d574a",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-60ml-cobalt-blue-20-400/GBBstnBlu2ozWhtDropperShnSlTrim/2cac833430ce93b2ffeb756bc45662ceb8fbe71181a0461c127199be89e9c9fd.front-on-1000x1100.webp",
+          "sha256": "2cac833430ce93b2ffeb756bc45662ceb8fbe71181a0461c127199be89e9c9fd",
+          "url": "/images/plate-contact-sheets/2cac833430ce93b2ffeb756bc45662ceb8fbe71181a0461c127199be89e9c9fd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}

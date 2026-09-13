@@ -1,0 +1,25 @@
+{
+  "http": 200,
+  "rows": 123,
+  "imagesLoaded": 142,
+  "viewsUnchanged": true,
+  "mobileOverflow": false,
+  "errors": [],
+  "approvalRequestIntercepted": true,
+  "approvalWrites": 0,
+  "batchPayload": {
+    "approved": 6,
+    "exceptions": 1
+  },
+  "checks": [
+    "whole family visible",
+    "15 mL filter",
+    "approval disabled before acknowledgment",
+    "exception removes only one eligible plate",
+    "cap-on/cap-off enlargement",
+    "Escape closes enlargement",
+    "atomic mixed batch payload",
+    "server error displayed",
+    "mobile layout"
+  ]
+}

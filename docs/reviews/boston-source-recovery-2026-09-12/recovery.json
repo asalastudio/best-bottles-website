@@ -1,0 +1,2564 @@
+{
+  "schemaVersion": 1,
+  "family": "Boston Round",
+  "generatedAt": "2026-09-13T01:13:29.432690+00:00",
+  "masterRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+  "masterFilesSearched": 5934,
+  "scope": "33 currently unplated catalog SKUs; candidate recovery only.",
+  "rows": [
+    {
+      "sku": "GBBstn1ozRollonMattBlk",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-MBLK",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn1ozRollMattBlk.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonMattBlk",
+          "sha256": "167527c0b0650a7c8c78c9141cb59b62ebc3add96bbcecb3961cdaa75b8d7563",
+          "url": "/images/boston-source-recovery/167527c0b0650a7c8c78c9141cb59b62ebc3add96bbcecb3961cdaa75b8d7563.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn1ozRollMattBlk.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonMattBlk",
+          "sha256": "509ba2df0871dc8d173229c5f4d8fc6f807dd70e0670c63ec2d595255b6dd5d6",
+          "url": "/images/boston-source-recovery/509ba2df0871dc8d173229c5f4d8fc6f807dd70e0670c63ec2d595255b6dd5d6.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/8. GBBstn1ozRollMattBlk.psd",
+          "sourceSha256": "2c91570ac025f4a938cba08b7a31b6d01ed631c9154587f8e77f376385966a95",
+          "url": "/images/boston-source-recovery/2c91570ac025f4a938cba08b7a31b6d01ed631c9154587f8e77f376385966a95.png",
+          "sha256": "87ace723b99efe733e39393f84e6b1c744989c1f26254e733e985c1a54cce5e7",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 29",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/8. GBBstn1ozRollMattBlk.psd",
+          "sourceSha256": "70f99c21a8fe157504a27b05350fb56b9be1267dba4041da2be7e788ad64fd9b",
+          "url": "/images/boston-source-recovery/70f99c21a8fe157504a27b05350fb56b9be1267dba4041da2be7e788ad64fd9b.png",
+          "sha256": "528d220a581c272172b4c1f5a4a88fe12264c882662f94682a9ad6f96d6e2447",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 24",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 33",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 34",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-1-oz-clear-glass-bottle-plastic-roller-ball-matte-black-cap",
+      "evidenceSha256": "c51fb19710ea28943809d3417c61e6b66e23c5c9775fa558d6de589082461eb3",
+      "retrievedAt": "2026-09-13T01:10:43.754Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn1ozRollonMattGl",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-MGLD",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn1ozRollMattGl.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonMattGl",
+          "sha256": "43c93e145b4997ad524b65d9428c4c8463ffcb71b520b5003c43c76208054e87",
+          "url": "/images/boston-source-recovery/43c93e145b4997ad524b65d9428c4c8463ffcb71b520b5003c43c76208054e87.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn1ozRollMattGl.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonMattGl",
+          "sha256": "2884beb561ebc383c478bbf6e90abd63be511b6261958f3b6513029deaa76385",
+          "url": "/images/boston-source-recovery/2884beb561ebc383c478bbf6e90abd63be511b6261958f3b6513029deaa76385.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/10. GBBstn1ozRollMattGl.psd",
+          "sourceSha256": "461d348bab429d087f2ed62f985ef6d840ed0b0028c60dbbfb9232cea9b83160",
+          "url": "/images/boston-source-recovery/461d348bab429d087f2ed62f985ef6d840ed0b0028c60dbbfb9232cea9b83160.png",
+          "sha256": "69fc7fcbdb859cf416bda3db221e829ef30dc4f87d616d6acffde7ec52f9c161",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 30",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/10. GBBstn1ozRollMattGl.psd",
+          "sourceSha256": "0c38b55299f839b238870433cae90771f22bc7823170292d2beb6f11a98f2983",
+          "url": "/images/boston-source-recovery/0c38b55299f839b238870433cae90771f22bc7823170292d2beb6f11a98f2983.png",
+          "sha256": "f97a063bcec9c7fe9065498d9d0799680268bccd7e26f608d54093b43f6c669b",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 33",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 35",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-1-oz-clear-glass-bottle-plastic-roller-ball-matte-gold-cap",
+      "evidenceSha256": "4f3e39cdba389f3c0c4e8512e4d14108730bdf9bb88e886d37fe13aacbd7ac54",
+      "retrievedAt": "2026-09-13T01:10:46.746Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn1ozRollonMattSl",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-MSLV",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn1ozRollMattSl.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonMattSl",
+          "sha256": "7017bb1f87fa4b41f073595c713468544059523c07a9a6e693206624090ec06b",
+          "url": "/images/boston-source-recovery/7017bb1f87fa4b41f073595c713468544059523c07a9a6e693206624090ec06b.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn1ozRollMattSl.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonMattSl",
+          "sha256": "0c9006de16b8a84f9e37ce21e619ccfdd709bf9914ce3fb13330ba595dfd35e5",
+          "url": "/images/boston-source-recovery/0c9006de16b8a84f9e37ce21e619ccfdd709bf9914ce3fb13330ba595dfd35e5.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/6. GBBstn1ozRollMattSl.psd",
+          "sourceSha256": "59e291a10a6ff5d8114f0dfa5b79a8cafed5d41954e141bd45cc6eb971fe17d7",
+          "url": "/images/boston-source-recovery/59e291a10a6ff5d8114f0dfa5b79a8cafed5d41954e141bd45cc6eb971fe17d7.png",
+          "sha256": "3c5f48e8f1673400f082a147e55fcc51848512c1523d83c4afb2adbdc7ee4201",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 26",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/6. GBBstn1ozRollMattSl.psd",
+          "sourceSha256": "d04041cb7ef135350995b4773640f516f42224dd93d02c307f6c609cf6a76609",
+          "url": "/images/boston-source-recovery/d04041cb7ef135350995b4773640f516f42224dd93d02c307f6c609cf6a76609.png",
+          "sha256": "b63fc411e8d909be926c991ce3b9e42a479616a7b8ccc9383bdea778199b9bb7",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 30",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 31",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-1-oz-clear-glass-bottle-plastic-roller-ball-matte-silver-cap",
+      "evidenceSha256": "d21feb3910e9b9faeb95c73c603654dca072b90d40d0ecb1fd3720fe933b84f2",
+      "retrievedAt": "2026-09-13T01:10:54.880Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn1ozRollonShBlk",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-SBLK",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn1ozRollShBlk.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonShBlk",
+          "sha256": "fadf4814c2da2cf1df91b0cd08a14fab2c97d9c9f843f5d7563e4273443e89c5",
+          "url": "/images/boston-source-recovery/fadf4814c2da2cf1df91b0cd08a14fab2c97d9c9f843f5d7563e4273443e89c5.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn1ozRollShBlk.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonShBlk",
+          "sha256": "41dfba0b645a8553bc37da51e3efb76eb73db6cf0f58b412dc6025d82d7afa58",
+          "url": "/images/boston-source-recovery/41dfba0b645a8553bc37da51e3efb76eb73db6cf0f58b412dc6025d82d7afa58.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/19. GBBstn1ozRollShBlk.psd",
+          "sourceSha256": "3eb8328785fefa535abb13a48b88eeb40b0c53c0b849d698f08e717aa8eee171",
+          "url": "/images/boston-source-recovery/3eb8328785fefa535abb13a48b88eeb40b0c53c0b849d698f08e717aa8eee171.png",
+          "sha256": "d7d00c8c68581a53cfa367dba4439be56f6d86d9d4e159231b8d6b2316033f26",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 35",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/19. GBBstn1ozRollShBlk.psd",
+          "sourceSha256": "8f9a1f4c9260ef8720f0ed2525f2148f7f63ee757a747052497974b0df211ad8",
+          "url": "/images/boston-source-recovery/8f9a1f4c9260ef8720f0ed2525f2148f7f63ee757a747052497974b0df211ad8.png",
+          "sha256": "0b839dd4cc7468f3c8a2bf3292c93330eb832ddbbb7ffac19d448a7f5bcad7e1",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 24",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 33",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 34",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-1-oz-clear-glass-bottle-plastic-roller-ball-shiny-black-cap",
+      "evidenceSha256": "be9dccc7ed6e18de88f35a85386b251d2c5a33c13de4a2a46a8cc0b4f224950d",
+      "retrievedAt": "2026-09-13T01:10:50.059Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn1ozRollonShGl",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-SGLD",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn1ozRollShGl.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonShGl",
+          "sha256": "4d483b2a233ace7dc1e63f67b4fc218247b1047b12c01e0bedd2aaefe7d8bff5",
+          "url": "/images/boston-source-recovery/4d483b2a233ace7dc1e63f67b4fc218247b1047b12c01e0bedd2aaefe7d8bff5.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn1ozRollShGl.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonShGl",
+          "sha256": "860697b59119170b33c27d79fc636485b39b97f9bc356601e6e6d98e0a1040bf",
+          "url": "/images/boston-source-recovery/860697b59119170b33c27d79fc636485b39b97f9bc356601e6e6d98e0a1040bf.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/9. GBBstn1ozRollShGl.psd",
+          "sourceSha256": "77fcf7e30fd3e667bcb1860c61822fe39ab400f564a08b6ac6866956e460a9c7",
+          "url": "/images/boston-source-recovery/77fcf7e30fd3e667bcb1860c61822fe39ab400f564a08b6ac6866956e460a9c7.png",
+          "sha256": "f6e9cb0eb2d745f1bd100246574057eddc08b933b5212ac46a5c830248c24806",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 29",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/9. GBBstn1ozRollShGl.psd",
+          "sourceSha256": "85d4f6c65b67ba4311242b169919e3eea51922c25284b9c07beaeadbe90e313c",
+          "url": "/images/boston-source-recovery/85d4f6c65b67ba4311242b169919e3eea51922c25284b9c07beaeadbe90e313c.png",
+          "sha256": "b69ebf68c2cabd567469ca0cd5e832c0b82a5f83980cf8c4fbadff3bd4ef0b5f",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 33",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 34",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-1-oz-clear-glass-bottle-plastic-roller-ball-shiny-gold-cap",
+      "evidenceSha256": "e9d86b982d73769600651a0bb44b48133be5c24584f110db7f607c051874cd56",
+      "retrievedAt": "2026-09-13T01:11:03.712Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn1ozRollonShnSl",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-SSLV",
+      "productGroupId": "kh7beaghvaf5dggxbjxy0xe17n8dp7kv",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn1ozRollShnSl.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonShnSl",
+          "sha256": "5164773ffd98a2b770f38bf0bb4275800b8177692b083e79b434cd689427576a",
+          "url": "/images/boston-source-recovery/5164773ffd98a2b770f38bf0bb4275800b8177692b083e79b434cd689427576a.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn1ozRollShnSl.gif",
+          "linkedFromExactSku": "GBBstn1ozRollonShnSl",
+          "sha256": "ae0eb45f1f2d78dd2ec06f85b4bf9bfb7f0840f9e9f64fd0eca9637c3c153ac0",
+          "url": "/images/boston-source-recovery/ae0eb45f1f2d78dd2ec06f85b4bf9bfb7f0840f9e9f64fd0eca9637c3c153ac0.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/7. GBBstn1ozRollShnSl.psd",
+          "sourceSha256": "c284917fd07f5cf47196a2f76f1a342f9fd3ee03878719f05b60dee7a14b3471",
+          "url": "/images/boston-source-recovery/c284917fd07f5cf47196a2f76f1a342f9fd3ee03878719f05b60dee7a14b3471.png",
+          "sha256": "9245deb2ecd4849cb68e1d78067cc21e13f0841c0113cd9c1056d2db70cdc5d0",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 27",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/7. GBBstn1ozRollShnSl.psd",
+          "sourceSha256": "76c3bddf15a2ac16a079797f454fd8f536cc3f7b78d9c02bc4627f1d7b6a2be0",
+          "url": "/images/boston-source-recovery/76c3bddf15a2ac16a079797f454fd8f536cc3f7b78d9c02bc4627f1d7b6a2be0.png",
+          "sha256": "82a2eaae3dedb17f04bdfd942e916a7c0f676671d29d537c09121887b4f178fa",
+          "width": 975,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 22",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 32",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 31",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-1-oz-clear-glass-bottle-plastic-roller-ball-shiny-silver-cap",
+      "evidenceSha256": "b5479c1042184751c8a2cb4351fd62565ea6585d0bac14f8653c98fc0012b34f",
+      "retrievedAt": "2026-09-13T01:11:12.456Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn2ozBlkDrpr",
+      "graceSku": "GB-BSR-CLR-60ML-BLK-T-01",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozBlkDrp.gif",
+          "linkedFromExactSku": "GBBstn2ozBlkDrpr",
+          "sha256": "d2def23daf52e318258ef82d0b42f2318b5056122a252fb4b915f0b959e8c27f",
+          "url": "/images/boston-source-recovery/d2def23daf52e318258ef82d0b42f2318b5056122a252fb4b915f0b959e8c27f.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozBlkDrp.gif",
+          "linkedFromExactSku": "GBBstn2ozBlkDrpr",
+          "sha256": "066e839e7c0b07aeaa80c9a7160e5da45ccc97ab57cff242c75e364c90f54895",
+          "url": "/images/boston-source-recovery/066e839e7c0b07aeaa80c9a7160e5da45ccc97ab57cff242c75e364c90f54895.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/16. GBBstn2ozBlkDrp.psd",
+          "sourceSha256": "3a2745c8fe28b918765010810c9ef362964b157478d94a13eb2bc7b59dfe5bc8",
+          "url": "/images/boston-source-recovery/3a2745c8fe28b918765010810c9ef362964b157478d94a13eb2bc7b59dfe5bc8.png",
+          "sha256": "c4fc03484a4a0eaaabf921f7a9cca708848186050bcbc69551555799ad3617e8",
+          "width": 600,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "'",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-black-dropper",
+      "evidenceSha256": "d89bc0d431679c3b3ad0c3a41f19021358b563ae1027f0be73411204f19f2c72",
+      "retrievedAt": "2026-09-13T01:10:57.914Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstn2ozBlkDrprShnGlTrim",
+      "graceSku": "GB-BSR-CLR-60ML-BLK-T-02",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 2 ounce clear glass bottle and black dropper with a shiny gold trim cap, price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozBlkDropperShnGlTrim.gif",
+          "linkedFromExactSku": "GBBstn2ozBlkDrprShnGlTrim",
+          "sha256": "07b81371b3cd99e79d4b75f09d6f209021d152a3e38e2daeb5954f51e43908be",
+          "url": "/images/boston-source-recovery/07b81371b3cd99e79d4b75f09d6f209021d152a3e38e2daeb5954f51e43908be.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozBlkDropperShnGlTrim.gif",
+          "linkedFromExactSku": "GBBstn2ozBlkDrprShnGlTrim",
+          "sha256": "03bf0659d8db5ed32f5b7bbb11968ea5bdfb054ae3ff52ca7eb24928f07d4822",
+          "url": "/images/boston-source-recovery/03bf0659d8db5ed32f5b7bbb11968ea5bdfb054ae3ff52ca7eb24928f07d4822.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/12. GBBstn2ozBlkDropperShnGlTrim.psd",
+          "sourceSha256": "8d36d157fbda03bcea719069cafbf87f34b4fdd227099efb410b49b45c5b1556",
+          "url": "/images/boston-source-recovery/8d36d157fbda03bcea719069cafbf87f34b4fdd227099efb410b49b45c5b1556.png",
+          "sha256": "602437b895696e2b7f18bd368bf64cfcf6101e9a948c6b4d4cf61ca06df5dcef",
+          "width": 600,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-black-dropper-shiny-gold-trim-cap",
+      "evidenceSha256": "4bbf0450e3fa0014ee355bc08d248ee629bdb3959b9e7fe5f8de7a937817cdc3",
+      "retrievedAt": "2026-09-13T01:11:15.827Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 2 ounce clear glass bottle and black dropper with a shiny gold trim cap, price each"
+    },
+    {
+      "sku": "GBBstn2ozBlkDrprShnSlTrim",
+      "graceSku": "GB-BSR-CLR-60ML-BLK-T-03",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle and black dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozBlkDropperShnSlTrim.gif",
+          "linkedFromExactSku": "GBBstn2ozBlkDrprShnSlTrim",
+          "sha256": "d367f7798c3eb492b6592399d22077150c285e2daaf7f5646243e1c856971991",
+          "url": "/images/boston-source-recovery/d367f7798c3eb492b6592399d22077150c285e2daaf7f5646243e1c856971991.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozBlkDropperShnSlTrim.gif",
+          "linkedFromExactSku": "GBBstn2ozBlkDrprShnSlTrim",
+          "sha256": "94695c008e55b558336fc423d0eda612bde7d483207e07ddc7efc6b44c514093",
+          "url": "/images/boston-source-recovery/94695c008e55b558336fc423d0eda612bde7d483207e07ddc7efc6b44c514093.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/15. GBBstn2ozBlkDropperShnSlTrim.psd",
+          "sourceSha256": "3402600d058ad7367741a28b8f33e0371e90c8aa24a8b38b1479d989799dc613",
+          "url": "/images/boston-source-recovery/3402600d058ad7367741a28b8f33e0371e90c8aa24a8b38b1479d989799dc613.png",
+          "sha256": "83b5d50295ca882e0b5150b4c5faba372087f2a9b06c11473bb05826dbc3a911",
+          "width": 600,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 12",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-black-dropper-shiny-silver-trim-cap",
+      "evidenceSha256": "510123516306e88891341e5cca009e58521f49c93d42da12c03da49c21eab79e",
+      "retrievedAt": "2026-09-13T01:11:26.261Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle and black dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstn2ozMtlRollBlk",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-BLK",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black",
+      "itemName": "Boston round design 2 ounce clear glass bottle with metal roller ball plug and shiny black cap, price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozMtlRollonBlk.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollBlk",
+          "sha256": "e811399616ea84a8936d46e1104a2f2d1f104b765bfdf289080a3d4b056897ab",
+          "url": "/images/boston-source-recovery/e811399616ea84a8936d46e1104a2f2d1f104b765bfdf289080a3d4b056897ab.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozMtlRollonBlk.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollBlk",
+          "sha256": "de46f0e46b49f7aa32db6df9d8216125e64a60179df61cc9de272a99e6414829",
+          "url": "/images/boston-source-recovery/de46f0e46b49f7aa32db6df9d8216125e64a60179df61cc9de272a99e6414829.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/18. GBBstn2ozMtlRollonBlk.psd",
+          "sourceSha256": "b2150b0eadc39995dbe4d3ba5606976d36908e163f7ad74053b2a38c8b17cc8f",
+          "url": "/images/boston-source-recovery/b2150b0eadc39995dbe4d3ba5606976d36908e163f7ad74053b2a38c8b17cc8f.png",
+          "sha256": "85f49e0f56ec7f6026d100612f2b7e4f46b5c9ce49c091aa1419ceee8d35054d",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 8",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/18. GBBstn2ozMtlRollonBlk.psd",
+          "sourceSha256": "b2150b0eadc39995dbe4d3ba5606976d36908e163f7ad74053b2a38c8b17cc8f",
+          "url": "/images/boston-source-recovery/b2150b0eadc39995dbe4d3ba5606976d36908e163f7ad74053b2a38c8b17cc8f.png",
+          "sha256": "85f49e0f56ec7f6026d100612f2b7e4f46b5c9ce49c091aa1419ceee8d35054d",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 8",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-metal-roller-ball-black-cap",
+      "evidenceSha256": "04388ace5e66f024491b556161ffd7be6626035f765322ee8b81dd3769330d86",
+      "retrievedAt": "2026-09-13T01:11:32.868Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 2 ounce clear glass bottle with metal roller ball plug and shiny black cap, price each"
+    },
+    {
+      "sku": "GBBstn2ozMtlRollGl",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-SGLD",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price ea",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozMtlRollonGl.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollGl",
+          "sha256": "fe5dd3081281dad0b39b4677d75c5f248c28f8d6220a74b0a3caedaa79f6d8bc",
+          "url": "/images/boston-source-recovery/fe5dd3081281dad0b39b4677d75c5f248c28f8d6220a74b0a3caedaa79f6d8bc.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozMtlRollonGl.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollGl",
+          "sha256": "6d6a1d83cc5b70ae43b1c017a4a65d9ab28cd0dab62a365e3fa7d24255270f83",
+          "url": "/images/boston-source-recovery/6d6a1d83cc5b70ae43b1c017a4a65d9ab28cd0dab62a365e3fa7d24255270f83.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/4. GBBstn2ozMtlRollonGl.psd",
+          "sourceSha256": "4878aa8d20f13486e737300a96827b84aea0c0fbd802403237b6e733a64494d2",
+          "url": "/images/boston-source-recovery/4878aa8d20f13486e737300a96827b84aea0c0fbd802403237b6e733a64494d2.png",
+          "sha256": "3e1e6d3f095ca34195f93bd96d98558784f6bdd9200abc425d936ba90126465c",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/4. GBBstn2ozMtlRollonGl.psd",
+          "sourceSha256": "d73957b2b5159a39873dfa2df485282261534fee6ca4f3b6d2afd7ccb5071fea",
+          "url": "/images/boston-source-recovery/d73957b2b5159a39873dfa2df485282261534fee6ca4f3b6d2afd7ccb5071fea.png",
+          "sha256": "1e3ccfcb1d72823347839d484e1350f27a23a035987e26d55808ccefcd887057",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 11",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-metal-roller-ball-shiny-gold-cap",
+      "evidenceSha256": "1746686fe77547c5828677e5520975d4283a0feaa7e17d9ed309bddcb9598556",
+      "retrievedAt": "2026-09-13T01:11:23.399Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price ea"
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattBlk",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-MBLK",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price e",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozMtlRollonMattBlk.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollMattBlk",
+          "sha256": "7a3fc9f4c276be78b9aa2a524c8bd912fc950311c520d6dbef751ecd5ef502e6",
+          "url": "/images/boston-source-recovery/7a3fc9f4c276be78b9aa2a524c8bd912fc950311c520d6dbef751ecd5ef502e6.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozMtlRollonMattBlk.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollMattBlk",
+          "sha256": "bc61c2a3fd9208ee4f2fac309194c82a06ae5aa84f6eb23fa1489acf11c208cc",
+          "url": "/images/boston-source-recovery/bc61c2a3fd9208ee4f2fac309194c82a06ae5aa84f6eb23fa1489acf11c208cc.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/3. GBBstn2ozMtlRollonMattBlk.psd",
+          "sourceSha256": "4ed4fa6ab8c9829d57aa2412e9ff0641ab872955aca60a6ce65ea22942f42466",
+          "url": "/images/boston-source-recovery/4ed4fa6ab8c9829d57aa2412e9ff0641ab872955aca60a6ce65ea22942f42466.png",
+          "sha256": "3fb051353540a88cb94d6ea8ee65707771f10c3f63992894ddf51ee9048ad6fc",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 8",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/3. GBBstn2ozMtlRollonMattBlk.psd",
+          "sourceSha256": "f04b675fa3a157f468874fb90ab1e06801edaf651aac6c274afc3e2c19c4c0f2",
+          "url": "/images/boston-source-recovery/f04b675fa3a157f468874fb90ab1e06801edaf651aac6c274afc3e2c19c4c0f2.png",
+          "sha256": "a50086061dacb3de85d7c93fa50a7d539c91facc3bc862ba2279f60db6d5d76c",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 11",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-metal-roller-ball-matte-black-cap",
+      "evidenceSha256": "ae0c34d1a67b13a47a54ca10448cd87d6561723fd39ce76482b029420e845bf7",
+      "retrievedAt": "2026-09-13T01:11:29.791Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price e"
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattGl",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-MGLD",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price ea",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozMtlRollonMattGl.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollMattGl",
+          "sha256": "9e75e281ba5c40571533f320eb1b6f569b81eeee366dd10660e56a02073b7af8",
+          "url": "/images/boston-source-recovery/9e75e281ba5c40571533f320eb1b6f569b81eeee366dd10660e56a02073b7af8.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozMtlRollonMattGl.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollMattGl",
+          "sha256": "e7f93255075ecf88a9b9320dfb70d3788949d1295f51b450dc6be878b529469a",
+          "url": "/images/boston-source-recovery/e7f93255075ecf88a9b9320dfb70d3788949d1295f51b450dc6be878b529469a.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/5. GBBstn2ozMtlRollonMattGl.psd",
+          "sourceSha256": "76b57bab827964b60603513744504f8fdf7e9a3ba4b430ecd6da022f651a9e37",
+          "url": "/images/boston-source-recovery/76b57bab827964b60603513744504f8fdf7e9a3ba4b430ecd6da022f651a9e37.png",
+          "sha256": "3edb3ed8b54e7e687ab1735f391ad0d48a80ccfa0f77916d21479a27d2694bea",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 11",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/5. GBBstn2ozMtlRollonMattGl.psd",
+          "sourceSha256": "75f0eea1eb20812b4ad9fc86d380fe5f45b5dc3cd66581e924838655e608b9d2",
+          "url": "/images/boston-source-recovery/75f0eea1eb20812b4ad9fc86d380fe5f45b5dc3cd66581e924838655e608b9d2.png",
+          "sha256": "c693aa8b70986b367206a08cb2f12de3753c385b30a22d85a0263050fe73b591",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 11",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 12",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "evidenceSha256": "b05d0891bafe482ab4b7ef4848fad797da3003de9906cdd064055ba2b7a0ed97",
+      "retrievedAt": "2026-09-13T01:11:43.970Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price ea"
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattSl",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-MSLV",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. P",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozMtlRollonMattSl.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollMattSl",
+          "sha256": "4ecc970606a7b4c5cbc59e789fea60dd04e552143dc718daade1ac5aa6707e94",
+          "url": "/images/boston-source-recovery/4ecc970606a7b4c5cbc59e789fea60dd04e552143dc718daade1ac5aa6707e94.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozMtlRollonMattSl.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollMattSl",
+          "sha256": "d288b5cad570e6d874b311d7919f8fe2c5320f9f2984cdd05b8d969f8665e202",
+          "url": "/images/boston-source-recovery/d288b5cad570e6d874b311d7919f8fe2c5320f9f2984cdd05b8d969f8665e202.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/1. GBBstn2ozMtlRollonMattSl.psd",
+          "sourceSha256": "3932d283dd5584d76a9629708d809610e6a568c49698326e9ee4745ad2ed4390",
+          "url": "/images/boston-source-recovery/3932d283dd5584d76a9629708d809610e6a568c49698326e9ee4745ad2ed4390.png",
+          "sha256": "c676531dc26844eb307f5189917d90e4d5e2dc600e792038eb7a2d2f5e1ca99b",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 4",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/1. GBBstn2ozMtlRollonMattSl.psd",
+          "sourceSha256": "4914891a05ddd899931837da3fd7e4ecf960968d5adecf05ef8bfa872c210a68",
+          "url": "/images/boston-source-recovery/4914891a05ddd899931837da3fd7e4ecf960968d5adecf05ef8bfa872c210a68.png",
+          "sha256": "ba4ea01eba4c54ec3b4ee43008bef13ba1dfe1413632c50144b77e72fea82d76",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 8",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-metal-roller-ball-matte-silver-cap",
+      "evidenceSha256": "809a09ded5a8f0c8317c5e9c6b4b6d4ab69b615a1dfe47be29e97f62796282ec",
+      "retrievedAt": "2026-09-13T01:11:37.678Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. P"
+    },
+    {
+      "sku": "GBBstn2ozMtlRollShnSl",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-SSLV",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozMtlRollonShnSl.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollShnSl",
+          "sha256": "8afccd3a3d40f097fcf35831b2b752d0f24f1afccdd2fecaf86ac9d83ffc3b78",
+          "url": "/images/boston-source-recovery/8afccd3a3d40f097fcf35831b2b752d0f24f1afccdd2fecaf86ac9d83ffc3b78.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozMtlRollonShnSl.gif",
+          "linkedFromExactSku": "GBBstn2ozMtlRollShnSl",
+          "sha256": "fc64dd08eb6644fc1833489ee831c2bded9dd668bf09bfc7ac5b845925cae50b",
+          "url": "/images/boston-source-recovery/fc64dd08eb6644fc1833489ee831c2bded9dd668bf09bfc7ac5b845925cae50b.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/2. GBBstn2ozMtlRollonShnSl.psd",
+          "sourceSha256": "0fe53bae2ba87e6fb4efd579d3f64978a122adeaf090842b3607760fba4c7cd5",
+          "url": "/images/boston-source-recovery/0fe53bae2ba87e6fb4efd579d3f64978a122adeaf090842b3607760fba4c7cd5.png",
+          "sha256": "7186fea519daeee290b170a1240fc1139236050eca72452b4dd2a08190411250",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 5",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 8",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/2. GBBstn2ozMtlRollonShnSl.psd",
+          "sourceSha256": "6852f8d126b7c400af7ef03021212ae89531cf925a3ea372f9d356a9ca4c7c55",
+          "url": "/images/boston-source-recovery/6852f8d126b7c400af7ef03021212ae89531cf925a3ea372f9d356a9ca4c7c55.png",
+          "sha256": "354a24ede5a304055b464fb71c50da89873e0df5da15062ccff6a997079edf10",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 8",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-metal-roller-ball-shiny-silver-cap",
+      "evidenceSha256": "ae4fa018d3d831150b63ad2b07e43f175969337a3ecc1ca30241864d5cee82ff",
+      "retrievedAt": "2026-09-13T01:11:46.975Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price"
+    },
+    {
+      "sku": "GBBstn2ozRollGl",
+      "graceSku": "GB-BSR-CLR-60ML-RBL-SGLD",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozRollonGl.gif",
+          "linkedFromExactSku": "GBBstn2ozRollGl",
+          "sha256": "3748dd3bccfb3de531dcf5d3b4e9a25f0b032696847986d06413232d239b90ac",
+          "url": "/images/boston-source-recovery/3748dd3bccfb3de531dcf5d3b4e9a25f0b032696847986d06413232d239b90ac.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozRollonGl.gif",
+          "linkedFromExactSku": "GBBstn2ozRollGl",
+          "sha256": "abe5f576d18465ea2477b59613dabd625940e8ef15fdbc6c422a38dc15341ae0",
+          "url": "/images/boston-source-recovery/abe5f576d18465ea2477b59613dabd625940e8ef15fdbc6c422a38dc15341ae0.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/9. GBBstn2ozRollonGl.psd",
+          "sourceSha256": "a00a82162a97ee5a044bb0786f3faa9810dd7e7c221b6d6be8d193137f2cc3a2",
+          "url": "/images/boston-source-recovery/a00a82162a97ee5a044bb0786f3faa9810dd7e7c221b6d6be8d193137f2cc3a2.png",
+          "sha256": "5efe766a21990d1bae3fb8bc50118d633d4e8da6a379cb8a5a6a6d39fbd29dc5",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/9. GBBstn2ozRollonGl.psd",
+          "sourceSha256": "7658f34d0cd5f07268db138d05201dfddf1655cd60bab5dd9c08d247b11420c4",
+          "url": "/images/boston-source-recovery/7658f34d0cd5f07268db138d05201dfddf1655cd60bab5dd9c08d247b11420c4.png",
+          "sha256": "53da48155e2d0ab29cc5e8c237c640f0c3963a21aa526b153aaeab59676093f3",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 11",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-plastic-roller-ball-shiny-gold-cap",
+      "evidenceSha256": "f1c4563ced63ec23d838e67623e1bdca5dc462d9a3e9c78f95ac139d7cffc3c8",
+      "retrievedAt": "2026-09-13T01:11:40.777Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn2ozRollMattBlk",
+      "graceSku": "GB-BSR-CLR-60ML-RBL-MBLK",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozRollonMattBlk.gif",
+          "linkedFromExactSku": "GBBstn2ozRollMattBlk",
+          "sha256": "870989adf288c4fa45b02944261ff3f2c4c068bfb90f9173b5f59a3a763913ca",
+          "url": "/images/boston-source-recovery/870989adf288c4fa45b02944261ff3f2c4c068bfb90f9173b5f59a3a763913ca.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozRollonMattBlk.gif",
+          "linkedFromExactSku": "GBBstn2ozRollMattBlk",
+          "sha256": "bc61c2a3fd9208ee4f2fac309194c82a06ae5aa84f6eb23fa1489acf11c208cc",
+          "url": "/images/boston-source-recovery/bc61c2a3fd9208ee4f2fac309194c82a06ae5aa84f6eb23fa1489acf11c208cc.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/8. GBBstn2ozRollonMattBlk.psd",
+          "sourceSha256": "6205324cc385e1559c6267bf7b8ed31de97c298392119c886497ad37adf75086",
+          "url": "/images/boston-source-recovery/6205324cc385e1559c6267bf7b8ed31de97c298392119c886497ad37adf75086.png",
+          "sha256": "29978af2103af732807729c7a3d51d46bc6d850d21925d1fb3c2bb70a952fa4a",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/8. GBBstn2ozRollonMattBlk.psd",
+          "sourceSha256": "61084a45c3a3d08649e7fa7c43311927ff165c43a05ab0e0048426becc01a485",
+          "url": "/images/boston-source-recovery/61084a45c3a3d08649e7fa7c43311927ff165c43a05ab0e0048426becc01a485.png",
+          "sha256": "4821264b1c574c2e5ec2d53af40dc73d4c0eb77f7161942f5bbf633237e49272",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 11",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-plastic-roller-ball-matte-black-cap",
+      "evidenceSha256": "fe48f690aa02ac5d0211f3b4ccbfe0e2bb232e9eaa8e44379b815e98601de7ed",
+      "retrievedAt": "2026-09-13T01:12:00.949Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn2ozRollMattSl",
+      "graceSku": "GB-BSR-CLR-60ML-RBL-MSLV",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozRollonMattSl.gif",
+          "linkedFromExactSku": "GBBstn2ozRollMattSl",
+          "sha256": "26f42ed4092d1b7d9547b187f676d79f332181f9f6fdfd6933d3b0967e9a6548",
+          "url": "/images/boston-source-recovery/26f42ed4092d1b7d9547b187f676d79f332181f9f6fdfd6933d3b0967e9a6548.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozRollonMattSl.gif",
+          "linkedFromExactSku": "GBBstn2ozRollMattSl",
+          "sha256": "d288b5cad570e6d874b311d7919f8fe2c5320f9f2984cdd05b8d969f8665e202",
+          "url": "/images/boston-source-recovery/d288b5cad570e6d874b311d7919f8fe2c5320f9f2984cdd05b8d969f8665e202.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/6. GBBstn2ozRollonMattSl.psd",
+          "sourceSha256": "727ba572245143b3f334c09bda1a4f0a480dfda48028a8a71a6ed72e4632d0f3",
+          "url": "/images/boston-source-recovery/727ba572245143b3f334c09bda1a4f0a480dfda48028a8a71a6ed72e4632d0f3.png",
+          "sha256": "fc6b1a33f3aa2cf12e210ecc712d53989c1bdd83727e83806a84fc0947bd9281",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 4",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/6. GBBstn2ozRollonMattSl.psd",
+          "sourceSha256": "4914891a05ddd899931837da3fd7e4ecf960968d5adecf05ef8bfa872c210a68",
+          "url": "/images/boston-source-recovery/4914891a05ddd899931837da3fd7e4ecf960968d5adecf05ef8bfa872c210a68.png",
+          "sha256": "08303d3d1395b2fa13d24d4c0ae75d4ff7cad97cb3b1cdf7bc2df3c232e390ae",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 8",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-plastic-roller-ball-matte-silver-cap",
+      "evidenceSha256": "6f480ea9f668635253bcc27562bdb97262caf98e7083e6151ed856e96e8e218b",
+      "retrievedAt": "2026-09-13T01:11:50.350Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn2ozRollShnBlk",
+      "graceSku": "GB-BSR-CLR-60ML-RBL-SBLK",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozRollonShnBlk.gif",
+          "linkedFromExactSku": "GBBstn2ozRollShnBlk",
+          "sha256": "5064c7e08f251e113eadb5f1ace541f6cf6c11c06de84a22033757c1be4478d6",
+          "url": "/images/boston-source-recovery/5064c7e08f251e113eadb5f1ace541f6cf6c11c06de84a22033757c1be4478d6.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/18. GBBstn2ozRollonShnBlk.psd",
+          "sourceSha256": "70b4519b800955ff0ba04e594ff43a4ca696ac12604c7aa512672d9abf66c8e5",
+          "url": "/images/boston-source-recovery/70b4519b800955ff0ba04e594ff43a4ca696ac12604c7aa512672d9abf66c8e5.png",
+          "sha256": "396ba1b139efd774908da59b8b0f611dbea5d907d40728212026c330f23d1f98",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/18. GBBstn2ozRollonShnBlk.psd",
+          "sourceSha256": "70b4519b800955ff0ba04e594ff43a4ca696ac12604c7aa512672d9abf66c8e5",
+          "url": "/images/boston-source-recovery/70b4519b800955ff0ba04e594ff43a4ca696ac12604c7aa512672d9abf66c8e5.png",
+          "sha256": "396ba1b139efd774908da59b8b0f611dbea5d907d40728212026c330f23d1f98",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 10",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-2-oz-clear-glass-bottle-plastic-roller-ball-shiny-black-cap",
+      "evidenceSha256": "b2464082b6fed22df0dd7d58a97cc9007add5494c34d0a02487311d72bd774bd",
+      "retrievedAt": "2026-09-13T01:11:56.034Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn2ozRollShnSl",
+      "graceSku": "GB-BSR-CLR-60ML-RON-SSLV",
+      "productGroupId": "kh78yy18d2hchcx668d1sdwnj98dqdd0",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozRollonShnSl.gif",
+          "linkedFromExactSku": "GBBstn2ozRollShnSl",
+          "sha256": "91dffa8397a72da5497335836ea250bff058e4d7fe2e88cb9e315ee0e9374906",
+          "url": "/images/boston-source-recovery/91dffa8397a72da5497335836ea250bff058e4d7fe2e88cb9e315ee0e9374906.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozRollonShnSl.gif",
+          "linkedFromExactSku": "GBBstn2ozRollShnSl",
+          "sha256": "1d3d349991b002e3f0b6f40518c4bb1051d74d5105c3bd3f99019dc548a72428",
+          "url": "/images/boston-source-recovery/1d3d349991b002e3f0b6f40518c4bb1051d74d5105c3bd3f99019dc548a72428.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/7. GBBstn2ozRollonShnSl.psd",
+          "sourceSha256": "19f16b857595fd5c77cd3c2ef4638ec0fcce011c3498f8473f446c0d76d89c5b",
+          "url": "/images/boston-source-recovery/19f16b857595fd5c77cd3c2ef4638ec0fcce011c3498f8473f446c0d76d89c5b.png",
+          "sha256": "c034ec4e09741a9d32dae5802757ca49d2c67554ddb3237b2e990797921f46cc",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 5",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 8",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        },
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/7. GBBstn2ozRollonShnSl.psd",
+          "sourceSha256": "3ed6db5172c29eddc17c5d6345c46e857a77d86f7e5ce7739b6ddca6d14ca129",
+          "url": "/images/boston-source-recovery/3ed6db5172c29eddc17c5d6345c46e857a77d86f7e5ce7739b6ddca6d14ca129.png",
+          "sha256": "948ebc5428d652d16d7843aea2d14338ee7e14376810e2c58371f23ec71fb361",
+          "width": 945,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 8",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 9",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-plastic-roller-ball-shiny-silver-cap",
+      "evidenceSha256": "4ade52b784068ed898b19030816202a5f39a1eba80c0d1a5f268d263d9c845b9",
+      "retrievedAt": "2026-09-13T01:11:53.027Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each"
+    },
+    {
+      "sku": "GBBstn2ozWhtDrpr",
+      "graceSku": "GB-BSR-CLR-60ML-WHT-T-01",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozWhtDropper.gif",
+          "linkedFromExactSku": "GBBstn2ozWhtDrpr",
+          "sha256": "8496b769bfbb7b923eaefe36e00e460375e8f05ee15e8d63cd266f95e01ab33d",
+          "url": "/images/boston-source-recovery/8496b769bfbb7b923eaefe36e00e460375e8f05ee15e8d63cd266f95e01ab33d.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozWhtDropper.gif",
+          "linkedFromExactSku": "GBBstn2ozWhtDrpr",
+          "sha256": "b79419a927adbe472f02c70eac795493f8e6d8f9766f6035613246bdabb5f337",
+          "url": "/images/boston-source-recovery/b79419a927adbe472f02c70eac795493f8e6d8f9766f6035613246bdabb5f337.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/11. GBBstn2ozWhtDropper.psd",
+          "sourceSha256": "f8710970abdb9b5a9fff7f16e847addef4b56dea72012b448ac03564f140a12a",
+          "url": "/images/boston-source-recovery/f8710970abdb9b5a9fff7f16e847addef4b56dea72012b448ac03564f140a12a.png",
+          "sha256": "88ca4018e9a17dd50d7903f9dc02a5528c9ab41121a5340ba866b0bfa023331f",
+          "width": 600,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 8",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-white-dropper",
+      "evidenceSha256": "487df6713352bb4ae42356600176cd5eefadce38c6d69a09738e0d049f50e830",
+      "retrievedAt": "2026-09-13T01:12:04.299Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle with white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstn2ozWhtDrprShnGlTrim",
+      "graceSku": "GB-BSR-CLR-60ML-WHT-T-02",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle and white dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozWhtDropperShnGlTrim.gif",
+          "linkedFromExactSku": "GBBstn2ozWhtDrprShnGlTrim",
+          "sha256": "ac4b03f7b07353d5b4e3f62efbd59fab104f8ca941e420d531464ca47603c877",
+          "url": "/images/boston-source-recovery/ac4b03f7b07353d5b4e3f62efbd59fab104f8ca941e420d531464ca47603c877.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozWhtDropperShnGlTrim.gif",
+          "linkedFromExactSku": "GBBstn2ozWhtDrprShnGlTrim",
+          "sha256": "84308ca3f4b1faffee89bbd4a7fcf9ebb64c3d0ed337cb005d434803b533370e",
+          "url": "/images/boston-source-recovery/84308ca3f4b1faffee89bbd4a7fcf9ebb64c3d0ed337cb005d434803b533370e.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/13. GBBstn2ozWhtDropperShnGlTrim.psd",
+          "sourceSha256": "b79d74992b5080e97db3fe43ef9433851bf9823c45c2b1ffa777db136895da7a",
+          "url": "/images/boston-source-recovery/b79d74992b5080e97db3fe43ef9433851bf9823c45c2b1ffa777db136895da7a.png",
+          "sha256": "8a60e4c136a84f95c08784b9fc8c0874883c8d7f5576e527328d8640d4d8184a",
+          "width": 600,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 4",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-white-dropper-shiny-gold-trim-cap",
+      "evidenceSha256": "4c9728985f85d5cad9cf46fcb85897687cc326370fd821a841b76ed820182cf1",
+      "retrievedAt": "2026-09-13T01:12:10.521Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Clear glass bottle and white dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstn2ozWhtDrprShnSlTrim",
+      "graceSku": "GB-BSR-CLR-60ML-WHT-T-03",
+      "productGroupId": "kh79sm9atpya350awcq2xqv4z98dqy71",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 2 ounce clear glass bottle and white dropper with a shiny silver trim cap, price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstn2ozWhtDropperShnSlTrim.gif",
+          "linkedFromExactSku": "GBBstn2ozWhtDrprShnSlTrim",
+          "sha256": "ef917d21de7eace1cc072f0101f1da0e9563cd335c70fb8e412868865daf86c5",
+          "url": "/images/boston-source-recovery/ef917d21de7eace1cc072f0101f1da0e9563cd335c70fb8e412868865daf86c5.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstn2ozWhtDropperShnSlTrim.gif",
+          "linkedFromExactSku": "GBBstn2ozWhtDrprShnSlTrim",
+          "sha256": "2a7d03b68f4ada21f48d73f149ad9266ea245d2a6eeac925f06457e411a989f3",
+          "url": "/images/boston-source-recovery/2a7d03b68f4ada21f48d73f149ad9266ea245d2a6eeac925f06457e411a989f3.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/14. GBBstn2ozWhtDropperShnSlTrim.psd",
+          "sourceSha256": "f8963f1e107d4c5bc0250a6dccc7d8296b790c0caa4900fb78558eaaf30d4090",
+          "url": "/images/boston-source-recovery/f8963f1e107d4c5bc0250a6dccc7d8296b790c0caa4900fb78558eaaf30d4090.png",
+          "sha256": "5bafced5c24b49769917edc6447bb94622af3cf825f831c79c6a390cc6662245",
+          "width": 600,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 11",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-clear-glass-bottle-white-dropper-shiny-silver-trim-cap",
+      "evidenceSha256": "a0a80c61299e5773e7a56fec6d89e9c6eec4b4d553d301174fb4a31d2daabaa5",
+      "retrievedAt": "2026-09-13T01:12:07.460Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 2 ounce clear glass bottle and white dropper with a shiny silver trim cap, price each"
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkDrpShnGl",
+      "graceSku": "GB-BSR-AMB-30ML-BLK-T-02",
+      "productGroupId": "kh76cthp5ysk49hky1ceay825s8dpqmm",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle and black dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstnAmb1ozBlkDropperShnGlTrim.gif",
+          "linkedFromExactSku": "GBBstnAmb1ozBlkDrpShnGl",
+          "sha256": "99c2e0eca193237a7564a204eb87883f56e604d225234f241dd909825dfe5a9e",
+          "url": "/images/boston-source-recovery/99c2e0eca193237a7564a204eb87883f56e604d225234f241dd909825dfe5a9e.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstnAmb1ozBlkDropperShnGlTrim.gif",
+          "linkedFromExactSku": "GBBstnAmb1ozBlkDrpShnGl",
+          "sha256": "30ba0f089091f78c071cdb9ad714ccb2b9a8c348d73649237507a1510331934c",
+          "url": "/images/boston-source-recovery/30ba0f089091f78c071cdb9ad714ccb2b9a8c348d73649237507a1510331934c.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/12. GBBstnAmb1ozBlkDropperShnGlTrim.psd",
+          "sourceSha256": "8948c4f9e4e39f82f535f2b5b3bda6cd07263343ad3dde0ada4a224b8afeb575",
+          "url": "/images/boston-source-recovery/8948c4f9e4e39f82f535f2b5b3bda6cd07263343ad3dde0ada4a224b8afeb575.png",
+          "sha256": "d00f2acb51d53fb3cd884c4fb77a5613be3f33ccb5e7aeb9a07d1c62ca05ef4e",
+          "width": 591,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 5",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 19",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-1-oz-amber-glass-bottle-black-dropper-shiny-silver-trim-cap",
+      "evidenceSha256": "20b53dae81e75949bba704447dbacbb9539713f360e25f69ff4bfe34e7feb1bc",
+      "retrievedAt": "2026-09-13T01:12:13.409Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 30ml, 1oz Amber glass bottle and black dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+      "graceSku": "GB-BSR-AMB-30ML-WHT-T-03",
+      "productGroupId": "kh76cthp5ysk49hky1ceay825s8dpqmm",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle and white dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstnAmb1ozWhtDropperShnSlTrim.gif",
+          "linkedFromExactSku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+          "sha256": "ea75b9002b7c40b7002e611153afd0d7adc6d98f180db43f1884e66b7e6f906f",
+          "url": "/images/boston-source-recovery/ea75b9002b7c40b7002e611153afd0d7adc6d98f180db43f1884e66b7e6f906f.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstnAmb1ozWhtDropperShnSlTrim.gif",
+          "linkedFromExactSku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+          "sha256": "0e3fea5086ab0cd392bca52d0bcffe3c0a83e7d131efdcc251459c59cdfe0cb0",
+          "url": "/images/boston-source-recovery/0e3fea5086ab0cd392bca52d0bcffe3c0a83e7d131efdcc251459c59cdfe0cb0.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/14. GBBstnAmb1ozWhtDropperShnSlTrim.psd",
+          "sourceSha256": "967be3256955e3ed40d93fd089b42ce33538a42de8f68fd096f60407583f452c",
+          "url": "/images/boston-source-recovery/967be3256955e3ed40d93fd089b42ce33538a42de8f68fd096f60407583f452c.png",
+          "sha256": "7c826b0cf71c0b8aa043cb42939f79bcac0ad40878d34ffe04f55a0ca4982e0d",
+          "width": 591,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 5",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 21",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-1-oz-amber-glass-bottle-white-dropper-shiny-silver-trim-cap",
+      "evidenceSha256": "6ac2418fe65ac97a9092756883f7f752199377549479ead888aa75e6ab6b449c",
+      "retrievedAt": "2026-09-13T01:12:16.472Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 30ml, 1oz Amber glass bottle and white dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDrpr",
+      "graceSku": "GB-BSR-AMB-60ML-BLK-T-02",
+      "productGroupId": "kh777dtpw7yx3x5g09s5vggbs98dpm7a",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 2 ounce amber glass bottle with black dropper, price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstnAmb2ozBlkDropper.gif",
+          "linkedFromExactSku": "GBBstnAmb2ozBlkDrpr",
+          "sha256": "5a6ec72298651dcb2f8ae484236906dfcefb67c140f301cd1d7c8a45f01f807d",
+          "url": "/images/boston-source-recovery/5a6ec72298651dcb2f8ae484236906dfcefb67c140f301cd1d7c8a45f01f807d.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstnAmb2ozBlkDropper.gif",
+          "linkedFromExactSku": "GBBstnAmb2ozBlkDrpr",
+          "sha256": "ef25840668dbb2983f9b6d828426543a768d8b078e76e85539e0b6526a3a3460",
+          "url": "/images/boston-source-recovery/ef25840668dbb2983f9b6d828426543a768d8b078e76e85539e0b6526a3a3460.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/16. GBBstnAmb2ozBlkDropper.psd",
+          "sourceSha256": "94c7718142f6eb391cc9192b24427c0dc9c93ee1de571c1538608a63b58b548f",
+          "url": "/images/boston-source-recovery/94c7718142f6eb391cc9192b24427c0dc9c93ee1de571c1538608a63b58b548f.png",
+          "sha256": "73553209b0eaebfd00ae96ae5482f2d2351e5232eed7a130a4f8b85a04d70025",
+          "width": 600,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 2",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "'",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-amber-glass-bottle-black-dropper-black-cap",
+      "evidenceSha256": "99904be1a2d63610b0bc1fb570b223323e00e66178e7a39b0a6cd732c7206c41",
+      "retrievedAt": "2026-09-13T01:12:21.944Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 2 ounce amber glass bottle with black dropper, price each"
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+      "graceSku": "GB-BSR-AMB-60ML-BLK-T-03",
+      "productGroupId": "kh777dtpw7yx3x5g09s5vggbs98dpm7a",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle and black dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstnAmb2ozBlkDropperShnSlTrim.gif",
+          "linkedFromExactSku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+          "sha256": "cdfc173e6d701fbd7f199036114d320b9b87dd5f41d9471e94e2180b5a7db0ab",
+          "url": "/images/boston-source-recovery/cdfc173e6d701fbd7f199036114d320b9b87dd5f41d9471e94e2180b5a7db0ab.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstnAmb2ozBlkDropperShnSlTrim.gif",
+          "linkedFromExactSku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+          "sha256": "95639c44ce56e9760c886dc7156c9ac3d194b9eae06033fadc2325238843b8ad",
+          "url": "/images/boston-source-recovery/95639c44ce56e9760c886dc7156c9ac3d194b9eae06033fadc2325238843b8ad.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/12. GBBstnAmb2ozBlkDropperShnSlTrim.psd",
+          "sourceSha256": "4fd6059cf0c12376b1b8ae524f4a26964047c9c9af3fc74746c99e73d619a4ba",
+          "url": "/images/boston-source-recovery/4fd6059cf0c12376b1b8ae524f4a26964047c9c9af3fc74746c99e73d619a4ba.png",
+          "sha256": "30a882dc9777b67e8463c15feb9f202bd3e633302eba56805b19a028f91ef3a3",
+          "width": 600,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-amber-glass-bottle-black-dropper-shiny-silver-trim-cap",
+      "evidenceSha256": "d660ca66ae57ffbf0fd592b48099fb8ad2f5bd781c3a862d9c7e258d9a43a8a8",
+      "retrievedAt": "2026-09-13T01:12:27.541Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Amber glass bottle and black dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDrpr",
+      "graceSku": "GB-BSR-AMB-60ML-WHT-T-03",
+      "productGroupId": "kh777dtpw7yx3x5g09s5vggbs98dpm7a",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstnAmb2ozWhtDropper.gif",
+          "linkedFromExactSku": "GBBstnAmb2ozWhtDrpr",
+          "sha256": "02a3b5f4d45632a198a5db2f7e715e82ba69e698a6bddecb038c13e26f781aab",
+          "url": "/images/boston-source-recovery/02a3b5f4d45632a198a5db2f7e715e82ba69e698a6bddecb038c13e26f781aab.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstnAmb2ozWhtDropper.gif",
+          "linkedFromExactSku": "GBBstnAmb2ozWhtDrpr",
+          "sha256": "0c0f8f480ebd92a1b57caf8c3109f04fce2287419c1a2922eedc58249ef46118",
+          "url": "/images/boston-source-recovery/0c0f8f480ebd92a1b57caf8c3109f04fce2287419c1a2922eedc58249ef46118.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/11. GBBstnAmb2ozWhtDropper.psd",
+          "sourceSha256": "35b64789da089ae8e1a5cf4c040ea888128ebf017181ea0b7418641d5b758069",
+          "url": "/images/boston-source-recovery/35b64789da089ae8e1a5cf4c040ea888128ebf017181ea0b7418641d5b758069.png",
+          "sha256": "19558534c053a9ee43eff6aff7ca0c2ed279f3dd3eb22928575c66d6f096fd24",
+          "width": 600,
+          "height": 1500,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 4",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 3",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-2-oz-amber-glass-bottle-white-dropper",
+      "evidenceSha256": "ab83bccf264a6952fbcac2da79dfade2bf5e61e525a5b4caae57a132e7f6b603",
+      "retrievedAt": "2026-09-13T01:12:24.637Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 60ml, 2oz Amber glass bottle with white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstnBlu15BlkDrpr",
+      "graceSku": "GB-BSR-CBL-15ML-BLK-T-01",
+      "productGroupId": "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle with a black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstnBlu15BlkDrp.gif",
+          "linkedFromExactSku": "GBBstnBlu15BlkDrpr",
+          "sha256": "b4d3423c0075ff654297bec2dc37ad93acfe93718bf71239fe84c7ea6cf23a12",
+          "url": "/images/boston-source-recovery/b4d3423c0075ff654297bec2dc37ad93acfe93718bf71239fe84c7ea6cf23a12.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstnBlu15BlkDrp.gif",
+          "linkedFromExactSku": "GBBstnBlu15BlkDrpr",
+          "sha256": "1d4dab1c6800d711e9de1596e90e9f92468e4fbcfff0b9486d42ce6b08b77599",
+          "url": "/images/boston-source-recovery/1d4dab1c6800d711e9de1596e90e9f92468e4fbcfff0b9486d42ce6b08b77599.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/5. GBBstnBlu15BlkDrp.psd",
+          "sourceSha256": "c7d203fd2f68f94c5155d19e0905bebf2e34b52a8b127a4b81233887ebd39ede",
+          "url": "/images/boston-source-recovery/c7d203fd2f68f94c5155d19e0905bebf2e34b52a8b127a4b81233887ebd39ede.png",
+          "sha256": "d32fb7ed218a8273d6e735c50453eca4b6896ac461244e1d62aa571fea8b8729",
+          "width": 591,
+          "height": 1181,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 3",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 2 copy",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-15-ml-cobalt-blue-glass-bottle-black-dropper",
+      "evidenceSha256": "994c77f1ec0bd0a6c72f05e6ab6a90f66a0967818517affedf4f45fbeeaf4780",
+      "retrievedAt": "2026-09-13T01:12:32.876Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 15ml, 1/2 oz Cobalt blue glass bottle with a black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstnBlu15BlkDrprGlTrim",
+      "graceSku": "GB-BSR-CBL-15ML-BLK-T-02",
+      "productGroupId": "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle with black dropper shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstnBlu15BlkDrpGlTrim.gif",
+          "linkedFromExactSku": "GBBstnBlu15BlkDrprGlTrim",
+          "sha256": "8d48be8629087c12c63352df273fa32bfa2e1592fc7e618ac89264db7101c590",
+          "url": "/images/boston-source-recovery/8d48be8629087c12c63352df273fa32bfa2e1592fc7e618ac89264db7101c590.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstnBlu15BlkDrpGlTrim.gif",
+          "linkedFromExactSku": "GBBstnBlu15BlkDrprGlTrim",
+          "sha256": "6f8dbc61dac0ed7ee251710abf3973a39b741a50d12b65875c74a2714933d1e0",
+          "url": "/images/boston-source-recovery/6f8dbc61dac0ed7ee251710abf3973a39b741a50d12b65875c74a2714933d1e0.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/7. GBBstnBlu15BlkDrpGlTrim.psd",
+          "sourceSha256": "fa72a02de0832a91b7cec0c4af89c529d5b9398bfecbce0610da4b1faec9976a",
+          "url": "/images/boston-source-recovery/fa72a02de0832a91b7cec0c4af89c529d5b9398bfecbce0610da4b1faec9976a.png",
+          "sha256": "f018186a40d9e014f9ef6a760182a8d7a50ade05589dbd68cc47b3e5e6d2c819",
+          "width": 591,
+          "height": 1181,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 5",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-15-ml-amber-glass-bottle-black-droppershiny-gold-trim-cap",
+      "evidenceSha256": "5163ebc622abebed6ceb6d37a3e5e153a2c262eaa3bd4940349a5035db73d884",
+      "retrievedAt": "2026-09-13T01:12:40.881Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 15ml, 1/2 oz Cobalt blue glass bottle with black dropper shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstnBlu15WhtDrpr",
+      "graceSku": "GB-BSR-CBL-15ML-WHT-T-01",
+      "productGroupId": "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle with a white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstnBlu15WhtDrp.gif",
+          "linkedFromExactSku": "GBBstnBlu15WhtDrpr",
+          "sha256": "8d160d9c3bb46b16837f677b316ac9a995af8f850e9f362c4926c420093d6a46",
+          "url": "/images/boston-source-recovery/8d160d9c3bb46b16837f677b316ac9a995af8f850e9f362c4926c420093d6a46.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstnBlu15WhtDrp.gif",
+          "linkedFromExactSku": "GBBstnBlu15WhtDrpr",
+          "sha256": "5dd047171cba182c96b5993296c29ddc31f1104d2ca2a922d5eb35b6c5c84680",
+          "url": "/images/boston-source-recovery/5dd047171cba182c96b5993296c29ddc31f1104d2ca2a922d5eb35b6c5c84680.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/6. GBBstnBlu15WhtDrp.psd",
+          "sourceSha256": "9d337772d09fb7026e79065a530682ee7392336930fa77fac96f0a5bd03d4cdb",
+          "url": "/images/boston-source-recovery/9d337772d09fb7026e79065a530682ee7392336930fa77fac96f0a5bd03d4cdb.png",
+          "sha256": "49144aae9401b9ebf275290a43ab49f31ae145504ada19ba93973b3af066f84d",
+          "width": 591,
+          "height": 1181,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 3",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 5",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-15-ml-cobalt-blue-glass-bottle-white-dropper",
+      "evidenceSha256": "044784e58fc8fb663a6f29d667c12efb6e06d2f786970624d9cba30ff737036f",
+      "retrievedAt": "2026-09-13T01:12:43.571Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 15ml, 1/2 oz Cobalt blue glass bottle with a white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstnBlu15WhtDrprGlTrim",
+      "graceSku": "GB-BSR-CBL-15ML-WHT-T-02",
+      "productGroupId": "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle and white dropper and a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstnBlu15WhtDrpGlTrim.gif",
+          "linkedFromExactSku": "GBBstnBlu15WhtDrprGlTrim",
+          "sha256": "953d5a537aa13a00f666bbe8d4a41778089d1181cf17894881c14761ca50d00b",
+          "url": "/images/boston-source-recovery/953d5a537aa13a00f666bbe8d4a41778089d1181cf17894881c14761ca50d00b.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstnBlu15WhtDrpGlTrim.gif",
+          "linkedFromExactSku": "GBBstnBlu15WhtDrprGlTrim",
+          "sha256": "645854c64fec5256f3ec4b69301abd5d028f28ad523bff4b76647760183da816",
+          "url": "/images/boston-source-recovery/645854c64fec5256f3ec4b69301abd5d028f28ad523bff4b76647760183da816.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/4. GBBstnBlu15WhtDrpGlTrim.psd",
+          "sourceSha256": "226bac97f53566eb848806fe20e6f2cd7ea446c84fc9d6a89a6e5ada559207c7",
+          "url": "/images/boston-source-recovery/226bac97f53566eb848806fe20e6f2cd7ea446c84fc9d6a89a6e5ada559207c7.png",
+          "sha256": "b84e9eba0b37f45e63a526d0c5daef1b00c3ba25d425d5cd0211d50911a3955d",
+          "width": 591,
+          "height": 1181,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 7",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-15-ml-cobalt-blue-glass-bottle-white-dropper-shiny-gold-trim-cap",
+      "evidenceSha256": "7672177c9000c1c3bde6b17a80ff700694266c7359efc874aa2428d014fbfe54",
+      "retrievedAt": "2026-09-13T01:12:38.152Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 15ml, 1/2 oz Cobalt blue glass bottle and white dropper and a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    },
+    {
+      "sku": "GBBstnBlu15WhtDrprSlTrim",
+      "graceSku": "GB-BSR-CBL-15ML-WHT-T-03",
+      "productGroupId": "kh74gnrjnzjqm2deqcxzx1zswn8dqs1a",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle and white dropper and a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "status": "master_candidates_recovered",
+      "references": [
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBstnBlu15WhtDrpSlTrim.gif",
+          "linkedFromExactSku": "GBBstnBlu15WhtDrprSlTrim",
+          "sha256": "1a3fe41cd12865a0f32bb9e81d81ce9c388d78a1d176bfa306b6dba40b3e12d6",
+          "url": "/images/boston-source-recovery/1a3fe41cd12865a0f32bb9e81d81ce9c388d78a1d176bfa306b6dba40b3e12d6.gif"
+        },
+        {
+          "sourceUrl": "https://www.bestbottles.com/images/store/capped/GBBstnBlu15WhtDrpSlTrim.gif",
+          "linkedFromExactSku": "GBBstnBlu15WhtDrprSlTrim",
+          "sha256": "7ad749a1f562293ab5b802d843ee63146a7c1d6de705739a4cb61816c829b3e6",
+          "url": "/images/boston-source-recovery/7ad749a1f562293ab5b802d843ee63146a7c1d6de705739a4cb61816c829b3e6.gif"
+        }
+      ],
+      "candidates": [
+        {
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/3. GBBstnBlu15WhtDrpSlTrim.psd",
+          "sourceSha256": "27270963215c841579cd5e87f9880fd16e08ab1bb5ea6ddaf0c0f2dcf862c001",
+          "url": "/images/boston-source-recovery/27270963215c841579cd5e87f9880fd16e08ab1bb5ea6ddaf0c0f2dcf862c001.png",
+          "sha256": "cb75410b111d685a54a120d3e13d5e980415e502cd936b7918bf8b32ee558b92",
+          "width": 591,
+          "height": 1181,
+          "layers": [
+            {
+              "name": "Background",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 6",
+              "visible": true,
+              "kind": "pixel"
+            },
+            {
+              "name": "Layer 5",
+              "visible": true,
+              "kind": "pixel"
+            }
+          ],
+          "method": "Original PSD merged preview; no resizing, layer changes or shadow edits."
+        }
+      ],
+      "holds": [
+        "Not a finished plate: source identity, physical sizing and technical review are still required."
+      ],
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-15-ml-cobalt-blue-glass-bottle-white-dropper-shiny-silver-trim-cap",
+      "evidenceSha256": "fca8c2525343062a6c414083c49bbf63bb2da8bef6a5d6abfa4436d3350420e7",
+      "retrievedAt": "2026-09-13T01:12:46.543Z",
+      "exactPageSkuVerified": true,
+      "pageDescription": "Boston round design 15ml, 1/2 oz Cobalt blue glass bottle and white dropper and a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each"
+    }
+  ]
+}

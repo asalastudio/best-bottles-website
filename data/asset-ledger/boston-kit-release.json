@@ -1,0 +1,3262 @@
+{
+  "schemaVersion": 1,
+  "id": "boston-round-kit-release-2026-09-12",
+  "family": "Boston Round",
+  "publicationAuthorized": true,
+  "reviewRequired": "Batch visual approval is required for each candidate; no kit rows are published by this build.",
+  "approvedPilotSkus": [
+    "GBBstn15BlkCapSht",
+    "GBBstn1ozBlkCapSht",
+    "GBBstn2ozBlkCapSht",
+    "GBBstnAmb15mlBlkDropper",
+    "GBBstnAmb15mlBlkDropperGlTrim",
+    "GBBstnAmb15mlBlkDropperSlTrim",
+    "GBBstnAmb15mlWhtDropper",
+    "GBBstnAmb15mlWhtDropperGlTrim",
+    "GBBstnAmb15mlWhtDropperSlTrim",
+    "GBBstnAmb1ozBlkDropper",
+    "GBBstnAmb1ozMtlRollonMattBlk",
+    "GBBstnAmb1ozMtlRollonMattSl",
+    "GBBstnAmb1ozMtlRollonShnSl",
+    "GBBstnAmb1ozRollonMattBlk",
+    "GBBstnAmb1ozRollonMattSl",
+    "GBBstnAmb1ozWhtDropper",
+    "GBBstnAmb1ozWhtDropperShnGlTrim",
+    "GBBstnAmb2ozWhtDropperShnGlTrim",
+    "GBBstnAmb2ozWhtDropperShnSlTrim",
+    "GBBstnBlu15mlBlkDropperSlTrim",
+    "GBBstnBlu1ozBlkDropper",
+    "GBBstnBlu1ozBlkDropperShnGlTrim",
+    "GBBstnBlu1ozWhtDropper",
+    "GBBstnBlu1ozWhtDropperShnGlTrim",
+    "GBBstnBlu1ozWhtDropperShnSlTrim"
+  ],
+  "rows": [
+    {
+      "sku": "GBBstn15BlkCapSht",
+      "websiteSku": "GBBstn15BlkCapSht",
+      "graceSku": "GB-BSR-CLR-15ML-BLK-S",
+      "familyId": "boston-round-15ml-clear-18-400",
+      "plateSha256": "cf53147c7cedde10e6154507dd6bb559fe0850111513ab481af9d09cd884d3c8",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 281,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 345,
+            "top": 266,
+            "right": 653,
+            "bottom": 1062
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/64729bea9cab7d4a395871db4d36b4973a23f2f4aafbb3e8f213515b13ea4727.webp",
+            "key": "64729bea9cab7d4a395871db4d36b4973a23f2f4aafbb3e8f213515b13ea4727.webp",
+            "sha256": "64729bea9cab7d4a395871db4d36b4973a23f2f4aafbb3e8f213515b13ea4727",
+            "bytes": 197850,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 368,
+            "top": 245,
+            "right": 626,
+            "bottom": 385
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/ab92eeb097f1999880133593eb8692774180ddaa633a6a559663f87ec6cb8cec.webp",
+            "key": "ab92eeb097f1999880133593eb8692774180ddaa633a6a559663f87ec6cb8cec.webp",
+            "sha256": "ab92eeb097f1999880133593eb8692774180ddaa633a6a559663f87ec6cb8cec",
+            "bytes": 15744,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+        "releaseVersion": "1c994a66c9d0eb524d3aff308514532efe560d0659f2df9c99860e4e4891fa71"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "1c994a66c9d0eb524d3aff308514532efe560d0659f2df9c99860e4e4891fa71",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1
+            ],
+            "transparentFraction": 0.8072,
+            "semiTransparentPixels": 6319,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "indices": [
+              2
+            ],
+            "transparentFraction": 0.9703,
+            "semiTransparentPixels": 1717,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": false,
+          "mean": 4.4222,
+          "tailOver40": 0.013398
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html?rev=2",
+          "docs/reviews/boston-kit-release-2026-09-12/hash-drift.json"
+        ],
+        "scope": "Four refreshed Boston Round kit rows after plate-byte drift",
+        "plateSha256": "cf53147c7cedde10e6154507dd6bb559fe0850111513ab481af9d09cd884d3c8",
+        "partHashes": [
+          "64729bea9cab7d4a395871db4d36b4973a23f2f4aafbb3e8f213515b13ea4727",
+          "ab92eeb097f1999880133593eb8692774180ddaa633a6a559663f87ec6cb8cec"
+        ],
+        "bytesVerified": true,
+        "supersededApproval": {
+          "status": "approved",
+          "reviewKind": "kit",
+          "reviewer": "Jordan Richter",
+          "approvedOn": "2026-09-12",
+          "evidence": [
+            "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+            "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+          ],
+          "scope": "All 25 source-qualified Boston Round kit candidates",
+          "plateSha256": "cb11490cbe2104d37535b896d8d685f9958eddd92041e62254a27e8554de4236",
+          "partHashes": [
+            {
+              "slot": "body",
+              "sha256": "83aa3f4f6d575d7bf316e1ca412e3ad816f45ae8b2e6f5e56c7262508a06fd93",
+              "bytes": 191298
+            },
+            {
+              "slot": "cap",
+              "sha256": "ad21ca1cfd034f1e82cef78d2d5e723c20b221c28d2a7e930ccccdc53022eedb",
+              "bytes": 15390
+            }
+          ],
+          "reconstructionSha256": "98886b7d6e457790b0c8e92012d7764d9977ce103a7a6e27be90d053dbe34cc9",
+          "bytesVerified": true
+        }
+      }
+    },
+    {
+      "sku": "GBBstn1ozBlkCapSht",
+      "websiteSku": "GBBstn1ozBlkCapSht",
+      "graceSku": "GB-BSR-CLR-30ML-BLK-S",
+      "familyId": "boston-round-30ml-clear-20-400",
+      "plateSha256": "f6c79efe149e59031cfdf39405346e6fe2c1b278843fcf79a7056c126f650c8e",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 256,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 323,
+            "top": 244,
+            "right": 675,
+            "bottom": 1061
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/038dcf628677911cda1a24620ebbb7e1a8f9accc640f87892e46d21575e04749.webp",
+            "key": "038dcf628677911cda1a24620ebbb7e1a8f9accc640f87892e46d21575e04749.webp",
+            "sha256": "038dcf628677911cda1a24620ebbb7e1a8f9accc640f87892e46d21575e04749",
+            "bytes": 229462,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 376,
+            "top": 231,
+            "right": 629,
+            "bottom": 357
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/0ffbbaf0466941f7b31e75da31d11a49cf177184969ec9d93b2fd5b4c54a500f.webp",
+            "key": "0ffbbaf0466941f7b31e75da31d11a49cf177184969ec9d93b2fd5b4c54a500f.webp",
+            "sha256": "0ffbbaf0466941f7b31e75da31d11a49cf177184969ec9d93b2fd5b4c54a500f",
+            "bytes": 14616,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+        "releaseVersion": "8f3adeb586877cc3a1ca8b58901f43022fe388187aa2c5b8d11bfa8edc4f6f1e"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "8f3adeb586877cc3a1ca8b58901f43022fe388187aa2c5b8d11bfa8edc4f6f1e",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1
+            ],
+            "transparentFraction": 0.7786,
+            "semiTransparentPixels": 6527,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "indices": [
+              2
+            ],
+            "transparentFraction": 0.9737,
+            "semiTransparentPixels": 1787,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": false,
+          "mean": 4.3398,
+          "tailOver40": 0.018234
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html?rev=2",
+          "docs/reviews/boston-kit-release-2026-09-12/hash-drift.json"
+        ],
+        "scope": "Four refreshed Boston Round kit rows after plate-byte drift",
+        "plateSha256": "f6c79efe149e59031cfdf39405346e6fe2c1b278843fcf79a7056c126f650c8e",
+        "partHashes": [
+          "038dcf628677911cda1a24620ebbb7e1a8f9accc640f87892e46d21575e04749",
+          "0ffbbaf0466941f7b31e75da31d11a49cf177184969ec9d93b2fd5b4c54a500f"
+        ],
+        "bytesVerified": true,
+        "supersededApproval": {
+          "status": "approved",
+          "reviewKind": "kit",
+          "reviewer": "Jordan Richter",
+          "approvedOn": "2026-09-12",
+          "evidence": [
+            "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+            "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+          ],
+          "scope": "All 25 source-qualified Boston Round kit candidates",
+          "plateSha256": "85d25d540709059c89bddb9ab2e820ad7cc895e52579abc9bc8924ead0f1d267",
+          "partHashes": [
+            {
+              "slot": "body",
+              "sha256": "680a805748888fdc11eca9a54f5c4fc176c4e56f5176935e450015da3539667f",
+              "bytes": 223624
+            },
+            {
+              "slot": "cap",
+              "sha256": "8554e5ce5a37ba2ee71d51fa4c921093734c57e08f1e05c3afd8ff892fd45983",
+              "bytes": 14184
+            }
+          ],
+          "reconstructionSha256": "debbbedd5e4a934ad7b95231d985148388ecc59f9e3f193f88765d946d960616",
+          "bytesVerified": true
+        }
+      }
+    },
+    {
+      "sku": "GBBstn2ozBlkCapSht",
+      "websiteSku": "GBBstn2ozBlkCapSht",
+      "graceSku": "GB-BSR-CLR-60ML-BLK-S",
+      "familyId": "boston-round-60ml-clear-20-400",
+      "plateSha256": "8a8a2489ea3d689d70eb9a18e1e69750656df041702fc9110a3a7257e956518c",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 53,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 323,
+            "top": 232,
+            "right": 673,
+            "bottom": 1057
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/50874880860440e319268d83b28f05bbb4243c8ac5c424f0e7b4f9d3dfeacf02.webp",
+            "key": "50874880860440e319268d83b28f05bbb4243c8ac5c424f0e7b4f9d3dfeacf02.webp",
+            "sha256": "50874880860440e319268d83b28f05bbb4243c8ac5c424f0e7b4f9d3dfeacf02",
+            "bytes": 233448,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 393,
+            "top": 220,
+            "right": 601,
+            "bottom": 324
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/bbe728e8461e760c180e32bd9fe383638d96710ab85f70581e5528af8c92ed23.webp",
+            "key": "bbe728e8461e760c180e32bd9fe383638d96710ab85f70581e5528af8c92ed23.webp",
+            "sha256": "bbe728e8461e760c180e32bd9fe383638d96710ab85f70581e5528af8c92ed23",
+            "bytes": 11170,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+        "releaseVersion": "82dacf0eeb9397d6ead784ff4dad5144d7882f6e843b12e511505ee16f87cdf0"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "82dacf0eeb9397d6ead784ff4dad5144d7882f6e843b12e511505ee16f87cdf0",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1
+            ],
+            "transparentFraction": 0.78,
+            "semiTransparentPixels": 5128,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "indices": [
+              2
+            ],
+            "transparentFraction": 0.982,
+            "semiTransparentPixels": 1207,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": false,
+          "mean": 17.889,
+          "tailOver40": 0.146493
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html?rev=2",
+          "docs/reviews/boston-kit-release-2026-09-12/hash-drift.json"
+        ],
+        "scope": "Four refreshed Boston Round kit rows after plate-byte drift",
+        "plateSha256": "8a8a2489ea3d689d70eb9a18e1e69750656df041702fc9110a3a7257e956518c",
+        "partHashes": [
+          "50874880860440e319268d83b28f05bbb4243c8ac5c424f0e7b4f9d3dfeacf02",
+          "bbe728e8461e760c180e32bd9fe383638d96710ab85f70581e5528af8c92ed23"
+        ],
+        "bytesVerified": true,
+        "supersededApproval": {
+          "status": "approved",
+          "reviewKind": "kit",
+          "reviewer": "Jordan Richter",
+          "approvedOn": "2026-09-12",
+          "evidence": [
+            "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+            "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+          ],
+          "scope": "All 25 source-qualified Boston Round kit candidates",
+          "plateSha256": "ada43cc85a767d0851e1fefc4f91daa838deec4ac48cc21a29a1a0b080e4f7b5",
+          "partHashes": [
+            {
+              "slot": "body",
+              "sha256": "5a2459d2081d9ef98a7b871756b1f53899f0ef46076c3fd7abc4c5c8a942e14b",
+              "bytes": 320744
+            },
+            {
+              "slot": "cap",
+              "sha256": "c9938ed2b28d4e6c17579e062e5876a1138573ba1717f7553040ad8eb4831fcd",
+              "bytes": 14814
+            }
+          ],
+          "reconstructionSha256": "c2e547e4269bdc7f22b92aebc0804debc5332223c6026f5205d07ec57dfffb1c",
+          "bytesVerified": true
+        }
+      }
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropper",
+      "websiteSku": "GBBstnAmb15mlBlkDropper",
+      "graceSku": "GB-BSR-AMB-15ML-BLK-T-01",
+      "familyId": "boston-round-15ml-amber-18-400",
+      "plateSha256": "8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 40,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 309,
+            "top": 40,
+            "right": 802,
+            "bottom": 1065
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/8ece95e89aca11e4bfb0cc6ab17668f191435aab0d2597f0902a47cecf5f7ba0.webp",
+            "key": "8ece95e89aca11e4bfb0cc6ab17668f191435aab0d2597f0902a47cecf5f7ba0.webp",
+            "sha256": "8ece95e89aca11e4bfb0cc6ab17668f191435aab0d2597f0902a47cecf5f7ba0",
+            "bytes": 239502,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/5. GBBstnAmb15mlBlkDropper.psd",
+        "releaseVersion": "1b11102a8e4308c7b498fd3ea1188e9cd78060fa5cc3f3daded0f9bc71139c97"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "1b11102a8e4308c7b498fd3ea1188e9cd78060fa5cc3f3daded0f9bc71139c97",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.7636,
+            "semiTransparentPixels": 11740,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.531,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "8ece95e89aca11e4bfb0cc6ab17668f191435aab0d2597f0902a47cecf5f7ba0",
+            "bytes": 239502
+          }
+        ],
+        "reconstructionSha256": "78b5eae3bce130dd7e69dd923200285fe2b9c17a06cefd2a984ab35e2ee23945",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+      "websiteSku": "GBBstnAmb15mlBlkDropperGlTrim",
+      "graceSku": "GB-BSR-AMB-15ML-BLK-T-02",
+      "familyId": "boston-round-15ml-amber-18-400",
+      "plateSha256": "d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 41,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 306,
+            "top": 41,
+            "right": 799,
+            "bottom": 1065
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/6ffe55dcb1fdfaf5315691c3e7fe3b643a51b191432fe16795db1b86f211d052.webp",
+            "key": "6ffe55dcb1fdfaf5315691c3e7fe3b643a51b191432fe16795db1b86f211d052.webp",
+            "sha256": "6ffe55dcb1fdfaf5315691c3e7fe3b643a51b191432fe16795db1b86f211d052",
+            "bytes": 260854,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/7. GBBstnAmb15mlBlkDropperGlTrim.psd",
+        "releaseVersion": "b2b52c85a1784af992b1958e7c64ce7db8c21af30db6a516edcbe5d2d5ee524e"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "b2b52c85a1784af992b1958e7c64ce7db8c21af30db6a516edcbe5d2d5ee524e",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.7617,
+            "semiTransparentPixels": 12699,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.6468,
+          "tailOver40": 1.3e-05
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "6ffe55dcb1fdfaf5315691c3e7fe3b643a51b191432fe16795db1b86f211d052",
+            "bytes": 260854
+          }
+        ],
+        "reconstructionSha256": "bb3922b09a5fb9b55fc1e59834771ddea68e0f7f1bddf810524b9ec2a0a030d1",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+      "websiteSku": "GBBstnAmb15mlBlkDropperSlTrim",
+      "graceSku": "GB-BSR-AMB-15ML-BLK-T-03",
+      "familyId": "boston-round-15ml-amber-18-400",
+      "plateSha256": "08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 41,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 319,
+            "top": 41,
+            "right": 812,
+            "bottom": 1065
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/50fa24074ea5f064a8e0ad94e9c06448d2e0edaa9b41466c93d6994a049d1ad5.webp",
+            "key": "50fa24074ea5f064a8e0ad94e9c06448d2e0edaa9b41466c93d6994a049d1ad5.webp",
+            "sha256": "50fa24074ea5f064a8e0ad94e9c06448d2e0edaa9b41466c93d6994a049d1ad5",
+            "bytes": 259604,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/2. GBBstnAmb15mlBlkDropperSlTrim.psd",
+        "releaseVersion": "e07dbdba792fbf30ebeabb532e7f0779c44be1174893009581d0c60dcfa1bc80"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "e07dbdba792fbf30ebeabb532e7f0779c44be1174893009581d0c60dcfa1bc80",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.7605,
+            "semiTransparentPixels": 12743,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.5937,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "50fa24074ea5f064a8e0ad94e9c06448d2e0edaa9b41466c93d6994a049d1ad5",
+            "bytes": 259604
+          }
+        ],
+        "reconstructionSha256": "1766b4e6b45325e6e546ab28b332db994439acde41e9f245c006f4e8c5fe5787",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropper",
+      "websiteSku": "GBBstnAmb15mlWhtDropper",
+      "graceSku": "GB-BSR-AMB-15ML-WHT-T-01",
+      "familyId": "boston-round-15ml-amber-18-400",
+      "plateSha256": "b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 33,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 308,
+            "top": 33,
+            "right": 799,
+            "bottom": 1065
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/c1c69db629acee83f8636754077e96b22bec984a3d762839f396363261717bf1.webp",
+            "key": "c1c69db629acee83f8636754077e96b22bec984a3d762839f396363261717bf1.webp",
+            "sha256": "c1c69db629acee83f8636754077e96b22bec984a3d762839f396363261717bf1",
+            "bytes": 214804,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/6. GBBstnAmb15mlWhtDropper.psd",
+        "releaseVersion": "eb5e161f1f1581b6f41f08dbcdca7950ecc841f7fd4571f35df6af1c661be8e1"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "eb5e161f1f1581b6f41f08dbcdca7950ecc841f7fd4571f35df6af1c661be8e1",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.7561,
+            "semiTransparentPixels": 13502,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.5565,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "c1c69db629acee83f8636754077e96b22bec984a3d762839f396363261717bf1",
+            "bytes": 214804
+          }
+        ],
+        "reconstructionSha256": "ad7592cb72c9520efba4b220e225e214900a3f37d047ef3fe64a1c47a72e88ab",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+      "websiteSku": "GBBstnAmb15mlWhtDropperGlTrim",
+      "graceSku": "GB-BSR-AMB-15ML-WHT-T-02",
+      "familyId": "boston-round-15ml-amber-18-400",
+      "plateSha256": "05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 42,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 306,
+            "top": 42,
+            "right": 798,
+            "bottom": 1065
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/5bc7e1838e22c5b3ed1dcc2449d9f41cfec90831998570661e6a3f9ffe51995f.webp",
+            "key": "5bc7e1838e22c5b3ed1dcc2449d9f41cfec90831998570661e6a3f9ffe51995f.webp",
+            "sha256": "5bc7e1838e22c5b3ed1dcc2449d9f41cfec90831998570661e6a3f9ffe51995f",
+            "bytes": 246710,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/4. GBBstnAmb15mlWhtDropperGlTrim.psd",
+        "releaseVersion": "818aeca0fc4b78a459781384726469dfe74e7a4ef8620a3a33791736d7d81193"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "818aeca0fc4b78a459781384726469dfe74e7a4ef8620a3a33791736d7d81193",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.7622,
+            "semiTransparentPixels": 12678,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.6401,
+          "tailOver40": 0.000293
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "5bc7e1838e22c5b3ed1dcc2449d9f41cfec90831998570661e6a3f9ffe51995f",
+            "bytes": 246710
+          }
+        ],
+        "reconstructionSha256": "cdf40d6efcf834eef50a59a90138c12b48253595cd5039f1409815a8adf358fa",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+      "websiteSku": "GBBstnAmb15mlWhtDropperSlTrim",
+      "graceSku": "GB-BSR-AMB-15ML-WHT-T-03",
+      "familyId": "boston-round-15ml-amber-18-400",
+      "plateSha256": "a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 48,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 312,
+            "top": 48,
+            "right": 804,
+            "bottom": 1065
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/fb6204aa1e71638a7a51524f254ef618bf5018f510c730e2f62a529429033b62.webp",
+            "key": "fb6204aa1e71638a7a51524f254ef618bf5018f510c730e2f62a529429033b62.webp",
+            "sha256": "fb6204aa1e71638a7a51524f254ef618bf5018f510c730e2f62a529429033b62",
+            "bytes": 240838,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/3. GBBstnAmb15mlWhtDropperSlTrim.psd",
+        "releaseVersion": "968b57b3b9ec4eb169506c51d8d07f8a88c98eabeeebe62923ebf31a0a08cb95"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "968b57b3b9ec4eb169506c51d8d07f8a88c98eabeeebe62923ebf31a0a08cb95",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.7628,
+            "semiTransparentPixels": 12759,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.5324,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "fb6204aa1e71638a7a51524f254ef618bf5018f510c730e2f62a529429033b62",
+            "bytes": 240838
+          }
+        ],
+        "reconstructionSha256": "d513ae2cc08d7004ee8192534e24ee3649318c7330396e3724ee2162e6a1ba4d",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkDropper",
+      "websiteSku": "GBBstnAmb1ozBlkDropper",
+      "graceSku": "GB-BSR-AMB-30ML-BLK-T-01",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "plateSha256": "a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 40,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 279,
+            "top": 40,
+            "right": 755,
+            "bottom": 1093
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/a3f798632fa4f2a3c728fd6708d4cfe05dad8523e6200528ba0f557fefa9b15c.webp",
+            "key": "a3f798632fa4f2a3c728fd6708d4cfe05dad8523e6200528ba0f557fefa9b15c.webp",
+            "sha256": "a3f798632fa4f2a3c728fd6708d4cfe05dad8523e6200528ba0f557fefa9b15c",
+            "bytes": 330756,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/16. GBBstnAmb1ozBlkDropper.psd",
+        "releaseVersion": "4f2ef5e45614acebdf51d947d0048f14dd008b4c69626ab531f50a6e664d2372"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "4f2ef5e45614acebdf51d947d0048f14dd008b4c69626ab531f50a6e664d2372",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.567,
+            "semiTransparentPixels": 15999,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.8965,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "a3f798632fa4f2a3c728fd6708d4cfe05dad8523e6200528ba0f557fefa9b15c",
+            "bytes": 330756
+          }
+        ],
+        "reconstructionSha256": "7bc4f59c89989fc5139159c719c2b6c86d02e93018f72d24e51c96510a2d3f77",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "websiteSku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "graceSku": "GB-BSR-AMB-30ML-MRL-MBLK",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 43,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 273,
+            "top": 43,
+            "right": 926,
+            "bottom": 1094
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+            "key": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+            "sha256": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+            "bytes": 303372,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 373,
+            "top": 45,
+            "right": 628,
+            "bottom": 451
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480.webp",
+            "key": "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480.webp",
+            "sha256": "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480",
+            "bytes": 29628,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/3. GBBstnAmb1ozMtlRollonMattBlk.psd",
+        "releaseVersion": "987864a06140f0a1c8638d278dbdd66fa2a0e90d1db2f3c376a772e75db08bb1"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "987864a06140f0a1c8638d278dbdd66fa2a0e90d1db2f3c376a772e75db08bb1",
+      "sourceParts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.3832,
+            "semiTransparentPixels": 9088,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "indices": [
+              3
+            ],
+            "transparentFraction": 0.9096,
+            "semiTransparentPixels": 3415,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3177,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "evidence": [
+          "docs/reviews/boston-kit-pilot/browser.json",
+          "docs/reviews/boston-kit-pilot/comparison.html"
+        ],
+        "scope": "Four 30 mL amber roll-on pilot SKUs only",
+        "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+        "viewHashes": {
+          "on": {
+            "parts": [
+              "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+              "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480"
+            ],
+            "fallback": "faaeac37ae8a21eb37733d9fa0f2bc4ca5102e1b0912fa000d481b371027f451",
+            "reconstruction": "20bec9aa8c23bc1e0f291b2155426cb6e618d66630d329a7a07c6ee03f471c79"
+          },
+          "off": {
+            "parts": [
+              "0cf438d2c3a7dff3fb525381fcc2d948b42ba45c49b58e2ea07a3ebd2a928082",
+              "977c3a8f5e8d989f9a92b3d94baa639115128a9683ad3c859e7f18f5023073d2"
+            ],
+            "fallback": "f3c4b90f1f0032fc4487d671bc8ed699e9bd3ff489198816fbf4a28d0cc262cd",
+            "reconstruction": "4e275a871d4ec3d71c48c0b035374721be0890acd13955b821e538dfef42992a"
+          }
+        }
+      }
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "websiteSku": "GBBstnAmb1ozMtlRollonMattSl",
+      "graceSku": "GB-BSR-AMB-30ML-MRL-MSLV",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 43,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 270,
+            "top": 43,
+            "right": 918,
+            "bottom": 1094
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/95e26e13997423d976516164bb89b4668b3b2625227dae4061fd767cf5661fb8.webp",
+            "key": "95e26e13997423d976516164bb89b4668b3b2625227dae4061fd767cf5661fb8.webp",
+            "sha256": "95e26e13997423d976516164bb89b4668b3b2625227dae4061fd767cf5661fb8",
+            "bytes": 303486,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 370,
+            "top": 62,
+            "right": 625,
+            "bottom": 436
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/e2995495983b62467578fdcc861c135d3a227c6389c986fafef80400c042285c.webp",
+            "key": "e2995495983b62467578fdcc861c135d3a227c6389c986fafef80400c042285c.webp",
+            "sha256": "e2995495983b62467578fdcc861c135d3a227c6389c986fafef80400c042285c",
+            "bytes": 28388,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/1. GBBstnAmb1ozMtlRollonMattSl.psd",
+        "releaseVersion": "3ca84fa59dffed11eb26323d63a6b8b7b74dc54ea6a1b06a4b7ce39e8f26c84f"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "3ca84fa59dffed11eb26323d63a6b8b7b74dc54ea6a1b06a4b7ce39e8f26c84f",
+      "sourceParts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.388,
+            "semiTransparentPixels": 8035,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "indices": [
+              3
+            ],
+            "transparentFraction": 0.9186,
+            "semiTransparentPixels": 2640,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.4361,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "evidence": [
+          "docs/reviews/boston-kit-pilot/browser.json",
+          "docs/reviews/boston-kit-pilot/comparison.html"
+        ],
+        "scope": "Four 30 mL amber roll-on pilot SKUs only",
+        "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+        "viewHashes": {
+          "on": {
+            "parts": [
+              "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+              "697dfe88e1415502934fc8a572218ed2535400803348ed288cf6c6ec7edd7ec0"
+            ],
+            "fallback": "ff9009d2a0a90e63ddc0f29c3f2d9724810f39a70ebfc9791c2bb30ddbec66de",
+            "reconstruction": "d1638071c2b0dde8eb219efbffd4b5e2fe69ce417b8c1da372e217a88bf8087b"
+          },
+          "off": {
+            "parts": [
+              "0cf438d2c3a7dff3fb525381fcc2d948b42ba45c49b58e2ea07a3ebd2a928082",
+              "a99aa93774ade2168d7987b6e31c3bda0ceef4bd1ad986e118a8c6993187f620"
+            ],
+            "fallback": "a4a31764e8f30f2f2e9ddbc5f7789f3c920d044f7ac593790a4037d93ba3c19e",
+            "reconstruction": "cc7ca115f4f6bb0e1bb487efce44e4aa4f783e4ccd1346594c73e53b0233e4b4"
+          }
+        }
+      }
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonShnSl",
+      "websiteSku": "GBBstnAmb1ozMtlRollonShnSl",
+      "graceSku": "GB-BSR-AMB-30ML-MRL-SSLV",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "plateSha256": "fe0d86ec7dd51a6c6079d113d3879dab56f15493f033c3d2d270dfe49dd1acee",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 42,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 270,
+            "top": 53,
+            "right": 913,
+            "bottom": 1095
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/917ec53649ec8bad47fe2ac62c86fdc99cc6fa090d847eb89453bd4188047a29.webp",
+            "key": "917ec53649ec8bad47fe2ac62c86fdc99cc6fa090d847eb89453bd4188047a29.webp",
+            "sha256": "917ec53649ec8bad47fe2ac62c86fdc99cc6fa090d847eb89453bd4188047a29",
+            "bytes": 299516,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 370,
+            "top": 75,
+            "right": 627,
+            "bottom": 445
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/d0182020749da520234d045ca85e0d09f92fb3aef863e8cb7c7652dc8b1bc489.webp",
+            "key": "d0182020749da520234d045ca85e0d09f92fb3aef863e8cb7c7652dc8b1bc489.webp",
+            "sha256": "d0182020749da520234d045ca85e0d09f92fb3aef863e8cb7c7652dc8b1bc489",
+            "bytes": 25050,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/2. GBBstnAmb1ozMtlRollonShnSl.psd",
+        "releaseVersion": "ee7e9381873be932835946e1dac8a2b9875d0e5e6d2a8f4f92d3763e6def51e7"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "ee7e9381873be932835946e1dac8a2b9875d0e5e6d2a8f4f92d3763e6def51e7",
+      "sourceParts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.3979,
+            "semiTransparentPixels": 8543,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "indices": [
+              3
+            ],
+            "transparentFraction": 0.9186,
+            "semiTransparentPixels": 4799,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": false,
+          "mean": 2.7714,
+          "tailOver40": 0.01325
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html?rev=2",
+          "docs/reviews/boston-kit-release-2026-09-12/hash-drift.json"
+        ],
+        "scope": "Four refreshed Boston Round kit rows after plate-byte drift",
+        "plateSha256": "fe0d86ec7dd51a6c6079d113d3879dab56f15493f033c3d2d270dfe49dd1acee",
+        "partHashes": [
+          "917ec53649ec8bad47fe2ac62c86fdc99cc6fa090d847eb89453bd4188047a29",
+          "d0182020749da520234d045ca85e0d09f92fb3aef863e8cb7c7652dc8b1bc489"
+        ],
+        "bytesVerified": true,
+        "supersededApproval": {
+          "status": "approved",
+          "reviewKind": "kit",
+          "reviewer": "Jordan Richter",
+          "approvedOn": "2026-09-12",
+          "evidence": [
+            "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+            "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+          ],
+          "scope": "All 25 source-qualified Boston Round kit candidates",
+          "plateSha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec",
+          "partHashes": [
+            {
+              "slot": "body",
+              "sha256": "56ad66264a127204cf270acef3a945b335aa3274b4ff86178e9bdd314f8c6e3f",
+              "bytes": 304248
+            },
+            {
+              "slot": "cap",
+              "sha256": "a47a9f12a7e7e0585e8ef81b08a70c5f5c4eaa5de6eb6b390a0e9b2b54f032bf",
+              "bytes": 25614
+            }
+          ],
+          "reconstructionSha256": "1c7d80e285363561779ee3e38dc81dfbc496204e7cf345af7dcc9e5c3635af36",
+          "bytesVerified": true
+        }
+      }
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "websiteSku": "GBBstnAmb1ozRollonMattBlk",
+      "graceSku": "GB-BSR-AMB-30ML-RON-MBLK",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 43,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 273,
+            "top": 43,
+            "right": 926,
+            "bottom": 1094
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+            "key": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+            "sha256": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+            "bytes": 303372,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 373,
+            "top": 45,
+            "right": 628,
+            "bottom": 451
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480.webp",
+            "key": "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480.webp",
+            "sha256": "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480",
+            "bytes": 29628,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/8. GBBstnAmb1ozRollonMattBlk.psd",
+        "releaseVersion": "db8aa09ebb4d60407aeaff1bad20da32f7fd01bd071d72bc57420ca1ba85ebd9"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "db8aa09ebb4d60407aeaff1bad20da32f7fd01bd071d72bc57420ca1ba85ebd9",
+      "sourceParts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.3832,
+            "semiTransparentPixels": 9088,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "indices": [
+              3
+            ],
+            "transparentFraction": 0.9096,
+            "semiTransparentPixels": 3415,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3177,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "evidence": [
+          "docs/reviews/boston-kit-pilot/browser.json",
+          "docs/reviews/boston-kit-pilot/comparison.html"
+        ],
+        "scope": "Four 30 mL amber roll-on pilot SKUs only",
+        "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+        "viewHashes": {
+          "on": {
+            "parts": [
+              "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+              "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480"
+            ],
+            "fallback": "faaeac37ae8a21eb37733d9fa0f2bc4ca5102e1b0912fa000d481b371027f451",
+            "reconstruction": "20bec9aa8c23bc1e0f291b2155426cb6e618d66630d329a7a07c6ee03f471c79"
+          },
+          "off": {
+            "parts": [
+              "a16aae158d17cfffc15ad67507c4ff512f93580f6374eb258cd15ecff23d5b20",
+              "ccd7cdaf72ec586829deecdca6aa7792e38e9964b01d031f82415ef9badbc92f"
+            ],
+            "fallback": "69831555fce47ee1527286e7a40c9ff0c79397cb2cdaa9903de71ab1266d4379",
+            "reconstruction": "b636692d6075d1b691487c5adbecf70836058b728b970d50bc3e2e2441b7e8d0"
+          }
+        }
+      }
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "websiteSku": "GBBstnAmb1ozRollonMattSl",
+      "graceSku": "GB-BSR-AMB-30ML-RON-MSLV",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 43,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 270,
+            "top": 43,
+            "right": 918,
+            "bottom": 1094
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/95e26e13997423d976516164bb89b4668b3b2625227dae4061fd767cf5661fb8.webp",
+            "key": "95e26e13997423d976516164bb89b4668b3b2625227dae4061fd767cf5661fb8.webp",
+            "sha256": "95e26e13997423d976516164bb89b4668b3b2625227dae4061fd767cf5661fb8",
+            "bytes": 303486,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 370,
+            "top": 62,
+            "right": 625,
+            "bottom": 436
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/e2995495983b62467578fdcc861c135d3a227c6389c986fafef80400c042285c.webp",
+            "key": "e2995495983b62467578fdcc861c135d3a227c6389c986fafef80400c042285c.webp",
+            "sha256": "e2995495983b62467578fdcc861c135d3a227c6389c986fafef80400c042285c",
+            "bytes": 28388,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/6. GBBstnAmb1ozRollonMattSl.psd",
+        "releaseVersion": "7eabadd67036eb3e1edb72415913f98b487612974de3fdf27194af86b2e139eb"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "7eabadd67036eb3e1edb72415913f98b487612974de3fdf27194af86b2e139eb",
+      "sourceParts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.388,
+            "semiTransparentPixels": 8035,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "indices": [
+              3
+            ],
+            "transparentFraction": 0.9186,
+            "semiTransparentPixels": 2640,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.4361,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "evidence": [
+          "docs/reviews/boston-kit-pilot/browser.json",
+          "docs/reviews/boston-kit-pilot/comparison.html"
+        ],
+        "scope": "Four 30 mL amber roll-on pilot SKUs only",
+        "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+        "viewHashes": {
+          "on": {
+            "parts": [
+              "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+              "697dfe88e1415502934fc8a572218ed2535400803348ed288cf6c6ec7edd7ec0"
+            ],
+            "fallback": "ff9009d2a0a90e63ddc0f29c3f2d9724810f39a70ebfc9791c2bb30ddbec66de",
+            "reconstruction": "d1638071c2b0dde8eb219efbffd4b5e2fe69ce417b8c1da372e217a88bf8087b"
+          },
+          "off": {
+            "parts": [
+              "a16aae158d17cfffc15ad67507c4ff512f93580f6374eb258cd15ecff23d5b20",
+              "f0ddc1ebda44b85bd517b9374f9d9dc709c0aaf6a92edb8f5b6358939fb47caa"
+            ],
+            "fallback": "1ee1063898f6506900bde6de280222fc9baa2d93d3fe8ae6b2a1fc68d5df0faa",
+            "reconstruction": "4a1fbbcb16d8b1ef0248f852fed487a6673f986257c4c3d05bc877df3b26d697"
+          }
+        }
+      }
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDropper",
+      "websiteSku": "GBBstnAmb1ozWhtDropper",
+      "graceSku": "GB-BSR-AMB-30ML-WHT-T-01",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "plateSha256": "f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 34,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 277,
+            "top": 34,
+            "right": 753,
+            "bottom": 1093
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/6e2a7998f94dcb4fb010e091048eb4978331d8febec2c65115f4e726ab156afc.webp",
+            "key": "6e2a7998f94dcb4fb010e091048eb4978331d8febec2c65115f4e726ab156afc.webp",
+            "sha256": "6e2a7998f94dcb4fb010e091048eb4978331d8febec2c65115f4e726ab156afc",
+            "bytes": 286914,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/11. GBBstnAmb1ozWhtDropper.psd",
+        "releaseVersion": "d78cb22c182b16eff4c338fa3ec34d937fde529b1dc08b15ca0b2fbe403297c3"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "d78cb22c182b16eff4c338fa3ec34d937fde529b1dc08b15ca0b2fbe403297c3",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.5676,
+            "semiTransparentPixels": 7918,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.5782,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "6e2a7998f94dcb4fb010e091048eb4978331d8febec2c65115f4e726ab156afc",
+            "bytes": 286914
+          }
+        ],
+        "reconstructionSha256": "d59308d510978f1643caebeeb817c2d9a2fbfdf3339fd394e66c7917adbab6b7",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+      "websiteSku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+      "graceSku": "GB-BSR-AMB-30ML-WHT-T-02",
+      "familyId": "boston-round-30ml-amber-20-400",
+      "plateSha256": "670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 73,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 280,
+            "top": 73,
+            "right": 756,
+            "bottom": 1093
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/bd66f849cd1bf9f4b2d8f3917dfec63449ce6994c74bdc5db2a6a0470b59ce53.webp",
+            "key": "bd66f849cd1bf9f4b2d8f3917dfec63449ce6994c74bdc5db2a6a0470b59ce53.webp",
+            "sha256": "bd66f849cd1bf9f4b2d8f3917dfec63449ce6994c74bdc5db2a6a0470b59ce53",
+            "bytes": 289742,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/13. GBBstnAmb1ozWhtDropperShnGlTrim.psd",
+        "releaseVersion": "e21d4abb5bc5a513004a8778f69f8de8a4f23cddd271f2ee7da8cf33e9185046"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "e21d4abb5bc5a513004a8778f69f8de8a4f23cddd271f2ee7da8cf33e9185046",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.5711,
+            "semiTransparentPixels": 7582,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.6845,
+          "tailOver40": 0.00011
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "bd66f849cd1bf9f4b2d8f3917dfec63449ce6994c74bdc5db2a6a0470b59ce53",
+            "bytes": 289742
+          }
+        ],
+        "reconstructionSha256": "ff27337eb39d28805d16fdaf05fbf496107919f23709849f7cf55f7259f6286d",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+      "websiteSku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+      "graceSku": "GB-BSR-AMB-60ML-WHT-T-01",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "plateSha256": "2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 11,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 288,
+            "top": 11,
+            "right": 721,
+            "bottom": 1086
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/9e6bdab35396549fd9aee27afe62ecb0220938bddec640b5f814d9d72b54d458.webp",
+            "key": "9e6bdab35396549fd9aee27afe62ecb0220938bddec640b5f814d9d72b54d458.webp",
+            "sha256": "9e6bdab35396549fd9aee27afe62ecb0220938bddec640b5f814d9d72b54d458",
+            "bytes": 308124,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/13. GBBstnAmb2ozWhtDropperShnGlTrim.psd",
+        "releaseVersion": "b71d5adf2d7e17c8b9de829e920a8dd75aaad1e8b5894892d8467cb15d8b8318"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "b71d5adf2d7e17c8b9de829e920a8dd75aaad1e8b5894892d8467cb15d8b8318",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.6112,
+            "semiTransparentPixels": 5967,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.7221,
+          "tailOver40": 0.0002
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "9e6bdab35396549fd9aee27afe62ecb0220938bddec640b5f814d9d72b54d458",
+            "bytes": 308124
+          }
+        ],
+        "reconstructionSha256": "d15301674eafc3a4941db5bc8864af75598289b80cef0857f54a3f9407a546f2",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+      "websiteSku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+      "graceSku": "GB-BSR-AMB-60ML-WHT-T-02",
+      "familyId": "boston-round-60ml-amber-20-400",
+      "plateSha256": "bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 11,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 287,
+            "top": 11,
+            "right": 721,
+            "bottom": 1086
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/4d21f8e61648537d38774751ee0562f4217d33f5c9bb816c3b39242f1b79352e.webp",
+            "key": "4d21f8e61648537d38774751ee0562f4217d33f5c9bb816c3b39242f1b79352e.webp",
+            "sha256": "4d21f8e61648537d38774751ee0562f4217d33f5c9bb816c3b39242f1b79352e",
+            "bytes": 307336,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/14. GBBstnAmb2ozWhtDropperShnSlTrim.psd",
+        "releaseVersion": "5c9a5008294957db16d2e47687a921d0e788b6f4bf9b7ce2c9cf40e7702c81aa"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "5c9a5008294957db16d2e47687a921d0e788b6f4bf9b7ce2c9cf40e7702c81aa",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.6099,
+            "semiTransparentPixels": 6020,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.6792,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "4d21f8e61648537d38774751ee0562f4217d33f5c9bb816c3b39242f1b79352e",
+            "bytes": 307336
+          }
+        ],
+        "reconstructionSha256": "9378b79e07122dc1accaec3509bd39ceab850420f54e47849ca5e90ce753cc54",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+      "websiteSku": "GBBstnBlu15mlBlkDropperSlTrim",
+      "graceSku": "GB-BSR-CBL-15ML-BLK-T-03",
+      "familyId": "boston-round-15ml-cobalt-blue-18-400",
+      "plateSha256": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 37,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 314,
+            "top": 37,
+            "right": 808,
+            "bottom": 1063
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/21f581021fa7b1566182ac0b749323602ec71cdc17c438447fc019d3b0685e24.webp",
+            "key": "21f581021fa7b1566182ac0b749323602ec71cdc17c438447fc019d3b0685e24.webp",
+            "sha256": "21f581021fa7b1566182ac0b749323602ec71cdc17c438447fc019d3b0685e24",
+            "bytes": 279310,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/2. GBBstnBlu15mlBlkDropperSlTrim.psd",
+        "releaseVersion": "54f455b539a529b31b984cec83e41cc430ce82de334967b234d33e179cff0742"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "54f455b539a529b31b984cec83e41cc430ce82de334967b234d33e179cff0742",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.7589,
+            "semiTransparentPixels": 12796,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.7862,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "21f581021fa7b1566182ac0b749323602ec71cdc17c438447fc019d3b0685e24",
+            "bytes": 279310
+          }
+        ],
+        "reconstructionSha256": "cc5ea49cd6e35560892eaef940e9406b01463d6dae19d6d5ab20102a004f72d4",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnBlu1ozBlkDropper",
+      "websiteSku": "GBBstnBlu1ozBlkDropper",
+      "graceSku": "GB-BSR-CBL-30ML-BLK-T-01",
+      "familyId": "boston-round-30ml-cobalt-blue-20-400",
+      "plateSha256": "a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 40,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 279,
+            "top": 40,
+            "right": 760,
+            "bottom": 1094
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/3504ab4a3a427497d5fb1a2636aa184ce199623b6952e7233a5983881cfcf6b0.webp",
+            "key": "3504ab4a3a427497d5fb1a2636aa184ce199623b6952e7233a5983881cfcf6b0.webp",
+            "sha256": "3504ab4a3a427497d5fb1a2636aa184ce199623b6952e7233a5983881cfcf6b0",
+            "bytes": 335582,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/16. GBBstnBlu1ozBlkDropper.psd",
+        "releaseVersion": "79bc6518e047a45f8ba8d015bfdd20926f502cc47409f2ca13d1f1dc255ccbea"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "79bc6518e047a45f8ba8d015bfdd20926f502cc47409f2ca13d1f1dc255ccbea",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.5695,
+            "semiTransparentPixels": 16397,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.1063,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "3504ab4a3a427497d5fb1a2636aa184ce199623b6952e7233a5983881cfcf6b0",
+            "bytes": 335582
+          }
+        ],
+        "reconstructionSha256": "66ed3124b80bf3e18496efb50c0eab47bf2c23a71522f0379a13ea1e6c889152",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "websiteSku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "graceSku": "GB-BSR-CBL-30ML-BLK-T-02",
+      "familyId": "boston-round-30ml-cobalt-blue-20-400",
+      "plateSha256": "9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 81,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 277,
+            "top": 81,
+            "right": 758,
+            "bottom": 1093
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/380d70ba9186bf2558e6d6aaca4b983466ee85413a3e9dbf076c01cf292b7427.webp",
+            "key": "380d70ba9186bf2558e6d6aaca4b983466ee85413a3e9dbf076c01cf292b7427.webp",
+            "sha256": "380d70ba9186bf2558e6d6aaca4b983466ee85413a3e9dbf076c01cf292b7427",
+            "bytes": 303716,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/12. GBBstnBlu1ozBlkDropperShnGlTrim.psd",
+        "releaseVersion": "aea9ad03ed77e7aea60f9e9814cc78488d26340ff8724ec781a6647f959f7e59"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "aea9ad03ed77e7aea60f9e9814cc78488d26340ff8724ec781a6647f959f7e59",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.5755,
+            "semiTransparentPixels": 8044,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.934,
+          "tailOver40": 8.8e-05
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "380d70ba9186bf2558e6d6aaca4b983466ee85413a3e9dbf076c01cf292b7427",
+            "bytes": 303716
+          }
+        ],
+        "reconstructionSha256": "ec9a10c804415f6d2a491516b5d26a6c7c56f867836d1e090826582a2c9c427f",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnBlu1ozWhtDropper",
+      "websiteSku": "GBBstnBlu1ozWhtDropper",
+      "graceSku": "GB-BSR-CBL-30ML-WHT-T-01",
+      "familyId": "boston-round-30ml-cobalt-blue-20-400",
+      "plateSha256": "0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 34,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 276,
+            "top": 34,
+            "right": 761,
+            "bottom": 1094
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/7d166b0565efc514c6faf0382475791187cd07127eaa4b841ad7f1542a2e6354.webp",
+            "key": "7d166b0565efc514c6faf0382475791187cd07127eaa4b841ad7f1542a2e6354.webp",
+            "sha256": "7d166b0565efc514c6faf0382475791187cd07127eaa4b841ad7f1542a2e6354",
+            "bytes": 295418,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/11. GBBstnBlu1ozWhtDropper.psd",
+        "releaseVersion": "8f6e134c62b41c1055e0189ee75cc83c5cf3c5229d279dad8e49e17829eccd45"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "8f6e134c62b41c1055e0189ee75cc83c5cf3c5229d279dad8e49e17829eccd45",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.5643,
+            "semiTransparentPixels": 7171,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.7841,
+          "tailOver40": 4e-06
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "7d166b0565efc514c6faf0382475791187cd07127eaa4b841ad7f1542a2e6354",
+            "bytes": 295418
+          }
+        ],
+        "reconstructionSha256": "d12966f70950bef5f6a909cf47cd21a22c8ea263e9abb2899245d9879ef68827",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+      "websiteSku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+      "graceSku": "GB-BSR-CBL-30ML-WHT-T-02",
+      "familyId": "boston-round-30ml-cobalt-blue-20-400",
+      "plateSha256": "d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 69,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 277,
+            "top": 69,
+            "right": 762,
+            "bottom": 1093
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/f1dbbae9494bd628578e752acde5b5ddf998a89c610c28af0ac48cc7a187db8c.webp",
+            "key": "f1dbbae9494bd628578e752acde5b5ddf998a89c610c28af0ac48cc7a187db8c.webp",
+            "sha256": "f1dbbae9494bd628578e752acde5b5ddf998a89c610c28af0ac48cc7a187db8c",
+            "bytes": 299924,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/13. GBBstnBlu1ozWhtDropperShnGlTrim.psd",
+        "releaseVersion": "714159bd99d69a90561e67e2a823939f39b4c0cffa716cebff99f1e8136ff70c"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "714159bd99d69a90561e67e2a823939f39b4c0cffa716cebff99f1e8136ff70c",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.567,
+            "semiTransparentPixels": 7944,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.8967,
+          "tailOver40": 0.000145
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "f1dbbae9494bd628578e752acde5b5ddf998a89c610c28af0ac48cc7a187db8c",
+            "bytes": 299924
+          }
+        ],
+        "reconstructionSha256": "8473eccec93ca6c8adff1ae893e7692c3a1a4895028dab9ebcab275d234ac219",
+        "bytesVerified": true
+      }
+    },
+    {
+      "sku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+      "websiteSku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+      "graceSku": "GB-BSR-CBL-30ML-WHT-T-03",
+      "familyId": "boston-round-30ml-cobalt-blue-20-400",
+      "plateSha256": "83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 72,
+        "baselineY": 1100,
+        "pxPerMm": null
+      },
+      "completeness": "bodyOnly",
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 278,
+            "top": 72,
+            "right": 763,
+            "bottom": 1094
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "url": "/images/boston-kit-release-2026-09-12/parts/39a4bc123dc9f2635f09b0c41f75e1f841f5daa3d76891e3598500cde4f0086d.webp",
+            "key": "39a4bc123dc9f2635f09b0c41f75e1f841f5daa3d76891e3598500cde4f0086d.webp",
+            "sha256": "39a4bc123dc9f2635f09b0c41f75e1f841f5daa3d76891e3598500cde4f0086d",
+            "bytes": 299018,
+            "width": 1000,
+            "height": 1100
+          },
+          "image2x": null,
+          "mask": null,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "source": {
+        "library": "BB-PSD-Files-Master",
+        "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/14. GBBstnBlu1ozWhtDropperShnSlTrim.psd",
+        "releaseVersion": "58bef541605f043890b700b2de976e4c3ccfc9c299884688699db4f0f158e7d6"
+      },
+      "builder": {
+        "name": "prepare-boston-kit-release.py",
+        "version": "1.0.0",
+        "builtAt": 0
+      },
+      "storageProvider": "vercel-blob",
+      "sourceSha256": "58bef541605f043890b700b2de976e4c3ccfc9c299884688699db4f0f158e7d6",
+      "sourceParts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "indices": [
+              1,
+              2
+            ],
+            "transparentFraction": 0.5686,
+            "semiTransparentPixels": 8266,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.847,
+          "tailOver40": 0.0
+        }
+      },
+      "publicationAuthorized": false,
+      "publishable": false,
+      "approval": {
+        "status": "approved",
+        "reviewKind": "kit",
+        "reviewer": "Jordan Richter",
+        "approvedOn": "2026-09-12",
+        "evidence": [
+          "docs/reviews/boston-kit-release-2026-09-12/comparison.html",
+          "conversation approval: \u201ceverything here looks great. It\u2019s perfect, all ready to go\u201d"
+        ],
+        "scope": "All 25 source-qualified Boston Round kit candidates",
+        "plateSha256": "83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46",
+        "partHashes": [
+          {
+            "slot": "body",
+            "sha256": "39a4bc123dc9f2635f09b0c41f75e1f841f5daa3d76891e3598500cde4f0086d",
+            "bytes": 299018
+          }
+        ],
+        "reconstructionSha256": "4c9d6497f2d11a63c581c654e506c6a4102b4c461c69b2cb4157cc5350f6ecc3",
+        "bytesVerified": true
+      }
+    }
+  ],
+  "approvedBatch": {
+    "reviewer": "Jordan Richter",
+    "approvedOn": "2026-09-12",
+    "scope": "All 25 source-qualified Boston Round kit candidates; four refreshed rows re-approved against current plate bytes",
+    "evidence": "docs/reviews/boston-kit-release-2026-09-12/comparison.html?rev=2",
+    "status": "approved"
+  },
+  "publishedAt": "2026-09-13T05:09:00Z",
+  "ship": "ship Boston Round kit release 2026-09-12"
+}

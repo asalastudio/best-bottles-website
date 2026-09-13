@@ -1,0 +1,31 @@
+{
+  "ledgerAt": "2026-09-13T00:02:57.246Z",
+  "checkedApprovedPlates": 165,
+  "liveKits": 420,
+  "sunburstGroups": 71,
+  "readyComparisons": 3,
+  "lockedStandards": 0,
+  "standards": [
+    {
+      "size": 15,
+      "state": "reference-proposed",
+      "ready": true,
+      "requestedPercent": 0,
+      "glassHeightPercent": 46.73887278590374
+    },
+    {
+      "size": 30,
+      "state": "reference-proposed",
+      "ready": true,
+      "requestedPercent": 3,
+      "glassHeightPercent": 52.43044795187855
+    },
+    {
+      "size": 60,
+      "state": "reference-proposed",
+      "ready": true,
+      "requestedPercent": 0,
+      "glassHeightPercent": 62.389727171078604
+    }
+  ]
+}

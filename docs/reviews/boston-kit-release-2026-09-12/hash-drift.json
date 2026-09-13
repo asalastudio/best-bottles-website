@@ -1,0 +1,27 @@
+{
+  "release": "boston-round-kit-release-2026-09-12",
+  "detectedOn": "2026-09-12",
+  "rows": [
+    {
+      "sku": "GBBstn15BlkCapSht",
+      "approvedPlateSha256": "cb11490cbe2104d37535b896d8d685f9958eddd92041e62254a27e8554de4236",
+      "currentPlateSha256": "cf53147c7cedde10e6154507dd6bb559fe0850111513ab481af9d09cd884d3c8"
+    },
+    {
+      "sku": "GBBstn1ozBlkCapSht",
+      "approvedPlateSha256": "85d25d540709059c89bddb9ab2e820ad7cc895e52579abc9bc8924ead0f1d267",
+      "currentPlateSha256": "f6c79efe149e59031cfdf39405346e6fe2c1b278843fcf79a7056c126f650c8e"
+    },
+    {
+      "sku": "GBBstn2ozBlkCapSht",
+      "approvedPlateSha256": "ada43cc85a767d0851e1fefc4f91daa838deec4ac48cc21a29a1a0b080e4f7b5",
+      "currentPlateSha256": "8a8a2489ea3d689d70eb9a18e1e69750656df041702fc9110a3a7257e956518c"
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonShnSl",
+      "approvedPlateSha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec",
+      "currentPlateSha256": "fe0d86ec7dd51a6c6079d113d3879dab56f15493f033c3d2d270dfe49dd1acee"
+    }
+  ],
+  "action": "Four rows re-rendered from BB-PSD-Files-Master and returned to review."
+}

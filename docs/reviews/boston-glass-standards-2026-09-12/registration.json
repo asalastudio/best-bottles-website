@@ -1,0 +1,62 @@
+[
+  {
+    "sku": "GBBstn15BlkCapSht",
+    "capacity": 15,
+    "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+    "layerIndex": 1,
+    "layerName": "Layer 4",
+    "layerOffset": [
+      137,
+      312
+    ],
+    "rimLocalY": 2,
+    "baseLocalY": 809,
+    "scale": 0.9938526109121538,
+    "translateX": 621.9413657077889,
+    "translateY": 756.9732377720676,
+    "glassHeight": 802.0390570061081,
+    "baseY": 1561.0,
+    "registrationMedianPx": 1.9458827421798333,
+    "registrationP95Px": 9.414935922186412
+  },
+  {
+    "sku": "GBBstn1ozBlkCapSht",
+    "capacity": 30,
+    "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+    "layerIndex": 1,
+    "layerName": "Layer 22",
+    "layerOffset": [
+      76,
+      468
+    ],
+    "rimLocalY": 3,
+    "baseLocalY": 946,
+    "scale": 0.926300576402759,
+    "translateX": 588.177211058966,
+    "translateY": 684.71965472299,
+    "glassHeight": 873.5014435478017,
+    "baseY": 1561.0,
+    "registrationMedianPx": 2.003078627492698,
+    "registrationP95Px": 15.159220791949812
+  },
+  {
+    "sku": "GBBstn2ozBlkCapSht",
+    "capacity": 60,
+    "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+    "layerIndex": 1,
+    "layerName": "Layer 6",
+    "layerOffset": [
+      50,
+      314
+    ],
+    "rimLocalY": 1,
+    "baseLocalY": 1155,
+    "scale": 0.927736324311706,
+    "translateX": 532.1522003469074,
+    "translateY": 489.46454541997946,
+    "glassHeight": 1070.6077182557087,
+    "baseY": 1561.0,
+    "registrationMedianPx": 2.0320539623965033,
+    "registrationP95Px": 12.980997938281808
+  }
+]

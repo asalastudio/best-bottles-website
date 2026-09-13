@@ -1,0 +1,19 @@
+[
+  {
+    "sku": "GBBstn1ozBlkCapSht",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "title": "30 mL Clear Boston Round · original short black cap",
+    "url": "/assets/boston-30ml-final-size-v1-2026-09-12/c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4.png",
+    "priorUrl": "/assets/boston-30ml-final-size-v1-2026-09-12/d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401.png",
+    "sourcePreview": "/assets/boston-30ml-final-size-v1-2026-09-12/5bf522a3373736025c7bf77cd075ca486877e2624ea58288336dd52fdc7aff77.png",
+    "stage": "rework",
+    "assetSha256": "c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4",
+    "standardBinding": "cc21b932b28d204c455c34181714175010f71ee95733806184caf22eafcd1f3b",
+    "standardId": "boston-round-standard-30ml",
+    "reviewNotes": [
+      "Original photograph uniformly resized by 3%. Calibrated glass height 873.5 → 899.7 px. Bottle, cap and existing shadow move together; no regeneration or separate retouching.",
+      "Visual approval only. Release and website verification remain separate."
+    ]
+  }
+]

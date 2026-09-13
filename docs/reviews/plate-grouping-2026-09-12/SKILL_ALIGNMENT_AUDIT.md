@@ -1,0 +1,47 @@
+# Restart handoff versus original Codex skills — 2026-09-12
+
+The restart handoff is useful, but it is not accurate enough to execute unchanged. Preserve the work; restore the original skills as the process, retain Jordan's newer explicit constraints, and repair accounting before resuming ordered production. No release has been authorized or published in this Codex session.
+
+## Verified findings
+
+1. **The original plate/kit skill was not lost.** `/Users/jordanrichter/.codex/skills/bestbottles-plate-kit-lane/SKILL.md` and this worktree's `.claude/skills/bestbottles-plate-kit-lane/SKILL.md` are byte-identical. The handoff changes the effective policy: the skill reconciles all currently sold legacy products and selectable variants against Convex/Shopify; the handoff treats Convex/Shopify alone as identity authority and does not establish complete legacy scope. Convex remains the operational identity source for rendering, but its imported facts and coverage need reconciliation. Never derive identity from SKU text or filenames.
+2. **642 plate approvals are mislabeled as hero approvals.** `scripts/asset-ledger/build.mjs:85` classifies any review collection without “kit” in its ID as a hero collection. All 642 `approved-not-locked` hero states in the baseline come from plate recovery collections: exact broken-link recovery 425, Circle 82, Diva 22, Elegant 86, Round 27. Their collection metadata and row notes explicitly describe plates. Do not lock or index those as catalog heroes.
+3. **Hero completion does not enforce the requested Sunburst condition.** There are 391 indexed registry rows: 82 `sunburst-approved` and 309 `prior-release`. Family `heroComplete` counts either generation as indexed, so an indexed group is not necessarily Sunburst complete. Existing approved originals remain valuable; the newer request for all-Sunburst coverage is a stricter target, not proof that prior images are defective.
+4. **Live counts cannot move at local-render time.** Measurement reads served Convex plates. Local builds, review, hash locks and publication are distinct. Split each step into local candidate coverage/quality deltas, Jordan's review and release-specific “ship”, then hosted verification and live ledger deltas. Do not require live completion before publication, and do not publish to make a counter green.
+5. **The measurement cache can hide a publication.** `measure-plates.py:64-67` reuses a SKU-named file merely because it exists. It does not invalidate on changed image URL/hash. Before/after measurement must be bound to the served image version. The 200 source-qualified Step 1 front caches checked in this session matched their baseline ledger hashes; the identified cache flaw concerns subsequent changes, not evidence that these baseline files were wrong.
+6. **The 28-family list is stale.** It is derived from the September 3 xref and September 2 catalog snapshot. Fresh Convex identity and existing source checks produced 200 passing rows and 150 held rows among the 350 listed SKUs. Holds: 113 missing approved fronts in the old selection, 27 source identity guard failures, 11 changed catalog family IDs; one row has two holds. “Not matched” is not “needs photography”. The original skill requires a full source/alias/paired-view investigation before that conclusion.
+7. **Rebuilding a kit audit does not automatically refresh local kit counts.** The asset ledger reads the fixed September 8 kit-completion CSV and saved review decisions; it does not consume new isolated `kit-audit.json` outputs. Wire new audited batch results into explicit current records before predicting that held/candidate counts will change.
+8. **Original visual safeguards are stronger than silhouette-height matching alone.** The hero skill preserves approved per-SKU absolute framing, verified physical-body/profile groups, shoulder landmarks and documented tall/short/vintage/atomizer exceptions. A sibling match requires verified same-body evidence. New enhancement bytes require fresh review; a model instruction to lock geometry is not verification of geometry.
+9. **The handoff omits the original end-to-end UI gate.** Restore checks of exact selected SKU, plate and cap-off, kit swaps with a fixed body, catalog filter/hero association, specifications, cart identity, and desktop/mobile behavior. A ledger, successful render, or hash guard cannot certify customer-visible behavior.
+10. **One documented test command is invalid in this checkout.** `npm test -- tests/catalog-approved-heroes.test.ts` fails because package.json has no `test` script. Use the installed Vitest runner (`npx --no-install vitest run tests/catalog-approved-heroes.test.ts`) and record the result.
+
+11. **The blanket grouping fix is not safe for every listed family.** Fresh Convex product records describe `GBTallRect10MtlRollSlMatt` as “Tall rectangular design” under productGroupId `kh79nfxrjrmbpg4thz4kspk5s58dp5c3`, and `GBRect10MtlRollSlMatt` as “Footed rectangular design” under `kh7ddwsy7tdsc2f6t43bckq1jx8dqkdk`. The existing xref derives `rectangle-10ml-clear-13-415` for both. This conclusion comes from catalog descriptions and distinct group records, not parsing SKU strings. The original skill requires distinct physical profiles to remain separate. Keying solely by familyId is appropriate only once the group is verified as one physical body. Keep the current patch as a paused proposal; do not roll it out across all families. Boston examples improve (amber 15 mL cap body width 362 → 285px, target 286px), but that cannot establish safety for Rectangle or other mixed profiles.
+
+## Rules to retain
+
+Use `BB-PSD-Files-Master` as the sole PSD source. Do not fabricate components, alter shadows with code, infer product identity from names, or overwrite approved originals. Keep the exact two-line frosted prompt unchanged and provide only its own input image. Every changed image needs same-zoom comparison and metrics. Review approval binds to exact sha256; re-rendered bytes return to review. Publishing requires Jordan's explicit “ship” for the named release. Never commit `.claude/launch.json`.
+
+The older hero skill contains background/shadow-editing guidance and a historical enhancement deferral. Do not blindly reinstate those over Jordan's newer no-shadow-editing and Sunburst instructions. Preserve the older identity, geometry, framing, review and UI checks where they do not conflict.
+
+## Current session state
+
+The initial measurement and ledger build succeeded after installing isolated Python dependencies. Product-record plate counts match the handoff: 946 plated, 173 no-cap-off-by-design, 453 legacy-source, 174 wrong-size, 130 cap-on-only, 551 none, 109 not applicable. The raw ledger has 36 additional no-plate rows without product records (587 none total). Kits: 420 live, 880 held, 687 no-plate, 358 candidate, 70 approved-not-published, 38 changes requested, 118 not applicable, one rendered. Product records cover 377 groups, 370 with an indexed hero; these are not all Sunburst approvals.
+
+The family-only grouping fix and a focused regression test are local and uncommitted. Nine focused checks passed. Seventeen scoped batch commands completed, producing 89 local candidate rows. Rendering was stopped during the Rectangle batch when Jordan requested this skill alignment audit. No candidate is approved, shipped, or claimed finished; incomplete batch output is preserved and excluded from completed-batch counts. Step 2 has not begun. Existing dirty launch configuration is untouched.
+
+## Recommended continuation
+
+First repair typed asset accounting, hash-current measurements, current catalog scope, and the local-versus-published status model. Preserve the baseline ledger and correct it with an auditable delta. Then resume Step 1 on reconciled physical groups, retaining individual holds. Complete visual and UI review, obtain the named release “ship”, verify hosted images and kit parity, rebuild the live ledger, and only then advance in the original step order. Do not use the contaminated 642-hero approval queue or stale 28-family scope as a publishing instruction.
+
+## Verification at pause
+
+The exact measurement-then-ledger sequence was run again after Step 1 was paused. Every plate, kit and hero summary count is unchanged; `ledger-before.json` and `ledger-after-paused-step1.json` preserve both results. Wrong-size remains 174, legacy-source remains 453 in ledger states (550 measured total), and live kits remain 420. This is expected with no publication; Step 1 is not complete and Step 2 has not started.
+
+The actual installed runner passed all 396 tests in `tests/catalog-approved-heroes.test.ts`. This verifies the existing guard contract, not full Sunburst completion, full PSD fidelity, or end-to-end UI behavior.
+
+## Paused candidate review
+
+Same-zoom full-canvas before/after cards, using unchanged source/output bytes, are preserved at:
+`/Users/jordanrichter/.codex/visualizations/2026/09/12/01a097d5-52fb-77b2-9230-f5a9a5ee8e40/plate-grouping-review/index.html`
+
+There are 142 view cards covering the 89 completed SKU candidates (fronts and rendered cap-off views). Each records image hashes and the original ruler's body width, height and foot position. All are pending review; no candidate is certified finished. References were fetched from current Convex plate URLs and matched their content-addressed hashes. The interrupted Rectangle batch is excluded.

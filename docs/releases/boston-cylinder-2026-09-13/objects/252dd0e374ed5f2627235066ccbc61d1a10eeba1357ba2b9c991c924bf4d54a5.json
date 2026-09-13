@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "decisions": {
+    "GBBstn1ozBlkCapSht:c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4": {
+      "sku": "GBBstn1ozBlkCapSht",
+      "assetSha256": "c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4",
+      "status": "approved",
+      "notes": "",
+      "targetHeight": null,
+      "revision": 1,
+      "updatedAt": "2026-09-13T00:33:20.402Z",
+      "scope": "visual-feedback-only"
+    }
+  },
+  "history": [
+    {
+      "sku": "GBBstn1ozBlkCapSht",
+      "assetSha256": "c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4",
+      "status": "approved",
+      "notes": "",
+      "targetHeight": null,
+      "revision": 1,
+      "updatedAt": "2026-09-13T00:33:20.402Z",
+      "scope": "visual-feedback-only"
+    }
+  ]
+}

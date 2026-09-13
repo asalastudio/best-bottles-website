@@ -1,0 +1,9 @@
+{
+  "command": "Matte Gold + metal roller; then cap off",
+  "resolvedSku": "GBBstn1ozMtlRollonMattGl",
+  "graceSku": "GB-BSR-CLR-30ML-MRO-MGLD",
+  "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRO-MGLD&assetPreview=boston",
+  "capOffSha256": "979b668e105d8c24fa101fa4fc5ffc4b760b72424d0e46e82433b65e2a1331ca",
+  "scope": "Frontend Grace command hook verified. No spoken conversation or model tool-calling test.",
+  "published": false
+}

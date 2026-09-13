@@ -1,0 +1,26 @@
+[
+  {
+    "preview": false,
+    "finish": "Gold",
+    "sku": "GBBstn1ozMtlRollonGl",
+    "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRO-GLD"
+  },
+  {
+    "preview": false,
+    "finish": "Black",
+    "sku": "GBBstn1ozMtlRollonBlk",
+    "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRL-BLK"
+  },
+  {
+    "preview": true,
+    "finish": "Gold",
+    "sku": "GBBstn1ozMtlRollonGl",
+    "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRO-GLD&assetPreview=boston"
+  },
+  {
+    "preview": true,
+    "finish": "Black",
+    "sku": "GBBstn1ozMtlRollonBlk",
+    "url": "http://localhost:3040/products/boston-round-30ml-clear-20-400-rollon?sku=GB-BSR-CLR-30ML-MRL-BLK&assetPreview=boston"
+  }
+]

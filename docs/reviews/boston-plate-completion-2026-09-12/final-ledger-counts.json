@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-09-13T01:51:39.890Z",
+  "prepared": {
+    "prepared": 61,
+    "reviewable": 61,
+    "held": 0,
+    "approved": 0,
+    "newPlates": 33,
+    "corrections": 28,
+    "preserved": 62
+  },
+  "indexed": 90,
+  "complete": 62,
+  "missing": 33,
+  "liveKits": 0,
+  "heroGroups": 23
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "candidates": [
+    {
+      "standardId": "boston-round-standard-30ml",
+      "standardBinding": "cc21b932b28d204c455c34181714175010f71ee95733806184caf22eafcd1f3b",
+      "collection": "boston-30ml-final-size-v1-2026-09-12",
+      "sku": "GBBstn1ozBlkCapSht",
+      "groupId": "kh7bb32zgnejqh02fd0bm6cgwx8dq3bd",
+      "before": {
+        "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.d1ca21c8a1dd.png",
+        "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401"
+      },
+      "after": {
+        "url": "/images/bottle-standards/final-candidates/c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4.png",
+        "sha256": "c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4"
+      },
+      "createdAt": "2026-09-13T00:26:46.216Z",
+      "operation": "uniform-complete-image-transform",
+      "authorization": "Jordan: sure resize whole image is fine",
+      "transform": {
+        "scale": 1.03,
+        "translateX": -23.40000000000002,
+        "translateY": -46.84680000000003,
+        "canvas": {
+          "width": 1560,
+          "height": 1716
+        }
+      },
+      "verification": {
+        "passed": true,
+        "outputSha256": "c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4",
+        "sourceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+        "sourceBounds": {
+          "left": 597,
+          "top": 648,
+          "right": 1096,
+          "bottom": 1563
+        },
+        "transformedBounds": {
+          "left": 591.51,
+          "right": 1105.48,
+          "top": 620.5932,
+          "bottom": 1563.0432
+        },
+        "glassHeightBefore": 873.5014435478017,
+        "glassHeightAfter": 899.7064868542358,
+        "baselinePercent": 91,
+        "summary": "Original photograph uniformly resized by 3%. Calibrated glass height 873.5 → 899.7 px. Bottle, cap and existing shadow move together; no regeneration or separate retouching.",
+        "limitation": "Glass endpoints retain the approved master-to-appearance calibration. This is a presentation-size check, not new physical metrology or a release approval."
+      }
+    }
+  ]
+}
