@@ -17,6 +17,7 @@ import { MEGA_MENU_PANELS, type MegaMenuId, type MegaMenuPanelContent } from "@/
 interface NavbarProps {
     variant?: "home" | "catalog";
     initialSearchValue?: string;
+    hideSearch?: boolean;
     hideMobileSearch?: boolean;
     builderMobile?: boolean;
     headerClassName?: string;
@@ -68,18 +69,18 @@ type NavLinkDef =
 
 const NAV_LINKS: Record<string, NavLinkDef[]> = {
     home: [
-        { label: "Bottles", href: "/catalog?category=Glass+Bottle", megaId: "bottles" as MegaMenuId },
+        { label: "Bottle Families", href: "/bottle-families" },
         { label: "Closures", href: "/catalog?category=Component", megaId: "closures" as MegaMenuId },
-        { label: "Specialty", href: "/catalog", megaId: "specialty" as MegaMenuId },
+        { label: "Collections", href: "/collections" },
         { label: "Catalog", href: "/catalog" },
         { label: "Build Your Bottle", href: "/matrix" },
         { label: "Journal", href: "/blog" },
         { label: "About", href: "/about" },
     ],
     catalog: [
-        { label: "Bottles", href: "/catalog?category=Glass+Bottle", megaId: "bottles" as MegaMenuId },
+        { label: "Bottle Families", href: "/bottle-families" },
         { label: "Closures", href: "/catalog?category=Component", megaId: "closures" as MegaMenuId },
-        { label: "Specialty", href: "/catalog", megaId: "specialty" as MegaMenuId },
+        { label: "Collections", href: "/collections" },
         { label: "Catalog", href: "/catalog" },
         { label: "Build Your Bottle", href: "/matrix" },
         { label: "Journal", href: "/blog" },
@@ -98,7 +99,7 @@ const SEARCH_SUGGESTIONS = [
     { label: "Cream Jar", helper: "Category", query: "cream jar" },
 ];
 
-export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch = false, builderMobile = false, headerClassName = "" }: NavbarProps) {
+export default function Navbar({ variant = "home", initialSearchValue, hideSearch = false, hideMobileSearch = false, builderMobile = false, headerClassName = "" }: NavbarProps) {
     const router = useRouter();
     // Grace trigger moved to the floating launcher; useGrace no longer needed here.
     const { itemCount, isCartHydrated } = useCart();
@@ -435,11 +436,12 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                 );
                             })}
                         </nav>
-                        <form
-                            onSubmit={handleSearchSubmit}
-                            className="group/search relative hidden min-w-0 items-center space-x-2 rounded-xl border border-champagne bg-white/60 px-3 py-2 transition-all duration-200 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 xl:flex xl:min-w-[320px] xl:max-w-[420px] xl:flex-1 2xl:min-w-[520px] 2xl:max-w-[520px]"
-                            suppressHydrationWarning
-                        >
+                        {!hideSearch && (
+                            <form
+                                onSubmit={handleSearchSubmit}
+                                className="group/search relative hidden min-w-0 items-center space-x-2 rounded-xl border border-champagne bg-white/60 px-3 py-2 transition-all duration-200 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 xl:flex xl:min-w-[320px] xl:max-w-[420px] xl:flex-1 2xl:min-w-[520px] 2xl:max-w-[520px]"
+                                suppressHydrationWarning
+                            >
                             <MagnifyingGlass className="text-slate shrink-0" size={16} />
                             <input
                                 type="search"
@@ -480,7 +482,8 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                     </div>
                                 </div>
                             )}
-                        </form>
+                            </form>
+                        )}
                         <div className="hidden xl:flex flex-1" />
                         <div className="ml-auto flex shrink-0 items-center justify-end space-x-2 xl:ml-0">
                             {/* Grace AI trigger removed from navbar in v3 — Grace now opens
@@ -508,9 +511,9 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                     </div>
 
                     {/* Row 2: full-width search bar (mobile only) */}
-                    {!hideMobileSearch && (
-                    <div data-mobile-search="" className="flex xl:hidden pb-3 border-t border-champagne/40 pt-2">
-                        <form
+                    {!hideSearch && !hideMobileSearch && (
+                        <div data-mobile-search="" className="flex xl:hidden pb-3 border-t border-champagne/40 pt-2">
+                            <form
                             onSubmit={handleSearchSubmit}
                             className="group/search relative flex flex-1 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2"
                             suppressHydrationWarning
@@ -556,8 +559,8 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                     </div>
                                 </div>
                             )}
-                        </form>
-                    </div>
+                            </form>
+                        </div>
                     )}
 
                 </div>

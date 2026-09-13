@@ -1,3 +1,4 @@
+import { matchesShopCollection } from "./shopCollections";
 import {
     APPLICATOR_BUCKETS,
     BOTTLE_CATEGORIES,
@@ -154,7 +155,7 @@ export function buildCatalogSearchResult(input: {
         return applicatorBucketMatchesProductValues(bucket as never, group.applicatorTypes ?? []);
     };
     const runFilters = (skipKeys = new Set<keyof CatalogFilters>()) => {
-        let rows = [...groups];
+        let rows = filters.shopCollection ? groups.filter(group => matchesShopCollection(group, filters.shopCollection!)) : [...groups];
         if (filters.search) {
             rows = rows.filter((group) => catalogSearchMatches(filters.search, [
                 group.displayName,

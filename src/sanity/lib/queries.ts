@@ -1,6 +1,8 @@
+import type { CollectionCardConfig } from "@/lib/shopCollections";
 // Homepage query (singleton: uses "homepage" if present, else first homepagePage)
 export const HOMEPAGE_QUERY = `
   *[_type == "homepagePage"][0] {
+    useEditorialArtwork,
     heroSlides[] {
       mediaType,
       image,
@@ -23,6 +25,8 @@ export const HOMEPAGE_QUERY = `
       ctaText,
       ctaHref
     },
+    collectionCards[] | order(order asc) { collectionKey, title, subtitle, image, order, enabled },
+    buildYourBottle { heading, description, image, buttonLabel, destination },
     mobileHeroMode,
     mobileTagline,
     mobileSectionLabel,
@@ -346,6 +350,9 @@ export async function getProductFamilyPageContent(
 }
 
 export type HomepageData = {
+    useEditorialArtwork?: boolean;
+    collectionCards?: CollectionCardConfig[];
+    buildYourBottle?: { heading?: string; description?: string; image?: { asset?: { _ref: string } }; buttonLabel?: string; destination?: string };
     heroSlides?: Array<{
         mediaType?: "image" | "video";
         image?: { asset?: { _ref: string }; _type: string };

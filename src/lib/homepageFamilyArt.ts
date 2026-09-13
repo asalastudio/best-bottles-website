@@ -1,0 +1,1 @@
+export const FAMILY_ART: Record<string, string> = { Cylinder: 'cylinder', Elegant: 'elegant', Circle: 'circle', 'Boston Round': 'boston-round', Diva: 'diva-stone', Grace: 'grace-stone', Empire: 'empire-stone', Round: 'round-stone' };

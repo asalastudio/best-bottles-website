@@ -21,6 +21,7 @@ export const APPLICATION_ROUTE_SLUGS = {
 export type BrowseEntryMode = "family" | "application" | "search" | "grace" | "matrix";
 
 export type BrowseContext = {
+    shopCollection?: string;
     entryMode: BrowseEntryMode;
     family?: string;
     application?: ApplicatorNavValue;
@@ -80,7 +81,7 @@ export function parseBrowseContext(pathname: string, params: URLSearchParams): B
     const route = pathname.replace(/\/+$/, "");
     const { filters, sort } = paramsToFilters(params);
     const routeApplication = applicationForRoute(route);
-    const family = familyForRoute(route);
+    const family = familyForRoute(route) ?? (filters.families.length === 1 && CATALOG_FAMILIES.includes(filters.families[0]) ? filters.families[0] : undefined);
     const application = routeApplication ?? (isApplicationRoute(route) ? undefined : applicationForBuckets(filters.applicators));
     const entryMode: BrowseEntryMode = routeApplication
         ? "application"
@@ -94,6 +95,7 @@ export function parseBrowseContext(pathname: string, params: URLSearchParams): B
         entryMode,
         ...(family ? { family } : {}),
         ...(application ? { application } : {}),
+        ...(filters.shopCollection ? { shopCollection: filters.shopCollection } : {}),
         ...(filters.capacities.length ? { capacities: filters.capacities } : {}),
         ...(filters.rollerMaterials.length ? { rollerMaterials: filters.rollerMaterials } : {}),
         ...(filters.colors.length ? { glassColors: filters.colors } : {}),
@@ -107,6 +109,7 @@ export function browseContextToFilters(context: BrowseContext): Partial<CatalogF
         ? APPLICATOR_NAV.find((candidate) => candidate.value === context.application)
         : undefined;
     return {
+        ...(context.shopCollection ? { shopCollection: context.shopCollection } : {}),
         ...(context.family ? { families: [context.family] } : {}),
         ...(application ? { applicators: [...application.buckets] } : {}),
         ...(context.capacities?.length ? { capacities: context.capacities.map(normalizeCapacityFilterValue) } : {}),
