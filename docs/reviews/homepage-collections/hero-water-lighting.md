@@ -6,23 +6,24 @@
 - Waterline rises almost to the dry rock top; every rock top and bottle base remains dry.
 - Obsidian wall with dramatic reflected light from the upper left and no visible light source.
 - Crisp, high-contrast glass and reflections with no fog or haze.
-- Three verified product silhouettes on the right: Empire with fine mist closure, Diva with black antique bulb and tassel, and Empire with black antique bulb.
+- Two exact-source Empire 50 mL assemblies on the right: a gold fine-mist closure and a black antique bulb.
 - Left side remains calm and dark enough for white homepage copy.
 
-## Still generation
+## Environment plate
 
-- Model: GPT Image 2.5 (`gpt_image_2_5`)
-- Variant: Sunburst
-- Desktop job: `a42d00d2-207e-40b4-af72-b57c5c8e9a53`
-- Mobile job: `1433973a-772e-4739-a216-91844132e4b9`
-- Desktop asset: `public/assets/homepage/desktop-empire-diva-water-obsidian.webp`
-- Mobile asset: `public/assets/homepage/hero-empire-diva-water-obsidian.webp`
+- The generated products were removed after visual review found geometry drift.
+- The retained raster is a background-only obsidian, rock and water environment.
+- Asset: `public/assets/homepage/hero-obsidian-water-stage.webp`
+
+## Exact product sources
+
+- `15. GBEmp50SpryShnGl.psd` supplies the gold fine-mist bottle.
+- `39. GBEmp50AnSpBlk.psd` supplies the black antique bulb bottle.
+- Original Photoshop layer offsets are preserved and each complete assembly receives only uniform CSS scaling and positioning.
+- A deterministic luminance-to-alpha adjustment affects only the clear-glass region so the source prepared for a white catalog field can transmit the dark environment. It does not reshape the bottle or reconstruct the hardware.
 
 ## Motion
 
-- Model: Seedance 2.0
-- Job: `6988fcb4-7d03-442a-8b74-dc6710e8d66f`
-- Five-second silent loop; only water ripples and reflected light move.
-- Bottles, dispensers, bulbs, tassels, marble, camera, focus and waterline remain locked across the sampled frames.
-- The static desktop still is the poster. Mobile uses the dedicated still, and reduced-motion visitors receive a paused frame.
-- Asset: `public/assets/homepage/hero-empire-diva-water-obsidian-loop.mp4`
+- A transparent Three.js shader animates only the lower water field and its reflected light.
+- Bottles, closures, rock, wall, camera, focus and waterline remain static DOM imagery.
+- Reduced-motion visitors receive the static environment plate without the shader layer.

@@ -9,6 +9,7 @@ import { FAMILY_ART } from '@/lib/homepageFamilyArt';
 import { CATALOG_FAMILIES } from '@/lib/catalogFilters';
 import { familyFinderHref } from '@/lib/products/focused-shopping';
 import { SHOP_COLLECTIONS, featuredCollectionCards, shopCollectionHref } from '@/lib/shopCollections';
+import { ImmersiveHeroArt } from './ImmersiveHeroArt';
 import styles from './CollectionShopping.module.css';
 
 const asset = (name: string) => `/assets/homepage/${name}.webp`;
@@ -48,8 +49,8 @@ export function ShoppingHero({ slides }: {slides?:HomepageData['heroSlides']}) {
     const [index,setIndex]=useState(0);
     const heroVideo=useRef<HTMLVideoElement>(null);
     const slide=slides?.[index];
-    const desktop=cmsImage(slide?.image,1800)??asset('desktop-empire-diva-water-obsidian');
-    const mobile=cmsImage(slide?.mobileImage,860)??(slide?.image?.asset?._ref ? desktop : asset('hero-empire-diva-water-obsidian'));
+    const desktop=cmsImage(slide?.image,1800)??asset('hero-obsidian-water-stage');
+    const mobile=cmsImage(slide?.mobileImage,860)??desktop;
     useEffect(() => {
         const video=heroVideo.current;
         if(!video)return;
@@ -60,7 +61,7 @@ export function ShoppingHero({ slides }: {slides?:HomepageData['heroSlides']}) {
         return()=>preference.removeEventListener('change',sync);
     }, [slide]);
     return <section className={styles.hero} aria-label="Featured bottles">
-        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? <><video ref={heroVideo} className={`${styles.heroArt} ${styles.heroVideo}`} src="/assets/homepage/hero-empire-diva-water-obsidian-loop.mp4" poster={desktop} autoPlay muted loop playsInline preload="metadata" aria-hidden="true"/><picture className={styles.heroMobile}><img className={styles.heroArt} src={mobile} alt="Empire and Diva perfume bottles with black antique bulb sprayers on dry black marble surrounded by water" fetchPriority="high"/></picture></> : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
+        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? <ImmersiveHeroArt/> : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
         <div className={styles.heroCopy}><h1>{slide?.headline || 'Beautifully contained.'}</h1><p>{slide?.subheadline || 'Distinctive glass. Thoughtful details. Endless possibilities.'}</p><div className={styles.buttons}><Link className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || 'Shop bottles'}</Link><Link className={styles.secondary} href="/matrix">Build your bottle</Link></div></div>
         {(slides?.length??0)>1 && <div className={styles.heroControls}>{slides!.map((_,i)=><button key={i} aria-label={`Show hero ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>{i+1}</button>)}</div>}
     </section>;

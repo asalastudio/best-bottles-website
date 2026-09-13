@@ -72,3 +72,25 @@
 @media(min-width:641px){.hero{height:685px}}
 .heroMobile{display:none}
 @media(max-width:640px){.heroVideo{display:none}.heroMobile{display:block}.heroMobile .heroArt{display:block}}
+
+/* Source-locked Empire assemblies over a live water-light field. */
+.immersiveArt{position:absolute;inset:0;overflow:hidden;background:#0d1012}
+.heroEnvironment{position:absolute;inset:0;background:url('/assets/homepage/hero-obsidian-water-stage.webp') center/cover no-repeat}
+.waterCanvas{position:absolute;z-index:1;left:0;right:0;bottom:0;height:43%;pointer-events:none;mix-blend-mode:screen;opacity:.78}
+.heroProductStage{position:absolute;z-index:3;inset:0;pointer-events:none;filter:drop-shadow(0 24px 22px rgba(0,0,0,.34))}
+.heroProductStage::before{content:"";position:absolute;right:1%;bottom:14%;width:47%;height:58%;background:radial-gradient(circle at 52% 40%,rgba(229,211,184,.12),transparent 62%);filter:blur(24px)}
+.heroProductStage::after{content:"";position:absolute;right:5%;bottom:15.7%;width:36%;height:4%;background:radial-gradient(ellipse,rgba(0,0,0,.62),transparent 68%);filter:blur(8px)}
+.exactProduct{position:absolute;display:block;width:auto;object-fit:contain;transform-origin:bottom center;filter:contrast(1.04) saturate(.96)}
+.productGold{right:27%;bottom:17.4%;height:62%;z-index:3}
+.productBulb{right:5.5%;bottom:16.4%;height:66%;z-index:4}
+.heroReflectionStage{position:absolute;z-index:2;inset:0;pointer-events:none;overflow:hidden;clip-path:inset(83% 0 0);-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 95%);mask-image:linear-gradient(to bottom,rgba(0,0,0,.55),transparent 95%);opacity:.26;filter:blur(1.2px) saturate(.72)}
+.productReflection{transform:scaleY(-.34);opacity:.72}
+.heroCopy{isolation:isolate}
+@media(max-width:950px){.productGold{right:29%;height:57%}.productBulb{right:2%;height:61%}}
+@media(max-width:640px){
+  .heroEnvironment{background-position:65% center}
+  .waterCanvas{height:40%;opacity:.7}
+  .productGold{display:none}
+  .productBulb{right:2%;bottom:15%;height:57%}
+}
+@media(prefers-reduced-motion:reduce){.waterCanvas{display:none}}
