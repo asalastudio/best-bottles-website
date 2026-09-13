@@ -485,6 +485,7 @@ export type CatalogFacetKey =
     | "price";
 
 export const EMPTY_FILTERS: CatalogFilters = {
+    shopCollection: null,
     category: null,
     collection: null,
     applicators: [],

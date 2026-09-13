@@ -1,0 +1,112 @@
+{
+  "purpose": "Homepage editorial hero replacement for the rejected transparent product overlays",
+  "model": "gpt_image_2_5",
+  "variant": "sunburst",
+  "resolution": "2k",
+  "quality": "max",
+  "references": [
+    {
+      "role": "lighting and water environment only",
+      "source": "User supplied ChatGPT Image Sep 13, 2026, 02_16_34 AM.png",
+      "mediaId": "a4ce5598-2888-45ef-8134-9a54fe61f8ee"
+    },
+    {
+      "role": "Empire 50ml gold spray geometry",
+      "url": "https://www.bestbottles.com/images/store/enlarged_pics/GBEmp50SpryShnGl.gif",
+      "verifiedAgainst": "15. GBEmp50SpryShnGl.psd"
+    },
+    {
+      "role": "Empire 50ml black vintage bulb geometry",
+      "url": "https://www.bestbottles.com/images/store/enlarged_pics/GBEmp50AnSpBlk.gif",
+      "verifiedAgainst": "39. GBEmp50AnSpBlk.psd"
+    }
+  ],
+  "generations": [
+    {
+      "jobId": "28d05be6-78b8-44d8-affe-6d3d55940aca",
+      "status": "superseded: bodies too broad",
+      "params": {
+        "model": "gpt_image_2_5",
+        "variant": "sunburst",
+        "quality": "max",
+        "resolution": "2k",
+        "aspect_ratio": "21:9",
+        "background": "opaque",
+        "count": 1,
+        "medias": [
+          {
+            "role": "image",
+            "value": "a4ce5598-2888-45ef-8134-9a54fe61f8ee"
+          },
+          {
+            "role": "image",
+            "value": "f739883a-7540-4c6d-804f-ad4cc1ce6b30"
+          },
+          {
+            "role": "image",
+            "value": "8e977c8b-c188-4d3d-8ea9-8a00ced2787f"
+          }
+        ],
+        "prompt": "Create one coherent luxury product campaign photograph for Best Bottles, a wide 21:9 homepage hero. Reference 1 defines only the beautiful water, dramatic lighting and irregular black obsidian rock environment. REMOVE ALL FOUR BOTTLES from that reference. Replace them with exactly TWO actual Empire 50ml bottles defined by references 2 and 3. Reference 2 is the Empire with exposed shiny gold two-stage spray pump, small circular pale nozzle and matching gold overcap. Reference 3 is the SAME Empire glass body with a silver cylindrical collar and rigid elbow connected directly to a horizontal black fabric bulb pointing left. No tassel, no hose, no third bottle. Do not copy the white catalog lighting. Rephotograph the actual products as fully integrated physical objects within this environment.\n\nCRITICAL PRODUCT GEOMETRY: faithfully copy each reference silhouette and all component proportions. The two glass bodies are identical in height and width, a broad flat rectangular body, nearly straight parallel outer sides, tiny square bevels, a flat rectangular shoulder with no sloping round shoulder, a deep U-shaped tapered internal cavity with a rounded lower interior, and a substantial heavy solid-glass base. Body visible height is approximately 1.95 times front width. They are not slender test tubes, not Boston rounds, not rounded rectangles, not generic tall perfume bottles. Gold sprayer width ~0.56 of body width; full exposed pump is ~0.53 of body height. Black bulb width approximately 1.22 of body width, silver collar ~0.55 of body width, entire bulb assembly remains physically connected and proportionally matches reference 3.\n\nCOMPOSITION: camera at product level with modest view of the bottle top edges, using a 75-85mm product lens, minimal perspective deformation. Both bottles on the RIGHT, gold pump at 68% frame width and black bulb at 86%, near the same depth, ample natural separation, bodies slightly turned just enough to reveal glass thickness. Complete products occupy x=59%-94%, y=19%-80%; keep all hardware comfortably within image. Left 48% is an uninterrupted elegant dark charcoal wall, calm with subtle reflected light, reserved for white headline overlay, but render NO text. One loose gold cap standing on the dry rock next to its bottle is allowed if it does not overlap either bottle. Rock is a low jagged obsidian formation on the right emerging from water. Rich reflective water fills the entire foreground and everything around the rock, rising just below the first dry top ledge; dry tops support bottles with convincing tight contact shadows. Stone and bottles must never look floating, sunk in water or pasted on.\n\nMATERIALS AND LIGHT: beautiful crisp real clear glass with strong champagne-white vertical specular edge reflections, dark refractive edge bands, clearly substantial thick glass base, nuanced refraction and internal reflections; the background is visibly distorted and attenuated through the glass. Glass should have presence and high local contrast, never faint ghost outlines or transparency-mask cutouts. Clear glass stays clear, no added liquid, frost or tint. Each bottle reflects the same directional light as water and gold/silver hardware. Strong cinematic key light arriving from upper left outside frame creates luminous gold and silver accents, strong edge highlights, sculptural shadow and soft rippled water reflections. Subtle bright reflection cards off camera should give the glass its polished white glints. A dark obsidian back wall with restrained reflected champagne light. High clarity, rich tonal depth, realistic black woven bulb texture, and liquid water reflections. Calm editorial elegance, exquisitely photographed, zero mist, zero fog, zero milky overlay, zero bloom, zero double outlines, zero CGI wireframes, zero fake opacity effects. Deliver a finished opaque photographic image edge to edge."
+      }
+    },
+    {
+      "jobId": "086fec14-45cd-47ee-b0c2-28c31e2d4543",
+      "status": "superseded: body width correction overshot",
+      "params": {
+        "model": "gpt_image_2_5",
+        "variant": "sunburst",
+        "quality": "max",
+        "resolution": "2k",
+        "aspect_ratio": "21:9",
+        "background": "opaque",
+        "count": 1,
+        "medias": [
+          {
+            "role": "image",
+            "value": "28d05be6-78b8-44d8-affe-6d3d55940aca"
+          },
+          {
+            "role": "image",
+            "value": "f739883a-7540-4c6d-804f-ad4cc1ce6b30"
+          },
+          {
+            "role": "image",
+            "value": "8e977c8b-c188-4d3d-8ea9-8a00ced2787f"
+          }
+        ],
+        "prompt": "Make a precise PRODUCT GEOMETRY CORRECTION to image 1. Preserve the water, setting, camera, composition, directional light, contrast, background, rock and the overall image exactly. Reference images 2 and 3 show the real Empire 50ml body proportions. The glass bodies in image 1 are currently TOO WIDE: their front body height/width is about 1.6, but the real bottle is about 1.95. Narrow ONLY each GLASS BOTTLE BODY in image 1 by approximately 16-17%, keeping the glass body height and center position the same. The correct visible glass body measures approximately 195 units tall by 100 units wide from the flat shoulder just below the metal collar to the outer bottom edge. Both bottles use precisely the SAME size and silhouette of glass body. Keep the nearly straight parallel outer sides, gently bevelled square corners, the deep U-shaped tapering inner cavity and heavy solid-glass base exactly as references 2 and 3. Do not change ANY metal closure dimensions, bulb size or gold overcap size: after the body correction the sprayer collar should be approx 55% of the glass front width. The rigidly attached black bulb should measure approx 120% of the body width. Continue to give the glass vivid, clear substantial glass reflections and optical depth, never faint outlines. Keep physical contact with rock, beautifully integrated natural light and water reflections. This is a narrow geometry revision, not a restyling or new composition. No extra objects, no labels, no text, no mist. Deliver full opaque image."
+      }
+    },
+    {
+      "jobId": "3c0c714a-fd64-48b5-94d7-96166571e343",
+      "status": "Local editorial preview; visually inspected on desktop, tablet and mobile; not user approved or dimensionally certified",
+      "params": {
+        "model": "gpt_image_2_5",
+        "variant": "sunburst",
+        "quality": "max",
+        "resolution": "2k",
+        "aspect_ratio": "21:9",
+        "background": "opaque",
+        "count": 1,
+        "medias": [
+          {
+            "role": "image",
+            "value": "086fec14-45cd-47ee-b0c2-28c31e2d4543"
+          },
+          {
+            "role": "image",
+            "value": "f739883a-7540-4c6d-804f-ad4cc1ce6b30"
+          },
+          {
+            "role": "image",
+            "value": "8e977c8b-c188-4d3d-8ea9-8a00ced2787f"
+          }
+        ],
+        "prompt": "Refine image 1 with one very small proportional correction. The two clear glass bodies are about 10 percent TOO TALL relative to their correct widths. REDUCE ONLY THE GLASS BODY HEIGHT BY TEN PERCENT (multiply height by 0.90), leaving both glass body widths exactly unchanged and their BOTTOM BASES on the same rock positions. Move each COMPLETE closure assembly DOWN to sit on its shortened glass shoulder; preserve the entire gold sprayer and silver collar/black bulb assembly's own shapes, widths and heights unchanged. Do not narrow anything further. The result should have two identical Empire glass bodies with body height approximately 1.95 times front body width. Match references 2 and 3. Preserve the straight-sided flat rectangular geometry, deep U-shaped tapered internal glass cavity, and thick clear-glass heel. Keep closure widths approx 55 percent of bottle width. Keep the loose gold cap, rock, entire water scene, luminous glass highlights, dark background, lighting, crop and composition unchanged. Nothing else changes. These are REAL empty glass bottles with optical depth, not translucent cutouts. Full opaque photograph, no text."
+      }
+    }
+  ],
+  "limitation": "Reference-guided generative editorial artwork, not a dimensionally locked catalog product plate. Do not mark as user approved or reuse for SKU imagery.",
+  "asset": "public/assets/homepage/hero-empire-water-rebuilt.webp"
+}
