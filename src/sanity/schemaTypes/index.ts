@@ -1,3 +1,4 @@
+import { shopCollectionCard, buildYourBottleBlock } from "./objects/shopCollectionCard";
 import { journal } from "./documents/journal";
 import { product } from "./documents/product";
 import { homepagePage } from "./documents/homepagePage";
@@ -38,6 +39,8 @@ export const schemaTypes = [
     marketingHeroAsset,
     paperDollBeautyGallery,
     // Objects — Homepage
+    shopCollectionCard,
+    buildYourBottleBlock,
     heroBlock,
     startHereCard,
     designFamilyCard,

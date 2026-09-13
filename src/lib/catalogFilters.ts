@@ -1,3 +1,4 @@
+import { getShopCollection } from "./shopCollections";
 // Option A: UI applicator buckets → product applicator values
 // Each spray sub-type is its own bucket so it gets its own grid card and filter option
 export const APPLICATOR_BUCKETS = [
@@ -456,6 +457,7 @@ export const VIEW_MODES = ["visual", "line"] as const;
 export type ViewMode = (typeof VIEW_MODES)[number];
 
 export interface CatalogFilters {
+    shopCollection?: string | null;
     category: string | null;
     collection: string | null;
     applicators: ApplicatorBucket[];
@@ -483,6 +485,7 @@ export type CatalogFacetKey =
     | "price";
 
 export const EMPTY_FILTERS: CatalogFilters = {
+    shopCollection: null,
     category: null,
     collection: null,
     applicators: [],
@@ -512,7 +515,7 @@ export function classifyComponentType(displayName: string, family: string | null
 
 export function filtersAreEmpty(f: CatalogFilters): boolean {
     return (
-        !f.category && !f.collection && f.applicators.length === 0 &&
+        !f.shopCollection && !f.category && !f.collection && f.applicators.length === 0 &&
         f.rollerMaterials.length === 0 &&
         f.families.length === 0 && f.colors.length === 0 && f.capacities.length === 0 &&
         f.neckThreadSizes.length === 0 && !f.componentType &&
@@ -521,7 +524,7 @@ export function filtersAreEmpty(f: CatalogFilters): boolean {
 }
 
 export function activeFilterCount(f: CatalogFilters): number {
-    let n = 0;
+    let n = f.shopCollection ? 1 : 0;
     if (f.category) n++;
     if (f.collection) n++;
     n += f.applicators.length;
@@ -542,6 +545,7 @@ export function activeFilterCount(f: CatalogFilters): number {
  * anything that navigates Grace away from stale filters strips these keys.
  */
 export const CATALOG_FACET_PARAM_KEYS = [
+    "shop",
     "category",
     "collection",
     "applicators",
@@ -558,6 +562,7 @@ export const CATALOG_FACET_PARAM_KEYS = [
 
 export function filtersToParams(f: CatalogFilters, sort: SortValue, view: ViewMode = "visual"): URLSearchParams {
     const p = new URLSearchParams();
+    if (getShopCollection(f.shopCollection)) p.set("shop", f.shopCollection!);
     if (f.category) p.set("category", f.category);
     if (f.collection) p.set("collection", f.collection);
     if (f.applicators.length) p.set("applicators", f.applicators.join(","));
@@ -608,6 +613,7 @@ export function paramsToFilters(sp: URLSearchParams): { filters: CatalogFilters;
     const sortParam = sp.get("sort") as SortValue | null;
     return {
         filters: {
+            shopCollection: getShopCollection(sp.get("shop"))?.key ?? null,
             category: sp.get("category") || null,
             collection: sp.get("collection") || null,
             applicators: validApplicators,

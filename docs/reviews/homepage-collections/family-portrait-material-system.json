@@ -1,0 +1,1703 @@
+{
+  "figma": {
+    "file": "zOxhNOGzakoZR68foyuqoR",
+    "page": "3:54",
+    "board": "4:12",
+    "url": "https://www.figma.com/design/zOxhNOGzakoZR68foyuqoR/Best-Bottles-%E2%80%94-Brand--Material---Digital-Design-System?node-id=3-54"
+  },
+  "model": "gpt_image_2_5",
+  "variant": "sunburst",
+  "quality": "max",
+  "aspectRatio": "4:5",
+  "status": "local-editorial-review",
+  "requests": [
+    {
+      "index": 0,
+      "name": "cylinder",
+      "prompt": "Create a premium, physically believable studio photograph for Best Bottles' bare glass bottle family cards. Native portrait 4:5 composition; fill the whole image with a seamless matte bone background (#F5F3EF), with a delicate tonal daylight gradient. Neutral daylight from upper left, soft precise contact shadows, controlled dark edge reflections and luminous glass thickness. Crystal-clear crisp glass with visible walls and bases, no haze. Each bottle must feel photographed in this setting, not like a flat cutout pasted on it.\nSTRICT PRODUCT SOURCE: The first reference is a sheet of ORIGINAL catalog bottle body pixels at relative physical scale. Copy each body's exact silhouette, shoulder geometry, neck thread proportions, glass base thickness, flute pattern and color. All are EMPTY BARE BOTTLES, uncapped, open threaded mouths. NO caps, pumps, droppers, roller inserts, tubes, stoppers, liquid, logos, labels or added parts. Do not stylize or improve their shapes. The reference is geometry authority.\nLAYOUT: compose a quiet, elegant small family collection on ONE very low rectangular material slab. Its top supports all bottles, front face is subtle, occupying only the lower 12–18% of the image. The tallest bottle ends near y=80%; keep all product outlines and the entire slab inside frame. Leave at least 12% margin on both sides of the bottle group and 14% above the tallest neck. Recompose spacing to suit portrait format: scale the entire group down uniformly when needed, NEVER crop a bottle or stretch its silhouette. Slight front-to-back offsets are acceptable, all bottles upright and immediately legible. No foliage, water, scenery, other props, text, border or graphic overlays.\nFAMILY CYLINDER: exactly THREE clear cylinder bottles, the three shown in reference1. Left small 5mL height53mm diameter17mm; middle regular 9mL height70mm diameter20mm; right very SLIM tall9mL height106mm diameter18mm. The tall cylinder is not a wider 30mL bottle; preserve its long narrow silhouette and thick base. Height ratios53:70:106. One continuous low CURly MAPLE wood slab: pale warm blond wood with fine subtle transverse rippled chatoyance exactly like the second reference. Reference2 supplies wood texture only. Same bone backdrop neutral daylight, pale wood must not look orange.",
+      "medias": [
+        {
+          "role": "image",
+          "value": "cd81b1c7-1796-4e4e-8c21-9faa7448a163"
+        },
+        {
+          "role": "image",
+          "value": "https://www.figma.com/api/mcp/asset/594e4c7c-6bd8-4d0f-9060-67f2c7532553.png"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "name": "elegant",
+      "prompt": "Create a premium, physically believable studio photograph for Best Bottles' bare glass bottle family cards. Native portrait 4:5 composition; fill the whole image with a seamless matte bone background (#F5F3EF), with a delicate tonal daylight gradient. Neutral daylight from upper left, soft precise contact shadows, controlled dark edge reflections and luminous glass thickness. Crystal-clear crisp glass with visible walls and bases, no haze. Each bottle must feel photographed in this setting, not like a flat cutout pasted on it.\nSTRICT PRODUCT SOURCE: The first reference is a sheet of ORIGINAL catalog bottle body pixels at relative physical scale. Copy each body's exact silhouette, shoulder geometry, neck thread proportions, glass base thickness, flute pattern and color. All are EMPTY BARE BOTTLES, uncapped, open threaded mouths. NO caps, pumps, droppers, roller inserts, tubes, stoppers, liquid, logos, labels or added parts. Do not stylize or improve their shapes. The reference is geometry authority.\nLAYOUT: compose a quiet, elegant small family collection on ONE very low rectangular material slab. Its top supports all bottles, front face is subtle, occupying only the lower 12–18% of the image. The tallest bottle ends near y=80%; keep all product outlines and the entire slab inside frame. Leave at least 12% margin on both sides of the bottle group and 14% above the tallest neck. Recompose spacing to suit portrait format: scale the entire group down uniformly when needed, NEVER crop a bottle or stretch its silhouette. Slight front-to-back offsets are acceptable, all bottles upright and immediately legible. No foliage, water, scenery, other props, text, border or graphic overlays.\nELEGANT: exactly three original clear flat rectangular Elegant bottles,15mL,60mL,100mL, relative capless heights61:86:109. Preserve flat broad rectangular front panels with nearly level slightly rounded shoulders, softly rounded vertical edges, short threaded cylindrical neck, and original base. Their widths36:54:61 and depths18:27:30; do not make tall Empire profiles. Small left, medium center, tall right with a little depth for an artistic portrait fit.\nMATERIAL PAIRING: neutral pale limestone, ONE low finely finished rectangular slab. Quiet warm ivory finely honed limestone, smooth top, gentle restrained pores, no dramatic veins. Same neutral bone backdrop and subdued daylight as the collection.",
+      "medias": [
+        {
+          "role": "image",
+          "value": "cf43ddff-c437-44da-8f36-195665b5185f"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "name": "circle",
+      "prompt": "Create a premium, physically believable studio photograph for Best Bottles' bare glass bottle family cards. Native portrait 4:5 composition; fill the whole image with a seamless matte bone background (#F5F3EF), with a delicate tonal daylight gradient. Neutral daylight from upper left, soft precise contact shadows, controlled dark edge reflections and luminous glass thickness. Crystal-clear crisp glass with visible walls and bases, no haze. Each bottle must feel photographed in this setting, not like a flat cutout pasted on it.\nSTRICT PRODUCT SOURCE: The first reference is a sheet of ORIGINAL catalog bottle body pixels at relative physical scale. Copy each body's exact silhouette, shoulder geometry, neck thread proportions, glass base thickness, flute pattern and color. All are EMPTY BARE BOTTLES, uncapped, open threaded mouths. NO caps, pumps, droppers, roller inserts, tubes, stoppers, liquid, logos, labels or added parts. Do not stylize or improve their shapes. The reference is geometry authority.\nLAYOUT: compose a quiet, elegant small family collection on ONE very low rectangular material slab. Its top supports all bottles, front face is subtle, occupying only the lower 12–18% of the image. The tallest bottle ends near y=80%; keep all product outlines and the entire slab inside frame. Leave at least 12% margin on both sides of the bottle group and 14% above the tallest neck. Recompose spacing to suit portrait format: scale the entire group down uniformly when needed, NEVER crop a bottle or stretch its silhouette. Slight front-to-back offsets are acceptable, all bottles upright and immediately legible. No foliage, water, scenery, other props, text, border or graphic overlays.\nCIRCLE: exactly three original clear FLAT circular-disc Circle bottles,30mL,50mL,100mL. Relative capless heights74:87:105 and face widths60:72:89, thin depths20:23:29. Preserve their flat circular face and the original thick small flattened foot; they are not spherical flasks. Gently stagger largest toward back-right and smaller toward front-left, preserving proportions with visible separate necks. Fit the full group inside portrait margins even if it needs more breathing room above.\nMATERIAL PAIRING: Travertine Navona, ONE low finely finished rectangular slab. Warm ivory Travertine Navona with quiet linear pores and restrained texture, as material reference2, not rough chunky rock.",
+      "medias": [
+        {
+          "role": "image",
+          "value": "7883e57d-f49a-4df6-a910-78ace8b8f8a0"
+        },
+        {
+          "role": "image",
+          "value": "https://www.figma.com/api/mcp/asset/66174c4b-1693-49a4-b810-6c9281c672e3.png"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "name": "boston-round",
+      "prompt": "Create a premium, physically believable studio photograph for Best Bottles' bare glass bottle family cards. Native portrait 4:5 composition; fill the whole image with a seamless matte bone background (#F5F3EF), with a delicate tonal daylight gradient. Neutral daylight from upper left, soft precise contact shadows, controlled dark edge reflections and luminous glass thickness. Crystal-clear crisp glass with visible walls and bases, no haze. Each bottle must feel photographed in this setting, not like a flat cutout pasted on it.\nSTRICT PRODUCT SOURCE: The first reference is a sheet of ORIGINAL catalog bottle body pixels at relative physical scale. Copy each body's exact silhouette, shoulder geometry, neck thread proportions, glass base thickness, flute pattern and color. All are EMPTY BARE BOTTLES, uncapped, open threaded mouths. NO caps, pumps, droppers, roller inserts, tubes, stoppers, liquid, logos, labels or added parts. Do not stylize or improve their shapes. The reference is geometry authority.\nLAYOUT: compose a quiet, elegant small family collection on ONE very low rectangular material slab. Its top supports all bottles, front face is subtle, occupying only the lower 12–18% of the image. The tallest bottle ends near y=80%; keep all product outlines and the entire slab inside frame. Leave at least 12% margin on both sides of the bottle group and 14% above the tallest neck. Recompose spacing to suit portrait format: scale the entire group down uniformly when needed, NEVER crop a bottle or stretch its silhouette. Slight front-to-back offsets are acceptable, all bottles upright and immediately legible. No foliage, water, scenery, other props, text, border or graphic overlays.\nBOSTON ROUND: exactly three original bare Boston Round bottles:15mL amber at left,30mL clear center,60mL clear right. All have the characteristic rounded Boston shoulders, straight round body and threaded open neck. Relative approximate capless heights68:78:94 and diameters25:33:39. Preserve the exact reference silhouette including amber rounded shoulder. Never substitute medicine droppers or include closures. Arrange as a compact portrait group.\nMATERIAL PAIRING: Figured Claro Walnut, ONE low finely finished rectangular slab. Warm medium brown figured Claro Walnut with subtle natural flowing curl, as material reference2. Low satin-smooth wood, never rough bark.",
+      "medias": [
+        {
+          "role": "image",
+          "value": "37b588a9-1102-42e9-b374-a7756b710de4"
+        },
+        {
+          "role": "image",
+          "value": "https://www.figma.com/api/mcp/asset/a6edd39c-c740-4a05-895f-13fe5612b5a2.png"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "name": "diva",
+      "prompt": "Create a premium, physically believable studio photograph for Best Bottles' bare glass bottle family cards. Native portrait 4:5 composition; fill the whole image with a seamless matte bone background (#F5F3EF), with a delicate tonal daylight gradient. Neutral daylight from upper left, soft precise contact shadows, controlled dark edge reflections and luminous glass thickness. Crystal-clear crisp glass with visible walls and bases, no haze. Each bottle must feel photographed in this setting, not like a flat cutout pasted on it.\nSTRICT PRODUCT SOURCE: The first reference is a sheet of ORIGINAL catalog bottle body pixels at relative physical scale. Copy each body's exact silhouette, shoulder geometry, neck thread proportions, glass base thickness, flute pattern and color. All are EMPTY BARE BOTTLES, uncapped, open threaded mouths. NO caps, pumps, droppers, roller inserts, tubes, stoppers, liquid, logos, labels or added parts. Do not stylize or improve their shapes. The reference is geometry authority.\nLAYOUT: compose a quiet, elegant small family collection on ONE very low rectangular material slab. Its top supports all bottles, front face is subtle, occupying only the lower 12–18% of the image. The tallest bottle ends near y=80%; keep all product outlines and the entire slab inside frame. Leave at least 12% margin on both sides of the bottle group and 14% above the tallest neck. Recompose spacing to suit portrait format: scale the entire group down uniformly when needed, NEVER crop a bottle or stretch its silhouette. Slight front-to-back offsets are acceptable, all bottles upright and immediately legible. No foliage, water, scenery, other props, text, border or graphic overlays.\nDIVA: exactly three original bare clear fluted Diva bottles30mL,46mL,100mL in left-to-right height order81:89:113, diameter43:49:64. EXACT distinctive catalog profiles: rounded fluted upper bowl narrowing toward a pinched ankle, fluted small pedestal foot, and short open threaded neck. Copy original fluting, curved shoulders, ankle and foot from first reference with precision. They are not generic round perfume bottles, not Grace, not teardrop vases. Maintain authentic physical sizes, no redesign.\nMATERIAL PAIRING: neutral pale limestone, ONE low finely finished rectangular slab. Quiet warm ivory finely honed limestone, smooth top, gentle restrained pores, no dramatic veins. Same neutral bone backdrop and subdued daylight as the collection.",
+      "medias": [
+        {
+          "role": "image",
+          "value": "65aae9c4-1273-4323-b624-c7a5fa6e27b4"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "name": "grace",
+      "prompt": "Create a premium, physically believable studio photograph for Best Bottles' bare glass bottle family cards. Native portrait 4:5 composition; fill the whole image with a seamless matte bone background (#F5F3EF), with a delicate tonal daylight gradient. Neutral daylight from upper left, soft precise contact shadows, controlled dark edge reflections and luminous glass thickness. Crystal-clear crisp glass with visible walls and bases, no haze. Each bottle must feel photographed in this setting, not like a flat cutout pasted on it.\nSTRICT PRODUCT SOURCE: The first reference is a sheet of ORIGINAL catalog bottle body pixels at relative physical scale. Copy each body's exact silhouette, shoulder geometry, neck thread proportions, glass base thickness, flute pattern and color. All are EMPTY BARE BOTTLES, uncapped, open threaded mouths. NO caps, pumps, droppers, roller inserts, tubes, stoppers, liquid, logos, labels or added parts. Do not stylize or improve their shapes. The reference is geometry authority.\nLAYOUT: compose a quiet, elegant small family collection on ONE very low rectangular material slab. Its top supports all bottles, front face is subtle, occupying only the lower 12–18% of the image. The tallest bottle ends near y=80%; keep all product outlines and the entire slab inside frame. Leave at least 12% margin on both sides of the bottle group and 14% above the tallest neck. Recompose spacing to suit portrait format: scale the entire group down uniformly when needed, NEVER crop a bottle or stretch its silhouette. Slight front-to-back offsets are acceptable, all bottles upright and immediately legible. No foliage, water, scenery, other props, text, border or graphic overlays.\nGRACE: ONE original clear bare Grace55mL bottle only. This family has one verified body, so do NOT create other sizes or multiple invented profiles. Let this single bottle fill around58% of frame height, its body fully visible and centered on low slab. The exact reference body has a short threaded neck, gently sloping shoulders, bowed-out upper sides tapering to a narrower heavy rectangular base, flat central front with subtle curved side facets,113mm high52mm wide30mm deep. Preserve it exactly; do not add Diva fluting, pedestal foot or stopper.\nMATERIAL PAIRING: neutral pale limestone, ONE low finely finished rectangular slab. Quiet warm ivory finely honed limestone, smooth top, gentle restrained pores, no dramatic veins. Same neutral bone backdrop and subdued daylight as the collection.",
+      "medias": [
+        {
+          "role": "image",
+          "value": "01741d02-6104-4b39-8c39-dc6245de8f9d"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "name": "empire",
+      "prompt": "Create a premium, physically believable studio photograph for Best Bottles' bare glass bottle family cards. Native portrait 4:5 composition; fill the whole image with a seamless matte bone background (#F5F3EF), with a delicate tonal daylight gradient. Neutral daylight from upper left, soft precise contact shadows, controlled dark edge reflections and luminous glass thickness. Crystal-clear crisp glass with visible walls and bases, no haze. Each bottle must feel photographed in this setting, not like a flat cutout pasted on it.\nSTRICT PRODUCT SOURCE: The first reference is a sheet of ORIGINAL catalog bottle body pixels at relative physical scale. Copy each body's exact silhouette, shoulder geometry, neck thread proportions, glass base thickness, flute pattern and color. All are EMPTY BARE BOTTLES, uncapped, open threaded mouths. NO caps, pumps, droppers, roller inserts, tubes, stoppers, liquid, logos, labels or added parts. Do not stylize or improve their shapes. The reference is geometry authority.\nLAYOUT: compose a quiet, elegant small family collection on ONE very low rectangular material slab. Its top supports all bottles, front face is subtle, occupying only the lower 12–18% of the image. The tallest bottle ends near y=80%; keep all product outlines and the entire slab inside frame. Leave at least 12% margin on both sides of the bottle group and 14% above the tallest neck. Recompose spacing to suit portrait format: scale the entire group down uniformly when needed, NEVER crop a bottle or stretch its silhouette. Slight front-to-back offsets are acceptable, all bottles upright and immediately legible. No foliage, water, scenery, other props, text, border or graphic overlays.\nEMPIRE: exactly TWO original bare clear Empire bottles,50mL left and100mL right. Relative heights88:107, front widths37:46. Match the exact reference tall rectangular silhouette, squared nearly flat shoulders, slight interior taper and deep rounded-bottom inner cavity with thick glass base. They are not straight generic vials and not square squat bottles. No bulb sprayers or metallic caps. Keep original front-facing geometry with slight camera perspective.\nMATERIAL PAIRING: Sahara Noir marble, ONE low finely finished rectangular slab. Black Sahara Noir marble with fine restrained warm gold and ivory veins, as in material reference2. Keep the black stone low; background is always light bone.",
+      "medias": [
+        {
+          "role": "image",
+          "value": "82fba4eb-628d-49de-96ec-244fc8cc3ed4"
+        },
+        {
+          "role": "image",
+          "value": "https://www.figma.com/api/mcp/asset/9ad983d3-26c7-4b29-92a4-1aea58384795.png"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "name": "round",
+      "prompt": "Create a premium, physically believable studio photograph for Best Bottles' bare glass bottle family cards. Native portrait 4:5 composition; fill the whole image with a seamless matte bone background (#F5F3EF), with a delicate tonal daylight gradient. Neutral daylight from upper left, soft precise contact shadows, controlled dark edge reflections and luminous glass thickness. Crystal-clear crisp glass with visible walls and bases, no haze. Each bottle must feel photographed in this setting, not like a flat cutout pasted on it.\nSTRICT PRODUCT SOURCE: The first reference is a sheet of ORIGINAL catalog bottle body pixels at relative physical scale. Copy each body's exact silhouette, shoulder geometry, neck thread proportions, glass base thickness, flute pattern and color. All are EMPTY BARE BOTTLES, uncapped, open threaded mouths. NO caps, pumps, droppers, roller inserts, tubes, stoppers, liquid, logos, labels or added parts. Do not stylize or improve their shapes. The reference is geometry authority.\nLAYOUT: compose a quiet, elegant small family collection on ONE very low rectangular material slab. Its top supports all bottles, front face is subtle, occupying only the lower 12–18% of the image. The tallest bottle ends near y=80%; keep all product outlines and the entire slab inside frame. Leave at least 12% margin on both sides of the bottle group and 14% above the tallest neck. Recompose spacing to suit portrait format: scale the entire group down uniformly when needed, NEVER crop a bottle or stretch its silhouette. Slight front-to-back offsets are acceptable, all bottles upright and immediately legible. No foliage, water, scenery, other props, text, border or graphic overlays.\nROUND: exactly THREE original bare ROUND family bottles:78mL clear,78mL frosted,128mL clear. The two78mL bottles are SAME physical height73mm and width59mm, just different glass finish;128mL is83mm high69mm wide. Preserve their broad rounded body and small flat thick-glass bottom. This is the Round family, not the thinner Circle family. Disregard stray white markup above the neck in the native source export: copy only the physical bottle. Frame complete mouths and bases, empty interiors.\nMATERIAL PAIRING: neutral pale limestone, ONE low finely finished rectangular slab. Quiet warm ivory finely honed limestone, smooth top, gentle restrained pores, no dramatic veins. Same neutral bone backdrop and subdued daylight as the collection.",
+      "medias": [
+        {
+          "role": "image",
+          "value": "65c63ccd-35ea-4c0c-8f82-b056dec70105"
+        }
+      ]
+    }
+  ],
+  "jobs": [
+    {
+      "index": 0,
+      "job_id": "c44b709d-00c1-4aa6-afdb-74d6c1a7fd10",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_151558_c44b709d-00c1-4aa6-afdb-74d6c1a7fd10.png"
+    },
+    {
+      "index": 1,
+      "job_id": "7766c4a4-b8a6-4e87-b897-40ee91daf0ba",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_151809_7766c4a4-b8a6-4e87-b897-40ee91daf0ba.png"
+    },
+    {
+      "index": 2,
+      "job_id": "faad10fa-26a0-4b27-9d43-f22a238085e4",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_151810_faad10fa-26a0-4b27-9d43-f22a238085e4.png"
+    },
+    {
+      "index": 3,
+      "job_id": "6d35c84a-cd9b-475b-8710-c3755c191fae",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_151810_6d35c84a-cd9b-475b-8710-c3755c191fae.png"
+    },
+    {
+      "index": 4,
+      "job_id": "c29fafe9-f664-40d8-b7b2-d129417420ef",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_151809_c29fafe9-f664-40d8-b7b2-d129417420ef.png"
+    },
+    {
+      "index": 5,
+      "job_id": "642f7d5e-662d-4e36-9892-5295790b2fd0",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_151809_642f7d5e-662d-4e36-9892-5295790b2fd0.png"
+    },
+    {
+      "index": 6,
+      "job_id": "a1f2c6a1-f8b8-4128-94bf-e1ce32160b0f",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_151810_a1f2c6a1-f8b8-4128-94bf-e1ce32160b0f.png"
+    },
+    {
+      "index": 7,
+      "job_id": "b443cfa7-f4d1-4deb-807a-f08ce5c22254",
+      "status": "completed",
+      "type": "image",
+      "model": "gpt_image_2_5",
+      "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_151812_b443cfa7-f4d1-4deb-807a-f08ce5c22254.png"
+    }
+  ],
+  "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+  "note": "Editorial family navigation art, not SKU photography or validated dimensions. Native body layers supplied as image references. Size values guide relative scale only; they do not create or replace the catalog geometry locks. Boston 30mL height is approximate and unresolved in source measurements.",
+  "families": [
+    {
+      "name": "cylinder",
+      "title": "Cylinder",
+      "material": "Curly Maple",
+      "bottles": [
+        [
+          "GBCyl5WhtSht",
+          53
+        ],
+        [
+          "GBCyl9RollMattSl",
+          70
+        ],
+        [
+          "GBTallCyl9WhtSht",
+          106
+        ]
+      ],
+      "reference": "docs/reviews/homepage-collections/family-portrait-references/cylinder.jpg",
+      "referenceSha256": "94728d5b4a455d76d3d205e21b2ee38578a5c9d564a2faced10edce84eab068e",
+      "sources": [
+        {
+          "sku": "GBCyl5WhtSht",
+          "relativeScaleHeightMm": 53,
+          "sourcePath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /2. GBCyl5WhtSht.psd",
+          "sourceSha256": "34da6a19e04971098672d825d186fecea690495aa1a3c17079e42905aa8f31dc",
+          "layer": 2
+        },
+        {
+          "sku": "GBCyl9RollMattSl",
+          "relativeScaleHeightMm": 70,
+          "sourcePath": "3.  17-415 Bottles/9. Clear  (Uncapped)/11. GBCyl9RollMattSl.psd",
+          "sourceSha256": "a1af2f69fd51006aab6e882ad968df3ca2dcd5f939ff28f2f3c74a0ebb8dca0f",
+          "layer": 3
+        },
+        {
+          "sku": "GBTallCyl9WhtSht",
+          "relativeScaleHeightMm": 106,
+          "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/2. GBTallCyl9WhtSht.psd",
+          "sourceSha256": "3e11b2363320dd837b531c972fba80a7a20d385b2996ab6fcd953c4e9c47385f",
+          "layer": 2
+        }
+      ],
+      "output": {
+        "path": "public/assets/homepage/family-cylinder-portrait.webp",
+        "width": 1000,
+        "height": 1250,
+        "sha256": "1d03d7aae63b884898331bd46bedbb8339808aaa8d4db55be2f8f919a8c1577d",
+        "bytes": 81346,
+        "jobId": "c44b709d-00c1-4aa6-afdb-74d6c1a7fd10"
+      },
+      "review": "Full neck, body and base visible; compared visually with native source reference. Editorial geometry remains subject to user review."
+    },
+    {
+      "name": "elegant",
+      "title": "Elegant",
+      "material": "neutral pale limestone",
+      "bottles": [
+        [
+          "GBElg15BlkSht",
+          61
+        ],
+        [
+          "GBElg60RdcrShnGl",
+          86
+        ],
+        [
+          "GBElg100RdcrShnGl",
+          109
+        ]
+      ],
+      "reference": "docs/reviews/homepage-collections/family-portrait-references/elegant.jpg",
+      "referenceSha256": "30fc67019da7ae5b176e6febd3e97dc09f6faf972cc6849b82ce39e9e20cdb72",
+      "sources": [
+        {
+          "sku": "GBElg15BlkSht",
+          "relativeScaleHeightMm": 61,
+          "sourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/1. GBElg15BlkSht.psd",
+          "sourceSha256": "75b87103e18241c096a0b8765bf5c66f01f302e3e064fd307e88c8fc1f4c3d37",
+          "layer": 2
+        },
+        {
+          "sku": "GBElg60RdcrShnGl",
+          "relativeScaleHeightMm": 86,
+          "sourcePath": "2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/1. GBElg60RdcrShnGl.psd",
+          "sourceSha256": "44bd6d7d6908d0c7adc579d75de2a5e0e857c23b8a13b090705f719757984691",
+          "layer": 2
+        },
+        {
+          "sku": "GBElg100RdcrShnGl",
+          "relativeScaleHeightMm": 109,
+          "sourcePath": "2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/1. GBElg100RdcrShnGl.psd",
+          "sourceSha256": "cdb2727c631f4fbff290e0752c9b82c0fe663edd6792b29f370f541c5032fb63",
+          "layer": 2
+        }
+      ],
+      "output": {
+        "path": "public/assets/homepage/family-elegant-portrait-open-mouth.webp",
+        "width": 1000,
+        "height": 1250,
+        "sha256": "24933d20892229c8c41dcaf910bd0b690a4743d8a4d7f044a5efcc7ea8427f94",
+        "bytes": 90000,
+        "jobId": "b6bb5570-7ff9-4c1b-88cf-dfef301f365f"
+      },
+      "review": "Revised after user identified reducer-like plastic. All bottle mouths visually inspected as hollow glass openings with no protruding insert. Full silhouette visible. Editorial geometry remains subject to user review."
+    },
+    {
+      "name": "circle",
+      "title": "Circle",
+      "material": "Travertine Navona",
+      "bottles": [
+        [
+          "GBCrcl30SpryShnGl",
+          74
+        ],
+        [
+          "GBCrcl50RdcrShnGl",
+          87
+        ],
+        [
+          "GBCrcl100RdcrShnGl",
+          105
+        ]
+      ],
+      "reference": "docs/reviews/homepage-collections/family-portrait-references/circle.jpg",
+      "referenceSha256": "b5c614dfd263a3cc2d9aba52ec73da0457573090b53903ea172f27291fe3ae93",
+      "sources": [
+        {
+          "sku": "GBCrcl30SpryShnGl",
+          "relativeScaleHeightMm": 74,
+          "sourcePath": "4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/2. GBCrcl30SpryShnGl.psd",
+          "sourceSha256": "4156ee780630103031bc7dd7faec15389a4b7cd6932bd416bddf60638defb25f",
+          "layer": 3
+        },
+        {
+          "sku": "GBCrcl50RdcrShnGl",
+          "relativeScaleHeightMm": 87,
+          "sourcePath": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/1. GBCrcl50RdcrShnGl.psd",
+          "sourceSha256": "a46371642c100090b5f2eec9cb021696b84154c915668ffa743d18f1c6b0aed4",
+          "layer": 2
+        },
+        {
+          "sku": "GBCrcl100RdcrShnGl",
+          "relativeScaleHeightMm": 105,
+          "sourcePath": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/1. GBCrcl100RdcrShnGl.psd",
+          "sourceSha256": "db84b0c32a00aac4b0d0e6d8dd487e6aad88991d75b398d869e29153ac4f1dec",
+          "layer": 2
+        }
+      ],
+      "output": {
+        "path": "public/assets/homepage/family-circle-portrait.webp",
+        "width": 1000,
+        "height": 1250,
+        "sha256": "e9e53bbfb48160b36f5cbda115618fcfe0f5d1da398ad2ae61c20ca67711b55c",
+        "bytes": 122438,
+        "jobId": "faad10fa-26a0-4b27-9d43-f22a238085e4"
+      },
+      "review": "Full neck, body and base visible; compared visually with native source reference. Editorial geometry remains subject to user review."
+    },
+    {
+      "name": "boston-round",
+      "title": "Boston Round",
+      "material": "Figured Claro Walnut",
+      "bottles": [
+        [
+          "GBBstn1ozMtlRollonMattSl",
+          78
+        ],
+        [
+          "gbbstnamb2ozblkcapsht",
+          94
+        ],
+        [
+          "gbbstnblu2ozblkcapsht",
+          94
+        ]
+      ],
+      "reference": "docs/reviews/homepage-collections/family-portrait-references/boston-round-colors.jpg",
+      "referenceSha256": "290bd4a54aeee6fb486461b68d502dd0004cebdf2f3b6921e1d07e100c1904b4",
+      "sources": [
+        {
+          "sku": "GBBstn1ozMtlRollonMattSl",
+          "relativeScaleHeightMm": 78,
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/1. GBBstn1ozMtlRollonMattSl.psd",
+          "sourceSha256": "68cad12d8746fde491802bb3ef6dfa165a29106028e223dcb64ff8caf3ce3f1b",
+          "layer": 2
+        },
+        {
+          "sku": "gbbstnamb2ozblkcapsht",
+          "relativeScaleHeightMm": 94,
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/17. GBBstnAmb2ozBlkCapSht.psd",
+          "sourceSha256": "7a4b430ed4f984a8e27134f4e47a65d0f5257536f649af042fc2288495d89281",
+          "layer": 2
+        },
+        {
+          "sku": "gbbstnblu2ozblkcapsht",
+          "relativeScaleHeightMm": 94,
+          "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/17. GBBstnBlu2ozBlkCapSht.psd",
+          "sourceSha256": "e741ba2b1c3b62e8912ddc95e824bbfaf4eca2c8eda98bb7a5006b2814c9fc7e",
+          "layer": 2
+        }
+      ],
+      "output": {
+        "path": "public/assets/homepage/family-boston-round-colors-portrait.webp",
+        "width": 1000,
+        "height": 1250,
+        "sha256": "a5ad41858436a87f69f8b6c23281d149a026099a94d98acc590872e6d4bec23d",
+        "bytes": 112472,
+        "jobId": "0419c394-aaca-4fc7-bc09-ef4372bd185e"
+      },
+      "review": "Revised after user identified reducer-like plastic. All bottle mouths visually inspected as hollow glass openings with no protruding insert. Full silhouette visible. Editorial geometry remains subject to user review. Amber and cobalt use matching 60 mL source bodies. Clear 30 mL relative height remains approximate; this scene is not a calibrated size comparison.",
+      "assortment": [
+        "Clear 30 mL",
+        "Amber 60 mL",
+        "Cobalt blue 60 mL"
+      ]
+    },
+    {
+      "name": "diva",
+      "title": "Diva",
+      "material": "neutral pale limestone",
+      "bottles": [
+        [
+          "GBDiva30SpryCu",
+          81
+        ],
+        [
+          "GBDiva46RdcrShnGl",
+          89
+        ],
+        [
+          "GBDiva100RdcrShnGl",
+          113
+        ]
+      ],
+      "reference": "docs/reviews/homepage-collections/family-portrait-references/diva.jpg",
+      "referenceSha256": "8d69af9d5586fdcbae9c3ff8b44d96123518e2ff2d2fa3c44d1119ff30fdc626",
+      "sources": [
+        {
+          "sku": "GBDiva30SpryCu",
+          "relativeScaleHeightMm": 81,
+          "sourcePath": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /53. GBDiva30SpryCu.psd",
+          "sourceSha256": "655e0b9ad116fdcb5f177d310b438c18fa1440e114b9c0e60b88ce3a061b7ae3",
+          "layer": 2
+        },
+        {
+          "sku": "GBDiva46RdcrShnGl",
+          "relativeScaleHeightMm": 89,
+          "sourcePath": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/1. GBDiva46RdcrShnGl.psd",
+          "sourceSha256": "3522d32082bd540f774f7e5f31aaf7b0a016e73c9dae99d8ac1c6bd04620b92e",
+          "layer": 2
+        },
+        {
+          "sku": "GBDiva100RdcrShnGl",
+          "relativeScaleHeightMm": 113,
+          "sourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/1. GBDiva100RdcrShnGl.psd",
+          "sourceSha256": "11679a409b0e719bac4915878d176c5541a88490972b3e88bf9f1672f2f95e39",
+          "layer": 2
+        }
+      ],
+      "output": {
+        "path": "public/assets/homepage/family-diva-portrait-open-mouth.webp",
+        "width": 1000,
+        "height": 1250,
+        "sha256": "5335ce1dcd4319d4e137c0152c0e4b761dd3219e5b07ce4075af6a2a6c6a4742",
+        "bytes": 140966,
+        "jobId": "06ee4586-62bb-4a3c-9b21-322c2ec02a72"
+      },
+      "review": "Revised after user identified reducer-like plastic. All bottle mouths visually inspected as hollow glass openings with no protruding insert. Full silhouette visible. Editorial geometry remains subject to user review."
+    },
+    {
+      "name": "grace",
+      "title": "Grace",
+      "material": "neutral pale limestone",
+      "bottles": [
+        [
+          "GBGrce55AnSpGl",
+          113
+        ]
+      ],
+      "reference": "docs/reviews/homepage-collections/family-portrait-references/grace.jpg",
+      "referenceSha256": "217e6d25d9ff859aa962563a826951811fee8fb46d6a81b4b39f637ccb2f4e38",
+      "sources": [
+        {
+          "sku": "GBGrce55AnSpGl",
+          "relativeScaleHeightMm": 113,
+          "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/37. GBGrce55AnSpGl.psd",
+          "sourceSha256": "97d104b1cfbccdbf980f268b1e12c2aa6d904d0b9bd897671f8c946b61511517",
+          "layer": 2
+        }
+      ],
+      "output": {
+        "path": "public/assets/homepage/family-grace-portrait-open-mouth.webp",
+        "width": 1000,
+        "height": 1250,
+        "sha256": "71a0dcb7949b5c713605c40a0ff8ad57e287e8651e7272baacaf899744e2f95b",
+        "bytes": 88844,
+        "jobId": "0514c7ae-1959-4acc-8796-35a52af63de0"
+      },
+      "review": "Revised after user identified reducer-like plastic. All bottle mouths visually inspected as hollow glass openings with no protruding insert. Full silhouette visible. Editorial geometry remains subject to user review."
+    },
+    {
+      "name": "empire",
+      "title": "Empire",
+      "material": "Sahara Noir marble",
+      "bottles": [
+        [
+          "GBEmp50SpryShnGl",
+          88
+        ],
+        [
+          "GBEmp100RdcrShnGl",
+          107
+        ]
+      ],
+      "reference": "docs/reviews/homepage-collections/family-portrait-references/empire.jpg",
+      "referenceSha256": "952c0ff0b35a88bc40c8047cb094ea35e6ba83068374bba40c35cd67e76cda10",
+      "sources": [
+        {
+          "sku": "GBEmp50SpryShnGl",
+          "relativeScaleHeightMm": 88,
+          "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/15. GBEmp50SpryShnGl.psd",
+          "sourceSha256": "fd7c406468105b16eef600e9f5ac247f1c72547b57c85c8649386abd91e28a05",
+          "layer": 2
+        },
+        {
+          "sku": "GBEmp100RdcrShnGl",
+          "relativeScaleHeightMm": 107,
+          "sourcePath": "2.  18-415 Bottles /22. Empire Bottle 100ml/1. Empire 100ml PSD/1. GBEmp100RdcrShnGl.psd",
+          "sourceSha256": "e354bf8bc6864c8f25625c2f6a535dff8f49a573db3c9112cf1ed39c5b19b2e5",
+          "layer": 2
+        }
+      ],
+      "output": {
+        "path": "public/assets/homepage/family-empire-portrait-open-mouth.webp",
+        "width": 1000,
+        "height": 1250,
+        "sha256": "ca51b7071c6a9ba0ef8f3c03ab6c418e3d204a35cb39164af4a21d53cd8fbb36",
+        "bytes": 103948,
+        "jobId": "4dcc29c0-e08c-4ab4-8544-80f7ccb3adf8"
+      },
+      "review": "Revised after user identified reducer-like plastic. All bottle mouths visually inspected as hollow glass openings with no protruding insert. Full silhouette visible. Editorial geometry remains subject to user review."
+    },
+    {
+      "name": "round",
+      "title": "Round",
+      "material": "neutral pale limestone",
+      "bottles": [
+        [
+          "GBRnd78RdcrShnGl",
+          73
+        ],
+        [
+          "GBRndFrst78RdcrShnGl",
+          73
+        ],
+        [
+          "GBRnd128RdcrShnGl",
+          83
+        ]
+      ],
+      "reference": "docs/reviews/homepage-collections/family-portrait-references/round.jpg",
+      "referenceSha256": "7912faa54ad0f362f3d6320906a4a888622b35031c05b619a8b6efdc0b63e8d8",
+      "sources": [
+        {
+          "sku": "GBRnd78RdcrShnGl",
+          "relativeScaleHeightMm": 73,
+          "sourcePath": "2.  18-415 Bottles /9. Round 78ml/1. Round 78ml PSD/1. GBRnd78RdcrShnGl..psd",
+          "sourceSha256": "30ee812266dba1c5b8446e17f7cf59ab9ee37e5af9e54c36d1202b42cedcf631",
+          "layer": 2
+        },
+        {
+          "sku": "GBRndFrst78RdcrShnGl",
+          "relativeScaleHeightMm": 73,
+          "sourcePath": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/1. GBRndFrst78RdcrShnGl.psd",
+          "sourceSha256": "f52ac2d0f5df6b8eb62c6b8cebf07b64027d26710827e5124c1b71e09a6f623d",
+          "layer": 2
+        },
+        {
+          "sku": "GBRnd128RdcrShnGl",
+          "relativeScaleHeightMm": 83,
+          "sourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/1. GBRnd128RdcrShnGl.psd",
+          "sourceSha256": "de9a5015c815f0ee680311b9c91a26e041821a0235d48c2968b18391cbf32ffc",
+          "layer": 2
+        }
+      ],
+      "output": {
+        "path": "public/assets/homepage/family-round-portrait-open-mouth.webp",
+        "width": 1000,
+        "height": 1250,
+        "sha256": "7ef12f053ef7679b9848f404b4154d2cd540471cdfb6b061e2bb940fd654da3d",
+        "bytes": 86002,
+        "jobId": "3f248547-a574-4aea-ba94-ea62252af18e"
+      },
+      "review": "Revised after user identified reducer-like plastic. All bottle mouths visually inspected as hollow glass openings with no protruding insert. Full silhouette visible. Editorial geometry remains subject to user review."
+    }
+  ],
+  "referencePreparation": "Exported actual bare-body PSD layers. Only uniform scale, placement and source canvas trimming were used for reference sheets. Round78 clear source layer has white cleanup marks above the neck; its blank upper source canvas was trimmed and generator instructed to ignore these marks.",
+  "verification": {
+    "browser": [
+      {
+        "viewport": "desktop",
+        "http": 200,
+        "images": [
+          {
+            "family": "Cylinder",
+            "src": "/assets/homepage/family-cylinder-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              459.953125,
+              574.9375
+            ],
+            "fit": "contain",
+            "href": "/catalog/cylinder"
+          },
+          {
+            "family": "Elegant",
+            "src": "/assets/homepage/family-elegant-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              459.953125,
+              574.9375
+            ],
+            "fit": "contain",
+            "href": "/catalog/elegant"
+          },
+          {
+            "family": "Circle",
+            "src": "/assets/homepage/family-circle-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              459.953125,
+              574.9375
+            ],
+            "fit": "contain",
+            "href": "/catalog/circle"
+          },
+          {
+            "family": "Boston Round",
+            "src": "/assets/homepage/family-boston-round-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              459.953125,
+              574.9375
+            ],
+            "fit": "contain",
+            "href": "/catalog/boston-round"
+          },
+          {
+            "family": "Diva",
+            "src": "/assets/homepage/family-diva-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              459.953125,
+              574.9375
+            ],
+            "fit": "contain",
+            "href": "/catalog/diva"
+          },
+          {
+            "family": "Grace",
+            "src": "/assets/homepage/family-grace-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              459.953125,
+              574.9375
+            ],
+            "fit": "contain",
+            "href": "/catalog/grace"
+          },
+          {
+            "family": "Empire",
+            "src": "/assets/homepage/family-empire-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              459.953125,
+              574.9375
+            ],
+            "fit": "contain",
+            "href": "/catalog/empire"
+          },
+          {
+            "family": "Round",
+            "src": "/assets/homepage/family-round-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              459.953125,
+              574.9375
+            ],
+            "fit": "contain",
+            "href": "/catalog/round"
+          }
+        ],
+        "nextWorks": true,
+        "previousWorks": true,
+        "layout": {
+          "width": 1440,
+          "documentWidth": 1440
+        },
+        "errors": []
+      },
+      {
+        "viewport": "mobile",
+        "http": 200,
+        "images": [
+          {
+            "family": "Cylinder",
+            "src": "/assets/homepage/family-cylinder-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              238.796875,
+              298.484375
+            ],
+            "fit": "contain",
+            "href": "/catalog/cylinder"
+          },
+          {
+            "family": "Elegant",
+            "src": "/assets/homepage/family-elegant-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              238.796875,
+              298.484375
+            ],
+            "fit": "contain",
+            "href": "/catalog/elegant"
+          },
+          {
+            "family": "Circle",
+            "src": "/assets/homepage/family-circle-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              238.796875,
+              298.484375
+            ],
+            "fit": "contain",
+            "href": "/catalog/circle"
+          },
+          {
+            "family": "Boston Round",
+            "src": "/assets/homepage/family-boston-round-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              238.796875,
+              298.484375
+            ],
+            "fit": "contain",
+            "href": "/catalog/boston-round"
+          },
+          {
+            "family": "Diva",
+            "src": "/assets/homepage/family-diva-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              238.796875,
+              298.484375
+            ],
+            "fit": "contain",
+            "href": "/catalog/diva"
+          },
+          {
+            "family": "Grace",
+            "src": "/assets/homepage/family-grace-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              238.796875,
+              298.484375
+            ],
+            "fit": "contain",
+            "href": "/catalog/grace"
+          },
+          {
+            "family": "Empire",
+            "src": "/assets/homepage/family-empire-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              238.796875,
+              298.484375
+            ],
+            "fit": "contain",
+            "href": "/catalog/empire"
+          },
+          {
+            "family": "Round",
+            "src": "/assets/homepage/family-round-portrait.webp",
+            "natural": [
+              1000,
+              1250
+            ],
+            "rendered": [
+              238.796875,
+              298.484375
+            ],
+            "fit": "contain",
+            "href": "/catalog/round"
+          }
+        ],
+        "nextWorks": true,
+        "previousWorks": true,
+        "layout": {
+          "width": 390,
+          "documentWidth": 390
+        },
+        "errors": []
+      },
+      {
+        "directory": [
+          {
+            "src": "/assets/homepage/family-cylinder-portrait.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "/assets/homepage/family-elegant-portrait.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "/assets/homepage/family-circle-portrait.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "/assets/homepage/family-diva-portrait.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "/assets/homepage/family-empire-portrait.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "/assets/homepage/family-boston-round-portrait.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "/assets/homepage/family-round-portrait.webp",
+            "loaded": true,
+            "fit": "contain"
+          },
+          {
+            "src": "/assets/homepage/family-grace-portrait.webp",
+            "loaded": true,
+            "fit": "contain"
+          }
+        ]
+      }
+    ],
+    "menu": {
+      "rows": [
+        {
+          "loaded": true,
+          "fit": "contain",
+          "src": "/_next/image?url=%2Fassets%2Fhomepage%2Ffamily-cylinder-portrait.webp&w=384&q=75"
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "src": "/_next/image?url=%2Fassets%2Fhomepage%2Ffamily-elegant-portrait.webp&w=384&q=75"
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "src": "/_next/image?url=%2Fassets%2Fhomepage%2Ffamily-circle-portrait.webp&w=384&q=75"
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "src": "/_next/image?url=%2Fassets%2Fhomepage%2Ffamily-boston-round-portrait.webp&w=384&q=75"
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "src": "/_next/image?url=%2Fassets%2Fhomepage%2Ffamily-diva-portrait.webp&w=384&q=75"
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "src": "/_next/image?url=%2Fassets%2Fhomepage%2Ffamily-grace-portrait.webp&w=384&q=75"
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "src": "/_next/image?url=%2Fassets%2Fhomepage%2Ffamily-empire-portrait.webp&w=384&q=75"
+        },
+        {
+          "loaded": true,
+          "fit": "contain",
+          "src": "/_next/image?url=%2Fassets%2Fhomepage%2Ffamily-round-portrait.webp&w=384&q=75"
+        }
+      ],
+      "escapeClosed": true
+    },
+    "checks": [
+      "Scoped ESLint passed",
+      "TypeScript noEmit passed",
+      "git diff --check passed"
+    ],
+    "localUrl": "http://localhost:3042/#family-heading",
+    "releaseState": "Local preview. Not committed, pushed, published or approved as SKU imagery."
+  },
+  "revisions": [
+    {
+      "feedback": "No reducer plugs or plastic at the mouth; especially Diva and Grace. Boston Round clear30mL, amber60mL, cobalt60mL with matching geometry for60mL.",
+      "requests": [
+        {
+          "index": 1,
+          "params": {
+            "model": "gpt_image_2_5",
+            "variant": "sunburst",
+            "quality": "max",
+            "resolution": "2k",
+            "background": "opaque",
+            "aspect_ratio": "4:5",
+            "count": 1,
+            "medias": [
+              {
+                "role": "image",
+                "value": "7766c4a4-b8a6-4e87-b897-40ee91daf0ba"
+              }
+            ],
+            "prompt": "PRECISE LOCAL PRODUCT RETOUCH. Edit the supplied Best Bottles Elegant family image. Keep the same bottle bodies, exact silhouettes, proportions, positions, glass colors, same neutral pale limestone base, bone background, lighting, shadows, and 4:5 framing. Correct ONLY the mouths of EVERY bottle. These are BARE EMPTY GLASS BOTTLES and MUST NOT have any reducer plug, orifice reducer, insert, white plastic ring, white disc, rubber stopper or central plastic projection. The current little white translucent raised boss on top of the threaded glass neck is WRONG: remove it completely. Reveal a real open glass mouth: a thin transparent annular glass rim enclosing a clearly VISIBLE HOLLOW ELLIPTICAL OPENING with darker inner glass wall and depth into the bottle. The center is OPEN AIR, not a white filled ellipse. Outer glass neck threads stay exactly as before, same size and body geometry. The very top is the bare glass lip, not another smaller cylinder emerging from inside it. Empty neck hollow all the way through. Use realistic subtle optical shading so the opening is unmistakably hollow at card scale; no black painted disc or opaque material. Nothing sits inside or above the glass neck. No hardware, caps, pumps, droppers, tubes or liquid anywhere. Check every bottle mouth. Do not change any other part of the image."
+          }
+        },
+        {
+          "index": 4,
+          "params": {
+            "model": "gpt_image_2_5",
+            "variant": "sunburst",
+            "quality": "max",
+            "resolution": "2k",
+            "background": "opaque",
+            "aspect_ratio": "4:5",
+            "count": 1,
+            "medias": [
+              {
+                "role": "image",
+                "value": "c29fafe9-f664-40d8-b7b2-d129417420ef"
+              }
+            ],
+            "prompt": "PRECISE LOCAL PRODUCT RETOUCH. Edit the supplied Best Bottles Diva family image. Keep the same bottle bodies, exact silhouettes, proportions, positions, glass colors, same neutral pale limestone base, bone background, lighting, shadows, and 4:5 framing. Correct ONLY the mouths of EVERY bottle. These are BARE EMPTY GLASS BOTTLES and MUST NOT have any reducer plug, orifice reducer, insert, white plastic ring, white disc, rubber stopper or central plastic projection. The current little white translucent raised boss on top of the threaded glass neck is WRONG: remove it completely. Reveal a real open glass mouth: a thin transparent annular glass rim enclosing a clearly VISIBLE HOLLOW ELLIPTICAL OPENING with darker inner glass wall and depth into the bottle. The center is OPEN AIR, not a white filled ellipse. Outer glass neck threads stay exactly as before, same size and body geometry. The very top is the bare glass lip, not another smaller cylinder emerging from inside it. Empty neck hollow all the way through. Use realistic subtle optical shading so the opening is unmistakably hollow at card scale; no black painted disc or opaque material. Nothing sits inside or above the glass neck. No hardware, caps, pumps, droppers, tubes or liquid anywhere. Check every bottle mouth. Do not change any other part of the image."
+          }
+        },
+        {
+          "index": 5,
+          "params": {
+            "model": "gpt_image_2_5",
+            "variant": "sunburst",
+            "quality": "max",
+            "resolution": "2k",
+            "background": "opaque",
+            "aspect_ratio": "4:5",
+            "count": 1,
+            "medias": [
+              {
+                "role": "image",
+                "value": "642f7d5e-662d-4e36-9892-5295790b2fd0"
+              }
+            ],
+            "prompt": "PRECISE LOCAL PRODUCT RETOUCH. Edit the supplied Best Bottles Grace family image. Keep the same bottle bodies, exact silhouettes, proportions, positions, glass colors, same neutral pale limestone base, bone background, lighting, shadows, and 4:5 framing. Correct ONLY the mouths of EVERY bottle. These are BARE EMPTY GLASS BOTTLES and MUST NOT have any reducer plug, orifice reducer, insert, white plastic ring, white disc, rubber stopper or central plastic projection. The current little white translucent raised boss on top of the threaded glass neck is WRONG: remove it completely. Reveal a real open glass mouth: a thin transparent annular glass rim enclosing a clearly VISIBLE HOLLOW ELLIPTICAL OPENING with darker inner glass wall and depth into the bottle. The center is OPEN AIR, not a white filled ellipse. Outer glass neck threads stay exactly as before, same size and body geometry. The very top is the bare glass lip, not another smaller cylinder emerging from inside it. Empty neck hollow all the way through. Use realistic subtle optical shading so the opening is unmistakably hollow at card scale; no black painted disc or opaque material. Nothing sits inside or above the glass neck. No hardware, caps, pumps, droppers, tubes or liquid anywhere. Check every bottle mouth. Do not change any other part of the image."
+          }
+        },
+        {
+          "index": 6,
+          "params": {
+            "model": "gpt_image_2_5",
+            "variant": "sunburst",
+            "quality": "max",
+            "resolution": "2k",
+            "background": "opaque",
+            "aspect_ratio": "4:5",
+            "count": 1,
+            "medias": [
+              {
+                "role": "image",
+                "value": "a1f2c6a1-f8b8-4128-94bf-e1ce32160b0f"
+              }
+            ],
+            "prompt": "PRECISE LOCAL PRODUCT RETOUCH. Edit the supplied Best Bottles Empire family image. Keep the same bottle bodies, exact silhouettes, proportions, positions, glass colors, same Sahara Noir marble base, bone background, lighting, shadows, and 4:5 framing. Correct ONLY the mouths of EVERY bottle. These are BARE EMPTY GLASS BOTTLES and MUST NOT have any reducer plug, orifice reducer, insert, white plastic ring, white disc, rubber stopper or central plastic projection. The current little white translucent raised boss on top of the threaded glass neck is WRONG: remove it completely. Reveal a real open glass mouth: a thin transparent annular glass rim enclosing a clearly VISIBLE HOLLOW ELLIPTICAL OPENING with darker inner glass wall and depth into the bottle. The center is OPEN AIR, not a white filled ellipse. Outer glass neck threads stay exactly as before, same size and body geometry. The very top is the bare glass lip, not another smaller cylinder emerging from inside it. Empty neck hollow all the way through. Use realistic subtle optical shading so the opening is unmistakably hollow at card scale; no black painted disc or opaque material. Nothing sits inside or above the glass neck. No hardware, caps, pumps, droppers, tubes or liquid anywhere. Check every bottle mouth. Do not change any other part of the image."
+          }
+        },
+        {
+          "index": 7,
+          "params": {
+            "model": "gpt_image_2_5",
+            "variant": "sunburst",
+            "quality": "max",
+            "resolution": "2k",
+            "background": "opaque",
+            "aspect_ratio": "4:5",
+            "count": 1,
+            "medias": [
+              {
+                "role": "image",
+                "value": "b443cfa7-f4d1-4deb-807a-f08ce5c22254"
+              }
+            ],
+            "prompt": "PRECISE LOCAL PRODUCT RETOUCH. Edit the supplied Best Bottles Round family image. Keep the same bottle bodies, exact silhouettes, proportions, positions, glass colors, same neutral pale limestone base, bone background, lighting, shadows, and 4:5 framing. Correct ONLY the mouths of EVERY bottle. These are BARE EMPTY GLASS BOTTLES and MUST NOT have any reducer plug, orifice reducer, insert, white plastic ring, white disc, rubber stopper or central plastic projection. The current little white translucent raised boss on top of the threaded glass neck is WRONG: remove it completely. Reveal a real open glass mouth: a thin transparent annular glass rim enclosing a clearly VISIBLE HOLLOW ELLIPTICAL OPENING with darker inner glass wall and depth into the bottle. The center is OPEN AIR, not a white filled ellipse. Outer glass neck threads stay exactly as before, same size and body geometry. The very top is the bare glass lip, not another smaller cylinder emerging from inside it. Empty neck hollow all the way through. Use realistic subtle optical shading so the opening is unmistakably hollow at card scale; no black painted disc or opaque material. Nothing sits inside or above the glass neck. No hardware, caps, pumps, droppers, tubes or liquid anywhere. Check every bottle mouth. Do not change any other part of the image."
+          }
+        },
+        {
+          "index": 3,
+          "params": {
+            "model": "gpt_image_2_5",
+            "variant": "sunburst",
+            "quality": "max",
+            "resolution": "2k",
+            "background": "opaque",
+            "aspect_ratio": "4:5",
+            "count": 1,
+            "medias": [
+              {
+                "role": "image",
+                "value": "85c740b3-c251-4df0-9430-bedf09063cab"
+              },
+              {
+                "role": "image",
+                "value": "6d35c84a-cd9b-475b-8710-c3755c191fae"
+              }
+            ],
+            "prompt": "Create the corrected Best Bottles Boston Round family navigation photograph. Reference1 contains the EXACT physical source bottles and required colors. Reference2 is the existing scene; retain its bone #F5F3EF background, neutral daylight from upper left, low Figured Claro Walnut base, depth and sophisticated clean optical lighting. Replace the old assortment with EXACTLY THREE empty BARE Boston Round bottles: LEFT clear30mL, MIDDLE amber60mL, RIGHT cobalt-blue60mL. The amber and cobalt are the SAME60mL body, IDENTICAL height, diameter, shoulders and neck size. Reference1 is the geometry and color authority. The smaller clear30mL body is around83% their height and85% their diameter. Keep amber rich warm brown and blue deep saturated cobalt transparent GLASS, no paint. Use real reflective glass walls and thick bases, crisp outlines.\nCrucial: completely UNCAPPED and NO INSERTS. Every neck ends at its glass lip with an open hollow elliptical mouth, visibly darker interior and inner glass wall. No white plastic reducer, plug, dropper, roller, cap, ring, seal or any hardware anywhere. No opaque disc blocking the opening. No dip tubes or liquid.\nPortrait4:5 canvas, all three entire bodies standing side-by-side on the one low walnut slab, common baseline around77% image height, balanced comfortable12% side margins and generous clean space above. Preserve source silhouettes exactly; photoreal coherent lighting and contact shadows, no Photoshop cutout effect, no scenery or other objects. The wood stays in the lower18% only. Make the amber and cobalt same scale and same plane. No text, labels, borders."
+          }
+        }
+      ],
+      "jobs": [
+        {
+          "index": 1,
+          "job_id": "b6bb5570-7ff9-4c1b-88cf-dfef301f365f"
+        },
+        {
+          "index": 4,
+          "job_id": "06ee4586-62bb-4a3c-9b21-322c2ec02a72"
+        },
+        {
+          "index": 5,
+          "job_id": "0514c7ae-1959-4acc-8796-35a52af63de0"
+        },
+        {
+          "index": 6,
+          "job_id": "4dcc29c0-e08c-4ab4-8544-80f7ccb3adf8"
+        },
+        {
+          "index": 7,
+          "job_id": "3f248547-a574-4aea-ba94-ea62252af18e"
+        },
+        {
+          "index": 3,
+          "job_id": "0419c394-aaca-4fc7-bc09-ef4372bd185e"
+        }
+      ],
+      "results": [
+        {
+          "index": 1,
+          "job_id": "b6bb5570-7ff9-4c1b-88cf-dfef301f365f",
+          "status": "completed",
+          "type": "image",
+          "model": "gpt_image_2_5",
+          "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_152914_b6bb5570-7ff9-4c1b-88cf-dfef301f365f.png"
+        },
+        {
+          "index": 4,
+          "job_id": "06ee4586-62bb-4a3c-9b21-322c2ec02a72",
+          "status": "completed",
+          "type": "image",
+          "model": "gpt_image_2_5",
+          "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_152914_06ee4586-62bb-4a3c-9b21-322c2ec02a72.png"
+        },
+        {
+          "index": 5,
+          "job_id": "0514c7ae-1959-4acc-8796-35a52af63de0",
+          "status": "completed",
+          "type": "image",
+          "model": "gpt_image_2_5",
+          "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_152914_0514c7ae-1959-4acc-8796-35a52af63de0.png"
+        },
+        {
+          "index": 6,
+          "job_id": "4dcc29c0-e08c-4ab4-8544-80f7ccb3adf8",
+          "status": "completed",
+          "type": "image",
+          "model": "gpt_image_2_5",
+          "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_152914_4dcc29c0-e08c-4ab4-8544-80f7ccb3adf8.png"
+        },
+        {
+          "index": 7,
+          "job_id": "3f248547-a574-4aea-ba94-ea62252af18e",
+          "status": "completed",
+          "type": "image",
+          "model": "gpt_image_2_5",
+          "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_152914_3f248547-a574-4aea-ba94-ea62252af18e.png"
+        },
+        {
+          "index": 3,
+          "job_id": "0419c394-aaca-4fc7-bc09-ef4372bd185e",
+          "status": "completed",
+          "type": "image",
+          "model": "gpt_image_2_5",
+          "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_38uS8RFOrQvYLf5nxOwGbhGKNAb/hf_20260913_153008_0419c394-aaca-4fc7-bc09-ef4372bd185e.png"
+        }
+      ],
+      "status": "local-editorial-review",
+      "previousFamilies": [
+        {
+          "name": "elegant",
+          "title": "Elegant",
+          "material": "neutral pale limestone",
+          "bottles": [
+            [
+              "GBElg15BlkSht",
+              61
+            ],
+            [
+              "GBElg60RdcrShnGl",
+              86
+            ],
+            [
+              "GBElg100RdcrShnGl",
+              109
+            ]
+          ],
+          "reference": "docs/reviews/homepage-collections/family-portrait-references/elegant.jpg",
+          "referenceSha256": "30fc67019da7ae5b176e6febd3e97dc09f6faf972cc6849b82ce39e9e20cdb72",
+          "sources": [
+            {
+              "sku": "GBElg15BlkSht",
+              "relativeScaleHeightMm": 61,
+              "sourcePath": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/1. GBElg15BlkSht.psd",
+              "sourceSha256": "75b87103e18241c096a0b8765bf5c66f01f302e3e064fd307e88c8fc1f4c3d37",
+              "layer": 2
+            },
+            {
+              "sku": "GBElg60RdcrShnGl",
+              "relativeScaleHeightMm": 86,
+              "sourcePath": "2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/1. GBElg60RdcrShnGl.psd",
+              "sourceSha256": "44bd6d7d6908d0c7adc579d75de2a5e0e857c23b8a13b090705f719757984691",
+              "layer": 2
+            },
+            {
+              "sku": "GBElg100RdcrShnGl",
+              "relativeScaleHeightMm": 109,
+              "sourcePath": "2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/1. GBElg100RdcrShnGl.psd",
+              "sourceSha256": "cdb2727c631f4fbff290e0752c9b82c0fe663edd6792b29f370f541c5032fb63",
+              "layer": 2
+            }
+          ],
+          "output": {
+            "path": "public/assets/homepage/family-elegant-portrait.webp",
+            "width": 1000,
+            "height": 1250,
+            "sha256": "49ae537f067fc7c9bedc3bccd56f421720393cfde013efb573d690b92609ba93",
+            "bytes": 96472,
+            "jobId": "7766c4a4-b8a6-4e87-b897-40ee91daf0ba"
+          },
+          "review": "Full neck, body and base visible; compared visually with native source reference. Editorial geometry remains subject to user review."
+        },
+        {
+          "name": "diva",
+          "title": "Diva",
+          "material": "neutral pale limestone",
+          "bottles": [
+            [
+              "GBDiva30SpryCu",
+              81
+            ],
+            [
+              "GBDiva46RdcrShnGl",
+              89
+            ],
+            [
+              "GBDiva100RdcrShnGl",
+              113
+            ]
+          ],
+          "reference": "docs/reviews/homepage-collections/family-portrait-references/diva.jpg",
+          "referenceSha256": "8d69af9d5586fdcbae9c3ff8b44d96123518e2ff2d2fa3c44d1119ff30fdc626",
+          "sources": [
+            {
+              "sku": "GBDiva30SpryCu",
+              "relativeScaleHeightMm": 81,
+              "sourcePath": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /53. GBDiva30SpryCu.psd",
+              "sourceSha256": "655e0b9ad116fdcb5f177d310b438c18fa1440e114b9c0e60b88ce3a061b7ae3",
+              "layer": 2
+            },
+            {
+              "sku": "GBDiva46RdcrShnGl",
+              "relativeScaleHeightMm": 89,
+              "sourcePath": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/1. GBDiva46RdcrShnGl.psd",
+              "sourceSha256": "3522d32082bd540f774f7e5f31aaf7b0a016e73c9dae99d8ac1c6bd04620b92e",
+              "layer": 2
+            },
+            {
+              "sku": "GBDiva100RdcrShnGl",
+              "relativeScaleHeightMm": 113,
+              "sourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/1. GBDiva100RdcrShnGl.psd",
+              "sourceSha256": "11679a409b0e719bac4915878d176c5541a88490972b3e88bf9f1672f2f95e39",
+              "layer": 2
+            }
+          ],
+          "output": {
+            "path": "public/assets/homepage/family-diva-portrait.webp",
+            "width": 1000,
+            "height": 1250,
+            "sha256": "fcfc0e954770f832375fb297b70a54141d0ca6d185c7489474cdb084cb60b1a5",
+            "bytes": 149682,
+            "jobId": "c29fafe9-f664-40d8-b7b2-d129417420ef"
+          },
+          "review": "Full neck, body and base visible; compared visually with native source reference. Editorial geometry remains subject to user review."
+        },
+        {
+          "name": "grace",
+          "title": "Grace",
+          "material": "neutral pale limestone",
+          "bottles": [
+            [
+              "GBGrce55AnSpGl",
+              113
+            ]
+          ],
+          "reference": "docs/reviews/homepage-collections/family-portrait-references/grace.jpg",
+          "referenceSha256": "217e6d25d9ff859aa962563a826951811fee8fb46d6a81b4b39f637ccb2f4e38",
+          "sources": [
+            {
+              "sku": "GBGrce55AnSpGl",
+              "relativeScaleHeightMm": 113,
+              "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/37. GBGrce55AnSpGl.psd",
+              "sourceSha256": "97d104b1cfbccdbf980f268b1e12c2aa6d904d0b9bd897671f8c946b61511517",
+              "layer": 2
+            }
+          ],
+          "output": {
+            "path": "public/assets/homepage/family-grace-portrait.webp",
+            "width": 1000,
+            "height": 1250,
+            "sha256": "5b021b1ca4dc1fde0d4bdc887f7827e07c7fdbb898c4d33d9117ecefd49e81a0",
+            "bytes": 93744,
+            "jobId": "642f7d5e-662d-4e36-9892-5295790b2fd0"
+          },
+          "review": "Full neck, body and base visible; compared visually with native source reference. Editorial geometry remains subject to user review."
+        },
+        {
+          "name": "empire",
+          "title": "Empire",
+          "material": "Sahara Noir marble",
+          "bottles": [
+            [
+              "GBEmp50SpryShnGl",
+              88
+            ],
+            [
+              "GBEmp100RdcrShnGl",
+              107
+            ]
+          ],
+          "reference": "docs/reviews/homepage-collections/family-portrait-references/empire.jpg",
+          "referenceSha256": "952c0ff0b35a88bc40c8047cb094ea35e6ba83068374bba40c35cd67e76cda10",
+          "sources": [
+            {
+              "sku": "GBEmp50SpryShnGl",
+              "relativeScaleHeightMm": 88,
+              "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/15. GBEmp50SpryShnGl.psd",
+              "sourceSha256": "fd7c406468105b16eef600e9f5ac247f1c72547b57c85c8649386abd91e28a05",
+              "layer": 2
+            },
+            {
+              "sku": "GBEmp100RdcrShnGl",
+              "relativeScaleHeightMm": 107,
+              "sourcePath": "2.  18-415 Bottles /22. Empire Bottle 100ml/1. Empire 100ml PSD/1. GBEmp100RdcrShnGl.psd",
+              "sourceSha256": "e354bf8bc6864c8f25625c2f6a535dff8f49a573db3c9112cf1ed39c5b19b2e5",
+              "layer": 2
+            }
+          ],
+          "output": {
+            "path": "public/assets/homepage/family-empire-portrait.webp",
+            "width": 1000,
+            "height": 1250,
+            "sha256": "f7c4d4b7fbb3d8b75bb83522c7125e4e331fd3ac0e085ced93e08aa960ad99d3",
+            "bytes": 105506,
+            "jobId": "a1f2c6a1-f8b8-4128-94bf-e1ce32160b0f"
+          },
+          "review": "Full neck, body and base visible; compared visually with native source reference. Editorial geometry remains subject to user review."
+        },
+        {
+          "name": "round",
+          "title": "Round",
+          "material": "neutral pale limestone",
+          "bottles": [
+            [
+              "GBRnd78RdcrShnGl",
+              73
+            ],
+            [
+              "GBRndFrst78RdcrShnGl",
+              73
+            ],
+            [
+              "GBRnd128RdcrShnGl",
+              83
+            ]
+          ],
+          "reference": "docs/reviews/homepage-collections/family-portrait-references/round.jpg",
+          "referenceSha256": "7912faa54ad0f362f3d6320906a4a888622b35031c05b619a8b6efdc0b63e8d8",
+          "sources": [
+            {
+              "sku": "GBRnd78RdcrShnGl",
+              "relativeScaleHeightMm": 73,
+              "sourcePath": "2.  18-415 Bottles /9. Round 78ml/1. Round 78ml PSD/1. GBRnd78RdcrShnGl..psd",
+              "sourceSha256": "30ee812266dba1c5b8446e17f7cf59ab9ee37e5af9e54c36d1202b42cedcf631",
+              "layer": 2
+            },
+            {
+              "sku": "GBRndFrst78RdcrShnGl",
+              "relativeScaleHeightMm": 73,
+              "sourcePath": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/1. GBRndFrst78RdcrShnGl.psd",
+              "sourceSha256": "f52ac2d0f5df6b8eb62c6b8cebf07b64027d26710827e5124c1b71e09a6f623d",
+              "layer": 2
+            },
+            {
+              "sku": "GBRnd128RdcrShnGl",
+              "relativeScaleHeightMm": 83,
+              "sourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/1. GBRnd128RdcrShnGl.psd",
+              "sourceSha256": "de9a5015c815f0ee680311b9c91a26e041821a0235d48c2968b18391cbf32ffc",
+              "layer": 2
+            }
+          ],
+          "output": {
+            "path": "public/assets/homepage/family-round-portrait.webp",
+            "width": 1000,
+            "height": 1250,
+            "sha256": "eb837ebeb2880781b4b856b32d034ae9aef827708d74e4987b822a00c427fbf0",
+            "bytes": 89146,
+            "jobId": "b443cfa7-f4d1-4deb-807a-f08ce5c22254"
+          },
+          "review": "Full neck, body and base visible; compared visually with native source reference. Editorial geometry remains subject to user review."
+        },
+        {
+          "name": "boston-round",
+          "title": "Boston Round",
+          "material": "Figured Claro Walnut",
+          "bottles": [
+            [
+              "GBBstnAmb15mlBlkDropperSlTrim",
+              68
+            ],
+            [
+              "GBBstn1ozMtlRollonMattSl",
+              78
+            ],
+            [
+              "gbbstn2ozmtlrollonblk",
+              94
+            ]
+          ],
+          "reference": "docs/reviews/homepage-collections/family-portrait-references/boston-round.jpg",
+          "referenceSha256": "c251cec39d0bf73c5a21ca133519021b7cf848c2f53b38c8453ec1f6409de6ea",
+          "sources": [
+            {
+              "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+              "relativeScaleHeightMm": 68,
+              "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/2. GBBstnAmb15mlBlkDropperSlTrim.psd",
+              "sourceSha256": "e07dbdba792fbf30ebeabb532e7f0779c44be1174893009581d0c60dcfa1bc80",
+              "layer": 2
+            },
+            {
+              "sku": "GBBstn1ozMtlRollonMattSl",
+              "relativeScaleHeightMm": 78,
+              "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/1. GBBstn1ozMtlRollonMattSl.psd",
+              "sourceSha256": "68cad12d8746fde491802bb3ef6dfa165a29106028e223dcb64ff8caf3ce3f1b",
+              "layer": 2
+            },
+            {
+              "sku": "gbbstn2ozmtlrollonblk",
+              "relativeScaleHeightMm": 94,
+              "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/18. GBBstn2ozMtlRollonBlk.psd",
+              "sourceSha256": "b2150b0eadc39995dbe4d3ba5606976d36908e163f7ad74053b2a38c8b17cc8f",
+              "layer": 4
+            }
+          ],
+          "output": {
+            "path": "public/assets/homepage/family-boston-round-portrait.webp",
+            "width": 1000,
+            "height": 1250,
+            "sha256": "872198d4e4c8834a0a3f553da209bd81be7a738b6295a5e39e1a85e714331e9f",
+            "bytes": 114682,
+            "jobId": "6d35c84a-cd9b-475b-8710-c3755c191fae"
+          },
+          "review": "Full neck, body and base visible; compared visually with native source reference. Editorial geometry remains subject to user review."
+        }
+      ],
+      "outputs": [
+        {
+          "family": "Elegant",
+          "path": "public/assets/homepage/family-elegant-portrait-open-mouth.webp",
+          "width": 1000,
+          "height": 1250,
+          "sha256": "24933d20892229c8c41dcaf910bd0b690a4743d8a4d7f044a5efcc7ea8427f94",
+          "bytes": 90000,
+          "jobId": "b6bb5570-7ff9-4c1b-88cf-dfef301f365f"
+        },
+        {
+          "family": "Diva",
+          "path": "public/assets/homepage/family-diva-portrait-open-mouth.webp",
+          "width": 1000,
+          "height": 1250,
+          "sha256": "5335ce1dcd4319d4e137c0152c0e4b761dd3219e5b07ce4075af6a2a6c6a4742",
+          "bytes": 140966,
+          "jobId": "06ee4586-62bb-4a3c-9b21-322c2ec02a72"
+        },
+        {
+          "family": "Grace",
+          "path": "public/assets/homepage/family-grace-portrait-open-mouth.webp",
+          "width": 1000,
+          "height": 1250,
+          "sha256": "71a0dcb7949b5c713605c40a0ff8ad57e287e8651e7272baacaf899744e2f95b",
+          "bytes": 88844,
+          "jobId": "0514c7ae-1959-4acc-8796-35a52af63de0"
+        },
+        {
+          "family": "Empire",
+          "path": "public/assets/homepage/family-empire-portrait-open-mouth.webp",
+          "width": 1000,
+          "height": 1250,
+          "sha256": "ca51b7071c6a9ba0ef8f3c03ab6c418e3d204a35cb39164af4a21d53cd8fbb36",
+          "bytes": 103948,
+          "jobId": "4dcc29c0-e08c-4ab4-8544-80f7ccb3adf8"
+        },
+        {
+          "family": "Round",
+          "path": "public/assets/homepage/family-round-portrait-open-mouth.webp",
+          "width": 1000,
+          "height": 1250,
+          "sha256": "7ef12f053ef7679b9848f404b4154d2cd540471cdfb6b061e2bb940fd654da3d",
+          "bytes": 86002,
+          "jobId": "3f248547-a574-4aea-ba94-ea62252af18e"
+        },
+        {
+          "family": "Boston Round",
+          "path": "public/assets/homepage/family-boston-round-colors-portrait.webp",
+          "width": 1000,
+          "height": 1250,
+          "sha256": "a5ad41858436a87f69f8b6c23281d149a026099a94d98acc590872e6d4bec23d",
+          "bytes": 112472,
+          "jobId": "0419c394-aaca-4fc7-bc09-ef4372bd185e"
+        }
+      ],
+      "referencePreparation": "Boston: separate native bare-glass layer 2 from amber and cobalt 60 mL PSDs, uniformly scaled to matching source height. Clear 30 mL retained. Other five scenes edited only at mouths to remove reducer-like inserts.",
+      "verification": {
+        "browser": [
+          {
+            "viewport": "desktop",
+            "http": 200,
+            "images": [
+              {
+                "src": "/assets/homepage/family-cylinder-portrait.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  459.953125,
+                  574.9375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-elegant-portrait-open-mouth.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  459.953125,
+                  574.9375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-circle-portrait.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  459.953125,
+                  574.9375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-boston-round-colors-portrait.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  459.953125,
+                  574.9375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-diva-portrait-open-mouth.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  459.953125,
+                  574.9375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-grace-portrait-open-mouth.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  459.953125,
+                  574.9375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-empire-portrait-open-mouth.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  459.953125,
+                  574.9375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-round-portrait-open-mouth.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  459.953125,
+                  574.9375
+                ],
+                "fit": "contain"
+              }
+            ],
+            "layout": {
+              "width": 1440,
+              "documentWidth": 1440
+            },
+            "errors": []
+          },
+          {
+            "viewport": "mobile",
+            "http": 200,
+            "images": [
+              {
+                "src": "/assets/homepage/family-cylinder-portrait.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  238.796875,
+                  298.484375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-elegant-portrait-open-mouth.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  238.796875,
+                  298.484375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-circle-portrait.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  238.796875,
+                  298.484375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-boston-round-colors-portrait.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  238.796875,
+                  298.484375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-diva-portrait-open-mouth.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  238.796875,
+                  298.484375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-grace-portrait-open-mouth.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  238.796875,
+                  298.484375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-empire-portrait-open-mouth.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  238.796875,
+                  298.484375
+                ],
+                "fit": "contain"
+              },
+              {
+                "src": "/assets/homepage/family-round-portrait-open-mouth.webp",
+                "natural": [
+                  1000,
+                  1250
+                ],
+                "rendered": [
+                  238.796875,
+                  298.484375
+                ],
+                "fit": "contain"
+              }
+            ],
+            "layout": {
+              "width": 390,
+              "documentWidth": 390
+            },
+            "errors": []
+          }
+        ],
+        "eslint": "passed",
+        "diffWhitespace": "passed",
+        "scope": "Updated image paths, loaded dimensions, 4:5 contain framing and no page overflow at desktop 1440 and mobile 390. Full viewport screenshots reviewed."
+      }
+    }
+  ]
+}

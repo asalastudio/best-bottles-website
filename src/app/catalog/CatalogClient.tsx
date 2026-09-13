@@ -1,5 +1,8 @@
 "use client";
 
+import { BUILDER_COLLECTION_FITMENTS } from "@/lib/bottle-builder/collection-context";
+import { getShopCollection, SHOP_COLLECTIONS } from "@/lib/shopCollections";
+
 import { useState, useEffect, useMemo, useCallback, useRef, type ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -665,7 +668,7 @@ function FilterSidebarContent({
     };
 
     const applicatorSection = Object.keys(facets?.applicators ?? {}).length > 0 ? (
-        <RefineSection title="Closure & applicator" defaultOpen={openByDefault("applicators")} hasActiveFilters={filters.applicators.length > 0}>
+        <RefineSection title="Dispenser" defaultOpen={openByDefault("applicators")} hasActiveFilters={filters.applicators.length > 0}>
             <div className="space-y-0.5">
                 {APPLICATOR_BUCKETS.filter((b) => (facets?.applicators?.[b.value] ?? 0) > 0 || filters.applicators.includes(b.value)).map((bucket) => (
                     <CheckboxItem
@@ -1870,7 +1873,7 @@ export default function CatalogClient({
     };
     return (
         <main className="min-h-screen bg-warm-white pt-[160px] lg:pt-[120px]">
-            <Navbar variant="catalog" initialSearchValue={filters.search || undefined} />
+            <Navbar variant="catalog" initialSearchValue={filters.search || undefined} hideSearch />
             <Breadcrumbs steps={[{ label: "Catalog" }]} />
 
             <div className="max-w-[1720px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
@@ -2077,7 +2080,7 @@ export default function CatalogClient({
                     {/* Product Grid Content */}
                     <div className="flex-1 min-w-0 w-full pb-32 border-l-0 lg:border-l border-champagne/30 lg:pl-6">
 
-                        {selectedFamilyLabel && CATALOG_FAMILIES.includes(selectedFamilyLabel) && (
+                        {selectedFamilyLabel && !filters.shopCollection && CATALOG_FAMILIES.includes(selectedFamilyLabel) && (
                             <div className="mb-4 flex flex-col gap-3 border border-muted-gold/40 bg-muted-gold/10 p-4 sm:flex-row sm:items-center sm:justify-between">
                                 <div>
                                     <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Family finder</p>
@@ -2092,6 +2095,27 @@ export default function CatalogClient({
                             </div>
                         )}
 
+                        <div className="mb-5 flex flex-wrap items-center gap-3">
+                            <label className="text-sm" htmlFor="shop-collection">Shop by collection</label>
+                            <select id="shop-collection" value={filters.shopCollection ?? ""}
+                                onChange={event => handleFilterChange({ shopCollection: event.target.value || null })}
+                                className="min-h-11 max-w-full rounded border border-champagne bg-white px-3 text-sm">
+                                <option value="">All collections</option>
+                                {SHOP_COLLECTIONS.map(collection => <option key={collection.key} value={collection.key}>{collection.title}</option>)}
+                            </select>
+                        </div>
+                        {filters.shopCollection && <p className="mb-4 text-sm text-slate">{getShopCollection(filters.shopCollection)?.subtitle}</p>}
+                        {filters.shopCollection && BUILDER_COLLECTION_FITMENTS[filters.shopCollection] && <Link className="mb-4 inline-flex min-h-11 items-center border border-champagne px-4 text-sm" href={`/matrix?shop=${filters.shopCollection}${filters.families.length === 1 ? `&family=${encodeURIComponent(filters.families[0])}` : ''}`}>Build from this collection →</Link>}
+                        {filters.shopCollection === "accessories-packaging" && <div className="mb-5 flex flex-wrap gap-4 text-sm">
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Component",families:[]})}>Loose components & caps</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Accessory",families:["Tool"]})}>Funnels & tools</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Bag"]})}>Bags</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Box"]})}>Boxes</button>
+                        </div>}
+                        {filters.shopCollection === "glass-spray-bottles" && <div className="mb-5 flex flex-wrap gap-3 text-sm">
+                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["antiquespray","antiquespray-tassel"]})}>Vintage Bulb Spray Bottles</button>
+                            <Link className="underline" href="/catalog?category=Component&componentType=Sprayer">Loose sprayer components</Link>
+                        </div>}
                         {/* Family banner — shown when a single design family is filtered */}
                         {filters.families.length === 1 && !filters.search && (
                             <FamilyBanner family={filters.families[0]} />
@@ -2117,7 +2141,7 @@ export default function CatalogClient({
                                                     ? `${filters.applicators.map((a) => APPLICATOR_BUCKETS.find((b) => b.value === a)?.label ?? a).join(" & ")} Bottles`
                                                     : filters.families.length === 1
                                                         ? filters.families[0]
-                                                        : filters.collection || filters.category || "All Products"}
+                                                        : getShopCollection(filters.shopCollection)?.title || filters.collection || filters.category || "All Products"}
                                     </h2>
                                 </div>
                                 <div className="flex items-center gap-2 sm:gap-3 shrink-0">

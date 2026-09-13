@@ -1,3 +1,4 @@
+import { getShopCollection } from "./shopCollections";
 import {
     APPLICATOR_BUCKETS,
     resolveCapacityRange,
@@ -13,7 +14,7 @@ export type CatalogArrayFacet =
     | "colors"
     | "neckThreadSizes";
 
-export type CatalogFilterChipFacet = CatalogFacetKey | "search";
+export type CatalogFilterChipFacet = CatalogFacetKey | "search" | "shopCollection";
 
 export type CatalogFilterChip = {
     facet: CatalogFilterChipFacet;
@@ -41,11 +42,12 @@ function priceLabel(filters: CatalogFilters): string {
 
 export function buildAppliedFilterChips(filters: CatalogFilters): CatalogFilterChip[] {
     const chips: CatalogFilterChip[] = [];
+    if (filters.shopCollection) chips.push({ facet: "shopCollection", value: filters.shopCollection, label: `Collection: ${getShopCollection(filters.shopCollection)?.title ?? filters.shopCollection}` });
     if (filters.category) chips.push({ facet: "category", value: filters.category, label: `Category: ${filters.category}` });
     if (filters.collection) chips.push({ facet: "collection", value: filters.collection, label: `Collection: ${filters.collection}` });
     for (const value of filters.applicators) {
         const label = APPLICATOR_BUCKETS.find((bucket) => bucket.value === value)?.label ?? value;
-        chips.push({ facet: "applicators", value, label: `Applicator: ${label}` });
+        chips.push({ facet: "applicators", value, label: `Dispenser: ${label}` });
     }
     for (const value of filters.rollerMaterials) {
         chips.push({ facet: "rollerMaterials", value, label: `Roller: ${value}` });
