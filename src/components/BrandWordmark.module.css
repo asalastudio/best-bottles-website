@@ -1,0 +1,24 @@
+.wordmark {
+    position: relative;
+    display: block;
+    width: 148px;
+    max-width: 100%;
+    aspect-ratio: 1620 / 217;
+    overflow: hidden;
+}
+
+/* Frame the PNG's visible bounds without changing the supplied artwork. */
+.artwork {
+    position: absolute;
+    width: 134.074074%;
+    max-width: none;
+    height: auto;
+    left: -15.925926%;
+    top: -107.834101%;
+}
+
+@media (min-width: 1280px) {
+    .wordmark {
+        width: 176px;
+    }
+}
