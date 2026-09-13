@@ -14,6 +14,7 @@ export function ImmersiveHeroArt() {
         height={1152}
         fetchPriority="high"
       />
+      <span className={styles.waterReflection} aria-hidden="true" />
     </div>
   );
 }
