@@ -379,7 +379,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         <Link
                             href="/"
                             aria-label="Best Bottles home"
-                            className="hidden min-h-11 items-center xl:flex shrink-0 xl:mr-2 2xl:mr-4"
+                            className="hidden xl:flex shrink-0 min-h-11 items-center xl:mr-2 2xl:mr-4"
                         >
                             <BrandWordmark />
                         </Link>
