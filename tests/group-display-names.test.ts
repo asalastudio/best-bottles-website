@@ -97,6 +97,31 @@ describe("disambiguateDisplayNames", () => {
         expect(new Set(await names(t)).size).toBe(1);
     });
 
+    it("refuses a neck value that is obviously not a finish", async () => {
+        const t = convexTest(schema, modules);
+        await seed(t, [
+            { slug: "pillar-9ml-clear-13-415", displayName: "9 ml Clear Pillar Bottle with Cap", neck: "13-415" },
+            // Real production data: a scrape put the wrong text in this field.
+            { slug: "pillar-9ml-clear-junk", displayName: "9 ml Clear Pillar Bottle with Cap", neck: "Size: GBPillar9BlkSht Nemat In" },
+        ]);
+        const result = await run(t);
+        expect(result.unresolved).toEqual(["pillar-9ml-clear-junk"]);
+        expect(await names(t)).not.toContain("9 ml Clear Pillar Bottle with Cap — Size: GBPillar9BlkSht Nemat In neck");
+    });
+
+    it("accepts a plain millimetre bore as a finish", async () => {
+        const t = convexTest(schema, modules);
+        await seed(t, [
+            { slug: "atomizer-5ml-a", displayName: "5 ml Atomizer Bottle", neck: "10mm" },
+            { slug: "atomizer-5ml-b", displayName: "5 ml Atomizer Bottle", neck: "12mm" },
+        ]);
+        await run(t);
+        expect(await names(t)).toEqual([
+            "5 ml Atomizer Bottle — 10mm neck",
+            "5 ml Atomizer Bottle — 12mm neck",
+        ]);
+    });
+
     it("reports a group it cannot disambiguate instead of guessing", async () => {
         const t = convexTest(schema, modules);
         await seed(t, [
