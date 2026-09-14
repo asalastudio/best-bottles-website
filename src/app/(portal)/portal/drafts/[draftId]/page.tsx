@@ -6,7 +6,7 @@ import { PageHeader, PortalTag } from "@/components/portal/ui";
 import OrderPad from "@/components/portal/OrderPad";
 import SubmitDraftForm from "@/components/portal/SubmitDraftForm";
 import { getDraftForViewer } from "@/lib/portal/draftEditor";
-import { saveDraftLinesAction, submitDraftAction } from "../../actions";
+import { saveDraftLinesAction, searchProductsAction, submitDraftAction } from "../../actions";
 
 function formatDate(value: number) {
     return new Date(value).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
@@ -62,6 +62,7 @@ export default async function PortalDraftDetail({
                 draftId={draftId}
                 readOnly={submitted}
                 saveLines={saveDraftLinesAction}
+                searchProducts={searchProductsAction}
                 initialLines={draft.lineItems.map((line) => ({
                     sku: line.sku,
                     description: line.description,

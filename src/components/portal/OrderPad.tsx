@@ -1,7 +1,16 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState, useTransition, useEffect, useRef } from "react";
 import { PortalButton } from "@/components/portal/ui";
+
+export type PadSearchHit = {
+    sku: string;
+    itemName: string;
+    capacity: string | null;
+    imageUrl: string | null;
+    startingPrice: number | null;
+    orderable: boolean;
+};
 
 export type PadLine = {
     sku: string;
@@ -39,11 +48,13 @@ export default function OrderPad({
     initialLines,
     readOnly,
     saveLines,
+    searchProducts,
 }: {
     draftId: string;
     initialLines: PadLine[];
     readOnly: boolean;
     saveLines: (draftId: string, lines: Array<{ sku: string; quantity: number }>) => Promise<SaveResult>;
+    searchProducts: (term: string) => Promise<PadSearchHit[]>;
 }) {
     const [lines, setLines] = useState<PadLine[]>(initialLines);
     const [sku, setSku] = useState("");
@@ -52,6 +63,34 @@ export default function OrderPad({
     const [showBulk, setShowBulk] = useState(false);
     const [problems, setProblems] = useState<string[]>([]);
     const [pending, startTransition] = useTransition();
+    const [hits, setHits] = useState<PadSearchHit[]>([]);
+    // Many product rows still carry Shopify URLs for files that have since been
+    // deleted, so a thumbnail 404 is normal rather than exceptional. A row of
+    // broken-image glyphs reads as a broken page; a plain tile does not.
+    const [brokenThumbs, setBrokenThumbs] = useState<Set<string>>(new Set());
+    const [searching, setSearching] = useState(false);
+    // Every keystroke fires a request otherwise, and a stale slow response can
+    // land after a newer fast one and overwrite it.
+    const searchSeq = useRef(0);
+
+    useEffect(() => {
+        const term = sku.trim();
+        if (readOnly || term.length < 2) { setHits([]); setSearching(false); return; }
+
+        const seq = ++searchSeq.current;
+        setSearching(true);
+        const timer = setTimeout(async () => {
+            try {
+                const found = await searchProducts(term);
+                if (seq === searchSeq.current) setHits(found);
+            } catch {
+                if (seq === searchSeq.current) setHits([]);
+            } finally {
+                if (seq === searchSeq.current) setSearching(false);
+            }
+        }, 220);
+        return () => clearTimeout(timer);
+    }, [sku, readOnly, searchProducts]);
 
     const total = lines.reduce((sum, l) => sum + (l.unitPrice ?? 0) * l.quantity, 0);
 
@@ -97,6 +136,20 @@ export default function OrderPad({
             : [...existing, { sku: trimmed, quantity }];
         setSku("");
         setQty("1");
+        setHits([]);
+        commit(next);
+    };
+
+    const addHit = (hit: PadSearchHit) => {
+        const quantity = Math.max(1, Math.floor(Number(qty) || 1));
+        const existing = currentAsInput();
+        const match = existing.find((l) => l.sku.toLowerCase() === hit.sku.toLowerCase());
+        const next = match
+            ? existing.map((l) => (l === match ? { ...l, quantity: l.quantity + quantity } : l))
+            : [...existing, { sku: hit.sku, quantity }];
+        setSku("");
+        setQty("1");
+        setHits([]);
         commit(next);
     };
 
@@ -138,14 +191,15 @@ export default function OrderPad({
                     <div className="flex items-end gap-2">
                         <div className="flex-1 min-w-0">
                             <label htmlFor="pad-sku" className="block font-sans text-[12px] text-neutral-500 mb-1.5">
-                                Add by SKU
+                                Add by SKU or product name
                             </label>
                             <input
                                 id="pad-sku"
                                 value={sku}
                                 onChange={(e) => setSku(e.target.value)}
                                 onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addOne(); } }}
-                                placeholder="GBCyl9SpryGl"
+                                placeholder="GBCyl9SpryGl, or &ldquo;9ml cylinder sprayer&rdquo;"
+                                autoComplete="off"
                                 className="w-full h-9 px-3 font-sans text-[13px] rounded-md border border-neutral-300 bg-white text-neutral-900 outline-none focus:border-neutral-500"
                             />
                         </div>
@@ -166,6 +220,50 @@ export default function OrderPad({
                             Add
                         </PortalButton>
                     </div>
+
+                    {(searching || hits.length > 0) && (
+                        <div className="mt-2 rounded-md border border-neutral-200 bg-white overflow-hidden">
+                            {searching && hits.length === 0 && (
+                                <p className="px-3 py-2.5 font-sans text-[12.5px] text-neutral-400">Searching…</p>
+                            )}
+                            {hits.map((hit) => (
+                                <div
+                                    key={hit.sku}
+                                    className="flex items-center gap-3 px-3 py-2 border-b border-neutral-100 last:border-b-0"
+                                >
+                                    {hit.imageUrl && !brokenThumbs.has(hit.sku) ? (
+                                        // eslint-disable-next-line @next/next/no-img-element -- Shopify CDN URL; Next/Image needs whitelisted domain config
+                                        <img
+                                            src={hit.imageUrl}
+                                            alt=""
+                                            className="h-9 w-9 shrink-0 rounded object-cover bg-neutral-100"
+                                            onError={() => setBrokenThumbs((prev) => new Set(prev).add(hit.sku))}
+                                        />
+                                    ) : (
+                                        <span className="h-9 w-9 shrink-0 rounded bg-neutral-100" />
+                                    )}
+                                    <div className="min-w-0 flex-1">
+                                        <p className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide">
+                                            {hit.sku}{hit.capacity ? ` · ${hit.capacity}` : ""}
+                                        </p>
+                                        <p className="font-sans text-[13px] text-neutral-900 truncate" title={hit.itemName}>
+                                            {hit.itemName}
+                                        </p>
+                                    </div>
+                                    <p className="shrink-0 font-sans text-[12px] text-neutral-500 tabular-nums">
+                                        {hit.startingPrice !== null ? `from ${money(hit.startingPrice)}` : "—"}
+                                    </p>
+                                    {hit.orderable ? (
+                                        <PortalButton size="sm" variant="outline" type="button" onClick={() => addHit(hit)} disabled={pending}>
+                                            Add
+                                        </PortalButton>
+                                    ) : (
+                                        <span className="shrink-0 font-sans text-[11px] text-neutral-400">Quote only</span>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+                    )}
 
                     <button
                         type="button"

@@ -2680,3 +2680,77 @@ export const getCheckoutBlockedCount = query({
         };
     },
 });
+
+/**
+ * Product lookup for the portal's order pad.
+ *
+ * A wholesale buyer arrives with one of two things: a SKU they already know,
+ * or a description of the thing they want. This answers both in one call —
+ * exact SKU matches are hoisted to the top, then full-text on the item name
+ * fills the rest.
+ *
+ * Deliberately bounded by the search index rather than a table scan: `products`
+ * crossed Convex's per-execution read limit at 2,330 documents, so anything
+ * that reads the whole table from a request path is a latent outage.
+ */
+export const searchForOrderPad = query({
+    args: { term: v.string(), limit: v.optional(v.number()) },
+    handler: async (ctx, args) => {
+        const term = args.term.trim();
+        if (term.length < 2) return [];
+        const limit = Math.min(Math.max(args.limit ?? 8, 1), 20);
+
+        const found = new Map<string, Doc<"products">>();
+
+        // Superseded rows keep their old SKU with a "__RETIRED__" marker so the
+        // history stays auditable. They are not buyable and must never surface
+        // in a pad that exists to put things on an order.
+        const isOfferable = (product: Doc<"products">) => {
+            const sku = product.websiteSku ?? product.graceSku ?? "";
+            if (sku.includes("__RETIRED__")) return false;
+            // `shopifySellable` is tri-state: false is a checked no, null or
+            // undefined means the sweep has not run and the variant id decides.
+            if (product.shopifySellable === false) return false;
+            return true;
+        };
+
+        // Exact SKU wins. Someone who typed a SKU wants that SKU, not the
+        // fuzzy neighbourhood around its name.
+        for (const candidate of new Set([term, term.toUpperCase()])) {
+            if (found.size > 0) break;
+            const byWebsite = await ctx.db
+                .query("products")
+                .withIndex("by_websiteSku", (q) => q.eq("websiteSku", candidate))
+                .first();
+            if (byWebsite && isOfferable(byWebsite)) found.set(byWebsite._id, byWebsite);
+            const byGrace = await ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", candidate))
+                .first();
+            if (byGrace && isOfferable(byGrace)) found.set(byGrace._id, byGrace);
+        }
+
+        if (found.size < limit) {
+            const byName = await ctx.db
+                .query("products")
+                .withSearchIndex("search_itemName", (q) => q.search("itemName", term))
+                .take(limit * 4);
+            for (const product of byName) {
+                if (found.size >= limit) break;
+                if (!isOfferable(product)) continue;
+                found.set(product._id, product);
+            }
+        }
+
+        return [...found.values()].slice(0, limit).map((product) => ({
+            sku: product.websiteSku ?? product.graceSku,
+            itemName: product.itemName,
+            capacity: product.capacity ?? null,
+            imageUrl: product.imageUrl ?? null,
+            startingPrice: product.webPrice1pc ?? null,
+            // Absent means Shopify cannot sell it, so the pad offers a quote
+            // instead of an Add button rather than failing at submission.
+            orderable: Boolean(product.shopifyVariantId),
+        }));
+    },
+});

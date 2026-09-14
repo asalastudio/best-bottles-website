@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import type { SubmitDraftState } from "@/components/portal/SubmitDraftForm";
 import {
+    searchProductsForViewer,
     setDraftLinesForViewer,
     submitDraftForViewer,
 } from "@/lib/portal/draftEditor";
@@ -164,4 +165,8 @@ export async function submitDraftAction(
     revalidatePath("/portal/drafts");
     revalidatePath("/portal");
     return { error: null, sentAs: result.shopifyDraftOrderName };
+}
+
+export async function searchProductsAction(term: string) {
+    return await searchProductsForViewer(term);
 }

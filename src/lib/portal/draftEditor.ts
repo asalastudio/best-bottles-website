@@ -183,3 +183,26 @@ export async function submitDraftForViewer(draftId: string): Promise<SubmitDraft
         };
     }
 }
+
+export type PadSearchHit = {
+    sku: string;
+    itemName: string;
+    capacity: string | null;
+    imageUrl: string | null;
+    startingPrice: number | null;
+    orderable: boolean;
+};
+
+/**
+ * Product search for the pad. Runs through the portal viewer check so an
+ * anonymous caller cannot use the portal as an unthrottled catalogue API.
+ */
+export async function searchProductsForViewer(term: string): Promise<PadSearchHit[]> {
+    await requirePortalViewer();
+    const trimmed = term.trim();
+    if (trimmed.length < 2) return [];
+    return await getPortalConvex().query(api.products.searchForOrderPad, {
+        term: trimmed,
+        limit: 8,
+    });
+}
