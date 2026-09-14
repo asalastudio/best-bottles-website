@@ -61,7 +61,7 @@ export default function ShoppingHeader() {
                 <div className={styles.headerRight}>
                     <button type="button" className={styles.searchTrigger} aria-expanded={activeMega === 'search'} aria-controls="search-mega-menu" onClick={() => toggleMega('search')}><MagnifyingGlass size={18}/><span>Search</span></button>
                     <button className={styles.grace} onClick={() => open()}>Ask Grace</button>
-                    <Link className={styles.portal} href="/sign-in?redirect_url=%2Fportal" aria-label="Sign in to the client portal"><User size={22}/><span>Portal</span></Link>
+                    <Link className={styles.portal} href="/sign-in?redirect_url=%2Fportal" aria-label="Sign in to the client portal"><User size={22}/></Link>
                     <button className={styles.cartButton} aria-label={`Open cart${isCartHydrated ? `, ${itemCount} items` : ''}`} onClick={() => setCart(true)}><ShoppingBag size={22}/>{isCartHydrated && itemCount > 0 && <span>{itemCount}</span>}</button>
                 </div>
             </div>
