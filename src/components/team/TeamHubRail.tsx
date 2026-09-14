@@ -42,7 +42,10 @@ export default function TeamHubRail({
     return (
         <nav
             aria-label="Team Hub tools"
-            className="flex h-full w-full flex-col lg:w-[248px] lg:min-w-[248px]"
+            // Sticky and full-height on desktop: the rail is the one thing on
+            // this page that should never scroll away, and a background that
+            // stopped where its list ended left a torn edge down the page.
+            className="flex w-full flex-col lg:sticky lg:top-0 lg:h-screen lg:w-[244px] lg:min-w-[244px]"
             style={{
                 background: "var(--color-surface-rail)",
                 borderRight: "1px solid var(--color-rule)",
@@ -78,10 +81,18 @@ export default function TeamHubRail({
                         Nothing matches “{query}”.
                     </p>
                 ) : (
-                    grouped.map((group) => (
-                        <div key={group.section.id} className="mb-4">
+                    grouped.map((group, groupIndex) => (
+                        <div
+                            key={group.section.id}
+                            className={groupIndex === 0 ? "pb-3" : "mt-3 pt-3 pb-0"}
+                            style={
+                                groupIndex === 0
+                                    ? undefined
+                                    : { borderTop: "1px solid var(--color-rule)" }
+                            }
+                        >
                             <p
-                                className="px-2 pb-1.5 font-sans text-[10.5px] font-medium uppercase tracking-[0.14em]"
+                                className="px-2 pb-1 font-sans text-[10px] font-semibold uppercase tracking-[0.16em]"
                                 style={{ color: "var(--color-text-muted)" }}
                             >
                                 {group.section.label}
@@ -96,7 +107,7 @@ export default function TeamHubRail({
                                         target={tool.external ? "_blank" : undefined}
                                         rel={tool.external ? "noopener noreferrer" : undefined}
                                         aria-current={active ? "page" : undefined}
-                                        className="group relative flex items-center gap-2 rounded-md px-2 py-[7px] font-sans text-[13px] transition-colors"
+                                        className="group relative flex items-center gap-2 rounded-md px-2 py-[6px] font-sans text-[13px] leading-[1.35] transition-colors hover:bg-[color:var(--color-surface-sunken)]"
                                         style={{
                                             background: active ? "var(--color-surface-selected)" : "transparent",
                                             color: "var(--color-text-primary)",
@@ -112,11 +123,13 @@ export default function TeamHubRail({
                                                 style={{ background: "var(--color-muted-gold)" }}
                                             />
                                         )}
-                                        <span className="min-w-0 flex-1 truncate">
+                                        {/* No ↗ glyph. Nine of them down a short
+                                            rail read as decoration, and the arrow
+                                            repeated the information already in the
+                                            grouping. Screen readers still get it. */}
+                                        <span className="min-w-0 flex-1">
                                             {tool.name}
-                                            {tool.external && (
-                                                <span aria-hidden style={{ color: "var(--color-text-muted)" }}> ↗</span>
-                                            )}
+                                            {tool.external && <span className="sr-only"> (opens in a new tab)</span>}
                                         </span>
                                         {count > 0 && (
                                             <span

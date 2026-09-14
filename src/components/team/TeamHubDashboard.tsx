@@ -35,7 +35,7 @@ export function TeamHubDashboard({
     return (
         <div
             data-team-hub
-            className="app-surface flex min-h-screen flex-col lg:flex-row"
+            className="app-surface flex min-h-screen flex-col lg:flex-row lg:items-start"
             style={{ background: "var(--color-surface-sunken)" }}
         >
             <TeamHubRail tools={tools} previewMode={previewMode} counts={queueCounts} />
