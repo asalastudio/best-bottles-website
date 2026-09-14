@@ -18,15 +18,25 @@ import styles from "./EmpireFitmentHero.module.css";
 const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v7";
 const MANIFEST = `/assets/hero/${HERO_SET}/manifest.json`;
 const HOLD_MS = 2000;     // one beat per closure (Jordan: "1, 2, switch")
-/** The niche fills this share of the hero height, centred vertically, its centre at NICHE_X of the hero width
- *  (the copy lives on the left). On wide boxes the stage is narrower than the box; the plaster tone from the
- *  manifest fills the sides and the stage's outer edges are masked into it (see .stage in the stylesheet). */
+/** Layout (Jordan, 2026-09-14): the niche box is NICHE_HEIGHT of the hero height, the moulding's outer edge sits
+ *  RIGHT_GAP px from the hero's right edge, the frame is centred vertically. Beside the stage the page fills with the
+ *  plaster tones from the manifest and the stage's outer edges are masked into them (no seam). Light reads in ONE
+ *  direction: a stage-space overlay flattens the wall's baked left-bright gradient, then one hero-space gradient
+ *  (.shade) fades the plaster out to the left from the moulding's left edge. At phone widths the copy stacks above
+ *  the scene (CSS) and the frame is centred instead. */
 const NICHE_HEIGHT = 0.8;
-const NICHE_X = 0.62;
+const RIGHT_GAP = 110;
+const STACK_BELOW = 1100;     // matches the page CSS: at this width and below the copy stacks above the scene
+const COPY_SHARE = 0.55;      // the moulding never crosses this share of the width, where the copy lives
 
 type Patch = { src: string; x: number; y: number; w: number; h: number };
 type Frame = { sku: string; src: string; label: string; patch?: Patch };
-type Manifest = { base: string; width: number; height: number; frames: Frame[]; builtAt?: number; niche?: [number, number, number, number]; edge?: { left: string; right: string }; hold?: unknown };
+type Box = [number, number, number, number];
+type Manifest = {
+    base: string; width: number; height: number; frames: Frame[]; builtAt?: number;
+    niche?: Box; frame?: Box; edge?: { left: string; right: string };
+    wallEven?: { width: number; stops: [number, number][] }; hold?: unknown;
+};
 /** Cache-bust every asset with the manifest's build stamp so a rebuilt set never mixes with a cached one. */
 const stamp = (m: Manifest, src: string) => (m.builtAt ? `${src}?v=${m.builtAt}` : src);
 
@@ -49,7 +59,7 @@ export default function EmpireFitmentHero() {
     const [manifest, setManifest] = useState<Manifest | null>(null);
     const [index, setIndex] = useState(0);
     const [paused, setPaused] = useState(false);
-    const [fit, setFit] = useState({ scale: 1, x: 0, y: 0 });
+    const [fit, setFit] = useState({ scale: 1, x: 0, y: 0, mouldingLeft: 0 });
     const box = useRef<HTMLDivElement>(null);
     const reduced = useRef(false);
 
@@ -67,24 +77,25 @@ export default function EmpireFitmentHero() {
         return () => mq.removeEventListener("change", sync);
     }, []);
 
-    // Fit the fixed-size stage so the WHOLE niche sits inside the hero box (Jordan: "the whole entire niche fits in
-    // the frame nicely"), never cropping the arch or the sill; the stage still covers the box vertically.
+    // Fit the fixed-size stage so the WHOLE niche sits inside the hero box, never cropping the arch or the sill;
+    // the stage always covers the box vertically, and horizontally the fill + edge mask take care of any gap.
     useLayoutEffect(() => {
         if (!manifest || !box.current) return;
         const el = box.current;
         const update = () => {
             const bw = el.clientWidth, bh = el.clientHeight;
-            const n = manifest.niche ?? [0, 0, manifest.width, manifest.height];
-            const nw = n[2] - n[0], nh = n[3] - n[1], ncx = (n[0] + n[2]) / 2, ncy = (n[1] + n[3]) / 2;
+            const n: Box = manifest.niche ?? [0, 0, manifest.width, manifest.height];
+            const f: Box = manifest.frame ?? n;
+            const nh = n[3] - n[1], fw = f[2] - f[0], fcx = (f[0] + f[2]) / 2, fcy = (f[1] + f[3]) / 2;
+            const stacked = bw <= STACK_BELOW;
             let scale = (bh * NICHE_HEIGHT) / nh;
-            scale = Math.min(scale, (bw * 0.9) / nw);              // a narrow box: the niche must fit the width too
-            scale = Math.max(scale, bh / manifest.height);         // but the stage always covers the box vertically
-            const sw = manifest.width * scale, sh = manifest.height * scale;
-            let x = NICHE_X * bw - ncx * scale;
-            if (sw >= bw) x = Math.min(0, Math.max(bw - sw, x));  // covering: keep the stage over the box
-            let y = bh / 2 - ncy * scale;
+            scale = Math.min(scale, stacked ? (bw * 0.9) / fw : (bw * (1 - COPY_SHARE) - RIGHT_GAP) / fw);   // the frame never crosses into the copy
+            scale = Math.max(scale, bh / manifest.height);                                       // but the stage always covers the box vertically
+            const sh = manifest.height * scale;
+            const x = stacked ? bw / 2 - fcx * scale : bw - RIGHT_GAP - f[2] * scale;
+            let y = bh / 2 - fcy * scale;
             y = sh >= bh ? Math.min(0, Math.max(bh - sh, y)) : (bh - sh) / 2;
-            setFit({ scale, x, y });
+            setFit({ scale, x, y, mouldingLeft: x + f[0] * scale });
         };
         update();
         const ro = new ResizeObserver(update);
@@ -129,11 +140,15 @@ export default function EmpireFitmentHero() {
             {manifest && (
                 <div className={styles.stage} style={{ width: manifest.width, height: manifest.height, transform: `translate(${fit.x}px, ${fit.y}px) scale(${fit.scale})` }}>
                     <img className={styles.base} src={stamp(manifest, manifest.base)} alt="" width={manifest.width} height={manifest.height} fetchPriority="high" />
+                    {manifest.wallEven && (
+                        <div className={styles.wallEven} aria-hidden="true" style={{ width: manifest.wallEven.width, background: `linear-gradient(90deg, ${manifest.wallEven.stops.map(([p, a]) => `rgba(0,0,0,${a}) ${(p * 100).toFixed(1)}%`).join(", ")})` }} />
+                    )}
                     {next && next.sku !== current?.sku && renderPatch(next, styles.next, true)}
                     {current && renderPatch(current, styles.current)}
                 </div>
             )}
-            <div className={styles.shade} aria-hidden="true" />
+            <div className={styles.topBlend} aria-hidden="true" />
+            <div className={styles.shade} aria-hidden="true" style={fit.mouldingLeft > 0 ? { background: `linear-gradient(90deg, rgba(58,48,36,0.22) 0px, rgba(58,48,36,0.07) ${Math.round(fit.mouldingLeft * 0.55)}px, rgba(58,48,36,0) ${Math.round(fit.mouldingLeft)}px)` } : undefined} />
             {current && (
                 <p className={styles.caption} aria-live="polite">
                     <span>Empire 50 mL</span>

@@ -227,8 +227,19 @@ hold = {"neck": {"x": int(B["cx"]) - hw, "y": B["neck_top"] - 2, "w": 2 * hw, "h
         "tube": {"x": int(tcols.min()) - 1, "y": B["shoulder"] + SEAT + 2, "w": int(tcols.max() - tcols.min()) + 3, "h": int(trows.max()) + 2 - (B["shoulder"] + SEAT + 2)}}
 log("hold rects", hold, "(collar widths %d..%d)" % (min(collar_w), max(collar_w)))
 hexc = lambda v: "#%02x%02x%02x" % tuple(int(round(x)) for x in v)
-edge = {"left": hexc(base[100:924, 0:60].mean((0, 1))), "right": hexc(base[100:924, W - 60:W].mean((0, 1)))}   # plaster tone the page fills beside the stage
-json.dump({"base": f"/assets/hero/{SET}/base.webp", "width": W, "height": H, "builtAt": int(time.time()), "niche": NICHE, "edge": edge, "hold": hold, "frames": frames}, open(f"{OUT}/manifest.json", "w"), indent=1)
+FRAME = [int(v) for v in os.environ.get("FRAME_BOX", "690,190,1272,805").split(",")]   # moulding OUTER box (v6; the sill runs ~23 px wider each side)
+# The generated wall is brightest at the far left and dims toward the niche. The page flattens that in stage space
+# (a black overlay whose alpha = 1 - target/L(x) left of the moulding) so its own leftward light falloff reads in one
+# direction; the fill tones beside the stage are sampled at that flattened level.
+Lum = base.mean(axis=2); target = float(Lum[250:750, FRAME[0] - 110: FRAME[0] - 10].mean())
+stops = []
+for x in range(0, FRAME[0] - 40, 64):
+    a = max(0.0, 1 - target / float(Lum[250:750, x:x + 64].mean())); stops.append([round((x + 32) / FRAME[0], 3), round(a, 3)])
+stops.append([1.0, 0.0])
+edge = {"left": hexc(base[250:750, FRAME[0] - 110: FRAME[0] - 10].mean((0, 1))), "right": hexc(base[250:750, FRAME[2] + 30: FRAME[2] + 90].mean((0, 1)))}
+log("frame", FRAME, "wall target L %.1f" % target, "flatten stops", stops, "edge", edge)
+json.dump({"base": f"/assets/hero/{SET}/base.webp", "width": W, "height": H, "builtAt": int(time.time()), "niche": NICHE, "frame": FRAME,
+           "wallEven": {"width": FRAME[0], "stops": stops}, "edge": edge, "hold": hold, "frames": frames}, open(f"{OUT}/manifest.json", "w"), indent=1)
 json.dump({"niche": NICHE, "plaster": g.get("plaster"), "body": g.get("body"), "datum": B}, open(f"{OUT}/geometry.json", "w"))
 
 try: font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 14)

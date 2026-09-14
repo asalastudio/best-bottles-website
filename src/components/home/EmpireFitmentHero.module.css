@@ -23,6 +23,15 @@
     display: block;
 }
 
+/* Stage-space overlay (stage px) that flattens the wall's baked left-bright gradient; stops come from the manifest. */
+.wallEven {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    pointer-events: none;
+}
+
 .patch,
 .full {
     position: absolute;
@@ -73,7 +82,17 @@
     .odoStrip { transition: none; }
 }
 
+/* Stacked layout only: the scene's top blends into the copy block's plaster tone (--plaster set on the hero section). */
+.topBlend { display: none; }
+
+/* From 1100px down the hero stacks (copy above, CollectionShopping.module.css), so the scene is a block of its own. */
+@media (max-width: 1100px) {
+    .scene { position: relative; inset: auto; width: 100%; height: 440px; }
+    .topBlend { display: block; position: absolute; left: 0; right: 0; top: 0; height: 120px; pointer-events: none;
+        background: linear-gradient(180deg, var(--plaster, #b8a58d) 0%, transparent 100%); }
+}
+
 @media (max-width: 640px) {
+    .scene { height: 320px; }
     .caption { left: 22px; bottom: 12px; font-size: 10px; }
-    .shade { background: linear-gradient(180deg, rgba(58, 48, 36, 0.45) 0%, rgba(58, 48, 36, 0) 45%); }
 }
