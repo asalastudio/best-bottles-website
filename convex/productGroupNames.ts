@@ -30,6 +30,22 @@ function withNeck(displayName: string, neck: string): string {
     return `${displayName} — ${neck} neck`;
 }
 
+/**
+ * Is this value actually a neck finish, or is it junk that landed in the field?
+ *
+ * Production has a group whose `neckThreadSize` reads
+ * "Size: GBPillar9BlkSht Nemat In" — a scrape that captured the wrong text.
+ * Appending that to a product name produces something far worse than the
+ * ambiguity it was meant to resolve, so anything that is not recognisably a
+ * finish is refused and reported instead.
+ *
+ * Accepts the two shapes the catalogue actually uses: a thread code like
+ * 18-415 or 13/415, and a plain millimetre bore like 10mm.
+ */
+function looksLikeNeckFinish(value: string): boolean {
+    return /^\d{1,3}\s*[-/]\s*\d{2,3}$/.test(value) || /^\d{1,3}\s*mm$/i.test(value);
+}
+
 export const disambiguateDisplayNames = mutation({
     args: { writeToken: v.string(), dryRun: v.optional(v.boolean()) },
     returns: v.object({
@@ -65,10 +81,11 @@ export const disambiguateDisplayNames = mutation({
 
             for (const group of bucket) {
                 const neck = group.neckThreadSize?.trim();
-                if (!neck) {
-                    // Nothing to disambiguate with. Renaming on some other axis
-                    // would be a guess, and a guessed product name is worse
-                    // than an ambiguous one.
+                if (!neck || !looksLikeNeckFinish(neck)) {
+                    // Nothing trustworthy to disambiguate with. Renaming on
+                    // some other axis would be a guess, and a guessed product
+                    // name is worse than an ambiguous one — as is a name built
+                    // from a corrupt field.
                     unresolved.push(group.slug);
                     continue;
                 }
