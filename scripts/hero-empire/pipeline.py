@@ -112,8 +112,8 @@ def seat_metrics(frame):
     rows_hit = np.where(band.any(axis=1))[0]
     if len(rows_hit) == 0: return None
     seat = int(rows_hit.max()) + y0 - SHOULDER
-    wide = d[y0:SHOULDER, int(NECK_CX) - 90:int(NECK_CX) + 90]; ys_, xs_ = np.where(wide)
-    dx = float(xs_.mean()) + int(NECK_CX) - 90 - NECK_CX if len(xs_) else 0.0
+    collar = d[max(SHOULDER - 70, y0):SHOULDER, int(NECK_CX) - 70:int(NECK_CX) + 70]; ys_, xs_ = np.where(collar)
+    dx = float(xs_.mean()) + int(NECK_CX) - 70 - NECK_CX if len(xs_) else 0.0
     return seat, dx
 SEAT_TOL, DX_TOL, MAX_TRIES = 12, 8, 3
 TUBE_KINDS = ("AnSp", "LB", "Spry")
@@ -129,14 +129,14 @@ def one(r):
     for attempt in range(MAX_TRIES):
         if attempt > 0 and os.path.exists(raw): os.rename(raw, f"{OUT}/raw-{sku}.try{attempt}.png")
         res = render_and_composite(sku, r, raw, reinforced=attempt > 0)
+        _, pct, mt, snapped = res
         frame = np.asarray(Image.open(f"{OUT}/frame-{sku}.png").convert("RGB")).astype(float)
-        mt = seat_metrics(frame)
         tube_ok = tube_present(frame) if kind(sku) in TUBE_KINDS else True
-        score = ((abs(mt[0]) + abs(mt[1])) if mt else 999) + (0 if tube_ok else 200)
+        score = ((abs(mt[0]) + abs(mt[1])) if mt else 999) + (0 if snapped else 500) + (0 if tube_ok else 200)
         os.replace(f"{OUT}/frame-{sku}.png", f"{OUT}/frame-{sku}.a{attempt}.png")
         if best is None or score < best[0]: best = (score, mt, res, attempt)
-        if mt and abs(mt[0]) <= SEAT_TOL and abs(mt[1]) <= DX_TOL and tube_ok: break
-        log(f"{sku}: seat {mt} tube {tube_ok} — attempt {attempt + 1}/{MAX_TRIES}")
+        if snapped and tube_ok: break
+        log(f"{sku}: pre-snap seat {mt} snapped {snapped} tube {tube_ok} — attempt {attempt + 1}/{MAX_TRIES}")
     os.replace(f"{OUT}/frame-{sku}.a{best[3]}.png", f"{OUT}/frame-{sku}.png")
     for f in glob.glob(f"{OUT}/frame-{sku}.a*.png"): os.remove(f)
     return sku, best[2][1], best[1]
@@ -155,15 +155,16 @@ def render_and_composite(sku, r, raw, reinforced=False):
     changed = ((np.abs(gen - bf).sum(axis=2) > 40) & (zone == 0)).astype(np.uint8) * 255
     a = np.asarray(Image.fromarray(changed).filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(2.5))).astype(float) / 255.0
     # KIT SNAP: measure where the collar landed and shift the closure layer onto the neck datum
-    mt = seat_metrics(gen)
+    mt = seat_metrics(gen); snapped = False
     if mt and abs(mt[0]) <= 40 and abs(mt[1]) <= 40:
+        snapped = True
         dy, dx = -int(round(mt[0])), -int(round(mt[1]))
         gen = np.roll(np.roll(gen, dy, axis=0), dx, axis=1); a = np.roll(np.roll(a, dy, axis=0), dx, axis=1)
         if dy < 0: a[dy:] = 0
         if dy > 0: a[:dy] = 0
     comp = bf * (1 - a[..., None]) + gen * a[..., None]
     Image.fromarray(comp.round().astype(np.uint8)).save(f"{OUT}/frame-{sku}.png")
-    return sku, 100 * (a > 0.5).mean()
+    return sku, 100 * (a > 0.5).mean(), mt, snapped
 def kind(sku):
     if sku == "BARE": return "BARE"
     return ("Tsl" if "AnSpTsl" in sku else "AnSp" if "AnSp" in sku else "Spry" if "Spry" in sku else "Drp" if "Drp" in sku
@@ -171,7 +172,7 @@ def kind(sku):
 todo = [r for r in rows if kind(r["sku"]) in SEQUENCE]
 log("sequence", SEQUENCE, "→", len(todo), "frames")
 with concurrent.futures.ThreadPoolExecutor(8) as ex:
-    for sku, pct, mt in ex.map(one, todo): log(f"{sku}: replaced {pct:.1f}% · seat {mt[0]:+d}px dx {mt[1]:+.1f}px" if mt else f"{sku}: replaced {pct:.1f}% · seat n/a")
+    for sku, pct, mt in ex.map(one, todo): log(f"{sku}: replaced {pct:.1f}% · snapped from seat {mt[0]:+d}px dx {mt[1]:+.1f}px" if mt else f"{sku}: replaced {pct:.1f}% · closure not found")
 if BARE_BASE: Image.open(base).convert("RGB").save(f"{OUT}/frame-BARE.png")
 
 # 5. manifest + webp + review sheet
