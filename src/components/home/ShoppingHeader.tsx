@@ -61,22 +61,22 @@ export default function ShoppingHeader() {
                 <button className={styles.cartButton} aria-label={`Open cart${isCartHydrated ? `, ${itemCount} items` : ''}`} onClick={() => setCart(true)}><ShoppingBag size={22}/>{isCartHydrated && itemCount > 0 && <span>{itemCount}</span>}</button>
             </div>
             <nav className={styles.nav} aria-label="Main navigation">
-                <button type="button" aria-expanded={activeMega === 'families'} aria-controls="families-mega-menu" onClick={() => toggleMega('families')}>Shop by Bottle Family <CaretDown size={13}/></button>
-                <button type="button" aria-expanded={activeMega === 'collections'} aria-controls="collections-mega-menu" onClick={() => toggleMega('collections')}>Shop by Collection <CaretDown size={13}/></button>
+                <button type="button" aria-expanded={activeMega === 'families'} aria-controls="families-mega-menu" onClick={() => toggleMega('families')}>Bottle Families <CaretDown size={13}/></button>
+                <button type="button" aria-expanded={activeMega === 'collections'} aria-controls="collections-mega-menu" onClick={() => toggleMega('collections')}>Collections <CaretDown size={13}/></button>
                 <Link href="/catalog" onFocus={() => setActiveMega(null)}>Full Catalog</Link><Link href="/matrix" onFocus={() => setActiveMega(null)}>Build your bottle</Link><Link href="/blog" onFocus={() => setActiveMega(null)}>Journal</Link><Link href="/about" onFocus={() => setActiveMega(null)}>About</Link>
             </nav>
             {activeMega && <div className={styles.megaBackdrop} onClick={() => setActiveMega(null)} aria-hidden="true"/>}
             {activeMega === 'families' && <div className={styles.megaMenu} id="families-mega-menu">
-                <div className={styles.megaHeading}><div><span>Find your silhouette</span><h2>Shop by Bottle Family</h2></div><Link href="/bottle-families" onClick={closeNavigation}>View all families</Link></div>
+                <div className={styles.megaHeading}><div><span>Find your silhouette</span><h2>Bottle Families</h2></div><Link href="/bottle-families" onClick={closeNavigation}>View all</Link></div>
                 <div className={styles.megaFamilyGrid}>{Object.entries(FAMILY_ART).map(([family, image]) => <Link href={familyFinderHref(family)} onClick={closeNavigation} key={family}><Image src={`/assets/homepage/${image}.webp`} alt="" width={160} height={200}/><span>{family}</span></Link>)}</div>
             </div>}
             {activeMega === 'collections' && <div className={styles.megaMenu} id="collections-mega-menu">
-                <div className={styles.megaHeading}><div><span>Begin with the application</span><h2>Shop by Collection</h2></div><Link href="/collections" onClick={closeNavigation}>View all collections</Link></div>
+                <div className={styles.megaHeading}><div><span>Begin with the application</span><h2>Collections</h2></div><Link href="/collections" onClick={closeNavigation}>View all</Link></div>
                 <div className={styles.megaCollectionGrid}>{SHOP_COLLECTIONS.map(collection => <Link key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}><strong>{collection.title}</strong><span>{collection.subtitle}</span></Link>)}</div>
             </div>}
             {menu && <nav id="shopping-menu" className={styles.menu} aria-label="Mobile navigation">
-                <details><summary>Shop by Bottle Family</summary><Link href="/bottle-families" onClick={closeNavigation}>View all families</Link>{Object.keys(FAMILY_ART).map(family => <Link key={family} href={familyFinderHref(family)} onClick={closeNavigation}>{family}</Link>)}</details>
-                <details><summary>Shop by Collection</summary><Link href="/collections" onClick={closeNavigation}>View all collections</Link>{SHOP_COLLECTIONS.map(collection => <Link key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}>{collection.title}</Link>)}</details>
+                <details><summary>Bottle Families</summary><Link href="/bottle-families" onClick={closeNavigation}>View all</Link>{Object.keys(FAMILY_ART).map(family => <Link key={family} href={familyFinderHref(family)} onClick={closeNavigation}>{family}</Link>)}</details>
+                <details><summary>Collections</summary><Link href="/collections" onClick={closeNavigation}>View all</Link>{SHOP_COLLECTIONS.map(collection => <Link key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}>{collection.title}</Link>)}</details>
                 <Link href="/catalog" onClick={closeNavigation}>Full Catalog</Link><Link href="/matrix" onClick={closeNavigation}>Build your bottle</Link><Link href="/blog" onClick={closeNavigation}>Journal</Link><Link href="/sign-in?redirect_url=%2Fportal" onClick={closeNavigation}>Client portal</Link>
             </nav>}
         </header>
