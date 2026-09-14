@@ -47,6 +47,16 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: "https",
+                // The plate store. Pinned to our own bucket rather than
+                // wildcarded: *.public.blob.vercel-storage.com would let any
+                // Vercel Blob store on the internet use /_next/image as a
+                // proxy, the same reason the Supabase host above is pinned.
+                // Product pages render plates through next/image, so without
+                // this every PDP throws "Invalid src prop".
+                hostname: "yzy7l20k4yt6znzz.public.blob.vercel-storage.com",
+            },
+            {
+                protocol: "https",
                 hostname: "www.bestbottles.com",
             },
         ],
