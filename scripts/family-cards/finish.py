@@ -1,12 +1,15 @@
 """Crop renders to card aspect (families 4:5, collections 4:3), centred on content, base kept low; write webp + review sheet."""
-import glob, os, json
+import glob, os, json, sys
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 BONE = np.array([245, 243, 239])
 SPEC = {"families": ((4, 5), (1000, 1250)), "collections": ((4, 3), (1200, 900))}
+ZOOM = {"collections": 1.12}  # tighter window on the group for collection cards (Jordan 2026-09-13: "12% more")
+ONLY = sys.argv[1] if len(sys.argv) > 1 else None
 rows = {}
 for p in sorted(glob.glob("public/assets/cards/*.png")):
     name = os.path.basename(p)[:-4]; kind = name.split("-")[0]; slug = name[len(kind) + 1:]
+    if ONLY and not name.startswith(ONLY): continue
     (aw, ah), (ow, oh) = SPEC[kind]
     im = Image.open(p).convert("RGB"); a = np.asarray(im).astype(int); H, W = a.shape[:2]
     bg = a[10:60, 10:60].reshape(-1, 3).mean(0)
@@ -15,6 +18,7 @@ for p in sorted(glob.glob("public/assets/cards/*.png")):
     # window at target aspect: as large as fits, content centred horizontally, bottom margin ~5% below content
     ww, wh = W, W * ah / aw
     if wh > H: wh, ww = H, H * aw / ah
+    z = ZOOM.get(kind, 1.0); ww, wh = ww / z, wh / z
     cx = (x0 + x1) / 2; left = min(max(cx - ww / 2, 0), W - ww)
     top = min(max(y1 + 0.05 * wh - wh, 0), H - wh)
     # keep content inside
