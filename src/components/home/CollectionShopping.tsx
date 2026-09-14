@@ -46,10 +46,18 @@ export function FamilyCarousel({ cards }: { cards?: HomepageData['designFamilyCa
         <div className={styles.edgeControls}><button aria-label="Previous bottle family" aria-controls="family-carousel" disabled={position.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label="Next bottle family" aria-controls="family-carousel" disabled={position.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div></div><div className={styles.railControls} aria-live="polite">{position.index} / {entries.length}</div>
     </section>;
 }
-export function ShoppingHero({ slides }: {slides?:HomepageData['heroSlides']}) {
+/** Stage-percent positions on the v7 niche scene: the bottle body and the closure on its neck. */
+const DEMO_HOTSPOTS: NonNullable<HomepageData['heroHotspots']> = [
+    { _key: 'demo-bottle', x: 62.5, y: 60, label: 'Empire 50 mL', detail: 'Clear glass, 18-415 neck. Takes every closure shown here.', href: '/catalog?family=empire' },
+    { _key: 'demo-closure', x: 62.5, y: 43, label: 'Closure', detail: 'Every fitment on this bottle is stocked.', href: '/collections', follows: 'closure' },
+];
+export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSlides']; hotspots?:HomepageData['heroHotspots']}) {
     const [index,setIndex]=useState(0);
     const heroVideo=useRef<HTMLVideoElement>(null);
     const fitmentHero=useSyncExternalStore(()=>()=>{}, ()=>new URLSearchParams(window.location.search).get('hero')==='fitments', ()=>false);
+    // ?hotspots=demo previews the hotspot design on the niche hero before any are placed in Sanity.
+    const demoHotspots=useSyncExternalStore(()=>()=>{}, ()=>new URLSearchParams(window.location.search).get('hotspots')==='demo', ()=>false);
+    const heroHotspots=hotspots?.length ? hotspots : demoHotspots ? DEMO_HOTSPOTS : undefined;
     const slide=slides?.[index];
     const desktop=cmsImage(slide?.image,1800)??asset('hero-empire-water-rebuilt');
     const mobile=cmsImage(slide?.mobileImage,860)??desktop;
@@ -63,7 +71,7 @@ export function ShoppingHero({ slides }: {slides?:HomepageData['heroSlides']}) {
         return()=>preference.removeEventListener('change',sync);
     }, [slide]);
     return <section className={styles.hero} data-scene={!slide ? (fitmentHero ? "empire-niche" : "empire-water") : undefined} aria-label="Featured bottles">
-        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (fitmentHero ? <EmpireFitmentHero/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
+        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (fitmentHero ? <EmpireFitmentHero hotspots={heroHotspots}/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
         <div className={styles.heroCopy}><h1>{slide?.headline || 'Beautifully contained.'}</h1><p>{slide?.subheadline || 'Distinctive Glass. Thoughtful Details. Endless Possibilities.'}</p><div className={styles.buttons}><Link className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || 'Shop bottles'}</Link><Link className={styles.secondary} href="/matrix">Build your bottle</Link></div></div>
         {(slides?.length??0)>1 && <div className={styles.heroControls}>{slides!.map((_,i)=><button key={i} aria-label={`Show hero ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>{i+1}</button>)}</div>}
     </section>;
@@ -71,7 +79,7 @@ export function ShoppingHero({ slides }: {slides?:HomepageData['heroSlides']}) {
 export default function CollectionShopping({data}:{data:HomepageData|null}){
     const build=data?.buildYourBottle;
     return <div className={styles.page}>
-        <ShoppingHero slides={data?.useEditorialArtwork ? data.heroSlides : undefined}/><FamilyCarousel cards={data?.useEditorialArtwork ? data.designFamilyCards : undefined}/>
+        <ShoppingHero slides={data?.useEditorialArtwork ? data.heroSlides : undefined} hotspots={data?.heroHotspots}/><FamilyCarousel cards={data?.useEditorialArtwork ? data.designFamilyCards : undefined}/>
         <section className={styles.section} aria-labelledby="collections-heading"><div className={styles.heading}><h2 id="collections-heading">Collections</h2><Link href="/collections">View all</Link></div><p className={styles.intro}>Know how you want to dispense? Start here, then find the shape and finish that fit.</p><CollectionGrid cards={data?.collectionCards}/></section>
         <section className={styles.section} id="build-your-bottle"><div className={styles.build}><div className={styles.buildCopy}><h2>{build?.heading || 'Build your bottle.'}</h2><p>{build?.description || 'Start with a shape you love.\nFind the finishing touches that fit.'}</p><Link className={styles.primary} href={build?.destination === '/collections' ? '/collections' : '/matrix'}>{build?.buttonLabel || 'Build your bottle'}</Link></div><img src={asset('build-your-bottle-bone-v3')} alt="Colored-pencil study of a bare glass bottle, compatible spray assembly, clear cap and finished bottle" width={1000} height={600} loading="lazy"/></div></section>
     </div>;

@@ -28,6 +28,24 @@ export const homepagePage = defineType({
             description: "Add 1 slide for a static hero, or 2+ for a rotating carousel (e.g. Black Friday, seasonal promos). Each slide has its own image, text, and button link.",
         }),
         defineField({
+            name: "heroHotspotImage",
+            title: "Hero hotspots — reference still",
+            type: "image",
+            description: "The current hero frame at its full extent (download it from /assets/hero/v7/base.webp). Hotspots below are placed by clicking on this still and mapped onto the live hero, so it must match the live scene exactly.",
+        }),
+        defineField({
+            name: "heroHotspots",
+            title: "Hero hotspots",
+            type: "array",
+            of: [defineArrayMember({ type: "heroHotspot" })],
+            options: {
+                // sanity-plugin-hotspot-array: click on the reference still to add and move spots
+                imageHotspot: { imagePath: "heroHotspotImage", descriptionPath: "label" },
+            } as never,
+            validation: (Rule) => Rule.max(8),
+            description: "Dots on the homepage hero scene (Empire bottle in the niche). Click the reference still to add one, drag to move. Up to 8.",
+        }),
+        defineField({
             name: "mobileHeroMode",
             title: "Mobile Hero Mode",
             type: "string",

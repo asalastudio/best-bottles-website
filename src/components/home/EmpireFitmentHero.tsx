@@ -1,7 +1,9 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import type { HeroHotspot } from "@/sanity/lib/queries";
 import styles from "./EmpireFitmentHero.module.css";
 
 /**
@@ -54,7 +56,12 @@ function Odometer({ value, digits }: { value: number; digits: number }) {
     );
 }
 
-export default function EmpireFitmentHero() {
+/**
+ * Hotspots come from Sanity (homepagePage.heroHotspots, placed on the hero reference still with
+ * sanity-plugin-hotspot-array). x/y are % of that still = % of the stage, so they ride the same fit
+ * transform as the patches but are drawn in scene space at a fixed size.
+ */
+export default function EmpireFitmentHero({ hotspots }: { hotspots?: HeroHotspot[] }) {
     const [manifest, setManifest] = useState<Manifest | null>(null);
     const [index, setIndex] = useState(0);
     const [paused, setPaused] = useState(false);
@@ -143,6 +150,27 @@ export default function EmpireFitmentHero() {
                     {current && renderPatch(current, styles.current)}
                 </div>
             )}
+            {manifest && hotspots?.map((h) => {
+                if (typeof h.x !== "number" || typeof h.y !== "number") return null;
+                const label = h.follows === "closure" && current ? current.label : (h.label ?? "");
+                const left = fit.x + (h.x / 100) * manifest.width * fit.scale;
+                const top = fit.y + (h.y / 100) * manifest.height * fit.scale;
+                const flip = h.x > 62;                                   // label opens toward the roomier side
+                const body = (
+                    <>
+                        <span className={styles.spotDot} aria-hidden="true" />
+                        <span className={styles.spotCard}>
+                            <span className={styles.spotLabel}>{label}</span>
+                            {h.detail && <span className={styles.spotDetail}>{h.detail}</span>}
+                        </span>
+                    </>
+                );
+                const cls = `${styles.spot} ${flip ? styles.spotFlip : ""}`;
+                const style = { left, top };
+                return h.href
+                    ? <Link key={h._key} href={h.href} className={cls} style={style} aria-label={label || h.href}>{body}</Link>
+                    : <button key={h._key} type="button" className={cls} style={style} aria-label={label}>{body}</button>;
+            })}
             <div className={styles.topBlend} aria-hidden="true" />
             <div className={styles.shade} aria-hidden="true" style={fit.mouldingLeft > 0 ? { background: `linear-gradient(90deg, rgba(58,48,36,0.10) 0px, rgba(58,48,36,0.03) ${Math.round(fit.mouldingLeft * 0.5)}px, rgba(58,48,36,0) ${Math.round(fit.mouldingLeft)}px)` } : undefined} />
             {current && (

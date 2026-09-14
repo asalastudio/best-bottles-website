@@ -25,6 +25,7 @@ export const HOMEPAGE_QUERY = `
       ctaText,
       ctaHref
     },
+    heroHotspots[] { _key, x, y, label, detail, href, follows },
     collectionCards[] | order(order asc) { collectionKey, title, subtitle, image, order, enabled },
     buildYourBottle { heading, description, image, buttonLabel, destination },
     mobileHeroMode,
@@ -349,6 +350,17 @@ export async function getProductFamilyPageContent(
     return client.fetch<ProductFamilyPageContent | null>(PRODUCT_FAMILY_PAGE_QUERY, { family });
 }
 
+/** A dot on the homepage hero scene; x/y are % of the hero reference still (= the 1536×1024 hero stage). */
+export type HeroHotspot = {
+    _key: string;
+    x: number;
+    y: number;
+    label?: string;
+    detail?: string;
+    href?: string;
+    follows?: "fixed" | "closure";
+};
+
 export type HomepageData = {
     useEditorialArtwork?: boolean;
     collectionCards?: CollectionCardConfig[];
@@ -367,6 +379,7 @@ export type HomepageData = {
         ctaText?: string;
         ctaHref?: string;
     }>;
+    heroHotspots?: HeroHotspot[];
     mobileHeroMode?: "categories" | "hero";
     mobileTagline?: string;
     mobileSectionLabel?: string;
