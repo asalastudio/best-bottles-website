@@ -10,6 +10,7 @@ import {
 } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import CartDrawer from "./CartDrawer";
+import AnnouncementMarquee from "./AnnouncementMarquee";
 import BrandWordmark from "./BrandWordmark";
 import { useMegaMenuPanels } from "./SanityMegaMenuProvider";
 import { urlFor } from "@/sanity/lib/image";
@@ -345,12 +346,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                     } ${variant === "catalog" ? "border-b border-champagne" : ""}`}
                 style={{ right: "var(--grace-content-inset, 0px)" }}
             >
-                <div className="bg-obsidian py-1.5 text-center px-4">
-                    <p className="text-xs uppercase tracking-[0.15em] text-bone font-medium">
-                        <span>Free shipping on orders above $99</span>
-                        <span className="hidden md:inline"> · Need fitment help? Talk with Grace, AI Bottling Specialist</span>
-                    </p>
-                </div>
+                <AnnouncementMarquee />
 
                 {builderMobile && <div className="builder-mobile-brand">
                     <Link href="/catalog" aria-label="Back to bottles"><ArrowLeft size={22} /></Link>

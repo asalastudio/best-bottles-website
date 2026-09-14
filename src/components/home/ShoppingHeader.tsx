@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/components/CartProvider';
+import AnnouncementMarquee from '@/components/AnnouncementMarquee';
 import BrandWordmark from '@/components/BrandWordmark';
 import CartDrawer from '@/components/CartDrawer';
 import { useGrace } from '@/components/useGrace';
@@ -49,6 +50,7 @@ export default function ShoppingHeader() {
 
     return <>
         <header ref={header} className={styles.header}>
+            <AnnouncementMarquee/>
             <div className={styles.headerMain}>
                 <div className={styles.headerLeft}>
                     <button className={styles.menuButton} aria-label={menu ? 'Close menu' : 'Open menu'} aria-expanded={menu} aria-controls="shopping-menu" onClick={() => setMenu(!menu)}>{menu ? <X size={22}/> : <List size={22}/>}</button>

@@ -1,0 +1,51 @@
+.bar {
+    background: var(--color-obsidian, #1d1d1f);
+    color: var(--color-bone, #f5f3ef);
+}
+
+.marquee {
+    overflow: hidden;
+    padding: 8px 0;
+    font-family: var(--font-brand);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.track {
+    display: flex;
+    width: max-content;
+    animation: scroll 70s linear infinite;
+}
+
+.marquee:hover .track {
+    animation-play-state: paused;
+}
+
+.group {
+    display: flex;
+    flex: none;
+}
+
+.item {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.dot {
+    padding: 0 36px;
+    opacity: 0.55;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .track { animation: none; width: 100%; justify-content: center; }
+    .group + .group, .item + .item, .dot { display: none; }
+}
