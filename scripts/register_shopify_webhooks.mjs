@@ -55,6 +55,16 @@ if (!listOnly && !baseUrl) {
     fail(`Missing required --url <base>. Example: --url https://bestbottles.vercel.app`);
     process.exit(1);
 }
+// A wrong --url is the expensive mistake here: every topic gets registered
+// against a host that silently swallows deliveries, and nothing looks broken
+// until someone notices orders never arrived. Refuse the two shapes that have
+// actually been typed by accident.
+if (baseUrl && /your-deployment-url|example\.com|localhost|127\.0\.0\.1/i.test(baseUrl)) {
+    fail(`--url looks like a placeholder or a local address: ${baseUrl}`);
+    fail(`Shopify must reach this host from the internet. Pass the deployed site's URL.`);
+    process.exit(1);
+}
+
 const CALLBACK_URL = baseUrl ? `${baseUrl.replace(/\/$/, "")}/api/shopify/webhooks` : null;
 
 const TOPICS = [
