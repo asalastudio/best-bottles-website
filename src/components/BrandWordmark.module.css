@@ -30,13 +30,13 @@
 }
 
 .inLockup {
-    height: 21px;
+    height: 23px;
 }
 
 .tagline {
     font-family: var(--font-brand);
     font-weight: 400;
-    font-size: 8.5px;
+    font-size: 10.5px;
     line-height: 1;
     letter-spacing: 0.3em;
     text-indent: 0.3em; /* balances the trailing tracking so the line centres under the mark */
@@ -45,7 +45,7 @@
 }
 
 @media (min-width: 1280px) {
-    .lockup { gap: 8px; }
-    .inLockup { height: 26px; }
-    .tagline { font-size: 10.5px; }
+    .lockup { gap: 9px; }
+    .inLockup { height: 28px; }
+    .tagline { font-size: 12.5px; }
 }
