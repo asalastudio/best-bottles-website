@@ -61,7 +61,7 @@ export default function ShoppingHeader() {
                     </form>
                     <RegionSelector className={styles.region}/>
                 </div>
-                <Link href="/" className={styles.brand} aria-label="Best Bottles home"><BrandWordmark/></Link>
+                <Link href="/" className={styles.brand} aria-label="Best Bottles home"><BrandWordmark tagline/></Link>
                 <div className={styles.headerRight}>
                     <button type="button" className={styles.searchTrigger} aria-expanded={activeMega === 'search'} aria-controls="search-mega-menu" onClick={() => toggleMega('search')}><MagnifyingGlass size={18}/><span>Search</span></button>
                     <button className={styles.grace} onClick={() => open()}>Ask Grace</button>

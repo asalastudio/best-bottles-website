@@ -151,15 +151,17 @@
 /* Collection cards: the 12% tighter crop is baked into the -bone-v3 webp (finish.py ZOOM); image box stays 4:3. */
 .collection img{background:transparent}
 /* Empire niche hero: bone plaster scene — obsidian copy, obsidian buttons, subtle left shade lives in the hero component. */
+/* Hero typography (Jordan, 2026-09-14): warm charcoal on the plaster — headline #222220, body #3F3B36,
+   primary CTA #1D1D1F with white type, secondary CTA transparent with a #35322E border and text. */
 .hero[data-scene="empire-niche"]{background:#ece5d8}
-.hero[data-scene="empire-niche"] .heroCopy{color:#fff}
-.hero[data-scene="empire-niche"] .heroCopy h1,[data-scene="empire-niche"] .heroCopy p{color:#fff;text-shadow:0 1px 18px rgba(40,30,18,.28)}
-.hero[data-scene="empire-niche"] .heroCopy h1{font-size:50px;max-width:560px}
-.hero[data-scene="empire-niche"] .heroCopy p{font-size:18px;max-width:440px}
-.hero[data-scene="empire-niche"] .primary{background:#1c1c1e;color:#fff;border-color:#1c1c1e}
-.hero[data-scene="empire-niche"] .secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.85)}
+.hero[data-scene="empire-niche"] .heroCopy{color:#222220}
+.hero[data-scene="empire-niche"] .heroCopy h1,.hero[data-scene="empire-niche"] .heroCopy p{text-shadow:none}
+.hero[data-scene="empire-niche"] .heroCopy h1{color:#222220;font-size:50px;max-width:560px}
+.hero[data-scene="empire-niche"] .heroCopy p{color:#3f3b36;font-size:18px;max-width:440px}
+.hero[data-scene="empire-niche"] .primary{background:#1d1d1f;color:#fff;border-color:#1d1d1f}
+.hero[data-scene="empire-niche"] .secondary{background:transparent;color:#35322e;border-color:#35322e}
 
 /* Niche scene stacks like the water scene: copy above, scene below, from 1100px down. */
 /* --plaster = the wall tone along the top of the v6 base image (#b8a58d), so the copy block reads as the same wall; white copy on it. */
-@media(max-width:1100px){.hero[data-scene="empire-niche"]{--plaster:#b8a58d;display:flex;flex-direction:column;height:auto;background:var(--plaster)}.hero[data-scene="empire-niche"] .heroCopy{order:-1;padding:32px 6% 28px;max-width:none;margin:0;color:#fff}.hero[data-scene="empire-niche"] .heroCopy h1,.hero[data-scene="empire-niche"] .heroCopy p{color:#fff}.hero[data-scene="empire-niche"] .heroCopy h1{max-width:600px}.hero[data-scene="empire-niche"] .heroCopy p{max-width:420px}.hero[data-scene="empire-niche"] .secondary{color:#fff;border-color:rgba(255,255,255,.85);background:transparent}}
+@media(max-width:1100px){.hero[data-scene="empire-niche"]{--plaster:#b8a58d;display:flex;flex-direction:column;height:auto;background:var(--plaster)}.hero[data-scene="empire-niche"] .heroCopy{order:-1;padding:32px 6% 28px;max-width:none;margin:0}.hero[data-scene="empire-niche"] .heroCopy h1{max-width:600px}.hero[data-scene="empire-niche"] .heroCopy p{max-width:420px}}
 @media(max-width:640px){.hero[data-scene="empire-niche"] .heroCopy{padding:28px 22px 22px}.hero[data-scene="empire-niche"] .heroCopy h1{font-size:30px;max-width:340px}.hero[data-scene="empire-niche"] .heroCopy p{max-width:320px;margin:16px 0 20px}.hero[data-scene="empire-niche"] .buttons{flex-direction:row;gap:10px}}

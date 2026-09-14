@@ -371,7 +371,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                             aria-label="Best Bottles home"
                             className="flex flex-1 min-h-11 items-center justify-center xl:flex-none xl:justify-self-center"
                         >
-                            <BrandWordmark />
+                            <BrandWordmark tagline />
                         </Link>
                         <div className="ml-auto flex min-w-9 shrink-0 items-center justify-end space-x-2 xl:ml-0 xl:min-w-0 xl:justify-self-end">
                         {!hideSearch && (

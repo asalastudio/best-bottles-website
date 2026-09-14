@@ -82,8 +82,8 @@ export default async function RootLayout({
   const initialMarketCode = (await cookies()).get(REGION_COOKIE)?.value ?? null;
 
   return (
-    <html lang="en">
-      <body className={`${brandFace.variable} ${cormorant.variable} ${ebGaramond.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
+    <html lang="en" className={`${brandFace.variable} ${cormorant.variable} ${ebGaramond.variable}`}>
+      <body className="antialiased selection:bg-muted-gold/20 selection:text-obsidian">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationJsonLd()) }}
