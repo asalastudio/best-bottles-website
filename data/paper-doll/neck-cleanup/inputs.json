@@ -1,0 +1,98 @@
+{
+ "Diva|100|Clear|18-415": {
+  "input": "data/paper-doll/neck-cleanup/diva-100-clear-18-415-input.png",
+  "side": 1500,
+  "bodySize": [
+   591,
+   1200
+  ]
+ },
+ "Diva|46|Frosted|18-415": {
+  "input": "data/paper-doll/neck-cleanup/diva-46-frosted-18-415-input.png",
+  "side": 1500,
+  "bodySize": [
+   609,
+   1200
+  ]
+ },
+ "Elegant|15|Clear|13-415": {
+  "input": "data/paper-doll/neck-cleanup/elegant-15-clear-13-415-input.png",
+  "side": 897,
+  "bodySize": [
+   423,
+   718
+  ]
+ },
+ "Elegant|15|Frosted|13-415": {
+  "input": "data/paper-doll/neck-cleanup/elegant-15-frosted-13-415-input.png",
+  "side": 891,
+  "bodySize": [
+   427,
+   713
+  ]
+ },
+ "Elegant|30|Clear|15-415": {
+  "input": "data/paper-doll/neck-cleanup/elegant-30-clear-15-415-input.png",
+  "side": 1071,
+  "bodySize": [
+   539,
+   857
+  ]
+ },
+ "Elegant|100|Clear|18-415": {
+  "input": "data/paper-doll/neck-cleanup/elegant-100-clear-18-415-input.png",
+  "side": 1500,
+  "bodySize": [
+   689,
+   1200
+  ]
+ },
+ "Empire|50|Clear|18-415": {
+  "input": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-input.png",
+  "side": 1500,
+  "bodySize": [
+   503,
+   1200
+  ]
+ },
+ "Circle|30|Clear|15-415": {
+  "input": "data/paper-doll/neck-cleanup/circle-30-clear-15-415-input.png",
+  "side": 1175,
+  "bodySize": [
+   713,
+   940
+  ]
+ },
+ "Circle|50|Frosted|18-415": {
+  "input": "data/paper-doll/neck-cleanup/circle-50-frosted-18-415-input.png",
+  "side": 1473,
+  "bodySize": [
+   1000,
+   1179
+  ]
+ },
+ "Circle|100|Clear|18-415": {
+  "input": "data/paper-doll/neck-cleanup/circle-100-clear-18-415-input.png",
+  "side": 1470,
+  "bodySize": [
+   1000,
+   1176
+  ]
+ },
+ "Circle|100|Frosted|18-415": {
+  "input": "data/paper-doll/neck-cleanup/circle-100-frosted-18-415-input.png",
+  "side": 757,
+  "bodySize": [
+   497,
+   606
+  ]
+ },
+ "Round|128|Frosted|18-415": {
+  "input": "data/paper-doll/neck-cleanup/round-128-frosted-18-415-input.png",
+  "side": 1455,
+  "bodySize": [
+   949,
+   1164
+  ]
+ }
+}

@@ -173,6 +173,17 @@ bodies = dict(circle); lineage = []; tiles = []
 for k in keys:
     name = re.sub(r'[^a-z0-9]+', '-', k.lower())
     a = approved.get(k)
+    if a and a.get('generated'):
+        # Jordan-approved GPT Image 2.5 edit of the master body layer (insert removed);
+        # the cut-out is scaled back to the input's pixel size so the glass keeps its size
+        g = a['generated']; c = Image.open(REPO / g['cutoutPng']).convert('RGBA'); inp = Image.open(REPO / g['input'])
+        scale = inp.width / c.width; c = c.resize((int(c.width * scale), int(c.height * scale)), Image.Resampling.LANCZOS)
+        media = None if args.review_only else save(c, name)
+        if media: bodies[k] = media
+        lineage.append({'body': k, 'status': 'reviewed', 'source': 'jordan-approved generated edit', 'path': g['input'], 'editJob': g['editJob'], 'cutoutJob': g['cutoutJob'],
+                        'model': g['model'], 'evidence': a['instruction'], 'asset': media})
+        tiles.append((k, 'approved', c, g['input'], '-', 'generated'))
+        continue
     if a and not a.get('candidate'):
         psd = PSDImage.open(ROOT / a['path']); layer = list(psd.descendants())[a['layer']]
         cleaned, dropped = largest_island(layer.composite())

@@ -1211,19 +1211,18 @@
     {
       "body": "Diva|46|Clear|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "LBDiva46LtnClOvrCap",
-      "path": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/27. LBDiva46LtnClOvrCap.psd",
-      "sourceSha256": "a1c87c0acd3f249b8eb7837d2bfac328b5665c6a7af599624414bd8d0aac9a36",
+      "source": "jordan-approved",
+      "path": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./2. Diva 46(18415)Sideviews/1. GBDiva46.psd",
+      "sourceSha256": "ea0bd40e756775b45b16a76e856c881b322e32a2c9dd76469e128d6394c2f414",
       "layerIndex": 1,
       "layerName": "Layer 1",
-      "evidence": "diva-paired-kit-recipes.json (uncapped source): 2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "retouchIslandsDropped": 0,
+      "evidence": "2026-09-14 Jordan: 'they still show the reducer' \u2014 every closure photograph of the Diva was shot with the reducer inserted; this bare-bottle master (no closure token) is the only Diva 46 photograph with an empty neck.",
       "asset": {
         "url": "/images/bottle-builder/bodies/diva-46-clear-18-415.webp",
-        "width": 625,
+        "width": 641,
         "height": 1200,
-        "sha256": "1e90174bd22fe4651920e9e58c159195b964d0d988f6e58bdc50340dd91b0945"
+        "sha256": "31fff304ebe330d62cd078347ba16a43683b2737b9fbefbf91e80b388a549259"
       }
     },
     {
