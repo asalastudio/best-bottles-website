@@ -48,6 +48,7 @@ const MAP = {
   PART_DIPTUBE_PP:         ["polymer.pp.translucent",    "polymer.pp.translucent"],
   PART_DIPTUBE_CLEAR:      ["polymer.pp.clear_tube",     "polymer.pp.clear"],
   PART_OVERCAP_CLEAR:      ["polymer.pp.clear_overcap",  "polymer.pp.clear"],
+  PART_OVERCAP_FROSTED:    ["polymer.pp.frosted_overcap", "polymer.pp.natural"],
   PART_FILLER_LIQUID:      ["fluid.filler",              "fluid"],
   PART_DRP_RUBBER:         ["polymer.rubber.bulb",       "polymer.rubber"],
 
