@@ -35,11 +35,23 @@
     "height": 1179,
     "sha256": "36eb895cb6c3ce910de7781d4a1df5ba1d5f54baf74d5ac17af5914588150102"
   },
+  "Cylinder|9|Frosted|13-415": {
+    "url": "/images/bottle-builder/bodies/cylinder-9-frosted-13-415.webp",
+    "width": 207,
+    "height": 1200,
+    "sha256": "a015cdbd3e615cfcf181c4c2c984a7a0b17700559c54e1b43d58b96a92b10147"
+  },
+  "Cylinder|9|Frosted|17-415": {
+    "url": "/images/bottle-builder/bodies/cylinder-9-frosted-17-415.webp",
+    "width": 250,
+    "height": 903,
+    "sha256": "619780fd19ea14436787c416f593fec2c1a88bbb243984d0a088c014a8eaa60c"
+  },
   "Diva|100|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/diva-100-clear-18-415.webp",
-    "width": 592,
+    "width": 641,
     "height": 1200,
-    "sha256": "9dcaa6cda4cbb9ea99141e9371fb28f20e7d8170e345b3f2977b5f41928f31a9"
+    "sha256": "7ccea1a9a2125861997662ffe07ffad78d9ea6615f66e71b54be760fc4046549"
   },
   "Diva|30|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/diva-30-clear-18-415.webp",
@@ -52,6 +64,12 @@
     "width": 625,
     "height": 1200,
     "sha256": "1e90174bd22fe4651920e9e58c159195b964d0d988f6e58bdc50340dd91b0945"
+  },
+  "Diva|46|Frosted|18-415": {
+    "url": "/images/bottle-builder/bodies/diva-46-frosted-18-415.webp",
+    "width": 660,
+    "height": 1103,
+    "sha256": "1cc9fcbc2940e07314afb232a3abc6076f84b04045c5026dd6ba7e73931d32d0"
   },
   "Elegant|100|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/elegant-100-clear-18-415.webp",
@@ -118,5 +136,17 @@
     "width": 1000,
     "height": 1136,
     "sha256": "f3cd5b0172fb7add9bbb2f8d7cff20150482cbeca687064d1dcac44cc636d702"
+  },
+  "Round|128|Frosted|18-415": {
+    "url": "/images/bottle-builder/bodies/round-128-frosted-18-415.webp",
+    "width": 949,
+    "height": 1164,
+    "sha256": "b03c885e4ae539a6378a1c38f632c2f51f1b5374ac4fa9719d623ae17c3aca7b"
+  },
+  "Round|78|Frosted|18-415": {
+    "url": "/images/bottle-builder/bodies/round-78-frosted-18-415.webp",
+    "width": 818,
+    "height": 1017,
+    "sha256": "17b8b45fcf87bfac9dbc95feff4ded9365153bd880d2d8aca93a3bbd12fcda64"
   }
 }

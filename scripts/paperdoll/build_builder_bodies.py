@@ -149,9 +149,21 @@ def candidate_for(k):
     return last
 
 ap = argparse.ArgumentParser(); ap.add_argument('--review-only', action='store_true'); args = ap.parse_args()
+# Jordan's approvals/corrections: an explicit source, or 'candidate: true' to accept the heuristic pick
+approved = {e['body']: e for e in json.loads((DATA / 'builder-bodies-approved.json').read_text())['entries']}
+sha_of = {f['relPath']: f['sha256'] for f in inventory}
 bodies = dict(circle); lineage = []; tiles = []
 for k in keys:
     name = re.sub(r'[^a-z0-9]+', '-', k.lower())
+    a = approved.get(k)
+    if a and not a.get('candidate'):
+        psd = PSDImage.open(ROOT / a['path']); layer = list(psd.descendants())[a['layer']]
+        cleaned, dropped = largest_island(layer.composite())
+        media = None if args.review_only else save(cleaned, name)
+        if media: bodies[k] = media
+        lineage.append({'body': k, 'status': 'reviewed', 'source': 'jordan-approved', 'path': a['path'], 'sourceSha256': sha_of.get(a['path']),
+                        'layerIndex': a['layer'], 'layerName': layer.name, 'retouchIslandsDropped': dropped, 'evidence': a['instruction'], 'asset': media})
+        tiles.append((k, 'approved', cleaned, a['path'], a['layer'], layer.name)); continue
     if k in circle:
         lineage.append({'body': k, 'status': 'reviewed', 'source': 'circle-builder-media', 'asset': circle[k]}); continue
     if k in reviewed:
@@ -167,6 +179,12 @@ for k in keys:
         lineage.append({'body': k, 'status': 'no-candidate', 'path': c['relPath'] if c else None, 'note': 'no visible on-axis layer reaching the baseline' if c else 'no capped master PSD for any plated SKU'}); continue
     s = c['stats'][c['pick']]
     cleaned, dropped = largest_island(s['image'])
+    if a and a.get('candidate'):
+        media = None if args.review_only else save(cleaned, name)
+        if media: bodies[k] = media
+        lineage.append({'body': k, 'status': 'reviewed', 'source': 'jordan-approved candidate', 'path': c['relPath'], 'sourceSha256': c['sha256'], 'layerIndex': c['pick'],
+                        'layerName': s['name'], 'retouchIslandsDropped': dropped, 'evidence': a['instruction'], 'asset': media})
+        tiles.append((k, 'approved', cleaned, c['relPath'], c['pick'], s['name'])); continue
     lineage.append({'body': k, 'status': 'candidate', 'path': c['relPath'], 'sourceSha256': c['sha256'], 'layerIndex': c['pick'], 'layerName': s['name'],
                     'retouchIslandsDropped': dropped,
                     'layers': [{'index': x['index'], 'name': x['name'], 'bbox': x['bbox'], 'background': x['background']} for x in c['stats'] if x],
@@ -189,7 +207,7 @@ for n, (k, status, im, rel, idx, lname) in enumerate(tiles):
     sheet.paste(im, (x0 + (TW - im.width) // 2, y0 + 10), im)
     draw.rectangle([x0, y0, x0 + TW - 1, y0 + TH - 1], outline=(200, 195, 188))
     draw.text((x0 + 8, y0 + TH - 72), k, fill=(30, 30, 30), font=font)
-    draw.text((x0 + 8, y0 + TH - 54), f"{status} · layer {idx} '{lname}'"[:52], fill=(120, 40, 40) if status.startswith('candidate') else (40, 100, 40), font=font)
+    draw.text((x0 + 8, y0 + TH - 54), f"{status} · layer {idx} '{lname}'"[:52], fill=(120, 40, 40) if status.startswith('candidate') else (30, 60, 140) if status == 'approved' else (40, 100, 40), font=font)
     draw.text((x0 + 8, y0 + TH - 36), Path(rel).name[:40], fill=(90, 90, 90), font=font)
 sheet.save(REVIEW_DIR / 'bodies-contact-sheet.jpg', quality=88)
 counts = {s: sum(1 for l in lineage if l['status'] == s) for s in ['reviewed', 'candidate', 'no-candidate']}

@@ -336,3 +336,5 @@
 .coverControl { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 0 16px 16px; flex-wrap: wrap; font-size: 12px; }
 .coverControl button { min-height: 44px; padding: 8px 12px; border: 1px solid #c9c1b3; border-radius: 4px; text-decoration: underline; text-underline-offset: 3px; }
 @media(max-width: 639px) { .coverControl { grid-column: 1 / -1; font-size: 13px; } .steps button { font-size: 12px; gap: 4px; } }
+
+.familyPending { margin: 6px 0 0; font-size: 13px; color: #71572f; }

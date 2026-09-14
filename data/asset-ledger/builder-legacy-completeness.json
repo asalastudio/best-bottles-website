@@ -1,24 +1,24 @@
 {
- "generatedAt": "2026-09-14T15:04:12.156Z",
- "funnelGeneratedAt": "2026-09-14T15:04:11.466Z",
+ "generatedAt": "2026-09-14T15:49:36.662Z",
+ "funnelGeneratedAt": "2026-09-14T15:49:35.791Z",
  "totals": {
   "clusters": 278,
-  "complete": 79,
-  "partial": 52,
-  "none": 147,
+  "complete": 83,
+  "partial": 59,
+  "none": 136,
   "assemblies": 2130,
-  "offered": 911
+  "offered": 999
  },
  "reasonTotals": {
   "gate: no compatible finish component": 195,
-  "no configuration: no kit indexed (has reviewed body image but no plate)": 28,
+  "no configuration: no kit indexed (has reviewed body image but no plate)": 57,
   "no configuration: Cylinder 5.5 ml excluded by rule": 1,
   "not on dev": 95,
-  "no configuration: no kit indexed (plate present but no reviewed body image)": 731,
+  "no configuration: no kit indexed (plate present but no reviewed body image)": 643,
   "no configuration: body derivation background-matte": 1,
   "gate: compatibility unresolved (no listed components)": 25,
   "no configuration: kit completeness capSplit": 27,
-  "no configuration: no kit indexed (no reviewed body image and no plate)": 100,
+  "no configuration: no kit indexed (no reviewed body image and no plate)": 71,
   "no configuration: kit completeness bodyOnly": 16
  },
  "clusters": [
@@ -223,7 +223,23 @@
    "missing": []
   },
   {
+   "body": "Round|128|Frosted|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
    "body": "Round|128|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Round|78|Frosted|18-415",
    "members": 9,
    "offered": 9,
    "complete": true,
@@ -383,6 +399,14 @@
    "missing": []
   },
   {
+   "body": "Diva|46|Frosted|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
    "body": "Diva|46|Clear|18-415",
    "members": 7,
    "offered": 7,
@@ -488,6 +512,14 @@
   },
   {
    "body": "Diva|30|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|46|Frosted|18-415",
    "members": 6,
    "offered": 6,
    "complete": true,
@@ -715,6 +747,18 @@
    ]
   },
   {
+   "body": "Diva|46|Frosted|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBDivaFrst46RdcrShnBlk"
+   ]
+  },
+  {
    "body": "Diva|46|Clear|18-415",
    "members": 12,
    "offered": 11,
@@ -787,6 +831,18 @@
    ]
   },
   {
+   "body": "Round|128|Frosted|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBRndFrst128RdcrShnBlk"
+   ]
+  },
+  {
    "body": "Round|128|Clear|18-415",
    "members": 12,
    "offered": 11,
@@ -796,6 +852,18 @@
    },
    "missing": [
     "GBRnd128RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Round|78|Frosted|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBRndFrst78RdcrShnBlk"
    ]
   },
   {
@@ -1058,6 +1126,34 @@
    ]
   },
   {
+   "body": "Diva|46|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBDivaFrst46AnSpIvyGl",
+    "GBDivaFrst46AnSpLvn",
+    "GBDivaFrst46AnSpRed"
+   ]
+  },
+  {
+   "body": "Diva|46|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 3
+   },
+   "missing": [
+    "GBDivaFrst46AnSpTslBlk",
+    "GBDivaFrst46AnSpTslMtSl",
+    "GBDivaFrst46AnSpTslRed"
+   ]
+  },
+  {
    "body": "Diva|46|Clear|18-415",
    "members": 9,
    "offered": 6,
@@ -1156,6 +1252,20 @@
    ]
   },
   {
+   "body": "Round|128|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBRndFrst128AnSpIvyGl",
+    "GBRndFrst128AnSpLvn",
+    "GBRndFrst128AnSpRed"
+   ]
+  },
+  {
    "body": "Round|128|Clear|18-415",
    "members": 9,
    "offered": 6,
@@ -1167,6 +1277,20 @@
     "GBRnd128AnSpIvyGl",
     "GBRnd128AnSpLvn",
     "GBRnd128AnSpRed"
+   ]
+  },
+  {
+   "body": "Round|78|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBRndFrst78AnSpIvyGl",
+    "GBRndFrst78AnSpLvn",
+    "GBRndFrst78AnSpRed"
    ]
   },
   {
@@ -1450,30 +1574,6 @@
    ]
   },
   {
-   "body": "Diva|46|Frosted|18-415",
-   "members": 12,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 11,
-    "gate: no compatible finish component": 1
-   },
-   "missing": [
-    "GBDivaFrst46RdcrBlkLthr",
-    "GBDivaFrst46RdcrBrwnLthr",
-    "GBDivaFrst46RdcrIvyLthr",
-    "GBDivaFrst46RdcrLBrwnLthr",
-    "GBDivaFrst46RdcrMtSl",
-    "GBDivaFrst46RdcrMtSlTall",
-    "GBDivaFrst46RdcrPnkLthr",
-    "GBDivaFrst46RdcrShnBlk",
-    "GBDivaFrst46RdcrShnBlkTall",
-    "GBDivaFrst46RdcrShnGl",
-    "GBDivaFrst46RdcrShnSl",
-    "GBDivaFrst46RdcrWht"
-   ]
-  },
-  {
    "body": "Flair|15|Clear|13-415",
    "members": 12,
    "offered": 0,
@@ -1543,54 +1643,6 @@
     "GBGrce55RdcrShnGl",
     "GBGrce55RdcrShnSl",
     "GBGrce55RdcrWht"
-   ]
-  },
-  {
-   "body": "Round|128|Frosted|18-415",
-   "members": 12,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 11,
-    "gate: no compatible finish component": 1
-   },
-   "missing": [
-    "GBRndFrst128RdcrBlkLthr",
-    "GBRndFrst128RdcrBrwnLthr",
-    "GBRndFrst128RdcrIvyLthr",
-    "GBRndFrst128RdcrLBrwnLthr",
-    "GBRndFrst128RdcrMtSl",
-    "GBRndFrst128RdcrMtSlTall",
-    "GBRndFrst128RdcrPnkLthr",
-    "GBRndFrst128RdcrShnBlk",
-    "GBRndFrst128RdcrShnBlkTall",
-    "GBRndFrst128RdcrShnGl",
-    "GBRndFrst128RdcrShnSl",
-    "GBRndFrst128RdcrWht"
-   ]
-  },
-  {
-   "body": "Round|78|Frosted|18-415",
-   "members": 12,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 11,
-    "gate: no compatible finish component": 1
-   },
-   "missing": [
-    "GBRndFrst78RdcrBlkLthr",
-    "GBRndFrst78RdcrBrwnLthr",
-    "GBRndFrst78RdcrIvyLthr",
-    "GBRndFrst78RdcrLBrwnLthr",
-    "GBRndFrst78RdcrMtSl",
-    "GBRndFrst78RdcrMtSlTall",
-    "GBRndFrst78RdcrPnkLthr",
-    "GBRndFrst78RdcrShnBlk",
-    "GBRndFrst78RdcrShnBlkTall",
-    "GBRndFrst78RdcrShnGl",
-    "GBRndFrst78RdcrShnSl",
-    "GBRndFrst78RdcrWht"
    ]
   },
   {
@@ -1980,48 +2032,6 @@
    ]
   },
   {
-   "body": "Diva|46|Frosted|18-415",
-   "members": 9,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
-    "gate: no compatible finish component": 3
-   },
-   "missing": [
-    "GBDivaFrst46AnSpBlk",
-    "GBDivaFrst46AnSpGl",
-    "GBDivaFrst46AnSpIvyGl",
-    "GBDivaFrst46AnSpIvySl",
-    "GBDivaFrst46AnSpLvn",
-    "GBDivaFrst46AnSpMtSl",
-    "GBDivaFrst46AnSpPnk",
-    "GBDivaFrst46AnSpRed",
-    "GBDivaFrst46AnSpWht"
-   ]
-  },
-  {
-   "body": "Diva|46|Frosted|18-415",
-   "members": 9,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (no reviewed body image and no plate)": 3,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 6
-   },
-   "missing": [
-    "GBDivaFrst46AnSpTslBlk",
-    "GBDivaFrst46AnSpTslGl",
-    "GBDivaFrst46AnSpTslIvyGl",
-    "GBDivaFrst46AnSpTslIvySl",
-    "GBDivaFrst46AnSpTslLvn",
-    "GBDivaFrst46AnSpTslMtSl",
-    "GBDivaFrst46AnSpTslPnk",
-    "GBDivaFrst46AnSpTslRed",
-    "GBDivaFrst46AnSpTslWht"
-   ]
-  },
-  {
    "body": "Flair|15|Clear|13-415",
    "members": 9,
    "offered": 0,
@@ -2140,88 +2150,6 @@
     "GBGrce55AnSpTslPnk",
     "GBGrce55AnSpTslRed",
     "GBGrce55AnSpTslWht"
-   ]
-  },
-  {
-   "body": "Round|128|Frosted|18-415",
-   "members": 9,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
-    "gate: no compatible finish component": 3
-   },
-   "missing": [
-    "GBRndFrst128AnSpBlk",
-    "GBRndFrst128AnSpGl",
-    "GBRndFrst128AnSpIvyGl",
-    "GBRndFrst128AnSpIvySl",
-    "GBRndFrst128AnSpLvn",
-    "GBRndFrst128AnSpMtSl",
-    "GBRndFrst128AnSpPnk",
-    "GBRndFrst128AnSpRed",
-    "GBRndFrst128AnSpWht"
-   ]
-  },
-  {
-   "body": "Round|128|Frosted|18-415",
-   "members": 9,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
-   },
-   "missing": [
-    "GBRndFrst128AnSpTslBlk",
-    "GBRndFrst128AnSpTslGl",
-    "GBRndFrst128AnSpTslIvyGl",
-    "GBRndFrst128AnSpTslIvySl",
-    "GBRndFrst128AnSpTslLvn",
-    "GBRndFrst128AnSpTslMtSl",
-    "GBRndFrst128AnSpTslPnk",
-    "GBRndFrst128AnSpTslRed",
-    "GBRndFrst128AnSpTslWht"
-   ]
-  },
-  {
-   "body": "Round|78|Frosted|18-415",
-   "members": 9,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
-    "gate: no compatible finish component": 3
-   },
-   "missing": [
-    "GBRndFrst78AnSpBlk",
-    "GBRndFrst78AnSpGl",
-    "GBRndFrst78AnSpIvyGl",
-    "GBRndFrst78AnSpIvySl",
-    "GBRndFrst78AnSpLvn",
-    "GBRndFrst78AnSpMtSl",
-    "GBRndFrst78AnSpPnk",
-    "GBRndFrst78AnSpRed",
-    "GBRndFrst78AnSpWht"
-   ]
-  },
-  {
-   "body": "Round|78|Frosted|18-415",
-   "members": 9,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
-   },
-   "missing": [
-    "GBRndFrst78AnSpTslBlk",
-    "GBRndFrst78AnSpTslGl",
-    "GBRndFrst78AnSpTslIvyGl",
-    "GBRndFrst78AnSpTslIvySl",
-    "GBRndFrst78AnSpTslLvn",
-    "GBRndFrst78AnSpTslMtSl",
-    "GBRndFrst78AnSpTslPnk",
-    "GBRndFrst78AnSpTslRed",
-    "GBRndFrst78AnSpTslWht"
    ]
   },
   {
@@ -3008,24 +2936,6 @@
    ]
   },
   {
-   "body": "Diva|46|Frosted|18-415",
-   "members": 7,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 7
-   },
-   "missing": [
-    "LBDivaFrst46LtnClOvrCap",
-    "LBDivaFrst46LtnCu",
-    "LBDivaFrst46LtnMtGl",
-    "LBDivaFrst46LtnMtSl",
-    "LBDivaFrst46LtnShnBlk",
-    "LBDivaFrst46LtnShnGl",
-    "LBDivaFrst46LtnShnSl"
-   ]
-  },
-  {
    "body": "Grace|55|Clear|18-415",
    "members": 7,
    "offered": 0,
@@ -3050,7 +2960,7 @@
    "offered": 0,
    "complete": false,
    "reasons": {
-    "no configuration: no kit indexed (no reviewed body image and no plate)": 7
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 7
    },
    "missing": [
     "LBRndFrst128LtnClOvrCap",
@@ -3068,7 +2978,7 @@
    "offered": 0,
    "complete": false,
    "reasons": {
-    "no configuration: no kit indexed (no reviewed body image and no plate)": 7
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 7
    },
    "missing": [
     "LBRndFrst78LtnClOvrCap",
@@ -3499,23 +3409,6 @@
    ]
   },
   {
-   "body": "Diva|46|Frosted|18-415",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 6
-   },
-   "missing": [
-    "GBDivaFrst46SpryCu",
-    "GBDivaFrst46SpryMtGl",
-    "GBDivaFrst46SpryMtSl",
-    "GBDivaFrst46SpryShnBlk",
-    "GBDivaFrst46SpryShnGl",
-    "GBDivaFrst46SpryShnSl"
-   ]
-  },
-  {
    "body": "Empire|100|Clear|18-415",
    "members": 6,
    "offered": 0,
@@ -3573,7 +3466,7 @@
    "offered": 0,
    "complete": false,
    "reasons": {
-    "no configuration: no kit indexed (no reviewed body image and no plate)": 6
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 6
    },
    "missing": [
     "GBRndFrst128SpryCu",
@@ -3590,7 +3483,7 @@
    "offered": 0,
    "complete": false,
    "reasons": {
-    "no configuration: no kit indexed (no reviewed body image and no plate)": 6
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 6
    },
    "missing": [
     "GBRndFrst78SpryCu",

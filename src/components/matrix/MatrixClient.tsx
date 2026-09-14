@@ -80,6 +80,9 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const [application, setApplication] = useState("");
     const [moreFilters, setMoreFilters] = useState(false);
     const [pending, startTransition] = useTransition();
+    // The family select is controlled by the server-rendered family; while the
+    // next family loads it must show the family the customer just chose.
+    const [chosenFamily, setChosenFamily] = useState(openFamily);
     const [adding, setAdding] = useState(false);
     const [lastAdded, setLastAdded] = useState<{ name: string; quantity: number } | null>(null);
     const confirmation = useRef<HTMLDivElement>(null);
@@ -213,11 +216,13 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         </div>}
         {step === 0 && familyNotice}
         {step === 0 && <div className={styles.filters}>
-            <label>Bottle family<select aria-label="Bottle family" value={openFamily} disabled={adding || pending} onChange={e => {
+            <label>Bottle family<select aria-label="Bottle family" value={chosenFamily} disabled={adding} onChange={e => {
                 const family = e.target.value;
+                setChosenFamily(family);
                 reset();
                 startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`));
             }}>{families.map(f => <option key={f.family}>{f.family}</option>)}</select></label>
+            {pending && chosenFamily !== openFamily && <p role="status" className={styles.familyPending}>Loading {chosenFamily} bottles…</p>}
             <label>Size<select aria-label="Size" value={size} disabled={adding || pending} onChange={e => { setSize(e.target.value); goTo(0); }}>
                 <option value="">All sizes</option>{sizes.map(size => <option value={size} key={size}>{size} ml</option>)}</select></label>
             <button className={styles.filterToggle} aria-expanded={moreFilters} onClick={() => setMoreFilters(!moreFilters)}><SlidersHorizontal size={17} /> More filters{neck || application ? " •" : ""}</button>
@@ -228,7 +233,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         </div>}
         <div className={styles.workspace} id="builder-workspace">
             <section className={styles.options} aria-label="Bottle options">
-                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 1} of 4</span><button type="button" className={styles.startOver} onClick={reset} disabled={adding || pending}>Start over</button></div>
+                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 1} of 4</span><button type="button" className={styles.startOver} onClick={reset} disabled={adding}>Start over</button></div>
                     <h2 tabIndex={-1} ref={optionHeading}>{titles[step]}</h2><p>{subtitles[step]}</p></div>
                 <fieldset aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
                 {step === 0 && <div className={styles.bottleGrid}>

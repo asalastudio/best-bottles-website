@@ -668,104 +668,37 @@
     },
     {
       "body": "Cylinder|9|Frosted|13-415",
-      "status": "candidate",
+      "status": "reviewed",
+      "source": "jordan-approved candidate",
       "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /10. GBTallCylFrst9MtlRollSlDot.psd",
       "sourceSha256": "6f106c5a3069dc6f889670282cf6534f571c44a456bfabb6fe17dc5407f6086d",
       "layerIndex": 2,
       "layerName": "Layer 34",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Layer 0",
-          "bbox": [
-            -75,
-            0,
-            824,
-            1593
-          ],
-          "background": true
-        },
-        {
-          "index": 2,
-          "name": "Layer 34",
-          "bbox": [
-            256,
-            298,
-            471,
-            1550
-          ],
-          "background": false
-        },
-        {
-          "index": 3,
-          "name": "Layer 32",
-          "bbox": [
-            261,
-            152,
-            455,
-            436
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "evidence": "2026-09-14 Jordan: add the frosted option.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/cylinder-9-frosted-13-415.webp",
+        "width": 207,
+        "height": 1200,
+        "sha256": "a015cdbd3e615cfcf181c4c2c984a7a0b17700559c54e1b43d58b96a92b10147"
+      }
     },
     {
       "body": "Cylinder|9|Frosted|17-415",
-      "status": "candidate",
+      "status": "reviewed",
+      "source": "jordan-approved candidate",
       "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/1. GBCylFrst9MtlRollMattSl.psd",
       "sourceSha256": "422c3d9ed8e18332fa50363503515996e943e8608165a5bac2029bcafc511332",
       "layerIndex": 2,
       "layerName": "Layer 15",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Layer 0",
-          "bbox": [
-            -75,
-            0,
-            824,
-            1593
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 7",
-          "bbox": [
-            155,
-            492,
-            507,
-            805
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 15",
-          "bbox": [
-            253,
-            618,
-            495,
-            1517
-          ],
-          "background": false
-        },
-        {
-          "index": 3,
-          "name": "Layer 16",
-          "bbox": [
-            256,
-            460,
-            478,
-            781
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "evidence": "2026-09-14 Jordan: add the frosted option.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/cylinder-9-frosted-17-415.webp",
+        "width": 250,
+        "height": 903,
+        "sha256": "619780fd19ea14436787c416f593fec2c1a88bbb243984d0a088c014a8eaa60c"
+      }
     },
     {
       "body": "Cylinder|9|Swirl|17-415",
@@ -871,32 +804,30 @@
     {
       "body": "Diva|100|Clear|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "LBDiva100LtnCu",
-      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/27.  100ml Diva (Clear) Ltn & Spry, capped/55. LBDiva100LtnCu.psd",
-      "sourceSha256": "512561075e606c74cee19af26b38830c35695cbc4b52f8d793329222d98b8702",
+      "source": "jordan-approved",
+      "path": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/4. GBDiva100RdcrBlkLthr.psd",
+      "sourceSha256": "096b156da39329a37c62110cecf5239a28efbd83b6e3e7207b6314d7205412cf",
       "layerIndex": 1,
       "layerName": "Layer 1",
-      "evidence": "diva-paired-kit-recipes.json: 2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "retouchIslandsDropped": 0,
+      "evidence": "2026-09-14 Jordan: reducer stuck in the top \u2014 clean-neck reducer-bottle source.",
       "asset": {
         "url": "/images/bottle-builder/bodies/diva-100-clear-18-415.webp",
-        "width": 592,
+        "width": 641,
         "height": 1200,
-        "sha256": "9dcaa6cda4cbb9ea99141e9371fb28f20e7d8170e345b3f2977b5f41928f31a9"
+        "sha256": "7ccea1a9a2125861997662ffe07ffad78d9ea6615f66e71b54be760fc4046549"
       }
     },
     {
       "body": "Diva|30|Clear|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "GBDiva30SpryShnSl",
-      "path": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /32. LBDiva30LtnShnSl.psd",
-      "sourceSha256": "c5c005fb0ad06f38bf16ef00fbe18e67a75929c4bc513d2cfdb213b439d0534f",
+      "source": "jordan-approved",
+      "path": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /4. GBDiva30RdcrBlkLthr.psd",
+      "sourceSha256": "ff4f72d3c3791a75a8a90aaa3686825de542434f89a224e27469c662a9d58243",
       "layerIndex": 1,
       "layerName": "Layer 5",
-      "evidence": "diva-paired-kit-recipes.json: 2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "retouchIslandsDropped": 0,
+      "evidence": "2026-09-14 Jordan: 'the Diva has the reducer that's stuck in the top' \u2014 the lotion/sprayer sources carry the pump insert in the body layer; the reducer-bottle body layer shows a clean neck.",
       "asset": {
         "url": "/images/bottle-builder/bodies/diva-30-clear-18-415.webp",
         "width": 592,
@@ -907,14 +838,13 @@
     {
       "body": "Diva|46|Clear|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "LBDiva46LtnClOvrCap",
-      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/25.  46 Diva (Clear) Ltn & Spry, capped/28. LBDiva46LtnClOvrCap.psd",
-      "sourceSha256": "ee99b881c694a5ec1e5e031dd4b55c9ae7176f759fe8626eaa78c4aab28ecc32",
+      "source": "jordan-approved",
+      "path": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/4. GBDiva46RdcrBlkLthr.psd",
+      "sourceSha256": "5acd9f6ebb31b9be16427172da9939c57bab11596247e236e657fa6da4011ffe",
       "layerIndex": 1,
       "layerName": "Layer 1",
-      "evidence": "diva-paired-kit-recipes.json: 2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "retouchIslandsDropped": 0,
+      "evidence": "2026-09-14 Jordan: reducer stuck in the top \u2014 clean-neck reducer-bottle source.",
       "asset": {
         "url": "/images/bottle-builder/bodies/diva-46-clear-18-415.webp",
         "width": 625,
@@ -924,48 +854,20 @@
     },
     {
       "body": "Diva|46|Frosted|18-415",
-      "status": "candidate",
+      "status": "reviewed",
+      "source": "jordan-approved candidate",
       "path": "2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/1. GBDivaFrst46RdcrShnGl.psd",
       "sourceSha256": "c2c550d0164d27bd1886d00f3382d54bc7f3708b8316c475ee6b0b898f6249ae",
       "layerIndex": 1,
       "layerName": "Layer 3",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            1049,
-            1487
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 3",
-          "bbox": [
-            202,
-            368,
-            854,
-            1470
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 5",
-          "bbox": [
-            375,
-            192,
-            664,
-            458
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "evidence": "2026-09-14 Jordan: 'We need the frosted bottles\u2026 we need to add the frosted option.'",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/diva-46-frosted-18-415.webp",
+        "width": 660,
+        "height": 1103,
+        "sha256": "1cc9fcbc2940e07314afb232a3abc6076f84b04045c5026dd6ba7e73931d32d0"
+      }
     },
     {
       "body": "Elegant|100|Clear|18-415",
@@ -1257,48 +1159,20 @@
     },
     {
       "body": "Round|128|Frosted|18-415",
-      "status": "candidate",
+      "status": "reviewed",
+      "source": "jordan-approved candidate",
       "path": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/10. GBRndFrst128RdcrWht.psd",
       "sourceSha256": "d78cf5d779aa166b36c0dcfad8160f9972d320d72e5cb38ba9006aeee54348ac",
       "layerIndex": 1,
       "layerName": "Layer 10",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            1049,
-            1487
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 10",
-          "bbox": [
-            73,
-            277,
-            1010,
-            1435
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 8",
-          "bbox": [
-            387,
-            166,
-            678,
-            524
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "evidence": "2026-09-14 Jordan: add the frosted option.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/round-128-frosted-18-415.webp",
+        "width": 949,
+        "height": 1164,
+        "sha256": "b03c885e4ae539a6378a1c38f632c2f51f1b5374ac4fa9719d623ae17c3aca7b"
+      }
     },
     {
       "body": "Round|78|Clear|18-415",
@@ -1347,48 +1221,20 @@
     },
     {
       "body": "Round|78|Frosted|18-415",
-      "status": "candidate",
+      "status": "reviewed",
+      "source": "jordan-approved candidate",
       "path": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/1. GBRndFrst78RdcrShnGl.psd",
       "sourceSha256": "f52ac2d0f5df6b8eb62c6b8cebf07b64027d26710827e5124c1b71e09a6f623d",
       "layerIndex": 1,
       "layerName": "Layer 5",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            1399,
-            1574
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 5",
-          "bbox": [
-            319,
-            365,
-            1129,
-            1376
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 2",
-          "bbox": [
-            575,
-            314,
-            868,
-            584
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "evidence": "2026-09-14 Jordan: add the frosted option.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/round-78-frosted-18-415.webp",
+        "width": 818,
+        "height": 1017,
+        "sha256": "17b8b45fcf87bfac9dbc95feff4ded9365153bd880d2d8aca93a3bbd12fcda64"
+      }
     },
     {
       "body": "Royal|13|Clear|13-415",

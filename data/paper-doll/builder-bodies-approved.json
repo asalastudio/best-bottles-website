@@ -1,0 +1,16 @@
+{
+  "note": "Jordan's approvals and corrections for builder bare-body sources. An entry here wins over the recipe-reviewed source and over the heuristic candidate for the same body key. Each names the master PSD, the descendants-order layer, and the instruction it answers.",
+  "entries": [
+    { "body": "Diva|30|Clear|18-415", "path": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /4. GBDiva30RdcrBlkLthr.psd", "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'the Diva has the reducer that's stuck in the top' — the lotion/sprayer sources carry the pump insert in the body layer; the reducer-bottle body layer shows a clean neck." },
+    { "body": "Diva|46|Clear|18-415", "path": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/4. GBDiva46RdcrBlkLthr.psd", "layer": 1,
+      "instruction": "2026-09-14 Jordan: reducer stuck in the top — clean-neck reducer-bottle source." },
+    { "body": "Diva|100|Clear|18-415", "path": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/4. GBDiva100RdcrBlkLthr.psd", "layer": 1,
+      "instruction": "2026-09-14 Jordan: reducer stuck in the top — clean-neck reducer-bottle source." },
+    { "body": "Diva|46|Frosted|18-415", "candidate": true, "instruction": "2026-09-14 Jordan: 'We need the frosted bottles… we need to add the frosted option.'" },
+    { "body": "Round|128|Frosted|18-415", "candidate": true, "instruction": "2026-09-14 Jordan: add the frosted option." },
+    { "body": "Round|78|Frosted|18-415", "candidate": true, "instruction": "2026-09-14 Jordan: add the frosted option." },
+    { "body": "Cylinder|9|Frosted|13-415", "candidate": true, "instruction": "2026-09-14 Jordan: add the frosted option." },
+    { "body": "Cylinder|9|Frosted|17-415", "candidate": true, "instruction": "2026-09-14 Jordan: add the frosted option." }
+  ]
+}
