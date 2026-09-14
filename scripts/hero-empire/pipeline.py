@@ -63,22 +63,44 @@ NICHE = (max(nx0 - 16, 0), max(ny0 - 16, 0), min(nx1 + 16, W), min(ny1 + sill + 
 json.dump({"niche": [int(v) for v in NICHE], "plaster": [nx0, ny0, nx1, ny1]}, open(f"{OUT}/geometry.json", "w"))
 log("niche", NICHE, "plaster", (nx0, ny0, nx1, ny1))
 m = np.full((H, W), 255, np.uint8); m[NICHE[1]:NICHE[3], NICHE[0]:NICHE[2]] = 0   # whole niche interior may change; the diff threshold keeps unchanged glass from the base
-# bottle body: per-row plaster reference (row median of the back wall, bottle is narrower than half the width),
-# pixels far from it are the bottle; the shaded side faces of the niche are excluded by a 10% inset.
+# bottle body. Primary: base-vs-wall difference at a high threshold (the base was rendered from this wall, so plaster,
+# glow and sill cancel; only the bottle and its reflection remain). Fallback: per-row plaster reference from the recess margins.
+def body_from_mask(bmask, x_lo, x_hi):
+    col = bmask.mean(axis=0); cols = np.where(col > 0.04)[0]
+    if len(cols) == 0: return None
+    runs = np.split(cols, np.where(np.diff(cols) > 10)[0] + 1); centre = (x_lo + x_hi) // 2
+    run = min(runs, key=lambda r: abs((r.min() + r.max()) / 2 - centre)); xL, xR = int(run.min()), int(run.max())
+    rowcov = bmask[:, xL:xR + 1].mean(axis=1); yrows = np.where(rowcov > 0.06)[0]
+    if len(yrows) == 0: return None
+    span = {y: (np.where(bmask[y, xL:xR + 1])[0].max() - np.where(bmask[y, xL:xR + 1])[0].min()) for y in yrows}
+    maxw = max(span.values()); shoulder = min(y for y, w in span.items() if w >= 0.80 * maxw)
+    return xL, xR, int(yrows.min()), int(yrows.max()), int(shoulder)
 pw = nx1 - nx0; bx0, bx1 = nx0 + int(0.10 * pw), nx1 - int(0.10 * pw)
-bmask = np.zeros((H, W), bool)
-for y in range(ny0 + 8, ny1):
-    ref = np.median(ba[y, bx0:bx1], axis=0); bmask[y, bx0:bx1] = np.abs(ba[y, bx0:bx1] - ref).sum(axis=1) > 60
-col = bmask.mean(axis=0); cols = np.where(col > 0.04)[0]
-runs = np.split(cols, np.where(np.diff(cols) > 10)[0] + 1); centre = (bx0 + bx1) // 2
-run = min(runs, key=lambda r: abs((r.min() + r.max()) / 2 - centre)); xL, xR = int(run.min()), int(run.max())
-rowcov = bmask[:, xL:xR + 1].mean(axis=1); yrows = np.where(rowcov > 0.06)[0]; yTop, yBot = int(yrows.min()), int(yrows.max())
-span = {y: (np.where(bmask[y, xL:xR + 1])[0].max() - np.where(bmask[y, xL:xR + 1])[0].min()) for y in yrows}
-maxw = max(span.values()); shoulder = min(y for y, w in span.items() if w >= 0.80 * maxw)
+def plausible(mm):
+    if not mm: return False
+    xL, xR, yTop_, yBot_, sh = mm; w = xR - xL
+    return 0.20 * pw <= w <= 0.70 * pw and sh - yTop_ >= 25 and yBot_ - sh >= 0.25 * (yBot_ - yTop_)
+dm = np.abs(ba - wa).sum(axis=2); mm = None
+for thr in (120, 160, 90):
+    bm = (dm > thr); bm[:, :bx0] = False; bm[:, bx1:] = False; bm[:ny0 + 8] = False; bm[ny1 + 40:] = False
+    mm = body_from_mask(bm, bx0, bx1)
+    if plausible(mm): log(f"body measure: diff>{thr}", mm); break
+    mm = None
+if mm is None:
+    mw = max(8, int(0.12 * (bx1 - bx0))); bmask = np.zeros((H, W), bool)
+    for y in range(ny0 + 8, ny1):
+        ref = np.median(np.concatenate([ba[y, bx0:bx0 + mw], ba[y, bx1 - mw:bx1]]), axis=0)
+        bmask[y, bx0:bx1] = np.abs(ba[y, bx0:bx1] - ref).sum(axis=1) > 60
+    mm = body_from_mask(bmask, bx0, bx1); log("body measure: margin fallback", mm)
+    if not plausible(mm): raise SystemExit(f"bottle measurement implausible: {mm} — set BODY_BOX manually")
+xL, xR, yTop, yBot, shoulder = mm
+if os.environ.get("BODY_BOX"):
+    xL, shoulder, xR, yBot = [int(v) for v in os.environ["BODY_BOX"].split(",")]; shoulder -= 10; yBot -= 40
 BODY = (xL - 6, int(shoulder) + 10, xR + 6, min(yBot + 40, H))
 m_cap = m.copy(); m_cap[BODY[1]:BODY[3], BODY[0]:BODY[2]] = 255
 json.dump({"niche": [int(v) for v in NICHE], "plaster": [nx0, ny0, nx1, ny1], "body": [int(v) for v in BODY]}, open(f"{OUT}/geometry.json", "w"))
 log("body lock (caps only)", BODY)
+if os.environ.get("MEASURE_ONLY"): raise SystemExit("measure-only")
 
 # 4. frames
 NECK_CX = (BODY[0] + BODY[2]) / 2; SHOULDER = BODY[1] - 10; NECK_TOP = yTop
@@ -132,6 +154,13 @@ def render_and_composite(sku, r, raw, reinforced=False):
     zone = m_cap if kind(sku) in ("Rdcr", "Cap") else m      # caps: body locked (empty bottle); sprayers/pumps: interior follows the closure
     changed = ((np.abs(gen - bf).sum(axis=2) > 40) & (zone == 0)).astype(np.uint8) * 255
     a = np.asarray(Image.fromarray(changed).filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(2.5))).astype(float) / 255.0
+    # KIT SNAP: measure where the collar landed and shift the closure layer onto the neck datum
+    mt = seat_metrics(gen)
+    if mt and abs(mt[0]) <= 40 and abs(mt[1]) <= 40:
+        dy, dx = -int(round(mt[0])), -int(round(mt[1]))
+        gen = np.roll(np.roll(gen, dy, axis=0), dx, axis=1); a = np.roll(np.roll(a, dy, axis=0), dx, axis=1)
+        if dy < 0: a[dy:] = 0
+        if dy > 0: a[:dy] = 0
     comp = bf * (1 - a[..., None]) + gen * a[..., None]
     Image.fromarray(comp.round().astype(np.uint8)).save(f"{OUT}/frame-{sku}.png")
     return sku, 100 * (a > 0.5).mean()

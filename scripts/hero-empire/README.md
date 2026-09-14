@@ -18,13 +18,20 @@ antique bulb sprayers (NO tassel versions) → fine-mist sprayer* → lotion pum
    then a DIFFERENCE composite — inside the niche take generated pixels only where they differ from the
    base (> 40/765), everything else is the base. Wall, sill and plaster are therefore pixel-identical
    across frames; the bottle interior (dip tube / nothing) follows the closure.
-5. `manifest.json` (ordered), webp frames, `_review-frames.jpg` niche crops.
+5. KIT: the bottle body is measured (base-vs-wall difference at a high threshold; margin fallback), then every
+   closure is measured — collar bottom vs the shoulder line, centre vs the neck centre — and the closure layer is
+   SNAPPED onto that datum before compositing. Sprayers/pumps must show a dip tube; reducers/caps composite with
+   the body locked so the bottle stays empty. Gross failures (seat/centre > 40px, missing tube, bare threads)
+   re-render up to 3× with a reinforced prompt; the best attempt is kept.
+6. `manifest.json` (ordered), webp frames, `_review-frames.jpg` niche crops.
 
 ```
 HERO_SET=v4 BASE_REF_SKU=GBEmp50RdcrShnGl BASE_REF_KEY=image BARE_BASE=1 SEQUENCE=AnSp,LB,Rdcr \
   python3 scripts/hero-empire/pipeline.py
 ```
-Needs `OPENAI_API_KEY` and `SKETCH_SCRATCH` (reference cache). Plates come from Convex
+Env: `NICHE_BOX=x0,y0,x1,y1` (recess interior; required when the wall is all plaster), `BODY_BOX` (manual bottle
+override), `EXTRA_ROWS_JSON` (closures from a sibling family with the same neck, e.g. cylinder-50 sprayers),
+`MEASURE_ONLY=1` (print geometry and stop). Needs `OPENAI_API_KEY` and `SKETCH_SCRATCH` (reference cache). Plates come from Convex
 `productPlates.byFamily("empire-50ml-clear-18-415")` (`empire-50-rows.json` is a snapshot).
 
 ## What failed, so nobody repeats it
