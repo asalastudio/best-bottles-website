@@ -109,7 +109,7 @@ export const upsertPortalAccount = mutation({
         companyName: v.string(),
         tier: v.string(),
         accountManager: v.string(),
-        netTerms: v.string(),
+        netTerms: v.optional(v.string()),
         memberSince: v.string(),
         taxExempt: v.optional(v.boolean()),
         billingEmail: v.optional(v.string()),
@@ -818,5 +818,55 @@ export const discardDraft = mutation({
 
         await ctx.db.delete(draft._id);
         return { outcome: "deleted" as const };
+    },
+});
+
+const portalAddressValidator = v.object({
+    contactName: v.string(),
+    company: v.string(),
+    phone: v.string(),
+    address1: v.string(),
+    address2: v.string(),
+    city: v.string(),
+    provinceCode: v.string(),
+    zip: v.string(),
+    countryCode: v.string(),
+});
+
+/**
+ * Save where this account's orders ship to and bill from.
+ *
+ * Validation lives in src/lib/portal/address.ts and runs before this is
+ * called; this writes what it is given, scoped to the caller's org. Passing no
+ * billing address means "bill where you ship", which is the common case and is
+ * stored as absence rather than as a duplicate of the shipping address — so a
+ * later correction to the shipping address cannot leave a stale billing copy
+ * behind it.
+ */
+export const saveAccountAddress = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        clerkUserId: v.string(),
+        shippingAddress: portalAddressValidator,
+        billingAddress: v.optional(portalAddressValidator),
+    },
+    returns: v.null(),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        const account = await ctx.db
+            .query("portalAccounts")
+            .withIndex("by_clerkOrgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
+            .unique();
+        if (!account) throw new Error("account_not_found");
+
+        await ctx.db.patch(account._id, {
+            shippingAddress: args.shippingAddress,
+            billingAddress: args.billingAddress,
+            addressUpdatedAt: Date.now(),
+            addressUpdatedBy: args.clerkUserId,
+        });
+        return null;
     },
 });

@@ -1,7 +1,9 @@
 export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { PageHeader, PortalTag } from "@/components/portal/ui";
-import { getPortalAccountData } from "@/lib/portal/server";
+import PortalAddressForm from "@/components/portal/PortalAddressForm";
+import { getPortalAccountData, getPortalAddresses } from "@/lib/portal/server";
+import { saveAddressAction } from "../actions";
 
 function formatCurrency(value: number | null | undefined) {
     if (typeof value !== "number") return "—";
@@ -9,7 +11,10 @@ function formatCurrency(value: number | null | undefined) {
 }
 
 export default async function PortalAccount() {
-    const { account, orders } = await getPortalAccountData();
+    const [{ account, orders }, addresses] = await Promise.all([
+        getPortalAccountData(),
+        getPortalAddresses(),
+    ]);
     const deliveredSpend = orders
         .filter((order) => order.status === "delivered")
         .reduce((sum, order) => sum + (order.totalAmount ?? 0), 0);
@@ -76,6 +81,31 @@ export default async function PortalAccount() {
                                 Request a call
                             </Link>
                         </div>
+                    </div>
+
+                    {/* Shipping address — a full-width row under the two cards.
+                        Orders cannot be sent without it, so it lives on the page
+                        the customer already visits rather than behind a step in
+                        the order flow. */}
+                    <div className="col-span-2">
+                        <div className="flex items-center justify-between mb-2">
+                            <h2 className="font-sans text-[14px] font-semibold text-neutral-900">
+                                Shipping address
+                            </h2>
+                            {!addresses.shippingAddress && (
+                                <PortalTag variant="gold">Needed before you can order</PortalTag>
+                            )}
+                        </div>
+                        <p className="font-sans text-[13px] text-neutral-500 mb-3">
+                            Where your orders ship, and the contact a freight carrier calls to
+                            book delivery. We keep this on your Shopify record too, so the
+                            warehouse ships to the same place.
+                        </p>
+                        <PortalAddressForm
+                            shippingAddress={addresses.shippingAddress}
+                            billingAddress={addresses.billingAddress}
+                            action={saveAddressAction}
+                        />
                     </div>
                 </div>
             ) : (
