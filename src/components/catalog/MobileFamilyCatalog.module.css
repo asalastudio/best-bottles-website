@@ -22,7 +22,7 @@
     outline-offset: 3px;
   }
   .heading h1 {
-    font-family: var(--font-cormorant), Georgia, serif;
+    font-family: var(--font-brand);
     font-size: 34px;
     line-height: 1.1;
   }
@@ -145,7 +145,7 @@
     margin-bottom: 16px;
   }
   .dialogHeading h2 {
-    font-family: var(--font-cormorant), Georgia, serif;
+    font-family: var(--font-brand);
     font-size: 28px;
     line-height: 1.1;
   }

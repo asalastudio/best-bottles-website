@@ -975,7 +975,10 @@ export const searchCatalog = query({
         }
 
         const offset = Math.max(0, Number(args.cursor ?? 0) || 0);
-        const limit = Math.min(Math.max(args.limit, 1), 240);
+        // Each page item collects its group's full product documents; 240 groups blew Convex's 16 MB
+        // per-execution read budget (2026-09-14). Two catalog pages per request is the safe ceiling;
+        // the storefront loads more through the cursor.
+        const limit = Math.min(Math.max(args.limit, 1), 48);
         const items = sorted.slice(offset, offset + limit);
         const nextOffset = offset + items.length;
         const nextCursor = nextOffset < sorted.length ? String(nextOffset) : null;
