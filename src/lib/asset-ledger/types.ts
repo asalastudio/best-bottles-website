@@ -62,7 +62,7 @@ export type Ledger = {
 /** The states that count as "done" for the storefront: the asset is served today. */
 export const DONE: Record<Kind, string[]> = {
     hero: ["indexed"],
-    plate: ["plated", "plated-no-capoff-by-design"],
+    plate: ["plated", "plated-no-capoff-by-design", "plated-approved-legacy-source"],
     kit: ["live"],
 };
 

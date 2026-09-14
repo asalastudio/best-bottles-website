@@ -1,4 +1,4 @@
-export type PlateStage = 'complete' | 'review' | 'reconcile' | 'missing';
+export type PlateStage = 'complete' | 'release' | 'review' | 'reconcile' | 'missing';
 export type PlateCounts = {total:number} & Record<PlateStage,number>;
 export type PlateScopeExclusion = {sku:string;family:string;itemName:string;canonicalSku:string;canonicalGroupSlug?:string|null;reason:string;reviewedBy:string;reviewedAt:string;recordId:string};
 export type PlatePlanRow = {

@@ -1,111 +1,38 @@
-## Approval lock recorded — September 13
+# Cylinder final plate release — September 13, 2026
 
-Jordan approved all 38 final pairs in the local batch form, including the 27
-documented legacy source bases. The exact decision was revalidated, the 76 staged
-views were hash-checked, and approved-lock.json freezes the decision and manifest.
-Earlier statements below describe preparation history. Final visual/source
-approval is now complete. Publication and indexing have not happened for this
-batch; the 38 must not yet count as complete live plates.
+The final 38 Cylinder cap-on/cap-off pairs are released and indexed on the development catalog used by localhost:3040. Cylinder’s plate lane is **436/436 complete**, with zero holds, review items, missing plates, or pending releases. Boston Round remains 123/123. This is not a claim of production media deployment or kit/hero completion.
 
-The locked release outputs are also archived in
-../../releases/boston-cylinder-2026-09-13/ for restoration from a fresh checkout.
-Do not restage this locked manifest. A separate release-specific ship is required.
+Jordan’s recorded instruction is: “These all need to be released and indexed. We already clearly approve them.” `ship-authorization.json` binds that instruction to the existing approval lock and exact release manifest. The earlier visual decision and immutable lock remain unchanged; their historical `publicationAuthorized: false` fields describe the earlier approval stage, not the subsequent ship instruction.
 
-# Cylinder — final 38 prepared pairs
+## Exact release evidence
 
-All 38 remaining catalog configurations have a prepared cap-on / cap-off pair.
-This is a local review batch. It has not been approved or published.
+- `prepared-v2.json`: immutable same-zoom review packet, SHA-256 `b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b`.
+- `approved-lock.json`: Jordan’s saved 38-pair approval and the 27 explicitly accepted original-photo source bases.
+- Staged manifest SHA-256: `d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0`. Exact staged files are preserved in `../../releases/boston-cylinder-2026-09-13/`; do not restage them.
+- `ship-preflight.json`: exact product identities, original index rows, and all affected group records before publication.
+- `publish-output.txt`: 38 index rows written, zero skipped, zero conflicts, zero errors. The full-size approved images are reused as thumbnails without introducing new image bytes.
+- `published-verification.json`: 76 hosted views return HTTP 200, match the approved SHA-256 and byte count, and measure 1000 × 1100. Both website SKU and Grace SKU resolve the same assets. All 10 family records and every unselected row are unchanged.
+- `registered-approvals.json`: registration of the existing visual decision against the indexed family-sheet bindings; all earlier decision keys and history are preserved.
+- `ledger-after-release.json` and `ledger-final.json`: measured accounting after release and after registration.
 
-- Review: http://localhost:3040/reviews/cylinder-final38-2026-09-13/index.html
-- Immutable packet: `prepared-v2.json`, SHA-256 `b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b`.
-- Workbench before/after: `workbench-comparison.html`, equal 1440 × 1000 viewports.
-- Source and image approvals already saved for prior batches remain unchanged.
-- Kits and heroes remain paused. No `.claude/launch.json` changes were made or committed.
+## Counts
 
-## Prepared work
+Before release, Cylinder had 398 complete and 38 approved awaiting release; the global plate plan had 686 complete, 38 awaiting release, 431 review, 639 reconcile, and 511 missing, out of 2,305 applicable catalog rows.
 
-24 plain short-cap rows retain their exact approved legacy front bytes. Their
-cap-off images use the original bare-glass layer/group from four master PSDs:
-clear/cobalt 5 mL and clear/frosted tall 9 mL. There is no roller in these products.
-Glass-only cap-off views show the photographed opening; no component is invented.
-`bare-glass-inspection.json`, `legacy-products.json` and `legacy-media.json` preserve
-the explicit source crosswalk and exact live product-page evidence.
+After release, Cylinder has 436 complete and zero remaining plate work. Global counts are 724 complete, zero awaiting release, 431 review, 639 reconcile, and 511 missing. Each recount runs `python3 scripts/asset-ledger/measure-plates.py` followed by `npm run ledger:build`.
 
-Six sprayer pairs use the original master views Jordan approved in the prior
-source audit. The 30 mL source measurement was corrected to measure the entire
-assembly instead of its disconnected metal cap. Both 30 mL pairs have zero mean
-body difference; the smaller sprayers remain below 2.23/255.
+## Source and approval boundaries
 
-Five roller pairs use the previously approved original source sets. Four reuse
-their already-approved final bytes. The plastic black-dot cap-off was corrected:
-its prior 29.247/255 body difference is now 1.6834/255. Historical size findings
-remain recorded; this is not a new shared glass-height lock.
+24 plain short-cap pairs keep their approved original fronts and use bare-glass layers from four master PSDs for cap-off views. Six sprayer pairs and five roller pairs use the reviewed master-source evidence. Three plastic flip-top pairs retain the exact original product-page photographs, including the original-resolution cap-off views. Source mappings come from verified catalog/product-page evidence, not inferred filenames or SKU strings.
 
-Three plastic flip-top pairs retain their approved fronts and add real cap-off
-photos from their exact legacy product pages. The original rasters are 360 × 480;
-resizing does not create additional detail. Their metadata is honestly recorded
-as legacy raster provenance, with no fabricated master path or PSD hash.
+The 27 accepted legacy source bases remain explicitly labeled `plated-approved-legacy-source`. No master path or PSD hash is fabricated. The five old sizing findings are retained in `resolvedFindings` with the final reviewed binding; this release does not create new shared glass-height locks. No rendering, component fabrication, or shadow edits occurred during publication.
 
-## Verification and counts
+Completion is restricted to this exact approved packet, immutable manifest, release authorization, verified index, and current hosted image hashes. Changed views, catalog identities, source evidence, newer rejection decisions, missing measurements, or new technical holds cannot inherit completion.
 
-All 38 paired body checks pass (76 final views); the worst mean error is
-3.1762/255 against the existing 12/255 limit. Seven diagnostic contact sheets were
-visually inspected. There are 20 distinct new image files after excluding current
-and previously approved bytes. 33 cap-on files are unchanged.
+Kits and heroes remain deferred. Five older kits correctly became stale when their plate fronts changed; no kit was republished or falsely marked current.
 
-Desktop 1440 px and mobile 390 px review checks each returned HTTP 200, loaded all
-82 comparison images, showed no overflow or page errors, and filtered the three
-plastic rows correctly. The approval button stays disabled until both review
-acknowledgments are selected. Invalid submissions returned 409. No valid approval
-was submitted during automated testing. TypeScript and 18 focused tests passed.
+## Verification commands
 
-Before preparation: Cylinder 398/436 complete, 38 reconcile, zero review/missing.
-After preparation: Cylinder 398/436 complete, 38 reconcile, zero review/missing;
-38 prepared pairs and zero alignment failures are now recorded separately.
-Global counts remain 686/2,305 complete, 431 review, 677 reconcile, 511 missing.
-Every recount used measurement first, then `npm run ledger:build`.
+With the development environment loaded, `verify-cylinder-final38-release.mjs --after` rechecks every indexed view and catalog identity. `register-cylinder-final38-approvals.mjs` records the already-approved bytes on the current family sheet; it does not request or invent a new human review. Restore the unchanged staged manifest from the preservation archive if running these release tools in a fresh checkout. Ledger verification can also read its frozen archive copy directly.
 
-## The remaining human decision
-
-The current ledger definition requires master provenance. 27 retained fronts
-are verified original legacy photographs; their exact master finish counterparts
-remain unmatched. The batch approval explicitly asks Jordan to accept those
-original sources, including the three original-resolution plastic cap-off images.
-It does not falsely convert these into master renders or clear existing holds
-without a decision. The 5 mL nominal naming exception is preserved. The natural
-16 oz plastic wording and the frosted copper item's stale description are noted
-in the evidence; catalog copy was not changed by image preparation.
-
-The local button writes `data/asset-ledger/cylinder-final38-decisions.json`, with
-an exact packet token, per-SKU image hashes and source acceptance. The endpoint
-rechecks original sources, images, current catalog identity, and served reference
-bytes. The browser compares its displayed packet token with the server token.
-Rerendered bytes therefore cannot inherit an older card's approval.
-
-## Reproduce and release
-
-1. `python3 scripts/asset-ledger/recover-cylinder-final38-legacy.py` retrieves only
-   image URLs captured on the exact saved product pages. Review changed upstream
-   evidence as a new revision; do not overwrite accepted review packets.
-2. `python3 scripts/asset-ledger/prepare-cylinder-final38.py --revision 2` verifies
-   sources and reproduces the same immutable candidate bindings.
-3. `python3 scripts/asset-ledger/build-cylinder-final38-review.py` creates the
-   single family sheet. Preserve the reviewed HTML when accepting a new revision.
-4. `node scripts/asset-ledger/stage-cylinder-final38.mjs` stages all 76 final views
-   and performs a read-only preflight for the 38 exact products in ten existing
-   plate families. `release-preflight.json` captures product IDs and full original
-   family/index records for rollback. Zero ambiguous SKUs were found.
-
-Staged manifest: `dist/paper-doll/cylinder-final38-2026-09-13/manifest.json`.
-While approval is pending its 38 rows have `publishable: false`. After approval,
-restage to bind the approved status. Jordan's release-specific ship remains
-required. Before applying the release, bind that instruction to the exact
-manifest, validate accepted legacy provenance in ledger completion, preserve
-family metadata, and verify all 76 hosted view hashes and both exact SKU forms.
-The approved-source exceptions must be projected only for the exact approved and
-indexed views, never by changing the global legacy-source rule. Refresh the
-family contact sheet and register the existing batch decision against those
-indexed hashes. Then measure and rebuild the ledger to verify 436/436.
-
-The source-acceptance and publication steps are outstanding. Do not report the
-family complete from the existence of this review packet or staged manifest.
+Desktop/mobile runtime checks and the same-zoom ledger comparison are in `../cylinder-ledger-release-state-2026-09-13/`. The local review endpoint remains development-only.

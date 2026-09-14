@@ -1,0 +1,224 @@
+
+ RUN  v3.2.4 /Users/jordanrichter/Projects/Clients/Nemat-International/bb-asset-release-pr-2026-09-13
+
+ ✓ tests/source-recovery.test.ts (6 tests) 259ms
+ ✓ tests/cylinder-catalog-heroes.test.ts (57 tests) 276ms
+ ✓ tests/vercel-preview-build.test.ts (5 tests) 925ms
+   ✓ deploys opted-in previews with their backend before releasing the frontend  395ms
+   ✓ preserves existing preview and production build behavior outside the opt-in  487ms
+ ✓ tests/final-image-review.test.ts (5 tests) 827ms
+   ✓ saved hero candidate approval > saves a byte-bound decision in the existing review library without changing the glass lock  308ms
+ ✓ tests/standard-review.test.ts (9 tests) 1204ms
+   ✓ local bottle-standard decisions > locks only a verified packet and preserves its prior version on a later revision  596ms
+ ✓ tests/shopify-customers.test.ts (18 tests) 89ms
+ ✓ tests/plate-completion.test.ts (7 tests) 1261ms
+   ✓ prepared plate review > binds new bytes and framing, and leaves published approvals untouched  615ms
+ ✓ tests/executive-grace-operations.test.ts (1 test) 43ms
+ ✓ tests/paper-doll-recanvas.test.ts (4 tests) 2691ms
+   ✓ CYL-9ML 2080×2288 recanvas pipeline > produces an exact RGBA canvas with transparent side padding  2682ms
+ ✓ tests/pdp-relations.test.ts (9 tests) 52ms
+ ✓ tests/mobile-pdp-models.test.ts (42 tests) 41ms
+ ✓ tests/bottle-builder.test.ts (22 tests) 42ms
+ ✓ tests/ux-intuitiveness.test.ts (29 tests) 25ms
+ ✓ tests/catalogFilters.test.ts (87 tests) 66ms
+ ✓ tests/plate-contact-sheet.test.ts (13 tests) 4119ms
+   ✓ family plate approval > preserves a cap-on sign-off when cap-off changes and rejects changed cap-on bytes  315ms
+   ✓ family plate approval > supports a 373-plate family batch without writing Boston decisions  3040ms
+ ✓ tests/builder-readiness-audit.test.ts (4 tests) 75ms
+ ✓ tests/catalog-cap-previews.test.ts (13 tests) 37ms
+ ✓ tests/customer-facing-product-names.test.ts (8 tests) 43ms
+ ✓ tests/grace-hardening.test.ts (19 tests) 95ms
+ ✓ tests/bottle-builder-components.test.ts (17 tests) 60ms
+ ✓ tests/dropper-presentation.test.ts (10 tests) 11ms
+ ✓ tests/reuse-queue.test.ts (6 tests) 20ms
+ ✓ tests/analytics-events.test.ts (6 tests) 15ms
+ ✓ tests/graceOpenAIRealtimeAdapter.test.ts (9 tests) 34ms
+ ✓ tests/guided-finder-model.test.ts (6 tests) 134ms
+ ✓ tests/catalog-hero-diva-release.test.ts (1 test) 22ms
+ ✓ tests/shopify-sellability.test.ts (14 tests) 20ms
+ ✓ tests/paper-doll-mapping-resolver.test.ts (7 tests) 5ms
+ ✓ tests/cylinder-family-page.test.ts (6 tests) 14ms
+ ✓ tests/bottle-builder-source-links.test.ts (9 tests) 17ms
+ ✓ tests/portal-certificate-ui.test.ts (13 tests) 10ms
+ ✓ tests/decorated-cap-finish.test.ts (9 tests) 27ms
+ ✓ tests/catalogRefineStates.test.ts (5 tests) 19ms
+ ✓ tests/pdp-discovery-sections.test.ts (7 tests) 40ms
+ ✓ tests/cart-direct-checkout.test.ts (3 tests) 66ms
+ ✓ tests/pdp-stage-modes.test.ts (11 tests) 101ms
+ ✓ tests/canonicalProduct.test.ts (8 tests) 13ms
+ ✓ tests/cap-finish-evidence.test.ts (2 tests) 34ms
+ ✓ tests/checkout-readiness.test.ts (9 tests) 5ms
+ ✓ tests/executive-hub-signal-board.test.ts (6 tests) 116ms
+ ✓ tests/volume-pricing-display.test.ts (3 tests) 21ms
+ ✓ tests/graceSearchUtils.test.ts (10 tests) 44ms
+ ✓ tests/graceRealtimeConfig.test.ts (5 tests) 9ms
+ ✓ tests/mizan-ux-recovery.test.ts (6 tests) 9ms
+ ✓ tests/asset-ledger-reviews.test.ts (5 tests) 25ms
+ ✓ tests/family-page-data.test.ts (4 tests) 12ms
+ ✓ tests/product-card-variant-previews.test.ts (6 tests) 14ms
+ ✓ tests/catalog-missing-source-visibility.test.ts (6 tests) 7ms
+ ✓ tests/pdp-selected-kit-truth.test.ts (2 tests) 2ms
+ ✓ tests/catalog-vocabulary-alignment.test.ts (23 tests) 14ms
+stderr | tests/employee-knowledge-api.test.ts > employee knowledge chat API > returns a generic provider failure and persists only a minimized error trace
+[knowledge/chat] model failure { requestId: 'request_1', error: 'Error' }
+
+stderr | tests/employee-knowledge-api.test.ts > employee knowledge chat API > persists the runtime failure trace instead of replacing its usage
+[knowledge/chat] model failure { requestId: 'request_1', error: 'KnowledgeResponseExecutionError' }
+
+ ✓ tests/employee-knowledge-api.test.ts (5 tests) 12ms
+ ✓ tests/cylinder-9ml-cohort.test.ts (9 tests) 13ms
+ ✓ tests/homepage-browse.test.ts (4 tests) 14ms
+ ✓ tests/unified-cylinder-pdp.test.ts (8 tests) 21ms
+ ✓ tests/wholesale-draft-orders.test.ts (10 tests) 14ms
+ ✓ tests/mobile-family-css.test.ts (1 test) 15ms
+ ✓ tests/knowledge-tool-registry.test.ts (7 tests) 9ms
+ ✓ tests/madison-sanity-adapter.test.ts (8 tests) 14ms
+ ✓ tests/cylinder-final-release.test.ts (15 tests) 30ms
+ ✓ tests/cylinder-v3-acceptance.test.ts (3 tests) 3ms
+ ✓ tests/product-truth-reconciliation.test.ts (8 tests) 17ms
+ ✓ tests/catalogProductGrid.test.ts (5 tests) 22ms
+ ✓ tests/shopify.test.ts (16 tests) 12ms
+ ✓ tests/graceRefineState.test.ts (13 tests) 8ms
+ ✓ tests/checkout-sku-identity.test.ts (5 tests) 18ms
+ ✓ tests/portalGraceProjects.test.ts (2 tests) 4ms
+ ✓ tests/madison-shopify-hero-route.test.ts (2 tests) 6ms
+ ✓ tests/employee-knowledge-workspace.test.ts (3 tests) 18ms
+ ✓ tests/catalog-card-purchase.test.ts (8 tests) 7ms
+ ✓ tests/catalogSurface.test.ts (6 tests) 10ms
+ ✓ tests/checkout-minimum.test.ts (5 tests) 17ms
+ ✓ tests/glass-sibling-selection.test.ts (3 tests) 10ms
+ ✓ tests/observability-wiring.test.ts (10 tests) 18ms
+ ✓ tests/launch-readiness.test.ts (7 tests) 14ms
+ ✓ tests/legacy-reference-image-scraper.test.ts (5 tests) 8ms
+ ✓ tests/bottle-builder-entry.test.ts (4 tests) 9ms
+ ✓ tests/grace-catalog-navigation.test.ts (5 tests) 3ms
+ ✓ tests/knowledge-runtime-policy.test.ts (4 tests) 5ms
+ ✓ tests/focused-pdp-builder-language.test.ts (1 test) 7ms
+ ✓ tests/shopify-orders.test.ts (5 tests) 9ms
+ ✓ tests/wholesale-checkout-fallback.test.ts (7 tests) 5ms
+ ✓ tests/knowledge-openai-responses.test.ts (7 tests) 8ms
+ ✓ tests/grace-tool-gateway-server.test.ts (6 tests) 5ms
+ ✓ tests/grace-audit-report.test.ts (13 tests) 5ms
+ ✓ tests/focused-pdp-layout.test.ts (6 tests) 37ms
+ ✓ tests/pdp-analytics-resolution.test.ts (7 tests) 4ms
+ ✓ tests/catalog.smoke.test.ts (3 tests) 4ms
+ ✓ tests/catalog-approved-heroes.test.ts (396 tests) 10423ms
+ ✓ tests/shopify-sync-foundation.test.ts (6 tests) 7ms
+ ✓ tests/bottle-standards.test.ts (7 tests) 3ms
+ ✓ tests/grace-shopping-context.test.ts (8 tests) 15ms
+ ✓ tests/paper-doll-sanity-contract.test.ts (8 tests) 11ms
+ ✓ tests/homepage-merchandising.test.ts (7 tests) 6ms
+ ✓ tests/knowledge-corrections.test.ts (2 tests) 8ms
+ ✓ tests/portal-certificate-approval.test.ts (10 tests) 5ms
+ ✓ tests/pdf-catalog.test.ts (5 tests) 6ms
+ ✓ tests/cylinder-white-cap-repair.test.ts (2 tests) 2ms
+ ✓ tests/cylinder-final-plates.test.ts (7 tests) 10ms
+ ✓ tests/kit-frame.test.ts (3 tests) 5ms
+ ✓ tests/graceShapeIntent.test.ts (6 tests) 4ms
+ ✓ tests/plate-scope.test.ts (10 tests) 7ms
+ ✓ tests/observability-sentry-issues.test.ts (12 tests) 5ms
+ ✓ tests/cylinder-beauty-gallery.test.ts (3 tests) 8ms
+ ✓ tests/staging-ui-reference-audit.test.ts (3 tests) 11ms
+ ✓ tests/compatibility-resolver-parity.test.ts (5 tests) 7ms
+ ✓ tests/focused-pdp-purchasability.test.ts (2 tests) 2ms
+ ✓ tests/knowledge-gateway-acceptance.test.ts (1 test) 3ms
+ ✓ tests/catalog-price-filter-semantics.test.ts (7 tests) 15ms
+ ✓ tests/focused-shopping-context.test.ts (4 tests) 6ms
+ ✓ tests/executive-hub-contract.test.ts (8 tests) 3ms
+ ✓ tests/focused-pdp-purchase-panel.test.ts (12 tests) 6ms
+ ✓ tests/knowledge-operations.test.ts (2 tests) 2ms
+ ✓ tests/graceOpenAIToolSpecs.test.ts (5 tests) 8ms
+ ✓ tests/paper-doll-draft-preview.test.ts (4 tests) 8ms
+ ✓ tests/grace-pdp-plate-swap.test.ts (4 tests) 17ms
+ ✓ tests/prepared-plate-reviews.test.ts (8 tests) 4ms
+ ✓ tests/plate-plan.test.ts (11 tests) 6ms
+ ✓ tests/bottle-builder-preview-registration.test.ts (2 tests) 3ms
+ ✓ tests/checkout-navigation.test.ts (2 tests) 4ms
+ ✓ tests/clerk-branded-auth.test.ts (10 tests) 3ms
+ ✓ tests/grace-agentic-handoff.test.ts (6 tests) 7ms
+ ✓ tests/responsive-shell-contract.test.ts (4 tests) 9ms
+ ✓ tests/grace-policy-corpus.test.ts (4 tests) 7ms
+ ✓ tests/grace-session-compression.test.ts (3 tests) 3ms
+ ✓ tests/grace-memory-capabilities.test.ts (5 tests) 5ms
+ ✓ tests/team-access.test.ts (10 tests) 5ms
+ ✓ tests/product-groups-rebuild-interlock.test.ts (4 tests) 9ms
+ ✓ tests/madison-supabase-audit.test.ts (3 tests) 2ms
+ ✓ tests/catalog-card-visual.test.ts (4 tests) 5ms
+ ✓ tests/closure-swatch-keys.test.ts (6 tests) 4ms
+ ✓ tests/focused-pdp-rollout.test.ts (5 tests) 3ms
+ ✓ tests/mega-menu.test.ts (6 tests) 7ms
+ ✓ tests/knowledge-operations-schema.test.ts (1 test) 3ms
+ ✓ tests/team-hub-links.test.ts (7 tests) 4ms
+ ✓ tests/grace-capability-guardrails.test.ts (12 tests) 7ms
+ ✓ tests/pdp-editorial-description.test.ts (4 tests) 7ms
+ ✓ tests/pdp-closure-rail.test.ts (8 tests) 5ms
+ ✓ tests/cylinder-cap-thumbnails.test.ts (3 tests) 11ms
+ ✓ tests/catalog-ux-matrix.test.ts (4 tests) 4ms
+stderr | tests/sentry-webhook-verification.test.ts > verifySentryWebhook > rejects a wrong secret, a tampered body, a missing header, and an unset secret
+[Sentry Webhook] SENTRY_WEBHOOK_CLIENT_SECRET not set
+
+ ✓ tests/grace-push-layout.test.ts (8 tests) 5ms
+ ✓ tests/sentry-webhook-verification.test.ts (4 tests) 6ms
+ ✓ tests/pdp-sku-image-fallback.test.ts (3 tests) 7ms
+ ✓ tests/grace-voice-echo-guard.test.ts (2 tests) 5ms
+ ✓ tests/bottle-builder-preview-frame.test.ts (3 tests) 5ms
+ ✓ tests/image-generation-coverage.test.ts (2 tests) 3ms
+ ✓ tests/madison-image-naming-audit.test.ts (4 tests) 4ms
+ ✓ tests/catalogRefineModel.test.ts (4 tests) 3ms
+ ✓ tests/grace-focused-navigation-contract.test.ts (1 test) 2ms
+ ✓ tests/madison-image-preflight.test.ts (3 tests | 1 skipped) 4ms
+ ✓ tests/catalog-server-sanitization.test.ts (2 tests) 6ms
+ ✓ tests/knowledge-authorization.test.ts (5 tests) 3ms
+ ✓ tests/paper-doll-shared-contract.test.ts (3 tests) 3ms
+ ✓ tests/product-image-fallback.test.ts (4 tests) 2ms
+ ✓ tests/catalogSearchClient.test.ts (2 tests) 9ms
+ ✓ tests/catalog-group-sku.test.ts (4 tests) 8ms
+ ✓ tests/catalogResultIntegrity.test.ts (3 tests) 2ms
+ ✓ tests/graceRealtimeInstructions.test.ts (1 test) 4ms
+ ✓ tests/hub-sign-in.test.ts (2 tests) 7ms
+ ✓ tests/push-shopify-pdp-media-replace.test.ts (5 tests) 2ms
+ ✓ tests/next-image-config.test.ts (1 test) 1ms
+ ✓ tests/executive-hub-auth.test.ts (3 tests) 2ms
+ ✓ tests/executive-hub-dashboard.test.ts (2 tests) 2ms
+ ↓ tests/grace-navigation-battery.live.test.ts (5 tests | 5 skipped)
+ ↓ tests/grace-accuracy-audit.live.test.ts (1 test | 1 skipped)
+stderr | tests/next-build-memory.test.ts
+⚠ Missing environment variable: NEXT_PUBLIC_CONVEX_URL
+⚠ Missing environment variable: OPENAI_API_KEY
+
+ ✓ tests/next-build-memory.test.ts (2 tests) 3ms
+ ✓ tests/cylinder-authoritative-query.test.ts (3 tests) 3ms
+ ✓ tests/legacy-product-route-overrides.test.ts (7 tests) 2ms
+ ✓ tests/grace-memory-resilience.test.ts (1 test) 69ms
+ ✓ tests/mobile-family-catalog.test.tsx (5 tests) 238ms
+ ✓ tests/focused-pdp-mobile-dom.test.ts (3 tests) 3292ms
+   ✓ focused PDP mobile purchase surface > keeps exact cap-on and cap-off photographs after kit decode and reserves kit layers for exploded mode  3180ms
+ ✓ tests/catalog-card-tier-pricing.test.tsx (8 tests) 301ms
+stderr | tests/cylinder-catalog-hero-preview.test.ts > Cylinder static catalog hero > preserves reviewed empty framing without requesting a filled hover
+Received `true` for a non-boolean attribute `unoptimized`.
+
+If you want to write it to the DOM, pass a string instead: unoptimized="true" or unoptimized={value.toString()}.
+
+ ✓ tests/cylinder-catalog-hero-preview.test.ts (4 tests) 148ms
+ ✓ tests/application-finder-route.test.ts (13 tests) 558ms
+ ✓ tests/grace-bottle-components.test.ts (2 tests) 220ms
+ ✓ tests/mobile-bottle-builder.test.tsx (10 tests) 937ms
+ ✓ tests/cylinder-focused-finder.test.ts (9 tests) 701ms
+ ✓ tests/grace-product-card-navigation.test.ts (3 tests) 21ms
+ ✓ tests/bottle-builder-family-discovery.test.tsx (1 test) 67ms
+ ✓ tests/cylinder-release.test.ts (2 tests) 25ms
+ ✓ tests/product-compatibility-matrix.test.ts (13 tests) 38ms
+ ✓ tests/focused-finder-components.test.ts (15 tests) 33ms
+ ✓ tests/resale-certificates.test.ts (15 tests) 165ms
+stderr | tests/catalog-card-static-hero.test.ts > keeps the new catalog wrapper static and falls back only to the pictured SKU
+Received `true` for a non-boolean attribute `unoptimized`.
+
+If you want to write it to the DOM, pass a string instead: unoptimized="true" or unoptimized={value.toString()}.
+
+ ✓ tests/catalog-card-static-hero.test.ts (1 test) 26ms
+ ✓ tests/catalog-approved-card.test.ts (1 test) 26ms
+
+ Test Files  182 passed | 2 skipped (184)
+      Tests  1697 passed | 7 skipped (1704)
+   Start at  08:41:28
+   Duration  21.54s (transform 8.78s, setup 0ms, collect 86.66s, tests 31.25s, environment 8.29s, prepare 16.02s)

@@ -1,0 +1,351 @@
+{
+  "at": "2026-09-13T15:29:30.033Z",
+  "rows": [
+    {
+      "sku": "GBCyl5GlMattSht",
+      "currentOn": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+      "currentOff": null,
+      "approvedOn": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+      "approvedOff": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "currentOn": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+      "currentOff": null,
+      "approvedOn": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+      "approvedOff": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "currentOn": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+      "currentOff": null,
+      "approvedOn": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+      "approvedOff": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "currentOn": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+      "currentOff": null,
+      "approvedOn": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+      "approvedOff": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "currentOn": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+      "currentOff": null,
+      "approvedOn": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+      "approvedOff": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "currentOn": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+      "currentOff": null,
+      "approvedOn": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+      "approvedOff": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "currentOn": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+      "currentOff": null,
+      "approvedOn": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+      "approvedOff": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "currentOn": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+      "currentOff": null,
+      "approvedOn": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+      "approvedOff": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "currentOn": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+      "currentOff": null,
+      "approvedOn": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+      "approvedOff": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "currentOn": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+      "currentOff": null,
+      "approvedOn": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+      "approvedOff": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "currentOn": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+      "currentOff": null,
+      "approvedOn": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+      "approvedOff": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "currentOn": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+      "currentOff": null,
+      "approvedOn": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+      "approvedOff": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "currentOn": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+      "currentOff": null,
+      "approvedOn": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+      "approvedOff": "79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "currentOn": "bd18c4b7cb777a3eeac5820316fcd82cf332c07b9f212b92ef77e1736f913aa7",
+      "currentOff": null,
+      "approvedOn": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+      "approvedOff": "e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "currentOn": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+      "currentOff": null,
+      "approvedOn": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+      "approvedOff": "d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBSpry1ozSl",
+      "currentOn": "f86fb5c0dd860b8567751fab3c395e9872edb6c9d9509784567bbff6f4227280",
+      "currentOff": null,
+      "approvedOn": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+      "approvedOff": "36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "currentOn": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+      "currentOff": null,
+      "approvedOn": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+      "approvedOff": "69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "currentOn": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+      "currentOff": null,
+      "approvedOn": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+      "approvedOff": "fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "currentOn": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+      "currentOff": null,
+      "approvedOn": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+      "approvedOff": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "currentOn": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+      "currentOff": null,
+      "approvedOn": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+      "approvedOff": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "currentOn": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+      "currentOff": null,
+      "approvedOn": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+      "approvedOff": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "currentOn": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+      "currentOff": null,
+      "approvedOn": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+      "approvedOff": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "currentOn": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+      "currentOff": null,
+      "approvedOn": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+      "approvedOff": "930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "currentOn": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+      "currentOff": "0ba80b99e5ad85bb548ef1c8196b5fa23a434582799e7958ce87755a4d1d40bc",
+      "approvedOn": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+      "approvedOff": "4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9RollBlkSh",
+      "currentOn": "46a716523e47f4999663fb618ded8db18a314d2e9afd7edd0c47667bcddf55fc",
+      "currentOff": null,
+      "approvedOn": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+      "approvedOff": "9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9RollCuMatt",
+      "currentOn": "bce6192388a44de70be498dc70a396e0ec5378e18b31da2cf7989247c4774662",
+      "currentOff": null,
+      "approvedOn": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+      "approvedOff": "e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9RollSlSh",
+      "currentOn": "290516311b4e901a3034bcfd7bdab5bd0038eaaf33ccb17b9a0709c0a6ac7602",
+      "currentOff": null,
+      "approvedOn": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+      "approvedOff": "e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "currentOn": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+      "currentOff": null,
+      "approvedOn": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+      "approvedOff": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "currentOn": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+      "currentOff": null,
+      "approvedOn": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+      "approvedOff": "2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "currentOn": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+      "currentOff": null,
+      "approvedOn": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+      "approvedOff": "30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "currentOn": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+      "currentOff": null,
+      "approvedOn": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+      "approvedOff": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "currentOn": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+      "currentOff": null,
+      "approvedOn": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+      "approvedOff": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "currentOn": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+      "currentOff": null,
+      "approvedOn": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+      "approvedOff": "cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "currentOn": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+      "currentOff": null,
+      "approvedOn": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+      "approvedOff": "21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "PbClear4ozFlpWh",
+      "currentOn": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+      "currentOff": null,
+      "approvedOn": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+      "approvedOff": "57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "currentOn": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+      "currentOff": null,
+      "approvedOn": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+      "approvedOff": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "PbClear8ozFlpWh",
+      "currentOn": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+      "currentOff": null,
+      "approvedOn": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+      "approvedOff": "30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    },
+    {
+      "sku": "PbNat16ozFlpWh",
+      "currentOn": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+      "currentOff": null,
+      "approvedOn": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+      "approvedOff": "d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4",
+      "referenceUnchanged": true,
+      "approvedPairIndexed": false
+    }
+  ],
+  "scope": 38,
+  "referenceChanges": 0,
+  "approvedPairsAlreadyMatching": 0,
+  "publicationPerformed": false
+}
