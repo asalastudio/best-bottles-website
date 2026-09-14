@@ -59,7 +59,7 @@ export default async function PortalDashboard() {
                 </div>
                 <div className="flex items-center gap-2">
                     <Link
-                        href="/portal/grace"
+                        href="/grace-workspace"
                         className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-colors"
                     >
                         Talk with Grace

@@ -1,6 +1,6 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
-import type { Doc, Id } from "./_generated/dataModel";
+import type { Doc } from "./_generated/dataModel";
 import { verifyWriteToken } from "./portalAuth";
 
 function orderTotal(order: Doc<"portalOrders">): number | null {
@@ -467,16 +467,6 @@ export const getGraceWorkspaceByOrg = query({
                 ? projects.find((project) => project._id === args.projectId)
                 : projects[0]) ?? null;
 
-        const messages =
-            activeProject?.convexConversationId
-                ? await ctx.db
-                    .query("messages")
-                    .withIndex("by_conversation", (q) =>
-                        q.eq("conversationId", activeProject.convexConversationId as Id<"conversations">)
-                    )
-                    .collect()
-                : [];
-
         return {
             projects: projects.map((project) => ({
                 _id: project._id,
@@ -498,14 +488,6 @@ export const getGraceWorkspaceByOrg = query({
                     convexConversationId: activeProject.convexConversationId ?? null,
                 }
                 : null,
-            messages: sortByNewest(messages.map((message) => ({ ...message, updatedAt: message.createdAt })))
-                .reverse()
-                .map((message) => ({
-                    _id: message._id,
-                    role: message.role,
-                    content: message.content,
-                    createdAt: message.createdAt,
-                })),
         };
     },
 });
@@ -559,55 +541,25 @@ export const saveBottleToGraceProject = mutation({
     },
 });
 
-export const saveGraceChatTurn = mutation({
+export const renameGraceProject = mutation({
     args: {
         writeToken: v.string(),
         clerkOrgId: v.string(),
-        clerkUserId: v.string(),
         projectId: v.id("graceProjects"),
-        userMessage: v.string(),
-        assistantMessage: v.string(),
+        name: v.string(),
     },
     handler: async (ctx, args) => {
         verifyWriteToken(args.writeToken);
+
+        const name = args.name.trim();
+        if (!name) throw new Error("project_name_required");
 
         const project = await ctx.db.get(args.projectId);
         if (!project || project.clerkOrgId !== args.clerkOrgId) {
             throw new Error("Project not found for this organization.");
         }
 
-        const now = Date.now();
-        let conversationId = project.convexConversationId ?? null;
-
-        if (!conversationId) {
-            conversationId = await ctx.db.insert("conversations", {
-                sessionId: `portal:${args.clerkOrgId}:${args.projectId}`,
-                userId: args.clerkUserId,
-                startedAt: now,
-                lastMessageAt: now,
-            });
-            await ctx.db.patch(project._id, {
-                convexConversationId: conversationId,
-                updatedAt: now,
-            });
-        }
-
-        await ctx.db.insert("messages", {
-            conversationId,
-            role: "user",
-            content: args.userMessage,
-            createdAt: now,
-        });
-        await ctx.db.insert("messages", {
-            conversationId,
-            role: "assistant",
-            content: args.assistantMessage,
-            createdAt: now + 1,
-        });
-
-        await ctx.db.patch(conversationId, { lastMessageAt: now + 1 });
-        await ctx.db.patch(project._id, { updatedAt: now + 1 });
-
-        return { conversationId };
+        await ctx.db.patch(project._id, { name: name.slice(0, 120), updatedAt: Date.now() });
+        return { projectId: project._id, name };
     },
 });

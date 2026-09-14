@@ -219,44 +219,14 @@ export async function saveProductToGraceProjectForViewer(args: {
     return { ...result, projectId };
 }
 
-export async function askGraceForViewerProject(projectId: string, message: string) {
+export async function renameGraceProjectForViewer(projectId: string, name: string) {
     const viewer = await requirePortalViewer();
-
-    const workspace = await getPortalConvex().query(api.portal.getGraceWorkspaceByOrg, {
-        clerkOrgId: viewer.clerkOrgId,
-        projectId: projectId as never,
-    });
-
-    if (!workspace.activeProject) {
-        throw new Error("Grace project not found.");
-    }
-
-    const history = [
-        ...workspace.messages.map((entry) => ({
-            role: entry.role,
-            content: entry.content,
-        })),
-        {
-            role: "user" as const,
-            content: message,
-        },
-    ];
-
-    const assistantMessage = await getPortalConvex().action(api.grace.askGrace, {
-        messages: history,
-        voiceMode: false,
-    });
-
-    await getPortalConvex().mutation(api.portal.saveGraceChatTurn, {
+    return await getPortalConvex().mutation(api.portal.renameGraceProject, {
         writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
-        clerkUserId: viewer.clerkUserId,
-        projectId: projectId as never,
-        userMessage: message,
-        assistantMessage,
+        projectId: projectId as Id<"graceProjects">,
+        name,
     });
-
-    return { assistantMessage };
 }
 
 // ─── Identity bridge (Clerk org ↔ Shopify customer) ─────────────────────────

@@ -6,6 +6,7 @@ import {
     createGraceProjectForViewer,
     createPortalDraftForViewer,
     createPortalDraftFromOrderForViewer,
+    renameGraceProjectForViewer,
 } from "@/lib/portal/server";
 import {
     approveCertificateAsStaff,
@@ -36,6 +37,16 @@ export async function createGraceProjectAction() {
     await createGraceProjectForViewer();
     revalidatePath("/portal/grace");
     redirect("/portal/grace");
+}
+
+export async function renameGraceProjectAction(formData: FormData) {
+    const projectId = String(formData.get("projectId") ?? "");
+    const name = String(formData.get("name") ?? "").trim();
+    if (!projectId || !name) return;
+
+    await renameGraceProjectForViewer(projectId, name);
+    revalidatePath("/portal/grace");
+    redirect(`/portal/grace?project=${projectId}`);
 }
 
 // ─── Resale certificates ────────────────────────────────────────────────────

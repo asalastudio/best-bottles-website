@@ -46,6 +46,20 @@ function NavIcon({ id }: { id: string }) {
                 <path d="M5.5 6h5M5.5 8.5h3" />
             </svg>
         ),
+        // Bookmark — a project is a set the customer deliberately kept.
+        "grace-projects": (
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 2h8a1 1 0 0 1 1 1v11l-5-3-5 3V3a1 1 0 0 1 1-1Z" />
+            </svg>
+        ),
+        // Arrow leaving a frame — this one exits the portal shell.
+        "grace-open": (
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M9 2h5v5" />
+                <path d="M14 2 7.5 8.5" />
+                <path d="M12 10v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3" />
+            </svg>
+        ),
         documents: (
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 2h7l3 3v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z" />
@@ -76,22 +90,26 @@ function NavIcon({ id }: { id: string }) {
     );
 }
 
-const navSections = [
+const navSections: Array<{
+    label?: string;
+    items: Array<{ href: string; label: string; id: string; external?: boolean }>;
+}> = [
     {
         items: [
             { href: "/portal", label: "Overview", id: "dashboard" },
             { href: "/portal/orders", label: "Orders", id: "orders" },
             { href: "/portal/drafts", label: "Drafts", id: "drafts" },
-            { href: "/portal/grace", label: "Grace AI", id: "grace" },
-            { href: "/portal/sessions", label: "Grace Sessions", id: "grace" },
         ],
     },
     {
+        // One Grace section, in the order a customer moves through it: what
+        // they saved, what they said, and where they go to say more. Talking
+        // to Grace happens on the public workspace, never inside the portal.
+        label: "Grace",
         items: [
-            // Full-screen Grace workspace lives at a public top-level route.
-            // External arrow signals it leaves the portal shell into Grace's
-            // own surface; signed-in customers get account-linked history there.
-            { href: "/grace-workspace", label: "Grace Workspace ↗", id: "grace", external: true },
+            { href: "/portal/grace", label: "Projects", id: "grace-projects" },
+            { href: "/portal/sessions", label: "Sessions", id: "grace" },
+            { href: "/grace-workspace", label: "Open Workspace ↗", id: "grace-open", external: true },
         ],
     },
     {
@@ -164,6 +182,11 @@ export default function PortalSidebar({
                 {navSections.map((section, si) => (
                     <div key={si}>
                         {si > 0 && <div className="h-px bg-neutral-100 mx-4 my-1.5" />}
+                        {section.label && (
+                            <p className="px-5 pt-1.5 pb-1 font-sans text-[10px] font-semibold uppercase tracking-wide text-neutral-300">
+                                {section.label}
+                            </p>
+                        )}
                         {section.items.map((item) => {
                             const active = isActive(item.href);
                             return (
