@@ -672,7 +672,7 @@ function VariantImagePicker({
                 key={tile.id}
                 type="button"
                 onClick={() => onSelect(tile.variant)}
-                title={`${tile.label} · ${tile.graceSku}`}
+                title={tile.label}
                 aria-label={`Select ${tile.label} variant`}
                 aria-pressed={isSelected}
                 className={`
@@ -2544,7 +2544,7 @@ export default function ProductDetailClient({
                                                                     setSelectedCapComponentSku(item.websiteSku);
                                                                 }
                                                             }}
-                                                            title={item.graceSku ?? item.websiteSku}
+                                                            title={item.websiteSku}
                                                             className="flex shrink-0 flex-col items-center gap-1.5"
                                                         >
                                                             <span
@@ -2879,7 +2879,7 @@ export default function ProductDetailClient({
                                                                     setSelectedCapComponentSku(item.websiteSku);
                                                                 }
                                                             }}
-                                                            title={item.graceSku ?? item.websiteSku}
+                                                            title={item.websiteSku}
                                                             className="flex flex-col items-center gap-1.5 group/variant"
                                                         >
                                                             <span
