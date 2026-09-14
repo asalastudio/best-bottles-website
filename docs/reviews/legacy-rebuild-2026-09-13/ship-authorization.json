@@ -1,0 +1,22 @@
+{
+ "schemaVersion": 1,
+ "release": "legacy-rebuild-2026-09-13",
+ "actor": "Jordan Richter",
+ "instruction": "lock the approval and publish",
+ "authorizedAt": "2026-09-14T06:38:16.910825Z",
+ "publicationAuthorized": true,
+ "indexingAuthorized": true,
+ "approvedLockSha256": "d167989a7ed660fb2748810aeeb18725dbe6d107e6dcae31256fd717042e8c66",
+ "rows": 283,
+ "counts": {
+  "approved": 283,
+  "replacesServed": 205,
+  "identicalToServed": 9,
+  "newPlate": 69,
+  "refused": 0,
+  "skippedAlreadyComplete": 283
+ },
+ "target": "development catalog (NEXT_PUBLIC_CONVEX_URL) and the best-bottles-plates Blob store",
+ "scope": "Only the rows in the approved lock. 283 rows already complete were excluded and are untouched. 205 rows replace a served plate, which is why publication requires --replace.",
+ "note": "Authorizes publication and indexing of these exact approved bytes. Not a production website deployment."
+}
