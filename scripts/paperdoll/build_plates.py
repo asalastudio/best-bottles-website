@@ -23,8 +23,8 @@ Two render modes:
       base lands on the same line. Gates, unchanged from the shipping builder:
       post-alignment residual ≤ 12/255 WITHIN a session, closure axis on the
       canvas centre line within 2 px on every capped plate.
-      Registration groups by (familyId, body token): a frosted body filed
-      under a clear group is still its own photograph.
+      Registration uses explicit physical standards where mapped, otherwise exact
+      catalog product groups. SKU spelling never determines the group.
   standalone — components. One scale per family, ink box centred, the part
       must not touch its source edge.
 
@@ -51,7 +51,7 @@ from scipy.signal import fftconvolve
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from build_tokens import parse_sku  # noqa: E402
+
 
 REPO = HERE.parents[1]
 DATA = REPO / "data" / "paper-doll"
@@ -64,7 +64,7 @@ AXIS_MAX = 2.0               # px, closure axis vs canvas centre
 STANDALONE_HEIGHT = 0.62     # a component's tallest part fills this much of the canvas height
 WIDTH_TOLERANCE = 0.03       # body widths within 3 % are the same photographic session
 BUILDER = {"name": "build_plates.py", "version": "1.0.0"}
-HANGING_CLOSURES = {"AnSp", "AnSpTsl"}   # a bulb or tassel hangs off the bottle: framed as a composition
+HANGING_CLOSURES = {"Vintage Bulb Sprayer", "Vintage Bulb Sprayer with Tassel", "Atomizer"}   # a bulb or tassel hangs off the bottle: framed as a composition
 
 
 # ---------------------------------------------------------------- image helpers (the shipping builder's, verbatim)
@@ -190,7 +190,7 @@ def validate_front_source(src: dict, website_sku: str):
 
 
 def plan_groups(selection, xref, args):
-    """publishable xref rows -> render groups keyed by (familyId, body token | 'standalone')."""
+    """Keep distinct physical profiles separate using explicit catalog metadata."""
     groups = defaultdict(lambda: {"skus": []})
     for rec in xref["products"]:
         if not rec["publishable"]:
@@ -207,8 +207,12 @@ def plan_groups(selection, xref, args):
         if mode == "standalone":
             key = (fid, "standalone")
         else:
-            parsed = parse_sku(rec["websiteSku"])
-            key = (fid, parsed["body"] or rec["websiteSku"])
+            # A familyId can contain tall and footed profiles. Never merge it
+            # blindly, and never infer the physical body from SKU spelling.
+            group_id = rec.get("physicalStandardId") or rec.get("productGroupId")
+            if not group_id:
+                raise RuntimeError(f"physical_group_hold:{rec['websiteSku']}: refresh catalog group metadata before rendering")
+            key = (fid, group_id)
         on = source_of(entry, "on") or source_of(entry, "part") or source_of(entry, "unknown")
         off = source_of(entry, "off")
         if on is None:
@@ -216,7 +220,9 @@ def plan_groups(selection, xref, args):
                 raise RuntimeError(f"only an uncapped source exists for {rec['websiteSku']}; refusing to use it as the front")
             continue
         validate_front_source(on, rec["websiteSku"])
-        closure = parse_sku(rec["websiteSku"])["closure"]
+        if "applicator" not in rec:
+            raise RuntimeError(f"applicator_metadata_hold:{rec['websiteSku']}: refresh catalog metadata before rendering")
+        closure = rec["applicator"]
         groups[key]["skus"].append({"sku": rec["websiteSku"], "graceSku": rec["graceSku"], "familyId": fid, "family": rec["family"],
                                     "closure": closure, "warnings": rec["warnings"], "on": on, "off": off, "mode": mode})
     ordered = sorted(groups.items(), key=lambda kv: (-len(kv[1]["skus"]), kv[0]))

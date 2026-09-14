@@ -1,0 +1,558 @@
+{
+  "basis": "Exact catalog records, compatibility edges and master-source cap photos. Gold descriptions specify shiny gold. Clear 30 mL Black visually reconciled with current assembly and tall shiny black component in black-cap-identity.png. No SKU token parsing. Thumbnail bytes reused unchanged; no asset approval or publication.",
+  "ledgerGeneratedAt": "2026-09-13T02:08:59.243Z",
+  "rows": [
+    {
+      "sku": "GBBstn1ozMtlRollonBlk",
+      "itemName": "Boston round clear glass bottle with metal roll on and black cap, 1 oz capacity",
+      "componentSku": "CPRoll20-400TallShnBlk",
+      "componentName": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonGl",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with metal roller plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonMattBlk",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with metal roller plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonMattGl",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with metal roller plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonMattSl",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with metal roller plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonShnSl",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with metal roller plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozRollonMattBlk",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozRollonMattGl",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozRollonMattSl",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozRollonShBlk",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnBlk",
+      "componentName": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozRollonShGl",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn1ozRollonShnSl",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozMtlRollBlk",
+      "itemName": "Boston round design 2 ounce clear glass bottle with metal roller ball plug and shiny black cap, price each",
+      "componentSku": "CPRoll20-400TallShnBlk",
+      "componentName": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozMtlRollGl",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price ea",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattBlk",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price e",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattGl",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price ea",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattSl",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. P",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozMtlRollShnSl",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozRollGl",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozRollMattBlk",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozRollMattSl",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozRollShnBlk",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnBlk",
+      "componentName": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozRollShnSl",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstn2ozRollonMattGl",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonGl",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattGl",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonShnBlk",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnBlk",
+      "componentName": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonShnSl",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonGl",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattGl",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonShnBlk",
+      "itemName": "Cylinder design 30ml,1 oz Amber glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+      "componentSku": "CPRoll20-400TallShnBlk",
+      "componentName": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonShnSl",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonGl",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with metal roller ball plug and shiny gold cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. Pri",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattBlk",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with metal roller ball plug and matte black cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. Pr",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattGl",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with metal roller ball plug and matte gold cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. Pri",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattSl",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with metal roller ball plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. P",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonShnSl",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with metal roller ball plug and shiny silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. P",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonGl",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter roller ball. Price e",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattBlk",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with plastic roller ball plug and matte black cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattGl",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with plastic roller ball plug and matte gold cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter roller ball. Price e",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattSl",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with plastic roller ball plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonShnBlk",
+      "itemName": "Boston Round design 60ml,2 oz Amber glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+      "componentSku": "CPRoll20-400TallShnBlk",
+      "componentName": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonShnSl",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonGl",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with metal roller plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price e",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonMattBlk",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with metal roller plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonMattGl",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with metal roller plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price e",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonMattSl",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with metal roller plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball.",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonShnSl",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with metal roller plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonGl",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonMattBlk",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonMattGl",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonMattSl",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Pric",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonShnBlk",
+      "itemName": "Cylinder design 30ml,1 oz Blue glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+      "componentSku": "CPRoll20-400TallShnBlk",
+      "componentName": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonShnSl",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Pric",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonGl",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Pr",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonMattBlk",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. P",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonMattGl",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Pr",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonMattSl",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller b",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonShnSl",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball.",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonGl",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. .   oils. Refillable bottle with large, 12mm diameter roller ba",
+      "componentSku": "CPRoll20-400TallShnGl",
+      "componentName": "Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattBlk",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "componentSku": "CPRoll20-400TallMattBlk",
+      "componentName": "Tall Matte Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattGl",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. .   oils. Refillable bottle with large, 12mm diameter roller ba",
+      "componentSku": "CPRoll20-400TallMattGl",
+      "componentName": "Tall Matte Gold cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MGLD-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattSl",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Pric",
+      "componentSku": "CPRoll20-400TallMattSl",
+      "componentName": "Tall Matte Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-MSLV-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonShnBlk",
+      "itemName": "Boston design 60ml,2 oz blue glass bottle with plastic roller ball plug and black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+      "componentSku": "CPRoll20-400TallShnBlk",
+      "componentName": "Tall Shiny Black cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SBLK-20400-T",
+      "compatibleInSnapshot": true
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonShnSl",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Pric",
+      "componentSku": "CPRoll20-400TallShnSl",
+      "componentName": "Tall Shiny Silver cap or closure for rollon bottles, Threadsize 20-400",
+      "componentGraceSku": "CMP-ROC-SSLV-20400-T",
+      "compatibleInSnapshot": true
+    }
+  ]
+}

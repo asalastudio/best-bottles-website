@@ -46,8 +46,9 @@ dist/ or legacy manifests ──publish.mjs──▶ Blob objects + productPlate
 | verify | `node scripts/paperdoll/verify.mjs [--sample 40] [--all-urls] [--strict]` | `NEXT_PUBLIC_CONVEX_URL` |
 | prune rows | `node scripts/paperdoll/prune.mjs --orphans` / `--sku A,B` (`--apply` to delete) | write token for `--apply` |
 
-`set -a; source .env.local; set +a` before any of them. Which deployment they
-touch is decided by `NEXT_PUBLIC_CONVEX_URL` alone; production needs the
+The publisher entry points load the linked project's ignored `.env.local`
+automatically when a variable is missing. Other commands may use
+`set -a; source .env.local; set +a`. Which deployment they touch is decided by `NEXT_PUBLIC_CONVEX_URL` alone; production needs the
 production write token (`npx convex env get BEST_BOTTLES_CONVEX_WRITE_TOKEN --prod`).
 
 The only permitted PSD source is

@@ -1,0 +1,2063 @@
+{
+  "schemaVersion": 1,
+  "id": "tulip-amber-capoff-recovery-2026-09-13",
+  "family": "Tulip",
+  "scope": "Tulip 5 mL Amber 13-415 only",
+  "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+  "userSuppliedUncappedFolder": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD ",
+  "userSuppliedUncappedFolderRelative": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD ",
+  "method": "exact catalog identity plus paired capped/uncapped PSD basenames in the supplied master family folder",
+  "generatedAt": "2026-09-13T23:23:12.241853+00:00",
+  "ledgerGeneratedAt": "2026-09-13T23:15:55.481Z",
+  "approvalAuthorized": false,
+  "publicationAuthorized": false,
+  "summary": {
+    "rows": 30,
+    "currentCapOnDownloaded": 30,
+    "preparedCapOn": 30,
+    "preparedCapOff": 30,
+    "clearRowsIncluded": 0
+  },
+  "rows": [
+    {
+      "websiteSku": "GBTulipAmb5BlkSht",
+      "graceSku": "GB-DEC-AMB-5ML-S",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Amber",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5BlkSht/8762394e8405c31691311386dddfd24330c2c1f89f5ed38f56162e29c86c90b7.front-on-1000x1100.webp",
+        "sha256": "8762394e8405c31691311386dddfd24330c2c1f89f5ed38f56162e29c86c90b7",
+        "bytes": 18668,
+        "path": "assets/GBTulipAmb5BlkSht.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          316,
+          315,
+          693,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5BlkSht.on.webp",
+        "visibleBox": [
+          290,
+          221,
+          719,
+          1062
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5BlkSht.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5BlkSht/ee620d54675ba8b11a09c1910be40f7a008de3b7cedbcb822819cce316cb872a.front-on-1000x1100.webp",
+        "sha256": "ee620d54675ba8b11a09c1910be40f7a008de3b7cedbcb822819cce316cb872a",
+        "bytes": 22286,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/1. GBTulipAmb5BlkSht.psd",
+        "sourceSha256": "3201a38b9e88069133adf812f27477dcce616a7c4bbbad223368a49daf178854",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5BlkSht.off.webp",
+        "visibleBox": [
+          117,
+          252,
+          885,
+          1062
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5BlkSht.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5BlkSht/d88f612e837be4944d1a3fcf671e2797531c4acd2e5321459d4232273d40f405.front-off-1000x1100.webp",
+        "sha256": "d88f612e837be4944d1a3fcf671e2797531c4acd2e5321459d4232273d40f405",
+        "bytes": 27832,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /1. GBTulipAmb5BlkSht.psd",
+        "sourceSha256": "c7919dd7100b0b9715196f67cd1faddf9d340b9133287eb6d3d2da6bab0ad4e2",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/1. GBTulipAmb5BlkSht.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /1. GBTulipAmb5BlkSht.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /1. GBTulipAmb5BlkSht.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5Gl",
+      "graceSku": "GB-CYL-AMB-5ML-GLD-T",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Gold",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5Gl/ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f.front-on-1000x1100.webp",
+        "sha256": "ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f",
+        "bytes": 17846,
+        "path": "assets/GBTulipAmb5Gl.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          310,
+          156,
+          687,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5Gl.on.webp",
+        "visibleBox": [
+          284,
+          40,
+          712,
+          1062
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5Gl.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5Gl/2991186eefeb538e7c643187ba37c0189f883f0bd80d8f52e5eeec339eb02db7.front-on-1000x1100.webp",
+        "sha256": "2991186eefeb538e7c643187ba37c0189f883f0bd80d8f52e5eeec339eb02db7",
+        "bytes": 20902,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/28. GBTulipAmb5Gl.psd",
+        "sourceSha256": "b2dad27e84b25800c19f508c58bdbbf79084dbde47360f41ae83dcf4616ad012",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5Gl.off.webp",
+        "visibleBox": [
+          102,
+          252,
+          900,
+          1062
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5Gl.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5Gl/fccbad56697e55604ff4098c6e8ed6129d5ff1c4a563a16723d0a5ffe6e3e48d.front-off-1000x1100.webp",
+        "sha256": "fccbad56697e55604ff4098c6e8ed6129d5ff1c4a563a16723d0a5ffe6e3e48d",
+        "bytes": 29638,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /28. GBTulipAmb5Gl.psd",
+        "sourceSha256": "6fdb81eedb4a15fed9f59695a5e9af941b686ae2916e19a3f1fc1e30edfef298",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/28. GBTulipAmb5Gl.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /28. GBTulipAmb5Gl.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /28. GBTulipAmb5Gl.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollBlkDot",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-BKDT",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black Dotted",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkDot/734fad3a219bee64873a35c3b1b485419dd721bf5dfea4cea38d24622f38c114.front-on-1000x1100.webp",
+        "sha256": "734fad3a219bee64873a35c3b1b485419dd721bf5dfea4cea38d24622f38c114",
+        "bytes": 16414,
+        "path": "assets/GBTulipAmb5MtlRollBlkDot.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          314,
+          170,
+          692,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5MtlRollBlkDot.on.webp",
+        "visibleBox": [
+          291,
+          59,
+          715,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkDot.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkDot/c94eb029766b18f8afcaa451a8968072c090b1531b157cf28802896544e42a62.front-on-1000x1100.webp",
+        "sha256": "c94eb029766b18f8afcaa451a8968072c090b1531b157cf28802896544e42a62",
+        "bytes": 19482,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/26. GBTulipAmb5MtlRollBlkDot.psd",
+        "sourceSha256": "23e0d5e2aee39ddda19e4cf7927e72329f78d17a4bc1a63d7a53c4ed50c026ba",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5MtlRollBlkDot.off.webp",
+        "visibleBox": [
+          116,
+          98,
+          886,
+          1061
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkDot.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkDot/f2f4f9d699c9276c618ca7806c67ec9eb9079bb743bc906f205981110a9671f7.front-off-1000x1100.webp",
+        "sha256": "f2f4f9d699c9276c618ca7806c67ec9eb9079bb743bc906f205981110a9671f7",
+        "bytes": 31698,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /26. GBTulipAmb5MtlRollBlkDot.psd",
+        "sourceSha256": "241793e929de25d11e262f548b0a4745cb75b51dbc5a8f61effb9f5d0b9f7ee9",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/26. GBTulipAmb5MtlRollBlkDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /26. GBTulipAmb5MtlRollBlkDot.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /26. GBTulipAmb5MtlRollBlkDot.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollBlkSh",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SBLK",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkSh/7e1b83974fa001731acdb9bd41559b23730783ca1c35d5b4c440abac9b145da8.front-on-1000x1100.webp",
+        "sha256": "7e1b83974fa001731acdb9bd41559b23730783ca1c35d5b4c440abac9b145da8",
+        "bytes": 14358,
+        "path": "assets/GBTulipAmb5MtlRollBlkSh.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          316,
+          166,
+          693,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5MtlRollBlkSh.on.webp",
+        "visibleBox": [
+          292,
+          54,
+          717,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkSh.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkSh/6a1f51a277dec9871ababb92164f4e5f998960896328f88f2ef0acc173a992d5.front-on-1000x1100.webp",
+        "sha256": "6a1f51a277dec9871ababb92164f4e5f998960896328f88f2ef0acc173a992d5",
+        "bytes": 17242,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/24. GBTulipAmb5MtlRollBlkSh.psd",
+        "sourceSha256": "50921e9390d0549e0817127fb6d35385b11c0e2b8e8cbb31b1843a80d707386c",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5MtlRollBlkSh.off.webp",
+        "visibleBox": [
+          114,
+          101,
+          888,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkSh.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkSh/1f00d4c81456e94bd87f6b30e5fcb3d4b4ff2700a4b394ad2065bac6b3613c9b.front-off-1000x1100.webp",
+        "sha256": "1f00d4c81456e94bd87f6b30e5fcb3d4b4ff2700a4b394ad2065bac6b3613c9b",
+        "bytes": 28918,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /24. GBTulipAmb5MtlRollBlkSh.psd",
+        "sourceSha256": "81be7b988ccf4621e1f5b7dfb2bd9cee6dda5bad385f31ad4c401f8368ef0e5b",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/24. GBTulipAmb5MtlRollBlkSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /24. GBTulipAmb5MtlRollBlkSh.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /24. GBTulipAmb5MtlRollBlkSh.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollCuMatt",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-MCPR",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Copper",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollCuMatt/acaed0128405497106da55f769d79edf1dd20a0606a8b3f8219b63cb63f436ea.front-on-1000x1100.webp",
+        "sha256": "acaed0128405497106da55f769d79edf1dd20a0606a8b3f8219b63cb63f436ea",
+        "bytes": 15978,
+        "path": "assets/GBTulipAmb5MtlRollCuMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          316,
+          157,
+          693,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5MtlRollCuMatt.on.webp",
+        "visibleBox": [
+          292,
+          44,
+          717,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollCuMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollCuMatt/19680b3a397515a61c3105dce9468452feedd67d94c6cd9df7d514af0580e303.front-on-1000x1100.webp",
+        "sha256": "19680b3a397515a61c3105dce9468452feedd67d94c6cd9df7d514af0580e303",
+        "bytes": 19010,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/22. GBTulipAmb5MtlRollCuMatt.psd",
+        "sourceSha256": "0807357ec8dbd57160adaf86774adcc4622e0dae6e70d3f48ecd2cc8cc562903",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5MtlRollCuMatt.off.webp",
+        "visibleBox": [
+          111,
+          101,
+          891,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollCuMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollCuMatt/aaafcd93448d0a19259ff592f377f2e2dff32f80a5084bb5140dd8d6932030b0.front-off-1000x1100.webp",
+        "sha256": "aaafcd93448d0a19259ff592f377f2e2dff32f80a5084bb5140dd8d6932030b0",
+        "bytes": 33146,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /22. GBTulipAmb5MtlRollCuMatt.psd",
+        "sourceSha256": "2ebd77b6e70e73b038e1c76e6add9fa27964a58607ec5cbc138a3f6ed29daf26",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/22. GBTulipAmb5MtlRollCuMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /22. GBTulipAmb5MtlRollCuMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /22. GBTulipAmb5MtlRollCuMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollGlMatt",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-MGLD",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlMatt/370a4661bd119ba69fde0d15a4a2276e97414f7b684a910c32b520ab523ddc62.front-on-1000x1100.webp",
+        "sha256": "370a4661bd119ba69fde0d15a4a2276e97414f7b684a910c32b520ab523ddc62",
+        "bytes": 15610,
+        "path": "assets/GBTulipAmb5MtlRollGlMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          313,
+          152,
+          691,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5MtlRollGlMatt.on.webp",
+        "visibleBox": [
+          290,
+          39,
+          714,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlMatt/57895b88ea7345b3ebe4b45f0690cab3effdd267f90a6c4e81c107ae707cdac7.front-on-1000x1100.webp",
+        "sha256": "57895b88ea7345b3ebe4b45f0690cab3effdd267f90a6c4e81c107ae707cdac7",
+        "bytes": 18780,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/16. GBTulipAmb5MtlRollGlMatt.psd",
+        "sourceSha256": "b6ffdb0000ee0d6c96fd4c6ff752d8d40495c5ce1efc507beb835c78a87e023a",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5MtlRollGlMatt.off.webp",
+        "visibleBox": [
+          111,
+          99,
+          891,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlMatt/3c3f08cef2876cedc6fd1b99b0b0d27557d9a1284fd0814b6816d0790aa0376d.front-off-1000x1100.webp",
+        "sha256": "3c3f08cef2876cedc6fd1b99b0b0d27557d9a1284fd0814b6816d0790aa0376d",
+        "bytes": 30588,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /16. GBTulipAmb5MtlRollGlMatt.psd",
+        "sourceSha256": "ff4aa4fa6a3f4e01abf5b055c7a5377481c4967d1aa6aada6633c9d2b56198c4",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/16. GBTulipAmb5MtlRollGlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /16. GBTulipAmb5MtlRollGlMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /16. GBTulipAmb5MtlRollGlMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollGlSh",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SGLD",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlSh/ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f.front-on-1000x1100.webp",
+        "sha256": "ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f",
+        "bytes": 17846,
+        "path": "assets/GBTulipAmb5MtlRollGlSh.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          310,
+          156,
+          687,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5MtlRollGlSh.on.webp",
+        "visibleBox": [
+          286,
+          42,
+          710,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlSh.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlSh/05655fba63bdf481302792ded2fa737d15410de78c7b176fd91a59b1d6156fbc.front-on-1000x1100.webp",
+        "sha256": "05655fba63bdf481302792ded2fa737d15410de78c7b176fd91a59b1d6156fbc",
+        "bytes": 20644,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/18. GBTulipAmb5MtlRollGlSh.psd",
+        "sourceSha256": "04a2f593e054d6f0e52fcec82bdc0c50dbddb38bc4a3fd306ea1e6655b2b48a0",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5MtlRollGlSh.off.webp",
+        "visibleBox": [
+          111,
+          98,
+          892,
+          1062
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlSh.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlSh/59bfa54c178c167b0287a5c8afd59e16e5b442cbb8f4e6f3b48054f37571a65a.front-off-1000x1100.webp",
+        "sha256": "59bfa54c178c167b0287a5c8afd59e16e5b442cbb8f4e6f3b48054f37571a65a",
+        "bytes": 31440,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /18. GBTulipAmb5MtlRollGlSh.psd",
+        "sourceSha256": "9c14d5efd220fcfa3cd5535930f69025582b75ade055eaa20d90198b31a3d44e",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/18. GBTulipAmb5MtlRollGlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /18. GBTulipAmb5MtlRollGlSh.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /18. GBTulipAmb5MtlRollGlSh.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollPinkDot",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-PKDT",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Pink Dotted",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollPinkDot/df7506e30c94468d226cfeb2e9bb2aa590976272e11ff57798dbd67a1ea2908c.front-on-1000x1100.webp",
+        "sha256": "df7506e30c94468d226cfeb2e9bb2aa590976272e11ff57798dbd67a1ea2908c",
+        "bytes": 17882,
+        "path": "assets/GBTulipAmb5MtlRollPinkDot.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          314,
+          166,
+          692,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5MtlRollPinkDot.on.webp",
+        "visibleBox": [
+          291,
+          54,
+          715,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollPinkDot.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollPinkDot/c310cfe0a0d885bb5f319dabde901602b4de66ab3cefdbba99e303fdd4e2ac0e.front-on-1000x1100.webp",
+        "sha256": "c310cfe0a0d885bb5f319dabde901602b4de66ab3cefdbba99e303fdd4e2ac0e",
+        "bytes": 21288,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/12. GBTulipAmb5MtlRollPinkDot.psd",
+        "sourceSha256": "621f72ca695f770ecd13da9f404ca06f135ab5659b39e5f03ca093fd44652651",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5MtlRollPinkDot.off.webp",
+        "visibleBox": [
+          107,
+          98,
+          894,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollPinkDot.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollPinkDot/d1736741f840846b8e1fcd4c6da5c1c15b91f9aee24ffed13ee9977363bb9778.front-off-1000x1100.webp",
+        "sha256": "d1736741f840846b8e1fcd4c6da5c1c15b91f9aee24ffed13ee9977363bb9778",
+        "bytes": 32286,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /12. GBTulipAmb5MtlRollPinkDot.psd",
+        "sourceSha256": "9bdc7d42100aeacbb933dfc81e59325332ac146618ecab761a254e053c688830",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/12. GBTulipAmb5MtlRollPinkDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /12. GBTulipAmb5MtlRollPinkDot.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /12. GBTulipAmb5MtlRollPinkDot.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollSlDot",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SLDT",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Silver Dotted",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlDot/ec2ba0cde9dd8a01b14ec5f479bc533ca077ccbbf436c6575d084d9fc0ae0c5f.front-on-1000x1100.webp",
+        "sha256": "ec2ba0cde9dd8a01b14ec5f479bc533ca077ccbbf436c6575d084d9fc0ae0c5f",
+        "bytes": 16270,
+        "path": "assets/GBTulipAmb5MtlRollSlDot.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          313,
+          162,
+          691,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5MtlRollSlDot.on.webp",
+        "visibleBox": [
+          290,
+          50,
+          714,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlDot.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlDot/9cc3f94117bd977b33e082669953c8110dc9864003ba6e42f1e1eafd1046967e.front-on-1000x1100.webp",
+        "sha256": "9cc3f94117bd977b33e082669953c8110dc9864003ba6e42f1e1eafd1046967e",
+        "bytes": 19462,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/10. GBTulipAmb5MtlRollSlDot.psd",
+        "sourceSha256": "9ae39c01a1d6a80873f5dfd7f42fa5a345055690ba96f1031cdbf6d720091c08",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5MtlRollSlDot.off.webp",
+        "visibleBox": [
+          112,
+          98,
+          890,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlDot.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlDot/816be4c50efada198f5b88628b940f487a3e1f91e192b8e46becfc00860aa38f.front-off-1000x1100.webp",
+        "sha256": "816be4c50efada198f5b88628b940f487a3e1f91e192b8e46becfc00860aa38f",
+        "bytes": 30484,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /10. GBTulipAmb5MtlRollSlDot.psd",
+        "sourceSha256": "94b20ceb57dd69e1f76e51b8eda12385a689947405a7e4879e7f50b622f7c28e",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/10. GBTulipAmb5MtlRollSlDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /10. GBTulipAmb5MtlRollSlDot.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /10. GBTulipAmb5MtlRollSlDot.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollSlMatt",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-MSLV",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlMatt/63c4d7b7b297575d8d085824ce758e7f00b426c865fb8af35ab7b0a26b6d11c3.front-on-1000x1100.webp",
+        "sha256": "63c4d7b7b297575d8d085824ce758e7f00b426c865fb8af35ab7b0a26b6d11c3",
+        "bytes": 15002,
+        "path": "assets/GBTulipAmb5MtlRollSlMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          314,
+          162,
+          691,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5MtlRollSlMatt.on.webp",
+        "visibleBox": [
+          291,
+          51,
+          716,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlMatt/a8bafc8bb34c5c41113e36fbef401a71441208686e84556cc77dab936cec007a.front-on-1000x1100.webp",
+        "sha256": "a8bafc8bb34c5c41113e36fbef401a71441208686e84556cc77dab936cec007a",
+        "bytes": 17840,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/14. GBTulipAmb5MtlRollSlMatt.psd",
+        "sourceSha256": "78c04181763b207a0ab6016f795f202850789694043dc3b90d39680d632b1458",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5MtlRollSlMatt.off.webp",
+        "visibleBox": [
+          105,
+          99,
+          896,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlMatt/a0ed99065531ccafb0c862bfb9e5ec6eef08c71b04160548c3d4aa27d5b5fe94.front-off-1000x1100.webp",
+        "sha256": "a0ed99065531ccafb0c862bfb9e5ec6eef08c71b04160548c3d4aa27d5b5fe94",
+        "bytes": 29620,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /14. GBTulipAmb5MtlRollSlMatt.psd",
+        "sourceSha256": "478d342e999e238addedbe650cf44647065c217d70e190aab5d7f4d41f9a28e0",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/14. GBTulipAmb5MtlRollSlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /14. GBTulipAmb5MtlRollSlMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /14. GBTulipAmb5MtlRollSlMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollSlSh",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SSLV",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlSh/0780b7fb715058fa1b7cade9e96ba257748401c5150eb49387e5b3f6b69b4d8e.front-on-1000x1100.webp",
+        "sha256": "0780b7fb715058fa1b7cade9e96ba257748401c5150eb49387e5b3f6b69b4d8e",
+        "bytes": 16142,
+        "path": "assets/GBTulipAmb5MtlRollSlSh.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          311,
+          156,
+          688,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5MtlRollSlSh.on.webp",
+        "visibleBox": [
+          287,
+          43,
+          711,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlSh.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlSh/9bfecf0577d95442951ec8f15936d86e6e13b4bc0796965c4fccf7e20f04ef3f.front-on-1000x1100.webp",
+        "sha256": "9bfecf0577d95442951ec8f15936d86e6e13b4bc0796965c4fccf7e20f04ef3f",
+        "bytes": 18422,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/20. GBTulipAmb5MtlRollSlSh.psd",
+        "sourceSha256": "b6b8220a04e4ded6956e9da5d58be6a68055d0ec76c1fe714bf8d1dca990b5f9",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5MtlRollSlSh.off.webp",
+        "visibleBox": [
+          112,
+          98,
+          889,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlSh.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlSh/9cb5117d5b040623abad742a02f1f8294007984d8719fbf2dff3e672b4e9ef06.front-off-1000x1100.webp",
+        "sha256": "9cb5117d5b040623abad742a02f1f8294007984d8719fbf2dff3e672b4e9ef06",
+        "bytes": 32168,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /20. GBTulipAmb5MtlRollSlSh.psd",
+        "sourceSha256": "96cb2dbeee986c91a440a4d1cd5843dc65f8961f38a2b921bf7d51d4d55c5dad",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/20. GBTulipAmb5MtlRollSlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /20. GBTulipAmb5MtlRollSlSh.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /20. GBTulipAmb5MtlRollSlSh.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollBlkDot",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-BKDT",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black Dotted",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollBlkDot/734fad3a219bee64873a35c3b1b485419dd721bf5dfea4cea38d24622f38c114.front-on-1000x1100.webp",
+        "sha256": "734fad3a219bee64873a35c3b1b485419dd721bf5dfea4cea38d24622f38c114",
+        "bytes": 16414,
+        "path": "assets/GBTulipAmb5RollBlkDot.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          314,
+          170,
+          692,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5RollBlkDot.on.webp",
+        "visibleBox": [
+          291,
+          59,
+          715,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollBlkDot.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollBlkDot/c94eb029766b18f8afcaa451a8968072c090b1531b157cf28802896544e42a62.front-on-1000x1100.webp",
+        "sha256": "c94eb029766b18f8afcaa451a8968072c090b1531b157cf28802896544e42a62",
+        "bytes": 19482,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/27. GBTulipAmb5RollBlkDot.psd",
+        "sourceSha256": "23e0d5e2aee39ddda19e4cf7927e72329f78d17a4bc1a63d7a53c4ed50c026ba",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5RollBlkDot.off.webp",
+        "visibleBox": [
+          116,
+          85,
+          886,
+          1061
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollBlkDot.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollBlkDot/0a514f264aebc6aab28acf284a1bc09f66835e00f1e32b1f66bf5b968d6987b8.front-off-1000x1100.webp",
+        "sha256": "0a514f264aebc6aab28acf284a1bc09f66835e00f1e32b1f66bf5b968d6987b8",
+        "bytes": 30898,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /27. GBTulipAmb5RollBlkDot.psd",
+        "sourceSha256": "09033d4c03a5188cec60bbc8784d8ced127d391c2376757156d351b89c6a7bf7",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/27. GBTulipAmb5RollBlkDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /27. GBTulipAmb5RollBlkDot.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /27. GBTulipAmb5RollBlkDot.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollBlkSh",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SBLK",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollBlkSh/7e1b83974fa001731acdb9bd41559b23730783ca1c35d5b4c440abac9b145da8.front-on-1000x1100.webp",
+        "sha256": "7e1b83974fa001731acdb9bd41559b23730783ca1c35d5b4c440abac9b145da8",
+        "bytes": 14358,
+        "path": "assets/GBTulipAmb5RollBlkSh.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          316,
+          166,
+          693,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5RollBlkSh.on.webp",
+        "visibleBox": [
+          292,
+          54,
+          717,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollBlkSh.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollBlkSh/6a1f51a277dec9871ababb92164f4e5f998960896328f88f2ef0acc173a992d5.front-on-1000x1100.webp",
+        "sha256": "6a1f51a277dec9871ababb92164f4e5f998960896328f88f2ef0acc173a992d5",
+        "bytes": 17242,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/25. GBTulipAmb5RollBlkSh.psd",
+        "sourceSha256": "50921e9390d0549e0817127fb6d35385b11c0e2b8e8cbb31b1843a80d707386c",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5RollBlkSh.off.webp",
+        "visibleBox": [
+          114,
+          82,
+          888,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollBlkSh.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollBlkSh/d410fc74acdecfd6fef5037afa533f92f7331595453890726b8a97e52e41b4dd.front-off-1000x1100.webp",
+        "sha256": "d410fc74acdecfd6fef5037afa533f92f7331595453890726b8a97e52e41b4dd",
+        "bytes": 28286,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /25. GBTulipAmb5RollBlkSh.psd",
+        "sourceSha256": "5d70a8a2f62f66dc213c4c968bc2de49abc719770a809b10270cc4ba5d91ce80",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/25. GBTulipAmb5RollBlkSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /25. GBTulipAmb5RollBlkSh.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /25. GBTulipAmb5RollBlkSh.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollCuMatt",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-MCPR",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollCuMatt/acaed0128405497106da55f769d79edf1dd20a0606a8b3f8219b63cb63f436ea.front-on-1000x1100.webp",
+        "sha256": "acaed0128405497106da55f769d79edf1dd20a0606a8b3f8219b63cb63f436ea",
+        "bytes": 15978,
+        "path": "assets/GBTulipAmb5RollCuMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          316,
+          157,
+          693,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5RollCuMatt.on.webp",
+        "visibleBox": [
+          292,
+          44,
+          717,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollCuMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollCuMatt/19680b3a397515a61c3105dce9468452feedd67d94c6cd9df7d514af0580e303.front-on-1000x1100.webp",
+        "sha256": "19680b3a397515a61c3105dce9468452feedd67d94c6cd9df7d514af0580e303",
+        "bytes": 19010,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/23. GBTulipAmb5RollCuMatt.psd",
+        "sourceSha256": "e24f4e2cfb25f0e19c2f25515c4dff279677c45b991cfcdde24b79dc089945ef",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5RollCuMatt.off.webp",
+        "visibleBox": [
+          111,
+          82,
+          891,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollCuMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollCuMatt/11052b3e91b3acfea2bd1561d8da2a6ce1d485e52cfa2b304d97d50ff923e319.front-off-1000x1100.webp",
+        "sha256": "11052b3e91b3acfea2bd1561d8da2a6ce1d485e52cfa2b304d97d50ff923e319",
+        "bytes": 32406,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /23. GBTulipAmb5RollCuMatt.psd",
+        "sourceSha256": "18f4b1d451a42ec229a1fa0dfbb1bb5c9af72cdaadd354688c41686321fe9dc2",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/23. GBTulipAmb5RollCuMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /23. GBTulipAmb5RollCuMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /23. GBTulipAmb5RollCuMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollGlMatt",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-MGLD",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollGlMatt/370a4661bd119ba69fde0d15a4a2276e97414f7b684a910c32b520ab523ddc62.front-on-1000x1100.webp",
+        "sha256": "370a4661bd119ba69fde0d15a4a2276e97414f7b684a910c32b520ab523ddc62",
+        "bytes": 15610,
+        "path": "assets/GBTulipAmb5RollGlMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          313,
+          152,
+          691,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5RollGlMatt.on.webp",
+        "visibleBox": [
+          290,
+          39,
+          714,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollGlMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollGlMatt/57895b88ea7345b3ebe4b45f0690cab3effdd267f90a6c4e81c107ae707cdac7.front-on-1000x1100.webp",
+        "sha256": "57895b88ea7345b3ebe4b45f0690cab3effdd267f90a6c4e81c107ae707cdac7",
+        "bytes": 18780,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/17. GBTulipAmb5RollGlMatt.psd",
+        "sourceSha256": "b6ffdb0000ee0d6c96fd4c6ff752d8d40495c5ce1efc507beb835c78a87e023a",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5RollGlMatt.off.webp",
+        "visibleBox": [
+          111,
+          85,
+          892,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollGlMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollGlMatt/bb6d541b9ca40fc4454849f274bcbef39948815b2ef9f6a6460ad0c491684ce2.front-off-1000x1100.webp",
+        "sha256": "bb6d541b9ca40fc4454849f274bcbef39948815b2ef9f6a6460ad0c491684ce2",
+        "bytes": 29668,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /17. GBTulipAmb5RollGlMatt.psd",
+        "sourceSha256": "9bf53a330951f88f00d7792b013c9e795abdab5085602594f7bbd64da9baed11",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/17. GBTulipAmb5RollGlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /17. GBTulipAmb5RollGlMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /17. GBTulipAmb5RollGlMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollGlSh",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SGLD",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollGlSh/ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f.front-on-1000x1100.webp",
+        "sha256": "ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f",
+        "bytes": 17846,
+        "path": "assets/GBTulipAmb5RollGlSh.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          310,
+          156,
+          687,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5RollGlSh.on.webp",
+        "visibleBox": [
+          286,
+          42,
+          710,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollGlSh.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollGlSh/05655fba63bdf481302792ded2fa737d15410de78c7b176fd91a59b1d6156fbc.front-on-1000x1100.webp",
+        "sha256": "05655fba63bdf481302792ded2fa737d15410de78c7b176fd91a59b1d6156fbc",
+        "bytes": 20644,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/19. GBTulipAmb5RollGlSh.psd",
+        "sourceSha256": "04a2f593e054d6f0e52fcec82bdc0c50dbddb38bc4a3fd306ea1e6655b2b48a0",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5RollGlSh.off.webp",
+        "visibleBox": [
+          111,
+          84,
+          891,
+          1062
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollGlSh.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollGlSh/e009ecf4736e1e853f9288c6fd6065b973b304b97cf53689edceeabfb94b3157.front-off-1000x1100.webp",
+        "sha256": "e009ecf4736e1e853f9288c6fd6065b973b304b97cf53689edceeabfb94b3157",
+        "bytes": 30760,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /19. GBTulipAmb5RollGlSh.psd",
+        "sourceSha256": "8f91247a23e751535401bafb204162f37d78696c5c3b932a460b7b8157260eca",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/19. GBTulipAmb5RollGlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /19. GBTulipAmb5RollGlSh.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /19. GBTulipAmb5RollGlSh.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollPinkDot",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-PKDT",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Pink Dotted",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollPinkDot/df7506e30c94468d226cfeb2e9bb2aa590976272e11ff57798dbd67a1ea2908c.front-on-1000x1100.webp",
+        "sha256": "df7506e30c94468d226cfeb2e9bb2aa590976272e11ff57798dbd67a1ea2908c",
+        "bytes": 17882,
+        "path": "assets/GBTulipAmb5RollPinkDot.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          314,
+          166,
+          692,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5RollPinkDot.on.webp",
+        "visibleBox": [
+          291,
+          54,
+          715,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollPinkDot.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollPinkDot/c310cfe0a0d885bb5f319dabde901602b4de66ab3cefdbba99e303fdd4e2ac0e.front-on-1000x1100.webp",
+        "sha256": "c310cfe0a0d885bb5f319dabde901602b4de66ab3cefdbba99e303fdd4e2ac0e",
+        "bytes": 21288,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/13. GBTulipAmb5RollPinkDot.psd",
+        "sourceSha256": "621f72ca695f770ecd13da9f404ca06f135ab5659b39e5f03ca093fd44652651",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5RollPinkDot.off.webp",
+        "visibleBox": [
+          107,
+          82,
+          894,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollPinkDot.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollPinkDot/f1d1a1017a499585edf13571eac0275f1779acd58e98f6832e984b18afb0fa72.front-off-1000x1100.webp",
+        "sha256": "f1d1a1017a499585edf13571eac0275f1779acd58e98f6832e984b18afb0fa72",
+        "bytes": 31446,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /13. GBTulipAmb5RollPinkDot.psd",
+        "sourceSha256": "21abea7a3ffb7e06d757c14ddcd6eae2cd382d16d1b97ca860f56cb2cee38434",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/13. GBTulipAmb5RollPinkDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /13. GBTulipAmb5RollPinkDot.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /13. GBTulipAmb5RollPinkDot.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollSlDot",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SLDT",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Silver Dotted",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlDot/ec2ba0cde9dd8a01b14ec5f479bc533ca077ccbbf436c6575d084d9fc0ae0c5f.front-on-1000x1100.webp",
+        "sha256": "ec2ba0cde9dd8a01b14ec5f479bc533ca077ccbbf436c6575d084d9fc0ae0c5f",
+        "bytes": 16270,
+        "path": "assets/GBTulipAmb5RollSlDot.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          313,
+          162,
+          691,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5RollSlDot.on.webp",
+        "visibleBox": [
+          290,
+          50,
+          714,
+          1055
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollSlDot.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlDot/9cc3f94117bd977b33e082669953c8110dc9864003ba6e42f1e1eafd1046967e.front-on-1000x1100.webp",
+        "sha256": "9cc3f94117bd977b33e082669953c8110dc9864003ba6e42f1e1eafd1046967e",
+        "bytes": 19462,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/11. GBTulipAmb5RollSlDot.psd",
+        "sourceSha256": "9ae39c01a1d6a80873f5dfd7f42fa5a345055690ba96f1031cdbf6d720091c08",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5RollSlDot.off.webp",
+        "visibleBox": [
+          112,
+          85,
+          890,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollSlDot.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlDot/33388d47b08d6a1722ebf5e884dd235df2d707efd7ba024f29c86c0fd69b94b4.front-off-1000x1100.webp",
+        "sha256": "33388d47b08d6a1722ebf5e884dd235df2d707efd7ba024f29c86c0fd69b94b4",
+        "bytes": 29662,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /11. GBTulipAmb5RollSlDot.psd",
+        "sourceSha256": "838f072f8c6e8faee6343a8b45b460244c4997b805b581dee4f71ed3cc74f69b",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/11. GBTulipAmb5RollSlDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /11. GBTulipAmb5RollSlDot.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /11. GBTulipAmb5RollSlDot.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollSlMatt",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-MSLV",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlMatt/63c4d7b7b297575d8d085824ce758e7f00b426c865fb8af35ab7b0a26b6d11c3.front-on-1000x1100.webp",
+        "sha256": "63c4d7b7b297575d8d085824ce758e7f00b426c865fb8af35ab7b0a26b6d11c3",
+        "bytes": 15002,
+        "path": "assets/GBTulipAmb5RollSlMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          314,
+          162,
+          691,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5RollSlMatt.on.webp",
+        "visibleBox": [
+          291,
+          51,
+          716,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollSlMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlMatt/a8bafc8bb34c5c41113e36fbef401a71441208686e84556cc77dab936cec007a.front-on-1000x1100.webp",
+        "sha256": "a8bafc8bb34c5c41113e36fbef401a71441208686e84556cc77dab936cec007a",
+        "bytes": 17840,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/15. GBTulipAmb5RollSlMatt.psd",
+        "sourceSha256": "78c04181763b207a0ab6016f795f202850789694043dc3b90d39680d632b1458",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5RollSlMatt.off.webp",
+        "visibleBox": [
+          105,
+          85,
+          896,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollSlMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlMatt/c2d048eaa29f3ab4e9896db613452899be937a5ab47c3d9eef761b8d683dc737.front-off-1000x1100.webp",
+        "sha256": "c2d048eaa29f3ab4e9896db613452899be937a5ab47c3d9eef761b8d683dc737",
+        "bytes": 28960,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /15. GBTulipAmb5RollSlMatt.psd",
+        "sourceSha256": "e00b6d2caf5d3f7db5b30a6bdaacbd6a4ded12f4e2c86044724c042070f3cb01",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/15. GBTulipAmb5RollSlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /15. GBTulipAmb5RollSlMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /15. GBTulipAmb5RollSlMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollSlSh",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SSLV",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlSh/0780b7fb715058fa1b7cade9e96ba257748401c5150eb49387e5b3f6b69b4d8e.front-on-1000x1100.webp",
+        "sha256": "0780b7fb715058fa1b7cade9e96ba257748401c5150eb49387e5b3f6b69b4d8e",
+        "bytes": 16142,
+        "path": "assets/GBTulipAmb5RollSlSh.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          311,
+          156,
+          688,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5RollSlSh.on.webp",
+        "visibleBox": [
+          287,
+          43,
+          711,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollSlSh.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlSh/9bfecf0577d95442951ec8f15936d86e6e13b4bc0796965c4fccf7e20f04ef3f.front-on-1000x1100.webp",
+        "sha256": "9bfecf0577d95442951ec8f15936d86e6e13b4bc0796965c4fccf7e20f04ef3f",
+        "bytes": 18422,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/21. GBTulipAmb5RollSlSh.psd",
+        "sourceSha256": "b6b8220a04e4ded6956e9da5d58be6a68055d0ec76c1fe714bf8d1dca990b5f9",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5RollSlSh.off.webp",
+        "visibleBox": [
+          112,
+          82,
+          889,
+          1056
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5RollSlSh.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlSh/9157fdc0be0f56fd05f47ef561bec19f628549dcfda428a224855ea51de92cee.front-off-1000x1100.webp",
+        "sha256": "9157fdc0be0f56fd05f47ef561bec19f628549dcfda428a224855ea51de92cee",
+        "bytes": 31464,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /21. GBTulipAmb5RollSlSh.psd",
+        "sourceSha256": "eaf2ad46a69b24010b0a924f0eba6809a70cdbaa851229ce9bad89f641808915",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/21. GBTulipAmb5RollSlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /21. GBTulipAmb5RollSlSh.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /21. GBTulipAmb5RollSlSh.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5Sl",
+      "graceSku": "GB-CYL-AMB-5ML-SLV-T",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Silver",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5Sl/58d90f1adb1e5142132ac0411144857ac9f1c2eb1bc7e1ba5368adc8e430cee9.front-on-1000x1100.webp",
+        "sha256": "58d90f1adb1e5142132ac0411144857ac9f1c2eb1bc7e1ba5368adc8e430cee9",
+        "bytes": 16150,
+        "path": "assets/GBTulipAmb5Sl.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          311,
+          156,
+          688,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5Sl.on.webp",
+        "visibleBox": [
+          285,
+          40,
+          714,
+          1064
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5Sl.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5Sl/efa4efddcfc7a6f7292e4bfabf53673b60b50581ac5e0f659a5ad7346d962f0f.front-on-1000x1100.webp",
+        "sha256": "efa4efddcfc7a6f7292e4bfabf53673b60b50581ac5e0f659a5ad7346d962f0f",
+        "bytes": 18704,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/29. GBTulipAmb5Sl.psd",
+        "sourceSha256": "8c983d2c0c0cd77e136f5beee493d7c3282b0be90992bf2f1b10714affeb4c5b",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5Sl.off.webp",
+        "visibleBox": [
+          109,
+          252,
+          892,
+          1062
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5Sl.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5Sl/c68b1917cb2d9f54213d65a87d3a073750a7323c169295bf6182ecde95f17696.front-off-1000x1100.webp",
+        "sha256": "c68b1917cb2d9f54213d65a87d3a073750a7323c169295bf6182ecde95f17696",
+        "bytes": 28426,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /29. GBTulipAmb5Sl.psd",
+        "sourceSha256": "7ab17807f334f287c76b01a9a24c693e11e09b9c6db066575cef2c6d50793c7d",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/29. GBTulipAmb5Sl.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /29. GBTulipAmb5Sl.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /29. GBTulipAmb5Sl.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryBlkMatt",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MBLK",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkMatt/037612372b3dff22ed263fe418a476845d63351b4801a1edcb6f0c90b2f4ecf1.front-on-1000x1100.webp",
+        "sha256": "037612372b3dff22ed263fe418a476845d63351b4801a1edcb6f0c90b2f4ecf1",
+        "bytes": 16616,
+        "path": "assets/GBTulipAmb5SpryBlkMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          313,
+          42,
+          691,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5SpryBlkMatt.on.webp",
+        "visibleBox": [
+          312,
+          42,
+          691,
+          1058
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkMatt/7680a42ed730ff5cadf86454e17db4b8b9c46af566d96f5b3be40d0cb2623886.front-on-1000x1100.webp",
+        "sha256": "7680a42ed730ff5cadf86454e17db4b8b9c46af566d96f5b3be40d0cb2623886",
+        "bytes": 16702,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/3. GBTulipAmb5SpryBlkMatt.psd",
+        "sourceSha256": "63fe56482c6215d4cc8cacbbe8dd1fc0dce3fb8a7cbff575f6bd1418a210b6b8",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5SpryBlkMatt.off.webp",
+        "visibleBox": [
+          155,
+          79,
+          846,
+          1059
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkMatt/41a224db2fb559db22bae74468acb41d3f6abd33c387759f5bb4c673af27c9c6.front-off-1000x1100.webp",
+        "sha256": "41a224db2fb559db22bae74468acb41d3f6abd33c387759f5bb4c673af27c9c6",
+        "bytes": 22026,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /3. GBTulipAmb5SpryBlkMatt.psd",
+        "sourceSha256": "79dcb08fa226e54fbc49e31a23ab10bb0a200eb551fb1706dcd95349a26e92ef",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/3. GBTulipAmb5SpryBlkMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /3. GBTulipAmb5SpryBlkMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /3. GBTulipAmb5SpryBlkMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryBlkSh",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SBLK",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkSh/90ad012bfb5ba6d3118ffc4d1e4c552341424c263c0ec34e02e40847515df83d.front-on-1000x1100.webp",
+        "sha256": "90ad012bfb5ba6d3118ffc4d1e4c552341424c263c0ec34e02e40847515df83d",
+        "bytes": 15504,
+        "path": "assets/GBTulipAmb5SpryBlkSh.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          313,
+          41,
+          690,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5SpryBlkSh.on.webp",
+        "visibleBox": [
+          312,
+          41,
+          690,
+          1058
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkSh.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkSh/d1a147df80620ff79f5d7777c5a4ce2531882ee275f5af01500364299d1701bb.front-on-1000x1100.webp",
+        "sha256": "d1a147df80620ff79f5d7777c5a4ce2531882ee275f5af01500364299d1701bb",
+        "bytes": 15856,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/4. GBTulipAmb5SpryBlkSh.psd",
+        "sourceSha256": "d84dc61300c16061f6cc00676da00ba49cdbc4f9b8ccefcb72a1886c0957f1ef",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5SpryBlkSh.off.webp",
+        "visibleBox": [
+          158,
+          82,
+          843,
+          1059
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkSh.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkSh/73d9df5e9e15422c5a4df80171e418d1639649215374c630b016b42a1446131a.front-off-1000x1100.webp",
+        "sha256": "73d9df5e9e15422c5a4df80171e418d1639649215374c630b016b42a1446131a",
+        "bytes": 21514,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /4. GBTulipAmb5SpryBlkSh.psd",
+        "sourceSha256": "c01c17185567022a915e1e87051f24385fe95675f5ab2ae1b43e50f865532e0a",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/4. GBTulipAmb5SpryBlkSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /4. GBTulipAmb5SpryBlkSh.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /4. GBTulipAmb5SpryBlkSh.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryBluMatt",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MBLU",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBluMatt/0dab359e0363a5f82d111692e7decfe26cdcb7c4321a4aa93745d6b372e6cd26.front-on-1000x1100.webp",
+        "sha256": "0dab359e0363a5f82d111692e7decfe26cdcb7c4321a4aa93745d6b372e6cd26",
+        "bytes": 17486,
+        "path": "assets/GBTulipAmb5SpryBluMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          313,
+          41,
+          691,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5SpryBluMatt.on.webp",
+        "visibleBox": [
+          312,
+          41,
+          691,
+          1058
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryBluMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBluMatt/44de54685bf2c30dcafca7a4aff520b4ff997f1c20cb8dc5f781cd21ffc86847.front-on-1000x1100.webp",
+        "sha256": "44de54685bf2c30dcafca7a4aff520b4ff997f1c20cb8dc5f781cd21ffc86847",
+        "bytes": 17500,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/5. GBTulipAmb5SpryBluMatt.psd",
+        "sourceSha256": "2e8d9a069001866120bbd2deec2ad9c36181b2090c2648244c0bbec2c9dcc3ea",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5SpryBluMatt.off.webp",
+        "visibleBox": [
+          152,
+          88,
+          849,
+          1060
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryBluMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBluMatt/6e729e8f0c98d22d3e39c02f9eb6b2fd936756fbd0e028adf296373345527637.front-off-1000x1100.webp",
+        "sha256": "6e729e8f0c98d22d3e39c02f9eb6b2fd936756fbd0e028adf296373345527637",
+        "bytes": 25874,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /5. GBTulipAmb5SpryBluMatt.psd",
+        "sourceSha256": "7a514dec36bc1b47895684273da82c042f79b94cc03f5bc6f81f99d5bbb86f7e",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/5. GBTulipAmb5SpryBluMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /5. GBTulipAmb5SpryBluMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /5. GBTulipAmb5SpryBluMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryCuMatt",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MCPR",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryCuMatt/3202d114928cf796cee5814199e150eca700365194240b8e0f98aa455e0bf058.front-on-1000x1100.webp",
+        "sha256": "3202d114928cf796cee5814199e150eca700365194240b8e0f98aa455e0bf058",
+        "bytes": 17610,
+        "path": "assets/GBTulipAmb5SpryCuMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          311,
+          43,
+          689,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5SpryCuMatt.on.webp",
+        "visibleBox": [
+          311,
+          43,
+          689,
+          1058
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryCuMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryCuMatt/72306d6a80b708c18ac4ed05b613259b5713d79710bb8b3a52698c6b3182d333.front-on-1000x1100.webp",
+        "sha256": "72306d6a80b708c18ac4ed05b613259b5713d79710bb8b3a52698c6b3182d333",
+        "bytes": 17516,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/30. GBTulipAmb5SpryCuMatt.psd",
+        "sourceSha256": "5834ef97fbb1d34fb5e16d57de88b84e3dfa39e2e3bf7e85ca4549e58d780591",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5SpryCuMatt.off.webp",
+        "visibleBox": [
+          155,
+          86,
+          847,
+          1061
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryCuMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryCuMatt/8bd17141ef3a4fd78e09f45d49667395ab17e1e43d380f232553f7a3b4053e30.front-off-1000x1100.webp",
+        "sha256": "8bd17141ef3a4fd78e09f45d49667395ab17e1e43d380f232553f7a3b4053e30",
+        "bytes": 25932,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /30. GBTulipAmb5SpryCuMatt.psd",
+        "sourceSha256": "8ef5ef33c23c45ce26e0e187d25b5887e7338b88ed45d5efea2d061ef33f5b8e",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/30. GBTulipAmb5SpryCuMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /30. GBTulipAmb5SpryCuMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /30. GBTulipAmb5SpryCuMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryGlMatt",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MGLD",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryGlMatt/747c899abfb34929f58bfebe6e5cf620801ef27ff914e205edac550778457d87.front-on-1000x1100.webp",
+        "sha256": "747c899abfb34929f58bfebe6e5cf620801ef27ff914e205edac550778457d87",
+        "bytes": 18372,
+        "path": "assets/GBTulipAmb5SpryGlMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          312,
+          39,
+          689,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5SpryGlMatt.on.webp",
+        "visibleBox": [
+          312,
+          39,
+          690,
+          1059
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryGlMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryGlMatt/21259bdd2da97ae2afd22b0005f7ebde7fb995fd9caf6e7265873b9f60ddc174.front-on-1000x1100.webp",
+        "sha256": "21259bdd2da97ae2afd22b0005f7ebde7fb995fd9caf6e7265873b9f60ddc174",
+        "bytes": 18372,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/7. GBTulipAmb5SpryGlMatt.psd",
+        "sourceSha256": "b068bbf7eb5723298acb7831a1ff3478b52583019b2c347a9d9186fc9e96299e",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5SpryGlMatt.off.webp",
+        "visibleBox": [
+          156,
+          93,
+          848,
+          1060
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryGlMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryGlMatt/5ab219f6f9289c10a50659792e39462b6a1afe41ad022a3fa4689877c5e5c83a.front-off-1000x1100.webp",
+        "sha256": "5ab219f6f9289c10a50659792e39462b6a1afe41ad022a3fa4689877c5e5c83a",
+        "bytes": 28270,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /7. GBTulipAmb5SpryGlMatt.psd",
+        "sourceSha256": "ba9a4541ba98d26cedaaab39db02e5a6a1da6bcdf610bbeaf74b92cea582ce2c",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/7. GBTulipAmb5SpryGlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /7. GBTulipAmb5SpryGlMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /7. GBTulipAmb5SpryGlMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryGlSh",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SGLD",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryGlSh/0828877fd0eadea1f1088ebee2585450e60f123a6e78c23cabd9293fe707a671.front-on-1000x1100.webp",
+        "sha256": "0828877fd0eadea1f1088ebee2585450e60f123a6e78c23cabd9293fe707a671",
+        "bytes": 20376,
+        "path": "assets/GBTulipAmb5SpryGlSh.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          311,
+          41,
+          688,
+          1056
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5SpryGlSh.on.webp",
+        "visibleBox": [
+          311,
+          41,
+          689,
+          1058
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryGlSh.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryGlSh/523fbaecaab4d7725a95b7a8d3e20affa249fd34bd21ad392cdcc7fbcd9d5fc9.front-on-1000x1100.webp",
+        "sha256": "523fbaecaab4d7725a95b7a8d3e20affa249fd34bd21ad392cdcc7fbcd9d5fc9",
+        "bytes": 20472,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/6. GBTulipAmb5SpryGlSh.psd",
+        "sourceSha256": "74068f20e699fbfbb1a910eec16d14a50a053e789d686b3f0dcb16033b4fa895",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5SpryGlSh.off.webp",
+        "visibleBox": [
+          158,
+          94,
+          844,
+          1060
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SpryGlSh.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryGlSh/2886e4f726149f40588cd06a0c9654a39aa50095eabedac6db0bc955fa2cb7f3.front-off-1000x1100.webp",
+        "sha256": "2886e4f726149f40588cd06a0c9654a39aa50095eabedac6db0bc955fa2cb7f3",
+        "bytes": 33380,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /6. GBTulipAmb5SpryGlSh.psd",
+        "sourceSha256": "bfad0f88b8ff5d86b5d6265ef079d498e0270bd6ced15332eaa921122fdf8361",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/6. GBTulipAmb5SpryGlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /6. GBTulipAmb5SpryGlSh.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /6. GBTulipAmb5SpryGlSh.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SprySlMatt",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MSLV",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SprySlMatt/251a5980c7fd4b109f40ed5c7f59a503ee9a20a1c10f43030f7f30c96326282b.front-on-1000x1100.webp",
+        "sha256": "251a5980c7fd4b109f40ed5c7f59a503ee9a20a1c10f43030f7f30c96326282b",
+        "bytes": 14712,
+        "path": "assets/GBTulipAmb5SprySlMatt.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          312,
+          46,
+          689,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5SprySlMatt.on.webp",
+        "visibleBox": [
+          312,
+          46,
+          690,
+          1058
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SprySlMatt.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SprySlMatt/1a18bfa685107fd85e14c1833f4580741079eb732bcfa42f7105baa96224c680.front-on-1000x1100.webp",
+        "sha256": "1a18bfa685107fd85e14c1833f4580741079eb732bcfa42f7105baa96224c680",
+        "bytes": 14904,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/8. GBTulipAmb5SprySlMatt.psd",
+        "sourceSha256": "5efff4b0809716540f930427ca3a20fef62721c991b132ac335228fcfd7b79bb",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5SprySlMatt.off.webp",
+        "visibleBox": [
+          158,
+          94,
+          844,
+          1059
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SprySlMatt.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SprySlMatt/10876fffa019e9604a121704618f1a71a63188702b8620d6fef6e4261c75e5af.front-off-1000x1100.webp",
+        "sha256": "10876fffa019e9604a121704618f1a71a63188702b8620d6fef6e4261c75e5af",
+        "bytes": 19442,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /8. GBTulipAmb5SprySlMatt.psd",
+        "sourceSha256": "739e420a472843a83bafdee329d5eb70a94c4e08d9475248015c0cff33abf1ac",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/8. GBTulipAmb5SprySlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /8. GBTulipAmb5SprySlMatt.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /8. GBTulipAmb5SprySlMatt.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SprySlSh",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SSLV",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SprySlSh/e1788931d318935484e48542688c9a3573d876127247b94ac4ffb0fdcf47cf7b.front-on-1000x1100.webp",
+        "sha256": "e1788931d318935484e48542688c9a3573d876127247b94ac4ffb0fdcf47cf7b",
+        "bytes": 17784,
+        "path": "assets/GBTulipAmb5SprySlSh.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          313,
+          45,
+          690,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5SprySlSh.on.webp",
+        "visibleBox": [
+          312,
+          45,
+          690,
+          1058
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SprySlSh.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SprySlSh/c16902dbd11c17b20913a1b8e44f1fd7a3466edb6e15260ab8ac20b6010e51d7.front-on-1000x1100.webp",
+        "sha256": "c16902dbd11c17b20913a1b8e44f1fd7a3466edb6e15260ab8ac20b6010e51d7",
+        "bytes": 17924,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/9. GBTulipAmb5SprySlSh.psd",
+        "sourceSha256": "41dd7f7abfbce1ed5b72b95121e7f888db2b956d78afeb2157bed2b679b31fb7",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5SprySlSh.off.webp",
+        "visibleBox": [
+          147,
+          96,
+          855,
+          1062
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5SprySlSh.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5SprySlSh/219237e45e85ab1db5793f86e11a9f6978a5422462a4ed8c979debc2c38e8e69.front-off-1000x1100.webp",
+        "sha256": "219237e45e85ab1db5793f86e11a9f6978a5422462a4ed8c979debc2c38e8e69",
+        "bytes": 29388,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /9. GBTulipAmb5SprySlSh.psd",
+        "sourceSha256": "017de49ed1c26c6c6cce0a85a1d1f9d54ad9f38ef336c02a32c44d82897db437",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/9. GBTulipAmb5SprySlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /9. GBTulipAmb5SprySlSh.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /9. GBTulipAmb5SprySlSh.psd"
+      },
+      "status": "pending-review"
+    },
+    {
+      "websiteSku": "GBTulipAmb5WhtSht",
+      "graceSku": "GB-CYL-AMB-5ML-WHT-S",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "White",
+      "currentCapOn": {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5WhtSht/62e7da7b19b019b8bb06badad6c29cd7595e9db1c6167bc76a031b19afe0efa1.front-on-1000x1100.webp",
+        "sha256": "62e7da7b19b019b8bb06badad6c29cd7595e9db1c6167bc76a031b19afe0efa1",
+        "bytes": 16770,
+        "path": "assets/GBTulipAmb5WhtSht.current-on.webp",
+        "width": 1000,
+        "height": 1100,
+        "visibleBox": [
+          317,
+          313,
+          694,
+          1055
+        ]
+      },
+      "preparedCapOn": {
+        "path": "assets/GBTulipAmb5WhtSht.on.webp",
+        "visibleBox": [
+          292,
+          218,
+          720,
+          1062
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5WhtSht.front-on.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5WhtSht/07c894bc00e92824bf5d86174398253a21694040f0f8208ee5606b65f03f3af5.front-on-1000x1100.webp",
+        "sha256": "07c894bc00e92824bf5d86174398253a21694040f0f8208ee5606b65f03f3af5",
+        "bytes": 19710,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/2. GBTulipAmb5WhtSht.psd",
+        "sourceSha256": "6f9d4a3cdfc55e6a9c122872b549726dc9eaf309c070690cc8c1f8b6c6c5995a",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact capped master basename."
+      },
+      "preparedCapOff": {
+        "path": "assets/GBTulipAmb5WhtSht.off.webp",
+        "visibleBox": [
+          116,
+          252,
+          886,
+          1062
+        ],
+        "key": "tulip-5ml-amber-13-415/GBTulipAmb5WhtSht.front-off.webp",
+        "storeKey": "plates/tulip-5ml-amber-13-415/GBTulipAmb5WhtSht/438abdf464b39abf2eb3efee032da0c4c2ba3a2f430e83da91bac05842df56eb.front-off-1000x1100.webp",
+        "sha256": "438abdf464b39abf2eb3efee032da0c4c2ba3a2f430e83da91bac05842df56eb",
+        "bytes": 25350,
+        "width": 1000,
+        "height": 1100,
+        "sourceLibrary": "master",
+        "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /2. GBTulipAmb5WhtSht.psd",
+        "sourceSha256": "12627901dcde12e62279c169baf1e06639aa633e839691d747ea02865c12fee8",
+        "sourceStateEvidence": "Exact catalog family, capacity, color and applicator metadata; exact uncapped master basename."
+      },
+      "sources": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/2. GBTulipAmb5WhtSht.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /2. GBTulipAmb5WhtSht.psd",
+        "uncappedAbsolute": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /2. GBTulipAmb5WhtSht.psd"
+      },
+      "status": "pending-review"
+    }
+  ]
+}

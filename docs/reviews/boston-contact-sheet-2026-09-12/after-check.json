@@ -1,0 +1,14 @@
+{
+  "before": "2026-09-13T00:46:11.822Z",
+  "after": "2026-09-13T01:02:37.110Z",
+  "countsUnchanged": true,
+  "rows": 123,
+  "existingPlates": 90,
+  "missingPlates": 33,
+  "eligiblePlates": 62,
+  "capOffViews": 52,
+  "approvedPlates": 0,
+  "kitCandidates": 25,
+  "liveKits": 0,
+  "groupSunburstHeroes": 23
+}

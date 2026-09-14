@@ -1,0 +1,2751 @@
+{
+  "revision": 1,
+  "decisions": {
+    "GBRect10BlkSht:ddec467ef16175a7905ca03d4d8cbde4c9eb5c7868cf373cb992c61431ffd0e1": {
+      "sku": "GBRect10BlkSht",
+      "binding": "ddec467ef16175a7905ca03d4d8cbde4c9eb5c7868cf373cb992c61431ffd0e1",
+      "sha256": "8cec16ff320b5855ff413aa145676f9b04fcd8591c91a0e91fb768ca34dc3d93",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10BlkSht/8cec16ff320b5855ff413aa145676f9b04fcd8591c91a0e91fb768ca34dc3d93.front-on-1000x1100.webp",
+          "sha256": "8cec16ff320b5855ff413aa145676f9b04fcd8591c91a0e91fb768ca34dc3d93",
+          "url": "/images/plate-contact-sheets/8cec16ff320b5855ff413aa145676f9b04fcd8591c91a0e91fb768ca34dc3d93.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10BlkSht/6c22088cf0d0328033133f9c799e5f2a7fb6f29cf0d7173d4fcdc52a90a25932.front-off-1000x1100.webp",
+          "sha256": "6c22088cf0d0328033133f9c799e5f2a7fb6f29cf0d7173d4fcdc52a90a25932",
+          "url": "/images/plate-contact-sheets/6c22088cf0d0328033133f9c799e5f2a7fb6f29cf0d7173d4fcdc52a90a25932.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10Gl:49866ab2d6ee9b0f5cadc843f44e549fb7c1c1680a437c3f9c29d83597df2e94": {
+      "sku": "GBRect10Gl",
+      "binding": "49866ab2d6ee9b0f5cadc843f44e549fb7c1c1680a437c3f9c29d83597df2e94",
+      "sha256": "642138378c1620c561e368db810011ba4299a63ef8e23680183059e12c20213c",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10Gl/642138378c1620c561e368db810011ba4299a63ef8e23680183059e12c20213c.front-on-1000x1100.webp",
+          "sha256": "642138378c1620c561e368db810011ba4299a63ef8e23680183059e12c20213c",
+          "url": "/images/plate-contact-sheets/642138378c1620c561e368db810011ba4299a63ef8e23680183059e12c20213c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10Gl/4edd869ec5b716a863d4a2b369a4ee714d9e7af51289b55b4cb80ad30bc9ef88.front-off-1000x1100.webp",
+          "sha256": "4edd869ec5b716a863d4a2b369a4ee714d9e7af51289b55b4cb80ad30bc9ef88",
+          "url": "/images/plate-contact-sheets/4edd869ec5b716a863d4a2b369a4ee714d9e7af51289b55b4cb80ad30bc9ef88.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10MtlRollBlkDot:cf084ef519ef0fbacbe27ea2ff83fc0da62e3d918d9508f00724f01da7db35e9": {
+      "sku": "GBRect10MtlRollBlkDot",
+      "binding": "cf084ef519ef0fbacbe27ea2ff83fc0da62e3d918d9508f00724f01da7db35e9",
+      "sha256": "65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollBlkDot/65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a.front-on-1000x1100.webp",
+          "sha256": "65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a",
+          "url": "/images/plate-contact-sheets/65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollBlkDot/0c4275caec6d25e1d7700576ab300a63999142ba1e07b0142cd1e2990e90bf8c.front-off-1000x1100.webp",
+          "sha256": "0c4275caec6d25e1d7700576ab300a63999142ba1e07b0142cd1e2990e90bf8c",
+          "url": "/images/plate-contact-sheets/0c4275caec6d25e1d7700576ab300a63999142ba1e07b0142cd1e2990e90bf8c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10MtlRollBlkSh:fdbdfbcba95ec17cad5c3a16670536c89c2338581322490c38b721eb1af1b977": {
+      "sku": "GBRect10MtlRollBlkSh",
+      "binding": "fdbdfbcba95ec17cad5c3a16670536c89c2338581322490c38b721eb1af1b977",
+      "sha256": "c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollBlkSh/c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7.front-on-1000x1100.webp",
+          "sha256": "c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7",
+          "url": "/images/plate-contact-sheets/c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollBlkSh/5ccb370d4a4d246b32cd54670cc58749bc699dacdda71372ecbadb3656763439.front-off-1000x1100.webp",
+          "sha256": "5ccb370d4a4d246b32cd54670cc58749bc699dacdda71372ecbadb3656763439",
+          "url": "/images/plate-contact-sheets/5ccb370d4a4d246b32cd54670cc58749bc699dacdda71372ecbadb3656763439.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10MtlRollCuMatt:32df337c93fa833a8cb08418ed1f2e790f45bd2875d5100ae80beb19287f75fa": {
+      "sku": "GBRect10MtlRollCuMatt",
+      "binding": "32df337c93fa833a8cb08418ed1f2e790f45bd2875d5100ae80beb19287f75fa",
+      "sha256": "2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollCuMatt/2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc.front-on-1000x1100.webp",
+          "sha256": "2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc",
+          "url": "/images/plate-contact-sheets/2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollCuMatt/6e8bae9cddaad8ebba45c8462f14a7e3214fc959c06a4d8d4968704dc94d5e35.front-off-1000x1100.webp",
+          "sha256": "6e8bae9cddaad8ebba45c8462f14a7e3214fc959c06a4d8d4968704dc94d5e35",
+          "url": "/images/plate-contact-sheets/6e8bae9cddaad8ebba45c8462f14a7e3214fc959c06a4d8d4968704dc94d5e35.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10MtlRollGlMatt:1da51f38b988b1b0f0e11396a84470b7d8cf432244c532ca102173fa30e82a3a": {
+      "sku": "GBRect10MtlRollGlMatt",
+      "binding": "1da51f38b988b1b0f0e11396a84470b7d8cf432244c532ca102173fa30e82a3a",
+      "sha256": "ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollGlMatt/ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd.front-on-1000x1100.webp",
+          "sha256": "ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd",
+          "url": "/images/plate-contact-sheets/ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollGlMatt/d0a2db32a2eabd8455e6ed2085fb0e6715c8ef0671450aa25596fc3587b4d46a.front-off-1000x1100.webp",
+          "sha256": "d0a2db32a2eabd8455e6ed2085fb0e6715c8ef0671450aa25596fc3587b4d46a",
+          "url": "/images/plate-contact-sheets/d0a2db32a2eabd8455e6ed2085fb0e6715c8ef0671450aa25596fc3587b4d46a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10MtlRollGlSh:ac1714084cd9b977926759ebd1b44af7e14c13e369caac79813812a8b566a2eb": {
+      "sku": "GBRect10MtlRollGlSh",
+      "binding": "ac1714084cd9b977926759ebd1b44af7e14c13e369caac79813812a8b566a2eb",
+      "sha256": "5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollGlSh/5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed.front-on-1000x1100.webp",
+          "sha256": "5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed",
+          "url": "/images/plate-contact-sheets/5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollGlSh/c8ae51e506ce112d2bef08134f6f42313e5c924c3273f04478403f3513b05ce3.front-off-1000x1100.webp",
+          "sha256": "c8ae51e506ce112d2bef08134f6f42313e5c924c3273f04478403f3513b05ce3",
+          "url": "/images/plate-contact-sheets/c8ae51e506ce112d2bef08134f6f42313e5c924c3273f04478403f3513b05ce3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10MtlRollPinkDot:9ace5acc54c9456d4830d01eebe49504b67b8f82a2dd2f40b9f72fae7b93364f": {
+      "sku": "GBRect10MtlRollPinkDot",
+      "binding": "9ace5acc54c9456d4830d01eebe49504b67b8f82a2dd2f40b9f72fae7b93364f",
+      "sha256": "6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollPinkDot/6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925.front-on-1000x1100.webp",
+          "sha256": "6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925",
+          "url": "/images/plate-contact-sheets/6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollPinkDot/a82d2c60bbf4d0b4f22f1b302a7187d3ef899bc763131baadc8d530f88a19caa.front-off-1000x1100.webp",
+          "sha256": "a82d2c60bbf4d0b4f22f1b302a7187d3ef899bc763131baadc8d530f88a19caa",
+          "url": "/images/plate-contact-sheets/a82d2c60bbf4d0b4f22f1b302a7187d3ef899bc763131baadc8d530f88a19caa.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10MtlRollSlDot:7d0b4207cb54021053622fc4d4570705ad0c910fbed2f1d1895b7713eb0ca5db": {
+      "sku": "GBRect10MtlRollSlDot",
+      "binding": "7d0b4207cb54021053622fc4d4570705ad0c910fbed2f1d1895b7713eb0ca5db",
+      "sha256": "ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollSlDot/ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b.front-on-1000x1100.webp",
+          "sha256": "ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b",
+          "url": "/images/plate-contact-sheets/ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollSlDot/d892a77ca37cd0e88ee7d954b3a0e1209eb68d79fee24f46e75e705168473b02.front-off-1000x1100.webp",
+          "sha256": "d892a77ca37cd0e88ee7d954b3a0e1209eb68d79fee24f46e75e705168473b02",
+          "url": "/images/plate-contact-sheets/d892a77ca37cd0e88ee7d954b3a0e1209eb68d79fee24f46e75e705168473b02.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10MtlRollSlSh:e1f15eace16138ebc9d78c7d4d68d2317a39be744de374b5fdad33a2b66a0ef1": {
+      "sku": "GBRect10MtlRollSlSh",
+      "binding": "e1f15eace16138ebc9d78c7d4d68d2317a39be744de374b5fdad33a2b66a0ef1",
+      "sha256": "25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollSlSh/25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85.front-on-1000x1100.webp",
+          "sha256": "25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85",
+          "url": "/images/plate-contact-sheets/25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollSlSh/b97c0c26cf3f0a4f5a115d5b7f597e5107d4f7aa3a3f416420a883f3a6d01235.front-off-1000x1100.webp",
+          "sha256": "b97c0c26cf3f0a4f5a115d5b7f597e5107d4f7aa3a3f416420a883f3a6d01235",
+          "url": "/images/plate-contact-sheets/b97c0c26cf3f0a4f5a115d5b7f597e5107d4f7aa3a3f416420a883f3a6d01235.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10RollBlkDot:a38e125a4b5718e4681cbf9021057634172ab88af30020f350745a760ba2fe5a": {
+      "sku": "GBRect10RollBlkDot",
+      "binding": "a38e125a4b5718e4681cbf9021057634172ab88af30020f350745a760ba2fe5a",
+      "sha256": "65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollBlkDot/65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a.front-on-1000x1100.webp",
+          "sha256": "65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a",
+          "url": "/images/plate-contact-sheets/65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollBlkDot/d8ddf58cbd4a1fe7c4e266d8e0a149a8f24b1841a312bf3b86c7b63be3aef2cf.front-off-1000x1100.webp",
+          "sha256": "d8ddf58cbd4a1fe7c4e266d8e0a149a8f24b1841a312bf3b86c7b63be3aef2cf",
+          "url": "/images/plate-contact-sheets/d8ddf58cbd4a1fe7c4e266d8e0a149a8f24b1841a312bf3b86c7b63be3aef2cf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10RollBlkSh:b426736453e5025602cf1e3b8b4b8d23034c5031d6e36dcc0bc6c410356c6985": {
+      "sku": "GBRect10RollBlkSh",
+      "binding": "b426736453e5025602cf1e3b8b4b8d23034c5031d6e36dcc0bc6c410356c6985",
+      "sha256": "c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollBlkSh/c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7.front-on-1000x1100.webp",
+          "sha256": "c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7",
+          "url": "/images/plate-contact-sheets/c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollBlkSh/135ffbb66cb3b0668aaac9ea586882fecb4749c382274e357d408c6f1b02f44f.front-off-1000x1100.webp",
+          "sha256": "135ffbb66cb3b0668aaac9ea586882fecb4749c382274e357d408c6f1b02f44f",
+          "url": "/images/plate-contact-sheets/135ffbb66cb3b0668aaac9ea586882fecb4749c382274e357d408c6f1b02f44f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10RollCuMatt:2466fdf77a494fd523c5153189cbdc3da68d71c547d5f1898dd4483a1ef90b74": {
+      "sku": "GBRect10RollCuMatt",
+      "binding": "2466fdf77a494fd523c5153189cbdc3da68d71c547d5f1898dd4483a1ef90b74",
+      "sha256": "2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollCuMatt/2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc.front-on-1000x1100.webp",
+          "sha256": "2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc",
+          "url": "/images/plate-contact-sheets/2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollCuMatt/0ec7bb82697137b91b106290285955b53db7d8e34898e31a7729ea6f110fd78a.front-off-1000x1100.webp",
+          "sha256": "0ec7bb82697137b91b106290285955b53db7d8e34898e31a7729ea6f110fd78a",
+          "url": "/images/plate-contact-sheets/0ec7bb82697137b91b106290285955b53db7d8e34898e31a7729ea6f110fd78a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10RollGlMatt:3fb3bdd6fe503fa9a6bf38ba5d2269efca740b32a92f4ad1f18224e73accb0c6": {
+      "sku": "GBRect10RollGlMatt",
+      "binding": "3fb3bdd6fe503fa9a6bf38ba5d2269efca740b32a92f4ad1f18224e73accb0c6",
+      "sha256": "ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollGlMatt/ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd.front-on-1000x1100.webp",
+          "sha256": "ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd",
+          "url": "/images/plate-contact-sheets/ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollGlMatt/b69b3df6808ad25f9f65c79a81bb4d79f6ab4b8c7ddde282f674051b1ba460f1.front-off-1000x1100.webp",
+          "sha256": "b69b3df6808ad25f9f65c79a81bb4d79f6ab4b8c7ddde282f674051b1ba460f1",
+          "url": "/images/plate-contact-sheets/b69b3df6808ad25f9f65c79a81bb4d79f6ab4b8c7ddde282f674051b1ba460f1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10RollGlSh:308b8553821ee027331f8063406b421f8e680a0a16615e9fcf7c24d1f2f73ea3": {
+      "sku": "GBRect10RollGlSh",
+      "binding": "308b8553821ee027331f8063406b421f8e680a0a16615e9fcf7c24d1f2f73ea3",
+      "sha256": "5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollGlSh/5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed.front-on-1000x1100.webp",
+          "sha256": "5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed",
+          "url": "/images/plate-contact-sheets/5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollGlSh/c28bbcd92304ee878c91c5c3218365185d9ce862599ceb81ff1c59bfee60bde9.front-off-1000x1100.webp",
+          "sha256": "c28bbcd92304ee878c91c5c3218365185d9ce862599ceb81ff1c59bfee60bde9",
+          "url": "/images/plate-contact-sheets/c28bbcd92304ee878c91c5c3218365185d9ce862599ceb81ff1c59bfee60bde9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10RollPinkDot:a4e3e2554dcaf268ca1646ca6d642fb32c91719fa96d7f6e0c8df7b6aa85b7c3": {
+      "sku": "GBRect10RollPinkDot",
+      "binding": "a4e3e2554dcaf268ca1646ca6d642fb32c91719fa96d7f6e0c8df7b6aa85b7c3",
+      "sha256": "6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollPinkDot/6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925.front-on-1000x1100.webp",
+          "sha256": "6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925",
+          "url": "/images/plate-contact-sheets/6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollPinkDot/9df4c7e45c0f92b906f579c6ab5005e96bf66148002d628039ad754c7820ee70.front-off-1000x1100.webp",
+          "sha256": "9df4c7e45c0f92b906f579c6ab5005e96bf66148002d628039ad754c7820ee70",
+          "url": "/images/plate-contact-sheets/9df4c7e45c0f92b906f579c6ab5005e96bf66148002d628039ad754c7820ee70.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10RollSlDot:c8b73e914cc75d2b9b1a53bcca928031744737ccc54108fb25c96dadd6697699": {
+      "sku": "GBRect10RollSlDot",
+      "binding": "c8b73e914cc75d2b9b1a53bcca928031744737ccc54108fb25c96dadd6697699",
+      "sha256": "ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlDot/ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b.front-on-1000x1100.webp",
+          "sha256": "ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b",
+          "url": "/images/plate-contact-sheets/ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlDot/6b49dd1ed30fad0826c6edcb33506ec60fe2d44e663d9571cf0bc888a0c40992.front-off-1000x1100.webp",
+          "sha256": "6b49dd1ed30fad0826c6edcb33506ec60fe2d44e663d9571cf0bc888a0c40992",
+          "url": "/images/plate-contact-sheets/6b49dd1ed30fad0826c6edcb33506ec60fe2d44e663d9571cf0bc888a0c40992.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10RollSlMatt:830d4c4a8eabbf6e1587d43a5c4bd523972866d7a8c28636787af06792da6f7a": {
+      "sku": "GBRect10RollSlMatt",
+      "binding": "830d4c4a8eabbf6e1587d43a5c4bd523972866d7a8c28636787af06792da6f7a",
+      "sha256": "eb27d1ff01d6afe38a1b33ff41864ef5bfb798e2a837940753c112d6d1c73d0f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlMatt/eb27d1ff01d6afe38a1b33ff41864ef5bfb798e2a837940753c112d6d1c73d0f.front-on-1000x1100.webp",
+          "sha256": "eb27d1ff01d6afe38a1b33ff41864ef5bfb798e2a837940753c112d6d1c73d0f",
+          "url": "/images/plate-contact-sheets/eb27d1ff01d6afe38a1b33ff41864ef5bfb798e2a837940753c112d6d1c73d0f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlMatt/83c86a344b29ab7c78cbe0f66393a8774e1bca935725e5241a05f99353de0a20.front-off-1000x1100.webp",
+          "sha256": "83c86a344b29ab7c78cbe0f66393a8774e1bca935725e5241a05f99353de0a20",
+          "url": "/images/plate-contact-sheets/83c86a344b29ab7c78cbe0f66393a8774e1bca935725e5241a05f99353de0a20.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10RollSlSh:e7cbd9c26b2f24b681264c04bbcbd77feacd75fc15f8af2e3ab224cd6857b496": {
+      "sku": "GBRect10RollSlSh",
+      "binding": "e7cbd9c26b2f24b681264c04bbcbd77feacd75fc15f8af2e3ab224cd6857b496",
+      "sha256": "25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlSh/25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85.front-on-1000x1100.webp",
+          "sha256": "25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85",
+          "url": "/images/plate-contact-sheets/25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlSh/9678e177843a4683b8ac3c7177cd5dac3b39e005d78d445ca7e4a76924018bc1.front-off-1000x1100.webp",
+          "sha256": "9678e177843a4683b8ac3c7177cd5dac3b39e005d78d445ca7e4a76924018bc1",
+          "url": "/images/plate-contact-sheets/9678e177843a4683b8ac3c7177cd5dac3b39e005d78d445ca7e4a76924018bc1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10Sl:bcbedb244cee12cab9f9cd94152e7761a2db7820392a022d3750fe6901668308": {
+      "sku": "GBRect10Sl",
+      "binding": "bcbedb244cee12cab9f9cd94152e7761a2db7820392a022d3750fe6901668308",
+      "sha256": "eae85bd7b4c18b508b59fed30cf5f1edb5ceabfaf1952ec956f5e9ab5d6dca6d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10Sl/eae85bd7b4c18b508b59fed30cf5f1edb5ceabfaf1952ec956f5e9ab5d6dca6d.front-on-1000x1100.webp",
+          "sha256": "eae85bd7b4c18b508b59fed30cf5f1edb5ceabfaf1952ec956f5e9ab5d6dca6d",
+          "url": "/images/plate-contact-sheets/eae85bd7b4c18b508b59fed30cf5f1edb5ceabfaf1952ec956f5e9ab5d6dca6d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10Sl/2115395e40ef32f94c313cfa7add118aadece40a181b86bb90fceb89a6c21516.front-off-1000x1100.webp",
+          "sha256": "2115395e40ef32f94c313cfa7add118aadece40a181b86bb90fceb89a6c21516",
+          "url": "/images/plate-contact-sheets/2115395e40ef32f94c313cfa7add118aadece40a181b86bb90fceb89a6c21516.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10SpryBlkMatt:0e392a1a6b8043b8df0588ddb83e526af9c31c23bd5a0f887e349eb0e8d2153f": {
+      "sku": "GBRect10SpryBlkMatt",
+      "binding": "0e392a1a6b8043b8df0588ddb83e526af9c31c23bd5a0f887e349eb0e8d2153f",
+      "sha256": "77a9baa81893521b1a5835f587465635e1d0feb41918e532c06329c5bfa81874",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBlkMatt/77a9baa81893521b1a5835f587465635e1d0feb41918e532c06329c5bfa81874.front-on-1000x1100.webp",
+          "sha256": "77a9baa81893521b1a5835f587465635e1d0feb41918e532c06329c5bfa81874",
+          "url": "/images/plate-contact-sheets/77a9baa81893521b1a5835f587465635e1d0feb41918e532c06329c5bfa81874.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBlkMatt/0909fd57dd6275bd3f7b6ee4b2efd9f232440c5583974c0df78d75ec87b6b2d8.front-off-1000x1100.webp",
+          "sha256": "0909fd57dd6275bd3f7b6ee4b2efd9f232440c5583974c0df78d75ec87b6b2d8",
+          "url": "/images/plate-contact-sheets/0909fd57dd6275bd3f7b6ee4b2efd9f232440c5583974c0df78d75ec87b6b2d8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10SpryBlkSh:a9c8c4ab0c1f39a75e9134b6f709de6a6e5d71a91430872e21dc2ef9e115fb48": {
+      "sku": "GBRect10SpryBlkSh",
+      "binding": "a9c8c4ab0c1f39a75e9134b6f709de6a6e5d71a91430872e21dc2ef9e115fb48",
+      "sha256": "ea9893a73461f1a2226066944234a807e75ade92bdb9518a8272d49ec3db112c",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBlkSh/ea9893a73461f1a2226066944234a807e75ade92bdb9518a8272d49ec3db112c.front-on-1000x1100.webp",
+          "sha256": "ea9893a73461f1a2226066944234a807e75ade92bdb9518a8272d49ec3db112c",
+          "url": "/images/plate-contact-sheets/ea9893a73461f1a2226066944234a807e75ade92bdb9518a8272d49ec3db112c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBlkSh/6f5a0184a2bba285e18284f675a98a698769c90d331c38cf9376bc0dfbc60388.front-off-1000x1100.webp",
+          "sha256": "6f5a0184a2bba285e18284f675a98a698769c90d331c38cf9376bc0dfbc60388",
+          "url": "/images/plate-contact-sheets/6f5a0184a2bba285e18284f675a98a698769c90d331c38cf9376bc0dfbc60388.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10SpryBluMatt:047bd3d2d047ec8260df38969581967bf9903f461c6fee8d62d0495bec474848": {
+      "sku": "GBRect10SpryBluMatt",
+      "binding": "047bd3d2d047ec8260df38969581967bf9903f461c6fee8d62d0495bec474848",
+      "sha256": "f6a696250a91c00bf0fcba4f32b2df11cca6d17e826624d8e131aebedb6ecc59",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBluMatt/f6a696250a91c00bf0fcba4f32b2df11cca6d17e826624d8e131aebedb6ecc59.front-on-1000x1100.webp",
+          "sha256": "f6a696250a91c00bf0fcba4f32b2df11cca6d17e826624d8e131aebedb6ecc59",
+          "url": "/images/plate-contact-sheets/f6a696250a91c00bf0fcba4f32b2df11cca6d17e826624d8e131aebedb6ecc59.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBluMatt/ec9a88b103fcf2df8d14c6cd9f794aed9f7bd184b411bafcae48b7f7a3a7f9b5.front-off-1000x1100.webp",
+          "sha256": "ec9a88b103fcf2df8d14c6cd9f794aed9f7bd184b411bafcae48b7f7a3a7f9b5",
+          "url": "/images/plate-contact-sheets/ec9a88b103fcf2df8d14c6cd9f794aed9f7bd184b411bafcae48b7f7a3a7f9b5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10SpryCuMatt:896f836a3ef843b193a69144b0b5f1a6e743c037ae9d88df994cf26c42c6f680": {
+      "sku": "GBRect10SpryCuMatt",
+      "binding": "896f836a3ef843b193a69144b0b5f1a6e743c037ae9d88df994cf26c42c6f680",
+      "sha256": "905f90be821cd9141c109d06de989e84867b18ad595966ed3048d35f29bf18ac",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryCuMatt/905f90be821cd9141c109d06de989e84867b18ad595966ed3048d35f29bf18ac.front-on-1000x1100.webp",
+          "sha256": "905f90be821cd9141c109d06de989e84867b18ad595966ed3048d35f29bf18ac",
+          "url": "/images/plate-contact-sheets/905f90be821cd9141c109d06de989e84867b18ad595966ed3048d35f29bf18ac.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryCuMatt/a5aa22093327ac8bb2a4d0638043cae49320d08bc711e80a263ec1cc83462738.front-off-1000x1100.webp",
+          "sha256": "a5aa22093327ac8bb2a4d0638043cae49320d08bc711e80a263ec1cc83462738",
+          "url": "/images/plate-contact-sheets/a5aa22093327ac8bb2a4d0638043cae49320d08bc711e80a263ec1cc83462738.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10SpryGlMatt:9794f9508b9e9d8eb785e998e67776a1168e4f49468e797d28baa7e47344162f": {
+      "sku": "GBRect10SpryGlMatt",
+      "binding": "9794f9508b9e9d8eb785e998e67776a1168e4f49468e797d28baa7e47344162f",
+      "sha256": "f09f360987bdb40dbb89e89cdce59f5bdfe6ec6d41e2d79acd73a2fc6a4920b4",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryGlMatt/f09f360987bdb40dbb89e89cdce59f5bdfe6ec6d41e2d79acd73a2fc6a4920b4.front-on-1000x1100.webp",
+          "sha256": "f09f360987bdb40dbb89e89cdce59f5bdfe6ec6d41e2d79acd73a2fc6a4920b4",
+          "url": "/images/plate-contact-sheets/f09f360987bdb40dbb89e89cdce59f5bdfe6ec6d41e2d79acd73a2fc6a4920b4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryGlMatt/a45480d6185e9712f66bec55436db5dd55f3f0ba339cc55e738d51d7c4f05142.front-off-1000x1100.webp",
+          "sha256": "a45480d6185e9712f66bec55436db5dd55f3f0ba339cc55e738d51d7c4f05142",
+          "url": "/images/plate-contact-sheets/a45480d6185e9712f66bec55436db5dd55f3f0ba339cc55e738d51d7c4f05142.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10SpryGlSh:1ee835b70bbcd03b9893e2209a39b8395cc92530c1e6c0a1945af3fb1e585ffe": {
+      "sku": "GBRect10SpryGlSh",
+      "binding": "1ee835b70bbcd03b9893e2209a39b8395cc92530c1e6c0a1945af3fb1e585ffe",
+      "sha256": "892736bf9740966e56bb988863f72d0d438cded0c6a88f0b9ea8d0adc4569f76",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryGlSh/892736bf9740966e56bb988863f72d0d438cded0c6a88f0b9ea8d0adc4569f76.front-on-1000x1100.webp",
+          "sha256": "892736bf9740966e56bb988863f72d0d438cded0c6a88f0b9ea8d0adc4569f76",
+          "url": "/images/plate-contact-sheets/892736bf9740966e56bb988863f72d0d438cded0c6a88f0b9ea8d0adc4569f76.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryGlSh/42c5516a28b15a2bbe74a5aff9709a43ac7aed3797bc76d1a8434fe4ef17ef20.front-off-1000x1100.webp",
+          "sha256": "42c5516a28b15a2bbe74a5aff9709a43ac7aed3797bc76d1a8434fe4ef17ef20",
+          "url": "/images/plate-contact-sheets/42c5516a28b15a2bbe74a5aff9709a43ac7aed3797bc76d1a8434fe4ef17ef20.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10SprySlMatt:943bc019d1230e92addf4c82f759db9aaf74c1a0b0cc3805675ecea07bdec81c": {
+      "sku": "GBRect10SprySlMatt",
+      "binding": "943bc019d1230e92addf4c82f759db9aaf74c1a0b0cc3805675ecea07bdec81c",
+      "sha256": "6a2ec9c35a5b21db82af7d07ec85cc36ea70fca250c7e68a3d6f888b0756197a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SprySlMatt/6a2ec9c35a5b21db82af7d07ec85cc36ea70fca250c7e68a3d6f888b0756197a.front-on-1000x1100.webp",
+          "sha256": "6a2ec9c35a5b21db82af7d07ec85cc36ea70fca250c7e68a3d6f888b0756197a",
+          "url": "/images/plate-contact-sheets/6a2ec9c35a5b21db82af7d07ec85cc36ea70fca250c7e68a3d6f888b0756197a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SprySlMatt/ecbde1537a6f5aaac094fb4b5ed0c84269dc7f4e04c1fbe842a541e3a351d44e.front-off-1000x1100.webp",
+          "sha256": "ecbde1537a6f5aaac094fb4b5ed0c84269dc7f4e04c1fbe842a541e3a351d44e",
+          "url": "/images/plate-contact-sheets/ecbde1537a6f5aaac094fb4b5ed0c84269dc7f4e04c1fbe842a541e3a351d44e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10SprySlSh:a586129c8449ef9c42ea09e1d67f2679bce6ba119c634333a7eb153699f6f2b7": {
+      "sku": "GBRect10SprySlSh",
+      "binding": "a586129c8449ef9c42ea09e1d67f2679bce6ba119c634333a7eb153699f6f2b7",
+      "sha256": "9b455d8de02ab2506e71c1094947c3b2e9c3c0e5c395fd46b0fd768d6cda8322",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SprySlSh/9b455d8de02ab2506e71c1094947c3b2e9c3c0e5c395fd46b0fd768d6cda8322.front-on-1000x1100.webp",
+          "sha256": "9b455d8de02ab2506e71c1094947c3b2e9c3c0e5c395fd46b0fd768d6cda8322",
+          "url": "/images/plate-contact-sheets/9b455d8de02ab2506e71c1094947c3b2e9c3c0e5c395fd46b0fd768d6cda8322.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SprySlSh/dcd8b859165cad36a6228fd07d8a0915d96df58c9606fa53040b55f6db045741.front-off-1000x1100.webp",
+          "sha256": "dcd8b859165cad36a6228fd07d8a0915d96df58c9606fa53040b55f6db045741",
+          "url": "/images/plate-contact-sheets/dcd8b859165cad36a6228fd07d8a0915d96df58c9606fa53040b55f6db045741.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRect10WhtSht:d22fce786d197f8972898e1d0363002093b8a3f7a0c4d4c752ed4ed2ef3eeb01": {
+      "sku": "GBRect10WhtSht",
+      "binding": "d22fce786d197f8972898e1d0363002093b8a3f7a0c4d4c752ed4ed2ef3eeb01",
+      "sha256": "9880fb1596fc2acb3629851ea13918f003b2b18880b6252138314fef47ae38bb",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10WhtSht/9880fb1596fc2acb3629851ea13918f003b2b18880b6252138314fef47ae38bb.front-on-1000x1100.webp",
+          "sha256": "9880fb1596fc2acb3629851ea13918f003b2b18880b6252138314fef47ae38bb",
+          "url": "/images/plate-contact-sheets/9880fb1596fc2acb3629851ea13918f003b2b18880b6252138314fef47ae38bb.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10WhtSht/ce0cde093bda680050b160b4bc2689387796248a71c930e95db45a02377ceaa0.front-off-1000x1100.webp",
+          "sha256": "ce0cde093bda680050b160b4bc2689387796248a71c930e95db45a02377ceaa0",
+          "url": "/images/plate-contact-sheets/ce0cde093bda680050b160b4bc2689387796248a71c930e95db45a02377ceaa0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10BlkSht:19928c8ede6e5cbfa0bbdd1d0f7d4d3d8fde81a6eb210759f31c4eb065b026a3": {
+      "sku": "GBTallRect10BlkSht",
+      "binding": "19928c8ede6e5cbfa0bbdd1d0f7d4d3d8fde81a6eb210759f31c4eb065b026a3",
+      "sha256": "ea540db5889a64b8d3a597231bae49889e27c81feb8b7c4977a72001fc572a07",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10BlkSht/ea540db5889a64b8d3a597231bae49889e27c81feb8b7c4977a72001fc572a07.front-on-1000x1100.webp",
+          "sha256": "ea540db5889a64b8d3a597231bae49889e27c81feb8b7c4977a72001fc572a07",
+          "url": "/images/plate-contact-sheets/ea540db5889a64b8d3a597231bae49889e27c81feb8b7c4977a72001fc572a07.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10BlkSht/881a7bd83b2ae6b6dcfe9e085dfb63ae59da0e7a6127d981777426bf3328b261.front-off-1000x1100.webp",
+          "sha256": "881a7bd83b2ae6b6dcfe9e085dfb63ae59da0e7a6127d981777426bf3328b261",
+          "url": "/images/plate-contact-sheets/881a7bd83b2ae6b6dcfe9e085dfb63ae59da0e7a6127d981777426bf3328b261.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10Gl:4560db9c1b65ff14063c1d4d8da5ee78fe1327e78ebeddd56a7301b6096fec51": {
+      "sku": "GBTallRect10Gl",
+      "binding": "4560db9c1b65ff14063c1d4d8da5ee78fe1327e78ebeddd56a7301b6096fec51",
+      "sha256": "4e11e916fc6fca0820909014346d67f73a348463f4fdbd243a6258a7b0334f97",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10Gl/4e11e916fc6fca0820909014346d67f73a348463f4fdbd243a6258a7b0334f97.front-on-1000x1100.webp",
+          "sha256": "4e11e916fc6fca0820909014346d67f73a348463f4fdbd243a6258a7b0334f97",
+          "url": "/images/plate-contact-sheets/4e11e916fc6fca0820909014346d67f73a348463f4fdbd243a6258a7b0334f97.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10Gl/4a51021f2728f1cb2084c5bcc818e2d5ccb577452eaf0d4be545aa329d673f8e.front-off-1000x1100.webp",
+          "sha256": "4a51021f2728f1cb2084c5bcc818e2d5ccb577452eaf0d4be545aa329d673f8e",
+          "url": "/images/plate-contact-sheets/4a51021f2728f1cb2084c5bcc818e2d5ccb577452eaf0d4be545aa329d673f8e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10MtlRollBlkSh:4b6686a0653868c7e918f908db2f2bfa3768d1142485e145da8e0245bd3d6ae2": {
+      "sku": "GBTallRect10MtlRollBlkSh",
+      "binding": "4b6686a0653868c7e918f908db2f2bfa3768d1142485e145da8e0245bd3d6ae2",
+      "sha256": "f1bbb7f9c416b740b677a6eeae74381f60b497553ecdea4b59af8c4afbb1ecbb",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollBlkSh/f1bbb7f9c416b740b677a6eeae74381f60b497553ecdea4b59af8c4afbb1ecbb.front-on-1000x1100.webp",
+          "sha256": "f1bbb7f9c416b740b677a6eeae74381f60b497553ecdea4b59af8c4afbb1ecbb",
+          "url": "/images/plate-contact-sheets/f1bbb7f9c416b740b677a6eeae74381f60b497553ecdea4b59af8c4afbb1ecbb.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollBlkSh/27cd96c1ce5c3830afb2d36373d8a55be658c4382056bfbce34a20915e011026.front-off-1000x1100.webp",
+          "sha256": "27cd96c1ce5c3830afb2d36373d8a55be658c4382056bfbce34a20915e011026",
+          "url": "/images/plate-contact-sheets/27cd96c1ce5c3830afb2d36373d8a55be658c4382056bfbce34a20915e011026.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10MtlRollCuMatt:5685aaddff44738bbd9a95455969e735e642bbed9165763601f6d2efbbd9b113": {
+      "sku": "GBTallRect10MtlRollCuMatt",
+      "binding": "5685aaddff44738bbd9a95455969e735e642bbed9165763601f6d2efbbd9b113",
+      "sha256": "8f3bb9b3fed49d273de966d220564b1835423da96c72eb943fd223c79903c881",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollCuMatt/8f3bb9b3fed49d273de966d220564b1835423da96c72eb943fd223c79903c881.front-on-1000x1100.webp",
+          "sha256": "8f3bb9b3fed49d273de966d220564b1835423da96c72eb943fd223c79903c881",
+          "url": "/images/plate-contact-sheets/8f3bb9b3fed49d273de966d220564b1835423da96c72eb943fd223c79903c881.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollCuMatt/587d2e325a4fa93716ef6aa688e26f0f4af4ccf236e9a94f5dbab905d0c9db12.front-off-1000x1100.webp",
+          "sha256": "587d2e325a4fa93716ef6aa688e26f0f4af4ccf236e9a94f5dbab905d0c9db12",
+          "url": "/images/plate-contact-sheets/587d2e325a4fa93716ef6aa688e26f0f4af4ccf236e9a94f5dbab905d0c9db12.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10MtlRollGlMatt:627d7f10a220a61e78fefe3b07d4ca92215e8860a4e4ec4bf970c704e9ab99d4": {
+      "sku": "GBTallRect10MtlRollGlMatt",
+      "binding": "627d7f10a220a61e78fefe3b07d4ca92215e8860a4e4ec4bf970c704e9ab99d4",
+      "sha256": "197aa096f6ae723dba6a05a069d181c82654142ab1ac3d41b179b0a9db8a29f0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollGlMatt/197aa096f6ae723dba6a05a069d181c82654142ab1ac3d41b179b0a9db8a29f0.front-on-1000x1100.webp",
+          "sha256": "197aa096f6ae723dba6a05a069d181c82654142ab1ac3d41b179b0a9db8a29f0",
+          "url": "/images/plate-contact-sheets/197aa096f6ae723dba6a05a069d181c82654142ab1ac3d41b179b0a9db8a29f0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollGlMatt/9a34ced65f1f671f93951cd97781a4598ae2da5643f2dbb31fc0c47964d5b87b.front-off-1000x1100.webp",
+          "sha256": "9a34ced65f1f671f93951cd97781a4598ae2da5643f2dbb31fc0c47964d5b87b",
+          "url": "/images/plate-contact-sheets/9a34ced65f1f671f93951cd97781a4598ae2da5643f2dbb31fc0c47964d5b87b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10MtlRollSlSh:1f64d8d62a84fbabe72bdedf6db1aba31397cdb79a74fe44202a092bed57a8de": {
+      "sku": "GBTallRect10MtlRollSlSh",
+      "binding": "1f64d8d62a84fbabe72bdedf6db1aba31397cdb79a74fe44202a092bed57a8de",
+      "sha256": "f92b47952a568483def5d9c03f5e91747103bb9cb863ca1a1dcf0fb16b68ab3b",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollSlSh/f92b47952a568483def5d9c03f5e91747103bb9cb863ca1a1dcf0fb16b68ab3b.front-on-1000x1100.webp",
+          "sha256": "f92b47952a568483def5d9c03f5e91747103bb9cb863ca1a1dcf0fb16b68ab3b",
+          "url": "/images/plate-contact-sheets/f92b47952a568483def5d9c03f5e91747103bb9cb863ca1a1dcf0fb16b68ab3b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollSlSh/a611237fe53d6445dfa63368e1c1f40592c1d7e58644c68acc7b784238f28126.front-off-1000x1100.webp",
+          "sha256": "a611237fe53d6445dfa63368e1c1f40592c1d7e58644c68acc7b784238f28126",
+          "url": "/images/plate-contact-sheets/a611237fe53d6445dfa63368e1c1f40592c1d7e58644c68acc7b784238f28126.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10RollGlSh:9b3646de351c29e71309c5691dad077b4780e75508bf155b2b1a02e183e74c4e": {
+      "sku": "GBTallRect10RollGlSh",
+      "binding": "9b3646de351c29e71309c5691dad077b4780e75508bf155b2b1a02e183e74c4e",
+      "sha256": "de597bfba590cf8e047c9c5a75b6116ae349ea66acad5bde53b2188d6b8dc163",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollGlSh/de597bfba590cf8e047c9c5a75b6116ae349ea66acad5bde53b2188d6b8dc163.front-on-1000x1100.webp",
+          "sha256": "de597bfba590cf8e047c9c5a75b6116ae349ea66acad5bde53b2188d6b8dc163",
+          "url": "/images/plate-contact-sheets/de597bfba590cf8e047c9c5a75b6116ae349ea66acad5bde53b2188d6b8dc163.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollGlSh/6a88b7c29fb5cd5de84b2b7ee661437214dc9ccf83946609828cf22ae11b5634.front-off-1000x1100.webp",
+          "sha256": "6a88b7c29fb5cd5de84b2b7ee661437214dc9ccf83946609828cf22ae11b5634",
+          "url": "/images/plate-contact-sheets/6a88b7c29fb5cd5de84b2b7ee661437214dc9ccf83946609828cf22ae11b5634.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10RollPinkDot:5da15d91db922a92331bc93d6ce5698a47b65eade88beb3fd79d58511cc20dd3": {
+      "sku": "GBTallRect10RollPinkDot",
+      "binding": "5da15d91db922a92331bc93d6ce5698a47b65eade88beb3fd79d58511cc20dd3",
+      "sha256": "4a02477396ef3ab87ce68b0fde07ddb10329846c89e663c3d3e92d6e3486625f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollPinkDot/4a02477396ef3ab87ce68b0fde07ddb10329846c89e663c3d3e92d6e3486625f.front-on-1000x1100.webp",
+          "sha256": "4a02477396ef3ab87ce68b0fde07ddb10329846c89e663c3d3e92d6e3486625f",
+          "url": "/images/plate-contact-sheets/4a02477396ef3ab87ce68b0fde07ddb10329846c89e663c3d3e92d6e3486625f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollPinkDot/259f07699258da6ba4c745e5fbf2915d2bdae86336d1fc11b2d2b8306d80863f.front-off-1000x1100.webp",
+          "sha256": "259f07699258da6ba4c745e5fbf2915d2bdae86336d1fc11b2d2b8306d80863f",
+          "url": "/images/plate-contact-sheets/259f07699258da6ba4c745e5fbf2915d2bdae86336d1fc11b2d2b8306d80863f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10RollSlDot:d2657d9113fdcd0f3a750bf91fc2f20e0375c722a03562f7d2487b567d99d4f1": {
+      "sku": "GBTallRect10RollSlDot",
+      "binding": "d2657d9113fdcd0f3a750bf91fc2f20e0375c722a03562f7d2487b567d99d4f1",
+      "sha256": "f8dc0f55b80a28042a08aeb3561022a6cfb00fa342244e57e586cd8c0686c8ba",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollSlDot/f8dc0f55b80a28042a08aeb3561022a6cfb00fa342244e57e586cd8c0686c8ba.front-on-1000x1100.webp",
+          "sha256": "f8dc0f55b80a28042a08aeb3561022a6cfb00fa342244e57e586cd8c0686c8ba",
+          "url": "/images/plate-contact-sheets/f8dc0f55b80a28042a08aeb3561022a6cfb00fa342244e57e586cd8c0686c8ba.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollSlDot/2cfabfd9cf70ce24e34c4290b333dc163db31f57e284a645e989d8ece1ec9530.front-off-1000x1100.webp",
+          "sha256": "2cfabfd9cf70ce24e34c4290b333dc163db31f57e284a645e989d8ece1ec9530",
+          "url": "/images/plate-contact-sheets/2cfabfd9cf70ce24e34c4290b333dc163db31f57e284a645e989d8ece1ec9530.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10RollSlMatt:c3ac252746312a962d088551b308f85db028ad860543c4b424ca4304a3c07ce5": {
+      "sku": "GBTallRect10RollSlMatt",
+      "binding": "c3ac252746312a962d088551b308f85db028ad860543c4b424ca4304a3c07ce5",
+      "sha256": "531766bd7348d291fa97811be6f65d28148b064649dab2074cfccd595842dd50",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollSlMatt/531766bd7348d291fa97811be6f65d28148b064649dab2074cfccd595842dd50.front-on-1000x1100.webp",
+          "sha256": "531766bd7348d291fa97811be6f65d28148b064649dab2074cfccd595842dd50",
+          "url": "/images/plate-contact-sheets/531766bd7348d291fa97811be6f65d28148b064649dab2074cfccd595842dd50.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollSlMatt/1a88421f4565cd51d129e312ad78cabd2b2e952dd4e9553705aa748c828825c1.front-off-1000x1100.webp",
+          "sha256": "1a88421f4565cd51d129e312ad78cabd2b2e952dd4e9553705aa748c828825c1",
+          "url": "/images/plate-contact-sheets/1a88421f4565cd51d129e312ad78cabd2b2e952dd4e9553705aa748c828825c1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10Sl:54a7fe78631bd8979961394ede5436bfcbc06ea33db202e42e9987d759ef273b": {
+      "sku": "GBTallRect10Sl",
+      "binding": "54a7fe78631bd8979961394ede5436bfcbc06ea33db202e42e9987d759ef273b",
+      "sha256": "1fed7eb6b2f5d12624bc4e27231b07c65b3468846bb730f6e07bdcdf1c9114b2",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10Sl/1fed7eb6b2f5d12624bc4e27231b07c65b3468846bb730f6e07bdcdf1c9114b2.front-on-1000x1100.webp",
+          "sha256": "1fed7eb6b2f5d12624bc4e27231b07c65b3468846bb730f6e07bdcdf1c9114b2",
+          "url": "/images/plate-contact-sheets/1fed7eb6b2f5d12624bc4e27231b07c65b3468846bb730f6e07bdcdf1c9114b2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10Sl/f6190e1c50b068f183e9cc8a44a7c2cd77686f5bbae38992778bdceeaecd9944.front-off-1000x1100.webp",
+          "sha256": "f6190e1c50b068f183e9cc8a44a7c2cd77686f5bbae38992778bdceeaecd9944",
+          "url": "/images/plate-contact-sheets/f6190e1c50b068f183e9cc8a44a7c2cd77686f5bbae38992778bdceeaecd9944.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10SpryBlkMatt:14ab10eb205b4f254aa90ec880c39146b3edfa12369659d56562c3cf2bbc35e4": {
+      "sku": "GBTallRect10SpryBlkMatt",
+      "binding": "14ab10eb205b4f254aa90ec880c39146b3edfa12369659d56562c3cf2bbc35e4",
+      "sha256": "8979651f833f8221051114c0c881b537d85344cfbaae0587d073675e1b6892a7",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBlkMatt/8979651f833f8221051114c0c881b537d85344cfbaae0587d073675e1b6892a7.front-on-1000x1100.webp",
+          "sha256": "8979651f833f8221051114c0c881b537d85344cfbaae0587d073675e1b6892a7",
+          "url": "/images/plate-contact-sheets/8979651f833f8221051114c0c881b537d85344cfbaae0587d073675e1b6892a7.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBlkMatt/53d6581121dd55600424a84d6fd1b4592e489122389e5508702705189c176b09.front-off-1000x1100.webp",
+          "sha256": "53d6581121dd55600424a84d6fd1b4592e489122389e5508702705189c176b09",
+          "url": "/images/plate-contact-sheets/53d6581121dd55600424a84d6fd1b4592e489122389e5508702705189c176b09.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10SpryBlkSh:2527b5b6bca17f55115f1bc46ee0debd326f889b9277e23bbdd323e5162eb79f": {
+      "sku": "GBTallRect10SpryBlkSh",
+      "binding": "2527b5b6bca17f55115f1bc46ee0debd326f889b9277e23bbdd323e5162eb79f",
+      "sha256": "c7bbab5142030f78205d8dafeac1fc855796ae93fd4ee51f3311188a253889f1",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBlkSh/c7bbab5142030f78205d8dafeac1fc855796ae93fd4ee51f3311188a253889f1.front-on-1000x1100.webp",
+          "sha256": "c7bbab5142030f78205d8dafeac1fc855796ae93fd4ee51f3311188a253889f1",
+          "url": "/images/plate-contact-sheets/c7bbab5142030f78205d8dafeac1fc855796ae93fd4ee51f3311188a253889f1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBlkSh/ecacad3c146fa1de48cbbbc83cf142761e5f25cef0086e091574fcff0addc241.front-off-1000x1100.webp",
+          "sha256": "ecacad3c146fa1de48cbbbc83cf142761e5f25cef0086e091574fcff0addc241",
+          "url": "/images/plate-contact-sheets/ecacad3c146fa1de48cbbbc83cf142761e5f25cef0086e091574fcff0addc241.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10SpryBluMatt:2f026c7631f5d9ce003a7c46fee02253714cd3d38b3aa47130093e660daa62e2": {
+      "sku": "GBTallRect10SpryBluMatt",
+      "binding": "2f026c7631f5d9ce003a7c46fee02253714cd3d38b3aa47130093e660daa62e2",
+      "sha256": "e6c8e44b1bc45572548ba07a7d27e419082c133431949f6e220741fc267a4f7f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBluMatt/e6c8e44b1bc45572548ba07a7d27e419082c133431949f6e220741fc267a4f7f.front-on-1000x1100.webp",
+          "sha256": "e6c8e44b1bc45572548ba07a7d27e419082c133431949f6e220741fc267a4f7f",
+          "url": "/images/plate-contact-sheets/e6c8e44b1bc45572548ba07a7d27e419082c133431949f6e220741fc267a4f7f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBluMatt/a4a23f6d9a8aff01326c2390272b5c8ccbc39819bfcf01882e5beff3452064ea.front-off-1000x1100.webp",
+          "sha256": "a4a23f6d9a8aff01326c2390272b5c8ccbc39819bfcf01882e5beff3452064ea",
+          "url": "/images/plate-contact-sheets/a4a23f6d9a8aff01326c2390272b5c8ccbc39819bfcf01882e5beff3452064ea.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10SpryCuMatt:419a227b76da1a146d9177c9f682fd520c01b10430f40b1f803990f0f75ba40b": {
+      "sku": "GBTallRect10SpryCuMatt",
+      "binding": "419a227b76da1a146d9177c9f682fd520c01b10430f40b1f803990f0f75ba40b",
+      "sha256": "dffd0a81416df09683807688cd87be8b537aacc8c160660f1b4302de99047735",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryCuMatt/dffd0a81416df09683807688cd87be8b537aacc8c160660f1b4302de99047735.front-on-1000x1100.webp",
+          "sha256": "dffd0a81416df09683807688cd87be8b537aacc8c160660f1b4302de99047735",
+          "url": "/images/plate-contact-sheets/dffd0a81416df09683807688cd87be8b537aacc8c160660f1b4302de99047735.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryCuMatt/9171efd816c319aa90962382b6c7e1350e5da52b7d80bbb62b252eb439feb123.front-off-1000x1100.webp",
+          "sha256": "9171efd816c319aa90962382b6c7e1350e5da52b7d80bbb62b252eb439feb123",
+          "url": "/images/plate-contact-sheets/9171efd816c319aa90962382b6c7e1350e5da52b7d80bbb62b252eb439feb123.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10SpryGlMatt:cc6dab286b8497ea9f4253cfc654d5363aa6d9e3d54e78307519e792bf698672": {
+      "sku": "GBTallRect10SpryGlMatt",
+      "binding": "cc6dab286b8497ea9f4253cfc654d5363aa6d9e3d54e78307519e792bf698672",
+      "sha256": "e22feb50b50b784a2f11f9664f2cbbfdf4f444de5a4a714c99c678a842b8ebf8",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryGlMatt/e22feb50b50b784a2f11f9664f2cbbfdf4f444de5a4a714c99c678a842b8ebf8.front-on-1000x1100.webp",
+          "sha256": "e22feb50b50b784a2f11f9664f2cbbfdf4f444de5a4a714c99c678a842b8ebf8",
+          "url": "/images/plate-contact-sheets/e22feb50b50b784a2f11f9664f2cbbfdf4f444de5a4a714c99c678a842b8ebf8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryGlMatt/4c14d5a3a6876c915387cc4608aef6a72869ac3d0ce4b973a36ae2a1f8af6fb0.front-off-1000x1100.webp",
+          "sha256": "4c14d5a3a6876c915387cc4608aef6a72869ac3d0ce4b973a36ae2a1f8af6fb0",
+          "url": "/images/plate-contact-sheets/4c14d5a3a6876c915387cc4608aef6a72869ac3d0ce4b973a36ae2a1f8af6fb0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10SpryGlSh:e920ed663cc24d8392cbacb44107160a3fb37d72cacbf899576295ed8c6140e3": {
+      "sku": "GBTallRect10SpryGlSh",
+      "binding": "e920ed663cc24d8392cbacb44107160a3fb37d72cacbf899576295ed8c6140e3",
+      "sha256": "d733d038067c09e39a788fdf40d34dffcb15a4ea6563546882187d32784ac718",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryGlSh/d733d038067c09e39a788fdf40d34dffcb15a4ea6563546882187d32784ac718.front-on-1000x1100.webp",
+          "sha256": "d733d038067c09e39a788fdf40d34dffcb15a4ea6563546882187d32784ac718",
+          "url": "/images/plate-contact-sheets/d733d038067c09e39a788fdf40d34dffcb15a4ea6563546882187d32784ac718.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryGlSh/e1c0f7b8c23d8fd25eaabfc0b50cf6e99ed3e94ce92578a946d5f4eeb3c223f2.front-off-1000x1100.webp",
+          "sha256": "e1c0f7b8c23d8fd25eaabfc0b50cf6e99ed3e94ce92578a946d5f4eeb3c223f2",
+          "url": "/images/plate-contact-sheets/e1c0f7b8c23d8fd25eaabfc0b50cf6e99ed3e94ce92578a946d5f4eeb3c223f2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10SprySlMatt:4547b5c62c625d069f0d83c033a1ce162258d9a3f9ed6dcac94d5f30897a3c9a": {
+      "sku": "GBTallRect10SprySlMatt",
+      "binding": "4547b5c62c625d069f0d83c033a1ce162258d9a3f9ed6dcac94d5f30897a3c9a",
+      "sha256": "6d009e6a1a5319f56622d0f15cd2ab9a6826bf6215a0af4accee01fa2788962c",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SprySlMatt/6d009e6a1a5319f56622d0f15cd2ab9a6826bf6215a0af4accee01fa2788962c.front-on-1000x1100.webp",
+          "sha256": "6d009e6a1a5319f56622d0f15cd2ab9a6826bf6215a0af4accee01fa2788962c",
+          "url": "/images/plate-contact-sheets/6d009e6a1a5319f56622d0f15cd2ab9a6826bf6215a0af4accee01fa2788962c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SprySlMatt/d9709c90941632f303f83352dba67c76fbe13e2fb5544d66199f5de3400f87dd.front-off-1000x1100.webp",
+          "sha256": "d9709c90941632f303f83352dba67c76fbe13e2fb5544d66199f5de3400f87dd",
+          "url": "/images/plate-contact-sheets/d9709c90941632f303f83352dba67c76fbe13e2fb5544d66199f5de3400f87dd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10SprySlSh:57a6ebf39a3b42c6632d15787b7aecd1cc6f5449466d0db56ca3e0d6f1be9cf6": {
+      "sku": "GBTallRect10SprySlSh",
+      "binding": "57a6ebf39a3b42c6632d15787b7aecd1cc6f5449466d0db56ca3e0d6f1be9cf6",
+      "sha256": "fe425ae0a46e1736fcfe3bec4a593f23e4bd550e83c4b5334b6328652d80a40f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SprySlSh/fe425ae0a46e1736fcfe3bec4a593f23e4bd550e83c4b5334b6328652d80a40f.front-on-1000x1100.webp",
+          "sha256": "fe425ae0a46e1736fcfe3bec4a593f23e4bd550e83c4b5334b6328652d80a40f",
+          "url": "/images/plate-contact-sheets/fe425ae0a46e1736fcfe3bec4a593f23e4bd550e83c4b5334b6328652d80a40f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SprySlSh/c0f6f703a208338929d596ddbad27bdc1e6d6c1b61d268f2b3c28a4122f63c20.front-off-1000x1100.webp",
+          "sha256": "c0f6f703a208338929d596ddbad27bdc1e6d6c1b61d268f2b3c28a4122f63c20",
+          "url": "/images/plate-contact-sheets/c0f6f703a208338929d596ddbad27bdc1e6d6c1b61d268f2b3c28a4122f63c20.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallRect10WhtSht:1418e8c8500656fe0cca4a97598e2b83c4cea05b7ab23f7e320fdb49afae0a13": {
+      "sku": "GBTallRect10WhtSht",
+      "binding": "1418e8c8500656fe0cca4a97598e2b83c4cea05b7ab23f7e320fdb49afae0a13",
+      "sha256": "c6afb146ab125d7ca31085b505c700eb38c9bc9cbb55d78bd5b63cf1b5aad744",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10WhtSht/c6afb146ab125d7ca31085b505c700eb38c9bc9cbb55d78bd5b63cf1b5aad744.front-on-1000x1100.webp",
+          "sha256": "c6afb146ab125d7ca31085b505c700eb38c9bc9cbb55d78bd5b63cf1b5aad744",
+          "url": "/images/plate-contact-sheets/c6afb146ab125d7ca31085b505c700eb38c9bc9cbb55d78bd5b63cf1b5aad744.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10WhtSht/6c5557338811b7151cf7192c5e3f6b14e1d12d0da7727459171cba6f1df6d94b.front-off-1000x1100.webp",
+          "sha256": "6c5557338811b7151cf7192c5e3f6b14e1d12d0da7727459171cba6f1df6d94b",
+          "url": "/images/plate-contact-sheets/6c5557338811b7151cf7192c5e3f6b14e1d12d0da7727459171cba6f1df6d94b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "GBRect10BlkSht",
+      "binding": "ddec467ef16175a7905ca03d4d8cbde4c9eb5c7868cf373cb992c61431ffd0e1",
+      "sha256": "8cec16ff320b5855ff413aa145676f9b04fcd8591c91a0e91fb768ca34dc3d93",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10BlkSht/8cec16ff320b5855ff413aa145676f9b04fcd8591c91a0e91fb768ca34dc3d93.front-on-1000x1100.webp",
+          "sha256": "8cec16ff320b5855ff413aa145676f9b04fcd8591c91a0e91fb768ca34dc3d93",
+          "url": "/images/plate-contact-sheets/8cec16ff320b5855ff413aa145676f9b04fcd8591c91a0e91fb768ca34dc3d93.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10BlkSht/6c22088cf0d0328033133f9c799e5f2a7fb6f29cf0d7173d4fcdc52a90a25932.front-off-1000x1100.webp",
+          "sha256": "6c22088cf0d0328033133f9c799e5f2a7fb6f29cf0d7173d4fcdc52a90a25932",
+          "url": "/images/plate-contact-sheets/6c22088cf0d0328033133f9c799e5f2a7fb6f29cf0d7173d4fcdc52a90a25932.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10Gl",
+      "binding": "49866ab2d6ee9b0f5cadc843f44e549fb7c1c1680a437c3f9c29d83597df2e94",
+      "sha256": "642138378c1620c561e368db810011ba4299a63ef8e23680183059e12c20213c",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10Gl/642138378c1620c561e368db810011ba4299a63ef8e23680183059e12c20213c.front-on-1000x1100.webp",
+          "sha256": "642138378c1620c561e368db810011ba4299a63ef8e23680183059e12c20213c",
+          "url": "/images/plate-contact-sheets/642138378c1620c561e368db810011ba4299a63ef8e23680183059e12c20213c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10Gl/4edd869ec5b716a863d4a2b369a4ee714d9e7af51289b55b4cb80ad30bc9ef88.front-off-1000x1100.webp",
+          "sha256": "4edd869ec5b716a863d4a2b369a4ee714d9e7af51289b55b4cb80ad30bc9ef88",
+          "url": "/images/plate-contact-sheets/4edd869ec5b716a863d4a2b369a4ee714d9e7af51289b55b4cb80ad30bc9ef88.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10MtlRollBlkDot",
+      "binding": "cf084ef519ef0fbacbe27ea2ff83fc0da62e3d918d9508f00724f01da7db35e9",
+      "sha256": "65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollBlkDot/65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a.front-on-1000x1100.webp",
+          "sha256": "65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a",
+          "url": "/images/plate-contact-sheets/65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollBlkDot/0c4275caec6d25e1d7700576ab300a63999142ba1e07b0142cd1e2990e90bf8c.front-off-1000x1100.webp",
+          "sha256": "0c4275caec6d25e1d7700576ab300a63999142ba1e07b0142cd1e2990e90bf8c",
+          "url": "/images/plate-contact-sheets/0c4275caec6d25e1d7700576ab300a63999142ba1e07b0142cd1e2990e90bf8c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10MtlRollBlkSh",
+      "binding": "fdbdfbcba95ec17cad5c3a16670536c89c2338581322490c38b721eb1af1b977",
+      "sha256": "c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollBlkSh/c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7.front-on-1000x1100.webp",
+          "sha256": "c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7",
+          "url": "/images/plate-contact-sheets/c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollBlkSh/5ccb370d4a4d246b32cd54670cc58749bc699dacdda71372ecbadb3656763439.front-off-1000x1100.webp",
+          "sha256": "5ccb370d4a4d246b32cd54670cc58749bc699dacdda71372ecbadb3656763439",
+          "url": "/images/plate-contact-sheets/5ccb370d4a4d246b32cd54670cc58749bc699dacdda71372ecbadb3656763439.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10MtlRollCuMatt",
+      "binding": "32df337c93fa833a8cb08418ed1f2e790f45bd2875d5100ae80beb19287f75fa",
+      "sha256": "2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollCuMatt/2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc.front-on-1000x1100.webp",
+          "sha256": "2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc",
+          "url": "/images/plate-contact-sheets/2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollCuMatt/6e8bae9cddaad8ebba45c8462f14a7e3214fc959c06a4d8d4968704dc94d5e35.front-off-1000x1100.webp",
+          "sha256": "6e8bae9cddaad8ebba45c8462f14a7e3214fc959c06a4d8d4968704dc94d5e35",
+          "url": "/images/plate-contact-sheets/6e8bae9cddaad8ebba45c8462f14a7e3214fc959c06a4d8d4968704dc94d5e35.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10MtlRollGlMatt",
+      "binding": "1da51f38b988b1b0f0e11396a84470b7d8cf432244c532ca102173fa30e82a3a",
+      "sha256": "ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollGlMatt/ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd.front-on-1000x1100.webp",
+          "sha256": "ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd",
+          "url": "/images/plate-contact-sheets/ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollGlMatt/d0a2db32a2eabd8455e6ed2085fb0e6715c8ef0671450aa25596fc3587b4d46a.front-off-1000x1100.webp",
+          "sha256": "d0a2db32a2eabd8455e6ed2085fb0e6715c8ef0671450aa25596fc3587b4d46a",
+          "url": "/images/plate-contact-sheets/d0a2db32a2eabd8455e6ed2085fb0e6715c8ef0671450aa25596fc3587b4d46a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10MtlRollGlSh",
+      "binding": "ac1714084cd9b977926759ebd1b44af7e14c13e369caac79813812a8b566a2eb",
+      "sha256": "5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollGlSh/5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed.front-on-1000x1100.webp",
+          "sha256": "5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed",
+          "url": "/images/plate-contact-sheets/5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollGlSh/c8ae51e506ce112d2bef08134f6f42313e5c924c3273f04478403f3513b05ce3.front-off-1000x1100.webp",
+          "sha256": "c8ae51e506ce112d2bef08134f6f42313e5c924c3273f04478403f3513b05ce3",
+          "url": "/images/plate-contact-sheets/c8ae51e506ce112d2bef08134f6f42313e5c924c3273f04478403f3513b05ce3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10MtlRollPinkDot",
+      "binding": "9ace5acc54c9456d4830d01eebe49504b67b8f82a2dd2f40b9f72fae7b93364f",
+      "sha256": "6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollPinkDot/6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925.front-on-1000x1100.webp",
+          "sha256": "6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925",
+          "url": "/images/plate-contact-sheets/6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollPinkDot/a82d2c60bbf4d0b4f22f1b302a7187d3ef899bc763131baadc8d530f88a19caa.front-off-1000x1100.webp",
+          "sha256": "a82d2c60bbf4d0b4f22f1b302a7187d3ef899bc763131baadc8d530f88a19caa",
+          "url": "/images/plate-contact-sheets/a82d2c60bbf4d0b4f22f1b302a7187d3ef899bc763131baadc8d530f88a19caa.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10MtlRollSlDot",
+      "binding": "7d0b4207cb54021053622fc4d4570705ad0c910fbed2f1d1895b7713eb0ca5db",
+      "sha256": "ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollSlDot/ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b.front-on-1000x1100.webp",
+          "sha256": "ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b",
+          "url": "/images/plate-contact-sheets/ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollSlDot/d892a77ca37cd0e88ee7d954b3a0e1209eb68d79fee24f46e75e705168473b02.front-off-1000x1100.webp",
+          "sha256": "d892a77ca37cd0e88ee7d954b3a0e1209eb68d79fee24f46e75e705168473b02",
+          "url": "/images/plate-contact-sheets/d892a77ca37cd0e88ee7d954b3a0e1209eb68d79fee24f46e75e705168473b02.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10MtlRollSlSh",
+      "binding": "e1f15eace16138ebc9d78c7d4d68d2317a39be744de374b5fdad33a2b66a0ef1",
+      "sha256": "25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollSlSh/25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85.front-on-1000x1100.webp",
+          "sha256": "25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85",
+          "url": "/images/plate-contact-sheets/25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10MtlRollSlSh/b97c0c26cf3f0a4f5a115d5b7f597e5107d4f7aa3a3f416420a883f3a6d01235.front-off-1000x1100.webp",
+          "sha256": "b97c0c26cf3f0a4f5a115d5b7f597e5107d4f7aa3a3f416420a883f3a6d01235",
+          "url": "/images/plate-contact-sheets/b97c0c26cf3f0a4f5a115d5b7f597e5107d4f7aa3a3f416420a883f3a6d01235.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10RollBlkDot",
+      "binding": "a38e125a4b5718e4681cbf9021057634172ab88af30020f350745a760ba2fe5a",
+      "sha256": "65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollBlkDot/65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a.front-on-1000x1100.webp",
+          "sha256": "65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a",
+          "url": "/images/plate-contact-sheets/65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollBlkDot/d8ddf58cbd4a1fe7c4e266d8e0a149a8f24b1841a312bf3b86c7b63be3aef2cf.front-off-1000x1100.webp",
+          "sha256": "d8ddf58cbd4a1fe7c4e266d8e0a149a8f24b1841a312bf3b86c7b63be3aef2cf",
+          "url": "/images/plate-contact-sheets/d8ddf58cbd4a1fe7c4e266d8e0a149a8f24b1841a312bf3b86c7b63be3aef2cf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10RollBlkSh",
+      "binding": "b426736453e5025602cf1e3b8b4b8d23034c5031d6e36dcc0bc6c410356c6985",
+      "sha256": "c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollBlkSh/c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7.front-on-1000x1100.webp",
+          "sha256": "c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7",
+          "url": "/images/plate-contact-sheets/c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollBlkSh/135ffbb66cb3b0668aaac9ea586882fecb4749c382274e357d408c6f1b02f44f.front-off-1000x1100.webp",
+          "sha256": "135ffbb66cb3b0668aaac9ea586882fecb4749c382274e357d408c6f1b02f44f",
+          "url": "/images/plate-contact-sheets/135ffbb66cb3b0668aaac9ea586882fecb4749c382274e357d408c6f1b02f44f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10RollCuMatt",
+      "binding": "2466fdf77a494fd523c5153189cbdc3da68d71c547d5f1898dd4483a1ef90b74",
+      "sha256": "2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollCuMatt/2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc.front-on-1000x1100.webp",
+          "sha256": "2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc",
+          "url": "/images/plate-contact-sheets/2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollCuMatt/0ec7bb82697137b91b106290285955b53db7d8e34898e31a7729ea6f110fd78a.front-off-1000x1100.webp",
+          "sha256": "0ec7bb82697137b91b106290285955b53db7d8e34898e31a7729ea6f110fd78a",
+          "url": "/images/plate-contact-sheets/0ec7bb82697137b91b106290285955b53db7d8e34898e31a7729ea6f110fd78a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10RollGlMatt",
+      "binding": "3fb3bdd6fe503fa9a6bf38ba5d2269efca740b32a92f4ad1f18224e73accb0c6",
+      "sha256": "ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollGlMatt/ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd.front-on-1000x1100.webp",
+          "sha256": "ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd",
+          "url": "/images/plate-contact-sheets/ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollGlMatt/b69b3df6808ad25f9f65c79a81bb4d79f6ab4b8c7ddde282f674051b1ba460f1.front-off-1000x1100.webp",
+          "sha256": "b69b3df6808ad25f9f65c79a81bb4d79f6ab4b8c7ddde282f674051b1ba460f1",
+          "url": "/images/plate-contact-sheets/b69b3df6808ad25f9f65c79a81bb4d79f6ab4b8c7ddde282f674051b1ba460f1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10RollGlSh",
+      "binding": "308b8553821ee027331f8063406b421f8e680a0a16615e9fcf7c24d1f2f73ea3",
+      "sha256": "5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollGlSh/5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed.front-on-1000x1100.webp",
+          "sha256": "5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed",
+          "url": "/images/plate-contact-sheets/5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollGlSh/c28bbcd92304ee878c91c5c3218365185d9ce862599ceb81ff1c59bfee60bde9.front-off-1000x1100.webp",
+          "sha256": "c28bbcd92304ee878c91c5c3218365185d9ce862599ceb81ff1c59bfee60bde9",
+          "url": "/images/plate-contact-sheets/c28bbcd92304ee878c91c5c3218365185d9ce862599ceb81ff1c59bfee60bde9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10RollPinkDot",
+      "binding": "a4e3e2554dcaf268ca1646ca6d642fb32c91719fa96d7f6e0c8df7b6aa85b7c3",
+      "sha256": "6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollPinkDot/6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925.front-on-1000x1100.webp",
+          "sha256": "6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925",
+          "url": "/images/plate-contact-sheets/6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollPinkDot/9df4c7e45c0f92b906f579c6ab5005e96bf66148002d628039ad754c7820ee70.front-off-1000x1100.webp",
+          "sha256": "9df4c7e45c0f92b906f579c6ab5005e96bf66148002d628039ad754c7820ee70",
+          "url": "/images/plate-contact-sheets/9df4c7e45c0f92b906f579c6ab5005e96bf66148002d628039ad754c7820ee70.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10RollSlDot",
+      "binding": "c8b73e914cc75d2b9b1a53bcca928031744737ccc54108fb25c96dadd6697699",
+      "sha256": "ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlDot/ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b.front-on-1000x1100.webp",
+          "sha256": "ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b",
+          "url": "/images/plate-contact-sheets/ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlDot/6b49dd1ed30fad0826c6edcb33506ec60fe2d44e663d9571cf0bc888a0c40992.front-off-1000x1100.webp",
+          "sha256": "6b49dd1ed30fad0826c6edcb33506ec60fe2d44e663d9571cf0bc888a0c40992",
+          "url": "/images/plate-contact-sheets/6b49dd1ed30fad0826c6edcb33506ec60fe2d44e663d9571cf0bc888a0c40992.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10RollSlMatt",
+      "binding": "830d4c4a8eabbf6e1587d43a5c4bd523972866d7a8c28636787af06792da6f7a",
+      "sha256": "eb27d1ff01d6afe38a1b33ff41864ef5bfb798e2a837940753c112d6d1c73d0f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlMatt/eb27d1ff01d6afe38a1b33ff41864ef5bfb798e2a837940753c112d6d1c73d0f.front-on-1000x1100.webp",
+          "sha256": "eb27d1ff01d6afe38a1b33ff41864ef5bfb798e2a837940753c112d6d1c73d0f",
+          "url": "/images/plate-contact-sheets/eb27d1ff01d6afe38a1b33ff41864ef5bfb798e2a837940753c112d6d1c73d0f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlMatt/83c86a344b29ab7c78cbe0f66393a8774e1bca935725e5241a05f99353de0a20.front-off-1000x1100.webp",
+          "sha256": "83c86a344b29ab7c78cbe0f66393a8774e1bca935725e5241a05f99353de0a20",
+          "url": "/images/plate-contact-sheets/83c86a344b29ab7c78cbe0f66393a8774e1bca935725e5241a05f99353de0a20.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10RollSlSh",
+      "binding": "e7cbd9c26b2f24b681264c04bbcbd77feacd75fc15f8af2e3ab224cd6857b496",
+      "sha256": "25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlSh/25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85.front-on-1000x1100.webp",
+          "sha256": "25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85",
+          "url": "/images/plate-contact-sheets/25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10RollSlSh/9678e177843a4683b8ac3c7177cd5dac3b39e005d78d445ca7e4a76924018bc1.front-off-1000x1100.webp",
+          "sha256": "9678e177843a4683b8ac3c7177cd5dac3b39e005d78d445ca7e4a76924018bc1",
+          "url": "/images/plate-contact-sheets/9678e177843a4683b8ac3c7177cd5dac3b39e005d78d445ca7e4a76924018bc1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10Sl",
+      "binding": "bcbedb244cee12cab9f9cd94152e7761a2db7820392a022d3750fe6901668308",
+      "sha256": "eae85bd7b4c18b508b59fed30cf5f1edb5ceabfaf1952ec956f5e9ab5d6dca6d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10Sl/eae85bd7b4c18b508b59fed30cf5f1edb5ceabfaf1952ec956f5e9ab5d6dca6d.front-on-1000x1100.webp",
+          "sha256": "eae85bd7b4c18b508b59fed30cf5f1edb5ceabfaf1952ec956f5e9ab5d6dca6d",
+          "url": "/images/plate-contact-sheets/eae85bd7b4c18b508b59fed30cf5f1edb5ceabfaf1952ec956f5e9ab5d6dca6d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10Sl/2115395e40ef32f94c313cfa7add118aadece40a181b86bb90fceb89a6c21516.front-off-1000x1100.webp",
+          "sha256": "2115395e40ef32f94c313cfa7add118aadece40a181b86bb90fceb89a6c21516",
+          "url": "/images/plate-contact-sheets/2115395e40ef32f94c313cfa7add118aadece40a181b86bb90fceb89a6c21516.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10SpryBlkMatt",
+      "binding": "0e392a1a6b8043b8df0588ddb83e526af9c31c23bd5a0f887e349eb0e8d2153f",
+      "sha256": "77a9baa81893521b1a5835f587465635e1d0feb41918e532c06329c5bfa81874",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBlkMatt/77a9baa81893521b1a5835f587465635e1d0feb41918e532c06329c5bfa81874.front-on-1000x1100.webp",
+          "sha256": "77a9baa81893521b1a5835f587465635e1d0feb41918e532c06329c5bfa81874",
+          "url": "/images/plate-contact-sheets/77a9baa81893521b1a5835f587465635e1d0feb41918e532c06329c5bfa81874.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBlkMatt/0909fd57dd6275bd3f7b6ee4b2efd9f232440c5583974c0df78d75ec87b6b2d8.front-off-1000x1100.webp",
+          "sha256": "0909fd57dd6275bd3f7b6ee4b2efd9f232440c5583974c0df78d75ec87b6b2d8",
+          "url": "/images/plate-contact-sheets/0909fd57dd6275bd3f7b6ee4b2efd9f232440c5583974c0df78d75ec87b6b2d8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10SpryBlkSh",
+      "binding": "a9c8c4ab0c1f39a75e9134b6f709de6a6e5d71a91430872e21dc2ef9e115fb48",
+      "sha256": "ea9893a73461f1a2226066944234a807e75ade92bdb9518a8272d49ec3db112c",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBlkSh/ea9893a73461f1a2226066944234a807e75ade92bdb9518a8272d49ec3db112c.front-on-1000x1100.webp",
+          "sha256": "ea9893a73461f1a2226066944234a807e75ade92bdb9518a8272d49ec3db112c",
+          "url": "/images/plate-contact-sheets/ea9893a73461f1a2226066944234a807e75ade92bdb9518a8272d49ec3db112c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBlkSh/6f5a0184a2bba285e18284f675a98a698769c90d331c38cf9376bc0dfbc60388.front-off-1000x1100.webp",
+          "sha256": "6f5a0184a2bba285e18284f675a98a698769c90d331c38cf9376bc0dfbc60388",
+          "url": "/images/plate-contact-sheets/6f5a0184a2bba285e18284f675a98a698769c90d331c38cf9376bc0dfbc60388.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10SpryBluMatt",
+      "binding": "047bd3d2d047ec8260df38969581967bf9903f461c6fee8d62d0495bec474848",
+      "sha256": "f6a696250a91c00bf0fcba4f32b2df11cca6d17e826624d8e131aebedb6ecc59",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBluMatt/f6a696250a91c00bf0fcba4f32b2df11cca6d17e826624d8e131aebedb6ecc59.front-on-1000x1100.webp",
+          "sha256": "f6a696250a91c00bf0fcba4f32b2df11cca6d17e826624d8e131aebedb6ecc59",
+          "url": "/images/plate-contact-sheets/f6a696250a91c00bf0fcba4f32b2df11cca6d17e826624d8e131aebedb6ecc59.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryBluMatt/ec9a88b103fcf2df8d14c6cd9f794aed9f7bd184b411bafcae48b7f7a3a7f9b5.front-off-1000x1100.webp",
+          "sha256": "ec9a88b103fcf2df8d14c6cd9f794aed9f7bd184b411bafcae48b7f7a3a7f9b5",
+          "url": "/images/plate-contact-sheets/ec9a88b103fcf2df8d14c6cd9f794aed9f7bd184b411bafcae48b7f7a3a7f9b5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10SpryCuMatt",
+      "binding": "896f836a3ef843b193a69144b0b5f1a6e743c037ae9d88df994cf26c42c6f680",
+      "sha256": "905f90be821cd9141c109d06de989e84867b18ad595966ed3048d35f29bf18ac",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryCuMatt/905f90be821cd9141c109d06de989e84867b18ad595966ed3048d35f29bf18ac.front-on-1000x1100.webp",
+          "sha256": "905f90be821cd9141c109d06de989e84867b18ad595966ed3048d35f29bf18ac",
+          "url": "/images/plate-contact-sheets/905f90be821cd9141c109d06de989e84867b18ad595966ed3048d35f29bf18ac.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryCuMatt/a5aa22093327ac8bb2a4d0638043cae49320d08bc711e80a263ec1cc83462738.front-off-1000x1100.webp",
+          "sha256": "a5aa22093327ac8bb2a4d0638043cae49320d08bc711e80a263ec1cc83462738",
+          "url": "/images/plate-contact-sheets/a5aa22093327ac8bb2a4d0638043cae49320d08bc711e80a263ec1cc83462738.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10SpryGlMatt",
+      "binding": "9794f9508b9e9d8eb785e998e67776a1168e4f49468e797d28baa7e47344162f",
+      "sha256": "f09f360987bdb40dbb89e89cdce59f5bdfe6ec6d41e2d79acd73a2fc6a4920b4",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryGlMatt/f09f360987bdb40dbb89e89cdce59f5bdfe6ec6d41e2d79acd73a2fc6a4920b4.front-on-1000x1100.webp",
+          "sha256": "f09f360987bdb40dbb89e89cdce59f5bdfe6ec6d41e2d79acd73a2fc6a4920b4",
+          "url": "/images/plate-contact-sheets/f09f360987bdb40dbb89e89cdce59f5bdfe6ec6d41e2d79acd73a2fc6a4920b4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryGlMatt/a45480d6185e9712f66bec55436db5dd55f3f0ba339cc55e738d51d7c4f05142.front-off-1000x1100.webp",
+          "sha256": "a45480d6185e9712f66bec55436db5dd55f3f0ba339cc55e738d51d7c4f05142",
+          "url": "/images/plate-contact-sheets/a45480d6185e9712f66bec55436db5dd55f3f0ba339cc55e738d51d7c4f05142.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10SpryGlSh",
+      "binding": "1ee835b70bbcd03b9893e2209a39b8395cc92530c1e6c0a1945af3fb1e585ffe",
+      "sha256": "892736bf9740966e56bb988863f72d0d438cded0c6a88f0b9ea8d0adc4569f76",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryGlSh/892736bf9740966e56bb988863f72d0d438cded0c6a88f0b9ea8d0adc4569f76.front-on-1000x1100.webp",
+          "sha256": "892736bf9740966e56bb988863f72d0d438cded0c6a88f0b9ea8d0adc4569f76",
+          "url": "/images/plate-contact-sheets/892736bf9740966e56bb988863f72d0d438cded0c6a88f0b9ea8d0adc4569f76.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SpryGlSh/42c5516a28b15a2bbe74a5aff9709a43ac7aed3797bc76d1a8434fe4ef17ef20.front-off-1000x1100.webp",
+          "sha256": "42c5516a28b15a2bbe74a5aff9709a43ac7aed3797bc76d1a8434fe4ef17ef20",
+          "url": "/images/plate-contact-sheets/42c5516a28b15a2bbe74a5aff9709a43ac7aed3797bc76d1a8434fe4ef17ef20.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10SprySlMatt",
+      "binding": "943bc019d1230e92addf4c82f759db9aaf74c1a0b0cc3805675ecea07bdec81c",
+      "sha256": "6a2ec9c35a5b21db82af7d07ec85cc36ea70fca250c7e68a3d6f888b0756197a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SprySlMatt/6a2ec9c35a5b21db82af7d07ec85cc36ea70fca250c7e68a3d6f888b0756197a.front-on-1000x1100.webp",
+          "sha256": "6a2ec9c35a5b21db82af7d07ec85cc36ea70fca250c7e68a3d6f888b0756197a",
+          "url": "/images/plate-contact-sheets/6a2ec9c35a5b21db82af7d07ec85cc36ea70fca250c7e68a3d6f888b0756197a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SprySlMatt/ecbde1537a6f5aaac094fb4b5ed0c84269dc7f4e04c1fbe842a541e3a351d44e.front-off-1000x1100.webp",
+          "sha256": "ecbde1537a6f5aaac094fb4b5ed0c84269dc7f4e04c1fbe842a541e3a351d44e",
+          "url": "/images/plate-contact-sheets/ecbde1537a6f5aaac094fb4b5ed0c84269dc7f4e04c1fbe842a541e3a351d44e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10SprySlSh",
+      "binding": "a586129c8449ef9c42ea09e1d67f2679bce6ba119c634333a7eb153699f6f2b7",
+      "sha256": "9b455d8de02ab2506e71c1094947c3b2e9c3c0e5c395fd46b0fd768d6cda8322",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SprySlSh/9b455d8de02ab2506e71c1094947c3b2e9c3c0e5c395fd46b0fd768d6cda8322.front-on-1000x1100.webp",
+          "sha256": "9b455d8de02ab2506e71c1094947c3b2e9c3c0e5c395fd46b0fd768d6cda8322",
+          "url": "/images/plate-contact-sheets/9b455d8de02ab2506e71c1094947c3b2e9c3c0e5c395fd46b0fd768d6cda8322.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10SprySlSh/dcd8b859165cad36a6228fd07d8a0915d96df58c9606fa53040b55f6db045741.front-off-1000x1100.webp",
+          "sha256": "dcd8b859165cad36a6228fd07d8a0915d96df58c9606fa53040b55f6db045741",
+          "url": "/images/plate-contact-sheets/dcd8b859165cad36a6228fd07d8a0915d96df58c9606fa53040b55f6db045741.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRect10WhtSht",
+      "binding": "d22fce786d197f8972898e1d0363002093b8a3f7a0c4d4c752ed4ed2ef3eeb01",
+      "sha256": "9880fb1596fc2acb3629851ea13918f003b2b18880b6252138314fef47ae38bb",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10WhtSht/9880fb1596fc2acb3629851ea13918f003b2b18880b6252138314fef47ae38bb.front-on-1000x1100.webp",
+          "sha256": "9880fb1596fc2acb3629851ea13918f003b2b18880b6252138314fef47ae38bb",
+          "url": "/images/plate-contact-sheets/9880fb1596fc2acb3629851ea13918f003b2b18880b6252138314fef47ae38bb.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBRect10WhtSht/ce0cde093bda680050b160b4bc2689387796248a71c930e95db45a02377ceaa0.front-off-1000x1100.webp",
+          "sha256": "ce0cde093bda680050b160b4bc2689387796248a71c930e95db45a02377ceaa0",
+          "url": "/images/plate-contact-sheets/ce0cde093bda680050b160b4bc2689387796248a71c930e95db45a02377ceaa0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10BlkSht",
+      "binding": "19928c8ede6e5cbfa0bbdd1d0f7d4d3d8fde81a6eb210759f31c4eb065b026a3",
+      "sha256": "ea540db5889a64b8d3a597231bae49889e27c81feb8b7c4977a72001fc572a07",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10BlkSht/ea540db5889a64b8d3a597231bae49889e27c81feb8b7c4977a72001fc572a07.front-on-1000x1100.webp",
+          "sha256": "ea540db5889a64b8d3a597231bae49889e27c81feb8b7c4977a72001fc572a07",
+          "url": "/images/plate-contact-sheets/ea540db5889a64b8d3a597231bae49889e27c81feb8b7c4977a72001fc572a07.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10BlkSht/881a7bd83b2ae6b6dcfe9e085dfb63ae59da0e7a6127d981777426bf3328b261.front-off-1000x1100.webp",
+          "sha256": "881a7bd83b2ae6b6dcfe9e085dfb63ae59da0e7a6127d981777426bf3328b261",
+          "url": "/images/plate-contact-sheets/881a7bd83b2ae6b6dcfe9e085dfb63ae59da0e7a6127d981777426bf3328b261.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10Gl",
+      "binding": "4560db9c1b65ff14063c1d4d8da5ee78fe1327e78ebeddd56a7301b6096fec51",
+      "sha256": "4e11e916fc6fca0820909014346d67f73a348463f4fdbd243a6258a7b0334f97",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10Gl/4e11e916fc6fca0820909014346d67f73a348463f4fdbd243a6258a7b0334f97.front-on-1000x1100.webp",
+          "sha256": "4e11e916fc6fca0820909014346d67f73a348463f4fdbd243a6258a7b0334f97",
+          "url": "/images/plate-contact-sheets/4e11e916fc6fca0820909014346d67f73a348463f4fdbd243a6258a7b0334f97.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10Gl/4a51021f2728f1cb2084c5bcc818e2d5ccb577452eaf0d4be545aa329d673f8e.front-off-1000x1100.webp",
+          "sha256": "4a51021f2728f1cb2084c5bcc818e2d5ccb577452eaf0d4be545aa329d673f8e",
+          "url": "/images/plate-contact-sheets/4a51021f2728f1cb2084c5bcc818e2d5ccb577452eaf0d4be545aa329d673f8e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10MtlRollBlkSh",
+      "binding": "4b6686a0653868c7e918f908db2f2bfa3768d1142485e145da8e0245bd3d6ae2",
+      "sha256": "f1bbb7f9c416b740b677a6eeae74381f60b497553ecdea4b59af8c4afbb1ecbb",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollBlkSh/f1bbb7f9c416b740b677a6eeae74381f60b497553ecdea4b59af8c4afbb1ecbb.front-on-1000x1100.webp",
+          "sha256": "f1bbb7f9c416b740b677a6eeae74381f60b497553ecdea4b59af8c4afbb1ecbb",
+          "url": "/images/plate-contact-sheets/f1bbb7f9c416b740b677a6eeae74381f60b497553ecdea4b59af8c4afbb1ecbb.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollBlkSh/27cd96c1ce5c3830afb2d36373d8a55be658c4382056bfbce34a20915e011026.front-off-1000x1100.webp",
+          "sha256": "27cd96c1ce5c3830afb2d36373d8a55be658c4382056bfbce34a20915e011026",
+          "url": "/images/plate-contact-sheets/27cd96c1ce5c3830afb2d36373d8a55be658c4382056bfbce34a20915e011026.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10MtlRollCuMatt",
+      "binding": "5685aaddff44738bbd9a95455969e735e642bbed9165763601f6d2efbbd9b113",
+      "sha256": "8f3bb9b3fed49d273de966d220564b1835423da96c72eb943fd223c79903c881",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollCuMatt/8f3bb9b3fed49d273de966d220564b1835423da96c72eb943fd223c79903c881.front-on-1000x1100.webp",
+          "sha256": "8f3bb9b3fed49d273de966d220564b1835423da96c72eb943fd223c79903c881",
+          "url": "/images/plate-contact-sheets/8f3bb9b3fed49d273de966d220564b1835423da96c72eb943fd223c79903c881.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollCuMatt/587d2e325a4fa93716ef6aa688e26f0f4af4ccf236e9a94f5dbab905d0c9db12.front-off-1000x1100.webp",
+          "sha256": "587d2e325a4fa93716ef6aa688e26f0f4af4ccf236e9a94f5dbab905d0c9db12",
+          "url": "/images/plate-contact-sheets/587d2e325a4fa93716ef6aa688e26f0f4af4ccf236e9a94f5dbab905d0c9db12.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10MtlRollGlMatt",
+      "binding": "627d7f10a220a61e78fefe3b07d4ca92215e8860a4e4ec4bf970c704e9ab99d4",
+      "sha256": "197aa096f6ae723dba6a05a069d181c82654142ab1ac3d41b179b0a9db8a29f0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollGlMatt/197aa096f6ae723dba6a05a069d181c82654142ab1ac3d41b179b0a9db8a29f0.front-on-1000x1100.webp",
+          "sha256": "197aa096f6ae723dba6a05a069d181c82654142ab1ac3d41b179b0a9db8a29f0",
+          "url": "/images/plate-contact-sheets/197aa096f6ae723dba6a05a069d181c82654142ab1ac3d41b179b0a9db8a29f0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollGlMatt/9a34ced65f1f671f93951cd97781a4598ae2da5643f2dbb31fc0c47964d5b87b.front-off-1000x1100.webp",
+          "sha256": "9a34ced65f1f671f93951cd97781a4598ae2da5643f2dbb31fc0c47964d5b87b",
+          "url": "/images/plate-contact-sheets/9a34ced65f1f671f93951cd97781a4598ae2da5643f2dbb31fc0c47964d5b87b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10MtlRollSlSh",
+      "binding": "1f64d8d62a84fbabe72bdedf6db1aba31397cdb79a74fe44202a092bed57a8de",
+      "sha256": "f92b47952a568483def5d9c03f5e91747103bb9cb863ca1a1dcf0fb16b68ab3b",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollSlSh/f92b47952a568483def5d9c03f5e91747103bb9cb863ca1a1dcf0fb16b68ab3b.front-on-1000x1100.webp",
+          "sha256": "f92b47952a568483def5d9c03f5e91747103bb9cb863ca1a1dcf0fb16b68ab3b",
+          "url": "/images/plate-contact-sheets/f92b47952a568483def5d9c03f5e91747103bb9cb863ca1a1dcf0fb16b68ab3b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10MtlRollSlSh/a611237fe53d6445dfa63368e1c1f40592c1d7e58644c68acc7b784238f28126.front-off-1000x1100.webp",
+          "sha256": "a611237fe53d6445dfa63368e1c1f40592c1d7e58644c68acc7b784238f28126",
+          "url": "/images/plate-contact-sheets/a611237fe53d6445dfa63368e1c1f40592c1d7e58644c68acc7b784238f28126.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10RollGlSh",
+      "binding": "9b3646de351c29e71309c5691dad077b4780e75508bf155b2b1a02e183e74c4e",
+      "sha256": "de597bfba590cf8e047c9c5a75b6116ae349ea66acad5bde53b2188d6b8dc163",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollGlSh/de597bfba590cf8e047c9c5a75b6116ae349ea66acad5bde53b2188d6b8dc163.front-on-1000x1100.webp",
+          "sha256": "de597bfba590cf8e047c9c5a75b6116ae349ea66acad5bde53b2188d6b8dc163",
+          "url": "/images/plate-contact-sheets/de597bfba590cf8e047c9c5a75b6116ae349ea66acad5bde53b2188d6b8dc163.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollGlSh/6a88b7c29fb5cd5de84b2b7ee661437214dc9ccf83946609828cf22ae11b5634.front-off-1000x1100.webp",
+          "sha256": "6a88b7c29fb5cd5de84b2b7ee661437214dc9ccf83946609828cf22ae11b5634",
+          "url": "/images/plate-contact-sheets/6a88b7c29fb5cd5de84b2b7ee661437214dc9ccf83946609828cf22ae11b5634.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10RollPinkDot",
+      "binding": "5da15d91db922a92331bc93d6ce5698a47b65eade88beb3fd79d58511cc20dd3",
+      "sha256": "4a02477396ef3ab87ce68b0fde07ddb10329846c89e663c3d3e92d6e3486625f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollPinkDot/4a02477396ef3ab87ce68b0fde07ddb10329846c89e663c3d3e92d6e3486625f.front-on-1000x1100.webp",
+          "sha256": "4a02477396ef3ab87ce68b0fde07ddb10329846c89e663c3d3e92d6e3486625f",
+          "url": "/images/plate-contact-sheets/4a02477396ef3ab87ce68b0fde07ddb10329846c89e663c3d3e92d6e3486625f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollPinkDot/259f07699258da6ba4c745e5fbf2915d2bdae86336d1fc11b2d2b8306d80863f.front-off-1000x1100.webp",
+          "sha256": "259f07699258da6ba4c745e5fbf2915d2bdae86336d1fc11b2d2b8306d80863f",
+          "url": "/images/plate-contact-sheets/259f07699258da6ba4c745e5fbf2915d2bdae86336d1fc11b2d2b8306d80863f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10RollSlDot",
+      "binding": "d2657d9113fdcd0f3a750bf91fc2f20e0375c722a03562f7d2487b567d99d4f1",
+      "sha256": "f8dc0f55b80a28042a08aeb3561022a6cfb00fa342244e57e586cd8c0686c8ba",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollSlDot/f8dc0f55b80a28042a08aeb3561022a6cfb00fa342244e57e586cd8c0686c8ba.front-on-1000x1100.webp",
+          "sha256": "f8dc0f55b80a28042a08aeb3561022a6cfb00fa342244e57e586cd8c0686c8ba",
+          "url": "/images/plate-contact-sheets/f8dc0f55b80a28042a08aeb3561022a6cfb00fa342244e57e586cd8c0686c8ba.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollSlDot/2cfabfd9cf70ce24e34c4290b333dc163db31f57e284a645e989d8ece1ec9530.front-off-1000x1100.webp",
+          "sha256": "2cfabfd9cf70ce24e34c4290b333dc163db31f57e284a645e989d8ece1ec9530",
+          "url": "/images/plate-contact-sheets/2cfabfd9cf70ce24e34c4290b333dc163db31f57e284a645e989d8ece1ec9530.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10RollSlMatt",
+      "binding": "c3ac252746312a962d088551b308f85db028ad860543c4b424ca4304a3c07ce5",
+      "sha256": "531766bd7348d291fa97811be6f65d28148b064649dab2074cfccd595842dd50",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollSlMatt/531766bd7348d291fa97811be6f65d28148b064649dab2074cfccd595842dd50.front-on-1000x1100.webp",
+          "sha256": "531766bd7348d291fa97811be6f65d28148b064649dab2074cfccd595842dd50",
+          "url": "/images/plate-contact-sheets/531766bd7348d291fa97811be6f65d28148b064649dab2074cfccd595842dd50.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10RollSlMatt/1a88421f4565cd51d129e312ad78cabd2b2e952dd4e9553705aa748c828825c1.front-off-1000x1100.webp",
+          "sha256": "1a88421f4565cd51d129e312ad78cabd2b2e952dd4e9553705aa748c828825c1",
+          "url": "/images/plate-contact-sheets/1a88421f4565cd51d129e312ad78cabd2b2e952dd4e9553705aa748c828825c1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10Sl",
+      "binding": "54a7fe78631bd8979961394ede5436bfcbc06ea33db202e42e9987d759ef273b",
+      "sha256": "1fed7eb6b2f5d12624bc4e27231b07c65b3468846bb730f6e07bdcdf1c9114b2",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10Sl/1fed7eb6b2f5d12624bc4e27231b07c65b3468846bb730f6e07bdcdf1c9114b2.front-on-1000x1100.webp",
+          "sha256": "1fed7eb6b2f5d12624bc4e27231b07c65b3468846bb730f6e07bdcdf1c9114b2",
+          "url": "/images/plate-contact-sheets/1fed7eb6b2f5d12624bc4e27231b07c65b3468846bb730f6e07bdcdf1c9114b2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10Sl/f6190e1c50b068f183e9cc8a44a7c2cd77686f5bbae38992778bdceeaecd9944.front-off-1000x1100.webp",
+          "sha256": "f6190e1c50b068f183e9cc8a44a7c2cd77686f5bbae38992778bdceeaecd9944",
+          "url": "/images/plate-contact-sheets/f6190e1c50b068f183e9cc8a44a7c2cd77686f5bbae38992778bdceeaecd9944.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10SpryBlkMatt",
+      "binding": "14ab10eb205b4f254aa90ec880c39146b3edfa12369659d56562c3cf2bbc35e4",
+      "sha256": "8979651f833f8221051114c0c881b537d85344cfbaae0587d073675e1b6892a7",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBlkMatt/8979651f833f8221051114c0c881b537d85344cfbaae0587d073675e1b6892a7.front-on-1000x1100.webp",
+          "sha256": "8979651f833f8221051114c0c881b537d85344cfbaae0587d073675e1b6892a7",
+          "url": "/images/plate-contact-sheets/8979651f833f8221051114c0c881b537d85344cfbaae0587d073675e1b6892a7.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBlkMatt/53d6581121dd55600424a84d6fd1b4592e489122389e5508702705189c176b09.front-off-1000x1100.webp",
+          "sha256": "53d6581121dd55600424a84d6fd1b4592e489122389e5508702705189c176b09",
+          "url": "/images/plate-contact-sheets/53d6581121dd55600424a84d6fd1b4592e489122389e5508702705189c176b09.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10SpryBlkSh",
+      "binding": "2527b5b6bca17f55115f1bc46ee0debd326f889b9277e23bbdd323e5162eb79f",
+      "sha256": "c7bbab5142030f78205d8dafeac1fc855796ae93fd4ee51f3311188a253889f1",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBlkSh/c7bbab5142030f78205d8dafeac1fc855796ae93fd4ee51f3311188a253889f1.front-on-1000x1100.webp",
+          "sha256": "c7bbab5142030f78205d8dafeac1fc855796ae93fd4ee51f3311188a253889f1",
+          "url": "/images/plate-contact-sheets/c7bbab5142030f78205d8dafeac1fc855796ae93fd4ee51f3311188a253889f1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBlkSh/ecacad3c146fa1de48cbbbc83cf142761e5f25cef0086e091574fcff0addc241.front-off-1000x1100.webp",
+          "sha256": "ecacad3c146fa1de48cbbbc83cf142761e5f25cef0086e091574fcff0addc241",
+          "url": "/images/plate-contact-sheets/ecacad3c146fa1de48cbbbc83cf142761e5f25cef0086e091574fcff0addc241.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10SpryBluMatt",
+      "binding": "2f026c7631f5d9ce003a7c46fee02253714cd3d38b3aa47130093e660daa62e2",
+      "sha256": "e6c8e44b1bc45572548ba07a7d27e419082c133431949f6e220741fc267a4f7f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBluMatt/e6c8e44b1bc45572548ba07a7d27e419082c133431949f6e220741fc267a4f7f.front-on-1000x1100.webp",
+          "sha256": "e6c8e44b1bc45572548ba07a7d27e419082c133431949f6e220741fc267a4f7f",
+          "url": "/images/plate-contact-sheets/e6c8e44b1bc45572548ba07a7d27e419082c133431949f6e220741fc267a4f7f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryBluMatt/a4a23f6d9a8aff01326c2390272b5c8ccbc39819bfcf01882e5beff3452064ea.front-off-1000x1100.webp",
+          "sha256": "a4a23f6d9a8aff01326c2390272b5c8ccbc39819bfcf01882e5beff3452064ea",
+          "url": "/images/plate-contact-sheets/a4a23f6d9a8aff01326c2390272b5c8ccbc39819bfcf01882e5beff3452064ea.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10SpryCuMatt",
+      "binding": "419a227b76da1a146d9177c9f682fd520c01b10430f40b1f803990f0f75ba40b",
+      "sha256": "dffd0a81416df09683807688cd87be8b537aacc8c160660f1b4302de99047735",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryCuMatt/dffd0a81416df09683807688cd87be8b537aacc8c160660f1b4302de99047735.front-on-1000x1100.webp",
+          "sha256": "dffd0a81416df09683807688cd87be8b537aacc8c160660f1b4302de99047735",
+          "url": "/images/plate-contact-sheets/dffd0a81416df09683807688cd87be8b537aacc8c160660f1b4302de99047735.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryCuMatt/9171efd816c319aa90962382b6c7e1350e5da52b7d80bbb62b252eb439feb123.front-off-1000x1100.webp",
+          "sha256": "9171efd816c319aa90962382b6c7e1350e5da52b7d80bbb62b252eb439feb123",
+          "url": "/images/plate-contact-sheets/9171efd816c319aa90962382b6c7e1350e5da52b7d80bbb62b252eb439feb123.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10SpryGlMatt",
+      "binding": "cc6dab286b8497ea9f4253cfc654d5363aa6d9e3d54e78307519e792bf698672",
+      "sha256": "e22feb50b50b784a2f11f9664f2cbbfdf4f444de5a4a714c99c678a842b8ebf8",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryGlMatt/e22feb50b50b784a2f11f9664f2cbbfdf4f444de5a4a714c99c678a842b8ebf8.front-on-1000x1100.webp",
+          "sha256": "e22feb50b50b784a2f11f9664f2cbbfdf4f444de5a4a714c99c678a842b8ebf8",
+          "url": "/images/plate-contact-sheets/e22feb50b50b784a2f11f9664f2cbbfdf4f444de5a4a714c99c678a842b8ebf8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryGlMatt/4c14d5a3a6876c915387cc4608aef6a72869ac3d0ce4b973a36ae2a1f8af6fb0.front-off-1000x1100.webp",
+          "sha256": "4c14d5a3a6876c915387cc4608aef6a72869ac3d0ce4b973a36ae2a1f8af6fb0",
+          "url": "/images/plate-contact-sheets/4c14d5a3a6876c915387cc4608aef6a72869ac3d0ce4b973a36ae2a1f8af6fb0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10SpryGlSh",
+      "binding": "e920ed663cc24d8392cbacb44107160a3fb37d72cacbf899576295ed8c6140e3",
+      "sha256": "d733d038067c09e39a788fdf40d34dffcb15a4ea6563546882187d32784ac718",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryGlSh/d733d038067c09e39a788fdf40d34dffcb15a4ea6563546882187d32784ac718.front-on-1000x1100.webp",
+          "sha256": "d733d038067c09e39a788fdf40d34dffcb15a4ea6563546882187d32784ac718",
+          "url": "/images/plate-contact-sheets/d733d038067c09e39a788fdf40d34dffcb15a4ea6563546882187d32784ac718.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SpryGlSh/e1c0f7b8c23d8fd25eaabfc0b50cf6e99ed3e94ce92578a946d5f4eeb3c223f2.front-off-1000x1100.webp",
+          "sha256": "e1c0f7b8c23d8fd25eaabfc0b50cf6e99ed3e94ce92578a946d5f4eeb3c223f2",
+          "url": "/images/plate-contact-sheets/e1c0f7b8c23d8fd25eaabfc0b50cf6e99ed3e94ce92578a946d5f4eeb3c223f2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10SprySlMatt",
+      "binding": "4547b5c62c625d069f0d83c033a1ce162258d9a3f9ed6dcac94d5f30897a3c9a",
+      "sha256": "6d009e6a1a5319f56622d0f15cd2ab9a6826bf6215a0af4accee01fa2788962c",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SprySlMatt/6d009e6a1a5319f56622d0f15cd2ab9a6826bf6215a0af4accee01fa2788962c.front-on-1000x1100.webp",
+          "sha256": "6d009e6a1a5319f56622d0f15cd2ab9a6826bf6215a0af4accee01fa2788962c",
+          "url": "/images/plate-contact-sheets/6d009e6a1a5319f56622d0f15cd2ab9a6826bf6215a0af4accee01fa2788962c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SprySlMatt/d9709c90941632f303f83352dba67c76fbe13e2fb5544d66199f5de3400f87dd.front-off-1000x1100.webp",
+          "sha256": "d9709c90941632f303f83352dba67c76fbe13e2fb5544d66199f5de3400f87dd",
+          "url": "/images/plate-contact-sheets/d9709c90941632f303f83352dba67c76fbe13e2fb5544d66199f5de3400f87dd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10SprySlSh",
+      "binding": "57a6ebf39a3b42c6632d15787b7aecd1cc6f5449466d0db56ca3e0d6f1be9cf6",
+      "sha256": "fe425ae0a46e1736fcfe3bec4a593f23e4bd550e83c4b5334b6328652d80a40f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SprySlSh/fe425ae0a46e1736fcfe3bec4a593f23e4bd550e83c4b5334b6328652d80a40f.front-on-1000x1100.webp",
+          "sha256": "fe425ae0a46e1736fcfe3bec4a593f23e4bd550e83c4b5334b6328652d80a40f",
+          "url": "/images/plate-contact-sheets/fe425ae0a46e1736fcfe3bec4a593f23e4bd550e83c4b5334b6328652d80a40f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10SprySlSh/c0f6f703a208338929d596ddbad27bdc1e6d6c1b61d268f2b3c28a4122f63c20.front-off-1000x1100.webp",
+          "sha256": "c0f6f703a208338929d596ddbad27bdc1e6d6c1b61d268f2b3c28a4122f63c20",
+          "url": "/images/plate-contact-sheets/c0f6f703a208338929d596ddbad27bdc1e6d6c1b61d268f2b3c28a4122f63c20.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallRect10WhtSht",
+      "binding": "1418e8c8500656fe0cca4a97598e2b83c4cea05b7ab23f7e320fdb49afae0a13",
+      "sha256": "c6afb146ab125d7ca31085b505c700eb38c9bc9cbb55d78bd5b63cf1b5aad744",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:26.391Z",
+      "batchId": "f475cf3c-6b9b-4f39-91ab-d2c741ce397b",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10WhtSht/c6afb146ab125d7ca31085b505c700eb38c9bc9cbb55d78bd5b63cf1b5aad744.front-on-1000x1100.webp",
+          "sha256": "c6afb146ab125d7ca31085b505c700eb38c9bc9cbb55d78bd5b63cf1b5aad744",
+          "url": "/images/plate-contact-sheets/c6afb146ab125d7ca31085b505c700eb38c9bc9cbb55d78bd5b63cf1b5aad744.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/rectangle-10ml-clear-13-415/GBTallRect10WhtSht/6c5557338811b7151cf7192c5e3f6b14e1d12d0da7727459171cba6f1df6d94b.front-off-1000x1100.webp",
+          "sha256": "6c5557338811b7151cf7192c5e3f6b14e1d12d0da7727459171cba6f1df6d94b",
+          "url": "/images/plate-contact-sheets/6c5557338811b7151cf7192c5e3f6b14e1d12d0da7727459171cba6f1df6d94b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}

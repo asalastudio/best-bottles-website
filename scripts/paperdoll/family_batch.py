@@ -143,6 +143,10 @@ def prepare(catalog: Path, out: Path, family: str):
     selection = json.loads((target / "selection.json").read_text())
     for row in crosswalk["products"]:
         p = by_sku[row["websiteSku"]]
+        row["productGroupId"] = p.get("productGroupId")
+        row["applicator"] = p.get("applicator")
+        if not row["productGroupId"] and row.get("renderMode") != "standalone":
+            row["blockReasons"].append("physical_group_hold:catalog group missing")
         apply_catalog_policy(row, p, groups.get(p.get("productGroupId"), {}), policy)
         if row["family"] != family or (p.get("family") and p["family"] != family):
             row["blockReasons"].append("product_group_family_disagreement")

@@ -1,0 +1,67 @@
+{
+  "at": "2026-09-13T15:47:59.378Z",
+  "global": {
+    "total": 2305,
+    "complete": 724,
+    "release": 0,
+    "review": 431,
+    "reconcile": 639,
+    "missing": 511
+  },
+  "Cylinder": {
+    "family": "Cylinder",
+    "total": 436,
+    "complete": 436,
+    "release": 0,
+    "review": 0,
+    "reconcile": 0,
+    "missing": 0,
+    "sizes": [
+      3.3,
+      4,
+      5,
+      5.5,
+      9,
+      25,
+      28,
+      30,
+      50,
+      100,
+      114,
+      227,
+      454
+    ],
+    "unlinked": 0
+  },
+  "Boston": {
+    "family": "Boston Round",
+    "total": 123,
+    "complete": 123,
+    "release": 0,
+    "review": 0,
+    "reconcile": 0,
+    "missing": 0,
+    "sizes": [
+      15,
+      30,
+      60
+    ],
+    "unlinked": 0
+  },
+  "registration": {
+    "registeredAt": "2026-09-13T15:44:13.844Z",
+    "manifestSha256": "d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0",
+    "approvedPairs": 38,
+    "newPairBindings": 38,
+    "newAppearanceBindings": 5,
+    "existingHistoryPreserved": 871,
+    "revision": 7
+  },
+  "measurement": {
+    "plates": 1909,
+    "fetchFailures": 0,
+    "measurementFailures": 0,
+    "wrongSizeDiagnostic": 49,
+    "legacySourceDiagnostic": 526
+  }
+}

@@ -1,0 +1,2227 @@
+{
+  "generatedAt": "2026-09-13T07:44:51.426366+00:00",
+  "rows": [
+    {
+      "sku": "GBCyl5BlkShSht",
+      "itemName": "5 mL Clear Cylinder Bottle with Short Shiny Black Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Black",
+      "groupSlug": "cylinder-5ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-clear-13-415",
+        "sha256": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCyl5BlkShSht.png",
+        "capOff": false,
+        "bodyWidth": 243,
+        "expectedWidth": 244,
+        "sizeDeviation": -0.002,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCyl5BlkShSht",
+          "binding": "643342fd09d842c0f42c8b280bf32407261106f7017c3aa1f9edb886359b4b91",
+          "sha256": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.front-on-1000x1100.webp",
+              "sha256": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+              "url": "/images/plate-contact-sheets/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "itemName": "5 mL Clear Cylinder Bottle with Short Matte Copper Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Copper",
+      "groupSlug": "cylinder-5ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-clear-13-415",
+        "sha256": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5CuSht/1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCyl5CuSht.png",
+        "capOff": false,
+        "bodyWidth": 243,
+        "expectedWidth": 244,
+        "sizeDeviation": -0.002,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCyl5CuSht",
+          "binding": "906d92118010f0be7dc467da1a4bf42a43fa2743fde8565c17ec96f2b8e9bad9",
+          "sha256": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5CuSht/1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985.front-on-1000x1100.webp",
+              "sha256": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+              "url": "/images/plate-contact-sheets/1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "itemName": "5 mL Clear Cylinder Bottle with Short Matte Gold Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Gold",
+      "groupSlug": "cylinder-5ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-clear-13-415",
+        "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlMattSht/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCyl5GlMattSht.png",
+        "capOff": false,
+        "bodyWidth": 243,
+        "expectedWidth": 244,
+        "sizeDeviation": -0.002,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCyl5GlMattSht",
+          "binding": "f8593f33b1ea0974dfe7f84c5ce7d5cc78642e9230737c92d9b35de101b67a33",
+          "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlMattSht/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.front-on-1000x1100.webp",
+              "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+              "url": "/images/plate-contact-sheets/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "fieldConflict": "Current catalog calls this 5 mL; live option 3990 calls it 5.5 mL. Capacity identity needs reconciliation before sharing geometry.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "itemName": "5 mL Clear Cylinder Bottle with Short Shiny Gold Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Gold",
+      "groupSlug": "cylinder-5ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-clear-13-415",
+        "sha256": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlSht/5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCyl5GlSht.png",
+        "capOff": false,
+        "bodyWidth": 244,
+        "expectedWidth": 244,
+        "sizeDeviation": 0.002,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCyl5GlSht",
+          "binding": "14b2f5384244374e892b8f621ca25c533149e4bfedf4e54cca6943e64aa84431",
+          "sha256": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlSht/5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a.front-on-1000x1100.webp",
+              "sha256": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+              "url": "/images/plate-contact-sheets/5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "itemName": "5 mL Clear Cylinder Bottle with Short Matte Silver Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Silver",
+      "groupSlug": "cylinder-5ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-clear-13-415",
+        "sha256": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlMattSht/f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCyl5SlMattSht.png",
+        "capOff": false,
+        "bodyWidth": 242,
+        "expectedWidth": 244,
+        "sizeDeviation": -0.006,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCyl5SlMattSht",
+          "binding": "cf140251d1261b8b8bb00d0adccb4b7de8ecf1a9be27e2152c1895ed5aed49db",
+          "sha256": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlMattSht/f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1.front-on-1000x1100.webp",
+              "sha256": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+              "url": "/images/plate-contact-sheets/f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "itemName": "5 mL Clear Cylinder Bottle with Short Shiny Silver Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Silver",
+      "groupSlug": "cylinder-5ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-clear-13-415",
+        "sha256": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlSht/ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCyl5SlSht.png",
+        "capOff": false,
+        "bodyWidth": 244,
+        "expectedWidth": 244,
+        "sizeDeviation": 0.002,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCyl5SlSht",
+          "binding": "99cc3a16002a9ffda63f5eab28898c90261e3186b16d1c2eb1f44d684c861f89",
+          "sha256": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlSht/ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43.front-on-1000x1100.webp",
+              "sha256": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+              "url": "/images/plate-contact-sheets/ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "itemName": "5 mL Cobalt Blue Cylinder Bottle with Short Shiny Black Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Black",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-cobalt-blue-13-415",
+        "sha256": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5BlkShSht/2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCylBlu5BlkShSht.png",
+        "capOff": false,
+        "bodyWidth": 240,
+        "expectedWidth": 240,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCylBlu5BlkShSht",
+          "binding": "172d5c1cddcd09ecd5ec9696e773356d4a1701beea5e68d334207f5ef4b7ef50",
+          "sha256": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5BlkShSht/2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3.front-on-1000x1100.webp",
+              "sha256": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+              "url": "/images/plate-contact-sheets/2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "itemName": "5 mL Cobalt Blue Cylinder Bottle with Short Matte Copper Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Copper",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-cobalt-blue-13-415",
+        "sha256": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5CuSht/fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCylBlu5CuSht.png",
+        "capOff": false,
+        "bodyWidth": 240,
+        "expectedWidth": 240,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCylBlu5CuSht",
+          "binding": "740c7108cb0194ba422c267071acca4c4bb0658c13b9f992cf2d3fb3d3d2f761",
+          "sha256": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5CuSht/fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16.front-on-1000x1100.webp",
+              "sha256": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+              "url": "/images/plate-contact-sheets/fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "itemName": "5 mL Cobalt Blue Cylinder Bottle with Short Matte Gold Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Gold",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-cobalt-blue-13-415",
+        "sha256": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlMattSht/2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCylBlu5GlMattSht.png",
+        "capOff": false,
+        "bodyWidth": 240,
+        "expectedWidth": 240,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCylBlu5GlMattSht",
+          "binding": "362d6e2529b65051a6f79868e7e3af537f48a390d92040d68e0a8dbb81da1fa1",
+          "sha256": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlMattSht/2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964.front-on-1000x1100.webp",
+              "sha256": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+              "url": "/images/plate-contact-sheets/2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "itemName": "5 mL Cobalt Blue Cylinder Bottle with Short Shiny Gold Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Gold",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-cobalt-blue-13-415",
+        "sha256": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlSht/791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCylBlu5GlSht.png",
+        "capOff": false,
+        "bodyWidth": 240,
+        "expectedWidth": 240,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCylBlu5GlSht",
+          "binding": "9f64d9125fb0379c6c7a8589925902fdd9217347eacb6b6893b7dccf9789b1d9",
+          "sha256": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlSht/791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc.front-on-1000x1100.webp",
+              "sha256": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+              "url": "/images/plate-contact-sheets/791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "itemName": "5 mL Cobalt Blue Cylinder Bottle with Short Matte Silver Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Matte Silver",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-cobalt-blue-13-415",
+        "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlMattSht/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCylBlu5SlMattSht.png",
+        "capOff": false,
+        "bodyWidth": 240,
+        "expectedWidth": 240,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCylBlu5SlMattSht",
+          "binding": "72ec255cdda7b5dcdc719e8d76a76bd3afaef73336d7e0f79217bd9a853cac03",
+          "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlMattSht/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.front-on-1000x1100.webp",
+              "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+              "url": "/images/plate-contact-sheets/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "itemName": "5 mL Cobalt Blue Cylinder Bottle with Short Shiny Silver Cap",
+      "applicator": "Cap/Closure",
+      "capColor": "Short Shiny Silver",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-5ml-cobalt-blue-13-415",
+        "sha256": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlSht/7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBCylBlu5SlSht.png",
+        "capOff": false,
+        "bodyWidth": 240,
+        "expectedWidth": 240,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBCylBlu5SlSht",
+          "binding": "96d0ee5a36d7938527787b6e90473bff65816f9bdb308fdde2a848534f2970dd",
+          "sha256": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlSht/7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8.front-on-1000x1100.webp",
+              "sha256": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+              "url": "/images/plate-contact-sheets/7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "itemName": "Clear Glass Spray Bottle with Gold Top and Base. Capacity: 1oz (30ml)",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "groupSlug": "cylinder-30ml-clear-18-415-finemist",
+      "classification": "Sprayer",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-30ml-clear-18-415",
+        "sha256": "bd18c4b7cb777a3eeac5820316fcd82cf332c07b9f212b92ef77e1736f913aa7",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/bd18c4b7cb777a3eeac5820316fcd82cf332c07b9f212b92ef77e1736f913aa7.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/capped/GBSpry1ozGl.gif",
+        "capOff": false,
+        "bodyWidth": 245,
+        "expectedWidth": 244,
+        "sizeDeviation": 0.002,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBSpry1ozGl",
+          "binding": "7f54e1a9ef5fc099a07054099a0b10e472522cfebfbf239f531db4189b771e87",
+          "sha256": "bd18c4b7cb777a3eeac5820316fcd82cf332c07b9f212b92ef77e1736f913aa7",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/bd18c4b7cb777a3eeac5820316fcd82cf332c07b9f212b92ef77e1736f913aa7.front-on-1000x1100.webp",
+              "sha256": "bd18c4b7cb777a3eeac5820316fcd82cf332c07b9f212b92ef77e1736f913aa7",
+              "url": "/images/plate-contact-sheets/bd18c4b7cb777a3eeac5820316fcd82cf332c07b9f212b92ef77e1736f913aa7.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Cap-on and cap-off source pair found in the master. Original pixels are saved for preparation; no new plate render or approval has been created.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBSpry1ozSl",
+      "itemName": "Clear Glass Spray Bottle with Silver Top and Base. Capacity: 1oz (30ml)",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Silver",
+      "groupSlug": "cylinder-30ml-clear-18-415-finemist",
+      "classification": "Sprayer",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-30ml-clear-18-415",
+        "sha256": "f86fb5c0dd860b8567751fab3c395e9872edb6c9d9509784567bbff6f4227280",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozSl/f86fb5c0dd860b8567751fab3c395e9872edb6c9d9509784567bbff6f4227280.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/capped/GBSpry1ozSl.gif",
+        "capOff": false,
+        "bodyWidth": 244,
+        "expectedWidth": 244,
+        "sizeDeviation": -0.002,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBSpry1ozSl",
+          "binding": "d1171229a87e53f6385f14518f03f98e6925218e9bd134a4405c90f6f9b750f8",
+          "sha256": "f86fb5c0dd860b8567751fab3c395e9872edb6c9d9509784567bbff6f4227280",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozSl/f86fb5c0dd860b8567751fab3c395e9872edb6c9d9509784567bbff6f4227280.front-on-1000x1100.webp",
+              "sha256": "f86fb5c0dd860b8567751fab3c395e9872edb6c9d9509784567bbff6f4227280",
+              "url": "/images/plate-contact-sheets/f86fb5c0dd860b8567751fab3c395e9872edb6c9d9509784567bbff6f4227280.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Cap-on and cap-off source pair found in the master. Original pixels are saved for preparation; no new plate render or approval has been created.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "itemName": "3.3ml Clear Glass Bottle with Black Spray Pump and Clear Cap. Good for use as a sample.",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Clear",
+      "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
+      "classification": "Sprayer",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-cap-on-only",
+        "familyId": "cylinder-3.3ml-clear-12mm",
+        "sha256": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+        "revision": 3,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClBlk/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.front-on-1000x1100.webp",
+        "sourcePath": "17. Additional Bottles/GBSpry3mlClBlk..psd",
+        "capOff": false,
+        "bodyWidth": 249,
+        "expectedWidth": 248,
+        "sizeDeviation": 0.002,
+        "legacySource": false,
+        "approval": null,
+        "masterSourceRecorded": true,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBSpry3mlClBlk",
+          "binding": "1a85954fd48bd27d5d3fd2cd7be05d5e37b0237c54f6165b0c735943e67de676",
+          "sha256": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClBlk/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.front-on-1000x1100.webp",
+              "sha256": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+              "url": "/images/plate-contact-sheets/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Find and prepare the exact cap-off pair."
+      ],
+      "finding": "Cap-on and cap-off source pair found in the master. Original pixels are saved for preparation; no new plate render or approval has been created.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "itemName": "3.3ml Clear Glass Bottle with White Spray Pump and Clear Cap. Good for use as a sample.",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Clear",
+      "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
+      "classification": "Sprayer",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-cap-on-only",
+        "familyId": "cylinder-3.3ml-clear-12mm",
+        "sha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+        "revision": 3,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClWht/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.front-on-1000x1100.webp",
+        "sourcePath": "17. Additional Bottles/GBSpry3mlClWht..psd",
+        "capOff": false,
+        "bodyWidth": 248,
+        "expectedWidth": 248,
+        "sizeDeviation": -0.002,
+        "legacySource": false,
+        "approval": null,
+        "masterSourceRecorded": true,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBSpry3mlClWht",
+          "binding": "3a7e65bb73e99c898107888d27672f7dfcfbd0babb4aca5e6432095d3a9a6cd2",
+          "sha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClWht/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.front-on-1000x1100.webp",
+              "sha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+              "url": "/images/plate-contact-sheets/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Find and prepare the exact cap-off pair."
+      ],
+      "finding": "Cap-on and cap-off source pair found in the master. Original pixels are saved for preparation; no new plate render or approval has been created.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "itemName": "Clear Glass Bottle with Black Spray Pump and Clear Cap. Capacity: 4ml",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Clear",
+      "groupSlug": "cylinder-4ml-clear-12mm-finemist",
+      "classification": "Sprayer",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-cap-on-only",
+        "familyId": "cylinder-4ml-clear-12mm",
+        "sha256": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClBlk/4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a.front-on-1000x1100.webp",
+        "sourcePath": "17. Additional Bottles/GBSpry4mlClBlk.psd",
+        "capOff": false,
+        "bodyWidth": 201,
+        "expectedWidth": 205,
+        "sizeDeviation": -0.02,
+        "legacySource": false,
+        "approval": null,
+        "masterSourceRecorded": true,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBSpry4mlClBlk",
+          "binding": "7ad2d15f470213c67988e342703d906c5fd676c0a87ad5d93a52adb7b578d297",
+          "sha256": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClBlk/4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a.front-on-1000x1100.webp",
+              "sha256": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+              "url": "/images/plate-contact-sheets/4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Find and prepare the exact cap-off pair."
+      ],
+      "finding": "Cap-on and cap-off source pair found in the master. Original pixels are saved for preparation; no new plate render or approval has been created.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "itemName": "Clear Glass Bottle with White Spray Pump and Clear Cap. Capacity: 4ml",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Clear",
+      "groupSlug": "cylinder-4ml-clear-12mm-finemist",
+      "classification": "Sprayer",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-cap-on-only",
+        "familyId": "cylinder-4ml-clear-12mm",
+        "sha256": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+        "revision": 3,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClWh/b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c.front-on-1000x1100.webp",
+        "sourcePath": "17. Additional Bottles/GBSpry4mlClWh.psd",
+        "capOff": false,
+        "bodyWidth": 209,
+        "expectedWidth": 205,
+        "sizeDeviation": 0.02,
+        "legacySource": false,
+        "approval": null,
+        "masterSourceRecorded": true,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBSpry4mlClWh",
+          "binding": "49da6377957c52751fd76bc9ddfe76f985ee23ee355f7d103095ebe37da5a4f2",
+          "sha256": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClWh/b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c.front-on-1000x1100.webp",
+              "sha256": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+              "url": "/images/plate-contact-sheets/b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Find and prepare the exact cap-off pair."
+      ],
+      "finding": "Cap-on and cap-off source pair found in the master. Original pixels are saved for preparation; no new plate render or approval has been created.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short shiny black cap.",
+      "applicator": null,
+      "capColor": "Shiny Black",
+      "groupSlug": "cylinder-9ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9BlkShSht/f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCyl9BlkShSht.png",
+        "capOff": false,
+        "bodyWidth": 156,
+        "expectedWidth": 156,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9BlkShSht",
+          "binding": "c3ece6b68806bebfb8a1409a3e4b1628b9ec3b13e65246d39295f3585d93eb10",
+          "sha256": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9BlkShSht/f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3.front-on-1000x1100.webp",
+              "sha256": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+              "url": "/images/plate-contact-sheets/f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short matte copper cap.",
+      "applicator": null,
+      "capColor": "Matte Copper",
+      "groupSlug": "cylinder-9ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9CuSht/bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCyl9CuSht.png",
+        "capOff": false,
+        "bodyWidth": 156,
+        "expectedWidth": 156,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9CuSht",
+          "binding": "e0b01af3d51fc02603183a5dbb2f1e71d2f59997d2d6da273f4d70989fb0757a",
+          "sha256": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9CuSht/bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9.front-on-1000x1100.webp",
+              "sha256": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+              "url": "/images/plate-contact-sheets/bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short matte gold cap.",
+      "applicator": null,
+      "capColor": "Matte Gold",
+      "groupSlug": "cylinder-9ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlMattSht/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCyl9GlMattSht.png",
+        "capOff": false,
+        "bodyWidth": 156,
+        "expectedWidth": 156,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9GlMattSht",
+          "binding": "6d946d3cfbfec6c10a58ca4a76cc029fa73f75fe43e50c34fc6be89eba57da22",
+          "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlMattSht/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.front-on-1000x1100.webp",
+              "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+              "url": "/images/plate-contact-sheets/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short shiny gold cap.",
+      "applicator": null,
+      "capColor": "Shiny Gold",
+      "groupSlug": "cylinder-9ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlSht/0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCyl9GlSht.png",
+        "capOff": false,
+        "bodyWidth": 156,
+        "expectedWidth": 156,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9GlSht",
+          "binding": "8e96538809fe2d5b1f2c26f58340d86ea61a262e73f6f773443b177c8d1414dc",
+          "sha256": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlSht/0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf.front-on-1000x1100.webp",
+              "sha256": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+              "url": "/images/plate-contact-sheets/0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with metal roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, slender bottle with attractive heavy base. Pri",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black with Dots",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "classification": "Roller",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-cap-on-only",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+        "revision": 3,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.front-on-1000x1100.webp",
+        "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /26. GBTallCyl9MtlRollBlkDot copy.psd",
+        "capOff": false,
+        "bodyWidth": 157,
+        "expectedWidth": 156,
+        "sizeDeviation": 0.006,
+        "legacySource": false,
+        "approval": null,
+        "sizeHold": "Earlier sizing finding remains open; regrouping is not approval",
+        "masterSourceRecorded": true,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9MtlRollBlkDot",
+          "binding": "00f4ae24fdb208eb7f59b32160fe68bcc0660c35a9a224bc907c78d7eccccbfa",
+          "sha256": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.front-on-1000x1100.webp",
+              "sha256": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+              "url": "/images/plate-contact-sheets/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Find and prepare the exact cap-off pair.",
+        "Resolve the glass sizing finding."
+      ],
+      "finding": "Both original source views are already available. Resolve the glass sizing finding.",
+      "technicalEvidence": {
+        "sku": "GBTallCyl9MtlRollBlkDot",
+        "binding": "c8c2f83d54a3d52b689ac87c3d77c027c70301c7f63eba334b4ea9872c9b62e0",
+        "eligible": false,
+        "holds": [
+          "Historical size finding remains separate from appearance approval"
+        ],
+        "viewCorrections": [],
+        "pairCheck": {
+          "sku": "GBTallCyl9MtlRollBlkDot",
+          "bodyMeanError": 1.575,
+          "region": [
+            440,
+            577,
+            568,
+            1049
+          ],
+          "passed": true
+        }
+      },
+      "pairedSourceEvidence": {
+        "on": {
+          "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /26. GBTallCyl9MtlRollBlkDot copy.psd",
+          "sourceSha256": "dd6ca75525ac33adc50a64e5efe42aa960d67fadec088d689d4466dc3cf8b062",
+          "preview": "sources/dd6ca75525ac33adc50a64e5efe42aa960d67fadec088d689d4466dc3cf8b062.png",
+          "width": 750,
+          "height": 1594,
+          "layers": 6
+        },
+        "off": {
+          "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/26. GBTallCyl9MtlRollBlkDot.psd",
+          "sourceSha256": "c3907748833354c4f820ecb0c47aabb6e03521d89c151a81191998507c67ff28",
+          "preview": "sources/c3907748833354c4f820ecb0c47aabb6e03521d89c151a81191998507c67ff28.png",
+          "width": 750,
+          "height": 1594,
+          "layers": 7
+        }
+      },
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with plastic roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, slender bottle with attractive heavy base. P",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black with Dots",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "classification": "Roller",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+        "revision": 2,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkDot/656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220.front-on-1000x1100.webp",
+        "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /27. GBTallCyl9RollBlkDot.psd",
+        "capOff": true,
+        "bodyWidth": 157,
+        "expectedWidth": 156,
+        "sizeDeviation": 0.006,
+        "legacySource": false,
+        "approval": null,
+        "sizeHold": "Earlier sizing finding remains open; regrouping is not approval",
+        "masterSourceRecorded": true,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9RollBlkDot",
+          "binding": "3d414ed6b31bc7da96c0839d3fe31cda3820bfefca5a6a318ffcc49dab486bca",
+          "sha256": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkDot/656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220.front-on-1000x1100.webp",
+              "sha256": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+              "url": "/images/plate-contact-sheets/656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Resolve the glass sizing finding."
+      ],
+      "finding": "Both original source views are already available. Resolve the glass sizing finding and cap-off body alignment.",
+      "technicalEvidence": {
+        "sku": "GBTallCyl9RollBlkDot",
+        "binding": "f30dfc20b03d7a25d0c86edefea05af14e9ac4a0cb0623e37c0405a2de41453c",
+        "eligible": false,
+        "holds": [
+          "Historical size finding remains separate from appearance approval",
+          "Existing cap-off body alignment differs from the approved cap-on; retained image is not release-cleared"
+        ],
+        "viewCorrections": [],
+        "pairCheck": {
+          "sku": "GBTallCyl9RollBlkDot",
+          "bodyMeanError": 29.247,
+          "region": [
+            443,
+            579,
+            571,
+            1049
+          ],
+          "passed": false
+        }
+      },
+      "pairedSourceEvidence": {
+        "on": {
+          "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /27. GBTallCyl9RollBlkDot.psd",
+          "sourceSha256": "18c0cb29ce17a80caa9341d62b68883d34fb9ff73eadd34dd64c603a395597d4",
+          "preview": "sources/18c0cb29ce17a80caa9341d62b68883d34fb9ff73eadd34dd64c603a395597d4.png",
+          "width": 750,
+          "height": 1594,
+          "layers": 6
+        },
+        "off": {
+          "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/27. GBTallCyl9RollBlkDot.psd",
+          "sourceSha256": "fbcae3a6c0f238b634856b778cfe00d148550c809ab1c19b7056b2bb8b26dbe7",
+          "preview": "sources/fbcae3a6c0f238b634856b778cfe00d148550c809ab1c19b7056b2bb8b26dbe7.png",
+          "width": 750,
+          "height": 1594,
+          "layers": 7
+        }
+      },
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkSh",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with plastic roller ball plug and black shiny cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, slender bottle with attractive heavy base. Price each",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "classification": "Roller",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "46a716523e47f4999663fb618ded8db18a314d2e9afd7edd0c47667bcddf55fc",
+        "revision": 3,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkSh/46a716523e47f4999663fb618ded8db18a314d2e9afd7edd0c47667bcddf55fc.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/capped/GBTallCyl9RollBlkSh.gif",
+        "capOff": false,
+        "bodyWidth": 157,
+        "expectedWidth": 156,
+        "sizeDeviation": 0.006,
+        "legacySource": true,
+        "approval": null,
+        "sizeHold": "Earlier sizing finding remains open; regrouping is not approval",
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9RollBlkSh",
+          "binding": "d8f7f43fea3586e304ecf99c64c07bb6e09ff633da6014120b82ef475dd1e6b1",
+          "sha256": "46a716523e47f4999663fb618ded8db18a314d2e9afd7edd0c47667bcddf55fc",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkSh/46a716523e47f4999663fb618ded8db18a314d2e9afd7edd0c47667bcddf55fc.front-on-1000x1100.webp",
+              "sha256": "46a716523e47f4999663fb618ded8db18a314d2e9afd7edd0c47667bcddf55fc",
+              "url": "/images/plate-contact-sheets/46a716523e47f4999663fb618ded8db18a314d2e9afd7edd0c47667bcddf55fc.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Resolve the glass sizing finding.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Both original source views are already available. Resolve the glass sizing finding.",
+      "technicalEvidence": {
+        "sku": "GBTallCyl9RollBlkSh",
+        "binding": "7339d0c67ec74eb663470ace5f62b732160e924c531a1e97c467d45b0f604af3",
+        "eligible": false,
+        "holds": [
+          "Historical size finding remains separate from appearance approval"
+        ],
+        "viewCorrections": [],
+        "pairCheck": {
+          "sku": "GBTallCyl9RollBlkSh",
+          "bodyMeanError": 1.177,
+          "region": [
+            441,
+            582,
+            569,
+            1051
+          ],
+          "passed": true
+        }
+      },
+      "pairedSourceEvidence": {
+        "on": {
+          "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /24. GBTallCyl9MtlRollBlkSh.psd",
+          "sourceSha256": "ac08cd7d18782bb7a83c53e3e49001cc5758003075fa5fddda53efc03a2cf306",
+          "preview": "sources/ac08cd7d18782bb7a83c53e3e49001cc5758003075fa5fddda53efc03a2cf306.png",
+          "width": 750,
+          "height": 1594,
+          "layers": 6
+        },
+        "off": {
+          "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/25. GBTallCyl9RollBlkSh.psd",
+          "sourceSha256": "c12f3217c0346fe5bad323e8982152f6563419c28a4c6c28fd13da040463ac76",
+          "preview": "sources/c12f3217c0346fe5bad323e8982152f6563419c28a4c6c28fd13da040463ac76.png",
+          "width": 750,
+          "height": 1594,
+          "layers": 7
+        }
+      },
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9RollCuMatt",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with plastic roller ball plug and matte copper cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, slender bottle with attractive heavy base. Price each",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "classification": "Roller",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "bce6192388a44de70be498dc70a396e0ec5378e18b31da2cf7989247c4774662",
+        "revision": 3,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollCuMatt/bce6192388a44de70be498dc70a396e0ec5378e18b31da2cf7989247c4774662.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/capped/GBTallCyl9RollCuMatt.gif",
+        "capOff": false,
+        "bodyWidth": 157,
+        "expectedWidth": 156,
+        "sizeDeviation": 0.006,
+        "legacySource": true,
+        "approval": null,
+        "sizeHold": "Earlier sizing finding remains open; regrouping is not approval",
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9RollCuMatt",
+          "binding": "6bf4fcdc70f658d44107902538fd95b53435322666aede179f475a0b4659b6d4",
+          "sha256": "bce6192388a44de70be498dc70a396e0ec5378e18b31da2cf7989247c4774662",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollCuMatt/bce6192388a44de70be498dc70a396e0ec5378e18b31da2cf7989247c4774662.front-on-1000x1100.webp",
+              "sha256": "bce6192388a44de70be498dc70a396e0ec5378e18b31da2cf7989247c4774662",
+              "url": "/images/plate-contact-sheets/bce6192388a44de70be498dc70a396e0ec5378e18b31da2cf7989247c4774662.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Resolve the glass sizing finding.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Both original source views are already available. Resolve the glass sizing finding.",
+      "technicalEvidence": {
+        "sku": "GBTallCyl9RollCuMatt",
+        "binding": "4852bc5cef6b7c27806dc1271e3e98e6dfbf8b1b0c7107c706687322bd085d4e",
+        "eligible": false,
+        "holds": [
+          "Historical size finding remains separate from appearance approval"
+        ],
+        "viewCorrections": [],
+        "pairCheck": {
+          "sku": "GBTallCyl9RollCuMatt",
+          "bodyMeanError": 1.177,
+          "region": [
+            441,
+            583,
+            569,
+            1051
+          ],
+          "passed": true
+        }
+      },
+      "pairedSourceEvidence": {
+        "on": {
+          "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /22. GBTallCyl9MtlRollCuMatt.psd",
+          "sourceSha256": "fea1d56d7c2f0f4d632983a1ac6878e3ede0ec34c55cfa94c5c9f1baabd923c6",
+          "preview": "sources/fea1d56d7c2f0f4d632983a1ac6878e3ede0ec34c55cfa94c5c9f1baabd923c6.png",
+          "width": 750,
+          "height": 1594,
+          "layers": 6
+        },
+        "off": {
+          "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/23. GBTallCyl9RollCuMatt.psd",
+          "sourceSha256": "f668feec8d88d20bc2f933d1f9e7d874f852328a733bfdc417ae1c5ea3ef244f",
+          "preview": "sources/f668feec8d88d20bc2f933d1f9e7d874f852328a733bfdc417ae1c5ea3ef244f.png",
+          "width": 750,
+          "height": 1594,
+          "layers": 7
+        }
+      },
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9RollSlSh",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, slender bottle with attractive heavy base. Price each",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "classification": "Roller",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "290516311b4e901a3034bcfd7bdab5bd0038eaaf33ccb17b9a0709c0a6ac7602",
+        "revision": 3,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlSh/290516311b4e901a3034bcfd7bdab5bd0038eaaf33ccb17b9a0709c0a6ac7602.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/capped/GBTallCyl9RollSlSh.gif",
+        "capOff": false,
+        "bodyWidth": 157,
+        "expectedWidth": 156,
+        "sizeDeviation": 0.006,
+        "legacySource": true,
+        "approval": null,
+        "sizeHold": "Earlier sizing finding remains open; regrouping is not approval",
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9RollSlSh",
+          "binding": "895eaef1f0ec2f52ad15cb2b624f2830ed46de07c13e66f9c28e549faf68051d",
+          "sha256": "290516311b4e901a3034bcfd7bdab5bd0038eaaf33ccb17b9a0709c0a6ac7602",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlSh/290516311b4e901a3034bcfd7bdab5bd0038eaaf33ccb17b9a0709c0a6ac7602.front-on-1000x1100.webp",
+              "sha256": "290516311b4e901a3034bcfd7bdab5bd0038eaaf33ccb17b9a0709c0a6ac7602",
+              "url": "/images/plate-contact-sheets/290516311b4e901a3034bcfd7bdab5bd0038eaaf33ccb17b9a0709c0a6ac7602.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Resolve the glass sizing finding.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Both original source views are already available. Resolve the glass sizing finding.",
+      "technicalEvidence": {
+        "sku": "GBTallCyl9RollSlSh",
+        "binding": "380c38a0fe3baf2cf141c0913fb53e77cc5022df45c086ae0b8950e81eaed0f2",
+        "eligible": false,
+        "holds": [
+          "Historical size finding remains separate from appearance approval"
+        ],
+        "viewCorrections": [],
+        "pairCheck": {
+          "sku": "GBTallCyl9RollSlSh",
+          "bodyMeanError": 1.177,
+          "region": [
+            441,
+            582,
+            569,
+            1051
+          ],
+          "passed": true
+        }
+      },
+      "pairedSourceEvidence": {
+        "on": {
+          "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /21. GBTallCyl9RollSlSh.psd",
+          "sourceSha256": "d41b3a5e9e5f6adb280f0454087d1de496cf9300877bced86c4e300246c18b46",
+          "preview": "sources/d41b3a5e9e5f6adb280f0454087d1de496cf9300877bced86c4e300246c18b46.png",
+          "width": 750,
+          "height": 1594,
+          "layers": 6
+        },
+        "off": {
+          "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/21. GBTallCyl9RollSlSh.psd",
+          "sourceSha256": "d4ccce46670d31d414d08d3db58703cc94a9580240d0e057479260f6dcb7932c",
+          "preview": "sources/d4ccce46670d31d414d08d3db58703cc94a9580240d0e057479260f6dcb7932c.png",
+          "width": 750,
+          "height": 1594,
+          "layers": 7
+        }
+      },
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short matte silver cap.",
+      "applicator": null,
+      "capColor": "Matte Silver",
+      "groupSlug": "cylinder-9ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlMattSht/c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCyl9SlMattSht.png",
+        "capOff": false,
+        "bodyWidth": 156,
+        "expectedWidth": 156,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9SlMattSht",
+          "binding": "8af8b51a21561b0928382e7090ef9f3889cdef185922d7eb71b820e43e507048",
+          "sha256": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlMattSht/c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15.front-on-1000x1100.webp",
+              "sha256": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+              "url": "/images/plate-contact-sheets/c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short shiny silver cap.",
+      "applicator": null,
+      "capColor": "Shiny Silver",
+      "groupSlug": "cylinder-9ml-clear-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-clear-13-415",
+        "sha256": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlSht/7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCyl9SlSht.png",
+        "capOff": false,
+        "bodyWidth": 156,
+        "expectedWidth": 156,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCyl9SlSht",
+          "binding": "0d87cace8def739fd6c574144582b75ea45b296f3d8690a2c47afd627ad8a819",
+          "sha256": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlSht/7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc.front-on-1000x1100.webp",
+              "sha256": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+              "url": "/images/plate-contact-sheets/7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short shiny black cap.",
+      "applicator": null,
+      "capColor": "Shiny Black",
+      "groupSlug": "cylinder-9ml-frosted-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-frosted-13-415",
+        "sha256": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9BlkShSht/4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCylFrst9BlkShSht.png",
+        "capOff": false,
+        "bodyWidth": 143,
+        "expectedWidth": 144,
+        "sizeDeviation": -0.007,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCylFrst9BlkShSht",
+          "binding": "aff1fac2653228f7b4802647754efde34e4b62a3193e06f61d264aa3ebb1f6c0",
+          "sha256": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9BlkShSht/4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12.front-on-1000x1100.webp",
+              "sha256": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+              "url": "/images/plate-contact-sheets/4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short matte silver cap.",
+      "applicator": null,
+      "capColor": "Matte Copper",
+      "groupSlug": "cylinder-9ml-frosted-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-frosted-13-415",
+        "sha256": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9CuSht/58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCylFrst9CuSht.png",
+        "capOff": false,
+        "bodyWidth": 145,
+        "expectedWidth": 144,
+        "sizeDeviation": 0.007,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCylFrst9CuSht",
+          "binding": "90145830bc590daac0959849c8b8a6b6fe0ed5b73ebc2d91b0c187a3986ab427",
+          "sha256": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9CuSht/58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d.front-on-1000x1100.webp",
+              "sha256": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+              "url": "/images/plate-contact-sheets/58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "fieldConflict": "Catalog capColor says Matte Copper; itemName says matte silver. Approved image appears copper. Preserve this discrepancy until exact-page reconciliation.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short matte gold cap.",
+      "applicator": null,
+      "capColor": "Matte Gold",
+      "groupSlug": "cylinder-9ml-frosted-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-frosted-13-415",
+        "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlMattSht/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCylFrst9GlMattSht.png",
+        "capOff": false,
+        "bodyWidth": 145,
+        "expectedWidth": 144,
+        "sizeDeviation": 0.007,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCylFrst9GlMattSht",
+          "binding": "a9496c7c693eeadfb4dd7b885144c6a51ceb4de0bdfe37ebaa12f166936dedbc",
+          "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlMattSht/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.front-on-1000x1100.webp",
+              "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+              "url": "/images/plate-contact-sheets/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short shiny gold cap.",
+      "applicator": null,
+      "capColor": "Shiny Gold",
+      "groupSlug": "cylinder-9ml-frosted-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-frosted-13-415",
+        "sha256": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlSht/97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCylFrst9GlSht.png",
+        "capOff": false,
+        "bodyWidth": 145,
+        "expectedWidth": 144,
+        "sizeDeviation": 0.007,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCylFrst9GlSht",
+          "binding": "aec1cccd9f1092a6238c04ac37bdba095c01ad950dee3d21862338d461abc852",
+          "sha256": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlSht/97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae.front-on-1000x1100.webp",
+              "sha256": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+              "url": "/images/plate-contact-sheets/97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short matte silver cap.",
+      "applicator": null,
+      "capColor": "Matte Silver",
+      "groupSlug": "cylinder-9ml-frosted-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-frosted-13-415",
+        "sha256": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlMattSht/d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCylFrst9SlMattSht.png",
+        "capOff": false,
+        "bodyWidth": 144,
+        "expectedWidth": 144,
+        "sizeDeviation": 0,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCylFrst9SlMattSht",
+          "binding": "71b7ac1caa1cd109c26743f96c2334da0fefc90d13b3524e2cc18447ce9bc0e8",
+          "sha256": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlMattSht/d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b.front-on-1000x1100.webp",
+              "sha256": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+              "url": "/images/plate-contact-sheets/d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short shiny silver cap.",
+      "applicator": null,
+      "capColor": "Shiny Silver",
+      "groupSlug": "cylinder-9ml-frosted-13-415",
+      "classification": "Plain short cap",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-9ml-frosted-13-415",
+        "sha256": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlSht/7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/GBTallCylFrst9SlSht.png",
+        "capOff": false,
+        "bodyWidth": 143,
+        "expectedWidth": 144,
+        "sizeDeviation": -0.007,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "GBTallCylFrst9SlSht",
+          "binding": "8f043434b038039f3a01bf47514a3a964a265d52dc7830dae40f72a67ae7170e",
+          "sha256": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlSht/7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261.front-on-1000x1100.webp",
+              "sha256": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+              "url": "/images/plate-contact-sheets/7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog describes a plain short cap, with no roller. Related master bottles have genuine bare-neck views, but their ribbed plastic caps are different from these short metal finishes. Exact finish/source mapping is still open.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "PbClear4ozFlpWh",
+      "itemName": "114 mL Clear Plastic Cylinder Bottle with White Flip-Top Cap",
+      "applicator": "N/A",
+      "capColor": "White",
+      "groupSlug": "cylinder-118ml-clear",
+      "classification": "Flip top",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-118ml-clear",
+        "sha256": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-118ml-clear/PbClear4ozFlpWh/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/capped/PbClear4ozFlpWh.gif",
+        "capOff": false,
+        "bodyWidth": 304,
+        "expectedWidth": null,
+        "sizeDeviation": null,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "PbClear4ozFlpWh",
+          "binding": "bbab6bfa2b7d9b34427951d5896c67250df9d24e100217c3265babc4aff30754",
+          "sha256": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-118ml-clear/PbClear4ozFlpWh/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.front-on-1000x1100.webp",
+              "sha256": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+              "url": "/images/plate-contact-sheets/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog and exact live legacy page describe a flip-top bottle, not a roller. Master source is not yet matched. No claim that artwork is absent.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "PbClear8ozFlpWh",
+      "itemName": "227 mL Clear Plastic Cylinder Bottle with White Flip-Top Cap",
+      "applicator": "N/A",
+      "capColor": "White",
+      "groupSlug": "cylinder-227ml-clear",
+      "classification": "Flip top",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-227ml-clear",
+        "sha256": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-227ml-clear/PbClear8ozFlpWh/26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/aerial/PbClear8ozFlpWh.gif",
+        "capOff": false,
+        "bodyWidth": 270,
+        "expectedWidth": null,
+        "sizeDeviation": null,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "PbClear8ozFlpWh",
+          "binding": "9125841db1013f153d3d2a604d94f0d6d326a2f0478126d6d59b31c15cf4e5ef",
+          "sha256": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-227ml-clear/PbClear8ozFlpWh/26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e.front-on-1000x1100.webp",
+              "sha256": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+              "url": "/images/plate-contact-sheets/26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog and exact live legacy page describe a flip-top bottle, not a roller. Master source is not yet matched. No claim that artwork is absent.",
+      "existingAppearanceApprovalPreserved": true
+    },
+    {
+      "sku": "PbNat16ozFlpWh",
+      "itemName": "454 mL Clear Plastic Cylinder Bottle with White Flip-Top Cap",
+      "applicator": "N/A",
+      "capColor": "White",
+      "groupSlug": "cylinder-454ml-clear",
+      "classification": "Flip top",
+      "classificationEvidence": "Catalog itemName and explicit applicator fields; not SKU parsing",
+      "currentPlate": {
+        "state": "plated-legacy-source",
+        "familyId": "cylinder-454ml-clear",
+        "sha256": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+        "revision": 1,
+        "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-454ml-clear/PbNat16ozFlpWh/1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8.front-on-1000x1100.webp",
+        "sourcePath": "https://www.bestbottles.com/images/store/capped/PbNat16ozFlpWh.gif",
+        "capOff": false,
+        "bodyWidth": 270,
+        "expectedWidth": null,
+        "sizeDeviation": null,
+        "legacySource": true,
+        "approval": null,
+        "masterSourceRecorded": false,
+        "checksPassed": false,
+        "complete": false,
+        "appearanceApproval": {
+          "sku": "PbNat16ozFlpWh",
+          "binding": "2d3cb167ac5b3442057805017d95ecd53271a35bdb0f560f1c30c4d227f50489",
+          "sha256": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+          "status": "approved",
+          "notes": "Jordan explicitly confirmed in this conversation: \u201cAll the bottles, all 63, are accurate\u201d and \u201cThese all look good. All look perfect. All of them have caps on. Accurate, very good.\u201d This records approval of the exact current cap-on image for every existing Cylinder plate. Preserve prior full-view approvals. Source, paired-view, sizing-standard and publication checks remain independent. An unchanged cap-on image must not be sent back for appearance review.",
+          "updatedAt": "2026-09-13T05:57:20.733Z",
+          "batchId": "c9d2b4de-f838-4b7f-a464-63614a5b75e9",
+          "scope": "cap-on-appearance-review",
+          "views": [
+            {
+              "label": "Cap on",
+              "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-454ml-clear/PbNat16ozFlpWh/1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8.front-on-1000x1100.webp",
+              "sha256": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+              "url": "/images/plate-contact-sheets/1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8.webp",
+              "width": 1000,
+              "height": 1100
+            }
+          ],
+          "collection": "cylinder-plates-2026-09-13"
+        }
+      },
+      "reasons": [
+        "Replace the legacy image with its master Photoshop source.",
+        "Confirm the original source in BB-PSD-Files-Master."
+      ],
+      "finding": "Catalog and exact live legacy page describe a flip-top bottle, not a roller. Master source is not yet matched. No claim that artwork is absent.",
+      "fieldConflict": "Catalog itemName says Clear; exact live legacy page says natural color, and the approved plate appears translucent natural. This audit does not alter the catalog.",
+      "existingAppearanceApprovalPreserved": true
+    }
+  ],
+  "summary": {
+    "plainShortCaps": 24,
+    "flipTops": 3,
+    "sprayers": 6,
+    "rollers": 5,
+    "newSprayerSourcePairs": 6,
+    "approvalChanges": 0,
+    "publishedAssets": 0
+  },
+  "masterFilesInspected": 33,
+  "searchLimits": "Inventory covered the entire master tree. Visual inspection covered 33 shortlisted master files plus current plates and previously verified roller-source records. No unmatched item is declared absent from the master."
+}

@@ -1,0 +1,27 @@
+{
+  "before": {
+    "at": "2026-09-13T02:23:53.497Z",
+    "catalogSkus": 123,
+    "approvedPlates": 62,
+    "preparedPlates": 61,
+    "candidatePlateApprovals": 0,
+    "liveKits": 0,
+    "kitCandidates": 25,
+    "kitHolds": 65,
+    "kitNoPlate": 33,
+    "sunburstCompleteGroups": 23
+  },
+  "after": {
+    "at": "2026-09-13T02:32:16.017Z",
+    "catalogSkus": 123,
+    "approvedPlates": 62,
+    "preparedPlates": 61,
+    "candidatePlateApprovals": 0,
+    "liveKits": 0,
+    "kitCandidates": 25,
+    "kitHolds": 65,
+    "kitNoPlate": 33,
+    "sunburstCompleteGroups": 23
+  },
+  "expectedChange": "No approval or publication changes; presentation policy only."
+}

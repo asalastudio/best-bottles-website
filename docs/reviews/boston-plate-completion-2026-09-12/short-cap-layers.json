@@ -1,0 +1,155 @@
+[
+  {
+    "sku": "GBBstn15BlkCapSht",
+    "assets": [
+      {
+        "url": "/images/boston-plate-candidates/1c994a66c9d0eb524d3aff308514532efe560d0659f2df9c99860e4e4891fa71-layer-1.png",
+        "role": 1,
+        "width": 316,
+        "height": 812
+      },
+      {
+        "url": "/images/boston-plate-candidates/1c994a66c9d0eb524d3aff308514532efe560d0659f2df9c99860e4e4891fa71-layer-2.png",
+        "role": 2,
+        "width": 262,
+        "height": 142
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn1ozBlkCapSht",
+    "assets": [
+      {
+        "url": "/images/boston-plate-candidates/8f3adeb586877cc3a1ca8b58901f43022fe388187aa2c5b8d11bfa8edc4f6f1e-layer-1.png",
+        "role": 1,
+        "width": 410,
+        "height": 949
+      },
+      {
+        "url": "/images/boston-plate-candidates/8f3adeb586877cc3a1ca8b58901f43022fe388187aa2c5b8d11bfa8edc4f6f1e-layer-2.png",
+        "role": 2,
+        "width": 292,
+        "height": 145
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozBlkCapSht",
+    "assets": [
+      {
+        "url": "/images/boston-plate-candidates/82dacf0eeb9397d6ead784ff4dad5144d7882f6e843b12e511505ee16f87cdf0-layer-1.png",
+        "role": 1,
+        "width": 494,
+        "height": 1158
+      },
+      {
+        "url": "/images/boston-plate-candidates/82dacf0eeb9397d6ead784ff4dad5144d7882f6e843b12e511505ee16f87cdf0-layer-2.png",
+        "role": 2,
+        "width": 292,
+        "height": 145
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb15mlBlkCapSht",
+    "assets": [
+      {
+        "url": "/images/boston-plate-candidates/8aefa739fdcf1e5fa736877c4bff380725b8e8d7a2aba8b85d3129a497eb1d72-layer-1.png",
+        "role": 1,
+        "width": 612,
+        "height": 1005
+      },
+      {
+        "url": "/images/boston-plate-candidates/8aefa739fdcf1e5fa736877c4bff380725b8e8d7a2aba8b85d3129a497eb1d72-layer-2.png",
+        "role": 2,
+        "width": 262,
+        "height": 142
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb1ozBlkCapSht",
+    "assets": [
+      {
+        "url": "/images/boston-plate-candidates/d55c3911e6f42992f21851b6e4705038291fb559a5d8a2898d0ff72e61e62bf5-layer-1.png",
+        "role": 1,
+        "width": 812,
+        "height": 1210
+      },
+      {
+        "url": "/images/boston-plate-candidates/d55c3911e6f42992f21851b6e4705038291fb559a5d8a2898d0ff72e61e62bf5-layer-2.png",
+        "role": 2,
+        "width": 292,
+        "height": 145
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb2ozBlkCapSht",
+    "assets": [
+      {
+        "url": "/images/boston-plate-candidates/7a4b430ed4f984a8e27134f4e47a65d0f5257536f649af042fc2288495d89281-layer-1.png",
+        "role": 1,
+        "width": 945,
+        "height": 1500
+      },
+      {
+        "url": "/images/boston-plate-candidates/7a4b430ed4f984a8e27134f4e47a65d0f5257536f649af042fc2288495d89281-layer-2.png",
+        "role": 2,
+        "width": 292,
+        "height": 145
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnBlu15BlkCapSht",
+    "assets": [
+      {
+        "url": "/images/boston-plate-candidates/82e6548471ca8742eaafd65839f93b1a69fc44d7d718e7bdc59d67f63d21a297-layer-1.png",
+        "role": 1,
+        "width": 612,
+        "height": 1005
+      },
+      {
+        "url": "/images/boston-plate-candidates/82e6548471ca8742eaafd65839f93b1a69fc44d7d718e7bdc59d67f63d21a297-layer-2.png",
+        "role": 2,
+        "width": 262,
+        "height": 142
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnBlu1ozBlkCapSht",
+    "assets": [
+      {
+        "url": "/images/boston-plate-candidates/05d0e8c6355727ddfa084c31bbeedeecfe53bf3d2c7e02f4c3db87d41a892d4c-layer-1.png",
+        "role": 1,
+        "width": 812,
+        "height": 1210
+      },
+      {
+        "url": "/images/boston-plate-candidates/05d0e8c6355727ddfa084c31bbeedeecfe53bf3d2c7e02f4c3db87d41a892d4c-layer-2.png",
+        "role": 2,
+        "width": 292,
+        "height": 145
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnBlu2ozBlkCapSht",
+    "assets": [
+      {
+        "url": "/images/boston-plate-candidates/e741ba2b1c3b62e8912ddc95e824bbfaf4eca2c8eda98bb7a5006b2814c9fc7e-layer-1.png",
+        "role": 1,
+        "width": 973,
+        "height": 1511
+      },
+      {
+        "url": "/images/boston-plate-candidates/e741ba2b1c3b62e8912ddc95e824bbfaf4eca2c8eda98bb7a5006b2814c9fc7e-layer-2.png",
+        "role": 2,
+        "width": 292,
+        "height": 145
+      }
+    ]
+  }
+]

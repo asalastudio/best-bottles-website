@@ -6,6 +6,7 @@
 //   add --family <id> or --neck <id> (e.g. 13-415) to limit, --apply to actually write (dry run by default),
 //   a SKU that already carries a plate on the target is SKIPPED unless --replace is passed,
 //   --allow-orphans to index SKUs the catalogue does not carry yet (normally skipped)
+//   --preserve-family-metadata for a partial release into existing families
 //   --dist publishing requires tokens.json.reviewedAt (Jordan's sign-off); --skip-token-review for dev only
 //
 // Order of operations per plate, and the reason it is this order: hash the
@@ -15,9 +16,11 @@
 // not fetch. Nothing is ever overwritten or deleted.
 //
 // Env: BLOB_READ_WRITE_TOKEN (store), BEST_BOTTLES_CONVEX_WRITE_TOKEN (index),
-// NEXT_PUBLIC_CONVEX_URL (which deployment). Run from the repo root after
-// `set -a; source .env.local; set +a`.
+// NEXT_PUBLIC_CONVEX_URL (which deployment). The script loads the linked
+// project's ignored `.env.local` when a variable is not already in the
+// environment; CI can still provide explicit variables.
 import { createHash } from "node:crypto";
+import { existsSync } from "node:fs";
 import { readFile, readdir, stat } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { ConvexHttpClient } from "convex/browser";
@@ -27,6 +30,15 @@ import { createBlobStore, verifyPublicUrl } from "./lib/store-blob.mjs";
 const BUILDER = { name: "publish.mjs", version: "1.0.0" };
 const CANVAS = { width: 1000, height: 1100 };
 const THUMB = { width: 240, height: 240 };
+
+// Keep local publishes consistent with the ledger and other repo scripts: when
+// a caller has not already supplied credentials, load the linked project's
+// ignored `.env.local`. This avoids a misleading missing-token failure while
+// preserving explicitly supplied CI/production environment variables.
+if ((!process.env.NEXT_PUBLIC_CONVEX_URL || !process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN || !process.env.BLOB_READ_WRITE_TOKEN)
+    && existsSync(resolve(".env.local"))) {
+    try { process.loadEnvFile(resolve(".env.local")); } catch { /* explicit checks below report what is missing */ }
+}
 
 // The four families shipped from the repo used ad-hoc ids; the index uses
 // <family>-<capacityMl>ml-<color>-<neck>. The 9 mL folder held five glasses
@@ -74,6 +86,12 @@ async function main() {
 
     console.log(`${apply ? "PUBLISH" : "DRY RUN"} → ${convexUrl}`);
     const convex = new ConvexHttpClient(convexUrl);
+    const preserveFamilyMetadata = Boolean(args["preserve-family-metadata"]);
+    if (preserveFamilyMetadata) {
+        const known = new Set((await convex.query(api.productPlates.families, {})).map(f => f.familyId));
+        for (const family of families) if (!known.has(family.familyId)) fail(`cannot preserve missing family metadata: ${family.familyId}`);
+        console.log("Existing family metadata will be preserved for this partial release.");
+    }
 
     // A SKU that already has a plate on the target is left alone unless --replace
     // says otherwise. --neck 17-415 would otherwise have re-published the five
@@ -179,7 +197,7 @@ async function main() {
                 else familyReport.written++;
             }
         }
-        await convex.mutation(api.productPlates.upsertFamilies, {
+        if (!preserveFamilyMetadata) await convex.mutation(api.productPlates.upsertFamilies, {
             writeToken,
             families: [{
                 familyId: family.familyId,

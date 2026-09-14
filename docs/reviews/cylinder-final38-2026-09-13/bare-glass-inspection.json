@@ -1,0 +1,178 @@
+[
+  {
+    "discoverySku": "GBCyl5BlkSht",
+    "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /1. GBCyl5BlkSht.psd",
+    "sha256": "2961edfea8dc9b0ec0cea6e168cec86e286d7af3dced74262b5882f9248d0884",
+    "size": [
+      600,
+      827
+    ],
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "visible": true,
+        "bbox": [
+          0,
+          0,
+          600,
+          827
+        ],
+        "preview": "GBCyl5BlkSht-layer-0.png"
+      },
+      {
+        "index": 1,
+        "name": "Layer 4",
+        "visible": true,
+        "bbox": [
+          71,
+          145,
+          289,
+          781
+        ],
+        "preview": "GBCyl5BlkSht-layer-1.png"
+      },
+      {
+        "index": 2,
+        "name": "Layer 3",
+        "visible": true,
+        "bbox": [
+          355,
+          659,
+          543,
+          781
+        ],
+        "preview": "GBCyl5BlkSht-layer-2.png"
+      }
+    ]
+  },
+  {
+    "discoverySku": "GBCylBlu5BlkSht",
+    "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/1. GBCylBlu5BlkSht.psd",
+    "sha256": "9e3d31d5321f4a5ded3c4efac7124ff21cfdad6deeec1de9b1044fe433d5e606",
+    "size": [
+      600,
+      827
+    ],
+    "layers": [
+      {
+        "index": 0,
+        "name": "Background",
+        "visible": true,
+        "bbox": [
+          0,
+          0,
+          600,
+          827
+        ],
+        "preview": "GBCylBlu5BlkSht-layer-0.png"
+      },
+      {
+        "index": 1,
+        "name": "Layer 5",
+        "visible": true,
+        "bbox": [
+          93,
+          145,
+          299,
+          781
+        ],
+        "preview": "GBCylBlu5BlkSht-layer-1.png"
+      },
+      {
+        "index": 2,
+        "name": "Layer 3",
+        "visible": true,
+        "bbox": [
+          344,
+          659,
+          532,
+          781
+        ],
+        "preview": "GBCylBlu5BlkSht-layer-2.png"
+      }
+    ]
+  },
+  {
+    "discoverySku": "GBTallCyl9BlkSht",
+    "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/1. GBTallCyl9BlkSht.psd",
+    "sha256": "19b91e46778658e9a004bbe647b9bc22b6cf7f395d35eae7a76e7219c53cabb6",
+    "size": [
+      750,
+      1417
+    ],
+    "layers": [
+      {
+        "index": 0,
+        "name": "Layer 0",
+        "visible": true,
+        "bbox": [
+          -75,
+          0,
+          825,
+          1417
+        ],
+        "preview": "GBTallCyl9BlkSht-layer-0.png"
+      },
+      {
+        "index": 2,
+        "name": "Layer 6",
+        "visible": true,
+        "bbox": [
+          425,
+          1252,
+          617,
+          1381
+        ],
+        "preview": "GBTallCyl9BlkSht-layer-2.png"
+      }
+    ]
+  },
+  {
+    "discoverySku": "GBTallCylFrst9BlkSht",
+    "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/1. GBTallCylFrst9BlkSht.psd",
+    "sha256": "4c44728403529b40459fa8ad783229c3ceeb1e81b9adc8dc7e19f2256e1e65d1",
+    "size": [
+      750,
+      1417
+    ],
+    "layers": [
+      {
+        "index": 0,
+        "name": "Layer 0",
+        "visible": true,
+        "bbox": [
+          -75,
+          0,
+          825,
+          1417
+        ],
+        "preview": "GBTallCylFrst9BlkSht-layer-0.png"
+      },
+      {
+        "index": 1,
+        "name": "Layer 14",
+        "visible": true,
+        "bbox": [
+          169,
+          127,
+          385,
+          1381
+        ],
+        "preview": "GBTallCylFrst9BlkSht-layer-1.png"
+      },
+      {
+        "index": 2,
+        "name": "Layer 6",
+        "visible": true,
+        "bbox": [
+          449,
+          1252,
+          641,
+          1381
+        ],
+        "preview": "GBTallCylFrst9BlkSht-layer-2.png"
+      }
+    ]
+  }
+]

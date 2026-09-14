@@ -4,10 +4,15 @@
  * no source asset, product, or Shopify identity is deleted or overwritten.
  */
 import fs from 'node:fs/promises';
+import {existsSync} from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {ConvexHttpClient} from 'convex/browser';
 import {createBlobStore,verifyPublicUrl} from './lib/store-blob.mjs';
+if ((!process.env.NEXT_PUBLIC_CONVEX_URL || !process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN || !process.env.BLOB_READ_WRITE_TOKEN)
+    && existsSync(path.resolve('.env.local'))) {
+ try { process.loadEnvFile(path.resolve('.env.local')); } catch { /* explicit checks below */ }
+}
 const argv=process.argv.slice(2);const value=k=>argv[argv.indexOf(k)+1];
 const batch=path.resolve(value('--batch'));const release=path.resolve(value('--release'));
 const mode=value('--mode');if(!['plates','kits'].includes(mode))throw Error('--mode plates|kits required');

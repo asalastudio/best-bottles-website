@@ -1,0 +1,10 @@
+{
+  "method": "Independent row-edge check of source and saved image, read-only; threshold 40 against bone; rows 675..1509 exclude contact shadow.",
+  "rows": 755,
+  "expectedScale": 1.03,
+  "medianWidthScale": 1.0304709141274238,
+  "medianEdgeErrorPx": 0.42999999999995,
+  "p95EdgeErrorPx": 0.75,
+  "sourceSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+  "outputSha256": "c26a6e4cf88883e8485af6b5dfe897c8c773cb861caefa7e29dde3b20fdacde4"
+}

@@ -1,0 +1,167 @@
+[
+  {
+    "sku": "GBBstn1ozRollonMattBlk",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn1ozRollonMattGl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn1ozRollonMattSl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn1ozRollonShBlk",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn1ozRollonShGl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn1ozRollonShnSl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozBlkDrpr",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": false
+  },
+  {
+    "sku": "GBBstn2ozBlkDrprShnGlTrim",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": false
+  },
+  {
+    "sku": "GBBstn2ozBlkDrprShnSlTrim",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": false
+  },
+  {
+    "sku": "GBBstn2ozMtlRollBlk",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozMtlRollGl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattBlk",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattGl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattSl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozMtlRollShnSl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozRollGl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozRollMattBlk",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozRollMattSl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozRollShnBlk",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozRollShnSl",
+    "masterCandidateCount": 2,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstn2ozWhtDrpr",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": false
+  },
+  {
+    "sku": "GBBstn2ozWhtDrprShnGlTrim",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": false
+  },
+  {
+    "sku": "GBBstn2ozWhtDrprShnSlTrim",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": false
+  },
+  {
+    "sku": "GBBstnAmb1ozBlkDrpShnGl",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstnAmb2ozBlkDrpr",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": false
+  },
+  {
+    "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": false
+  },
+  {
+    "sku": "GBBstnAmb2ozWhtDrpr",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": false
+  },
+  {
+    "sku": "GBBstnBlu15BlkDrpr",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstnBlu15BlkDrprGlTrim",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstnBlu15WhtDrpr",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstnBlu15WhtDrprGlTrim",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": true
+  },
+  {
+    "sku": "GBBstnBlu15WhtDrprSlTrim",
+    "masterCandidateCount": 1,
+    "identicalCandidateInProvidedFolders": true
+  }
+]

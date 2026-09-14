@@ -1,0 +1,49 @@
+{
+  "before": "2026-09-13T00:42:48.931Z",
+  "after": "2026-09-13T00:46:11.822Z",
+  "skuCount": 123,
+  "assetEvidenceUnchanged": true,
+  "familyCountsUnchanged": true,
+  "family": {
+    "family": "Boston Round",
+    "skus": 123,
+    "groups": 23,
+    "groupsWithHero": 23,
+    "groupsWithSunburst": 23,
+    "plateChecked": 62,
+    "heroWaiting": 6,
+    "kitWaiting": 25,
+    "plated": 0,
+    "platedFull": 0,
+    "plateApplicable": 123,
+    "kitLive": 0,
+    "kitApplicable": 123,
+    "heroComplete": true,
+    "plateComplete": false,
+    "kitComplete": false,
+    "blockers": [
+      "33 SKU(s) with no plate",
+      "10 plate(s) missing a cap-off view",
+      "7 unresolved sizing findings",
+      "123 plates need checks or current-byte visual approval",
+      "123 SKU(s) without a published kit"
+    ],
+    "heroes": {
+      "none": 94,
+      "indexed": 23,
+      "approved-not-indexed": 6
+    },
+    "plates": {
+      "plated": 52,
+      "none": 33,
+      "plated-no-capoff-by-design": 28,
+      "plated-cap-on-only": 10
+    },
+    "kits": {
+      "held": 65,
+      "no-plate": 33,
+      "candidate": 25
+    },
+    "complete": false
+  }
+}

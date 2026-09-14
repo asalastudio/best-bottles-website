@@ -1,0 +1,3463 @@
+{
+  "schemaVersion": 1,
+  "batchId": "tulip-plate-release-2026-09-13",
+  "reviewedBy": "Jordan Richter",
+  "reviewedAt": "2026-09-14T00:06:12.185Z",
+  "decision": "Tulip plates are perfect. Jordan explicitly approved and asked to lock them in.",
+  "source": "Explicit user approval in this Codex conversation after reviewing the Tulip amber and clear prepared cap-on/cap-off packets.",
+  "reviewPackets": [
+    {
+      "id": "tulip-amber-capoff-recovery-2026-09-13",
+      "file": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/manifest.json",
+      "sha256": "3e5c30d623dc9c370215af50109d9af4a4d5250037a3a829519645412a0ba562",
+      "rows": 30
+    },
+    {
+      "id": "tulip-clear-capoff-recovery-2026-09-13",
+      "file": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/manifest.json",
+      "sha256": "94718ec46502fe3e1d78af7a86a79f2952f18816de79c196f79c1f4c8e299cf9",
+      "rows": 29
+    }
+  ],
+  "preparedManifest": {
+    "file": "dist/paper-doll/technical-reconciliation-2026-09-13/tulip/plates/manifest.json",
+    "sha256": "6a3d4acc6762821bf5bc138a78ea72c652beb204a34753ebf23530ee49396a21",
+    "rows": 59
+  },
+  "visualApproved": true,
+  "indexingAuthorized": false,
+  "publicationAuthorized": false,
+  "heldRows": [
+    {
+      "sku": "GBTulip6BlkShSht",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "reason": "No exact PSD candidate in the verified master source audit (match:no-psd). Preserve as an explicit hold."
+    }
+  ],
+  "entries": [
+    {
+      "websiteSku": "GBTulip6BlkSht",
+      "recordId": "kd7d7xhyb26rprc2gdhpjh6m8181tnyz",
+      "graceSku": "GB-DEC-CLR-6ML-S",
+      "productGroupId": "kh717xh4kg9gcrqzrt8bbwdvqs8dqka9",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": null,
+      "capColor": "Clear",
+      "binding": "3fd208b298f23025e54d5cb4575f81548aa93dc25721c1fd9084231dd422a49c",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "53196e2fae69b5cce26b563915478d89b27287709eea7ce804f785c382e2e883",
+          "bytes": 12668,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6BlkSht/53196e2fae69b5cce26b563915478d89b27287709eea7ce804f785c382e2e883.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "eae9e1d8a4a1cbd4255219093fbeccbf092d3100fe7c57eb1966cfe8f6329058",
+          "bytes": 14284,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6BlkSht.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /1. GBTulip6BlkSht.psd",
+          "sourceSha256": "b629820069aa5482641b888c40ec9798a10d038aec91ba1de2d582f1e84099a8"
+        },
+        {
+          "role": "off",
+          "sha256": "299b311e9a0faa52ad1cf7cd9b21d108e6068001ea1942408577dd6cf4f1d87d",
+          "bytes": 18092,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6BlkSht.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /1. GBTulip6BlkSht.psd",
+          "sourceSha256": "040ab98bbf3f620bed6fb02e9791e3124bbbf6773af9f800c4efbc44801cfc4a"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /1. GBTulip6BlkSht.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /1. GBTulip6BlkSht.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6Gl",
+      "recordId": "kd73b0kvhzb2vac1pk6pn11jen81tpj8",
+      "graceSku": "GB-CYL-CLR-6ML-GLD-T",
+      "productGroupId": "kh717xh4kg9gcrqzrt8bbwdvqs8dqka9",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": null,
+      "capColor": "Gold",
+      "binding": "9e579fee554df23538d6310caa49bb6944230280bea7c57642fb815e30442214",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "1e63afc82d1c6bb491855e2ab87f530838adbb6cc11a132d3d79cb3482c7be6a",
+          "bytes": 12732,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6Gl/1e63afc82d1c6bb491855e2ab87f530838adbb6cc11a132d3d79cb3482c7be6a.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "986da8a9387a6c532fa9ecfaba74fc4bf9cf7cbc17c56160ef39526015f15daa",
+          "bytes": 14188,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6Gl.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /28. GBTulip6Gl.psd",
+          "sourceSha256": "89074c18354463cfebf3d1efe162ccaf4e3e2061aba3d39be3939dfbb9a957ae"
+        },
+        {
+          "role": "off",
+          "sha256": "ea5362d40f5b895f09670200e1c95d8b110cfa6daea22329976b91fc6248f345",
+          "bytes": 20702,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6Gl.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /28. GBTulip6Gl.psd",
+          "sourceSha256": "932c49ffebcb62fee46688b8e115959aca80cf3752cbddf6c7f4195cc62d24cb"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /28. GBTulip6Gl.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /28. GBTulip6Gl.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollBlkDot",
+      "recordId": "kd7fn7sscqqr1z5bjd7d254w4581t9k7",
+      "graceSku": "GB-CYL-CLR-6ML-MRL-BKDT",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black Dotted",
+      "binding": "055df0d7d58977e434a48afe43b4df023ff64984ccf67ffe941adfacfa0c4708",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "8b372a3199d44d46608151440bb308d52ea7ec5b52b3d3aeac02d2ed66755847",
+          "bytes": 11768,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollBlkDot/8b372a3199d44d46608151440bb308d52ea7ec5b52b3d3aeac02d2ed66755847.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "b0b503098abe7f35732119f2780a0c10038438c1e007f3f53ba123e31239c24d",
+          "bytes": 13170,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollBlkDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /26. GBTulip6MtlRollBlkDot.psd",
+          "sourceSha256": "8efff3ca88f30536e59be7a4f07e9abcdec2222cebd6278c9eb574cf0be77203"
+        },
+        {
+          "role": "off",
+          "sha256": "75b9122d5572338283f0a403d240ecc4f4593d746e4b29418a0eb42028e9f325",
+          "bytes": 21828,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollBlkDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /26. GBTulip6MtlRollBlkDot.psd",
+          "sourceSha256": "c2a331158e2c71422c386d66cd84ead06fc4df122b2fe182fd4c677e7958b9c8"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /26. GBTulip6MtlRollBlkDot.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /26. GBTulip6MtlRollBlkDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollBlkSh",
+      "recordId": "kd74yzsgwam2tf6w0ax1vtarwh81t8cw",
+      "graceSku": "GB-CYL-CLR-6ML-MRL-SBLK",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "binding": "d9ce20eeae3cf924c63a03d66a1b3af5bd6126d4775f10aee21a027b84038ce8",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "a643140b9bdbbe306c145598b0da2bbc8692df3a026215d7e2fea750aceb5aa4",
+          "bytes": 9936,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollBlkSh/a643140b9bdbbe306c145598b0da2bbc8692df3a026215d7e2fea750aceb5aa4.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "7f55232cd39030d21928a54362acc27846fdb84ce3bf680730c658687f1ebf0e",
+          "bytes": 11330,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollBlkSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /24. GBTulip6MtlRollBlkSh.psd",
+          "sourceSha256": "fc31300dbbf6ff53368b1117b6f058628dac8df442d5b381d4a99d4e12c29c04"
+        },
+        {
+          "role": "off",
+          "sha256": "0ecc816277d3ba248ccae4babcf6bcdae493bd0066cf8ec96992bac0f51936f3",
+          "bytes": 19118,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollBlkSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /24. GBTulip6MtlRollBlkSh.psd",
+          "sourceSha256": "05dcca97b54c2ff0c286af352622dcfe073d80a8e25d7ac590fc495b119db789"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /24. GBTulip6MtlRollBlkSh.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /24. GBTulip6MtlRollBlkSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollCuMatt",
+      "recordId": "kd71c7b1j1a1dnemn8cx92s0hh81tpzw",
+      "graceSku": "GB-CYL-CLR-6ML-MRL-MCPR",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Copper",
+      "binding": "7c06210d0316d3db1731e213f0b37356f0cee3ae2c6af67b367a052db128f5cf",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "fe8a8768d89b58a243ed0e7b15ca22dff2ba2b74b642356c4971f2fce8867df4",
+          "bytes": 11812,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollCuMatt/fe8a8768d89b58a243ed0e7b15ca22dff2ba2b74b642356c4971f2fce8867df4.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "dc3df6b2b0452ea03e535984a3ed58120703ece03d2ebf55b304843dece5450e",
+          "bytes": 13506,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollCuMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /22. GBTulip6MtlRollCuMatt.psd",
+          "sourceSha256": "e9b837cf64931cee2e65dc6a88d68e977eb71e87d4ef991e86aa68f0f333e607"
+        },
+        {
+          "role": "off",
+          "sha256": "249c8287be7e32f1cc3fab818a090c9972894aa3dbe55e7b05659b1fc5cd95c8",
+          "bytes": 22132,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollCuMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /22. GBTulip6MtlRollCuMatt.psd",
+          "sourceSha256": "0e655651ba3071cd4802c30d229a2087a80bdb53ebf3c927e8ccbbb84ab1e680"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /22. GBTulip6MtlRollCuMatt.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /22. GBTulip6MtlRollCuMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollGlMatt",
+      "recordId": "kd74jbsvjc0necnphtn75hm0ex81tgzv",
+      "graceSku": "GB-CYL-CLR-6ML-MRL-MGLD",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "binding": "e99815d7b735a54e5c90e182d4f4f8d9f7e5f1134a512dc528b12c1ef7308fb7",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "7219dd17856aa810b67c8c9d34bbedc7de37bc1268d69004b99c405047528995",
+          "bytes": 10876,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollGlMatt/7219dd17856aa810b67c8c9d34bbedc7de37bc1268d69004b99c405047528995.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "20304a9e325063bcbb006fe10543d34a35d3ea1452a74eb577c8a03db940190c",
+          "bytes": 12464,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollGlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /16. GBTulip6MtlRollGlMatt.psd",
+          "sourceSha256": "7074b738eeeb668d31cdf9f9b157e0b59a0f270c686200f2ed6c72a620c75791"
+        },
+        {
+          "role": "off",
+          "sha256": "ab24147417be4d229a6473126d7cc1179c3d08bb3401ea492d8cf77ca71d3149",
+          "bytes": 21190,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollGlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /16. GBTulip6MtlRollGlMatt.psd",
+          "sourceSha256": "2eb665e23245b654f84790a803fc06ca57ccab850f078bfa935cffae204bf699"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /16. GBTulip6MtlRollGlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /16. GBTulip6MtlRollGlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollGlSh",
+      "recordId": "kd75p7ww4p045sks9b3xbpxnqx81vsz5",
+      "graceSku": "GB-CYL-CLR-6ML-MRL-SGLD",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "binding": "ecc7845db41aac052dc1b4517a299ad15c9e069acd4f0ab526f7c89b26661a39",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "d9161a82855685e738e46125eab34bc38ca57e9c57d78acce67ebd3fe9a0e1a1",
+          "bytes": 12592,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollGlSh/d9161a82855685e738e46125eab34bc38ca57e9c57d78acce67ebd3fe9a0e1a1.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "0a97507a8b614088971e2ce752cd7c19119fd16ecf5bb378b699ea8e7e7f0bd8",
+          "bytes": 14498,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollGlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /18. GBTulip6MtlRollGlSh.psd",
+          "sourceSha256": "65197761c0f457ca4f463add5a188601b46b85ae5e3f80c2b6e1168f79687b67"
+        },
+        {
+          "role": "off",
+          "sha256": "46a522f06afb305ba36b9c65e1bca400b8068094c8797958fc3c7b582a14a402",
+          "bytes": 22340,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollGlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /18. GBTulip6MtlRollGlSh.psd",
+          "sourceSha256": "92ad6693d6b31d779537335f88e61fe6dd5934a7a91eeb6ecc6f8130eb12b314"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /18. GBTulip6MtlRollGlSh.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /18. GBTulip6MtlRollGlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollPinkDot",
+      "recordId": "kd7dn0va0rtg644zhqy5kyqw9s81tc1a",
+      "graceSku": "GB-CYL-CLR-6ML-MRL-PKDT",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Pink Dotted",
+      "binding": "a5684225b62941fcc82409a0040022b5fc03eee63cba28aa68bb2032cc9459bc",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "0dd3902085eec75d780c1243c8ffdfe44432c76f01fbc923d3082d2e04d0eb90",
+          "bytes": 11786,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollPinkDot/0dd3902085eec75d780c1243c8ffdfe44432c76f01fbc923d3082d2e04d0eb90.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "8601f71735078bf5a4d6b2fd9f02976fb05f632787d55bea4795b13c779ede96",
+          "bytes": 13228,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollPinkDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /12. GBTulip6MtlRollPinkDot.psd",
+          "sourceSha256": "e4fac2b5f0aa8c0f6442eba6f0b21e923cbae7bf0ea7b20149a13bb71b842bf2"
+        },
+        {
+          "role": "off",
+          "sha256": "dbeb6d9a52654ba2eafb6fbbc64694cc25d94f0aab49e5e873cc474cc3056994",
+          "bytes": 22428,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollPinkDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /12. GBTulip6MtlRollPinkDot.psd",
+          "sourceSha256": "80514c66682e847057ce0b608f1215f6683c9d1ad414cd4afb0ea6755c38e588"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /12. GBTulip6MtlRollPinkDot.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /12. GBTulip6MtlRollPinkDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollSlDot",
+      "recordId": "kd7f89wxchatq4p0yggsfvpyb181v504",
+      "graceSku": "GB-CYL-CLR-6ML-MRL-SLDT",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Silver Dotted",
+      "binding": "6d353b70e21ac58a4a6d7e5a2916316ed8e104a702d1792e8318bb82b9992e3a",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "db15080da39b63fc3491d36ec5c8b25f0d320fdf0cd2c2e73353ee3b73c54244",
+          "bytes": 11178,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollSlDot/db15080da39b63fc3491d36ec5c8b25f0d320fdf0cd2c2e73353ee3b73c54244.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "c2a34311d8d7665e379f044946e4133b7f8204b450b66d5713f1eb287f2519c6",
+          "bytes": 12670,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollSlDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /10. GBTulip6MtlRollSlDot.psd",
+          "sourceSha256": "98dbf8a1b0393dd05e68224fba87203d275943ac3e2a8b023d1d7a19661ce459"
+        },
+        {
+          "role": "off",
+          "sha256": "952c3a7d71eb469bc67af66c6e13c055aa03571accdcf41500497b68cb707821",
+          "bytes": 20474,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollSlDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /10. GBTulip6MtlRollSlDot.psd",
+          "sourceSha256": "f8042634f1c8c8aad3c6f2c3b7404ba12b135c74ad1dbfde7c289c216d3fae8e"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /10. GBTulip6MtlRollSlDot.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /10. GBTulip6MtlRollSlDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollSlMatt",
+      "recordId": "kd72ywsf16h7d6rn7dxzggatwh81t9ar",
+      "graceSku": "GB-CYL-CLR-6ML-MRL-MSLV",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "binding": "47b71274735582a7cd345c8dd6255405c183125acc2fc4c275ceb685754b739f",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "740dc87f444e87248efbcb5e45a5153f718c395d4a78500a90b44f015cdf6f8c",
+          "bytes": 10220,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollSlMatt/740dc87f444e87248efbcb5e45a5153f718c395d4a78500a90b44f015cdf6f8c.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "0a46890661c3a3788bed12177de468d7d74d7a2aa002232e493694309db89162",
+          "bytes": 11656,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollSlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /14. GBTulip6MtlRollSlMatt.psd",
+          "sourceSha256": "dd92d414ae4fc1d7766fcae3a6da6ba45bea7254ad8400388eebc855f73f6216"
+        },
+        {
+          "role": "off",
+          "sha256": "295cd20b557a190d142b68c279a2a140b9f9d0ec51e91094d6852740a70a59ca",
+          "bytes": 19712,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollSlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /14. GBTulip6MtlRollSlMatt.psd",
+          "sourceSha256": "533fd495e0c73887b1f93aed0f6a9583664b3f7800c01a70dfd7d4760a9b64a3"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /14. GBTulip6MtlRollSlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /14. GBTulip6MtlRollSlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6MtlRollSlSh",
+      "recordId": "kd7dk707ejt7jmak60v6bp80b581t513",
+      "graceSku": "GB-CYL-CLR-6ML-MRL-SSLV",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "binding": "aefbdb1ed9e60ac1e3194a4ebec4b139e1eb9ad108d47a8f9c5aaf6f0b997835",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "6692cc80dfcaf5e70554ce7d5097688999c2848655cedb9da842fa5872bfb066",
+          "bytes": 10686,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollSlSh/6692cc80dfcaf5e70554ce7d5097688999c2848655cedb9da842fa5872bfb066.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "c2419a8272b020611a97e8a604bcb955b31e8652f0338c9c73650cc250df2fdc",
+          "bytes": 11938,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollSlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /20. GBTulip6MtlRollSlSh.psd",
+          "sourceSha256": "ee090673112f2050baf32d9e3a2e7058a52c860af96903422cc765241ca00a53"
+        },
+        {
+          "role": "off",
+          "sha256": "7d6033330b1f7af7c60c6b37ede1eb27594dc37d77f509d3c324bd8735839bb5",
+          "bytes": 22328,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6MtlRollSlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /20. GBTulip6MtlRollSlSh.psd",
+          "sourceSha256": "092b6a0e8a7e6ab701b370f91344f749f82a9ff99f89c671160a25a51f012a2a"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /20. GBTulip6MtlRollSlSh.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /20. GBTulip6MtlRollSlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6RollBlkDot",
+      "recordId": "kd76rqwf6es5t97184p4jxf0dn81tvsn",
+      "graceSku": "GB-CYL-CLR-6ML-ROL-BKDT",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black Dotted",
+      "binding": "58161d862b665de88a479974edfb756b2d173f3624507ad63b7a82dea4f3edb4",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "8b372a3199d44d46608151440bb308d52ea7ec5b52b3d3aeac02d2ed66755847",
+          "bytes": 11768,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollBlkDot/8b372a3199d44d46608151440bb308d52ea7ec5b52b3d3aeac02d2ed66755847.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "b0b503098abe7f35732119f2780a0c10038438c1e007f3f53ba123e31239c24d",
+          "bytes": 13170,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollBlkDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /27. GBTulip6RollBlkDot.psd",
+          "sourceSha256": "8efff3ca88f30536e59be7a4f07e9abcdec2222cebd6278c9eb574cf0be77203"
+        },
+        {
+          "role": "off",
+          "sha256": "70b817754d83d2abf5495fb1cf98c29ccd09019a0bf102772743bf64a2959096",
+          "bytes": 20694,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollBlkDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /27. GBTulip6RollBlkDot.psd",
+          "sourceSha256": "f010f985fb9fabcea00809ae1628b8a574f88e22f340f61211423a9a1b036a08"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /27. GBTulip6RollBlkDot.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /27. GBTulip6RollBlkDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6RollBlkSh",
+      "recordId": "kd71p37g4gcdntrzh3c30bya7d81tmfr",
+      "graceSku": "GB-CYL-CLR-6ML-ROL-SBLK",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "binding": "f211962141d5bc0048dfbe9038158f4e9fa20a0ff834a7cda65ba9a08426b948",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "a643140b9bdbbe306c145598b0da2bbc8692df3a026215d7e2fea750aceb5aa4",
+          "bytes": 9936,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollBlkSh/a643140b9bdbbe306c145598b0da2bbc8692df3a026215d7e2fea750aceb5aa4.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "7f55232cd39030d21928a54362acc27846fdb84ce3bf680730c658687f1ebf0e",
+          "bytes": 11330,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollBlkSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /25. GBTulip6RollBlkSh.psd",
+          "sourceSha256": "fc31300dbbf6ff53368b1117b6f058628dac8df442d5b381d4a99d4e12c29c04"
+        },
+        {
+          "role": "off",
+          "sha256": "8f8f4b1452ebe726c9719f4aef66d5448e40a3926238a4f1c8c02482df435c11",
+          "bytes": 18290,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollBlkSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /25. GBTulip6RollBlkSh.psd",
+          "sourceSha256": "def7ac61430941d07bad1f7bc1db7a73c435df49ac5a24bf7a5a57934ef0f7d4"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /25. GBTulip6RollBlkSh.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /25. GBTulip6RollBlkSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6RollCuMatt",
+      "recordId": "kd7bcgnqyt3r98cs9sw4vzdnfh81v0fs",
+      "graceSku": "GB-CYL-CLR-6ML-ROL-MCPR",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "binding": "8410ba01292902dfb522bbbd35f0a576a496cd81d9fbf75dca6341d27b09dd34",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "fe8a8768d89b58a243ed0e7b15ca22dff2ba2b74b642356c4971f2fce8867df4",
+          "bytes": 11812,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollCuMatt/fe8a8768d89b58a243ed0e7b15ca22dff2ba2b74b642356c4971f2fce8867df4.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "dc3df6b2b0452ea03e535984a3ed58120703ece03d2ebf55b304843dece5450e",
+          "bytes": 13506,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollCuMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /23. GBTulip6RollCuMatt.psd",
+          "sourceSha256": "e9b837cf64931cee2e65dc6a88d68e977eb71e87d4ef991e86aa68f0f333e607"
+        },
+        {
+          "role": "off",
+          "sha256": "bc7a89343350958f6454d20b9e25a5614e8e8eb89028301f2802ad2f9e43fa17",
+          "bytes": 21294,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollCuMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /23. GBTulip6RollCuMatt.psd",
+          "sourceSha256": "57c418b04380ddce9e69f91600595d4a2fbdcf208a9cd557a0909596d01daf4b"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /23. GBTulip6RollCuMatt.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /23. GBTulip6RollCuMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6RollGlMatt",
+      "recordId": "kd799dpd75rrat0q7h14z5hj2981vghc",
+      "graceSku": "GB-CYL-CLR-6ML-ROL-MGLD",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "binding": "709376a7d30b2efdd8d66e1879f639a870a43e90ffdd14ee633c9c8bdae64ea2",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "7219dd17856aa810b67c8c9d34bbedc7de37bc1268d69004b99c405047528995",
+          "bytes": 10876,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollGlMatt/7219dd17856aa810b67c8c9d34bbedc7de37bc1268d69004b99c405047528995.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "20304a9e325063bcbb006fe10543d34a35d3ea1452a74eb577c8a03db940190c",
+          "bytes": 12464,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollGlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /17. GBTulip6RollGlMatt.psd",
+          "sourceSha256": "7074b738eeeb668d31cdf9f9b157e0b59a0f270c686200f2ed6c72a620c75791"
+        },
+        {
+          "role": "off",
+          "sha256": "5fad5160a2fbfec4fb12e1da7cfd5c29d288ffee08c0b75b41646753dbbeae25",
+          "bytes": 20590,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollGlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /17. GBTulip6RollGlMatt.psd",
+          "sourceSha256": "132d1e1b2794347b61a55fefaf6520d284b6a280b1f832c1e2f0f11c5bd82317"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /17. GBTulip6RollGlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /17. GBTulip6RollGlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6RollGlSh",
+      "recordId": "kd77bndzbses8mw0zprytc42f581thzt",
+      "graceSku": "GB-CYL-CLR-6ML-ROL-SGLD",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "binding": "b7599ef9183630c38b8aae44ff113bc944000c27a38317bc096c1c6419c8486e",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "d9161a82855685e738e46125eab34bc38ca57e9c57d78acce67ebd3fe9a0e1a1",
+          "bytes": 12592,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollGlSh/d9161a82855685e738e46125eab34bc38ca57e9c57d78acce67ebd3fe9a0e1a1.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "0a97507a8b614088971e2ce752cd7c19119fd16ecf5bb378b699ea8e7e7f0bd8",
+          "bytes": 14498,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollGlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /19. GBTulip6RollGlSh.psd",
+          "sourceSha256": "65197761c0f457ca4f463add5a188601b46b85ae5e3f80c2b6e1168f79687b67"
+        },
+        {
+          "role": "off",
+          "sha256": "88f7cd824ba5ef623071c6797bb465c9e1737c9c2d42df0dadc3ddac011a4ade",
+          "bytes": 21552,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollGlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /19. GBTulip6RollGlSh.psd",
+          "sourceSha256": "4ee171916b0799bd706bf379d2de254ab00f3365823ad4c179248dc877db023d"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /19. GBTulip6RollGlSh.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /19. GBTulip6RollGlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6RollPinkDot",
+      "recordId": "kd7f552z407wq0kq3xka8mvfx181t0ec",
+      "graceSku": "GB-CYL-CLR-6ML-ROL-PKDT",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Pink Dotted",
+      "binding": "e0b46481d7a9ace95b561e67da69f6f4437828fb578cce51d0410d4a53450d88",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "0dd3902085eec75d780c1243c8ffdfe44432c76f01fbc923d3082d2e04d0eb90",
+          "bytes": 11786,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollPinkDot/0dd3902085eec75d780c1243c8ffdfe44432c76f01fbc923d3082d2e04d0eb90.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "8601f71735078bf5a4d6b2fd9f02976fb05f632787d55bea4795b13c779ede96",
+          "bytes": 13228,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollPinkDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /13. GBTulip6RollPinkDot.psd",
+          "sourceSha256": "e4fac2b5f0aa8c0f6442eba6f0b21e923cbae7bf0ea7b20149a13bb71b842bf2"
+        },
+        {
+          "role": "off",
+          "sha256": "3fd29f410ccfb777247db2767384f853c16f14206f4153047afd2e8344c0f7bb",
+          "bytes": 21472,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollPinkDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /13. GBTulip6RollPinkDot.psd",
+          "sourceSha256": "e29c4aa185ce9334cc67513967ef9dcc47b01c59a9bb2821151d382a6eb18baf"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /13. GBTulip6RollPinkDot.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /13. GBTulip6RollPinkDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6RollSlDot",
+      "recordId": "kd74cvz5813paw8zv62dec5b2181v2yy",
+      "graceSku": "GB-CYL-CLR-6ML-ROL-SLDT",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Silver Dotted",
+      "binding": "b0f9d579ede4127fe1375c795c7e5e12ba24e5c3decc6a9323da5a616b976fec",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "db15080da39b63fc3491d36ec5c8b25f0d320fdf0cd2c2e73353ee3b73c54244",
+          "bytes": 11178,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollSlDot/db15080da39b63fc3491d36ec5c8b25f0d320fdf0cd2c2e73353ee3b73c54244.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "c2a34311d8d7665e379f044946e4133b7f8204b450b66d5713f1eb287f2519c6",
+          "bytes": 12670,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollSlDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /11. GBTulip6RollSlDot.psd",
+          "sourceSha256": "98dbf8a1b0393dd05e68224fba87203d275943ac3e2a8b023d1d7a19661ce459"
+        },
+        {
+          "role": "off",
+          "sha256": "f526702307314b49949c7286e492169a5ff94ba9585df68c130af3d6a046773a",
+          "bytes": 19518,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollSlDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /11. GBTulip6RollSlDot.psd",
+          "sourceSha256": "d3c50e4b878326ca62e574be4008f3eed409f38803741e500b901cdb2fc5bfc2"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /11. GBTulip6RollSlDot.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /11. GBTulip6RollSlDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6RollSlMatt",
+      "recordId": "kd71gq2s9pdzj1kweywstd4bx181vyk8",
+      "graceSku": "GB-CYL-CLR-6ML-ROL-MSLV",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "binding": "739fef1418fcc8f69a60d98e5992933d2c402606f0bc92d77c9ca6d1842708e2",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "740dc87f444e87248efbcb5e45a5153f718c395d4a78500a90b44f015cdf6f8c",
+          "bytes": 10220,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollSlMatt/740dc87f444e87248efbcb5e45a5153f718c395d4a78500a90b44f015cdf6f8c.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "0a46890661c3a3788bed12177de468d7d74d7a2aa002232e493694309db89162",
+          "bytes": 11656,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollSlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /15. GBTulip6RollSlMatt.psd",
+          "sourceSha256": "dd92d414ae4fc1d7766fcae3a6da6ba45bea7254ad8400388eebc855f73f6216"
+        },
+        {
+          "role": "off",
+          "sha256": "5744f278a29097019ef2b92822cc74d513e8728079ebfac34eea0db6b1bbc3c3",
+          "bytes": 18844,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollSlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /15. GBTulip6RollSlMatt.psd",
+          "sourceSha256": "2f5d0e2182f5aa33c79e84edf43b90eebe7132767889101cdc4797423f0b17ed"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /15. GBTulip6RollSlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /15. GBTulip6RollSlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6RollSlSh",
+      "recordId": "kd7cjcwht6zvf2xkdyjp2bzkth81vmz7",
+      "graceSku": "GB-CYL-CLR-6ML-ROL-SSLV",
+      "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "binding": "59212ce7fcb0b74038918b46eabfb95c7e821cba75af8b092888e198cfeb9d96",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "6692cc80dfcaf5e70554ce7d5097688999c2848655cedb9da842fa5872bfb066",
+          "bytes": 10686,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollSlSh/6692cc80dfcaf5e70554ce7d5097688999c2848655cedb9da842fa5872bfb066.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "c2419a8272b020611a97e8a604bcb955b31e8652f0338c9c73650cc250df2fdc",
+          "bytes": 11938,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollSlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /21. GBTulip6RollSlSh.psd",
+          "sourceSha256": "ee090673112f2050baf32d9e3a2e7058a52c860af96903422cc765241ca00a53"
+        },
+        {
+          "role": "off",
+          "sha256": "240c7cb62c9901fe101bcc8b089fe3da12fd1b69e9df008262ae212c15217cbd",
+          "bytes": 22046,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6RollSlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /21. GBTulip6RollSlSh.psd",
+          "sourceSha256": "f13c6f9d77230e6b971cccc1fe4caa593ac71fc7ddef879c6f63878aad9a3208"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /21. GBTulip6RollSlSh.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /21. GBTulip6RollSlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6Sl",
+      "recordId": "kd7fwwet23db57p6kv2dbbp8fn81vjak",
+      "graceSku": "GB-CYL-CLR-6ML-SLV-T",
+      "productGroupId": "kh717xh4kg9gcrqzrt8bbwdvqs8dqka9",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": null,
+      "capColor": "Silver",
+      "binding": "2f4b71af5f9c5205bf94584577eb8936059ee7b5d0bcca6f18a892f6277cff66",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "b01e80111890e799ea3fec57ac54243232240bca45729d771b73e0efbe597806",
+          "bytes": 11032,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6Sl/b01e80111890e799ea3fec57ac54243232240bca45729d771b73e0efbe597806.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "6cbd2ef94f176f20c3cd3499dc20b0fd2cbccec9b3b91e8f10ef35404b0b2805",
+          "bytes": 12306,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6Sl.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /29. GBTulip6Sl.psd",
+          "sourceSha256": "2d3dfe9e24aca619918e437217397da4e9f2d7220965148b8424318aed915711"
+        },
+        {
+          "role": "off",
+          "sha256": "98634a1246398a69accaba79a1e16b74a57af695016df7c6b598e3adbe1ea307",
+          "bytes": 18576,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6Sl.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /29. GBTulip6Sl.psd",
+          "sourceSha256": "238e783ef222ccfa4c94665989849bb4a2a0238b4c99bbe5a1222db321358a12"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /29. GBTulip6Sl.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /29. GBTulip6Sl.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6SpryBlkSh",
+      "recordId": "kd75va65dkxaghd3xbew5dn0a181thfx",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-SBLK",
+      "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "binding": "478db28cf8deb9855f3e39e6b282233840abe765b891c9748206bb6d0f079e15",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "f701e4126a2cd88f790e5afe90e92c1ed613c886cc3b6bebf016dd94b72715ef",
+          "bytes": 10790,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SpryBlkSh/f701e4126a2cd88f790e5afe90e92c1ed613c886cc3b6bebf016dd94b72715ef.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "ed2819550462089c0cd071a1728a065f02f6b2d1430586945805067c2c93ba6f",
+          "bytes": 10824,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SpryBlkSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /4. GBTulip6SpryBlkSh.psd",
+          "sourceSha256": "febad5c5e1fd2167c9339cee6c8c723fff4fb51d6b6dc8302194e42d225d2b53"
+        },
+        {
+          "role": "off",
+          "sha256": "2a70d71a3bb4b0e5ba38cc6a13f8d64375cb3836e6e70f19a26d5b94d7000656",
+          "bytes": 15940,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SpryBlkSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /4. GBTulip6SpryBlkSh.psd",
+          "sourceSha256": "4e4e992814b6588d8533577112ec57d337c3fc4dcf4e08cbc49782fc8dc0b16d"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /4. GBTulip6SpryBlkSh.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /4. GBTulip6SpryBlkSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6SpryBluMatt",
+      "recordId": "kd716hxkgmd1cetn73etcjgp3181vpzb",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-MBLU",
+      "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "binding": "4fd835b5be451f27328c8eae66919ab32d557d9e616ed64d508a4c8be9496f26",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "abc1746f30c2154d7ece6b63f5395ffcaa5cdf01e9acee47771502723ead18f9",
+          "bytes": 12886,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SpryBluMatt/abc1746f30c2154d7ece6b63f5395ffcaa5cdf01e9acee47771502723ead18f9.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "04db81e3cc6e8e86e012deab20a9d04a75b6a019eb88023d39ad126982f1b3ac",
+          "bytes": 12854,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SpryBluMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /5. GBTulip6SpryBluMatt.psd",
+          "sourceSha256": "4a69e73a185c2b4b661497f2226a54db4fd53af9aeb269093f423fa21afd5cda"
+        },
+        {
+          "role": "off",
+          "sha256": "ef8ebf1767c240d4c2d9ebe8af8263519da0557dc46595ecbaed1683fb17008f",
+          "bytes": 19052,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SpryBluMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /5. GBTulip6SpryBluMatt.psd",
+          "sourceSha256": "efa53f2166d3bdeef9c0e75fd39ea2f52421f5bc3d7665fc0abef2061e2403fb"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /5. GBTulip6SpryBluMatt.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /5. GBTulip6SpryBluMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6SpryCuMatt",
+      "recordId": "kd7be6psnmn2d1h7qrbqt4ja1s81tspe",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-MCPR",
+      "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "binding": "2c6c7d5b4f9eec05bf187f5ca4ccaac624a7fe35bc89acc3b9338f850c3044a3",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "1c552955e4469b1dd9934b2657cff04b6125b49d529004b0e2c14349fa6ebfe5",
+          "bytes": 12970,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SpryCuMatt/1c552955e4469b1dd9934b2657cff04b6125b49d529004b0e2c14349fa6ebfe5.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "c36093f8ef61469ded5cd525b19560bbda360bf25f185d18c2952ce1a8e86a7f",
+          "bytes": 13026,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SpryCuMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /30. GBTulip6SpryCuMatt.psd",
+          "sourceSha256": "c3b1168774aa08079a02a5a185203b06be1db1afc65cd6eb2fc6faed3ce724ff"
+        },
+        {
+          "role": "off",
+          "sha256": "0d7c0c8e4b7c6ad2b2da25920df0a2f292860b45d85daab8e93b40aba22648bb",
+          "bytes": 19364,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SpryCuMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /30. GBTulip6SpryCuMatt.psd",
+          "sourceSha256": "99f94658a36500d74f0344a31d9f9add384c2d7498511ad2cc8760cf9f9d66e4"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /30. GBTulip6SpryCuMatt.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /30. GBTulip6SpryCuMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6SpryGlMatt",
+      "recordId": "kd7bj4gg06h142gkq7g9g8grsn81texj",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-MGLD",
+      "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "binding": "c6c095a805aefca0762b462f0f08f7c72b413260af5dd67e829ca5e48ac71911",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "dac70704f778a83a1b68cc8271d64b99a36ba9a07978cfc40877be6c0639b7c8",
+          "bytes": 13014,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SpryGlMatt/dac70704f778a83a1b68cc8271d64b99a36ba9a07978cfc40877be6c0639b7c8.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "2bbb08ed2411024d415a267cb8a1b9636cb54c080088770a3c79e8ca430c83b0",
+          "bytes": 13012,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SpryGlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /7. GBTulip6SpryGlMatt.psd",
+          "sourceSha256": "6dc6b717f244f4c4811becd2371a72363b33248584c4d1c5fe01d88655788340"
+        },
+        {
+          "role": "off",
+          "sha256": "88beb66db886cae8e5d837bc552dcced664906026c4c14ac6d3e03261e22498c",
+          "bytes": 23322,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SpryGlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /7. GBTulip6SpryGlMatt.psd",
+          "sourceSha256": "5151b2cc1468bcc03e2d042be102e4ac0b6b573785325b4d5d54dce8d3680466"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /7. GBTulip6SpryGlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /7. GBTulip6SpryGlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6SpryGlSh",
+      "recordId": "kd712sve9c8t1r2vpnhs0zzrv581ttzz",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-SGLD",
+      "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "binding": "8b877ed570d460d6af707b88bd3e7322b6dfd37e6a8278356ba01b6f60d04d24",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "d5d741abd92e9638cde8cc44f4bc25af9fe21defa42b252cb5983e967b37801e",
+          "bytes": 14836,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SpryGlSh/d5d741abd92e9638cde8cc44f4bc25af9fe21defa42b252cb5983e967b37801e.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "1ffbfa670def4f1513ff9fd51aa7f04caddc6f322cbe62fe18267f10d515b973",
+          "bytes": 14904,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SpryGlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /6. GBTulip6SpryGlSh.psd",
+          "sourceSha256": "2bfdbd2de0fb2dc7761eb1dc013d70c25026b78d16424888dac0adb5cd8bf837"
+        },
+        {
+          "role": "off",
+          "sha256": "c70a4907be1af9968fbfa6189482641463ade2703920edfa280946e870238880",
+          "bytes": 27988,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SpryGlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /6. GBTulip6SpryGlSh.psd",
+          "sourceSha256": "8771f680a4619cae6b9972607d09329c1715bc05972deed1dfa79c1bbad37b9f"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /6. GBTulip6SpryGlSh.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /6. GBTulip6SpryGlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6SprySlMatt",
+      "recordId": "kd7fp417cz2az2mbtnctya481s81t4gd",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-MSLV",
+      "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "binding": "1cd518f839eb54c29c98e126c53335ccfb146804f2c6aacb33437f76363b7609",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "0af16f380e334ecab320b014f18d3d38d2b18bccfe619a7c13fb5414b558cffe",
+          "bytes": 9982,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SprySlMatt/0af16f380e334ecab320b014f18d3d38d2b18bccfe619a7c13fb5414b558cffe.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "e80df9eee92d746914e3003b2eb08ce4aa7a3f1f67c9bf95d8e3f1715ae3ac65",
+          "bytes": 9980,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SprySlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /8. GBTulip6SprySlMatt.psd",
+          "sourceSha256": "3aac83c992f47a4a5c4a287f117d72c9a346623349dee10959ae67dc1c29d7a1"
+        },
+        {
+          "role": "off",
+          "sha256": "4b0141c61c1b767fbb4c3ddd855488e75f42b459ed218b09aceaf9f7c5cde084",
+          "bytes": 14194,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SprySlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /8. GBTulip6SprySlMatt.psd",
+          "sourceSha256": "3f913d0bfd79edbc5788876485c51097f11767b564962fe47c74df8fce7da43a"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /8. GBTulip6SprySlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /8. GBTulip6SprySlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6SprySlSh",
+      "recordId": "kd73vgsscf4jrav5y8j4tyt1a981vt3s",
+      "graceSku": "GB-CYL-CLR-6ML-SPR-SSLV",
+      "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "binding": "3b413bfd275a3242f5185b5def72ab25b7d549a60e65db9eb1b5cd85b17ca5e2",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "302e6ee43f6333f5fe4f1ec7f29b38014b2d111b9afeedd4209f9311814ea0b4",
+          "bytes": 12826,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SprySlSh/302e6ee43f6333f5fe4f1ec7f29b38014b2d111b9afeedd4209f9311814ea0b4.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "6035d96d0eee22384399691ff36e0bc7fa0cf05fc7ae73446906bed74f3ae3e9",
+          "bytes": 12942,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SprySlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /9. GBTulip6SprySlSh.psd",
+          "sourceSha256": "08e40b058a90aa82f3d2c484d18d73d57ce8addc4abe88917609e715d55c958f"
+        },
+        {
+          "role": "off",
+          "sha256": "55709be53d07ae3ec0351219f232e8cbbdfe1b3e4d560a405edd68013dcb0a54",
+          "bytes": 21854,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6SprySlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /9. GBTulip6SprySlSh.psd",
+          "sourceSha256": "5e3ae7846df1c8500d07bb82aef7196a8a1520051c9e5d3e763c7f1fcdee25f7"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /9. GBTulip6SprySlSh.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /9. GBTulip6SprySlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulip6WhtSht",
+      "recordId": "kd7cb606ejrgp4kv426eda8c5h81vta6",
+      "graceSku": "GB-CYL-WHT-6ML-WHT-S",
+      "productGroupId": "kh717xh4kg9gcrqzrt8bbwdvqs8dqka9",
+      "familyId": "tulip-6ml-clear-13-415",
+      "family": "Tulip",
+      "capacityMl": 6,
+      "color": "Clear",
+      "neckThreadSize": "13-415",
+      "applicator": null,
+      "capColor": "White",
+      "binding": "3c802abab114824ce282cbe556206ac69d3279d5429a1dd6e01476646afbfa43",
+      "reviewPackets": [
+        "tulip-clear-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "de1033c6be5b2a7fb09be5031860f18d1896479fa803a97f08f669207a497b9e",
+          "bytes": 10758,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6WhtSht/de1033c6be5b2a7fb09be5031860f18d1896479fa803a97f08f669207a497b9e.front-on-1000x1100.webp",
+          "verifiedFrom": "local plate-contact-sheet cache"
+        },
+        {
+          "role": "on",
+          "sha256": "f258c8a65b157ff4a808a22c53eadfa0149170c1e7a8ba7dee9354bdca0783ba",
+          "bytes": 12034,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6WhtSht.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /2. GBTulip6WhtSht.psd",
+          "sourceSha256": "f290847cc4f29eaf5b3a0d1c6adf232f0074bb710c679f44190a8da0dc8ea01e"
+        },
+        {
+          "role": "off",
+          "sha256": "1e6a9c030a47d3f12566dc4dd9473450a9b8633cb434d182a633a7da17be7b1d",
+          "bytes": 15870,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-clear-capoff-recovery-2026-09-13/assets/GBTulip6WhtSht.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /2. GBTulip6WhtSht.psd",
+          "sourceSha256": "b6252ee8f7aa051cdd916cefe999a1b11d3fdb62315c29bc4cf009e57b8f2fb1"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /2. GBTulip6WhtSht.psd",
+        "uncapped": "5.  13-415 Bottles/19. Tulip 6ml Clear/1. Tulip 6ml (Uncapped) PSD /2. GBTulip6WhtSht.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5BlkSht",
+      "recordId": "kd7fe70a3p69md5prhf741rdd981vcks",
+      "graceSku": "GB-DEC-AMB-5ML-S",
+      "productGroupId": "kh7efvmg1vcgbxb4t2mva10r598dpcv1",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": null,
+      "capColor": "Amber",
+      "binding": "227b6a76149df15ceed09521dacf272e64401521251a6ec6d60ec5d88720ade2",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "8762394e8405c31691311386dddfd24330c2c1f89f5ed38f56162e29c86c90b7",
+          "bytes": 18668,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5BlkSht/8762394e8405c31691311386dddfd24330c2c1f89f5ed38f56162e29c86c90b7.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "ee620d54675ba8b11a09c1910be40f7a008de3b7cedbcb822819cce316cb872a",
+          "bytes": 22286,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5BlkSht.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/1. GBTulipAmb5BlkSht.psd",
+          "sourceSha256": "3201a38b9e88069133adf812f27477dcce616a7c4bbbad223368a49daf178854"
+        },
+        {
+          "role": "off",
+          "sha256": "d88f612e837be4944d1a3fcf671e2797531c4acd2e5321459d4232273d40f405",
+          "bytes": 27832,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5BlkSht.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /1. GBTulipAmb5BlkSht.psd",
+          "sourceSha256": "c7919dd7100b0b9715196f67cd1faddf9d340b9133287eb6d3d2da6bab0ad4e2"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/1. GBTulipAmb5BlkSht.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /1. GBTulipAmb5BlkSht.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5Gl",
+      "recordId": "kd74tg5a8q1kgapfhb9ddxdje981t4cy",
+      "graceSku": "GB-CYL-AMB-5ML-GLD-T",
+      "productGroupId": "kh7efvmg1vcgbxb4t2mva10r598dpcv1",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": null,
+      "capColor": "Gold",
+      "binding": "2f43260321764270051e39a89464fdae951f90f6f354aec3eb8a799be7e9fb60",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f",
+          "bytes": 17846,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5Gl/ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "2991186eefeb538e7c643187ba37c0189f883f0bd80d8f52e5eeec339eb02db7",
+          "bytes": 20902,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5Gl.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/28. GBTulipAmb5Gl.psd",
+          "sourceSha256": "b2dad27e84b25800c19f508c58bdbbf79084dbde47360f41ae83dcf4616ad012"
+        },
+        {
+          "role": "off",
+          "sha256": "fccbad56697e55604ff4098c6e8ed6129d5ff1c4a563a16723d0a5ffe6e3e48d",
+          "bytes": 29638,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5Gl.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /28. GBTulipAmb5Gl.psd",
+          "sourceSha256": "6fdb81eedb4a15fed9f59695a5e9af941b686ae2916e19a3f1fc1e30edfef298"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/28. GBTulipAmb5Gl.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /28. GBTulipAmb5Gl.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollBlkDot",
+      "recordId": "kd78rz7n010m2k6gj561r0690h81vdye",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-BKDT",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black Dotted",
+      "binding": "df13b90393581405f1485d312b669e888aed83462ab5096cfb24d3a300b602f9",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "734fad3a219bee64873a35c3b1b485419dd721bf5dfea4cea38d24622f38c114",
+          "bytes": 16414,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkDot/734fad3a219bee64873a35c3b1b485419dd721bf5dfea4cea38d24622f38c114.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "c94eb029766b18f8afcaa451a8968072c090b1531b157cf28802896544e42a62",
+          "bytes": 19482,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollBlkDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/26. GBTulipAmb5MtlRollBlkDot.psd",
+          "sourceSha256": "23e0d5e2aee39ddda19e4cf7927e72329f78d17a4bc1a63d7a53c4ed50c026ba"
+        },
+        {
+          "role": "off",
+          "sha256": "f2f4f9d699c9276c618ca7806c67ec9eb9079bb743bc906f205981110a9671f7",
+          "bytes": 31698,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollBlkDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /26. GBTulipAmb5MtlRollBlkDot.psd",
+          "sourceSha256": "241793e929de25d11e262f548b0a4745cb75b51dbc5a8f61effb9f5d0b9f7ee9"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/26. GBTulipAmb5MtlRollBlkDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /26. GBTulipAmb5MtlRollBlkDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollBlkSh",
+      "recordId": "kd7c412nceatzaabtxqv0k17hx81t11y",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SBLK",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "binding": "0b598d5054bcbaf060943148a9daf499a0b2d470f44f4c9e31b14f6e9f6c6a71",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "7e1b83974fa001731acdb9bd41559b23730783ca1c35d5b4c440abac9b145da8",
+          "bytes": 14358,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkSh/7e1b83974fa001731acdb9bd41559b23730783ca1c35d5b4c440abac9b145da8.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "6a1f51a277dec9871ababb92164f4e5f998960896328f88f2ef0acc173a992d5",
+          "bytes": 17242,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollBlkSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/24. GBTulipAmb5MtlRollBlkSh.psd",
+          "sourceSha256": "50921e9390d0549e0817127fb6d35385b11c0e2b8e8cbb31b1843a80d707386c"
+        },
+        {
+          "role": "off",
+          "sha256": "1f00d4c81456e94bd87f6b30e5fcb3d4b4ff2700a4b394ad2065bac6b3613c9b",
+          "bytes": 28918,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollBlkSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /24. GBTulipAmb5MtlRollBlkSh.psd",
+          "sourceSha256": "81be7b988ccf4621e1f5b7dfb2bd9cee6dda5bad385f31ad4c401f8368ef0e5b"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/24. GBTulipAmb5MtlRollBlkSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /24. GBTulipAmb5MtlRollBlkSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollCuMatt",
+      "recordId": "kd76n5gfhbrnf4sytzya3kjp9581vtcz",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-MCPR",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Copper",
+      "binding": "905eb62bae9c026c49d152df8f156e01035f420b062f73114471d04229f3afff",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "acaed0128405497106da55f769d79edf1dd20a0606a8b3f8219b63cb63f436ea",
+          "bytes": 15978,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollCuMatt/acaed0128405497106da55f769d79edf1dd20a0606a8b3f8219b63cb63f436ea.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "19680b3a397515a61c3105dce9468452feedd67d94c6cd9df7d514af0580e303",
+          "bytes": 19010,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollCuMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/22. GBTulipAmb5MtlRollCuMatt.psd",
+          "sourceSha256": "0807357ec8dbd57160adaf86774adcc4622e0dae6e70d3f48ecd2cc8cc562903"
+        },
+        {
+          "role": "off",
+          "sha256": "aaafcd93448d0a19259ff592f377f2e2dff32f80a5084bb5140dd8d6932030b0",
+          "bytes": 33146,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollCuMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /22. GBTulipAmb5MtlRollCuMatt.psd",
+          "sourceSha256": "2ebd77b6e70e73b038e1c76e6add9fa27964a58607ec5cbc138a3f6ed29daf26"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/22. GBTulipAmb5MtlRollCuMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /22. GBTulipAmb5MtlRollCuMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollGlMatt",
+      "recordId": "kd7amkx1pnwnnkkpdjxapkpyqd81tx3m",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-MGLD",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "binding": "e45db185af4580e38cadcca953bc7563983d3e09af20d8944ac88c67512d328f",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "370a4661bd119ba69fde0d15a4a2276e97414f7b684a910c32b520ab523ddc62",
+          "bytes": 15610,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlMatt/370a4661bd119ba69fde0d15a4a2276e97414f7b684a910c32b520ab523ddc62.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "57895b88ea7345b3ebe4b45f0690cab3effdd267f90a6c4e81c107ae707cdac7",
+          "bytes": 18780,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollGlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/16. GBTulipAmb5MtlRollGlMatt.psd",
+          "sourceSha256": "b6ffdb0000ee0d6c96fd4c6ff752d8d40495c5ce1efc507beb835c78a87e023a"
+        },
+        {
+          "role": "off",
+          "sha256": "3c3f08cef2876cedc6fd1b99b0b0d27557d9a1284fd0814b6816d0790aa0376d",
+          "bytes": 30588,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollGlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /16. GBTulipAmb5MtlRollGlMatt.psd",
+          "sourceSha256": "ff4aa4fa6a3f4e01abf5b055c7a5377481c4967d1aa6aada6633c9d2b56198c4"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/16. GBTulipAmb5MtlRollGlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /16. GBTulipAmb5MtlRollGlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollGlSh",
+      "recordId": "kd76n9jnyvfnz6hnjb6gx7j9b581ttvx",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SGLD",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "binding": "1d157bc9184abf223a3fca7542b6e10ff58af6bbc51da0306e7ec4af1de0546e",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f",
+          "bytes": 17846,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlSh/ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "05655fba63bdf481302792ded2fa737d15410de78c7b176fd91a59b1d6156fbc",
+          "bytes": 20644,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollGlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/18. GBTulipAmb5MtlRollGlSh.psd",
+          "sourceSha256": "04a2f593e054d6f0e52fcec82bdc0c50dbddb38bc4a3fd306ea1e6655b2b48a0"
+        },
+        {
+          "role": "off",
+          "sha256": "59bfa54c178c167b0287a5c8afd59e16e5b442cbb8f4e6f3b48054f37571a65a",
+          "bytes": 31440,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollGlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /18. GBTulipAmb5MtlRollGlSh.psd",
+          "sourceSha256": "9c14d5efd220fcfa3cd5535930f69025582b75ade055eaa20d90198b31a3d44e"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/18. GBTulipAmb5MtlRollGlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /18. GBTulipAmb5MtlRollGlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollPinkDot",
+      "recordId": "kd74vgebe38x5rts817tkjh4nx81tmss",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-PKDT",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Pink Dotted",
+      "binding": "d27e4c7e535877c27218e631a53ba34fd8e65f2ef3be62fb36835c97fea651d9",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "df7506e30c94468d226cfeb2e9bb2aa590976272e11ff57798dbd67a1ea2908c",
+          "bytes": 17882,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollPinkDot/df7506e30c94468d226cfeb2e9bb2aa590976272e11ff57798dbd67a1ea2908c.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "c310cfe0a0d885bb5f319dabde901602b4de66ab3cefdbba99e303fdd4e2ac0e",
+          "bytes": 21288,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollPinkDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/12. GBTulipAmb5MtlRollPinkDot.psd",
+          "sourceSha256": "621f72ca695f770ecd13da9f404ca06f135ab5659b39e5f03ca093fd44652651"
+        },
+        {
+          "role": "off",
+          "sha256": "d1736741f840846b8e1fcd4c6da5c1c15b91f9aee24ffed13ee9977363bb9778",
+          "bytes": 32286,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollPinkDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /12. GBTulipAmb5MtlRollPinkDot.psd",
+          "sourceSha256": "9bdc7d42100aeacbb933dfc81e59325332ac146618ecab761a254e053c688830"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/12. GBTulipAmb5MtlRollPinkDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /12. GBTulipAmb5MtlRollPinkDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollSlDot",
+      "recordId": "kd780r0tn5xbpne9wywtj8vkb581v12s",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SLDT",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Silver Dotted",
+      "binding": "e0bedcfddb57857a37dda001e173cdb9fb951e75806d92ae81e19bd1792ba2c3",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "ec2ba0cde9dd8a01b14ec5f479bc533ca077ccbbf436c6575d084d9fc0ae0c5f",
+          "bytes": 16270,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlDot/ec2ba0cde9dd8a01b14ec5f479bc533ca077ccbbf436c6575d084d9fc0ae0c5f.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "9cc3f94117bd977b33e082669953c8110dc9864003ba6e42f1e1eafd1046967e",
+          "bytes": 19462,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollSlDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/10. GBTulipAmb5MtlRollSlDot.psd",
+          "sourceSha256": "9ae39c01a1d6a80873f5dfd7f42fa5a345055690ba96f1031cdbf6d720091c08"
+        },
+        {
+          "role": "off",
+          "sha256": "816be4c50efada198f5b88628b940f487a3e1f91e192b8e46becfc00860aa38f",
+          "bytes": 30484,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollSlDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /10. GBTulipAmb5MtlRollSlDot.psd",
+          "sourceSha256": "94b20ceb57dd69e1f76e51b8eda12385a689947405a7e4879e7f50b622f7c28e"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/10. GBTulipAmb5MtlRollSlDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /10. GBTulipAmb5MtlRollSlDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollSlMatt",
+      "recordId": "kd78ht1kxdat0gpxcgvnsz4wcs81vv9e",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-MSLV",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "binding": "31bea9f33bf8e43dda7f22054d8a44579b14a3407727cdf455f58661d9bb45e8",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "63c4d7b7b297575d8d085824ce758e7f00b426c865fb8af35ab7b0a26b6d11c3",
+          "bytes": 15002,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlMatt/63c4d7b7b297575d8d085824ce758e7f00b426c865fb8af35ab7b0a26b6d11c3.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "a8bafc8bb34c5c41113e36fbef401a71441208686e84556cc77dab936cec007a",
+          "bytes": 17840,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollSlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/14. GBTulipAmb5MtlRollSlMatt.psd",
+          "sourceSha256": "78c04181763b207a0ab6016f795f202850789694043dc3b90d39680d632b1458"
+        },
+        {
+          "role": "off",
+          "sha256": "a0ed99065531ccafb0c862bfb9e5ec6eef08c71b04160548c3d4aa27d5b5fe94",
+          "bytes": 29620,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollSlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /14. GBTulipAmb5MtlRollSlMatt.psd",
+          "sourceSha256": "478d342e999e238addedbe650cf44647065c217d70e190aab5d7f4d41f9a28e0"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/14. GBTulipAmb5MtlRollSlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /14. GBTulipAmb5MtlRollSlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollSlSh",
+      "recordId": "kd7d631c63fw0qmh5dbqkjc48181v9tj",
+      "graceSku": "GB-CYL-AMB-5ML-MRL-SSLV",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "binding": "8f54cb8a9e6a952e686185cf224253f8a940dad9e95c23daa497f8dac6166b4c",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "0780b7fb715058fa1b7cade9e96ba257748401c5150eb49387e5b3f6b69b4d8e",
+          "bytes": 16142,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlSh/0780b7fb715058fa1b7cade9e96ba257748401c5150eb49387e5b3f6b69b4d8e.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "9bfecf0577d95442951ec8f15936d86e6e13b4bc0796965c4fccf7e20f04ef3f",
+          "bytes": 18422,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollSlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/20. GBTulipAmb5MtlRollSlSh.psd",
+          "sourceSha256": "b6b8220a04e4ded6956e9da5d58be6a68055d0ec76c1fe714bf8d1dca990b5f9"
+        },
+        {
+          "role": "off",
+          "sha256": "9cb5117d5b040623abad742a02f1f8294007984d8719fbf2dff3e672b4e9ef06",
+          "bytes": 32168,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5MtlRollSlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /20. GBTulipAmb5MtlRollSlSh.psd",
+          "sourceSha256": "96cb2dbeee986c91a440a4d1cd5843dc65f8961f38a2b921bf7d51d4d55c5dad"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/20. GBTulipAmb5MtlRollSlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /20. GBTulipAmb5MtlRollSlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollBlkDot",
+      "recordId": "kd76qxfjb3003p0szdhaxb0rt581tmnn",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-BKDT",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black Dotted",
+      "binding": "cf4b07a496bfc7cd809e8838f03b6aa9c5a8345637bd7a896afa596a04b57b30",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "734fad3a219bee64873a35c3b1b485419dd721bf5dfea4cea38d24622f38c114",
+          "bytes": 16414,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollBlkDot/734fad3a219bee64873a35c3b1b485419dd721bf5dfea4cea38d24622f38c114.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "c94eb029766b18f8afcaa451a8968072c090b1531b157cf28802896544e42a62",
+          "bytes": 19482,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollBlkDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/27. GBTulipAmb5RollBlkDot.psd",
+          "sourceSha256": "23e0d5e2aee39ddda19e4cf7927e72329f78d17a4bc1a63d7a53c4ed50c026ba"
+        },
+        {
+          "role": "off",
+          "sha256": "0a514f264aebc6aab28acf284a1bc09f66835e00f1e32b1f66bf5b968d6987b8",
+          "bytes": 30898,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollBlkDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /27. GBTulipAmb5RollBlkDot.psd",
+          "sourceSha256": "09033d4c03a5188cec60bbc8784d8ced127d391c2376757156d351b89c6a7bf7"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/27. GBTulipAmb5RollBlkDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /27. GBTulipAmb5RollBlkDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollBlkSh",
+      "recordId": "kd7c16bdptzw8b7zmpw82fjfpd81v7pc",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SBLK",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "binding": "c69c088c2e320719ddf59a9c40a84b296e5ac11a52eb7988a8f45ff6ff1c0394",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "7e1b83974fa001731acdb9bd41559b23730783ca1c35d5b4c440abac9b145da8",
+          "bytes": 14358,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollBlkSh/7e1b83974fa001731acdb9bd41559b23730783ca1c35d5b4c440abac9b145da8.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "6a1f51a277dec9871ababb92164f4e5f998960896328f88f2ef0acc173a992d5",
+          "bytes": 17242,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollBlkSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/25. GBTulipAmb5RollBlkSh.psd",
+          "sourceSha256": "50921e9390d0549e0817127fb6d35385b11c0e2b8e8cbb31b1843a80d707386c"
+        },
+        {
+          "role": "off",
+          "sha256": "d410fc74acdecfd6fef5037afa533f92f7331595453890726b8a97e52e41b4dd",
+          "bytes": 28286,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollBlkSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /25. GBTulipAmb5RollBlkSh.psd",
+          "sourceSha256": "5d70a8a2f62f66dc213c4c968bc2de49abc719770a809b10270cc4ba5d91ce80"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/25. GBTulipAmb5RollBlkSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /25. GBTulipAmb5RollBlkSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollCuMatt",
+      "recordId": "kd71k2aj4gxe8jzwf8kg15y8t181v8va",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-MCPR",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "binding": "81506972de36d0ce56ba60104ece7e97b79bfb556c3d9b3d7de612bd2aee2016",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "acaed0128405497106da55f769d79edf1dd20a0606a8b3f8219b63cb63f436ea",
+          "bytes": 15978,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollCuMatt/acaed0128405497106da55f769d79edf1dd20a0606a8b3f8219b63cb63f436ea.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "19680b3a397515a61c3105dce9468452feedd67d94c6cd9df7d514af0580e303",
+          "bytes": 19010,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollCuMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/23. GBTulipAmb5RollCuMatt.psd",
+          "sourceSha256": "e24f4e2cfb25f0e19c2f25515c4dff279677c45b991cfcdde24b79dc089945ef"
+        },
+        {
+          "role": "off",
+          "sha256": "11052b3e91b3acfea2bd1561d8da2a6ce1d485e52cfa2b304d97d50ff923e319",
+          "bytes": 32406,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollCuMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /23. GBTulipAmb5RollCuMatt.psd",
+          "sourceSha256": "18f4b1d451a42ec229a1fa0dfbb1bb5c9af72cdaadd354688c41686321fe9dc2"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/23. GBTulipAmb5RollCuMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /23. GBTulipAmb5RollCuMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollGlMatt",
+      "recordId": "kd74gwy49v3h1rqkn61tv9t2m981tcsv",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-MGLD",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "binding": "3112c5630081f0babe81dbdfd6a4eb942322b68dc9beca06f4bb0adae68e56a8",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "370a4661bd119ba69fde0d15a4a2276e97414f7b684a910c32b520ab523ddc62",
+          "bytes": 15610,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollGlMatt/370a4661bd119ba69fde0d15a4a2276e97414f7b684a910c32b520ab523ddc62.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "57895b88ea7345b3ebe4b45f0690cab3effdd267f90a6c4e81c107ae707cdac7",
+          "bytes": 18780,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollGlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/17. GBTulipAmb5RollGlMatt.psd",
+          "sourceSha256": "b6ffdb0000ee0d6c96fd4c6ff752d8d40495c5ce1efc507beb835c78a87e023a"
+        },
+        {
+          "role": "off",
+          "sha256": "bb6d541b9ca40fc4454849f274bcbef39948815b2ef9f6a6460ad0c491684ce2",
+          "bytes": 29668,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollGlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /17. GBTulipAmb5RollGlMatt.psd",
+          "sourceSha256": "9bf53a330951f88f00d7792b013c9e795abdab5085602594f7bbd64da9baed11"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/17. GBTulipAmb5RollGlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /17. GBTulipAmb5RollGlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollGlSh",
+      "recordId": "kd7eqh04e3nrqk10f09mezjqan81vnxt",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SGLD",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "binding": "0f7e3ed08321e0c4d5d298c9884807fb3f01cafbf00dc6756449893836f3616b",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f",
+          "bytes": 17846,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollGlSh/ad777f56395dd5f4db9de25243412635d2faf754b8c8c11c8a18b4d99b9ad35f.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "05655fba63bdf481302792ded2fa737d15410de78c7b176fd91a59b1d6156fbc",
+          "bytes": 20644,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollGlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/19. GBTulipAmb5RollGlSh.psd",
+          "sourceSha256": "04a2f593e054d6f0e52fcec82bdc0c50dbddb38bc4a3fd306ea1e6655b2b48a0"
+        },
+        {
+          "role": "off",
+          "sha256": "e009ecf4736e1e853f9288c6fd6065b973b304b97cf53689edceeabfb94b3157",
+          "bytes": 30760,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollGlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /19. GBTulipAmb5RollGlSh.psd",
+          "sourceSha256": "8f91247a23e751535401bafb204162f37d78696c5c3b932a460b7b8157260eca"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/19. GBTulipAmb5RollGlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /19. GBTulipAmb5RollGlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollPinkDot",
+      "recordId": "kd74kqr1vt8y71qckwwrd3m97s81vxha",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-PKDT",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Pink Dotted",
+      "binding": "36f8a3bfe8c3f10b69705310aa0066a802fd1625cd2c17bf39b696879d9ff65d",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "df7506e30c94468d226cfeb2e9bb2aa590976272e11ff57798dbd67a1ea2908c",
+          "bytes": 17882,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollPinkDot/df7506e30c94468d226cfeb2e9bb2aa590976272e11ff57798dbd67a1ea2908c.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "c310cfe0a0d885bb5f319dabde901602b4de66ab3cefdbba99e303fdd4e2ac0e",
+          "bytes": 21288,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollPinkDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/13. GBTulipAmb5RollPinkDot.psd",
+          "sourceSha256": "621f72ca695f770ecd13da9f404ca06f135ab5659b39e5f03ca093fd44652651"
+        },
+        {
+          "role": "off",
+          "sha256": "f1d1a1017a499585edf13571eac0275f1779acd58e98f6832e984b18afb0fa72",
+          "bytes": 31446,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollPinkDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /13. GBTulipAmb5RollPinkDot.psd",
+          "sourceSha256": "21abea7a3ffb7e06d757c14ddcd6eae2cd382d16d1b97ca860f56cb2cee38434"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/13. GBTulipAmb5RollPinkDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /13. GBTulipAmb5RollPinkDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollSlDot",
+      "recordId": "kd7et82tej14mhmcgz3d3bceg581vaf3",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SLDT",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Silver Dotted",
+      "binding": "ab24f2cc90c565b805ced3c299efae4a8cba0ed1826cdceb551138c00f4153b4",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "ec2ba0cde9dd8a01b14ec5f479bc533ca077ccbbf436c6575d084d9fc0ae0c5f",
+          "bytes": 16270,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlDot/ec2ba0cde9dd8a01b14ec5f479bc533ca077ccbbf436c6575d084d9fc0ae0c5f.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "9cc3f94117bd977b33e082669953c8110dc9864003ba6e42f1e1eafd1046967e",
+          "bytes": 19462,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollSlDot.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/11. GBTulipAmb5RollSlDot.psd",
+          "sourceSha256": "9ae39c01a1d6a80873f5dfd7f42fa5a345055690ba96f1031cdbf6d720091c08"
+        },
+        {
+          "role": "off",
+          "sha256": "33388d47b08d6a1722ebf5e884dd235df2d707efd7ba024f29c86c0fd69b94b4",
+          "bytes": 29662,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollSlDot.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /11. GBTulipAmb5RollSlDot.psd",
+          "sourceSha256": "838f072f8c6e8faee6343a8b45b460244c4997b805b581dee4f71ed3cc74f69b"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/11. GBTulipAmb5RollSlDot.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /11. GBTulipAmb5RollSlDot.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollSlMatt",
+      "recordId": "kd73hwpvb7bst4xssyprh9djx981te9j",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-MSLV",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "binding": "89afe3cba2e3fae7ad7b3107944b0c34e6e38bd7bbdf625cbfe56667e424eceb",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "63c4d7b7b297575d8d085824ce758e7f00b426c865fb8af35ab7b0a26b6d11c3",
+          "bytes": 15002,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlMatt/63c4d7b7b297575d8d085824ce758e7f00b426c865fb8af35ab7b0a26b6d11c3.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "a8bafc8bb34c5c41113e36fbef401a71441208686e84556cc77dab936cec007a",
+          "bytes": 17840,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollSlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/15. GBTulipAmb5RollSlMatt.psd",
+          "sourceSha256": "78c04181763b207a0ab6016f795f202850789694043dc3b90d39680d632b1458"
+        },
+        {
+          "role": "off",
+          "sha256": "c2d048eaa29f3ab4e9896db613452899be937a5ab47c3d9eef761b8d683dc737",
+          "bytes": 28960,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollSlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /15. GBTulipAmb5RollSlMatt.psd",
+          "sourceSha256": "e00b6d2caf5d3f7db5b30a6bdaacbd6a4ded12f4e2c86044724c042070f3cb01"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/15. GBTulipAmb5RollSlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /15. GBTulipAmb5RollSlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5RollSlSh",
+      "recordId": "kd76chkde2d1sfh8bhnzzraq8181vebs",
+      "graceSku": "GB-CYL-AMB-5ML-ROL-SSLV",
+      "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "binding": "043dc18260109dbc060c34a55d6f95262bd0da822c4d0ba2279377028904fa94",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "0780b7fb715058fa1b7cade9e96ba257748401c5150eb49387e5b3f6b69b4d8e",
+          "bytes": 16142,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlSh/0780b7fb715058fa1b7cade9e96ba257748401c5150eb49387e5b3f6b69b4d8e.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "9bfecf0577d95442951ec8f15936d86e6e13b4bc0796965c4fccf7e20f04ef3f",
+          "bytes": 18422,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollSlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/21. GBTulipAmb5RollSlSh.psd",
+          "sourceSha256": "b6b8220a04e4ded6956e9da5d58be6a68055d0ec76c1fe714bf8d1dca990b5f9"
+        },
+        {
+          "role": "off",
+          "sha256": "9157fdc0be0f56fd05f47ef561bec19f628549dcfda428a224855ea51de92cee",
+          "bytes": 31464,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5RollSlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /21. GBTulipAmb5RollSlSh.psd",
+          "sourceSha256": "eaf2ad46a69b24010b0a924f0eba6809a70cdbaa851229ce9bad89f641808915"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/21. GBTulipAmb5RollSlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /21. GBTulipAmb5RollSlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5Sl",
+      "recordId": "kd76av0ftc1yy2em4y7nk0hcp181thdp",
+      "graceSku": "GB-CYL-AMB-5ML-SLV-T",
+      "productGroupId": "kh7efvmg1vcgbxb4t2mva10r598dpcv1",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": null,
+      "capColor": "Silver",
+      "binding": "123e9b60d4243afaf0adc728cf720a4a09f2781607cefb6cd7ecf606dcd2b583",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "58d90f1adb1e5142132ac0411144857ac9f1c2eb1bc7e1ba5368adc8e430cee9",
+          "bytes": 16150,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5Sl/58d90f1adb1e5142132ac0411144857ac9f1c2eb1bc7e1ba5368adc8e430cee9.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "efa4efddcfc7a6f7292e4bfabf53673b60b50581ac5e0f659a5ad7346d962f0f",
+          "bytes": 18704,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5Sl.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/29. GBTulipAmb5Sl.psd",
+          "sourceSha256": "8c983d2c0c0cd77e136f5beee493d7c3282b0be90992bf2f1b10714affeb4c5b"
+        },
+        {
+          "role": "off",
+          "sha256": "c68b1917cb2d9f54213d65a87d3a073750a7323c169295bf6182ecde95f17696",
+          "bytes": 28426,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5Sl.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /29. GBTulipAmb5Sl.psd",
+          "sourceSha256": "7ab17807f334f287c76b01a9a24c693e11e09b9c6db066575cef2c6d50793c7d"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/29. GBTulipAmb5Sl.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /29. GBTulipAmb5Sl.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryBlkMatt",
+      "recordId": "kd79c7v0r71mpsm9gappwtz6r981vpcd",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MBLK",
+      "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "binding": "67a726bb3be5dfc053804170514d510429cf8b9281221675e1f83a00f407f08b",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "037612372b3dff22ed263fe418a476845d63351b4801a1edcb6f0c90b2f4ecf1",
+          "bytes": 16616,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkMatt/037612372b3dff22ed263fe418a476845d63351b4801a1edcb6f0c90b2f4ecf1.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "7680a42ed730ff5cadf86454e17db4b8b9c46af566d96f5b3be40d0cb2623886",
+          "bytes": 16702,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryBlkMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/3. GBTulipAmb5SpryBlkMatt.psd",
+          "sourceSha256": "63fe56482c6215d4cc8cacbbe8dd1fc0dce3fb8a7cbff575f6bd1418a210b6b8"
+        },
+        {
+          "role": "off",
+          "sha256": "41a224db2fb559db22bae74468acb41d3f6abd33c387759f5bb4c673af27c9c6",
+          "bytes": 22026,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryBlkMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /3. GBTulipAmb5SpryBlkMatt.psd",
+          "sourceSha256": "79dcb08fa226e54fbc49e31a23ab10bb0a200eb551fb1706dcd95349a26e92ef"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/3. GBTulipAmb5SpryBlkMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /3. GBTulipAmb5SpryBlkMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryBlkSh",
+      "recordId": "kd7drt2vf3pspnxnt8kkfd5zy981v5m4",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SBLK",
+      "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "binding": "680cba396f904412e462b1a3236a9897a04f4bea6a381a6e8452bbda52f248fb",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "90ad012bfb5ba6d3118ffc4d1e4c552341424c263c0ec34e02e40847515df83d",
+          "bytes": 15504,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkSh/90ad012bfb5ba6d3118ffc4d1e4c552341424c263c0ec34e02e40847515df83d.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "d1a147df80620ff79f5d7777c5a4ce2531882ee275f5af01500364299d1701bb",
+          "bytes": 15856,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryBlkSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/4. GBTulipAmb5SpryBlkSh.psd",
+          "sourceSha256": "d84dc61300c16061f6cc00676da00ba49cdbc4f9b8ccefcb72a1886c0957f1ef"
+        },
+        {
+          "role": "off",
+          "sha256": "73d9df5e9e15422c5a4df80171e418d1639649215374c630b016b42a1446131a",
+          "bytes": 21514,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryBlkSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /4. GBTulipAmb5SpryBlkSh.psd",
+          "sourceSha256": "c01c17185567022a915e1e87051f24385fe95675f5ab2ae1b43e50f865532e0a"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/4. GBTulipAmb5SpryBlkSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /4. GBTulipAmb5SpryBlkSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryBluMatt",
+      "recordId": "kd72p8np4e8hp5563g8zbqt9yh81t81x",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MBLU",
+      "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "binding": "5740bdafb35a9b4d2bbd00bcf780cba6a6d6ed381d8ff1fa664ce00076961730",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "0dab359e0363a5f82d111692e7decfe26cdcb7c4321a4aa93745d6b372e6cd26",
+          "bytes": 17486,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBluMatt/0dab359e0363a5f82d111692e7decfe26cdcb7c4321a4aa93745d6b372e6cd26.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "44de54685bf2c30dcafca7a4aff520b4ff997f1c20cb8dc5f781cd21ffc86847",
+          "bytes": 17500,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryBluMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/5. GBTulipAmb5SpryBluMatt.psd",
+          "sourceSha256": "2e8d9a069001866120bbd2deec2ad9c36181b2090c2648244c0bbec2c9dcc3ea"
+        },
+        {
+          "role": "off",
+          "sha256": "6e729e8f0c98d22d3e39c02f9eb6b2fd936756fbd0e028adf296373345527637",
+          "bytes": 25874,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryBluMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /5. GBTulipAmb5SpryBluMatt.psd",
+          "sourceSha256": "7a514dec36bc1b47895684273da82c042f79b94cc03f5bc6f81f99d5bbb86f7e"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/5. GBTulipAmb5SpryBluMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /5. GBTulipAmb5SpryBluMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryCuMatt",
+      "recordId": "kd7eekvapf3rv5w800yqr6et0581vjah",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MCPR",
+      "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "binding": "2c77439b49869354af304fdc22384c029d7fe93ef97c3631102397529aaa9c0a",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "3202d114928cf796cee5814199e150eca700365194240b8e0f98aa455e0bf058",
+          "bytes": 17610,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryCuMatt/3202d114928cf796cee5814199e150eca700365194240b8e0f98aa455e0bf058.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "72306d6a80b708c18ac4ed05b613259b5713d79710bb8b3a52698c6b3182d333",
+          "bytes": 17516,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryCuMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/30. GBTulipAmb5SpryCuMatt.psd",
+          "sourceSha256": "5834ef97fbb1d34fb5e16d57de88b84e3dfa39e2e3bf7e85ca4549e58d780591"
+        },
+        {
+          "role": "off",
+          "sha256": "8bd17141ef3a4fd78e09f45d49667395ab17e1e43d380f232553f7a3b4053e30",
+          "bytes": 25932,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryCuMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /30. GBTulipAmb5SpryCuMatt.psd",
+          "sourceSha256": "8ef5ef33c23c45ce26e0e187d25b5887e7338b88ed45d5efea2d061ef33f5b8e"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/30. GBTulipAmb5SpryCuMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /30. GBTulipAmb5SpryCuMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryGlMatt",
+      "recordId": "kd795x8qbckp5vtcnda7ba0k9181v2g7",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MGLD",
+      "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "binding": "f978e65e80d12146d85e916ac15b0094bb44ff1f263a79111f5e8c4dc2c8eeb5",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "747c899abfb34929f58bfebe6e5cf620801ef27ff914e205edac550778457d87",
+          "bytes": 18372,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryGlMatt/747c899abfb34929f58bfebe6e5cf620801ef27ff914e205edac550778457d87.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "21259bdd2da97ae2afd22b0005f7ebde7fb995fd9caf6e7265873b9f60ddc174",
+          "bytes": 18372,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryGlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/7. GBTulipAmb5SpryGlMatt.psd",
+          "sourceSha256": "b068bbf7eb5723298acb7831a1ff3478b52583019b2c347a9d9186fc9e96299e"
+        },
+        {
+          "role": "off",
+          "sha256": "5ab219f6f9289c10a50659792e39462b6a1afe41ad022a3fa4689877c5e5c83a",
+          "bytes": 28270,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryGlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /7. GBTulipAmb5SpryGlMatt.psd",
+          "sourceSha256": "ba9a4541ba98d26cedaaab39db02e5a6a1da6bcdf610bbeaf74b92cea582ce2c"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/7. GBTulipAmb5SpryGlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /7. GBTulipAmb5SpryGlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryGlSh",
+      "recordId": "kd77vzrt590t5ngf9nhrxh2wdn81va81",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SGLD",
+      "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "binding": "b317a6e5d3b3445fd9a238234b61ef74d8cf8fdd9266e94d9f04e4638aa95813",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "0828877fd0eadea1f1088ebee2585450e60f123a6e78c23cabd9293fe707a671",
+          "bytes": 20376,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryGlSh/0828877fd0eadea1f1088ebee2585450e60f123a6e78c23cabd9293fe707a671.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "523fbaecaab4d7725a95b7a8d3e20affa249fd34bd21ad392cdcc7fbcd9d5fc9",
+          "bytes": 20472,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryGlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/6. GBTulipAmb5SpryGlSh.psd",
+          "sourceSha256": "74068f20e699fbfbb1a910eec16d14a50a053e789d686b3f0dcb16033b4fa895"
+        },
+        {
+          "role": "off",
+          "sha256": "2886e4f726149f40588cd06a0c9654a39aa50095eabedac6db0bc955fa2cb7f3",
+          "bytes": 33380,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SpryGlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /6. GBTulipAmb5SpryGlSh.psd",
+          "sourceSha256": "bfad0f88b8ff5d86b5d6265ef079d498e0270bd6ced15332eaa921122fdf8361"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/6. GBTulipAmb5SpryGlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /6. GBTulipAmb5SpryGlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5SprySlMatt",
+      "recordId": "kd78yvyw50v47bex1a3s6807gs81tb03",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-MSLV",
+      "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "binding": "a933e0d6b87fe44aa593ffbfb431172a73b561115b321887247421c9e78d3374",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "251a5980c7fd4b109f40ed5c7f59a503ee9a20a1c10f43030f7f30c96326282b",
+          "bytes": 14712,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SprySlMatt/251a5980c7fd4b109f40ed5c7f59a503ee9a20a1c10f43030f7f30c96326282b.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "1a18bfa685107fd85e14c1833f4580741079eb732bcfa42f7105baa96224c680",
+          "bytes": 14904,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SprySlMatt.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/8. GBTulipAmb5SprySlMatt.psd",
+          "sourceSha256": "5efff4b0809716540f930427ca3a20fef62721c991b132ac335228fcfd7b79bb"
+        },
+        {
+          "role": "off",
+          "sha256": "10876fffa019e9604a121704618f1a71a63188702b8620d6fef6e4261c75e5af",
+          "bytes": 19442,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SprySlMatt.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /8. GBTulipAmb5SprySlMatt.psd",
+          "sourceSha256": "739e420a472843a83bafdee329d5eb70a94c4e08d9475248015c0cff33abf1ac"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/8. GBTulipAmb5SprySlMatt.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /8. GBTulipAmb5SprySlMatt.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5SprySlSh",
+      "recordId": "kd76h9h18q6pyb7m132456g8x981vg0f",
+      "graceSku": "GB-CYL-AMB-5ML-SPR-SSLV",
+      "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "binding": "5ec79cd9404470d5ed9205f240fd451897d84032cee6aa6a4713e70810295101",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "e1788931d318935484e48542688c9a3573d876127247b94ac4ffb0fdcf47cf7b",
+          "bytes": 17784,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SprySlSh/e1788931d318935484e48542688c9a3573d876127247b94ac4ffb0fdcf47cf7b.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "c16902dbd11c17b20913a1b8e44f1fd7a3466edb6e15260ab8ac20b6010e51d7",
+          "bytes": 17924,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SprySlSh.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/9. GBTulipAmb5SprySlSh.psd",
+          "sourceSha256": "41dd7f7abfbce1ed5b72b95121e7f888db2b956d78afeb2157bed2b679b31fb7"
+        },
+        {
+          "role": "off",
+          "sha256": "219237e45e85ab1db5793f86e11a9f6978a5422462a4ed8c979debc2c38e8e69",
+          "bytes": 29388,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5SprySlSh.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /9. GBTulipAmb5SprySlSh.psd",
+          "sourceSha256": "017de49ed1c26c6c6cce0a85a1d1f9d54ad9f38ef336c02a32c44d82897db437"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/9. GBTulipAmb5SprySlSh.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /9. GBTulipAmb5SprySlSh.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    },
+    {
+      "websiteSku": "GBTulipAmb5WhtSht",
+      "recordId": "kd702ct7wtn6706v2cm8m6qq0181vxd4",
+      "graceSku": "GB-CYL-AMB-5ML-WHT-S",
+      "productGroupId": "kh7efvmg1vcgbxb4t2mva10r598dpcv1",
+      "familyId": "tulip-5ml-amber-13-415",
+      "family": "Tulip",
+      "capacityMl": 5,
+      "color": "Amber",
+      "neckThreadSize": "13-415",
+      "applicator": null,
+      "capColor": "White",
+      "binding": "4845ac5a8802e7377bacdda077cfd972d615ebff9b9cca7db9ebf1c7baaf7ce4",
+      "reviewPackets": [
+        "tulip-amber-capoff-recovery-2026-09-13"
+      ],
+      "views": [
+        {
+          "role": "current-on",
+          "sha256": "62e7da7b19b019b8bb06badad6c29cd7595e9db1c6167bc76a031b19afe0efa1",
+          "bytes": 16770,
+          "width": 1000,
+          "height": 1100,
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5WhtSht/62e7da7b19b019b8bb06badad6c29cd7595e9db1c6167bc76a031b19afe0efa1.front-on-1000x1100.webp",
+          "verifiedFrom": "recorded Blob URL"
+        },
+        {
+          "role": "on",
+          "sha256": "07c894bc00e92824bf5d86174398253a21694040f0f8208ee5606b65f03f3af5",
+          "bytes": 19710,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5WhtSht.on.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/2. GBTulipAmb5WhtSht.psd",
+          "sourceSha256": "6f9d4a3cdfc55e6a9c122872b549726dc9eaf309c070690cc8c1f8b6c6c5995a"
+        },
+        {
+          "role": "off",
+          "sha256": "438abdf464b39abf2eb3efee032da0c4c2ba3a2f430e83da91bac05842df56eb",
+          "bytes": 25350,
+          "width": 1000,
+          "height": 1100,
+          "path": "docs/reviews/tulip-amber-capoff-recovery-2026-09-13/assets/GBTulipAmb5WhtSht.off.webp",
+          "sourceLibrary": "master",
+          "sourceRelPath": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /2. GBTulipAmb5WhtSht.psd",
+          "sourceSha256": "12627901dcde12e62279c169baf1e06639aa633e839691d747ea02865c12fee8"
+        }
+      ],
+      "sourcePair": {
+        "capped": "5.  13-415 Bottles/4. Tulip 5ml Amber/2. Tulip 5 Amber (Capped) PSD/2. GBTulipAmb5WhtSht.psd",
+        "uncapped": "5.  13-415 Bottles/4. Tulip 5ml Amber/1. Tulip 5 Amber (Uncapped) PSD /2. GBTulipAmb5WhtSht.psd"
+      },
+      "status": "approved",
+      "scope": "plate cap-on and exact master-PSD cap-off visual approval",
+      "technicalHoldsNotWaived": [],
+      "publicationAuthorized": false
+    }
+  ]
+}

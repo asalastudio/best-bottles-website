@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-09-13T05:45:24.579Z",
+  "before": {
+    "total": 2312,
+    "complete": 288,
+    "review": 804,
+    "reconcile": 702,
+    "missing": 518
+  },
+  "after": {
+    "total": 2312,
+    "complete": 661,
+    "review": 431,
+    "reconcile": 702,
+    "missing": 518
+  },
+  "cylinder": {
+    "family": "Cylinder",
+    "total": 443,
+    "complete": 373,
+    "review": 0,
+    "reconcile": 63,
+    "missing": 7,
+    "sizes": [
+      3.3,
+      4,
+      5,
+      5.5,
+      9,
+      25,
+      28,
+      30,
+      50,
+      100,
+      114,
+      227,
+      454
+    ],
+    "unlinked": 7
+  },
+  "measurement": {
+    "plates": 1909,
+    "fetchFailures": 0,
+    "measurementFailures": 0,
+    "bottlesWithTwoOrMore": 180,
+    "wrongSize": 49,
+    "legacySource": 550,
+    "tolerance": 0.05
+  }
+}

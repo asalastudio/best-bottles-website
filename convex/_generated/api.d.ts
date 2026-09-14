@@ -45,6 +45,7 @@ import type * as materialRecipes from "../materialRecipes.js";
 import type * as matrix from "../matrix.js";
 import type * as measurements from "../measurements.js";
 import type * as migrations from "../migrations.js";
+import type * as nonBottleProductGroups from "../nonBottleProductGroups.js";
 import type * as observability from "../observability.js";
 import type * as paperDoll from "../paperDoll.js";
 import type * as patchFromMasterV83 from "../patchFromMasterV83.js";
@@ -106,6 +107,7 @@ declare const fullApi: ApiFromModules<{
   matrix: typeof matrix;
   measurements: typeof measurements;
   migrations: typeof migrations;
+  nonBottleProductGroups: typeof nonBottleProductGroups;
   observability: typeof observability;
   paperDoll: typeof paperDoll;
   patchFromMasterV83: typeof patchFromMasterV83;

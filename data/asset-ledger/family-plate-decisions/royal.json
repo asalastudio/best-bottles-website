@@ -1,0 +1,1463 @@
+{
+  "revision": 1,
+  "decisions": {
+    "GBRoyal13BlkSht:80cd3ebcd6433b334714c7c024febc2ba7442dc89a573d2f9928ed6c0231db11": {
+      "sku": "GBRoyal13BlkSht",
+      "binding": "80cd3ebcd6433b334714c7c024febc2ba7442dc89a573d2f9928ed6c0231db11",
+      "sha256": "4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13BlkSht/4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830.front-on-1000x1100.webp",
+          "sha256": "4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830",
+          "url": "/images/plate-contact-sheets/4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13BlkSht/0a5019d647c13d74b023680d849ffaa7f23f4d8633efe9271b703fbe6cff3c32.front-off-1000x1100.webp",
+          "sha256": "0a5019d647c13d74b023680d849ffaa7f23f4d8633efe9271b703fbe6cff3c32",
+          "url": "/images/plate-contact-sheets/0a5019d647c13d74b023680d849ffaa7f23f4d8633efe9271b703fbe6cff3c32.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13Gl:529a0e74d6cd630d7424b1fbe51a00ff0f67f604294a97b463ccd1cabb7fa7c4": {
+      "sku": "GBRoyal13Gl",
+      "binding": "529a0e74d6cd630d7424b1fbe51a00ff0f67f604294a97b463ccd1cabb7fa7c4",
+      "sha256": "67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Gl/67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a.front-on-1000x1100.webp",
+          "sha256": "67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a",
+          "url": "/images/plate-contact-sheets/67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Gl/016de717c45b838357bab909b307c799cf9420385fe05dff523a63594098ce3e.front-off-1000x1100.webp",
+          "sha256": "016de717c45b838357bab909b307c799cf9420385fe05dff523a63594098ce3e",
+          "url": "/images/plate-contact-sheets/016de717c45b838357bab909b307c799cf9420385fe05dff523a63594098ce3e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13MtlRollBlkDot:a08cf509e04f5f33d20ff9edde7417aa692c930298b3c418ffccf69dd04845ad": {
+      "sku": "GBRoyal13MtlRollBlkDot",
+      "binding": "a08cf509e04f5f33d20ff9edde7417aa692c930298b3c418ffccf69dd04845ad",
+      "sha256": "7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkDot/7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5.front-on-1000x1100.webp",
+          "sha256": "7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5",
+          "url": "/images/plate-contact-sheets/7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkDot/46a0b9473b4c76035a5db84aaf3b50bfc5a9fd5a667fa838caf5f876b31d7849.front-off-1000x1100.webp",
+          "sha256": "46a0b9473b4c76035a5db84aaf3b50bfc5a9fd5a667fa838caf5f876b31d7849",
+          "url": "/images/plate-contact-sheets/46a0b9473b4c76035a5db84aaf3b50bfc5a9fd5a667fa838caf5f876b31d7849.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13MtlRollBlkSh:5625c2ad8e2aeb3e9894df4782c84aa0794a3910c8341db426632477aeb81c61": {
+      "sku": "GBRoyal13MtlRollBlkSh",
+      "binding": "5625c2ad8e2aeb3e9894df4782c84aa0794a3910c8341db426632477aeb81c61",
+      "sha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkSh/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.front-on-1000x1100.webp",
+          "sha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+          "url": "/images/plate-contact-sheets/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkSh/cd10881210677c4a1a0d706b33e77adacb85c521e81c554ee2ccb723285211d3.front-off-1000x1100.webp",
+          "sha256": "cd10881210677c4a1a0d706b33e77adacb85c521e81c554ee2ccb723285211d3",
+          "url": "/images/plate-contact-sheets/cd10881210677c4a1a0d706b33e77adacb85c521e81c554ee2ccb723285211d3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13MtlRollCuMatt:77ea58ab797d1497facf83938353849d4fc096917401c4c8d8845c8735bdb8cc": {
+      "sku": "GBRoyal13MtlRollCuMatt",
+      "binding": "77ea58ab797d1497facf83938353849d4fc096917401c4c8d8845c8735bdb8cc",
+      "sha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollCuMatt/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.front-on-1000x1100.webp",
+          "sha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+          "url": "/images/plate-contact-sheets/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollCuMatt/dd96036bfdfb30f462e255058ee65ad8abdf6267d21fc1ff6dba10c0809cbeaf.front-off-1000x1100.webp",
+          "sha256": "dd96036bfdfb30f462e255058ee65ad8abdf6267d21fc1ff6dba10c0809cbeaf",
+          "url": "/images/plate-contact-sheets/dd96036bfdfb30f462e255058ee65ad8abdf6267d21fc1ff6dba10c0809cbeaf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13MtlRollGlMatt:873b0b1f6bd16ccd743af945adf7688ded1806a7c678ffb541c29175d44c6785": {
+      "sku": "GBRoyal13MtlRollGlMatt",
+      "binding": "873b0b1f6bd16ccd743af945adf7688ded1806a7c678ffb541c29175d44c6785",
+      "sha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlMatt/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.front-on-1000x1100.webp",
+          "sha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+          "url": "/images/plate-contact-sheets/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlMatt/78e9f12fb0541b1e364b7b2cbf0121c622665d0aaff001ed18ff4a0326ec5136.front-off-1000x1100.webp",
+          "sha256": "78e9f12fb0541b1e364b7b2cbf0121c622665d0aaff001ed18ff4a0326ec5136",
+          "url": "/images/plate-contact-sheets/78e9f12fb0541b1e364b7b2cbf0121c622665d0aaff001ed18ff4a0326ec5136.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13MtlRollGlSh:8a2f9831583a74ce442bf583dd4ca87b024036d07514979ca6f54583374260b8": {
+      "sku": "GBRoyal13MtlRollGlSh",
+      "binding": "8a2f9831583a74ce442bf583dd4ca87b024036d07514979ca6f54583374260b8",
+      "sha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlSh/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.front-on-1000x1100.webp",
+          "sha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+          "url": "/images/plate-contact-sheets/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlSh/bc13e59e770a82355bd2491959aeac069c6c15788b9254e9cd75d3087b95ba1f.front-off-1000x1100.webp",
+          "sha256": "bc13e59e770a82355bd2491959aeac069c6c15788b9254e9cd75d3087b95ba1f",
+          "url": "/images/plate-contact-sheets/bc13e59e770a82355bd2491959aeac069c6c15788b9254e9cd75d3087b95ba1f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13MtlRollPinkDot:4e149651d946f2ebc0387137cd5c1a0a5d6057906d7c5f957a1814d7e405aa53": {
+      "sku": "GBRoyal13MtlRollPinkDot",
+      "binding": "4e149651d946f2ebc0387137cd5c1a0a5d6057906d7c5f957a1814d7e405aa53",
+      "sha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollPinkDot/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.front-on-1000x1100.webp",
+          "sha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+          "url": "/images/plate-contact-sheets/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollPinkDot/fa2d549bf80c41bb551143134771532b6b0b00b2ea5720818395886beb1996ed.front-off-1000x1100.webp",
+          "sha256": "fa2d549bf80c41bb551143134771532b6b0b00b2ea5720818395886beb1996ed",
+          "url": "/images/plate-contact-sheets/fa2d549bf80c41bb551143134771532b6b0b00b2ea5720818395886beb1996ed.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13MtlRollSlDot:5a51608cf50d94211454634bcc822cfe3ef7fbad9c978d47e33154199de99d62": {
+      "sku": "GBRoyal13MtlRollSlDot",
+      "binding": "5a51608cf50d94211454634bcc822cfe3ef7fbad9c978d47e33154199de99d62",
+      "sha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlDot/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.front-on-1000x1100.webp",
+          "sha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+          "url": "/images/plate-contact-sheets/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlDot/d3fc1e7d634ee1abd66ba4cb39a110ad3819fc53a730a6bcd6ede00a6f6ba772.front-off-1000x1100.webp",
+          "sha256": "d3fc1e7d634ee1abd66ba4cb39a110ad3819fc53a730a6bcd6ede00a6f6ba772",
+          "url": "/images/plate-contact-sheets/d3fc1e7d634ee1abd66ba4cb39a110ad3819fc53a730a6bcd6ede00a6f6ba772.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13MtlRollSlMatt:e285eef7d9a1d89549b62b0c824987adcdddca987d1706bdf515a6f2902c8312": {
+      "sku": "GBRoyal13MtlRollSlMatt",
+      "binding": "e285eef7d9a1d89549b62b0c824987adcdddca987d1706bdf515a6f2902c8312",
+      "sha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlMatt/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.front-on-1000x1100.webp",
+          "sha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+          "url": "/images/plate-contact-sheets/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlMatt/72c16b75bc5be916e2524466d79d1958e2f48ffa9efc15b96f51de1afaf953c2.front-off-1000x1100.webp",
+          "sha256": "72c16b75bc5be916e2524466d79d1958e2f48ffa9efc15b96f51de1afaf953c2",
+          "url": "/images/plate-contact-sheets/72c16b75bc5be916e2524466d79d1958e2f48ffa9efc15b96f51de1afaf953c2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13MtlRollSlSh:4ba8cdf8cf5b99e39262ab73d5a6b18b532da70cd7a98043ea7472d87e1f741e": {
+      "sku": "GBRoyal13MtlRollSlSh",
+      "binding": "4ba8cdf8cf5b99e39262ab73d5a6b18b532da70cd7a98043ea7472d87e1f741e",
+      "sha256": "85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlSh/85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354.front-on-1000x1100.webp",
+          "sha256": "85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354",
+          "url": "/images/plate-contact-sheets/85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlSh/71fa4d1681594b42309a16e0c76f066833f877f0385036432ba9e5a94885cab4.front-off-1000x1100.webp",
+          "sha256": "71fa4d1681594b42309a16e0c76f066833f877f0385036432ba9e5a94885cab4",
+          "url": "/images/plate-contact-sheets/71fa4d1681594b42309a16e0c76f066833f877f0385036432ba9e5a94885cab4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13RollBlkSh:843d278ff448a1cc48b83d2c5a0b63ca76660ed603170dfea9406f9fcae67690": {
+      "sku": "GBRoyal13RollBlkSh",
+      "binding": "843d278ff448a1cc48b83d2c5a0b63ca76660ed603170dfea9406f9fcae67690",
+      "sha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollBlkSh/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.front-on-1000x1100.webp",
+          "sha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+          "url": "/images/plate-contact-sheets/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollBlkSh/1d942deed32b7db9f19ba28ca094f8afd5550bbd628a3e894cb7d4bd8128e701.front-off-1000x1100.webp",
+          "sha256": "1d942deed32b7db9f19ba28ca094f8afd5550bbd628a3e894cb7d4bd8128e701",
+          "url": "/images/plate-contact-sheets/1d942deed32b7db9f19ba28ca094f8afd5550bbd628a3e894cb7d4bd8128e701.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13RollCuMatt:5e5aa38ec80f8454d15e8753c33967a7c1cd47c540694bf1bcb4dc137b18af9f": {
+      "sku": "GBRoyal13RollCuMatt",
+      "binding": "5e5aa38ec80f8454d15e8753c33967a7c1cd47c540694bf1bcb4dc137b18af9f",
+      "sha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollCuMatt/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.front-on-1000x1100.webp",
+          "sha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+          "url": "/images/plate-contact-sheets/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollCuMatt/127fb78a71934adfddf3bff07734e213941f304c2e293b1a08ee7fb19f5fa46b.front-off-1000x1100.webp",
+          "sha256": "127fb78a71934adfddf3bff07734e213941f304c2e293b1a08ee7fb19f5fa46b",
+          "url": "/images/plate-contact-sheets/127fb78a71934adfddf3bff07734e213941f304c2e293b1a08ee7fb19f5fa46b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13RollGlMatt:9ba198cf87f332ce7dacd09a39620cc2487a8a864b23784ed406b58c84a4bb24": {
+      "sku": "GBRoyal13RollGlMatt",
+      "binding": "9ba198cf87f332ce7dacd09a39620cc2487a8a864b23784ed406b58c84a4bb24",
+      "sha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlMatt/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.front-on-1000x1100.webp",
+          "sha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+          "url": "/images/plate-contact-sheets/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlMatt/3268b6486ac686cde31e613f8a6f83734ae04de28fafbedae9f1b29377cb7985.front-off-1000x1100.webp",
+          "sha256": "3268b6486ac686cde31e613f8a6f83734ae04de28fafbedae9f1b29377cb7985",
+          "url": "/images/plate-contact-sheets/3268b6486ac686cde31e613f8a6f83734ae04de28fafbedae9f1b29377cb7985.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13RollGlSh:62c3e2655b29dd25f1fb9a275278f73ab8c61ddce625f12348c3ab3b8b4f01eb": {
+      "sku": "GBRoyal13RollGlSh",
+      "binding": "62c3e2655b29dd25f1fb9a275278f73ab8c61ddce625f12348c3ab3b8b4f01eb",
+      "sha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlSh/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.front-on-1000x1100.webp",
+          "sha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+          "url": "/images/plate-contact-sheets/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlSh/916f244f20eeb27d1ce18da18c07ae3d2e82c6b50f9973cf577cbcbdf4006fe8.front-off-1000x1100.webp",
+          "sha256": "916f244f20eeb27d1ce18da18c07ae3d2e82c6b50f9973cf577cbcbdf4006fe8",
+          "url": "/images/plate-contact-sheets/916f244f20eeb27d1ce18da18c07ae3d2e82c6b50f9973cf577cbcbdf4006fe8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13RollPinkDot:8feac8e520a2fc11e1dbd237144a96a478b8b6d06d34a5838c52f906695a1ea8": {
+      "sku": "GBRoyal13RollPinkDot",
+      "binding": "8feac8e520a2fc11e1dbd237144a96a478b8b6d06d34a5838c52f906695a1ea8",
+      "sha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollPinkDot/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.front-on-1000x1100.webp",
+          "sha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+          "url": "/images/plate-contact-sheets/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollPinkDot/1a81448ce5cb88fcef1d14f9066fecffc52b9a9e6349a9c8e817005986d035b7.front-off-1000x1100.webp",
+          "sha256": "1a81448ce5cb88fcef1d14f9066fecffc52b9a9e6349a9c8e817005986d035b7",
+          "url": "/images/plate-contact-sheets/1a81448ce5cb88fcef1d14f9066fecffc52b9a9e6349a9c8e817005986d035b7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13RollSlDot:2984415bc3a17e36d5b5bf06c26a79bca6da41f8a6bc1a5475ce67ddec42668f": {
+      "sku": "GBRoyal13RollSlDot",
+      "binding": "2984415bc3a17e36d5b5bf06c26a79bca6da41f8a6bc1a5475ce67ddec42668f",
+      "sha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlDot/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.front-on-1000x1100.webp",
+          "sha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+          "url": "/images/plate-contact-sheets/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlDot/fbf34e9278cbe6bd82dadc4875ce396b7200f2506a7d7e3fd442f56467b0ca48.front-off-1000x1100.webp",
+          "sha256": "fbf34e9278cbe6bd82dadc4875ce396b7200f2506a7d7e3fd442f56467b0ca48",
+          "url": "/images/plate-contact-sheets/fbf34e9278cbe6bd82dadc4875ce396b7200f2506a7d7e3fd442f56467b0ca48.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13RollSlMatt:83941c5a0787b799e3f03c467740839d9c0c9e9902801aa470dc04e7914dcabd": {
+      "sku": "GBRoyal13RollSlMatt",
+      "binding": "83941c5a0787b799e3f03c467740839d9c0c9e9902801aa470dc04e7914dcabd",
+      "sha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlMatt/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.front-on-1000x1100.webp",
+          "sha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+          "url": "/images/plate-contact-sheets/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlMatt/8fd3a42e4afaa564de6b38df92b45af2a49b425cd041295e2f05c8a5fe43e1c9.front-off-1000x1100.webp",
+          "sha256": "8fd3a42e4afaa564de6b38df92b45af2a49b425cd041295e2f05c8a5fe43e1c9",
+          "url": "/images/plate-contact-sheets/8fd3a42e4afaa564de6b38df92b45af2a49b425cd041295e2f05c8a5fe43e1c9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13Sl:2d811f246040fc6af13c1cc46e76444d422b1a61471e3dce7956411ddba460f2": {
+      "sku": "GBRoyal13Sl",
+      "binding": "2d811f246040fc6af13c1cc46e76444d422b1a61471e3dce7956411ddba460f2",
+      "sha256": "5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Sl/5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f.front-on-1000x1100.webp",
+          "sha256": "5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f",
+          "url": "/images/plate-contact-sheets/5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Sl/a402c321e628714014fb5774fef59d403b9119589caac78ff7a93366b279d22e.front-off-1000x1100.webp",
+          "sha256": "a402c321e628714014fb5774fef59d403b9119589caac78ff7a93366b279d22e",
+          "url": "/images/plate-contact-sheets/a402c321e628714014fb5774fef59d403b9119589caac78ff7a93366b279d22e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13SpryBlkSh:690465e095f79e00cdea3b4638b9b336af4d593c63881625ce41908c2b437d30": {
+      "sku": "GBRoyal13SpryBlkSh",
+      "binding": "690465e095f79e00cdea3b4638b9b336af4d593c63881625ce41908c2b437d30",
+      "sha256": "d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBlkSh/d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d.front-on-1000x1100.webp",
+          "sha256": "d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d",
+          "url": "/images/plate-contact-sheets/d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBlkSh/5b42f14c78ae6e1374539af0349dbcf26c79a56e9dfa2131bd983b506d923a34.front-off-1000x1100.webp",
+          "sha256": "5b42f14c78ae6e1374539af0349dbcf26c79a56e9dfa2131bd983b506d923a34",
+          "url": "/images/plate-contact-sheets/5b42f14c78ae6e1374539af0349dbcf26c79a56e9dfa2131bd983b506d923a34.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13SpryBluMatt:28a3562167b28362c3c948a232a87b1ae26017fbc6885bc2456f484c2f31883d": {
+      "sku": "GBRoyal13SpryBluMatt",
+      "binding": "28a3562167b28362c3c948a232a87b1ae26017fbc6885bc2456f484c2f31883d",
+      "sha256": "f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBluMatt/f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148.front-on-1000x1100.webp",
+          "sha256": "f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148",
+          "url": "/images/plate-contact-sheets/f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBluMatt/ff6d5a9501bb4ab86370632a62bc112f3945cf5f0bfb86708a630ccf76812403.front-off-1000x1100.webp",
+          "sha256": "ff6d5a9501bb4ab86370632a62bc112f3945cf5f0bfb86708a630ccf76812403",
+          "url": "/images/plate-contact-sheets/ff6d5a9501bb4ab86370632a62bc112f3945cf5f0bfb86708a630ccf76812403.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13SpryCuMatt:151e17865b10068752dc07d7969f6de62bf5a5a3f527c773d6806cc3876c5b4e": {
+      "sku": "GBRoyal13SpryCuMatt",
+      "binding": "151e17865b10068752dc07d7969f6de62bf5a5a3f527c773d6806cc3876c5b4e",
+      "sha256": "6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryCuMatt/6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495.front-on-1000x1100.webp",
+          "sha256": "6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495",
+          "url": "/images/plate-contact-sheets/6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryCuMatt/d43dbe1f744d0f7ee1ead4963d0ade30356310a7c5d3c2b44ad12ffed381c2d9.front-off-1000x1100.webp",
+          "sha256": "d43dbe1f744d0f7ee1ead4963d0ade30356310a7c5d3c2b44ad12ffed381c2d9",
+          "url": "/images/plate-contact-sheets/d43dbe1f744d0f7ee1ead4963d0ade30356310a7c5d3c2b44ad12ffed381c2d9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13SpryGlMatt:e9ff99a2d8daf55eb01565035e656078075cb5d77790a532b3d8e54757ea10ce": {
+      "sku": "GBRoyal13SpryGlMatt",
+      "binding": "e9ff99a2d8daf55eb01565035e656078075cb5d77790a532b3d8e54757ea10ce",
+      "sha256": "665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlMatt/665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d.front-on-1000x1100.webp",
+          "sha256": "665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d",
+          "url": "/images/plate-contact-sheets/665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlMatt/7ee2a676899c9dfa04005e42007dfc2cf4c4cfa01b6c26e1a95fdd8003de6ea0.front-off-1000x1100.webp",
+          "sha256": "7ee2a676899c9dfa04005e42007dfc2cf4c4cfa01b6c26e1a95fdd8003de6ea0",
+          "url": "/images/plate-contact-sheets/7ee2a676899c9dfa04005e42007dfc2cf4c4cfa01b6c26e1a95fdd8003de6ea0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13SpryGlSh:92021bcaefc3a02b93420679c8bba7ff2915b440a688150460f2c542671ef595": {
+      "sku": "GBRoyal13SpryGlSh",
+      "binding": "92021bcaefc3a02b93420679c8bba7ff2915b440a688150460f2c542671ef595",
+      "sha256": "c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlSh/c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab.front-on-1000x1100.webp",
+          "sha256": "c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab",
+          "url": "/images/plate-contact-sheets/c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlSh/8da45a2da6c236a7b9062f279d188b197f5c24dc08844b72aa62bdfb3109a7b4.front-off-1000x1100.webp",
+          "sha256": "8da45a2da6c236a7b9062f279d188b197f5c24dc08844b72aa62bdfb3109a7b4",
+          "url": "/images/plate-contact-sheets/8da45a2da6c236a7b9062f279d188b197f5c24dc08844b72aa62bdfb3109a7b4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13SprySlMatt:df8ff252288e30f538edc30e50af096253f840fe78fc36bf65d15307569a3bf5": {
+      "sku": "GBRoyal13SprySlMatt",
+      "binding": "df8ff252288e30f538edc30e50af096253f840fe78fc36bf65d15307569a3bf5",
+      "sha256": "7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlMatt/7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638.front-on-1000x1100.webp",
+          "sha256": "7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638",
+          "url": "/images/plate-contact-sheets/7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlMatt/f63d14c2351e0b02ba005b1504db96127b0aeebaa029b5407d0db48e02b4d517.front-off-1000x1100.webp",
+          "sha256": "f63d14c2351e0b02ba005b1504db96127b0aeebaa029b5407d0db48e02b4d517",
+          "url": "/images/plate-contact-sheets/f63d14c2351e0b02ba005b1504db96127b0aeebaa029b5407d0db48e02b4d517.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBRoyal13SprySlSh:56efd141a9aef0448a178048b3a432a0f5e3176295f325aeaa100efb62a28485": {
+      "sku": "GBRoyal13SprySlSh",
+      "binding": "56efd141a9aef0448a178048b3a432a0f5e3176295f325aeaa100efb62a28485",
+      "sha256": "3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlSh/3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970.front-on-1000x1100.webp",
+          "sha256": "3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970",
+          "url": "/images/plate-contact-sheets/3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlSh/941348919fe29cb1ff0b714d3869c92e0a5aacbbf09b3c989fe7ef40f98903ea.front-off-1000x1100.webp",
+          "sha256": "941348919fe29cb1ff0b714d3869c92e0a5aacbbf09b3c989fe7ef40f98903ea",
+          "url": "/images/plate-contact-sheets/941348919fe29cb1ff0b714d3869c92e0a5aacbbf09b3c989fe7ef40f98903ea.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "GBRoyal13BlkSht",
+      "binding": "80cd3ebcd6433b334714c7c024febc2ba7442dc89a573d2f9928ed6c0231db11",
+      "sha256": "4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13BlkSht/4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830.front-on-1000x1100.webp",
+          "sha256": "4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830",
+          "url": "/images/plate-contact-sheets/4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13BlkSht/0a5019d647c13d74b023680d849ffaa7f23f4d8633efe9271b703fbe6cff3c32.front-off-1000x1100.webp",
+          "sha256": "0a5019d647c13d74b023680d849ffaa7f23f4d8633efe9271b703fbe6cff3c32",
+          "url": "/images/plate-contact-sheets/0a5019d647c13d74b023680d849ffaa7f23f4d8633efe9271b703fbe6cff3c32.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13Gl",
+      "binding": "529a0e74d6cd630d7424b1fbe51a00ff0f67f604294a97b463ccd1cabb7fa7c4",
+      "sha256": "67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Gl/67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a.front-on-1000x1100.webp",
+          "sha256": "67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a",
+          "url": "/images/plate-contact-sheets/67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Gl/016de717c45b838357bab909b307c799cf9420385fe05dff523a63594098ce3e.front-off-1000x1100.webp",
+          "sha256": "016de717c45b838357bab909b307c799cf9420385fe05dff523a63594098ce3e",
+          "url": "/images/plate-contact-sheets/016de717c45b838357bab909b307c799cf9420385fe05dff523a63594098ce3e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13MtlRollBlkDot",
+      "binding": "a08cf509e04f5f33d20ff9edde7417aa692c930298b3c418ffccf69dd04845ad",
+      "sha256": "7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkDot/7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5.front-on-1000x1100.webp",
+          "sha256": "7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5",
+          "url": "/images/plate-contact-sheets/7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkDot/46a0b9473b4c76035a5db84aaf3b50bfc5a9fd5a667fa838caf5f876b31d7849.front-off-1000x1100.webp",
+          "sha256": "46a0b9473b4c76035a5db84aaf3b50bfc5a9fd5a667fa838caf5f876b31d7849",
+          "url": "/images/plate-contact-sheets/46a0b9473b4c76035a5db84aaf3b50bfc5a9fd5a667fa838caf5f876b31d7849.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13MtlRollBlkSh",
+      "binding": "5625c2ad8e2aeb3e9894df4782c84aa0794a3910c8341db426632477aeb81c61",
+      "sha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkSh/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.front-on-1000x1100.webp",
+          "sha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+          "url": "/images/plate-contact-sheets/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkSh/cd10881210677c4a1a0d706b33e77adacb85c521e81c554ee2ccb723285211d3.front-off-1000x1100.webp",
+          "sha256": "cd10881210677c4a1a0d706b33e77adacb85c521e81c554ee2ccb723285211d3",
+          "url": "/images/plate-contact-sheets/cd10881210677c4a1a0d706b33e77adacb85c521e81c554ee2ccb723285211d3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13MtlRollCuMatt",
+      "binding": "77ea58ab797d1497facf83938353849d4fc096917401c4c8d8845c8735bdb8cc",
+      "sha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollCuMatt/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.front-on-1000x1100.webp",
+          "sha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+          "url": "/images/plate-contact-sheets/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollCuMatt/dd96036bfdfb30f462e255058ee65ad8abdf6267d21fc1ff6dba10c0809cbeaf.front-off-1000x1100.webp",
+          "sha256": "dd96036bfdfb30f462e255058ee65ad8abdf6267d21fc1ff6dba10c0809cbeaf",
+          "url": "/images/plate-contact-sheets/dd96036bfdfb30f462e255058ee65ad8abdf6267d21fc1ff6dba10c0809cbeaf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13MtlRollGlMatt",
+      "binding": "873b0b1f6bd16ccd743af945adf7688ded1806a7c678ffb541c29175d44c6785",
+      "sha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlMatt/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.front-on-1000x1100.webp",
+          "sha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+          "url": "/images/plate-contact-sheets/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlMatt/78e9f12fb0541b1e364b7b2cbf0121c622665d0aaff001ed18ff4a0326ec5136.front-off-1000x1100.webp",
+          "sha256": "78e9f12fb0541b1e364b7b2cbf0121c622665d0aaff001ed18ff4a0326ec5136",
+          "url": "/images/plate-contact-sheets/78e9f12fb0541b1e364b7b2cbf0121c622665d0aaff001ed18ff4a0326ec5136.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13MtlRollGlSh",
+      "binding": "8a2f9831583a74ce442bf583dd4ca87b024036d07514979ca6f54583374260b8",
+      "sha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlSh/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.front-on-1000x1100.webp",
+          "sha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+          "url": "/images/plate-contact-sheets/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlSh/bc13e59e770a82355bd2491959aeac069c6c15788b9254e9cd75d3087b95ba1f.front-off-1000x1100.webp",
+          "sha256": "bc13e59e770a82355bd2491959aeac069c6c15788b9254e9cd75d3087b95ba1f",
+          "url": "/images/plate-contact-sheets/bc13e59e770a82355bd2491959aeac069c6c15788b9254e9cd75d3087b95ba1f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13MtlRollPinkDot",
+      "binding": "4e149651d946f2ebc0387137cd5c1a0a5d6057906d7c5f957a1814d7e405aa53",
+      "sha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollPinkDot/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.front-on-1000x1100.webp",
+          "sha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+          "url": "/images/plate-contact-sheets/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollPinkDot/fa2d549bf80c41bb551143134771532b6b0b00b2ea5720818395886beb1996ed.front-off-1000x1100.webp",
+          "sha256": "fa2d549bf80c41bb551143134771532b6b0b00b2ea5720818395886beb1996ed",
+          "url": "/images/plate-contact-sheets/fa2d549bf80c41bb551143134771532b6b0b00b2ea5720818395886beb1996ed.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13MtlRollSlDot",
+      "binding": "5a51608cf50d94211454634bcc822cfe3ef7fbad9c978d47e33154199de99d62",
+      "sha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlDot/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.front-on-1000x1100.webp",
+          "sha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+          "url": "/images/plate-contact-sheets/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlDot/d3fc1e7d634ee1abd66ba4cb39a110ad3819fc53a730a6bcd6ede00a6f6ba772.front-off-1000x1100.webp",
+          "sha256": "d3fc1e7d634ee1abd66ba4cb39a110ad3819fc53a730a6bcd6ede00a6f6ba772",
+          "url": "/images/plate-contact-sheets/d3fc1e7d634ee1abd66ba4cb39a110ad3819fc53a730a6bcd6ede00a6f6ba772.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13MtlRollSlMatt",
+      "binding": "e285eef7d9a1d89549b62b0c824987adcdddca987d1706bdf515a6f2902c8312",
+      "sha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlMatt/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.front-on-1000x1100.webp",
+          "sha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+          "url": "/images/plate-contact-sheets/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlMatt/72c16b75bc5be916e2524466d79d1958e2f48ffa9efc15b96f51de1afaf953c2.front-off-1000x1100.webp",
+          "sha256": "72c16b75bc5be916e2524466d79d1958e2f48ffa9efc15b96f51de1afaf953c2",
+          "url": "/images/plate-contact-sheets/72c16b75bc5be916e2524466d79d1958e2f48ffa9efc15b96f51de1afaf953c2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13MtlRollSlSh",
+      "binding": "4ba8cdf8cf5b99e39262ab73d5a6b18b532da70cd7a98043ea7472d87e1f741e",
+      "sha256": "85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlSh/85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354.front-on-1000x1100.webp",
+          "sha256": "85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354",
+          "url": "/images/plate-contact-sheets/85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlSh/71fa4d1681594b42309a16e0c76f066833f877f0385036432ba9e5a94885cab4.front-off-1000x1100.webp",
+          "sha256": "71fa4d1681594b42309a16e0c76f066833f877f0385036432ba9e5a94885cab4",
+          "url": "/images/plate-contact-sheets/71fa4d1681594b42309a16e0c76f066833f877f0385036432ba9e5a94885cab4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13RollBlkSh",
+      "binding": "843d278ff448a1cc48b83d2c5a0b63ca76660ed603170dfea9406f9fcae67690",
+      "sha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollBlkSh/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.front-on-1000x1100.webp",
+          "sha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+          "url": "/images/plate-contact-sheets/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollBlkSh/1d942deed32b7db9f19ba28ca094f8afd5550bbd628a3e894cb7d4bd8128e701.front-off-1000x1100.webp",
+          "sha256": "1d942deed32b7db9f19ba28ca094f8afd5550bbd628a3e894cb7d4bd8128e701",
+          "url": "/images/plate-contact-sheets/1d942deed32b7db9f19ba28ca094f8afd5550bbd628a3e894cb7d4bd8128e701.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13RollCuMatt",
+      "binding": "5e5aa38ec80f8454d15e8753c33967a7c1cd47c540694bf1bcb4dc137b18af9f",
+      "sha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollCuMatt/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.front-on-1000x1100.webp",
+          "sha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+          "url": "/images/plate-contact-sheets/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollCuMatt/127fb78a71934adfddf3bff07734e213941f304c2e293b1a08ee7fb19f5fa46b.front-off-1000x1100.webp",
+          "sha256": "127fb78a71934adfddf3bff07734e213941f304c2e293b1a08ee7fb19f5fa46b",
+          "url": "/images/plate-contact-sheets/127fb78a71934adfddf3bff07734e213941f304c2e293b1a08ee7fb19f5fa46b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13RollGlMatt",
+      "binding": "9ba198cf87f332ce7dacd09a39620cc2487a8a864b23784ed406b58c84a4bb24",
+      "sha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlMatt/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.front-on-1000x1100.webp",
+          "sha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+          "url": "/images/plate-contact-sheets/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlMatt/3268b6486ac686cde31e613f8a6f83734ae04de28fafbedae9f1b29377cb7985.front-off-1000x1100.webp",
+          "sha256": "3268b6486ac686cde31e613f8a6f83734ae04de28fafbedae9f1b29377cb7985",
+          "url": "/images/plate-contact-sheets/3268b6486ac686cde31e613f8a6f83734ae04de28fafbedae9f1b29377cb7985.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13RollGlSh",
+      "binding": "62c3e2655b29dd25f1fb9a275278f73ab8c61ddce625f12348c3ab3b8b4f01eb",
+      "sha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlSh/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.front-on-1000x1100.webp",
+          "sha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+          "url": "/images/plate-contact-sheets/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlSh/916f244f20eeb27d1ce18da18c07ae3d2e82c6b50f9973cf577cbcbdf4006fe8.front-off-1000x1100.webp",
+          "sha256": "916f244f20eeb27d1ce18da18c07ae3d2e82c6b50f9973cf577cbcbdf4006fe8",
+          "url": "/images/plate-contact-sheets/916f244f20eeb27d1ce18da18c07ae3d2e82c6b50f9973cf577cbcbdf4006fe8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13RollPinkDot",
+      "binding": "8feac8e520a2fc11e1dbd237144a96a478b8b6d06d34a5838c52f906695a1ea8",
+      "sha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollPinkDot/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.front-on-1000x1100.webp",
+          "sha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+          "url": "/images/plate-contact-sheets/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollPinkDot/1a81448ce5cb88fcef1d14f9066fecffc52b9a9e6349a9c8e817005986d035b7.front-off-1000x1100.webp",
+          "sha256": "1a81448ce5cb88fcef1d14f9066fecffc52b9a9e6349a9c8e817005986d035b7",
+          "url": "/images/plate-contact-sheets/1a81448ce5cb88fcef1d14f9066fecffc52b9a9e6349a9c8e817005986d035b7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13RollSlDot",
+      "binding": "2984415bc3a17e36d5b5bf06c26a79bca6da41f8a6bc1a5475ce67ddec42668f",
+      "sha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlDot/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.front-on-1000x1100.webp",
+          "sha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+          "url": "/images/plate-contact-sheets/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlDot/fbf34e9278cbe6bd82dadc4875ce396b7200f2506a7d7e3fd442f56467b0ca48.front-off-1000x1100.webp",
+          "sha256": "fbf34e9278cbe6bd82dadc4875ce396b7200f2506a7d7e3fd442f56467b0ca48",
+          "url": "/images/plate-contact-sheets/fbf34e9278cbe6bd82dadc4875ce396b7200f2506a7d7e3fd442f56467b0ca48.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13RollSlMatt",
+      "binding": "83941c5a0787b799e3f03c467740839d9c0c9e9902801aa470dc04e7914dcabd",
+      "sha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlMatt/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.front-on-1000x1100.webp",
+          "sha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+          "url": "/images/plate-contact-sheets/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlMatt/8fd3a42e4afaa564de6b38df92b45af2a49b425cd041295e2f05c8a5fe43e1c9.front-off-1000x1100.webp",
+          "sha256": "8fd3a42e4afaa564de6b38df92b45af2a49b425cd041295e2f05c8a5fe43e1c9",
+          "url": "/images/plate-contact-sheets/8fd3a42e4afaa564de6b38df92b45af2a49b425cd041295e2f05c8a5fe43e1c9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13Sl",
+      "binding": "2d811f246040fc6af13c1cc46e76444d422b1a61471e3dce7956411ddba460f2",
+      "sha256": "5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Sl/5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f.front-on-1000x1100.webp",
+          "sha256": "5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f",
+          "url": "/images/plate-contact-sheets/5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Sl/a402c321e628714014fb5774fef59d403b9119589caac78ff7a93366b279d22e.front-off-1000x1100.webp",
+          "sha256": "a402c321e628714014fb5774fef59d403b9119589caac78ff7a93366b279d22e",
+          "url": "/images/plate-contact-sheets/a402c321e628714014fb5774fef59d403b9119589caac78ff7a93366b279d22e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13SpryBlkSh",
+      "binding": "690465e095f79e00cdea3b4638b9b336af4d593c63881625ce41908c2b437d30",
+      "sha256": "d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBlkSh/d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d.front-on-1000x1100.webp",
+          "sha256": "d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d",
+          "url": "/images/plate-contact-sheets/d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBlkSh/5b42f14c78ae6e1374539af0349dbcf26c79a56e9dfa2131bd983b506d923a34.front-off-1000x1100.webp",
+          "sha256": "5b42f14c78ae6e1374539af0349dbcf26c79a56e9dfa2131bd983b506d923a34",
+          "url": "/images/plate-contact-sheets/5b42f14c78ae6e1374539af0349dbcf26c79a56e9dfa2131bd983b506d923a34.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13SpryBluMatt",
+      "binding": "28a3562167b28362c3c948a232a87b1ae26017fbc6885bc2456f484c2f31883d",
+      "sha256": "f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBluMatt/f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148.front-on-1000x1100.webp",
+          "sha256": "f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148",
+          "url": "/images/plate-contact-sheets/f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBluMatt/ff6d5a9501bb4ab86370632a62bc112f3945cf5f0bfb86708a630ccf76812403.front-off-1000x1100.webp",
+          "sha256": "ff6d5a9501bb4ab86370632a62bc112f3945cf5f0bfb86708a630ccf76812403",
+          "url": "/images/plate-contact-sheets/ff6d5a9501bb4ab86370632a62bc112f3945cf5f0bfb86708a630ccf76812403.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13SpryCuMatt",
+      "binding": "151e17865b10068752dc07d7969f6de62bf5a5a3f527c773d6806cc3876c5b4e",
+      "sha256": "6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryCuMatt/6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495.front-on-1000x1100.webp",
+          "sha256": "6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495",
+          "url": "/images/plate-contact-sheets/6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryCuMatt/d43dbe1f744d0f7ee1ead4963d0ade30356310a7c5d3c2b44ad12ffed381c2d9.front-off-1000x1100.webp",
+          "sha256": "d43dbe1f744d0f7ee1ead4963d0ade30356310a7c5d3c2b44ad12ffed381c2d9",
+          "url": "/images/plate-contact-sheets/d43dbe1f744d0f7ee1ead4963d0ade30356310a7c5d3c2b44ad12ffed381c2d9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13SpryGlMatt",
+      "binding": "e9ff99a2d8daf55eb01565035e656078075cb5d77790a532b3d8e54757ea10ce",
+      "sha256": "665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlMatt/665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d.front-on-1000x1100.webp",
+          "sha256": "665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d",
+          "url": "/images/plate-contact-sheets/665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlMatt/7ee2a676899c9dfa04005e42007dfc2cf4c4cfa01b6c26e1a95fdd8003de6ea0.front-off-1000x1100.webp",
+          "sha256": "7ee2a676899c9dfa04005e42007dfc2cf4c4cfa01b6c26e1a95fdd8003de6ea0",
+          "url": "/images/plate-contact-sheets/7ee2a676899c9dfa04005e42007dfc2cf4c4cfa01b6c26e1a95fdd8003de6ea0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13SpryGlSh",
+      "binding": "92021bcaefc3a02b93420679c8bba7ff2915b440a688150460f2c542671ef595",
+      "sha256": "c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlSh/c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab.front-on-1000x1100.webp",
+          "sha256": "c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab",
+          "url": "/images/plate-contact-sheets/c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlSh/8da45a2da6c236a7b9062f279d188b197f5c24dc08844b72aa62bdfb3109a7b4.front-off-1000x1100.webp",
+          "sha256": "8da45a2da6c236a7b9062f279d188b197f5c24dc08844b72aa62bdfb3109a7b4",
+          "url": "/images/plate-contact-sheets/8da45a2da6c236a7b9062f279d188b197f5c24dc08844b72aa62bdfb3109a7b4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13SprySlMatt",
+      "binding": "df8ff252288e30f538edc30e50af096253f840fe78fc36bf65d15307569a3bf5",
+      "sha256": "7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlMatt/7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638.front-on-1000x1100.webp",
+          "sha256": "7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638",
+          "url": "/images/plate-contact-sheets/7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlMatt/f63d14c2351e0b02ba005b1504db96127b0aeebaa029b5407d0db48e02b4d517.front-off-1000x1100.webp",
+          "sha256": "f63d14c2351e0b02ba005b1504db96127b0aeebaa029b5407d0db48e02b4d517",
+          "url": "/images/plate-contact-sheets/f63d14c2351e0b02ba005b1504db96127b0aeebaa029b5407d0db48e02b4d517.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBRoyal13SprySlSh",
+      "binding": "56efd141a9aef0448a178048b3a432a0f5e3176295f325aeaa100efb62a28485",
+      "sha256": "3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:36.259Z",
+      "batchId": "047ac32a-3008-4a1f-8008-24b0fc5a16e4",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlSh/3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970.front-on-1000x1100.webp",
+          "sha256": "3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970",
+          "url": "/images/plate-contact-sheets/3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlSh/941348919fe29cb1ff0b714d3869c92e0a5aacbbf09b3c989fe7ef40f98903ea.front-off-1000x1100.webp",
+          "sha256": "941348919fe29cb1ff0b714d3869c92e0a5aacbbf09b3c989fe7ef40f98903ea",
+          "url": "/images/plate-contact-sheets/941348919fe29cb1ff0b714d3869c92e0a5aacbbf09b3c989fe7ef40f98903ea.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}

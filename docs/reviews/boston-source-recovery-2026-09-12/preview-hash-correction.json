@@ -1,0 +1,9 @@
+[
+  {
+    "sku": "GBBstn2ozMtlRollMattSl",
+    "recorded": "ba4ea01eba4c54ec3b4ee43008bef13ba1dfe1413632c50144b77e72fea82d76",
+    "actual": "08303d3d1395b2fa13d24d4c0ae75d4ff7cad97cb3b1cdf7bc2df3c232e390ae",
+    "url": "/images/boston-source-recovery/4914891a05ddd899931837da3fd7e4ecf960968d5adecf05ef8bfa872c210a68.png",
+    "reason": "Concurrent duplicate export wrote a new ICC profile timestamp before Jordan reviewed the page. Original PSD and decoded preview pixels are unchanged. Bind the bytes actually served and reviewed; do not rewrite the image."
+  }
+]

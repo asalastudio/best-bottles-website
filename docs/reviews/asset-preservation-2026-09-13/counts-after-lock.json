@@ -1,0 +1,68 @@
+{
+  "before": {
+    "at": "2026-09-13T15:13:46.483Z",
+    "global": {
+      "total": 2305,
+      "complete": 686,
+      "review": 431,
+      "reconcile": 677,
+      "missing": 511
+    },
+    "families": [
+      {
+        "family": "Cylinder",
+        "total": 436,
+        "complete": 398,
+        "review": 0,
+        "reconcile": 38,
+        "missing": 0,
+        "unlinked": 0
+      },
+      {
+        "family": "Boston Round",
+        "total": 123,
+        "complete": 123,
+        "review": 0,
+        "reconcile": 0,
+        "missing": 0,
+        "unlinked": 0
+      }
+    ],
+    "prepared": 38,
+    "approvedPrepared": 38
+  },
+  "after": {
+    "at": "2026-09-13T15:17:32.389Z",
+    "global": {
+      "total": 2305,
+      "complete": 686,
+      "review": 431,
+      "reconcile": 677,
+      "missing": 511
+    },
+    "families": [
+      {
+        "family": "Cylinder",
+        "total": 436,
+        "complete": 398,
+        "review": 0,
+        "reconcile": 38,
+        "missing": 0,
+        "unlinked": 0
+      },
+      {
+        "family": "Boston Round",
+        "total": 123,
+        "complete": 123,
+        "review": 0,
+        "reconcile": 0,
+        "missing": 0,
+        "unlinked": 0
+      }
+    ],
+    "prepared": 38,
+    "approvedPrepared": 38
+  },
+  "expected": "Lock and Git preservation do not change indexed completion. All 38 prepared pairs retain their saved approval.",
+  "passed": true
+}

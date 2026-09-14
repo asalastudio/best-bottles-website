@@ -131,6 +131,8 @@ export const getAllForPlates = query({
                 capColor: p.capColor ?? null,
                 itemName: p.itemName,
                 productGroupId: p.productGroupId ?? null,
+                stockStatus: p.stockStatus ?? null,
+                importSource: p.importSource ?? null,
             })),
         };
     },

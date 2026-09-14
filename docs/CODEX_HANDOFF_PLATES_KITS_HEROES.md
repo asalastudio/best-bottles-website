@@ -1,3 +1,5 @@
+> September 12 Codex reconciliation: Jordan has updated the work order and requested persistent physical-bottle size standards. Read [ASSET_WORKBENCH_WORKFLOW.md](ASSET_WORKBENCH_WORKFLOW.md) alongside this historical handoff. The blanket familyId-only grouping instruction below is superseded; distinct physical profiles must remain separate.
+
 # Codex handoff — finish the plates, the kits and the hero images
 
 Written 2026-09-12 at the end of the Claude session that built the asset ledger.

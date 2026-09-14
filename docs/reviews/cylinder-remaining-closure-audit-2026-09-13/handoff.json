@@ -1,0 +1,7 @@
+{
+  "purpose": "Read-only source audit; no approval or release mutation",
+  "recoveryFile": "recovered-sprayer-pairs.json",
+  "newSourceCandidates": 6,
+  "oldApprovalsPreserved": 38,
+  "nextWork": "Prepare six sprayer pairs into the existing Cylinder plate workflow with locked geometry and same-zoom review. Resolve five sizing holds separately. Reconcile exact short-cap finish and flip-top master sources without inventing cap-off artwork."
+}

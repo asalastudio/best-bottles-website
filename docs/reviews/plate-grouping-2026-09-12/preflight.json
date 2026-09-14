@@ -1,0 +1,2088 @@
+{
+ "families": [
+  "boston-round-15ml-amber-18-400",
+  "boston-round-15ml-cobalt-blue-18-400",
+  "boston-round-30ml-amber-20-400",
+  "boston-round-30ml-clear-20-400",
+  "boston-round-30ml-cobalt-blue-20-400",
+  "boston-round-60ml-amber-20-400",
+  "boston-round-60ml-clear-20-400",
+  "boston-round-60ml-cobalt-blue-20-400",
+  "circle-30ml-clear-15-415",
+  "cream-jar-30ml-mixed-45mm",
+  "cream-jar-40ml-mixed-48-400",
+  "cream-jar-5ml-mixed-27mm",
+  "decorative-4ml-frosted-8mm",
+  "diva-46ml-frosted-18-415",
+  "elegant-30ml-clear-15-415",
+  "elegant-30ml-frosted-15-415",
+  "plastic-bottle-30ml-mixed-13-415",
+  "rectangle-10ml-clear-13-415",
+  "rectangle-9ml-clear-ground",
+  "sleek-100ml-clear-18-415",
+  "sleek-30ml-clear-18-415",
+  "sleek-50ml-clear-18-415",
+  "vial-1ml-amber-plug",
+  "vial-2ml-amber-8-425",
+  "vial-2ml-clear-8-425",
+  "vial-4ml-amber-13-425",
+  "vial-4ml-blue-13-425",
+  "vial-4ml-green-13-425"
+ ],
+ "scope": 350,
+ "pass": [
+  {
+   "sku": "LBSlk100LtnClOvrCap",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBElg30SpryMattSl",
+   "familyId": "elegant-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBElg30SpryMattGl",
+   "familyId": "elegant-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBElgFrst30SpryShnGl",
+   "familyId": "elegant-30ml-frosted-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBElgFrst30SpryShSl",
+   "familyId": "elegant-30ml-frosted-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBElgFrst30SpryMattSl",
+   "familyId": "elegant-30ml-frosted-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonShnSl",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBElgFrst30SpryMattGl",
+   "familyId": "elegant-30ml-frosted-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50AnSpTslLvn",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GB1mlAmbVialWht",
+   "familyId": "vial-1ml-amber-plug",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50AnSpTslIvyGl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50AnSpTslIvySl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50AnSpTslWht",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBVAmb2WhtCap",
+   "familyId": "vial-2ml-amber-8-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50AnSpTslPnk",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBVialClr2mlWhtCap",
+   "familyId": "vial-2ml-clear-8-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonMattGl",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50AnSpTslRed",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonMattSl",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50AnSpTslMtSl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50AnSpTslGl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBVAmb1DrmWhtCapSht",
+   "familyId": "vial-4ml-amber-13-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonShnBlk",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBVBlu1DrmWhtCapSht",
+   "familyId": "vial-4ml-blue-13-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBVGr1DrmWhtCapSht",
+   "familyId": "vial-4ml-green-13-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonMattBlk",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonMattGl",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonMattBlk",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonMattGl",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozMtlRollonMattBlk",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozMtlRollonMattGl",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10SpryBlkMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozMtlRollonMattSl",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10SpryBlkMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozMtlRollonShnSl",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+   "familyId": "boston-round-15ml-amber-18-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropper",
+   "familyId": "boston-round-15ml-amber-18-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+   "familyId": "boston-round-15ml-amber-18-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+   "familyId": "boston-round-15ml-amber-18-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+   "familyId": "boston-round-15ml-amber-18-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+   "familyId": "boston-round-15ml-cobalt-blue-18-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstn1ozWhtDrp",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstn1ozBlkDrpShnGlTrim",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstn1ozWhtDrpShnGlTrim",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstn1ozWhtDrpShnSlTrim",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50SpryShnBlk",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50SpryShnGl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDropper",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50SpryMtSl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50SpryShnSl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50SpryMtGl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonMattGl",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBCrcl30SpryBlk",
+   "familyId": "circle-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonMattBlk",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropper",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonMattSl",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonShnSl",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10Gl",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonShnBlk",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10Sl",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10WhtSht",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBElg30SpryBlk",
+   "familyId": "elegant-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10Gl",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBElgFrst30SpryBlk",
+   "familyId": "elegant-30ml-frosted-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonShnSl",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10Sl",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10WhtSht",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonShnBlk",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonMattGl",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50SpryCu",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10BlkSht",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonMattSl",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonShnSl",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozRollonMattGl",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozRollonMattBlk",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozRollonMattSl",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozRollonShnSl",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozRollonShnBlk",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBCrcl30GlCap",
+   "familyId": "circle-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropper",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBElg30GlCap",
+   "familyId": "elegant-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropperShnGlTrim",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBElgFrst30GlCap",
+   "familyId": "elegant-30ml-frosted-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100SpryCu",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropperShnSlTrim",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBCrcl30SlCap",
+   "familyId": "circle-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk50AnSpTslBlk",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkCapSht",
+   "familyId": "boston-round-15ml-amber-18-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu15BlkCapSht",
+   "familyId": "boston-round-15ml-cobalt-blue-18-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstn1ozBlkCapSht",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkCapSht",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkCapSht",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstn2ozBlkCapSht",
+   "familyId": "boston-round-60ml-clear-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkCapSht",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkCapSht",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBElg30SlCap",
+   "familyId": "elegant-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBElgFrst30SlCap",
+   "familyId": "elegant-30ml-frosted-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100SpryShnGl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100SpryMtGl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100SpryMtSl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100SpryShnSl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10RollBlkDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100AnSpTslBlk",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk30WhtRectClOverCap",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonGl",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonGl",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozRollonGl",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10MtlRollBlkDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonBlk",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonGl",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk50WhtRectClOverCap",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozMtlRollonGl",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk50LtnShnBlk",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk50LtnShnGl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk50LtnMtGl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk50LtnMtSl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk50LtnCu",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk50LtnShnSl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10SpryBlkSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10SpryBluMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10SpryCuMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10SpryGlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10SpryGlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10SprySlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10SprySlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10SpryBlkSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10SpryBluMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10SpryCuMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10SpryGlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10SpryGlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10SprySlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10SprySlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10MtlRollBlkSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10MtlRollCuMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10MtlRollGlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10MtlRollGlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10MtlRollPinkDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSQSTBlue",
+   "familyId": "rectangle-9ml-clear-ground",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10MtlRollSlDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSQSTClear",
+   "familyId": "rectangle-9ml-clear-ground",
+   "reasons": []
+  },
+  {
+   "sku": "GBSQSTGREEN",
+   "familyId": "rectangle-9ml-clear-ground",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10MtlRollSlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GB1mlAmbVBlk",
+   "familyId": "vial-1ml-amber-plug",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10MtlRollBlkSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10MtlRollCuMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10MtlRollGlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBVAmb2BlackCap",
+   "familyId": "vial-2ml-amber-8-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBVialClr2mlBlackCap",
+   "familyId": "vial-2ml-clear-8-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBVBlu1DrmBlkDropper",
+   "familyId": "vial-4ml-blue-13-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBVGr1DrmBlkDropper",
+   "familyId": "vial-4ml-green-13-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBVAmb1DrmBlackCapSht",
+   "familyId": "vial-4ml-amber-13-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropper",
+   "familyId": "boston-round-15ml-amber-18-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10MtlRollSlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBVBlu1DrmBlackCapSht",
+   "familyId": "vial-4ml-blue-13-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstn1ozBlkDrp",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkDropper",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkDropper",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBVGr1DrmBlackCapSht",
+   "familyId": "vial-4ml-green-13-425",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100AnSpTslLvn",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100AnSpTslIvyGl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100AnSpTslIvySl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkDropper",
+   "familyId": "boston-round-60ml-cobalt-blue-20-400",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100AnSpTslWht",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100AnSpTslPnk",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100AnSpTslRed",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100AnSpTslMtSl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10BlkSht",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBSlk100AnSpTslGl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10RollBlkSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10RollCuMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10RollGlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10RollGlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10RollPinkDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10RollSlDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10RollSlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBRect10RollSlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBCrcl30SpryShSl",
+   "familyId": "circle-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10RollGlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBCrcl30SpryShnGl",
+   "familyId": "circle-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10RollPinkDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBCrcl30SpryMattSl",
+   "familyId": "circle-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10RollSlDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBCrcl30SpryMattGl",
+   "familyId": "circle-30ml-clear-15-415",
+   "reasons": []
+  },
+  {
+   "sku": "GBTallRect10RollSlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk100LtnShnGl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk100LtnShnSl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk100WhtRectClOverCap",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk50LtnClOvrCap",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk100LtnMtGl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk100LtnMtSl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  },
+  {
+   "sku": "LBSlk100LtnCu",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": []
+  }
+ ],
+ "issues": [
+  {
+   "sku": "GBSlk50AnSpLvn",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpPnk",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpMtSl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpIvySl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpGl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpIvyGl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpWht",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonMattSl",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": [
+    "front source basename 'GBBstn1ozRollMattSl' does not match website SKU 'GBBstn1ozMtlRollonMattSl'"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpRed",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonMattBlk",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": [
+    "front source basename 'GBBstn1ozRollMattBlk' does not match website SKU 'GBBstn1ozMtlRollonMattBlk'"
+   ]
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonGl",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": [
+    "front source basename 'GBBstn1ozRollShGl' does not match website SKU 'GBBstn1ozMtlRollonGl'"
+   ]
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonMattGl",
+   "familyId": "boston-round-30ml-clear-20-400",
+   "reasons": [
+    "front source basename 'GBBstn1ozRollMattGl' does not match website SKU 'GBBstn1ozMtlRollonMattGl'"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonShnSl",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": [
+    "front source basename 'GBBstnAmb1ozRollonShnSl' does not match website SKU 'GBBstnAmb1ozMtlRollonShnSl'"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonMattSl",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": [
+    "front source basename 'GBBstnBlu1ozMtlRollonMattSl copy' does not match website SKU 'GBBstnBlu1ozMtlRollonMattSl'"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonShnSl",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": [
+    "front source basename 'GBBstnBlu1ozRollonShnSl' does not match website SKU 'GBBstnBlu1ozMtlRollonShnSl'"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46SpryMtGl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46SpryShnGl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46SpryShnBlk",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46SpryMtSl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46SpryShnSl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonMattSl",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": [
+    "front source basename 'GBBstnAmb2ozRollonMattSl' does not match website SKU 'GBBstnAmb2ozMtlRollonMattSl'"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonShnSl",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": [
+    "front source basename 'GBBstnAmb2ozRollonShnSl' does not match website SKU 'GBBstnAmb2ozMtlRollonShnSl'"
+   ]
+  },
+  {
+   "sku": "PB1ozClearcap",
+   "familyId": "plastic-bottle-30ml-mixed-13-415",
+   "reasons": [
+    "family changed: plastic-bottle-30ml-clear-13-415"
+   ]
+  },
+  {
+   "sku": "PB1ozSpryNat",
+   "familyId": "plastic-bottle-30ml-mixed-13-415",
+   "reasons": [
+    "family changed: plastic-bottle-30ml-clear-13-415"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonMattBlk",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": [
+    "front source basename 'GBBstnBlu1ozMtlRollonMattBlk' does not match website SKU 'GBBstnBlu1ozRollonMattBlk'"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonMattSl",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": [
+    "front source basename 'GBBstnBlu1ozMtlRollonMattSl copy' does not match website SKU 'GBBstnBlu1ozRollonMattSl'"
+   ]
+  },
+  {
+   "sku": "GBSlk30DrpSl",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30DrpGl",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonMattGl",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": [
+    "front source basename 'GBBstnBlu1ozMtlRollonMattGl' does not match website SKU 'GBBstnBlu1ozRollonMattGl'"
+   ]
+  },
+  {
+   "sku": "GBDiva46DrpSl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "family changed: diva-46ml-clear-18-415",
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46SpryCu",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBBstn2ozRollonMattGl",
+   "familyId": "boston-round-60ml-clear-20-400",
+   "reasons": [
+    "front source basename 'GBBstn2ozMtlRollonMattGl' does not match website SKU 'GBBstn2ozRollonMattGl'"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonMattBlk",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": [
+    "front source basename 'GBBstnAmb2ozMtlRollonMattBlk' does not match website SKU 'GBBstnAmb2ozRollonMattBlk'"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonShnBlk",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": [
+    "front source basename 'GBBstnAmb2ozMtlRollonShnBlk' does not match website SKU 'GBBstnAmb2ozRollonShnBlk'"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrIvyLthr",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrPnkLthr",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrShnGl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrShnBlkTall",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrShnBlk",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrBrwnLthr",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrLBrwnLthr",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrBlkLthr",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrShnSl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrMtSlTall",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrMtSl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrWht",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrBlkLthr",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpBlk",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrBlkLthr",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpBlk",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslBlk",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrBlkLthr",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpBlk",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrIvyLthr",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrPnkLthr",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrShnGl",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrShnBlkTall",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrShnBlk",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrBrwnLthr",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrLBrwnLthr",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrShnSl",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrMtSlTall",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrMtSl",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrWht",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpBlk",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBTallRect10RollBlkDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": [
+    "front source basename 'GBTallRect10MtlRollBlkDot copy' does not match website SKU 'GBTallRect10RollBlkDot'"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonGl",
+   "familyId": "boston-round-60ml-amber-20-400",
+   "reasons": [
+    "front source basename 'GBBstnAmb2ozMtlRollonGl' does not match website SKU 'GBBstnAmb2ozRollonGl'"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnGl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnBlkTall",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnBlk",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrBrwnLthr",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "LBDivaFrst46LtnMtGl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrLBrwnLthr",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "LBDivaFrst46LtnMtSl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnSl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "LBDivaFrst46LtnCu",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrMtSlTall",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "LBDivaFrst46LtnShnGl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrMtSl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "LBDivaFrst46LtnShnBlk",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrWht",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "LBDivaFrst46LtnShnSl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrPnkLthr",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrIvyLthr",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBTallRect10MtlRollBlkDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": [
+    "front source basename 'GBTallRect10MtlRollBlkDot copy' does not match website SKU 'GBTallRect10MtlRollBlkDot'"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpLvn",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpPnk",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpMtSl",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpIvySl",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpGl",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpIvyGl",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpWht",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpRed",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonGl",
+   "familyId": "boston-round-30ml-amber-20-400",
+   "reasons": [
+    "front source basename 'GBBstnAmb1ozRollonGl' does not match website SKU 'GBBstnAmb1ozMtlRollonGl'"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonGl",
+   "familyId": "boston-round-30ml-cobalt-blue-20-400",
+   "reasons": [
+    "front source basename 'GBBstnBlu1ozRollonGl' does not match website SKU 'GBBstnBlu1ozMtlRollonGl'"
+   ]
+  },
+  {
+   "sku": "GBHeartFrst4KeyGld",
+   "familyId": "decorative-4ml-frosted-8mm",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBHeartFrst4TslRed",
+   "familyId": "decorative-4ml-frosted-8mm",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrIvyLthr",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrPnkLthr",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrShnGl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrShnBlkTall",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrShnBlk",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrBrwnLthr",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrLBrwnLthr",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpLvn",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrShnSl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpPnk",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrMtSlTall",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpMtSl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrMtSl",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpIvySl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrWht",
+   "familyId": "sleek-50ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpGl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpIvyGl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpWht",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpRed",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslLvn",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslIvyGl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslIvySl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslWht",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBRect10MtlRollSlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": [
+    "front source basename 'GBRect10MtlRollSlMatt copy' does not match website SKU 'GBRect10MtlRollSlMatt'"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslPnk",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslMtSl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslGl",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslRed",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBTallRect10MtlRollGlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": [
+    "front source basename 'GBTallRect10RollGlSh' does not match website SKU 'GBTallRect10MtlRollGlSh'"
+   ]
+  },
+  {
+   "sku": "GBTallRect10MtlRollSlDot",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": [
+    "front source basename 'GBTallRect10RollSlDot' does not match website SKU 'GBTallRect10MtlRollSlDot'"
+   ]
+  },
+  {
+   "sku": "GBTallRect10MtlRollSlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": [
+    "front source basename 'GBTallRect10RollSlMatt' does not match website SKU 'GBTallRect10MtlRollSlMatt'"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpLvn",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpPnk",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpMtSl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk30DrpCu",
+   "familyId": "sleek-30ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpIvySl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpGl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpIvyGl",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "CJAmb5mlBlkCap",
+   "familyId": "cream-jar-5ml-mixed-27mm",
+   "reasons": [
+    "family changed: cream-jar-5ml-amber-27mm"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpWht",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpRed",
+   "familyId": "sleek-100ml-clear-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "CJClr5mlClrCap",
+   "familyId": "cream-jar-5ml-mixed-27mm",
+   "reasons": [
+    "family changed: cream-jar-5ml-clear-27mm"
+   ]
+  },
+  {
+   "sku": "CJAmb30SlCap",
+   "familyId": "cream-jar-30ml-mixed-45mm",
+   "reasons": [
+    "family changed: cream-jar-30ml-amber-45mm"
+   ]
+  },
+  {
+   "sku": "CJFrst30BlkCap",
+   "familyId": "cream-jar-30ml-mixed-45mm",
+   "reasons": [
+    "family changed: cream-jar-30ml-frosted-45mm"
+   ]
+  },
+  {
+   "sku": "CJFrst30SlCap",
+   "familyId": "cream-jar-30ml-mixed-45mm",
+   "reasons": [
+    "family changed: cream-jar-30ml-frosted-45mm"
+   ]
+  },
+  {
+   "sku": "CJAmb40SlCap",
+   "familyId": "cream-jar-40ml-mixed-48-400",
+   "reasons": [
+    "family changed: cream-jar-40ml-amber-48-400"
+   ]
+  },
+  {
+   "sku": "CJFrst40BlkCap",
+   "familyId": "cream-jar-40ml-mixed-48-400",
+   "reasons": [
+    "family changed: cream-jar-40ml-frosted-48-400"
+   ]
+  },
+  {
+   "sku": "CJFrst40SlCap",
+   "familyId": "cream-jar-40ml-mixed-48-400",
+   "reasons": [
+    "family changed: cream-jar-40ml-frosted-48-400"
+   ]
+  },
+  {
+   "sku": "GBTallRect10RollBlkSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  },
+  {
+   "sku": "GBTallRect10RollCuMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": [
+    "front source basename 'GBTallRect10MtlRollCuMatt' does not match website SKU 'GBTallRect10RollCuMatt'"
+   ]
+  },
+  {
+   "sku": "GBTallRect10RollGlMatt",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": [
+    "front source basename 'GBTallRect10MtlRollGlMatt' does not match website SKU 'GBTallRect10RollGlMatt'"
+   ]
+  },
+  {
+   "sku": "GBTallRect10RollSlSh",
+   "familyId": "rectangle-10ml-clear-13-415",
+   "reasons": [
+    "front source basename 'GBTallRect10MtlRollSlSh' does not match website SKU 'GBTallRect10RollSlSh'"
+   ]
+  },
+  {
+   "sku": "LBDivaFrst46LtnClOvrCap",
+   "familyId": "diva-46ml-frosted-18-415",
+   "reasons": [
+    "no approved front in existing selection"
+   ]
+  }
+ ]
+}

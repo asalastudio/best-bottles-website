@@ -1,0 +1,167 @@
+[
+  {
+    "label": "desktop",
+    "status": 200,
+    "errors": [],
+    "pageWidth": 1440,
+    "documentWidth": 1440,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 100,
+      "top": 0,
+      "right": 1440,
+      "bottom": 100,
+      "left": 0
+    },
+    "logos": [
+      {
+        "label": "BEST BOTTLES",
+        "box": {
+          "x": 24,
+          "y": 48,
+          "width": 153.765625,
+          "height": 32,
+          "top": 48,
+          "right": 177.765625,
+          "bottom": 80,
+          "left": 24
+        },
+        "image": null
+      }
+    ]
+  },
+  {
+    "label": "mobile",
+    "status": 200,
+    "errors": [],
+    "pageWidth": 390,
+    "documentWidth": 390,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 69.328125,
+      "top": 0,
+      "right": 390,
+      "bottom": 69.328125,
+      "left": 0
+    },
+    "logos": [
+      {
+        "label": "BEST BOTTLES",
+        "box": {
+          "x": 64,
+          "y": 31.328125,
+          "width": 115.328125,
+          "height": 28,
+          "top": 31.328125,
+          "right": 179.328125,
+          "bottom": 59.328125,
+          "left": 64
+        },
+        "image": null
+      }
+    ]
+  },
+  {
+    "label": "small-mobile",
+    "status": 200,
+    "errors": [],
+    "pageWidth": 320,
+    "documentWidth": 320,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 69.328125,
+      "top": 0,
+      "right": 320,
+      "bottom": 69.328125,
+      "left": 0
+    },
+    "logos": [
+      {
+        "label": "BEST BOTTLES",
+        "box": {
+          "x": 64,
+          "y": 31.328125,
+          "width": 115.328125,
+          "height": 28,
+          "top": 31.328125,
+          "right": 179.328125,
+          "bottom": 59.328125,
+          "left": 64
+        },
+        "image": null
+      }
+    ]
+  },
+  {
+    "label": "small-desktop",
+    "status": 200,
+    "errors": [],
+    "pageWidth": 1280,
+    "documentWidth": 1280,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 1280,
+      "height": 100,
+      "top": 0,
+      "right": 1280,
+      "bottom": 100,
+      "left": 0
+    },
+    "logos": [
+      {
+        "label": "BEST BOTTLES",
+        "box": {
+          "x": 24,
+          "y": 48,
+          "width": 153.765625,
+          "height": 32,
+          "top": 48,
+          "right": 177.765625,
+          "bottom": 80,
+          "left": 24
+        },
+        "image": null
+      }
+    ]
+  },
+  {
+    "label": "builder-mobile",
+    "status": 200,
+    "errors": [],
+    "pageWidth": 390,
+    "documentWidth": 390,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 56,
+      "top": 0,
+      "right": 390,
+      "bottom": 56,
+      "left": 0
+    },
+    "logos": [
+      {
+        "label": "BEST BOTTLES",
+        "box": {
+          "x": 56,
+          "y": 6,
+          "width": 234,
+          "height": 44,
+          "top": 6,
+          "right": 290,
+          "bottom": 50,
+          "left": 56
+        },
+        "image": null
+      }
+    ]
+  }
+]

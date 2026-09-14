@@ -6,12 +6,15 @@
 //   add --family <familyId> to limit
 //
 // env: NEXT_PUBLIC_CONVEX_URL, BLOB_READ_WRITE_TOKEN, BEST_BOTTLES_CONVEX_WRITE_TOKEN
+// The linked project's ignored `.env.local` is loaded automatically when a
+// caller has not supplied one of these variables explicitly.
 //
 // The same rules the plates follow. Keys are content-addressed, so a part is
 // uploaded once however many SKUs reference it and re-publishing never
 // overwrites. A row is written only after its object's public URL answers 200
 // with the right type and length, and only for a SKU that already carries a
 // published plate — a kit without its plate is a stage that cannot fall back.
+import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import { join, resolve, dirname } from "node:path";
@@ -25,6 +28,11 @@ const onlyFamily = argv.includes("--family") ? argv[argv.indexOf("--family") + 1
 const KITS = resolve("dist/paper-doll/kits");
 const PLATES = resolve("dist/paper-doll/legacy/cylinder-9ml-17-415");
 const BUILDER = { name: "publish-kits.mjs", version: "1.0.0" };
+
+if ((!process.env.NEXT_PUBLIC_CONVEX_URL || !process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN || !process.env.BLOB_READ_WRITE_TOKEN)
+    && existsSync(resolve(".env.local"))) {
+    try { process.loadEnvFile(resolve(".env.local")); } catch { /* explicit checks below report what is missing */ }
+}
 
 const asBounds = ([left, top, right, bottom]) => ({ left, top, right, bottom });
 

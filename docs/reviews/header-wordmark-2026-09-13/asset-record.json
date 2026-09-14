@@ -1,0 +1,24 @@
+{
+  "source": "/Users/jordanrichter/Downloads/ChatGPT Image Sep 13, 2026, 12_56_03 AM.png",
+  "siteAsset": "public/brand/best-bottles-wordmark.png",
+  "sha256": "357290806bc583ff11ac203e3080dc1a3f2c4f3e4cfd5d6188264a91860749eb",
+  "sourceUnchanged": true,
+  "sourceDimensions": [
+    2172,
+    724
+  ],
+  "visibleBounds": [
+    258,
+    234,
+    1878,
+    451
+  ],
+  "rendering": "Original PNG displayed through a CSS frame; only surrounding transparent padding is hidden. Uniform aspect ratio preserved.",
+  "locations": [
+    "Desktop header",
+    "Mobile header",
+    "Mobile navigation menu",
+    "Mobile bottle builder"
+  ],
+  "publication": "Local development site only"
+}

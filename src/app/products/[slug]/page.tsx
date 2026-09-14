@@ -1,3 +1,4 @@
+import { readKitPilot } from "../../../../scripts/asset-ledger/kit-pilot.mjs";
 import { hasCatalogSourceHold } from "@/lib/products/catalog-listing-visibility";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -22,6 +23,9 @@ import { resolveProductPageRedirectTarget } from "@/lib/products/pdp-redirect";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
 import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
+import { headers } from "next/headers";
+import { readCompletion } from "../../../../scripts/asset-ledger/plate-completion.mjs";
+import { localBostonPreview, previewPlates } from "../../../../scripts/asset-ledger/product-preview.mjs";
 import {
     selectPrimaryProductVariant,
     type FocusedPdpRelations,
@@ -205,6 +209,10 @@ export default async function ProductPage({
     ]);
     const group = data?.group;
     const variant = primaryVariant;
+    const localAssetPreview = localBostonPreview(process.env.NODE_ENV, (await headers()).get('host'), resolvedSearchParams.assetPreview) && group?.family === 'Boston Round';
+    const completion = localAssetPreview ? await readCompletion(process.cwd()) : null;
+    const displayedPlates = localAssetPreview ? previewPlates(completion, group?._id, data?.variants ?? [], platesBySku) : platesBySku;
+    const pilot = localAssetPreview ? await readKitPilot(process.cwd(), group, displayedPlates) : {kits:{},plates:displayedPlates};
     const customerName = group
         ? getCustomerFacingProductName({ group, variant, fallbackName: group.displayName }).displayName
         : "";
@@ -263,7 +271,10 @@ export default async function ProductPage({
                 initialRelations={relations}
                 initialCompatibility={compatibility}
                 siblingGroups={siblingGroups}
-                platesBySku={platesBySku}
+                platesBySku={localAssetPreview ? pilot.plates : platesBySku}
+                localKits={pilot.kits}
+                localAssetPreview={localAssetPreview}
+                localAssetVersion={completion ? `${completion.token}:${completion.revision}` : ''}
             />
             <SanityLiveVisualEditing />
             <Footer />

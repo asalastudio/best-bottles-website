@@ -1,0 +1,2065 @@
+[
+  {
+    "sku": "GBBstn1ozMtlRollonGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/4. GBBstn1ozMtlRollonGl.psd",
+      "sourceSha256": "51f8985a2c5aa211bc22811f465e9da8779691c12d259fba65b525b4781d6cfd",
+      "url": "/images/boston-source-recovery/51f8985a2c5aa211bc22811f465e9da8779691c12d259fba65b525b4781d6cfd.png",
+      "sha256": "021e80aa60f030c81376dd44fadc4b1f2539e8bd5869ed52c62d9ce80dbcd25a",
+      "width": 975,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            975,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 22",
+          "bbox": [
+            107,
+            481,
+            517,
+            1430
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 24",
+          "bbox": [
+            -8,
+            168,
+            957,
+            1682
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 28",
+          "bbox": [
+            587,
+            970,
+            891,
+            1428
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 28",
+        "url": "/images/boston-plate-candidates/51f8985a2c5aa211bc22811f465e9da8779691c12d259fba65b525b4781d6cfd-cap-layer-3.png",
+        "bbox": [
+          588,
+          973,
+          886,
+          1423
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn1ozMtlRollonMattBlk",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/3. GBBstn1ozMtlRollonMattBlk.psd",
+      "sourceSha256": "00efbd7959243e374eddad62ff3ae498ec81b9e7fdbc68a503d3372d053d386c",
+      "url": "/images/boston-source-recovery/00efbd7959243e374eddad62ff3ae498ec81b9e7fdbc68a503d3372d053d386c.png",
+      "sha256": "5cf2202712bbc00a15464581dfda497ea69b0f6d16387072757be667ff9118b0",
+      "width": 975,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            975,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 22",
+          "bbox": [
+            107,
+            481,
+            517,
+            1430
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 24",
+          "bbox": [
+            -8,
+            168,
+            957,
+            1682
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 28",
+          "bbox": [
+            587,
+            990,
+            882,
+            1459
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 28",
+        "url": "/images/boston-plate-candidates/00efbd7959243e374eddad62ff3ae498ec81b9e7fdbc68a503d3372d053d386c-cap-layer-3.png",
+        "bbox": [
+          590,
+          991,
+          880,
+          1457
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn1ozMtlRollonMattGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/5. GBBstn1ozMtlRollonMattGl.psd",
+      "sourceSha256": "da38bf72029a20576644800533a8f789ccb037117b9dd7da52fefdc3c3350944",
+      "url": "/images/boston-source-recovery/da38bf72029a20576644800533a8f789ccb037117b9dd7da52fefdc3c3350944.png",
+      "sha256": "7759a58e4f2f60b5d6b5431a80c136d50b91ed7d8247c935b4b1a57b4f50905e",
+      "width": 975,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            975,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 22",
+          "bbox": [
+            107,
+            481,
+            517,
+            1430
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 24",
+          "bbox": [
+            -8,
+            168,
+            957,
+            1682
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 29",
+          "bbox": [
+            585,
+            968,
+            895,
+            1428
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 29",
+        "url": "/images/boston-plate-candidates/da38bf72029a20576644800533a8f789ccb037117b9dd7da52fefdc3c3350944-cap-layer-3.png",
+        "bbox": [
+          588,
+          973,
+          885,
+          1420
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn1ozMtlRollonMattSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/1. GBBstn1ozMtlRollonMattSl.psd",
+      "sourceSha256": "68cad12d8746fde491802bb3ef6dfa165a29106028e223dcb64ff8caf3ce3f1b",
+      "url": "/images/boston-source-recovery/68cad12d8746fde491802bb3ef6dfa165a29106028e223dcb64ff8caf3ce3f1b.png",
+      "sha256": "0f7b8d3109a03080e2520ffcc7d92eef8767eec8807484108e00c0871f12c5f7",
+      "width": 975,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            975,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 22",
+          "bbox": [
+            107,
+            481,
+            517,
+            1430
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 24",
+          "bbox": [
+            -8,
+            168,
+            957,
+            1682
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 25",
+          "bbox": [
+            585,
+            995,
+            879,
+            1427
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 25",
+        "url": "/images/boston-plate-candidates/68cad12d8746fde491802bb3ef6dfa165a29106028e223dcb64ff8caf3ce3f1b-cap-layer-3.png",
+        "bbox": [
+          593,
+          1002,
+          878,
+          1421
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozRollonMattGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/10. GBBstn2ozRollonMattGl.psd",
+      "sourceSha256": "ee72d6bb7a9b7c08b80fbfd20d1e39546acc45e75ad9adcecc6fa533aaa693ff",
+      "url": "/images/boston-source-recovery/ee72d6bb7a9b7c08b80fbfd20d1e39546acc45e75ad9adcecc6fa533aaa693ff.png",
+      "sha256": "51c16e1d50dc00355f74c3aa518695dc9b7ea7c8b19e9c5f4ea7e6655f458c1f",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 11",
+          "bbox": [
+            71,
+            132,
+            546,
+            1447
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 8",
+          "bbox": [
+            585,
+            988,
+            895,
+            1448
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 2,
+        "name": "Layer 8",
+        "url": "/images/boston-plate-candidates/ee72d6bb7a9b7c08b80fbfd20d1e39546acc45e75ad9adcecc6fa533aaa693ff-cap-layer-2.png",
+        "bbox": [
+          588,
+          993,
+          885,
+          1440
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb1ozMtlRollonGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/4. GBBstnAmb1ozMtlRollonGl.psd",
+      "sourceSha256": "c1766b2476d8147bc959f3f049f60c8b8e2d40861f58278b02479710fa7928ba",
+      "url": "/images/boston-source-recovery/c1766b2476d8147bc959f3f049f60c8b8e2d40861f58278b02479710fa7928ba.png",
+      "sha256": "1a897fa930caba73ce1258c62c3ba6998aa5eaa623ff99fa488e2cbfb7002463",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 7",
+          "bbox": [
+            162,
+            315,
+            408,
+            529
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 5",
+          "bbox": [
+            10,
+            290,
+            822,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 10",
+          "bbox": [
+            587,
+            1012,
+            891,
+            1448
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 10",
+        "url": "/images/boston-plate-candidates/c1766b2476d8147bc959f3f049f60c8b8e2d40861f58278b02479710fa7928ba-cap-layer-3.png",
+        "bbox": [
+          588,
+          1015,
+          886,
+          1443
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb1ozMtlRollonShnSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/2. GBBstnAmb1ozMtlRollonShnSl.psd",
+      "sourceSha256": "dd8021f8f07ba8b9e9e5fdfdab2eef0127c3ac6fc91c053b0326d6b4de869396",
+      "url": "/images/boston-source-recovery/dd8021f8f07ba8b9e9e5fdfdab2eef0127c3ac6fc91c053b0326d6b4de869396.png",
+      "sha256": "86d210a578214a91d655492c7ceb3f638c8ab5abb99402f96715b09513db1ef3",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 7",
+          "bbox": [
+            162,
+            315,
+            408,
+            529
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 5",
+          "bbox": [
+            10,
+            290,
+            822,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 8",
+          "bbox": [
+            585,
+            1012,
+            885,
+            1449
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 8",
+        "url": "/images/boston-plate-candidates/dd8021f8f07ba8b9e9e5fdfdab2eef0127c3ac6fc91c053b0326d6b4de869396-cap-layer-3.png",
+        "bbox": [
+          592,
+          1020,
+          878,
+          1442
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb2ozMtlRollonMattSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/1. Amber Bottle (2 ounce:60 ml)/Amber - Alternating Caps/1. GBBstnAmb2ozMtlRollonMattSl.psd",
+      "sourceSha256": "3ec1cedc5b955923e987f024d1afe4c516d29571d997dcf77713d6efb1dbced3",
+      "url": "/images/boston-source-recovery/3ec1cedc5b955923e987f024d1afe4c516d29571d997dcf77713d6efb1dbced3.png",
+      "sha256": "fee2ddcbd29f3a61446ac448bb227f98142401769a4268671fff41a27e3a0ce6",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 3",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 4",
+          "bbox": [
+            585,
+            1015,
+            879,
+            1447
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 2,
+        "name": "Layer 4",
+        "url": "/images/boston-plate-candidates/3ec1cedc5b955923e987f024d1afe4c516d29571d997dcf77713d6efb1dbced3-cap-layer-2.png",
+        "bbox": [
+          593,
+          1022,
+          878,
+          1441
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb2ozMtlRollonShnSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/1. Amber Bottle (2 ounce:60 ml)/Amber - Alternating Caps/2. GBBstnAmb2ozMtlRollonShnSl.psd",
+      "sourceSha256": "4b2c6b94fb7d6a5e840df94e8a89a5b1cf6138816092a8da684962e4a6ac843b",
+      "url": "/images/boston-source-recovery/4b2c6b94fb7d6a5e840df94e8a89a5b1cf6138816092a8da684962e4a6ac843b.png",
+      "sha256": "1afce90e21b7a374c52d2330cae3661b7da682907890a6bc5057987b428d5086",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 3",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 5",
+          "bbox": [
+            585,
+            1012,
+            885,
+            1449
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 2,
+        "name": "Layer 5",
+        "url": "/images/boston-plate-candidates/4b2c6b94fb7d6a5e840df94e8a89a5b1cf6138816092a8da684962e4a6ac843b-cap-layer-2.png",
+        "bbox": [
+          592,
+          1020,
+          878,
+          1442
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb2ozRollonGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/1. Amber Bottle (2 ounce:60 ml)/Amber - Alternating Caps/9. GBBstnAmb2ozRollonGl.psd",
+      "sourceSha256": "8c01ae4bc476080341c46882577715bc71392a16c96265331b8dbb2bd2b328cf",
+      "url": "/images/boston-source-recovery/8c01ae4bc476080341c46882577715bc71392a16c96265331b8dbb2bd2b328cf.png",
+      "sha256": "c6223901c11597a15d7ce9621c26af4b6e6dfba020ad0ceb37df7ea84b1fb3a7",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 3",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 7",
+          "bbox": [
+            587,
+            990,
+            891,
+            1448
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 8",
+          "bbox": [
+            202,
+            144,
+            415,
+            315
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 2,
+        "name": "Layer 7",
+        "url": "/images/boston-plate-candidates/8c01ae4bc476080341c46882577715bc71392a16c96265331b8dbb2bd2b328cf-cap-layer-2.png",
+        "bbox": [
+          588,
+          993,
+          886,
+          1443
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb2ozRollonMattBlk",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/1. Amber Bottle (2 ounce:60 ml)/Amber - Alternating Caps/8. GBBstnAmb2ozRollonMattBlk.psd",
+      "sourceSha256": "ac1fe1f617c8addd50bcf5a3cf12202b529530b233dbcb36d47455b953dd552b",
+      "url": "/images/boston-source-recovery/ac1fe1f617c8addd50bcf5a3cf12202b529530b233dbcb36d47455b953dd552b.png",
+      "sha256": "bf39c2f6ed60ccd0d9694919441c258e5ee46698f8b42ebc83ec07a1f28af000",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 3",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 7",
+          "bbox": [
+            202,
+            144,
+            415,
+            315
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 8",
+          "bbox": [
+            589,
+            990,
+            883,
+            1459
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 8",
+        "url": "/images/boston-plate-candidates/ac1fe1f617c8addd50bcf5a3cf12202b529530b233dbcb36d47455b953dd552b-cap-layer-3.png",
+        "bbox": [
+          592,
+          991,
+          882,
+          1457
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnAmb2ozRollonShnBlk",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/1. Amber Bottle (2 ounce:60 ml)/Amber - Alternating Caps/19. GBBstnAmb2ozRollonShnBlk.psd",
+      "sourceSha256": "fc58e9a791261404c3b62e3075e696dfb65745d796a2061df353262e71b90342",
+      "url": "/images/boston-source-recovery/fc58e9a791261404c3b62e3075e696dfb65745d796a2061df353262e71b90342.png",
+      "sha256": "ccc26ba19752584063a5d808f09088208196873811b5249c2d415c7a2c2faf14",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 3",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 7",
+          "bbox": [
+            202,
+            144,
+            415,
+            315
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 8",
+          "bbox": [
+            536,
+            991,
+            900,
+            1500
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 8",
+        "url": "/images/boston-plate-candidates/fc58e9a791261404c3b62e3075e696dfb65745d796a2061df353262e71b90342-cap-layer-3.png",
+        "bbox": [
+          589,
+          992,
+          882,
+          1458
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /4. GBBstnBlu1ozMtlRollonGl.psd",
+      "sourceSha256": "9360d1b0a73ff8a72d9ebcd6635d49d657f7b04e4aa574e5e1fccd71576d8e69",
+      "url": "/images/boston-source-recovery/9360d1b0a73ff8a72d9ebcd6635d49d657f7b04e4aa574e5e1fccd71576d8e69.png",
+      "sha256": "18e9c6e681a83368da0c03f261ee4e17fa7cf43c1efca44c0eaca85ccc71e02c",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 7",
+          "bbox": [
+            162,
+            315,
+            408,
+            529
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 5",
+          "bbox": [
+            10,
+            290,
+            822,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 10",
+          "bbox": [
+            587,
+            1012,
+            891,
+            1448
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 10",
+        "url": "/images/boston-plate-candidates/9360d1b0a73ff8a72d9ebcd6635d49d657f7b04e4aa574e5e1fccd71576d8e69-cap-layer-3.png",
+        "bbox": [
+          588,
+          1015,
+          886,
+          1443
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonMattSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /1. GBBstnBlu1ozMtlRollonMattSl.psd",
+      "sourceSha256": "8b475266fa376fbba52fac131e501a66908311d9344c419eea50b8bb1dcb3218",
+      "url": "/images/boston-source-recovery/8b475266fa376fbba52fac131e501a66908311d9344c419eea50b8bb1dcb3218.png",
+      "sha256": "df69adf409414c0b2179ce457f8b7763288131a1299324d1cfa00f45c0475a9b",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 7",
+          "bbox": [
+            162,
+            315,
+            408,
+            529
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 5",
+          "bbox": [
+            10,
+            290,
+            822,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 4",
+          "bbox": [
+            585,
+            1015,
+            879,
+            1447
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 4",
+        "url": "/images/boston-plate-candidates/8b475266fa376fbba52fac131e501a66908311d9344c419eea50b8bb1dcb3218-cap-layer-3.png",
+        "bbox": [
+          593,
+          1022,
+          878,
+          1441
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnBlu1ozMtlRollonShnSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /2. GBBstnBlu1ozMtlRollonShnSl.psd",
+      "sourceSha256": "404d71ac40a4c7999cb12cf241cb3b65f3e31eef1f8ecb27fefcbfec29f417ad",
+      "url": "/images/boston-source-recovery/404d71ac40a4c7999cb12cf241cb3b65f3e31eef1f8ecb27fefcbfec29f417ad.png",
+      "sha256": "39e815f20f0415080ff6527299e4ae17735e197ea9ed9c33c226a6aaecf188b5",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 7",
+          "bbox": [
+            162,
+            315,
+            408,
+            529
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 5",
+          "bbox": [
+            10,
+            290,
+            822,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 8",
+          "bbox": [
+            585,
+            1012,
+            885,
+            1449
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 8",
+        "url": "/images/boston-plate-candidates/404d71ac40a4c7999cb12cf241cb3b65f3e31eef1f8ecb27fefcbfec29f417ad-cap-layer-3.png",
+        "bbox": [
+          592,
+          1020,
+          878,
+          1442
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonMattBlk",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /8. GBBstnBlu1ozRollonMattBlk.psd",
+      "sourceSha256": "8623a537f48dce370a1f93573f92e3d17c35b3bbeef8122e82f0d38068daccb2",
+      "url": "/images/boston-source-recovery/8623a537f48dce370a1f93573f92e3d17c35b3bbeef8122e82f0d38068daccb2.png",
+      "sha256": "45fca7544dabdf61c99bed4fa756784c59a3b49872465ca5ce1da6d0f59acc1a",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 14",
+          "bbox": [
+            169,
+            353,
+            382,
+            524
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 5",
+          "bbox": [
+            10,
+            290,
+            822,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 17",
+          "bbox": [
+            559,
+            990,
+            853,
+            1459
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 17",
+        "url": "/images/boston-plate-candidates/8623a537f48dce370a1f93573f92e3d17c35b3bbeef8122e82f0d38068daccb2-cap-layer-3.png",
+        "bbox": [
+          562,
+          991,
+          852,
+          1457
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonMattGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /10. GBBstnBlu1ozRollonMattGl.psd",
+      "sourceSha256": "135cfb2ee02419bf398575a60abd30cc44942b973e4a63f3a231e25550a0416c",
+      "url": "/images/boston-source-recovery/135cfb2ee02419bf398575a60abd30cc44942b973e4a63f3a231e25550a0416c.png",
+      "sha256": "c18d4dfdc8c5cfeef6c90792f60940efa4348f63d9cb89ea0e80453621443785",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 14",
+          "bbox": [
+            169,
+            353,
+            382,
+            524
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 5",
+          "bbox": [
+            10,
+            290,
+            822,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 18",
+          "bbox": [
+            585,
+            1001,
+            895,
+            1438
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 18",
+        "url": "/images/boston-plate-candidates/135cfb2ee02419bf398575a60abd30cc44942b973e4a63f3a231e25550a0416c-cap-layer-3.png",
+        "bbox": [
+          588,
+          1006,
+          885,
+          1431
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstnBlu1ozRollonMattSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /6. GBBstnBlu1ozRollonMattSl.psd",
+      "sourceSha256": "a2ecb52e252593a072ef4ae60cbf711aa8542f4fc355c89591da502f6f2bf668",
+      "url": "/images/boston-source-recovery/a2ecb52e252593a072ef4ae60cbf711aa8542f4fc355c89591da502f6f2bf668.png",
+      "sha256": "2571c421f052ca70e08a12474ea3d70717385a530ddc88b0b92f4e3467fae4cf",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            945,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 14",
+          "bbox": [
+            169,
+            353,
+            382,
+            524
+          ],
+          "visible": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 5",
+          "bbox": [
+            10,
+            290,
+            822,
+            1500
+          ],
+          "visible": true
+        },
+        {
+          "index": 3,
+          "name": "Layer 13",
+          "bbox": [
+            583,
+            999,
+            877,
+            1440
+          ],
+          "visible": true
+        }
+      ]
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 13",
+        "url": "/images/boston-plate-candidates/a2ecb52e252593a072ef4ae60cbf711aa8542f4fc355c89591da502f6f2bf668-cap-layer-3.png",
+        "bbox": [
+          591,
+          1006,
+          876,
+          1434
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn1ozRollonMattBlk",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/8. GBBstn1ozRollMattBlk.psd",
+      "sourceSha256": "70f99c21a8fe157504a27b05350fb56b9be1267dba4041da2be7e788ad64fd9b",
+      "url": "/images/boston-source-recovery/70f99c21a8fe157504a27b05350fb56b9be1267dba4041da2be7e788ad64fd9b.png",
+      "sha256": "528d220a581c272172b4c1f5a4a88fe12264c882662f94682a9ad6f96d6e2447",
+      "width": 975,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 22",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 24",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 33",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 34",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 4,
+        "name": "Layer 34",
+        "url": "/images/boston-plate-candidates/70f99c21a8fe157504a27b05350fb56b9be1267dba4041da2be7e788ad64fd9b-cap-layer-4.png",
+        "bbox": [
+          592,
+          971,
+          882,
+          1437
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn1ozRollonMattGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/10. GBBstn1ozRollMattGl.psd",
+      "sourceSha256": "0c38b55299f839b238870433cae90771f22bc7823170292d2beb6f11a98f2983",
+      "url": "/images/boston-source-recovery/0c38b55299f839b238870433cae90771f22bc7823170292d2beb6f11a98f2983.png",
+      "sha256": "f97a063bcec9c7fe9065498d9d0799680268bccd7e26f608d54093b43f6c669b",
+      "width": 975,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 22",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 33",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 35",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 35",
+        "url": "/images/boston-plate-candidates/0c38b55299f839b238870433cae90771f22bc7823170292d2beb6f11a98f2983-cap-layer-3.png",
+        "bbox": [
+          588,
+          973,
+          885,
+          1420
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn1ozRollonMattSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/6. GBBstn1ozRollMattSl.psd",
+      "sourceSha256": "d04041cb7ef135350995b4773640f516f42224dd93d02c307f6c609cf6a76609",
+      "url": "/images/boston-source-recovery/d04041cb7ef135350995b4773640f516f42224dd93d02c307f6c609cf6a76609.png",
+      "sha256": "b63fc411e8d909be926c991ce3b9e42a479616a7b8ccc9383bdea778199b9bb7",
+      "width": 975,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 22",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 30",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 31",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 2,
+        "name": "Layer 30",
+        "url": "/images/boston-plate-candidates/d04041cb7ef135350995b4773640f516f42224dd93d02c307f6c609cf6a76609-cap-layer-2.png",
+        "bbox": [
+          585,
+          975,
+          887,
+          1419
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn1ozRollonShBlk",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/19. GBBstn1ozRollShBlk.psd",
+      "sourceSha256": "8f9a1f4c9260ef8720f0ed2525f2148f7f63ee757a747052497974b0df211ad8",
+      "url": "/images/boston-source-recovery/8f9a1f4c9260ef8720f0ed2525f2148f7f63ee757a747052497974b0df211ad8.png",
+      "sha256": "0b839dd4cc7468f3c8a2bf3292c93330eb832ddbbb7ffac19d448a7f5bcad7e1",
+      "width": 975,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 22",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 24",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 33",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 34",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 4,
+        "name": "Layer 34",
+        "url": "/images/boston-plate-candidates/8f9a1f4c9260ef8720f0ed2525f2148f7f63ee757a747052497974b0df211ad8-cap-layer-4.png",
+        "bbox": [
+          589,
+          992,
+          882,
+          1458
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn1ozRollonShGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/9. GBBstn1ozRollShGl.psd",
+      "sourceSha256": "85d4f6c65b67ba4311242b169919e3eea51922c25284b9c07beaeadbe90e313c",
+      "url": "/images/boston-source-recovery/85d4f6c65b67ba4311242b169919e3eea51922c25284b9c07beaeadbe90e313c.png",
+      "sha256": "b69ebf68c2cabd567469ca0cd5e832c0b82a5f83980cf8c4fbadff3bd4ef0b5f",
+      "width": 975,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 22",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 33",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 34",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 34",
+        "url": "/images/boston-plate-candidates/85d4f6c65b67ba4311242b169919e3eea51922c25284b9c07beaeadbe90e313c-cap-layer-3.png",
+        "bbox": [
+          584,
+          973,
+          882,
+          1423
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn1ozRollonShnSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/7. GBBstn1ozRollShnSl.psd",
+      "sourceSha256": "76c3bddf15a2ac16a079797f454fd8f536cc3f7b78d9c02bc4627f1d7b6a2be0",
+      "url": "/images/boston-source-recovery/76c3bddf15a2ac16a079797f454fd8f536cc3f7b78d9c02bc4627f1d7b6a2be0.png",
+      "sha256": "82a2eaae3dedb17f04bdfd942e916a7c0f676671d29d537c09121887b4f178fa",
+      "width": 975,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 22",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 32",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 31",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 31",
+        "url": "/images/boston-plate-candidates/76c3bddf15a2ac16a079797f454fd8f536cc3f7b78d9c02bc4627f1d7b6a2be0-cap-layer-3.png",
+        "bbox": [
+          584,
+          976,
+          885,
+          1420
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozMtlRollBlk",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/18. GBBstn2ozMtlRollonBlk.psd",
+      "sourceSha256": "b2150b0eadc39995dbe4d3ba5606976d36908e163f7ad74053b2a38c8b17cc8f",
+      "url": "/images/boston-source-recovery/b2150b0eadc39995dbe4d3ba5606976d36908e163f7ad74053b2a38c8b17cc8f.png",
+      "sha256": "85f49e0f56ec7f6026d100612f2b7e4f46b5c9ce49c091aa1419ceee8d35054d",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 10",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 8",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 9",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 1,
+        "name": "Layer 10",
+        "url": "/images/boston-plate-candidates/b2150b0eadc39995dbe4d3ba5606976d36908e163f7ad74053b2a38c8b17cc8f-cap-layer-1.png",
+        "bbox": [
+          589,
+          992,
+          882,
+          1458
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozMtlRollGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/4. GBBstn2ozMtlRollonGl.psd",
+      "sourceSha256": "4878aa8d20f13486e737300a96827b84aea0c0fbd802403237b6e733a64494d2",
+      "url": "/images/boston-source-recovery/4878aa8d20f13486e737300a96827b84aea0c0fbd802403237b6e733a64494d2.png",
+      "sha256": "3e1e6d3f095ca34195f93bd96d98558784f6bdd9200abc425d936ba90126465c",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 7",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 9",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 10",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "url": "/images/boston-plate-candidates/4878aa8d20f13486e737300a96827b84aea0c0fbd802403237b6e733a64494d2-cap-layer-1.png",
+        "bbox": [
+          588,
+          993,
+          886,
+          1443
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattBlk",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/3. GBBstn2ozMtlRollonMattBlk.psd",
+      "sourceSha256": "4ed4fa6ab8c9829d57aa2412e9ff0641ab872955aca60a6ce65ea22942f42466",
+      "url": "/images/boston-source-recovery/4ed4fa6ab8c9829d57aa2412e9ff0641ab872955aca60a6ce65ea22942f42466.png",
+      "sha256": "3fb051353540a88cb94d6ea8ee65707771f10c3f63992894ddf51ee9048ad6fc",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 10",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 8",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 9",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 1,
+        "name": "Layer 10",
+        "url": "/images/boston-plate-candidates/4ed4fa6ab8c9829d57aa2412e9ff0641ab872955aca60a6ce65ea22942f42466-cap-layer-1.png",
+        "bbox": [
+          592,
+          991,
+          882,
+          1457
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/5. GBBstn2ozMtlRollonMattGl.psd",
+      "sourceSha256": "76b57bab827964b60603513744504f8fdf7e9a3ba4b430ecd6da022f651a9e37",
+      "url": "/images/boston-source-recovery/76b57bab827964b60603513744504f8fdf7e9a3ba4b430ecd6da022f651a9e37.png",
+      "sha256": "3edb3ed8b54e7e687ab1735f391ad0d48a80ccfa0f77916d21479a27d2694bea",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 9",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 10",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 11",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 1,
+        "name": "Layer 9",
+        "url": "/images/boston-plate-candidates/76b57bab827964b60603513744504f8fdf7e9a3ba4b430ecd6da022f651a9e37-cap-layer-1.png",
+        "bbox": [
+          588,
+          993,
+          885,
+          1440
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozMtlRollMattSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/1. GBBstn2ozMtlRollonMattSl.psd",
+      "sourceSha256": "3932d283dd5584d76a9629708d809610e6a568c49698326e9ee4745ad2ed4390",
+      "url": "/images/boston-source-recovery/3932d283dd5584d76a9629708d809610e6a568c49698326e9ee4745ad2ed4390.png",
+      "sha256": "c676531dc26844eb307f5189917d90e4d5e2dc600e792038eb7a2d2f5e1ca99b",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 7",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 6",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 4",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 3,
+        "name": "Layer 4",
+        "url": "/images/boston-plate-candidates/3932d283dd5584d76a9629708d809610e6a568c49698326e9ee4745ad2ed4390-cap-layer-3.png",
+        "bbox": [
+          593,
+          1022,
+          878,
+          1441
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozMtlRollShnSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/2. GBBstn2ozMtlRollonShnSl.psd",
+      "sourceSha256": "0fe53bae2ba87e6fb4efd579d3f64978a122adeaf090842b3607760fba4c7cd5",
+      "url": "/images/boston-source-recovery/0fe53bae2ba87e6fb4efd579d3f64978a122adeaf090842b3607760fba4c7cd5.png",
+      "sha256": "7186fea519daeee290b170a1240fc1139236050eca72452b4dd2a08190411250",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 5",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 7",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 8",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 1,
+        "name": "Layer 5",
+        "url": "/images/boston-plate-candidates/0fe53bae2ba87e6fb4efd579d3f64978a122adeaf090842b3607760fba4c7cd5-cap-layer-1.png",
+        "bbox": [
+          592,
+          1020,
+          878,
+          1442
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozRollGl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/9. GBBstn2ozRollonGl.psd",
+      "sourceSha256": "a00a82162a97ee5a044bb0786f3faa9810dd7e7c221b6d6be8d193137f2cc3a2",
+      "url": "/images/boston-source-recovery/a00a82162a97ee5a044bb0786f3faa9810dd7e7c221b6d6be8d193137f2cc3a2.png",
+      "sha256": "5efe766a21990d1bae3fb8bc50118d633d4e8da6a379cb8a5a6a6d39fbd29dc5",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 7",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 10",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "url": "/images/boston-plate-candidates/a00a82162a97ee5a044bb0786f3faa9810dd7e7c221b6d6be8d193137f2cc3a2-cap-layer-1.png",
+        "bbox": [
+          588,
+          993,
+          886,
+          1443
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozRollMattBlk",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/8. GBBstn2ozRollonMattBlk.psd",
+      "sourceSha256": "6205324cc385e1559c6267bf7b8ed31de97c298392119c886497ad37adf75086",
+      "url": "/images/boston-source-recovery/6205324cc385e1559c6267bf7b8ed31de97c298392119c886497ad37adf75086.png",
+      "sha256": "29978af2103af732807729c7a3d51d46bc6d850d21925d1fb3c2bb70a952fa4a",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 10",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 9",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 1,
+        "name": "Layer 10",
+        "url": "/images/boston-plate-candidates/6205324cc385e1559c6267bf7b8ed31de97c298392119c886497ad37adf75086-cap-layer-1.png",
+        "bbox": [
+          592,
+          991,
+          882,
+          1457
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozRollMattSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/6. GBBstn2ozRollonMattSl.psd",
+      "sourceSha256": "727ba572245143b3f334c09bda1a4f0a480dfda48028a8a71a6ed72e4632d0f3",
+      "url": "/images/boston-source-recovery/727ba572245143b3f334c09bda1a4f0a480dfda48028a8a71a6ed72e4632d0f3.png",
+      "sha256": "fc6b1a33f3aa2cf12e210ecc712d53989c1bdd83727e83806a84fc0947bd9281",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 6",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 4",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 2,
+        "name": "Layer 4",
+        "url": "/images/boston-plate-candidates/727ba572245143b3f334c09bda1a4f0a480dfda48028a8a71a6ed72e4632d0f3-cap-layer-2.png",
+        "bbox": [
+          593,
+          1022,
+          878,
+          1441
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozRollShnBlk",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/18. GBBstn2ozRollonShnBlk.psd",
+      "sourceSha256": "70b4519b800955ff0ba04e594ff43a4ca696ac12604c7aa512672d9abf66c8e5",
+      "url": "/images/boston-source-recovery/70b4519b800955ff0ba04e594ff43a4ca696ac12604c7aa512672d9abf66c8e5.png",
+      "sha256": "396ba1b139efd774908da59b8b0f611dbea5d907d40728212026c330f23d1f98",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 10",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 9",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 1,
+        "name": "Layer 10",
+        "url": "/images/boston-plate-candidates/70b4519b800955ff0ba04e594ff43a4ca696ac12604c7aa512672d9abf66c8e5-cap-layer-1.png",
+        "bbox": [
+          589,
+          992,
+          882,
+          1458
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  },
+  {
+    "sku": "GBBstn2ozRollShnSl",
+    "source": {
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/7. GBBstn2ozRollonShnSl.psd",
+      "sourceSha256": "19f16b857595fd5c77cd3c2ef4638ec0fcce011c3498f8473f446c0d76d89c5b",
+      "url": "/images/boston-source-recovery/19f16b857595fd5c77cd3c2ef4638ec0fcce011c3498f8473f446c0d76d89c5b.png",
+      "sha256": "c034ec4e09741a9d32dae5802757ca49d2c67554ddb3237b2e990797921f46cc",
+      "width": 945,
+      "height": 1500,
+      "layers": [
+        {
+          "name": "Background",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 5",
+          "visible": true,
+          "kind": "pixel"
+        },
+        {
+          "name": "Layer 8",
+          "visible": true,
+          "kind": "pixel"
+        }
+      ],
+      "method": "Original PSD merged preview; no resizing, layer changes or shadow edits.",
+      "view": "off"
+    },
+    "choices": [
+      {
+        "index": 1,
+        "name": "Layer 5",
+        "url": "/images/boston-plate-candidates/19f16b857595fd5c77cd3c2ef4638ec0fcce011c3498f8473f446c0d76d89c5b-cap-layer-1.png",
+        "bbox": [
+          592,
+          1020,
+          878,
+          1442
+        ],
+        "mode": "BlendMode.NORMAL"
+      }
+    ]
+  }
+]

@@ -6,19 +6,17 @@ A plate that exists is not a plate that is right. On 2026-09-12 Jordan saw the c
 clear one was correct and the other two were 27 % too big. The ledger counted all
 three as done. This script gives it the number to disagree with.
 
-The test is the builder's own ruler applied to the FINISHED plate: the glass body
-width — the widest run in the lower 60 % of the product — must be one number for
-one bottle, where a bottle is family + capacity + neck with the glass colours merged
-and the tall variants split out. Hanging closures (antique bulb, tassel, atomizer)
-widen that band and so never vote or get judged. Anything more than 5 % off its
-bottle's median is wrong-sized, and the expected width is recorded beside it.
+The ruler measures the widest run in the lower 60% of each finished image.
+This is a diagnostic, not visual approval. Cohorts use exact catalog group IDs
+until a reviewed physical-group crosswalk is available; no SKU parsing is used.
+Current served bytes are downloaded, hashed and measured on every run.
 
   python3 scripts/asset-ledger/measure-plates.py   (needs NEXT_PUBLIC_CONVEX_URL; reads .env.local)
 
 Writes src/lib/asset-ledger/plate-geometry.json for build.mjs. Plate images are cached
 in data/asset-ledger/plates-cache/ (gitignored); nothing is written anywhere else.
 """
-import json, os, re, sys, subprocess, urllib.request, collections
+import json, os, re, sys, subprocess, urllib.request, urllib.error, collections, hashlib, io
 import concurrent.futures as cf
 import numpy as np
 from PIL import Image
@@ -27,7 +25,7 @@ from scipy import ndimage
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 CACHE = os.path.join(ROOT, "data/asset-ledger/plates-cache"); os.makedirs(CACHE, exist_ok=True)
 OUT = os.path.join(ROOT, "src/lib/asset-ledger/plate-geometry.json")
-HANG = re.compile(r"AnSp|Tsl|Atom")
+HANG = {"Vintage Bulb Sprayer", "Vintage Bulb Sprayer with Tassel", "Atomizer"}
 NECK = re.compile(r"^(\d+-\d+|\d+mm|Press-Fit|Specialty)$", re.I)
 TOL = 0.05
 
@@ -47,11 +45,16 @@ const require = createRequire(process.cwd() + '/package.json');
 const { ConvexHttpClient } = require('convex/browser');
 const { api } = await import('./convex/_generated/api.js');
 const c = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL);
-const out = [];
+const out = []; const catalog = new Map();
+let productCursor = null;
+for (;;) { const page = await c.query(api.products.getAllForPlates, {limit:500,cursor:productCursor});
+  for(const p of page.page) { const key=p.websiteSku; catalog.set(key,catalog.has(key) ? null : p); }
+  if(page.isDone) break; productCursor=page.continueCursor;
+}
 for (const f of await c.query(api.productPlates.families, {})) {
   let cursor = null;
   for (;;) { const r = await c.query(api.productPlates.byFamily, { familyId: f.familyId, cursor, limit: 500 });
-    for (const p of r.page) out.push({ sku: p.websiteSku || p.sku, familyId: f.familyId, image: p.image, capOff: !!p.imageCapOff, source: p.sourcePath || '' });
+    for (const p of r.page) out.push({ sku: p.websiteSku || p.sku, familyId: f.familyId, image: p.image, capOff: !!p.imageCapOff, source: p.sourcePath || '', product: catalog.get(p.websiteSku || p.sku) || null });
     if (r.isDone) break; cursor = r.continueCursor; }
 }
 process.stdout.write(JSON.stringify(out));
@@ -62,21 +65,36 @@ process.stdout.write(JSON.stringify(out));
     return json.loads(r.stdout)
 
 def fetch(p):
-    dest = os.path.join(CACHE, p["sku"] + ".webp")
-    if os.path.exists(dest) and os.path.getsize(dest) > 0: return True
-    try: urllib.request.urlretrieve(p["image"], dest); return True
-    except Exception: return False
+    """Read current bytes every run. Content-addressed storage cannot reuse a stale SKU file."""
+    try:
+        for attempt in range(3):
+            try:
+                with urllib.request.urlopen(p["image"], timeout=45) as response: data = response.read()
+                break
+            except (OSError, urllib.error.URLError):
+                if attempt == 2: raise
+        digest = hashlib.sha256(data).hexdigest()
+        declared = re.search(r"([0-9a-f]{64})\.", p["image"])
+        if declared and declared.group(1) != digest: raise ValueError("served bytes do not match the URL hash")
+        with Image.open(io.BytesIO(data)) as im: im.verify()
+        dest = os.path.join(CACHE, digest + ".webp")
+        if not os.path.exists(dest) or hashlib.sha256(open(dest,"rb").read()).hexdigest() != digest:
+            temp = dest + ".tmp-" + str(__import__("threading").get_ident())
+            with open(temp, "wb") as out: out.write(data)
+            os.replace(temp, dest)
+        p["cachePath"], p["imageSha256"] = dest, digest
+        return True
+    except Exception as error:
+        p.pop("cachePath", None); p["fetchError"] = str(error)
+        return False
 
-def bottle_key(sku, fid):
-    parts = fid.split("-"); cap = next((i for i, s in enumerate(parts) if re.fullmatch(r"\d+ml", s)), None)
-    if cap is None: return None
-    if len(parts) >= 2 and NECK.match("-".join(parts[-2:])): neck = "-".join(parts[-2:])
-    elif NECK.match(parts[-1]): neck = parts[-1]
-    else: return None
-    return ("tall-" if sku.startswith("GBTall") else "") + "-".join(parts[:cap]) + "-" + parts[cap] + "-" + neck
+def bottle_key(sku, fid, product=None):
+    # Catalog group IDs conservatively keep physical profiles apart. Merging
+    # across applicators/colours requires a reviewed physical-group crosswalk.
+    return (product or {}).get("productGroupId")
 
 def measure(p):
-    try: a = np.array(Image.open(os.path.join(CACHE, p["sku"] + ".webp")).convert("RGB")).astype(float)
+    try: a = np.array(Image.open(p["cachePath"]).convert("RGB")).astype(float)
     except Exception: return None
     bg = np.median(np.concatenate([a[0], a[-1], a[:, 0], a[:, -1]]), axis=0)      # the plate's own background
     d = np.abs(a - bg).max(axis=2)
@@ -87,9 +105,9 @@ def measure(p):
     if not len(ys): return None
     y0, y1 = int(ys.min()), int(ys.max())
     cols = np.where(m[y0 + int(0.4 * (y1 - y0)):y1 + 1].any(axis=0))[0]
-    return dict(sku=p["sku"], familyId=p["familyId"], bottle=bottle_key(p["sku"], p["familyId"]),
+    return dict(sku=p["sku"], familyId=p["familyId"], bottle=bottle_key(p["sku"], p["familyId"], p.get("product")), imageUrl=p["image"], imageSha256=p["imageSha256"], bytesVerified=True, sourcePath=p["source"],
                 bodyWidth=int(cols.max() - cols.min() + 1), height=int(y1 - y0 + 1), foot=y1,
-                hanging=bool(HANG.search(p["sku"])), legacySource=p["source"].startswith("http"), capOff=p["capOff"])
+                hanging=(p.get("product") or {}).get("applicator") in HANG, legacySource=p["source"].startswith("http"), capOff=p["capOff"])
 
 def main():
     plates = list_plates()
@@ -105,11 +123,12 @@ def main():
         r["expectedWidth"] = round(med) if med else None
         r["sizeDeviation"] = round(r["bodyWidth"] / med - 1, 3) if med else None
         r["wrongSize"] = bool(med and abs(r["bodyWidth"] / med - 1) > TOL)
-    summary = dict(plates=len(rows), bottlesWithTwoOrMore=len(medians), wrongSize=sum(r["wrongSize"] for r in rows),
+    summary = dict(plates=len(rows), fetchFailures=len(plates)-got, measurementFailures=got-len(rows), bottlesWithTwoOrMore=len(medians), wrongSize=sum(r["wrongSize"] for r in rows),
                    legacySource=sum(r["legacySource"] for r in rows), tolerance=TOL)
     json.dump(dict(generatedAt=__import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(timespec="seconds"),
-                   rule="glass body width (widest run in the lower 60% of the product) must match the bottle's median; bottle = family+capacity+neck, colours merged, tall split; hanging closures excluded",
+                   schemaVersion=2, rule="Diagnostic width within the exact catalog product group; authoritative applicator fields exclude hanging closures. No identity inferred from SKU. Physical group and visual approval still required.", failures=[dict(sku=p["sku"],imageUrl=p["image"],reason=p.get("fetchError","measurement failed")) for p in plates if p["sku"] not in {r["sku"] for r in rows}],
                    summary=summary, plates={r["sku"]: r for r in rows}), open(OUT, "w"), indent=1)
     print(json.dumps(summary))
+    if len(rows) != len(plates): sys.exit("Measurement incomplete; ledger refresh stopped. See plate-geometry.json failures.")
 
 if __name__ == "__main__": main()

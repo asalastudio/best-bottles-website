@@ -20,7 +20,7 @@ export type LedgerRow = {
     applicator?: string | null;
     productRecord: boolean;
     hero: { state: string; generation?: string; url?: string; sha256?: string | null; lock?: string; why?: string; review?: ReviewDecision; collections?: number };
-    plate: { state: string; familyId?: string; sha256?: string | null; hold?: string; reason?: string; issues?: string[]; capOff?: boolean; bodyWidth?: number; expectedWidth?: number | null; sizeDeviation?: number | null; legacySource?: boolean };
+    plate: { state: string; familyId?: string; sha256?: string | null; hold?: string; reason?: string; issues?: string[]; capOff?: boolean; bodyWidth?: number; expectedWidth?: number | null; sizeDeviation?: number | null; legacySource?: boolean; acquisitionCandidate?: {status:string;candidate?:{url:string;sha256:string;bytes:number;width:number;height:number};source?:{path:string;sha256:string;library:string;stateEvidence?:string};holdReasons?:string[]}|null };
     kit: { state: string; completeness?: string; parts?: number; reason?: string; review?: ReviewDecision; issues?: string[] };
 };
 
@@ -62,7 +62,7 @@ export type Ledger = {
 /** The states that count as "done" for the storefront: the asset is served today. */
 export const DONE: Record<Kind, string[]> = {
     hero: ["indexed"],
-    plate: ["plated", "plated-no-capoff-by-design"],
+    plate: ["plated", "plated-no-capoff-by-design", "plated-approved-legacy-source"],
     kit: ["live"],
 };
 

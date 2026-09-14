@@ -1,0 +1,20 @@
+{
+  "initial": {
+    "pilotBanner": true,
+    "pilotImages": 5,
+    "finishOptions": [
+      "Matte Black",
+      "Matte Gold",
+      "Matte Silver",
+      "Shiny Silver",
+      "Shiny Black",
+      "Gold"
+    ]
+  },
+  "switched": {
+    "url": "http://localhost:3040/products/boston-round-30ml-amber-20-400-rollon?sku=GB-BSR-AMB-30ML-MRL-MSLV&assetPreview=boston",
+    "pilotImages": 5
+  },
+  "errors": [],
+  "http": 200
+}

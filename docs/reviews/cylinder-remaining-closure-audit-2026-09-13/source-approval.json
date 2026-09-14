@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "approvedBy": "Jordan Richter",
+  "recordedAt": "2026-09-13T07:51:59.601989+00:00",
+  "decision": "approved",
+  "scope": "Cylinder remaining-closure source audit and six recovered sprayer source pairs shown on the audit sheet",
+  "userStatement": "Perfect. Everything looks good to me. Let's log it in Maestro",
+  "reviewUrl": "http://localhost:3040/reviews/cylinder-remaining-closure-audit-2026-09-13/index.html",
+  "reviewHtmlSha256": "5a42681dcb166bc5b72794a59c5de07c1334d8b1dec72269ea8c8bdf63eb6be6",
+  "auditSha256": "7f4f30303c1146bdde798b82c7a5a1f3c3c48df6e48bc9300636b64b2923d032",
+  "sourcePairManifestSha256": "99493ed0958a0a4269dc84032982eaa04572a6e8ddd81f55386abbd59c7722a8",
+  "views": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "view": "on",
+      "masterPath": "17. Additional Bottles/GBSpry3mlClBlk..psd",
+      "masterSha256": "4010a54843424f947432363420d864fe520fe259c682e93950a214d660f02445",
+      "preview": "sources/4010a54843424f947432363420d864fe520fe259c682e93950a214d660f02445.png",
+      "previewSha256": "0beaa8856d3202081ee64191f6277677784691a56abe2a6799eabadac7ba6e48"
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "view": "off",
+      "masterPath": "17. Additional Bottles/GBSpry3mlClBlk.psd",
+      "masterSha256": "f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06",
+      "preview": "sources/f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06.png",
+      "previewSha256": "213553d5bfbf57ee21042ae1d0d95bae4955d9a91b72a7ea75acc35eaa4722fb"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "view": "on",
+      "masterPath": "17. Additional Bottles/GBSpry3mlClWht..psd",
+      "masterSha256": "1c3b17e52c49f6b7a9c6801a30f9fe76030ec3737f72a2df7b2e614cb2c75859",
+      "preview": "sources/1c3b17e52c49f6b7a9c6801a30f9fe76030ec3737f72a2df7b2e614cb2c75859.png",
+      "previewSha256": "3136855535d0f6709fc4ebee48780236a19dc3a0f3bd2dec5dc777655bf920de"
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "view": "off",
+      "masterPath": "17. Additional Bottles/GBSpry3mlClWht.psd",
+      "masterSha256": "190a4afd95a58b2efe546acd1450de3f40cf9a21c66a0d5949a7b0d3508fb4d4",
+      "preview": "sources/190a4afd95a58b2efe546acd1450de3f40cf9a21c66a0d5949a7b0d3508fb4d4.png",
+      "previewSha256": "42f272368131247512381d677291640af04d2340683a3f5bc9d324a5e933ce9c"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "view": "on",
+      "masterPath": "17. Additional Bottles/GBSpry4mlClBlk.psd",
+      "masterSha256": "df4a28c21ae7a5dba2e659d6b0641ce0bb742181c737a17f99a9d935f32032ea",
+      "preview": "sources/df4a28c21ae7a5dba2e659d6b0641ce0bb742181c737a17f99a9d935f32032ea.png",
+      "previewSha256": "70753dbedf3006c54b9ee4a45967653494878aa1351700c3a2a8289a3e09aa4d"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "view": "off",
+      "masterPath": "17. Additional Bottles/GBSpry4mlClBlk..psd",
+      "masterSha256": "87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626",
+      "preview": "sources/87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626.png",
+      "previewSha256": "bb97ac92bb4e52e447ceeb38a92f91e7a4f07d60b78cc2f47b5a15c6c2258760"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "view": "on",
+      "masterPath": "17. Additional Bottles/GBSpry4mlClWh.psd",
+      "masterSha256": "e19dbc706e02350cf0e953dc467f0fd71fbe6639bfe0a7a9d361b785cd098aa0",
+      "preview": "sources/e19dbc706e02350cf0e953dc467f0fd71fbe6639bfe0a7a9d361b785cd098aa0.png",
+      "previewSha256": "eac6e34c6c10434d16fd4dfad4f54e07de3db0fc4522ba00f08895f1ef35e95a"
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "view": "off",
+      "masterPath": "17. Additional Bottles/GBSpry4mlClWh..psd",
+      "masterSha256": "bdb1553385148221c84a8e7c14b66b7ed64d2af4585a59151362da30ae30d5ed",
+      "preview": "sources/bdb1553385148221c84a8e7c14b66b7ed64d2af4585a59151362da30ae30d5ed.png",
+      "previewSha256": "73798900aacc756dd16da58edaae88c4586aac6a8c8cc5cd2c46e82090fb5758"
+    },
+    {
+      "sku": "GBSpry1ozSl",
+      "view": "on",
+      "masterPath": "18. Perfume Glass Bottles with Metal Decoration/GBSpry1ozSl.psd",
+      "masterSha256": "c1f3997dac5a55dc8cf90bc3ac2f3ad715fbf4a4b12f440947877417ba91ba6a",
+      "preview": "sources/c1f3997dac5a55dc8cf90bc3ac2f3ad715fbf4a4b12f440947877417ba91ba6a.png",
+      "previewSha256": "67893783e706680bc236e5033feffe694eefc9efb78e7d75b714d78b94384446"
+    },
+    {
+      "sku": "GBSpry1ozSl",
+      "view": "off",
+      "masterPath": "17. Additional Bottles/GBSpry1ozSl.psd",
+      "masterSha256": "4b00f35c25bd70eb50da2183de7756dac8bec525300919a62f28be144ae40ecd",
+      "preview": "sources/4b00f35c25bd70eb50da2183de7756dac8bec525300919a62f28be144ae40ecd.png",
+      "previewSha256": "efdf34b76af9a69a7a3ca922d669dda52e136df615c05ee577887f5b2659d70e"
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "view": "on",
+      "masterPath": "17. Additional Bottles/GB1ozGl.psd",
+      "masterSha256": "272daf473b31cf8e3cd1fcf0b44a58d58444319e5863ee5b4e01167ec2f6ecf5",
+      "preview": "sources/272daf473b31cf8e3cd1fcf0b44a58d58444319e5863ee5b4e01167ec2f6ecf5.png",
+      "previewSha256": "b84f6f442cc883c9bf2ceffc8eb02bc0ad7ddb08197a5a91dca4172908decef6"
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "view": "off",
+      "masterPath": "17. Additional Bottles/GB1ozGl..psd",
+      "masterSha256": "eab95ecbbfc9a69a4133c430e8b9cda3aef0f7e51034f58f6c52e4e80dd1ea57",
+      "preview": "sources/eab95ecbbfc9a69a4133c430e8b9cda3aef0f7e51034f58f6c52e4e80dd1ea57.png",
+      "previewSha256": "11e16104342520186bd367807f89ea37ea414984430326242c161d6e25014379"
+    }
+  ],
+  "existingCapOnApprovalsPreserved": 38,
+  "finalPlateApprovalGranted": false,
+  "releaseAuthorizationGranted": false,
+  "remainingPlateCounts": {
+    "family": "Cylinder",
+    "total": 436,
+    "complete": 398,
+    "review": 0,
+    "reconcile": 38,
+    "missing": 0,
+    "sizes": [
+      3.3,
+      4,
+      5,
+      5.5,
+      9,
+      25,
+      28,
+      30,
+      50,
+      100,
+      114,
+      227,
+      454
+    ],
+    "unlinked": 0
+  },
+  "externalLogging": "Maestro destination clarification pending; approval recorded locally first"
+}

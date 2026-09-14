@@ -1,0 +1,1162 @@
+{
+  "schemaVersion": 1,
+  "id": "boston-30ml-amber-kit-pilot",
+  "publicationAuthorized": false,
+  "glassStandardsSha256": "45326ffda8e2a52d34167a9b269ca5e86f0c51a9c69e0179dff8a7febc461af3",
+  "rows": {
+    "GBBstnAmb1ozMtlRollonMattBlk": {
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "graceSku": "GB-BSR-AMB-30ML-MRL-MBLK",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "expectedPlateUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp",
+      "registrationSha256": "4bbc1c73c385bdbbd2b53a0e145a13ca867ebafb012528728f5f132485c79983",
+      "sources": {
+        "on": {
+          "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/3. GBBstnAmb1ozMtlRollonMattBlk.psd",
+          "sha256": "987864a06140f0a1c8638d278dbdd66fa2a0e90d1db2f3c376a772e75db08bb1",
+          "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0"
+        },
+        "off": {
+          "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/3. GBBstnAmb1ozMtlRollonMattBlk.psd",
+          "sha256": "af23cbcd885e0d46bc90943bb5ab29bd58e5173dbb5887275c7c2aaf70a5a762",
+          "plateSha256": "8f07ee56d31ec00badd20a45c086c02b1e5b6a5dec9df8bd5a020080bac54a76"
+        }
+      },
+      "checks": {
+        "on": {
+          "registrationDelta": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "fallback": {
+            "url": "/images/boston-kit-pilot/faaeac37ae8a21eb37733d9fa0f2bc4ca5102e1b0912fa000d481b371027f451.webp",
+            "key": "faaeac37ae8a21eb37733d9fa0f2bc4ca5102e1b0912fa000d481b371027f451.webp",
+            "sha256": "faaeac37ae8a21eb37733d9fa0f2bc4ca5102e1b0912fa000d481b371027f451",
+            "bytes": 241234,
+            "width": 1000,
+            "height": 1100
+          },
+          "alpha": [
+            {
+              "slot": "body",
+              "indices": [
+                1,
+                2
+              ],
+              "transparentFraction": 0.3832,
+              "semiTransparentPixels": 9088,
+              "touchesOwnEdge": false
+            },
+            {
+              "slot": "cap",
+              "indices": [
+                3
+              ],
+              "transparentFraction": 0.9096,
+              "semiTransparentPixels": 3415,
+              "touchesOwnEdge": false
+            }
+          ],
+          "parity": {
+            "ok": true,
+            "mean": 0.0155,
+            "tailOver40": 0.0
+          },
+          "reconstruction": {
+            "url": "/images/boston-kit-pilot/20bec9aa8c23bc1e0f291b2155426cb6e618d66630d329a7a07c6ee03f471c79.webp",
+            "key": "20bec9aa8c23bc1e0f291b2155426cb6e618d66630d329a7a07c6ee03f471c79.webp",
+            "sha256": "20bec9aa8c23bc1e0f291b2155426cb6e618d66630d329a7a07c6ee03f471c79",
+            "bytes": 241162,
+            "width": 1000,
+            "height": 1100
+          },
+          "before": "/images/plate-contact-sheets/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.webp"
+        },
+        "off": {
+          "registrationDelta": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "fallback": {
+            "url": "/images/boston-kit-pilot/f3c4b90f1f0032fc4487d671bc8ed699e9bd3ff489198816fbf4a28d0cc262cd.webp",
+            "key": "f3c4b90f1f0032fc4487d671bc8ed699e9bd3ff489198816fbf4a28d0cc262cd.webp",
+            "sha256": "f3c4b90f1f0032fc4487d671bc8ed699e9bd3ff489198816fbf4a28d0cc262cd",
+            "bytes": 312294,
+            "width": 1000,
+            "height": 1100
+          },
+          "alpha": [
+            {
+              "slot": "body",
+              "indices": [
+                1,
+                2
+              ],
+              "transparentFraction": 0.3329,
+              "semiTransparentPixels": 10293,
+              "touchesOwnEdge": false
+            },
+            {
+              "slot": "cap",
+              "indices": [
+                3
+              ],
+              "transparentFraction": 0.9096,
+              "semiTransparentPixels": 3212,
+              "touchesOwnEdge": false
+            }
+          ],
+          "parity": {
+            "ok": true,
+            "mean": 0.0248,
+            "tailOver40": 0.0
+          },
+          "reconstruction": {
+            "url": "/images/boston-kit-pilot/4e275a871d4ec3d71c48c0b035374721be0890acd13955b821e538dfef42992a.webp",
+            "key": "4e275a871d4ec3d71c48c0b035374721be0890acd13955b821e538dfef42992a.webp",
+            "sha256": "4e275a871d4ec3d71c48c0b035374721be0890acd13955b821e538dfef42992a",
+            "bytes": 311808,
+            "width": 1000,
+            "height": 1100
+          },
+          "before": "/images/plate-contact-sheets/8f07ee56d31ec00badd20a45c086c02b1e5b6a5dec9df8bd5a020080bac54a76.webp"
+        }
+      },
+      "on": {
+        "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+        "familyId": "boston-round-30ml-amber-20-400",
+        "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+        "canvas": {
+          "width": 1000,
+          "height": 1100
+        },
+        "anchors": {
+          "axisX": 500,
+          "neckAxisX": 500,
+          "seatY": 43,
+          "baselineY": 1060.0,
+          "pxPerMm": null
+        },
+        "completeness": "capSplit",
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 273,
+              "top": 43,
+              "right": 926,
+              "bottom": 1094
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+              "key": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+              "sha256": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+              "bytes": 303372,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          },
+          {
+            "slot": "cap",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 373,
+              "top": 45,
+              "right": 628,
+              "bottom": 451
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480.webp",
+              "key": "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480.webp",
+              "sha256": "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480",
+              "bytes": 29628,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          }
+        ],
+        "three": null,
+        "conflicts": []
+      },
+      "off": {
+        "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+        "familyId": "boston-round-30ml-amber-20-400",
+        "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+        "canvas": {
+          "width": 1000,
+          "height": 1100
+        },
+        "anchors": {
+          "axisX": 500,
+          "neckAxisX": 500,
+          "seatY": 42,
+          "baselineY": 1060.0,
+          "pxPerMm": null
+        },
+        "completeness": "capSplit",
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 98,
+              "top": 42,
+              "right": 804,
+              "bottom": 1094
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/0cf438d2c3a7dff3fb525381fcc2d948b42ba45c49b58e2ea07a3ebd2a928082.webp",
+              "key": "0cf438d2c3a7dff3fb525381fcc2d948b42ba45c49b58e2ea07a3ebd2a928082.webp",
+              "sha256": "0cf438d2c3a7dff3fb525381fcc2d948b42ba45c49b58e2ea07a3ebd2a928082",
+              "bytes": 304524,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          },
+          {
+            "slot": "cap",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 584,
+              "top": 652,
+              "right": 839,
+              "bottom": 1058
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/977c3a8f5e8d989f9a92b3d94baa639115128a9683ad3c859e7f18f5023073d2.webp",
+              "key": "977c3a8f5e8d989f9a92b3d94baa639115128a9683ad3c859e7f18f5023073d2.webp",
+              "sha256": "977c3a8f5e8d989f9a92b3d94baa639115128a9683ad3c859e7f18f5023073d2",
+              "bytes": 29462,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          }
+        ],
+        "three": null,
+        "conflicts": []
+      }
+    },
+    "GBBstnAmb1ozMtlRollonMattSl": {
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "graceSku": "GB-BSR-AMB-30ML-MRL-MSLV",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "expectedPlateUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattSl/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.front-on-1000x1100.webp",
+      "registrationSha256": "4bbc1c73c385bdbbd2b53a0e145a13ca867ebafb012528728f5f132485c79983",
+      "sources": {
+        "on": {
+          "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/1. GBBstnAmb1ozMtlRollonMattSl.psd",
+          "sha256": "3ca84fa59dffed11eb26323d63a6b8b7b74dc54ea6a1b06a4b7ce39e8f26c84f",
+          "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68"
+        },
+        "off": {
+          "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/1. GBBstnAmb1ozMtlRollonMattSl.psd",
+          "sha256": "7e14dec33daccb39020f748a6c15203dc0895f5380bf8dce02472bb3892d0cb0",
+          "plateSha256": "4d4f4b8e8243cff8661e9b59d30d4a799327880bc495b0a8aed1efc3ebd12b84"
+        }
+      },
+      "checks": {
+        "on": {
+          "registrationDelta": {
+            "x": 3.9055744680851063,
+            "y": 0.0
+          },
+          "fallback": {
+            "url": "/images/boston-kit-pilot/ff9009d2a0a90e63ddc0f29c3f2d9724810f39a70ebfc9791c2bb30ddbec66de.webp",
+            "key": "ff9009d2a0a90e63ddc0f29c3f2d9724810f39a70ebfc9791c2bb30ddbec66de.webp",
+            "sha256": "ff9009d2a0a90e63ddc0f29c3f2d9724810f39a70ebfc9791c2bb30ddbec66de",
+            "bytes": 244218,
+            "width": 1000,
+            "height": 1100
+          },
+          "alpha": [
+            {
+              "slot": "body",
+              "indices": [
+                1,
+                2
+              ],
+              "transparentFraction": 0.388,
+              "semiTransparentPixels": 9066,
+              "touchesOwnEdge": false
+            },
+            {
+              "slot": "cap",
+              "indices": [
+                3
+              ],
+              "transparentFraction": 0.9186,
+              "semiTransparentPixels": 2683,
+              "touchesOwnEdge": false
+            }
+          ],
+          "parity": {
+            "ok": true,
+            "mean": 2.0149,
+            "tailOver40": 0.008813
+          },
+          "reconstruction": {
+            "url": "/images/boston-kit-pilot/d1638071c2b0dde8eb219efbffd4b5e2fe69ce417b8c1da372e217a88bf8087b.webp",
+            "key": "d1638071c2b0dde8eb219efbffd4b5e2fe69ce417b8c1da372e217a88bf8087b.webp",
+            "sha256": "d1638071c2b0dde8eb219efbffd4b5e2fe69ce417b8c1da372e217a88bf8087b",
+            "bytes": 244000,
+            "width": 1000,
+            "height": 1100
+          },
+          "before": "/images/plate-contact-sheets/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.webp",
+          "sharedBodyFromSku": "GBBstnAmb1ozMtlRollonMattBlk"
+        },
+        "off": {
+          "registrationDelta": {
+            "x": 6.944999999999993,
+            "y": 0.0
+          },
+          "fallback": {
+            "url": "/images/boston-kit-pilot/a4a31764e8f30f2f2e9ddbc5f7789f3c920d044f7ac593790a4037d93ba3c19e.webp",
+            "key": "a4a31764e8f30f2f2e9ddbc5f7789f3c920d044f7ac593790a4037d93ba3c19e.webp",
+            "sha256": "a4a31764e8f30f2f2e9ddbc5f7789f3c920d044f7ac593790a4037d93ba3c19e",
+            "bytes": 310998,
+            "width": 1000,
+            "height": 1100
+          },
+          "alpha": [
+            {
+              "slot": "body",
+              "indices": [
+                1,
+                2
+              ],
+              "transparentFraction": 0.3329,
+              "semiTransparentPixels": 10293,
+              "touchesOwnEdge": false
+            },
+            {
+              "slot": "cap",
+              "indices": [
+                3
+              ],
+              "transparentFraction": 0.9188,
+              "semiTransparentPixels": 2722,
+              "touchesOwnEdge": false
+            }
+          ],
+          "parity": {
+            "ok": true,
+            "mean": 0.0315,
+            "tailOver40": 0.0
+          },
+          "reconstruction": {
+            "url": "/images/boston-kit-pilot/cc7ca115f4f6bb0e1bb487efce44e4aa4f783e4ccd1346594c73e53b0233e4b4.webp",
+            "key": "cc7ca115f4f6bb0e1bb487efce44e4aa4f783e4ccd1346594c73e53b0233e4b4.webp",
+            "sha256": "cc7ca115f4f6bb0e1bb487efce44e4aa4f783e4ccd1346594c73e53b0233e4b4",
+            "bytes": 310408,
+            "width": 1000,
+            "height": 1100
+          },
+          "before": "/images/plate-contact-sheets/4d4f4b8e8243cff8661e9b59d30d4a799327880bc495b0a8aed1efc3ebd12b84.webp",
+          "sharedBodyFromSku": "GBBstnAmb1ozMtlRollonMattBlk"
+        }
+      },
+      "on": {
+        "sku": "GBBstnAmb1ozMtlRollonMattSl",
+        "familyId": "boston-round-30ml-amber-20-400",
+        "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+        "canvas": {
+          "width": 1000,
+          "height": 1100
+        },
+        "anchors": {
+          "axisX": 500,
+          "neckAxisX": 500,
+          "seatY": 43,
+          "baselineY": 1060.0,
+          "pxPerMm": null
+        },
+        "completeness": "capSplit",
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 273,
+              "top": 43,
+              "right": 926,
+              "bottom": 1094
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+              "key": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+              "sha256": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+              "bytes": 303372,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          },
+          {
+            "slot": "cap",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 374,
+              "top": 62,
+              "right": 629,
+              "bottom": 436
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/697dfe88e1415502934fc8a572218ed2535400803348ed288cf6c6ec7edd7ec0.webp",
+              "key": "697dfe88e1415502934fc8a572218ed2535400803348ed288cf6c6ec7edd7ec0.webp",
+              "sha256": "697dfe88e1415502934fc8a572218ed2535400803348ed288cf6c6ec7edd7ec0",
+              "bytes": 28646,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          }
+        ],
+        "three": null,
+        "conflicts": []
+      },
+      "off": {
+        "sku": "GBBstnAmb1ozMtlRollonMattSl",
+        "familyId": "boston-round-30ml-amber-20-400",
+        "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+        "canvas": {
+          "width": 1000,
+          "height": 1100
+        },
+        "anchors": {
+          "axisX": 500,
+          "neckAxisX": 500,
+          "seatY": 42,
+          "baselineY": 1060.0,
+          "pxPerMm": null
+        },
+        "completeness": "capSplit",
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 98,
+              "top": 42,
+              "right": 804,
+              "bottom": 1094
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/0cf438d2c3a7dff3fb525381fcc2d948b42ba45c49b58e2ea07a3ebd2a928082.webp",
+              "key": "0cf438d2c3a7dff3fb525381fcc2d948b42ba45c49b58e2ea07a3ebd2a928082.webp",
+              "sha256": "0cf438d2c3a7dff3fb525381fcc2d948b42ba45c49b58e2ea07a3ebd2a928082",
+              "bytes": 304524,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          },
+          {
+            "slot": "cap",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 598,
+              "top": 673,
+              "right": 853,
+              "bottom": 1048
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/a99aa93774ade2168d7987b6e31c3bda0ceef4bd1ad986e118a8c6993187f620.webp",
+              "key": "a99aa93774ade2168d7987b6e31c3bda0ceef4bd1ad986e118a8c6993187f620.webp",
+              "sha256": "a99aa93774ade2168d7987b6e31c3bda0ceef4bd1ad986e118a8c6993187f620",
+              "bytes": 28630,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          }
+        ],
+        "three": null,
+        "conflicts": []
+      }
+    },
+    "GBBstnAmb1ozRollonMattBlk": {
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "graceSku": "GB-BSR-AMB-30ML-RON-MBLK",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "expectedPlateUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp",
+      "registrationSha256": "4bbc1c73c385bdbbd2b53a0e145a13ca867ebafb012528728f5f132485c79983",
+      "sources": {
+        "on": {
+          "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/8. GBBstnAmb1ozRollonMattBlk.psd",
+          "sha256": "db8aa09ebb4d60407aeaff1bad20da32f7fd01bd071d72bc57420ca1ba85ebd9",
+          "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0"
+        },
+        "off": {
+          "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/8. GBBstnAmb1ozRollonMattBlk.psd",
+          "sha256": "5b4a2e1ec5299c1eaceb4181d4d8fe24b4eae2583b9713b1c209d7e594ac1840",
+          "plateSha256": "08e563e8bea279e76e163f35e6e450833af04ca2d1e90613cb2813a807451cbf"
+        }
+      },
+      "checks": {
+        "on": {
+          "registrationDelta": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "fallback": {
+            "url": "/images/boston-kit-pilot/faaeac37ae8a21eb37733d9fa0f2bc4ca5102e1b0912fa000d481b371027f451.webp",
+            "key": "faaeac37ae8a21eb37733d9fa0f2bc4ca5102e1b0912fa000d481b371027f451.webp",
+            "sha256": "faaeac37ae8a21eb37733d9fa0f2bc4ca5102e1b0912fa000d481b371027f451",
+            "bytes": 241234,
+            "width": 1000,
+            "height": 1100
+          },
+          "alpha": [
+            {
+              "slot": "body",
+              "indices": [
+                1,
+                2
+              ],
+              "transparentFraction": 0.3832,
+              "semiTransparentPixels": 9088,
+              "touchesOwnEdge": false
+            },
+            {
+              "slot": "cap",
+              "indices": [
+                3
+              ],
+              "transparentFraction": 0.9096,
+              "semiTransparentPixels": 3415,
+              "touchesOwnEdge": false
+            }
+          ],
+          "parity": {
+            "ok": true,
+            "mean": 0.0155,
+            "tailOver40": 0.0
+          },
+          "reconstruction": {
+            "url": "/images/boston-kit-pilot/20bec9aa8c23bc1e0f291b2155426cb6e618d66630d329a7a07c6ee03f471c79.webp",
+            "key": "20bec9aa8c23bc1e0f291b2155426cb6e618d66630d329a7a07c6ee03f471c79.webp",
+            "sha256": "20bec9aa8c23bc1e0f291b2155426cb6e618d66630d329a7a07c6ee03f471c79",
+            "bytes": 241162,
+            "width": 1000,
+            "height": 1100
+          },
+          "before": "/images/plate-contact-sheets/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.webp"
+        },
+        "off": {
+          "registrationDelta": {
+            "x": -4.340000000000003,
+            "y": 0.0
+          },
+          "fallback": {
+            "url": "/images/boston-kit-pilot/69831555fce47ee1527286e7a40c9ff0c79397cb2cdaa9903de71ab1266d4379.webp",
+            "key": "69831555fce47ee1527286e7a40c9ff0c79397cb2cdaa9903de71ab1266d4379.webp",
+            "sha256": "69831555fce47ee1527286e7a40c9ff0c79397cb2cdaa9903de71ab1266d4379",
+            "bytes": 301440,
+            "width": 1000,
+            "height": 1100
+          },
+          "alpha": [
+            {
+              "slot": "body",
+              "indices": [
+                1,
+                2,
+                3
+              ],
+              "transparentFraction": 0.3328,
+              "semiTransparentPixels": 10463,
+              "touchesOwnEdge": false
+            },
+            {
+              "slot": "cap",
+              "indices": [
+                4
+              ],
+              "transparentFraction": 0.9097,
+              "semiTransparentPixels": 3339,
+              "touchesOwnEdge": false
+            }
+          ],
+          "parity": {
+            "ok": true,
+            "mean": 0.0195,
+            "tailOver40": 0.0
+          },
+          "reconstruction": {
+            "url": "/images/boston-kit-pilot/b636692d6075d1b691487c5adbecf70836058b728b970d50bc3e2e2441b7e8d0.webp",
+            "key": "b636692d6075d1b691487c5adbecf70836058b728b970d50bc3e2e2441b7e8d0.webp",
+            "sha256": "b636692d6075d1b691487c5adbecf70836058b728b970d50bc3e2e2441b7e8d0",
+            "bytes": 301142,
+            "width": 1000,
+            "height": 1100
+          },
+          "before": "/images/plate-contact-sheets/08e563e8bea279e76e163f35e6e450833af04ca2d1e90613cb2813a807451cbf.webp"
+        }
+      },
+      "on": {
+        "sku": "GBBstnAmb1ozRollonMattBlk",
+        "familyId": "boston-round-30ml-amber-20-400",
+        "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+        "canvas": {
+          "width": 1000,
+          "height": 1100
+        },
+        "anchors": {
+          "axisX": 500,
+          "neckAxisX": 500,
+          "seatY": 43,
+          "baselineY": 1060.0,
+          "pxPerMm": null
+        },
+        "completeness": "capSplit",
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 273,
+              "top": 43,
+              "right": 926,
+              "bottom": 1094
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+              "key": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+              "sha256": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+              "bytes": 303372,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          },
+          {
+            "slot": "cap",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 373,
+              "top": 45,
+              "right": 628,
+              "bottom": 451
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480.webp",
+              "key": "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480.webp",
+              "sha256": "daacb41dd19d8b2508ae577b2f0353382bf0ae7c663e4d370d2ae868d13e0480",
+              "bytes": 29628,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          }
+        ],
+        "three": null,
+        "conflicts": []
+      },
+      "off": {
+        "sku": "GBBstnAmb1ozRollonMattBlk",
+        "familyId": "boston-round-30ml-amber-20-400",
+        "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+        "canvas": {
+          "width": 1000,
+          "height": 1100
+        },
+        "anchors": {
+          "axisX": 500,
+          "neckAxisX": 500,
+          "seatY": 42,
+          "baselineY": 1060.0,
+          "pxPerMm": null
+        },
+        "completeness": "capSplit",
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 98,
+              "top": 42,
+              "right": 804,
+              "bottom": 1094
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/a16aae158d17cfffc15ad67507c4ff512f93580f6374eb258cd15ecff23d5b20.webp",
+              "key": "a16aae158d17cfffc15ad67507c4ff512f93580f6374eb258cd15ecff23d5b20.webp",
+              "sha256": "a16aae158d17cfffc15ad67507c4ff512f93580f6374eb258cd15ecff23d5b20",
+              "bytes": 290482,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          },
+          {
+            "slot": "cap",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 575,
+              "top": 652,
+              "right": 831,
+              "bottom": 1058
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/ccd7cdaf72ec586829deecdca6aa7792e38e9964b01d031f82415ef9badbc92f.webp",
+              "key": "ccd7cdaf72ec586829deecdca6aa7792e38e9964b01d031f82415ef9badbc92f.webp",
+              "sha256": "ccd7cdaf72ec586829deecdca6aa7792e38e9964b01d031f82415ef9badbc92f",
+              "bytes": 30204,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          }
+        ],
+        "three": null,
+        "conflicts": []
+      }
+    },
+    "GBBstnAmb1ozRollonMattSl": {
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "graceSku": "GB-BSR-AMB-30ML-RON-MSLV",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "expectedPlateUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozRollonMattSl/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.front-on-1000x1100.webp",
+      "registrationSha256": "4bbc1c73c385bdbbd2b53a0e145a13ca867ebafb012528728f5f132485c79983",
+      "sources": {
+        "on": {
+          "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/6. GBBstnAmb1ozRollonMattSl.psd",
+          "sha256": "7eabadd67036eb3e1edb72415913f98b487612974de3fdf27194af86b2e139eb",
+          "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68"
+        },
+        "off": {
+          "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/6. GBBstnAmb1ozRollonMattSl.psd",
+          "sha256": "fc54479ec1ef44ecdabcac4347793a39c532089d3036e3d26a05b0e20b0e219b",
+          "plateSha256": "cd0c633fb653847ec382326186f384e488149fa0700875fc566a5b9d2afc0ad1"
+        }
+      },
+      "checks": {
+        "on": {
+          "registrationDelta": {
+            "x": 3.9055744680851063,
+            "y": 0.0
+          },
+          "fallback": {
+            "url": "/images/boston-kit-pilot/ff9009d2a0a90e63ddc0f29c3f2d9724810f39a70ebfc9791c2bb30ddbec66de.webp",
+            "key": "ff9009d2a0a90e63ddc0f29c3f2d9724810f39a70ebfc9791c2bb30ddbec66de.webp",
+            "sha256": "ff9009d2a0a90e63ddc0f29c3f2d9724810f39a70ebfc9791c2bb30ddbec66de",
+            "bytes": 244218,
+            "width": 1000,
+            "height": 1100
+          },
+          "alpha": [
+            {
+              "slot": "body",
+              "indices": [
+                1,
+                2
+              ],
+              "transparentFraction": 0.388,
+              "semiTransparentPixels": 9066,
+              "touchesOwnEdge": false
+            },
+            {
+              "slot": "cap",
+              "indices": [
+                3
+              ],
+              "transparentFraction": 0.9186,
+              "semiTransparentPixels": 2683,
+              "touchesOwnEdge": false
+            }
+          ],
+          "parity": {
+            "ok": true,
+            "mean": 2.0149,
+            "tailOver40": 0.008813
+          },
+          "reconstruction": {
+            "url": "/images/boston-kit-pilot/d1638071c2b0dde8eb219efbffd4b5e2fe69ce417b8c1da372e217a88bf8087b.webp",
+            "key": "d1638071c2b0dde8eb219efbffd4b5e2fe69ce417b8c1da372e217a88bf8087b.webp",
+            "sha256": "d1638071c2b0dde8eb219efbffd4b5e2fe69ce417b8c1da372e217a88bf8087b",
+            "bytes": 244000,
+            "width": 1000,
+            "height": 1100
+          },
+          "before": "/images/plate-contact-sheets/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.webp",
+          "sharedBodyFromSku": "GBBstnAmb1ozRollonMattBlk"
+        },
+        "off": {
+          "registrationDelta": {
+            "x": 6.076999999999998,
+            "y": 0.0
+          },
+          "fallback": {
+            "url": "/images/boston-kit-pilot/1ee1063898f6506900bde6de280222fc9baa2d93d3fe8ae6b2a1fc68d5df0faa.webp",
+            "key": "1ee1063898f6506900bde6de280222fc9baa2d93d3fe8ae6b2a1fc68d5df0faa.webp",
+            "sha256": "1ee1063898f6506900bde6de280222fc9baa2d93d3fe8ae6b2a1fc68d5df0faa",
+            "bytes": 300602,
+            "width": 1000,
+            "height": 1100
+          },
+          "alpha": [
+            {
+              "slot": "body",
+              "indices": [
+                1,
+                2,
+                3
+              ],
+              "transparentFraction": 0.3328,
+              "semiTransparentPixels": 10463,
+              "touchesOwnEdge": false
+            },
+            {
+              "slot": "cap",
+              "indices": [
+                4
+              ],
+              "transparentFraction": 0.9169,
+              "semiTransparentPixels": 2843,
+              "touchesOwnEdge": false
+            }
+          ],
+          "parity": {
+            "ok": true,
+            "mean": 0.031,
+            "tailOver40": 0.0
+          },
+          "reconstruction": {
+            "url": "/images/boston-kit-pilot/4a1fbbcb16d8b1ef0248f852fed487a6673f986257c4c3d05bc877df3b26d697.webp",
+            "key": "4a1fbbcb16d8b1ef0248f852fed487a6673f986257c4c3d05bc877df3b26d697.webp",
+            "sha256": "4a1fbbcb16d8b1ef0248f852fed487a6673f986257c4c3d05bc877df3b26d697",
+            "bytes": 300360,
+            "width": 1000,
+            "height": 1100
+          },
+          "before": "/images/plate-contact-sheets/cd0c633fb653847ec382326186f384e488149fa0700875fc566a5b9d2afc0ad1.webp",
+          "sharedBodyFromSku": "GBBstnAmb1ozRollonMattBlk"
+        }
+      },
+      "on": {
+        "sku": "GBBstnAmb1ozRollonMattSl",
+        "familyId": "boston-round-30ml-amber-20-400",
+        "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+        "canvas": {
+          "width": 1000,
+          "height": 1100
+        },
+        "anchors": {
+          "axisX": 500,
+          "neckAxisX": 500,
+          "seatY": 43,
+          "baselineY": 1060.0,
+          "pxPerMm": null
+        },
+        "completeness": "capSplit",
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 273,
+              "top": 43,
+              "right": 926,
+              "bottom": 1094
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+              "key": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0.webp",
+              "sha256": "2e22f9b0b43ed4510c978feb19f0426f3b7ceb09d03f59eaf3284d2899d15ab0",
+              "bytes": 303372,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          },
+          {
+            "slot": "cap",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 374,
+              "top": 62,
+              "right": 629,
+              "bottom": 436
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/697dfe88e1415502934fc8a572218ed2535400803348ed288cf6c6ec7edd7ec0.webp",
+              "key": "697dfe88e1415502934fc8a572218ed2535400803348ed288cf6c6ec7edd7ec0.webp",
+              "sha256": "697dfe88e1415502934fc8a572218ed2535400803348ed288cf6c6ec7edd7ec0",
+              "bytes": 28646,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          }
+        ],
+        "three": null,
+        "conflicts": []
+      },
+      "off": {
+        "sku": "GBBstnAmb1ozRollonMattSl",
+        "familyId": "boston-round-30ml-amber-20-400",
+        "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+        "canvas": {
+          "width": 1000,
+          "height": 1100
+        },
+        "anchors": {
+          "axisX": 500,
+          "neckAxisX": 500,
+          "seatY": 42,
+          "baselineY": 1060.0,
+          "pxPerMm": null
+        },
+        "completeness": "capSplit",
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 98,
+              "top": 42,
+              "right": 804,
+              "bottom": 1094
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/a16aae158d17cfffc15ad67507c4ff512f93580f6374eb258cd15ecff23d5b20.webp",
+              "key": "a16aae158d17cfffc15ad67507c4ff512f93580f6374eb258cd15ecff23d5b20.webp",
+              "sha256": "a16aae158d17cfffc15ad67507c4ff512f93580f6374eb258cd15ecff23d5b20",
+              "bytes": 290482,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          },
+          {
+            "slot": "cap",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "left": 596,
+              "top": 659,
+              "right": 852,
+              "bottom": 1041
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "image": {
+              "url": "/images/boston-kit-pilot/f0ddc1ebda44b85bd517b9374f9d9dc709c0aaf6a92edb8f5b6358939fb47caa.webp",
+              "key": "f0ddc1ebda44b85bd517b9374f9d9dc709c0aaf6a92edb8f5b6358939fb47caa.webp",
+              "sha256": "f0ddc1ebda44b85bd517b9374f9d9dc709c0aaf6a92edb8f5b6358939fb47caa",
+              "bytes": 29040,
+              "width": 1000,
+              "height": 1100
+            },
+            "image2x": null,
+            "mask": null,
+            "derivation": "psd-layer"
+          }
+        ],
+        "three": null,
+        "conflicts": []
+      }
+    }
+  }
+}
