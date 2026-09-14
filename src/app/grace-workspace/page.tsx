@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import GraceWorkspaceClient from "./GraceWorkspaceClient";
+import { getWorkspaceRailData } from "@/lib/grace/workspaceRail";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
     title: "Grace Workspace",
@@ -13,6 +16,7 @@ export const metadata: Metadata = {
  * microphone, so it was retired. Signing in adds account-linked history, it
  * does not change the shape of the page.
  */
-export default function GraceWorkspacePage() {
-    return <GraceWorkspaceClient />;
+export default async function GraceWorkspacePage() {
+    const rail = await getWorkspaceRailData();
+    return <GraceWorkspaceClient families={rail.families} sessions={rail.sessions} />;
 }

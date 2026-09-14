@@ -138,13 +138,15 @@ function summarize(row: Doc<"graceSessions">) {
  * owned by nobody the portal queries, and invisible forever.
  */
 export const listForViewer = query({
-    args: { clerkOrgId: v.string(), clerkUserId: v.string() },
+    args: { clerkOrgId: v.optional(v.string()), clerkUserId: v.string() },
     handler: async (ctx, args) => {
-        const byOrg = await ctx.db
-            .query("graceSessions")
-            .withIndex("by_orgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
-            .order("desc")
-            .take(SESSIONS_PER_ORG);
+        const byOrg = args.clerkOrgId
+            ? await ctx.db
+                .query("graceSessions")
+                .withIndex("by_orgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
+                .order("desc")
+                .take(SESSIONS_PER_ORG)
+            : [];
 
         const byUser = await ctx.db
             .query("graceSessions")
