@@ -83,6 +83,7 @@ const navSections = [
             { href: "/portal/orders", label: "Orders", id: "orders" },
             { href: "/portal/drafts", label: "Drafts", id: "drafts" },
             { href: "/portal/grace", label: "Grace AI", id: "grace" },
+            { href: "/portal/sessions", label: "Grace Sessions", id: "grace" },
         ],
     },
     {

@@ -10,6 +10,7 @@ const sectionLabels: Record<string, string> = {
     "/portal/drafts": "Drafts",
     "/portal/tools": "Tools",
     "/portal/grace": "Grace AI",
+    "/portal/sessions": "Grace Sessions",
     "/portal/documents": "Documents",
     "/portal/account": "Account",
     "/portal/settings": "Profile & Security",

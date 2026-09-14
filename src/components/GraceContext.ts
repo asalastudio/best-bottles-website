@@ -357,6 +357,8 @@ export interface GraceContextValue {
     graceQuery: string;
     pageContext: PageContext | null;
     browsingHistory: BrowsingHistoryEntry[];
+    /** Scopes shortlists, memory, and uploads: `user:<clerkId>` when signed in, else the device key. */
+    ownerKey: string;
 }
 
 // ─── Shared context & hook ───────────────────────────────────────────────────
@@ -416,6 +418,8 @@ const GRACE_NOOP: GraceContextValue = {
     graceQuery: "",
     pageContext: null,
     browsingHistory: [],
+    // No provider mounted: nothing is persisted, so the key is inert.
+    ownerKey: "",
 };
 
 export function useGrace(): GraceContextValue {

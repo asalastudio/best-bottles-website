@@ -2,6 +2,7 @@ import "server-only";
 
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { api } from "../../../convex/_generated/api";
+import type { Id } from "../../../convex/_generated/dataModel";
 import { getPortalConvex, getPortalConvexWriteToken } from "./convexClient";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { getUserEmailAddresses } from "@/lib/teamAccess";
@@ -144,6 +145,26 @@ export async function getPortalGraceWorkspace(projectId?: string) {
         projectId: (projectId ?? undefined) as never,
     });
     return { viewer, ...workspace };
+}
+
+// ─── Grace sessions (recorded for signed-in customers) ──────────────────────
+
+export async function getPortalGraceSessions() {
+    const viewer = await requirePortalViewer();
+    const sessions = await getPortalConvex().query(api.graceSessions.listForViewer, {
+        clerkOrgId: viewer.clerkOrgId,
+        clerkUserId: viewer.clerkUserId,
+    });
+    return { viewer, sessions };
+}
+
+export async function getPortalGraceSession(sessionId: string) {
+    const viewer = await requirePortalViewer();
+    return await getPortalConvex().query(api.graceSessions.getForViewer, {
+        clerkOrgId: viewer.clerkOrgId,
+        clerkUserId: viewer.clerkUserId,
+        sessionId: sessionId as Id<"graceSessions">,
+    });
 }
 
 export async function createPortalDraftForViewer(name?: string) {

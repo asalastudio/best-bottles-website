@@ -627,6 +627,32 @@ export default defineSchema({
         .index("by_owner", ["ownerKey"])
         .index("by_endedAt", ["endedAt"]),
 
+    // Grace sessions — transcripts recorded for SIGNED-IN customers only.
+    // Written by the Next.js server after it resolves the Clerk identity, so
+    // clerkUserId / clerkOrgId are trusted. Anonymous sessions never land here;
+    // `graceSessionTraces` above keeps the no-transcript telemetry for everyone.
+    graceSessions: defineTable({
+        clerkUserId: v.string(),
+        clerkOrgId: v.optional(v.string()),          // absent when the user has no active org yet
+        ownerKey: v.string(),                        // same key that scopes shortlists + memory
+        sessionId: v.string(),                       // minted client-side, one row per session
+        surface: v.string(),                         // "workspace" | "drawer"
+        companionMode: v.string(),
+        title: v.string(),                           // first user message, clipped
+        startedAt: v.number(),
+        lastMessageAt: v.number(),
+        endedAt: v.optional(v.number()),
+        lastPageUrl: v.optional(v.string()),
+        messageCount: v.number(),
+        messages: v.array(v.object({
+            role: v.union(v.literal("user"), v.literal("grace")),
+            text: v.string(),
+        })),
+    })
+        .index("by_sessionId", ["sessionId"])
+        .index("by_orgId", ["clerkOrgId", "lastMessageAt"])
+        .index("by_user", ["clerkUserId", "lastMessageAt"]),
+
     // -------------------------------------------------------------------------
     // GRACE AI UPLOADS — user-supplied images for reference match + brand mockup
     // -------------------------------------------------------------------------
