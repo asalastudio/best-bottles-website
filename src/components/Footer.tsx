@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 import Link from "next/link";
+import BrandWordmark from "./BrandWordmark";
 import { useMutation } from "convex/react";
 import {
     ArrowRight,
@@ -101,8 +102,8 @@ export default function Footer() {
             <div className="mx-auto max-w-[1440px] px-5 py-12 sm:px-6 lg:px-10 lg:py-16">
                 <div className="grid gap-12 border-b border-white/12 pb-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:pb-16">
                     <div className="lg:col-span-3">
-                        <Link href="/" className="font-brand-display text-[22px] tracking-[0.115em] text-white transition-colors hover:text-muted-gold">
-                            BEST BOTTLES
+                        <Link href="/" aria-label="Best Bottles home" className="inline-block transition-opacity hover:opacity-80">
+                            <BrandWordmark tone="light" className="!h-[18px]" />
                         </Link>
                         <p className="mt-4 max-w-[260px] text-xs leading-relaxed text-white/58">
                             Premium glass bottles and closures for beauty, fragrance, and wellness brands.

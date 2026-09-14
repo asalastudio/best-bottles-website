@@ -13,7 +13,7 @@ import { familyFinderHref } from '@/lib/products/focused-shopping';
 import { SHOP_COLLECTIONS, shopCollectionHref } from '@/lib/shopCollections';
 import styles from './CollectionShopping.module.css';
 
-type MegaMenu = 'families' | 'collections';
+type MegaMenu = 'families' | 'collections' | 'search';
 
 export default function ShoppingHeader() {
     const [menu, setMenu] = useState(false);
@@ -59,6 +59,7 @@ export default function ShoppingHeader() {
                 </div>
                 <Link href="/" className={styles.brand} aria-label="Best Bottles home"><BrandWordmark/></Link>
                 <div className={styles.headerRight}>
+                    <button type="button" className={styles.searchTrigger} aria-expanded={activeMega === 'search'} aria-controls="search-mega-menu" onClick={() => toggleMega('search')}><MagnifyingGlass size={18}/><span>Search</span></button>
                     <button className={styles.grace} onClick={() => open()}>Ask Grace</button>
                     <Link className={styles.portal} href="/sign-in?redirect_url=%2Fportal" aria-label="Sign in to the client portal"><User size={22}/><span>Portal</span></Link>
                     <button className={styles.cartButton} aria-label={`Open cart${isCartHydrated ? `, ${itemCount} items` : ''}`} onClick={() => setCart(true)}><ShoppingBag size={22}/>{isCartHydrated && itemCount > 0 && <span>{itemCount}</span>}</button>
@@ -73,6 +74,17 @@ export default function ShoppingHeader() {
             {activeMega === 'families' && <div className={styles.megaMenu} id="families-mega-menu">
                 <div className={styles.megaHeading}><div><span>Find your silhouette</span><h2>Bottle Families</h2></div><Link href="/bottle-families" onClick={closeNavigation}>View all</Link></div>
                 <div className={styles.megaFamilyGrid}>{Object.entries(FAMILY_ART).map(([family, image]) => <Link href={familyFinderHref(family)} onClick={closeNavigation} key={family}><Image src={`/assets/homepage/${image}.webp`} alt="" width={160} height={200}/><span>{family}</span></Link>)}</div>
+            </div>}
+            {activeMega === 'search' && <div className={styles.megaMenu} id="search-mega-menu">
+                <form action="/catalog" className={styles.megaSearch} role="search">
+                    <MagnifyingGlass size={22}/>
+                    <input name="search" aria-label="Search the catalog" placeholder="Search bottles, closures, sizes, SKUs…" type="search" autoFocus autoComplete="off"/>
+                    <button type="submit">Search</button>
+                </form>
+                <div className={styles.megaSearchBody}>
+                    <div><h3>Bottle families</h3><div className={styles.megaSearchFamilies}>{Object.entries(FAMILY_ART).map(([family, image]) => <Link href={familyFinderHref(family)} onClick={closeNavigation} key={family}><Image src={`/assets/homepage/${image}.webp`} alt="" width={120} height={150}/><span>{family}</span></Link>)}</div></div>
+                    <div><h3>Collections</h3><div className={styles.megaSearchCollections}>{SHOP_COLLECTIONS.map(collection => <Link key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}><strong>{collection.title}</strong><span>{collection.subtitle}</span></Link>)}</div></div>
+                </div>
             </div>}
             {activeMega === 'collections' && <div className={styles.megaMenu} id="collections-mega-menu">
                 <div className={styles.megaHeading}><div><span>Begin with the application</span><h2>Collections</h2></div><Link href="/collections" onClick={closeNavigation}>View all</Link></div>

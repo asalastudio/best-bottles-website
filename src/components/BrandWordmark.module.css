@@ -1,17 +1,16 @@
 .wordmark {
     display: block;
-    font-family: var(--font-brand);
-    font-weight: var(--brand-weight-display);
-    font-size: 18px;
-    line-height: 1;
-    letter-spacing: 0.115em;
-    text-transform: uppercase;
-    white-space: nowrap;
-    color: var(--color-obsidian, #1d1d1f);
+    height: 15px;
+    width: auto;
+    max-width: 100%;
+}
+
+.light {
+    filter: invert(1);
 }
 
 @media (min-width: 1280px) {
     .wordmark {
-        font-size: 22px;
+        height: 17px;
     }
 }

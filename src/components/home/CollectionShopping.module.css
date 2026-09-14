@@ -93,19 +93,32 @@
 .build h2{font-family:var(--font-brand);font-weight:var(--brand-weight-display);font-size:30px;line-height:1.15;letter-spacing:.08em;text-transform:uppercase}
 @media(max-width:640px){.build h2{font-size:22px}}
 
-/* Three-column header: compact search | centred wordmark | utilities (Figma: desktop logo centred in a three-column header). */
+/* Three-column header: mobile-only search | centred wordmark | utilities (Figma: desktop logo centred in a three-column header). */
 .headerMain{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;padding:18px 4.5%}
 .headerLeft{display:flex;align-items:center;gap:12px;min-width:0}
 .headerRight{display:flex;align-items:center;justify-content:flex-end;gap:22px}
 .brand{justify-self:center;min-height:0}
-.search{flex:none;width:min(100%,220px);transition:width .18s ease;border-radius:3px}
-.search:focus-within{width:min(100%,320px)}
-.search input{padding:9px 12px;font-size:13px}
-.search input::placeholder{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#7a7268}
-.search button{min-width:40px;padding:0 10px}
+/* Desktop search lives in the utility cluster and opens a mega panel; the inline field is mobile-only. */
+.searchTrigger{display:inline-flex;align-items:center;gap:7px;font-size:14px;white-space:nowrap;cursor:pointer;min-height:44px}
+.searchTrigger[aria-expanded=true]{color:var(--color-muted-gold)}
+@media(min-width:641px){.headerLeft .search{display:none}}
+.megaSearch{display:flex;align-items:center;gap:16px;padding-bottom:22px;border-bottom:1px solid #ded4c4}
+.megaSearch input{flex:1;min-width:0;padding:10px 0;font-family:var(--font-brand);font-size:22px;line-height:1.2;background:none;border:0;border-bottom:1px solid #1c1c1e;border-radius:0;outline:none}
+.megaSearch input::placeholder{color:#8a8176}
+.megaSearch input:focus{border-bottom-color:var(--color-muted-gold)}
+.megaSearch button{min-height:44px;padding:0 22px;border:1px solid #1c1c1e;background:#1c1c1e;color:#fff;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.megaSearchBody{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:44px;padding-top:22px}
+.megaSearchBody h3{margin-bottom:12px;font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:#637588}
+.megaSearchFamilies{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:10px}
+.megaSearchFamilies a{display:grid;grid-template-rows:84px auto;gap:8px;font-size:12px;text-align:center;letter-spacing:.02em}
+.megaSearchFamilies img{width:100%;height:84px;object-fit:contain;background:#f5f3ef;border:1px solid #e1d8cb}
+.megaSearchCollections{display:grid;grid-template-columns:1fr 1fr;gap:0 28px}
+.megaSearchCollections a{display:grid;gap:2px;padding:9px 0;border-bottom:1px solid #e4ddd2;font-size:13px}
+.megaSearchCollections strong{font-weight:500}
+.megaSearchCollections span{font-size:11px;line-height:1.35;color:#637588}
 /* Nav row: every item shares one line box so triggers and links sit on the same baseline. */
 .nav{align-items:center;padding:10px 24px}
 .nav a,.nav button{display:inline-flex;align-items:center;min-height:32px;line-height:1}
 .nav button svg{position:relative;top:-1px}
-@media(max-width:950px){.headerMain{gap:16px}.headerRight{gap:16px}}
-@media(max-width:640px){.headerMain{grid-template-columns:36px 1fr auto auto;gap:10px;padding:12px 18px}.headerLeft,.headerRight{display:contents}.search{grid-row:2;grid-column:1/-1;width:100%}.search:focus-within{width:100%}.search input{padding:11px 12px;font-size:16px}.search input::placeholder{font-size:13px;letter-spacing:0;text-transform:none}}
+@media(max-width:950px){.headerMain{gap:16px}.headerRight{gap:16px}.megaSearchBody{grid-template-columns:1fr}.megaSearchFamilies{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:640px){.headerMain{grid-template-columns:36px 1fr auto auto;gap:10px;padding:12px 18px}.headerLeft,.headerRight{display:contents}.searchTrigger{display:none}.search{grid-row:2;grid-column:1/-1;width:100%}}

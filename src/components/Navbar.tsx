@@ -359,8 +359,8 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                     <button aria-label="Open menu" onClick={() => setMobileMenuOpen(true)}><List size={20} /></button>
                 </div>}
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-                    {/* Row 1: desktop = logo | nav | search | actions. mobile = hamburger | actions */}
-                    <div className="relative flex h-[56px] items-center gap-2 sm:gap-4 xl:h-[72px] xl:gap-4 2xl:gap-6">
+                    {/* Row 1: desktop = [reserved: region/currency] | centred wordmark | search + actions. mobile = hamburger | centred wordmark | spacer */}
+                    <div className="relative flex h-[56px] items-center gap-2 sm:gap-4 xl:grid xl:grid-cols-[1fr_auto_1fr] xl:h-[60px] xl:gap-4 2xl:gap-6">
                         <button
                             aria-label="Open menu"
                             className="xl:hidden p-2 -ml-2 text-obsidian hover:text-muted-gold transition-colors shrink-0"
@@ -368,24 +368,92 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                         >
                             <List size={20} weight="regular" />
                         </button>
-                        {/* Mobile wordmark */}
+                        <div className="hidden xl:block" aria-hidden="true" />{/* reserved for region / currency selector */}
                         <Link
                             href="/"
                             aria-label="Best Bottles home"
-                            className="xl:hidden ml-1 flex min-h-11 shrink-0 items-center"
+                            className="flex flex-1 min-h-11 items-center justify-center xl:flex-none xl:justify-self-center"
                         >
                             <BrandWordmark />
                         </Link>
-                        {/* Desktop wordmark */}
-                        <Link
-                            href="/"
-                            aria-label="Best Bottles home"
-                            className="hidden xl:flex shrink-0 min-h-11 items-center xl:mr-2 2xl:mr-4"
-                        >
-                            <BrandWordmark />
-                        </Link>
+                        <div className="ml-auto flex min-w-9 shrink-0 items-center justify-end space-x-2 xl:ml-0 xl:min-w-0 xl:justify-self-end">
+                        {!hideSearch && (
+                            <form
+                                onSubmit={handleSearchSubmit}
+                                className="group/search relative hidden min-w-0 items-center space-x-2 rounded-xl border border-champagne bg-white/60 px-3 py-2 transition-all duration-200 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 xl:flex xl:w-[240px] 2xl:w-[300px]"
+                                suppressHydrationWarning
+                            >
+                            <MagnifyingGlass className="text-slate shrink-0" size={16} />
+                            <input
+                                type="search"
+                                name="search"
+                                autoComplete="search"
+                                enterKeyHint="search"
+                                value={searchValue}
+                                onChange={(e) => setSearchValue(e.target.value)}
+                                placeholder={searchPlaceholder}
+                                className="bg-transparent text-sm focus:outline-none flex-1 min-w-0 placeholder-slate/60 text-obsidian"
+                                aria-label="Search products"
+                                data-testid="navbar-desktop-search-input"
+                                suppressHydrationWarning
+                            />
+                            <button
+                                type="submit"
+                                aria-label="Submit product search"
+                                className="shrink-0 rounded-lg p-1.5 text-slate hover:bg-muted-gold/10 hover:text-muted-gold transition-colors"
+                            >
+                                <ArrowRight size={14} />
+                            </button>
+                            {showSearchSuggestions && (
+                                <div className="absolute left-0 right-0 top-[calc(100%+0.5rem)] z-[70] hidden overflow-hidden rounded-xl border border-champagne bg-white shadow-xl group-focus-within/search:block">
+                                    <p className="px-3 pt-3 text-[10px] font-bold uppercase tracking-[0.18em] text-slate/70">Suggested searches</p>
+                                    <div className="p-2">
+                                        {visibleSearchSuggestions.map((suggestion) => (
+                                            <button
+                                                key={`${suggestion.helper}-${suggestion.label}`}
+                                                type="button"
+                                                onMouseDown={(e) => e.preventDefault()}
+                                                onClick={() => handleSearchSuggestion(suggestion.query)}
+                                                className="flex min-h-11 w-full items-center justify-between rounded-lg px-3 py-2 text-left hover:bg-bone"
+                                            >
+                                                <span className="text-sm font-medium text-obsidian">{suggestion.label}</span>
+                                                <span className="text-[11px] text-slate">{suggestion.helper}</span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                            </form>
+                        )}
+
+                            {/* Grace AI trigger removed from navbar in v3 — Grace now opens
+                                via the floating bottom-right launcher (GraceLauncher.tsx)
+                                so the entry point matches the PRD's collapsed-launcher spec.
+                                Mobile keeps the tab-bar Grace button, PDPs keep PdpGraceTrigger. */}
+
+                            <Link href="/sign-in" aria-label="Account" className="hidden xl:flex items-center p-2 hover:text-muted-gold transition-colors">
+                                <User className="text-obsidian" size={20} />
+                            </Link>
+
+                            <button
+                                aria-label="Cart"
+                                onClick={() => setCartOpen(true)}
+                                className="hidden xl:flex items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
+                            >
+                                <ShoppingBag className="text-obsidian" size={20} />
+                                {mounted && isCartHydrated && itemCount > 0 && (
+                                    <span className="absolute top-0.5 right-0.5 bg-muted-gold text-white text-[10px] w-[16px] h-[16px] flex items-center justify-center rounded-full font-semibold">
+                                        {itemCount > 99 ? "99" : itemCount}
+                                    </span>
+                                )}
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Row 2 (desktop): centred navigation under the wordmark */}
+                    <div className="hidden xl:flex h-[40px] items-center justify-center border-t border-champagne/40">
                         <nav
-                            className="hidden xl:flex items-center xl:gap-x-6 2xl:gap-x-12 text-[12px] font-normal text-obsidian uppercase tracking-[0.08em] shrink-0"
+                            className="flex items-center xl:gap-x-8 2xl:gap-x-12 text-[12px] font-normal text-obsidian uppercase tracking-[0.08em] shrink-0"
                             ref={megaRef}
                         >
                             {links.map((link) => {
@@ -439,81 +507,9 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                                 );
                             })}
                         </nav>
-                        {!hideSearch && (
-                            <form
-                                onSubmit={handleSearchSubmit}
-                                className="group/search relative hidden min-w-0 items-center space-x-2 rounded-xl border border-champagne bg-white/60 px-3 py-2 transition-all duration-200 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 xl:flex xl:min-w-[320px] xl:max-w-[420px] xl:flex-1 2xl:min-w-[520px] 2xl:max-w-[520px]"
-                                suppressHydrationWarning
-                            >
-                            <MagnifyingGlass className="text-slate shrink-0" size={16} />
-                            <input
-                                type="search"
-                                name="search"
-                                autoComplete="search"
-                                enterKeyHint="search"
-                                value={searchValue}
-                                onChange={(e) => setSearchValue(e.target.value)}
-                                placeholder={searchPlaceholder}
-                                className="bg-transparent text-sm focus:outline-none flex-1 min-w-0 placeholder-slate/60 text-obsidian"
-                                aria-label="Search products"
-                                data-testid="navbar-desktop-search-input"
-                                suppressHydrationWarning
-                            />
-                            <button
-                                type="submit"
-                                aria-label="Submit product search"
-                                className="shrink-0 rounded-lg p-1.5 text-slate hover:bg-muted-gold/10 hover:text-muted-gold transition-colors"
-                            >
-                                <ArrowRight size={14} />
-                            </button>
-                            {showSearchSuggestions && (
-                                <div className="absolute left-0 right-0 top-[calc(100%+0.5rem)] z-[70] hidden overflow-hidden rounded-xl border border-champagne bg-white shadow-xl group-focus-within/search:block">
-                                    <p className="px-3 pt-3 text-[10px] font-bold uppercase tracking-[0.18em] text-slate/70">Suggested searches</p>
-                                    <div className="p-2">
-                                        {visibleSearchSuggestions.map((suggestion) => (
-                                            <button
-                                                key={`${suggestion.helper}-${suggestion.label}`}
-                                                type="button"
-                                                onMouseDown={(e) => e.preventDefault()}
-                                                onClick={() => handleSearchSuggestion(suggestion.query)}
-                                                className="flex min-h-11 w-full items-center justify-between rounded-lg px-3 py-2 text-left hover:bg-bone"
-                                            >
-                                                <span className="text-sm font-medium text-obsidian">{suggestion.label}</span>
-                                                <span className="text-[11px] text-slate">{suggestion.helper}</span>
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-                            </form>
-                        )}
-                        <div className="hidden xl:flex flex-1" />
-                        <div className="ml-auto flex shrink-0 items-center justify-end space-x-2 xl:ml-0">
-                            {/* Grace AI trigger removed from navbar in v3 — Grace now opens
-                                via the floating bottom-right launcher (GraceLauncher.tsx)
-                                so the entry point matches the PRD's collapsed-launcher spec.
-                                Mobile keeps the tab-bar Grace button, PDPs keep PdpGraceTrigger. */}
-
-                            <Link href="/sign-in" aria-label="Account" className="hidden xl:flex items-center p-2 hover:text-muted-gold transition-colors">
-                                <User className="text-obsidian" size={20} />
-                            </Link>
-
-                            <button
-                                aria-label="Cart"
-                                onClick={() => setCartOpen(true)}
-                                className="hidden xl:flex items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
-                            >
-                                <ShoppingBag className="text-obsidian" size={20} />
-                                {mounted && isCartHydrated && itemCount > 0 && (
-                                    <span className="absolute top-0.5 right-0.5 bg-muted-gold text-white text-[10px] w-[16px] h-[16px] flex items-center justify-center rounded-full font-semibold">
-                                        {itemCount > 99 ? "99" : itemCount}
-                                    </span>
-                                )}
-                            </button>
-                        </div>
                     </div>
 
-                    {/* Row 2: full-width search bar (mobile only) */}
+                    {/* Row 3: full-width search bar (mobile only) */}
                     {!hideSearch && !hideMobileSearch && (
                         <div data-mobile-search="" className="flex xl:hidden pb-3 border-t border-champagne/40 pt-2">
                             <form
