@@ -19,7 +19,7 @@ import { checkoutMinimum, checkoutMinimumMessage } from "@/lib/checkout";
 import { analytics } from "@/lib/analytics";
 import {
     builderOrder, deriveBuilder, emptySelection, previewParts, reconcileSelection, selectBuilderBody,
-    MAX_QUANTITY, ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection,
+    MAX_QUANTITY, ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection, clearBodyPreview,
 } from "@/lib/bottle-builder/model";
 import hasIncludedCovers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import styles from "@/components/bottle-builder/Builder.module.css";
@@ -250,7 +250,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                 <fieldset aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
                 {step === 0 && <div className={styles.bottleGrid}>
                     {visibleBodies.map(b => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)}>
-                        <div className={styles.bottleThumb}><BuilderImage config={b.configurations[0]} parts={previewParts(b.configurations[0], "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} /></div>
+                        <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} /></div>
                         <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <small>{b.profileLabel}</small>}<span className={styles.neckBadge}>Neck: {b.neck}</span>
                     </Option>)}
                 </div>}

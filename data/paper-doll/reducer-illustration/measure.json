@@ -1,0 +1,39 @@
+{
+  "referenceHeightOverWidth": 1.123,
+  "drawingHeightOverWidth": 1.202,
+  "heightRatioDrawingOverReference": 1.07,
+  "widthFractionByBand": [
+    {
+      "band": "top disc",
+      "reference": 0.643,
+      "drawing": 0.684
+    },
+    {
+      "band": "flange",
+      "reference": 0.992,
+      "drawing": 0.997
+    },
+    {
+      "band": "body upper",
+      "reference": 0.879,
+      "drawing": 0.867
+    },
+    {
+      "band": "body lower",
+      "reference": 0.873,
+      "drawing": 0.863
+    },
+    {
+      "band": "chamfer",
+      "reference": 0.816,
+      "drawing": 0.83
+    },
+    {
+      "band": "foot",
+      "reference": 0.686,
+      "drawing": 0.693
+    }
+  ],
+  "meanAbsWidthDiff": 0.016,
+  "maxAbsWidthDiff": 0.18
+}

@@ -4,364 +4,196 @@
   "bodies": [
     {
       "body": "Boston Round|15|Amber|18-400",
-      "status": "no-candidate",
-      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/7. GBBstnAmb15mlBlkDropperGlTrim.psd",
-      "note": "no visible on-axis layer reaching the baseline"
+      "status": "reviewed",
+      "source": "jordan-approved",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/1. GBBstnAmb15mlBlkCapSht.psd",
+      "sourceSha256": "8aefa739fdcf1e5fa736877c4bff380725b8e8d7a2aba8b85d3129a497eb1d72",
+      "layerIndex": 1,
+      "layerName": "Layer 2",
+      "retouchIslandsDropped": 1,
+      "whiteGroundPixelsDropped": 73171,
+      "evidence": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles\u2026 the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/boston-round-15-amber-18-400.webp",
+        "width": 298,
+        "height": 823,
+        "sha256": "bea1f361bb6d74f4a4df3f161f589f0b891dcedca4264b198c57915bb00a2425"
+      }
+    },
+    {
+      "body": "Boston Round|15|Clear|18-400",
+      "status": "reviewed",
+      "source": "jordan-approved",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+      "sourceSha256": "1c994a66c9d0eb524d3aff308514532efe560d0659f2df9c99860e4e4891fa71",
+      "layerIndex": 1,
+      "layerName": "Layer 4",
+      "retouchIslandsDropped": 0,
+      "whiteGroundPixelsDropped": 0,
+      "evidence": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles\u2026 the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/boston-round-15-clear-18-400.webp",
+        "width": 316,
+        "height": 812,
+        "sha256": "cf6ac89f76f3050f4d3bca6322d71a111ae98c0bdf8225188388c421ff3a747d"
+      }
     },
     {
       "body": "Boston Round|15|Cobalt Blue|18-400",
-      "status": "no-candidate",
-      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/2. GBBstnBlu15mlBlkDropperSlTrim.psd",
-      "note": "no visible on-axis layer reaching the baseline"
+      "status": "reviewed",
+      "source": "jordan-approved",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/1. GBBstnBlu15BlkCapSht.psd",
+      "sourceSha256": "82e6548471ca8742eaafd65839f93b1a69fc44d7d718e7bdc59d67f63d21a297",
+      "layerIndex": 1,
+      "layerName": "Layer 2",
+      "retouchIslandsDropped": 1,
+      "whiteGroundPixelsDropped": 73201,
+      "evidence": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles\u2026 the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/boston-round-15-cobalt-blue-18-400.webp",
+        "width": 298,
+        "height": 823,
+        "sha256": "31eca59d1b55d189dca7498bcea4b73ca0a01b9e3ff6c0c7e3b0c44ce09e8b2d"
+      }
     },
     {
       "body": "Boston Round|30|Amber|20-400",
-      "status": "candidate",
-      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/1. Amber Bottle (1oz)/Amber - Alternating Caps/1. GBBstnAmb1ozMtlRollonMattSl.psd",
-      "sourceSha256": "7e14dec33daccb39020f748a6c15203dc0895f5380bf8dce02472bb3892d0cb0",
-      "layerIndex": 2,
+      "status": "reviewed",
+      "source": "jordan-approved",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/17. GBBstnAmb1ozBlkCapSht.psd",
+      "sourceSha256": "d55c3911e6f42992f21851b6e4705038291fb559a5d8a2898d0ff72e61e62bf5",
+      "layerIndex": 1,
       "layerName": "Layer 5",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            944,
-            1499
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 7",
-          "bbox": [
-            163,
-            315,
-            407,
-            528
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 5",
-          "bbox": [
-            10,
-            290,
-            821,
-            1499
-          ],
-          "background": false
-        },
-        {
-          "index": 3,
-          "name": "Layer 4",
-          "bbox": [
-            593,
-            1022,
-            878,
-            1442
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "whiteGroundPixelsDropped": 619046,
+      "evidence": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles\u2026 the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/boston-round-30-amber-20-400.webp",
+        "width": 392,
+        "height": 1091,
+        "sha256": "892dd57cdcd1f41a9a1fa6c6fda99c882e2b35aae307dfba4599c8bcec192235"
+      }
     },
     {
       "body": "Boston Round|30|Clear|20-400",
-      "status": "candidate",
-      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/3. Clear Bottle (1oz)/Clear - Alternating Caps/1. GBBstn1ozMtlRollonMattSl.psd",
-      "sourceSha256": "68cad12d8746fde491802bb3ef6dfa165a29106028e223dcb64ff8caf3ce3f1b",
-      "layerIndex": 2,
-      "layerName": "Layer 24",
+      "status": "reviewed",
+      "source": "jordan-approved",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+      "sourceSha256": "8f3adeb586877cc3a1ca8b58901f43022fe388187aa2c5b8d11bfa8edc4f6f1e",
+      "layerIndex": 1,
+      "layerName": "Layer 22",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            974,
-            1499
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 22",
-          "bbox": [
-            111,
-            482,
-            514,
-            1429
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 24",
-          "bbox": [
-            -8,
-            168,
-            956,
-            1681
-          ],
-          "background": false
-        },
-        {
-          "index": 3,
-          "name": "Layer 25",
-          "bbox": [
-            593,
-            1002,
-            878,
-            1422
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "whiteGroundPixelsDropped": 0,
+      "evidence": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles\u2026 the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/boston-round-30-clear-20-400.webp",
+        "width": 410,
+        "height": 949,
+        "sha256": "bba1459072fba60bf49a66e1390f7eae5a7dfd20af9cd2aa1338db69b053b945"
+      }
     },
     {
       "body": "Boston Round|30|Cobalt Blue|20-400",
-      "status": "candidate",
-      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/3. (1ounce:30ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (1oz)/Cobalt Blue - Alternating Caps /1. GBBstnBlu1ozMtlRollonMattSl.psd",
-      "sourceSha256": "8b475266fa376fbba52fac131e501a66908311d9344c419eea50b8bb1dcb3218",
-      "layerIndex": 2,
+      "status": "reviewed",
+      "source": "jordan-approved",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/17. GBBstnBlu1ozBlkCapSht.psd",
+      "sourceSha256": "05d0e8c6355727ddfa084c31bbeedeecfe53bf3d2c7e02f4c3db87d41a892d4c",
+      "layerIndex": 1,
       "layerName": "Layer 5",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            944,
-            1499
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 7",
-          "bbox": [
-            163,
-            315,
-            407,
-            528
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 5",
-          "bbox": [
-            10,
-            290,
-            821,
-            1499
-          ],
-          "background": false
-        },
-        {
-          "index": 3,
-          "name": "Layer 4",
-          "bbox": [
-            593,
-            1022,
-            878,
-            1442
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "whiteGroundPixelsDropped": 600804,
+      "evidence": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles\u2026 the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/boston-round-30-cobalt-blue-20-400.webp",
+        "width": 392,
+        "height": 1152,
+        "sha256": "a77b51fa595cf2b8dec3590a97a95a99a02a9a6566bf217b492269cdf4a24306"
+      }
     },
     {
       "body": "Boston Round|60|Amber|20-400",
-      "status": "candidate",
-      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/1. Amber Bottle (2 ounce:60 ml)/Amber - Alternating Caps/1. GBBstnAmb2ozMtlRollonMattSl.psd",
-      "sourceSha256": "3ec1cedc5b955923e987f024d1afe4c516d29571d997dcf77713d6efb1dbced3",
-      "layerIndex": 2,
-      "layerName": "Layer 4",
+      "status": "reviewed",
+      "source": "jordan-approved",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/17. GBBstnAmb2ozBlkCapSht.psd",
+      "sourceSha256": "7a4b430ed4f984a8e27134f4e47a65d0f5257536f649af042fc2288495d89281",
+      "layerIndex": 1,
+      "layerName": "Layer 3",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            944,
-            1499
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 3",
-          "bbox": [
-            0,
-            0,
-            944,
-            1499
-          ],
-          "background": true
-        },
-        {
-          "index": 2,
-          "name": "Layer 4",
-          "bbox": [
-            593,
-            1022,
-            878,
-            1442
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "whiteGroundPixelsDropped": 898314,
+      "evidence": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles\u2026 the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/boston-round-60-amber-20-400.webp",
+        "width": 466,
+        "height": 1200,
+        "sha256": "f7031381905db71d55b6402e7ec9094266283330e4d0d85b563ec1fee57b2bcc"
+      }
     },
     {
       "body": "Boston Round|60|Clear|20-400",
-      "status": "candidate",
-      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/3. Clear Bottle (2 ounce:60 ml)/Clear - Alternating Caps/10. GBBstn2ozRollonMattGl.psd",
-      "sourceSha256": "ee72d6bb7a9b7c08b80fbfd20d1e39546acc45e75ad9adcecc6fa533aaa693ff",
+      "status": "reviewed",
+      "source": "jordan-approved",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+      "sourceSha256": "82dacf0eeb9397d6ead784ff4dad5144d7882f6e843b12e511505ee16f87cdf0",
       "layerIndex": 1,
-      "layerName": "Layer 11",
+      "layerName": "Layer 6",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            944,
-            1499
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 11",
-          "bbox": [
-            76,
-            132,
-            543,
-            1445
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 8",
-          "bbox": [
-            587,
-            993,
-            886,
-            1440
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "whiteGroundPixelsDropped": 0,
+      "evidence": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles\u2026 the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/boston-round-60-clear-20-400.webp",
+        "width": 494,
+        "height": 1158,
+        "sha256": "ab3d011859b6721011deadd8b1bf414c91c65e77421f4cdef88100b707611382"
+      }
     },
     {
       "body": "Boston Round|60|Cobalt Blue|20-400",
-      "status": "candidate",
-      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/1. (2 ounce:60 ml) Boston Round (Uncapped)/2. Cobalt Blue Bottle (2 ounce:60 ml)/Cobalt Blue 2oz - Alternating Caps  /1. GBBstnBlu2ozMtlRollonMattSl.psd",
-      "sourceSha256": "914f08e3ef0ceadd5ac5b1c8ec0c1b83df94d6bf83dbceb56ab909ff6c9ac72a",
-      "layerIndex": 2,
-      "layerName": "Layer 5",
+      "status": "reviewed",
+      "source": "jordan-approved",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/17. GBBstnBlu2ozBlkCapSht.psd",
+      "sourceSha256": "e741ba2b1c3b62e8912ddc95e824bbfaf4eca2c8eda98bb7a5006b2814c9fc7e",
+      "layerIndex": 1,
+      "layerName": "Layer 2",
       "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            944,
-            1499
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 3",
-          "bbox": [
-            0,
-            0,
-            944,
-            1499
-          ],
-          "background": true
-        },
-        {
-          "index": 2,
-          "name": "Layer 5",
-          "bbox": [
-            -9,
-            -10,
-            963,
-            1500
-          ],
-          "background": false
-        },
-        {
-          "index": 3,
-          "name": "Layer 4",
-          "bbox": [
-            593,
-            1022,
-            878,
-            1442
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "whiteGroundPixelsDropped": 1008754,
+      "evidence": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles\u2026 the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/boston-round-60-cobalt-blue-20-400.webp",
+        "width": 470,
+        "height": 1148,
+        "sha256": "7e414b61c57c3847dc8e894c7652bcd1864341cdfc54dc4e6b7b738e7587fed4"
+      }
     },
     {
       "body": "Circle|100|Clear|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "LBCrcl100LtnCu",
-      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/55. LBCrcl100LtnCu.psd",
-      "sourceSha256": "4016010fefde727031c038cb0f1a2865fadeb32077cf055d4b8a383c2f6c34cc",
-      "layerIndex": 1,
-      "layerName": "Layer 1",
-      "evidence": "circle-paired-kit-recipes.json: 2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/circle-100-clear-18-415-input.png",
+      "editJob": "fce457b7-6063-4fae-9ae8-e0a191a704e7",
+      "cutoutJob": "4959f814-d47a-4401-b434-30181b7dfb3e",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/circle-100-clear-18-415.webp",
         "width": 1000,
-        "height": 1176,
-        "sha256": "c4d5c0f09aca45d756b95fbedfa9a96b3f5f0fb4d02d72e10bf1f35607651680"
+        "height": 1166,
+        "sha256": "b5d9e52d05d2cfda32b75f268f5d10b6868f58348b1cbc7e49ca617c7e460d32"
       }
     },
     {
       "body": "Circle|100|Frosted|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "LBCrclFrst100LtnCu",
-      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/56. LBCrclFrst100LtnCu.psd",
-      "sourceSha256": "362251e73b3c78dd437b488f33527d7d030708a41fb57af1da5ac4f1fd3d3ef7",
-      "layerIndex": 2,
-      "layerName": "Layer 1",
-      "evidence": "circle-paired-kit-recipes.json: 2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/circle-100-frosted-18-415-input.png",
+      "editJob": "9f6cd4ce-72cf-4b68-98cd-22d03360bfbb",
+      "cutoutJob": "aac84994-011f-4b9a-9bfe-76893f87e56d",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/circle-100-frosted-18-415.webp",
         "width": 497,
-        "height": 606,
-        "sha256": "5aa094c6335d36bd592f2e4a8b9e018a444c01fcc3a154fd335733b2951e6809"
+        "height": 594,
+        "sha256": "30da82b9b6850866b5242cc108bde6b2e0d10ba8cf3da656e2d1aa0ba0728c9d"
       }
     },
     {
@@ -378,19 +210,17 @@
     {
       "body": "Circle|30|Clear|15-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "GBCrcl30SpryMattGl",
-      "path": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/5. GBCrcl30SpryMattGl.psd",
-      "sourceSha256": "07fea1c7d6e88f6fe14e9cdb13239c2754dbe405cf5d7564894ed433a0138809",
-      "layerIndex": 1,
-      "layerName": "Layer 10",
-      "evidence": "circle-paired-kit-recipes.json: 2026-09-08 Circle paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/circle-30-clear-15-415-input.png",
+      "editJob": "26ffc4b2-04f1-4085-ad1c-6b2abce99d1a",
+      "cutoutJob": "94a95437-727b-4316-abd3-8ee7d77ac57f",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/circle-30-clear-15-415.webp",
-        "width": 713,
-        "height": 940,
-        "sha256": "57e98fe6ca812fa1608c06f4be99e12a5919dd5c8b66ac711eaf3c23671dee97"
+        "width": 711,
+        "height": 927,
+        "sha256": "5144bee20a918437465151fbef8e3cdc82298ff8fb8703fddbce4d6d775177d1"
       }
     },
     {
@@ -414,12 +244,17 @@
     {
       "body": "Circle|50|Frosted|18-415",
       "status": "reviewed",
-      "source": "circle-builder-media (reducer-bottle layer; replace when an uncapped source is found)",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/circle-50-frosted-18-415-input.png",
+      "editJob": "fd4fb831-f369-49bc-a6a6-afe4423163f1",
+      "cutoutJob": "e81946a1-ede3-4e77-a309-e46cddf240ff",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
-        "url": "/images/bottle-builder/circle/circle-50-frosted-18-415.webp",
+        "url": "/images/bottle-builder/bodies/circle-50-frosted-18-415.webp",
         "width": 1000,
-        "height": 1179,
-        "sha256": "36eb895cb6c3ce910de7781d4a1df5ba1d5f54baf74d5ac17af5914588150102"
+        "height": 1154,
+        "sha256": "f51592cbf7b44d9a309321dac192d77174d4eb340c48fee14d3e4ed7f2a456a5"
       }
     },
     {
@@ -1018,13 +853,14 @@
     {
       "body": "Cylinder|9|Frosted|13-415",
       "status": "reviewed",
-      "source": "jordan-approved candidate",
+      "source": "jordan-approved",
       "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/5. GBTallCylFrst9SpryBluMatt.psd",
       "sourceSha256": "6c2ff131d2b19a5f8bb3fe20a26375c9f685f5e60c5846afb00c927e4ad07c5e",
       "layerIndex": 3,
       "layerName": "Layer 21",
       "retouchIslandsDropped": 0,
-      "evidence": "2026-09-14 Jordan: add the frosted option.",
+      "whiteGroundPixelsDropped": 0,
+      "evidence": "2026-09-14 Jordan: add the frosted option. Pinned 2026-09-14 to the layer Jordan saw (heuristic picks drift when the ledger changes).",
       "asset": {
         "url": "/images/bottle-builder/bodies/cylinder-9-frosted-13-415.webp",
         "width": 207,
@@ -1035,13 +871,14 @@
     {
       "body": "Cylinder|9|Frosted|17-415",
       "status": "reviewed",
-      "source": "jordan-approved candidate",
+      "source": "jordan-approved",
       "path": "3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/22. GBCylFrst9SpryMattSl.psd",
       "sourceSha256": "963be098fd0c896d8a478689317c310df90ac8fb83928b18b1d559bad9dd3e58",
       "layerIndex": 1,
       "layerName": "Layer 16",
       "retouchIslandsDropped": 0,
-      "evidence": "2026-09-14 Jordan: add the frosted option.",
+      "whiteGroundPixelsDropped": 0,
+      "evidence": "2026-09-14 Jordan: add the frosted option. Pinned 2026-09-14 to the layer Jordan saw (heuristic picks drift when the ledger changes).",
       "asset": {
         "url": "/images/bottle-builder/bodies/cylinder-9-frosted-17-415.webp",
         "width": 250,
@@ -1117,95 +954,35 @@
       "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
     },
     {
-      "body": "Diamond|60|Clear|18-415",
-      "status": "candidate",
-      "path": "2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/33. GBDmnd2ozAnSpLvn.psd",
-      "sourceSha256": "fcc6de87c81a99a4acf617f4af5328cc08035c0fd8e1e53effbbf01e6a123c90",
-      "layerIndex": 1,
-      "layerName": "Layer 4 copy",
-      "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            1399,
-            1924
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 4 copy",
-          "bbox": [
-            738,
-            797,
-            873,
-            1791
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 22",
-          "bbox": [
-            537,
-            560,
-            1115,
-            1827
-          ],
-          "background": false
-        },
-        {
-          "index": 3,
-          "name": "Layer 21",
-          "bbox": [
-            87,
-            180,
-            977,
-            780
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
-    },
-    {
       "body": "Diva|100|Clear|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "LBDiva100LtnCu",
-      "path": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/56. LBDiva100LtnCu.psd",
-      "sourceSha256": "448d50aa7d73076f2c3d958398ab2e9f9fb484c708ff4bb22fa63d44054846f9",
-      "layerIndex": 1,
-      "layerName": "Layer 1",
-      "evidence": "diva-paired-kit-recipes.json (uncapped source): 2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/diva-100-clear-18-415-input.png",
+      "editJob": "7c87c8a7-c1de-4454-9ba6-66eb7d768a71",
+      "cutoutJob": "c4fe7254-0201-4beb-9220-da4b53331c00",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/diva-100-clear-18-415.webp",
-        "width": 591,
-        "height": 1200,
-        "sha256": "45bb4cee6db99099585f69c68c48280039c76cf65ecf97f3583935bc807b9dbb"
+        "width": 585,
+        "height": 1129,
+        "sha256": "7543682004dadd9327eb21261dd991770567b01c669456939e66e2b988506ed4"
       }
     },
     {
       "body": "Diva|30|Clear|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "GBDiva30SpryShnSl",
-      "path": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /31. LBDiva30LtnShnSl.psd",
-      "sourceSha256": "11470fed44b5638d077685acf5d174c17fc39361e282019bb8387f489008910f",
-      "layerIndex": 1,
-      "layerName": "Layer 5",
-      "evidence": "diva-paired-kit-recipes.json (uncapped source): 2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/diva-30-clear-18-415-input.png",
+      "editJob": "71247d70-c922-4331-a730-4f0d0260a01e",
+      "cutoutJob": "0cdf9c7e-e84f-429e-917e-4dbed96ce7e4",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 pilot, Jordan: 'looks great'.",
       "asset": {
         "url": "/images/bottle-builder/bodies/diva-30-clear-18-415.webp",
-        "width": 592,
-        "height": 1165,
-        "sha256": "732a27004e6beef28c86265db61ab55cebbe300737f565ae8d3227afd8929167"
+        "width": 583,
+        "height": 1121,
+        "sha256": "fe49c54df3fc30fd3ea9f8b0768747a79e934c77b53561e4e94cdec2f57a0a86"
       }
     },
     {
@@ -1217,6 +994,7 @@
       "layerIndex": 1,
       "layerName": "Layer 1",
       "retouchIslandsDropped": 0,
+      "whiteGroundPixelsDropped": 0,
       "evidence": "2026-09-14 Jordan: 'they still show the reducer' \u2014 every closure photograph of the Diva was shot with the reducer inserted; this bare-bottle master (no closure token) is the only Diva 46 photograph with an empty neck.",
       "asset": {
         "url": "/images/bottle-builder/bodies/diva-46-clear-18-415.webp",
@@ -1228,36 +1006,33 @@
     {
       "body": "Diva|46|Frosted|18-415",
       "status": "reviewed",
-      "source": "jordan-approved",
-      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/26.  46 Diva (Frosted) Ltn & Spry, uncapped/30. GBDivaFrst46SpryShnSl.psd",
-      "sourceSha256": "5d7f3aeb2a331f972a4a5f688b5ea6c613194da96d825c91d930ead8d32c89b1",
-      "layerIndex": 1,
-      "layerName": "Layer 3",
-      "retouchIslandsDropped": 0,
-      "evidence": "2026-09-14 Jordan: add the frosted option; then 'the top of the Diva bottle is cut off' \u2014 the reducer-capped source's body layer ends where the cap sat; the uncapped sprayer source carries the complete neck and no insert.",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/diva-46-frosted-18-415-input.png",
+      "editJob": "d8c3b988-6340-4a1a-8494-bca387f54818",
+      "cutoutJob": "77a05eb6-3c50-4ebc-9c02-f321e4699338",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/diva-46-frosted-18-415.webp",
-        "width": 609,
-        "height": 1200,
-        "sha256": "9b73a509675a54d60aa0ee7253a24b129a99710cf9803455e0a6fe88414168f4"
+        "width": 604,
+        "height": 1144,
+        "sha256": "bebc9422a57fa8234e66cae94fdcabf1b65e4afc3ba31553703a24463c5b2528"
       }
     },
     {
       "body": "Elegant|100|Clear|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "LBElg100WhtClOvrCp",
-      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/18.  100ml Elegant, Ltn & Spry, capped/53. LBElg100WhtClOvrCp.psd",
-      "sourceSha256": "224e8baa5ac2693e61b3cd9842859cb115dd25a7089c94bfb9b9a5bbe63dedee",
-      "layerIndex": 1,
-      "layerName": "Shape 1 copy",
-      "evidence": "elegant-paired-kit-recipes.json: 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/elegant-100-clear-18-415-input.png",
+      "editJob": "1c605df3-d363-4c9f-b085-408fd6352843",
+      "cutoutJob": "ef6cba0a-f3b8-449f-826f-e1287fca4dae",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/elegant-100-clear-18-415.webp",
-        "width": 689,
-        "height": 1200,
-        "sha256": "819415f455de83edb12b58194284e384d2ac548e25b026683cf474379e5b8c20"
+        "width": 686,
+        "height": 1194,
+        "sha256": "394b60e1794e47bacd1d9ad67b1b5dbab52bf3661f8258edaefe1a3558d0a79c"
       }
     },
     {
@@ -1281,55 +1056,49 @@
     {
       "body": "Elegant|15|Clear|13-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "GBElg15MtlRollBlkSh",
-      "path": "5.  13-415 Bottles/8. Elegant 15ml Clear/1. Elegant 15ml (Uncapped) PSD/25. GBElg15RollBlkSh.psd",
-      "sourceSha256": "e1ea405ca4ec8721078e61fad7b71286616a7463cb58c5a7a10a99c847957098",
-      "layerIndex": 2,
-      "layerName": "Layer 33",
-      "evidence": "elegant-paired-kit-recipes.json (uncapped source): 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/elegant-15-clear-13-415-input.png",
+      "editJob": "06cff5a3-e3ff-4d98-a083-26c9694e8d3d",
+      "cutoutJob": "38ffcd2a-856f-4566-99b8-a8963d42aa5d",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/elegant-15-clear-13-415.webp",
         "width": 423,
-        "height": 718,
-        "sha256": "74bb9b47440c5197d0da13da4675f8d5819d1c15cdaa815e088c13e6cd265c35"
+        "height": 702,
+        "sha256": "5d384a7949b2a918a8b3dc6df386192dc493636bd8a92d51cf55ae7c2e61ed97"
       }
     },
     {
       "body": "Elegant|15|Frosted|13-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "GBElgFrst15MtlRollBlkSh",
-      "path": "5.  13-415 Bottles/26. Frosted Elegant 15ml /1. Frosted Elegant 15ml (Uncapped) PSD/24. GBElgFrst15MtlRollBlkSh.psd",
-      "sourceSha256": "2d29a44ecc2f1defe5d5cdc3e1939c395cc8cdec554166c26ea7b2fb73415259",
-      "layerIndex": 2,
-      "layerName": "Layer 33",
-      "evidence": "elegant-paired-kit-recipes.json (uncapped source): 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/elegant-15-frosted-13-415-input.png",
+      "editJob": "d143b7d0-f7df-41d4-8d93-f2efa376d968",
+      "cutoutJob": "aa10f0e5-a397-4d03-ae48-9bf6a02caa1e",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/elegant-15-frosted-13-415.webp",
-        "width": 427,
-        "height": 713,
-        "sha256": "e49f8f3d5ffc067e007d107a8e7daf683bec22bf05f27fc08ebf4893e20b39c9"
+        "width": 425,
+        "height": 705,
+        "sha256": "122dc447f0709d5deb67c5dab44e92afccaa38789992bbcbfa28d132ef521511"
       }
     },
     {
       "body": "Elegant|30|Clear|15-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "GBElg30SlCap",
-      "path": "4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/6. GBElg30SlCap..psd",
-      "sourceSha256": "5b7c125e6d9a2bfb8e5332e3e3c202434aac0d7843749038954d5a4a7593a738",
-      "layerIndex": 1,
-      "layerName": "Layer 3",
-      "evidence": "elegant-paired-kit-recipes.json: 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/elegant-30-clear-15-415-input.png",
+      "editJob": "27451e4f-12ca-4d8f-a6d6-d6402cc60632",
+      "cutoutJob": "c0c77482-397a-462a-8c2a-2d8c908ce312",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/elegant-30-clear-15-415.webp",
         "width": 539,
-        "height": 857,
-        "sha256": "b69fc7c74ee699a5300772e1aab6f0664e6dddbeaf2cac41e5c640ee6bac616b"
+        "height": 847,
+        "sha256": "a5658b681e70c2f0c403a4bda6e19d81265a8197923c62255abce551bd6cc988"
       }
     },
     {
@@ -1407,19 +1176,17 @@
     {
       "body": "Empire|50|Clear|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "GBEmp50AnSpTslIvySl",
-      "path": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/44. GBEmp50AnSpTslIvySl.psd",
-      "sourceSha256": "a94eb861305a7a03ba5b646afdd96ad73ff0e9e3217e82c34cc0072769e718ba",
-      "layerIndex": 1,
-      "layerName": "Layer 45",
-      "evidence": "empire-paired-kit-recipes.json: 2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-input.png",
+      "editJob": "e12bef5a-7232-4aef-a3b9-93005362739f",
+      "cutoutJob": "2ac49acd-76c0-4ec8-b232-ccca26912bad",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/empire-50-clear-18-415.webp",
-        "width": 503,
-        "height": 1200,
-        "sha256": "e823b256ad3c4c6b8d060a1b086884ca5e02b4b6758ecd31fb356e472b34db8a"
+        "width": 496,
+        "height": 1160,
+        "sha256": "2ac9aa2af087d43508e1a9b5249580203869117cea2e30cda080c55b1755efb8"
       }
     },
     {
@@ -1548,14 +1315,14 @@
     {
       "body": "Round|128|Clear|18-415",
       "status": "reviewed",
-      "source": "paired-kit-recipe",
-      "sku": "GBRnd128SpryShnSl",
+      "source": "jordan-approved",
       "path": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/29. GBRnd128SpryShnSl.psd",
       "sourceSha256": "e5810acc7b0b85dc6fed22a01216f0bcd7a2bc169621f91975b8af831b7c5009",
       "layerIndex": 1,
       "layerName": "Layer 25",
-      "evidence": "round-128-paired-kit-recipes.json (uncapped source): 2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
-      "reviewedBy": "Jordan Richter and Codex",
+      "retouchIslandsDropped": 0,
+      "whiteGroundPixelsDropped": 0,
+      "evidence": "Pinned 2026-09-14: the paired-kit recipe layer already serving the builder; main's ledger moved the Round 128 ml clear plates to 'reconcile', which must not drop a reviewed body.",
       "asset": {
         "url": "/images/bottle-builder/bodies/round-128-clear-18-415.webp",
         "width": 1000,
@@ -1566,97 +1333,36 @@
     {
       "body": "Round|128|Frosted|18-415",
       "status": "reviewed",
-      "source": "jordan-approved candidate",
-      "path": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/51. GBRndFrst128DrpSl.psd",
-      "sourceSha256": "a823298e4eba3c6a31fc8ab8163d26f10ff24a4eedfe6b8da95a685ddc8e3850",
-      "layerIndex": 2,
-      "layerName": "Layer 29",
-      "retouchIslandsDropped": 0,
-      "evidence": "2026-09-14 Jordan: add the frosted option.",
+      "source": "jordan-approved generated edit",
+      "path": "data/paper-doll/neck-cleanup/round-128-frosted-18-415-input.png",
+      "editJob": "59dc38c3-f131-4a26-a7db-9eea3bcabeac",
+      "cutoutJob": "4b8840cf-dbb4-40e1-beb8-793fb1b73329",
+      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
       "asset": {
         "url": "/images/bottle-builder/bodies/round-128-frosted-18-415.webp",
-        "width": 949,
-        "height": 1164,
-        "sha256": "d023bd3be905a01374e82c9f35f759569bc98b2b723315361e5a0edc2d880567"
+        "width": 936,
+        "height": 1141,
+        "sha256": "f8be685251c860d02e6d5d20d25fa3dabbaa115c12c2433e030be973e4a35e67"
       }
     },
     {
       "body": "Round|78|Clear|18-415",
-      "status": "candidate",
-      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/53. GBRnd78SpryCu.psd",
-      "sourceSha256": "d0142bc1641010554b46cdd0cd5d680cd9d8a83254762b43edf84bfce33de4f7",
-      "layerIndex": 1,
-      "layerName": "Layer 16",
-      "retouchIslandsDropped": 7,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            1239,
-            1487
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 16",
-          "bbox": [
-            118,
-            260,
-            1143,
-            1423
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 11",
-          "bbox": [
-            606,
-            619,
-            737,
-            1327
-          ],
-          "background": false
-        },
-        {
-          "index": 3,
-          "name": "Layer 14",
-          "bbox": [
-            480,
-            74,
-            776,
-            641
-          ],
-          "background": false
-        },
-        {
-          "index": 4,
-          "name": "Layer 15",
-          "bbox": [
-            432,
-            -18,
-            834,
-            644
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "status": "no-candidate",
+      "path": "2.  18-415 Bottles /9. Round 78ml/1. Round 78ml PSD/49. GBRnd78AnSpTslMtSl.psd",
+      "note": "no visible on-axis layer reaching the baseline"
     },
     {
       "body": "Round|78|Frosted|18-415",
       "status": "reviewed",
-      "source": "jordan-approved candidate",
+      "source": "jordan-approved",
       "path": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/33. GBRndFrst78AnSpLvn.psd",
       "sourceSha256": "8008ac3b1bbc27059a3028672d8e3473f6a19973018001e4977525944485ee9d",
       "layerIndex": 1,
       "layerName": "Layer 11",
       "retouchIslandsDropped": 0,
-      "evidence": "2026-09-14 Jordan: add the frosted option.",
+      "whiteGroundPixelsDropped": 0,
+      "evidence": "2026-09-14 Jordan: add the frosted option. Pinned 2026-09-14 to the layer Jordan saw (heuristic picks drift when the ledger changes).",
       "asset": {
         "url": "/images/bottle-builder/bodies/round-78-frosted-18-415.webp",
         "width": 816,
@@ -2014,11 +1720,11 @@
     {
       "body": "Slim|100|Clear|18-415",
       "status": "candidate",
-      "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/36. GBSlm100AnSpIvySl.psd",
-      "sourceSha256": "dfaa659ade45b14989dcb2a576207e2ad7ee3bfbff5cc444038d9a89e59af7d2",
-      "layerIndex": 1,
-      "layerName": "Layer 49",
-      "retouchIslandsDropped": 0,
+      "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/48. GBSlm100AnSpTslBlk.psd",
+      "sourceSha256": "738bed299434097a1edfbac9f100c60a664fe81350ccc3989bde9ff40e309238",
+      "layerIndex": 6,
+      "layerName": "Layer 79",
+      "retouchIslandsDropped": 1,
       "layers": [
         {
           "index": 0,
@@ -2026,97 +1732,85 @@
           "bbox": [
             0,
             0,
-            1574,
+            2274,
             2624
           ],
           "background": true
         },
         {
           "index": 1,
-          "name": "Layer 49",
+          "name": "Layer 82",
           "bbox": [
-            558,
-            421,
-            997,
-            2553
+            1501,
+            348,
+            1940,
+            2478
           ],
           "background": false
         },
         {
           "index": 2,
+          "name": "Layer 6",
+          "bbox": [
+            1585,
+            333,
+            1900,
+            577
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
           "name": "Layer 45",
           "bbox": [
-            672,
-            662,
-            815,
-            2214
+            1614,
+            587,
+            1757,
+            2147
           ],
           "background": false
         },
         {
-          "index": 3,
-          "name": "Layer 48",
+          "index": 5,
+          "name": "Layer 78",
           "bbox": [
-            31,
-            57,
-            933,
-            652
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
-    },
-    {
-      "body": "Slim|30|Clear|18-415",
-      "status": "candidate",
-      "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/33. GBSlm30AnSpLvn.psd",
-      "sourceSha256": "b83577f7e74616b60dacc366afe5b64be6a37b6a74f0cfd87e2709e22fcdf094",
-      "layerIndex": 1,
-      "layerName": "Layer 27",
-      "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Layer 0",
-          "bbox": [
-            -43,
-            0,
-            1531,
-            1924
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 27",
-          "bbox": [
-            554,
-            508,
-            963,
-            1741
+            1127,
+            180,
+            1556,
+            1459
           ],
           "background": false
         },
         {
-          "index": 2,
-          "name": "Layer 25",
+          "index": 6,
+          "name": "Layer 79",
           "bbox": [
-            719,
-            733,
-            802,
-            1501
+            94,
+            821,
+            1881,
+            2456
           ],
           "background": false
         },
         {
-          "index": 3,
-          "name": "Layer 26",
+          "index": 7,
+          "name": "Layer 80",
           "bbox": [
-            14,
-            154,
-            905,
-            730
+            983,
+            1389,
+            1463,
+            2033
+          ],
+          "background": false
+        },
+        {
+          "index": 8,
+          "name": "Layer 81",
+          "bbox": [
+            1523,
+            71,
+            1866,
+            573
           ],
           "background": false
         }
@@ -2125,59 +1819,9 @@
     },
     {
       "body": "Slim|50|Clear|18-415",
-      "status": "candidate",
-      "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/33. GBSlm50AnSpLvn.psd",
-      "sourceSha256": "f127a0f090304899d6925c903c12846ad63d781a8ac24e9cec5ced1a26d44d0e",
-      "layerIndex": 1,
-      "layerName": "Layer 5",
-      "retouchIslandsDropped": 0,
-      "layers": [
-        {
-          "index": 0,
-          "name": "Background",
-          "bbox": [
-            0,
-            0,
-            1399,
-            2274
-          ],
-          "background": true
-        },
-        {
-          "index": 1,
-          "name": "Layer 5",
-          "bbox": [
-            577,
-            644,
-            998,
-            2117
-          ],
-          "background": false
-        },
-        {
-          "index": 2,
-          "name": "Layer 3",
-          "bbox": [
-            714,
-            667,
-            821,
-            1858
-          ],
-          "background": false
-        },
-        {
-          "index": 3,
-          "name": "Layer 2",
-          "bbox": [
-            41,
-            59,
-            931,
-            659
-          ],
-          "background": false
-        }
-      ],
-      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+      "status": "no-candidate",
+      "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/50. GBSlm50AnSpTslGl.psd",
+      "note": "no visible on-axis layer reaching the baseline"
     },
     {
       "body": "Square|15|Clear|13-415",

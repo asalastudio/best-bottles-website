@@ -107,6 +107,20 @@ export function reviewedBodyImage(row: CatalogRow) {
     return byProfile ?? media[`${row.family}|${row.capacityMl}|${row.color}|${row.neckThreadSize}`] ?? null;
 }
 
+/** The chooser shows every bottle as bare clear glass. A body whose first
+ * configuration is coloured (Boston Round 15 ml sells amber and cobalt on dev)
+ * still has its reviewed clear layer, so the tile borrows it. */
+export function clearBodyPreview(body: BuilderBody): BuilderConfiguration {
+    const first = body.configurations[0];
+    const clear = body.configurations.find(config => config.color === "Clear") ?? first;
+    if (clear.color === "Clear") return clear;
+    const media = bodyMedia as Record<string, { url: string; width: number; height: number }>;
+    const profile = body.id.split("|")[0].replace(new RegExp(`-${body.capacityMl}ml$`), "");
+    const image = media[`${profile}|${body.capacityMl}|Clear|${body.neck}`] ?? media[`${body.family}|${body.capacityMl}|Clear|${body.neck}`];
+    if (!image) return first;
+    return { ...first, color: "Clear", bodyImage: image, kit: null, previewKit: undefined };
+}
+
 export function reviewedFitmentImage(config: BuilderConfiguration) {
     return (fitmentMedia as Record<string, { url: string; width: number; height: number }>)[`${config.family}|${config.capacityMl}|${config.neck}|${config.fitment}`] ?? null;
 }
@@ -186,20 +200,49 @@ export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | n
     const { family, color, capacityMl, neckThreadSize: neck } = row;
     const app = row.applicator?.trim();
     const capOnly = app === "Cap/Closure" || ((!app || app === "N/A") && /\bcap\b/i.test(row.itemName ?? ""));
-    const fitment = capOnly ? /tear[ -]off/i.test(row.itemName ?? "") ? "Tear-off Cap" : "Screw Cap" : app === "Metal Roller Ball" ? "Metal Roller"
+    let fitment = capOnly ? /tear[ -]off/i.test(row.itemName ?? "") ? "Tear-off Cap" : "Screw Cap" : app === "Metal Roller Ball" ? "Metal Roller"
         : app === "Plastic Roller Ball" ? "Plastic Roller" : app === "Perfume Spray Pump" ? "Perfume Sprayer"
         : app && app !== "N/A" ? app : /\bapplicator\b/i.test(row.itemName ?? "") ? "Applicator" : null;
     if (!fitment) return null;
+    const description = row.itemName ?? "";
+    // The same catalogue witness the finish component uses: a tassel assembly
+    // whose applicator field says plain "Vintage Bulb Sprayer" is still a
+    // tassel sprayer, and shares a selection tuple with the plain one otherwise.
+    if (/vintage|bulb/i.test(fitment) && !/tassel/i.test(fitment) && /with\s+tassel/i.test(description)) fitment = `${fitment} with Tassel`;
     const name = getCustomerFacingProductName({ variant: row });
+    const finishComponent = compatibleFinishComponent(row)!;
     let closure = name.variantLabel ?? row.capColor?.trim() ?? "Standard finish";
-    if (row.capStyle === "Tall" && /Cap/.test(closure) && !/Tall/i.test(closure)) closure = `Tall ${closure}`;
+    // Tall or short is the listed cap's own name ("Tall Matt Silver caps" vs
+    // "Short Matt Silver caps"); the row's capStyle says Tall on both Diva 46 reducers.
+    const capName = finishComponent.name;
+    const tall = /\btall\b/i.test(capName) ? true : /\bshort\b/i.test(capName) ? false : row.capStyle === "Tall";
+    if (/Cap/.test(closure)) {
+        if (tall && !/\bTall\b/i.test(closure)) closure = `Tall ${closure}`;
+        if (!tall && /^Tall\s+/i.test(closure)) closure = closure.replace(/^Tall\s+/i, "");
+    }
+    if (/vintage|bulb/i.test(fitment)) {
+        // Ivory bulb with a shiny gold or shiny silver collar; jeweled ring variants.
+        const collar = description.match(/\b((?:shiny|matte|matt)\s+)?(gold|silver)\s+collar\b/i);
+        if (collar && !new RegExp(`\\b${collar[2]}\\b`, "i").test(closure)) closure = `${closure}, ${titleCase(`${collar[1] ?? ""}${collar[2]}`)} Collar`;
+        if (/jewel/i.test(description) && !/ring/i.test(closure)) closure = `${closure}, Jeweled Ring`;
+    }
+    // A dropper is sold as bulb + collar. The catalogue's cap colour names one or
+    // the other ("Black" for GBBstnAmb15mlBlkDropperGlTrim, "Shiny Gold Trim" for
+    // GBBstn1ozBlkDrpShnGlTrim), so three trims of one bulb collapsed into one
+    // "White Collar" and were dropped as ambiguous. Name both parts from the
+    // catalogue description whenever a trim is described.
+    if (fitment === "Dropper") {
+        const trim = row.itemName?.match(/\b((?:shiny|matte|matt)\s+)?(gold|silver)\s+trim\b/i);
+        const bulb = row.itemName?.match(/\b(black|white)\s+dropper\b/i);
+        if (trim && bulb) closure = `${titleCase(bulb[1])} Bulb, ${titleCase(`${trim[1] ?? ""}${trim[2]}`)} Trim Collar`;
+    }
     // The group prefix preserves distinct molds with equal capacity and neck,
     // such as Footed Rectangle and Tall Rectangle, across colors and tops.
     const { bodyId, profileLabel } = builderBodyIdentity(row);
     return {
         id: row.websiteSku!, bodyId,
         family: family!, capacityMl: capacityMl!, neck: neck!, color: color!, fitment, closure, kit, profileLabel,
-        bodyImage, finishComponent: compatibleFinishComponent(row)!,
+        bodyImage, finishComponent,
         photoUrl: assembly?.url ?? null,
         caseQuantity: row.caseQuantity && row.caseQuantity > 0 ? row.caseQuantity : null,
         product: {
@@ -233,6 +276,8 @@ export function resolveBuilderConfigurations(rows: CatalogRow[], kits: (BuilderK
         found ?? (preview ? configurationFromRow(row, kits[i], preview) : null), null)
         ?? catalogConfigurationFromRow(row, null, plateUrls[i] ?? null));
 }
+
+const titleCase = (value: string) => value.trim().toLowerCase().replace(/\b[a-z]/g, c => c.toUpperCase());
 
 export function groupBuilderBodies(configurations: BuilderConfiguration[]): BuilderBody[] {
     const groups = new Map<string, BuilderBody>();

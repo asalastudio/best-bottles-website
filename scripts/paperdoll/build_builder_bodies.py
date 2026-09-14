@@ -65,7 +65,21 @@ for r in ledger:
     plated.setdefault(k, {'complete': 0, 'total': 0, 'skus': []})
     plated[k]['total'] += 1
     if r['stage'] == 'complete': plated[k]['complete'] += 1; plated[k]['skus'].append(r['sku'])
-keys = sorted(k for k, v in plated.items() if v['complete'] >= 3)
+_approved_keys = {e['body'] for e in json.loads((DATA / 'builder-bodies-approved.json').read_text())['entries']}
+# a key Jordan has approved a source for is built even when fewer than three
+# plates are complete (Boston Round 15 ml clear carries two)
+# the published plate index outranks the ledger stage: a body whose plates are
+# live (builder-body-coverage.json, from productPlates) is built even when the
+# ledger has since moved its rows back to "reconcile" (Round 128 ml clear)
+_coverage = Path(REPO / 'data/asset-ledger/builder-body-coverage.json')
+_live = set()
+if _coverage.exists():
+    for e in json.loads(_coverage.read_text())['keys']:
+        if e.get('plates', 0) < 3: continue
+        fam = f"{e['family']}|{e['capacityMl']}|{e['color']}|{e['neck']}"
+        if fam in SPLIT: _live.update(f"{p}|{e['capacityMl']}|{e['color']}|{e['neck']}" for p in e.get('profiles', []))
+        else: _live.add(fam)
+keys = sorted(k for k in set(plated) | _live | _approved_keys if plated.get(k, {}).get('complete', 0) >= 3 or k in _live or k in _approved_keys)
 
 # reviewed sources from the paired-kit recipes: one per key, the most-reviewed SKU first
 reviewed = {}
@@ -93,6 +107,31 @@ def largest_island(im):
     mask = labels == keep
     arr = np.asarray(im).copy(); arr[..., 3] = np.where(mask, arr[..., 3], 0)
     return Image.fromarray(arr, 'RGBA'), int(n - 1)
+
+def strip_white_ground(im, tol=28):
+    """Some master body layers are the photograph itself: the glass on a white
+    studio ground, the ground only partly cut away. Drop the near-white region
+    connected to the layer border. Only used where an approved entry says
+    ground: white, and only for opaque coloured glass — clear or frosted glass
+    reads as white and would be eaten."""
+    from scipy import ndimage
+    im = im.convert('RGBA'); arr = np.asarray(im).copy()
+    rgb = arr[..., :3].astype(int); a = arr[..., 3] > 8
+    white = a & (rgb.min(axis=2) >= 255 - tol)
+    labels, n = ndimage.label(white)
+    border = np.zeros_like(white); border[0, :] = border[-1, :] = border[:, 0] = border[:, -1] = True
+    border |= ~a  # ground touching an already-transparent cut counts as border too
+    edge_labels = np.unique(labels[border & white]); edge_labels = edge_labels[edge_labels > 0]
+    ground = np.isin(labels, edge_labels)
+    # one pixel of soft edge so the anti-aliased rim keeps its partial alpha
+    inner = ndimage.binary_erosion(~ground, iterations=1)
+    alpha = arr[..., 3].astype(float)
+    alpha[ground] = 0
+    rim = ~ground & ~inner & a
+    whiteness = np.clip((rgb.min(axis=2)[rim] - (255 - tol * 2)) / float(tol * 2), 0, 1)
+    alpha[rim] = alpha[rim] * (1 - whiteness)
+    arr[..., 3] = alpha.round().astype(np.uint8)
+    return Image.fromarray(arr, 'RGBA'), int(ground.sum())
 
 def save(im, name):
     im = im.convert('RGBA'); box = im.getchannel('A').getbbox()
@@ -123,7 +162,7 @@ def layer_stats(psd):
 
 def candidate_for(k):
     """Representative capped PSD: prefer a cap-only or reducer SKU with the fewest layers."""
-    skus = plated[k]['skus']
+    skus = plated.get(k, {}).get('skus') or [r['sku'] for r in ledger if key_of(r['sku']) == k]
     pool = []
     for sku in skus:
         stem = re.sub(r'[^a-z0-9]', '', sku.lower())
@@ -176,8 +215,14 @@ for k in keys:
     if a and a.get('generated'):
         # Jordan-approved GPT Image 2.5 edit of the master body layer (insert removed);
         # the cut-out is scaled back to the input's pixel size so the glass keeps its size
-        g = a['generated']; c = Image.open(REPO / g['cutoutPng']).convert('RGBA'); inp = Image.open(REPO / g['input'])
-        scale = inp.width / c.width; c = c.resize((int(c.width * scale), int(c.height * scale)), Image.Resampling.LANCZOS)
+        g = a['generated']
+        if g.get('splicedPng'):
+            # the no-drift result: master pixels everywhere but the neck bore
+            # (scripts/paperdoll/splice_neck_edit.py), already at source size
+            c = Image.open(REPO / g['splicedPng']).convert('RGBA')
+        else:
+            c = Image.open(REPO / g['cutoutPng']).convert('RGBA'); inp = Image.open(REPO / g['input'])
+            scale = inp.width / c.width; c = c.resize((int(c.width * scale), int(c.height * scale)), Image.Resampling.LANCZOS)
         media = None if args.review_only else save(c, name)
         if media: bodies[k] = media
         lineage.append({'body': k, 'status': 'reviewed', 'source': 'jordan-approved generated edit', 'path': g['input'], 'editJob': g['editJob'], 'cutoutJob': g['cutoutJob'],
@@ -186,11 +231,14 @@ for k in keys:
         continue
     if a and not a.get('candidate'):
         psd = PSDImage.open(ROOT / a['path']); layer = list(psd.descendants())[a['layer']]
-        cleaned, dropped = largest_island(layer.composite())
+        raw = layer.composite(); ground_px = 0
+        if a.get('ground') == 'white': raw, ground_px = strip_white_ground(raw)
+        cleaned, dropped = largest_island(raw)
         media = None if args.review_only else save(cleaned, name)
         if media: bodies[k] = media
         lineage.append({'body': k, 'status': 'reviewed', 'source': 'jordan-approved', 'path': a['path'], 'sourceSha256': sha_of.get(a['path']),
-                        'layerIndex': a['layer'], 'layerName': layer.name, 'retouchIslandsDropped': dropped, 'evidence': a['instruction'], 'asset': media})
+                        'layerIndex': a['layer'], 'layerName': layer.name, 'retouchIslandsDropped': dropped, 'whiteGroundPixelsDropped': ground_px,
+                        'evidence': a['instruction'], 'asset': media})
         tiles.append((k, 'approved', cleaned, a['path'], a['layer'], layer.name)); continue
     if k in circle and k not in reviewed:
         lineage.append({'body': k, 'status': 'reviewed', 'source': 'circle-builder-media (reducer-bottle layer; replace when an uncapped source is found)', 'asset': circle[k]}); continue

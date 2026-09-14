@@ -1,4 +1,58 @@
 {
+  "Boston Round|15|Amber|18-400": {
+    "url": "/images/bottle-builder/bodies/boston-round-15-amber-18-400.webp",
+    "width": 298,
+    "height": 823,
+    "sha256": "bea1f361bb6d74f4a4df3f161f589f0b891dcedca4264b198c57915bb00a2425"
+  },
+  "Boston Round|15|Clear|18-400": {
+    "url": "/images/bottle-builder/bodies/boston-round-15-clear-18-400.webp",
+    "width": 316,
+    "height": 812,
+    "sha256": "cf6ac89f76f3050f4d3bca6322d71a111ae98c0bdf8225188388c421ff3a747d"
+  },
+  "Boston Round|15|Cobalt Blue|18-400": {
+    "url": "/images/bottle-builder/bodies/boston-round-15-cobalt-blue-18-400.webp",
+    "width": 298,
+    "height": 823,
+    "sha256": "31eca59d1b55d189dca7498bcea4b73ca0a01b9e3ff6c0c7e3b0c44ce09e8b2d"
+  },
+  "Boston Round|30|Amber|20-400": {
+    "url": "/images/bottle-builder/bodies/boston-round-30-amber-20-400.webp",
+    "width": 392,
+    "height": 1091,
+    "sha256": "892dd57cdcd1f41a9a1fa6c6fda99c882e2b35aae307dfba4599c8bcec192235"
+  },
+  "Boston Round|30|Clear|20-400": {
+    "url": "/images/bottle-builder/bodies/boston-round-30-clear-20-400.webp",
+    "width": 410,
+    "height": 949,
+    "sha256": "bba1459072fba60bf49a66e1390f7eae5a7dfd20af9cd2aa1338db69b053b945"
+  },
+  "Boston Round|30|Cobalt Blue|20-400": {
+    "url": "/images/bottle-builder/bodies/boston-round-30-cobalt-blue-20-400.webp",
+    "width": 392,
+    "height": 1152,
+    "sha256": "a77b51fa595cf2b8dec3590a97a95a99a02a9a6566bf217b492269cdf4a24306"
+  },
+  "Boston Round|60|Amber|20-400": {
+    "url": "/images/bottle-builder/bodies/boston-round-60-amber-20-400.webp",
+    "width": 466,
+    "height": 1200,
+    "sha256": "f7031381905db71d55b6402e7ec9094266283330e4d0d85b563ec1fee57b2bcc"
+  },
+  "Boston Round|60|Clear|20-400": {
+    "url": "/images/bottle-builder/bodies/boston-round-60-clear-20-400.webp",
+    "width": 494,
+    "height": 1158,
+    "sha256": "ab3d011859b6721011deadd8b1bf414c91c65e77421f4cdef88100b707611382"
+  },
+  "Boston Round|60|Cobalt Blue|20-400": {
+    "url": "/images/bottle-builder/bodies/boston-round-60-cobalt-blue-20-400.webp",
+    "width": 470,
+    "height": 1148,
+    "sha256": "7e414b61c57c3847dc8e894c7652bcd1864341cdfc54dc4e6b7b738e7587fed4"
+  },
   "Circle|100|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/circle-100-clear-18-415.webp",
     "width": 1000,

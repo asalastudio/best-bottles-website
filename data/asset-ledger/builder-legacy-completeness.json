@@ -1,25 +1,24 @@
 {
- "generatedAt": "2026-09-14T15:49:36.662Z",
- "funnelGeneratedAt": "2026-09-14T15:49:35.791Z",
+ "generatedAt": "2026-09-14T18:37:07.400Z",
+ "funnelGeneratedAt": "2026-09-14T18:37:06.734Z",
  "totals": {
   "clusters": 278,
-  "complete": 83,
-  "partial": 59,
-  "none": 136,
+  "complete": 87,
+  "partial": 75,
+  "none": 116,
   "assemblies": 2130,
-  "offered": 999
+  "offered": 1094
  },
  "reasonTotals": {
   "gate: no compatible finish component": 195,
   "no configuration: no kit indexed (has reviewed body image but no plate)": 57,
   "no configuration: Cylinder 5.5 ml excluded by rule": 1,
   "not on dev": 95,
-  "no configuration: no kit indexed (plate present but no reviewed body image)": 643,
+  "no configuration: no kit indexed (plate present but no reviewed body image)": 569,
   "no configuration: body derivation background-matte": 1,
   "gate: compatibility unresolved (no listed components)": 25,
-  "no configuration: kit completeness capSplit": 27,
-  "no configuration: no kit indexed (no reviewed body image and no plate)": 71,
-  "no configuration: kit completeness bodyOnly": 16
+  "no configuration: kit completeness capSplit": 22,
+  "no configuration: no kit indexed (no reviewed body image and no plate)": 71
  },
  "clusters": [
   {
@@ -423,6 +422,14 @@
    "missing": []
   },
   {
+   "body": "Boston Round|30|Clear|20-400",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
    "body": "Circle|100|Frosted|18-415",
    "members": 6,
    "offered": 6,
@@ -570,6 +577,30 @@
    "body": "Round|128|Clear|18-415",
    "members": 6,
    "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Boston Round|30|Amber|20-400",
+   "members": 5,
+   "offered": 5,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Boston Round|30|Clear|20-400",
+   "members": 5,
+   "offered": 5,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Boston Round|30|Cobalt Blue|20-400",
+   "members": 5,
+   "offered": 5,
    "complete": true,
    "reasons": {},
    "missing": []
@@ -963,6 +994,126 @@
    ]
   },
   {
+   "body": "Boston Round|30|Amber|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb1ozRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Amber|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb2ozRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Cobalt Blue|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnBlu2ozRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|30|Cobalt Blue|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnBlu1ozRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Amber|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb2ozBlkDrpr"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Clear|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstn2ozRollGl"
+   ]
+  },
+  {
+   "body": "Boston Round|30|Amber|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb1ozMtlRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|30|Clear|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstn1ozMtlRollonBlk"
+   ]
+  },
+  {
+   "body": "Boston Round|15|Amber|18-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb15mlBlkDropper"
+   ]
+  },
+  {
+   "body": "Boston Round|15|Cobalt Blue|18-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnBlu15BlkDrpr"
+   ]
+  },
+  {
    "body": "Circle|50|Frosted|18-415",
    "members": 11,
    "offered": 9,
@@ -999,6 +1150,42 @@
    "missing": [
     "GBCylBlu9RollPnkDot",
     "GBCylBlu9RollSlDot"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Amber|20-400",
+   "members": 5,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb2ozMtlRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Cobalt Blue|20-400",
+   "members": 5,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnBlu2ozBlkDropper"
+   ]
+  },
+  {
+   "body": "Boston Round|30|Cobalt Blue|20-400",
+   "members": 5,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnBlu1ozMtlRollonGl"
    ]
   },
   {
@@ -1291,6 +1478,46 @@
     "GBRndFrst78AnSpIvyGl",
     "GBRndFrst78AnSpLvn",
     "GBRndFrst78AnSpRed"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Clear|20-400",
+   "members": 6,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 2
+   },
+   "missing": [
+    "GBBstn2ozBlkDrprShnGlTrim",
+    "GBBstn2ozWhtDrprShnSlTrim"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Clear|20-400",
+   "members": 6,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 2
+   },
+   "missing": [
+    "GBBstn2ozMtlRollBlk",
+    "GBBstn2ozMtlRollGl"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Cobalt Blue|20-400",
+   "members": 6,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1,
+    "not on dev": 1
+   },
+   "missing": [
+    "GBBstnBlu2ozMtlRollonGl",
+    "GBBstnBlu2ozMtlRollonShnBlk"
    ]
   },
   {
@@ -3119,79 +3346,6 @@
    ]
   },
   {
-   "body": "Boston Round|30|Amber|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: kit completeness capSplit": 2,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 3
-   },
-   "missing": [
-    "GBBstnAmb1ozRollonGl",
-    "GBBstnAmb1ozRollonMattBlk",
-    "GBBstnAmb1ozRollonMattGl",
-    "GBBstnAmb1ozRollonMattSl",
-    "GBBstnAmb1ozRollonShnBlk",
-    "GBBstnAmb1ozRollonShnSl"
-   ]
-  },
-  {
-   "body": "Boston Round|60|Amber|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 5
-   },
-   "missing": [
-    "GBBstnAmb2ozRollonGl",
-    "GBBstnAmb2ozRollonMattBlk",
-    "GBBstnAmb2ozRollonMattGl",
-    "GBBstnAmb2ozRollonMattSl",
-    "GBBstnAmb2ozRollonShnBlk",
-    "GBBstnAmb2ozRollonShnSl"
-   ]
-  },
-  {
-   "body": "Boston Round|60|Cobalt Blue|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 5
-   },
-   "missing": [
-    "GBBstnBlu2ozRollonGl",
-    "GBBstnBlu2ozRollonMattBlk",
-    "GBBstnBlu2ozRollonMattGl",
-    "GBBstnBlu2ozRollonMattSl",
-    "GBBstnBlu2ozRollonShnBlk",
-    "GBBstnBlu2ozRollonShnSl"
-   ]
-  },
-  {
-   "body": "Boston Round|30|Cobalt Blue|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 5
-   },
-   "missing": [
-    "GBBstnBlu1ozRollonGl",
-    "GBBstnBlu1ozRollonMattBlk",
-    "GBBstnBlu1ozRollonMattGl",
-    "GBBstnBlu1ozRollonMattSl",
-    "GBBstnBlu1ozRollonShnBlk",
-    "GBBstnBlu1ozRollonShnSl"
-   ]
-  },
-  {
    "body": "Gift Box|0|Clear|?",
    "members": 6,
    "offered": 0,
@@ -3206,189 +3360,6 @@
     "CP13-415GlSht",
     "CP13-415SlMattSht",
     "CP13-415SlSht"
-   ]
-  },
-  {
-   "body": "Boston Round|60|Amber|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 3,
-    "gate: no compatible finish component": 1,
-    "no configuration: kit completeness bodyOnly": 2
-   },
-   "missing": [
-    "GBBstnAmb2ozBlkDropperShnGlTrim",
-    "GBBstnAmb2ozBlkDrpr",
-    "GBBstnAmb2ozBlkDrprShnSlTrim",
-    "GBBstnAmb2ozWhtDropperShnGlTrim",
-    "GBBstnAmb2ozWhtDropperShnSlTrim",
-    "GBBstnAmb2ozWhtDrpr"
-   ]
-  },
-  {
-   "body": "Boston Round|60|Clear|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 4,
-    "gate: no compatible finish component": 2
-   },
-   "missing": [
-    "GBBstn2ozBlkDrpr",
-    "GBBstn2ozBlkDrprShnGlTrim",
-    "GBBstn2ozBlkDrprShnSlTrim",
-    "GBBstn2ozWhtDrpr",
-    "GBBstn2ozWhtDrprShnGlTrim",
-    "GBBstn2ozWhtDrprShnSlTrim"
-   ]
-  },
-  {
-   "body": "Boston Round|60|Clear|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 2,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
-   },
-   "missing": [
-    "GBBstn2ozMtlRollBlk",
-    "GBBstn2ozMtlRollGl",
-    "GBBstn2ozMtlRollMattBlk",
-    "GBBstn2ozMtlRollMattGl",
-    "GBBstn2ozMtlRollMattSl",
-    "GBBstn2ozMtlRollShnSl"
-   ]
-  },
-  {
-   "body": "Boston Round|60|Clear|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 5
-   },
-   "missing": [
-    "GBBstn2ozRollGl",
-    "GBBstn2ozRollMattBlk",
-    "GBBstn2ozRollMattSl",
-    "GBBstn2ozRollShnBlk",
-    "GBBstn2ozRollShnSl",
-    "GBBstn2ozRollonMattGl"
-   ]
-  },
-  {
-   "body": "Boston Round|60|Cobalt Blue|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 4,
-    "not on dev": 1
-   },
-   "missing": [
-    "GBBstnBlu2ozMtlRollonGl",
-    "GBBstnBlu2ozMtlRollonMattBlk",
-    "GBBstnBlu2ozMtlRollonMattGl",
-    "GBBstnBlu2ozMtlRollonMattSl",
-    "GBBstnBlu2ozMtlRollonShnBlk",
-    "GBBstnBlu2ozMtlRollonShnSl"
-   ]
-  },
-  {
-   "body": "Boston Round|30|Amber|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: kit completeness capSplit": 3,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 2
-   },
-   "missing": [
-    "GBBstnAmb1ozMtlRollonGl",
-    "GBBstnAmb1ozMtlRollonMattBlk",
-    "GBBstnAmb1ozMtlRollonMattGl",
-    "GBBstnAmb1ozMtlRollonMattSl",
-    "GBBstnAmb1ozMtlRollonShnBlk",
-    "GBBstnAmb1ozMtlRollonShnSl"
-   ]
-  },
-  {
-   "body": "Boston Round|30|Clear|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 5
-   },
-   "missing": [
-    "GBBstn1ozMtlRollonBlk",
-    "GBBstn1ozMtlRollonGl",
-    "GBBstn1ozMtlRollonMattBlk",
-    "GBBstn1ozMtlRollonMattGl",
-    "GBBstn1ozMtlRollonMattSl",
-    "GBBstn1ozMtlRollonShnSl"
-   ]
-  },
-  {
-   "body": "Boston Round|30|Clear|20-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 6
-   },
-   "missing": [
-    "GBBstn1ozRollonMattBlk",
-    "GBBstn1ozRollonMattGl",
-    "GBBstn1ozRollonMattSl",
-    "GBBstn1ozRollonShBlk",
-    "GBBstn1ozRollonShGl",
-    "GBBstn1ozRollonShnSl"
-   ]
-  },
-  {
-   "body": "Boston Round|15|Amber|18-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: kit completeness bodyOnly": 5
-   },
-   "missing": [
-    "GBBstnAmb15mlBlkDropper",
-    "GBBstnAmb15mlBlkDropperGlTrim",
-    "GBBstnAmb15mlBlkDropperSlTrim",
-    "GBBstnAmb15mlWhtDropper",
-    "GBBstnAmb15mlWhtDropperGlTrim",
-    "GBBstnAmb15mlWhtDropperSlTrim"
-   ]
-  },
-  {
-   "body": "Boston Round|15|Cobalt Blue|18-400",
-   "members": 6,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 4,
-    "no configuration: kit completeness bodyOnly": 1
-   },
-   "missing": [
-    "GBBstnBlu15BlkDrpr",
-    "GBBstnBlu15BlkDrprGlTrim",
-    "GBBstnBlu15WhtDrpr",
-    "GBBstnBlu15WhtDrprGlTrim",
-    "GBBstnBlu15WhtDrprSlTrim",
-    "GBBstnBlu15mlBlkDropperSlTrim"
    ]
   },
   {
@@ -3613,106 +3584,6 @@
     "GBSlm50SpryShnBlk",
     "GBSlm50SpryShnGl",
     "GBSlm50SpryShnSl"
-   ]
-  },
-  {
-   "body": "Boston Round|60|Amber|20-400",
-   "members": 5,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
-   },
-   "missing": [
-    "GBBstnAmb2ozMtlRollonGl",
-    "GBBstnAmb2ozMtlRollonMattBlk",
-    "GBBstnAmb2ozMtlRollonMattGl",
-    "GBBstnAmb2ozMtlRollonMattSl",
-    "GBBstnAmb2ozMtlRollonShnSl"
-   ]
-  },
-  {
-   "body": "Boston Round|60|Cobalt Blue|20-400",
-   "members": 5,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
-   },
-   "missing": [
-    "GBBstnBlu2ozBlkDropper",
-    "GBBstnBlu2ozBlkDropperShnGlTrim",
-    "GBBstnBlu2ozWhtDropper",
-    "GBBstnBlu2ozWhtDropperShnGlTrim",
-    "GBBstnBlu2ozWhtDropperShnSlTrim"
-   ]
-  },
-  {
-   "body": "Boston Round|30|Amber|20-400",
-   "members": 5,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: kit completeness bodyOnly": 3,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 2
-   },
-   "missing": [
-    "GBBstnAmb1ozBlkDropper",
-    "GBBstnAmb1ozBlkDrpShnGl",
-    "GBBstnAmb1ozWhtDropper",
-    "GBBstnAmb1ozWhtDropperShnGlTrim",
-    "GBBstnAmb1ozWhtDrprShnSlTrim"
-   ]
-  },
-  {
-   "body": "Boston Round|30|Clear|20-400",
-   "members": 5,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 5
-   },
-   "missing": [
-    "GBBstn1ozBlkDrp",
-    "GBBstn1ozBlkDrpShnGlTrim",
-    "GBBstn1ozWhtDrp",
-    "GBBstn1ozWhtDrpShnGlTrim",
-    "GBBstn1ozWhtDrpShnSlTrim"
-   ]
-  },
-  {
-   "body": "Boston Round|30|Cobalt Blue|20-400",
-   "members": 5,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "no configuration: kit completeness bodyOnly": 5
-   },
-   "missing": [
-    "GBBstnBlu1ozBlkDropper",
-    "GBBstnBlu1ozBlkDropperShnGlTrim",
-    "GBBstnBlu1ozWhtDropper",
-    "GBBstnBlu1ozWhtDropperShnGlTrim",
-    "GBBstnBlu1ozWhtDropperShnSlTrim"
-   ]
-  },
-  {
-   "body": "Boston Round|30|Cobalt Blue|20-400",
-   "members": 5,
-   "offered": 0,
-   "complete": false,
-   "reasons": {
-    "gate: no compatible finish component": 1,
-    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
-   },
-   "missing": [
-    "GBBstnBlu1ozMtlRollonGl",
-    "GBBstnBlu1ozMtlRollonMattBlk",
-    "GBBstnBlu1ozMtlRollonMattGl",
-    "GBBstnBlu1ozMtlRollonMattSl",
-    "GBBstnBlu1ozMtlRollonShnSl"
    ]
   },
   {

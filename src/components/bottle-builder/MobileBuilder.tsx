@@ -4,7 +4,7 @@ import { fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitmen
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, Minus, Plus, SlidersHorizontal, X, ArrowsOutSimple } from "@/components/icons";
-import { builderOrder, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderSelection } from "@/lib/bottle-builder/model";
+import { builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderSelection } from "@/lib/bottle-builder/model";
 import { checkoutMinimum, checkoutMinimumMessage } from "@/lib/checkout";
 import BuilderImage from "./BuilderImage";
 import BuilderFinishImage from "./BuilderFinishImage";
@@ -181,7 +181,7 @@ export default function MobileBuilder(p: Props) {
             </div><p className={styles.count}>{visible.length} bottle {visible.length === 1 ? "option" : "options"}</p>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>Bottle</legend><div className={styles.bottleGrid}>
                 {visible.map(b => <Choice key={b.id} name={`${id}-bottle`} value={b.id} selected={body?.id === b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} onSelect={() => choose({ bodyId: b.id })}>
-                    <div className={styles.bottleThumb}><BuilderImage config={b.configurations[0]} parts={previewParts(b.configurations[0], "body")} scale={1.08 * Math.max(.55, p.chooserScale(b))} label={`${b.capacityMl} ml ${b.profileLabel}`} /></div>
+                    <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} scale={1.08 * Math.max(.55, p.chooserScale(b))} label={`${b.capacityMl} ml ${b.profileLabel}`} /></div>
                     <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <span>{b.profileLabel}</span>}<span>Neck: {b.neck}</span>
                 </Choice>)}
             </div></fieldset>
