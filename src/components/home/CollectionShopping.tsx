@@ -46,9 +46,9 @@ export function FamilyCarousel({ cards }: { cards?: HomepageData['designFamilyCa
         <div className={styles.edgeControls}><button aria-label="Previous bottle family" aria-controls="family-carousel" disabled={position.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label="Next bottle family" aria-controls="family-carousel" disabled={position.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div></div><div className={styles.railControls} aria-live="polite">{position.index} / {entries.length}</div>
     </section>;
 }
-/** Stage-percent position on the v7 niche still (3584×1024): a card at the base of the bottle, on the sill to its right. */
+/** Stage-percent anchor on the v7 niche still (3584×1024): the underside of the sill at its left end, where the tag hangs. */
 const DEMO_HOTSPOTS: NonNullable<HomepageData['heroHotspots']> = [
-    { _key: 'demo-bottle', x: 85.2, y: 71.5, label: 'Empire 50 mL', detail: 'Clear glass with an 18-415 neck. Every closure shown here fits it.', href: '/catalog?family=empire' },
+    { _key: 'demo-bottle', x: 77.3, y: 78.8, label: 'Empire 50 mL', detail: 'Clear glass with an 18-415 neck. Every closure shown here fits it.', href: familyFinderHref('Empire') },
 ];
 export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSlides']; hotspots?:HomepageData['heroHotspots']}) {
     const [index,setIndex]=useState(0);

@@ -72,29 +72,48 @@
 
 @media (prefers-reduced-motion: reduce) {
     .odoStrip { transition: none; }
-    .tag, .tagMore, .tagChevron { transition: none; }
+    .tag { animation: none; }
+    .tagBody, .tagMore, .tagChevron { transition: none; }
 }
 
-/* Hotspot cards (Sanity homepagePage.heroHotspots): a small label anchored at its point, opening on hover,
-   focus or tap into the detail line and a click-through. Anchored at its top-left; .tagFlip anchors top-right. */
+/* Hotspot swing tags (Sanity homepagePage.heroHotspots): the point is where the thread attaches (the underside of
+   the sill); the tag hangs centred below it, settles once on load, and opens downward on hover, focus or tap. */
 .tag {
     position: absolute;
     z-index: 2;
     display: block;
-    width: 168px;
-    padding: 9px 12px 8px;
-    background: rgba(245, 243, 239, 0.94);
-    border: 1px solid rgba(28, 28, 30, 0.16);
-    box-shadow: 0 8px 24px rgba(30, 22, 12, 0.14);
+    width: 176px;
+    transform: translateX(-50%);
+    transform-origin: 50% 0;
     color: #1c1c1e;
     text-decoration: none;
     font: inherit;
     cursor: pointer;
+    animation: tagSettle 2.6s cubic-bezier(0.3, 0.7, 0.3, 1) 0.2s 1 both;
+}
+.tag::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    border-radius: 50%;
+    background: rgba(28, 28, 30, 0.7);
+}
+.tagThread { display: block; width: 1px; height: 26px; margin: 0 auto; background: rgba(28, 28, 30, 0.55); }
+.tagBody {
+    display: block;
+    padding: 9px 12px 9px;
+    background: rgba(245, 243, 239, 0.94);
+    border: 1px solid rgba(28, 28, 30, 0.16);
+    box-shadow: 0 10px 26px rgba(30, 22, 12, 0.16);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    transition: box-shadow 0.25s ease;
 }
-.tagFlip { transform: translateX(-100%); }
+.tagEyelet { display: block; width: 6px; height: 6px; margin: -3px auto 7px; border: 1px solid rgba(28, 28, 30, 0.5); border-radius: 50%; background: rgba(245, 243, 239, 0.9); }
 .tagHead { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .tagLabel {
     font-family: var(--font-brand);
@@ -120,8 +139,8 @@
     display: grid;
     grid-template-rows: 0fr;
     opacity: 0;
-    transition: grid-template-rows 0.3s ease, opacity 0.25s ease, margin-top 0.3s ease;
     margin-top: 0;
+    transition: grid-template-rows 0.3s ease, opacity 0.25s ease, margin-top 0.3s ease;
 }
 .tagMore > * { overflow: hidden; }
 .tagDetail { display: block; font-family: var(--font-brand); font-size: 12px; line-height: 1.45; color: rgba(28, 28, 30, 0.74); }
@@ -137,12 +156,19 @@
     width: fit-content;
     padding-bottom: 1px;
 }
-.tag:hover, .tag:focus-visible, .tag:focus-within { box-shadow: 0 12px 32px rgba(30, 22, 12, 0.2); }
-.tag:hover .tagMore, .tag:focus-visible .tagMore, .tag:focus-within .tagMore { grid-template-rows: 1fr; opacity: 1; margin-top: 7px; }
-.tag:hover .tagMore > *, .tag:focus-visible .tagMore > *, .tag:focus-within .tagMore > * { overflow: visible; }
-.tag:hover .tagChevron, .tag:focus-visible .tagChevron, .tag:focus-within .tagChevron { transform: rotate(-135deg) translate(-2px, -2px); }
-.tag:focus-visible { outline: 2px solid #1c1c1e; outline-offset: 2px; }
+.tag:hover .tagBody, .tag:focus-visible .tagBody { box-shadow: 0 14px 34px rgba(30, 22, 12, 0.22); }
+.tag:hover .tagMore, .tag:focus-visible .tagMore { grid-template-rows: 1fr; opacity: 1; margin-top: 7px; }
+.tag:hover .tagMore > *, .tag:focus-visible .tagMore > * { overflow: visible; }
+.tag:hover .tagChevron, .tag:focus-visible .tagChevron { transform: rotate(-135deg) translate(-2px, -2px); }
+.tag:focus-visible { outline: none; }
+.tag:focus-visible .tagBody { outline: 2px solid #1c1c1e; outline-offset: 2px; }
 @media (hover: none) { .tag:active .tagMore { grid-template-rows: 1fr; opacity: 1; margin-top: 7px; } }
+@keyframes tagSettle {
+    0% { transform: translateX(-50%) rotate(-2.4deg); }
+    35% { transform: translateX(-50%) rotate(1.4deg); }
+    70% { transform: translateX(-50%) rotate(-0.5deg); }
+    100% { transform: translateX(-50%) rotate(0deg); }
+}
 
 /* Stacked layout only: the scene's top blends into the copy block's plaster tone (--plaster set on the hero section). */
 .topBlend { display: none; }

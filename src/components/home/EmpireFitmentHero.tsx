@@ -59,9 +59,10 @@ function Odometer({ value, digits }: { value: number; digits: number }) {
 /**
  * Hotspots come from Sanity (homepagePage.heroHotspots, placed on the hero reference still with
  * sanity-plugin-hotspot-array). x/y are % of that still = % of the stage, so they ride the same fit
- * transform as the patches but are drawn in scene space at a fixed size. Each renders as a small
- * label card anchored at its point (Jordan: "a card, creatively placed near the base of the bottle")
- * that opens on hover, focus or tap into a click-through to the product.
+ * transform as the patches but are drawn in scene space at a fixed size. Each renders as a swing tag
+ * HANGING from its point on a thread (Jordan: "have it hang off… the left side at the base of that
+ * little shelf"), so the editor clicks the underside of the sill; hover, focus or tap opens the tag
+ * downward into the detail line and a click-through to the product.
  */
 export default function EmpireFitmentHero({ hotspots }: { hotspots?: HeroHotspot[] }) {
     const [manifest, setManifest] = useState<Manifest | null>(null);
@@ -157,22 +158,25 @@ export default function EmpireFitmentHero({ hotspots }: { hotspots?: HeroHotspot
                 const label = h.follows === "closure" && current ? current.label : (h.label ?? "");
                 const left = fit.x + (h.x / 100) * manifest.width * fit.scale;
                 const top = fit.y + (h.y / 100) * manifest.height * fit.scale;
-                const cls = `${styles.tag} ${h.x > 90 ? styles.tagFlip : ""}`;
                 const body = (
                     <>
-                        <span className={styles.tagHead}>
-                            <span className={styles.tagLabel}>{label}</span>
-                            <span className={styles.tagChevron} aria-hidden="true" />
-                        </span>
-                        <span className={styles.tagMore}>
-                            {h.detail && <span className={styles.tagDetail}>{h.detail}</span>}
-                            {h.href && <span className={styles.tagCta}>View product</span>}
+                        <span className={styles.tagThread} aria-hidden="true" />
+                        <span className={styles.tagBody}>
+                            <span className={styles.tagEyelet} aria-hidden="true" />
+                            <span className={styles.tagHead}>
+                                <span className={styles.tagLabel}>{label}</span>
+                                <span className={styles.tagChevron} aria-hidden="true" />
+                            </span>
+                            <span className={styles.tagMore}>
+                                {h.detail && <span className={styles.tagDetail}>{h.detail}</span>}
+                                {h.href && <span className={styles.tagCta}>View product</span>}
+                            </span>
                         </span>
                     </>
                 );
                 return h.href
-                    ? <Link key={h._key} href={h.href} className={cls} style={{ left, top }} aria-label={`${label}: view product`}>{body}</Link>
-                    : <span key={h._key} tabIndex={0} className={cls} style={{ left, top }}>{body}</span>;
+                    ? <Link key={h._key} href={h.href} className={styles.tag} style={{ left, top }} aria-label={`${label}: view product`}>{body}</Link>
+                    : <span key={h._key} tabIndex={0} className={styles.tag} style={{ left, top }}>{body}</span>;
             })}
             <div className={styles.topBlend} aria-hidden="true" />
             <div className={styles.shade} aria-hidden="true" style={fit.mouldingLeft > 0 ? { background: `linear-gradient(90deg, rgba(48,38,26,0.34) 0px, rgba(48,38,26,0.16) ${Math.round(fit.mouldingLeft * 0.5)}px, rgba(48,38,26,0) ${Math.round(fit.mouldingLeft)}px)` } : undefined} />
