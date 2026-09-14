@@ -2,9 +2,11 @@ import { NextRequest } from "next/server";
 import {
     verifyShopifyWebhook,
     parseWebhookTopic,
+    orderStatusFromShopify,
     type WebhookProduct,
     type WebhookProductDelete,
     type WebhookInventoryLevel,
+    type WebhookOrder,
 } from "@/lib/shopify-webhooks";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
@@ -20,6 +22,22 @@ function getConvex(): ConvexHttpClient | null {
     return convexClient;
 }
 const convexWriteToken = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
+
+/**
+ * `portalOrders.estimatedDelivery` is a display string, not a timestamp, so
+ * Shopify's ISO value has to be formatted before it is stored. Passing it
+ * through raw put "2026-09-19T00:00:00Z" on the customer's dashboard.
+ */
+function formatEstimatedDelivery(value: string | null | undefined): string | undefined {
+    if (!value) return undefined;
+    const at = new Date(value);
+    if (Number.isNaN(at.getTime())) return undefined;
+    // Formatted in UTC on purpose. Shopify sends midnight UTC, which a US
+    // server renders as the previous day — an ETA that reads a day early.
+    return at.toLocaleDateString("en-US", {
+        month: "short", day: "numeric", year: "numeric", timeZone: "UTC",
+    });
+}
 
 /**
  * POST /api/shopify/webhooks
@@ -121,6 +139,52 @@ export async function POST(req: NextRequest) {
                 });
                 console.log(
                     `[Shopify Webhook] products/delete: removed ${deleted.id}`,
+                );
+                break;
+            }
+
+            // All four order topics carry the same order payload, so one
+            // handler serves them. `orders/updated` is the one that actually
+            // moves an order along — it fires when a fulfilment or tracking
+            // number is added.
+            case "orders/create":
+            case "orders/updated":
+            case "orders/cancelled":
+            case "orders/fulfilled": {
+                const order = body as WebhookOrder;
+                const shipment = order.fulfillments?.find((f) => f.tracking_number) ?? null;
+                const priceText = order.current_total_price ?? order.total_price ?? null;
+                const total = priceText === null ? undefined : Number(priceText);
+                const shipTo = order.shipping_address
+                    ? [order.shipping_address.city, order.shipping_address.province_code]
+                        .filter(Boolean).join(", ") || undefined
+                    : undefined;
+
+                const result = await convex.mutation(api.portal.upsertOrderFromShopify, {
+                    writeToken: convexWriteToken,
+                    shopifyOrderId: String(order.id),
+                    shopifyCustomerId: order.customer ? String(order.customer.id) : undefined,
+                    orderName: order.name,
+                    orderDate: new Date(order.created_at).getTime(),
+                    status: orderStatusFromShopify(order),
+                    lineItems: order.line_items.map((item) => ({
+                        // A Shopify line item can ship without a SKU; the portal
+                        // shows this string, so an empty cell is worse than a mark.
+                        sku: item.sku?.trim() || "—",
+                        description: item.name?.trim() || item.title,
+                        quantity: item.quantity,
+                        unitPrice: item.price === null ? undefined : Number(item.price),
+                    })),
+                    totalAmount: Number.isFinite(total) ? total : undefined,
+                    trackingNumber: shipment?.tracking_number ?? undefined,
+                    carrier: shipment?.tracking_company ?? undefined,
+                    estimatedDelivery: formatEstimatedDelivery(shipment?.estimated_delivery_at),
+                    shipTo,
+                });
+
+                console.log(
+                    `[Shopify Webhook] ${topic}: order ${order.name} →`,
+                    "skipped" in result ? `skipped (${result.skipped})` : "synced",
                 );
                 break;
             }

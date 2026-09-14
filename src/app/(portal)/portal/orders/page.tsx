@@ -46,7 +46,7 @@ export default async function PortalOrders() {
             <PageHeader
                 eyebrow="History"
                 title="Orders"
-                subtitle={orders.length > 0 ? `${orders.length} synced orders · Reorder any previous purchase.` : "Order history will appear here as it syncs into Convex."}
+                subtitle={orders.length > 0 ? `${orders.length} order${orders.length === 1 ? "" : "s"} · Reorder any previous purchase.` : "Order history will appear here as it syncs into Convex."}
             />
 
             <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">

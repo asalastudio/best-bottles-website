@@ -62,6 +62,12 @@ const TOPICS = [
     "PRODUCTS_UPDATE",
     "PRODUCTS_DELETE",
     "INVENTORY_LEVELS_UPDATE",
+    // Customer portal order history. ORDERS_UPDATED carries fulfilment and
+    // tracking changes, so it is what advances an order through the timeline.
+    "ORDERS_CREATE",
+    "ORDERS_UPDATED",
+    "ORDERS_CANCELLED",
+    "ORDERS_FULFILLED",
 ];
 
 const missingEnv = ["NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN", "SHOPIFY_ADMIN_TOKEN"].filter((key) => !process.env[key]);

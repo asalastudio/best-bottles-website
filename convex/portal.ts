@@ -563,3 +563,103 @@ export const renameGraceProject = mutation({
         return { projectId: project._id, name };
     },
 });
+
+// ─── Shopify order sync ─────────────────────────────────────────────────────
+
+/**
+ * Mirror one Shopify order into `portalOrders`.
+ *
+ * Called by the Shopify webhook route after it verifies the HMAC. Three rules
+ * shape this:
+ *
+ *  1. **Orders are matched to an account, never to an email.** The owning org
+ *     is resolved through `portalAccounts.by_shopifyCustomerId`, the bridge
+ *     that already exists for exactly this purpose. An order from a retail
+ *     buyer with no portal account is not an error — it is simply not a portal
+ *     order, and is skipped.
+ *  2. **Idempotent.** Shopify redelivers webhooks and sends several updates per
+ *     order. Keyed on the numeric Shopify id, a repeat patches the existing row
+ *     rather than adding a second copy of the same order.
+ *  3. **Never overwrites QuickBooks history.** A row sourced from the
+ *     historical book is left alone; the two sources share a table but not a
+ *     record.
+ */
+export const upsertOrderFromShopify = mutation({
+    args: {
+        writeToken: v.string(),
+        shopifyOrderId: v.string(),
+        shopifyCustomerId: v.optional(v.string()),
+        orderName: v.string(),
+        orderDate: v.number(),
+        status: v.union(
+            v.literal("processing"),
+            v.literal("in_transit"),
+            v.literal("delivered"),
+            v.literal("cancelled"),
+        ),
+        lineItems: v.array(v.object({
+            sku: v.string(),
+            description: v.string(),
+            quantity: v.number(),
+            unitPrice: v.optional(v.number()),
+        })),
+        totalAmount: v.optional(v.number()),
+        trackingNumber: v.optional(v.string()),
+        carrier: v.optional(v.string()),
+        estimatedDelivery: v.optional(v.string()),
+        shipTo: v.optional(v.string()),
+    },
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        if (!args.shopifyCustomerId) {
+            return { skipped: "no_customer" as const };
+        }
+
+        const account = await ctx.db
+            .query("portalAccounts")
+            .withIndex("by_shopifyCustomerId", (q) =>
+                q.eq("shopifyCustomerId", args.shopifyCustomerId),
+            )
+            .first();
+
+        if (!account) {
+            // A retail purchase, or a wholesale customer whose Shopify record
+            // has not been linked to an org yet. Not a failure.
+            return { skipped: "no_portal_account" as const };
+        }
+
+        const now = Date.now();
+        const fields = {
+            clerkOrgId: account.clerkOrgId,
+            orderId: args.orderName,
+            lineItems: args.lineItems,
+            status: args.status,
+            orderDate: args.orderDate,
+            estimatedDelivery: args.estimatedDelivery,
+            trackingNumber: args.trackingNumber,
+            carrier: args.carrier,
+            shipTo: args.shipTo,
+            totalAmount: args.totalAmount,
+            source: "shopify" as const,
+            shopifyOrderId: args.shopifyOrderId,
+            updatedAt: now,
+        };
+
+        const existing = await ctx.db
+            .query("portalOrders")
+            .withIndex("by_shopifyOrderId", (q) => q.eq("shopifyOrderId", args.shopifyOrderId))
+            .first();
+
+        if (existing) {
+            if (existing.source === "quickbooks") {
+                return { skipped: "owned_by_quickbooks" as const, orderId: existing._id };
+            }
+            await ctx.db.patch(existing._id, fields);
+            return { updated: true as const, orderId: existing._id };
+        }
+
+        const orderId = await ctx.db.insert("portalOrders", fields);
+        return { created: true as const, orderId };
+    },
+});

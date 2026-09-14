@@ -480,9 +480,21 @@ export default defineSchema({
         shipFrom: v.optional(v.string()),
         shipTo: v.optional(v.string()),
         totalAmount: v.optional(v.number()),
+
+        // Order history arrives from two places and must stay separable: the
+        // historical book lives in QuickBooks, while everything placed from now
+        // on arrives by Shopify webhook. Both are optional so existing rows and
+        // a later QuickBooks backfill both fit without a migration.
+        source: v.optional(v.union(v.literal("shopify"), v.literal("quickbooks"))),
+        // Shopify's numeric order id. `orderId` holds the human name (#1003)
+        // because that is what a customer recognises; this is the idempotency
+        // key, so a replayed or updated webhook patches instead of duplicating.
+        shopifyOrderId: v.optional(v.string()),
+        updatedAt: v.optional(v.number()),
     })
         .index("by_orgId", ["clerkOrgId"])
-        .index("by_orderId", ["orderId"]),
+        .index("by_orderId", ["orderId"])
+        .index("by_shopifyOrderId", ["shopifyOrderId"]),
 
     // Saved draft orders — native portal data, not synced from any external system.
     portalDrafts: defineTable({
