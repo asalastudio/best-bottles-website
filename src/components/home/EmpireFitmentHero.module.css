@@ -23,15 +23,6 @@
     display: block;
 }
 
-/* Stage-space overlay (stage px) that flattens the wall's baked left-bright gradient; stops come from the manifest. */
-.wallEven {
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    pointer-events: none;
-}
-
 .patch,
 .full {
     position: absolute;

@@ -34,8 +34,7 @@ type Frame = { sku: string; src: string; label: string; patch?: Patch };
 type Box = [number, number, number, number];
 type Manifest = {
     base: string; width: number; height: number; frames: Frame[]; builtAt?: number;
-    niche?: Box; frame?: Box; edge?: { left: string; right: string };
-    wallEven?: { width: number; stops: [number, number][] }; hold?: unknown;
+    niche?: Box; frame?: Box; edge?: { left: string; right: string }; hold?: unknown;
 };
 /** Cache-bust every asset with the manifest's build stamp so a rebuilt set never mixes with a cached one. */
 const stamp = (m: Manifest, src: string) => (m.builtAt ? `${src}?v=${m.builtAt}` : src);
@@ -140,15 +139,12 @@ export default function EmpireFitmentHero() {
             {manifest && (
                 <div className={styles.stage} style={{ width: manifest.width, height: manifest.height, transform: `translate(${fit.x}px, ${fit.y}px) scale(${fit.scale})` }}>
                     <img className={styles.base} src={stamp(manifest, manifest.base)} alt="" width={manifest.width} height={manifest.height} fetchPriority="high" />
-                    {manifest.wallEven && (
-                        <div className={styles.wallEven} aria-hidden="true" style={{ width: manifest.wallEven.width, background: `linear-gradient(90deg, ${manifest.wallEven.stops.map(([p, a]) => `rgba(0,0,0,${a}) ${(p * 100).toFixed(1)}%`).join(", ")})` }} />
-                    )}
                     {next && next.sku !== current?.sku && renderPatch(next, styles.next, true)}
                     {current && renderPatch(current, styles.current)}
                 </div>
             )}
             <div className={styles.topBlend} aria-hidden="true" />
-            <div className={styles.shade} aria-hidden="true" style={fit.mouldingLeft > 0 ? { background: `linear-gradient(90deg, rgba(58,48,36,0.22) 0px, rgba(58,48,36,0.07) ${Math.round(fit.mouldingLeft * 0.55)}px, rgba(58,48,36,0) ${Math.round(fit.mouldingLeft)}px)` } : undefined} />
+            <div className={styles.shade} aria-hidden="true" style={fit.mouldingLeft > 0 ? { background: `linear-gradient(90deg, rgba(58,48,36,0.10) 0px, rgba(58,48,36,0.03) ${Math.round(fit.mouldingLeft * 0.5)}px, rgba(58,48,36,0) ${Math.round(fit.mouldingLeft)}px)` } : undefined} />
             {current && (
                 <p className={styles.caption} aria-live="polite">
                     <span>Empire 50 mL</span>

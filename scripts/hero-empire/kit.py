@@ -228,18 +228,11 @@ hold = {"neck": {"x": int(B["cx"]) - hw, "y": B["neck_top"] - 2, "w": 2 * hw, "h
 log("hold rects", hold, "(collar widths %d..%d)" % (min(collar_w), max(collar_w)))
 hexc = lambda v: "#%02x%02x%02x" % tuple(int(round(x)) for x in v)
 FRAME = [int(v) for v in os.environ.get("FRAME_BOX", "690,190,1272,805").split(",")]   # moulding OUTER box (v6; the sill runs ~23 px wider each side)
-# The generated wall is brightest at the far left and dims toward the niche. The page flattens that in stage space
-# (a black overlay whose alpha = 1 - target/L(x) left of the moulding) so its own leftward light falloff reads in one
-# direction; the fill tones beside the stage are sampled at that flattened level.
-Lum = base.mean(axis=2); target = float(Lum[250:750, FRAME[0] - 110: FRAME[0] - 10].mean())
-stops = []
-for x in range(0, FRAME[0] - 40, 64):
-    a = max(0.0, 1 - target / float(Lum[250:750, x:x + 64].mean())); stops.append([round((x + 32) / FRAME[0], 3), round(a, 3)])
-stops.append([1.0, 0.0])
-edge = {"left": hexc(base[250:750, FRAME[0] - 110: FRAME[0] - 10].mean((0, 1))), "right": hexc(base[250:750, FRAME[2] + 30: FRAME[2] + 90].mean((0, 1)))}
-log("frame", FRAME, "wall target L %.1f" % target, "flatten stops", stops, "edge", edge)
+# Fill tones the page paints beside the stage on wide heroes: the image's own edge colours, so the join is invisible.
+edge = {"left": hexc(base[250:750, 0:60].mean((0, 1))), "right": hexc(base[250:750, FRAME[2] + 30: FRAME[2] + 90].mean((0, 1)))}
+log("frame", FRAME, "edge", edge)
 json.dump({"base": f"/assets/hero/{SET}/base.webp", "width": W, "height": H, "builtAt": int(time.time()), "niche": NICHE, "frame": FRAME,
-           "wallEven": {"width": FRAME[0], "stops": stops}, "edge": edge, "hold": hold, "frames": frames}, open(f"{OUT}/manifest.json", "w"), indent=1)
+           "edge": edge, "hold": hold, "frames": frames}, open(f"{OUT}/manifest.json", "w"), indent=1)
 json.dump({"niche": NICHE, "plaster": g.get("plaster"), "body": g.get("body"), "datum": B}, open(f"{OUT}/geometry.json", "w"))
 
 try: font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 14)
