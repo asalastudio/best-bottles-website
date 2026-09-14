@@ -97,28 +97,56 @@ xL, xR, yTop, yBot, shoulder = mm
 if os.environ.get("BODY_BOX"):
     xL, shoulder, xR, yBot = [int(v) for v in os.environ["BODY_BOX"].split(",")]; shoulder -= 10; yBot -= 40
 BODY = (xL - 6, int(shoulder) + 10, xR + 6, min(yBot + 40, H))
-m_cap = m.copy(); m_cap[BODY[1]:BODY[3], BODY[0]:BODY[2]] = 255
+# closure zone = box around the neck (bulbs hang to the left) — plaster elsewhere can never change
+ncx_ = int((BODY[0] + BODY[2]) / 2); SH_ = BODY[1] - 10
+m_box = np.full((H, W), 255, np.uint8)
+m_box[max(NICHE[1], 0):SH_ + 18, max(ncx_ - 300, NICHE[0]):min(ncx_ + 220, NICHE[2])] = 0
+m_cap = m_box.copy(); m_cap[BODY[1]:BODY[3], BODY[0]:BODY[2]] = 255
 # sprayers/pumps: glass locked too, except a narrow column for the dip tube (so only the tube can change inside the body)
 TUBE_HALF = 16; ncx = int((BODY[0] + BODY[2]) / 2)
 m_tube = m_cap.copy(); m_tube[BODY[1]:BODY[3] - 40, ncx - TUBE_HALF:ncx + TUBE_HALF] = 0
+m = m_box   # the generic zone is the closure box too
 json.dump({"niche": [int(v) for v in NICHE], "plaster": [nx0, ny0, nx1, ny1], "body": [int(v) for v in BODY]}, open(f"{OUT}/geometry.json", "w"))
 log("body lock (caps only)", BODY)
 if os.environ.get("MEASURE_ONLY"): raise SystemExit("measure-only")
 
 # 4. frames
 NECK_CX = (BODY[0] + BODY[2]) / 2; SHOULDER = BODY[1] - 10; NECK_TOP = yTop
+BASE_BODY_W = BODY[2] - BODY[0] - 12
+
+def plate_geometry(path):
+    """On a white-backed plate: bottle body width and the closure collar width just above the shoulder (both in plate px)."""
+    pa = np.asarray(Image.open(path).convert("RGB")).astype(int); ink = (255 * 3 - pa.sum(axis=2)) > 45
+    ph, pw_ = ink.shape; cxp = pw_ // 2
+    rows = np.where(ink[:, cxp - pw_ // 4:cxp + pw_ // 4].any(axis=1))[0]
+    if len(rows) == 0: return None
+    spans = {}
+    for y in rows:
+        xs = np.where(ink[y, cxp - pw_ // 3:cxp + pw_ // 3])[0]
+        if len(xs): spans[y] = xs.max() - xs.min()
+    body_w = max(spans.values()); ys_sorted = sorted(spans)
+    shoulder = min(y for y in ys_sorted if spans[y] >= 0.85 * body_w)
+    band = [spans[y] for y in ys_sorted if shoulder - 0.10 * (max(ys_sorted) - shoulder) - 30 <= y <= shoulder - 6 and spans[y] > 8]
+    collar_w = float(np.median(band)) if band else None
+    return body_w, collar_w
+
+def closure_geometry(gen, a):
+    """Collar bottom = lowest neck row where the base's glass threads are strongly replaced (a fitted collar covers them;
+    a floating one leaves them visible). Centre = centroid of strong change in the rows just above that bottom."""
+    strong = (np.abs(gen - ba).sum(axis=2) > 90) & (a > 0.5)
+    c = int(NECK_CX); half = 18
+    band = strong[NECK_TOP - 70:SHOULDER + 8, c - half:c + half]
+    cover = band.mean(axis=1) > 0.6
+    rows = np.where(cover)[0]
+    if len(rows) == 0: return None, None, None
+    bottom = int(rows.max()) + NECK_TOP - 70
+    ys_, xs_ = np.where(strong[max(bottom - 34, NICHE[1]):bottom - 4, c - 80:c + 80])
+    centre = (float(xs_.mean()) + c - 80) if len(xs_) else None
+    return None, bottom, centre
 def seat_metrics(frame):
-    """closure vs base. seat = collar bottom (measured in two strips beside the dip-tube column so the tube never counts)
-    minus the shoulder line; dx = collar centre (rows just above the shoulder, ±70px) minus the neck centre."""
-    d = np.abs(frame - ba).sum(axis=2) > 40
-    y0 = max(NICHE[1], 0); c = int(NECK_CX)
-    strips = d[y0:SHOULDER + 14, c - 34:c - 16].any(axis=1) | d[y0:SHOULDER + 14, c + 16:c + 34].any(axis=1)
-    rows_hit = np.where(strips)[0]
-    if len(rows_hit) == 0: return None
-    seat = int(rows_hit.max()) + y0 - SHOULDER
-    collar = d[max(SHOULDER - 70, y0):SHOULDER, c - 70:c + 70]; ys_, xs_ = np.where(collar)
-    dx = float(xs_.mean()) + c - 70 - NECK_CX if len(xs_) else 0.0
-    return seat, dx
+    """(collar bottom − shoulder, collar centre − neck centre) via thread coverage; None if no closure found."""
+    _, b, c = closure_geometry(frame, np.ones((H, W)))
+    return (b - SHOULDER, c - NECK_CX) if (b is not None and c is not None) else None
 SEAT_TOL, DX_TOL, MAX_TRIES = 12, 8, 3
 TUBE_KINDS = ("AnSp", "LB", "Spry")
 def tube_present(frame):
@@ -145,28 +173,65 @@ def one(r):
     for f in glob.glob(f"{OUT}/frame-{sku}.a*.png"): os.remove(f)
     return sku, best[2][1], best[1]
 def render_and_composite(sku, r, raw, reinforced=False):
+    """r = plate row; raw = cached Sunburst output; returns (sku, replaced%, pre-snap metrics, snapped)"""
+    ref_key = "imageCapOff" if (kind(sku) == "Spry" and r.get("imageCapOff")) else "image"   # sprayers: show the head, not the overcap
     if not os.path.exists(raw):
         prompt = ("Fit the exact closure shown on the bottle in the second image onto the bottle in the first image — same type, shape, proportions, colour and finish — seated on the neck at the same scale, lit by the niche's light from above with matching reflections. "
                   "Inside the glass, show exactly what the second image shows for this closure: a slim dip tube for a sprayer or pump, nothing for a cap or reducer. "
                   "The closure must actually be fitted: it covers the threaded neck completely, so no bare threads remain visible. "
                   "Everything else — the glass bottle's shape and position, the sill, the plaster and the wall — stays exactly as in the first image. No text.")
+        if kind(sku) == "Spry":
+            prompt += " This is a fine-mist sprayer: show the sprayer head (the actuator) exposed on its collar, exactly as in the second image; do not place the removed overcap anywhere in the scene."
         if reinforced:
             prompt += (" The closure's collar rests exactly on the bottle's shoulder line and is centred on the neck; it must not sink into the bottle or float above it."
                        + (" A slim dip tube runs from the collar straight down inside the bottle, almost to the base, clearly visible through the glass." if kind(sku) in TUBE_KINDS else ""))
-        edit(prompt, [base, ref_png(sku)], raw)
+        edit(prompt, [base, ref_png(sku, ref_key)], raw)
     gen = np.asarray(Image.open(raw).convert("RGB").resize((W, H))).astype(float); bf = ba.astype(float)
     zone = m_cap if kind(sku) in ("Rdcr", "Cap") else m_tube   # caps: body locked (empty bottle); sprayers/pumps: only the tube column may change inside the glass
     changed = ((np.abs(gen - bf).sum(axis=2) > 40) & (zone == 0)).astype(np.uint8) * 255
-    a = np.asarray(Image.fromarray(changed).filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(2.5))).astype(float) / 255.0
-    # KIT SNAP: measure where the collar landed and shift the closure layer onto the neck datum
+    opened = np.asarray(Image.fromarray(changed).filter(ImageFilter.MinFilter(5)).filter(ImageFilter.MaxFilter(5)))   # opening: drop speckles
+    protect = np.zeros_like(changed, dtype=bool); protect[BODY[1]:BODY[3], int(NECK_CX) - TUBE_HALF:int(NECK_CX) + TUBE_HALF] = True   # thin dip tube survives
+    cleaned = Image.fromarray(np.where(protect, changed, opened).astype(np.uint8))
+    try:
+        from scipy import ndimage
+        lab, n = ndimage.label(np.asarray(cleaned) > 0)
+        if n:
+            sizes = ndimage.sum(np.ones_like(lab), lab, range(1, n + 1))
+            neck = lab[NECK_TOP - 40:SHOULDER + 12, int(NECK_CX) - 40:int(NECK_CX) + 40]
+            keep = {int(v) for v in np.unique(neck) if v} | {i + 1 for i, sz in enumerate(sizes) if sz > 2500}
+            tube = lab[BODY[1]:BODY[3], int(NECK_CX) - TUBE_HALF:int(NECK_CX) + TUBE_HALF]
+            keep |= {int(v) for v in np.unique(tube) if v}
+            cleaned = Image.fromarray((np.isin(lab, list(keep)) * 255).astype(np.uint8))
+    except ImportError:
+        pass
+    a = np.asarray(cleaned.filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(2.5))).astype(float) / 255.0
+    # KIT SNAP (translate only): collar bottom → shoulder line, collar centre → neck centre. Only the closure layer moves.
     mt = seat_metrics(gen); snapped = False
-    if mt and abs(mt[0]) <= 40 and abs(mt[1]) <= 40:
+    _, cbottom, ccentre = closure_geometry(gen, a)
+    if cbottom is not None and ccentre is not None and abs(cbottom - SHOULDER) <= 40 and abs(ccentre - NECK_CX) <= 40:
+        dy, dx = int(round(SHOULDER - cbottom)), int(round(NECK_CX - ccentre))
+        gen = np.roll(np.roll(gen, dy, axis=0), dx, axis=1); a = np.roll(np.roll(a, dy, axis=0), dx, axis=1)
+        if dy < 0: a[dy:] = 0
+        if dy > 0: a[:dy] = 0
+        if dx < 0: a[:, dx:] = 0
+        if dx > 0: a[:, :dx] = 0
+        a[m == 255] = 0.0
+        snapped = True
+        log(f"{sku}: snap dy {dy:+d} dx {dx:+d} (collar bottom was {cbottom - SHOULDER:+d}px)")
+    elif mt and abs(mt[0]) <= 40 and abs(mt[1]) <= 40:
         snapped = True
         dy, dx = -int(round(mt[0])), -int(round(mt[1]))
         gen = np.roll(np.roll(gen, dy, axis=0), dx, axis=1); a = np.roll(np.roll(a, dy, axis=0), dx, axis=1)
         if dy < 0: a[dy:] = 0
         if dy > 0: a[:dy] = 0
     comp = bf * (1 - a[..., None]) + gen * a[..., None]
+    # PATCH: only the changed region, lossless with alpha, so the page never re-sends or re-decodes the scene
+    ys_, xs_ = np.where(a > 0.004)
+    if len(ys_):
+        py0, py1, px0, px1 = max(int(ys_.min()) - 4, 0), min(int(ys_.max()) + 5, H), max(int(xs_.min()) - 4, 0), min(int(xs_.max()) + 5, W)
+        rgba = np.dstack([gen[py0:py1, px0:px1], a[py0:py1, px0:px1] * 255]).round().astype(np.uint8)
+        Image.fromarray(rgba, "RGBA").save(f"{OUT}/patch-{sku}.webp", "WEBP", lossless=True)
+        json.dump({"x": px0, "y": py0, "w": px1 - px0, "h": py1 - py0}, open(f"{OUT}/patch-{sku}.json", "w"))
     Image.fromarray(comp.round().astype(np.uint8)).save(f"{OUT}/frame-{sku}.png")
     return sku, 100 * (a > 0.5).mean(), mt, snapped
 def kind(sku):
@@ -195,10 +260,14 @@ ORDER = {"AnSp": 0, "Tsl": 1, "LB": 2, "Spry": 3, "BARE": 4, "Rdcr": 5, "Drp": 6
 rank = lambda s: ORDER["BARE" if s == "BARE" else kind(s)]
 skus = sorted([os.path.basename(p)[6:-4] for p in glob.glob(f"{OUT}/frame-*.png")], key=lambda s: (rank(s), s))
 manifest = []
+Image.open(base).convert("RGB").save(f"{OUT}/base.webp", "WEBP", quality=90)
 for sku in skus:
     Image.open(f"{OUT}/frame-{sku}.png").convert("RGB").save(f"{OUT}/frame-{sku}.webp", "WEBP", quality=85)
-    manifest.append({"sku": sku, "src": f"/assets/hero/{SET}/frame-{sku}.webp", "label": label(sku)})
-json.dump(manifest, open(f"{OUT}/manifest.json", "w"), indent=1)
+    entry = {"sku": sku, "src": f"/assets/hero/{SET}/frame-{sku}.webp", "label": label(sku)}
+    if os.path.exists(f"{OUT}/patch-{sku}.json"):
+        entry["patch"] = {"src": f"/assets/hero/{SET}/patch-{sku}.webp", **json.load(open(f"{OUT}/patch-{sku}.json"))}
+    manifest.append(entry)
+json.dump({"base": f"/assets/hero/{SET}/base.webp", "width": W, "height": H, "frames": manifest}, open(f"{OUT}/manifest.json", "w"), indent=1)
 try: font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 13)
 except Exception: font = ImageFont.load_default()
 cells = []

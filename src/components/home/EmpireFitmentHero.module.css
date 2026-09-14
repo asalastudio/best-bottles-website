@@ -2,41 +2,56 @@
     position: absolute;
     inset: 0;
     overflow: hidden;
-    background: #141210;
-    /* niche interior in % of the wall image (1536×1024), measured from empire-niche-wall-v2 */
-    --niche-left: 53.3%;
-    --niche-top: 11.2%;
-    --niche-width: 25.6%;
-    --niche-height: 67%;
+    background: #ece5d8;
 }
 
-/* Every frame is the same 1536×1024 scene, so `cover` with one fixed focal point keeps them aligned
-   and never distorts; the focal point keeps the niche in the band at any viewport. */
+/* Fixed-pixel stage (1536×1024) scaled to cover the box; children are placed in stage pixels. */
 .stage {
     position: absolute;
-    inset: 0;
+    left: 0;
+    top: 0;
+    transform-origin: 0 0;
+    will-change: transform;
 }
 
-.wall,
-.frame {
+.base {
     position: absolute;
     inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 62% 38%;
+    display: block;
 }
 
-.frame {
-    transition: opacity 0.9s ease;
+.patch,
+.full {
+    position: absolute;
+    display: block;
 }
 
-.entering { opacity: 1; animation: plateIn 0.9s ease both; }
-.leaving { opacity: 0; }
+.full { inset: 0; width: 100%; height: 100%; }
 
-@keyframes plateIn {
+/* Sequenced, not crossed: the new closure fades in ON TOP of the old one while the old stays opaque, and only
+   then does the old one dissolve. Every closure covers the whole neck, so the bare threads never show between
+   two fitments (a plain crossfade let them ghost through at the midpoint). */
+.entering { opacity: 1; animation: patchIn 0.9s ease both; }
+/* A keyframe animation, not a transition: browsers will not start a transition from a value a finished
+   animation was holding, so the old patch used to vanish on the spot. `both` holds opacity 1 through the delay. */
+.leaving { opacity: 0; animation: patchOut 0.6s ease 0.9s both; }
+
+@keyframes patchIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@keyframes patchOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Left-hand darkening so the headline reads on the plaster — tunable here, never baked into the render. */
+.shade {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, rgba(58, 48, 36, 0.16) 0%, rgba(58, 48, 36, 0.08) 30%, rgba(58, 48, 36, 0) 52%);
 }
 
 .caption {
@@ -51,27 +66,25 @@
     font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(245, 243, 239, 0.78);
+    color: rgba(28, 28, 30, 0.72);
+    z-index: 1;
 }
 
-.rule { width: 28px; height: 1px; background: rgba(245, 243, 239, 0.35); }
-.count { display: inline-flex; align-items: baseline; gap: 0.35em; color: rgba(245, 243, 239, 0.5); letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
+.rule { width: 28px; height: 1px; background: rgba(28, 28, 30, 0.3); }
+.count { display: inline-flex; align-items: baseline; gap: 0.35em; color: rgba(28, 28, 30, 0.5); letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-/* Ticking counter */
-.odo { display: inline-flex; line-height: 1; color: rgba(245, 243, 239, 0.85); }
+.odo { display: inline-flex; line-height: 1; color: rgba(28, 28, 30, 0.8); }
 .odoDigit { display: inline-block; height: 1em; overflow: hidden; }
 .odoStrip { display: flex; flex-direction: column; transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1); }
 .odoStrip span { display: block; height: 1em; line-height: 1; }
 
 @media (prefers-reduced-motion: reduce) {
-    .entering { animation: none; }
-    .frame { transition: none; }
+    .entering, .leaving { animation: none; }
     .odoStrip { transition: none; }
 }
 
 @media (max-width: 640px) {
-    /* enlarge the stage so the niche reads at phone width; keep the niche inside the band */
-    .wall, .frame { object-position: 66% 40%; }
     .caption { left: 22px; bottom: 12px; font-size: 10px; }
+    .shade { background: linear-gradient(180deg, rgba(58, 48, 36, 0.45) 0%, rgba(58, 48, 36, 0) 45%); }
 }

@@ -1,13 +1,41 @@
 # Empire hero — one bottle, every closure
 
-Homepage hero prototype: an Empire 50 mL bottle standing in a lit bone-plaster niche cut into a dark
-Sahara Noir wall; its closures turn over one by one. Enabled on `/` with `?hero=fitments`; the frame
-set is chosen with `NEXT_PUBLIC_HERO_SET` (`frames` = v1 all-fitments set, `v4` = approved sequence).
+Homepage hero: an Empire 50 mL bottle in a lit bone-plaster arched niche; its closures turn over one by one.
+Enabled on `/` with `?hero=fitments`; the frame set is chosen with `NEXT_PUBLIC_HERO_SET` (default `v7`).
 
-## Approved sequence (Jordan, 2026-09-13)
-antique bulb sprayers (NO tassel versions) → fine-mist sprayer* → lotion pump → bare neck (dip tube gone)
-→ reducer caps → loop. No droppers, no roll-ons.
-\* no fine-mist sprayer plate exists in the Empire 50 index yet — needs a catalogue reference.
+## Current method — `kit.py` (v7, approved 2026-09-13)
+
+No per-frame rendering. The base (`v6/base.png`, a Sunburst render of the catalogue bottle in the niche; masters
+parked in the main checkout `.local-assets/hero-masters/2026-09-13/v6/`) is ONE static image. Every closure is
+cut from the layered PSD in the master library (`BB-PSD-Files-Master/2.  18-415 Bottles /21. Empire 50ml/1. Empire
+50ml PSD`): body layer, dip-tube layer, closure layer (+ overcap beside on cap-off twins). One similarity
+transform per file — scale = base body width / PSD body width, PSD shoulder line anchored on the base neck axis —
+places the closure where the artist drew it; then the collar bottom at the axis is snapped to shoulder + 1.
+
+- body = tallest layer with fill ≥ 0.5 (tube layers are taller but sparse); beside = no x-overlap with the neck
+  column; per SKU the SHORTER closure twin wins (exposed sprayer / pump head, overcap dropped).
+- ONE shared dip tube (gold bulb file), thinned to `TUBE_WIDTH=0.55`, under bulbs, pumps and sprayers; none for
+  BARE and reducers.
+- Bulb ball reduced `BULB_SCALE=0.85` about its nozzle; the collar is never scaled (it must cover the threads).
+- Output: `base.webp`, lossless RGBA `patch-<sku>.webp` + position in `manifest.json` (`builtAt` cache-busts),
+  `_kit-preview.jpg`, `_collars.jpg` (every collar bottom must sit on the red line).
+
+```
+BASE_SET=v6 HERO_SET=v7 python3 scripts/hero-empire/kit.py
+```
+
+Component `EmpireFitmentHero.tsx`: static base + patches on a 1536×1024 stage scaled to cover. The changeover is
+SEQUENCED, not crossed: the new patch fades in on top of the old one (kept opaque), then the old one dissolves —
+both as keyframe animations, because a transition will not start from a value a finished animation was holding
+(the old patch used to vanish instantly and expose the bare threads).
+
+## Sequence (Jordan, 2026-09-13)
+9 antique bulbs (no tassels) → 8 lotion pumps → 6 fine-mist sprayers → bare neck → 12 reducers → loop.
+No droppers, no roll-ons. The dip tube stays through the spray closures and leaves at the bare-neck beat.
+
+---
+
+## Earlier method — `pipeline.py` (v4–v6 wall + base builder; per-frame Sunburst closures are RETIRED)
 
 ## How a set is built (`pipeline.py`, env-driven)
 1. `wall.png` — Sunburst generation: dark honed stone, one niche with pale plaster interior + dark sill.

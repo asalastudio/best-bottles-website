@@ -1,48 +1,30 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "./EmpireFitmentHero.module.css";
 
 /**
- * Hero prototype: one Empire 50 mL bottle in a lit stone niche, its fitments
- * turning over one by one. Frames are Sunburst renders built from the catalogue
- * plates: one base frame, then masked edits of the closure region only, with the
- * base pixels hard-composited back outside the mask — so glass, sill and wall are
- * identical in every frame and only the closure changes.
+ * Hero: one Empire 50 mL bottle in a lit plaster niche, its closures turning over.
+ * The scene is ONE static base image. Each closure is a small lossless transparent
+ * patch placed at its exact pixel position on a 1536×1024 stage that is scaled to
+ * cover the hero box — so nothing outside the closure can ever change or shimmer.
+ * Closures come from the PSD master layers (scripts/hero-empire/kit.py) placed on the one bottle by body-width scale + shoulder anchor.
  */
-export const EMPIRE_HERO_FAMILY = "empire-50ml-clear-18-415";
-/** Frame set in use. v1 = frames/ (all 34 fitments, locked body); v4 = bare-neck base, bulbs → pump → bare → reducers. */
-const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v5";
+const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v7";
 const MANIFEST = `/assets/hero/${HERO_SET}/manifest.json`;
-type Frame = { sku: string; src: string; label: string };
 const HOLD_MS = 3600;
-const FADE_MS = 900;
+const FADE_IN_MS = 900;   // new closure fades in over the old one (still opaque)
+const FADE_OUT_MS = 600;  // then the old one dissolves (see .leaving delay in the stylesheet)
+/** Focal point kept in view when the stage is cropped to the hero box (fractions of stage size). */
+const FOCAL = { x: 0.64, y: 0.5 };
 
-const TOKENS: Array<[RegExp, string]> = [
-    [/AnSpTsl/, "Antique sprayer · tassel"],
-    [/AnSp/, "Antique sprayer"],
-    [/Drp/, "Glass dropper"],
-    [/RdcrMtSlTall/, "Tall reducer · matte silver"],
-    [/RdcrShnBlkTall/, "Tall reducer · shiny black"],
-    [/Rdcr/, "Reducer"],
-    [/OvrCp/, "Overcap"],
-];
-const COLOURS: Array<[RegExp, string]> = [
-    [/IvyGl/, "ivory & gold"], [/IvySl/, "ivory & silver"], [/MtSl/, "matte silver"],
-    [/ShnBlk/, "shiny black"], [/ShnGl/, "shiny gold"], [/ShnSl/, "shiny silver"],
-    [/BlkLthr/, "black leather"], [/BrwnLthr/, "brown leather"], [/LBrwnLthr/, "light brown leather"], [/IvyLthr/, "ivory leather"], [/PnkLthr/, "pink leather"],
-    [/Blk/, "black"], [/Wht/, "white"], [/Red/, "red"], [/Pnk/, "pink"], [/Lvn/, "lavender"], [/Cu/, "copper"], [/Gl/, "gold"], [/Sl/, "silver"],
-];
-export function fitmentLabel(sku: string): string {
-    const tail = sku.replace(/^[GL]BEmp50/, "");
-    const kind = TOKENS.find(([re]) => re.test(tail))?.[1] ?? "Closure";
-    const colour = COLOURS.find(([re]) => re.test(tail.replace(/Tsl|AnSp|Drp|Rdcr|Tall|OvrCp/g, "")))?.[1];
-    return colour && !kind.includes("·") ? `${kind} · ${colour}` : kind;
-}
+type Patch = { src: string; x: number; y: number; w: number; h: number };
+type Frame = { sku: string; src: string; label: string; patch?: Patch };
+type Manifest = { base: string; width: number; height: number; frames: Frame[]; builtAt?: number };
+/** Cache-bust every asset with the manifest's build stamp so a rebuilt set never mixes with a cached one. */
+const stamp = (m: Manifest, src: string) => (m.builtAt ? `${src}?v=${m.builtAt}` : src);
 
-
-/** Odometer-style counter: each digit is a 0–9 strip that rolls to the new value. */
 function Odometer({ value, digits }: { value: number; digits: number }) {
     const str = String(value).padStart(digits, "0");
     return (
@@ -59,16 +41,19 @@ function Odometer({ value, digits }: { value: number; digits: number }) {
 }
 
 export default function EmpireFitmentHero() {
-    const [rows, setRows] = useState<Frame[]>([]);
-    useEffect(() => {
-        let alive = true;
-        fetch(MANIFEST).then((r) => r.json()).then((frames: Frame[]) => { if (alive) setRows(frames); }).catch(() => undefined);
-        return () => { alive = false; };
-    }, []);
+    const [manifest, setManifest] = useState<Manifest | null>(null);
     const [index, setIndex] = useState(0);
     const [prev, setPrev] = useState<number | null>(null);
     const [paused, setPaused] = useState(false);
+    const [fit, setFit] = useState({ scale: 1, x: 0, y: 0 });
+    const box = useRef<HTMLDivElement>(null);
     const reduced = useRef(false);
+
+    useEffect(() => {
+        let alive = true;
+        fetch(`${MANIFEST}?t=${Date.now()}`, { cache: "no-store" }).then((r) => r.json()).then((m: Manifest) => { if (alive) setManifest(m); }).catch(() => undefined);
+        return () => { alive = false; };
+    }, []);
 
     useEffect(() => {
         const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -78,40 +63,63 @@ export default function EmpireFitmentHero() {
         return () => mq.removeEventListener("change", sync);
     }, []);
 
-    // Preload the next few frames so the crossfade never waits on the network.
-    useEffect(() => {
-        rows.slice(index + 1, index + 4).forEach((r) => { const img = new Image(); img.src = r.src; });
-    }, [rows, index]);
+    // Cover-fit the fixed-size stage to the hero box (same maths as object-fit: cover with a focal point).
+    useLayoutEffect(() => {
+        if (!manifest || !box.current) return;
+        const el = box.current;
+        const update = () => {
+            const bw = el.clientWidth, bh = el.clientHeight;
+            const scale = Math.max(bw / manifest.width, bh / manifest.height);
+            const x = (bw - manifest.width * scale) * FOCAL.x;
+            const y = (bh - manifest.height * scale) * FOCAL.y;
+            setFit({ scale, x, y });
+        };
+        update();
+        const ro = new ResizeObserver(update);
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [manifest]);
+
+    const frames = manifest?.frames ?? [];
 
     useEffect(() => {
-        if (rows.length < 2 || paused || reduced.current) return;
-        const t = setTimeout(() => {
-            setPrev(index);
-            setIndex((i) => (i + 1) % rows.length);
-        }, HOLD_MS);
+        if (!manifest) return;
+        frames.slice(index + 1, index + 4).forEach((f) => { const img = new Image(); img.src = stamp(manifest, f.patch?.src ?? f.src); });
+    }, [manifest, frames, index]);
+
+    useEffect(() => {
+        if (frames.length < 2 || paused || reduced.current) return;
+        const t = setTimeout(() => { setPrev(index); setIndex((i) => (i + 1) % frames.length); }, HOLD_MS);
         return () => clearTimeout(t);
-    }, [rows.length, index, paused]);
+    }, [frames.length, index, paused]);
 
     useEffect(() => {
         if (prev === null) return;
-        const t = setTimeout(() => setPrev(null), FADE_MS + 50);
+        const t = setTimeout(() => setPrev(null), FADE_IN_MS + FADE_OUT_MS + 50);
         return () => clearTimeout(t);
     }, [prev]);
 
-    const current = rows[index];
+    const current = frames[index];
+    const renderPatch = (f: Frame, cls: string) => (manifest && f.patch)
+        ? <img key={f.sku} className={`${styles.patch} ${cls}`} src={stamp(manifest, f.patch.src)} alt="" width={f.patch.w} height={f.patch.h} style={{ left: f.patch.x, top: f.patch.y, width: f.patch.w, height: f.patch.h }} />
+        : <img key={f.sku} className={`${styles.full} ${cls}`} src={manifest ? stamp(manifest, f.src) : f.src} alt="" />;
+
     return (
-        <div className={styles.scene} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} aria-label="Empire 50 mL bottle with its closures">
-            <div className={styles.stage}>
-                <img className={styles.wall} src={rows[0]?.src ?? `/assets/hero/${HERO_SET}/frame-GBEmp50AnSpGl.webp`} alt="" width={1536} height={1024} fetchPriority="high" />
-                {prev !== null && rows[prev] && <img key={`p-${rows[prev].sku}`} className={`${styles.frame} ${styles.leaving}`} src={rows[prev].src} alt="" />}
-                {current && <img key={current.sku} className={`${styles.frame} ${styles.entering}`} src={current.src} alt="" />}
-            </div>
+        <div ref={box} className={styles.scene} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} aria-label="Empire 50 mL bottle with its closures">
+            {manifest && (
+                <div className={styles.stage} style={{ width: manifest.width, height: manifest.height, transform: `translate(${fit.x}px, ${fit.y}px) scale(${fit.scale})` }}>
+                    <img className={styles.base} src={stamp(manifest, manifest.base)} alt="" width={manifest.width} height={manifest.height} fetchPriority="high" />
+                    {prev !== null && frames[prev] && renderPatch(frames[prev], styles.leaving)}
+                    {current && renderPatch(current, styles.entering)}
+                </div>
+            )}
+            <div className={styles.shade} aria-hidden="true" />
             {current && (
                 <p className={styles.caption} aria-live="polite">
                     <span>Empire 50 mL</span>
                     <span className={styles.rule} />
                     <span>{current.label}</span>
-                    <span className={styles.count}><Odometer value={index + 1} digits={2} /><span className={styles.sr}>{index + 1}</span> / {String(rows.length).padStart(2, "0")}</span>
+                    <span className={styles.count}><Odometer value={index + 1} digits={2} /><span className={styles.sr}>{index + 1}</span> / {String(frames.length).padStart(2, "0")}</span>
                 </p>
             )}
         </div>
