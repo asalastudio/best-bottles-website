@@ -47,24 +47,16 @@ if not os.path.exists(base):
                   "Everything else — the black marble wall, the niche, the plaster, the sill — stays exactly as in the first image. No text.")
     edit(prompt, [wall, ref_png(BASE_REF_SKU, BASE_REF_KEY)], base); log("base written")
 
-# 3. auto-measure niche interior (pale plaster) and the bottle body to lock
+# 3. measure the niche interior: pale plaster by row/column coverage (thin bright marble veins never reach 30% coverage)
 wa = np.asarray(Image.open(wall).convert("RGB")).astype(int); ba = np.asarray(Image.open(base).convert("RGB").resize((W, H))).astype(int)
 pale = wa.mean(axis=2) > 150
-ys, xs = np.where(pale); nx0, ny0, nx1, ny1 = xs.min(), ys.min(), xs.max(), ys.max()
-NICHE = (max(nx0 - 12, 0), max(ny0 - 12, 0), min(nx1 + 12, W), min(ny1 + 60, H))   # incl. sill
-diff = np.abs(ba - wa).sum(axis=2) > 60
-diff[:NICHE[1], :] = False; diff[NICHE[3]:, :] = False; diff[:, :NICHE[0]] = False; diff[:, NICHE[2]:] = False
-rows_w = diff.sum(axis=1); yb = np.where(rows_w > 0)[0].max()
-widths = [(y, np.where(diff[y])[0]) for y in range(yb, NICHE[1], -1) if rows_w[y] > 0]
-bodyw = max((c.max() - c.min()) for y, c in widths[: max(1, len(widths) // 3)])   # widest rows near the bottom = glass body
-top = yb
-for y, c in widths:
-    if (c.max() - c.min()) < 0.82 * bodyw: break
-    top = y
-cols = np.where(diff[top:yb].any(axis=0))[0]
-BODY = (int(cols.min()) - 4, int(top) + 8, int(cols.max()) + 4, min(int(yb) + 48, H))
-json.dump({"niche": [int(v) for v in NICHE], "body": [int(v) for v in BODY]}, open(f"{OUT}/geometry.json", "w"))
-log("niche", NICHE, "body", BODY)
+col_cov = pale.mean(axis=0); xs = np.where(col_cov > 0.30)[0]; nx0, nx1 = int(xs.min()), int(xs.max())
+row_cov = pale[:, nx0:nx1 + 1].mean(axis=1); ys = np.where(row_cov > 0.30)[0]; ny0, ny1 = int(ys.min()), int(ys.max())
+# sill: dark band directly under the plaster; include ~8% of the niche height below the plaster for the sill + reflection
+sill = int(0.08 * (ny1 - ny0))
+NICHE = (max(nx0 - 16, 0), max(ny0 - 16, 0), min(nx1 + 16, W), min(ny1 + sill + 16, H))
+json.dump({"niche": [int(v) for v in NICHE], "plaster": [nx0, ny0, nx1, ny1]}, open(f"{OUT}/geometry.json", "w"))
+log("niche", NICHE, "plaster", (nx0, ny0, nx1, ny1))
 m = np.full((H, W), 255, np.uint8); m[NICHE[1]:NICHE[3], NICHE[0]:NICHE[2]] = 0   # whole niche interior may change; the diff threshold keeps unchanged glass from the base
 
 # 4. frames

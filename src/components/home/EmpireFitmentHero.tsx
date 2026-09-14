@@ -12,7 +12,9 @@ import styles from "./EmpireFitmentHero.module.css";
  * identical in every frame and only the closure changes.
  */
 export const EMPIRE_HERO_FAMILY = "empire-50ml-clear-18-415";
-const MANIFEST = "/assets/hero/frames/manifest.json";
+/** Frame set in use. v1 = frames/ (all 34 fitments, locked body); v4 = bare-neck base, bulbs → pump → bare → reducers. */
+const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "frames";
+const MANIFEST = `/assets/hero/${HERO_SET}/manifest.json`;
 type Frame = { sku: string; src: string; label: string };
 const HOLD_MS = 2600;
 const FADE_MS = 700;
@@ -100,7 +102,7 @@ export default function EmpireFitmentHero() {
     return (
         <div className={styles.scene} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} aria-label="Empire 50 mL bottle with its closures">
             <div className={styles.stage}>
-                <img className={styles.wall} src="/assets/hero/frames/frame-GBEmp50AnSpGl.webp" alt="" width={1536} height={1024} fetchPriority="high" />
+                <img className={styles.wall} src={rows[0]?.src ?? `/assets/hero/${HERO_SET}/frame-GBEmp50AnSpGl.webp`} alt="" width={1536} height={1024} fetchPriority="high" />
                 {prev !== null && rows[prev] && <img key={`p-${rows[prev].sku}`} className={`${styles.frame} ${styles.leaving}`} src={rows[prev].src} alt="" />}
                 {current && <img key={current.sku} className={`${styles.frame} ${styles.entering}`} src={current.src} alt="" />}
             </div>
