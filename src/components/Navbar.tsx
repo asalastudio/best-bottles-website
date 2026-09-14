@@ -624,7 +624,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                                         <div key={link.label} className="border-b border-champagne/40 pb-2">
                                             <button
                                                 onClick={() => setMobileOpenSection(isExpanded ? null : link.megaId)}
-                                                className="w-full flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold tracking-wide text-obsidian"
+                                                className="w-full flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold uppercase tracking-wide text-obsidian"
                                                 aria-expanded={isExpanded}
                                             >
                                                 {link.label}
@@ -769,7 +769,7 @@ function MegaMenuPanel({
                                     <FeaturedIcon className="text-muted-gold" size={20} />
                                 </div>
                             )}
-                            <h4 className="font-serif text-lg text-obsidian font-medium normal-case mb-2 group-hover:text-muted-gold transition-colors">
+                            <h4 className="font-brand-display text-[13px] tracking-[0.06em] text-obsidian mb-2 group-hover:text-muted-gold transition-colors">
                                 {title}
                             </h4>
                             <p className="text-[12px] text-slate normal-case leading-relaxed">
