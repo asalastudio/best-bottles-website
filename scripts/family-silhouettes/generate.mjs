@@ -5,7 +5,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 
 const MODEL = "gpt-image-2.5-sunburst";
-const SIZE = "1024x1536"; // portrait, matches the 4:5 references
+const DEFAULT_SIZE = "1024x1536"; // portrait, matches the 4:5 references; --size 1536x1024 for the 4:3 tile set
 const REF_DIR = process.env.SKETCH_REF_DIR ?? "public/assets/homepage";
 const OUT_DIR = process.env.SKETCH_OUT_DIR ?? "public/assets/sketches";
 const FAMILIES = {
@@ -22,8 +22,11 @@ const FAMILIES = {
 const args = process.argv.slice(2);
 const flag = (name, fallback) => { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : fallback; };
 const quality = flag("--quality", "high");
+const SIZE = flag("--size", DEFAULT_SIZE);
+const suffix = flag("--suffix", "");
+const promptFile = flag("--prompt", "prompt.txt");
 const only = flag("--only", null)?.split(",").map((s) => s.trim());
-const prompt = readFileSync(new URL("./prompt.txt", import.meta.url), "utf8").trim();
+const prompt = readFileSync(new URL(`./${promptFile}`, import.meta.url), "utf8").trim();
 const key = process.env.OPENAI_API_KEY;
 if (!key) throw new Error("OPENAI_API_KEY missing");
 mkdirSync(OUT_DIR, { recursive: true });
@@ -41,7 +44,7 @@ async function generate(slug, file) {
     const res = await fetch("https://api.openai.com/v1/images/edits", { method: "POST", headers: { Authorization: `Bearer ${key}` }, body: form });
     if (!res.ok) throw new Error(`${slug}: ${res.status} ${await res.text()}`);
     const json = await res.json();
-    const out = path.join(OUT_DIR, `family-${slug}.png`);
+    const out = path.join(OUT_DIR, `family-${slug}${suffix}.png`);
     writeFileSync(out, Buffer.from(json.data[0].b64_json, "base64"));
     console.log(`${slug}: ${out} (${Math.round((Date.now() - started) / 1000)}s)`);
 }

@@ -10,7 +10,7 @@ import RegionSelector from '@/components/RegionSelector';
 import CartDrawer from '@/components/CartDrawer';
 import { useGrace } from '@/components/useGrace';
 import { CaretDown, List, MagnifyingGlass, ShoppingBag, User, X } from '@/components/icons';
-import { FAMILY_ART } from '@/lib/homepageFamilyArt';
+import { FAMILY_ART, familySketchSrc } from '@/lib/homepageFamilyArt';
 import { familyFinderHref } from '@/lib/products/focused-shopping';
 import { SHOP_COLLECTIONS, shopCollectionHref } from '@/lib/shopCollections';
 import styles from './CollectionShopping.module.css';
@@ -77,7 +77,7 @@ export default function ShoppingHeader() {
             {activeMega && <div className={styles.megaBackdrop} onClick={() => setActiveMega(null)} aria-hidden="true"/>}
             {activeMega === 'families' && <div className={styles.megaMenu} id="families-mega-menu">
                 <div className={styles.megaHeading}><div><span>Find your silhouette</span><h2>Bottle Families</h2></div><Link href="/bottle-families" onClick={closeNavigation}>View all</Link></div>
-                <div className={styles.megaFamilyGrid}>{Object.entries(FAMILY_ART).map(([family, image]) => <Link href={familyFinderHref(family)} onClick={closeNavigation} key={family}><Image src={`/assets/homepage/${image}.webp`} alt="" width={160} height={200}/><span>{family}</span></Link>)}</div>
+                <div className={styles.megaFamilyGrid}>{Object.entries(FAMILY_ART).map(([family, image]) => <Link href={familyFinderHref(family)} onClick={closeNavigation} key={family}><Image src={familySketchSrc(family) ?? `/assets/homepage/${image}.webp`} alt="" width={400} height={300}/><span>{family}</span></Link>)}</div>
             </div>}
             {activeMega === 'search' && <div className={styles.megaMenu} id="search-mega-menu">
                 <form action="/catalog" className={styles.megaSearch} role="search">
@@ -86,7 +86,7 @@ export default function ShoppingHeader() {
                     <button type="submit">Search</button>
                 </form>
                 <div className={styles.megaSearchBody}>
-                    <div><h3>Bottle families</h3><div className={styles.megaSearchFamilies}>{Object.entries(FAMILY_ART).map(([family, image]) => <Link href={familyFinderHref(family)} onClick={closeNavigation} key={family}><Image src={`/assets/homepage/${image}.webp`} alt="" width={120} height={150}/><span>{family}</span></Link>)}</div></div>
+                    <div><h3>Bottle families</h3><div className={styles.megaSearchFamilies}>{Object.entries(FAMILY_ART).map(([family, image]) => <Link href={familyFinderHref(family)} onClick={closeNavigation} key={family}><Image src={familySketchSrc(family) ?? `/assets/homepage/${image}.webp`} alt="" width={400} height={300}/><span>{family}</span></Link>)}</div></div>
                     <div><h3>Collections</h3><div className={styles.megaSearchCollections}>{SHOP_COLLECTIONS.map(collection => <Link key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}><strong>{collection.title}</strong><span>{collection.subtitle}</span></Link>)}</div></div>
                 </div>
             </div>}

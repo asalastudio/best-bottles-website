@@ -134,3 +134,8 @@
 .region{display:none}
 @media(min-width:641px){.region{display:block}}
 .regionMobile{padding-top:6px;border-top:1px solid #e8e2d9}
+/* Pencil tiles: true 4:3 boxes, image fills the box (paper is the background), no letterboxing. */
+.megaFamilyGrid a{grid-template-rows:auto auto}
+.megaFamilyGrid img{height:auto;aspect-ratio:4/3;object-fit:cover;background:#f7f4ee;border:1px solid #e1d8cb}
+.megaSearchFamilies a{grid-template-rows:auto auto}
+.megaSearchFamilies img{height:auto;aspect-ratio:4/3;object-fit:cover;background:#f7f4ee;border:1px solid #e1d8cb}
