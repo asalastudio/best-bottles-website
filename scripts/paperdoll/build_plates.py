@@ -237,7 +237,7 @@ def family_name(fid: str) -> str:
 
 
 # ---------------------------------------------------------------- registered mode
-def build_registered(fid, body, skus, out_dir: Path, log):
+def build_registered(fid, body, skus, out_dir: Path, log, anchor=None):
     shots = []      # every flattened shot in the group
     per_sku = {}
     for item in skus:
@@ -435,20 +435,82 @@ def build_registered(fid, body, skus, out_dir: Path, log):
         registration["refused"] = "registration_unmatched"
         return [], registration
 
-    # one output scale for the family, measured in the primary session's pixels
-    max_w, uy0, uy1 = 0, 10**9, -10**9
-    for sh in shots:
-        c = clusters[sh["cluster"]]
-        k = c.get("k", 1.0)
-        x0, y0, x1, y1 = ink_bbox(sh["gray"])
-        max_w = max(max_w, (x1 - x0) * k)
-        base_rel_top = (c["refBase"] + sh["dy"] - y0) * k        # bottle base above the ink top
-        base_rel_bot = (c["refBase"] + sh["dy"] - y1) * k        # …and below the ink bottom
-        uy0 = min(uy0, -base_rel_top)
-        uy1 = max(uy1, -base_rel_bot)
+    # one output scale for the family, measured in the primary session's pixels.
+    #
+    # A bulb or tassel hangs beside and below the bottle. It already never defines
+    # a photographic session, and for the same reason it must not define the output
+    # scale or the vertical band: its ink reaches further than the glass does, so
+    # letting it vote shrinks the bottle and lifts it off the baseline every other
+    # closure on the same glass sits on. Measured on the 2026-09-13 rebuild, the
+    # tassel plates came out up to 184 px above their siblings' foot and around
+    # 60 % of their size, while plain and bulb-only closures agreed within 7 px.
+    # Jordan: the vintage bottle with tassel "has to have its own baseline along
+    # with the size" — that is this rule. The glass sets both; the tassel hangs.
+    def band_of(sample):
+        max_w, uy0, uy1 = 0, 10**9, -10**9
+        for sh in sample:
+            c = clusters[sh["cluster"]]
+            k = c.get("k", 1.0)
+            x0, y0, x1, y1 = ink_bbox(sh["gray"])
+            max_w = max(max_w, (x1 - x0) * k)
+            base_rel_top = (c["refBase"] + sh["dy"] - y0) * k    # bottle base above the ink top
+            base_rel_bot = (c["refBase"] + sh["dy"] - y1) * k    # …and below the ink bottom
+            uy0 = min(uy0, -base_rel_top)
+            uy1 = max(uy1, -base_rel_bot)
+        return max_w, uy0, uy1
+
+    anchors = [sh for sh in shots if sh["closure"] not in HANGING_CLOSURES]
+    max_w, uy0, uy1 = band_of(anchors or shots)
     uh = uy1 - uy0
     scale = min((OUT_W - 2 * PAD) / max_w, (OUT_H - 2 * PAD) / uh)
     base_out = PAD - uy0 * scale + ((OUT_H - 2 * PAD) - uh * scale) / 2   # where every bottle's base lands
+    # The hanging closures still have to fit on the canvas. Shrink only as far as
+    # that needs, and record it, rather than silently re-admitting them as anchors.
+    if anchors and len(anchors) != len(shots):
+        # A mixed group: the glass set the frame above, so only make sure the
+        # hanging parts still fit on the canvas.
+        hw, hy0, hy1 = band_of(shots)
+        fit = min((OUT_W - 2 * PAD) / hw, (OUT_H - 2 * PAD) / (hy1 - hy0))
+        if fit < scale:
+            registration["hangingFitScale"] = round(fit / scale, 4)
+            scale, uy0, uy1 = fit, hy0, hy1
+            uh = uy1 - uy0
+            base_out = PAD - uy0 * scale + ((OUT_H - 2 * PAD) - uh * scale) / 2
+        registration["anchoredOnGlass"] = len(anchors)
+    elif not anchors and anchor:
+        # Every shot here hangs, so this group has no glass of its own to measure.
+        # `body_metrics` cannot supply one either: on a tassel it spans the glass AND
+        # the tassel lying beside it — 829 px of glass read as 1413 on the 2026-09-13
+        # Round rebuild — which is why these plates came out about 60 % of their
+        # siblings' size and up to 184 px above the shared baseline. Take the frame
+        # from the group that photographed the same glass without a tassel rather
+        # than invent a new ruler for a shape that defeats the existing ones.
+        # Jordan chose this treatment on 2026-09-13, from three rendered against a
+        # plain sibling: the bottle keeps whatever size the whole composition needs
+        # in order to stay uncropped, but its foot is pinned to the baseline its
+        # siblings stand on. A tassel composition is roughly 1924 px wide against
+        # 829 px of glass, so matching the sibling's size as well would overflow the
+        # canvas by 352 px and behead the bulb on most of them. Pinning the baseline
+        # is what stops the bottle jumping when a customer switches finish.
+        registration["frameFrom"] = anchor["body"]
+        max_w, uy0, uy1 = band_of(shots)
+        uh = uy1 - uy0
+        scale = min(anchor["scale"], (OUT_W - 2 * PAD) / max_w, (OUT_H - 2 * PAD) / uh)
+        if scale < anchor["scale"]:
+            registration["hangingFitScale"] = round(scale / anchor["scale"], 4)
+        base_out = anchor["baseOut"]
+        # Pinning must never push a plate off the canvas, but the clamp is judged on
+        # the assembled cap-on views — the ones a customer sees. Letting every shot
+        # vote here reintroduced the original fault in miniature: one uncapped view
+        # whose parts lie lower dragged the whole Empire 100 group 102 px up the
+        # canvas, floating a bottle whose own composition ended 100 px clear of it.
+        ay0, ay1 = band_of([sh for sh in shots if sh in assembled] or shots)[1:]
+        top, bottom = base_out + ay0 * scale, base_out + ay1 * scale
+        shifted = min(max(base_out, base_out - top + PAD), base_out - (bottom - (OUT_H - PAD)))
+        if abs(shifted - base_out) > 0.5:
+            registration["baselineShiftedToFit"] = round(shifted - base_out, 1)
+            base_out = shifted
+        registration["baselinePinnedTo"] = anchor["body"]
     registration.update({"scale": scale, "band": [round(uy0, 1), round(uy1, 1)], "baseOut": round(base_out, 1)})
 
     def render(sh, on_axis):
@@ -624,6 +686,11 @@ def main():
         return
 
     all_rows, reports, built = [], [], set()
+    # Groups whose closures all hang (bulb, tassel, atomizer) cannot measure their
+    # own glass, so build them after a sibling group of the same family that can.
+    all_hanging = lambda g: all(i["closure"] in HANGING_CLOSURES for i in g["skus"])  # noqa: E731
+    groups = sorted(groups, key=lambda kv: (kv[0][0], all_hanging(kv[1])))
+    family_frame: dict[str, dict] = {}
     for (fid, body), g in groups:
         out_dir = DIST / fid
         out_dir.mkdir(parents=True, exist_ok=True)
@@ -633,7 +700,10 @@ def main():
         if body == "standalone":
             rows, registration = build_standalone(fid, g["skus"], out_dir, log)
         else:
-            rows, registration = build_registered(fid, body, g["skus"], out_dir, log)
+            rows, registration = build_registered(fid, body, g["skus"], out_dir, log,
+                                                  anchor=family_frame.get(fid) if all_hanging(g) else None)
+            if not all_hanging(g) and registration.get("scale") and fid not in family_frame:
+                family_frame[fid] = {"body": body, "scale": registration["scale"], "baseOut": registration["baseOut"]}
         (out_dir / f"_registration{'' if body == 'standalone' else '-' + body}.json").write_text(json.dumps(registration, indent=1))
         refused = registration.get("refused")
         if refused:

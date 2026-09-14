@@ -58,7 +58,21 @@ if (!skipConvex) {
     const page = async (fn, args, key) => { const out = []; let cursor = null; for (;;) { const r = await convex.query(fn, { ...args, cursor }); out.push(...(r.page ?? r.rows ?? r[key] ?? [])); if (r.isDone) break; cursor = r.continueCursor; } return out; };
     products = await page(api.products.getAllForPlates, { limit: 500 });
     { const g = await convex.query(api.products.getAllGroupsForPlates, {}); groups = Array.isArray(g) ? g : (g.page ?? g.rows ?? []); }
-    note("convex.products", { deployment, rows: products.length });
+    // getAllForPlates is a narrow projection and carries no lifecycle fields, so
+    // the retired-scope classifier below had nothing to read and silently excluded
+    // nothing: 146 retired duplicates sat in the active plate queue as work to do.
+    // Enrich only the ungrouped records with their exact catalog lifecycle fields,
+    // so the classification stays evidence-based and never reads a SKU marker.
+    const ungrouped = products.map((p, i) => ({ p, i })).filter(({ p }) => p.websiteSku && !p.productGroupId);
+    for (let i = 0; i < ungrouped.length; i += 12) {
+        const batch = await Promise.allSettled(ungrouped.slice(i, i + 12).map(({ p }) => convex.query(api.products.lookupSku, { sku: p.websiteSku })));
+        batch.forEach((result, offset) => {
+            if (result.status !== "fulfilled" || !result.value?.product) return;
+            const product = result.value.product, index = ungrouped[i + offset].i;
+            products[index] = { ...products[index], stockStatus: product.stockStatus ?? null, importSource: product.importSource ?? null };
+        });
+    }
+    note("convex.products", { deployment, rows: products.length, lifecycleEnriched: ungrouped.length });
     note("convex.productGroups", { deployment, rows: groups.length });
 }
 const groupById = new Map(groups.map((g) => [g._id, g]));

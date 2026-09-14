@@ -143,7 +143,10 @@ function ComponentCard({
         shopifyVariantId: component.shopifyVariantId,
         shopifySellable: component.shopifySellable,
     });
+    // The quote link still needs a working identifier, but only the merchant SKU
+    // is shown to a buyer: the Grace code is internal (D-06).
     const sku = component.websiteSku ?? component.graceSku;
+    const displaySku = component.websiteSku;
     const quoteHref = `/request-quote?products=${encodeURIComponent(`${component.itemName} (SKU: ${sku})`)}`;
 
     return (
@@ -152,7 +155,7 @@ function ComponentCard({
             <div className="min-w-0 flex-1">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Compatible with this bottle</p>
                 <h3 className="mt-1 text-base font-semibold text-obsidian">{component.itemName}</h3>
-                <p className="mt-1 font-mono text-[11px] uppercase tracking-wide text-slate">SKU {sku} · {component.graceSku}</p>
+                {displaySku ? <p className="mt-1 font-mono text-[11px] uppercase tracking-wide text-slate">SKU {displaySku}</p> : null}
                 <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate">
                     <span>{component.stockStatus ?? "Availability to confirm"}</span>
                     <span className="font-semibold text-obsidian">{formatPrice(component.webPrice1pc)}</span>

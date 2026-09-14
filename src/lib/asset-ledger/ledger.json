@@ -11802,13 +11802,14 @@
   "sourceHolds": 150,
   "note": "Current catalog snapshot; live legacy variant scope and physical bottle groups still require reconciliation."
  },
- "generatedAt": "2026-09-14T03:19:46.760Z",
+ "generatedAt": "2026-09-14T05:51:20.448Z",
  "deployment": "helpful-elephant-638",
  "sources": [
   {
    "name": "convex.products",
    "deployment": "helpful-elephant-638",
-   "rows": 2540
+   "rows": 2540,
+   "lifecycleEnriched": 155
   },
   {
    "name": "convex.productGroups",
@@ -11882,7 +11883,7 @@
   {
    "name": "plate.geometry",
    "path": "src/lib/asset-ledger/plate-geometry.json",
-   "generatedAt": "2026-09-14T03:17:17+00:00",
+   "generatedAt": "2026-09-14T05:43:33+00:00",
    "plates": 2075,
    "fetchFailures": 0,
    "measurementFailures": 0,
@@ -11897,12 +11898,19 @@
    "rows": 1876
   },
   {
+   "name": "boston.kit-release",
+   "path": "dist/paper-doll/boston-kit-release-2026-09-12/manifest.json",
+   "rows": 25,
+   "approved": 25,
+   "publicationAuthorized": true
+  },
+  {
    "name": "four-family.published-verification",
    "path": "docs/reviews/four-family-plates-2026-09-13/published-verification.json",
    "rows": 637,
    "hostedAssetsChecked": 1786,
    "deployment": "https://helpful-elephant-638.convex.cloud",
-   "manifest": "docs/reviews/four-family-plates-2026-09-13/release-manifest.json"
+   "manifest": "dist/paper-doll/four-family-plates-2026-09-13-release/manifest.json"
   },
   {
    "name": "plate.holds",
