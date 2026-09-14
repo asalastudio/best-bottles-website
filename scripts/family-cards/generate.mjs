@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 const MODEL = "gpt-image-2.5-sunburst";
-const DEFAULT_SIZE = { families: "1024x1536", collections: "1536x1024" };
+const DEFAULT_SIZE = { families: "1024x1536", "families-v3": "1024x1536", collections: "1536x1024", "collections-v3": "1536x1024", build: "1536x1024" };
 const args = process.argv.slice(2);
 const flag = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
 const set = flag("--set", "families");
@@ -12,12 +12,12 @@ const only = flag("--only", null)?.split(",");
 const quality = flag("--quality", "high");
 const SIZE = flag("--size", DEFAULT_SIZE[set] ?? "1024x1536");
 const subjects = JSON.parse(readFileSync(new URL("./subjects.json", import.meta.url), "utf8"))[set];
-const recipe = readFileSync(new URL("./recipe.txt", import.meta.url), "utf8").trim();
+const recipe = readFileSync(new URL(`./${flag("--recipe", "recipe.txt")}`, import.meta.url), "utf8").trim();
 const key = process.env.OPENAI_API_KEY; if (!key) throw new Error("OPENAI_API_KEY missing");
 const OUT = "public/assets/cards"; mkdirSync(OUT, { recursive: true });
-async function run(slug, { ref, material }) {
+async function run(slug, { ref, material, extra }) {
     const form = new FormData();
-    form.append("model", MODEL); form.append("prompt", recipe.replace("{MATERIAL}", material));
+    form.append("model", MODEL); form.append("prompt", recipe.replace("{MATERIAL}", material) + (extra ? ` ${extra}` : ""));
     form.append("size", SIZE); form.append("quality", quality); form.append("n", "1");
     form.append("image", new Blob([readFileSync(`public/assets/homepage.png-cache/${ref}.png`)], { type: "image/png" }), `${ref}.png`);
     const t = Date.now();

@@ -14,7 +14,7 @@ import styles from './CollectionShopping.module.css';
 
 const asset = (name: string) => `/assets/homepage/${name}.webp`;
 const cmsImage = editorialImageUrl;
-const BONE_COLLECTION_ART = new Set(['roll-on-bottles','perfume-atomizers','glass-spray-bottles','dropper-bottles','sample-vials','lotion-pump-bottles','decorative-bottles','apothecary-bottles','cream-jars','accessories-packaging']);
+const BONE_COLLECTION_ART = new Set(['roll-on-bottles','perfume-atomizers','glass-spray-bottles','dropper-bottles','sample-vials','lotion-pump-bottles','decorative-bottles','apothecary-bottles','cream-jars','accessories-packaging','splash-on-bottles']);
 export function CollectionGrid({ cards, all = false }: { cards?: HomepageData['collectionCards']; all?: boolean }) {
     const rail = useRef<HTMLDivElement>(null);
     const [edges, setEdges] = useState({ start: true, end: false });
@@ -24,7 +24,7 @@ export function CollectionGrid({ cards, all = false }: { cards?: HomepageData['c
     const configured = featuredCollectionCards(cards);
     const entries = all ? SHOP_COLLECTIONS.map(c => ({ ...c, ...configured.find(card => card.key === c.key) })) : configured;
     return <div className={all ? undefined : styles.collectionRailWrap}><div ref={rail} id={all ? undefined : "collection-carousel"} onScroll={updateEdges} className={all ? styles.grid : styles.collectionRail}>{entries.map(c => <Link key={c.key} href={shopCollectionHref(c.key)} className={styles.collection}>
-        <img className={['roll-on-bottles', 'perfume-atomizers', 'dropper-bottles', 'sample-vials'].includes(c.key) ? styles.collectionScene : undefined} src={cmsImage('image' in c ? c.image : undefined, 800, 600) ?? (BONE_COLLECTION_ART.has(c.key) ? asset(`collection-${c.key}-bone-v2`) : asset(`source-${c.key}`))} alt={c.title} width={800} height={600} loading="lazy"/>
+        <img className={['roll-on-bottles', 'perfume-atomizers', 'dropper-bottles', 'sample-vials'].includes(c.key) ? styles.collectionScene : undefined} src={cmsImage('image' in c ? c.image : undefined, 800, 600) ?? (BONE_COLLECTION_ART.has(c.key) ? asset(`collection-${c.key}-bone-v3`) : asset(`source-${c.key}`))} alt={c.title} width={800} height={600} loading="lazy"/>
         <div className={styles.collectionCopy}><h3>{c.title}</h3><p>{c.subtitle}</p></div>
     </Link>)}</div>{!all && <div className={styles.edgeControls}><button aria-label="Previous collection" aria-controls="collection-carousel" disabled={edges.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label="Next collection" aria-controls="collection-carousel" disabled={edges.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div>}</div>;
 }
@@ -71,6 +71,6 @@ export default function CollectionShopping({data}:{data:HomepageData|null}){
     return <div className={styles.page}>
         <ShoppingHero slides={data?.useEditorialArtwork ? data.heroSlides : undefined}/><FamilyCarousel cards={data?.useEditorialArtwork ? data.designFamilyCards : undefined}/>
         <section className={styles.section} aria-labelledby="collections-heading"><div className={styles.heading}><h2 id="collections-heading">Collections</h2><Link href="/collections">View all</Link></div><p className={styles.intro}>Know how you want to dispense? Start here, then find the shape and finish that fit.</p><CollectionGrid cards={data?.collectionCards}/></section>
-        <section className={styles.section} id="build-your-bottle"><div className={styles.build}><div className={styles.buildCopy}><h2>{build?.heading || 'Build your bottle.'}</h2><p>{build?.description || 'Start with a shape you love.\nFind the finishing touches that fit.'}</p><Link className={styles.primary} href={build?.destination === '/collections' ? '/collections' : '/matrix'}>{build?.buttonLabel || 'Build your bottle'}</Link></div><img src={asset('build-your-bottle-artwork-standard')} alt="Colored-pencil study of a bare glass bottle, compatible spray assembly, clear cap and finished bottle" width={1000} height={600} loading="lazy"/></div></section>
+        <section className={styles.section} id="build-your-bottle"><div className={styles.build}><div className={styles.buildCopy}><h2>{build?.heading || 'Build your bottle.'}</h2><p>{build?.description || 'Start with a shape you love.\nFind the finishing touches that fit.'}</p><Link className={styles.primary} href={build?.destination === '/collections' ? '/collections' : '/matrix'}>{build?.buttonLabel || 'Build your bottle'}</Link></div><img src={asset('build-your-bottle-bone-v3')} alt="Colored-pencil study of a bare glass bottle, compatible spray assembly, clear cap and finished bottle" width={1000} height={600} loading="lazy"/></div></section>
     </div>;
 }

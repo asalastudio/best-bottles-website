@@ -139,3 +139,9 @@
 .megaFamilyGrid img{height:auto;aspect-ratio:4/3;object-fit:cover;background:#f7f4ee;border:1px solid #e1d8cb}
 .megaSearchFamilies a{grid-template-rows:auto auto}
 .megaSearchFamilies img{height:auto;aspect-ratio:4/3;object-fit:cover;background:#f7f4ee;border:1px solid #e1d8cb}
+/* Build Your Bottle: no card — the section rests on the bone ground with a hairline rule above and below. */
+.build{background:transparent;border:0;border-top:1px solid #e4ddd2;border-bottom:1px solid #e4ddd2;border-radius:0;box-shadow:none}
+.buildCopy{padding-left:0}
+/* Family cards trimmed 10px; the image crops symmetrically so the baseline stays put. */
+@media(min-width:641px){.family img{aspect-ratio:auto;height:306px;object-fit:cover;object-position:center}}
+.build img{object-fit:cover;object-position:center;background:transparent}

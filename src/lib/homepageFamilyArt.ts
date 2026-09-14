@@ -1,14 +1,14 @@
 // Portrait editorial scenes under the locked material-board recipe (bone #F5F3EF, one daylight, one baseline,
 // family material base in the lower quarter). Regenerate with scripts/family-cards. Not SKU plates.
 export const FAMILY_ART: Record<string, string> = {
-    "Cylinder": "family-cylinder-bone-v2",
-    "Elegant": "family-elegant-bone-v2",
-    "Circle": "family-circle-bone-v2",
-    "Boston Round": "family-boston-round-bone-v2",
-    "Diva": "family-diva-bone-v2",
-    "Grace": "family-grace-bone-v2",
-    "Empire": "family-empire-bone-v2",
-    "Round": "family-round-bone-v2"
+    "Cylinder": "family-cylinder-bone-v3",
+    "Elegant": "family-elegant-bone-v3",
+    "Circle": "family-circle-bone-v3",
+    "Boston Round": "family-boston-round-bone-v3",
+    "Diva": "family-diva-bone-v3",
+    "Grace": "family-grace-bone-v3",
+    "Empire": "family-empire-bone-v3",
+    "Round": "family-round-bone-v3"
 };
 
 // Pencil silhouette tiles (4:3, 1200×900) for accent slots: mega-menu + search-panel tiles.
