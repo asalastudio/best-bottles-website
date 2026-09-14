@@ -50,15 +50,19 @@ export default function ShoppingHeader() {
     return <>
         <header ref={header} className={styles.header}>
             <div className={styles.headerMain}>
-                <button className={styles.menuButton} aria-label={menu ? 'Close menu' : 'Open menu'} aria-expanded={menu} aria-controls="shopping-menu" onClick={() => setMenu(!menu)}>{menu ? <X size={22}/> : <List size={22}/>}</button>
+                <div className={styles.headerLeft}>
+                    <button className={styles.menuButton} aria-label={menu ? 'Close menu' : 'Open menu'} aria-expanded={menu} aria-controls="shopping-menu" onClick={() => setMenu(!menu)}>{menu ? <X size={22}/> : <List size={22}/>}</button>
+                    <form action="/catalog" className={styles.search} role="search">
+                        <input name="search" aria-label="Search the catalog" placeholder="Search" type="search"/>
+                        <button aria-label="Search"><MagnifyingGlass size={18}/></button>
+                    </form>
+                </div>
                 <Link href="/" className={styles.brand} aria-label="Best Bottles home"><BrandWordmark/></Link>
-                <form action="/catalog" className={styles.search} role="search">
-                    <input name="search" aria-label="Search the catalog" placeholder="Search bottles, dispensers, sizes…" type="search"/>
-                    <button aria-label="Search"><MagnifyingGlass size={20}/></button>
-                </form>
-                <button className={styles.grace} onClick={() => open()}>Ask Grace</button>
-                <Link className={styles.portal} href="/sign-in?redirect_url=%2Fportal" aria-label="Sign in to the client portal"><User size={22}/><span>Portal</span></Link>
-                <button className={styles.cartButton} aria-label={`Open cart${isCartHydrated ? `, ${itemCount} items` : ''}`} onClick={() => setCart(true)}><ShoppingBag size={22}/>{isCartHydrated && itemCount > 0 && <span>{itemCount}</span>}</button>
+                <div className={styles.headerRight}>
+                    <button className={styles.grace} onClick={() => open()}>Ask Grace</button>
+                    <Link className={styles.portal} href="/sign-in?redirect_url=%2Fportal" aria-label="Sign in to the client portal"><User size={22}/><span>Portal</span></Link>
+                    <button className={styles.cartButton} aria-label={`Open cart${isCartHydrated ? `, ${itemCount} items` : ''}`} onClick={() => setCart(true)}><ShoppingBag size={22}/>{isCartHydrated && itemCount > 0 && <span>{itemCount}</span>}</button>
+                </div>
             </div>
             <nav className={styles.nav} aria-label="Main navigation">
                 <button type="button" aria-expanded={activeMega === 'families'} aria-controls="families-mega-menu" onClick={() => toggleMega('families')}>Bottle Families <CaretDown size={13}/></button>
