@@ -134,7 +134,7 @@ export default async function TeamPage({ searchParams }: TeamPageProps) {
     const platformHealth = await getPlatformHealthSnapshot({ issueLimit: 3, activityLimit: 0 });
 
     return (
-        <main className="min-h-screen bg-bone px-6 py-20 sm:py-24">
+        <main className="app-surface min-h-screen bg-bone px-6 py-20 sm:py-24">
             <div className="mx-auto max-w-5xl">
                 <header className="mb-10 max-w-2xl">
                     <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-muted-gold">
@@ -201,7 +201,7 @@ function TeamAccessPending({ emailAddresses }: { emailAddresses: string[] }) {
     const signedInEmail = emailAddresses[0];
 
     return (
-        <main className="min-h-screen bg-bone px-6 py-20 sm:py-24">
+        <main className="app-surface min-h-screen bg-bone px-6 py-20 sm:py-24">
             <div className="mx-auto max-w-2xl border border-champagne/60 bg-linen p-8 shadow-[0_18px_45px_rgba(29,29,31,0.04)]">
                 <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-muted-gold">
                     Best Bottles

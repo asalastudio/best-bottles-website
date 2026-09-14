@@ -7,7 +7,7 @@ import { UserButton, useOrganization } from "@clerk/nextjs";
 function NavIcon({ id }: { id: string }) {
     const icons: Record<string, React.ReactNode> = {
         dashboard: (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="5" height="5" rx="1" />
                 <rect x="9" y="2" width="5" height="5" rx="1" />
                 <rect x="2" y="9" width="5" height="5" rx="1" />
@@ -15,25 +15,25 @@ function NavIcon({ id }: { id: string }) {
             </svg>
         ),
         orders: (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
                 <path d="M2 4h12M2 8h12M2 12h8" />
             </svg>
         ),
         tracking: (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="1" y="3" width="14" height="10" rx="2" />
                 <path d="M1 7h14" />
                 <path d="M5 11h2" />
             </svg>
         ),
         drafts: (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 2h6l3 3v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z" />
                 <path d="M10 2v3h3" />
             </svg>
         ),
         tools: (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
                 <circle cx="8" cy="8" r="3" />
                 <path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41" />
             </svg>
@@ -41,41 +41,41 @@ function NavIcon({ id }: { id: string }) {
         // Conversation bubble, not a sparkle/star — Grace is a specialist you
         // talk to, and the sparkle motif reads as generic "AI" decoration.
         grace: (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 9.5a2 2 0 0 1-2 2H6.5L3 14v-2.5a2 2 0 0 1-1-1.74V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5.5Z" />
                 <path d="M5.5 6h5M5.5 8.5h3" />
             </svg>
         ),
         // Bookmark — a project is a set the customer deliberately kept.
         "grace-projects": (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M4 2h8a1 1 0 0 1 1 1v11l-5-3-5 3V3a1 1 0 0 1 1-1Z" />
             </svg>
         ),
         // Arrow leaving a frame — this one exits the portal shell.
         "grace-open": (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 2h5v5" />
                 <path d="M14 2 7.5 8.5" />
                 <path d="M12 10v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3" />
             </svg>
         ),
         documents: (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M3 2h7l3 3v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1Z" />
                 <path d="M10 2v3h3" />
                 <path d="M5 8h6M5 11h4" />
             </svg>
         ),
         account: (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
                 <circle cx="8" cy="5.5" r="2.5" />
                 <path d="M2.5 14c0-2.76 2.46-4.5 5.5-4.5s5.5 1.74 5.5 4.5" />
             </svg>
         ),
         // Sliders — distinct from the `tools` gear so the two don't read alike.
         settings: (
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
                 <path d="M2 4.5h5M10.5 4.5H14M2 11.5h3.5M9 11.5H14" />
                 <circle cx="8.75" cy="4.5" r="1.75" />
                 <circle cx="7.25" cy="11.5" r="1.75" />
@@ -84,7 +84,10 @@ function NavIcon({ id }: { id: string }) {
     };
 
     return (
-        <span className="w-4 h-4 flex items-center justify-center shrink-0">
+        <span
+            className="flex items-center justify-center shrink-0"
+            style={{ width: "var(--icon-size-desktop)", height: "var(--icon-size-desktop)" }}
+        >
             {icons[id]}
         </span>
     );
@@ -148,29 +151,35 @@ export default function PortalSidebar({
         .toUpperCase();
 
     return (
-        <div className="w-[220px] min-w-[220px] bg-white border-r border-neutral-200 flex flex-col h-full">
+        <div
+            className="w-[220px] min-w-[220px] flex flex-col h-full"
+            style={{
+                background: "var(--color-surface-rail)",
+                borderRight: "1px solid var(--color-rule)",
+            }}
+        >
 
             {/* Brand */}
-            <div className="px-5 pt-5 pb-4 border-b border-neutral-100">
-                <p className="font-sans text-[22px] font-semibold text-neutral-900 leading-tight tracking-tight">
+            <div className="px-5 pt-5 pb-4" style={{ borderBottom: "1px solid var(--color-rule)" }}>
+                <p className="font-sans text-[22px] font-semibold leading-tight tracking-tight text-[color:var(--color-text-primary)]">
                     Best Bottles
                 </p>
-                <p className="font-sans text-[11px] text-neutral-400 mt-0.5">Client Portal</p>
+                <p className="font-sans text-[11px] mt-0.5 text-[color:var(--color-text-muted)]">Client Portal</p>
             </div>
 
             {/* Org switcher */}
-            <div className="px-5 py-3.5 border-b border-neutral-100">
+            <div className="px-5 py-3.5" style={{ borderBottom: "1px solid var(--color-rule)" }}>
                 <div className="flex items-center gap-2.5">
-                    <div className="w-7 h-7 rounded-md bg-neutral-900 flex items-center justify-center shrink-0">
+                    <div className="w-7 h-7 rounded-md flex items-center justify-center shrink-0" style={{ background: "var(--color-text-primary)" }}>
                         <span className="font-sans text-[10px] text-white font-semibold leading-none">
                             {initials}
                         </span>
                     </div>
                     <div className="min-w-0 flex-1">
-                        <p className="font-sans text-[13px] text-neutral-900 font-medium truncate leading-tight">
+                        <p className="font-sans text-[13px] font-medium truncate leading-tight text-[color:var(--color-text-primary)]">
                             {orgName}
                         </p>
-                        <p className="font-sans text-[11px] text-neutral-400 leading-tight">
+                        <p className="font-sans text-[11px] leading-tight text-[color:var(--color-text-muted)]">
                             {tierLabel ?? "Portal access"}
                         </p>
                     </div>
@@ -181,9 +190,9 @@ export default function PortalSidebar({
             <nav className="flex-1 overflow-y-auto py-2">
                 {navSections.map((section, si) => (
                     <div key={si}>
-                        {si > 0 && <div className="h-px bg-neutral-100 mx-4 my-1.5" />}
+                        {si > 0 && <div className="h-px mx-4 my-1.5" style={{ background: "var(--color-rule)" }} />}
                         {section.label && (
-                            <p className="px-5 pt-1.5 pb-1 font-sans text-[10px] font-semibold uppercase tracking-wide text-neutral-300">
+                            <p className="px-5 pt-1.5 pb-1 font-sans text-[10px] font-semibold uppercase tracking-wide text-[color:var(--color-text-muted)]">
                                 {section.label}
                             </p>
                         )}
@@ -193,16 +202,33 @@ export default function PortalSidebar({
                                 <Link
                                     key={item.href}
                                     href={item.href}
-                                    className={`flex items-center gap-2.5 mx-2 px-3 py-[7px] rounded-md text-[13px] font-sans transition-colors duration-100 ${
-                                        active
-                                            ? "bg-neutral-100 text-neutral-900 font-medium"
-                                            : "text-neutral-500 hover:bg-neutral-50 hover:text-neutral-700"
-                                    }`}
+                                    aria-current={active ? "page" : undefined}
+                                    className="flex items-center gap-2.5 mx-2 px-3 py-[7px] rounded-md text-[13px] font-sans transition-colors duration-100"
+                                    style={{
+                                        // The current row is marked by a soft warm ground and a
+                                        // heavier label, not by colour. Gold is reserved for the
+                                        // destination marker below, so it means one thing.
+                                        background: active ? "var(--color-surface-selected)" : "transparent",
+                                        color: active
+                                            ? "var(--color-text-primary)"
+                                            : "var(--color-text-secondary)",
+                                        fontWeight: active ? 500 : 400,
+                                    }}
                                 >
-                                    <span className={active ? "text-neutral-700" : "text-neutral-400"}>
+                                    {/* Icons share the body charcoal. An icon that is a different
+                                        colour from its label reads as a second piece of
+                                        information when it is the same one. */}
+                                    <span style={{ color: "currentColor", opacity: active ? 1 : 0.75 }}>
                                         <NavIcon id={item.id} />
                                     </span>
                                     {item.label}
+                                    {active && (
+                                        <span
+                                            aria-hidden
+                                            className="ml-auto h-4 w-[2px] rounded-full"
+                                            style={{ background: "var(--color-muted-gold)" }}
+                                        />
+                                    )}
                                 </Link>
                             );
                         })}
@@ -211,7 +237,7 @@ export default function PortalSidebar({
             </nav>
 
             {/* Footer */}
-            <div className="px-5 py-3 border-t border-neutral-100 flex items-center justify-between">
+            <div className="px-5 py-3 flex items-center justify-between" style={{ borderTop: "1px solid var(--color-rule)" }}>
                 <div className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                     <span className="font-sans text-[11px] text-neutral-400">Grace online</span>
