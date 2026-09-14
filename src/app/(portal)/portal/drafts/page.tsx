@@ -23,7 +23,10 @@ function statusVariant(status: string): "gold" | "muted" {
 }
 
 function statusLabel(status: string) {
-    return status === "in_review" ? "In Review" : status === "submitted" ? "Submitted" : "Draft";
+    // "Draft" is Best Bottles' word for this — on the Shopify side it lands
+    // under Orders → Drafts. To the customer it is simply their order, and
+    // calling it a draft reads as "not real yet".
+    return status === "in_review" ? "In Review" : status === "submitted" ? "Submitted" : "In progress";
 }
 
 const colClass = "grid grid-cols-[1fr_80px_100px_130px_100px_200px] gap-4 items-center";
@@ -34,9 +37,13 @@ export default async function PortalDrafts() {
     return (
         <div className="px-6 py-6 max-w-[1200px]">
             <PageHeader
-                eyebrow="Saved Orders"
-                title="Drafts"
-                subtitle={drafts.length > 0 ? "Saved carts persist in Convex and stay available across sessions." : "Create a draft order to start saving line items for review."}
+                eyebrow="Purchasing"
+                title="Orders"
+                subtitle={
+                    drafts.length > 0
+                        ? "Orders you are still building, and orders already submitted to Best Bottles."
+                        : "Start an order to save what you need before submitting it."
+                }
             />
 
             <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
@@ -51,7 +58,7 @@ export default async function PortalDrafts() {
                 {drafts.length === 0 ? (
                     <div className="px-5 py-10">
                         <p className="font-sans text-[13px] text-neutral-500">
-                            No drafts yet. Create one to save order ideas before you submit.
+                            No orders yet. Start one to gather what you need before submitting it.
                         </p>
                     </div>
                 ) : (
@@ -87,7 +94,7 @@ export default async function PortalDrafts() {
 
             <form action={createDraftAction}>
                 <PortalButton type="submit" size="md" className="mt-4">
-                    Create Draft
+                    Start an order
                 </PortalButton>
             </form>
         </div>

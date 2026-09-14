@@ -46,7 +46,6 @@ export default async function PortalAccountsPage() {
     // Offer what this business actually uses rather than a taxonomy invented
     // here, falling back only when there is nothing to learn from yet.
     const knownTiers = [...new Set(accounts.map((a) => a.tier).filter(Boolean))];
-    const knownTerms = [...new Set(accounts.map((a) => a.netTerms).filter(Boolean))];
 
     return (
         <div className="min-h-screen bg-neutral-50 px-6 py-10">
@@ -101,7 +100,6 @@ export default async function PortalAccountsPage() {
                                     </p>
                                 </div>
                                 <p className="font-sans text-[13px] text-neutral-500">{account.tier}</p>
-                                <p className="font-sans text-[13px] text-neutral-500">{account.netTerms}</p>
                                 <p className="font-sans text-[12px] text-neutral-400 truncate">
                                     {account.billingEmail ?? (
                                         // Without this, an approved certificate has nowhere to go.
@@ -122,7 +120,6 @@ export default async function PortalAccountsPage() {
                     organizations={organizations}
                     action={upsertPortalAccountAction}
                     knownTiers={knownTiers.length > 0 ? knownTiers : FALLBACK_TIERS}
-                    knownTerms={knownTerms.length > 0 ? knownTerms : FALLBACK_TERMS}
                 />
             </div>
         </div>

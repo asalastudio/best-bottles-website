@@ -7,6 +7,8 @@ import OrderPad from "@/components/portal/OrderPad";
 import SubmitDraftForm from "@/components/portal/SubmitDraftForm";
 import DiscardDraftButton from "@/components/portal/DiscardDraftButton";
 import { getDraftForViewer } from "@/lib/portal/draftEditor";
+import { getPortalAddresses } from "@/lib/portal/server";
+import { addressIsUsable } from "@/lib/portal/address";
 import { discardDraftAction, saveDraftLinesAction, searchProductsAction, submitDraftAction } from "../../actions";
 
 function formatDate(value: number) {
@@ -19,8 +21,10 @@ export default async function PortalDraftDetail({
     params: Promise<{ draftId: string }>;
 }) {
     const { draftId } = await params;
-    const draft = await getDraftForViewer(draftId);
+    const [draft, addresses] = await Promise.all([getDraftForViewer(draftId), getPortalAddresses()]);
     if (!draft) notFound();
+
+    const hasAddress = addressIsUsable(addresses.shippingAddress);
 
     const submitted = draft.status === "submitted";
 
@@ -30,21 +34,21 @@ export default async function PortalDraftDetail({
                 href="/portal/drafts"
                 className="inline-block font-sans text-[12px] text-neutral-400 hover:text-neutral-700 mb-3 transition-colors"
             >
-                ← All drafts
+                ← All orders
             </Link>
 
             <PageHeader
-                eyebrow="Purchase order"
+                eyebrow="Order"
                 title={draft.name}
                 subtitle={
                     submitted
-                        ? "Sent to Best Bottles. Your account manager reviews it and sends the invoice."
-                        : "Add what you need, then send it to Best Bottles for review."
+                        ? "Your order has been submitted. Best Bottles will handle the rest."
+                        : "Add what you need, then submit it to Best Bottles."
                 }
             >
                 <div className="flex items-center gap-3">
                     <PortalTag variant={submitted ? "green" : "muted"}>
-                        {submitted ? "Sent" : "Draft"}
+                        {submitted ? "Submitted" : "In progress"}
                     </PortalTag>
                     <DiscardDraftButton
                         draftId={draftId}
@@ -57,11 +61,15 @@ export default async function PortalDraftDetail({
             {submitted && draft.shopifyDraftOrderName && (
                 <div className="bg-white rounded-lg border border-emerald-200 px-5 py-4 mb-4">
                     <p className="font-sans text-[13px] font-medium text-neutral-900">
-                        Received as {draft.shopifyDraftOrderName}
+                        Your order has been submitted
                     </p>
                     <p className="font-sans text-[13px] text-neutral-500 mt-1.5 leading-relaxed">
-                        Sent {draft.submittedAt ? formatDate(draft.submittedAt) : "recently"}. Nothing is
-                        charged yet. Best Bottles confirms quantities and pricing, then sends your invoice.
+                        Received {draft.submittedAt ? formatDate(draft.submittedAt) : "just now"} as{" "}
+                        {/* The Shopify reference is what staff will quote back on the
+                            phone, so it is worth showing — but as a reference number,
+                            not as the name of the thing. */}
+                        <span className="tabular-nums">{draft.shopifyDraftOrderName}</span>. Nothing is
+                        charged yet. Best Bottles confirms quantities and freight, then sends your invoice.
                     </p>
                 </div>
             )}
@@ -84,6 +92,7 @@ export default async function PortalDraftDetail({
                 <SubmitDraftForm
                     draftId={draftId}
                     lineCount={draft.lineItems.length}
+                    hasAddress={hasAddress}
                     submitAction={submitDraftAction}
                 />
             )}
