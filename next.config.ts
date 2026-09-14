@@ -24,6 +24,9 @@ const nextConfig: NextConfig = {
         // Sentry adds a custom Webpack hook, disabling Next's default worker.
         // Isolate compilation so its memory is released before TypeScript runs.
         webpackBuildWorker: true,
+        // Vercel's standard build container OOM-killed the webpack worker on
+        // 2026-09-14; this trades a little build time for a lower peak heap.
+        webpackMemoryOptimizations: true,
     },
     turbopack: {
         root: projectRoot,

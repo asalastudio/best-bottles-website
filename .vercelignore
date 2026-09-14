@@ -6,8 +6,11 @@
 # Madison paper-doll source library (~36 GB of PSDs/renders)
 pipeline/
 
-# Local research, audit, and scrape artifacts
-data/
+# Local research, audit, and scrape artifacts — except the asset-ledger JSON, which the
+# Team asset-ledger page and its API route import at build/run time (Vercel applies this file
+# to Git builds too; excluding it broke every production build with "Module not found").
+data/*
+!data/asset-ledger/
 docs/
 reference_images/
 Best-Bottles-Orphan-urls/
