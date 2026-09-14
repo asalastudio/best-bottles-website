@@ -157,8 +157,8 @@
 .hero[data-scene="empire-niche"] .heroCopy{color:#222220}
 .hero[data-scene="empire-niche"] .heroCopy h1,.hero[data-scene="empire-niche"] .heroCopy p{text-shadow:none}
 .hero[data-scene="empire-niche"] .heroCopy h1{color:#222220;font-size:56px;max-width:600px}
-/* Subtext on ONE line: 24px from ~1300px up, sized down with the viewport below so it never reaches the moulding. */
-.hero[data-scene="empire-niche"] .heroCopy p{color:#3f3b36;font-size:clamp(16px,3.69vw - 23.8px,24px);line-height:1.3;max-width:none;white-space:nowrap}
+/* Subtext on ONE line: 21.5px from ~1230px up, sized down with the viewport below so it never reaches the moulding. */
+.hero[data-scene="empire-niche"] .heroCopy p{color:#3f3b36;font-size:clamp(16px,3.69vw - 23.8px,21.5px);line-height:1.3;max-width:none;white-space:nowrap}
 .hero[data-scene="empire-niche"] .primary{background:#1d1d1f;color:#fff;border-color:#1d1d1f}
 .hero[data-scene="empire-niche"] .secondary{background:transparent;color:#35322e;border-color:#35322e}
 
