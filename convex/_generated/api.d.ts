@@ -53,6 +53,7 @@ import type * as patchFromMasterV83 from "../patchFromMasterV83.js";
 import type * as portal from "../portal.js";
 import type * as portalAuth from "../portalAuth.js";
 import type * as pricing from "../pricing.js";
+import type * as productGroupNames from "../productGroupNames.js";
 import type * as productGroups from "../productGroups.js";
 import type * as productGroupsRebuild from "../productGroupsRebuild.js";
 import type * as productKits from "../productKits.js";
@@ -116,6 +117,7 @@ declare const fullApi: ApiFromModules<{
   portal: typeof portal;
   portalAuth: typeof portalAuth;
   pricing: typeof pricing;
+  productGroupNames: typeof productGroupNames;
   productGroups: typeof productGroups;
   productGroupsRebuild: typeof productGroupsRebuild;
   productKits: typeof productKits;
