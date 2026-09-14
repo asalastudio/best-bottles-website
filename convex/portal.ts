@@ -350,7 +350,42 @@ export const listOrdersByOrg = query({
             itemCount: orderItemCount(order),
             primaryLineItem: order.lineItems[0] ?? null,
             lineItems: order.lineItems,
+            shipments: order.shipments ?? [],
+            shipTo: order.shipTo ?? null,
         }));
+    },
+});
+
+/**
+ * One order, for the customer's order page. Scoped like every other read here:
+ * an order name belonging to another organization reads as absent rather than
+ * as a permission error, which would confirm it exists.
+ */
+export const getOrderForOrg = query({
+    args: { clerkOrgId: v.string(), orderId: v.string() },
+    handler: async (ctx, args) => {
+        const order = await ctx.db
+            .query("portalOrders")
+            .withIndex("by_orderId", (q) => q.eq("orderId", args.orderId))
+            .first();
+        if (!order || order.clerkOrgId !== args.clerkOrgId) return null;
+
+        return {
+            _id: order._id,
+            orderId: order.orderId,
+            status: order.status,
+            orderDate: order.orderDate,
+            estimatedDelivery: order.estimatedDelivery ?? null,
+            carrier: order.carrier ?? null,
+            trackingNumber: order.trackingNumber ?? null,
+            totalAmount: orderTotal(order),
+            itemCount: orderItemCount(order),
+            lineItems: order.lineItems,
+            shipments: order.shipments ?? [],
+            shipTo: order.shipTo ?? null,
+            source: order.source ?? null,
+            updatedAt: order.updatedAt ?? null,
+        };
     },
 });
 
@@ -617,6 +652,20 @@ export const upsertOrderFromShopify = mutation({
         carrier: v.optional(v.string()),
         estimatedDelivery: v.optional(v.string()),
         shipTo: v.optional(v.string()),
+        shipments: v.optional(v.array(v.object({
+            shopifyFulfillmentId: v.optional(v.string()),
+            trackingNumber: v.optional(v.string()),
+            carrier: v.optional(v.string()),
+            trackingUrl: v.optional(v.string()),
+            shipmentStatus: v.optional(v.string()),
+            shippedAt: v.optional(v.number()),
+            estimatedDelivery: v.optional(v.string()),
+            lineItems: v.optional(v.array(v.object({
+                sku: v.string(),
+                description: v.string(),
+                quantity: v.number(),
+            }))),
+        }))),
     },
     handler: async (ctx, args) => {
         verifyWriteToken(args.writeToken);
@@ -648,6 +697,7 @@ export const upsertOrderFromShopify = mutation({
             estimatedDelivery: args.estimatedDelivery,
             trackingNumber: args.trackingNumber,
             carrier: args.carrier,
+            shipments: args.shipments,
             shipTo: args.shipTo,
             totalAmount: args.totalAmount,
             source: "shopify" as const,
@@ -664,7 +714,22 @@ export const upsertOrderFromShopify = mutation({
             if (existing.source === "quickbooks") {
                 return { skipped: "owned_by_quickbooks" as const, orderId: existing._id };
             }
-            await ctx.db.patch(existing._id, fields);
+            // Shopify's order payloads do not always carry the fulfilments — an
+            // `orders/updated` fired by an unrelated edit can arrive with none.
+            // Patching that over a row a fulfilment webhook just populated would
+            // make a shipped order look unshipped and lose the tracking number,
+            // so absent shipment data leaves what is already stored alone.
+            const patch = { ...fields };
+            if (!args.shipments || args.shipments.length === 0) {
+                const kept = existing.shipments ?? [];
+                if (kept.length > 0) {
+                    patch.shipments = kept;
+                    patch.trackingNumber = existing.trackingNumber;
+                    patch.carrier = existing.carrier;
+                    patch.estimatedDelivery = existing.estimatedDelivery;
+                }
+            }
+            await ctx.db.patch(existing._id, patch);
             return { updated: true as const, orderId: existing._id };
         }
 

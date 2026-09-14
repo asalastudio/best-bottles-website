@@ -181,6 +181,18 @@ export async function getPortalOrdersData() {
     return { viewer, orders };
 }
 
+export async function getPortalOrder(orderId: string) {
+    if (!CLERK_ENABLED) return null;
+
+    const viewer = await getPortalViewer();
+    if (!viewer.clerkOrgId) return null;
+
+    return await getPortalConvex().query(api.portal.getOrderForOrg, {
+        clerkOrgId: viewer.clerkOrgId,
+        orderId,
+    });
+}
+
 export async function getPortalAccountData() {
     if (!CLERK_ENABLED) {
         return { viewer: DISABLED_VIEWER, account: null, orders: [] };

@@ -51,7 +51,12 @@ export type ShopifyWebhookTopic =
     | "orders/create"
     | "orders/updated"
     | "orders/cancelled"
-    | "orders/fulfilled";
+    | "orders/fulfilled"
+    // The fulfilment topics are what actually carry tracking. `orders/updated`
+    // fires too, but it is a general-purpose edit signal and its payload does
+    // not reliably include the fulfilments.
+    | "fulfillments/create"
+    | "fulfillments/update";
 
 export function parseWebhookTopic(
     header: string | null,
@@ -66,6 +71,8 @@ export function parseWebhookTopic(
         "orders/updated",
         "orders/cancelled",
         "orders/fulfilled",
+        "fulfillments/create",
+        "fulfillments/update",
     ];
     if (header && valid.includes(header as ShopifyWebhookTopic)) {
         return header as ShopifyWebhookTopic;
@@ -131,11 +138,74 @@ export interface WebhookOrderLineItem {
 }
 
 export interface WebhookOrderFulfillment {
+    id?: number;
+    order_id?: number;
+    created_at?: string | null;
     /** Shopify's delivery state: "in_transit", "delivered", "out_for_delivery", … */
     shipment_status: string | null;
     tracking_company: string | null;
     tracking_number: string | null;
+    /** Shopify resolves the carrier's own tracking page for known carriers. */
+    tracking_url?: string | null;
+    tracking_urls?: string[] | null;
+    tracking_numbers?: string[] | null;
     estimated_delivery_at?: string | null;
+    line_items?: WebhookOrderLineItem[];
+}
+
+/**
+ * The `fulfillments/create` and `fulfillments/update` payload: one shipment,
+ * carrying the order id it belongs to rather than the whole order.
+ */
+export interface WebhookFulfillment extends WebhookOrderFulfillment {
+    id: number;
+    order_id: number;
+    status?: string | null;
+}
+
+/**
+ * Normalise one Shopify fulfilment into the portal's shipment shape.
+ *
+ * Shopify exposes tracking in both singular and plural forms and does not
+ * always agree with itself about which is populated, so both are read. A
+ * shipment with no tracking number at all is still worth keeping — it tells
+ * the customer part of the order has left, which is more than silence.
+ */
+export function shipmentFromFulfillment(fulfillment: WebhookOrderFulfillment) {
+    const trackingNumber =
+        fulfillment.tracking_number ?? fulfillment.tracking_numbers?.[0] ?? undefined;
+    const trackingUrl = fulfillment.tracking_url ?? fulfillment.tracking_urls?.[0] ?? undefined;
+    const shippedAt = fulfillment.created_at ? new Date(fulfillment.created_at).getTime() : undefined;
+
+    return {
+        shopifyFulfillmentId: fulfillment.id === undefined ? undefined : String(fulfillment.id),
+        trackingNumber: trackingNumber || undefined,
+        carrier: fulfillment.tracking_company || undefined,
+        trackingUrl: trackingUrl || undefined,
+        shipmentStatus: fulfillment.shipment_status || undefined,
+        shippedAt: Number.isFinite(shippedAt) ? shippedAt : undefined,
+        estimatedDelivery: formatEstimatedDelivery(fulfillment.estimated_delivery_at),
+        lineItems: fulfillment.line_items?.map((item) => ({
+            sku: item.sku?.trim() || "—",
+            description: item.name?.trim() || item.title,
+            quantity: item.quantity,
+        })),
+    };
+}
+
+/**
+ * `portalOrders` estimated-delivery fields are display strings, not timestamps.
+ *
+ * Formatted in UTC on purpose: Shopify sends midnight UTC, which a US server
+ * renders as the previous day — an ETA that reads a day early.
+ */
+export function formatEstimatedDelivery(value: string | null | undefined): string | undefined {
+    if (!value) return undefined;
+    const at = new Date(value);
+    if (Number.isNaN(at.getTime())) return undefined;
+    return at.toLocaleDateString("en-US", {
+        month: "short", day: "numeric", year: "numeric", timeZone: "UTC",
+    });
 }
 
 export interface WebhookOrder {

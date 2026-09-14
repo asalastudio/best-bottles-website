@@ -3,11 +3,15 @@ import {
     verifyShopifyWebhook,
     parseWebhookTopic,
     orderStatusFromShopify,
+    shipmentFromFulfillment,
+    formatEstimatedDelivery,
     type WebhookProduct,
     type WebhookProductDelete,
     type WebhookInventoryLevel,
     type WebhookOrder,
+    type WebhookFulfillment,
 } from "@/lib/shopify-webhooks";
+import { fetchOrderForSync } from "@/lib/shopify-order-fetch";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
 
@@ -24,18 +28,53 @@ function getConvex(): ConvexHttpClient | null {
 const convexWriteToken = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
 
 /**
- * `portalOrders.estimatedDelivery` is a display string, not a timestamp, so
- * Shopify's ISO value has to be formatted before it is stored. Passing it
- * through raw put "2026-09-19T00:00:00Z" on the customer's dashboard.
+ * Write one Shopify order into the portal.
+ *
+ * Every shipment is carried, not just the first one with a tracking number: a
+ * wholesale order goes out on several pallets, and reporting one number made a
+ * half-shipped order read as fully shipped.
  */
-function formatEstimatedDelivery(value: string | null | undefined): string | undefined {
-    if (!value) return undefined;
-    const at = new Date(value);
-    if (Number.isNaN(at.getTime())) return undefined;
-    // Formatted in UTC on purpose. Shopify sends midnight UTC, which a US
-    // server renders as the previous day — an ETA that reads a day early.
-    return at.toLocaleDateString("en-US", {
-        month: "short", day: "numeric", year: "numeric", timeZone: "UTC",
+async function syncOrder(
+    convex: ConvexHttpClient,
+    writeToken: string,
+    order: WebhookOrder,
+) {
+    const shipments = (order.fulfillments ?? []).map(shipmentFromFulfillment);
+    // The legacy single-tracking fields still mirror the first shipment that
+    // has a number, so anything reading one number keeps working.
+    const primary = shipments.find((s) => s.trackingNumber) ?? shipments[0] ?? null;
+
+    const priceText = order.current_total_price ?? order.total_price ?? null;
+    const total = priceText === null ? undefined : Number(priceText);
+    const shipTo = order.shipping_address
+        ? [order.shipping_address.city, order.shipping_address.province_code]
+              .filter(Boolean)
+              .join(", ") || undefined
+        : undefined;
+
+    return await convex.mutation(api.portal.upsertOrderFromShopify, {
+        writeToken,
+        shopifyOrderId: String(order.id),
+        shopifyCustomerId: order.customer ? String(order.customer.id) : undefined,
+        orderName: order.name,
+        orderDate: new Date(order.created_at).getTime(),
+        status: orderStatusFromShopify(order),
+        lineItems: order.line_items.map((item) => ({
+            // A Shopify line item can ship without a SKU; the portal shows this
+            // string, so an empty cell is worse than a mark.
+            sku: item.sku?.trim() || "—",
+            description: item.name?.trim() || item.title,
+            quantity: item.quantity,
+            unitPrice: item.price === null ? undefined : Number(item.price),
+        })),
+        totalAmount: Number.isFinite(total) ? total : undefined,
+        trackingNumber: primary?.trackingNumber,
+        carrier: primary?.carrier,
+        estimatedDelivery:
+            primary?.estimatedDelivery ??
+            formatEstimatedDelivery(order.fulfillments?.[0]?.estimated_delivery_at),
+        shipments: shipments.length > 0 ? shipments : undefined,
+        shipTo,
     });
 }
 
@@ -151,40 +190,32 @@ export async function POST(req: NextRequest) {
             case "orders/updated":
             case "orders/cancelled":
             case "orders/fulfilled": {
-                const order = body as WebhookOrder;
-                const shipment = order.fulfillments?.find((f) => f.tracking_number) ?? null;
-                const priceText = order.current_total_price ?? order.total_price ?? null;
-                const total = priceText === null ? undefined : Number(priceText);
-                const shipTo = order.shipping_address
-                    ? [order.shipping_address.city, order.shipping_address.province_code]
-                        .filter(Boolean).join(", ") || undefined
-                    : undefined;
-
-                const result = await convex.mutation(api.portal.upsertOrderFromShopify, {
-                    writeToken: convexWriteToken,
-                    shopifyOrderId: String(order.id),
-                    shopifyCustomerId: order.customer ? String(order.customer.id) : undefined,
-                    orderName: order.name,
-                    orderDate: new Date(order.created_at).getTime(),
-                    status: orderStatusFromShopify(order),
-                    lineItems: order.line_items.map((item) => ({
-                        // A Shopify line item can ship without a SKU; the portal
-                        // shows this string, so an empty cell is worse than a mark.
-                        sku: item.sku?.trim() || "—",
-                        description: item.name?.trim() || item.title,
-                        quantity: item.quantity,
-                        unitPrice: item.price === null ? undefined : Number(item.price),
-                    })),
-                    totalAmount: Number.isFinite(total) ? total : undefined,
-                    trackingNumber: shipment?.tracking_number ?? undefined,
-                    carrier: shipment?.tracking_company ?? undefined,
-                    estimatedDelivery: formatEstimatedDelivery(shipment?.estimated_delivery_at),
-                    shipTo,
-                });
-
+                const result = await syncOrder(convex, convexWriteToken, body as WebhookOrder);
                 console.log(
-                    `[Shopify Webhook] ${topic}: order ${order.name} →`,
-                    "skipped" in result ? `skipped (${result.skipped})` : "synced",
+                    `[Shopify Webhook] ${topic}: order ${(body as WebhookOrder).name} →`,
+                    result && "skipped" in result ? `skipped (${result.skipped})` : "synced",
+                );
+                break;
+            }
+
+            // A fulfilment payload carries the shipment and an order_id, but no
+            // customer — and the portal keys an order to an account through the
+            // customer. Fetching the order and running the ordinary sync keeps
+            // one code path rather than two that drift.
+            case "fulfillments/create":
+            case "fulfillments/update": {
+                const fulfillment = body as WebhookFulfillment;
+                const order = await fetchOrderForSync(String(fulfillment.order_id));
+                if (!order) {
+                    console.warn(
+                        `[Shopify Webhook] ${topic}: order ${fulfillment.order_id} not found`,
+                    );
+                    break;
+                }
+                const result = await syncOrder(convex, convexWriteToken, order);
+                console.log(
+                    `[Shopify Webhook] ${topic}: order ${order.name}, ${order.fulfillments?.length ?? 0} shipment(s) →`,
+                    result && "skipped" in result ? `skipped (${result.skipped})` : "synced",
                 );
                 break;
             }

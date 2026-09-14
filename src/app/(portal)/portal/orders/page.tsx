@@ -1,4 +1,5 @@
 export const dynamic = "force-dynamic";
+import Link from "next/link";
 import { PageHeader, PortalButton, PortalTag } from "@/components/portal/ui";
 import { getPortalOrdersData } from "@/lib/portal/server";
 import { reorderToDraftAction } from "../actions";
@@ -36,7 +37,7 @@ function statusLabel(status: string) {
     }
 }
 
-const colClass = "grid grid-cols-[100px_1fr_140px_100px_100px_120px] gap-4 items-center";
+const colClass = "grid grid-cols-[100px_1fr_150px_120px_100px_110px] gap-4 items-center";
 
 export default async function PortalOrders() {
     const { orders } = await getPortalOrdersData();
@@ -45,14 +46,18 @@ export default async function PortalOrders() {
         <div className="px-6 py-6 max-w-[1200px]">
             <PageHeader
                 eyebrow="History"
-                title="Orders"
-                subtitle={orders.length > 0 ? `${orders.length} order${orders.length === 1 ? "" : "s"} · Reorder any previous purchase.` : "Order history will appear here as it syncs into Convex."}
+                title="Order history"
+                subtitle={
+                    orders.length > 0
+                        ? `${orders.length} order${orders.length === 1 ? "" : "s"} · open one to track its shipments or reorder it.`
+                        : "Orders appear here once Best Bottles confirms them in Shopify."
+                }
             />
 
             <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
                 {/* Table header */}
                 <div className={`${colClass} px-5 py-3 bg-neutral-50 border-b border-neutral-200`}>
-                    {["Order", "Product", "Date", "Total", "Status", ""].map((h) => (
+                    {["Order", "Product", "Date", "Tracking", "Status", ""].map((h) => (
                         <p key={h} className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide">
                             {h}
                         </p>
@@ -62,7 +67,8 @@ export default async function PortalOrders() {
                 {orders.length === 0 ? (
                     <div className="px-5 py-10">
                         <p className="font-sans text-[13px] text-neutral-500">
-                            No orders are synced for this organization yet.
+                            No orders yet. Once Best Bottles confirms an order in Shopify, it
+                            appears here with its tracking.
                         </p>
                     </div>
                 ) : (
@@ -73,20 +79,50 @@ export default async function PortalOrders() {
                                 i < orders.length - 1 ? "border-b border-neutral-100" : ""
                             }`}
                         >
-                            <span className="font-sans text-[13px] font-medium text-neutral-900">
+                            <Link
+                                href={`/portal/orders/${encodeURIComponent(order.orderId)}`}
+                                className="font-sans text-[13px] font-medium text-neutral-900 hover:underline"
+                            >
                                 {order.orderId}
-                            </span>
+                            </Link>
                             <div>
                                 <p className="font-sans text-[13px] text-neutral-900">
                                     {order.primaryLineItem?.description ?? "Order items"}
                                 </p>
                                 <p className="font-sans text-[12px] text-neutral-400">
-                                    {order.itemCount} units
-                                    {order.carrier ? ` · ${order.carrier}` : ""}
+                                    {order.itemCount} units · {formatCurrency(order.totalAmount)}
                                 </p>
                             </div>
                             <span className="font-sans text-[13px] text-neutral-500">{formatDate(order.orderDate)}</span>
-                            <span className="font-sans text-[13px] font-medium text-neutral-900">{formatCurrency(order.totalAmount)}</span>
+                            {/* The tracking link is the thing a customer opens this
+                                page for, so it sits in the row rather than one
+                                click deeper. Several shipments collapse to a count
+                                that opens the order. */}
+                            <div className="min-w-0">
+                                {order.shipments.length > 1 ? (
+                                    <Link
+                                        href={`/portal/orders/${encodeURIComponent(order.orderId)}`}
+                                        className="font-sans text-[13px] text-neutral-900 underline underline-offset-2"
+                                    >
+                                        {order.shipments.length} shipments
+                                    </Link>
+                                ) : order.shipments[0]?.trackingUrl ? (
+                                    <a
+                                        href={order.shipments[0].trackingUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-sans text-[13px] text-neutral-900 underline underline-offset-2"
+                                    >
+                                        {order.shipments[0].carrier ?? "Track"} ↗
+                                    </a>
+                                ) : order.trackingNumber ? (
+                                    <p className="font-mono text-[11.5px] text-neutral-500 truncate" title={order.trackingNumber}>
+                                        {order.trackingNumber}
+                                    </p>
+                                ) : (
+                                    <span className="font-sans text-[13px] text-neutral-400">—</span>
+                                )}
+                            </div>
                             <PortalTag variant={statusVariant(order.status)}>{statusLabel(order.status)}</PortalTag>
                             <div className="flex gap-1.5 justify-end">
                                 <form action={reorderToDraftAction}>

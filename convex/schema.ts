@@ -511,8 +511,34 @@ export default defineSchema({
         ),
         orderDate: v.number(),
         estimatedDelivery: v.optional(v.string()),
+        // Kept for rows written before shipments existed, and still filled from
+        // the first shipment so anything reading a single number keeps working.
         trackingNumber: v.optional(v.string()),
         carrier: v.optional(v.string()),
+
+        // A wholesale order does not arrive in one box. Pallets ship on
+        // different days from different carriers, and collapsing that to one
+        // tracking number told the customer their order had shipped when half
+        // of it had — so every shipment is kept.
+        shipments: v.optional(v.array(v.object({
+            /** Shopify fulfilment id — the idempotency key for updates. */
+            shopifyFulfillmentId: v.optional(v.string()),
+            trackingNumber: v.optional(v.string()),
+            carrier: v.optional(v.string()),
+            /** Carrier's own tracking page, as Shopify resolved it. */
+            trackingUrl: v.optional(v.string()),
+            /** Shopify delivery state: in_transit, out_for_delivery, delivered… */
+            shipmentStatus: v.optional(v.string()),
+            shippedAt: v.optional(v.number()),
+            estimatedDelivery: v.optional(v.string()),
+            /** What travelled in this box, so a partial shipment is legible. */
+            lineItems: v.optional(v.array(v.object({
+                sku: v.string(),
+                description: v.string(),
+                quantity: v.number(),
+            }))),
+        }))),
+
         shipFrom: v.optional(v.string()),
         shipTo: v.optional(v.string()),
         totalAmount: v.optional(v.number()),
