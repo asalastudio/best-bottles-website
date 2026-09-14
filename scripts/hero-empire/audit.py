@@ -12,7 +12,9 @@ for p in sorted(glob.glob(f"{OUT}/frame-*.png")):
     sku = os.path.basename(p)[6:-4]
     if sku == "BARE": continue
     f = np.asarray(Image.open(p).convert("RGB")).astype(float); d = np.abs(f - base).sum(axis=2) > 40
-    band = d[NICHE[1]:shoulder + 14, int(cx) - 30:int(cx) + 30]; hit = np.where(band.any(axis=1))[0]
+    # collar bottom measured in two strips beside the dip-tube column (±16px) so the tube never counts as collar
+    bandL = d[NICHE[1]:shoulder + 14, int(cx) - 34:int(cx) - 16]; bandR = d[NICHE[1]:shoulder + 14, int(cx) + 16:int(cx) + 34]
+    hit = np.where(bandL.any(axis=1) | bandR.any(axis=1))[0]
     seat = (int(hit.max()) + NICHE[1] - shoulder) if len(hit) else None
     collar = d[max(shoulder - 70, NICHE[1]):shoulder, int(cx) - 70:int(cx) + 70]; ys, xs = np.where(collar)
     dx = (float(xs.mean()) + int(cx) - 70 - cx) if len(xs) else None

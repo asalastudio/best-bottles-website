@@ -108,15 +108,16 @@ if os.environ.get("MEASURE_ONLY"): raise SystemExit("measure-only")
 # 4. frames
 NECK_CX = (BODY[0] + BODY[2]) / 2; SHOULDER = BODY[1] - 10; NECK_TOP = yTop
 def seat_metrics(frame):
-    """closure pixels = frame vs base diff above the shoulder, within ±90px of the neck centre.
-    seat = collar bottom (in the ±30px neck band) minus the shoulder line; dx = closure centre minus neck centre."""
+    """closure vs base. seat = collar bottom (measured in two strips beside the dip-tube column so the tube never counts)
+    minus the shoulder line; dx = collar centre (rows just above the shoulder, ±70px) minus the neck centre."""
     d = np.abs(frame - ba).sum(axis=2) > 40
-    y0 = max(NICHE[1], 0); band = d[y0:SHOULDER + 14, int(NECK_CX) - 30:int(NECK_CX) + 30]
-    rows_hit = np.where(band.any(axis=1))[0]
+    y0 = max(NICHE[1], 0); c = int(NECK_CX)
+    strips = d[y0:SHOULDER + 14, c - 34:c - 16].any(axis=1) | d[y0:SHOULDER + 14, c + 16:c + 34].any(axis=1)
+    rows_hit = np.where(strips)[0]
     if len(rows_hit) == 0: return None
     seat = int(rows_hit.max()) + y0 - SHOULDER
-    collar = d[max(SHOULDER - 70, y0):SHOULDER, int(NECK_CX) - 70:int(NECK_CX) + 70]; ys_, xs_ = np.where(collar)
-    dx = float(xs_.mean()) + int(NECK_CX) - 70 - NECK_CX if len(xs_) else 0.0
+    collar = d[max(SHOULDER - 70, y0):SHOULDER, c - 70:c + 70]; ys_, xs_ = np.where(collar)
+    dx = float(xs_.mean()) + c - 70 - NECK_CX if len(xs_) else 0.0
     return seat, dx
 SEAT_TOL, DX_TOL, MAX_TRIES = 12, 8, 3
 TUBE_KINDS = ("AnSp", "LB", "Spry")
