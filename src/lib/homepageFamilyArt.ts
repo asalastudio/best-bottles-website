@@ -1,13 +1,14 @@
-// Portrait editorial scenes follow the Figma material system; these are not SKU plates.
+// Portrait editorial scenes under the locked material-board recipe (bone #F5F3EF, one daylight, one baseline,
+// family material base in the lower quarter). Regenerate with scripts/family-cards. Not SKU plates.
 export const FAMILY_ART: Record<string, string> = {
-    "Cylinder": "family-cylinder-portrait",
-    "Elegant": "family-elegant-portrait-open-mouth",
-    "Circle": "family-circle-portrait",
-    "Boston Round": "family-boston-round-colors-portrait",
-    "Diva": "family-diva-portrait-open-mouth",
-    "Grace": "family-grace-portrait-open-mouth",
-    "Empire": "family-empire-portrait-open-mouth",
-    "Round": "family-round-portrait-open-mouth"
+    "Cylinder": "family-cylinder-bone-v2",
+    "Elegant": "family-elegant-bone-v2",
+    "Circle": "family-circle-bone-v2",
+    "Boston Round": "family-boston-round-bone-v2",
+    "Diva": "family-diva-bone-v2",
+    "Grace": "family-grace-bone-v2",
+    "Empire": "family-empire-bone-v2",
+    "Round": "family-round-bone-v2"
 };
 
 // Pencil silhouette tiles (4:3, 1200×900) for accent slots: mega-menu + search-panel tiles.

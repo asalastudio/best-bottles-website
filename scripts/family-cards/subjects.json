@@ -1,0 +1,24 @@
+{
+  "families": {
+    "cylinder":     { "ref": "family-cylinder-portrait",               "material": "curly maple wood" },
+    "elegant":      { "ref": "family-elegant-portrait-open-mouth",     "material": "pale limestone" },
+    "circle":       { "ref": "family-circle-portrait",                 "material": "Travertine Navona stone" },
+    "boston-round": { "ref": "family-boston-round-colors-portrait",    "material": "figured Claro walnut wood" },
+    "diva":         { "ref": "family-diva-portrait-open-mouth",        "material": "neutral pale stone" },
+    "grace":        { "ref": "family-grace-portrait-open-mouth",       "material": "neutral pale stone" },
+    "empire":       { "ref": "family-empire-portrait-open-mouth",      "material": "Sahara Noir black marble" },
+    "round":        { "ref": "family-round-portrait-open-mouth",       "material": "neutral pale stone" }
+  },
+  "collections": {
+    "roll-on-bottles":        { "ref": "collection-roll-on-measured",             "material": "neutral pale stone" },
+    "perfume-atomizers":      { "ref": "collection-perfume-atomizers-cap-off",    "material": "silver travertine stone" },
+    "glass-spray-bottles":    { "ref": "collection-glass-spray-bottles",          "material": "pale limestone" },
+    "dropper-bottles":        { "ref": "collection-dropper-cobalt-amber-empire",  "material": "Sahara Noir black marble" },
+    "sample-vials":           { "ref": "collection-sample-vials-seven",           "material": "curly maple wood" },
+    "lotion-pump-bottles":    { "ref": "collection-lotion-pump-bottles",          "material": "pale limestone" },
+    "decorative-bottles":     { "ref": "collection-decorative-bottles",           "material": "warm pale sandstone" },
+    "apothecary-bottles":     { "ref": "collection-apothecary-bottles",           "material": "warm pale sandstone" },
+    "cream-jars":             { "ref": "collection-cream-jars",                   "material": "Statuario white marble" },
+    "accessories-packaging":  { "ref": "collection-accessories-packaging",        "material": "bone studio surface (no separate base; the items rest directly on the bone floor)" }
+  }
+}

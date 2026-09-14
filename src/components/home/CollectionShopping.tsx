@@ -14,7 +14,7 @@ import styles from './CollectionShopping.module.css';
 
 const asset = (name: string) => `/assets/homepage/${name}.webp`;
 const cmsImage = editorialImageUrl;
-const approvedCollectionArt = new Set(['lotion-pump-bottles', 'glass-spray-bottles', 'perfume-atomizers']);
+const BONE_COLLECTION_ART = new Set(['roll-on-bottles','perfume-atomizers','glass-spray-bottles','dropper-bottles','sample-vials','lotion-pump-bottles','decorative-bottles','apothecary-bottles','cream-jars','accessories-packaging']);
 export function CollectionGrid({ cards, all = false }: { cards?: HomepageData['collectionCards']; all?: boolean }) {
     const rail = useRef<HTMLDivElement>(null);
     const [edges, setEdges] = useState({ start: true, end: false });
@@ -24,7 +24,7 @@ export function CollectionGrid({ cards, all = false }: { cards?: HomepageData['c
     const configured = featuredCollectionCards(cards);
     const entries = all ? SHOP_COLLECTIONS.map(c => ({ ...c, ...configured.find(card => card.key === c.key) })) : configured;
     return <div className={all ? undefined : styles.collectionRailWrap}><div ref={rail} id={all ? undefined : "collection-carousel"} onScroll={updateEdges} className={all ? styles.grid : styles.collectionRail}>{entries.map(c => <Link key={c.key} href={shopCollectionHref(c.key)} className={styles.collection}>
-        <img className={['roll-on-bottles', 'perfume-atomizers', 'dropper-bottles', 'sample-vials'].includes(c.key) ? styles.collectionScene : undefined} src={cmsImage('image' in c ? c.image : undefined, 800, 600) ?? (c.key === 'roll-on-bottles' ? asset('collection-roll-on-measured') : c.key === 'perfume-atomizers' ? asset('collection-perfume-atomizers-cap-off') : c.key === 'dropper-bottles' ? asset('collection-dropper-cobalt-amber-empire') : c.key === 'sample-vials' ? asset('collection-sample-vials-seven') : asset(`${approvedCollectionArt.has(c.key) ? 'collection' : 'source'}-${c.key}`))} alt={c.title} width={800} height={600} loading="lazy"/>
+        <img className={['roll-on-bottles', 'perfume-atomizers', 'dropper-bottles', 'sample-vials'].includes(c.key) ? styles.collectionScene : undefined} src={cmsImage('image' in c ? c.image : undefined, 800, 600) ?? (BONE_COLLECTION_ART.has(c.key) ? asset(`collection-${c.key}-bone-v2`) : asset(`source-${c.key}`))} alt={c.title} width={800} height={600} loading="lazy"/>
         <div className={styles.collectionCopy}><h3>{c.title}</h3><p>{c.subtitle}</p></div>
     </Link>)}</div>{!all && <div className={styles.edgeControls}><button aria-label="Previous collection" aria-controls="collection-carousel" disabled={edges.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label="Next collection" aria-controls="collection-carousel" disabled={edges.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div>}</div>;
 }
