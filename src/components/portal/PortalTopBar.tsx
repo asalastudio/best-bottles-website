@@ -6,11 +6,10 @@ import { usePathname } from "next/navigation";
 const sectionLabels: Record<string, string> = {
     "/portal": "Overview",
     "/portal/orders": "Orders",
-    "/portal/tracking": "Tracking",
     "/portal/drafts": "Drafts",
     "/portal/tools": "Tools",
-    "/portal/grace": "Grace AI",
-    "/portal/documents": "Documents",
+    "/portal/grace": "Grace Projects",
+    "/portal/sessions": "Grace Sessions",
     "/portal/account": "Account",
     "/portal/settings": "Profile & Security",
 };

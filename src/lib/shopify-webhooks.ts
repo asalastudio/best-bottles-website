@@ -44,7 +44,14 @@ export type ShopifyWebhookTopic =
     | "products/update"
     | "products/delete"
     | "inventory_levels/update"
-    | "collections/update";
+    | "collections/update"
+    // Order topics feed the customer portal's history. `updated` carries
+    // fulfilment and tracking changes, so it is the one that moves an order
+    // from processing to in transit to delivered.
+    | "orders/create"
+    | "orders/updated"
+    | "orders/cancelled"
+    | "orders/fulfilled";
 
 export function parseWebhookTopic(
     header: string | null,
@@ -55,6 +62,10 @@ export function parseWebhookTopic(
         "products/delete",
         "inventory_levels/update",
         "collections/update",
+        "orders/create",
+        "orders/updated",
+        "orders/cancelled",
+        "orders/fulfilled",
     ];
     if (header && valid.includes(header as ShopifyWebhookTopic)) {
         return header as ShopifyWebhookTopic;
@@ -107,3 +118,60 @@ export type WebhookPayload =
     | { topic: "products/update"; data: WebhookProduct }
     | { topic: "products/delete"; data: WebhookProductDelete }
     | { topic: "inventory_levels/update"; data: WebhookInventoryLevel };
+
+// ─── Order payloads ─────────────────────────────────────────────────────────
+
+export interface WebhookOrderLineItem {
+    sku: string | null;
+    title: string;
+    name?: string | null;
+    variant_title?: string | null;
+    quantity: number;
+    price: string | null;
+}
+
+export interface WebhookOrderFulfillment {
+    /** Shopify's delivery state: "in_transit", "delivered", "out_for_delivery", … */
+    shipment_status: string | null;
+    tracking_company: string | null;
+    tracking_number: string | null;
+    estimated_delivery_at?: string | null;
+}
+
+export interface WebhookOrder {
+    id: number;
+    name: string;
+    created_at: string;
+    cancelled_at: string | null;
+    /** "fulfilled" | "partial" | null */
+    fulfillment_status: string | null;
+    current_total_price?: string | null;
+    total_price?: string | null;
+    customer: { id: number } | null;
+    line_items: WebhookOrderLineItem[];
+    fulfillments?: WebhookOrderFulfillment[];
+    shipping_address?: { city?: string | null; province_code?: string | null } | null;
+}
+
+/**
+ * Collapse Shopify's separate cancel flag, fulfilment status and per-shipment
+ * delivery state into the four states the portal shows.
+ *
+ * Cancellation wins over everything: a cancelled order that was already shipped
+ * must not keep reading as in transit.
+ */
+export function orderStatusFromShopify(
+    order: Pick<WebhookOrder, "cancelled_at" | "fulfillment_status" | "fulfillments">,
+): "processing" | "in_transit" | "delivered" | "cancelled" {
+    if (order.cancelled_at) return "cancelled";
+
+    const shipments = order.fulfillments ?? [];
+    const delivered = shipments.length > 0
+        && shipments.every((f) => f.shipment_status === "delivered");
+    if (delivered) return "delivered";
+
+    if (order.fulfillment_status === "fulfilled" || order.fulfillment_status === "partial") {
+        return "in_transit";
+    }
+    return "processing";
+}

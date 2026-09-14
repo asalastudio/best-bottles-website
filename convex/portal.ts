@@ -1,6 +1,6 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
-import type { Doc, Id } from "./_generated/dataModel";
+import type { Doc } from "./_generated/dataModel";
 import { verifyWriteToken } from "./portalAuth";
 
 function orderTotal(order: Doc<"portalOrders">): number | null {
@@ -296,7 +296,12 @@ export const getDashboardData = query({
                 activeOrderCount: activeOrders.length,
                 inTransitCount: orders.filter((order) => order.status === "in_transit").length,
                 unitsInFlight,
-                availableCredit: account ? Math.max(100_000 - ytdSpend, 0) : null,
+                // `availableCredit` used to be `100_000 - ytdSpend`. There is no
+                // credit facility and no net terms at Best Bottles, so that
+                // number was invented in code and shown to customers as though
+                // it were their line of credit. Count what is actually true
+                // instead: work they have in progress.
+                openDraftCount: drafts.filter((draft) => draft.status !== "submitted").length,
             },
             activeOrders: activeOrders.slice(0, 4).map((order) => ({
                 _id: order._id,
@@ -467,16 +472,6 @@ export const getGraceWorkspaceByOrg = query({
                 ? projects.find((project) => project._id === args.projectId)
                 : projects[0]) ?? null;
 
-        const messages =
-            activeProject?.convexConversationId
-                ? await ctx.db
-                    .query("messages")
-                    .withIndex("by_conversation", (q) =>
-                        q.eq("conversationId", activeProject.convexConversationId as Id<"conversations">)
-                    )
-                    .collect()
-                : [];
-
         return {
             projects: projects.map((project) => ({
                 _id: project._id,
@@ -498,14 +493,6 @@ export const getGraceWorkspaceByOrg = query({
                     convexConversationId: activeProject.convexConversationId ?? null,
                 }
                 : null,
-            messages: sortByNewest(messages.map((message) => ({ ...message, updatedAt: message.createdAt })))
-                .reverse()
-                .map((message) => ({
-                    _id: message._id,
-                    role: message.role,
-                    content: message.content,
-                    createdAt: message.createdAt,
-                })),
         };
     },
 });
@@ -559,55 +546,229 @@ export const saveBottleToGraceProject = mutation({
     },
 });
 
-export const saveGraceChatTurn = mutation({
+export const renameGraceProject = mutation({
     args: {
         writeToken: v.string(),
         clerkOrgId: v.string(),
-        clerkUserId: v.string(),
         projectId: v.id("graceProjects"),
-        userMessage: v.string(),
-        assistantMessage: v.string(),
+        name: v.string(),
     },
     handler: async (ctx, args) => {
         verifyWriteToken(args.writeToken);
+
+        const name = args.name.trim();
+        if (!name) throw new Error("project_name_required");
 
         const project = await ctx.db.get(args.projectId);
         if (!project || project.clerkOrgId !== args.clerkOrgId) {
             throw new Error("Project not found for this organization.");
         }
 
-        const now = Date.now();
-        let conversationId = project.convexConversationId ?? null;
+        await ctx.db.patch(project._id, { name: name.slice(0, 120), updatedAt: Date.now() });
+        return { projectId: project._id, name };
+    },
+});
 
-        if (!conversationId) {
-            conversationId = await ctx.db.insert("conversations", {
-                sessionId: `portal:${args.clerkOrgId}:${args.projectId}`,
-                userId: args.clerkUserId,
-                startedAt: now,
-                lastMessageAt: now,
-            });
-            await ctx.db.patch(project._id, {
-                convexConversationId: conversationId,
-                updatedAt: now,
-            });
+// ─── Shopify order sync ─────────────────────────────────────────────────────
+
+/**
+ * Mirror one Shopify order into `portalOrders`.
+ *
+ * Called by the Shopify webhook route after it verifies the HMAC. Three rules
+ * shape this:
+ *
+ *  1. **Orders are matched to an account, never to an email.** The owning org
+ *     is resolved through `portalAccounts.by_shopifyCustomerId`, the bridge
+ *     that already exists for exactly this purpose. An order from a retail
+ *     buyer with no portal account is not an error — it is simply not a portal
+ *     order, and is skipped.
+ *  2. **Idempotent.** Shopify redelivers webhooks and sends several updates per
+ *     order. Keyed on the numeric Shopify id, a repeat patches the existing row
+ *     rather than adding a second copy of the same order.
+ *  3. **Never overwrites QuickBooks history.** A row sourced from the
+ *     historical book is left alone; the two sources share a table but not a
+ *     record.
+ */
+export const upsertOrderFromShopify = mutation({
+    args: {
+        writeToken: v.string(),
+        shopifyOrderId: v.string(),
+        shopifyCustomerId: v.optional(v.string()),
+        orderName: v.string(),
+        orderDate: v.number(),
+        status: v.union(
+            v.literal("processing"),
+            v.literal("in_transit"),
+            v.literal("delivered"),
+            v.literal("cancelled"),
+        ),
+        lineItems: v.array(v.object({
+            sku: v.string(),
+            description: v.string(),
+            quantity: v.number(),
+            unitPrice: v.optional(v.number()),
+        })),
+        totalAmount: v.optional(v.number()),
+        trackingNumber: v.optional(v.string()),
+        carrier: v.optional(v.string()),
+        estimatedDelivery: v.optional(v.string()),
+        shipTo: v.optional(v.string()),
+    },
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        if (!args.shopifyCustomerId) {
+            return { skipped: "no_customer" as const };
         }
 
-        await ctx.db.insert("messages", {
-            conversationId,
-            role: "user",
-            content: args.userMessage,
-            createdAt: now,
-        });
-        await ctx.db.insert("messages", {
-            conversationId,
-            role: "assistant",
-            content: args.assistantMessage,
-            createdAt: now + 1,
+        const account = await ctx.db
+            .query("portalAccounts")
+            .withIndex("by_shopifyCustomerId", (q) =>
+                q.eq("shopifyCustomerId", args.shopifyCustomerId),
+            )
+            .first();
+
+        if (!account) {
+            // A retail purchase, or a wholesale customer whose Shopify record
+            // has not been linked to an org yet. Not a failure.
+            return { skipped: "no_portal_account" as const };
+        }
+
+        const now = Date.now();
+        const fields = {
+            clerkOrgId: account.clerkOrgId,
+            orderId: args.orderName,
+            lineItems: args.lineItems,
+            status: args.status,
+            orderDate: args.orderDate,
+            estimatedDelivery: args.estimatedDelivery,
+            trackingNumber: args.trackingNumber,
+            carrier: args.carrier,
+            shipTo: args.shipTo,
+            totalAmount: args.totalAmount,
+            source: "shopify" as const,
+            shopifyOrderId: args.shopifyOrderId,
+            updatedAt: now,
+        };
+
+        const existing = await ctx.db
+            .query("portalOrders")
+            .withIndex("by_shopifyOrderId", (q) => q.eq("shopifyOrderId", args.shopifyOrderId))
+            .first();
+
+        if (existing) {
+            if (existing.source === "quickbooks") {
+                return { skipped: "owned_by_quickbooks" as const, orderId: existing._id };
+            }
+            await ctx.db.patch(existing._id, fields);
+            return { updated: true as const, orderId: existing._id };
+        }
+
+        const orderId = await ctx.db.insert("portalOrders", fields);
+        return { created: true as const, orderId };
+    },
+});
+
+// ─── Draft editing ──────────────────────────────────────────────────────────
+
+export const getDraftById = query({
+    args: { clerkOrgId: v.string(), draftId: v.id("portalDrafts") },
+    handler: async (ctx, args) => {
+        const draft = await ctx.db.get(args.draftId);
+        // Scoped read: a draft id from another organization must read as absent
+        // rather than as a permission error, which would confirm it exists.
+        if (!draft || draft.clerkOrgId !== args.clerkOrgId) return null;
+        return draft;
+    },
+});
+
+/**
+ * Replace a draft's lines wholesale.
+ *
+ * Prices arrive already resolved because they must come from Convex on the
+ * server, never from the browser — `unitPrice` becomes the Shopify price
+ * override, so a client-supplied value is a way to buy at any price.
+ *
+ * A submitted draft is frozen: it records what was sent to Shopify, and
+ * editing it after the fact would make the portal disagree with the order.
+ */
+export const setDraftLineItems = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        draftId: v.id("portalDrafts"),
+        lineItems: v.array(v.object({
+            sku: v.string(),
+            description: v.string(),
+            quantity: v.number(),
+            unitPrice: v.optional(v.number()),
+            shopifyVariantId: v.optional(v.string()),
+        })),
+    },
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        const draft = await ctx.db.get(args.draftId);
+        if (!draft || draft.clerkOrgId !== args.clerkOrgId) {
+            throw new Error("draft_not_found");
+        }
+        if (draft.status === "submitted") throw new Error("draft_already_submitted");
+
+        for (const line of args.lineItems) {
+            if (!Number.isFinite(line.quantity) || line.quantity < 1) {
+                throw new Error("quantity_must_be_at_least_one");
+            }
+        }
+
+        const totalAmount = args.lineItems.reduce(
+            (sum, line) => sum + (line.unitPrice ?? 0) * line.quantity,
+            0,
+        );
+
+        await ctx.db.patch(draft._id, {
+            lineItems: args.lineItems,
+            totalAmount,
+            updatedAt: Date.now(),
         });
 
-        await ctx.db.patch(conversationId, { lastMessageAt: now + 1 });
-        await ctx.db.patch(project._id, { updatedAt: now + 1 });
+        return { lineCount: args.lineItems.length, totalAmount };
+    },
+});
 
-        return { conversationId };
+/**
+ * Record that a draft reached Shopify.
+ *
+ * Called only after `draftOrderCreate` succeeds, so the stored ids never claim
+ * more than actually happened — the same rule the resale certificates follow
+ * about Convex approval versus a real Shopify exemption.
+ */
+export const markDraftSubmitted = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        draftId: v.id("portalDrafts"),
+        shopifyDraftOrderId: v.string(),
+        shopifyDraftOrderName: v.string(),
+        clerkUserId: v.string(),
+    },
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        const draft = await ctx.db.get(args.draftId);
+        if (!draft || draft.clerkOrgId !== args.clerkOrgId) {
+            throw new Error("draft_not_found");
+        }
+        if (draft.status === "submitted") throw new Error("draft_already_submitted");
+
+        await ctx.db.patch(draft._id, {
+            status: "submitted",
+            shopifyDraftOrderId: args.shopifyDraftOrderId,
+            shopifyDraftOrderName: args.shopifyDraftOrderName,
+            submittedAt: Date.now(),
+            submittedBy: args.clerkUserId,
+            updatedAt: Date.now(),
+        });
+
+        return { draftId: draft._id, shopifyDraftOrderName: args.shopifyDraftOrderName };
     },
 });

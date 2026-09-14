@@ -2,6 +2,7 @@ import "server-only";
 
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { api } from "../../../convex/_generated/api";
+import type { Id } from "../../../convex/_generated/dataModel";
 import { getPortalConvex, getPortalConvexWriteToken } from "./convexClient";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { getUserEmailAddresses } from "@/lib/teamAccess";
@@ -73,7 +74,7 @@ export async function getPortalDashboardData() {
                 activeOrderCount: 0,
                 inTransitCount: 0,
                 unitsInFlight: 0,
-                availableCredit: 0,
+                openDraftCount: 0,
             },
             activeOrders: [],
             recentOrders: [],
@@ -146,6 +147,26 @@ export async function getPortalGraceWorkspace(projectId?: string) {
     return { viewer, ...workspace };
 }
 
+// ─── Grace sessions (recorded for signed-in customers) ──────────────────────
+
+export async function getPortalGraceSessions() {
+    const viewer = await requirePortalViewer();
+    const sessions = await getPortalConvex().query(api.graceSessions.listForViewer, {
+        clerkOrgId: viewer.clerkOrgId,
+        clerkUserId: viewer.clerkUserId,
+    });
+    return { viewer, sessions };
+}
+
+export async function getPortalGraceSession(sessionId: string) {
+    const viewer = await requirePortalViewer();
+    return await getPortalConvex().query(api.graceSessions.getForViewer, {
+        clerkOrgId: viewer.clerkOrgId,
+        clerkUserId: viewer.clerkUserId,
+        sessionId: sessionId as Id<"graceSessions">,
+    });
+}
+
 export async function createPortalDraftForViewer(name?: string) {
     const viewer = await requirePortalViewer();
     return await getPortalConvex().mutation(api.portal.createDraft, {
@@ -198,44 +219,14 @@ export async function saveProductToGraceProjectForViewer(args: {
     return { ...result, projectId };
 }
 
-export async function askGraceForViewerProject(projectId: string, message: string) {
+export async function renameGraceProjectForViewer(projectId: string, name: string) {
     const viewer = await requirePortalViewer();
-
-    const workspace = await getPortalConvex().query(api.portal.getGraceWorkspaceByOrg, {
-        clerkOrgId: viewer.clerkOrgId,
-        projectId: projectId as never,
-    });
-
-    if (!workspace.activeProject) {
-        throw new Error("Grace project not found.");
-    }
-
-    const history = [
-        ...workspace.messages.map((entry) => ({
-            role: entry.role,
-            content: entry.content,
-        })),
-        {
-            role: "user" as const,
-            content: message,
-        },
-    ];
-
-    const assistantMessage = await getPortalConvex().action(api.grace.askGrace, {
-        messages: history,
-        voiceMode: false,
-    });
-
-    await getPortalConvex().mutation(api.portal.saveGraceChatTurn, {
+    return await getPortalConvex().mutation(api.portal.renameGraceProject, {
         writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
-        clerkUserId: viewer.clerkUserId,
-        projectId: projectId as never,
-        userMessage: message,
-        assistantMessage,
+        projectId: projectId as Id<"graceProjects">,
+        name,
     });
-
-    return { assistantMessage };
 }
 
 // ─── Identity bridge (Clerk org ↔ Shopify customer) ─────────────────────────

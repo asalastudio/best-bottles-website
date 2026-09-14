@@ -39,6 +39,8 @@ export default defineSchema({
         shopifyUpdatedAt: v.optional(v.number()),                      // Last webhook sync timestamp
         sanitySlug: v.optional(v.union(v.string(), v.null())),
         heroImageUrl: v.optional(v.union(v.string(), v.null())),
+        /** Superseded Shopify CDN hero. See products.legacyShopifyImageUrl. */
+        legacyShopifyHeroImageUrl: v.optional(v.union(v.string(), v.null())),
         // Option A: applicator-first — unique applicator types in this group (e.g. ["Metal Roller", "Fine Mist Sprayer"])
         applicatorTypes: v.optional(v.array(v.string())),
         // Cached primary SKU — populated by backfill migration to eliminate N+1 on catalog page.
@@ -183,6 +185,12 @@ export default defineSchema({
         // when group.paperDollFamilyKey is set, but kept as a static gallery
         // alongside paper-doll for editorial/lifestyle views (Phase 2).
         imageUrlCapOff: v.optional(v.union(v.string(), v.null())),
+        // The Shopify CDN URL that `imageUrl` held before plate imagery was
+        // promoted into it. Kept, not discarded: those files are mostly deleted
+        // (a 40-URL probe returned 37 404s) but the value is the only record of
+        // what the row used to point at, and it makes the promotion reversible.
+        legacyShopifyImageUrl: v.optional(v.union(v.string(), v.null())),
+        legacyShopifyImageUrlCapOff: v.optional(v.union(v.string(), v.null())),
         productUrl: v.union(v.string(), v.null()),
         dataGrade: v.union(v.string(), v.null()),
         bottleCollection: v.union(v.string(), v.null()),
@@ -480,9 +488,21 @@ export default defineSchema({
         shipFrom: v.optional(v.string()),
         shipTo: v.optional(v.string()),
         totalAmount: v.optional(v.number()),
+
+        // Order history arrives from two places and must stay separable: the
+        // historical book lives in QuickBooks, while everything placed from now
+        // on arrives by Shopify webhook. Both are optional so existing rows and
+        // a later QuickBooks backfill both fit without a migration.
+        source: v.optional(v.union(v.literal("shopify"), v.literal("quickbooks"))),
+        // Shopify's numeric order id. `orderId` holds the human name (#1003)
+        // because that is what a customer recognises; this is the idempotency
+        // key, so a replayed or updated webhook patches instead of duplicating.
+        shopifyOrderId: v.optional(v.string()),
+        updatedAt: v.optional(v.number()),
     })
         .index("by_orgId", ["clerkOrgId"])
-        .index("by_orderId", ["orderId"]),
+        .index("by_orderId", ["orderId"])
+        .index("by_shopifyOrderId", ["shopifyOrderId"]),
 
     // Saved draft orders — native portal data, not synced from any external system.
     portalDrafts: defineTable({
@@ -498,10 +518,22 @@ export default defineSchema({
             description: v.string(),
             quantity: v.number(),
             unitPrice: v.optional(v.number()),
+            // Captured when the line is added so submission does not have to
+            // re-resolve the SKU, and so a product renamed between drafting and
+            // submitting still reaches the right Shopify variant.
+            shopifyVariantId: v.optional(v.string()),
         })),
         totalAmount: v.optional(v.number()),
         createdAt: v.number(),
         updatedAt: v.number(),
+
+        // Set once the draft has been pushed to Shopify. A submitted draft is
+        // a record of what was sent, not an editable cart, so these being
+        // present is what makes the order pad read-only.
+        shopifyDraftOrderId: v.optional(v.string()),
+        shopifyDraftOrderName: v.optional(v.string()),
+        submittedAt: v.optional(v.number()),
+        submittedBy: v.optional(v.string()),
     })
         .index("by_orgId", ["clerkOrgId"]),
 
@@ -626,6 +658,32 @@ export default defineSchema({
     })
         .index("by_owner", ["ownerKey"])
         .index("by_endedAt", ["endedAt"]),
+
+    // Grace sessions — transcripts recorded for SIGNED-IN customers only.
+    // Written by the Next.js server after it resolves the Clerk identity, so
+    // clerkUserId / clerkOrgId are trusted. Anonymous sessions never land here;
+    // `graceSessionTraces` above keeps the no-transcript telemetry for everyone.
+    graceSessions: defineTable({
+        clerkUserId: v.string(),
+        clerkOrgId: v.optional(v.string()),          // absent when the user has no active org yet
+        ownerKey: v.string(),                        // same key that scopes shortlists + memory
+        sessionId: v.string(),                       // minted client-side, one row per session
+        surface: v.string(),                         // "workspace" | "drawer"
+        companionMode: v.string(),
+        title: v.string(),                           // first user message, clipped
+        startedAt: v.number(),
+        lastMessageAt: v.number(),
+        endedAt: v.optional(v.number()),
+        lastPageUrl: v.optional(v.string()),
+        messageCount: v.number(),
+        messages: v.array(v.object({
+            role: v.union(v.literal("user"), v.literal("grace")),
+            text: v.string(),
+        })),
+    })
+        .index("by_sessionId", ["sessionId"])
+        .index("by_orgId", ["clerkOrgId", "lastMessageAt"])
+        .index("by_user", ["clerkUserId", "lastMessageAt"]),
 
     // -------------------------------------------------------------------------
     // GRACE AI UPLOADS — user-supplied images for reference match + brand mockup

@@ -66,7 +66,7 @@ const tools = [
     {
         name: "Grace Workspace",
         href: "/grace-workspace",
-        description: "Staff see the employee knowledge workspace — ask Grace across live product truth, fitments, policies and operations, and feed her new sources.",
+        description: "The full Grace workspace — ask across live product truth, fitments and policies by voice or text. Same surface customers use.",
         badge: "Grace",
     },
     {

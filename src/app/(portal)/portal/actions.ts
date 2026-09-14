@@ -2,10 +2,17 @@
 
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import type { SubmitDraftState } from "@/components/portal/SubmitDraftForm";
+import {
+    searchProductsForViewer,
+    setDraftLinesForViewer,
+    submitDraftForViewer,
+} from "@/lib/portal/draftEditor";
 import {
     createGraceProjectForViewer,
     createPortalDraftForViewer,
     createPortalDraftFromOrderForViewer,
+    renameGraceProjectForViewer,
 } from "@/lib/portal/server";
 import {
     approveCertificateAsStaff,
@@ -36,6 +43,16 @@ export async function createGraceProjectAction() {
     await createGraceProjectForViewer();
     revalidatePath("/portal/grace");
     redirect("/portal/grace");
+}
+
+export async function renameGraceProjectAction(formData: FormData) {
+    const projectId = String(formData.get("projectId") ?? "");
+    const name = String(formData.get("name") ?? "").trim();
+    if (!projectId || !name) return;
+
+    await renameGraceProjectForViewer(projectId, name);
+    revalidatePath("/portal/grace");
+    redirect(`/portal/grace?project=${projectId}`);
 }
 
 // ─── Resale certificates ────────────────────────────────────────────────────
@@ -107,4 +124,49 @@ export async function rejectCertificateAction(formData: FormData) {
 
     await rejectCertificateAsStaff({ certificateId, reviewNote });
     revalidatePath("/team/resale-certificates");
+}
+
+// ─── Order pad ──────────────────────────────────────────────────────────────
+
+/**
+ * The pad sends SKUs and quantities only. Prices are resolved server-side from
+ * Convex, because `unitPrice` becomes the Shopify price override and a
+ * browser-supplied figure would be a way to buy at any price.
+ */
+export async function saveDraftLinesAction(
+    draftId: string,
+    lines: Array<{ sku: string; quantity: number }>,
+) {
+    const result = await setDraftLinesForViewer(draftId, lines);
+    revalidatePath(`/portal/drafts/${draftId}`);
+    revalidatePath("/portal/drafts");
+    revalidatePath("/portal");
+    return {
+        rejected: result.rejected.map((r) => ({
+            sku: "sku" in r ? r.sku : "",
+            reason: "reason" in r ? r.reason : "unknown_sku",
+        })),
+        lineCount: result.lineCount,
+        totalAmount: result.totalAmount,
+    };
+}
+
+export async function submitDraftAction(
+    _prev: SubmitDraftState,
+    formData: FormData,
+): Promise<SubmitDraftState> {
+    const draftId = String(formData.get("draftId") ?? "");
+    if (!draftId) return { error: "That draft is no longer available.", sentAs: null };
+
+    const result = await submitDraftForViewer(draftId);
+    if (!result.ok) return { error: result.error, sentAs: null };
+
+    revalidatePath(`/portal/drafts/${draftId}`);
+    revalidatePath("/portal/drafts");
+    revalidatePath("/portal");
+    return { error: null, sentAs: result.shopifyDraftOrderName };
+}
+
+export async function searchProductsAction(term: string) {
+    return await searchProductsForViewer(term);
 }

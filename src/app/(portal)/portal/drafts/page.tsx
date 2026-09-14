@@ -1,4 +1,5 @@
 export const dynamic = "force-dynamic";
+import Link from "next/link";
 import { PageHeader, PortalButton, PortalTag } from "@/components/portal/ui";
 import { getPortalDraftsData } from "@/lib/portal/server";
 import { createDraftAction } from "../actions";
@@ -66,7 +67,12 @@ export default async function PortalDrafts() {
                             <span className="font-sans text-[13px] text-neutral-500">{formatDate(draft.updatedAt)}</span>
                             <PortalTag variant={statusVariant(draft.status)}>{statusLabel(draft.status)}</PortalTag>
                             <div className="flex gap-1.5 justify-end">
-                                <PortalButton size="sm" type="button">Resume</PortalButton>
+                                <Link
+                                        href={`/portal/drafts/${draft._id}`}
+                                        className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
+                                    >
+                                        {draft.status === "submitted" ? "View" : "Open"}
+                                    </Link>
                             </div>
                         </div>
                     ))
