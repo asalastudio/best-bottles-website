@@ -27,13 +27,31 @@ TUBE_WIDTH = float(os.environ.get("TUBE_WIDTH", "0.55"))   # one thin dip tube f
 SEAT = 1                                                    # collar bottom row = shoulder + SEAT, identical for every closure
 log = lambda *a: print(*a, flush=True)
 
-base = np.asarray(Image.open(f"{BIN}/base.png").convert("RGB").resize((W, H))).astype(float)
-wall = np.asarray(Image.open(f"{BIN}/wall.png").convert("RGB").resize((W, H))).astype(float)
-g = json.load(open(f"{BIN}/geometry.json")); NICHE = g["niche"]
+EXTEND_LEFT = int(os.environ.get("EXTEND_LEFT", "2048"))   # plaster continued to the left so wide heroes never show a CSS fill
+def extend_left(img, pad, band_w=640):
+    """Continue the wall leftward with its own texture: the left band is de-trended (divided by its low-frequency
+    brightness), mirror-tiled, and re-lit with the image's per-row tone at x=0, so the seam is invisible and there
+    are no brightness ridges at the tile joins. Deterministic; no AI."""
+    from scipy import ndimage
+    band = img[:, :band_w]
+    lf = np.stack([ndimage.gaussian_filter(band[..., c], 48) for c in range(3)], axis=-1)
+    tex = band / np.maximum(lf, 1.0)
+    edge = np.stack([ndimage.gaussian_filter1d(img[:, :12, c].mean(axis=1), 24) for c in range(3)], axis=-1)   # (H, 3)
+    tiles, flip, width = [], True, 0
+    while width < pad:
+        t = tex[:, ::-1] if flip else tex; tiles.insert(0, t); width += band_w; flip = not flip
+    ext = np.concatenate(tiles, axis=1)[:, -pad:] * edge[:, None, :]
+    return np.clip(np.concatenate([ext, img], axis=1), 0, 255)
+W0 = W
+base = extend_left(np.asarray(Image.open(f"{BIN}/base.png").convert("RGB").resize((W0, H))).astype(float), EXTEND_LEFT)
+wall = extend_left(np.asarray(Image.open(f"{BIN}/wall.png").convert("RGB").resize((W0, H))).astype(float), EXTEND_LEFT)
+W = W0 + EXTEND_LEFT
+g = json.load(open(f"{BIN}/geometry.json")); NICHE = [g["niche"][0] + EXTEND_LEFT, g["niche"][1], g["niche"][2] + EXTEND_LEFT, g["niche"][3]]
+log("canvas %dx%d (plaster extended %d px left)" % (W, H, EXTEND_LEFT))
 
 # ── the hero bottle's datum: neck axis, shoulder line, body width, from the base-vs-wall difference ────────────────
 def base_datum():
-    d = np.abs(base - wall).sum(axis=2); X0, X1 = 840, 1090
+    d = np.abs(base - wall).sum(axis=2); X0, X1 = 840 + EXTEND_LEFT, 1090 + EXTEND_LEFT
     m = d[:, X0:X1] > 120; ext = {}
     for y in range(300, 820):
         xs = np.where(m[y])[0]
@@ -156,7 +174,7 @@ def rank(sku):
 todo = sorted([s for s in files if kind(s) in SEQUENCE], key=rank)
 
 manifest = []; collar_w = []
-Image.open(f"{BIN}/base.png").convert("RGB").save(f"{OUT}/base.webp", "WEBP", quality=90)
+Image.fromarray(base.round().astype(np.uint8)).save(f"{OUT}/base.webp", "WEBP", quality=90)
 for sku in todo:
     k = kind(sku); cands = [read_psd(p) for p in files[sku]]
     cands = [c for c in cands if c["closure"]]
@@ -197,7 +215,7 @@ for sku in todo:
     Image.fromarray(np.dstack([RGB[y0:y1, x0:x1], A[y0:y1, x0:x1] * 255]).round().astype(np.uint8), "RGBA").save(f"{OUT}/patch-{sku}.webp", "WEBP", lossless=True)
     manifest.append((sku, {"x": x0, "y": y0, "w": x1 - x0, "h": y1 - y0}))
     log(f"{sku}: {os.path.basename(c['path'])}  scale {s:.4f}  seat {dy:+d}px  centre {dx:+d}px  collar {collar_w[-1]}px  patch {x1-x0}×{y1-y0}" + ("  (+overcap beside dropped)" if c["beside"] else ""))
-Image.open(f"{BIN}/base.png").convert("RGB").save(f"{OUT}/frame-BARE.png")
+Image.fromarray(base.round().astype(np.uint8)).save(f"{OUT}/frame-BARE.png")
 if "BARE" in SEQUENCE: manifest.append(("BARE", None))
 
 # ── labels, manifest, previews ─────────────────────────────────────────────────────────────────────────────────────
@@ -228,12 +246,13 @@ hold = {"neck": {"x": int(B["cx"]) - hw, "y": B["neck_top"] - 2, "w": 2 * hw, "h
 log("hold rects", hold, "(collar widths %d..%d)" % (min(collar_w), max(collar_w)))
 hexc = lambda v: "#%02x%02x%02x" % tuple(int(round(x)) for x in v)
 FRAME = [int(v) for v in os.environ.get("FRAME_BOX", "690,190,1272,805").split(",")]   # moulding OUTER box (v6; the sill runs ~23 px wider each side)
+FRAME = [FRAME[0] + EXTEND_LEFT, FRAME[1], FRAME[2] + EXTEND_LEFT, FRAME[3]]
 # Fill tones the page paints beside the stage on wide heroes: the image's own edge colours, so the join is invisible.
 edge = {"left": hexc(base[250:750, 0:60].mean((0, 1))), "right": hexc(base[250:750, FRAME[2] + 30: FRAME[2] + 90].mean((0, 1)))}
 log("frame", FRAME, "edge", edge)
 json.dump({"base": f"/assets/hero/{SET}/base.webp", "width": W, "height": H, "builtAt": int(time.time()), "niche": NICHE, "frame": FRAME,
            "edge": edge, "hold": hold, "frames": frames}, open(f"{OUT}/manifest.json", "w"), indent=1)
-json.dump({"niche": NICHE, "plaster": g.get("plaster"), "body": g.get("body"), "datum": B}, open(f"{OUT}/geometry.json", "w"))
+json.dump({"niche": NICHE, "frame": FRAME, "extendLeft": EXTEND_LEFT, "datum": B}, open(f"{OUT}/geometry.json", "w"))
 
 try: font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 14)
 except Exception: font = ImageFont.load_default()

@@ -59,7 +59,9 @@ function Odometer({ value, digits }: { value: number; digits: number }) {
 /**
  * Hotspots come from Sanity (homepagePage.heroHotspots, placed on the hero reference still with
  * sanity-plugin-hotspot-array). x/y are % of that still = % of the stage, so they ride the same fit
- * transform as the patches but are drawn in scene space at a fixed size.
+ * transform as the patches but are drawn in scene space at a fixed size. Each renders as a small
+ * label card anchored at its point (Jordan: "a card, creatively placed near the base of the bottle")
+ * that opens on hover, focus or tap into a click-through to the product.
  */
 export default function EmpireFitmentHero({ hotspots }: { hotspots?: HeroHotspot[] }) {
     const [manifest, setManifest] = useState<Manifest | null>(null);
@@ -155,24 +157,25 @@ export default function EmpireFitmentHero({ hotspots }: { hotspots?: HeroHotspot
                 const label = h.follows === "closure" && current ? current.label : (h.label ?? "");
                 const left = fit.x + (h.x / 100) * manifest.width * fit.scale;
                 const top = fit.y + (h.y / 100) * manifest.height * fit.scale;
-                const flip = h.x > 62;                                   // label opens toward the roomier side
+                const cls = `${styles.tag} ${h.x > 90 ? styles.tagFlip : ""}`;
                 const body = (
                     <>
-                        <span className={styles.spotDot} aria-hidden="true" />
-                        <span className={styles.spotCard}>
-                            <span className={styles.spotLabel}>{label}</span>
-                            {h.detail && <span className={styles.spotDetail}>{h.detail}</span>}
+                        <span className={styles.tagHead}>
+                            <span className={styles.tagLabel}>{label}</span>
+                            <span className={styles.tagChevron} aria-hidden="true" />
+                        </span>
+                        <span className={styles.tagMore}>
+                            {h.detail && <span className={styles.tagDetail}>{h.detail}</span>}
+                            {h.href && <span className={styles.tagCta}>View product</span>}
                         </span>
                     </>
                 );
-                const cls = `${styles.spot} ${flip ? styles.spotFlip : ""}`;
-                const style = { left, top };
                 return h.href
-                    ? <Link key={h._key} href={h.href} className={cls} style={style} aria-label={label || h.href}>{body}</Link>
-                    : <button key={h._key} type="button" className={cls} style={style} aria-label={label}>{body}</button>;
+                    ? <Link key={h._key} href={h.href} className={cls} style={{ left, top }} aria-label={`${label}: view product`}>{body}</Link>
+                    : <span key={h._key} tabIndex={0} className={cls} style={{ left, top }}>{body}</span>;
             })}
             <div className={styles.topBlend} aria-hidden="true" />
-            <div className={styles.shade} aria-hidden="true" style={fit.mouldingLeft > 0 ? { background: `linear-gradient(90deg, rgba(58,48,36,0.10) 0px, rgba(58,48,36,0.03) ${Math.round(fit.mouldingLeft * 0.5)}px, rgba(58,48,36,0) ${Math.round(fit.mouldingLeft)}px)` } : undefined} />
+            <div className={styles.shade} aria-hidden="true" style={fit.mouldingLeft > 0 ? { background: `linear-gradient(90deg, rgba(48,38,26,0.34) 0px, rgba(48,38,26,0.16) ${Math.round(fit.mouldingLeft * 0.5)}px, rgba(48,38,26,0) ${Math.round(fit.mouldingLeft)}px)` } : undefined} />
             {current && (
                 <p className={styles.caption} aria-live="polite">
                     <span>Empire 50 mL</span>

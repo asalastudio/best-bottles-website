@@ -1,33 +1,33 @@
 {
  "base": "/assets/hero/v7/base.webp",
- "width": 1536,
+ "width": 3584,
  "height": 1024,
- "builtAt": 1789360132,
+ "builtAt": 1789360660,
  "niche": [
-  709,
+  2757,
   179,
-  1266,
+  3314,
   869
  ],
  "frame": [
-  690,
+  2738,
   190,
-  1272,
+  3320,
   805
  ],
  "edge": {
-  "left": "#dad0c1",
+  "left": "#dbd1c3",
   "right": "#b6a48d"
  },
  "hold": {
   "neck": {
-   "x": 924,
+   "x": 2972,
    "y": 414,
    "w": 72,
    "h": 69
   },
   "tube": {
-   "x": 953,
+   "x": 3001,
    "y": 483,
    "w": 16,
    "h": 193
@@ -41,7 +41,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpGl.webp",
-    "x": 784,
+    "x": 2832,
     "y": 330,
     "w": 221,
     "h": 349
@@ -54,7 +54,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpMtSl.webp",
-    "x": 780,
+    "x": 2828,
     "y": 331,
     "w": 224,
     "h": 348
@@ -67,7 +67,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpBlk.webp",
-    "x": 777,
+    "x": 2825,
     "y": 324,
     "w": 228,
     "h": 355
@@ -80,7 +80,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpWht.webp",
-    "x": 775,
+    "x": 2823,
     "y": 328,
     "w": 231,
     "h": 351
@@ -93,7 +93,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpRed.webp",
-    "x": 780,
+    "x": 2828,
     "y": 326,
     "w": 224,
     "h": 353
@@ -106,7 +106,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpPnk.webp",
-    "x": 782,
+    "x": 2830,
     "y": 327,
     "w": 223,
     "h": 352
@@ -119,7 +119,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpLvn.webp",
-    "x": 784,
+    "x": 2832,
     "y": 326,
     "w": 221,
     "h": 353
@@ -132,7 +132,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpIvyGl.webp",
-    "x": 785,
+    "x": 2833,
     "y": 331,
     "w": 219,
     "h": 348
@@ -145,7 +145,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpIvySl.webp",
-    "x": 781,
+    "x": 2829,
     "y": 330,
     "w": 222,
     "h": 349
@@ -158,7 +158,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50WhtClOvrCp.webp",
-    "x": 909,
+    "x": 2957,
     "y": 322,
     "w": 105,
     "h": 357
@@ -171,7 +171,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnShnGl.webp",
-    "x": 916,
+    "x": 2964,
     "y": 336,
     "w": 89,
     "h": 343
@@ -184,7 +184,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnShnSl.webp",
-    "x": 918,
+    "x": 2966,
     "y": 336,
     "w": 86,
     "h": 343
@@ -197,7 +197,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnShnBlk.webp",
-    "x": 915,
+    "x": 2963,
     "y": 336,
     "w": 88,
     "h": 343
@@ -210,7 +210,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnMtGl.webp",
-    "x": 915,
+    "x": 2963,
     "y": 337,
     "w": 90,
     "h": 342
@@ -223,7 +223,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnMtSl.webp",
-    "x": 918,
+    "x": 2966,
     "y": 340,
     "w": 85,
     "h": 339
@@ -236,7 +236,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnCu.webp",
-    "x": 917,
+    "x": 2965,
     "y": 331,
     "w": 89,
     "h": 348
@@ -249,7 +249,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnClOvrCap.webp",
-    "x": 916,
+    "x": 2964,
     "y": 337,
     "w": 88,
     "h": 342
@@ -262,7 +262,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryShnGl.webp",
-    "x": 917,
+    "x": 2965,
     "y": 336,
     "w": 89,
     "h": 343
@@ -275,7 +275,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryShnSl.webp",
-    "x": 919,
+    "x": 2967,
     "y": 336,
     "w": 86,
     "h": 343
@@ -288,7 +288,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryShnBlk.webp",
-    "x": 915,
+    "x": 2963,
     "y": 336,
     "w": 88,
     "h": 343
@@ -301,7 +301,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryMtGl.webp",
-    "x": 916,
+    "x": 2964,
     "y": 337,
     "w": 90,
     "h": 342
@@ -314,7 +314,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryMtSl.webp",
-    "x": 918,
+    "x": 2966,
     "y": 340,
     "w": 85,
     "h": 339
@@ -327,7 +327,7 @@
    "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryCu.webp",
-    "x": 919,
+    "x": 2967,
     "y": 333,
     "w": 86,
     "h": 346
@@ -346,7 +346,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrShnGl.webp",
-    "x": 918,
+    "x": 2966,
     "y": 406,
     "w": 86,
     "h": 82
@@ -359,7 +359,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrShnSl.webp",
-    "x": 917,
+    "x": 2965,
     "y": 407,
     "w": 86,
     "h": 80
@@ -372,7 +372,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrShnBlk.webp",
-    "x": 918,
+    "x": 2966,
     "y": 406,
     "w": 87,
     "h": 83
@@ -385,7 +385,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrMtSl.webp",
-    "x": 917,
+    "x": 2965,
     "y": 405,
     "w": 86,
     "h": 84
@@ -398,7 +398,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrWht.webp",
-    "x": 916,
+    "x": 2964,
     "y": 379,
     "w": 87,
     "h": 108
@@ -411,7 +411,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrBlkLthr.webp",
-    "x": 909,
+    "x": 2957,
     "y": 368,
     "w": 104,
     "h": 119
@@ -424,7 +424,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrBrwnLthr.webp",
-    "x": 910,
+    "x": 2958,
     "y": 367,
     "w": 104,
     "h": 121
@@ -437,7 +437,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrLBrwnLthr.webp",
-    "x": 910,
+    "x": 2958,
     "y": 368,
     "w": 103,
     "h": 120
@@ -450,7 +450,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrIvyLthr.webp",
-    "x": 904,
+    "x": 2952,
     "y": 371,
     "w": 109,
     "h": 117
@@ -463,7 +463,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrPnkLthr.webp",
-    "x": 905,
+    "x": 2953,
     "y": 369,
     "w": 109,
     "h": 119
@@ -476,7 +476,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrMtSlTall.webp",
-    "x": 914,
+    "x": 2962,
     "y": 383,
     "w": 91,
     "h": 105
@@ -489,7 +489,7 @@
    "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrShnBlkTall.webp",
-    "x": 918,
+    "x": 2966,
     "y": 381,
     "w": 86,
     "h": 106
