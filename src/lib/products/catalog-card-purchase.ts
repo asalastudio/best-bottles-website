@@ -160,8 +160,8 @@ export function catalogTierLabel(tier: DisplayVolumeTier | null | undefined): st
 const usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2 });
 
 /** Screen-reader sentence for a tier row. */
-export function describeCatalogTier(tier: DisplayVolumeTier): string {
-    const base = `${formatVolumeQtyRange(tier.minQty, tier.maxQty)} units at ${usd.format(tier.unitPrice)} each`;
+export function describeCatalogTier(tier: DisplayVolumeTier, formatPrice: (usd: number) => string = (value) => usd.format(value)): string {
+    const base = `${formatVolumeQtyRange(tier.minQty, tier.maxQty)} units at ${formatPrice(tier.unitPrice)} each`;
     return tier.savePct > 0 ? `${base}, save ${tier.savePct}%` : base;
 }
 

@@ -2,6 +2,7 @@
 
 import { useCallback, useState } from "react";
 import Link from "next/link";
+import BrandWordmark from "./BrandWordmark";
 import { useMutation } from "convex/react";
 import {
     ArrowRight,
@@ -83,7 +84,7 @@ export default function Footer() {
     ] as const;
 
     return (
-        <footer className="bg-obsidian text-bone/68 pb-[calc(2rem+var(--mobile-tab-bar-clearance))] xl:pb-8">
+        <footer className="bg-[#0f0f10] text-bone/68 pb-[calc(2rem+var(--mobile-tab-bar-clearance))] xl:pb-8">
             <div className="border-b border-white/12">
                 <div className="mx-auto grid max-w-[1440px] md:grid-cols-3">
                     {SERVICE_ITEMS.map((item) => (
@@ -101,13 +102,13 @@ export default function Footer() {
             <div className="mx-auto max-w-[1440px] px-5 py-12 sm:px-6 lg:px-10 lg:py-16">
                 <div className="grid gap-12 border-b border-white/12 pb-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:pb-16">
                     <div className="lg:col-span-3">
-                        <Link href="/" className="font-cormorant text-[28px] font-semibold tracking-tight text-white transition-colors hover:text-muted-gold">
-                            BEST BOTTLES
+                        <Link href="/" aria-label="Best Bottles home" className="inline-block transition-opacity hover:opacity-80">
+                            <BrandWordmark tone="light" className="!h-[18px]" />
                         </Link>
                         <p className="mt-4 max-w-[260px] text-xs leading-relaxed text-white/58">
                             Premium glass bottles and closures for beauty, fragrance, and wellness brands.
                         </p>
-                        <p className="mt-5 font-display text-lg text-muted-gold">Beautifully Contained.</p>
+                        <p className="mt-5 font-brand-display text-[11px] tracking-[0.2em] text-muted-gold">Beautifully Contained.</p>
                         <div className="mt-7 flex gap-2">
                             {socialLinks.map((social) => (
                                 <a

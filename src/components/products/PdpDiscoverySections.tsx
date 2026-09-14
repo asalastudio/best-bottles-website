@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,10 +65,6 @@ type PdpDiscoveryContentProps = {
     onAskGrace: () => void;
     onAddComponent: (component: PdpCompatibilityComponent) => void;
 };
-
-function formatPrice(price: number | null): string {
-    return price == null ? "Price on request" : `$${price.toFixed(2)} /ea`;
-}
 
 function sizeChipLabel(relation: ProductGroupRelation): string {
     return relation.capacityMl != null ? `${relation.capacityMl} ml` : (relation.capacity ?? "Size");
@@ -138,6 +136,8 @@ function ComponentCard({
     component: PdpCompatibilityComponent;
     onAddComponent: (component: PdpCompatibilityComponent) => void;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null): string => (price == null ? "Price on request" : `${money(price)} /ea`);
     const checkoutReady = isCheckoutReady({
         graceSku: component.graceSku,
         shopifyVariantId: component.shopifyVariantId,

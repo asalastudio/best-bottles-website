@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { decodeImage } from "@/lib/paper-doll/decode-image";
 import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
 import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
@@ -90,11 +92,6 @@ function analyticsApplicationForApplicator(applicator: string | null | undefined
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
-
-function formatPrice(price: number | null | undefined): string {
-    if (!price) return "—";
-    return `$${price.toFixed(2)}`;
-}
 
 function getFinishFromGraceSku(graceSku: string | null | undefined): { label: string; swatchName: string } | null {
     if (!graceSku) return null;
@@ -817,6 +814,8 @@ function TrustStack({ variant, inStock }: { variant: ProductVariant | null | und
 }
 
 function VolumeTeaser({ variant }: { variant: ProductVariant | null | undefined }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     if (!variant?.webPrice1pc) return null;
     const tiers = buildDisplayVolumeTiers({
         webPrice1pc: variant.webPrice1pc,
@@ -853,6 +852,8 @@ function TierLadder({
     compact?: boolean;
     onQtyChange?: (qty: number) => void;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     if (!variant?.webPrice1pc) return null;
 
     const p1 = variant.webPrice1pc;
@@ -1103,6 +1104,8 @@ export default function ProductDetailClient({
     localAssetPreview?: boolean;
     localAssetVersion?: string;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     const router = useRouter();
     useEffect(() => {
         const urls = new Set(Object.values(localKits).flatMap(kit => [...kit.on.parts, ...kit.off.parts].map(part => part.image.url)));

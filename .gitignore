@@ -204,3 +204,9 @@ data/paper-doll/plates-snapshot.json
 
 # asset ledger: downloaded plate images used only to measure them
 data/asset-ledger/plates-cache/
+public/assets/homepage.png-cache/
+public/assets/sketches/*.png
+public/assets/cards/*.png
+public/assets/hero/**/*.png
+public/assets/hero/*.png
+public/assets/hero/frames/_mask.png
