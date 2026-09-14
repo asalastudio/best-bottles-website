@@ -74,7 +74,7 @@ export async function getPortalDashboardData() {
                 activeOrderCount: 0,
                 inTransitCount: 0,
                 unitsInFlight: 0,
-                availableCredit: 0,
+                openDraftCount: 0,
             },
             activeOrders: [],
             recentOrders: [],

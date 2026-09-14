@@ -296,7 +296,12 @@ export const getDashboardData = query({
                 activeOrderCount: activeOrders.length,
                 inTransitCount: orders.filter((order) => order.status === "in_transit").length,
                 unitsInFlight,
-                availableCredit: account ? Math.max(100_000 - ytdSpend, 0) : null,
+                // `availableCredit` used to be `100_000 - ytdSpend`. There is no
+                // credit facility and no net terms at Best Bottles, so that
+                // number was invented in code and shown to customers as though
+                // it were their line of credit. Count what is actually true
+                // instead: work they have in progress.
+                openDraftCount: drafts.filter((draft) => draft.status !== "submitted").length,
             },
             activeOrders: activeOrders.slice(0, 4).map((order) => ({
                 _id: order._id,
@@ -661,5 +666,109 @@ export const upsertOrderFromShopify = mutation({
 
         const orderId = await ctx.db.insert("portalOrders", fields);
         return { created: true as const, orderId };
+    },
+});
+
+// ─── Draft editing ──────────────────────────────────────────────────────────
+
+export const getDraftById = query({
+    args: { clerkOrgId: v.string(), draftId: v.id("portalDrafts") },
+    handler: async (ctx, args) => {
+        const draft = await ctx.db.get(args.draftId);
+        // Scoped read: a draft id from another organization must read as absent
+        // rather than as a permission error, which would confirm it exists.
+        if (!draft || draft.clerkOrgId !== args.clerkOrgId) return null;
+        return draft;
+    },
+});
+
+/**
+ * Replace a draft's lines wholesale.
+ *
+ * Prices arrive already resolved because they must come from Convex on the
+ * server, never from the browser — `unitPrice` becomes the Shopify price
+ * override, so a client-supplied value is a way to buy at any price.
+ *
+ * A submitted draft is frozen: it records what was sent to Shopify, and
+ * editing it after the fact would make the portal disagree with the order.
+ */
+export const setDraftLineItems = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        draftId: v.id("portalDrafts"),
+        lineItems: v.array(v.object({
+            sku: v.string(),
+            description: v.string(),
+            quantity: v.number(),
+            unitPrice: v.optional(v.number()),
+            shopifyVariantId: v.optional(v.string()),
+        })),
+    },
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        const draft = await ctx.db.get(args.draftId);
+        if (!draft || draft.clerkOrgId !== args.clerkOrgId) {
+            throw new Error("draft_not_found");
+        }
+        if (draft.status === "submitted") throw new Error("draft_already_submitted");
+
+        for (const line of args.lineItems) {
+            if (!Number.isFinite(line.quantity) || line.quantity < 1) {
+                throw new Error("quantity_must_be_at_least_one");
+            }
+        }
+
+        const totalAmount = args.lineItems.reduce(
+            (sum, line) => sum + (line.unitPrice ?? 0) * line.quantity,
+            0,
+        );
+
+        await ctx.db.patch(draft._id, {
+            lineItems: args.lineItems,
+            totalAmount,
+            updatedAt: Date.now(),
+        });
+
+        return { lineCount: args.lineItems.length, totalAmount };
+    },
+});
+
+/**
+ * Record that a draft reached Shopify.
+ *
+ * Called only after `draftOrderCreate` succeeds, so the stored ids never claim
+ * more than actually happened — the same rule the resale certificates follow
+ * about Convex approval versus a real Shopify exemption.
+ */
+export const markDraftSubmitted = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        draftId: v.id("portalDrafts"),
+        shopifyDraftOrderId: v.string(),
+        shopifyDraftOrderName: v.string(),
+        clerkUserId: v.string(),
+    },
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        const draft = await ctx.db.get(args.draftId);
+        if (!draft || draft.clerkOrgId !== args.clerkOrgId) {
+            throw new Error("draft_not_found");
+        }
+        if (draft.status === "submitted") throw new Error("draft_already_submitted");
+
+        await ctx.db.patch(draft._id, {
+            status: "submitted",
+            shopifyDraftOrderId: args.shopifyDraftOrderId,
+            shopifyDraftOrderName: args.shopifyDraftOrderName,
+            submittedAt: Date.now(),
+            submittedBy: args.clerkUserId,
+            updatedAt: Date.now(),
+        });
+
+        return { draftId: draft._id, shopifyDraftOrderName: args.shopifyDraftOrderName };
     },
 });

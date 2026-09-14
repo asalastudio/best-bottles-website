@@ -54,7 +54,7 @@ export default async function PortalDashboard() {
                         Welcome back, {companyName}
                     </h1>
                     <p className="font-sans text-sm text-neutral-400 mt-0.5">
-                        {accountNumber} · {account?.netTerms ?? "Terms pending"} · {account?.taxExempt ? "Tax Exempt" : "Taxable"}
+                        {accountNumber} · {account?.taxExempt ? "Tax Exempt" : "Taxable"}
                     </p>
                 </div>
                 <div className="flex items-center gap-2">
@@ -77,7 +77,7 @@ export default async function PortalDashboard() {
                 <StatCard label="YTD Spend" numericValue={stats.ytdSpend} format={formatCurrency} sub="Delivered orders this year" highlight />
                 <StatCard label="Active Orders" numericValue={stats.activeOrderCount} sub={`${stats.inTransitCount} in transit`} />
                 <StatCard label="Units In Flight" numericValue={stats.unitsInFlight} sub="Across active shipments" />
-                <StatCard label="Credit Available" value={formatCurrency(stats.availableCredit)} sub={account ? `${account.netTerms} · ${account.tier}` : "Available after account sync"} />
+                <StatCard label="Open Drafts" numericValue={stats.openDraftCount} sub={account ? account.tier : "Available after account sync"} />
             </div>
 
             <div className="grid grid-cols-[1.5fr_1fr] gap-4 mb-4">

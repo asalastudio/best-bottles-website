@@ -510,10 +510,22 @@ export default defineSchema({
             description: v.string(),
             quantity: v.number(),
             unitPrice: v.optional(v.number()),
+            // Captured when the line is added so submission does not have to
+            // re-resolve the SKU, and so a product renamed between drafting and
+            // submitting still reaches the right Shopify variant.
+            shopifyVariantId: v.optional(v.string()),
         })),
         totalAmount: v.optional(v.number()),
         createdAt: v.number(),
         updatedAt: v.number(),
+
+        // Set once the draft has been pushed to Shopify. A submitted draft is
+        // a record of what was sent, not an editable cart, so these being
+        // present is what makes the order pad read-only.
+        shopifyDraftOrderId: v.optional(v.string()),
+        shopifyDraftOrderName: v.optional(v.string()),
+        submittedAt: v.optional(v.number()),
+        submittedBy: v.optional(v.string()),
     })
         .index("by_orgId", ["clerkOrgId"]),
 

@@ -27,7 +27,6 @@ export default async function PortalAccount() {
                                 <PortalTag variant={account.taxExempt ? "green" : "muted"}>
                                     {account.taxExempt ? "Tax Exempt" : "Taxable"}
                                 </PortalTag>
-                                <PortalTag variant="muted">{account.netTerms}</PortalTag>
                             </div>
                         </div>
                         <div className="px-5 py-4 grid grid-cols-2 gap-x-6 gap-y-4">
