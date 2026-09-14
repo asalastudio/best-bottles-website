@@ -10,18 +10,20 @@ import styles from "./EmpireFitmentHero.module.css";
  * patch placed at its exact pixel position on a 1536×1024 stage that is scaled to
  * cover the hero box — so nothing outside the closure can ever change or shimmer.
  * Closures come from the PSD master layers (scripts/hero-empire/kit.py) placed on the one bottle by body-width scale + shoulder anchor.
+ *
+ * The changeover is a JUMP CUT (Jordan: "like a video jump cut"), never a fade: the next patch is
+ * mounted a beat early at opacity 0 and decoded, so the cut is one atomic paint with the layer
+ * already there to catch it. The bare-neck beat renders nothing — the base IS the bare bottle.
  */
 const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v7";
 const MANIFEST = `/assets/hero/${HERO_SET}/manifest.json`;
-const HOLD_MS = 3600;
-const FADE_IN_MS = 900;   // new closure fades in over the old one (still opaque)
-const FADE_OUT_MS = 600;  // then the old one dissolves (see .leaving delay in the stylesheet)
+const HOLD_MS = 3600;     // one beat per closure
 /** Focal point kept in view when the stage is cropped to the hero box (fractions of stage size). */
 const FOCAL = { x: 0.64, y: 0.5 };
 
 type Patch = { src: string; x: number; y: number; w: number; h: number };
 type Frame = { sku: string; src: string; label: string; patch?: Patch };
-type Manifest = { base: string; width: number; height: number; frames: Frame[]; builtAt?: number };
+type Manifest = { base: string; width: number; height: number; frames: Frame[]; builtAt?: number; hold?: unknown };
 /** Cache-bust every asset with the manifest's build stamp so a rebuilt set never mixes with a cached one. */
 const stamp = (m: Manifest, src: string) => (m.builtAt ? `${src}?v=${m.builtAt}` : src);
 
@@ -43,7 +45,6 @@ function Odometer({ value, digits }: { value: number; digits: number }) {
 export default function EmpireFitmentHero() {
     const [manifest, setManifest] = useState<Manifest | null>(null);
     const [index, setIndex] = useState(0);
-    const [prev, setPrev] = useState<number | null>(null);
     const [paused, setPaused] = useState(false);
     const [fit, setFit] = useState({ scale: 1, x: 0, y: 0 });
     const box = useRef<HTMLDivElement>(null);
@@ -81,36 +82,44 @@ export default function EmpireFitmentHero() {
     }, [manifest]);
 
     const frames = manifest?.frames ?? [];
+    const patchBased = frames.some((f) => f.patch);
+    const warm = useRef<HTMLImageElement[]>([]);
 
+    // Fetch + decode the next few patches ahead of their beat (kept referenced so the decoded bitmaps stay cached).
     useEffect(() => {
         if (!manifest) return;
-        frames.slice(index + 1, index + 4).forEach((f) => { const img = new Image(); img.src = stamp(manifest, f.patch?.src ?? f.src); });
-    }, [manifest, frames, index]);
+        warm.current = frames.slice(index + 1, index + 4).flatMap((f) => {
+            if (patchBased && !f.patch) return [];
+            const img = new Image();
+            img.src = stamp(manifest, f.patch?.src ?? f.src);
+            img.decode?.().catch(() => undefined);
+            return [img];
+        });
+    }, [manifest, frames, index, patchBased]);
 
     useEffect(() => {
         if (frames.length < 2 || paused || reduced.current) return;
-        const t = setTimeout(() => { setPrev(index); setIndex((i) => (i + 1) % frames.length); }, HOLD_MS);
+        const t = setTimeout(() => setIndex((i) => (i + 1) % frames.length), HOLD_MS);
         return () => clearTimeout(t);
     }, [frames.length, index, paused]);
 
-    useEffect(() => {
-        if (prev === null) return;
-        const t = setTimeout(() => setPrev(null), FADE_IN_MS + FADE_OUT_MS + 50);
-        return () => clearTimeout(t);
-    }, [prev]);
-
     const current = frames[index];
-    const renderPatch = (f: Frame, cls: string) => (manifest && f.patch)
-        ? <img key={f.sku} className={`${styles.patch} ${cls}`} src={stamp(manifest, f.patch.src)} alt="" width={f.patch.w} height={f.patch.h} style={{ left: f.patch.x, top: f.patch.y, width: f.patch.w, height: f.patch.h }} />
-        : <img key={f.sku} className={`${styles.full} ${cls}`} src={manifest ? stamp(manifest, f.src) : f.src} alt="" />;
+    const next = frames.length > 1 ? frames[(index + 1) % frames.length] : undefined;
+    const decodeOnMount = (el: HTMLImageElement | null) => { el?.decode?.().catch(() => undefined); };
+    const renderPatch = (f: Frame, cls: string, ahead = false) => {
+        if (!manifest) return null;
+        if (f.patch) return <img key={f.sku} ref={ahead ? decodeOnMount : undefined} className={`${styles.patch} ${cls}`} src={stamp(manifest, f.patch.src)} alt="" width={f.patch.w} height={f.patch.h} style={{ left: f.patch.x, top: f.patch.y, width: f.patch.w, height: f.patch.h }} />;
+        if (patchBased) return null;                       // a bare beat in a patch set: the base already is the bare bottle
+        return <img key={f.sku} ref={ahead ? decodeOnMount : undefined} className={`${styles.full} ${cls}`} src={stamp(manifest, f.src)} alt="" />;
+    };
 
     return (
         <div ref={box} className={styles.scene} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} aria-label="Empire 50 mL bottle with its closures">
             {manifest && (
                 <div className={styles.stage} style={{ width: manifest.width, height: manifest.height, transform: `translate(${fit.x}px, ${fit.y}px) scale(${fit.scale})` }}>
                     <img className={styles.base} src={stamp(manifest, manifest.base)} alt="" width={manifest.width} height={manifest.height} fetchPriority="high" />
-                    {prev !== null && frames[prev] && renderPatch(frames[prev], styles.leaving)}
-                    {current && renderPatch(current, styles.entering)}
+                    {next && next.sku !== current?.sku && renderPatch(next, styles.next, true)}
+                    {current && renderPatch(current, styles.current)}
                 </div>
             )}
             <div className={styles.shade} aria-hidden="true" />

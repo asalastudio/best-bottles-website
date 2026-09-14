@@ -28,23 +28,10 @@
 
 .full { inset: 0; width: 100%; height: 100%; }
 
-/* Sequenced, not crossed: the new closure fades in ON TOP of the old one while the old stays opaque, and only
-   then does the old one dissolve. Every closure covers the whole neck, so the bare threads never show between
-   two fitments (a plain crossfade let them ghost through at the midpoint). */
-.entering { opacity: 1; animation: patchIn 0.9s ease both; }
-/* A keyframe animation, not a transition: browsers will not start a transition from a value a finished
-   animation was holding, so the old patch used to vanish on the spot. `both` holds opacity 1 through the delay. */
-.leaving { opacity: 0; animation: patchOut 0.6s ease 0.9s both; }
-
-@keyframes patchIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes patchOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
+/* Jump cut: no transition of any kind. The upcoming patch sits in the DOM at opacity 0 (already painted and
+   decoded) and simply becomes the current one on the beat — one atomic paint, the layer already in place. */
+.current { opacity: 1; }
+.next { opacity: 0; pointer-events: none; }
 
 /* Left-hand darkening so the headline reads on the plaster — tunable here, never baked into the render. */
 .shade {
@@ -80,7 +67,6 @@
 .odoStrip span { display: block; height: 1em; line-height: 1; }
 
 @media (prefers-reduced-motion: reduce) {
-    .entering, .leaving { animation: none; }
     .odoStrip { transition: none; }
 }
 

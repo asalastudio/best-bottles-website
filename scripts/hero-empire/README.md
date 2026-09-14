@@ -24,10 +24,12 @@ places the closure where the artist drew it; then the collar bottom at the axis 
 BASE_SET=v6 HERO_SET=v7 python3 scripts/hero-empire/kit.py
 ```
 
-Component `EmpireFitmentHero.tsx`: static base + patches on a 1536×1024 stage scaled to cover. The changeover is
-SEQUENCED, not crossed: the new patch fades in on top of the old one (kept opaque), then the old one dissolves —
-both as keyframe animations, because a transition will not start from a value a finished animation was holding
-(the old patch used to vanish instantly and expose the bare threads).
+Component `EmpireFitmentHero.tsx`: static base + patches on a 1536×1024 stage scaled to cover. The changeover is a
+JUMP CUT (Jordan: "like a video jump cut" — fades of any length were rejected): the upcoming patch is mounted a beat
+early at opacity 0 and decoded, then simply becomes the current one — one atomic paint, no transition, no fade. The
+bare-neck beat renders nothing over the base (a re-encoded full frame would shimmer). Every collar is centred on the
+neck axis and seated on the same row by the kit, so a cut never steps sideways or up. `manifest.hold` (neck + tube
+boxes every closure covers) is kit geometry kept for QA; the jump-cut component does not need it.
 
 ## Sequence (Jordan, 2026-09-13)
 9 antique bulbs (no tassels) → 8 lotion pumps → 6 fine-mist sprayers → bare neck → 12 reducers → loop.

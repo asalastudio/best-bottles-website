@@ -88,7 +88,7 @@ for fn in sorted(os.listdir(MASTER)):
     files.setdefault(m.group(1), []).append(os.path.join(MASTER, fn))
 
 # ── transform (PSD → hero): premultiplied resize, anchor (cx, shoulder) ──────────────────────────────────────────────
-def place(f, s, pd, k=1.0, dy=0.0):
+def place(f, s, pd, k=1.0, dy=0.0, dx=0.0):
     """layer f (PSD coords) → full-frame (rgb, a) in hero space under the similarity that maps the PSD body onto the base body;
     k = extra scale of this layer about its own top-left (used for the bulb ball, whose top-left is its nozzle-anchored origin)"""
     rgba = np.asarray(f["im"]).astype(np.float32); a = rgba[..., 3:4] / 255.0; a[a < 6 / 255] = 0; pre = rgba[..., :3] * a
@@ -98,7 +98,7 @@ def place(f, s, pd, k=1.0, dy=0.0):
     aa = np.asarray(Image.fromarray(a[..., 0]).resize((nw, nh), Image.LANCZOS)); aa = np.clip(aa, 0, 1)
     rgb = np.dstack(ch) / np.maximum(aa, 1e-4)[..., None]
     s0 = s / k
-    px = B["cx"] + (f["left"] - pd["cx"]) * s0; py = B["shoulder"] + (f["top"] - pd["shoulder"]) * s0 + dy
+    px = B["cx"] + (f["left"] - pd["cx"]) * s0 + dx; py = B["shoulder"] + (f["top"] - pd["shoulder"]) * s0 + dy
     x0, y0 = int(round(px)), int(round(py))
     RGB, A = np.zeros((H, W, 3)), np.zeros((H, W))
     sx0, sy0 = max(0, -x0), max(0, -y0); dx0, dy0 = max(0, x0), max(0, y0)
@@ -155,7 +155,7 @@ def rank(sku):
     lst = ORDER.get(k, []); return (SEQUENCE.index(k) if k in SEQUENCE else 99, lst.index(tail) if tail in lst else 50, sku)
 todo = sorted([s for s in files if kind(s) in SEQUENCE], key=rank)
 
-manifest = []
+manifest = []; collar_w = []
 Image.open(f"{BIN}/base.png").convert("RGB").save(f"{OUT}/base.webp", "WEBP", quality=90)
 for sku in todo:
     k = kind(sku); cands = [read_psd(p) for p in files[sku]]
@@ -174,10 +174,16 @@ for sku in todo:
     for f, kk in layers:
         r, a = place(f, s, c["datum"], kk); CR, CA = over(r, a, CR, CA)
     axis = CA[:, int(B["cx"]) - 8: int(B["cx"]) + 8].max(axis=1); solid = np.where(axis[: B["shoulder"] + 40] > 0.5)[0]
-    dy = (B["shoulder"] + SEAT) - int(solid.max()) if len(solid) else 0
+    bottom = int(solid.max()); dy = (B["shoulder"] + SEAT) - bottom
+    centres = []
+    for yy in range(bottom - 24, bottom - 3):                     # the collar band: centre it on the neck axis
+        xs = np.where(CA[yy] > 0.5)[0]
+        if len(xs): centres.append((xs.min() + xs.max()) / 2)
+    dx = int(round(B["cx"] - float(np.median(centres)))) if centres else 0
     CR, CA = np.zeros((H, W, 3)), np.zeros((H, W))
     for f, kk in layers:
-        r, a = place(f, s, c["datum"], kk, dy); CR, CA = over(r, a, CR, CA)
+        r, a = place(f, s, c["datum"], kk, dy, dx); CR, CA = over(r, a, CR, CA)
+    xs = np.where(CA[B["shoulder"] - 4] > 0.5)[0]; collar_w.append(int(xs.max() - xs.min() + 1))
     RGB, A = np.zeros((H, W, 3)), np.zeros((H, W))
     if k in ("AnSp", "LB", "Spry"): RGB, A = TUBE_RGB.copy(), TUBE_A.copy()
     RGB, A = over(CR, CA, RGB, A)
@@ -190,7 +196,7 @@ for sku in todo:
     y0, y1, x0, x1 = max(int(ys.min()) - 4, 0), min(int(ys.max()) + 5, H), max(int(xs.min()) - 4, 0), min(int(xs.max()) + 5, W)
     Image.fromarray(np.dstack([RGB[y0:y1, x0:x1], A[y0:y1, x0:x1] * 255]).round().astype(np.uint8), "RGBA").save(f"{OUT}/patch-{sku}.webp", "WEBP", lossless=True)
     manifest.append((sku, {"x": x0, "y": y0, "w": x1 - x0, "h": y1 - y0}))
-    log(f"{sku}: {os.path.basename(c['path'])}  scale {s:.4f}  seat shift {dy:+d}px  patch {x1-x0}×{y1-y0}" + ("  (+overcap beside dropped)" if c["beside"] else ""))
+    log(f"{sku}: {os.path.basename(c['path'])}  scale {s:.4f}  seat {dy:+d}px  centre {dx:+d}px  collar {collar_w[-1]}px  patch {x1-x0}×{y1-y0}" + ("  (+overcap beside dropped)" if c["beside"] else ""))
 Image.open(f"{BIN}/base.png").convert("RGB").save(f"{OUT}/frame-BARE.png")
 if "BARE" in SEQUENCE: manifest.append(("BARE", None))
 
@@ -210,10 +216,17 @@ manifest.sort(key=lambda t: (ORDER_K.get("BARE" if t[0] == "BARE" else kind(t[0]
 frames = []
 for sku, pbox in manifest:
     Image.open(f"{OUT}/frame-{sku}.png").convert("RGB").save(f"{OUT}/frame-{sku}.webp", "WEBP", quality=85)
-    e = {"sku": sku, "src": f"/assets/hero/{SET}/frame-{sku}.webp", "label": label(sku)}
+    e = {"sku": sku, "src": f"/assets/hero/{SET}/frame-{sku}.webp", "label": label(sku), "tube": sku != "BARE" and kind(sku) in ("AnSp", "LB", "Spry")}
     if pbox: e["patch"] = {"src": f"/assets/hero/{SET}/patch-{sku}.webp", **pbox}
     frames.append(e)
-json.dump({"base": f"/assets/hero/{SET}/base.webp", "width": W, "height": H, "builtAt": int(time.time()), "frames": frames}, open(f"{OUT}/manifest.json", "w"), indent=1)
+# HOLD rects (stage px): regions every closure covers opaquely — the component keeps the old patch there while the rest crossfades,
+# so the bare threads never show and the shared tube never pulses. neck = narrowest collar minus a margin; tube = the shared tube column.
+hw = min(collar_w) // 2 - 1
+tcols = np.where(TUBE_A.max(axis=0) > 0.05)[0]; trows = np.where(TUBE_A.max(axis=1) > 0.05)[0]
+hold = {"neck": {"x": int(B["cx"]) - hw, "y": B["neck_top"] - 2, "w": 2 * hw, "h": B["shoulder"] + SEAT + 2 - (B["neck_top"] - 2)},
+        "tube": {"x": int(tcols.min()) - 1, "y": B["shoulder"] + SEAT + 2, "w": int(tcols.max() - tcols.min()) + 3, "h": int(trows.max()) + 2 - (B["shoulder"] + SEAT + 2)}}
+log("hold rects", hold, "(collar widths %d..%d)" % (min(collar_w), max(collar_w)))
+json.dump({"base": f"/assets/hero/{SET}/base.webp", "width": W, "height": H, "builtAt": int(time.time()), "hold": hold, "frames": frames}, open(f"{OUT}/manifest.json", "w"), indent=1)
 json.dump({"niche": NICHE, "plaster": g.get("plaster"), "body": g.get("body"), "datum": B}, open(f"{OUT}/geometry.json", "w"))
 
 try: font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 14)

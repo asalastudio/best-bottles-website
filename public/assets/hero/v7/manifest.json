@@ -2,12 +2,27 @@
  "base": "/assets/hero/v7/base.webp",
  "width": 1536,
  "height": 1024,
- "builtAt": 1789357404,
+ "builtAt": 1789357998,
+ "hold": {
+  "neck": {
+   "x": 924,
+   "y": 414,
+   "w": 72,
+   "h": 69
+  },
+  "tube": {
+   "x": 953,
+   "y": 483,
+   "w": 16,
+   "h": 193
+  }
+ },
  "frames": [
   {
    "sku": "GBEmp50AnSpGl",
    "src": "/assets/hero/v7/frame-GBEmp50AnSpGl.webp",
    "label": "Antique sprayer \u00b7 gold",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpGl.webp",
     "x": 784,
@@ -20,6 +35,7 @@
    "sku": "GBEmp50AnSpMtSl",
    "src": "/assets/hero/v7/frame-GBEmp50AnSpMtSl.webp",
    "label": "Antique sprayer \u00b7 matte silver",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpMtSl.webp",
     "x": 780,
@@ -32,6 +48,7 @@
    "sku": "GBEmp50AnSpBlk",
    "src": "/assets/hero/v7/frame-GBEmp50AnSpBlk.webp",
    "label": "Antique sprayer \u00b7 black",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpBlk.webp",
     "x": 777,
@@ -44,6 +61,7 @@
    "sku": "GBEmp50AnSpWht",
    "src": "/assets/hero/v7/frame-GBEmp50AnSpWht.webp",
    "label": "Antique sprayer \u00b7 white",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpWht.webp",
     "x": 775,
@@ -56,6 +74,7 @@
    "sku": "GBEmp50AnSpRed",
    "src": "/assets/hero/v7/frame-GBEmp50AnSpRed.webp",
    "label": "Antique sprayer \u00b7 red",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpRed.webp",
     "x": 780,
@@ -68,6 +87,7 @@
    "sku": "GBEmp50AnSpPnk",
    "src": "/assets/hero/v7/frame-GBEmp50AnSpPnk.webp",
    "label": "Antique sprayer \u00b7 pink",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpPnk.webp",
     "x": 782,
@@ -80,9 +100,10 @@
    "sku": "GBEmp50AnSpLvn",
    "src": "/assets/hero/v7/frame-GBEmp50AnSpLvn.webp",
    "label": "Antique sprayer \u00b7 lavender",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpLvn.webp",
-    "x": 782,
+    "x": 784,
     "y": 326,
     "w": 221,
     "h": 353
@@ -92,9 +113,10 @@
    "sku": "GBEmp50AnSpIvyGl",
    "src": "/assets/hero/v7/frame-GBEmp50AnSpIvyGl.webp",
    "label": "Antique sprayer \u00b7 ivory & gold",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpIvyGl.webp",
-    "x": 784,
+    "x": 785,
     "y": 331,
     "w": 219,
     "h": 348
@@ -104,9 +126,10 @@
    "sku": "GBEmp50AnSpIvySl",
    "src": "/assets/hero/v7/frame-GBEmp50AnSpIvySl.webp",
    "label": "Antique sprayer \u00b7 ivory & silver",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50AnSpIvySl.webp",
-    "x": 783,
+    "x": 781,
     "y": 330,
     "w": 222,
     "h": 349
@@ -116,9 +139,10 @@
    "sku": "LBEmp50WhtClOvrCp",
    "src": "/assets/hero/v7/frame-LBEmp50WhtClOvrCp.webp",
    "label": "Lotion pump \u00b7 white",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50WhtClOvrCp.webp",
-    "x": 907,
+    "x": 909,
     "y": 322,
     "w": 105,
     "h": 357
@@ -128,6 +152,7 @@
    "sku": "LBEmp50LtnShnGl",
    "src": "/assets/hero/v7/frame-LBEmp50LtnShnGl.webp",
    "label": "Lotion pump \u00b7 shiny gold",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnShnGl.webp",
     "x": 916,
@@ -140,9 +165,10 @@
    "sku": "LBEmp50LtnShnSl",
    "src": "/assets/hero/v7/frame-LBEmp50LtnShnSl.webp",
    "label": "Lotion pump \u00b7 shiny silver",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnShnSl.webp",
-    "x": 916,
+    "x": 918,
     "y": 336,
     "w": 86,
     "h": 343
@@ -152,9 +178,10 @@
    "sku": "LBEmp50LtnShnBlk",
    "src": "/assets/hero/v7/frame-LBEmp50LtnShnBlk.webp",
    "label": "Lotion pump \u00b7 shiny black",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnShnBlk.webp",
-    "x": 913,
+    "x": 915,
     "y": 336,
     "w": 88,
     "h": 343
@@ -164,6 +191,7 @@
    "sku": "LBEmp50LtnMtGl",
    "src": "/assets/hero/v7/frame-LBEmp50LtnMtGl.webp",
    "label": "Lotion pump \u00b7 matte gold",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnMtGl.webp",
     "x": 915,
@@ -176,9 +204,10 @@
    "sku": "LBEmp50LtnMtSl",
    "src": "/assets/hero/v7/frame-LBEmp50LtnMtSl.webp",
    "label": "Lotion pump \u00b7 matte silver",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnMtSl.webp",
-    "x": 916,
+    "x": 918,
     "y": 340,
     "w": 85,
     "h": 339
@@ -188,9 +217,10 @@
    "sku": "LBEmp50LtnCu",
    "src": "/assets/hero/v7/frame-LBEmp50LtnCu.webp",
    "label": "Lotion pump \u00b7 copper",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnCu.webp",
-    "x": 913,
+    "x": 917,
     "y": 331,
     "w": 89,
     "h": 348
@@ -200,9 +230,10 @@
    "sku": "LBEmp50LtnClOvrCap",
    "src": "/assets/hero/v7/frame-LBEmp50LtnClOvrCap.webp",
    "label": "Lotion pump \u00b7 clear",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-LBEmp50LtnClOvrCap.webp",
-    "x": 913,
+    "x": 916,
     "y": 337,
     "w": 88,
     "h": 342
@@ -212,6 +243,7 @@
    "sku": "GBEmp50SpryShnGl",
    "src": "/assets/hero/v7/frame-GBEmp50SpryShnGl.webp",
    "label": "Fine-mist sprayer \u00b7 shiny gold",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryShnGl.webp",
     "x": 917,
@@ -224,9 +256,10 @@
    "sku": "GBEmp50SpryShnSl",
    "src": "/assets/hero/v7/frame-GBEmp50SpryShnSl.webp",
    "label": "Fine-mist sprayer \u00b7 shiny silver",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryShnSl.webp",
-    "x": 917,
+    "x": 919,
     "y": 336,
     "w": 86,
     "h": 343
@@ -236,6 +269,7 @@
    "sku": "GBEmp50SpryShnBlk",
    "src": "/assets/hero/v7/frame-GBEmp50SpryShnBlk.webp",
    "label": "Fine-mist sprayer \u00b7 shiny black",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryShnBlk.webp",
     "x": 915,
@@ -248,9 +282,10 @@
    "sku": "GBEmp50SpryMtGl",
    "src": "/assets/hero/v7/frame-GBEmp50SpryMtGl.webp",
    "label": "Fine-mist sprayer \u00b7 matte gold",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryMtGl.webp",
-    "x": 914,
+    "x": 916,
     "y": 337,
     "w": 90,
     "h": 342
@@ -260,9 +295,10 @@
    "sku": "GBEmp50SpryMtSl",
    "src": "/assets/hero/v7/frame-GBEmp50SpryMtSl.webp",
    "label": "Fine-mist sprayer \u00b7 matte silver",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryMtSl.webp",
-    "x": 917,
+    "x": 918,
     "y": 340,
     "w": 85,
     "h": 339
@@ -272,9 +308,10 @@
    "sku": "GBEmp50SpryCu",
    "src": "/assets/hero/v7/frame-GBEmp50SpryCu.webp",
    "label": "Fine-mist sprayer \u00b7 copper",
+   "tube": true,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50SpryCu.webp",
-    "x": 917,
+    "x": 919,
     "y": 333,
     "w": 86,
     "h": 346
@@ -283,12 +320,14 @@
   {
    "sku": "BARE",
    "src": "/assets/hero/v7/frame-BARE.webp",
-   "label": "Bare bottle \u00b7 18-415 neck"
+   "label": "Bare bottle \u00b7 18-415 neck",
+   "tube": false
   },
   {
    "sku": "GBEmp50RdcrShnGl",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrShnGl.webp",
    "label": "Reducer \u00b7 shiny gold",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrShnGl.webp",
     "x": 918,
@@ -301,6 +340,7 @@
    "sku": "GBEmp50RdcrShnSl",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrShnSl.webp",
    "label": "Reducer \u00b7 shiny silver",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrShnSl.webp",
     "x": 917,
@@ -313,9 +353,10 @@
    "sku": "GBEmp50RdcrShnBlk",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrShnBlk.webp",
    "label": "Reducer \u00b7 shiny black",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrShnBlk.webp",
-    "x": 917,
+    "x": 918,
     "y": 406,
     "w": 87,
     "h": 83
@@ -325,6 +366,7 @@
    "sku": "GBEmp50RdcrMtSl",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrMtSl.webp",
    "label": "Reducer \u00b7 matte silver",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrMtSl.webp",
     "x": 917,
@@ -337,9 +379,10 @@
    "sku": "GBEmp50RdcrWht",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrWht.webp",
    "label": "Reducer \u00b7 white",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrWht.webp",
-    "x": 914,
+    "x": 916,
     "y": 379,
     "w": 87,
     "h": 108
@@ -349,6 +392,7 @@
    "sku": "GBEmp50RdcrBlkLthr",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrBlkLthr.webp",
    "label": "Reducer \u00b7 black leather",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrBlkLthr.webp",
     "x": 909,
@@ -361,9 +405,10 @@
    "sku": "GBEmp50RdcrBrwnLthr",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrBrwnLthr.webp",
    "label": "Reducer \u00b7 brown leather",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrBrwnLthr.webp",
-    "x": 908,
+    "x": 910,
     "y": 367,
     "w": 104,
     "h": 121
@@ -373,9 +418,10 @@
    "sku": "GBEmp50RdcrLBrwnLthr",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrLBrwnLthr.webp",
    "label": "Reducer \u00b7 light brown leather",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrLBrwnLthr.webp",
-    "x": 908,
+    "x": 910,
     "y": 368,
     "w": 103,
     "h": 120
@@ -385,9 +431,10 @@
    "sku": "GBEmp50RdcrIvyLthr",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrIvyLthr.webp",
    "label": "Reducer \u00b7 ivory leather",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrIvyLthr.webp",
-    "x": 903,
+    "x": 904,
     "y": 371,
     "w": 109,
     "h": 117
@@ -397,9 +444,10 @@
    "sku": "GBEmp50RdcrPnkLthr",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrPnkLthr.webp",
    "label": "Reducer \u00b7 pink leather",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrPnkLthr.webp",
-    "x": 904,
+    "x": 905,
     "y": 369,
     "w": 109,
     "h": 119
@@ -409,9 +457,10 @@
    "sku": "GBEmp50RdcrMtSlTall",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrMtSlTall.webp",
    "label": "Tall reducer \u00b7 matte silver",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrMtSlTall.webp",
-    "x": 912,
+    "x": 914,
     "y": 383,
     "w": 91,
     "h": 105
@@ -421,9 +470,10 @@
    "sku": "GBEmp50RdcrShnBlkTall",
    "src": "/assets/hero/v7/frame-GBEmp50RdcrShnBlkTall.webp",
    "label": "Tall reducer \u00b7 shiny black",
+   "tube": false,
    "patch": {
     "src": "/assets/hero/v7/patch-GBEmp50RdcrShnBlkTall.webp",
-    "x": 917,
+    "x": 918,
     "y": 381,
     "w": 86,
     "h": 106
