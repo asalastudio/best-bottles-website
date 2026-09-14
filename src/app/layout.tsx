@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { brandFace, cormorant, ebGaramond } from "./fonts";
 import "./globals.css";
+import { cookies } from "next/headers";
 import AppProviders from "@/components/AppProviders";
+import { REGION_COOKIE } from "@/lib/region";
 import { getMegaMenuPanels } from "@/sanity/lib/queries";
 import {
   SITE_URL,
@@ -77,6 +79,7 @@ export default async function RootLayout({
   // provider via props. Lets AppProviders stay a Client Component without
   // rendering an async Server Component inside it (which Next.js disallows).
   const megaMenuPanels = await getMegaMenuPanels();
+  const initialMarketCode = (await cookies()).get(REGION_COOKIE)?.value ?? null;
 
   return (
     <html lang="en">
@@ -89,7 +92,7 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(buildWebSiteJsonLd()) }}
         />
-        <AppProviders megaMenuPanels={megaMenuPanels}>{children}</AppProviders>
+        <AppProviders megaMenuPanels={megaMenuPanels} initialMarketCode={initialMarketCode}>{children}</AppProviders>
       </body>
     </html>
   );

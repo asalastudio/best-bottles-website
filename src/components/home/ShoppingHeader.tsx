@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useCart } from '@/components/CartProvider';
 import AnnouncementMarquee from '@/components/AnnouncementMarquee';
 import BrandWordmark from '@/components/BrandWordmark';
+import RegionSelector from '@/components/RegionSelector';
 import CartDrawer from '@/components/CartDrawer';
 import { useGrace } from '@/components/useGrace';
 import { CaretDown, List, MagnifyingGlass, ShoppingBag, User, X } from '@/components/icons';
@@ -58,6 +59,7 @@ export default function ShoppingHeader() {
                         <input name="search" aria-label="Search the catalog" placeholder="Search" type="search"/>
                         <button aria-label="Search"><MagnifyingGlass size={18}/></button>
                     </form>
+                    <RegionSelector className={styles.region}/>
                 </div>
                 <Link href="/" className={styles.brand} aria-label="Best Bottles home"><BrandWordmark/></Link>
                 <div className={styles.headerRight}>
@@ -96,6 +98,7 @@ export default function ShoppingHeader() {
                 <details><summary>Bottle Families</summary><Link href="/bottle-families" onClick={closeNavigation}>View all</Link>{Object.keys(FAMILY_ART).map(family => <Link key={family} href={familyFinderHref(family)} onClick={closeNavigation}>{family}</Link>)}</details>
                 <details><summary>Collections</summary><Link href="/collections" onClick={closeNavigation}>View all</Link>{SHOP_COLLECTIONS.map(collection => <Link key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}>{collection.title}</Link>)}</details>
                 <Link href="/catalog" onClick={closeNavigation}>Full Catalog</Link><Link href="/matrix" onClick={closeNavigation}>Build your bottle</Link><Link href="/blog" onClick={closeNavigation}>Journal</Link><Link href="/sign-in?redirect_url=%2Fportal" onClick={closeNavigation}>Client portal</Link>
+                <RegionSelector inline className={styles.regionMobile}/>
             </nav>}
         </header>
         <CartDrawer isOpen={cart} onClose={() => setCart(false)}/>

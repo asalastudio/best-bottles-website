@@ -4,18 +4,13 @@ import { getCustomerFacingProductName } from "@/lib/products/customer-facing-nam
 import { getProductCardVariantPreviews } from "@/lib/products/product-card-variant-previews";
 import type { GuidedFinderProduct } from "@/lib/products/guided-finder";
 import { safeCatalogReturnPath } from "@/components/catalog/FinderNavigationMemory";
+import { useRegion } from "@/components/RegionProvider";
 
 type FocusedProductCardProps = {
     product: GuidedFinderProduct;
     finderUrl: string;
     onOpen?: (product: GuidedFinderProduct) => void;
 };
-
-const price = new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    minimumFractionDigits: 2,
-});
 
 export function buildFocusedProductHref(productHref: string, finderUrl: string): string {
     const safeReturnPath = safeCatalogReturnPath(finderUrl);
@@ -39,6 +34,7 @@ function detailLine(product: GuidedFinderProduct): string {
 }
 
 export default function FocusedProductCard({ product, finderUrl, onOpen }: FocusedProductCardProps) {
+    const { formatPrice } = useRegion();
     const productHref = buildFocusedProductHref(product.href, finderUrl);
     const productTitle = product.catalogHero?.alt ?? getCustomerFacingProductName({
         group: {
@@ -103,7 +99,7 @@ export default function FocusedProductCard({ product, finderUrl, onOpen }: Focus
                 </dl>
                 <p className="mt-auto pt-5 text-sm font-semibold text-obsidian">
                     {product.startingUnitPrice != null
-                        ? `From ${price.format(product.startingUnitPrice)}/ea`
+                        ? `From ${formatPrice(product.startingUnitPrice)}/ea`
                         : "Request pricing"}
                 </p>
             </Link>

@@ -12,6 +12,7 @@ import { useCart } from "@/components/CartProvider";
 import CartDrawer from "./CartDrawer";
 import AnnouncementMarquee from "./AnnouncementMarquee";
 import BrandWordmark from "./BrandWordmark";
+import RegionSelector from "./RegionSelector";
 import { useMegaMenuPanels } from "./SanityMegaMenuProvider";
 import { urlFor } from "@/sanity/lib/image";
 import { MEGA_MENU_PANELS, type MegaMenuId, type MegaMenuPanelContent } from "@/lib/megaMenu";
@@ -364,7 +365,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                         >
                             <List size={20} weight="regular" />
                         </button>
-                        <div className="hidden xl:block" aria-hidden="true" />{/* reserved for region / currency selector */}
+                        <div className="hidden xl:flex xl:justify-self-start"><RegionSelector /></div>
                         <Link
                             href="/"
                             aria-label="Best Bottles home"
@@ -597,6 +598,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                                 <X size={20} />
                             </button>
                         </div>
+                        <div className="px-4 py-2 border-b border-champagne"><RegionSelector inline /></div>
 
                         <div className="flex-1 overflow-y-auto px-4 py-4">
                             <nav className="space-y-2">
