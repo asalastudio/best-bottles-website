@@ -1,19 +1,41 @@
 .bar {
+    position: relative;
+    height: 27px;
+    overflow: hidden;
     background: var(--color-obsidian, #1d1d1f);
     color: var(--color-bone, #f5f3ef);
 }
 
+.track {
+    position: absolute;
+    inset: 0;
+}
+
+/* One line, starting just past the right edge, travelling its own width plus the bar width to the left. */
 .line {
-    margin: 0;
-    padding: 8px 16px;
-    text-align: center;
+    position: absolute;
+    top: 8px;
+    left: 100%;
+    white-space: nowrap;
     font-family: var(--font-brand);
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     line-height: 1;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    will-change: transform;
+    animation: pass 32s linear infinite;
+}
+
+.bar:hover .line {
+    animation-play-state: paused;
+}
+
+@keyframes pass {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - 100vw)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .line { animation: none; left: 0; right: 0; text-align: center; }
 }
