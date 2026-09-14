@@ -58,6 +58,10 @@
 }
 
 /* Cormorant — logo and display typography */
+.font-montserrat {
+  font-family: var(--font-montserrat),"Montserrat",ui-sans-serif,system-ui,sans-serif;
+}
+
 .font-cormorant {
   font-family: var(--font-cormorant), var(--font-eb-garamond), ui-serif, Georgia, serif;
 }

@@ -87,6 +87,8 @@
 }
 
 /* Brand typography 2026-09-13: section heading and family names in all-caps Montserrat. */
-.section[aria-labelledby="family-heading"] .heading h2{font-family:var(--font-montserrat),"Montserrat",ui-sans-serif,system-ui,sans-serif;font-weight:500;font-size:22px;line-height:1.2;letter-spacing:.1em;text-transform:uppercase;max-width:none}
+.heading h2{font-family:var(--font-montserrat),"Montserrat",ui-sans-serif,system-ui,sans-serif;font-weight:500;font-size:22px;line-height:1.2;letter-spacing:.1em;text-transform:uppercase;max-width:none}
 .familyTitle,.familyGrid .familyTitle,.textFamily{font-family:var(--font-montserrat),"Montserrat",ui-sans-serif,system-ui,sans-serif;font-weight:500;font-size:15px;line-height:1.2;letter-spacing:.12em;text-transform:uppercase}
-@media(max-width:640px){.section[aria-labelledby="family-heading"] .heading h2{font-size:17px;max-width:230px}.familyTitle,.familyGrid .familyTitle,.textFamily{font-size:13px}}
+@media(max-width:640px){.heading h2{font-size:17px;max-width:230px}.familyTitle,.familyGrid .familyTitle,.textFamily{font-size:13px}}
+.build h2{font-family:var(--font-montserrat),"Montserrat",ui-sans-serif,system-ui,sans-serif;font-weight:500;font-size:30px;line-height:1.15;letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:640px){.build h2{font-size:22px}}

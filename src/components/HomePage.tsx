@@ -838,7 +838,7 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
                 <div className="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end">
                     <FadeUp>
                         <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">{sectionEyebrow}</p>
-                        <h2 className="font-display text-[34px] font-medium leading-none text-obsidian lg:text-[42px]">{sectionTitle}</h2>
+                        <h2 className="font-montserrat text-[20px] font-medium uppercase leading-tight tracking-[0.1em] text-obsidian lg:text-[22px]">{sectionTitle}</h2>
                     </FadeUp>
                     <FadeUp delay={0.12}>
                         <Link href={viewAllHref} className="flex items-center text-xs font-semibold uppercase tracking-[0.16em] text-muted-gold transition-colors hover:text-obsidian">
