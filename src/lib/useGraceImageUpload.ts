@@ -2,7 +2,6 @@
 
 import { useCallback, useState } from "react";
 import { useGrace } from "@/components/useGrace";
-import { getAnonOwnerKey } from "@/lib/graceAnonOwnerKey";
 import type { ProductCard, ReferenceMatchPayload } from "@/components/GraceContext";
 
 /**
@@ -59,7 +58,7 @@ function customerMessageForError(error: unknown): string {
 }
 
 export function useGraceImageUpload() {
-    const { appendInlineMessage } = useGrace();
+    const { appendInlineMessage, ownerKey } = useGrace();
     const [status, setStatus] = useState<UploadStatus>("idle");
     const [error, setError] = useState<string | null>(null);
 
@@ -69,7 +68,6 @@ export function useGraceImageUpload() {
             setError(null);
             try {
                 // 1. Upload to Convex storage via /api/grace/upload
-                const ownerKey = getAnonOwnerKey();
                 const form = new FormData();
                 form.append("file", file);
                 form.append("ownerKey", ownerKey);
@@ -173,7 +171,7 @@ export function useGraceImageUpload() {
                 });
             }
         },
-        [appendInlineMessage],
+        [appendInlineMessage, ownerKey],
     );
 
     return { uploadAndAnalyze, status, error };

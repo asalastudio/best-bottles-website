@@ -57,6 +57,22 @@ export interface CreateDraftOrderInput {
     accountNumber?: string;
     companyName?: string;
     currencyCode?: string;
+    /**
+     * Where the order ships.
+     *
+     * The PORTAL passes this explicitly, because a portal submission is
+     * finished paperwork: a draft order with no address cannot be rated,
+     * taxed, or fulfilled, and falling back to "use the customer's default"
+     * silently produced exactly that whenever the customer record had no
+     * address on it — which was every account until the portal started
+     * collecting one.
+     *
+     * Storefront CHECKOUT omits it on purpose. That flow hands the buyer an
+     * invoice URL and they enter the address at Shopify's own checkout, so
+     * demanding one up front would block a sale.
+     */
+    shippingAddress?: ReturnType<typeof import("./portal/address").toShopifyMailingAddress>;
+    billingAddress?: ReturnType<typeof import("./portal/address").toShopifyMailingAddress>;
 }
 
 export async function createWholesaleDraftOrder(
@@ -121,7 +137,12 @@ export async function createWholesaleDraftOrder(
                     // an approved resale certificate lives. Forcing true here
                     // would exempt every portal order, approved or not.
                     taxExempt: false,
-                    useCustomerDefaultAddress: true,
+                    ...(input.shippingAddress
+                        ? {
+                              shippingAddress: input.shippingAddress,
+                              billingAddress: input.billingAddress ?? input.shippingAddress,
+                          }
+                        : { useCustomerDefaultAddress: true }),
                 },
             },
         );

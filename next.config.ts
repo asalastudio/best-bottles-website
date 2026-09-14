@@ -27,6 +27,9 @@ const nextConfig: NextConfig = {
         // Sentry adds a custom Webpack hook, disabling Next's default worker.
         // Isolate compilation so its memory is released before TypeScript runs.
         webpackBuildWorker: true,
+        // Vercel's standard build container OOM-killed the webpack worker on
+        // 2026-09-14; this trades a little build time for a lower peak heap.
+        webpackMemoryOptimizations: true,
     },
     turbopack: {
         root: projectRoot,
@@ -47,6 +50,16 @@ const nextConfig: NextConfig = {
                 // any Supabase bucket on the internet use /_next/image as a proxy.
                 hostname: "likkskifwsrvszxdvufw.supabase.co",
                 pathname: "/storage/v1/object/public/**",
+            },
+            {
+                protocol: "https",
+                // The plate store. Pinned to our own bucket rather than
+                // wildcarded: *.public.blob.vercel-storage.com would let any
+                // Vercel Blob store on the internet use /_next/image as a
+                // proxy, the same reason the Supabase host above is pinned.
+                // Product pages render plates through next/image, so without
+                // this every PDP throws "Invalid src prop".
+                hostname: "yzy7l20k4yt6znzz.public.blob.vercel-storage.com",
             },
             {
                 protocol: "https",

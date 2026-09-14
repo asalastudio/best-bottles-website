@@ -33,6 +33,7 @@ import type * as gracePrompt from "../gracePrompt.js";
 import type * as graceRateLimits from "../graceRateLimits.js";
 import type * as graceSearchUtils from "../graceSearchUtils.js";
 import type * as graceSessionTraces from "../graceSessionTraces.js";
+import type * as graceSessions from "../graceSessions.js";
 import type * as graceShortlists from "../graceShortlists.js";
 import type * as graceToolDefs from "../graceToolDefs.js";
 import type * as graceUploads from "../graceUploads.js";
@@ -45,12 +46,15 @@ import type * as materialRecipes from "../materialRecipes.js";
 import type * as matrix from "../matrix.js";
 import type * as measurements from "../measurements.js";
 import type * as migrations from "../migrations.js";
+import type * as nonBottleProductGroups from "../nonBottleProductGroups.js";
 import type * as observability from "../observability.js";
 import type * as paperDoll from "../paperDoll.js";
 import type * as patchFromMasterV83 from "../patchFromMasterV83.js";
 import type * as portal from "../portal.js";
 import type * as portalAuth from "../portalAuth.js";
+import type * as posthog from "../posthog.js";
 import type * as pricing from "../pricing.js";
+import type * as productGroupNames from "../productGroupNames.js";
 import type * as productGroups from "../productGroups.js";
 import type * as productGroupsRebuild from "../productGroupsRebuild.js";
 import type * as productKits from "../productKits.js";
@@ -95,6 +99,7 @@ declare const fullApi: ApiFromModules<{
   graceRateLimits: typeof graceRateLimits;
   graceSearchUtils: typeof graceSearchUtils;
   graceSessionTraces: typeof graceSessionTraces;
+  graceSessions: typeof graceSessions;
   graceShortlists: typeof graceShortlists;
   graceToolDefs: typeof graceToolDefs;
   graceUploads: typeof graceUploads;
@@ -107,12 +112,15 @@ declare const fullApi: ApiFromModules<{
   matrix: typeof matrix;
   measurements: typeof measurements;
   migrations: typeof migrations;
+  nonBottleProductGroups: typeof nonBottleProductGroups;
   observability: typeof observability;
   paperDoll: typeof paperDoll;
   patchFromMasterV83: typeof patchFromMasterV83;
   portal: typeof portal;
   portalAuth: typeof portalAuth;
+  posthog: typeof posthog;
   pricing: typeof pricing;
+  productGroupNames: typeof productGroupNames;
   productGroups: typeof productGroups;
   productGroupsRebuild: typeof productGroupsRebuild;
   productKits: typeof productKits;
@@ -154,4 +162,5 @@ export declare const internal: FilterApi<
 
 export declare const components: {
   agent: import("@convex-dev/agent/_generated/component.js").ComponentApi<"agent">;
+  posthog: import("@posthog/convex/_generated/component.js").ComponentApi<"posthog">;
 };

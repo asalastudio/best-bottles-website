@@ -1,0 +1,40 @@
+(node:39637) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/convex/_generated/api.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PUBLISH → https://helpful-elephant-638.convex.cloud
+Existing family metadata will be preserved for this partial release.
+
+=== Cylinder 5 ml (0.17 oz) Clear (cylinder-5ml-clear-13-415) — 6 SKUs, 24 objects (replacing 6 already on the target) ===
+
+=== Cylinder 5 ml (0.17 oz) Cobalt Blue (cylinder-5ml-cobalt-blue-13-415) — 6 SKUs, 24 objects (replacing 6 already on the target) ===
+
+=== Cylinder 30 ml (1.01 oz) Clear (cylinder-30ml-clear-18-415) — 2 SKUs, 8 objects (replacing 2 already on the target) ===
+
+=== Cylinder 3.3 ml (0.1 oz) Clear (cylinder-3.3ml-clear-12mm) — 2 SKUs, 8 objects (replacing 2 already on the target) ===
+
+=== Cylinder 4 ml (0.14 oz) Clear (cylinder-4ml-clear-12mm) — 2 SKUs, 8 objects (replacing 2 already on the target) ===
+
+=== Cylinder 9 ml (0.3 oz) Clear (cylinder-9ml-clear-13-415) — 11 SKUs, 44 objects (replacing 11 already on the target) ===
+
+=== Cylinder 9 ml (0.3 oz) Frosted (cylinder-9ml-frosted-13-415) — 6 SKUs, 24 objects (replacing 6 already on the target) ===
+
+=== Cylinder 114 ml (3.85 oz) Clear (cylinder-118ml-clear) — 1 SKUs, 4 objects (replacing 1 already on the target) ===
+
+=== Cylinder 227 ml (7.68 oz) Clear (cylinder-227ml-clear) — 1 SKUs, 4 objects (replacing 1 already on the target) ===
+
+=== Cylinder 454 ml (15.35 oz) Clear (cylinder-454ml-clear) — 1 SKUs, 4 objects (replacing 1 already on the target) ===
+  uploaded 6, existed 18, verified 24, rows written 6, unchanged 0, skipped 0 (no product), on duplicated SKUs 0, grace SKUs restamped 0, errors 0
+  uploaded 6, existed 18, verified 24, rows written 6, unchanged 0, skipped 0 (no product), on duplicated SKUs 0, grace SKUs restamped 0, errors 0
+  uploaded 4, existed 4, verified 8, rows written 2, unchanged 0, skipped 0 (no product), on duplicated SKUs 0, grace SKUs restamped 0, errors 0
+  uploaded 2, existed 6, verified 8, rows written 2, unchanged 0, skipped 0 (no product), on duplicated SKUs 0, grace SKUs restamped 0, errors 0
+  uploaded 2, existed 6, verified 8, rows written 2, unchanged 0, skipped 0 (no product), on duplicated SKUs 0, grace SKUs restamped 0, errors 0
+  uploaded 14, existed 30, verified 44, rows written 11, unchanged 0, skipped 0 (no product), on duplicated SKUs 0, grace SKUs restamped 0, errors 0
+  uploaded 6, existed 18, verified 24, rows written 6, unchanged 0, skipped 0 (no product), on duplicated SKUs 0, grace SKUs restamped 0, errors 0
+  uploaded 1, existed 3, verified 4, rows written 1, unchanged 0, skipped 0 (no product), on duplicated SKUs 0, grace SKUs restamped 0, errors 0
+  uploaded 1, existed 3, verified 4, rows written 1, unchanged 0, skipped 0 (no product), on duplicated SKUs 0, grace SKUs restamped 0, errors 0
+  uploaded 1, existed 3, verified 4, rows written 1, unchanged 0, skipped 0 (no product), on duplicated SKUs 0, grace SKUs restamped 0, errors 0
+
+build record: plates/_builds/2026-09-13T15-37-44-958Z-cylinder-5ml-clear-13-415+cylinder-5ml-cobalt-blue-13-415+cylinder-30ml-clear-18-415+cylinder-3.3ml-clear-12mm+cylinder-.json
+
+OK — now run scripts/paperdoll/verify.mjs

@@ -17,7 +17,7 @@ describe('reviewed duplicate plate scope',()=>{
   const audit=applyPlateScope(f.rows,f.products,f.manifest,f.live);
   expect(audit).toMatchObject({held:[],unmatched:[]});expect(audit.excluded).toHaveLength(1);
   expect(f.rows).toHaveLength(2);expect(JSON.stringify(f.rows[1])).toBe(approval);expect(f.rows[0].plate.state).toBe('none');
-  const plan=buildPlatePlan({rows:f.rows});expect(plan.counts).toEqual({total:1,complete:1,review:0,reconcile:0,missing:0});expect(plan.scope.excludedDuplicates).toHaveLength(1);
+  const plan=buildPlatePlan({rows:f.rows});expect(plan.counts).toEqual({total:1,complete:1,release:0,review:0,reconcile:0,missing:0});expect(plan.scope.excludedDuplicates).toHaveLength(1);
  });
  it('leaves an unreviewed retired-looking SKU in the queue',()=>{
   const f=fixture();f.rows[0].sku='whatever__RETIRED__';

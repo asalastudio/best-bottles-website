@@ -96,9 +96,9 @@ export default function GreetingState({
 
     return (
         <div className="flex min-h-0 flex-1 items-center justify-center px-6 py-10">
-            <div className="w-full max-w-[720px]">
+            <div className="w-full max-w-[680px]">
                 {/* Greeting */}
-                <div className="mb-[30px] flex items-center justify-center gap-4">
+                <div className="mb-[38px] flex items-center justify-center gap-4">
                     <ChatCircle size={34} className="text-muted-gold" />
                     <h1 className="font-serif text-[42px] font-medium tracking-[0.02em] text-obsidian">
                         {getGreeting()}, {name}.
@@ -111,12 +111,12 @@ export default function GreetingState({
                         e.preventDefault();
                         if (input.trim()) onSubmit();
                     }}
-                    className="rounded-[3px]"
+                    className="rounded-[10px]"
                     style={{
                         background: "rgba(255, 255, 255, 0.7)",
                         border: "1px solid rgba(212, 197, 169, 0.7)",
-                        boxShadow: "0 12px 32px rgba(29, 29, 31, 0.06)",
-                        padding: "18px 20px 14px",
+                        boxShadow: "0 14px 38px rgba(29, 29, 31, 0.07)",
+                        padding: "22px 24px 16px",
                     }}
                 >
                     <textarea
@@ -164,7 +164,7 @@ export default function GreetingState({
                             aria-pressed={voiceEnabled}
                             aria-label={voiceEnabled ? "End voice conversation with Grace" : "Talk with Grace"}
                             title={voiceEnabled ? "End voice conversation" : "Talk with Grace"}
-                            className="flex cursor-pointer items-center justify-center rounded-[2px] px-2 py-1.5 transition-colors"
+                            className="flex cursor-pointer items-center justify-center rounded-[6px] px-2 py-1.5 transition-colors"
                             style={{
                                 border: voiceEnabled
                                     ? "1px solid var(--color-muted-gold)"
@@ -179,7 +179,7 @@ export default function GreetingState({
                             type="submit"
                             disabled={!input.trim()}
                             aria-label="Send"
-                            className="flex cursor-pointer items-center justify-center rounded-[2px] border-none bg-obsidian p-1.5 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-black transition-colors"
+                            className="flex cursor-pointer items-center justify-center rounded-[6px] border-none bg-obsidian p-1.5 text-white disabled:opacity-40 disabled:cursor-not-allowed hover:bg-black transition-colors"
                         >
                             <PaperPlaneTilt size={15} />
                         </button>
@@ -187,13 +187,13 @@ export default function GreetingState({
                 </form>
 
                 {/* Skill chips */}
-                <div className="mt-[18px] flex flex-wrap justify-center gap-2.5">
+                <div className="mt-6 flex flex-wrap justify-center gap-2.5">
                     {SKILLS.map((s) => (
                         <button
                             key={s.label}
                             type="button"
                             onClick={() => onSkillClick(s.query)}
-                            className="inline-flex cursor-pointer items-center gap-1.5 rounded-[2px] bg-transparent px-3 py-[7px] text-[11.5px] font-medium tracking-[0.04em] text-obsidian hover:bg-obsidian/[0.03] transition-colors"
+                            className="inline-flex cursor-pointer items-center gap-1.5 rounded-[6px] bg-transparent px-3 py-[7px] text-[11.5px] font-medium tracking-[0.04em] text-obsidian hover:bg-obsidian/[0.03] transition-colors"
                             style={{ border: "1px solid rgba(99, 117, 136, 0.28)" }}
                         >
                             <span className="flex text-gold-dim">
@@ -205,7 +205,7 @@ export default function GreetingState({
                 </div>
 
                 {/* Footer note */}
-                <div className="mt-3.5 text-center text-[11px] tracking-[0.04em] text-slate">
+                <div className="mt-5 text-center text-[11px] tracking-[0.04em] text-slate">
                     A division of Nemat International · 2,300 SKUs · 37 families
                 </div>
             </div>

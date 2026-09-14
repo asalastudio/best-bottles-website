@@ -34,7 +34,10 @@ export default async function PortalLayout({ children }: { children: ReactNode }
     const shell = await getPortalShellData();
 
     return (
-        <div className="flex h-screen overflow-hidden bg-neutral-50">
+        <div
+            className="app-surface flex h-screen overflow-hidden"
+            style={{ background: "var(--color-surface-sunken)" }}
+        >
             <PortalSidebar
                 companyName={shell.account?.companyName ?? null}
                 tierLabel={shell.account?.tier ?? null}

@@ -1,5 +1,5 @@
 {
-  "revision": 5,
+  "revision": 7,
   "decisions": {
     "GBCyl100AnSpBlk:21f10bdf4c252b8503c06a64ed9a07253dfb12cba04f456740697ca65fb4ee43": {
       "sku": "GBCyl100AnSpBlk",
@@ -20000,6 +20000,1170 @@
           "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e.front-on-1000x1100.webp",
           "sha256": "6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e",
           "url": "/images/plate-contact-sheets/6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCyl5BlkShSht:7c621999ee1d07db9449e650cf5f7319e2ae20d68fa65bbfae84da87f6dcb47b": {
+      "sku": "GBCyl5BlkShSht",
+      "binding": "7c621999ee1d07db9449e650cf5f7319e2ae20d68fa65bbfae84da87f6dcb47b",
+      "sha256": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.front-on-1000x1100.webp",
+          "sha256": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+          "url": "/images/plate-contact-sheets/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCyl5CuSht:55374c5f74be2bfd33afd047e897dfe449806bf28ce96e5af3dbb189e4149c94": {
+      "sku": "GBCyl5CuSht",
+      "binding": "55374c5f74be2bfd33afd047e897dfe449806bf28ce96e5af3dbb189e4149c94",
+      "sha256": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5CuSht/1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985.front-on-1000x1100.webp",
+          "sha256": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+          "url": "/images/plate-contact-sheets/1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5CuSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCyl5GlMattSht:535cd2de1c6340631f05c836f84f4814ec4f734db4fa8676bffd6f05ffd0eeb1": {
+      "sku": "GBCyl5GlMattSht",
+      "binding": "535cd2de1c6340631f05c836f84f4814ec4f734db4fa8676bffd6f05ffd0eeb1",
+      "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlMattSht/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.front-on-1000x1100.webp",
+          "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+          "url": "/images/plate-contact-sheets/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlMattSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCyl5GlSht:38b43a8e152afa10832ab5abda0e18d28d3a7df7fd7eabfd5cb996cecb2791c2": {
+      "sku": "GBCyl5GlSht",
+      "binding": "38b43a8e152afa10832ab5abda0e18d28d3a7df7fd7eabfd5cb996cecb2791c2",
+      "sha256": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlSht/5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a.front-on-1000x1100.webp",
+          "sha256": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+          "url": "/images/plate-contact-sheets/5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCyl5SlMattSht:7017f1355db07327e83d927bf70e4ec33223a45c704815981df3bfaf377455d5": {
+      "sku": "GBCyl5SlMattSht",
+      "binding": "7017f1355db07327e83d927bf70e4ec33223a45c704815981df3bfaf377455d5",
+      "sha256": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlMattSht/f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1.front-on-1000x1100.webp",
+          "sha256": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+          "url": "/images/plate-contact-sheets/f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlMattSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCyl5SlSht:1748a840e0828a44ddb7f5ce76e9f62765d61f3adbdd78f251363c2934cfdcef": {
+      "sku": "GBCyl5SlSht",
+      "binding": "1748a840e0828a44ddb7f5ce76e9f62765d61f3adbdd78f251363c2934cfdcef",
+      "sha256": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlSht/ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43.front-on-1000x1100.webp",
+          "sha256": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+          "url": "/images/plate-contact-sheets/ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCylBlu5BlkShSht:a4f35bb2df13e1741978954a1b01932ab4db8b7197425fe12a3bbad7f5163f7c": {
+      "sku": "GBCylBlu5BlkShSht",
+      "binding": "a4f35bb2df13e1741978954a1b01932ab4db8b7197425fe12a3bbad7f5163f7c",
+      "sha256": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5BlkShSht/2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3.front-on-1000x1100.webp",
+          "sha256": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+          "url": "/images/plate-contact-sheets/2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5BlkShSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCylBlu5CuSht:5f90179f542b625326dff2c80ddb87830dea4584b016fb5646e7671e3bde1a7b": {
+      "sku": "GBCylBlu5CuSht",
+      "binding": "5f90179f542b625326dff2c80ddb87830dea4584b016fb5646e7671e3bde1a7b",
+      "sha256": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5CuSht/fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16.front-on-1000x1100.webp",
+          "sha256": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+          "url": "/images/plate-contact-sheets/fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5CuSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCylBlu5GlMattSht:0a124ecfdc40993681c8e26c0b21429aa7866099e365c89d833591f54bfda332": {
+      "sku": "GBCylBlu5GlMattSht",
+      "binding": "0a124ecfdc40993681c8e26c0b21429aa7866099e365c89d833591f54bfda332",
+      "sha256": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlMattSht/2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964.front-on-1000x1100.webp",
+          "sha256": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+          "url": "/images/plate-contact-sheets/2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlMattSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCylBlu5GlSht:4b5568f4d96afe0f82b607e0758aad62062b3894e7ebbd3bbf0968d3fcfdabe6": {
+      "sku": "GBCylBlu5GlSht",
+      "binding": "4b5568f4d96afe0f82b607e0758aad62062b3894e7ebbd3bbf0968d3fcfdabe6",
+      "sha256": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlSht/791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc.front-on-1000x1100.webp",
+          "sha256": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+          "url": "/images/plate-contact-sheets/791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCylBlu5SlMattSht:a3f0806eb4b6a0d082b37439f62889968d8a76a34da274bd60ed320640fd76ff": {
+      "sku": "GBCylBlu5SlMattSht",
+      "binding": "a3f0806eb4b6a0d082b37439f62889968d8a76a34da274bd60ed320640fd76ff",
+      "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlMattSht/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.front-on-1000x1100.webp",
+          "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+          "url": "/images/plate-contact-sheets/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlMattSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBCylBlu5SlSht:8401d6941735045ac628dc91242d989df7e69fe91504df0c51530a0d24c259a5": {
+      "sku": "GBCylBlu5SlSht",
+      "binding": "8401d6941735045ac628dc91242d989df7e69fe91504df0c51530a0d24c259a5",
+      "sha256": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlSht/7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8.front-on-1000x1100.webp",
+          "sha256": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+          "url": "/images/plate-contact-sheets/7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSpry1ozGl:d927a9982b9736bb3211df00415cb6c27a1c1d747ea1fe85525b798965c4e759": {
+      "sku": "GBSpry1ozGl",
+      "binding": "d927a9982b9736bb3211df00415cb6c27a1c1d747ea1fe85525b798965c4e759",
+      "sha256": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.front-on-1000x1100.webp",
+          "sha256": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+          "url": "/images/plate-contact-sheets/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9.front-off-1000x1100.webp",
+          "sha256": "e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9",
+          "url": "/images/plate-contact-sheets/e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSpry1ozSl:86879f08ccb089d2802d9d59a241d4d5a2769586abfc4d5b8e6bdcd0480d2b8c": {
+      "sku": "GBSpry1ozSl",
+      "binding": "86879f08ccb089d2802d9d59a241d4d5a2769586abfc4d5b8e6bdcd0480d2b8c",
+      "sha256": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozSl/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.front-on-1000x1100.webp",
+          "sha256": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+          "url": "/images/plate-contact-sheets/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozSl/36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946.front-off-1000x1100.webp",
+          "sha256": "36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946",
+          "url": "/images/plate-contact-sheets/36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSpry3mlClBlk:dd5239d1b1803c9d2118f4dfcf47320f34999c7c831cbf2e26c8d925d6c9ca55": {
+      "sku": "GBSpry3mlClBlk",
+      "binding": "dd5239d1b1803c9d2118f4dfcf47320f34999c7c831cbf2e26c8d925d6c9ca55",
+      "sha256": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClBlk/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.front-on-1000x1100.webp",
+          "sha256": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+          "url": "/images/plate-contact-sheets/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClBlk/79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47.front-off-1000x1100.webp",
+          "sha256": "79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47",
+          "url": "/images/plate-contact-sheets/79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSpry3mlClWht:8256c76bbfec7615081a4e3b4a80450fc1f453e18094d83725bb9eb45d642230": {
+      "sku": "GBSpry3mlClWht",
+      "binding": "8256c76bbfec7615081a4e3b4a80450fc1f453e18094d83725bb9eb45d642230",
+      "sha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClWht/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.front-on-1000x1100.webp",
+          "sha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+          "url": "/images/plate-contact-sheets/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClWht/d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7.front-off-1000x1100.webp",
+          "sha256": "d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7",
+          "url": "/images/plate-contact-sheets/d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSpry4mlClBlk:b2c9449dbdc734860c33b95bd648c5adae25463e787d7c4d43c35da3cab498e0": {
+      "sku": "GBSpry4mlClBlk",
+      "binding": "b2c9449dbdc734860c33b95bd648c5adae25463e787d7c4d43c35da3cab498e0",
+      "sha256": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClBlk/4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a.front-on-1000x1100.webp",
+          "sha256": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+          "url": "/images/plate-contact-sheets/4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClBlk/fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa.front-off-1000x1100.webp",
+          "sha256": "fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa",
+          "url": "/images/plate-contact-sheets/fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSpry4mlClWh:7f4829bc84f989cde0793712909a81641367a4aaf8efe8754e71474aed2d6eef": {
+      "sku": "GBSpry4mlClWh",
+      "binding": "7f4829bc84f989cde0793712909a81641367a4aaf8efe8754e71474aed2d6eef",
+      "sha256": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClWh/b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c.front-on-1000x1100.webp",
+          "sha256": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+          "url": "/images/plate-contact-sheets/b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClWh/69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b.front-off-1000x1100.webp",
+          "sha256": "69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b",
+          "url": "/images/plate-contact-sheets/69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9BlkShSht:c66f6ec66c42f80b4d1d4306d8d6205fd012fce624bf96eaee3803398690736e": {
+      "sku": "GBTallCyl9BlkShSht",
+      "binding": "c66f6ec66c42f80b4d1d4306d8d6205fd012fce624bf96eaee3803398690736e",
+      "sha256": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9BlkShSht/f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3.front-on-1000x1100.webp",
+          "sha256": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+          "url": "/images/plate-contact-sheets/f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9BlkShSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9CuSht:900f271b2d5c6f913845082e953c5cadafd479e7fb16986e4efdd95406da2816": {
+      "sku": "GBTallCyl9CuSht",
+      "binding": "900f271b2d5c6f913845082e953c5cadafd479e7fb16986e4efdd95406da2816",
+      "sha256": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9CuSht/bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9.front-on-1000x1100.webp",
+          "sha256": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+          "url": "/images/plate-contact-sheets/bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9CuSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9GlMattSht:ba6314e225ace468489cc4df68ec410d3e4489bbfbb08c35248b5bd19eaccad7": {
+      "sku": "GBTallCyl9GlMattSht",
+      "binding": "ba6314e225ace468489cc4df68ec410d3e4489bbfbb08c35248b5bd19eaccad7",
+      "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlMattSht/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.front-on-1000x1100.webp",
+          "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+          "url": "/images/plate-contact-sheets/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlMattSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9GlSht:88d0ece5fde946d0523dc4c6d07825ca04c36efac2ad89ea55e397db681ce9b4": {
+      "sku": "GBTallCyl9GlSht",
+      "binding": "88d0ece5fde946d0523dc4c6d07825ca04c36efac2ad89ea55e397db681ce9b4",
+      "sha256": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlSht/0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf.front-on-1000x1100.webp",
+          "sha256": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+          "url": "/images/plate-contact-sheets/0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9MtlRollBlkDot:99b2185a10c0026f8294ad59031d6a68a72e501069ec65ba700492f3df7b5ce5": {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "binding": "99b2185a10c0026f8294ad59031d6a68a72e501069ec65ba700492f3df7b5ce5",
+      "sha256": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.front-on-1000x1100.webp",
+          "sha256": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+          "url": "/images/plate-contact-sheets/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b.front-off-1000x1100.webp",
+          "sha256": "930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b",
+          "url": "/images/plate-contact-sheets/930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9RollBlkDot:9585b5dc76e979b089284f5813730f0d03707eba426a8a913135e2854acaa6f5": {
+      "sku": "GBTallCyl9RollBlkDot",
+      "binding": "9585b5dc76e979b089284f5813730f0d03707eba426a8a913135e2854acaa6f5",
+      "sha256": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkDot/656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220.front-on-1000x1100.webp",
+          "sha256": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+          "url": "/images/plate-contact-sheets/656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkDot/4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112.front-off-1000x1100.webp",
+          "sha256": "4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112",
+          "url": "/images/plate-contact-sheets/4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9RollBlkSh:d8f78f6d19266eed5fa13c281cca129dcc9554649ea5a94f1ff5983e31b7279e": {
+      "sku": "GBTallCyl9RollBlkSh",
+      "binding": "d8f78f6d19266eed5fa13c281cca129dcc9554649ea5a94f1ff5983e31b7279e",
+      "sha256": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkSh/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.front-on-1000x1100.webp",
+          "sha256": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+          "url": "/images/plate-contact-sheets/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkSh/9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192.front-off-1000x1100.webp",
+          "sha256": "9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192",
+          "url": "/images/plate-contact-sheets/9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9RollCuMatt:c07536f1c3b0d399d741ade7c1b9ca97e843c4044e38d1b39d8b67749d1d2751": {
+      "sku": "GBTallCyl9RollCuMatt",
+      "binding": "c07536f1c3b0d399d741ade7c1b9ca97e843c4044e38d1b39d8b67749d1d2751",
+      "sha256": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollCuMatt/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.front-on-1000x1100.webp",
+          "sha256": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+          "url": "/images/plate-contact-sheets/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollCuMatt/e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f.front-off-1000x1100.webp",
+          "sha256": "e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f",
+          "url": "/images/plate-contact-sheets/e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9RollSlSh:a18cb525a6155d324131354ebcdf4188a8a0ac95026e587502b61a4ae4c19c3e": {
+      "sku": "GBTallCyl9RollSlSh",
+      "binding": "a18cb525a6155d324131354ebcdf4188a8a0ac95026e587502b61a4ae4c19c3e",
+      "sha256": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlSh/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.front-on-1000x1100.webp",
+          "sha256": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+          "url": "/images/plate-contact-sheets/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlSh/e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0.front-off-1000x1100.webp",
+          "sha256": "e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0",
+          "url": "/images/plate-contact-sheets/e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9SlMattSht:6d46813a556eee36f009513c892fdc3f8cc039c07cf435033d7fa8a30eda0344": {
+      "sku": "GBTallCyl9SlMattSht",
+      "binding": "6d46813a556eee36f009513c892fdc3f8cc039c07cf435033d7fa8a30eda0344",
+      "sha256": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlMattSht/c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15.front-on-1000x1100.webp",
+          "sha256": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+          "url": "/images/plate-contact-sheets/c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlMattSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9SlSht:c012b66b0fec3d243e404fac80171b5b3351d0d0c893ff79736bee91814e973b": {
+      "sku": "GBTallCyl9SlSht",
+      "binding": "c012b66b0fec3d243e404fac80171b5b3351d0d0c893ff79736bee91814e973b",
+      "sha256": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlSht/7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc.front-on-1000x1100.webp",
+          "sha256": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+          "url": "/images/plate-contact-sheets/7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCylFrst9BlkShSht:ea5a7fdb78c6738bb22059d2dc98d99e69d94ac0870e0eabecf203ce66390ab4": {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "binding": "ea5a7fdb78c6738bb22059d2dc98d99e69d94ac0870e0eabecf203ce66390ab4",
+      "sha256": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9BlkShSht/4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12.front-on-1000x1100.webp",
+          "sha256": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+          "url": "/images/plate-contact-sheets/4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9BlkShSht/2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4.front-off-1000x1100.webp",
+          "sha256": "2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4",
+          "url": "/images/plate-contact-sheets/2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCylFrst9CuSht:baf6e2a1e52bbe99198e2caf7923a8ca6265e9867810a0f7f5e706cb9abe8979": {
+      "sku": "GBTallCylFrst9CuSht",
+      "binding": "baf6e2a1e52bbe99198e2caf7923a8ca6265e9867810a0f7f5e706cb9abe8979",
+      "sha256": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9CuSht/58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d.front-on-1000x1100.webp",
+          "sha256": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+          "url": "/images/plate-contact-sheets/58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9CuSht/30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa.front-off-1000x1100.webp",
+          "sha256": "30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa",
+          "url": "/images/plate-contact-sheets/30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCylFrst9GlMattSht:60ef016b2a7f3b6f6e7173aa5691524c3cc72277392098c4f1033ffefd63a084": {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "binding": "60ef016b2a7f3b6f6e7173aa5691524c3cc72277392098c4f1033ffefd63a084",
+      "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlMattSht/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.front-on-1000x1100.webp",
+          "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+          "url": "/images/plate-contact-sheets/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlMattSht/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.front-off-1000x1100.webp",
+          "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+          "url": "/images/plate-contact-sheets/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCylFrst9GlSht:49d91b4afc8e9b8e7d1c873852d72223cdb77f2a0ac8e6567708b8c025caceda": {
+      "sku": "GBTallCylFrst9GlSht",
+      "binding": "49d91b4afc8e9b8e7d1c873852d72223cdb77f2a0ac8e6567708b8c025caceda",
+      "sha256": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlSht/97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae.front-on-1000x1100.webp",
+          "sha256": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+          "url": "/images/plate-contact-sheets/97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlSht/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.front-off-1000x1100.webp",
+          "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+          "url": "/images/plate-contact-sheets/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCylFrst9SlMattSht:6eec1ce33f0e71a9bd0fc8215a0a61a484ebadf678ec0ac2227621c98bc91a2d": {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "binding": "6eec1ce33f0e71a9bd0fc8215a0a61a484ebadf678ec0ac2227621c98bc91a2d",
+      "sha256": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlMattSht/d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b.front-on-1000x1100.webp",
+          "sha256": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+          "url": "/images/plate-contact-sheets/d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlMattSht/21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d.front-off-1000x1100.webp",
+          "sha256": "21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d",
+          "url": "/images/plate-contact-sheets/21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCylFrst9SlSht:20753c1e461595811a12e05af9fc42bca54a8900dd22ba24884f08323955ff32": {
+      "sku": "GBTallCylFrst9SlSht",
+      "binding": "20753c1e461595811a12e05af9fc42bca54a8900dd22ba24884f08323955ff32",
+      "sha256": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlSht/7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261.front-on-1000x1100.webp",
+          "sha256": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+          "url": "/images/plate-contact-sheets/7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlSht/cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d.front-off-1000x1100.webp",
+          "sha256": "cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d",
+          "url": "/images/plate-contact-sheets/cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "PbClear4ozFlpWh:901821e409cbd3f9742e2174ccec682c5f22e726f78f3849313ca4464d253b76": {
+      "sku": "PbClear4ozFlpWh",
+      "binding": "901821e409cbd3f9742e2174ccec682c5f22e726f78f3849313ca4464d253b76",
+      "sha256": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-118ml-clear/PbClear4ozFlpWh/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.front-on-1000x1100.webp",
+          "sha256": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+          "url": "/images/plate-contact-sheets/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-118ml-clear/PbClear4ozFlpWh/57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0.front-off-1000x1100.webp",
+          "sha256": "57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0",
+          "url": "/images/plate-contact-sheets/57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "PbClear8ozFlpWh:32e650f063f912cd02ae186f1a8b3697cfe31dd29ab12d464ea95ee8525a4555": {
+      "sku": "PbClear8ozFlpWh",
+      "binding": "32e650f063f912cd02ae186f1a8b3697cfe31dd29ab12d464ea95ee8525a4555",
+      "sha256": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-227ml-clear/PbClear8ozFlpWh/26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e.front-on-1000x1100.webp",
+          "sha256": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+          "url": "/images/plate-contact-sheets/26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-227ml-clear/PbClear8ozFlpWh/30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327.front-off-1000x1100.webp",
+          "sha256": "30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327",
+          "url": "/images/plate-contact-sheets/30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "PbNat16ozFlpWh:0d9499fc3c5b2a41d3d24b801742968a85aabfedece4f8eb9036fef1da1fbbeb": {
+      "sku": "PbNat16ozFlpWh",
+      "binding": "0d9499fc3c5b2a41d3d24b801742968a85aabfedece4f8eb9036fef1da1fbbeb",
+      "sha256": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-454ml-clear/PbNat16ozFlpWh/1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8.front-on-1000x1100.webp",
+          "sha256": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+          "url": "/images/plate-contact-sheets/1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-454ml-clear/PbNat16ozFlpWh/d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4.front-off-1000x1100.webp",
+          "sha256": "d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4",
+          "url": "/images/plate-contact-sheets/d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSpry1ozGl:954ff6ed7243f3b5ee523a550e634f21758700560146c65b167a8bd68f238493": {
+      "sku": "GBSpry1ozGl",
+      "binding": "954ff6ed7243f3b5ee523a550e634f21758700560146c65b167a8bd68f238493",
+      "sha256": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:13.705Z",
+      "batchId": "41047d1b-4d9b-45df-bb0a-a285af400491",
+      "scope": "cap-on-appearance-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.front-on-1000x1100.webp",
+          "sha256": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+          "url": "/images/plate-contact-sheets/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSpry1ozSl:09beb5c0f03297efe3d3b6e5c3a4c016865373b1d97dfc5ba8188e8585b5910f": {
+      "sku": "GBSpry1ozSl",
+      "binding": "09beb5c0f03297efe3d3b6e5c3a4c016865373b1d97dfc5ba8188e8585b5910f",
+      "sha256": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:13.705Z",
+      "batchId": "41047d1b-4d9b-45df-bb0a-a285af400491",
+      "scope": "cap-on-appearance-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozSl/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.front-on-1000x1100.webp",
+          "sha256": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+          "url": "/images/plate-contact-sheets/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9RollBlkSh:500b33929ffaddee4e9fdd6a793f5f603aa3a80ac5fc12e6ca41d4e2e09eb00c": {
+      "sku": "GBTallCyl9RollBlkSh",
+      "binding": "500b33929ffaddee4e9fdd6a793f5f603aa3a80ac5fc12e6ca41d4e2e09eb00c",
+      "sha256": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:13.705Z",
+      "batchId": "41047d1b-4d9b-45df-bb0a-a285af400491",
+      "scope": "cap-on-appearance-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkSh/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.front-on-1000x1100.webp",
+          "sha256": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+          "url": "/images/plate-contact-sheets/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9RollCuMatt:e90f65d6fb9781d0c2868e6060347e1f9e3a7ae713b9b0d8e5e0d392747aaa84": {
+      "sku": "GBTallCyl9RollCuMatt",
+      "binding": "e90f65d6fb9781d0c2868e6060347e1f9e3a7ae713b9b0d8e5e0d392747aaa84",
+      "sha256": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:13.705Z",
+      "batchId": "41047d1b-4d9b-45df-bb0a-a285af400491",
+      "scope": "cap-on-appearance-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollCuMatt/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.front-on-1000x1100.webp",
+          "sha256": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+          "url": "/images/plate-contact-sheets/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBTallCyl9RollSlSh:566b54d0671377d7fd867b6d2d19499879256c2f6c9f6bda12ade18f7355c8b9": {
+      "sku": "GBTallCyl9RollSlSh",
+      "binding": "566b54d0671377d7fd867b6d2d19499879256c2f6c9f6bda12ade18f7355c8b9",
+      "sha256": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:13.705Z",
+      "batchId": "41047d1b-4d9b-45df-bb0a-a285af400491",
+      "scope": "cap-on-appearance-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlSh/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.front-on-1000x1100.webp",
+          "sha256": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+          "url": "/images/plate-contact-sheets/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.webp",
           "width": 1000,
           "height": 1100
         }
@@ -40006,6 +41170,1170 @@
           "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e.front-on-1000x1100.webp",
           "sha256": "6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e",
           "url": "/images/plate-contact-sheets/6f4a0bb1ff7e9458a5282afe19f52941167924d0cea9ca988c8ebd84723ed87e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5BlkShSht",
+      "binding": "7c621999ee1d07db9449e650cf5f7319e2ae20d68fa65bbfae84da87f6dcb47b",
+      "sha256": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.front-on-1000x1100.webp",
+          "sha256": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+          "url": "/images/plate-contact-sheets/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "binding": "55374c5f74be2bfd33afd047e897dfe449806bf28ce96e5af3dbb189e4149c94",
+      "sha256": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5CuSht/1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985.front-on-1000x1100.webp",
+          "sha256": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+          "url": "/images/plate-contact-sheets/1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5CuSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "binding": "535cd2de1c6340631f05c836f84f4814ec4f734db4fa8676bffd6f05ffd0eeb1",
+      "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlMattSht/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.front-on-1000x1100.webp",
+          "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+          "url": "/images/plate-contact-sheets/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlMattSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "binding": "38b43a8e152afa10832ab5abda0e18d28d3a7df7fd7eabfd5cb996cecb2791c2",
+      "sha256": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlSht/5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a.front-on-1000x1100.webp",
+          "sha256": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+          "url": "/images/plate-contact-sheets/5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5GlSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "binding": "7017f1355db07327e83d927bf70e4ec33223a45c704815981df3bfaf377455d5",
+      "sha256": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlMattSht/f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1.front-on-1000x1100.webp",
+          "sha256": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+          "url": "/images/plate-contact-sheets/f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlMattSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "binding": "1748a840e0828a44ddb7f5ce76e9f62765d61f3adbdd78f251363c2934cfdcef",
+      "sha256": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlSht/ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43.front-on-1000x1100.webp",
+          "sha256": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+          "url": "/images/plate-contact-sheets/ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5SlSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/plate-contact-sheets/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "binding": "a4f35bb2df13e1741978954a1b01932ab4db8b7197425fe12a3bbad7f5163f7c",
+      "sha256": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5BlkShSht/2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3.front-on-1000x1100.webp",
+          "sha256": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+          "url": "/images/plate-contact-sheets/2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5BlkShSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "binding": "5f90179f542b625326dff2c80ddb87830dea4584b016fb5646e7671e3bde1a7b",
+      "sha256": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5CuSht/fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16.front-on-1000x1100.webp",
+          "sha256": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+          "url": "/images/plate-contact-sheets/fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5CuSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "binding": "0a124ecfdc40993681c8e26c0b21429aa7866099e365c89d833591f54bfda332",
+      "sha256": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlMattSht/2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964.front-on-1000x1100.webp",
+          "sha256": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+          "url": "/images/plate-contact-sheets/2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlMattSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "binding": "4b5568f4d96afe0f82b607e0758aad62062b3894e7ebbd3bbf0968d3fcfdabe6",
+      "sha256": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlSht/791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc.front-on-1000x1100.webp",
+          "sha256": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+          "url": "/images/plate-contact-sheets/791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5GlSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "binding": "a3f0806eb4b6a0d082b37439f62889968d8a76a34da274bd60ed320640fd76ff",
+      "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlMattSht/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.front-on-1000x1100.webp",
+          "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+          "url": "/images/plate-contact-sheets/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlMattSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "binding": "8401d6941735045ac628dc91242d989df7e69fe91504df0c51530a0d24c259a5",
+      "sha256": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlSht/7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8.front-on-1000x1100.webp",
+          "sha256": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+          "url": "/images/plate-contact-sheets/7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5SlSht/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.front-off-1000x1100.webp",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/plate-contact-sheets/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "binding": "d927a9982b9736bb3211df00415cb6c27a1c1d747ea1fe85525b798965c4e759",
+      "sha256": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.front-on-1000x1100.webp",
+          "sha256": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+          "url": "/images/plate-contact-sheets/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9.front-off-1000x1100.webp",
+          "sha256": "e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9",
+          "url": "/images/plate-contact-sheets/e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSpry1ozSl",
+      "binding": "86879f08ccb089d2802d9d59a241d4d5a2769586abfc4d5b8e6bdcd0480d2b8c",
+      "sha256": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozSl/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.front-on-1000x1100.webp",
+          "sha256": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+          "url": "/images/plate-contact-sheets/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozSl/36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946.front-off-1000x1100.webp",
+          "sha256": "36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946",
+          "url": "/images/plate-contact-sheets/36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "binding": "dd5239d1b1803c9d2118f4dfcf47320f34999c7c831cbf2e26c8d925d6c9ca55",
+      "sha256": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClBlk/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.front-on-1000x1100.webp",
+          "sha256": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+          "url": "/images/plate-contact-sheets/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClBlk/79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47.front-off-1000x1100.webp",
+          "sha256": "79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47",
+          "url": "/images/plate-contact-sheets/79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "binding": "8256c76bbfec7615081a4e3b4a80450fc1f453e18094d83725bb9eb45d642230",
+      "sha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClWht/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.front-on-1000x1100.webp",
+          "sha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+          "url": "/images/plate-contact-sheets/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClWht/d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7.front-off-1000x1100.webp",
+          "sha256": "d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7",
+          "url": "/images/plate-contact-sheets/d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "binding": "b2c9449dbdc734860c33b95bd648c5adae25463e787d7c4d43c35da3cab498e0",
+      "sha256": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClBlk/4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a.front-on-1000x1100.webp",
+          "sha256": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+          "url": "/images/plate-contact-sheets/4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClBlk/fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa.front-off-1000x1100.webp",
+          "sha256": "fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa",
+          "url": "/images/plate-contact-sheets/fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "binding": "7f4829bc84f989cde0793712909a81641367a4aaf8efe8754e71474aed2d6eef",
+      "sha256": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClWh/b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c.front-on-1000x1100.webp",
+          "sha256": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+          "url": "/images/plate-contact-sheets/b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-4ml-clear-12mm/GBSpry4mlClWh/69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b.front-off-1000x1100.webp",
+          "sha256": "69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b",
+          "url": "/images/plate-contact-sheets/69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "binding": "c66f6ec66c42f80b4d1d4306d8d6205fd012fce624bf96eaee3803398690736e",
+      "sha256": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9BlkShSht/f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3.front-on-1000x1100.webp",
+          "sha256": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+          "url": "/images/plate-contact-sheets/f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9BlkShSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "binding": "900f271b2d5c6f913845082e953c5cadafd479e7fb16986e4efdd95406da2816",
+      "sha256": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9CuSht/bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9.front-on-1000x1100.webp",
+          "sha256": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+          "url": "/images/plate-contact-sheets/bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9CuSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "binding": "ba6314e225ace468489cc4df68ec410d3e4489bbfbb08c35248b5bd19eaccad7",
+      "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlMattSht/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.front-on-1000x1100.webp",
+          "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+          "url": "/images/plate-contact-sheets/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlMattSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "binding": "88d0ece5fde946d0523dc4c6d07825ca04c36efac2ad89ea55e397db681ce9b4",
+      "sha256": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlSht/0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf.front-on-1000x1100.webp",
+          "sha256": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+          "url": "/images/plate-contact-sheets/0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9GlSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "binding": "99b2185a10c0026f8294ad59031d6a68a72e501069ec65ba700492f3df7b5ce5",
+      "sha256": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.front-on-1000x1100.webp",
+          "sha256": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+          "url": "/images/plate-contact-sheets/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b.front-off-1000x1100.webp",
+          "sha256": "930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b",
+          "url": "/images/plate-contact-sheets/930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "binding": "9585b5dc76e979b089284f5813730f0d03707eba426a8a913135e2854acaa6f5",
+      "sha256": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkDot/656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220.front-on-1000x1100.webp",
+          "sha256": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+          "url": "/images/plate-contact-sheets/656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkDot/4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112.front-off-1000x1100.webp",
+          "sha256": "4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112",
+          "url": "/images/plate-contact-sheets/4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9RollBlkSh",
+      "binding": "d8f78f6d19266eed5fa13c281cca129dcc9554649ea5a94f1ff5983e31b7279e",
+      "sha256": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkSh/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.front-on-1000x1100.webp",
+          "sha256": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+          "url": "/images/plate-contact-sheets/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkSh/9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192.front-off-1000x1100.webp",
+          "sha256": "9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192",
+          "url": "/images/plate-contact-sheets/9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9RollCuMatt",
+      "binding": "c07536f1c3b0d399d741ade7c1b9ca97e843c4044e38d1b39d8b67749d1d2751",
+      "sha256": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollCuMatt/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.front-on-1000x1100.webp",
+          "sha256": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+          "url": "/images/plate-contact-sheets/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollCuMatt/e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f.front-off-1000x1100.webp",
+          "sha256": "e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f",
+          "url": "/images/plate-contact-sheets/e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9RollSlSh",
+      "binding": "a18cb525a6155d324131354ebcdf4188a8a0ac95026e587502b61a4ae4c19c3e",
+      "sha256": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlSh/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.front-on-1000x1100.webp",
+          "sha256": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+          "url": "/images/plate-contact-sheets/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlSh/e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0.front-off-1000x1100.webp",
+          "sha256": "e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0",
+          "url": "/images/plate-contact-sheets/e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "binding": "6d46813a556eee36f009513c892fdc3f8cc039c07cf435033d7fa8a30eda0344",
+      "sha256": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlMattSht/c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15.front-on-1000x1100.webp",
+          "sha256": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+          "url": "/images/plate-contact-sheets/c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlMattSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "binding": "c012b66b0fec3d243e404fac80171b5b3351d0d0c893ff79736bee91814e973b",
+      "sha256": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlSht/7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc.front-on-1000x1100.webp",
+          "sha256": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+          "url": "/images/plate-contact-sheets/7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9SlSht/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.front-off-1000x1100.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/plate-contact-sheets/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "binding": "ea5a7fdb78c6738bb22059d2dc98d99e69d94ac0870e0eabecf203ce66390ab4",
+      "sha256": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9BlkShSht/4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12.front-on-1000x1100.webp",
+          "sha256": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+          "url": "/images/plate-contact-sheets/4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9BlkShSht/2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4.front-off-1000x1100.webp",
+          "sha256": "2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4",
+          "url": "/images/plate-contact-sheets/2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "binding": "baf6e2a1e52bbe99198e2caf7923a8ca6265e9867810a0f7f5e706cb9abe8979",
+      "sha256": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9CuSht/58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d.front-on-1000x1100.webp",
+          "sha256": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+          "url": "/images/plate-contact-sheets/58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9CuSht/30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa.front-off-1000x1100.webp",
+          "sha256": "30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa",
+          "url": "/images/plate-contact-sheets/30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "binding": "60ef016b2a7f3b6f6e7173aa5691524c3cc72277392098c4f1033ffefd63a084",
+      "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlMattSht/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.front-on-1000x1100.webp",
+          "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+          "url": "/images/plate-contact-sheets/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlMattSht/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.front-off-1000x1100.webp",
+          "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+          "url": "/images/plate-contact-sheets/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "binding": "49d91b4afc8e9b8e7d1c873852d72223cdb77f2a0ac8e6567708b8c025caceda",
+      "sha256": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlSht/97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae.front-on-1000x1100.webp",
+          "sha256": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+          "url": "/images/plate-contact-sheets/97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9GlSht/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.front-off-1000x1100.webp",
+          "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+          "url": "/images/plate-contact-sheets/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "binding": "6eec1ce33f0e71a9bd0fc8215a0a61a484ebadf678ec0ac2227621c98bc91a2d",
+      "sha256": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlMattSht/d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b.front-on-1000x1100.webp",
+          "sha256": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+          "url": "/images/plate-contact-sheets/d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlMattSht/21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d.front-off-1000x1100.webp",
+          "sha256": "21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d",
+          "url": "/images/plate-contact-sheets/21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "binding": "20753c1e461595811a12e05af9fc42bca54a8900dd22ba24884f08323955ff32",
+      "sha256": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlSht/7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261.front-on-1000x1100.webp",
+          "sha256": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+          "url": "/images/plate-contact-sheets/7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9SlSht/cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d.front-off-1000x1100.webp",
+          "sha256": "cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d",
+          "url": "/images/plate-contact-sheets/cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "PbClear4ozFlpWh",
+      "binding": "901821e409cbd3f9742e2174ccec682c5f22e726f78f3849313ca4464d253b76",
+      "sha256": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-118ml-clear/PbClear4ozFlpWh/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.front-on-1000x1100.webp",
+          "sha256": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+          "url": "/images/plate-contact-sheets/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-118ml-clear/PbClear4ozFlpWh/57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0.front-off-1000x1100.webp",
+          "sha256": "57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0",
+          "url": "/images/plate-contact-sheets/57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "PbClear8ozFlpWh",
+      "binding": "32e650f063f912cd02ae186f1a8b3697cfe31dd29ab12d464ea95ee8525a4555",
+      "sha256": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-227ml-clear/PbClear8ozFlpWh/26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e.front-on-1000x1100.webp",
+          "sha256": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+          "url": "/images/plate-contact-sheets/26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-227ml-clear/PbClear8ozFlpWh/30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327.front-off-1000x1100.webp",
+          "sha256": "30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327",
+          "url": "/images/plate-contact-sheets/30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "PbNat16ozFlpWh",
+      "binding": "0d9499fc3c5b2a41d3d24b801742968a85aabfedece4f8eb9036fef1da1fbbeb",
+      "sha256": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:12.856Z",
+      "batchId": "ec915287-e706-42ac-9b39-5aa76f1d6c3d",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-454ml-clear/PbNat16ozFlpWh/1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8.front-on-1000x1100.webp",
+          "sha256": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+          "url": "/images/plate-contact-sheets/1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-454ml-clear/PbNat16ozFlpWh/d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4.front-off-1000x1100.webp",
+          "sha256": "d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4",
+          "url": "/images/plate-contact-sheets/d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "binding": "954ff6ed7243f3b5ee523a550e634f21758700560146c65b167a8bd68f238493",
+      "sha256": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:13.705Z",
+      "batchId": "41047d1b-4d9b-45df-bb0a-a285af400491",
+      "scope": "cap-on-appearance-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.front-on-1000x1100.webp",
+          "sha256": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+          "url": "/images/plate-contact-sheets/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSpry1ozSl",
+      "binding": "09beb5c0f03297efe3d3b6e5c3a4c016865373b1d97dfc5ba8188e8585b5910f",
+      "sha256": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:13.705Z",
+      "batchId": "41047d1b-4d9b-45df-bb0a-a285af400491",
+      "scope": "cap-on-appearance-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozSl/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.front-on-1000x1100.webp",
+          "sha256": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+          "url": "/images/plate-contact-sheets/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9RollBlkSh",
+      "binding": "500b33929ffaddee4e9fdd6a793f5f603aa3a80ac5fc12e6ca41d4e2e09eb00c",
+      "sha256": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:13.705Z",
+      "batchId": "41047d1b-4d9b-45df-bb0a-a285af400491",
+      "scope": "cap-on-appearance-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollBlkSh/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.front-on-1000x1100.webp",
+          "sha256": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+          "url": "/images/plate-contact-sheets/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9RollCuMatt",
+      "binding": "e90f65d6fb9781d0c2868e6060347e1f9e3a7ae713b9b0d8e5e0d392747aaa84",
+      "sha256": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:13.705Z",
+      "batchId": "41047d1b-4d9b-45df-bb0a-a285af400491",
+      "scope": "cap-on-appearance-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollCuMatt/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.front-on-1000x1100.webp",
+          "sha256": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+          "url": "/images/plate-contact-sheets/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9RollSlSh",
+      "binding": "566b54d0671377d7fd867b6d2d19499879256c2f6c9f6bda12ade18f7355c8b9",
+      "sha256": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+      "status": "approved",
+      "notes": "Jordan approved these exact bytes on the final Cylinder comparison sheet and then explicitly instructed release and indexing. Approval packet b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b. Release manifest d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0.",
+      "updatedAt": "2026-09-13T15:44:13.705Z",
+      "batchId": "41047d1b-4d9b-45df-bb0a-a285af400491",
+      "scope": "cap-on-appearance-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlSh/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.front-on-1000x1100.webp",
+          "sha256": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+          "url": "/images/plate-contact-sheets/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.webp",
           "width": 1000,
           "height": 1100
         }

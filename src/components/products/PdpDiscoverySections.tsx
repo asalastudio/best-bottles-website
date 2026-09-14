@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,10 +65,6 @@ type PdpDiscoveryContentProps = {
     onAskGrace: () => void;
     onAddComponent: (component: PdpCompatibilityComponent) => void;
 };
-
-function formatPrice(price: number | null): string {
-    return price == null ? "Price on request" : `$${price.toFixed(2)} /ea`;
-}
 
 function sizeChipLabel(relation: ProductGroupRelation): string {
     return relation.capacityMl != null ? `${relation.capacityMl} ml` : (relation.capacity ?? "Size");
@@ -138,12 +136,17 @@ function ComponentCard({
     component: PdpCompatibilityComponent;
     onAddComponent: (component: PdpCompatibilityComponent) => void;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null): string => (price == null ? "Price on request" : `${money(price)} /ea`);
     const checkoutReady = isCheckoutReady({
         graceSku: component.graceSku,
         shopifyVariantId: component.shopifyVariantId,
         shopifySellable: component.shopifySellable,
     });
+    // The quote link still needs a working identifier, but only the merchant SKU
+    // is shown to a buyer: the Grace code is internal (D-06).
     const sku = component.websiteSku ?? component.graceSku;
+    const displaySku = component.websiteSku;
     const quoteHref = `/request-quote?products=${encodeURIComponent(`${component.itemName} (SKU: ${sku})`)}`;
 
     return (
@@ -152,7 +155,7 @@ function ComponentCard({
             <div className="min-w-0 flex-1">
                 <p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Compatible with this bottle</p>
                 <h3 className="mt-1 text-base font-semibold text-obsidian">{component.itemName}</h3>
-                <p className="mt-1 font-mono text-[11px] uppercase tracking-wide text-slate">SKU {sku} · {component.graceSku}</p>
+                {displaySku ? <p className="mt-1 font-mono text-[11px] uppercase tracking-wide text-slate">SKU {displaySku}</p> : null}
                 <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate">
                     <span>{component.stockStatus ?? "Availability to confirm"}</span>
                     <span className="font-semibold text-obsidian">{formatPrice(component.webPrice1pc)}</span>

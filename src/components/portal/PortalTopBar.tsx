@@ -5,12 +5,12 @@ import { usePathname } from "next/navigation";
 
 const sectionLabels: Record<string, string> = {
     "/portal": "Overview",
-    "/portal/orders": "Orders",
-    "/portal/tracking": "Tracking",
-    "/portal/drafts": "Drafts",
+    "/portal/catalog": "Catalog",
+    "/portal/orders": "Order history",
+    "/portal/drafts": "Orders",
     "/portal/tools": "Tools",
-    "/portal/grace": "Grace AI",
-    "/portal/documents": "Documents",
+    "/portal/grace": "Grace Projects",
+    "/portal/sessions": "Grace Sessions",
     "/portal/account": "Account",
     "/portal/settings": "Profile & Security",
 };
@@ -54,7 +54,7 @@ export default function PortalTopBar({
                     <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="1.6" className="w-3 h-3 shrink-0">
                         <line x1="6" y1="2" x2="6" y2="10" /><line x1="2" y1="6" x2="10" y2="6" />
                     </svg>
-                    New Draft
+                    New order
                 </Link>
             </div>
         </div>

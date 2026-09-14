@@ -39,6 +39,19 @@ export async function loadBuilderFamily(family: string) {
     return loadBuilderBodies(data.rows);
 }
 
+/** The published plate per candidate SKU: the exact master front on the plate
+ * canvas, used as the complete-stage photograph where no reviewed assembly or
+ * kit exists. Bounded lookups, never the whole table. */
+async function loadPlateUrls(convex: ConvexHttpClient, rows: CatalogRow[]) {
+    const urls = new Array<string | null>(rows.length).fill(null);
+    for (let start = 0; start < rows.length; start += 200) {
+        const slice = rows.slice(start, start + 200);
+        const { plates } = await convex.query(api.productPlates.forSkus, { skus: slice.map(row => row.websiteSku!) });
+        slice.forEach((row, i) => { urls[start + i] = plates[row.websiteSku!]?.image ?? null; });
+    }
+    return urls;
+}
+
 export async function loadBuilderBodies(rows: CatalogRow[]) {
     const convex = client();
     const activeBySku = new Map<string, ActiveComponent | null>();
@@ -58,7 +71,8 @@ export async function loadBuilderBodies(rows: CatalogRow[]) {
             configurations[index] = kit;
         }
     }));
-    const bodies = groupBuilderBodies(resolveBuilderConfigurations(candidates, configurations).filter(config => config !== null));
+    const plateUrls = await loadPlateUrls(convex, candidates);
+    const bodies = groupBuilderBodies(resolveBuilderConfigurations(candidates, configurations, plateUrls).filter(config => config !== null));
     for (const row of rows) {
         const unavailable = unavailableVintageFinishes(row, activeBySku);
         if (!unavailable.length) continue;
@@ -83,5 +97,5 @@ export async function freshConfiguration(family: string, sku: string) {
         && row.color === target[0].color && row.neckThreadSize === target[0].neckThreadSize), async sku => (await convex.query(api.products.lookupSku, { sku }))?.product ?? null);
     const kits = await Promise.all(rows.map(row => convex.query(api.productKits.forSku,
         { websiteSku: row.websiteSku ?? null, graceSku: row.graceSku ?? null })));
-    return resolveBuilderConfigurations(rows, kits).find(config => config?.id === sku) ?? null;
+    return resolveBuilderConfigurations(rows, kits, await loadPlateUrls(convex, rows)).find(config => config?.id === sku) ?? null;
 }

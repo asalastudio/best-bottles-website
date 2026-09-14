@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitment-copy";
 import { useEffect, useId, useMemo, useRef, useState, useTransition, useSyncExternalStore, type ReactNode } from "react";
 import Link from "next/link";
@@ -8,6 +10,7 @@ import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, Sl
 import { useCart } from "@/components/CartProvider";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
 import FamilyLoadingStatus from "@/components/bottle-builder/FamilyLoadingStatus";
+import bodyHeightMedia from "@/lib/bottle-builder/body-heights.generated.json";
 import MobileBuilder from "@/components/bottle-builder/MobileBuilder";
 import BuilderImage from "@/components/bottle-builder/BuilderImage";
 import FitmentIllustration from "@/components/bottle-builder/FitmentIllustration";
@@ -16,7 +19,7 @@ import { checkoutMinimum, checkoutMinimumMessage } from "@/lib/checkout";
 import { analytics } from "@/lib/analytics";
 import {
     builderOrder, deriveBuilder, emptySelection, previewParts, reconcileSelection, selectBuilderBody,
-    MAX_QUANTITY, ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection,
+    MAX_QUANTITY, ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection, bareGlassPreview, clearBodyPreview,
 } from "@/lib/bottle-builder/model";
 import hasIncludedCovers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import styles from "@/components/bottle-builder/Builder.module.css";
@@ -38,11 +41,22 @@ const fitmentDescriptions: Record<string, string> = {
     "Vintage Bulb Sprayer with Tassel": "A squeeze-bulb spray with a decorative tassel.",
 };
 
-// Visual size cues for the chooser, not a dimensional product comparison.
-// Preserve the taller, slender 9 ml profile and a graduated size range.
-function chooserScale(body: BuilderBody) {
-    if (body.family === "Circle") return ({ 15: .68, 30: .79, 50: .9, 100: 1 } as Record<number, number>)[body.capacityMl] ?? 1;
-    if (body.family !== "Cylinder") return 1;
+// Chooser tiles keep the family's physical proportions: each body is shown at
+// its measured glass height relative to the tallest body on offer (canonical
+// body-geometry audit, 2026-07-12), floored so the smallest stays legible.
+// Cylinder keeps its hand-tuned cues for the two 9 ml necks the audit merges.
+const bodyHeights = (bodyHeightMedia as { heights: Record<string, { bodyHeightMm: number }> }).heights;
+export function bodyHeightMm(body: Pick<BuilderBody, "family" | "capacityMl">) {
+    return bodyHeights[`${body.family}|${body.capacityMl}`]?.bodyHeightMm ?? null;
+}
+function physicalChooserScale(body: BuilderBody, all: BuilderBody[]) {
+    const mine = bodyHeightMm(body);
+    const tallest = Math.max(...all.map(b => bodyHeightMm(b) ?? 0));
+    if (!mine || !tallest) return null;
+    return Math.max(.48, mine / tallest);
+}
+function chooserScale(body: BuilderBody, all: BuilderBody[] = [body]) {
+    if (body.family !== "Cylinder") return physicalChooserScale(body, all) ?? 1;
     if (body.capacityMl <= 5) return .52;
     if (body.capacityMl === 9 && body.neck === "13-415") return .84;
     if (body.capacityMl === 9 && body.neck === "17-415") return .68;
@@ -57,6 +71,8 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     openFamily: string;
     bodies: BuilderBody[];
 }) {
+    const { formatPrice } = useRegion();
+    const money = (value: number | null) => (value == null ? "—" : formatPrice(value));
     const { families, status: familyStatus, retry: retryFamilies } = useBuilderFamilies(initialFamilies);
     const familyNotice = <FamilyLoadingStatus status={familyStatus} onRetry={retryFamilies} />;
     const router = useRouter();
@@ -76,6 +92,9 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const [application, setApplication] = useState("");
     const [moreFilters, setMoreFilters] = useState(false);
     const [pending, startTransition] = useTransition();
+    // The family select is controlled by the server-rendered family; while the
+    // next family loads it must show the family the customer just chose.
+    const [chosenFamily, setChosenFamily] = useState(openFamily);
     const [adding, setAdding] = useState(false);
     const [lastAdded, setLastAdded] = useState<{ name: string; quantity: number } | null>(null);
     const confirmation = useRef<HTMLDivElement>(null);
@@ -186,7 +205,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         onUpdate={patch => { update(patch); if (patch.bodyId || patch.color || patch.fitment) setShowCover(false); }} onReset={reset} onFamily={family => { reset(); startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`)); }} onAdd={addToCart}
         size={size} neck={neck} application={application} onFilter={(filter, value) => { if (filter === "size") setSize(value); else if (filter === "neck") setNeck(value); else setApplication(value); }}
         pending={pending} adding={adding} hydrated={isCartHydrated} error={error} lastAdded={lastAdded} cartProgress={cartProgress}
-        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={chooserScale} />;
+        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={b => chooserScale(b, bodies)} />;
 
     return <div className={styles.builder} data-bottle-builder data-current-step={step} data-has-bottle={Boolean(body)} aria-busy={pending || adding}>
         <header className={styles.header}>
@@ -209,11 +228,13 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         </div>}
         {step === 0 && familyNotice}
         {step === 0 && <div className={styles.filters}>
-            <label>Bottle family<select aria-label="Bottle family" value={openFamily} disabled={adding || pending} onChange={e => {
+            <label>Bottle family<select aria-label="Bottle family" value={chosenFamily} disabled={adding} onChange={e => {
                 const family = e.target.value;
+                setChosenFamily(family);
                 reset();
                 startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`));
             }}>{families.map(f => <option key={f.family}>{f.family}</option>)}</select></label>
+            {pending && chosenFamily !== openFamily && <p role="status" className={styles.familyPending}>Loading {chosenFamily} bottles…</p>}
             <label>Size<select aria-label="Size" value={size} disabled={adding || pending} onChange={e => { setSize(e.target.value); goTo(0); }}>
                 <option value="">All sizes</option>{sizes.map(size => <option value={size} key={size}>{size} ml</option>)}</select></label>
             <button className={styles.filterToggle} aria-expanded={moreFilters} onClick={() => setMoreFilters(!moreFilters)}><SlidersHorizontal size={17} /> More filters{neck || application ? " •" : ""}</button>
@@ -224,19 +245,19 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         </div>}
         <div className={styles.workspace} id="builder-workspace">
             <section className={styles.options} aria-label="Bottle options">
-                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 1} of 4</span><button type="button" className={styles.startOver} onClick={reset} disabled={adding || pending}>Start over</button></div>
+                <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 1} of 4</span><button type="button" className={styles.startOver} onClick={reset} disabled={adding}>Start over</button></div>
                     <h2 tabIndex={-1} ref={optionHeading}>{titles[step]}</h2><p>{subtitles[step]}</p></div>
                 <fieldset aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
                 {step === 0 && <div className={styles.bottleGrid}>
                     {visibleBodies.map(b => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)}>
-                        <div className={styles.bottleThumb}><BuilderImage config={b.configurations[0]} parts={previewParts(b.configurations[0], "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b)} /></div>
+                        <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} /></div>
                         <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <small>{b.profileLabel}</small>}<span className={styles.neckBadge}>Neck: {b.neck}</span>
                     </Option>)}
                 </div>}
                 {step === 0 && !visibleBodies.length && <div className={styles.empty}><h3>No bottles for these choices.</h3><p>Try another size or bottle family.</p><button className={styles.secondary} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button><Link href={catalogHref}>Explore the full catalog <ArrowRight size={15} /></Link></div>}
                 {step === 0 && body && <div className={styles.glassSection}><h3 ref={glassHeading} tabIndex={-1}>Choose your glass</h3><div className={current.colors.length === 1 ? styles.singleGlass : styles.colorGrid}>
                     {current.colors.map(c => { const example = body!.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => update({ color: c, fitment: null, closure: null })}>
-                        {current.colors.length > 1 && <div className={styles.colorThumb}><BuilderImage config={example} parts={previewParts(example, "body")} label={`${c} bottle`} /></div>}<strong>{c}{current.colors.length === 1 ? " glass" : ""}</strong>
+                        {current.colors.length > 1 && <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} /></div>}<strong>{c}{current.colors.length === 1 ? " glass" : ""}</strong>
                     </Option>; })}
                 </div><div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>Your bottle is ready. Select <strong>Choose Fitment</strong> to continue.</span></>}</div></div>}
                 {(step === 1 || step === 2) && <>

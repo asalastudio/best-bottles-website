@@ -11,6 +11,17 @@ vi.mock("mixpanel-browser", () => ({
         register: vi.fn(), set_group: vi.fn(), get_group: vi.fn(() => ({ set: vi.fn() })), time_event: vi.fn(),
     },
 }));
+
+vi.mock("posthog-js", () => ({
+  default: {
+    init: vi.fn(),
+    identify: vi.fn(),
+    reset: vi.fn(),
+    capture: track,
+    setPersonProperties: vi.fn(),
+    group: vi.fn(),
+  },
+}));
 vi.mock("@/components/CartProvider", () => ({ useCart: () => ({ addItems }) }));
 vi.mock("next/image", () => ({ default: (props: ImgHTMLAttributes<HTMLImageElement> & { fill?: boolean }) => {
     const p = { ...props } as Record<string, unknown>; delete p.fill; delete p.unoptimized; return React.createElement("img", p);

@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { decodeImage } from "@/lib/paper-doll/decode-image";
 import type { LocalKitPilot } from "@/lib/products/local-kit-pilot";
 import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
@@ -90,11 +92,6 @@ function analyticsApplicationForApplicator(applicator: string | null | undefined
 }
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
-
-function formatPrice(price: number | null | undefined): string {
-    if (!price) return "—";
-    return `$${price.toFixed(2)}`;
-}
 
 function getFinishFromGraceSku(graceSku: string | null | undefined): { label: string; swatchName: string } | null {
     if (!graceSku) return null;
@@ -672,7 +669,7 @@ function VariantImagePicker({
                 key={tile.id}
                 type="button"
                 onClick={() => onSelect(tile.variant)}
-                title={`${tile.label} · ${tile.graceSku}`}
+                title={tile.label}
                 aria-label={`Select ${tile.label} variant`}
                 aria-pressed={isSelected}
                 className={`
@@ -817,6 +814,8 @@ function TrustStack({ variant, inStock }: { variant: ProductVariant | null | und
 }
 
 function VolumeTeaser({ variant }: { variant: ProductVariant | null | undefined }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     if (!variant?.webPrice1pc) return null;
     const tiers = buildDisplayVolumeTiers({
         webPrice1pc: variant.webPrice1pc,
@@ -853,6 +852,8 @@ function TierLadder({
     compact?: boolean;
     onQtyChange?: (qty: number) => void;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     if (!variant?.webPrice1pc) return null;
 
     const p1 = variant.webPrice1pc;
@@ -1103,6 +1104,8 @@ export default function ProductDetailClient({
     localAssetPreview?: boolean;
     localAssetVersion?: string;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     const router = useRouter();
     useEffect(() => {
         const urls = new Set(Object.values(localKits).flatMap(kit => [...kit.on.parts, ...kit.off.parts].map(part => part.image.url)));
@@ -2544,7 +2547,7 @@ export default function ProductDetailClient({
                                                                     setSelectedCapComponentSku(item.websiteSku);
                                                                 }
                                                             }}
-                                                            title={item.graceSku ?? item.websiteSku}
+                                                            title={item.websiteSku}
                                                             className="flex shrink-0 flex-col items-center gap-1.5"
                                                         >
                                                             <span
@@ -2879,7 +2882,7 @@ export default function ProductDetailClient({
                                                                     setSelectedCapComponentSku(item.websiteSku);
                                                                 }
                                                             }}
-                                                            title={item.graceSku ?? item.websiteSku}
+                                                            title={item.websiteSku}
                                                             className="flex flex-col items-center gap-1.5 group/variant"
                                                         >
                                                             <span

@@ -1,0 +1,168 @@
+{
+  "families": {
+    "cylinder": {
+      "ref": "family-cylinder-portrait",
+      "material": "curly maple wood"
+    },
+    "elegant": {
+      "ref": "family-elegant-portrait-open-mouth",
+      "material": "pale limestone"
+    },
+    "circle": {
+      "ref": "family-circle-portrait",
+      "material": "Travertine Navona stone"
+    },
+    "boston-round": {
+      "ref": "family-boston-round-colors-portrait",
+      "material": "figured Claro walnut wood"
+    },
+    "diva": {
+      "ref": "family-diva-portrait-open-mouth",
+      "material": "neutral pale stone"
+    },
+    "grace": {
+      "ref": "family-grace-portrait-open-mouth",
+      "material": "neutral pale stone"
+    },
+    "empire": {
+      "ref": "family-empire-portrait-open-mouth",
+      "material": "Sahara Noir black marble"
+    },
+    "round": {
+      "ref": "family-round-portrait-open-mouth",
+      "material": "neutral pale stone"
+    }
+  },
+  "collections": {
+    "roll-on-bottles": {
+      "ref": "collection-roll-on-measured",
+      "material": "neutral pale stone"
+    },
+    "perfume-atomizers": {
+      "ref": "collection-perfume-atomizers-cap-off",
+      "material": "silver travertine stone"
+    },
+    "glass-spray-bottles": {
+      "ref": "collection-glass-spray-bottles",
+      "material": "pale limestone"
+    },
+    "dropper-bottles": {
+      "ref": "collection-dropper-cobalt-amber-empire",
+      "material": "Sahara Noir black marble"
+    },
+    "sample-vials": {
+      "ref": "collection-sample-vials-seven",
+      "material": "curly maple wood"
+    },
+    "lotion-pump-bottles": {
+      "ref": "collection-lotion-pump-bottles",
+      "material": "pale limestone"
+    },
+    "decorative-bottles": {
+      "ref": "collection-decorative-bottles",
+      "material": "warm pale sandstone"
+    },
+    "apothecary-bottles": {
+      "ref": "collection-apothecary-bottles",
+      "material": "warm pale sandstone"
+    },
+    "cream-jars": {
+      "ref": "collection-cream-jars",
+      "material": "Statuario white marble"
+    },
+    "accessories-packaging": {
+      "ref": "collection-accessories-packaging",
+      "material": "bone studio surface (no separate base; the items rest directly on the bone floor)"
+    }
+  },
+  "families-v3": {
+    "cylinder": {
+      "ref": "family-cylinder-portrait",
+      "material": "pale limestone"
+    },
+    "elegant": {
+      "ref": "family-elegant-portrait-open-mouth",
+      "material": "pale limestone"
+    },
+    "circle": {
+      "ref": "family-circle-portrait",
+      "material": "warm travertine"
+    },
+    "boston-round": {
+      "ref": "family-boston-round-colors-portrait",
+      "material": "warm travertine"
+    },
+    "diva": {
+      "ref": "family-diva-portrait-open-mouth",
+      "material": "pale limestone"
+    },
+    "grace": {
+      "ref": "family-grace-portrait-open-mouth",
+      "material": "pale limestone"
+    },
+    "empire": {
+      "ref": "family-empire-portrait-open-mouth",
+      "material": "dark Sahara Noir stone"
+    },
+    "round": {
+      "ref": "family-round-portrait-open-mouth",
+      "material": "pale limestone",
+      "extra": "Show only the medium and the large bottle from the photograph, side by side; omit the smallest one. These two bottles may be larger in the frame, together filling about two thirds of the frame height, still standing on the slab."
+    }
+  },
+  "collections-v3": {
+    "roll-on-bottles": {
+      "ref": "collection-roll-on-measured",
+      "material": "pale limestone"
+    },
+    "perfume-atomizers": {
+      "ref": "collection-perfume-atomizers-cap-off",
+      "material": "pale limestone"
+    },
+    "glass-spray-bottles": {
+      "ref": "collection-glass-spray-bottles",
+      "material": "pale limestone"
+    },
+    "dropper-bottles": {
+      "ref": "collection-dropper-cobalt-amber-empire",
+      "material": "dark Sahara Noir stone"
+    },
+    "sample-vials": {
+      "ref": "collection-sample-vials-seven",
+      "material": "pale limestone"
+    },
+    "lotion-pump-bottles": {
+      "ref": "collection-lotion-pump-bottles",
+      "material": "pale limestone"
+    },
+    "decorative-bottles": {
+      "ref": "collection-decorative-bottles",
+      "material": "warm travertine",
+      "extra": "Keep the single bottle exactly as photographed, centred on the slab."
+    },
+    "apothecary-bottles": {
+      "ref": "collection-apothecary-bottles",
+      "material": "warm travertine",
+      "extra": "The tall cylindrical apothecary bottle on the left wears its matching clear ground-glass stopper seated in the neck, flat-topped, exactly like a traditional apothecary stopper; the two other bottles keep their pointed stoppers."
+    },
+    "cream-jars": {
+      "ref": "collection-cream-jars",
+      "material": "Statuario white marble"
+    },
+    "accessories-packaging": {
+      "ref": "collection-accessories-packaging",
+      "material": "pale limestone"
+    },
+    "splash-on-bottles": {
+      "ref": "source-splash-on-bottles",
+      "material": "pale limestone",
+      "extra": "Show the bottle standing upright with its gold cap placed beside it on the slab, both fully visible."
+    }
+  },
+  "build": {
+    "build-your-bottle": {
+      "ref": "build-your-bottle-artwork-standard",
+      "material": "none"
+    }
+  }
+}

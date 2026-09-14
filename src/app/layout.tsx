@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Cormorant, EB_Garamond, Inter } from "next/font/google";
+import { brandFace, cormorant, ebGaramond } from "./fonts";
 import "./globals.css";
+import { cookies } from "next/headers";
 import AppProviders from "@/components/AppProviders";
+import { REGION_COOKIE } from "@/lib/region";
 import { getMegaMenuPanels } from "@/sanity/lib/queries";
 import {
   SITE_URL,
@@ -12,26 +14,6 @@ import {
   buildOrganizationJsonLd,
   buildWebSiteJsonLd,
 } from "@/lib/seo";
-
-const cormorant = Cormorant({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-});
-
-const ebGaramond = EB_Garamond({
-  variable: "--font-eb-garamond",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -97,10 +79,11 @@ export default async function RootLayout({
   // provider via props. Lets AppProviders stay a Client Component without
   // rendering an async Server Component inside it (which Next.js disallows).
   const megaMenuPanels = await getMegaMenuPanels();
+  const initialMarketCode = (await cookies()).get(REGION_COOKIE)?.value ?? null;
 
   return (
-    <html lang="en">
-      <body className={`${cormorant.variable} ${ebGaramond.variable} ${inter.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
+    <html lang="en" className={`${brandFace.variable} ${cormorant.variable} ${ebGaramond.variable}`}>
+      <body className="antialiased selection:bg-muted-gold/20 selection:text-obsidian">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationJsonLd()) }}
@@ -109,7 +92,7 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(buildWebSiteJsonLd()) }}
         />
-        <AppProviders megaMenuPanels={megaMenuPanels}>{children}</AppProviders>
+        <AppProviders megaMenuPanels={megaMenuPanels} initialMarketCode={initialMarketCode}>{children}</AppProviders>
       </body>
     </html>
   );

@@ -1,4 +1,6 @@
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import BrandWordmark from "@/components/BrandWordmark";
 import { Card, CardContent } from "@/components/ui/card";
 import { PlatformStatusCard } from "@/components/team/PlatformStatusCard";
 import type { PlatformHealthSnapshot } from "@/lib/executive/platformHealth";
@@ -53,13 +55,16 @@ export function TeamHubDashboard({ tools, previewMode = false, platformHealth }:
     const grouped = groupTeamHubTools(tools);
 
     return (
-        <main data-team-hub className="min-h-screen bg-bone px-5 py-8 sm:px-8 sm:py-10">
+        <main data-team-hub className="app-surface min-h-screen bg-bone px-5 py-8 sm:px-8 sm:py-10">
             <div className="mx-auto max-w-6xl" data-testid="team-hub-dashboard">
                 <header className="mb-6 flex flex-col gap-4 border-b border-champagne/40 pb-6 lg:flex-row lg:items-end lg:justify-between">
                     <div className="max-w-2xl">
-                        <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-gold">
-                            Best Bottles
-                        </p>
+                        {/* The supplied wordmark, not the company name set as an
+                            eyebrow — the staff hub carries the same mark as the
+                            storefront and the client portal. */}
+                        <Link href="/" aria-label="Best Bottles home" className="mb-3 block">
+                            <BrandWordmark className="app-wordmark" />
+                        </Link>
                         <div className="flex flex-wrap items-center gap-3">
                             <h1 className="font-serif text-4xl leading-tight text-obsidian sm:text-5xl">
                                 Team Hub

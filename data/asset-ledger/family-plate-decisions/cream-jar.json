@@ -1,0 +1,343 @@
+{
+  "revision": 1,
+  "decisions": {
+    "CJAmb5mlSlCap:ffb49a4f0cece24e98749719b1f33a1729820c071b3f2fc8ff72d8d5ee6779df": {
+      "sku": "CJAmb5mlSlCap",
+      "binding": "ffb49a4f0cece24e98749719b1f33a1729820c071b3f2fc8ff72d8d5ee6779df",
+      "sha256": "9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-amber-27mm/CJAmb5mlSlCap/9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd.front-on-1000x1100.webp",
+          "sha256": "9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd",
+          "url": "/images/plate-contact-sheets/9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-amber-27mm/CJAmb5mlSlCap/60398c476a48a404ba61bcb38793527ca656be430a700e1cb8c8717f90d7dfaf.front-off-1000x1100.webp",
+          "sha256": "60398c476a48a404ba61bcb38793527ca656be430a700e1cb8c8717f90d7dfaf",
+          "url": "/images/plate-contact-sheets/60398c476a48a404ba61bcb38793527ca656be430a700e1cb8c8717f90d7dfaf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "CJClr15Pnk:991b975a6f4f5552813feba3661de349b4e8f31634bba7e3cf6d58e66d7b68ed": {
+      "sku": "CJClr15Pnk",
+      "binding": "991b975a6f4f5552813feba3661de349b4e8f31634bba7e3cf6d58e66d7b68ed",
+      "sha256": "67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Pnk/67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad.front-on-1000x1100.webp",
+          "sha256": "67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad",
+          "url": "/images/plate-contact-sheets/67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Pnk/32218d5da1285cc73060f66f6dcb70ca8fccd3c2db7ffcf223ea1932c8a5d00d.front-off-1000x1100.webp",
+          "sha256": "32218d5da1285cc73060f66f6dcb70ca8fccd3c2db7ffcf223ea1932c8a5d00d",
+          "url": "/images/plate-contact-sheets/32218d5da1285cc73060f66f6dcb70ca8fccd3c2db7ffcf223ea1932c8a5d00d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "CJClr15Wht:77c77a0593b8f48a240599596b830f4fe71b13e5375a3d22686f0df64a2db286": {
+      "sku": "CJClr15Wht",
+      "binding": "77c77a0593b8f48a240599596b830f4fe71b13e5375a3d22686f0df64a2db286",
+      "sha256": "a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Wht/a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978.front-on-1000x1100.webp",
+          "sha256": "a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978",
+          "url": "/images/plate-contact-sheets/a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Wht/f031f5fe8e2a67d2c781dc06ed2f500c1ae3c4fb87e69f951176f6b4c5f000c5.front-off-1000x1100.webp",
+          "sha256": "f031f5fe8e2a67d2c781dc06ed2f500c1ae3c4fb87e69f951176f6b4c5f000c5",
+          "url": "/images/plate-contact-sheets/f031f5fe8e2a67d2c781dc06ed2f500c1ae3c4fb87e69f951176f6b4c5f000c5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "CJClr3:610d0ff0d0851bbc764cc01f348bd7fd765c1fe40aa64a3d892d1e06bc09dbfa": {
+      "sku": "CJClr3",
+      "binding": "610d0ff0d0851bbc764cc01f348bd7fd765c1fe40aa64a3d892d1e06bc09dbfa",
+      "sha256": "cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-3ml-clear-20mm/CJClr3/cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042.front-on-1000x1100.webp",
+          "sha256": "cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042",
+          "url": "/images/plate-contact-sheets/cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-3ml-clear-20mm/CJClr3/1e48ae77e8355ab6ee0dab4390fa2ad5e1867ba2666ee577d9a31fba0b2e8ce2.front-off-1000x1100.webp",
+          "sha256": "1e48ae77e8355ab6ee0dab4390fa2ad5e1867ba2666ee577d9a31fba0b2e8ce2",
+          "url": "/images/plate-contact-sheets/1e48ae77e8355ab6ee0dab4390fa2ad5e1867ba2666ee577d9a31fba0b2e8ce2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "CJWhite20:5e0b907c471b9b931820ebd923452e790e3e40ace6f38dec4653d0756f38467d": {
+      "sku": "CJWhite20",
+      "binding": "5e0b907c471b9b931820ebd923452e790e3e40ace6f38dec4653d0756f38467d",
+      "sha256": "5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-20ml-white-40mm/CJWhite20/5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a.front-on-1000x1100.webp",
+          "sha256": "5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a",
+          "url": "/images/plate-contact-sheets/5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-20ml-white-40mm/CJWhite20/f6b605b09c0df28635968ddd88e1f29cd4d64af3ff2ef68edd2b676601a4d770.front-off-1000x1100.webp",
+          "sha256": "f6b605b09c0df28635968ddd88e1f29cd4d64af3ff2ef68edd2b676601a4d770",
+          "url": "/images/plate-contact-sheets/f6b605b09c0df28635968ddd88e1f29cd4d64af3ff2ef68edd2b676601a4d770.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "CJWhitePlsSlFr2oz:a648c646e3ba41b16e6d6bb3a86d88cd21f192fa851cfdaf6e2cdab1507ff4ac": {
+      "sku": "CJWhitePlsSlFr2oz",
+      "binding": "a648c646e3ba41b16e6d6bb3a86d88cd21f192fa851cfdaf6e2cdab1507ff4ac",
+      "sha256": "372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-63ml-white-58mm/CJWhitePlsSlFr2oz/372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45.front-on-1000x1100.webp",
+          "sha256": "372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45",
+          "url": "/images/plate-contact-sheets/372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-63ml-white-58mm/CJWhitePlsSlFr2oz/84cc22ef07148449c3d1f1f2e44e0a8d27f542e06aaddd426245e2e2459d9096.front-off-1000x1100.webp",
+          "sha256": "84cc22ef07148449c3d1f1f2e44e0a8d27f542e06aaddd426245e2e2459d9096",
+          "url": "/images/plate-contact-sheets/84cc22ef07148449c3d1f1f2e44e0a8d27f542e06aaddd426245e2e2459d9096.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "CJAmb5mlSlCap",
+      "binding": "ffb49a4f0cece24e98749719b1f33a1729820c071b3f2fc8ff72d8d5ee6779df",
+      "sha256": "9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-amber-27mm/CJAmb5mlSlCap/9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd.front-on-1000x1100.webp",
+          "sha256": "9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd",
+          "url": "/images/plate-contact-sheets/9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-5ml-amber-27mm/CJAmb5mlSlCap/60398c476a48a404ba61bcb38793527ca656be430a700e1cb8c8717f90d7dfaf.front-off-1000x1100.webp",
+          "sha256": "60398c476a48a404ba61bcb38793527ca656be430a700e1cb8c8717f90d7dfaf",
+          "url": "/images/plate-contact-sheets/60398c476a48a404ba61bcb38793527ca656be430a700e1cb8c8717f90d7dfaf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "CJClr15Pnk",
+      "binding": "991b975a6f4f5552813feba3661de349b4e8f31634bba7e3cf6d58e66d7b68ed",
+      "sha256": "67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Pnk/67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad.front-on-1000x1100.webp",
+          "sha256": "67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad",
+          "url": "/images/plate-contact-sheets/67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Pnk/32218d5da1285cc73060f66f6dcb70ca8fccd3c2db7ffcf223ea1932c8a5d00d.front-off-1000x1100.webp",
+          "sha256": "32218d5da1285cc73060f66f6dcb70ca8fccd3c2db7ffcf223ea1932c8a5d00d",
+          "url": "/images/plate-contact-sheets/32218d5da1285cc73060f66f6dcb70ca8fccd3c2db7ffcf223ea1932c8a5d00d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "CJClr15Wht",
+      "binding": "77c77a0593b8f48a240599596b830f4fe71b13e5375a3d22686f0df64a2db286",
+      "sha256": "a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Wht/a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978.front-on-1000x1100.webp",
+          "sha256": "a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978",
+          "url": "/images/plate-contact-sheets/a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-15ml-clear-37mm/CJClr15Wht/f031f5fe8e2a67d2c781dc06ed2f500c1ae3c4fb87e69f951176f6b4c5f000c5.front-off-1000x1100.webp",
+          "sha256": "f031f5fe8e2a67d2c781dc06ed2f500c1ae3c4fb87e69f951176f6b4c5f000c5",
+          "url": "/images/plate-contact-sheets/f031f5fe8e2a67d2c781dc06ed2f500c1ae3c4fb87e69f951176f6b4c5f000c5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "CJClr3",
+      "binding": "610d0ff0d0851bbc764cc01f348bd7fd765c1fe40aa64a3d892d1e06bc09dbfa",
+      "sha256": "cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-3ml-clear-20mm/CJClr3/cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042.front-on-1000x1100.webp",
+          "sha256": "cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042",
+          "url": "/images/plate-contact-sheets/cc5e320aff6880aca0ea2b8febcd88715fa3b211a7ee8e59e0b4c99f9bf36042.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-3ml-clear-20mm/CJClr3/1e48ae77e8355ab6ee0dab4390fa2ad5e1867ba2666ee577d9a31fba0b2e8ce2.front-off-1000x1100.webp",
+          "sha256": "1e48ae77e8355ab6ee0dab4390fa2ad5e1867ba2666ee577d9a31fba0b2e8ce2",
+          "url": "/images/plate-contact-sheets/1e48ae77e8355ab6ee0dab4390fa2ad5e1867ba2666ee577d9a31fba0b2e8ce2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "CJWhite20",
+      "binding": "5e0b907c471b9b931820ebd923452e790e3e40ace6f38dec4653d0756f38467d",
+      "sha256": "5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-20ml-white-40mm/CJWhite20/5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a.front-on-1000x1100.webp",
+          "sha256": "5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a",
+          "url": "/images/plate-contact-sheets/5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-20ml-white-40mm/CJWhite20/f6b605b09c0df28635968ddd88e1f29cd4d64af3ff2ef68edd2b676601a4d770.front-off-1000x1100.webp",
+          "sha256": "f6b605b09c0df28635968ddd88e1f29cd4d64af3ff2ef68edd2b676601a4d770",
+          "url": "/images/plate-contact-sheets/f6b605b09c0df28635968ddd88e1f29cd4d64af3ff2ef68edd2b676601a4d770.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "CJWhitePlsSlFr2oz",
+      "binding": "a648c646e3ba41b16e6d6bb3a86d88cd21f192fa851cfdaf6e2cdab1507ff4ac",
+      "sha256": "372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:42.740Z",
+      "batchId": "96112136-46f7-40e0-8f4b-d462bed99c84",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-63ml-white-58mm/CJWhitePlsSlFr2oz/372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45.front-on-1000x1100.webp",
+          "sha256": "372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45",
+          "url": "/images/plate-contact-sheets/372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cream-jar-63ml-white-58mm/CJWhitePlsSlFr2oz/84cc22ef07148449c3d1f1f2e44e0a8d27f542e06aaddd426245e2e2459d9096.front-off-1000x1100.webp",
+          "sha256": "84cc22ef07148449c3d1f1f2e44e0a8d27f542e06aaddd426245e2e2459d9096",
+          "url": "/images/plate-contact-sheets/84cc22ef07148449c3d1f1f2e44e0a8d27f542e06aaddd426245e2e2459d9096.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}

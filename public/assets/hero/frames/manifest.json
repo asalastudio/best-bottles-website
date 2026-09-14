@@ -1,0 +1,112 @@
+[
+ {
+  "sku": "GBEmp50AnSpBlk",
+  "src": "/assets/hero/frames/frame-GBEmp50AnSpBlk.webp",
+  "label": "Antique sprayer \u00b7 black"
+ },
+ {
+  "sku": "GBEmp50AnSpGl",
+  "src": "/assets/hero/frames/frame-GBEmp50AnSpGl.webp",
+  "label": "Antique sprayer \u00b7 gold"
+ },
+ {
+  "sku": "GBEmp50AnSpIvyGl",
+  "src": "/assets/hero/frames/frame-GBEmp50AnSpIvyGl.webp",
+  "label": "Antique sprayer \u00b7 ivory & gold"
+ },
+ {
+  "sku": "GBEmp50AnSpIvySl",
+  "src": "/assets/hero/frames/frame-GBEmp50AnSpIvySl.webp",
+  "label": "Antique sprayer \u00b7 ivory & silver"
+ },
+ {
+  "sku": "GBEmp50AnSpLvn",
+  "src": "/assets/hero/frames/frame-GBEmp50AnSpLvn.webp",
+  "label": "Antique sprayer \u00b7 lavender"
+ },
+ {
+  "sku": "GBEmp50AnSpMtSl",
+  "src": "/assets/hero/frames/frame-GBEmp50AnSpMtSl.webp",
+  "label": "Antique sprayer \u00b7 matte silver"
+ },
+ {
+  "sku": "GBEmp50AnSpPnk",
+  "src": "/assets/hero/frames/frame-GBEmp50AnSpPnk.webp",
+  "label": "Antique sprayer \u00b7 pink"
+ },
+ {
+  "sku": "GBEmp50AnSpRed",
+  "src": "/assets/hero/frames/frame-GBEmp50AnSpRed.webp",
+  "label": "Antique sprayer \u00b7 red"
+ },
+ {
+  "sku": "GBEmp50AnSpWht",
+  "src": "/assets/hero/frames/frame-GBEmp50AnSpWht.webp",
+  "label": "Antique sprayer \u00b7 white"
+ },
+ {
+  "sku": "LBEmp50WhtClOvrCp",
+  "src": "/assets/hero/frames/frame-LBEmp50WhtClOvrCp.webp",
+  "label": "Lotion pump \u00b7 white"
+ },
+ {
+  "sku": "GBEmp50RdcrBlkLthr",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrBlkLthr.webp",
+  "label": "Reducer \u00b7 black leather"
+ },
+ {
+  "sku": "GBEmp50RdcrBrwnLthr",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrBrwnLthr.webp",
+  "label": "Reducer \u00b7 brown leather"
+ },
+ {
+  "sku": "GBEmp50RdcrIvyLthr",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrIvyLthr.webp",
+  "label": "Reducer \u00b7 ivory leather"
+ },
+ {
+  "sku": "GBEmp50RdcrLBrwnLthr",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrLBrwnLthr.webp",
+  "label": "Reducer \u00b7 light brown leather"
+ },
+ {
+  "sku": "GBEmp50RdcrMtSl",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrMtSl.webp",
+  "label": "Reducer \u00b7 matte silver"
+ },
+ {
+  "sku": "GBEmp50RdcrMtSlTall",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrMtSlTall.webp",
+  "label": "Tall reducer \u00b7 matte silver"
+ },
+ {
+  "sku": "GBEmp50RdcrPnkLthr",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrPnkLthr.webp",
+  "label": "Reducer \u00b7 pink leather"
+ },
+ {
+  "sku": "GBEmp50RdcrShnBlk",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrShnBlk.webp",
+  "label": "Reducer \u00b7 shiny black"
+ },
+ {
+  "sku": "GBEmp50RdcrShnBlkTall",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrShnBlkTall.webp",
+  "label": "Tall reducer \u00b7 shiny black"
+ },
+ {
+  "sku": "GBEmp50RdcrShnGl",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrShnGl.webp",
+  "label": "Reducer \u00b7 shiny gold"
+ },
+ {
+  "sku": "GBEmp50RdcrShnSl",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrShnSl.webp",
+  "label": "Reducer \u00b7 shiny silver"
+ },
+ {
+  "sku": "GBEmp50RdcrWht",
+  "src": "/assets/hero/frames/frame-GBEmp50RdcrWht.webp",
+  "label": "Reducer \u00b7 white"
+ }
+]

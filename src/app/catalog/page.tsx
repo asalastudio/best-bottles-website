@@ -7,7 +7,7 @@ import { getCatalogConvexClient, searchCatalogServer } from "@/lib/catalogServer
 import { SITE_URL } from "@/lib/seo";
 
 const PAGE_SIZE = 24;
-const MAX_VISIBLE_LIMIT = 240;
+const MAX_VISIBLE_LIMIT = 48; // one Convex execution reads whole product docs per group; larger limits hit the 16 MB budget
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;

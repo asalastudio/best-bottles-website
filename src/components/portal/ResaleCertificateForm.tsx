@@ -2,6 +2,7 @@
 
 import { useActionState, useRef, useState } from "react";
 import { PortalButton } from "@/components/portal/ui";
+import { US_STATES } from "@/lib/portal/usStates";
 import type { CertificateSubmitState } from "@/app/(portal)/portal/actions";
 
 /**
@@ -15,21 +16,7 @@ import type { CertificateSubmitState } from "@/app/(portal)/portal/actions";
 
 // The 50 states plus DC — Shopify issues a reseller exemption for each. Kept
 // here rather than imported so this stays a client module.
-const US_STATES: Array<[string, string]> = [
-    ["AL", "Alabama"], ["AK", "Alaska"], ["AZ", "Arizona"], ["AR", "Arkansas"],
-    ["CA", "California"], ["CO", "Colorado"], ["CT", "Connecticut"], ["DE", "Delaware"],
-    ["DC", "District of Columbia"], ["FL", "Florida"], ["GA", "Georgia"], ["HI", "Hawaii"],
-    ["ID", "Idaho"], ["IL", "Illinois"], ["IN", "Indiana"], ["IA", "Iowa"],
-    ["KS", "Kansas"], ["KY", "Kentucky"], ["LA", "Louisiana"], ["ME", "Maine"],
-    ["MD", "Maryland"], ["MA", "Massachusetts"], ["MI", "Michigan"], ["MN", "Minnesota"],
-    ["MS", "Mississippi"], ["MO", "Missouri"], ["MT", "Montana"], ["NE", "Nebraska"],
-    ["NV", "Nevada"], ["NH", "New Hampshire"], ["NJ", "New Jersey"], ["NM", "New Mexico"],
-    ["NY", "New York"], ["NC", "North Carolina"], ["ND", "North Dakota"], ["OH", "Ohio"],
-    ["OK", "Oklahoma"], ["OR", "Oregon"], ["PA", "Pennsylvania"], ["RI", "Rhode Island"],
-    ["SC", "South Carolina"], ["SD", "South Dakota"], ["TN", "Tennessee"], ["TX", "Texas"],
-    ["UT", "Utah"], ["VT", "Vermont"], ["VA", "Virginia"], ["WA", "Washington"],
-    ["WV", "West Virginia"], ["WI", "Wisconsin"], ["WY", "Wyoming"],
-];
+
 
 const MAX_BYTES = 15 * 1024 * 1024;
 
@@ -153,7 +140,7 @@ export default function ResaleCertificateForm({
 
                 <div className="sm:col-span-2">
                     <label className={labelClass} htmlFor="certificateDocument">
-                        Certificate document
+                        Certificate document <span className="text-neutral-400">(required)</span>
                     </label>
                     <input
                         ref={fileInput}
@@ -181,7 +168,9 @@ export default function ResaleCertificateForm({
             )}
 
             <div className="flex items-center gap-3 mt-5">
-                <PortalButton type="submit" disabled={pending || uploading}>
+                {/* A permit number with no document cannot be reviewed, so the
+                    submit stays shut until the certificate is attached. */}
+                <PortalButton type="submit" disabled={pending || uploading || !storageId}>
                     {pending ? "Submitting…" : "Submit for review"}
                 </PortalButton>
                 <p className="font-sans text-[12px] text-neutral-400">

@@ -36,8 +36,8 @@ import {
     type CatalogPurchaseVariant,
 } from "@/lib/products/catalog-card-purchase";
 import { formatVolumeQtyRange, type DisplayVolumeTier } from "@/lib/volumePricing";
+import { useRegion } from "@/components/RegionProvider";
 
-const usd = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", minimumFractionDigits: 2 });
 
 /** Telemetry is best-effort: a tracking failure must never block or misreport a cart update. */
 function track(send: () => void) {
@@ -78,6 +78,7 @@ export default function CatalogCardPurchase({
     context,
     imageUrl,
 }: CatalogCardPurchaseProps) {
+    const { formatPrice } = useRegion();
     const { addItems } = useCart();
     const baseId = useId();
     const dialogId = `${baseId}-tiers`;
@@ -193,7 +194,7 @@ export default function CatalogCardPurchase({
             <div className="border-t border-champagne/55 px-4 pb-5 pt-4 sm:px-5" data-testid="catalog-card-purchase" data-state="unpriced">
                 <p className="text-lg font-semibold text-obsidian" data-testid="catalog-card-price">
                     {groupStartingPrice != null
-                        ? <>From {usd.format(groupStartingPrice)}<span className="text-sm font-normal text-slate">/ea</span></>
+                        ? <>From {formatPrice(groupStartingPrice)}<span className="text-sm font-normal text-slate">/ea</span></>
                         : "Request pricing"}
                 </p>
                 <Link href={href} className={`mt-2 inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-wider text-obsidian underline-offset-4 hover:underline sm:min-h-9 ${FOCUS_RING}`}>
@@ -209,9 +210,9 @@ export default function CatalogCardPurchase({
     const nextTier = activeIndex >= 0 ? tiers[activeIndex + 1] : undefined;
     const unitsToNext = nextTier && qty != null ? nextTier.minQty - qty : 0;
     const footnote = firstQuoteTier
-        ? `Online checkout bills ${usd.format(p1)}/ea. ${firstQuoteTier.minQty.toLocaleString("en-US")}+ rates are confirmed on a quote.`
+        ? `Online checkout bills ${formatPrice(p1)}/ea. ${firstQuoteTier.minQty.toLocaleString("en-US")}+ rates are confirmed on a quote.`
         : nextTier && unitsToNext > 0 && unitsToNext <= 11
-            ? `Add ${unitsToNext} more to unlock ${usd.format(nextTier.unitPrice)}/ea · save ${nextTier.savePct}%.`
+            ? `Add ${unitsToNext} more to unlock ${formatPrice(nextTier.unitPrice)}/ea · save ${nextTier.savePct}%.`
             : "Save more at higher quantities.";
     const quoteHref = `/request-quote?products=${encodeURIComponent(`${title} (SKU: ${variant.graceSku})`)}&quantities=${encodeURIComponent(`${qty ?? 1} units`)}`;
 
@@ -272,7 +273,7 @@ export default function CatalogCardPurchase({
             ) : (
                 <p id={scopedId(scope, "live")} aria-live="polite" className="tabular-nums" data-testid="catalog-card-active-tier">
                     <span className="block">
-                        <span className="text-sm font-semibold text-obsidian">{usd.format(activeUnitPrice)}</span>
+                        <span className="text-sm font-semibold text-obsidian">{formatPrice(activeUnitPrice)}</span>
                         /ea{activeTier && <> · {formatVolumeQtyRange(activeTier.minQty, activeTier.maxQty)}</>}
                     </span>
                     <span className="block">
@@ -281,7 +282,7 @@ export default function CatalogCardPurchase({
                         )}
                         <span className="whitespace-nowrap" data-testid="catalog-card-subtotal" data-quote={activeTier && !activeTier.appliesAtCheckout ? "true" : undefined}>
                             {activeTier && !activeTier.appliesAtCheckout ? "Quote subtotal" : "Subtotal"}{" "}
-                            <span className="font-semibold text-obsidian">{usd.format((qty ?? 0) * activeUnitPrice)}</span>
+                            <span className="font-semibold text-obsidian">{formatPrice((qty ?? 0) * activeUnitPrice)}</span>
                         </span>
                     </span>
                 </p>
@@ -313,7 +314,7 @@ export default function CatalogCardPurchase({
             data-state={purchasable ? "purchasable" : "quote"}
         >
             <p className="text-lg font-semibold text-obsidian" data-testid="catalog-card-price">
-                From {usd.format(startingPrice ?? variant.webPrice1pc)}
+                From {formatPrice(startingPrice ?? variant.webPrice1pc)}
                 <span className="text-sm font-normal text-slate">/ea</span>
             </p>
             {variant.optionLabel && (
@@ -406,7 +407,7 @@ export default function CatalogCardPurchase({
                                                 type="button"
                                                 role="radio"
                                                 aria-checked={active}
-                                                aria-label={describeCatalogTier(tier)}
+                                                aria-label={describeCatalogTier(tier, formatPrice)}
                                                 tabIndex={active || (activeIndex < 0 && index === 0) ? 0 : -1}
                                                 onClick={() => selectTier(tier)}
                                                 data-testid="catalog-card-tier-row"
@@ -423,7 +424,7 @@ export default function CatalogCardPurchase({
                                                     </span>
                                                     <span className="tabular-nums">{formatVolumeQtyRange(tier.minQty, tier.maxQty)}</span>
                                                 </span>
-                                                <span className="text-right tabular-nums">{usd.format(tier.unitPrice)}</span>
+                                                <span className="text-right tabular-nums">{formatPrice(tier.unitPrice)}</span>
                                                 <span className={`text-right text-xs tabular-nums ${tier.savePct > 0 ? "text-emerald-800" : "text-slate"}`}>
                                                     {tier.savePct > 0 ? `${tier.savePct}%` : "—"}
                                                 </span>

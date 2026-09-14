@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { BUILDER_COLLECTION_FITMENTS } from "@/lib/bottle-builder/collection-context";
 import { getShopCollection, SHOP_COLLECTIONS } from "@/lib/shopCollections";
 
@@ -67,7 +69,7 @@ import { familyFinderHref } from "@/lib/products/focused-shopping";
 
 const PAGE_SIZE = 24;
 const SEARCH_DEBOUNCE_MS = 300;
-const MAX_VISIBLE_LIMIT = 240;
+const MAX_VISIBLE_LIMIT = 48; // one Convex execution reads whole product docs per group; larger limits hit the 16 MB budget
 
 // ─── Sanity Family Banner ─────────────────────────────────────────────────────
 
@@ -193,11 +195,6 @@ interface Facets {
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
-
-function formatPrice(price: number | null): string {
-    if (!price) return "—";
-    return `$${price.toFixed(2)}`;
-}
 
 function clampVisibleLimit(rawLimit: string | null): number {
     const parsed = Number(rawLimit);
@@ -462,6 +459,8 @@ function PriceRangeSlider({
     valueMax: number | null;
     onChange: (min: number | null, max: number | null) => void;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     const effectiveMin = valueMin ?? min;
     const effectiveMax = valueMax ?? max;
     const debounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
@@ -997,6 +996,8 @@ function LineItemRow({
     primaryGraceSku?: string | null;
     primaryWebsiteSku?: string | null;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     const [quantity, setQuantity] = useState(1);
     const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const href = lineItemProductHref({
@@ -1093,7 +1094,7 @@ function LineItemRow({
                 <div className="flex flex-col items-end">
                     <span className="text-xs text-slate">from</span>
                     <span className="font-semibold text-obsidian">
-                        {group.priceRangeMin != null ? `$${group.priceRangeMin.toFixed(2)}` : "—"}
+                        {formatPrice(group.priceRangeMin)}
                     </span>
                 </div>
             </td>
@@ -1161,6 +1162,8 @@ function LineItemMobileCard({
     primaryGraceSku?: string | null;
     primaryWebsiteSku?: string | null;
 }) {
+    const { formatPrice: money } = useRegion();
+    const formatPrice = (price: number | null | undefined): string => (price ? money(price) : "—");
     const [expanded, setExpanded] = useState(false);
     const [quantity, setQuantity] = useState(1);
     const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
@@ -1225,7 +1228,7 @@ function LineItemMobileCard({
                             {sku}
                         </span>
                         <span className="text-xs font-semibold text-obsidian">
-                            {group.priceRangeMin != null ? `$${group.priceRangeMin.toFixed(2)}` : "—"}
+                            {formatPrice(group.priceRangeMin)}
                         </span>
                         <span className="text-[10px] text-slate bg-bone px-1.5 py-0.5 rounded">
                             {group.variantCount} variant{group.variantCount !== 1 ? "s" : ""}

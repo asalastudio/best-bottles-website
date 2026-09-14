@@ -6,7 +6,16 @@ import { useCart } from "@/components/CartProvider";
 import { usePathname } from "next/navigation";
 import { analytics } from "@/lib/analytics";
 
-const MIXPANEL_TOKEN = "ab0478c15b0c8af6cc5eca4d82b2a7ae";
+/**
+ * The Mixpanel token used to be hardcoded here, which meant every preview
+ * deployment wrote into the production project — there was no way to separate
+ * environments. The PostHog key comes from the environment instead, so a
+ * preview can point at its own project or at nothing.
+ *
+ * Absent key means analytics simply does not start. That is deliberate: a
+ * missing key is a configuration gap, not a reason to fail a page render.
+ */
+const ANALYTICS_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim();
 
 function MixpanelProviderBase({
   userId,
@@ -26,7 +35,8 @@ function MixpanelProviderBase({
   const prevUserIdRef = useRef<string | null>(null);
 
   useEffect(() => {
-    analytics.init(MIXPANEL_TOKEN);
+    if (!ANALYTICS_KEY) return;
+    analytics.init(ANALYTICS_KEY);
   }, []);
 
   useEffect(() => {

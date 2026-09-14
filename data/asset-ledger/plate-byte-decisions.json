@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "scope": "Exact current plate-byte decisions. Appearance approval never clears a sizing, source, pairing or indexing hold.",
+  "entries": [
+    {
+      "sku": "GBElg15MtlRollBlkDot",
+      "sha256": "d1147bff7bb310e5c0855bb35f2d41834b908f50fc1fa8b2dedceabdb2aefbd5",
+      "status": "approved",
+      "scope": "cap-on-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current cap-on appearance for the Elegant 15 mL clear metal-roller set. This appearance sign-off does not waive the open glass-sizing correction."
+    },
+    {
+      "sku": "GBElg15MtlRollBlkSh",
+      "sha256": "0683cbc7be6ca4e3f70f5360f0c8bdc4c8067f2314e6cb1468eeef5c077f3f88",
+      "status": "approved",
+      "scope": "cap-on-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current cap-on appearance for the Elegant 15 mL clear metal-roller set. This appearance sign-off does not waive the open glass-sizing correction."
+    },
+    {
+      "sku": "GBElg15MtlRollCuMatt",
+      "sha256": "1516a4640f5bcbe200ca86cd59c1166e5c8eb96b2f56c0a96fe28e186e71d11b",
+      "status": "approved",
+      "scope": "cap-on-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current cap-on appearance for the Elegant 15 mL clear metal-roller set. This appearance sign-off does not waive the open glass-sizing correction."
+    },
+    {
+      "sku": "GBElg15MtlRollGlMatt",
+      "sha256": "e4cd006e7f798cbac64706681ea1d8925101545ec3767484fbbacefdbf165c13",
+      "status": "approved",
+      "scope": "cap-on-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current cap-on appearance for the Elegant 15 mL clear metal-roller set. This appearance sign-off does not waive the open glass-sizing correction."
+    },
+    {
+      "sku": "GBElg15MtlRollGlSh",
+      "sha256": "349226f8ebaca5d0419cb47673ad52a91edfc7d0a25559c0f1ed0688628b8855",
+      "status": "approved",
+      "scope": "cap-on-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current cap-on appearance for the Elegant 15 mL clear metal-roller set. This appearance sign-off does not waive the open glass-sizing correction."
+    },
+    {
+      "sku": "GBElg15MtlRollPinkDot",
+      "sha256": "5d0f3e3e0a2b86c588a1a6770b47f94346f23ceb340ae33dec754083d00b5cbc",
+      "status": "approved",
+      "scope": "cap-on-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current cap-on appearance for the Elegant 15 mL clear metal-roller set. This appearance sign-off does not waive the open glass-sizing correction."
+    },
+    {
+      "sku": "GBElg15MtlRollSlDot",
+      "sha256": "16b15c1e48f855fb14da85a03560cedd79dca11dfaf7cad463464b33e616bfc1",
+      "status": "approved",
+      "scope": "cap-on-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current cap-on appearance for the Elegant 15 mL clear metal-roller set. This appearance sign-off does not waive the open glass-sizing correction."
+    },
+    {
+      "sku": "GBElg15MtlRollSlMatt",
+      "sha256": "fdc60a828a678ae8dac1c9e33cf06eac1720a3083bd8a65ca61ac265b4463fca",
+      "status": "approved",
+      "scope": "cap-on-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current cap-on appearance for the Elegant 15 mL clear metal-roller set. This appearance sign-off does not waive the open glass-sizing correction."
+    },
+    {
+      "sku": "GBElg15MtlRollSlSh",
+      "sha256": "7ec9f502e31b778d0507e7d2dfee24649046f04e9925c4490b63f1fb48f26a4c",
+      "status": "approved",
+      "scope": "cap-on-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current cap-on appearance for the Elegant 15 mL clear metal-roller set. This appearance sign-off does not waive the open glass-sizing correction."
+    },
+    {
+      "sku": "GBDiva46AnSpTslBlk",
+      "sha256": "3dde85bd191bf4e66f81e9286402c4fbfe50a00ee47e8523167d2e4927749f32",
+      "status": "rejected",
+      "scope": "technical-sizing-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Rejected by Jordan: the Diva 46 mL black tassel sprayer plate is far too small and is not usable."
+    },
+    {
+      "sku": "GBDiva100RdcrShnBlk",
+      "sha256": "e763ee7f137b30e9ab5939497cb8233c56ab234a81bdec43496bbbfc97e19a6e",
+      "status": "rejected",
+      "scope": "technical-sizing-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Rejected by Jordan: the Diva 100 mL shiny-black reducer plate is far too small and is not usable."
+    },
+    {
+      "sku": "LBCrclFrst100LtnCu",
+      "sha256": "384a0b7d9f802329d50c466f18a92eb7f82a0e7f8f22996759c8e762ca6dbf81",
+      "status": "approved",
+      "scope": "paper-doll-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current Circle 100 mL frosted lotion-pump appearance for the paper-doll presentation; glass sizing reconciliation remains recorded."
+    },
+    {
+      "sku": "LBCrclFrst100LtnMtGl",
+      "sha256": "616609412454c1cd75a4301d08c61aaa086803e87bb0f538690f1f759d3c2375",
+      "status": "approved",
+      "scope": "paper-doll-appearance-review",
+      "reviewedBy": "Jordan Richter",
+      "reviewedAt": "2026-09-13T21:17:00.000Z",
+      "reason": "Jordan approved the current Circle 100 mL frosted lotion-pump appearance for the paper-doll presentation; glass sizing reconciliation remains recorded."
+    }
+  ]
+}

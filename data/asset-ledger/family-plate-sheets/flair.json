@@ -1,0 +1,944 @@
+{
+  "schemaVersion": 1,
+  "id": "flair-plates-2026-09-14",
+  "family": "Flair",
+  "createdAt": "2026-09-14T01:00:00.166Z",
+  "ledgerAt": "2026-09-14T00:39:35.157Z",
+  "scope": "Current development catalog; legacy scope remains open.",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "rows": [
+    {
+      "sku": "GBFlair15BlkSht",
+      "graceSku": "GB-FLR-CLR-15ML-BLK-S",
+      "productGroupId": "kh7da009vam1n9g72d2fv8dv6d8dp7t6",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with short black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15BlkSht/4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07.front-on-1000x1100.webp",
+          "sha256": "4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07",
+          "url": "/images/plate-contact-sheets/4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15BlkSht/ddaf7fdd099ad288c14d0c955d5f88d16cf523e464a9cc6924fd6e93ae6276c4.front-off-1000x1100.webp",
+          "sha256": "ddaf7fdd099ad288c14d0c955d5f88d16cf523e464a9cc6924fd6e93ae6276c4",
+          "url": "/images/plate-contact-sheets/ddaf7fdd099ad288c14d0c955d5f88d16cf523e464a9cc6924fd6e93ae6276c4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15Gl",
+      "graceSku": "GB-VIA-CLR-15ML-GLD-T-01",
+      "productGroupId": "kh7da009vam1n9g72d2fv8dv6d8dp7t6",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Gold",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Gl/2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80.front-on-1000x1100.webp",
+          "sha256": "2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80",
+          "url": "/images/plate-contact-sheets/2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Gl/0f856fdedc425704736c4c3a4a31810c6fdb45c5e9088607aaa84bca001a001e.front-off-1000x1100.webp",
+          "sha256": "0f856fdedc425704736c4c3a4a31810c6fdb45c5e9088607aaa84bca001a001e",
+          "url": "/images/plate-contact-sheets/0f856fdedc425704736c4c3a4a31810c6fdb45c5e9088607aaa84bca001a001e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15MtlRollBlkDot",
+      "graceSku": "GB-FLR-CLR-15ML-MRL-BKDT",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black Dotted",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants.",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkDot/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.front-on-1000x1100.webp",
+          "sha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+          "url": "/images/plate-contact-sheets/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkDot/89e8e6efe690d26c1aaa0db6da41d5adda8c4cb432fde440efc08d91d2d74701.front-off-1000x1100.webp",
+          "sha256": "89e8e6efe690d26c1aaa0db6da41d5adda8c4cb432fde440efc08d91d2d74701",
+          "url": "/images/plate-contact-sheets/89e8e6efe690d26c1aaa0db6da41d5adda8c4cb432fde440efc08d91d2d74701.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15MtlRollBlkSh",
+      "graceSku": "GB-FLR-CLR-15ML-MRL-SBLK",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and black shiny cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price eac",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkSh/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.front-on-1000x1100.webp",
+          "sha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab",
+          "url": "/images/plate-contact-sheets/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollBlkSh/efd59e91dde1d27fd01c0f867b566bc2e0fb8781677bec08dbf6badbdc453d81.front-off-1000x1100.webp",
+          "sha256": "efd59e91dde1d27fd01c0f867b566bc2e0fb8781677bec08dbf6badbdc453d81",
+          "url": "/images/plate-contact-sheets/efd59e91dde1d27fd01c0f867b566bc2e0fb8781677bec08dbf6badbdc453d81.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15MtlRollCuMatt",
+      "graceSku": "GB-FLR-CLR-15ML-MRL-MCPR",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Copper",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and matte copper cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollCuMatt/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.front-on-1000x1100.webp",
+          "sha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799",
+          "url": "/images/plate-contact-sheets/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollCuMatt/38fafe1ed670f187a57b11f144d83da0cc3748d4b993112094744d06ed12d786.front-off-1000x1100.webp",
+          "sha256": "38fafe1ed670f187a57b11f144d83da0cc3748d4b993112094744d06ed12d786",
+          "url": "/images/plate-contact-sheets/38fafe1ed670f187a57b11f144d83da0cc3748d4b993112094744d06ed12d786.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15MtlRollGlMatt",
+      "graceSku": "GB-FLR-CLR-15ML-MRL-MGLD",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlMatt/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.front-on-1000x1100.webp",
+          "sha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a",
+          "url": "/images/plate-contact-sheets/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlMatt/dcf96ef3ce54732985d5b0aa2d8b3985d0f4ae00ce488fa8cf9a7a847351c370.front-off-1000x1100.webp",
+          "sha256": "dcf96ef3ce54732985d5b0aa2d8b3985d0f4ae00ce488fa8cf9a7a847351c370",
+          "url": "/images/plate-contact-sheets/dcf96ef3ce54732985d5b0aa2d8b3985d0f4ae00ce488fa8cf9a7a847351c370.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15MtlRollGlSh",
+      "graceSku": "GB-FLR-CLR-15ML-MRL-SGLD",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlSh/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.front-on-1000x1100.webp",
+          "sha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0",
+          "url": "/images/plate-contact-sheets/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollGlSh/293fae1f2dbe078369615ab9727b2e24da61a29f1d550db3bbdd7944a8b41fca.front-off-1000x1100.webp",
+          "sha256": "293fae1f2dbe078369615ab9727b2e24da61a29f1d550db3bbdd7944a8b41fca",
+          "url": "/images/plate-contact-sheets/293fae1f2dbe078369615ab9727b2e24da61a29f1d550db3bbdd7944a8b41fca.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15MtlRollPinkDot",
+      "graceSku": "GB-FLR-CLR-15ML-MRL-PKDT",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Pink Dotted",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and pink cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollPinkDot/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.front-on-1000x1100.webp",
+          "sha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0",
+          "url": "/images/plate-contact-sheets/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollPinkDot/8b3e1d8e60d03cfe7c2e6ddd65c1a7b84766cc45ba3a0dec347cb79b8ac4a1d5.front-off-1000x1100.webp",
+          "sha256": "8b3e1d8e60d03cfe7c2e6ddd65c1a7b84766cc45ba3a0dec347cb79b8ac4a1d5",
+          "url": "/images/plate-contact-sheets/8b3e1d8e60d03cfe7c2e6ddd65c1a7b84766cc45ba3a0dec347cb79b8ac4a1d5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15MtlRollSlDot",
+      "graceSku": "GB-FLR-CLR-15ML-MRL-SLDT",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Silver Dotted",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and silver cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Pric",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlDot/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.front-on-1000x1100.webp",
+          "sha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600",
+          "url": "/images/plate-contact-sheets/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlDot/878c4639062f786126891f37098fd08e1c822a2330b97bbd6942f242d23ff397.front-off-1000x1100.webp",
+          "sha256": "878c4639062f786126891f37098fd08e1c822a2330b97bbd6942f242d23ff397",
+          "url": "/images/plate-contact-sheets/878c4639062f786126891f37098fd08e1c822a2330b97bbd6942f242d23ff397.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15MtlRollSlMatt",
+      "graceSku": "GB-FLR-CLR-15ML-MRL-MSLV",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlMatt/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.front-on-1000x1100.webp",
+          "sha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3",
+          "url": "/images/plate-contact-sheets/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlMatt/42f18ea37e40b0f457d8a8af7b67d96bd1517cde98f42c51d6a7e019619da163.front-off-1000x1100.webp",
+          "sha256": "42f18ea37e40b0f457d8a8af7b67d96bd1517cde98f42c51d6a7e019619da163",
+          "url": "/images/plate-contact-sheets/42f18ea37e40b0f457d8a8af7b67d96bd1517cde98f42c51d6a7e019619da163.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15MtlRollSlSh",
+      "graceSku": "GB-FLR-CLR-15ML-MRL-SSLV",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlSh/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.front-on-1000x1100.webp",
+          "sha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d",
+          "url": "/images/plate-contact-sheets/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15MtlRollSlSh/48bffc6296caa4d54be16c1093c6cd377e649e1cffa36b5f06a367916d129289.front-off-1000x1100.webp",
+          "sha256": "48bffc6296caa4d54be16c1093c6cd377e649e1cffa36b5f06a367916d129289",
+          "url": "/images/plate-contact-sheets/48bffc6296caa4d54be16c1093c6cd377e649e1cffa36b5f06a367916d129289.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15RollBlkDot",
+      "graceSku": "GB-FLR-CLR-15ML-ROL-BKDT",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black Dotted",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decant",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkDot/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.front-on-1000x1100.webp",
+          "sha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+          "url": "/images/plate-contact-sheets/cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkDot/377d77413c7a5fd13609c7435a0f43cabfa64afb0d192e9fc3ba826128d2eb76.front-off-1000x1100.webp",
+          "sha256": "377d77413c7a5fd13609c7435a0f43cabfa64afb0d192e9fc3ba826128d2eb76",
+          "url": "/images/plate-contact-sheets/377d77413c7a5fd13609c7435a0f43cabfa64afb0d192e9fc3ba826128d2eb76.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15RollBlkSh",
+      "graceSku": "GB-FLR-CLR-15ML-ROL-SBLK",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and black shiny cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price e",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkSh/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.front-on-1000x1100.webp",
+          "sha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab",
+          "url": "/images/plate-contact-sheets/a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollBlkSh/27caf102c65a655dd81c86b1e239429580025ca500c11af92466a0dc0f49c465.front-off-1000x1100.webp",
+          "sha256": "27caf102c65a655dd81c86b1e239429580025ca500c11af92466a0dc0f49c465",
+          "url": "/images/plate-contact-sheets/27caf102c65a655dd81c86b1e239429580025ca500c11af92466a0dc0f49c465.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15RollCuMatt",
+      "graceSku": "GB-FLR-CLR-15ML-ROL-MCPR",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and matte copper cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollCuMatt/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.front-on-1000x1100.webp",
+          "sha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799",
+          "url": "/images/plate-contact-sheets/3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollCuMatt/d1e651f90e71c7ff7e5632d2e066b9ee5711b2f375b10dc66016f6d5b5123cdc.front-off-1000x1100.webp",
+          "sha256": "d1e651f90e71c7ff7e5632d2e066b9ee5711b2f375b10dc66016f6d5b5123cdc",
+          "url": "/images/plate-contact-sheets/d1e651f90e71c7ff7e5632d2e066b9ee5711b2f375b10dc66016f6d5b5123cdc.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15RollGlMatt",
+      "graceSku": "GB-FLR-CLR-15ML-ROL-MGLD",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlMatt/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.front-on-1000x1100.webp",
+          "sha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a",
+          "url": "/images/plate-contact-sheets/ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlMatt/220143accbd49aa5587097b62d8ca7ea85dd329c924cb4e03d2b8bcebeda9845.front-off-1000x1100.webp",
+          "sha256": "220143accbd49aa5587097b62d8ca7ea85dd329c924cb4e03d2b8bcebeda9845",
+          "url": "/images/plate-contact-sheets/220143accbd49aa5587097b62d8ca7ea85dd329c924cb4e03d2b8bcebeda9845.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15RollGlSh",
+      "graceSku": "GB-FLR-CLR-15ML-ROL-SGLD",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlSh/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.front-on-1000x1100.webp",
+          "sha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0",
+          "url": "/images/plate-contact-sheets/f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollGlSh/3215a866434b579e1ddbd8480827385ce7cf4c553c3bb469023594b8279e4240.front-off-1000x1100.webp",
+          "sha256": "3215a866434b579e1ddbd8480827385ce7cf4c553c3bb469023594b8279e4240",
+          "url": "/images/plate-contact-sheets/3215a866434b579e1ddbd8480827385ce7cf4c553c3bb469023594b8279e4240.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15RollPinkDot",
+      "graceSku": "GB-FLR-CLR-15ML-ROL-PKDT",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Pink Dotted",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and pink cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Pric",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollPinkDot/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.front-on-1000x1100.webp",
+          "sha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0",
+          "url": "/images/plate-contact-sheets/834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollPinkDot/8a229a81dac40e0a90fa6c302bfedd3845450dd0dba2cb50d3d9ae49132e99e5.front-off-1000x1100.webp",
+          "sha256": "8a229a81dac40e0a90fa6c302bfedd3845450dd0dba2cb50d3d9ae49132e99e5",
+          "url": "/images/plate-contact-sheets/8a229a81dac40e0a90fa6c302bfedd3845450dd0dba2cb50d3d9ae49132e99e5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15RollSlDot",
+      "graceSku": "GB-FLR-CLR-15ML-ROL-SLDT",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Silver Dotted",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and silver cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Pr",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlDot/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.front-on-1000x1100.webp",
+          "sha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600",
+          "url": "/images/plate-contact-sheets/a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlDot/351cde52e29d5c348629ce5d21e9a60609c48ab3c7aa55a1b848011c251e2ae4.front-off-1000x1100.webp",
+          "sha256": "351cde52e29d5c348629ce5d21e9a60609c48ab3c7aa55a1b848011c251e2ae4",
+          "url": "/images/plate-contact-sheets/351cde52e29d5c348629ce5d21e9a60609c48ab3c7aa55a1b848011c251e2ae4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15RollSlMatt",
+      "graceSku": "GB-FLR-CLR-15ML-ROL-MSLV",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlMatt/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.front-on-1000x1100.webp",
+          "sha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3",
+          "url": "/images/plate-contact-sheets/e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlMatt/9b8f54b51ade72537c2b98134c4b8699af26d8a4f03b7129a3aa37b6f2df9fff.front-off-1000x1100.webp",
+          "sha256": "9b8f54b51ade72537c2b98134c4b8699af26d8a4f03b7129a3aa37b6f2df9fff",
+          "url": "/images/plate-contact-sheets/9b8f54b51ade72537c2b98134c4b8699af26d8a4f03b7129a3aa37b6f2df9fff.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15RollSlSh",
+      "graceSku": "GB-FLR-CLR-15ML-ROL-SSLV",
+      "productGroupId": "kh73hfrmdk6tqw6ew9hhx0kkv18dqwpg",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "flair-15ml-clear-13-415-rollon",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlSh/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.front-on-1000x1100.webp",
+          "sha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d",
+          "url": "/images/plate-contact-sheets/9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15RollSlSh/f5c62d493720a3914b444e1c095170ad3b4d22c5cd207ca2a3ab34ba3d334b8d.front-off-1000x1100.webp",
+          "sha256": "f5c62d493720a3914b444e1c095170ad3b4d22c5cd207ca2a3ab34ba3d334b8d",
+          "url": "/images/plate-contact-sheets/f5c62d493720a3914b444e1c095170ad3b4d22c5cd207ca2a3ab34ba3d334b8d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15Sl",
+      "graceSku": "GB-VIA-CLR-15ML-SLV-T-01",
+      "productGroupId": "kh7da009vam1n9g72d2fv8dv6d8dp7t6",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Silver",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Sl/fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e.front-on-1000x1100.webp",
+          "sha256": "fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e",
+          "url": "/images/plate-contact-sheets/fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15Sl/825d98743d3893c669bbede47814012949136cbc72a27d049f3bf6cc167f86c1.front-off-1000x1100.webp",
+          "sha256": "825d98743d3893c669bbede47814012949136cbc72a27d049f3bf6cc167f86c1",
+          "url": "/images/plate-contact-sheets/825d98743d3893c669bbede47814012949136cbc72a27d049f3bf6cc167f86c1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15SpryBlkMatt",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MBLK",
+      "productGroupId": "kh776sp4exn1qpwx5qf8d3hshs8dp35m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with matte black spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415-finemist",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkMatt/e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006.front-on-1000x1100.webp",
+          "sha256": "e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006",
+          "url": "/images/plate-contact-sheets/e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkMatt/1a33ea7952a8f3e31622ae715718dc866651f3127874f5f3b4a73715e88a5380.front-off-1000x1100.webp",
+          "sha256": "1a33ea7952a8f3e31622ae715718dc866651f3127874f5f3b4a73715e88a5380",
+          "url": "/images/plate-contact-sheets/1a33ea7952a8f3e31622ae715718dc866651f3127874f5f3b4a73715e88a5380.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15SpryBlkSh",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-SBLK",
+      "productGroupId": "kh776sp4exn1qpwx5qf8d3hshs8dp35m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with shiny black spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415-finemist",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkSh/72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952.front-on-1000x1100.webp",
+          "sha256": "72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952",
+          "url": "/images/plate-contact-sheets/72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBlkSh/288f5babe4f975679dee0b386912f9a4b0229e9052157968a2c14be0e81660c7.front-off-1000x1100.webp",
+          "sha256": "288f5babe4f975679dee0b386912f9a4b0229e9052157968a2c14be0e81660c7",
+          "url": "/images/plate-contact-sheets/288f5babe4f975679dee0b386912f9a4b0229e9052157968a2c14be0e81660c7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15SpryBluMatt",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MBLU",
+      "productGroupId": "kh776sp4exn1qpwx5qf8d3hshs8dp35m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with matte blue spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415-finemist",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBluMatt/392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e.front-on-1000x1100.webp",
+          "sha256": "392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e",
+          "url": "/images/plate-contact-sheets/392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryBluMatt/af4b1c5b725c4ac1184f0d30948911b818b8aaa6dcfe9916c8f19eb16678c29a.front-off-1000x1100.webp",
+          "sha256": "af4b1c5b725c4ac1184f0d30948911b818b8aaa6dcfe9916c8f19eb16678c29a",
+          "url": "/images/plate-contact-sheets/af4b1c5b725c4ac1184f0d30948911b818b8aaa6dcfe9916c8f19eb16678c29a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15SpryCuMatt",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MCPR",
+      "productGroupId": "kh776sp4exn1qpwx5qf8d3hshs8dp35m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with matte copper spray. For use with fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415-finemist",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryCuMatt/36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75.front-on-1000x1100.webp",
+          "sha256": "36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75",
+          "url": "/images/plate-contact-sheets/36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryCuMatt/886b81ee4a54df50ca2971e208bcdda513e24290f154f31e5261f2b30538a1f3.front-off-1000x1100.webp",
+          "sha256": "886b81ee4a54df50ca2971e208bcdda513e24290f154f31e5261f2b30538a1f3",
+          "url": "/images/plate-contact-sheets/886b81ee4a54df50ca2971e208bcdda513e24290f154f31e5261f2b30538a1f3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15SpryGlMatt",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MGLD",
+      "productGroupId": "kh776sp4exn1qpwx5qf8d3hshs8dp35m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with matte gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415-finemist",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlMatt/f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354.front-on-1000x1100.webp",
+          "sha256": "f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354",
+          "url": "/images/plate-contact-sheets/f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlMatt/312e38e2ab5ce1b30ac6315f156e428afe23b3d7917b7b1dcf1a73019b8c6ac3.front-off-1000x1100.webp",
+          "sha256": "312e38e2ab5ce1b30ac6315f156e428afe23b3d7917b7b1dcf1a73019b8c6ac3",
+          "url": "/images/plate-contact-sheets/312e38e2ab5ce1b30ac6315f156e428afe23b3d7917b7b1dcf1a73019b8c6ac3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15SpryGlSh",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-SGLD",
+      "productGroupId": "kh776sp4exn1qpwx5qf8d3hshs8dp35m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with shiny gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415-finemist",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlSh/19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2.front-on-1000x1100.webp",
+          "sha256": "19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2",
+          "url": "/images/plate-contact-sheets/19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SpryGlSh/9ccdb2c2f8aa99c1d5f958819213263d1a1fdc5d78c231fd5648091943bd9e12.front-off-1000x1100.webp",
+          "sha256": "9ccdb2c2f8aa99c1d5f958819213263d1a1fdc5d78c231fd5648091943bd9e12",
+          "url": "/images/plate-contact-sheets/9ccdb2c2f8aa99c1d5f958819213263d1a1fdc5d78c231fd5648091943bd9e12.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15SprySlMatt",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-MSLV",
+      "productGroupId": "kh776sp4exn1qpwx5qf8d3hshs8dp35m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with matte silver spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415-finemist",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlMatt/87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb.front-on-1000x1100.webp",
+          "sha256": "87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb",
+          "url": "/images/plate-contact-sheets/87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlMatt/5c6b98be243fb69705803ef6efa612be825833ab72f61abd3b6576e4ad19037e.front-off-1000x1100.webp",
+          "sha256": "5c6b98be243fb69705803ef6efa612be825833ab72f61abd3b6576e4ad19037e",
+          "url": "/images/plate-contact-sheets/5c6b98be243fb69705803ef6efa612be825833ab72f61abd3b6576e4ad19037e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15SprySlSh",
+      "graceSku": "GB-FLR-CLR-15ML-SPR-SSLV",
+      "productGroupId": "kh776sp4exn1qpwx5qf8d3hshs8dp35m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with shiny silver spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415-finemist",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlSh/e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e.front-on-1000x1100.webp",
+          "sha256": "e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e",
+          "url": "/images/plate-contact-sheets/e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15SprySlSh/d6d002daa849fb641be3a1a45825c19abd2f03c1aa57d6249e6cb6f7bd9bb877.front-off-1000x1100.webp",
+          "sha256": "d6d002daa849fb641be3a1a45825c19abd2f03c1aa57d6249e6cb6f7bd9bb877",
+          "url": "/images/plate-contact-sheets/d6d002daa849fb641be3a1a45825c19abd2f03c1aa57d6249e6cb6f7bd9bb877.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBFlair15WhtSht",
+      "graceSku": "GB-VIA-WHT-15ML-WHT-S-01",
+      "productGroupId": "kh7da009vam1n9g72d2fv8dv6d8dp7t6",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "White",
+      "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with short white cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "flair-15ml-clear-13-415",
+      "familyId": "flair-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15WhtSht/6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea.front-on-1000x1100.webp",
+          "sha256": "6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea",
+          "url": "/images/plate-contact-sheets/6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/flair-15ml-clear-13-415/GBFlair15WhtSht/8a7838f12cfe8e5362f4cd1518704a4c86cb004f0ba52ee06cbe647498665ab2.front-off-1000x1100.webp",
+          "sha256": "8a7838f12cfe8e5362f4cd1518704a4c86cb004f0ba52ee06cbe647498665ab2",
+          "url": "/images/plate-contact-sheets/8a7838f12cfe8e5362f4cd1518704a4c86cb004f0ba52ee06cbe647498665ab2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 /**
  * ConfiguratorPdp — the guided configurator hero (design handoff
  * `design_handoff_configurator_pdp`, approved 2026-08-31).
@@ -216,6 +218,7 @@ export default function ConfiguratorPdp({
   /** One-line volume teaser under Add to Cart; the full table is below the fold. */
   volumePricing?: ReactNode;
 }) {
+    const { formatPrice } = useRegion();
   const isBottle = (productPresentation?.kind ?? "bottle") === "bottle";
   const fam = isBottle ? familyForSlugOrDerived(currentSlug) : null;
   const slugGlass: GlassPresetId = fam ? glassFromSlug(fam, currentSlug) : "clear";
@@ -718,7 +721,7 @@ export default function ConfiguratorPdp({
     <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-3.5">
       {priceEach != null && (
         <p className="text-[28px] font-semibold text-obsidian tabular-nums leading-none">
-          ${priceEach.toFixed(2)}
+          {formatPrice(priceEach)}
           <span className="text-sm font-normal text-slate ml-1.5">/each</span>
         </p>
       )}
@@ -741,11 +744,11 @@ export default function ConfiguratorPdp({
     <div ref={ctaAnchorRef} className="mt-4" data-testid="pdp-focused-cta">
       <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-sm">
         <span className="font-semibold tabular-nums text-obsidian">
-          {tierPrice != null ? `$${tierPrice.toFixed(2)} /ea` : "Price on request"}
+          {tierPrice != null ? `${formatPrice(tierPrice)} /ea` : "Price on request"}
         </span>
         {caseQty && tierPrice != null ? (
           <span className="text-slate">
-            ${ (tierPrice * caseQty).toFixed(2) } per case of {caseQty.toLocaleString()}
+            {formatPrice((tierPrice * caseQty))} per case of {caseQty.toLocaleString()}
           </span>
         ) : null}
       </div>

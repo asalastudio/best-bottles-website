@@ -1,0 +1,290 @@
+{
+  "note": "Jordan's approvals and corrections for builder bare-body sources. An entry here wins over the recipe-reviewed source and over the heuristic candidate for the same body key. Each names the master PSD, the descendants-order layer, and the instruction it answers. 2026-09-14 later: Jordan — 'the actual reducer should not be inside the bottle'; reducer-bottle sources are no longer used for any body. Where a paired-kit recipe names an uncapped (off) source, its body layer is used; otherwise uncapped sprayer/pump/dropper sources are preferred, then cap-only capped sources, and reducer sources last.",
+  "entries": [
+    {
+      "body": "Round|78|Frosted|18-415",
+      "instruction": "2026-09-14 Jordan: add the frosted option. Pinned 2026-09-14 to the layer Jordan saw (heuristic picks drift when the ledger changes).",
+      "path": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/33. GBRndFrst78AnSpLvn.psd",
+      "layer": 1
+    },
+    {
+      "body": "Cylinder|9|Frosted|13-415",
+      "instruction": "2026-09-14 Jordan: add the frosted option. Pinned 2026-09-14 to the layer Jordan saw (heuristic picks drift when the ledger changes).",
+      "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/5. GBTallCylFrst9SpryBluMatt.psd",
+      "layer": 3
+    },
+    {
+      "body": "Cylinder|9|Frosted|17-415",
+      "instruction": "2026-09-14 Jordan: add the frosted option. Pinned 2026-09-14 to the layer Jordan saw (heuristic picks drift when the ledger changes).",
+      "path": "3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/22. GBCylFrst9SpryMattSl.psd",
+      "layer": 1
+    },
+    {
+      "body": "Diva|46|Clear|18-415",
+      "path": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./2. Diva 46(18415)Sideviews/1. GBDiva46.psd",
+      "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'they still show the reducer' — every closure photograph of the Diva was shot with the reducer inserted; this bare-bottle master (no closure token) is the only Diva 46 photograph with an empty neck."
+    },
+    {
+      "body": "Diva|100|Clear|18-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/diva-100-clear-18-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "7c87c8a7-c1de-4454-9ba6-66eb7d768a71",
+        "cutoutJob": "c4fe7254-0201-4beb-9220-da4b53331c00",
+        "generatedPng": "data/paper-doll/neck-cleanup/diva-100-clear-18-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/diva-100-clear-18-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/diva-100-clear-18-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/diva-100-clear-18-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Diva|46|Frosted|18-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/diva-46-frosted-18-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "d8c3b988-6340-4a1a-8494-bca387f54818",
+        "cutoutJob": "77a05eb6-3c50-4ebc-9c02-f321e4699338",
+        "generatedPng": "data/paper-doll/neck-cleanup/diva-46-frosted-18-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/diva-46-frosted-18-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/diva-46-frosted-18-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/diva-46-frosted-18-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Elegant|15|Clear|13-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/elegant-15-clear-13-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "06cff5a3-e3ff-4d98-a083-26c9694e8d3d",
+        "cutoutJob": "38ffcd2a-856f-4566-99b8-a8963d42aa5d",
+        "generatedPng": "data/paper-doll/neck-cleanup/elegant-15-clear-13-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/elegant-15-clear-13-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/elegant-15-clear-13-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/elegant-15-clear-13-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Elegant|15|Frosted|13-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/elegant-15-frosted-13-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "d143b7d0-f7df-41d4-8d93-f2efa376d968",
+        "cutoutJob": "aa10f0e5-a397-4d03-ae48-9bf6a02caa1e",
+        "generatedPng": "data/paper-doll/neck-cleanup/elegant-15-frosted-13-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/elegant-15-frosted-13-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/elegant-15-frosted-13-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/elegant-15-frosted-13-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Elegant|30|Clear|15-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/elegant-30-clear-15-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "27451e4f-12ca-4d8f-a6d6-d6402cc60632",
+        "cutoutJob": "c0c77482-397a-462a-8c2a-2d8c908ce312",
+        "generatedPng": "data/paper-doll/neck-cleanup/elegant-30-clear-15-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/elegant-30-clear-15-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/elegant-30-clear-15-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/elegant-30-clear-15-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Elegant|100|Clear|18-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/elegant-100-clear-18-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "1c605df3-d363-4c9f-b085-408fd6352843",
+        "cutoutJob": "ef6cba0a-f3b8-449f-826f-e1287fca4dae",
+        "generatedPng": "data/paper-doll/neck-cleanup/elegant-100-clear-18-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/elegant-100-clear-18-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/elegant-100-clear-18-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/elegant-100-clear-18-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Empire|50|Clear|18-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "e12bef5a-7232-4aef-a3b9-93005362739f",
+        "cutoutJob": "2ac49acd-76c0-4ec8-b232-ccca26912bad",
+        "generatedPng": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/empire-50-clear-18-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Circle|30|Clear|15-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/circle-30-clear-15-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "26ffc4b2-04f1-4085-ad1c-6b2abce99d1a",
+        "cutoutJob": "94a95437-727b-4316-abd3-8ee7d77ac57f",
+        "generatedPng": "data/paper-doll/neck-cleanup/circle-30-clear-15-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/circle-30-clear-15-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/circle-30-clear-15-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/circle-30-clear-15-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Circle|50|Frosted|18-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/circle-50-frosted-18-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "fd4fb831-f369-49bc-a6a6-afe4423163f1",
+        "cutoutJob": "e81946a1-ede3-4e77-a309-e46cddf240ff",
+        "generatedPng": "data/paper-doll/neck-cleanup/circle-50-frosted-18-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/circle-50-frosted-18-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/circle-50-frosted-18-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/circle-50-frosted-18-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Circle|100|Clear|18-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/circle-100-clear-18-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "fce457b7-6063-4fae-9ae8-e0a191a704e7",
+        "cutoutJob": "4959f814-d47a-4401-b434-30181b7dfb3e",
+        "generatedPng": "data/paper-doll/neck-cleanup/circle-100-clear-18-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/circle-100-clear-18-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/circle-100-clear-18-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/circle-100-clear-18-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Circle|100|Frosted|18-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/circle-100-frosted-18-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "9f6cd4ce-72cf-4b68-98cd-22d03360bfbb",
+        "cutoutJob": "aac84994-011f-4b9a-9bfe-76893f87e56d",
+        "generatedPng": "data/paper-doll/neck-cleanup/circle-100-frosted-18-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/circle-100-frosted-18-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/circle-100-frosted-18-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/circle-100-frosted-18-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Round|128|Frosted|18-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/round-128-frosted-18-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "59dc38c3-f131-4a26-a7db-9eea3bcabeac",
+        "cutoutJob": "4b8840cf-dbb4-40e1-beb8-793fb1b73329",
+        "generatedPng": "data/paper-doll/neck-cleanup/round-128-frosted-18-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/round-128-frosted-18-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/round-128-frosted-18-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/round-128-frosted-18-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
+      "body": "Diva|30|Clear|18-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/diva-30-clear-18-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "71247d70-c922-4331-a730-4f0d0260a01e",
+        "cutoutJob": "0cdf9c7e-e84f-429e-917e-4dbed96ce7e4",
+        "generatedPng": "data/paper-doll/neck-cleanup/diva-30-clear-18-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/diva-30-clear-18-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/diva-30-clear-18-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/diva-30-clear-18-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 pilot, Jordan: 'looks great'."
+    },
+    {
+      "body": "Boston Round|15|Clear|18-400",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+      "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles… the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground."
+    },
+    {
+      "body": "Boston Round|15|Amber|18-400",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/1. GBBstnAmb15mlBlkCapSht.psd",
+      "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles… the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "ground": "white"
+    },
+    {
+      "body": "Boston Round|15|Cobalt Blue|18-400",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/1. GBBstnBlu15BlkCapSht.psd",
+      "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles… the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "ground": "white"
+    },
+    {
+      "body": "Boston Round|30|Clear|20-400",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+      "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles… the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground."
+    },
+    {
+      "body": "Boston Round|30|Amber|20-400",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/17. GBBstnAmb1ozBlkCapSht.psd",
+      "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles… the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "ground": "white"
+    },
+    {
+      "body": "Boston Round|30|Cobalt Blue|20-400",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/17. GBBstnBlu1ozBlkCapSht.psd",
+      "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles… the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "ground": "white"
+    },
+    {
+      "body": "Boston Round|60|Clear|20-400",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+      "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles… the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground."
+    },
+    {
+      "body": "Boston Round|60|Amber|20-400",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/17. GBBstnAmb2ozBlkCapSht.psd",
+      "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles… the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "ground": "white"
+    },
+    {
+      "body": "Boston Round|60|Cobalt Blue|20-400",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/17. GBBstnBlu2ozBlkCapSht.psd",
+      "layer": 1,
+      "instruction": "2026-09-14 Jordan: 'the Boston rounds are missing quite a few bottles… the 15 mL in all colors, and the 30 and 60 mL only come in clear glass'. Bare-glass layer of the cap-only (BlkCapSht) master PSD; the amber and cobalt layers are photographs on a white ground, stripped by strip_white_ground.",
+      "ground": "white"
+    },
+    {
+      "body": "Round|128|Clear|18-415",
+      "path": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/29. GBRnd128SpryShnSl.psd",
+      "layer": 1,
+      "instruction": "Pinned 2026-09-14: the paired-kit recipe layer already serving the builder; main's ledger moved the Round 128 ml clear plates to 'reconcile', which must not drop a reviewed body."
+    }
+  ]
+}
