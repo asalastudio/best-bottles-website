@@ -1,0 +1,77 @@
+.scene {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: #141210;
+    /* niche interior in % of the wall image (1536×1024), measured from empire-niche-wall-v2 */
+    --niche-left: 53.3%;
+    --niche-top: 11.2%;
+    --niche-width: 25.6%;
+    --niche-height: 67%;
+}
+
+/* Every frame is the same 1536×1024 scene, so `cover` with one fixed focal point keeps them aligned
+   and never distorts; the focal point keeps the niche in the band at any viewport. */
+.stage {
+    position: absolute;
+    inset: 0;
+}
+
+.wall,
+.frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 62% 38%;
+}
+
+.frame {
+    transition: opacity 0.7s ease;
+}
+
+.entering { opacity: 1; animation: plateIn 0.7s ease both; }
+.leaving { opacity: 0; }
+
+@keyframes plateIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.caption {
+    position: absolute;
+    left: 6%;
+    bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0;
+    font-family: var(--font-brand);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(245, 243, 239, 0.78);
+}
+
+.rule { width: 28px; height: 1px; background: rgba(245, 243, 239, 0.35); }
+.count { display: inline-flex; align-items: baseline; gap: 0.35em; color: rgba(245, 243, 239, 0.5); letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Ticking counter */
+.odo { display: inline-flex; line-height: 1; color: rgba(245, 243, 239, 0.85); }
+.odoDigit { display: inline-block; height: 1em; overflow: hidden; }
+.odoStrip { display: flex; flex-direction: column; transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.odoStrip span { display: block; height: 1em; line-height: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+    .entering { animation: none; }
+    .frame { transition: none; }
+    .odoStrip { transition: none; }
+}
+
+@media (max-width: 640px) {
+    /* enlarge the stage so the niche reads at phone width; keep the niche inside the band */
+    .wall, .frame { object-position: 66% 40%; }
+    .caption { left: 22px; bottom: 12px; font-size: 10px; }
+}

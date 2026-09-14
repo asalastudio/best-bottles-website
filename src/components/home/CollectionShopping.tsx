@@ -1,7 +1,7 @@
 "use client";
 /* Editorial images here are collection navigation, never SKU plates. */
 /* eslint-disable @next/next/no-img-element */
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import type { HomepageData } from '@/sanity/lib/queries';
 import { editorialImageUrl } from '@/sanity/lib/image';
@@ -10,6 +10,7 @@ import { CATALOG_FAMILIES } from '@/lib/catalogFilters';
 import { familyFinderHref } from '@/lib/products/focused-shopping';
 import { SHOP_COLLECTIONS, featuredCollectionCards, shopCollectionHref } from '@/lib/shopCollections';
 import { ImmersiveHeroArt } from './ImmersiveHeroArt';
+import EmpireFitmentHero from './EmpireFitmentHero';
 import styles from './CollectionShopping.module.css';
 
 const asset = (name: string) => `/assets/homepage/${name}.webp`;
@@ -48,6 +49,7 @@ export function FamilyCarousel({ cards }: { cards?: HomepageData['designFamilyCa
 export function ShoppingHero({ slides }: {slides?:HomepageData['heroSlides']}) {
     const [index,setIndex]=useState(0);
     const heroVideo=useRef<HTMLVideoElement>(null);
+    const fitmentHero=useSyncExternalStore(()=>()=>{}, ()=>new URLSearchParams(window.location.search).get('hero')==='fitments', ()=>false);
     const slide=slides?.[index];
     const desktop=cmsImage(slide?.image,1800)??asset('hero-empire-water-rebuilt');
     const mobile=cmsImage(slide?.mobileImage,860)??desktop;
@@ -61,7 +63,7 @@ export function ShoppingHero({ slides }: {slides?:HomepageData['heroSlides']}) {
         return()=>preference.removeEventListener('change',sync);
     }, [slide]);
     return <section className={styles.hero} data-scene={!slide ? "empire-water" : undefined} aria-label="Featured bottles">
-        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? <ImmersiveHeroArt/> : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
+        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (fitmentHero ? <EmpireFitmentHero/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
         <div className={styles.heroCopy}><h1>{slide?.headline || 'Beautifully contained.'}</h1><p>{slide?.subheadline || 'Distinctive Glass. Thoughtful Details. Endless Possibilities.'}</p><div className={styles.buttons}><Link className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || 'Shop bottles'}</Link><Link className={styles.secondary} href="/matrix">Build your bottle</Link></div></div>
         {(slides?.length??0)>1 && <div className={styles.heroControls}>{slides!.map((_,i)=><button key={i} aria-label={`Show hero ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>{i+1}</button>)}</div>}
     </section>;
