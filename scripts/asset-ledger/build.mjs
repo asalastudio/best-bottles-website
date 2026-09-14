@@ -5,6 +5,7 @@ import {readSourceRecovery} from './source-recovery.mjs';
 import {applyPlateSheetReviews} from './plate-contact-sheet.mjs';
 import {applyPreparedPlateReviews} from './prepared-plate-reviews.mjs';
 import {buildPlatePlan} from './plate-plan.mjs';
+import {readPlateReleaseLocks} from './plate-release-locks.mjs';
 import {assembledPlatePresentation} from './plate-presentation.mjs';
 import {applyPlateScope} from './plate-scope.mjs';
 import {readCylinderFinalPlates,applyCylinderFinalPreparation} from './cylinder-final-plates.mjs';
@@ -338,6 +339,37 @@ const out = { schemaVersion: 2, sourceRecovery, platePreparation, bottleStandard
 }, summary, families, rows };
 
 mkdirSync(path.join(root, "src/lib/asset-ledger"), { recursive: true });
+// Jordan's completeness rule, 2026-09-13: the live legacy site decides what
+// exists and what can still be obtained. Recording it here stops the plan
+// presenting a source hold as a dead end when the asset is in fact available.
+const legacyReconPath = path.join(root, "data/asset-ledger/legacy-asset-reconciliation.json");
+out.legacyAssetReconciliation = existsSync(legacyReconPath) ? readJson(legacyReconPath) : null;
+if (out.legacyAssetReconciliation) {
+    const lr = out.legacyAssetReconciliation;
+    note("plate.legacy-asset-reconciliation", { path: "data/asset-ledger/legacy-asset-reconciliation.json",
+        generatedAt: lr.generatedAt, networkChecked: lr.networkChecked,
+        legacyCatalogGeneratedAt: lr.legacyCatalog?.generatedAt, ...lr.summary });
+}
+// Jordan's source decision on the rows that had no candidate: the legacy
+// photograph is accepted as their source, cap-on only. It settles the source
+// question; it does not make them plates.
+const legacyHoldPath = path.join(root, "data/asset-ledger/legacy-hold-source-decisions.json");
+out.legacyHoldDecision = existsSync(legacyHoldPath) ? readJson(legacyHoldPath) : null;
+if (out.legacyHoldDecision) {
+    const d = out.legacyHoldDecision;
+    note("plate.legacy-hold-source-decision", { path: "data/asset-ledger/legacy-hold-source-decisions.json",
+        decidedAt: d.decidedAt, sourceApproved: d.approvedRows, queuedForRegeneration: d.regenerateRows,
+        capOnAccepted: d.capOnAccepted, plateApproved: d.plateApproved, publicationAuthorized: d.publicationAuthorized });
+}
+// Every family's exact-byte approval lock, so an image Jordan has already
+// signed off is never sent back for another review. A lock is visual approval
+// only; publication and indexing stay separate and are checked above.
+out.plateReleaseLocks = readPlateReleaseLocks(root);
+for (const lock of out.plateReleaseLocks) {
+    if (lock.skipped) { note("plate.release-lock-skipped", { path: lock.path, release: lock.release, reason: lock.skipped }); continue; }
+    note("plate.release-lock", { path: lock.path, release: lock.release, rows: lock.rows, held: lock.held.length,
+        approvedAt: lock.approvedAt, publicationAuthorized: lock.publicationAuthorized, indexingAuthorized: lock.indexingAuthorized });
+}
 out.platePlan = buildPlatePlan(out);
 writeFileSync(path.join(root, "src/lib/asset-ledger/ledger.json.tmp"), JSON.stringify(out, null, 1) + "\n");
 renameSync(path.join(root,"src/lib/asset-ledger/ledger.json.tmp"),path.join(root,"src/lib/asset-ledger/ledger.json"));

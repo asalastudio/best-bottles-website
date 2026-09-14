@@ -83,6 +83,46 @@ Review-only SKUs, catalog records lacking SKUs, unclassified collections, and so
 
 The kit CSV remains a dated source; `ASSET_LEDGER_KIT_LEDGER` can select a reconciled replacement explicitly. New audit results must be integrated deliberately and identified in the ledger sources; running an audit elsewhere does not update this ledger automatically.
 
+## The legacy site is the completeness authority — Jordan, September 13
+
+Jordan's instruction: *"We have all the files we need on our desktop, and if you need
+anything else, you can always scrape the assets from the current Best Bottles legacy
+site. There's nothing that we cannot get right now. If it's not present in the Best
+Bottles legacy site, then that means it doesn't exist."*
+
+This was measured against the live site on 2026-09-14 rather than assumed.
+**All 833 outstanding plate rows have a live legacy image. None are unobtainable.**
+821 have a legacy product page; the other 12 have no page but their image files are
+live at the standard paths. `Alu250mlSprayBlack` looked like the single exception and
+was not: the legacy site sells it as `Alu250SpryBl` and serves its image as
+`Alu250mlSprayblack.gif` with a lowercase b. That alias is now recorded in
+`data/legacy/legacy-aliases.json` with the description evidence that established it,
+never the spelling.
+
+`scripts/asset-ledger/reconcile-legacy-assets.py` re-runs the check and writes
+`data/asset-ledger/legacy-asset-reconciliation.json`, which the ledger build reads.
+Every outstanding plan row now carries its `legacyAsset`, so a source hold reads as a
+task with a known fallback instead of a dead end. Re-run it whenever the catalog or
+the plan changes; it downloads nothing and publishes nothing.
+
+Three rules govern its use:
+
+- **The master PSD stays preferred.** Legacy files are 600x800 or 360x480 GIFs and the
+  plate canvas is 1000x1100. A legacy image is a fallback where no master view exists,
+  and it is recorded as a legacy source, never silently promoted to master lineage.
+- **Identity still never comes from a SKU string, a filename, or a URL.** A legacy row
+  matches through the exact SKU the legacy page prints in its own heading, or through
+  an alias recorded with substantive evidence.
+- **"Not on the legacy site" is a finding to bring to Jordan, not a licence to delete.**
+  Several catalog records absent from the legacy sitemap are active Shopify products
+  with master PSDs. Absence removes a product from scope only on Jordan's explicit
+  scope decision, recorded in `data/asset-ledger/plate-scope-dispositions.json`.
+
+The legacy sweep lane itself (`scripts/legacy/sweep_legacy_site.py`, `data/legacy/`)
+was recovered from commit `67c62efb`; it had never been on main. Its catalogue snapshot
+is dated 2026-09-02, so re-run its `catalog` and `expand` phases before relying on it
+for scope rather than for assets.
+
 ## Release rules
 
 The sole PSD root is `BB-PSD-Files-Master`. Preserve unresolved SKUs as holds and fabricate no components. Every visual change gets a same-zoom before/after with measurements. Approval binds to SHA-256; changed bytes return to review. Nothing is published without Jordan's “ship” for that named release. Never commit `.claude/launch.json`.

@@ -1,0 +1,63 @@
+{
+  "revision": 1,
+  "decisions": {
+    "Alu250mlSprayBlack:c51287985c7d58f6f678377a26f5470a8f98dedc85ed39943fb715633c15e814": {
+      "sku": "Alu250mlSprayBlack",
+      "binding": "c51287985c7d58f6f678377a26f5470a8f98dedc85ed39943fb715633c15e814",
+      "sha256": "e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:43.074Z",
+      "batchId": "de70fba1-09f2-458d-8bfa-e428338b4459",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-250ml-clear-20-410/Alu250mlSprayBlack/e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e.front-on-1000x1100.webp",
+          "sha256": "e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e",
+          "url": "/images/plate-contact-sheets/e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-250ml-clear-20-410/Alu250mlSprayBlack/4803a63d26b15b93eaf71b9fcefabe658f7b005fb9c2395e40e2298653bc8cff.front-off-1000x1100.webp",
+          "sha256": "4803a63d26b15b93eaf71b9fcefabe658f7b005fb9c2395e40e2298653bc8cff",
+          "url": "/images/plate-contact-sheets/4803a63d26b15b93eaf71b9fcefabe658f7b005fb9c2395e40e2298653bc8cff.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "Alu250mlSprayBlack",
+      "binding": "c51287985c7d58f6f678377a26f5470a8f98dedc85ed39943fb715633c15e814",
+      "sha256": "e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:43.074Z",
+      "batchId": "de70fba1-09f2-458d-8bfa-e428338b4459",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-250ml-clear-20-410/Alu250mlSprayBlack/e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e.front-on-1000x1100.webp",
+          "sha256": "e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e",
+          "url": "/images/plate-contact-sheets/e5e78ddb91abf5403d70ffc1390dd0f76d6b38519f0785cd441f03e92255d81e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/aluminum-bottle-250ml-clear-20-410/Alu250mlSprayBlack/4803a63d26b15b93eaf71b9fcefabe658f7b005fb9c2395e40e2298653bc8cff.front-off-1000x1100.webp",
+          "sha256": "4803a63d26b15b93eaf71b9fcefabe658f7b005fb9c2395e40e2298653bc8cff",
+          "url": "/images/plate-contact-sheets/4803a63d26b15b93eaf71b9fcefabe658f7b005fb9c2395e40e2298653bc8cff.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}

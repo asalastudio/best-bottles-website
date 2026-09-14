@@ -1,3 +1,5 @@
+import {lockApprovedSkus} from './plate-release-locks.mjs';
+
 export const plateStages = {
     complete: {label: 'Approved & indexed', detail: 'Current plate checks and image-byte approval pass.'},
     release: {label: 'Approved · awaiting release', detail: 'The final images are approved. Publication and indexing remain.'},
@@ -17,7 +19,7 @@ export function plateStage(plate) {
     return 'reconcile';
 }
 
-export function plateReasons(row) {
+export function plateReasons(row, legacyAsset = null, legacySourceApproved = null, legacyRegenerate = null) {
     const p = row.plate, stage = plateStage(p), reasons = [];
     if (stage === 'complete') return ['Approved current image bytes; preserve this plate.'];
     if (stage === 'release') return ['Final image and source approval is recorded. No repeat review is needed for these exact bytes. Publish the named release, verify its hosted files, and register the indexed views.'];
@@ -39,6 +41,18 @@ export function plateReasons(row) {
     if (p.issues?.length) reasons.push(...p.issues);
     if (p.state === 'measurement-stale') reasons.push('Refresh measurement of the currently indexed bytes.');
     if (!reasons.length) reasons.push(plateStages[stage].detail);
+    if (legacyRegenerate) {
+        return ['The legacy photograph sits on a green matte and cannot be matted onto the plate canvas. Jordan queued this bottle for regeneration with Higgsfield GPT Image 2.5.'];
+    }
+    if (legacySourceApproved) {
+        return [`Source settled: Jordan approved this product's legacy photograph (${legacySourceApproved.view}, ${legacySourceApproved.pixels}) as its source, cap-on only, with no cap-off owed. Prepare the plate from that source; the prepared bytes are new and come back for their own review before indexing.`];
+    }
+    // A source hold is a task, not a dead end, whenever the legacy site still
+    // serves this exact product's photograph. The master PSD stays preferred:
+    // legacy files are small GIFs and are a fallback, never an upgrade.
+    if (legacyAsset && (stage === 'missing' || stage === 'reconcile')) {
+        reasons.push(`Fallback source available on the legacy site (${legacyAsset.roles.join(', ') || 'image'}). Prefer the master PSD; use the legacy image only where no master view exists, and record it as a legacy source.`);
+    }
     return [...new Set(reasons)];
 }
 
@@ -46,11 +60,33 @@ export function plateReasons(row) {
 // remain outside the denominator, and missing group links remain explicit.
 export function buildPlatePlan(ledger) {
     const empty = () => ({total:0,complete:0,release:0,review:0,reconcile:0,missing:0});
+    // Rows whose exact bytes are already approved under a named family release lock.
+    const lockApproved = lockApprovedSkus(ledger.plateReleaseLocks);
+    const awaitingRelease = (r) => !r.plate.complete && lockApproved.has(r.sku);
+    // Rows whose source Jordan settled on the legacy evidence page.
+    const legacySourceApproved = new Map();
+    for (const r of ledger.legacyHoldDecision?.rows ?? []) legacySourceApproved.set(r.sku, r);
+    const legacyRegenerate = new Map();
+    for (const r of ledger.legacyHoldDecision?.regenerate ?? []) legacyRegenerate.set(r.sku, r);
+    // Which outstanding rows the live legacy site can still supply an image for.
+    const legacyAsset = new Map();
+    for (const e of ledger.legacyAssetReconciliation?.rows ?? []) {
+        if (!e.assetAvailable) continue;
+        legacyAsset.set(e.sku, { roles: e.liveImageRoles ?? [], url: e.legacy?.url ?? null,
+            legacySku: e.legacy?.sku ?? null, matchedBy: e.legacy?.matchedBy ?? 'image path only' });
+    }
     const rows = ledger.rows.filter(r => r.productRecord && r.plate.state !== 'not-applicable' && !r.plate.scopeExclusion).map(r => ({
         sku:r.sku,graceSku:r.graceSku,family:r.family,capacityMl:r.capacityMl,color:r.color,
         itemName:r.itemName || r.sku,applicator:r.applicator,capColor:r.capColor,
         productGroupId:r.productGroupId,groupSlug:r.groupSlug,imageUrl:r.plate.imageUrl,
-        stage:plateStage(r.plate),reasons:plateReasons(r),sha256:r.plate.sha256,
+        stage:awaitingRelease(r)?'release':plateStage(r.plate),
+        reasons:awaitingRelease(r)
+            ? [`Exact image bytes are approved and locked under "${lockApproved.get(r.sku)}". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates.`]
+            : plateReasons(r, legacyAsset.get(r.sku), legacySourceApproved.get(r.sku), legacyRegenerate.get(r.sku)),sha256:r.plate.sha256,
+        releaseLock:lockApproved.get(r.sku) ?? null,
+        legacyAsset:legacyAsset.get(r.sku) ?? null,
+        legacySourceApproved:legacySourceApproved.get(r.sku) ?? null,
+        regenerateQueue:legacyRegenerate.get(r.sku)?.queue ?? null,
         capOff:r.plate.capOff,plateState:r.plate.state,sourcePath:r.plate.sourcePath,
         visualApprovalRecorded:r.plate.approval?.status === 'approved' || r.plate.appearanceApproval?.status === 'approved',
         finalPreparation:r.plate.finalPreparation ?? null,
@@ -66,7 +102,11 @@ export function buildPlatePlan(ledger) {
     const families = [...familyMap.values()].map(f => ({...f,sizes:[...f.sizes].sort((a,b)=>a-b)}))
         .sort((a,b)=>b.total-a.total || a.family.localeCompare(b.family));
     return {
-        version:1,focus:'plates',paused:['kits','heroes'],stages:plateStages,counts,families,rows,
+        version:1,        releaseLocks:(ledger.plateReleaseLocks ?? []).map(l=>l.skipped
+            ?{release:l.release,path:l.path,skipped:l.skipped}
+            :{release:l.release,path:l.path,rows:l.rows,held:l.held,approvedAt:l.approvedAt,
+              publicationAuthorized:l.publicationAuthorized,indexingAuthorized:l.indexingAuthorized}),
+focus:'plates',paused:['kits','heroes'],stages:plateStages,counts,families,rows,
         scope:{
             reconciled:ledger.scope?.catalogReconciled === true,
             reviewOnly:ledger.rows.filter(r=>!r.productRecord).length,

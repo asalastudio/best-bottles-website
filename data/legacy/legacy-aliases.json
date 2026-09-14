@@ -1,0 +1,32 @@
+{
+ "note": "Legacy bestbottles.com SKUs that name a product prod carries under another SKU (joined by product URL). Prod spelling is canonical; the sweep suppresses these from the missing list.",
+ "aliases": {
+  "Plastic Funnels": {
+   "prodSku": "Plastic",
+   "url": "https://www.bestbottles.com/product/Funnel-Plastic-small"
+  },
+  "BoxCWndwWhite - OUT OF STOCK": {
+   "prodSku": "BoxCWndwWhite",
+   "url": "https://www.bestbottles.com/product/Gift-box-C-small-window-white-color"
+  },
+  "AnSpTsl18-415Gold": {
+   "prodSku": "CP18-415AnSpTslGl",
+   "url": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-gold-Tassel"
+  },
+  "Ansp18-415Pnk": {
+   "prodSku": "CP18-415AnSpPnk",
+   "url": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-pink"
+  },
+  "CP13-415BlkShShtMtl": {
+   "prodSku": "CMP-CAP-SBLK-13-415 (blank websiteSku, grace SKU)",
+   "url": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-black-Color-13-415"
+  },
+  "Alu250SpryBl": {
+   "prodSku": "Alu250mlSprayBlack",
+   "url": "https://www.bestbottles.com/product/Cylinder-shaped-matte-aluminum-250ml-bottle-black-sprayer",
+   "evidence": "Legacy description 'Cylinder shaped, matte aluminum 250 ml bottle with black sprayer' matches the catalog record Aluminum Bottle 250 ml Clear Aluminum with Fine Mist Sprayer, Black cap (AB-ALU-CLR-250ML-SPR-BLK). Matched on capacity, material, applicator and cap colour, not on SKU spelling.",
+   "imageCasing": "The legacy page serves images/store/{capped,enlarged_pics}/Alu250mlSprayblack.gif with a lowercase b; the capitalised filename 404s.",
+   "verifiedAt": "2026-09-14"
+  }
+ }
+}

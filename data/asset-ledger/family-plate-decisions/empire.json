@@ -1,0 +1,767 @@
+{
+  "revision": 1,
+  "decisions": {
+    "GBEmp100AnSpTslBlk:93bdd439ab337d15b12151d6c2d92d06747a6e5c0746df847361ca776b0b0d9f": {
+      "sku": "GBEmp100AnSpTslBlk",
+      "binding": "93bdd439ab337d15b12151d6c2d92d06747a6e5c0746df847361ca776b0b0d9f",
+      "sha256": "33421ff7210f12ff4ccc23592b0a92c330c3f8a635f0392dfb5ca80ff9134b86",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslBlk/33421ff7210f12ff4ccc23592b0a92c330c3f8a635f0392dfb5ca80ff9134b86.front-on-1000x1100.webp",
+          "sha256": "33421ff7210f12ff4ccc23592b0a92c330c3f8a635f0392dfb5ca80ff9134b86",
+          "url": "/images/plate-contact-sheets/33421ff7210f12ff4ccc23592b0a92c330c3f8a635f0392dfb5ca80ff9134b86.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp100AnSpTslGl:b67a8f2404d1409544c8efee88513c6c9130edc1b7ef42a5d0a15b9af0a8c83d": {
+      "sku": "GBEmp100AnSpTslGl",
+      "binding": "b67a8f2404d1409544c8efee88513c6c9130edc1b7ef42a5d0a15b9af0a8c83d",
+      "sha256": "6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslGl/6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb.front-on-1000x1100.webp",
+          "sha256": "6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb",
+          "url": "/images/plate-contact-sheets/6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp100AnSpTslIvyGl:ea8cd960adea56db705eca37c39985aca36f0a6d82c49357cafa20e9655b89bc": {
+      "sku": "GBEmp100AnSpTslIvyGl",
+      "binding": "ea8cd960adea56db705eca37c39985aca36f0a6d82c49357cafa20e9655b89bc",
+      "sha256": "1eed7e5913db2e365d3cfc5e9b2e3ffcdf92c15e0f0796654a18fb2e1d1a8d03",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslIvyGl/1eed7e5913db2e365d3cfc5e9b2e3ffcdf92c15e0f0796654a18fb2e1d1a8d03.front-on-1000x1100.webp",
+          "sha256": "1eed7e5913db2e365d3cfc5e9b2e3ffcdf92c15e0f0796654a18fb2e1d1a8d03",
+          "url": "/images/plate-contact-sheets/1eed7e5913db2e365d3cfc5e9b2e3ffcdf92c15e0f0796654a18fb2e1d1a8d03.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp100AnSpTslIvySl:f2aa7dba65c9ad67639814d12999b9e5f7d6012de72bdb759e2c1e05f91fc5dd": {
+      "sku": "GBEmp100AnSpTslIvySl",
+      "binding": "f2aa7dba65c9ad67639814d12999b9e5f7d6012de72bdb759e2c1e05f91fc5dd",
+      "sha256": "2575abf6e6b09039a96130e39d1e0e51ef8210b66577e01228d71cd37d617724",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslIvySl/2575abf6e6b09039a96130e39d1e0e51ef8210b66577e01228d71cd37d617724.front-on-1000x1100.webp",
+          "sha256": "2575abf6e6b09039a96130e39d1e0e51ef8210b66577e01228d71cd37d617724",
+          "url": "/images/plate-contact-sheets/2575abf6e6b09039a96130e39d1e0e51ef8210b66577e01228d71cd37d617724.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp100AnSpTslLvn:3ba2bf5f95c1d94896c06acb321e168c22309e43cf9c3d3072081cdd13071878": {
+      "sku": "GBEmp100AnSpTslLvn",
+      "binding": "3ba2bf5f95c1d94896c06acb321e168c22309e43cf9c3d3072081cdd13071878",
+      "sha256": "0910aa35d4e13943c669cd03a897582575ab1bd7a5df67787bec91b252335b81",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslLvn/0910aa35d4e13943c669cd03a897582575ab1bd7a5df67787bec91b252335b81.front-on-1000x1100.webp",
+          "sha256": "0910aa35d4e13943c669cd03a897582575ab1bd7a5df67787bec91b252335b81",
+          "url": "/images/plate-contact-sheets/0910aa35d4e13943c669cd03a897582575ab1bd7a5df67787bec91b252335b81.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp100AnSpTslMtSl:f8757b0741f75eac270a8e478647fe3c4faed3d4a46d392b80b84dd22b308b82": {
+      "sku": "GBEmp100AnSpTslMtSl",
+      "binding": "f8757b0741f75eac270a8e478647fe3c4faed3d4a46d392b80b84dd22b308b82",
+      "sha256": "cb1a2270a5fb2ba1289bfd3f7e8c31b18fed7b1ad61f39091c182e72432e23da",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslMtSl/cb1a2270a5fb2ba1289bfd3f7e8c31b18fed7b1ad61f39091c182e72432e23da.front-on-1000x1100.webp",
+          "sha256": "cb1a2270a5fb2ba1289bfd3f7e8c31b18fed7b1ad61f39091c182e72432e23da",
+          "url": "/images/plate-contact-sheets/cb1a2270a5fb2ba1289bfd3f7e8c31b18fed7b1ad61f39091c182e72432e23da.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp100AnSpTslPnk:50221a3331880daf2f841083ba3b4ee864b5d0fa62e1c1f504b46939ca1032c1": {
+      "sku": "GBEmp100AnSpTslPnk",
+      "binding": "50221a3331880daf2f841083ba3b4ee864b5d0fa62e1c1f504b46939ca1032c1",
+      "sha256": "e649562a277b08057b83bad90f7753b7d802a864d432426e6678fda2cbf42b31",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslPnk/e649562a277b08057b83bad90f7753b7d802a864d432426e6678fda2cbf42b31.front-on-1000x1100.webp",
+          "sha256": "e649562a277b08057b83bad90f7753b7d802a864d432426e6678fda2cbf42b31",
+          "url": "/images/plate-contact-sheets/e649562a277b08057b83bad90f7753b7d802a864d432426e6678fda2cbf42b31.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp100AnSpTslRed:cd9cb6357fba1063e49ddcc90748fe71794335670500b7273ce1f61367ee219d": {
+      "sku": "GBEmp100AnSpTslRed",
+      "binding": "cd9cb6357fba1063e49ddcc90748fe71794335670500b7273ce1f61367ee219d",
+      "sha256": "5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslRed/5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d.front-on-1000x1100.webp",
+          "sha256": "5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d",
+          "url": "/images/plate-contact-sheets/5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp100AnSpTslWht:7304649bba89aba1ed156c6d02a70c3d6857bf3d89001f53248160400a08ce69": {
+      "sku": "GBEmp100AnSpTslWht",
+      "binding": "7304649bba89aba1ed156c6d02a70c3d6857bf3d89001f53248160400a08ce69",
+      "sha256": "3872d6054c7b1aba1cfdab2f71d7b2e007436d39ba435a0d6c3a55df5392e651",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslWht/3872d6054c7b1aba1cfdab2f71d7b2e007436d39ba435a0d6c3a55df5392e651.front-on-1000x1100.webp",
+          "sha256": "3872d6054c7b1aba1cfdab2f71d7b2e007436d39ba435a0d6c3a55df5392e651",
+          "url": "/images/plate-contact-sheets/3872d6054c7b1aba1cfdab2f71d7b2e007436d39ba435a0d6c3a55df5392e651.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp50AnSpBlk:7310074849470c24bb4b46f584117bac7e8a675234f18d0d43a00f0af1791429": {
+      "sku": "GBEmp50AnSpBlk",
+      "binding": "7310074849470c24bb4b46f584117bac7e8a675234f18d0d43a00f0af1791429",
+      "sha256": "251d1602df5272a8660bcb5f201a53a1f9aa904698041af4232ac9bb33104cdc",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpBlk/251d1602df5272a8660bcb5f201a53a1f9aa904698041af4232ac9bb33104cdc.front-on-1000x1100.webp",
+          "sha256": "251d1602df5272a8660bcb5f201a53a1f9aa904698041af4232ac9bb33104cdc",
+          "url": "/images/plate-contact-sheets/251d1602df5272a8660bcb5f201a53a1f9aa904698041af4232ac9bb33104cdc.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp50AnSpGl:6d2b5f5dd9ee472c33378d6e0e1988a398bac7926a88a7bcb8734ff9fc218024": {
+      "sku": "GBEmp50AnSpGl",
+      "binding": "6d2b5f5dd9ee472c33378d6e0e1988a398bac7926a88a7bcb8734ff9fc218024",
+      "sha256": "8e156f3afacda7a23f7ee99e6d682cedf754d561556c00712212097ab6798877",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpGl/8e156f3afacda7a23f7ee99e6d682cedf754d561556c00712212097ab6798877.front-on-1000x1100.webp",
+          "sha256": "8e156f3afacda7a23f7ee99e6d682cedf754d561556c00712212097ab6798877",
+          "url": "/images/plate-contact-sheets/8e156f3afacda7a23f7ee99e6d682cedf754d561556c00712212097ab6798877.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp50AnSpIvyGl:0b0af0aedd7ddda226f5c6b510a0876d9d7d090684695f281f9a0a7ebeb74f10": {
+      "sku": "GBEmp50AnSpIvyGl",
+      "binding": "0b0af0aedd7ddda226f5c6b510a0876d9d7d090684695f281f9a0a7ebeb74f10",
+      "sha256": "047840844c131355f604cc831f5efb6ace4a361be51b943a6d50ec6f04dea334",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpIvyGl/047840844c131355f604cc831f5efb6ace4a361be51b943a6d50ec6f04dea334.front-on-1000x1100.webp",
+          "sha256": "047840844c131355f604cc831f5efb6ace4a361be51b943a6d50ec6f04dea334",
+          "url": "/images/plate-contact-sheets/047840844c131355f604cc831f5efb6ace4a361be51b943a6d50ec6f04dea334.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp50AnSpIvySl:1975bc102f07c842264e550d4f711ae7317ee6d52c984478a52a94849b26d24c": {
+      "sku": "GBEmp50AnSpIvySl",
+      "binding": "1975bc102f07c842264e550d4f711ae7317ee6d52c984478a52a94849b26d24c",
+      "sha256": "f9b939df739b5c0b23e03d1f038246a7cbaa7e7e69e34b79b8eee586d485e457",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpIvySl/f9b939df739b5c0b23e03d1f038246a7cbaa7e7e69e34b79b8eee586d485e457.front-on-1000x1100.webp",
+          "sha256": "f9b939df739b5c0b23e03d1f038246a7cbaa7e7e69e34b79b8eee586d485e457",
+          "url": "/images/plate-contact-sheets/f9b939df739b5c0b23e03d1f038246a7cbaa7e7e69e34b79b8eee586d485e457.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp50AnSpLvn:522054b63e98490e530586b9649f8de93ff7ac045ee950d4387fe0961265238e": {
+      "sku": "GBEmp50AnSpLvn",
+      "binding": "522054b63e98490e530586b9649f8de93ff7ac045ee950d4387fe0961265238e",
+      "sha256": "420c206d66500e589c0d33fcb46096da5b80fd1837694c9453845c4826ef0f38",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpLvn/420c206d66500e589c0d33fcb46096da5b80fd1837694c9453845c4826ef0f38.front-on-1000x1100.webp",
+          "sha256": "420c206d66500e589c0d33fcb46096da5b80fd1837694c9453845c4826ef0f38",
+          "url": "/images/plate-contact-sheets/420c206d66500e589c0d33fcb46096da5b80fd1837694c9453845c4826ef0f38.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp50AnSpMtSl:b4d940b1c4ffa5493115231bbcf9b43066ccfa10272f0d4051bfd312f39ad3e7": {
+      "sku": "GBEmp50AnSpMtSl",
+      "binding": "b4d940b1c4ffa5493115231bbcf9b43066ccfa10272f0d4051bfd312f39ad3e7",
+      "sha256": "b6d15a561a4674f7a02f105156a9a1ccee6932011d87d65d65265bbc0f56cbf4",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpMtSl/b6d15a561a4674f7a02f105156a9a1ccee6932011d87d65d65265bbc0f56cbf4.front-on-1000x1100.webp",
+          "sha256": "b6d15a561a4674f7a02f105156a9a1ccee6932011d87d65d65265bbc0f56cbf4",
+          "url": "/images/plate-contact-sheets/b6d15a561a4674f7a02f105156a9a1ccee6932011d87d65d65265bbc0f56cbf4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp50AnSpPnk:b9c93e54f7f613792a6029c5329ba007ef7e71898cd25916be7e194528bf35bd": {
+      "sku": "GBEmp50AnSpPnk",
+      "binding": "b9c93e54f7f613792a6029c5329ba007ef7e71898cd25916be7e194528bf35bd",
+      "sha256": "a0cb7abaa5015c9d25125f80da96a29fff2905857e10dbd9781fbb38ddeb91c7",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpPnk/a0cb7abaa5015c9d25125f80da96a29fff2905857e10dbd9781fbb38ddeb91c7.front-on-1000x1100.webp",
+          "sha256": "a0cb7abaa5015c9d25125f80da96a29fff2905857e10dbd9781fbb38ddeb91c7",
+          "url": "/images/plate-contact-sheets/a0cb7abaa5015c9d25125f80da96a29fff2905857e10dbd9781fbb38ddeb91c7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp50AnSpRed:f8ec959f5f6cbaeb1019542b501d954673169c74f62dd1dfa405ad0b40bd27a0": {
+      "sku": "GBEmp50AnSpRed",
+      "binding": "f8ec959f5f6cbaeb1019542b501d954673169c74f62dd1dfa405ad0b40bd27a0",
+      "sha256": "7135c7ff163a4eaaffeac4190136d0c4188341135486dca492a8dfc09ffe767e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpRed/7135c7ff163a4eaaffeac4190136d0c4188341135486dca492a8dfc09ffe767e.front-on-1000x1100.webp",
+          "sha256": "7135c7ff163a4eaaffeac4190136d0c4188341135486dca492a8dfc09ffe767e",
+          "url": "/images/plate-contact-sheets/7135c7ff163a4eaaffeac4190136d0c4188341135486dca492a8dfc09ffe767e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp50AnSpTslIvyGl:2643005ef08e0a540c8bc1e4ad9826c3679247f6d3c33bb7c9e91bbde898459f": {
+      "sku": "GBEmp50AnSpTslIvyGl",
+      "binding": "2643005ef08e0a540c8bc1e4ad9826c3679247f6d3c33bb7c9e91bbde898459f",
+      "sha256": "09b4a9f61eb4223b805e2bcb2f618a38d18b4711cc512f15dacd2ffe214952ef",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpTslIvyGl/09b4a9f61eb4223b805e2bcb2f618a38d18b4711cc512f15dacd2ffe214952ef.front-on-1000x1100.webp",
+          "sha256": "09b4a9f61eb4223b805e2bcb2f618a38d18b4711cc512f15dacd2ffe214952ef",
+          "url": "/images/plate-contact-sheets/09b4a9f61eb4223b805e2bcb2f618a38d18b4711cc512f15dacd2ffe214952ef.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBEmp50AnSpTslLvn:6993c90bc62ef59486f1ea1a143c7ee0bca4ca814e8efdfb06d418a857fb8a75": {
+      "sku": "GBEmp50AnSpTslLvn",
+      "binding": "6993c90bc62ef59486f1ea1a143c7ee0bca4ca814e8efdfb06d418a857fb8a75",
+      "sha256": "36b3953cb92fc03b0b349d6e85730b568acfb393a3cddcaa14e09a41d1800615",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpTslLvn/36b3953cb92fc03b0b349d6e85730b568acfb393a3cddcaa14e09a41d1800615.front-on-1000x1100.webp",
+          "sha256": "36b3953cb92fc03b0b349d6e85730b568acfb393a3cddcaa14e09a41d1800615",
+          "url": "/images/plate-contact-sheets/36b3953cb92fc03b0b349d6e85730b568acfb393a3cddcaa14e09a41d1800615.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "GBEmp100AnSpTslBlk",
+      "binding": "93bdd439ab337d15b12151d6c2d92d06747a6e5c0746df847361ca776b0b0d9f",
+      "sha256": "33421ff7210f12ff4ccc23592b0a92c330c3f8a635f0392dfb5ca80ff9134b86",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslBlk/33421ff7210f12ff4ccc23592b0a92c330c3f8a635f0392dfb5ca80ff9134b86.front-on-1000x1100.webp",
+          "sha256": "33421ff7210f12ff4ccc23592b0a92c330c3f8a635f0392dfb5ca80ff9134b86",
+          "url": "/images/plate-contact-sheets/33421ff7210f12ff4ccc23592b0a92c330c3f8a635f0392dfb5ca80ff9134b86.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100AnSpTslGl",
+      "binding": "b67a8f2404d1409544c8efee88513c6c9130edc1b7ef42a5d0a15b9af0a8c83d",
+      "sha256": "6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslGl/6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb.front-on-1000x1100.webp",
+          "sha256": "6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb",
+          "url": "/images/plate-contact-sheets/6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100AnSpTslIvyGl",
+      "binding": "ea8cd960adea56db705eca37c39985aca36f0a6d82c49357cafa20e9655b89bc",
+      "sha256": "1eed7e5913db2e365d3cfc5e9b2e3ffcdf92c15e0f0796654a18fb2e1d1a8d03",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslIvyGl/1eed7e5913db2e365d3cfc5e9b2e3ffcdf92c15e0f0796654a18fb2e1d1a8d03.front-on-1000x1100.webp",
+          "sha256": "1eed7e5913db2e365d3cfc5e9b2e3ffcdf92c15e0f0796654a18fb2e1d1a8d03",
+          "url": "/images/plate-contact-sheets/1eed7e5913db2e365d3cfc5e9b2e3ffcdf92c15e0f0796654a18fb2e1d1a8d03.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100AnSpTslIvySl",
+      "binding": "f2aa7dba65c9ad67639814d12999b9e5f7d6012de72bdb759e2c1e05f91fc5dd",
+      "sha256": "2575abf6e6b09039a96130e39d1e0e51ef8210b66577e01228d71cd37d617724",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslIvySl/2575abf6e6b09039a96130e39d1e0e51ef8210b66577e01228d71cd37d617724.front-on-1000x1100.webp",
+          "sha256": "2575abf6e6b09039a96130e39d1e0e51ef8210b66577e01228d71cd37d617724",
+          "url": "/images/plate-contact-sheets/2575abf6e6b09039a96130e39d1e0e51ef8210b66577e01228d71cd37d617724.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100AnSpTslLvn",
+      "binding": "3ba2bf5f95c1d94896c06acb321e168c22309e43cf9c3d3072081cdd13071878",
+      "sha256": "0910aa35d4e13943c669cd03a897582575ab1bd7a5df67787bec91b252335b81",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslLvn/0910aa35d4e13943c669cd03a897582575ab1bd7a5df67787bec91b252335b81.front-on-1000x1100.webp",
+          "sha256": "0910aa35d4e13943c669cd03a897582575ab1bd7a5df67787bec91b252335b81",
+          "url": "/images/plate-contact-sheets/0910aa35d4e13943c669cd03a897582575ab1bd7a5df67787bec91b252335b81.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100AnSpTslMtSl",
+      "binding": "f8757b0741f75eac270a8e478647fe3c4faed3d4a46d392b80b84dd22b308b82",
+      "sha256": "cb1a2270a5fb2ba1289bfd3f7e8c31b18fed7b1ad61f39091c182e72432e23da",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslMtSl/cb1a2270a5fb2ba1289bfd3f7e8c31b18fed7b1ad61f39091c182e72432e23da.front-on-1000x1100.webp",
+          "sha256": "cb1a2270a5fb2ba1289bfd3f7e8c31b18fed7b1ad61f39091c182e72432e23da",
+          "url": "/images/plate-contact-sheets/cb1a2270a5fb2ba1289bfd3f7e8c31b18fed7b1ad61f39091c182e72432e23da.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100AnSpTslPnk",
+      "binding": "50221a3331880daf2f841083ba3b4ee864b5d0fa62e1c1f504b46939ca1032c1",
+      "sha256": "e649562a277b08057b83bad90f7753b7d802a864d432426e6678fda2cbf42b31",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslPnk/e649562a277b08057b83bad90f7753b7d802a864d432426e6678fda2cbf42b31.front-on-1000x1100.webp",
+          "sha256": "e649562a277b08057b83bad90f7753b7d802a864d432426e6678fda2cbf42b31",
+          "url": "/images/plate-contact-sheets/e649562a277b08057b83bad90f7753b7d802a864d432426e6678fda2cbf42b31.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100AnSpTslRed",
+      "binding": "cd9cb6357fba1063e49ddcc90748fe71794335670500b7273ce1f61367ee219d",
+      "sha256": "5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslRed/5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d.front-on-1000x1100.webp",
+          "sha256": "5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d",
+          "url": "/images/plate-contact-sheets/5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp100AnSpTslWht",
+      "binding": "7304649bba89aba1ed156c6d02a70c3d6857bf3d89001f53248160400a08ce69",
+      "sha256": "3872d6054c7b1aba1cfdab2f71d7b2e007436d39ba435a0d6c3a55df5392e651",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-100ml-clear-18-415/GBEmp100AnSpTslWht/3872d6054c7b1aba1cfdab2f71d7b2e007436d39ba435a0d6c3a55df5392e651.front-on-1000x1100.webp",
+          "sha256": "3872d6054c7b1aba1cfdab2f71d7b2e007436d39ba435a0d6c3a55df5392e651",
+          "url": "/images/plate-contact-sheets/3872d6054c7b1aba1cfdab2f71d7b2e007436d39ba435a0d6c3a55df5392e651.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50AnSpBlk",
+      "binding": "7310074849470c24bb4b46f584117bac7e8a675234f18d0d43a00f0af1791429",
+      "sha256": "251d1602df5272a8660bcb5f201a53a1f9aa904698041af4232ac9bb33104cdc",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpBlk/251d1602df5272a8660bcb5f201a53a1f9aa904698041af4232ac9bb33104cdc.front-on-1000x1100.webp",
+          "sha256": "251d1602df5272a8660bcb5f201a53a1f9aa904698041af4232ac9bb33104cdc",
+          "url": "/images/plate-contact-sheets/251d1602df5272a8660bcb5f201a53a1f9aa904698041af4232ac9bb33104cdc.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50AnSpGl",
+      "binding": "6d2b5f5dd9ee472c33378d6e0e1988a398bac7926a88a7bcb8734ff9fc218024",
+      "sha256": "8e156f3afacda7a23f7ee99e6d682cedf754d561556c00712212097ab6798877",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpGl/8e156f3afacda7a23f7ee99e6d682cedf754d561556c00712212097ab6798877.front-on-1000x1100.webp",
+          "sha256": "8e156f3afacda7a23f7ee99e6d682cedf754d561556c00712212097ab6798877",
+          "url": "/images/plate-contact-sheets/8e156f3afacda7a23f7ee99e6d682cedf754d561556c00712212097ab6798877.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50AnSpIvyGl",
+      "binding": "0b0af0aedd7ddda226f5c6b510a0876d9d7d090684695f281f9a0a7ebeb74f10",
+      "sha256": "047840844c131355f604cc831f5efb6ace4a361be51b943a6d50ec6f04dea334",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpIvyGl/047840844c131355f604cc831f5efb6ace4a361be51b943a6d50ec6f04dea334.front-on-1000x1100.webp",
+          "sha256": "047840844c131355f604cc831f5efb6ace4a361be51b943a6d50ec6f04dea334",
+          "url": "/images/plate-contact-sheets/047840844c131355f604cc831f5efb6ace4a361be51b943a6d50ec6f04dea334.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50AnSpIvySl",
+      "binding": "1975bc102f07c842264e550d4f711ae7317ee6d52c984478a52a94849b26d24c",
+      "sha256": "f9b939df739b5c0b23e03d1f038246a7cbaa7e7e69e34b79b8eee586d485e457",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpIvySl/f9b939df739b5c0b23e03d1f038246a7cbaa7e7e69e34b79b8eee586d485e457.front-on-1000x1100.webp",
+          "sha256": "f9b939df739b5c0b23e03d1f038246a7cbaa7e7e69e34b79b8eee586d485e457",
+          "url": "/images/plate-contact-sheets/f9b939df739b5c0b23e03d1f038246a7cbaa7e7e69e34b79b8eee586d485e457.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50AnSpLvn",
+      "binding": "522054b63e98490e530586b9649f8de93ff7ac045ee950d4387fe0961265238e",
+      "sha256": "420c206d66500e589c0d33fcb46096da5b80fd1837694c9453845c4826ef0f38",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpLvn/420c206d66500e589c0d33fcb46096da5b80fd1837694c9453845c4826ef0f38.front-on-1000x1100.webp",
+          "sha256": "420c206d66500e589c0d33fcb46096da5b80fd1837694c9453845c4826ef0f38",
+          "url": "/images/plate-contact-sheets/420c206d66500e589c0d33fcb46096da5b80fd1837694c9453845c4826ef0f38.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50AnSpMtSl",
+      "binding": "b4d940b1c4ffa5493115231bbcf9b43066ccfa10272f0d4051bfd312f39ad3e7",
+      "sha256": "b6d15a561a4674f7a02f105156a9a1ccee6932011d87d65d65265bbc0f56cbf4",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpMtSl/b6d15a561a4674f7a02f105156a9a1ccee6932011d87d65d65265bbc0f56cbf4.front-on-1000x1100.webp",
+          "sha256": "b6d15a561a4674f7a02f105156a9a1ccee6932011d87d65d65265bbc0f56cbf4",
+          "url": "/images/plate-contact-sheets/b6d15a561a4674f7a02f105156a9a1ccee6932011d87d65d65265bbc0f56cbf4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50AnSpPnk",
+      "binding": "b9c93e54f7f613792a6029c5329ba007ef7e71898cd25916be7e194528bf35bd",
+      "sha256": "a0cb7abaa5015c9d25125f80da96a29fff2905857e10dbd9781fbb38ddeb91c7",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpPnk/a0cb7abaa5015c9d25125f80da96a29fff2905857e10dbd9781fbb38ddeb91c7.front-on-1000x1100.webp",
+          "sha256": "a0cb7abaa5015c9d25125f80da96a29fff2905857e10dbd9781fbb38ddeb91c7",
+          "url": "/images/plate-contact-sheets/a0cb7abaa5015c9d25125f80da96a29fff2905857e10dbd9781fbb38ddeb91c7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50AnSpRed",
+      "binding": "f8ec959f5f6cbaeb1019542b501d954673169c74f62dd1dfa405ad0b40bd27a0",
+      "sha256": "7135c7ff163a4eaaffeac4190136d0c4188341135486dca492a8dfc09ffe767e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpRed/7135c7ff163a4eaaffeac4190136d0c4188341135486dca492a8dfc09ffe767e.front-on-1000x1100.webp",
+          "sha256": "7135c7ff163a4eaaffeac4190136d0c4188341135486dca492a8dfc09ffe767e",
+          "url": "/images/plate-contact-sheets/7135c7ff163a4eaaffeac4190136d0c4188341135486dca492a8dfc09ffe767e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50AnSpTslIvyGl",
+      "binding": "2643005ef08e0a540c8bc1e4ad9826c3679247f6d3c33bb7c9e91bbde898459f",
+      "sha256": "09b4a9f61eb4223b805e2bcb2f618a38d18b4711cc512f15dacd2ffe214952ef",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpTslIvyGl/09b4a9f61eb4223b805e2bcb2f618a38d18b4711cc512f15dacd2ffe214952ef.front-on-1000x1100.webp",
+          "sha256": "09b4a9f61eb4223b805e2bcb2f618a38d18b4711cc512f15dacd2ffe214952ef",
+          "url": "/images/plate-contact-sheets/09b4a9f61eb4223b805e2bcb2f618a38d18b4711cc512f15dacd2ffe214952ef.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBEmp50AnSpTslLvn",
+      "binding": "6993c90bc62ef59486f1ea1a143c7ee0bca4ca814e8efdfb06d418a857fb8a75",
+      "sha256": "36b3953cb92fc03b0b349d6e85730b568acfb393a3cddcaa14e09a41d1800615",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:39.028Z",
+      "batchId": "b28ea028-dc35-4027-835e-04753311a079",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/empire-50ml-clear-18-415/GBEmp50AnSpTslLvn/36b3953cb92fc03b0b349d6e85730b568acfb393a3cddcaa14e09a41d1800615.front-on-1000x1100.webp",
+          "sha256": "36b3953cb92fc03b0b349d6e85730b568acfb393a3cddcaa14e09a41d1800615",
+          "url": "/images/plate-contact-sheets/36b3953cb92fc03b0b349d6e85730b568acfb393a3cddcaa14e09a41d1800615.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}
