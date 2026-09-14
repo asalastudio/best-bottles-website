@@ -129,7 +129,7 @@ export default function MobileFamilyCatalog(p: Props) {
         <Link
           href={`/matrix?family=${encodeURIComponent(p.family)}&from=finder`}
         >
-          Build a Bottle
+          Build Your Bottle
         </Link>
       </div>
       {chips.length > 0 && (

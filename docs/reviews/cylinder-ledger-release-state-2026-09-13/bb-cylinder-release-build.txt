@@ -1,0 +1,136 @@
+
+> best-bottles@0.1.0 build
+> next build --webpack
+
+▲ Next.js 16.2.12 (webpack)
+- Environments: .env.local
+- Experiments (use with caution):
+  · clientTraceMetadata
+  ✓ webpackBuildWorker
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 40s
+  Running TypeScript ...
+  Finished TypeScript in 26.1s ...
+  Collecting page data using 9 workers ...
+  Generating static pages using 9 workers (0/60) ...
+  Generating static pages using 9 workers (15/60)
+  Generating static pages using 9 workers (30/60)
+  Generating static pages using 9 workers (45/60)
+✓ Generating static pages using 9 workers (60/60) in 1547ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)                                                      Revalidate  Expire
+┌ ○ /                                                                    1m      1y
+├ ○ /_not-found
+├ ○ /about
+├ ƒ /api/asset-ledger/cylinder-final-plates
+├ ƒ /api/asset-ledger/final-images
+├ ƒ /api/asset-ledger/plate-completion
+├ ƒ /api/asset-ledger/plate-contact-sheet
+├ ƒ /api/asset-ledger/standards
+├ ƒ /api/bottle-builder/families
+├ ƒ /api/bottle-builder/validate
+├ ƒ /api/catalog/search
+├ ƒ /api/draft-mode/disable
+├ ƒ /api/draft-mode/enable
+├ ƒ /api/executive/grace-audit
+├ ƒ /api/executive/grace-integrity
+├ ƒ /api/grace/chat
+├ ƒ /api/grace/tools
+├ ƒ /api/grace/upload
+├ ƒ /api/grace/vision
+├ ƒ /api/knowledge/chat
+├ ƒ /api/knowledge/corrections
+├ ƒ /api/openai/realtime-token
+├ ƒ /api/paper-doll/render
+├ ƒ /api/pdf/catalog
+├ ƒ /api/portal/grace/chat
+├ ƒ /api/portal/grace/projects
+├ ƒ /api/sentry/webhook
+├ ƒ /api/shopify/resolve-variants
+├ ƒ /api/shopify/webhooks
+├ ƒ /api/voice/transcribe
+├ ○ /blog
+├ ● /blog/[slug]
+│ ├ /blog/5-glass-bottle-mistakes-scaling-fragrance-brands-make
+│ ├ /blog/amber-glass-question-uv-protection
+│ ├ /blog/boston-round-vs-euro-dropper-vs-serum-vial
+│ └ [+5 more paths]
+├ ○ /cart
+├ ƒ /catalog
+├ ƒ /catalog/[family]
+├ ƒ /catalog/application/[application]
+├ ○ /collections/boston-round-30ml
+├ ○ /contact
+├ ○ /dev/lighting-test
+├ ○ /dev/material-lab
+├ ○ /example
+├ ƒ /executive
+├ ○ /fitment-demo
+├ ○ /grace-workspace
+├ ○ /lab/bottle-3d
+├ ○ /lab/bottle25
+├ ○ /lab/configurator
+├ ○ /lab/glass-9ml
+├ ƒ /lab/paper-doll
+├ ƒ /matrix
+├ ƒ /portal
+├ ƒ /portal/account
+├ ƒ /portal/documents
+├ ƒ /portal/drafts
+├ ƒ /portal/grace
+├ ƒ /portal/orders
+├ ƒ /portal/settings/[[...rest]]
+├ ƒ /portal/tax-exemption
+├ ƒ /portal/tools
+├ ƒ /portal/tracking
+├ ○ /privacy
+├ ƒ /products/[slug]
+├ ○ /request-quote
+├ ○ /request-sample
+├ ○ /resources
+├ ƒ /server-sitemap.xml
+├ ○ /shipping-returns
+├ ƒ /sign-in/[[...sign-in]]
+├ ƒ /sign-up/[[...sign-up]]
+├ ƒ /studio/[[...tool]]
+├ ƒ /team
+├ ƒ /team/asset-ledger
+├ ƒ /team/portal-accounts
+├ ƒ /team/resale-certificates
+├ ○ /tech-stack
+└ ○ /terms
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+> best-bottles@0.1.0 postbuild
+> next-sitemap
+
+✨ [next-sitemap] Loading next-sitemap config: file:///Users/jordanrichter/Projects/Clients/Nemat-International/bb-asset-release-pr-2026-09-13/next-sitemap.config.js
+✅ [next-sitemap] Generation completed
+┌───────────────┬────────┐
+│ (index)       │ Values │
+├───────────────┼────────┤
+│ indexSitemaps │ 1      │
+│ sitemaps      │ 1      │
+└───────────────┴────────┘
+-----------------------------------------------------
+ SITEMAP INDICES
+-----------------------------------------------------
+
+   ○ https://www.bestbottles.com/sitemap.xml
+
+
+-----------------------------------------------------
+ SITEMAPS
+-----------------------------------------------------
+
+   ○ https://www.bestbottles.com/sitemap-0.xml

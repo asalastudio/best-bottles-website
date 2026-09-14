@@ -1,0 +1,150 @@
+[
+  {
+    "sku": "GBCyl5BlkShSht",
+    "classification": "Plain short cap",
+    "width": 1440,
+    "url": "http://localhost:3040/products/cylinder-5ml-clear-13-415?sku=GBCyl5BlkShSht",
+    "http": 200,
+    "overflow": false,
+    "errors": [],
+    "photo": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.front-off-1000x1100.webp",
+        "loaded": true
+      }
+    ],
+    "capToggle": "enabled; toggled successfully"
+  },
+  {
+    "sku": "GBCyl5BlkShSht",
+    "classification": "Plain short cap",
+    "width": 390,
+    "url": "http://localhost:3040/products/cylinder-5ml-clear-13-415?sku=GBCyl5BlkShSht",
+    "http": 200,
+    "overflow": false,
+    "errors": [],
+    "photo": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.front-on-1000x1100.webp",
+        "loaded": true
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5BlkShSht/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.front-on-1000x1100.webp",
+        "loaded": true
+      }
+    ],
+    "capToggle": "not shown in mobile layout"
+  },
+  {
+    "sku": "GBSpry1ozGl",
+    "classification": "Sprayer",
+    "width": 1440,
+    "url": "http://localhost:3040/products/cylinder-30ml-clear-18-415-finemist?sku=GBSpry1ozGl",
+    "http": 200,
+    "overflow": false,
+    "errors": [],
+    "photo": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9.front-off-1000x1100.webp",
+        "loaded": true
+      }
+    ],
+    "capToggle": "enabled; toggled successfully"
+  },
+  {
+    "sku": "GBSpry1ozGl",
+    "classification": "Sprayer",
+    "width": 390,
+    "url": "http://localhost:3040/products/cylinder-30ml-clear-18-415-finemist?sku=GBSpry1ozGl",
+    "http": 200,
+    "overflow": false,
+    "errors": [],
+    "photo": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.front-on-1000x1100.webp",
+        "loaded": true
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-30ml-clear-18-415/GBSpry1ozGl/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.front-on-1000x1100.webp",
+        "loaded": true
+      }
+    ],
+    "capToggle": "not shown in mobile layout"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkDot",
+    "classification": "Roller",
+    "width": 1440,
+    "url": "http://localhost:3040/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9MtlRollBlkDot",
+    "http": 200,
+    "overflow": false,
+    "errors": [],
+    "photo": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.front-on-1000x1100.webp",
+        "loaded": true
+      }
+    ],
+    "capToggle": "enabled; toggled successfully"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkDot",
+    "classification": "Roller",
+    "width": 390,
+    "url": "http://localhost:3040/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9MtlRollBlkDot",
+    "http": 200,
+    "overflow": false,
+    "errors": [],
+    "photo": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.front-on-1000x1100.webp",
+        "loaded": true
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b.front-off-1000x1100.webp",
+        "loaded": true
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9MtlRollBlkDot/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.front-on-1000x1100.webp",
+        "loaded": true
+      }
+    ],
+    "capToggle": "not shown in mobile layout"
+  },
+  {
+    "sku": "PbClear4ozFlpWh",
+    "classification": "Flip top",
+    "width": 1440,
+    "url": "http://localhost:3040/products/cylinder-118ml-clear?sku=PbClear4ozFlpWh",
+    "http": 200,
+    "overflow": false,
+    "errors": [],
+    "photo": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-118ml-clear/PbClear4ozFlpWh/57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0.front-off-1000x1100.webp",
+        "loaded": true
+      }
+    ],
+    "capToggle": "enabled; toggled successfully"
+  },
+  {
+    "sku": "PbClear4ozFlpWh",
+    "classification": "Flip top",
+    "width": 390,
+    "url": "http://localhost:3040/products/cylinder-118ml-clear?sku=PbClear4ozFlpWh",
+    "http": 200,
+    "overflow": false,
+    "errors": [],
+    "photo": [
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-118ml-clear/PbClear4ozFlpWh/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.front-on-1000x1100.webp",
+        "loaded": true
+      },
+      {
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-118ml-clear/PbClear4ozFlpWh/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.front-on-1000x1100.webp",
+        "loaded": true
+      }
+    ],
+    "capToggle": "not shown in mobile layout"
+  }
+]

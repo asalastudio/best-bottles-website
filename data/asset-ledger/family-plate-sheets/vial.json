@@ -1,0 +1,629 @@
+{
+  "schemaVersion": 1,
+  "id": "vial-plates-2026-09-14",
+  "family": "Vial",
+  "createdAt": "2026-09-14T01:00:12.620Z",
+  "ledgerAt": "2026-09-14T00:39:35.157Z",
+  "scope": "Current development catalog; legacy scope remains open.",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "rows": [
+    {
+      "sku": "GB09BlackCapApp",
+      "graceSku": "GB-CYL-CLR-9ML-T-01",
+      "productGroupId": "kh781rxmztzedv2kbvhn6ssk358dpn6a",
+      "capacityMl": 9,
+      "color": "Clear",
+      "applicator": "Glass Rod",
+      "capColor": "Clear",
+      "itemName": "Cylinder design 9 ml clear glass vial with black cap with glass rod applicator. For use with perfume or fragrance oil, essential oil, aromatherapy. Small sample or trial size vial. Price each",
+      "groupSlug": "vial-9ml-clear-18-400-glasswand",
+      "familyId": "vial-9ml-clear-18-400",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-9ml-clear-18-400/GB09BlackCapApp/bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1.front-on-1000x1100.webp",
+          "sha256": "bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1",
+          "url": "/images/plate-contact-sheets/bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-9ml-clear-18-400/GB09BlackCapApp/86e8dae8937edc8acf104a1294c6793a8756ee44a6724304be705bf710ac7bf4.front-off-1000x1100.webp",
+          "sha256": "86e8dae8937edc8acf104a1294c6793a8756ee44a6724304be705bf710ac7bf4",
+          "url": "/images/plate-contact-sheets/86e8dae8937edc8acf104a1294c6793a8756ee44a6724304be705bf710ac7bf4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GB09BlackCapSht",
+      "graceSku": "GB-CYL-CLR-9ML-S-01",
+      "productGroupId": "kh7dnveng8jwem1btyz30qjc9h8dpna4",
+      "capacityMl": 9,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Cylinder design 9 ml clear glass vial with black short cap. For use with perfume or fragrance oil, essential oil, aromatherapy. Small sample or trial size vial. Price each",
+      "groupSlug": "vial-9ml-clear-18-400",
+      "familyId": "vial-9ml-clear-18-400",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-9ml-clear-18-400/GB09BlackCapSht/4897b6e25d86ad355084858973dc7408eb265fc8a3243d8db6c5d74b6cc8d16f.front-on-1000x1100.webp",
+          "sha256": "4897b6e25d86ad355084858973dc7408eb265fc8a3243d8db6c5d74b6cc8d16f",
+          "url": "/images/plate-contact-sheets/4897b6e25d86ad355084858973dc7408eb265fc8a3243d8db6c5d74b6cc8d16f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GB1mlAmbVBlk",
+      "graceSku": "GB-VIA-CLR-1ML",
+      "productGroupId": "kh73maqqqhnwt205gm7f5ds7118dqq4j",
+      "capacityMl": 1,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Vial style 1 ml amber glass bottle with black applicator. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Good for giving samples or for promotions. Price each",
+      "groupSlug": "vial-1ml-amber-Plug",
+      "familyId": "vial-1ml-amber-plug",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-1ml-amber-plug/GB1mlAmbVBlk/596acbbbf938625c5c27a63b1559e3e2b74c0280c26b46ba10ee1b334bbf75d6.front-on-1000x1100.webp",
+          "sha256": "596acbbbf938625c5c27a63b1559e3e2b74c0280c26b46ba10ee1b334bbf75d6",
+          "url": "/images/plate-contact-sheets/596acbbbf938625c5c27a63b1559e3e2b74c0280c26b46ba10ee1b334bbf75d6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GB1mlAmbVialWht",
+      "graceSku": "GB-VIA-AMB-1ML-WHT-T",
+      "productGroupId": "kh73maqqqhnwt205gm7f5ds7118dqq4j",
+      "capacityMl": 1,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "White",
+      "itemName": "Vial style 1 ml amber glass bottle with white applicator. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Good for giving samples or for promotions. Price each",
+      "groupSlug": "vial-1ml-amber-Plug",
+      "familyId": "vial-1ml-amber-plug",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-1ml-amber-plug/GB1mlAmbVialWht/58db81937355fdc59a0ee403a14698a1ba341e3ed8532d6820b8031582b1d8dd.front-on-1000x1100.webp",
+          "sha256": "58db81937355fdc59a0ee403a14698a1ba341e3ed8532d6820b8031582b1d8dd",
+          "url": "/images/plate-contact-sheets/58db81937355fdc59a0ee403a14698a1ba341e3ed8532d6820b8031582b1d8dd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GB1mlVBlk",
+      "graceSku": "GB-VIA-CLR-1ML-BLK-T",
+      "productGroupId": "kh725fg9p2vc7w02vy9rmgaxa58dp14h",
+      "capacityMl": 1,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Vial style 1 ml clear glass bottle with black applicator. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Good for giving samples or for promotions. Price each",
+      "groupSlug": "vial-1ml-clear-Plug",
+      "familyId": "vial-1ml-clear-plug",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-1ml-clear-plug/GB1mlVBlk/5c729a41c6509759794ff956be0cce6ef9da28ca74b6a197ed15c1ab13c45fb7.front-on-1000x1100.webp",
+          "sha256": "5c729a41c6509759794ff956be0cce6ef9da28ca74b6a197ed15c1ab13c45fb7",
+          "url": "/images/plate-contact-sheets/5c729a41c6509759794ff956be0cce6ef9da28ca74b6a197ed15c1ab13c45fb7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GB1mlVWht",
+      "graceSku": "GB-VIA-CLR-1ML-WHT-T",
+      "productGroupId": "kh725fg9p2vc7w02vy9rmgaxa58dp14h",
+      "capacityMl": 1,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "White",
+      "itemName": "Vial style 1 ml clear glass bottle with white applicator. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Good for giving samples or for promotions. Price each",
+      "groupSlug": "vial-1ml-clear-Plug",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBV1DrmBlackCapSht",
+      "graceSku": "GB-VIA-CLR-3ML-S-01",
+      "productGroupId": "kh7064mcswf136pqmanc63jpas8dqvn8",
+      "capacityMl": 4,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Clear glass vial with black short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-clear-13-425",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBV1DrmBlkDropper",
+      "graceSku": "GB-VIA-CLR-3ML-01",
+      "productGroupId": "kh7eac824cbjwtnz52gs61enx58dqqex",
+      "capacityMl": 4,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Clear glass vial with black dropper. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-clear-13-425-dropper",
+      "familyId": "vial-4ml-clear-13-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-clear-13-425/GBV1DrmBlkDropper/dcfbfacb47fe85ad6b72208079bf71a3137c6e7a6d8c1c98541cfa86881fc820.front-on-1000x1100.webp",
+          "sha256": "dcfbfacb47fe85ad6b72208079bf71a3137c6e7a6d8c1c98541cfa86881fc820",
+          "url": "/images/plate-contact-sheets/dcfbfacb47fe85ad6b72208079bf71a3137c6e7a6d8c1c98541cfa86881fc820.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBV1DrmWhtCapSht",
+      "graceSku": "GB-VIA-CLR-3ML-S-02",
+      "productGroupId": "kh7064mcswf136pqmanc63jpas8dqvn8",
+      "capacityMl": 4,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Clear glass vial with white short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-clear-13-425",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBVAmb1DrmBlackCapSht",
+      "graceSku": "GB-VIA-CLR-3ML-S-03",
+      "productGroupId": "kh7fdapbjzb77szexyg9eahmw98dq6y3",
+      "capacityMl": 4,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Amber glass vial with black short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-amber-13-425",
+      "familyId": "vial-4ml-amber-13-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmBlackCapSht/e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5.front-on-1000x1100.webp",
+          "sha256": "e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5",
+          "url": "/images/plate-contact-sheets/e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmBlackCapSht/76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79.front-off-1000x1100.webp",
+          "sha256": "76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79",
+          "url": "/images/plate-contact-sheets/76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVAmb1DrmBlkDrpr",
+      "graceSku": "GB-VIA-CLR-3ML-02",
+      "productGroupId": "kh78rzxw8s7m3wjq0x25hb8e5h8dq1fb",
+      "capacityMl": 4,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Amber glass vial with black dropper. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-amber-13-425-dropper",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBVAmb1DrmWhtCapSht",
+      "graceSku": "GB-VIA-CLR-3ML-S-04",
+      "productGroupId": "kh7fdapbjzb77szexyg9eahmw98dq6y3",
+      "capacityMl": 4,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Amber glass vial with white short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-amber-13-425",
+      "familyId": "vial-4ml-amber-13-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmWhtCapSht/65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2.front-on-1000x1100.webp",
+          "sha256": "65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2",
+          "url": "/images/plate-contact-sheets/65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmWhtCapSht/dd5b6bd0b8fa32b88ac4d7aa637552eaca5ebf1e50aaff4cc1a3eb0e543788eb.front-off-1000x1100.webp",
+          "sha256": "dd5b6bd0b8fa32b88ac4d7aa637552eaca5ebf1e50aaff4cc1a3eb0e543788eb",
+          "url": "/images/plate-contact-sheets/dd5b6bd0b8fa32b88ac4d7aa637552eaca5ebf1e50aaff4cc1a3eb0e543788eb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVAmb2BlackCap",
+      "graceSku": "GB-VIA-CLR-2ML-S-01",
+      "productGroupId": "kh7500mej3zv8w3h1pbh90tqnn8dpp6f",
+      "capacityMl": 2,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Vial design 2 ml Amber glass vial with short black cap. For use with perfume or fragrance oil, essential oil, and aromatherapy. Small or mini size vials for promotions, sample or travel accessory. Price each",
+      "groupSlug": "vial-2ml-amber-8-425",
+      "familyId": "vial-2ml-amber-8-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2BlackCap/dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102.front-on-1000x1100.webp",
+          "sha256": "dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102",
+          "url": "/images/plate-contact-sheets/dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2BlackCap/c3115a061de988833fda76e01193ddc9b719e7555780e9f1facaf01ef445a55f.front-off-1000x1100.webp",
+          "sha256": "c3115a061de988833fda76e01193ddc9b719e7555780e9f1facaf01ef445a55f",
+          "url": "/images/plate-contact-sheets/c3115a061de988833fda76e01193ddc9b719e7555780e9f1facaf01ef445a55f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVAmb2WhtCap",
+      "graceSku": "GB-VIA-CLR-2ML-S-02",
+      "productGroupId": "kh7500mej3zv8w3h1pbh90tqnn8dpp6f",
+      "capacityMl": 2,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Vial design 2 ml Amber glass vial with short white cap. For use with perfume or fragrance oil, essential oil, and aromatherapy.  Small or mini size vials for promotions, sample or travel accessory. Price each",
+      "groupSlug": "vial-2ml-amber-8-425",
+      "familyId": "vial-2ml-amber-8-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2WhtCap/94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0.front-on-1000x1100.webp",
+          "sha256": "94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0",
+          "url": "/images/plate-contact-sheets/94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2WhtCap/8ce2639283c5c5fd499432dba0befbf8d5893ffe49b9a063f3979da8f3b05707.front-off-1000x1100.webp",
+          "sha256": "8ce2639283c5c5fd499432dba0befbf8d5893ffe49b9a063f3979da8f3b05707",
+          "url": "/images/plate-contact-sheets/8ce2639283c5c5fd499432dba0befbf8d5893ffe49b9a063f3979da8f3b05707.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVBlu1DrmBlackCapSht",
+      "graceSku": "GB-VIA-CLR-3ML-S-05",
+      "productGroupId": "kh7596zqzwhyezhacnkczm96t98dp3th",
+      "capacityMl": 4,
+      "color": "Blue",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Blue glass vial with black short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-blue-13-425",
+      "familyId": "vial-4ml-blue-13-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlackCapSht/0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a.front-on-1000x1100.webp",
+          "sha256": "0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a",
+          "url": "/images/plate-contact-sheets/0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlackCapSht/cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0.front-off-1000x1100.webp",
+          "sha256": "cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0",
+          "url": "/images/plate-contact-sheets/cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVBlu1DrmBlkDropper",
+      "graceSku": "GB-VIA-CLR-3ML-03",
+      "productGroupId": "kh7e0xbdfzr29yfv3key2jj3n58dpvq8",
+      "capacityMl": 4,
+      "color": "Blue",
+      "applicator": "Dropper",
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Blue glass vial with black dropper. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-blue-13-425-dropper",
+      "familyId": "vial-4ml-blue-13-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlkDropper/565d7bb8f3316ccb3001215e8cfbe50b626f346d28d1e56abe5067a6d64d36e9.front-on-1000x1100.webp",
+          "sha256": "565d7bb8f3316ccb3001215e8cfbe50b626f346d28d1e56abe5067a6d64d36e9",
+          "url": "/images/plate-contact-sheets/565d7bb8f3316ccb3001215e8cfbe50b626f346d28d1e56abe5067a6d64d36e9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVBlu1DrmWhtCapSht",
+      "graceSku": "GB-VIA-CLR-3ML-S-06",
+      "productGroupId": "kh7596zqzwhyezhacnkczm96t98dp3th",
+      "capacityMl": 4,
+      "color": "Blue",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Blue glass vial with white short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-blue-13-425",
+      "familyId": "vial-4ml-blue-13-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmWhtCapSht/8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde.front-on-1000x1100.webp",
+          "sha256": "8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde",
+          "url": "/images/plate-contact-sheets/8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmWhtCapSht/ae6b08f036e7efa3feee1e3245cb36fdf0fe794d9485fe7074c1ea7fb4fe49d4.front-off-1000x1100.webp",
+          "sha256": "ae6b08f036e7efa3feee1e3245cb36fdf0fe794d9485fe7074c1ea7fb4fe49d4",
+          "url": "/images/plate-contact-sheets/ae6b08f036e7efa3feee1e3245cb36fdf0fe794d9485fe7074c1ea7fb4fe49d4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVBlu1o9BlackCapSht",
+      "graceSku": "GB-VIA-BLU-3ML-BLK-S",
+      "productGroupId": "kh7992w4gga3wa0d5wsz2bv1mh8dpjkf",
+      "capacityMl": 3,
+      "color": "Blue",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Vial design 5/8 dram Blue glass vial with black short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-3ml-blue-13-425",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBVGr1DrmBlackCapSht",
+      "graceSku": "GB-VIA-CLR-3ML-S-07",
+      "productGroupId": "kh7ef1wc027phbv8wefk3r3wvh8dp267",
+      "capacityMl": 4,
+      "color": "Green",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Green glass vial with black short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-green-13-425",
+      "familyId": "vial-4ml-green-13-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlackCapSht/e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df.front-on-1000x1100.webp",
+          "sha256": "e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df",
+          "url": "/images/plate-contact-sheets/e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlackCapSht/12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1.front-off-1000x1100.webp",
+          "sha256": "12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1",
+          "url": "/images/plate-contact-sheets/12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVGr1DrmBlkDropper",
+      "graceSku": "GB-VIA-CLR-3ML-04",
+      "productGroupId": "kh70jq1xmpk5r9hsgpefrce1g18dpk2j",
+      "capacityMl": 4,
+      "color": "Green",
+      "applicator": "Dropper",
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Green glass vial with black dropper. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-green-13-425-dropper",
+      "familyId": "vial-4ml-green-13-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlkDropper/59f7b8e86e65c77b5a43c78dc21d81d88b4933fe8bf8f310387cccb1dda555fc.front-on-1000x1100.webp",
+          "sha256": "59f7b8e86e65c77b5a43c78dc21d81d88b4933fe8bf8f310387cccb1dda555fc",
+          "url": "/images/plate-contact-sheets/59f7b8e86e65c77b5a43c78dc21d81d88b4933fe8bf8f310387cccb1dda555fc.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVGr1DrmWhtCapSht",
+      "graceSku": "GB-VIA-CLR-3ML-S-08",
+      "productGroupId": "kh7ef1wc027phbv8wefk3r3wvh8dp267",
+      "capacityMl": 4,
+      "color": "Green",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Vial design 1 dram Green glass vial with white short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-4ml-green-13-425",
+      "familyId": "vial-4ml-green-13-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmWhtCapSht/3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d.front-on-1000x1100.webp",
+          "sha256": "3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d",
+          "url": "/images/plate-contact-sheets/3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmWhtCapSht/284839fa0fcbf512b2a5aa456cc95698b1dd9ec849997605b4cc126c3f107403.front-off-1000x1100.webp",
+          "sha256": "284839fa0fcbf512b2a5aa456cc95698b1dd9ec849997605b4cc126c3f107403",
+          "url": "/images/plate-contact-sheets/284839fa0fcbf512b2a5aa456cc95698b1dd9ec849997605b4cc126c3f107403.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVGreen2o4BlackCapSht",
+      "graceSku": "GB-VIA-CLR-3ML-GRN-S",
+      "productGroupId": "kh7793nm0vzg543esq22x303a98dpw3q",
+      "capacityMl": 3,
+      "color": "Green",
+      "applicator": null,
+      "capColor": "Green",
+      "itemName": "Vial design 5/8 dram Green glass vial with black short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-3ml-green-13-425",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBVGreen2o4WhtCapSht",
+      "graceSku": "GB-GRN-GRN-20ML",
+      "productGroupId": "kh7793nm0vzg543esq22x303a98dpw3q",
+      "capacityMl": 3,
+      "color": "Green",
+      "applicator": null,
+      "capColor": "Green",
+      "itemName": "Vial design 5/8 dram Green glass vial with white short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-3ml-green-13-425",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBVialAmb1o5WhtCapSht",
+      "graceSku": "GB-VIA-AMB-1.5ML-WHT-S",
+      "productGroupId": "kh7fjkqnbcj9efvhtabvpewnan8dpr7h",
+      "capacityMl": 2,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "White",
+      "itemName": "Vial design 1.5ml, Amber glass vial with white short cap. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Perfume sample vials for promotions. Price each",
+      "groupSlug": "vial-2ml-amber-13-425",
+      "familyId": "vial-2ml-amber-13-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-13-425/GBVialAmb1o5WhtCapSht/bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa.front-on-1000x1100.webp",
+          "sha256": "bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa",
+          "url": "/images/plate-contact-sheets/bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-13-425/GBVialAmb1o5WhtCapSht/aadfbeec66e7ff0cd316620f79824e6bfe509e827c30e9fc30aca0d63e5f9516.front-off-1000x1100.webp",
+          "sha256": "aadfbeec66e7ff0cd316620f79824e6bfe509e827c30e9fc30aca0d63e5f9516",
+          "url": "/images/plate-contact-sheets/aadfbeec66e7ff0cd316620f79824e6bfe509e827c30e9fc30aca0d63e5f9516.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVialClr2mlBlackCap",
+      "graceSku": "GB-VIA-CLR-2ML-BLK-T",
+      "productGroupId": "kh73tbctxpba4gxf29byrf6y198dqac7",
+      "capacityMl": 2,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Vial design 2 ml clear glass vial with short black cap.",
+      "groupSlug": "vial-2ml-clear-8-425",
+      "familyId": "vial-2ml-clear-8-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-clear-8-425/GBVialClr2mlBlackCap/2c2522ffc06da3eb084ba920364e1735d4a78db63e359a97369b6b631cf79820.front-on-1000x1100.webp",
+          "sha256": "2c2522ffc06da3eb084ba920364e1735d4a78db63e359a97369b6b631cf79820",
+          "url": "/images/plate-contact-sheets/2c2522ffc06da3eb084ba920364e1735d4a78db63e359a97369b6b631cf79820.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBVialClr2mlWhtCap",
+      "graceSku": "GB-VIA-CLR-2ML-WHT-T",
+      "productGroupId": "kh73tbctxpba4gxf29byrf6y198dqac7",
+      "capacityMl": 2,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "White",
+      "itemName": "Vial design 2 ml clear glass vial with short white cap.",
+      "groupSlug": "vial-2ml-clear-8-425",
+      "familyId": "vial-2ml-clear-8-425",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-clear-8-425/GBVialClr2mlWhtCap/94967ea010feb494787f7f1eea51590060e5c20fbcfc9ddb32798c72ce5e3abe.front-on-1000x1100.webp",
+          "sha256": "94967ea010feb494787f7f1eea51590060e5c20fbcfc9ddb32798c72ce5e3abe",
+          "url": "/images/plate-contact-sheets/94967ea010feb494787f7f1eea51590060e5c20fbcfc9ddb32798c72ce5e3abe.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    }
+  ]
+}

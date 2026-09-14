@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitment-copy";
 import { useEffect, useId, useMemo, useRef, useState, useTransition, useSyncExternalStore, type ReactNode } from "react";
 import Link from "next/link";
@@ -57,6 +59,8 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     openFamily: string;
     bodies: BuilderBody[];
 }) {
+    const { formatPrice } = useRegion();
+    const money = (value: number | null) => (value == null ? "—" : formatPrice(value));
     const { families, status: familyStatus, retry: retryFamilies } = useBuilderFamilies(initialFamilies);
     const familyNotice = <FamilyLoadingStatus status={familyStatus} onRetry={retryFamilies} />;
     const router = useRouter();

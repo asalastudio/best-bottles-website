@@ -2,6 +2,7 @@ import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
 import { presentationTool } from "sanity/presentation";
+import { imageHotspotArrayPlugin } from "sanity-plugin-hotspot-array";
 import { schemaTypes } from "./src/sanity/schemaTypes";
 import { resolve } from "./src/sanity/presentation/resolve";
 
@@ -14,6 +15,7 @@ export default defineConfig({
     projectId: process.env.SANITY_STUDIO_PROJECT_ID ?? process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
     dataset: process.env.SANITY_STUDIO_DATASET ?? process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production",
     plugins: [
+        imageHotspotArrayPlugin(),
         structureTool({
             structure: (S) =>
                 S.list()

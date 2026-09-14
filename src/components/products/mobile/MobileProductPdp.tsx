@@ -1,5 +1,7 @@
 "use client";
 
+import { useRegion } from "@/components/RegionProvider";
+
 import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 
@@ -142,11 +144,9 @@ function slugFromHref(href: string): string {
     return href.replace(/^\/products\//, "").split("?")[0] ?? href;
 }
 
-function formatEach(price: number | null | undefined): string {
-    return price == null ? "Price on request" : `$${price.toFixed(2)}`;
-}
-
 export default function MobileProductPdp(props: MobileProductPdpProps) {
+    const { formatPrice } = useRegion();
+    const formatEach = (price: number | null | undefined): string => (price == null ? "Price on request" : formatPrice(price));
     const {
         slug, group, variants, selectedVariant, platesBySku, selectedKitQuery, skuImageFallbacks, displayName, inStock, canAddToCart,
         addedFlash, onAddToCart, quoteHref, qty, onQtyChange, cartCount, backHref, cartAnchorRef, glassOptions,
@@ -598,7 +598,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 </div>
                 {priceEach != null && qty > 1 ? (
                     <p className="mt-2 text-right text-xs text-slate">
-                        {qty.toLocaleString()} × {formatEach(priceEach)} = <span className="font-semibold text-obsidian">${(priceEach * qty).toFixed(2)}</span>
+                        {qty.toLocaleString()} × {formatEach(priceEach)} = <span className="font-semibold text-obsidian">{formatPrice((priceEach * qty))}</span>
                     </p>
                 ) : null}
                 {/* Grace sits at the decision point, not in a floating disc: the

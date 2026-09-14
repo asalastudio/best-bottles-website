@@ -53,7 +53,7 @@
     "audit:catalog-vocabulary": "tsx scripts/audit_catalog_vocabulary.ts",
     "test:alignment": "vitest run tests/catalog-vocabulary-alignment.test.ts tests/catalog-price-filter-semantics.test.ts tests/observability-sentry-issues.test.ts tests/sentry-webhook-verification.test.ts tests/observability-wiring.test.ts",
     "review:heroes": "node tools/hero-review/server.cjs",
-        "ledger:build": "node scripts/asset-ledger/build.mjs",
+    "ledger:build": "node scripts/asset-ledger/build.mjs",
     "review:heroes:import": "node tools/hero-review/import.cjs",
     "review:heroes:archive": "node tools/hero-review/archive.cjs"
   },
@@ -96,6 +96,7 @@
     "react-dom": "19.2.3",
     "react-use-measure": "^2.1.7",
     "sanity": "^5.18.0",
+    "sanity-plugin-hotspot-array": "^5.0.17",
     "sharp": "^0.34.5",
     "styled-components": "^6.3.11",
     "tailwind-merge": "^3.5.0",

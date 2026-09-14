@@ -5,6 +5,7 @@ import { homepagePage } from "./documents/homepagePage";
 import { productFamilyContent } from "./documents/productFamilyContent";
 import { productGroupContent } from "./documents/productGroupContent";
 import { heroBlock } from "./objects/heroBlock";
+import { heroHotspot } from "./objects/heroHotspot";
 import { startHereCard } from "./objects/startHereCard";
 import { designFamilyCard } from "./objects/designFamilyCard";
 import { educationPreview } from "./objects/educationPreview";
@@ -42,6 +43,7 @@ export const schemaTypes = [
     shopCollectionCard,
     buildYourBottleBlock,
     heroBlock,
+    heroHotspot,
     startHereCard,
     designFamilyCard,
     mobileCategoryCard,

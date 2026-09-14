@@ -421,7 +421,7 @@ export default function FamilyPageClient({
                                     href={`/matrix?family=${encodeURIComponent(family)}&from=finder`}
                                     className="inline-flex min-h-11 items-center justify-center border border-obsidian px-5 text-sm font-semibold text-obsidian focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
                                 >
-                                    Build a Bottle
+                                    Build Your Bottle
                                 </Link>
                             </div>
                         </div>

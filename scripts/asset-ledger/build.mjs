@@ -1,12 +1,14 @@
 #!/usr/bin/env node
+import {readCylinderFinalRelease,applyCylinderFinalRelease} from './cylinder-final-release.mjs';
 import {readCompletion} from './plate-completion.mjs';
 import {readSourceRecovery} from './source-recovery.mjs';
 import {applyPlateSheetReviews} from './plate-contact-sheet.mjs';
 import {applyPreparedPlateReviews} from './prepared-plate-reviews.mjs';
 import {buildPlatePlan} from './plate-plan.mjs';
+import {readPlateReleaseLocks} from './plate-release-locks.mjs';
 import {assembledPlatePresentation} from './plate-presentation.mjs';
 import {applyPlateScope} from './plate-scope.mjs';
-import {applyCylinderFinalPreparation} from './cylinder-final-plates.mjs';
+import {readCylinderFinalPlates,applyCylinderFinalPreparation} from './cylinder-final-plates.mjs';
 import {retryLedgerRead,timedLedgerFetch} from './read-retry.mjs';
 /**
  * Asset ledger: one row per product SKU with the state of each visual asset kind
@@ -56,7 +58,21 @@ if (!skipConvex) {
     const page = async (fn, args, key) => { const out = []; let cursor = null; for (;;) { const r = await convex.query(fn, { ...args, cursor }); out.push(...(r.page ?? r.rows ?? r[key] ?? [])); if (r.isDone) break; cursor = r.continueCursor; } return out; };
     products = await page(api.products.getAllForPlates, { limit: 500 });
     { const g = await convex.query(api.products.getAllGroupsForPlates, {}); groups = Array.isArray(g) ? g : (g.page ?? g.rows ?? []); }
-    note("convex.products", { deployment, rows: products.length });
+    // getAllForPlates is a narrow projection and carries no lifecycle fields, so
+    // the retired-scope classifier below had nothing to read and silently excluded
+    // nothing: 146 retired duplicates sat in the active plate queue as work to do.
+    // Enrich only the ungrouped records with their exact catalog lifecycle fields,
+    // so the classification stays evidence-based and never reads a SKU marker.
+    const ungrouped = products.map((p, i) => ({ p, i })).filter(({ p }) => p.websiteSku && !p.productGroupId);
+    for (let i = 0; i < ungrouped.length; i += 12) {
+        const batch = await Promise.allSettled(ungrouped.slice(i, i + 12).map(({ p }) => convex.query(api.products.lookupSku, { sku: p.websiteSku })));
+        batch.forEach((result, offset) => {
+            if (result.status !== "fulfilled" || !result.value?.product) return;
+            const product = result.value.product, index = ungrouped[i + offset].i;
+            products[index] = { ...products[index], stockStatus: product.stockStatus ?? null, importSource: product.importSource ?? null };
+        });
+    }
+    note("convex.products", { deployment, rows: products.length, lifecycleEnriched: ungrouped.length });
     note("convex.productGroups", { deployment, rows: groups.length });
 }
 const groupById = new Map(groups.map((g) => [g._id, g]));
@@ -119,6 +135,11 @@ const geom = existsSync(geomPath) ? readJson(geomPath) : null;
 if (geom) note("plate.geometry", { path: "src/lib/asset-ledger/plate-geometry.json", generatedAt: geom.generatedAt, ...geom.summary });
 // Product kinds that never take a plate: they are not bottles.
 const NO_PLATE_CATEGORY = new Set(["Component", "Packaging", "Accessory", "Gift Bag", "Gift Box"]);
+// Discontinued records imported by the confirmed retired-record reconciliation
+// are kept in the ledger for audit, but they are not active plate work. This is
+// derived from catalog lifecycle fields, never from a SKU or filename marker.
+const isRetiredScopeHold = (product) => product?.stockStatus === "Discontinued" &&
+    typeof product?.importSource === "string" && product.importSource.includes(":retired") && !product?.productGroupId;
 
 // ---------- local kit + plate ledgers ----------
 const kitCsv = new Map();
@@ -136,6 +157,29 @@ const bostonKitReleasePath = path.join(root, "dist/paper-doll/boston-kit-release
 const bostonKitRelease = existsSync(bostonKitReleasePath) ? readJson(bostonKitReleasePath) : null;
 const bostonKitApprovals = new Map((bostonKitRelease?.rows ?? []).filter(r => r.approval?.status === "approved").map(r => [r.sku, r]));
 if (bostonKitRelease) note("boston.kit-release", { path: path.relative(root, bostonKitReleasePath), rows: bostonKitRelease.rows.length, approved: bostonKitApprovals.size, publicationAuthorized: !!bostonKitRelease.publicationAuthorized });
+// A prepared approval remains "release" until the release-scoped verifier has
+// checked the indexed Convex rows and every hosted Blob byte. Only that exact
+// verification, bound to the immutable manifest and ship authorization, may
+// promote the approved rows to "complete" in the ledger. The manifest is read
+// from the release build when present, otherwise from the copy committed beside
+// the verification so the ledger stays true on a fresh clone.
+const fourFamilyManifestPath = [
+    path.join(root, "dist/paper-doll/four-family-plates-2026-09-13-release/manifest.json"),
+    path.join(root, "docs/reviews/four-family-plates-2026-09-13/release-manifest.json"),
+].find(existsSync);
+const fourFamilyVerificationPath = path.join(root, "docs/reviews/four-family-plates-2026-09-13/published-verification.json");
+const fourFamilyShipPath = path.join(root, "docs/reviews/four-family-plates-2026-09-13/ship-authorization.json");
+let fourFamilyPublishedVerification = null;
+if (existsSync(fourFamilyVerificationPath) && existsSync(fourFamilyShipPath) && fourFamilyManifestPath) {
+    const verification = readJson(fourFamilyVerificationPath);
+    const ship = readJson(fourFamilyShipPath);
+    const manifestSha = sha256(readFileSync(fourFamilyManifestPath));
+    if (verification.phase === "published" && verification.failures?.length === 0 && verification.rows === 637 &&
+        verification.manifestSha256 === manifestSha && ship.publicationAuthorized === true && ship.manifestSha256 === manifestSha) {
+        fourFamilyPublishedVerification = verification;
+        note("four-family.published-verification", { path: "docs/reviews/four-family-plates-2026-09-13/published-verification.json", rows: verification.rows, hostedAssetsChecked: verification.hostedAssetsChecked, deployment: verification.deployment, manifest: path.relative(root, fourFamilyManifestPath) });
+    }
+}
 const plateHolds = new Map();
 const holdPath = path.join(root, "data/paper-doll/priority-family-kit-holds-2026-09-08.json");
 if (existsSync(holdPath)) { for (const r of readJson(holdPath).rows) plateHolds.set(r.websiteSku, r); note("plate.holds", { path: "data/paper-doll/priority-family-kit-holds-2026-09-08.json", rows: plateHolds.size }); }
@@ -152,6 +196,7 @@ for (const sku of [...skus].sort()) {
     const p = productBySku.get(sku); const reg = registryBySku.get(sku); const man = manifestBySku.get(sku); const lock = heroLocks.get(sku); const rv = review.hero.get(sku); const kv = review.kit.get(sku);
     const g = p ? groupById.get(p.productGroupId) : null;
     const family = p?.family ?? reg?.family ?? kitCsv.get(sku)?.family ?? "Unknown";
+    const retiredScopeHold = isRetiredScopeHold(p);
     // hero
     let hero;
     if (reg) {
@@ -190,6 +235,14 @@ for (const sku of [...skus].sort()) {
     else if (NO_PLATE_CATEGORY.has(p?.category ?? "")) plate = { state: "not-applicable", reason: `${p.category}: not a bottle` };
     else plate = { state: convex ? "none" : "unknown" };
     if (pl && plateHolds.has(sku)) { plate.hold = plateHolds.get(sku).holdType; plate.reason = plateHolds.get(sku).reason; }
+    if (retiredScopeHold) {
+        plate.scopeExclusion = {
+            kind: "retired-scope-hold",
+            status: p.stockStatus,
+            importSource: p.importSource,
+            reason: "Discontinued catalog record with no product-group link. Preserve for audit; do not prepare an active plate.",
+        };
+    }
     const pv = review.plate.get(sku);
     if (pv) plate.candidate = {state:pv.status, sha256:pv.sha256, collection:pv.collection, bytesVerified:pv.bytesVerified};
     // A historical plate approval is visible evidence, never a hero approval.
@@ -234,6 +287,12 @@ if(sourceRecovery) note('boston.master-source-recovery',sourceRecovery);
 const preparedPlates=await readCompletion(root);
 const cylinderFinalPreparation=await applyCylinderFinalPreparation(root,rows);
 if(cylinderFinalPreparation)note('cylinder.final-plate-preparation',cylinderFinalPreparation);
+const cylinderRelease=await readCylinderFinalRelease(root);
+if(cylinderRelease){
+ const sheet=await readCylinderFinalPlates(root);
+ if(new URL(cylinderRelease.authorization.deployment).hostname.split('.')[0]===deployment)
+  note('cylinder.final-plate-release',await applyCylinderFinalRelease(rows,plates,sheet,cylinderRelease));
+}
 const platePreparation=preparedPlates?.summary ?? null;
 if(platePreparation){
  note('boston.plate-preparation',platePreparation);
@@ -321,16 +380,110 @@ for (const family of families) {
 
 const out = { schemaVersion: 2, sourceRecovery, platePreparation, bottleStandards:readJson(path.join(root,"data/asset-ledger/bottle-standards.json")), groupRows, reviewAudit, scope: {catalogReconciled:false, reviewOnly:rows.filter(r=>!r.productRecord).length, groupRecords:groups.length, duplicateProductRecords:products.filter(p=>p.websiteSku).length-new Set(products.filter(p=>p.websiteSku).map(p=>p.websiteSku)).size, missingSkuRecords: products.filter(p=>!p.websiteSku).map(p=>({id:p._id,family:p.family,itemName:p.itemName,productGroupId:p.productGroupId})), catalogRecordCount:products.length, localPlateCandidates:localCandidates.size, sourceHolds:sourceHolds.size, note:"Current catalog snapshot; live legacy variant scope and physical bottle groups still require reconciliation."}, generatedAt: new Date().toISOString(), deployment, sources, states: {
     hero: { indexed: "registry row, file on disk, bytes match the manifest", "indexed-stale": "indexed, but a newer approved lock exists — a release will repoint it", "indexed-missing-file": "registry row points at a file that is not on disk", "indexed-manifest-mismatch": "the file on disk does not match the manifest hash", "approved-not-indexed": "approved and locked by hash; no registry row yet", "approved-not-locked": "approved on a card; not yet locked", changes_requested: "Jordan asked for a change on the latest card", rejected: "rejected on the latest card", pending: "on a card, decision pending", rendered: "an image exists on a card; no decision", none: "no hero image anywhere" },
-    plate: { plated: "front + cap-off plate served by Convex, glass the right size, built from the PSD master", "plated-no-capoff-by-design": "two-piece product (bulb, tassel, atomizer, reducer, dropper): served, no cap to take off", "plated-wrong-size": "served, but the glass is more than 5% off its bottle's width — the plate is wrong and must be rebuilt", "plated-legacy-source": "served, but built from a legacy website GIF rather than the PSD master — to be rebuilt", "plated-cap-on-only": "front plate only; this product should have a cap-off view and does not", hold: "held with a reason, no plate", none: "no plate", "not-applicable": "not a bottle (component, packaging, gift bag/box)", unknown: "Convex not read" },
+    plate: { "plated-approved-legacy-source": "Current paired views match Jordan’s exact approved original-source exception; master PSD provenance is not claimed", plated: "front + cap-off plate served by Convex, glass the right size, built from the PSD master", "plated-no-capoff-by-design": "two-piece product (bulb, tassel, atomizer, reducer, dropper): served, no cap to take off", "plated-wrong-size": "served, but the glass is more than 5% off its bottle's width — the plate is wrong and must be rebuilt", "plated-legacy-source": "served, but built from a legacy website GIF rather than the PSD master — to be rebuilt", "plated-cap-on-only": "front plate only; this product should have a cap-off view and does not", hold: "held with a reason, no plate", none: "no plate", "not-applicable": "not a bottle (component, packaging, gift bag/box)", unknown: "Convex not read" },
     kit: { live: "kit served by Convex and registered to the current plate", stale: "kit exists but not registered to the served plate", "approved-not-published": "approved on a kit card; not published", changes_requested: "change requested on the latest kit card", rejected: "rejected on the latest kit card", pending: "on a kit card, decision pending", candidate: "kit candidate (2026-09-08 ledger)", held: "held with a reason (2026-09-08 ledger)", "not-applicable": "no kit for this product kind", rendered: "kit image on a card, no decision", none: "plated, no kit work", "no-plate": "no plate, so no kit" },
 }, scoring: {
     hero: "per PRODUCT GROUP — the catalogue shows one hero per group, so a family is scored on groups covered, not SKUs",
-    plate: "per SKU that is a bottle; complete only when the plate is served, the right size for its bottle, from the PSD master, and has its cap-off view unless the product is two-piece",
+    plate: "per SKU that is a bottle; complete only when the plate is served, the right size for its bottle, from the PSD master or an explicitly approved exact-source release exception, and has its cap-off view unless the product is two-piece",
     kit: "per SKU that can take a kit (SKUs marked not-applicable are excluded)",
     complete: "a family is complete when heroes, plates and kits are all complete and nothing is flagged or stale",
 }, summary, families, rows };
 
 mkdirSync(path.join(root, "src/lib/asset-ledger"), { recursive: true });
+// Local preparation is visible without counting unapproved candidates as indexed plates.
+const preparedReviewPath=path.join(root,"data/asset-ledger/four-family-plate-progress.json");
+out.preparedPlateReview = existsSync(preparedReviewPath) ? readJson(preparedReviewPath) : null;
+// The combined review writes approvals to a separate, append-only decision log.
+// Join that log back into the dashboard only after re-hashing the immutable
+// packet. Candidates remain unindexed until their named release is published.
+const fourFamilyPacketPath=path.join(root,"docs/reviews/four-family-plates-2026-09-13/prepared.json");
+const fourFamilyDecisionPath=path.join(root,"data/asset-ledger/four-family-plates-2026-09-13-decisions.json");
+if (out.preparedPlateReview && existsSync(fourFamilyPacketPath) && existsSync(fourFamilyDecisionPath)) {
+    const packetBytes=readFileSync(fourFamilyPacketPath), packet=JSON.parse(packetBytes.toString("utf8"));
+    const packetSha=sha256(packetBytes), decisions=readJson(fourFamilyDecisionPath);
+    const decision=(decisions.history??[]).findLast(d=>d.token===packetSha);
+    if (decision) {
+        const approvedEntries=(decision.entries??[]).filter(e=>e.status==='approved'&&e.publicationAuthorized===false);
+        const approvedSkus=[...new Set(approvedEntries.map(e=>e.sku))].sort();
+        if (approvedSkus.length!==approvedEntries.length) throw Error("Duplicate four-family approval identity.");
+        const packetReady=new Set((packet.rows??[]).filter(r=>r.status==='ready').map(r=>r.sku));
+        if (approvedSkus.some(sku=>!packetReady.has(sku))) throw Error("Four-family approval includes a row outside the eligible packet.");
+        out.preparedPlateReview={...out.preparedPlateReview,status:'approved',approvalRevision:decisions.revision,
+            approvalAt:decision.at,approvalId:decision.id,packetSha256:packetSha,approvedCount:approvedSkus.length,
+            approvedSkus,duplicateDispositionCount:(decision.duplicateEntries??[]).length,
+            recordedExceptions:(packet.counts?.hold??0)+(packet.counts?.legacy??0),publicationAuthorized:false};
+        note("four-family.approval",{path:"data/asset-ledger/four-family-plates-2026-09-13-decisions.json",approved:approvedSkus.length,
+            preserved:packet.counts?.preserved??0,exceptions:out.preparedPlateReview.recordedExceptions,
+            duplicates:out.preparedPlateReview.duplicateDispositionCount,publicationAuthorized:false});
+    }
+}
+if (fourFamilyPublishedVerification && out.preparedPlateReview?.approvedSkus?.length === 637) {
+    const publishedSkus = new Set(fourFamilyPublishedVerification.verifiedSkus ?? out.preparedPlateReview.approvedSkus);
+    if (publishedSkus.size === 637) {
+        out.preparedPlateReview = { ...out.preparedPlateReview, publicationVerifiedAt: fourFamilyPublishedVerification.verifiedAt,
+            publishedManifestSha256: fourFamilyPublishedVerification.manifestSha256, indexedCount: publishedSkus.size };
+        for (const row of rows) {
+            if (!publishedSkus.has(row.sku)) continue;
+            row.plate.complete = true;
+            row.plate.publishedVerification = {
+                phase: "published",
+                manifestSha256: fourFamilyPublishedVerification.manifestSha256,
+                verifiedAt: fourFamilyPublishedVerification.verifiedAt,
+            };
+        }
+        note("four-family.ledger-complete", { rows: publishedSkus.size, reason: "indexed rows and hosted bytes match the approved manifest" });
+    }
+}
+// Every family's exact-byte approval lock, so an image Jordan has already
+// signed off is never sent back for another review. A lock is visual approval
+// only; publication and indexing stay separate and are checked above.
+
+// Jordan's completeness rule, 2026-09-13: the live legacy site decides what
+// exists and what can still be obtained. Recording it here stops the plan
+// presenting a source hold as a dead end when the asset is in fact available.
+const legacyReconPath = path.join(root, "data/asset-ledger/legacy-asset-reconciliation.json");
+out.legacyAssetReconciliation = existsSync(legacyReconPath) ? readJson(legacyReconPath) : null;
+if (out.legacyAssetReconciliation) {
+    const lr = out.legacyAssetReconciliation;
+    note("plate.legacy-asset-reconciliation", { path: "data/asset-ledger/legacy-asset-reconciliation.json",
+        generatedAt: lr.generatedAt, networkChecked: lr.networkChecked,
+        legacyCatalogGeneratedAt: lr.legacyCatalog?.generatedAt, ...lr.summary });
+}
+// Jordan's source decision on the rows that had no candidate: the legacy
+// photograph is accepted as their source, cap-on only. It settles the source
+// question; it does not make them plates.
+const legacyHoldPath = path.join(root, "data/asset-ledger/legacy-hold-source-decisions.json");
+out.legacyHoldDecision = existsSync(legacyHoldPath) ? readJson(legacyHoldPath) : null;
+if (out.legacyHoldDecision) {
+    const d = out.legacyHoldDecision;
+    note("plate.legacy-hold-source-decision", { path: "data/asset-ledger/legacy-hold-source-decisions.json",
+        decidedAt: d.decidedAt, sourceApproved: d.approvedRows, queuedForRegeneration: d.regenerateRows,
+        capOnAccepted: d.capOnAccepted, plateApproved: d.plateApproved, publicationAuthorized: d.publicationAuthorized });
+}
+// Every family's exact-byte approval lock, so an image Jordan has already
+// signed off is never sent back for another review. A lock is visual approval
+// only; publication and indexing stay separate and are checked above.
+out.plateReleaseLocks = readPlateReleaseLocks(root);
+for (const lock of out.plateReleaseLocks) {
+    if (lock.skipped) { note("plate.release-lock-skipped", { path: lock.path, release: lock.release, reason: lock.skipped }); continue; }
+    note("plate.release-lock", { path: lock.path, release: lock.release, rows: lock.rows, held: lock.held.length,
+        approvedAt: lock.approvedAt, publicationAuthorized: lock.publicationAuthorized, indexingAuthorized: lock.indexingAuthorized,
+        published: lock.published ? lock.published.verifiedAt : false });
+    // A release whose own verifier confirmed every approved byte against the
+    // indexed rows and the hosted objects is done, not awaiting release.
+    if (!lock.published) continue;
+    const verified = new Set(lock.published.skus);
+    let promoted = 0;
+    for (const row of rows) {
+        if (!verified.has(row.sku) || row.plate.complete) continue;
+        row.plate.complete = true;
+        row.plate.publishedVerification = { phase: "published", release: lock.release,
+            verifiedAt: lock.published.verifiedAt, deployment: lock.published.deployment };
+        promoted++;
+    }
+    note("plate.release-verified", { release: lock.release, rows: verified.size, promoted,
+        hostedAssetsChecked: lock.published.hostedAssetsChecked, verifiedAt: lock.published.verifiedAt });
+}
 out.platePlan = buildPlatePlan(out);
 writeFileSync(path.join(root, "src/lib/asset-ledger/ledger.json.tmp"), JSON.stringify(out, null, 1) + "\n");
 renameSync(path.join(root,"src/lib/asset-ledger/ledger.json.tmp"),path.join(root,"src/lib/asset-ledger/ledger.json"));

@@ -48,7 +48,7 @@ describe("mega menu destinations", () => {
         expect(links.some((link) => link.href.includes("0.03"))).toBe(false);
     });
 
-    it("filters closures by component type and pairs leftover help with Build a Bottle", () => {
+    it("filters closures by component type and pairs leftover help with Build Your Bottle", () => {
         expect(panelHrefs("closures")).toEqual(expect.arrayContaining([
             catalogHref({ category: "Component", componentType: "Sprayer" }),
             catalogHref({ category: "Component", componentType: "Dropper" }),

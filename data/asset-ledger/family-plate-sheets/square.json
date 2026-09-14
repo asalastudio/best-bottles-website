@@ -1,0 +1,913 @@
+{
+  "schemaVersion": 1,
+  "id": "square-plates-2026-09-14",
+  "family": "Square",
+  "createdAt": "2026-09-14T01:00:05.673Z",
+  "ledgerAt": "2026-09-14T00:39:35.157Z",
+  "scope": "Current development catalog; legacy scope remains open.",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "rows": [
+    {
+      "sku": "GBSqr15BlkSht",
+      "graceSku": "GB-SQR-CLR-15ML-S",
+      "productGroupId": "kh794byc1rn859t6sy6e9jtr2n8dqg14",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with short black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15BlkSht/e4b42d3dcbff134519ae69f0e74a79d5417854a2dd40a980398d40533dd46bdf.front-on-1000x1100.webp",
+          "sha256": "e4b42d3dcbff134519ae69f0e74a79d5417854a2dd40a980398d40533dd46bdf",
+          "url": "/images/plate-contact-sheets/e4b42d3dcbff134519ae69f0e74a79d5417854a2dd40a980398d40533dd46bdf.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15BlkSht/ed6061b9be34c709c233a8d9e60e28920d52fb557b097cce0483311a606e6b58.front-off-1000x1100.webp",
+          "sha256": "ed6061b9be34c709c233a8d9e60e28920d52fb557b097cce0483311a606e6b58",
+          "url": "/images/plate-contact-sheets/ed6061b9be34c709c233a8d9e60e28920d52fb557b097cce0483311a606e6b58.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15Gl",
+      "graceSku": "GB-VIA-CLR-15ML-GLD-T-02",
+      "productGroupId": "kh794byc1rn859t6sy6e9jtr2n8dqg14",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Gold",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15Gl/e2a8abac8a2d6ca6f26040df7a63165eb14e92e5d93b7d91e8180485be771aff.front-on-1000x1100.webp",
+          "sha256": "e2a8abac8a2d6ca6f26040df7a63165eb14e92e5d93b7d91e8180485be771aff",
+          "url": "/images/plate-contact-sheets/e2a8abac8a2d6ca6f26040df7a63165eb14e92e5d93b7d91e8180485be771aff.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15Gl/a6edd5c0406542fad2f5e7fe3721e1528bfb7e6adf436b40c276f81eeb1b6d16.front-off-1000x1100.webp",
+          "sha256": "a6edd5c0406542fad2f5e7fe3721e1528bfb7e6adf436b40c276f81eeb1b6d16",
+          "url": "/images/plate-contact-sheets/a6edd5c0406542fad2f5e7fe3721e1528bfb7e6adf436b40c276f81eeb1b6d16.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15MtlRollBlkDot",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-BKDT",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black Dotted",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollBlkDot/d3bbab28f33358de2fd6a73a5e9706c56442c5179a28ec7621e5588ed3dec4e7.front-on-1000x1100.webp",
+          "sha256": "d3bbab28f33358de2fd6a73a5e9706c56442c5179a28ec7621e5588ed3dec4e7",
+          "url": "/images/plate-contact-sheets/d3bbab28f33358de2fd6a73a5e9706c56442c5179a28ec7621e5588ed3dec4e7.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollBlkDot/2ce649368da86973c828b87a08b1cf57d80808ec7bed55ba0f7e9977ed4e1171.front-off-1000x1100.webp",
+          "sha256": "2ce649368da86973c828b87a08b1cf57d80808ec7bed55ba0f7e9977ed4e1171",
+          "url": "/images/plate-contact-sheets/2ce649368da86973c828b87a08b1cf57d80808ec7bed55ba0f7e9977ed4e1171.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15MtlRollBlkSh",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-SBLK",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and black shiny cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollBlkSh/03d6b17a24705e1da203fb051a534d53504f375d2b86afc374f995585c7bd303.front-on-1000x1100.webp",
+          "sha256": "03d6b17a24705e1da203fb051a534d53504f375d2b86afc374f995585c7bd303",
+          "url": "/images/plate-contact-sheets/03d6b17a24705e1da203fb051a534d53504f375d2b86afc374f995585c7bd303.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollBlkSh/ed7abfbe4a81d123b3c58fc2846a375091a8f983e140b373c78d3856f829db5c.front-off-1000x1100.webp",
+          "sha256": "ed7abfbe4a81d123b3c58fc2846a375091a8f983e140b373c78d3856f829db5c",
+          "url": "/images/plate-contact-sheets/ed7abfbe4a81d123b3c58fc2846a375091a8f983e140b373c78d3856f829db5c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15MtlRollCuMatt",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-MCPR",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Copper",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and matte copper cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price e",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollCuMatt/060b31cf397dfacfa007b9fbbefe89bf3f25a967358f18f63d38b99ff611a27b.front-on-1000x1100.webp",
+          "sha256": "060b31cf397dfacfa007b9fbbefe89bf3f25a967358f18f63d38b99ff611a27b",
+          "url": "/images/plate-contact-sheets/060b31cf397dfacfa007b9fbbefe89bf3f25a967358f18f63d38b99ff611a27b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollCuMatt/9edf72a6b6959f05f770310f771362bcad4206f978e0ba1e06d261e45b855804.front-off-1000x1100.webp",
+          "sha256": "9edf72a6b6959f05f770310f771362bcad4206f978e0ba1e06d261e45b855804",
+          "url": "/images/plate-contact-sheets/9edf72a6b6959f05f770310f771362bcad4206f978e0ba1e06d261e45b855804.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15MtlRollGlMatt",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-MGLD",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price eac",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollGlMatt/4da0ea43ec682e88e0c4ebae906c17f94235c7df06d0adb7fabfa739816fcd84.front-on-1000x1100.webp",
+          "sha256": "4da0ea43ec682e88e0c4ebae906c17f94235c7df06d0adb7fabfa739816fcd84",
+          "url": "/images/plate-contact-sheets/4da0ea43ec682e88e0c4ebae906c17f94235c7df06d0adb7fabfa739816fcd84.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollGlMatt/e639f8aff192850d9df3f2f72301606cf1a3ec4b0987b8a344f57a140fad3035.front-off-1000x1100.webp",
+          "sha256": "e639f8aff192850d9df3f2f72301606cf1a3ec4b0987b8a344f57a140fad3035",
+          "url": "/images/plate-contact-sheets/e639f8aff192850d9df3f2f72301606cf1a3ec4b0987b8a344f57a140fad3035.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15MtlRollGlSh",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-SGLD",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price eac",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollGlSh/9d1dee2de06f1ecef8aac249a161dd05b65cab41293313ec53b3eac3cd84aede.front-on-1000x1100.webp",
+          "sha256": "9d1dee2de06f1ecef8aac249a161dd05b65cab41293313ec53b3eac3cd84aede",
+          "url": "/images/plate-contact-sheets/9d1dee2de06f1ecef8aac249a161dd05b65cab41293313ec53b3eac3cd84aede.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollGlSh/9a64329df6cc74f8e1275f413370241fc1d1886da8266d72b9f7dbf31dac0dd4.front-off-1000x1100.webp",
+          "sha256": "9a64329df6cc74f8e1275f413370241fc1d1886da8266d72b9f7dbf31dac0dd4",
+          "url": "/images/plate-contact-sheets/9a64329df6cc74f8e1275f413370241fc1d1886da8266d72b9f7dbf31dac0dd4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15MtlRollPinkDot",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-PKDT",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Pink Dotted",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and pink cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollPinkDot/1b3a9d6ef12d7c343f3f76b2123423db7b817a343ec565b2e5980f466e1a7123.front-on-1000x1100.webp",
+          "sha256": "1b3a9d6ef12d7c343f3f76b2123423db7b817a343ec565b2e5980f466e1a7123",
+          "url": "/images/plate-contact-sheets/1b3a9d6ef12d7c343f3f76b2123423db7b817a343ec565b2e5980f466e1a7123.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollPinkDot/737718df58a320641bd3b992432d67688f77dff435975e8865441b2ab571f585.front-off-1000x1100.webp",
+          "sha256": "737718df58a320641bd3b992432d67688f77dff435975e8865441b2ab571f585",
+          "url": "/images/plate-contact-sheets/737718df58a320641bd3b992432d67688f77dff435975e8865441b2ab571f585.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15MtlRollSlDot",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-SLDT",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Silver Dotted",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and silver cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Pri",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollSlDot/c6ac32f4e69f61d36140b3d2733ce899a3bd76499b3f9805b41972b6857779dd.front-on-1000x1100.webp",
+          "sha256": "c6ac32f4e69f61d36140b3d2733ce899a3bd76499b3f9805b41972b6857779dd",
+          "url": "/images/plate-contact-sheets/c6ac32f4e69f61d36140b3d2733ce899a3bd76499b3f9805b41972b6857779dd.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollSlDot/84b1d95fb8a2fa629b9aff0c20a86a9f68bf852196bb0cd94462c394c357569f.front-off-1000x1100.webp",
+          "sha256": "84b1d95fb8a2fa629b9aff0c20a86a9f68bf852196bb0cd94462c394c357569f",
+          "url": "/images/plate-contact-sheets/84b1d95fb8a2fa629b9aff0c20a86a9f68bf852196bb0cd94462c394c357569f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15MtlRollSlMatt",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-MSLV",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price e",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollSlMatt/182573dd76b359223dedc05fc85ba61225dc4c0affb812e01ef492c2aa9b9671.front-on-1000x1100.webp",
+          "sha256": "182573dd76b359223dedc05fc85ba61225dc4c0affb812e01ef492c2aa9b9671",
+          "url": "/images/plate-contact-sheets/182573dd76b359223dedc05fc85ba61225dc4c0affb812e01ef492c2aa9b9671.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollSlMatt/9c745193ba781b298df1633d3991be522f74f634ed9e20d6fe87929d4aa71e7b.front-off-1000x1100.webp",
+          "sha256": "9c745193ba781b298df1633d3991be522f74f634ed9e20d6fe87929d4aa71e7b",
+          "url": "/images/plate-contact-sheets/9c745193ba781b298df1633d3991be522f74f634ed9e20d6fe87929d4aa71e7b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15MtlRollSlSh",
+      "graceSku": "GB-SQR-CLR-15ML-MRL-SSLV",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price e",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollSlSh/0d09e981ec7069d6bd28bcad380836a151a43205ebc5d4b26c041e1c0eb8416b.front-on-1000x1100.webp",
+          "sha256": "0d09e981ec7069d6bd28bcad380836a151a43205ebc5d4b26c041e1c0eb8416b",
+          "url": "/images/plate-contact-sheets/0d09e981ec7069d6bd28bcad380836a151a43205ebc5d4b26c041e1c0eb8416b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15MtlRollSlSh/d1f5890a08966a66dfdd346a89942798d7330bcffb4c89e7f340d0f442bd0cbf.front-off-1000x1100.webp",
+          "sha256": "d1f5890a08966a66dfdd346a89942798d7330bcffb4c89e7f340d0f442bd0cbf",
+          "url": "/images/plate-contact-sheets/d1f5890a08966a66dfdd346a89942798d7330bcffb4c89e7f340d0f442bd0cbf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15RollBlkDot",
+      "graceSku": "GB-SQR-CLR-15ML-ROL-BKDT",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black Dotted",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decan",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollBlkDot/d3bbab28f33358de2fd6a73a5e9706c56442c5179a28ec7621e5588ed3dec4e7.front-on-1000x1100.webp",
+          "sha256": "d3bbab28f33358de2fd6a73a5e9706c56442c5179a28ec7621e5588ed3dec4e7",
+          "url": "/images/plate-contact-sheets/d3bbab28f33358de2fd6a73a5e9706c56442c5179a28ec7621e5588ed3dec4e7.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollBlkDot/df40e48831c1468f37d9d02d695cc65196d8fa78e54d4753ff82dbabbd59ede2.front-off-1000x1100.webp",
+          "sha256": "df40e48831c1468f37d9d02d695cc65196d8fa78e54d4753ff82dbabbd59ede2",
+          "url": "/images/plate-contact-sheets/df40e48831c1468f37d9d02d695cc65196d8fa78e54d4753ff82dbabbd59ede2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15RollBlkSh",
+      "graceSku": "GB-SQR-CLR-15ML-ROL-SBLK",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and black shiny cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollBlkSh/03d6b17a24705e1da203fb051a534d53504f375d2b86afc374f995585c7bd303.front-on-1000x1100.webp",
+          "sha256": "03d6b17a24705e1da203fb051a534d53504f375d2b86afc374f995585c7bd303",
+          "url": "/images/plate-contact-sheets/03d6b17a24705e1da203fb051a534d53504f375d2b86afc374f995585c7bd303.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollBlkSh/c4b7bc917ea1b4a9dd36520133153551c4e554f9764aada98d28211a8fabb2a8.front-off-1000x1100.webp",
+          "sha256": "c4b7bc917ea1b4a9dd36520133153551c4e554f9764aada98d28211a8fabb2a8",
+          "url": "/images/plate-contact-sheets/c4b7bc917ea1b4a9dd36520133153551c4e554f9764aada98d28211a8fabb2a8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15RollCuMatt",
+      "graceSku": "GB-SQR-CLR-15ML-ROL-MCPR",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and matte copper cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollCuMatt/060b31cf397dfacfa007b9fbbefe89bf3f25a967358f18f63d38b99ff611a27b.front-on-1000x1100.webp",
+          "sha256": "060b31cf397dfacfa007b9fbbefe89bf3f25a967358f18f63d38b99ff611a27b",
+          "url": "/images/plate-contact-sheets/060b31cf397dfacfa007b9fbbefe89bf3f25a967358f18f63d38b99ff611a27b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollCuMatt/422c67094a69b070b205f284230e2552bf0cddcdfda20d8cd0e5596f7df0b125.front-off-1000x1100.webp",
+          "sha256": "422c67094a69b070b205f284230e2552bf0cddcdfda20d8cd0e5596f7df0b125",
+          "url": "/images/plate-contact-sheets/422c67094a69b070b205f284230e2552bf0cddcdfda20d8cd0e5596f7df0b125.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15RollGlMatt",
+      "graceSku": "GB-SQR-CLR-15ML-ROL-MGLD",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price e",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollGlMatt/4da0ea43ec682e88e0c4ebae906c17f94235c7df06d0adb7fabfa739816fcd84.front-on-1000x1100.webp",
+          "sha256": "4da0ea43ec682e88e0c4ebae906c17f94235c7df06d0adb7fabfa739816fcd84",
+          "url": "/images/plate-contact-sheets/4da0ea43ec682e88e0c4ebae906c17f94235c7df06d0adb7fabfa739816fcd84.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollGlMatt/b5528e6870fd3ab13f4e0031525542429ae91526e684860bdc346430c1f41dba.front-off-1000x1100.webp",
+          "sha256": "b5528e6870fd3ab13f4e0031525542429ae91526e684860bdc346430c1f41dba",
+          "url": "/images/plate-contact-sheets/b5528e6870fd3ab13f4e0031525542429ae91526e684860bdc346430c1f41dba.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15RollGlSh",
+      "graceSku": "GB-SQR-CLR-15ML-ROL-SGLD",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price e",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollGlSh/9d1dee2de06f1ecef8aac249a161dd05b65cab41293313ec53b3eac3cd84aede.front-on-1000x1100.webp",
+          "sha256": "9d1dee2de06f1ecef8aac249a161dd05b65cab41293313ec53b3eac3cd84aede",
+          "url": "/images/plate-contact-sheets/9d1dee2de06f1ecef8aac249a161dd05b65cab41293313ec53b3eac3cd84aede.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollGlSh/3c274c2182bd5fbda388f1bcc462cb7610d2fa261802e9af58f0b70aef2c1abd.front-off-1000x1100.webp",
+          "sha256": "3c274c2182bd5fbda388f1bcc462cb7610d2fa261802e9af58f0b70aef2c1abd",
+          "url": "/images/plate-contact-sheets/3c274c2182bd5fbda388f1bcc462cb7610d2fa261802e9af58f0b70aef2c1abd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15RollPinkDot",
+      "graceSku": "GB-SQR-CLR-15ML-ROL-PKDT",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Pink Dotted",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and pink cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Pri",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollPinkDot/1b3a9d6ef12d7c343f3f76b2123423db7b817a343ec565b2e5980f466e1a7123.front-on-1000x1100.webp",
+          "sha256": "1b3a9d6ef12d7c343f3f76b2123423db7b817a343ec565b2e5980f466e1a7123",
+          "url": "/images/plate-contact-sheets/1b3a9d6ef12d7c343f3f76b2123423db7b817a343ec565b2e5980f466e1a7123.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollPinkDot/5d217a7b73508048cc2032ba42bb3c0cf107ffa638014b2c57192b6dd2af3e00.front-off-1000x1100.webp",
+          "sha256": "5d217a7b73508048cc2032ba42bb3c0cf107ffa638014b2c57192b6dd2af3e00",
+          "url": "/images/plate-contact-sheets/5d217a7b73508048cc2032ba42bb3c0cf107ffa638014b2c57192b6dd2af3e00.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15RollSlDot",
+      "graceSku": "GB-SQR-CLR-15ML-ROL-SLDT",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Silver Dotted",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and silver cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. P",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollSlDot/c6ac32f4e69f61d36140b3d2733ce899a3bd76499b3f9805b41972b6857779dd.front-on-1000x1100.webp",
+          "sha256": "c6ac32f4e69f61d36140b3d2733ce899a3bd76499b3f9805b41972b6857779dd",
+          "url": "/images/plate-contact-sheets/c6ac32f4e69f61d36140b3d2733ce899a3bd76499b3f9805b41972b6857779dd.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollSlDot/09aeb75252991b42004aaa2b8f0bc45334ecc81dd3efaf27963706f1c8a55d80.front-off-1000x1100.webp",
+          "sha256": "09aeb75252991b42004aaa2b8f0bc45334ecc81dd3efaf27963706f1c8a55d80",
+          "url": "/images/plate-contact-sheets/09aeb75252991b42004aaa2b8f0bc45334ecc81dd3efaf27963706f1c8a55d80.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15RollSlMatt",
+      "graceSku": "GB-SQR-CLR-15ML-ROL-MSLV",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollSlMatt/182573dd76b359223dedc05fc85ba61225dc4c0affb812e01ef492c2aa9b9671.front-on-1000x1100.webp",
+          "sha256": "182573dd76b359223dedc05fc85ba61225dc4c0affb812e01ef492c2aa9b9671",
+          "url": "/images/plate-contact-sheets/182573dd76b359223dedc05fc85ba61225dc4c0affb812e01ef492c2aa9b9671.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollSlMatt/1eaf99c03385a246ce479b1f3e9b84afb36df3213386cde4b797a10595eb2e2f.front-off-1000x1100.webp",
+          "sha256": "1eaf99c03385a246ce479b1f3e9b84afb36df3213386cde4b797a10595eb2e2f",
+          "url": "/images/plate-contact-sheets/1eaf99c03385a246ce479b1f3e9b84afb36df3213386cde4b797a10595eb2e2f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15RollSlSh",
+      "graceSku": "GB-SQR-CLR-15ML-ROL-SSLV",
+      "productGroupId": "kh77mt8xzt1q6zqjrpdh047dbh8dpgj4",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "square-15ml-clear-13-415-rollon",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollSlSh/0d09e981ec7069d6bd28bcad380836a151a43205ebc5d4b26c041e1c0eb8416b.front-on-1000x1100.webp",
+          "sha256": "0d09e981ec7069d6bd28bcad380836a151a43205ebc5d4b26c041e1c0eb8416b",
+          "url": "/images/plate-contact-sheets/0d09e981ec7069d6bd28bcad380836a151a43205ebc5d4b26c041e1c0eb8416b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15RollSlSh/e1031a8e4139a504bbb3ac83bb292a9359582528f257c78852c21f9a2bdbda7a.front-off-1000x1100.webp",
+          "sha256": "e1031a8e4139a504bbb3ac83bb292a9359582528f257c78852c21f9a2bdbda7a",
+          "url": "/images/plate-contact-sheets/e1031a8e4139a504bbb3ac83bb292a9359582528f257c78852c21f9a2bdbda7a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15Sl",
+      "graceSku": "GB-VIA-CLR-15ML-SLV-T-02",
+      "productGroupId": "kh794byc1rn859t6sy6e9jtr2n8dqg14",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Silver",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15Sl/2dc06d8400fc0d5841a623180f8ab64ce3f990b4d2de9f606d197769d1cc295c.front-on-1000x1100.webp",
+          "sha256": "2dc06d8400fc0d5841a623180f8ab64ce3f990b4d2de9f606d197769d1cc295c",
+          "url": "/images/plate-contact-sheets/2dc06d8400fc0d5841a623180f8ab64ce3f990b4d2de9f606d197769d1cc295c.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15Sl/85111c9940aa3513378349daad6d84c4cadf078a824f48fc98db9a15696f1a0c.front-off-1000x1100.webp",
+          "sha256": "85111c9940aa3513378349daad6d84c4cadf078a824f48fc98db9a15696f1a0c",
+          "url": "/images/plate-contact-sheets/85111c9940aa3513378349daad6d84c4cadf078a824f48fc98db9a15696f1a0c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15SpryBlkSh",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-SBLK",
+      "productGroupId": "kh702vwsrbfaac87n5cf0fnkj18dp38m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with shiny black spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415-finemist",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SpryBlkSh/fefb31c6267fde6bac74ab60eef15d1c7d9602a6200109537da80075dd9188f5.front-on-1000x1100.webp",
+          "sha256": "fefb31c6267fde6bac74ab60eef15d1c7d9602a6200109537da80075dd9188f5",
+          "url": "/images/plate-contact-sheets/fefb31c6267fde6bac74ab60eef15d1c7d9602a6200109537da80075dd9188f5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SpryBlkSh/c6e31b973455a0fbd0316c96d229ca447ddd486c16fb7d7e9033cd61b17c4174.front-off-1000x1100.webp",
+          "sha256": "c6e31b973455a0fbd0316c96d229ca447ddd486c16fb7d7e9033cd61b17c4174",
+          "url": "/images/plate-contact-sheets/c6e31b973455a0fbd0316c96d229ca447ddd486c16fb7d7e9033cd61b17c4174.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15SpryBluMatt",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-MBLU",
+      "productGroupId": "kh702vwsrbfaac87n5cf0fnkj18dp38m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with matte blue spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415-finemist",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SpryBluMatt/6fd3d09faa183029dd1fe83a2e063f4029d603a45108617b3bf2b9ea0ab3a0c9.front-on-1000x1100.webp",
+          "sha256": "6fd3d09faa183029dd1fe83a2e063f4029d603a45108617b3bf2b9ea0ab3a0c9",
+          "url": "/images/plate-contact-sheets/6fd3d09faa183029dd1fe83a2e063f4029d603a45108617b3bf2b9ea0ab3a0c9.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SpryBluMatt/99156a3af153283e259d5f9a0bad07741aeb2eaca68db137f49820ee4990ba02.front-off-1000x1100.webp",
+          "sha256": "99156a3af153283e259d5f9a0bad07741aeb2eaca68db137f49820ee4990ba02",
+          "url": "/images/plate-contact-sheets/99156a3af153283e259d5f9a0bad07741aeb2eaca68db137f49820ee4990ba02.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15SpryCuMatt",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-MCPR",
+      "productGroupId": "kh702vwsrbfaac87n5cf0fnkj18dp38m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with matte copper spray. For use with fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415-finemist",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SpryCuMatt/a1a04dac48c7f0c029902224109ba8aaa8254d0f19a12731048ef663ebc46135.front-on-1000x1100.webp",
+          "sha256": "a1a04dac48c7f0c029902224109ba8aaa8254d0f19a12731048ef663ebc46135",
+          "url": "/images/plate-contact-sheets/a1a04dac48c7f0c029902224109ba8aaa8254d0f19a12731048ef663ebc46135.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SpryCuMatt/f72e102bdd9cbe7a4c5906e6b28281338e0122f70ecfa997dc2f05d5e4a6ca88.front-off-1000x1100.webp",
+          "sha256": "f72e102bdd9cbe7a4c5906e6b28281338e0122f70ecfa997dc2f05d5e4a6ca88",
+          "url": "/images/plate-contact-sheets/f72e102bdd9cbe7a4c5906e6b28281338e0122f70ecfa997dc2f05d5e4a6ca88.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15SpryGlMatt",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-MGLD",
+      "productGroupId": "kh702vwsrbfaac87n5cf0fnkj18dp38m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with matte gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415-finemist",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SpryGlMatt/159cf06fa3c4ef2ef921c47244a7ce054d0e0a6e8b7f6e3117eea2407c1dccf1.front-on-1000x1100.webp",
+          "sha256": "159cf06fa3c4ef2ef921c47244a7ce054d0e0a6e8b7f6e3117eea2407c1dccf1",
+          "url": "/images/plate-contact-sheets/159cf06fa3c4ef2ef921c47244a7ce054d0e0a6e8b7f6e3117eea2407c1dccf1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SpryGlMatt/dddb3311180f05e91db2eff9c2a583db7c7b686fc1c4cff424d17376278f3232.front-off-1000x1100.webp",
+          "sha256": "dddb3311180f05e91db2eff9c2a583db7c7b686fc1c4cff424d17376278f3232",
+          "url": "/images/plate-contact-sheets/dddb3311180f05e91db2eff9c2a583db7c7b686fc1c4cff424d17376278f3232.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15SpryGlSh",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-SGLD",
+      "productGroupId": "kh702vwsrbfaac87n5cf0fnkj18dp38m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with shiny gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415-finemist",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SpryGlSh/598161b67d404d2e4d2a0f7360318c63f8b3add128b6955aca76b5f3f806b690.front-on-1000x1100.webp",
+          "sha256": "598161b67d404d2e4d2a0f7360318c63f8b3add128b6955aca76b5f3f806b690",
+          "url": "/images/plate-contact-sheets/598161b67d404d2e4d2a0f7360318c63f8b3add128b6955aca76b5f3f806b690.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SpryGlSh/9827bd7a9105f541e6c20113ca463074b512b5130f71bd9d3a4f68048868c864.front-off-1000x1100.webp",
+          "sha256": "9827bd7a9105f541e6c20113ca463074b512b5130f71bd9d3a4f68048868c864",
+          "url": "/images/plate-contact-sheets/9827bd7a9105f541e6c20113ca463074b512b5130f71bd9d3a4f68048868c864.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15SprySlMatt",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-MSLV",
+      "productGroupId": "kh702vwsrbfaac87n5cf0fnkj18dp38m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with matte silver spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415-finemist",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SprySlMatt/aa3bd325d7f65ee144b73042eae3eaabc655a458a8b297a480f319b010f1df01.front-on-1000x1100.webp",
+          "sha256": "aa3bd325d7f65ee144b73042eae3eaabc655a458a8b297a480f319b010f1df01",
+          "url": "/images/plate-contact-sheets/aa3bd325d7f65ee144b73042eae3eaabc655a458a8b297a480f319b010f1df01.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SprySlMatt/830e1ac83697ea3bd75ed2c1f0afa97ae3c35f7c3c13acf9361fd1e71b5859bb.front-off-1000x1100.webp",
+          "sha256": "830e1ac83697ea3bd75ed2c1f0afa97ae3c35f7c3c13acf9361fd1e71b5859bb",
+          "url": "/images/plate-contact-sheets/830e1ac83697ea3bd75ed2c1f0afa97ae3c35f7c3c13acf9361fd1e71b5859bb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15SprySlSh",
+      "graceSku": "GB-SQR-CLR-15ML-SPR-SSLV",
+      "productGroupId": "kh702vwsrbfaac87n5cf0fnkj18dp38m",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with shiny silver spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415-finemist",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SprySlSh/23fbda4a04b07d11be252c1f8ba8b18372982413164e91b3f3728a8b86365c82.front-on-1000x1100.webp",
+          "sha256": "23fbda4a04b07d11be252c1f8ba8b18372982413164e91b3f3728a8b86365c82",
+          "url": "/images/plate-contact-sheets/23fbda4a04b07d11be252c1f8ba8b18372982413164e91b3f3728a8b86365c82.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15SprySlSh/bcdb9af603f23aeec85a5a6626f8f32b9d159170f2b37b529321d82463060a19.front-off-1000x1100.webp",
+          "sha256": "bcdb9af603f23aeec85a5a6626f8f32b9d159170f2b37b529321d82463060a19",
+          "url": "/images/plate-contact-sheets/bcdb9af603f23aeec85a5a6626f8f32b9d159170f2b37b529321d82463060a19.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBSqr15WhtSht",
+      "graceSku": "GB-VIA-WHT-15ML-WHT-S-02",
+      "productGroupId": "kh794byc1rn859t6sy6e9jtr2n8dqg14",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "White",
+      "itemName": "Square design 15ml, 1/2oz Clear glass bottle with short white cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "square-15ml-clear-13-415",
+      "familyId": "square-15ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15WhtSht/f1c0d18e3a74c902d3a03d47dd1b98b391614b56a11f8f11587751db6791ecaa.front-on-1000x1100.webp",
+          "sha256": "f1c0d18e3a74c902d3a03d47dd1b98b391614b56a11f8f11587751db6791ecaa",
+          "url": "/images/plate-contact-sheets/f1c0d18e3a74c902d3a03d47dd1b98b391614b56a11f8f11587751db6791ecaa.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/square-15ml-clear-13-415/GBSqr15WhtSht/d658f9acb17f5c5c7494313fcbc79bbe55eca773dbde3e452797c4e1165e6007.front-off-1000x1100.webp",
+          "sha256": "d658f9acb17f5c5c7494313fcbc79bbe55eca773dbde3e452797c4e1165e6007",
+          "url": "/images/plate-contact-sheets/d658f9acb17f5c5c7494313fcbc79bbe55eca773dbde3e452797c4e1165e6007.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    }
+  ]
+}

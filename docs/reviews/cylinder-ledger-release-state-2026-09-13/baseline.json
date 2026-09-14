@@ -1,0 +1,58 @@
+{
+  "at": "2026-09-13T15:31:34.539Z",
+  "global": {
+    "total": 2305,
+    "complete": 686,
+    "review": 431,
+    "reconcile": 677,
+    "missing": 511
+  },
+  "families": [
+    {
+      "family": "Cylinder",
+      "total": 436,
+      "complete": 398,
+      "review": 0,
+      "reconcile": 38,
+      "missing": 0,
+      "sizes": [
+        3.3,
+        4,
+        5,
+        5.5,
+        9,
+        25,
+        28,
+        30,
+        50,
+        100,
+        114,
+        227,
+        454
+      ],
+      "unlinked": 0
+    },
+    {
+      "family": "Boston Round",
+      "total": 123,
+      "complete": 123,
+      "review": 0,
+      "reconcile": 0,
+      "missing": 0,
+      "sizes": [
+        15,
+        30,
+        60
+      ],
+      "unlinked": 0
+    }
+  ],
+  "protected": {
+    "data/asset-ledger/cylinder-final38-decisions.json": "2ee4c7dd9fc9c22d2f31745430860b2820fb910845e575518e545f594666cf2c",
+    "docs/reviews/cylinder-final38-2026-09-13/approved-lock.json": "b79b56672e3d2e56f19e32989f22630342c02fc1e76659f93260095eef78a2e2",
+    "docs/reviews/cylinder-final38-2026-09-13/prepared-v2.json": "b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b",
+    "data/asset-ledger/family-plate-decisions/cylinder.json": "7ca33fd68167baf3393bdf2a28e41d22c086ef33ca558a612030a15ba200fbd9",
+    "data/asset-ledger/boston-completion-decisions.json": "94438df6b08b79017cd1c6b6f97173c04ce5b037582c1ae6f6aad41e660302a8",
+    "data/asset-ledger/bottle-standards.json": "45326ffda8e2a52d34167a9b269ca5e86f0c51a9c69e0179dff8a7febc461af3"
+  }
+}

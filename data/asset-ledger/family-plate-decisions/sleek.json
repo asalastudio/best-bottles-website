@@ -1,0 +1,1631 @@
+{
+  "revision": 1,
+  "decisions": {
+    "GBSleek5BlkSht:a96330fff7def6b6ca14b572394eba1f17d7def19e57fe80e236c26586abf400": {
+      "sku": "GBSleek5BlkSht",
+      "binding": "a96330fff7def6b6ca14b572394eba1f17d7def19e57fe80e236c26586abf400",
+      "sha256": "712d9c92eb7e9335650dd5dc92a67991fff4419c636d98bae6689893c57c63c0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5BlkSht/712d9c92eb7e9335650dd5dc92a67991fff4419c636d98bae6689893c57c63c0.front-on-1000x1100.webp",
+          "sha256": "712d9c92eb7e9335650dd5dc92a67991fff4419c636d98bae6689893c57c63c0",
+          "url": "/images/plate-contact-sheets/712d9c92eb7e9335650dd5dc92a67991fff4419c636d98bae6689893c57c63c0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5BlkSht/ccc2523688abdb38265e3267f7cfad2bef89f356b2381a42742e0729c1796450.front-off-1000x1100.webp",
+          "sha256": "ccc2523688abdb38265e3267f7cfad2bef89f356b2381a42742e0729c1796450",
+          "url": "/images/plate-contact-sheets/ccc2523688abdb38265e3267f7cfad2bef89f356b2381a42742e0729c1796450.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5Gl:22b81de4553b1de274af98e9559064ca36958093863fa6b8f972980b5845ae85": {
+      "sku": "GBSleek5Gl",
+      "binding": "22b81de4553b1de274af98e9559064ca36958093863fa6b8f972980b5845ae85",
+      "sha256": "09b17d2a34d8537b36eca3e6dba2b0c3f52d6c499ca2997a560df76405be01a3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5Gl/09b17d2a34d8537b36eca3e6dba2b0c3f52d6c499ca2997a560df76405be01a3.front-on-1000x1100.webp",
+          "sha256": "09b17d2a34d8537b36eca3e6dba2b0c3f52d6c499ca2997a560df76405be01a3",
+          "url": "/images/plate-contact-sheets/09b17d2a34d8537b36eca3e6dba2b0c3f52d6c499ca2997a560df76405be01a3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5Gl/26612905e31bd1dd50df2088009c25b944efef2e601d3f38a14100f2d3e6b862.front-off-1000x1100.webp",
+          "sha256": "26612905e31bd1dd50df2088009c25b944efef2e601d3f38a14100f2d3e6b862",
+          "url": "/images/plate-contact-sheets/26612905e31bd1dd50df2088009c25b944efef2e601d3f38a14100f2d3e6b862.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5MtlRollBlkDot:66fcd7772db195068e0a45dcbb035504290d16d17083fd20413e3aa1771d1cfc": {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "binding": "66fcd7772db195068e0a45dcbb035504290d16d17083fd20413e3aa1771d1cfc",
+      "sha256": "6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollBlkDot/6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309.front-on-1000x1100.webp",
+          "sha256": "6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309",
+          "url": "/images/plate-contact-sheets/6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollBlkDot/4e93507f7911d9f28280c9da86ba8b28f91fde06f1959810025c8a2185c66d11.front-off-1000x1100.webp",
+          "sha256": "4e93507f7911d9f28280c9da86ba8b28f91fde06f1959810025c8a2185c66d11",
+          "url": "/images/plate-contact-sheets/4e93507f7911d9f28280c9da86ba8b28f91fde06f1959810025c8a2185c66d11.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5MtlRollBlkSh:9fe9e5592a26e64a56eb64fd0193f60bd333cc459173cf322c465e6f3a4b2c07": {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "binding": "9fe9e5592a26e64a56eb64fd0193f60bd333cc459173cf322c465e6f3a4b2c07",
+      "sha256": "a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollBlkSh/a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df.front-on-1000x1100.webp",
+          "sha256": "a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df",
+          "url": "/images/plate-contact-sheets/a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollBlkSh/c00069c2856d285a1a3f1b71c49d1cd30068fc0e9d3ca061663efb1fe9d19c2a.front-off-1000x1100.webp",
+          "sha256": "c00069c2856d285a1a3f1b71c49d1cd30068fc0e9d3ca061663efb1fe9d19c2a",
+          "url": "/images/plate-contact-sheets/c00069c2856d285a1a3f1b71c49d1cd30068fc0e9d3ca061663efb1fe9d19c2a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5MtlRollCuMatt:0eb859c3c7d72c491953e564f5374b65b25946baa9e4458203f6d87f2cdddd15": {
+      "sku": "GBSleek5MtlRollCuMatt",
+      "binding": "0eb859c3c7d72c491953e564f5374b65b25946baa9e4458203f6d87f2cdddd15",
+      "sha256": "37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollCuMatt/37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079.front-on-1000x1100.webp",
+          "sha256": "37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079",
+          "url": "/images/plate-contact-sheets/37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollCuMatt/3032a61f8d460af950f9454744d1cf8778631c8b170480a2df3260dc48b45eeb.front-off-1000x1100.webp",
+          "sha256": "3032a61f8d460af950f9454744d1cf8778631c8b170480a2df3260dc48b45eeb",
+          "url": "/images/plate-contact-sheets/3032a61f8d460af950f9454744d1cf8778631c8b170480a2df3260dc48b45eeb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5MtlRollGlMatt:cc6d193631cc493a5ee9910f5121116f2d77ced0f5987146ef7eb4c3a272a828": {
+      "sku": "GBSleek5MtlRollGlMatt",
+      "binding": "cc6d193631cc493a5ee9910f5121116f2d77ced0f5987146ef7eb4c3a272a828",
+      "sha256": "2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollGlMatt/2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26.front-on-1000x1100.webp",
+          "sha256": "2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26",
+          "url": "/images/plate-contact-sheets/2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollGlMatt/003d724e2278490aba8a5ef189b90a537165af84289588027ba28d47568ddf0f.front-off-1000x1100.webp",
+          "sha256": "003d724e2278490aba8a5ef189b90a537165af84289588027ba28d47568ddf0f",
+          "url": "/images/plate-contact-sheets/003d724e2278490aba8a5ef189b90a537165af84289588027ba28d47568ddf0f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5MtlRollGlSh:8eb8c263e6ca7bee6c89e5a46f20b4c3b13d2a49a7a809af503d03aa74032066": {
+      "sku": "GBSleek5MtlRollGlSh",
+      "binding": "8eb8c263e6ca7bee6c89e5a46f20b4c3b13d2a49a7a809af503d03aa74032066",
+      "sha256": "5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollGlSh/5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3.front-on-1000x1100.webp",
+          "sha256": "5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3",
+          "url": "/images/plate-contact-sheets/5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollGlSh/c09817fbcf342167862bbfff50f613cdce3fc91076cccfdfe7e4052160585cdd.front-off-1000x1100.webp",
+          "sha256": "c09817fbcf342167862bbfff50f613cdce3fc91076cccfdfe7e4052160585cdd",
+          "url": "/images/plate-contact-sheets/c09817fbcf342167862bbfff50f613cdce3fc91076cccfdfe7e4052160585cdd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5MtlRollPinkDot:74cebf3702799f4ac1dd4a9d7615e8c98fefc6d3649c09280f553cc5336bd8ab": {
+      "sku": "GBSleek5MtlRollPinkDot",
+      "binding": "74cebf3702799f4ac1dd4a9d7615e8c98fefc6d3649c09280f553cc5336bd8ab",
+      "sha256": "f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollPinkDot/f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e.front-on-1000x1100.webp",
+          "sha256": "f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e",
+          "url": "/images/plate-contact-sheets/f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollPinkDot/8e2929fafeaaa00d5a359741836d884c38c7c0d5540d1df11df131fb745a94a2.front-off-1000x1100.webp",
+          "sha256": "8e2929fafeaaa00d5a359741836d884c38c7c0d5540d1df11df131fb745a94a2",
+          "url": "/images/plate-contact-sheets/8e2929fafeaaa00d5a359741836d884c38c7c0d5540d1df11df131fb745a94a2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5MtlRollSlDot:206439e09e4512f10a50b0d8ee0b863a424d1dcbf4a04b04fc54364e8b1707f4": {
+      "sku": "GBSleek5MtlRollSlDot",
+      "binding": "206439e09e4512f10a50b0d8ee0b863a424d1dcbf4a04b04fc54364e8b1707f4",
+      "sha256": "d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlDot/d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8.front-on-1000x1100.webp",
+          "sha256": "d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8",
+          "url": "/images/plate-contact-sheets/d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlDot/d86bacb82ad4b1fb5071372d8360ef89998325e708327bc6c2d8a48379229dfd.front-off-1000x1100.webp",
+          "sha256": "d86bacb82ad4b1fb5071372d8360ef89998325e708327bc6c2d8a48379229dfd",
+          "url": "/images/plate-contact-sheets/d86bacb82ad4b1fb5071372d8360ef89998325e708327bc6c2d8a48379229dfd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5MtlRollSlMatt:cb3bd2e05bc12721fe5ec8e983ef5d6f2792e28278e11fb2d4f178335eabcc7a": {
+      "sku": "GBSleek5MtlRollSlMatt",
+      "binding": "cb3bd2e05bc12721fe5ec8e983ef5d6f2792e28278e11fb2d4f178335eabcc7a",
+      "sha256": "78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlMatt/78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26.front-on-1000x1100.webp",
+          "sha256": "78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26",
+          "url": "/images/plate-contact-sheets/78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlMatt/364efbef828738a58b25bc3926a41b25203573a196b3c840e89fac9e140310f4.front-off-1000x1100.webp",
+          "sha256": "364efbef828738a58b25bc3926a41b25203573a196b3c840e89fac9e140310f4",
+          "url": "/images/plate-contact-sheets/364efbef828738a58b25bc3926a41b25203573a196b3c840e89fac9e140310f4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5MtlRollSlSh:748998850cde87abb62157c9afe052dda8d84e431f1b2665383efa1fd22ea042": {
+      "sku": "GBSleek5MtlRollSlSh",
+      "binding": "748998850cde87abb62157c9afe052dda8d84e431f1b2665383efa1fd22ea042",
+      "sha256": "f14eff2f19863d9715f7d8ba189c32ec2ed51c065bdac658f4a9b388699d0ce2",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlSh/f14eff2f19863d9715f7d8ba189c32ec2ed51c065bdac658f4a9b388699d0ce2.front-on-1000x1100.webp",
+          "sha256": "f14eff2f19863d9715f7d8ba189c32ec2ed51c065bdac658f4a9b388699d0ce2",
+          "url": "/images/plate-contact-sheets/f14eff2f19863d9715f7d8ba189c32ec2ed51c065bdac658f4a9b388699d0ce2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlSh/910ad2c6f13c8a930881aa01268259e817aa195160f8ba7051229c7d2ab2660a.front-off-1000x1100.webp",
+          "sha256": "910ad2c6f13c8a930881aa01268259e817aa195160f8ba7051229c7d2ab2660a",
+          "url": "/images/plate-contact-sheets/910ad2c6f13c8a930881aa01268259e817aa195160f8ba7051229c7d2ab2660a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5RollBlkDot:2a05a02d2365fdab2d4ed8811147779f016355634b0b7e6653ec04d75eb2f8b1": {
+      "sku": "GBSleek5RollBlkDot",
+      "binding": "2a05a02d2365fdab2d4ed8811147779f016355634b0b7e6653ec04d75eb2f8b1",
+      "sha256": "6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollBlkDot/6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309.front-on-1000x1100.webp",
+          "sha256": "6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309",
+          "url": "/images/plate-contact-sheets/6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollBlkDot/932b78688b2fc0f1e0311f15fb52b556e7a8ab58d9808677c9b0f4ea6d9c67a2.front-off-1000x1100.webp",
+          "sha256": "932b78688b2fc0f1e0311f15fb52b556e7a8ab58d9808677c9b0f4ea6d9c67a2",
+          "url": "/images/plate-contact-sheets/932b78688b2fc0f1e0311f15fb52b556e7a8ab58d9808677c9b0f4ea6d9c67a2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5RollBlkSh:cca3e8bd44d26f8b0cb88dc34622cff0d739b5c35148d84344823a268c506ef0": {
+      "sku": "GBSleek5RollBlkSh",
+      "binding": "cca3e8bd44d26f8b0cb88dc34622cff0d739b5c35148d84344823a268c506ef0",
+      "sha256": "a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollBlkSh/a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df.front-on-1000x1100.webp",
+          "sha256": "a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df",
+          "url": "/images/plate-contact-sheets/a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollBlkSh/96a0cf6496c09417f1ed5486e39c5fe75b12c31b91eb3037e26c2b15250ec723.front-off-1000x1100.webp",
+          "sha256": "96a0cf6496c09417f1ed5486e39c5fe75b12c31b91eb3037e26c2b15250ec723",
+          "url": "/images/plate-contact-sheets/96a0cf6496c09417f1ed5486e39c5fe75b12c31b91eb3037e26c2b15250ec723.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5RollCuMatt:7cd568c6a38ea03c1473b6f3dba5af1c2a7285b8030874fb092c7e4da61267d7": {
+      "sku": "GBSleek5RollCuMatt",
+      "binding": "7cd568c6a38ea03c1473b6f3dba5af1c2a7285b8030874fb092c7e4da61267d7",
+      "sha256": "37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollCuMatt/37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079.front-on-1000x1100.webp",
+          "sha256": "37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079",
+          "url": "/images/plate-contact-sheets/37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollCuMatt/c0265c122a2ce9ea14a4fd7f6553f3c7e81481199bef8ef47e02badde99edf60.front-off-1000x1100.webp",
+          "sha256": "c0265c122a2ce9ea14a4fd7f6553f3c7e81481199bef8ef47e02badde99edf60",
+          "url": "/images/plate-contact-sheets/c0265c122a2ce9ea14a4fd7f6553f3c7e81481199bef8ef47e02badde99edf60.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5RollGlMatt:1089558866869748ad0f94b1a8c5b79eb997a7d46d8071f414167dc7267f70f4": {
+      "sku": "GBSleek5RollGlMatt",
+      "binding": "1089558866869748ad0f94b1a8c5b79eb997a7d46d8071f414167dc7267f70f4",
+      "sha256": "2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollGlMatt/2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26.front-on-1000x1100.webp",
+          "sha256": "2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26",
+          "url": "/images/plate-contact-sheets/2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollGlMatt/c14a068bff5bffe5ed32ef712ea18ecd3b50b38a5491e9c74846bf343bd75ffe.front-off-1000x1100.webp",
+          "sha256": "c14a068bff5bffe5ed32ef712ea18ecd3b50b38a5491e9c74846bf343bd75ffe",
+          "url": "/images/plate-contact-sheets/c14a068bff5bffe5ed32ef712ea18ecd3b50b38a5491e9c74846bf343bd75ffe.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5RollGlSh:169addcd78ee32341431743876906a1cd82a88337d9d3272ebab732378c17ea4": {
+      "sku": "GBSleek5RollGlSh",
+      "binding": "169addcd78ee32341431743876906a1cd82a88337d9d3272ebab732378c17ea4",
+      "sha256": "5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollGlSh/5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3.front-on-1000x1100.webp",
+          "sha256": "5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3",
+          "url": "/images/plate-contact-sheets/5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollGlSh/57f062474720369774e555f802df529dea53a8de7404a93cac79a9871799fe00.front-off-1000x1100.webp",
+          "sha256": "57f062474720369774e555f802df529dea53a8de7404a93cac79a9871799fe00",
+          "url": "/images/plate-contact-sheets/57f062474720369774e555f802df529dea53a8de7404a93cac79a9871799fe00.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5RollPinkDot:f396ffe6093db2fb3d6fdcc677049ce14bec2dddbda8f6ec201afc4ffdf2e94f": {
+      "sku": "GBSleek5RollPinkDot",
+      "binding": "f396ffe6093db2fb3d6fdcc677049ce14bec2dddbda8f6ec201afc4ffdf2e94f",
+      "sha256": "f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollPinkDot/f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e.front-on-1000x1100.webp",
+          "sha256": "f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e",
+          "url": "/images/plate-contact-sheets/f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollPinkDot/0d1235635e07849ef8c97d79dc063f5a64e1fdebac5b53200adfd4b0af35764c.front-off-1000x1100.webp",
+          "sha256": "0d1235635e07849ef8c97d79dc063f5a64e1fdebac5b53200adfd4b0af35764c",
+          "url": "/images/plate-contact-sheets/0d1235635e07849ef8c97d79dc063f5a64e1fdebac5b53200adfd4b0af35764c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5RollSlDot:baa0058831d82406294cbc9468e049715715a2fec0d94d482533dc499b15c5ce": {
+      "sku": "GBSleek5RollSlDot",
+      "binding": "baa0058831d82406294cbc9468e049715715a2fec0d94d482533dc499b15c5ce",
+      "sha256": "d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollSlDot/d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8.front-on-1000x1100.webp",
+          "sha256": "d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8",
+          "url": "/images/plate-contact-sheets/d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollSlDot/e484a642b23051cd851eccf6b65a748382680caac1d4c44a87b5e7014d1b8a72.front-off-1000x1100.webp",
+          "sha256": "e484a642b23051cd851eccf6b65a748382680caac1d4c44a87b5e7014d1b8a72",
+          "url": "/images/plate-contact-sheets/e484a642b23051cd851eccf6b65a748382680caac1d4c44a87b5e7014d1b8a72.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5RollSlMatt:56664ab9622d08cac1f3174c793eb68a83f39688643d514812f6b1600a06ec6d": {
+      "sku": "GBSleek5RollSlMatt",
+      "binding": "56664ab9622d08cac1f3174c793eb68a83f39688643d514812f6b1600a06ec6d",
+      "sha256": "78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollSlMatt/78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26.front-on-1000x1100.webp",
+          "sha256": "78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26",
+          "url": "/images/plate-contact-sheets/78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollSlMatt/eeb9c4cc9de77bd1647f90e08c49c901ceaabb2135f3acacf05a953a4a68d783.front-off-1000x1100.webp",
+          "sha256": "eeb9c4cc9de77bd1647f90e08c49c901ceaabb2135f3acacf05a953a4a68d783",
+          "url": "/images/plate-contact-sheets/eeb9c4cc9de77bd1647f90e08c49c901ceaabb2135f3acacf05a953a4a68d783.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5Sl:c12e4a37a80bd7d59d8f1291c06cdd5e1d4c4f23d398c3e221546ba0478a2bd8": {
+      "sku": "GBSleek5Sl",
+      "binding": "c12e4a37a80bd7d59d8f1291c06cdd5e1d4c4f23d398c3e221546ba0478a2bd8",
+      "sha256": "0ca47523b713f9d9b2745c2267be0559aa3b8d15dc1af0790ef37be5d5f39dee",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5Sl/0ca47523b713f9d9b2745c2267be0559aa3b8d15dc1af0790ef37be5d5f39dee.front-on-1000x1100.webp",
+          "sha256": "0ca47523b713f9d9b2745c2267be0559aa3b8d15dc1af0790ef37be5d5f39dee",
+          "url": "/images/plate-contact-sheets/0ca47523b713f9d9b2745c2267be0559aa3b8d15dc1af0790ef37be5d5f39dee.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5Sl/b938be4979941ce70dc1a1f31984bddf858f60feac2c861692cb21ce08ca69fd.front-off-1000x1100.webp",
+          "sha256": "b938be4979941ce70dc1a1f31984bddf858f60feac2c861692cb21ce08ca69fd",
+          "url": "/images/plate-contact-sheets/b938be4979941ce70dc1a1f31984bddf858f60feac2c861692cb21ce08ca69fd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5SpryBlkMatt:7a8bbd3a81ed35f11db9bd01700740671ff45b70c6a5f8438ab5856e532e939f": {
+      "sku": "GBSleek5SpryBlkMatt",
+      "binding": "7a8bbd3a81ed35f11db9bd01700740671ff45b70c6a5f8438ab5856e532e939f",
+      "sha256": "9ef6c7723495cd913730cd9da719d3ddfa2b56dc2629a255413daaec58992383",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBlkMatt/9ef6c7723495cd913730cd9da719d3ddfa2b56dc2629a255413daaec58992383.front-on-1000x1100.webp",
+          "sha256": "9ef6c7723495cd913730cd9da719d3ddfa2b56dc2629a255413daaec58992383",
+          "url": "/images/plate-contact-sheets/9ef6c7723495cd913730cd9da719d3ddfa2b56dc2629a255413daaec58992383.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBlkMatt/b807cd1bfeb2722e964312bab53602f75afdbd5247d70cdf5f524a447641352a.front-off-1000x1100.webp",
+          "sha256": "b807cd1bfeb2722e964312bab53602f75afdbd5247d70cdf5f524a447641352a",
+          "url": "/images/plate-contact-sheets/b807cd1bfeb2722e964312bab53602f75afdbd5247d70cdf5f524a447641352a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5SpryBlkSh:124490f1c22f9d54309671eb40fb8a091ef11ca2828038f4b0d5be83784bcdc9": {
+      "sku": "GBSleek5SpryBlkSh",
+      "binding": "124490f1c22f9d54309671eb40fb8a091ef11ca2828038f4b0d5be83784bcdc9",
+      "sha256": "55e67a0e28ec1ca93a4abbd823f7797b13061c17f061c8e643b428cb037dfdc2",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBlkSh/55e67a0e28ec1ca93a4abbd823f7797b13061c17f061c8e643b428cb037dfdc2.front-on-1000x1100.webp",
+          "sha256": "55e67a0e28ec1ca93a4abbd823f7797b13061c17f061c8e643b428cb037dfdc2",
+          "url": "/images/plate-contact-sheets/55e67a0e28ec1ca93a4abbd823f7797b13061c17f061c8e643b428cb037dfdc2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBlkSh/a64c855c65806bddef1dfb4d915a06db968a665fb9285187b972859fa84d906f.front-off-1000x1100.webp",
+          "sha256": "a64c855c65806bddef1dfb4d915a06db968a665fb9285187b972859fa84d906f",
+          "url": "/images/plate-contact-sheets/a64c855c65806bddef1dfb4d915a06db968a665fb9285187b972859fa84d906f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5SpryBluMatt:b07fd27415e3d093bba035f098ed68a63066e5dd5ab2e116cd2909300bf152ec": {
+      "sku": "GBSleek5SpryBluMatt",
+      "binding": "b07fd27415e3d093bba035f098ed68a63066e5dd5ab2e116cd2909300bf152ec",
+      "sha256": "25623f7376595d95c12c16d7f556df6997e7d15cfec47162f1341398b3228cfe",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBluMatt/25623f7376595d95c12c16d7f556df6997e7d15cfec47162f1341398b3228cfe.front-on-1000x1100.webp",
+          "sha256": "25623f7376595d95c12c16d7f556df6997e7d15cfec47162f1341398b3228cfe",
+          "url": "/images/plate-contact-sheets/25623f7376595d95c12c16d7f556df6997e7d15cfec47162f1341398b3228cfe.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBluMatt/6c7fcacfa8e93667a7ca38ce05a5ebb789f708e4c4b7e1d066588b19d9ded363.front-off-1000x1100.webp",
+          "sha256": "6c7fcacfa8e93667a7ca38ce05a5ebb789f708e4c4b7e1d066588b19d9ded363",
+          "url": "/images/plate-contact-sheets/6c7fcacfa8e93667a7ca38ce05a5ebb789f708e4c4b7e1d066588b19d9ded363.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5SpryCuMatt:b088ee272b9b834bb3c8e4d31ea16d9d01816fea489c711a69e1c13f24dfbf46": {
+      "sku": "GBSleek5SpryCuMatt",
+      "binding": "b088ee272b9b834bb3c8e4d31ea16d9d01816fea489c711a69e1c13f24dfbf46",
+      "sha256": "7c628b158e782ecd87b9e44199df33e4ede3e442e540ca095ef4e033f8982122",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryCuMatt/7c628b158e782ecd87b9e44199df33e4ede3e442e540ca095ef4e033f8982122.front-on-1000x1100.webp",
+          "sha256": "7c628b158e782ecd87b9e44199df33e4ede3e442e540ca095ef4e033f8982122",
+          "url": "/images/plate-contact-sheets/7c628b158e782ecd87b9e44199df33e4ede3e442e540ca095ef4e033f8982122.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryCuMatt/194104fc1eb1766ce7e771c8274f2a58c483eccea647fff01d07bd669aaf92b7.front-off-1000x1100.webp",
+          "sha256": "194104fc1eb1766ce7e771c8274f2a58c483eccea647fff01d07bd669aaf92b7",
+          "url": "/images/plate-contact-sheets/194104fc1eb1766ce7e771c8274f2a58c483eccea647fff01d07bd669aaf92b7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5SpryGlMatt:84f1c8e410a982bb598e45bfa0a178cc721b6a903efd67ae5f9c2cf795266b67": {
+      "sku": "GBSleek5SpryGlMatt",
+      "binding": "84f1c8e410a982bb598e45bfa0a178cc721b6a903efd67ae5f9c2cf795266b67",
+      "sha256": "27477e77fcdb40721a9b870e39eb2b6c7ce9d3cbc5bd9399d63c30e36c676a48",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryGlMatt/27477e77fcdb40721a9b870e39eb2b6c7ce9d3cbc5bd9399d63c30e36c676a48.front-on-1000x1100.webp",
+          "sha256": "27477e77fcdb40721a9b870e39eb2b6c7ce9d3cbc5bd9399d63c30e36c676a48",
+          "url": "/images/plate-contact-sheets/27477e77fcdb40721a9b870e39eb2b6c7ce9d3cbc5bd9399d63c30e36c676a48.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryGlMatt/0b1ce9b98245fb929b8031d971e20850929643a817563533959d1e71c043b963.front-off-1000x1100.webp",
+          "sha256": "0b1ce9b98245fb929b8031d971e20850929643a817563533959d1e71c043b963",
+          "url": "/images/plate-contact-sheets/0b1ce9b98245fb929b8031d971e20850929643a817563533959d1e71c043b963.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5SpryGlSh:91eb3dd86165886392e5d39c5888f97c37105005cafea470eb4dc11745b0a077": {
+      "sku": "GBSleek5SpryGlSh",
+      "binding": "91eb3dd86165886392e5d39c5888f97c37105005cafea470eb4dc11745b0a077",
+      "sha256": "532a5e47fa0f73082d3671a0f5c19b64f9c5c22d88da3f54d974efa4e057c151",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryGlSh/532a5e47fa0f73082d3671a0f5c19b64f9c5c22d88da3f54d974efa4e057c151.front-on-1000x1100.webp",
+          "sha256": "532a5e47fa0f73082d3671a0f5c19b64f9c5c22d88da3f54d974efa4e057c151",
+          "url": "/images/plate-contact-sheets/532a5e47fa0f73082d3671a0f5c19b64f9c5c22d88da3f54d974efa4e057c151.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryGlSh/8667cd6a8aa99b35a4ae1d401bd69be948c1a3bf4355aa1ac827e4ea1464fbf5.front-off-1000x1100.webp",
+          "sha256": "8667cd6a8aa99b35a4ae1d401bd69be948c1a3bf4355aa1ac827e4ea1464fbf5",
+          "url": "/images/plate-contact-sheets/8667cd6a8aa99b35a4ae1d401bd69be948c1a3bf4355aa1ac827e4ea1464fbf5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5SprySlMatt:cb2da38789baf21c145bf81f18a2223714c2a61c7aac720eb1f231c006793099": {
+      "sku": "GBSleek5SprySlMatt",
+      "binding": "cb2da38789baf21c145bf81f18a2223714c2a61c7aac720eb1f231c006793099",
+      "sha256": "ea18cdb516cc67f6534a40573cb986b9043601ef9a54531f5b90ae4cf892c3e5",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SprySlMatt/ea18cdb516cc67f6534a40573cb986b9043601ef9a54531f5b90ae4cf892c3e5.front-on-1000x1100.webp",
+          "sha256": "ea18cdb516cc67f6534a40573cb986b9043601ef9a54531f5b90ae4cf892c3e5",
+          "url": "/images/plate-contact-sheets/ea18cdb516cc67f6534a40573cb986b9043601ef9a54531f5b90ae4cf892c3e5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SprySlMatt/c6e0500ed209e8555529c47530ac4d0d6b6e3646e4d6795466e3bbdbca0b7201.front-off-1000x1100.webp",
+          "sha256": "c6e0500ed209e8555529c47530ac4d0d6b6e3646e4d6795466e3bbdbca0b7201",
+          "url": "/images/plate-contact-sheets/c6e0500ed209e8555529c47530ac4d0d6b6e3646e4d6795466e3bbdbca0b7201.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5SprySlSh:ae6d0882968e415d693e5139f00b9093742f8f5907fcc9f0c5a4ee65fe8c4d87": {
+      "sku": "GBSleek5SprySlSh",
+      "binding": "ae6d0882968e415d693e5139f00b9093742f8f5907fcc9f0c5a4ee65fe8c4d87",
+      "sha256": "a7e28f57afb845325108acc5b950e58ee2c987b85940f84bf5a1ad8d91395ea8",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SprySlSh/a7e28f57afb845325108acc5b950e58ee2c987b85940f84bf5a1ad8d91395ea8.front-on-1000x1100.webp",
+          "sha256": "a7e28f57afb845325108acc5b950e58ee2c987b85940f84bf5a1ad8d91395ea8",
+          "url": "/images/plate-contact-sheets/a7e28f57afb845325108acc5b950e58ee2c987b85940f84bf5a1ad8d91395ea8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SprySlSh/08b23252a51148b7c4bd34057735ceabaf453bae8462f5ece6d37bd1836af77e.front-off-1000x1100.webp",
+          "sha256": "08b23252a51148b7c4bd34057735ceabaf453bae8462f5ece6d37bd1836af77e",
+          "url": "/images/plate-contact-sheets/08b23252a51148b7c4bd34057735ceabaf453bae8462f5ece6d37bd1836af77e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSleek5WhtSht:e72aa5757d0c23abcfd43f90045226e0f379c42a0064231686082a71ff446b81": {
+      "sku": "GBSleek5WhtSht",
+      "binding": "e72aa5757d0c23abcfd43f90045226e0f379c42a0064231686082a71ff446b81",
+      "sha256": "4a934667848f1c905552b9e4adaafb1bb412cfeffbb6b3847ac2f5ace799350b",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5WhtSht/4a934667848f1c905552b9e4adaafb1bb412cfeffbb6b3847ac2f5ace799350b.front-on-1000x1100.webp",
+          "sha256": "4a934667848f1c905552b9e4adaafb1bb412cfeffbb6b3847ac2f5ace799350b",
+          "url": "/images/plate-contact-sheets/4a934667848f1c905552b9e4adaafb1bb412cfeffbb6b3847ac2f5ace799350b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5WhtSht/5072ae2b64f04b70ed4721f3d4088eae98b30e469214eab238555271bfa48b48.front-off-1000x1100.webp",
+          "sha256": "5072ae2b64f04b70ed4721f3d4088eae98b30e469214eab238555271bfa48b48",
+          "url": "/images/plate-contact-sheets/5072ae2b64f04b70ed4721f3d4088eae98b30e469214eab238555271bfa48b48.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "GBSleek5BlkSht",
+      "binding": "a96330fff7def6b6ca14b572394eba1f17d7def19e57fe80e236c26586abf400",
+      "sha256": "712d9c92eb7e9335650dd5dc92a67991fff4419c636d98bae6689893c57c63c0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5BlkSht/712d9c92eb7e9335650dd5dc92a67991fff4419c636d98bae6689893c57c63c0.front-on-1000x1100.webp",
+          "sha256": "712d9c92eb7e9335650dd5dc92a67991fff4419c636d98bae6689893c57c63c0",
+          "url": "/images/plate-contact-sheets/712d9c92eb7e9335650dd5dc92a67991fff4419c636d98bae6689893c57c63c0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5BlkSht/ccc2523688abdb38265e3267f7cfad2bef89f356b2381a42742e0729c1796450.front-off-1000x1100.webp",
+          "sha256": "ccc2523688abdb38265e3267f7cfad2bef89f356b2381a42742e0729c1796450",
+          "url": "/images/plate-contact-sheets/ccc2523688abdb38265e3267f7cfad2bef89f356b2381a42742e0729c1796450.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5Gl",
+      "binding": "22b81de4553b1de274af98e9559064ca36958093863fa6b8f972980b5845ae85",
+      "sha256": "09b17d2a34d8537b36eca3e6dba2b0c3f52d6c499ca2997a560df76405be01a3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5Gl/09b17d2a34d8537b36eca3e6dba2b0c3f52d6c499ca2997a560df76405be01a3.front-on-1000x1100.webp",
+          "sha256": "09b17d2a34d8537b36eca3e6dba2b0c3f52d6c499ca2997a560df76405be01a3",
+          "url": "/images/plate-contact-sheets/09b17d2a34d8537b36eca3e6dba2b0c3f52d6c499ca2997a560df76405be01a3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5Gl/26612905e31bd1dd50df2088009c25b944efef2e601d3f38a14100f2d3e6b862.front-off-1000x1100.webp",
+          "sha256": "26612905e31bd1dd50df2088009c25b944efef2e601d3f38a14100f2d3e6b862",
+          "url": "/images/plate-contact-sheets/26612905e31bd1dd50df2088009c25b944efef2e601d3f38a14100f2d3e6b862.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkDot",
+      "binding": "66fcd7772db195068e0a45dcbb035504290d16d17083fd20413e3aa1771d1cfc",
+      "sha256": "6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollBlkDot/6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309.front-on-1000x1100.webp",
+          "sha256": "6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309",
+          "url": "/images/plate-contact-sheets/6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollBlkDot/4e93507f7911d9f28280c9da86ba8b28f91fde06f1959810025c8a2185c66d11.front-off-1000x1100.webp",
+          "sha256": "4e93507f7911d9f28280c9da86ba8b28f91fde06f1959810025c8a2185c66d11",
+          "url": "/images/plate-contact-sheets/4e93507f7911d9f28280c9da86ba8b28f91fde06f1959810025c8a2185c66d11.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5MtlRollBlkSh",
+      "binding": "9fe9e5592a26e64a56eb64fd0193f60bd333cc459173cf322c465e6f3a4b2c07",
+      "sha256": "a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollBlkSh/a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df.front-on-1000x1100.webp",
+          "sha256": "a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df",
+          "url": "/images/plate-contact-sheets/a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollBlkSh/c00069c2856d285a1a3f1b71c49d1cd30068fc0e9d3ca061663efb1fe9d19c2a.front-off-1000x1100.webp",
+          "sha256": "c00069c2856d285a1a3f1b71c49d1cd30068fc0e9d3ca061663efb1fe9d19c2a",
+          "url": "/images/plate-contact-sheets/c00069c2856d285a1a3f1b71c49d1cd30068fc0e9d3ca061663efb1fe9d19c2a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5MtlRollCuMatt",
+      "binding": "0eb859c3c7d72c491953e564f5374b65b25946baa9e4458203f6d87f2cdddd15",
+      "sha256": "37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollCuMatt/37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079.front-on-1000x1100.webp",
+          "sha256": "37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079",
+          "url": "/images/plate-contact-sheets/37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollCuMatt/3032a61f8d460af950f9454744d1cf8778631c8b170480a2df3260dc48b45eeb.front-off-1000x1100.webp",
+          "sha256": "3032a61f8d460af950f9454744d1cf8778631c8b170480a2df3260dc48b45eeb",
+          "url": "/images/plate-contact-sheets/3032a61f8d460af950f9454744d1cf8778631c8b170480a2df3260dc48b45eeb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5MtlRollGlMatt",
+      "binding": "cc6d193631cc493a5ee9910f5121116f2d77ced0f5987146ef7eb4c3a272a828",
+      "sha256": "2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollGlMatt/2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26.front-on-1000x1100.webp",
+          "sha256": "2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26",
+          "url": "/images/plate-contact-sheets/2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollGlMatt/003d724e2278490aba8a5ef189b90a537165af84289588027ba28d47568ddf0f.front-off-1000x1100.webp",
+          "sha256": "003d724e2278490aba8a5ef189b90a537165af84289588027ba28d47568ddf0f",
+          "url": "/images/plate-contact-sheets/003d724e2278490aba8a5ef189b90a537165af84289588027ba28d47568ddf0f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5MtlRollGlSh",
+      "binding": "8eb8c263e6ca7bee6c89e5a46f20b4c3b13d2a49a7a809af503d03aa74032066",
+      "sha256": "5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollGlSh/5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3.front-on-1000x1100.webp",
+          "sha256": "5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3",
+          "url": "/images/plate-contact-sheets/5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollGlSh/c09817fbcf342167862bbfff50f613cdce3fc91076cccfdfe7e4052160585cdd.front-off-1000x1100.webp",
+          "sha256": "c09817fbcf342167862bbfff50f613cdce3fc91076cccfdfe7e4052160585cdd",
+          "url": "/images/plate-contact-sheets/c09817fbcf342167862bbfff50f613cdce3fc91076cccfdfe7e4052160585cdd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5MtlRollPinkDot",
+      "binding": "74cebf3702799f4ac1dd4a9d7615e8c98fefc6d3649c09280f553cc5336bd8ab",
+      "sha256": "f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollPinkDot/f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e.front-on-1000x1100.webp",
+          "sha256": "f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e",
+          "url": "/images/plate-contact-sheets/f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollPinkDot/8e2929fafeaaa00d5a359741836d884c38c7c0d5540d1df11df131fb745a94a2.front-off-1000x1100.webp",
+          "sha256": "8e2929fafeaaa00d5a359741836d884c38c7c0d5540d1df11df131fb745a94a2",
+          "url": "/images/plate-contact-sheets/8e2929fafeaaa00d5a359741836d884c38c7c0d5540d1df11df131fb745a94a2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5MtlRollSlDot",
+      "binding": "206439e09e4512f10a50b0d8ee0b863a424d1dcbf4a04b04fc54364e8b1707f4",
+      "sha256": "d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlDot/d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8.front-on-1000x1100.webp",
+          "sha256": "d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8",
+          "url": "/images/plate-contact-sheets/d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlDot/d86bacb82ad4b1fb5071372d8360ef89998325e708327bc6c2d8a48379229dfd.front-off-1000x1100.webp",
+          "sha256": "d86bacb82ad4b1fb5071372d8360ef89998325e708327bc6c2d8a48379229dfd",
+          "url": "/images/plate-contact-sheets/d86bacb82ad4b1fb5071372d8360ef89998325e708327bc6c2d8a48379229dfd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5MtlRollSlMatt",
+      "binding": "cb3bd2e05bc12721fe5ec8e983ef5d6f2792e28278e11fb2d4f178335eabcc7a",
+      "sha256": "78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlMatt/78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26.front-on-1000x1100.webp",
+          "sha256": "78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26",
+          "url": "/images/plate-contact-sheets/78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlMatt/364efbef828738a58b25bc3926a41b25203573a196b3c840e89fac9e140310f4.front-off-1000x1100.webp",
+          "sha256": "364efbef828738a58b25bc3926a41b25203573a196b3c840e89fac9e140310f4",
+          "url": "/images/plate-contact-sheets/364efbef828738a58b25bc3926a41b25203573a196b3c840e89fac9e140310f4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5MtlRollSlSh",
+      "binding": "748998850cde87abb62157c9afe052dda8d84e431f1b2665383efa1fd22ea042",
+      "sha256": "f14eff2f19863d9715f7d8ba189c32ec2ed51c065bdac658f4a9b388699d0ce2",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlSh/f14eff2f19863d9715f7d8ba189c32ec2ed51c065bdac658f4a9b388699d0ce2.front-on-1000x1100.webp",
+          "sha256": "f14eff2f19863d9715f7d8ba189c32ec2ed51c065bdac658f4a9b388699d0ce2",
+          "url": "/images/plate-contact-sheets/f14eff2f19863d9715f7d8ba189c32ec2ed51c065bdac658f4a9b388699d0ce2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5MtlRollSlSh/910ad2c6f13c8a930881aa01268259e817aa195160f8ba7051229c7d2ab2660a.front-off-1000x1100.webp",
+          "sha256": "910ad2c6f13c8a930881aa01268259e817aa195160f8ba7051229c7d2ab2660a",
+          "url": "/images/plate-contact-sheets/910ad2c6f13c8a930881aa01268259e817aa195160f8ba7051229c7d2ab2660a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5RollBlkDot",
+      "binding": "2a05a02d2365fdab2d4ed8811147779f016355634b0b7e6653ec04d75eb2f8b1",
+      "sha256": "6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollBlkDot/6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309.front-on-1000x1100.webp",
+          "sha256": "6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309",
+          "url": "/images/plate-contact-sheets/6d38574dcd359b51e8e943a94de058e1e3840abd75dd9fdca42a1c19b33fa309.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollBlkDot/932b78688b2fc0f1e0311f15fb52b556e7a8ab58d9808677c9b0f4ea6d9c67a2.front-off-1000x1100.webp",
+          "sha256": "932b78688b2fc0f1e0311f15fb52b556e7a8ab58d9808677c9b0f4ea6d9c67a2",
+          "url": "/images/plate-contact-sheets/932b78688b2fc0f1e0311f15fb52b556e7a8ab58d9808677c9b0f4ea6d9c67a2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5RollBlkSh",
+      "binding": "cca3e8bd44d26f8b0cb88dc34622cff0d739b5c35148d84344823a268c506ef0",
+      "sha256": "a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollBlkSh/a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df.front-on-1000x1100.webp",
+          "sha256": "a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df",
+          "url": "/images/plate-contact-sheets/a308f8d4fb02e0339a7266c380537b7278c258c66227270fd52445bb956d52df.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollBlkSh/96a0cf6496c09417f1ed5486e39c5fe75b12c31b91eb3037e26c2b15250ec723.front-off-1000x1100.webp",
+          "sha256": "96a0cf6496c09417f1ed5486e39c5fe75b12c31b91eb3037e26c2b15250ec723",
+          "url": "/images/plate-contact-sheets/96a0cf6496c09417f1ed5486e39c5fe75b12c31b91eb3037e26c2b15250ec723.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5RollCuMatt",
+      "binding": "7cd568c6a38ea03c1473b6f3dba5af1c2a7285b8030874fb092c7e4da61267d7",
+      "sha256": "37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollCuMatt/37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079.front-on-1000x1100.webp",
+          "sha256": "37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079",
+          "url": "/images/plate-contact-sheets/37825eae41e5a30ee278ab18e27aba3ec4edd8310c0aeec6788dd935e6869079.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollCuMatt/c0265c122a2ce9ea14a4fd7f6553f3c7e81481199bef8ef47e02badde99edf60.front-off-1000x1100.webp",
+          "sha256": "c0265c122a2ce9ea14a4fd7f6553f3c7e81481199bef8ef47e02badde99edf60",
+          "url": "/images/plate-contact-sheets/c0265c122a2ce9ea14a4fd7f6553f3c7e81481199bef8ef47e02badde99edf60.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5RollGlMatt",
+      "binding": "1089558866869748ad0f94b1a8c5b79eb997a7d46d8071f414167dc7267f70f4",
+      "sha256": "2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollGlMatt/2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26.front-on-1000x1100.webp",
+          "sha256": "2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26",
+          "url": "/images/plate-contact-sheets/2d478573b1df3f3aef05267fbc7f7a7a3e9ffdb2f88571f005e2e0057d667a26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollGlMatt/c14a068bff5bffe5ed32ef712ea18ecd3b50b38a5491e9c74846bf343bd75ffe.front-off-1000x1100.webp",
+          "sha256": "c14a068bff5bffe5ed32ef712ea18ecd3b50b38a5491e9c74846bf343bd75ffe",
+          "url": "/images/plate-contact-sheets/c14a068bff5bffe5ed32ef712ea18ecd3b50b38a5491e9c74846bf343bd75ffe.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5RollGlSh",
+      "binding": "169addcd78ee32341431743876906a1cd82a88337d9d3272ebab732378c17ea4",
+      "sha256": "5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollGlSh/5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3.front-on-1000x1100.webp",
+          "sha256": "5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3",
+          "url": "/images/plate-contact-sheets/5c548b9d19acc627393dc86c0294fbf272971f1209ee4c4b7c348266a0730ad3.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollGlSh/57f062474720369774e555f802df529dea53a8de7404a93cac79a9871799fe00.front-off-1000x1100.webp",
+          "sha256": "57f062474720369774e555f802df529dea53a8de7404a93cac79a9871799fe00",
+          "url": "/images/plate-contact-sheets/57f062474720369774e555f802df529dea53a8de7404a93cac79a9871799fe00.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5RollPinkDot",
+      "binding": "f396ffe6093db2fb3d6fdcc677049ce14bec2dddbda8f6ec201afc4ffdf2e94f",
+      "sha256": "f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollPinkDot/f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e.front-on-1000x1100.webp",
+          "sha256": "f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e",
+          "url": "/images/plate-contact-sheets/f5fe7502ff4a331900d495086cf7388eed3ef914615016c4a21419ea35e85c3e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollPinkDot/0d1235635e07849ef8c97d79dc063f5a64e1fdebac5b53200adfd4b0af35764c.front-off-1000x1100.webp",
+          "sha256": "0d1235635e07849ef8c97d79dc063f5a64e1fdebac5b53200adfd4b0af35764c",
+          "url": "/images/plate-contact-sheets/0d1235635e07849ef8c97d79dc063f5a64e1fdebac5b53200adfd4b0af35764c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5RollSlDot",
+      "binding": "baa0058831d82406294cbc9468e049715715a2fec0d94d482533dc499b15c5ce",
+      "sha256": "d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollSlDot/d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8.front-on-1000x1100.webp",
+          "sha256": "d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8",
+          "url": "/images/plate-contact-sheets/d5ada7c3ebcf0e8ca25815bf161909913bed75d75cf0a7930b7951534c2736c8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollSlDot/e484a642b23051cd851eccf6b65a748382680caac1d4c44a87b5e7014d1b8a72.front-off-1000x1100.webp",
+          "sha256": "e484a642b23051cd851eccf6b65a748382680caac1d4c44a87b5e7014d1b8a72",
+          "url": "/images/plate-contact-sheets/e484a642b23051cd851eccf6b65a748382680caac1d4c44a87b5e7014d1b8a72.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5RollSlMatt",
+      "binding": "56664ab9622d08cac1f3174c793eb68a83f39688643d514812f6b1600a06ec6d",
+      "sha256": "78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollSlMatt/78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26.front-on-1000x1100.webp",
+          "sha256": "78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26",
+          "url": "/images/plate-contact-sheets/78c7918813705101f9d8436da21c5d69c1de59e5c0e0052183ec7d5378f41d26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5RollSlMatt/eeb9c4cc9de77bd1647f90e08c49c901ceaabb2135f3acacf05a953a4a68d783.front-off-1000x1100.webp",
+          "sha256": "eeb9c4cc9de77bd1647f90e08c49c901ceaabb2135f3acacf05a953a4a68d783",
+          "url": "/images/plate-contact-sheets/eeb9c4cc9de77bd1647f90e08c49c901ceaabb2135f3acacf05a953a4a68d783.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5Sl",
+      "binding": "c12e4a37a80bd7d59d8f1291c06cdd5e1d4c4f23d398c3e221546ba0478a2bd8",
+      "sha256": "0ca47523b713f9d9b2745c2267be0559aa3b8d15dc1af0790ef37be5d5f39dee",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5Sl/0ca47523b713f9d9b2745c2267be0559aa3b8d15dc1af0790ef37be5d5f39dee.front-on-1000x1100.webp",
+          "sha256": "0ca47523b713f9d9b2745c2267be0559aa3b8d15dc1af0790ef37be5d5f39dee",
+          "url": "/images/plate-contact-sheets/0ca47523b713f9d9b2745c2267be0559aa3b8d15dc1af0790ef37be5d5f39dee.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5Sl/b938be4979941ce70dc1a1f31984bddf858f60feac2c861692cb21ce08ca69fd.front-off-1000x1100.webp",
+          "sha256": "b938be4979941ce70dc1a1f31984bddf858f60feac2c861692cb21ce08ca69fd",
+          "url": "/images/plate-contact-sheets/b938be4979941ce70dc1a1f31984bddf858f60feac2c861692cb21ce08ca69fd.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5SpryBlkMatt",
+      "binding": "7a8bbd3a81ed35f11db9bd01700740671ff45b70c6a5f8438ab5856e532e939f",
+      "sha256": "9ef6c7723495cd913730cd9da719d3ddfa2b56dc2629a255413daaec58992383",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBlkMatt/9ef6c7723495cd913730cd9da719d3ddfa2b56dc2629a255413daaec58992383.front-on-1000x1100.webp",
+          "sha256": "9ef6c7723495cd913730cd9da719d3ddfa2b56dc2629a255413daaec58992383",
+          "url": "/images/plate-contact-sheets/9ef6c7723495cd913730cd9da719d3ddfa2b56dc2629a255413daaec58992383.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBlkMatt/b807cd1bfeb2722e964312bab53602f75afdbd5247d70cdf5f524a447641352a.front-off-1000x1100.webp",
+          "sha256": "b807cd1bfeb2722e964312bab53602f75afdbd5247d70cdf5f524a447641352a",
+          "url": "/images/plate-contact-sheets/b807cd1bfeb2722e964312bab53602f75afdbd5247d70cdf5f524a447641352a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5SpryBlkSh",
+      "binding": "124490f1c22f9d54309671eb40fb8a091ef11ca2828038f4b0d5be83784bcdc9",
+      "sha256": "55e67a0e28ec1ca93a4abbd823f7797b13061c17f061c8e643b428cb037dfdc2",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBlkSh/55e67a0e28ec1ca93a4abbd823f7797b13061c17f061c8e643b428cb037dfdc2.front-on-1000x1100.webp",
+          "sha256": "55e67a0e28ec1ca93a4abbd823f7797b13061c17f061c8e643b428cb037dfdc2",
+          "url": "/images/plate-contact-sheets/55e67a0e28ec1ca93a4abbd823f7797b13061c17f061c8e643b428cb037dfdc2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBlkSh/a64c855c65806bddef1dfb4d915a06db968a665fb9285187b972859fa84d906f.front-off-1000x1100.webp",
+          "sha256": "a64c855c65806bddef1dfb4d915a06db968a665fb9285187b972859fa84d906f",
+          "url": "/images/plate-contact-sheets/a64c855c65806bddef1dfb4d915a06db968a665fb9285187b972859fa84d906f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5SpryBluMatt",
+      "binding": "b07fd27415e3d093bba035f098ed68a63066e5dd5ab2e116cd2909300bf152ec",
+      "sha256": "25623f7376595d95c12c16d7f556df6997e7d15cfec47162f1341398b3228cfe",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBluMatt/25623f7376595d95c12c16d7f556df6997e7d15cfec47162f1341398b3228cfe.front-on-1000x1100.webp",
+          "sha256": "25623f7376595d95c12c16d7f556df6997e7d15cfec47162f1341398b3228cfe",
+          "url": "/images/plate-contact-sheets/25623f7376595d95c12c16d7f556df6997e7d15cfec47162f1341398b3228cfe.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryBluMatt/6c7fcacfa8e93667a7ca38ce05a5ebb789f708e4c4b7e1d066588b19d9ded363.front-off-1000x1100.webp",
+          "sha256": "6c7fcacfa8e93667a7ca38ce05a5ebb789f708e4c4b7e1d066588b19d9ded363",
+          "url": "/images/plate-contact-sheets/6c7fcacfa8e93667a7ca38ce05a5ebb789f708e4c4b7e1d066588b19d9ded363.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5SpryCuMatt",
+      "binding": "b088ee272b9b834bb3c8e4d31ea16d9d01816fea489c711a69e1c13f24dfbf46",
+      "sha256": "7c628b158e782ecd87b9e44199df33e4ede3e442e540ca095ef4e033f8982122",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryCuMatt/7c628b158e782ecd87b9e44199df33e4ede3e442e540ca095ef4e033f8982122.front-on-1000x1100.webp",
+          "sha256": "7c628b158e782ecd87b9e44199df33e4ede3e442e540ca095ef4e033f8982122",
+          "url": "/images/plate-contact-sheets/7c628b158e782ecd87b9e44199df33e4ede3e442e540ca095ef4e033f8982122.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryCuMatt/194104fc1eb1766ce7e771c8274f2a58c483eccea647fff01d07bd669aaf92b7.front-off-1000x1100.webp",
+          "sha256": "194104fc1eb1766ce7e771c8274f2a58c483eccea647fff01d07bd669aaf92b7",
+          "url": "/images/plate-contact-sheets/194104fc1eb1766ce7e771c8274f2a58c483eccea647fff01d07bd669aaf92b7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "binding": "84f1c8e410a982bb598e45bfa0a178cc721b6a903efd67ae5f9c2cf795266b67",
+      "sha256": "27477e77fcdb40721a9b870e39eb2b6c7ce9d3cbc5bd9399d63c30e36c676a48",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryGlMatt/27477e77fcdb40721a9b870e39eb2b6c7ce9d3cbc5bd9399d63c30e36c676a48.front-on-1000x1100.webp",
+          "sha256": "27477e77fcdb40721a9b870e39eb2b6c7ce9d3cbc5bd9399d63c30e36c676a48",
+          "url": "/images/plate-contact-sheets/27477e77fcdb40721a9b870e39eb2b6c7ce9d3cbc5bd9399d63c30e36c676a48.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryGlMatt/0b1ce9b98245fb929b8031d971e20850929643a817563533959d1e71c043b963.front-off-1000x1100.webp",
+          "sha256": "0b1ce9b98245fb929b8031d971e20850929643a817563533959d1e71c043b963",
+          "url": "/images/plate-contact-sheets/0b1ce9b98245fb929b8031d971e20850929643a817563533959d1e71c043b963.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5SpryGlSh",
+      "binding": "91eb3dd86165886392e5d39c5888f97c37105005cafea470eb4dc11745b0a077",
+      "sha256": "532a5e47fa0f73082d3671a0f5c19b64f9c5c22d88da3f54d974efa4e057c151",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryGlSh/532a5e47fa0f73082d3671a0f5c19b64f9c5c22d88da3f54d974efa4e057c151.front-on-1000x1100.webp",
+          "sha256": "532a5e47fa0f73082d3671a0f5c19b64f9c5c22d88da3f54d974efa4e057c151",
+          "url": "/images/plate-contact-sheets/532a5e47fa0f73082d3671a0f5c19b64f9c5c22d88da3f54d974efa4e057c151.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SpryGlSh/8667cd6a8aa99b35a4ae1d401bd69be948c1a3bf4355aa1ac827e4ea1464fbf5.front-off-1000x1100.webp",
+          "sha256": "8667cd6a8aa99b35a4ae1d401bd69be948c1a3bf4355aa1ac827e4ea1464fbf5",
+          "url": "/images/plate-contact-sheets/8667cd6a8aa99b35a4ae1d401bd69be948c1a3bf4355aa1ac827e4ea1464fbf5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5SprySlMatt",
+      "binding": "cb2da38789baf21c145bf81f18a2223714c2a61c7aac720eb1f231c006793099",
+      "sha256": "ea18cdb516cc67f6534a40573cb986b9043601ef9a54531f5b90ae4cf892c3e5",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SprySlMatt/ea18cdb516cc67f6534a40573cb986b9043601ef9a54531f5b90ae4cf892c3e5.front-on-1000x1100.webp",
+          "sha256": "ea18cdb516cc67f6534a40573cb986b9043601ef9a54531f5b90ae4cf892c3e5",
+          "url": "/images/plate-contact-sheets/ea18cdb516cc67f6534a40573cb986b9043601ef9a54531f5b90ae4cf892c3e5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SprySlMatt/c6e0500ed209e8555529c47530ac4d0d6b6e3646e4d6795466e3bbdbca0b7201.front-off-1000x1100.webp",
+          "sha256": "c6e0500ed209e8555529c47530ac4d0d6b6e3646e4d6795466e3bbdbca0b7201",
+          "url": "/images/plate-contact-sheets/c6e0500ed209e8555529c47530ac4d0d6b6e3646e4d6795466e3bbdbca0b7201.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5SprySlSh",
+      "binding": "ae6d0882968e415d693e5139f00b9093742f8f5907fcc9f0c5a4ee65fe8c4d87",
+      "sha256": "a7e28f57afb845325108acc5b950e58ee2c987b85940f84bf5a1ad8d91395ea8",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SprySlSh/a7e28f57afb845325108acc5b950e58ee2c987b85940f84bf5a1ad8d91395ea8.front-on-1000x1100.webp",
+          "sha256": "a7e28f57afb845325108acc5b950e58ee2c987b85940f84bf5a1ad8d91395ea8",
+          "url": "/images/plate-contact-sheets/a7e28f57afb845325108acc5b950e58ee2c987b85940f84bf5a1ad8d91395ea8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5SprySlSh/08b23252a51148b7c4bd34057735ceabaf453bae8462f5ece6d37bd1836af77e.front-off-1000x1100.webp",
+          "sha256": "08b23252a51148b7c4bd34057735ceabaf453bae8462f5ece6d37bd1836af77e",
+          "url": "/images/plate-contact-sheets/08b23252a51148b7c4bd34057735ceabaf453bae8462f5ece6d37bd1836af77e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSleek5WhtSht",
+      "binding": "e72aa5757d0c23abcfd43f90045226e0f379c42a0064231686082a71ff446b81",
+      "sha256": "4a934667848f1c905552b9e4adaafb1bb412cfeffbb6b3847ac2f5ace799350b",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:32.534Z",
+      "batchId": "1fbe75af-f496-4d58-830c-803096e446c9",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5WhtSht/4a934667848f1c905552b9e4adaafb1bb412cfeffbb6b3847ac2f5ace799350b.front-on-1000x1100.webp",
+          "sha256": "4a934667848f1c905552b9e4adaafb1bb412cfeffbb6b3847ac2f5ace799350b",
+          "url": "/images/plate-contact-sheets/4a934667848f1c905552b9e4adaafb1bb412cfeffbb6b3847ac2f5ace799350b.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/sleek-5ml-clear-13-415/GBSleek5WhtSht/5072ae2b64f04b70ed4721f3d4088eae98b30e469214eab238555271bfa48b48.front-off-1000x1100.webp",
+          "sha256": "5072ae2b64f04b70ed4721f3d4088eae98b30e469214eab238555271bfa48b48",
+          "url": "/images/plate-contact-sheets/5072ae2b64f04b70ed4721f3d4088eae98b30e469214eab238555271bfa48b48.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}

@@ -43,13 +43,16 @@ export function stickyCtaFacts({
     priceEach,
     caseQuantity,
     qty,
+    formatEach = (price) => `$${price.toFixed(2)}`,
 }: {
     priceEach: number | null | undefined;
     caseQuantity: number | null | undefined;
     qty: number;
+    /** Currency formatter (defaults to USD); pass the region formatter from the UI. */
+    formatEach?: (price: number) => string;
 }): string {
     const parts: string[] = [];
-    parts.push(priceEach == null ? "Price on request" : `$${priceEach.toFixed(2)}/ea`);
+    parts.push(priceEach == null ? "Price on request" : `${formatEach(priceEach)}/ea`);
     if (caseQuantity && caseQuantity > 1) parts.push(`${caseQuantity.toLocaleString("en-US")}/case`);
     if (qty > 1) parts.push(`Qty ${qty.toLocaleString("en-US")}`);
     return parts.join(" · ");
