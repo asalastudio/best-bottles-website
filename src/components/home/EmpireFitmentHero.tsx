@@ -18,12 +18,15 @@ import styles from "./EmpireFitmentHero.module.css";
 const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v7";
 const MANIFEST = `/assets/hero/${HERO_SET}/manifest.json`;
 const HOLD_MS = 2000;     // one beat per closure (Jordan: "1, 2, switch")
-/** Focal point kept in view when the stage is cropped to the hero box (fractions of stage size). */
-const FOCAL = { x: 0.64, y: 0.5 };
+/** The niche fills this share of the hero height, centred vertically, its centre at NICHE_X of the hero width
+ *  (the copy lives on the left). On wide boxes the stage is narrower than the box; the plaster tone from the
+ *  manifest fills the sides and the stage's outer edges are masked into it (see .stage in the stylesheet). */
+const NICHE_HEIGHT = 0.8;
+const NICHE_X = 0.62;
 
 type Patch = { src: string; x: number; y: number; w: number; h: number };
 type Frame = { sku: string; src: string; label: string; patch?: Patch };
-type Manifest = { base: string; width: number; height: number; frames: Frame[]; builtAt?: number; hold?: unknown };
+type Manifest = { base: string; width: number; height: number; frames: Frame[]; builtAt?: number; niche?: [number, number, number, number]; edge?: { left: string; right: string }; hold?: unknown };
 /** Cache-bust every asset with the manifest's build stamp so a rebuilt set never mixes with a cached one. */
 const stamp = (m: Manifest, src: string) => (m.builtAt ? `${src}?v=${m.builtAt}` : src);
 
@@ -64,15 +67,23 @@ export default function EmpireFitmentHero() {
         return () => mq.removeEventListener("change", sync);
     }, []);
 
-    // Cover-fit the fixed-size stage to the hero box (same maths as object-fit: cover with a focal point).
+    // Fit the fixed-size stage so the WHOLE niche sits inside the hero box (Jordan: "the whole entire niche fits in
+    // the frame nicely"), never cropping the arch or the sill; the stage still covers the box vertically.
     useLayoutEffect(() => {
         if (!manifest || !box.current) return;
         const el = box.current;
         const update = () => {
             const bw = el.clientWidth, bh = el.clientHeight;
-            const scale = Math.max(bw / manifest.width, bh / manifest.height);
-            const x = (bw - manifest.width * scale) * FOCAL.x;
-            const y = (bh - manifest.height * scale) * FOCAL.y;
+            const n = manifest.niche ?? [0, 0, manifest.width, manifest.height];
+            const nw = n[2] - n[0], nh = n[3] - n[1], ncx = (n[0] + n[2]) / 2, ncy = (n[1] + n[3]) / 2;
+            let scale = (bh * NICHE_HEIGHT) / nh;
+            scale = Math.min(scale, (bw * 0.9) / nw);              // a narrow box: the niche must fit the width too
+            scale = Math.max(scale, bh / manifest.height);         // but the stage always covers the box vertically
+            const sw = manifest.width * scale, sh = manifest.height * scale;
+            let x = NICHE_X * bw - ncx * scale;
+            if (sw >= bw) x = Math.min(0, Math.max(bw - sw, x));  // covering: keep the stage over the box
+            let y = bh / 2 - ncy * scale;
+            y = sh >= bh ? Math.min(0, Math.max(bh - sh, y)) : (bh - sh) / 2;
             setFit({ scale, x, y });
         };
         update();
@@ -114,7 +125,7 @@ export default function EmpireFitmentHero() {
     };
 
     return (
-        <div ref={box} className={styles.scene} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} aria-label="Empire 50 mL bottle with its closures">
+        <div ref={box} className={styles.scene} style={manifest?.edge ? { background: `linear-gradient(90deg, ${manifest.edge.left} 0%, ${manifest.edge.left} 50%, ${manifest.edge.right} 50%, ${manifest.edge.right} 100%)` } : undefined} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} aria-label="Empire 50 mL bottle with its closures">
             {manifest && (
                 <div className={styles.stage} style={{ width: manifest.width, height: manifest.height, transform: `translate(${fit.x}px, ${fit.y}px) scale(${fit.scale})` }}>
                     <img className={styles.base} src={stamp(manifest, manifest.base)} alt="" width={manifest.width} height={manifest.height} fetchPriority="high" />

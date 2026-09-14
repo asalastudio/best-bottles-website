@@ -2,7 +2,17 @@
  "base": "/assets/hero/v7/base.webp",
  "width": 1536,
  "height": 1024,
- "builtAt": 1789357998,
+ "builtAt": 1789358949,
+ "niche": [
+  709,
+  179,
+  1266,
+  869
+ ],
+ "edge": {
+  "left": "#dacfc0",
+  "right": "#af9e87"
+ },
  "hold": {
   "neck": {
    "x": 924,

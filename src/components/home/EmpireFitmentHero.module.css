@@ -5,13 +5,16 @@
     background: #ece5d8;
 }
 
-/* Fixed-pixel stage (1536×1024) scaled to cover the box; children are placed in stage pixels. */
+/* Fixed-pixel stage (1536×1024) scaled so the whole niche fits the box; children are placed in stage pixels.
+   Its outer 12% on each side fades into the scene's plaster fill, so a wide box shows no seam where the image ends. */
 .stage {
     position: absolute;
     left: 0;
     top: 0;
     transform-origin: 0 0;
     will-change: transform;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 88%, transparent 100%);
 }
 
 .base {

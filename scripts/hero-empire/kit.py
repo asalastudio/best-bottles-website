@@ -226,7 +226,9 @@ tcols = np.where(TUBE_A.max(axis=0) > 0.05)[0]; trows = np.where(TUBE_A.max(axis
 hold = {"neck": {"x": int(B["cx"]) - hw, "y": B["neck_top"] - 2, "w": 2 * hw, "h": B["shoulder"] + SEAT + 2 - (B["neck_top"] - 2)},
         "tube": {"x": int(tcols.min()) - 1, "y": B["shoulder"] + SEAT + 2, "w": int(tcols.max() - tcols.min()) + 3, "h": int(trows.max()) + 2 - (B["shoulder"] + SEAT + 2)}}
 log("hold rects", hold, "(collar widths %d..%d)" % (min(collar_w), max(collar_w)))
-json.dump({"base": f"/assets/hero/{SET}/base.webp", "width": W, "height": H, "builtAt": int(time.time()), "hold": hold, "frames": frames}, open(f"{OUT}/manifest.json", "w"), indent=1)
+hexc = lambda v: "#%02x%02x%02x" % tuple(int(round(x)) for x in v)
+edge = {"left": hexc(base[100:924, 0:60].mean((0, 1))), "right": hexc(base[100:924, W - 60:W].mean((0, 1)))}   # plaster tone the page fills beside the stage
+json.dump({"base": f"/assets/hero/{SET}/base.webp", "width": W, "height": H, "builtAt": int(time.time()), "niche": NICHE, "edge": edge, "hold": hold, "frames": frames}, open(f"{OUT}/manifest.json", "w"), indent=1)
 json.dump({"niche": NICHE, "plaster": g.get("plaster"), "body": g.get("body"), "datum": B}, open(f"{OUT}/geometry.json", "w"))
 
 try: font = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 14)
