@@ -110,7 +110,7 @@ export const upsertPortalAccount = mutation({
         companyName: v.string(),
         tier: v.string(),
         accountManager: v.string(),
-        netTerms: v.string(),
+        netTerms: v.optional(v.string()),
         memberSince: v.string(),
         taxExempt: v.optional(v.boolean()),
         billingEmail: v.optional(v.string()),
@@ -245,10 +245,12 @@ export const getDashboardData = query({
         );
 
         const drafts = sortByNewest(
-            await ctx.db
+            (await ctx.db
                 .query("portalDrafts")
                 .withIndex("by_orgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
-                .collect()
+                .collect())
+                // Archived drafts are kept for the record, not for the customer.
+                .filter((draft) => !draft.archivedAt)
         );
 
         const now = new Date();
@@ -349,7 +351,42 @@ export const listOrdersByOrg = query({
             itemCount: orderItemCount(order),
             primaryLineItem: order.lineItems[0] ?? null,
             lineItems: order.lineItems,
+            shipments: order.shipments ?? [],
+            shipTo: order.shipTo ?? null,
         }));
+    },
+});
+
+/**
+ * One order, for the customer's order page. Scoped like every other read here:
+ * an order name belonging to another organization reads as absent rather than
+ * as a permission error, which would confirm it exists.
+ */
+export const getOrderForOrg = query({
+    args: { clerkOrgId: v.string(), orderId: v.string() },
+    handler: async (ctx, args) => {
+        const order = await ctx.db
+            .query("portalOrders")
+            .withIndex("by_orderId", (q) => q.eq("orderId", args.orderId))
+            .first();
+        if (!order || order.clerkOrgId !== args.clerkOrgId) return null;
+
+        return {
+            _id: order._id,
+            orderId: order.orderId,
+            status: order.status,
+            orderDate: order.orderDate,
+            estimatedDelivery: order.estimatedDelivery ?? null,
+            carrier: order.carrier ?? null,
+            trackingNumber: order.trackingNumber ?? null,
+            totalAmount: orderTotal(order),
+            itemCount: orderItemCount(order),
+            lineItems: order.lineItems,
+            shipments: order.shipments ?? [],
+            shipTo: order.shipTo ?? null,
+            source: order.source ?? null,
+            updatedAt: order.updatedAt ?? null,
+        };
     },
 });
 
@@ -357,10 +394,12 @@ export const listDraftsByOrg = query({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
         const drafts = sortByNewest(
-            await ctx.db
+            (await ctx.db
                 .query("portalDrafts")
                 .withIndex("by_orgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
-                .collect()
+                .collect())
+                // Archived drafts are kept for the record, not for the customer.
+                .filter((draft) => !draft.archivedAt)
         );
 
         return drafts.map((draft) => ({
@@ -614,6 +653,20 @@ export const upsertOrderFromShopify = mutation({
         carrier: v.optional(v.string()),
         estimatedDelivery: v.optional(v.string()),
         shipTo: v.optional(v.string()),
+        shipments: v.optional(v.array(v.object({
+            shopifyFulfillmentId: v.optional(v.string()),
+            trackingNumber: v.optional(v.string()),
+            carrier: v.optional(v.string()),
+            trackingUrl: v.optional(v.string()),
+            shipmentStatus: v.optional(v.string()),
+            shippedAt: v.optional(v.number()),
+            estimatedDelivery: v.optional(v.string()),
+            lineItems: v.optional(v.array(v.object({
+                sku: v.string(),
+                description: v.string(),
+                quantity: v.number(),
+            }))),
+        }))),
     },
     handler: async (ctx, args) => {
         verifyWriteToken(args.writeToken);
@@ -645,6 +698,7 @@ export const upsertOrderFromShopify = mutation({
             estimatedDelivery: args.estimatedDelivery,
             trackingNumber: args.trackingNumber,
             carrier: args.carrier,
+            shipments: args.shipments,
             shipTo: args.shipTo,
             totalAmount: args.totalAmount,
             source: "shopify" as const,
@@ -661,7 +715,22 @@ export const upsertOrderFromShopify = mutation({
             if (existing.source === "quickbooks") {
                 return { skipped: "owned_by_quickbooks" as const, orderId: existing._id };
             }
-            await ctx.db.patch(existing._id, fields);
+            // Shopify's order payloads do not always carry the fulfilments — an
+            // `orders/updated` fired by an unrelated edit can arrive with none.
+            // Patching that over a row a fulfilment webhook just populated would
+            // make a shipped order look unshipped and lose the tracking number,
+            // so absent shipment data leaves what is already stored alone.
+            const patch = { ...fields };
+            if (!args.shipments || args.shipments.length === 0) {
+                const kept = existing.shipments ?? [];
+                if (kept.length > 0) {
+                    patch.shipments = kept;
+                    patch.trackingNumber = existing.trackingNumber;
+                    patch.carrier = existing.carrier;
+                    patch.estimatedDelivery = existing.estimatedDelivery;
+                }
+            }
+            await ctx.db.patch(existing._id, patch);
             return { updated: true as const, orderId: existing._id };
         }
 
@@ -786,5 +855,99 @@ export const markDraftSubmitted = mutation({
         });
 
         return { draftId: draft._id, shopifyDraftOrderName: args.shopifyDraftOrderName };
+    },
+});
+
+/**
+ * Put a draft away.
+ *
+ * The two cases are genuinely different and deserve different fates:
+ *
+ *  - An UNSUBMITTED draft is a scratch document. Nothing downstream points at
+ *    it, so it is deleted. A customer who made three reorder drafts by mistake
+ *    wants them gone, not filed.
+ *  - A SUBMITTED draft is the record of what was sent to Shopify. Deleting it
+ *    would leave an order in Shopify with nothing in the portal explaining
+ *    where it came from, so it is archived instead and disappears from the
+ *    list without ceasing to exist.
+ */
+export const discardDraft = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        draftId: v.id("portalDrafts"),
+        clerkUserId: v.string(),
+    },
+    returns: v.object({ outcome: v.union(v.literal("deleted"), v.literal("archived")) }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        const draft = await ctx.db.get(args.draftId);
+        if (!draft || draft.clerkOrgId !== args.clerkOrgId) {
+            throw new Error("draft_not_found");
+        }
+
+        if (draft.status === "submitted") {
+            if (draft.archivedAt) return { outcome: "archived" as const };
+            await ctx.db.patch(draft._id, {
+                archivedAt: Date.now(),
+                archivedBy: args.clerkUserId,
+                updatedAt: Date.now(),
+            });
+            return { outcome: "archived" as const };
+        }
+
+        await ctx.db.delete(draft._id);
+        return { outcome: "deleted" as const };
+    },
+});
+
+const portalAddressValidator = v.object({
+    contactName: v.string(),
+    company: v.string(),
+    phone: v.string(),
+    address1: v.string(),
+    address2: v.string(),
+    city: v.string(),
+    provinceCode: v.string(),
+    zip: v.string(),
+    countryCode: v.string(),
+});
+
+/**
+ * Save where this account's orders ship to and bill from.
+ *
+ * Validation lives in src/lib/portal/address.ts and runs before this is
+ * called; this writes what it is given, scoped to the caller's org. Passing no
+ * billing address means "bill where you ship", which is the common case and is
+ * stored as absence rather than as a duplicate of the shipping address — so a
+ * later correction to the shipping address cannot leave a stale billing copy
+ * behind it.
+ */
+export const saveAccountAddress = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        clerkUserId: v.string(),
+        shippingAddress: portalAddressValidator,
+        billingAddress: v.optional(portalAddressValidator),
+    },
+    returns: v.null(),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        const account = await ctx.db
+            .query("portalAccounts")
+            .withIndex("by_clerkOrgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
+            .unique();
+        if (!account) throw new Error("account_not_found");
+
+        await ctx.db.patch(account._id, {
+            shippingAddress: args.shippingAddress,
+            billingAddress: args.billingAddress,
+            addressUpdatedAt: Date.now(),
+            addressUpdatedBy: args.clerkUserId,
+        });
+        return null;
     },
 });

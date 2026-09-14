@@ -78,6 +78,11 @@ const TOPICS = [
     "ORDERS_UPDATED",
     "ORDERS_CANCELLED",
     "ORDERS_FULFILLED",
+    // Tracking. ORDERS_UPDATED fires on a fulfilment too, but it is a general
+    // edit signal whose payload does not reliably carry the fulfilments — these
+    // two do, and they are what put a tracking number in the customer's portal.
+    "FULFILLMENTS_CREATE",
+    "FULFILLMENTS_UPDATE",
 ];
 
 const missingEnv = ["NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN", "SHOPIFY_ADMIN_TOKEN"].filter((key) => !process.env[key]);

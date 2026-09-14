@@ -3,7 +3,8 @@ import "server-only";
 import { api } from "../../../convex/_generated/api";
 import type { Id } from "../../../convex/_generated/dataModel";
 import { getPortalConvex, getPortalConvexWriteToken } from "./convexClient";
-import { requirePortalViewer, ensurePortalShopifyCustomer } from "./server";
+import { requirePortalViewer, ensurePortalShopifyCustomer, getPortalAddresses } from "./server";
+import { addressIsUsable, toShopifyMailingAddress } from "./address";
 import { createWholesaleDraftOrder } from "@/lib/shopify-draft-orders";
 import { resolveQuotedUnitPrice } from "@/lib/volumePricing";
 
@@ -141,6 +142,17 @@ export async function submitDraftForViewer(draftId: string): Promise<SubmitDraft
         };
     }
 
+    // An order with nowhere to go is not an order. Shopify cannot rate, tax,
+    // or fulfil a draft without an address, so the gate is here rather than a
+    // warning after the fact.
+    const addresses = await getPortalAddresses();
+    if (!addresses.shippingAddress || !addressIsUsable(addresses.shippingAddress)) {
+        return {
+            ok: false,
+            error: "Add a shipping address before sending this order — we can't ship or price freight without one.",
+        };
+    }
+
     const identity = await ensurePortalShopifyCustomer();
     if (identity.status !== "linked") {
         return {
@@ -163,6 +175,10 @@ export async function submitDraftForViewer(draftId: string): Promise<SubmitDraft
             })),
             accountNumber: account?.accountNumber,
             companyName: account?.companyName,
+            shippingAddress: toShopifyMailingAddress(addresses.shippingAddress),
+            billingAddress: addresses.billingAddress
+                ? toShopifyMailingAddress(addresses.billingAddress)
+                : undefined,
         });
 
         await getPortalConvex().mutation(api.portal.markDraftSubmitted, {
@@ -205,4 +221,73 @@ export async function searchProductsForViewer(term: string): Promise<PadSearchHi
         term: trimmed,
         limit: 8,
     });
+}
+
+export type AddToDraftResult =
+    | { ok: true; draftId: string; draftName: string; sku: string; quantity: number }
+    | { ok: false; reason: "unknown_sku" | "no_price" | "draft_closed" };
+
+/**
+ * Add one SKU to an open draft from the catalogue.
+ *
+ * Browsing and ordering are the same motion for a wholesale buyer, so a row in
+ * the catalogue can go straight onto an order. The draft is chosen rather than
+ * asked for: the newest open one, or a new one if every draft has been sent.
+ * Making someone create a draft before they can add anything to it puts the
+ * paperwork before the product.
+ *
+ * A submitted draft is never reopened — it is the record of what Shopify was
+ * sent, and quietly appending to it would make the portal disagree with the
+ * order that is already under review.
+ *
+ * As everywhere on the pad, only SKU and quantity cross the wire; the price is
+ * resolved server-side by setDraftLinesForViewer.
+ */
+export async function addSkuToOpenDraftForViewer(args: {
+    sku: string;
+    quantity: number;
+    draftId?: string;
+}): Promise<AddToDraftResult> {
+    const viewer = await requirePortalViewer();
+    const convex = getPortalConvex();
+    const sku = args.sku.trim();
+    const quantity = Math.max(1, Math.floor(args.quantity) || 1);
+    if (!sku) return { ok: false, reason: "unknown_sku" };
+
+    // Resolve the SKU before touching a draft, so an unknown one does not
+    // leave an empty draft behind as a souvenir of the failure.
+    const [resolution] = await resolveDraftLines([{ sku, quantity }]);
+    if (!resolution?.ok) {
+        return { ok: false, reason: resolution?.reason === "no_price" ? "no_price" : "unknown_sku" };
+    }
+
+    const drafts = await convex.query(api.portal.listDraftsByOrg, { clerkOrgId: viewer.clerkOrgId });
+
+    let target = args.draftId
+        ? drafts.find((draft) => draft._id === args.draftId)
+        : drafts.find((draft) => draft.status !== "submitted");
+
+    if (args.draftId && !target) return { ok: false, reason: "draft_closed" };
+    if (target && target.status === "submitted") return { ok: false, reason: "draft_closed" };
+
+    if (!target) {
+        const created = await convex.mutation(api.portal.createDraft, {
+            writeToken: getPortalConvexWriteToken(),
+            clerkOrgId: viewer.clerkOrgId,
+        });
+        const refreshed = await convex.query(api.portal.listDraftsByOrg, { clerkOrgId: viewer.clerkOrgId });
+        target = refreshed.find((draft) => draft._id === created.draftId);
+        if (!target) return { ok: false, reason: "draft_closed" };
+    }
+
+    // Adding a SKU already on the order raises its quantity rather than
+    // creating a second line for the same thing.
+    const merged = target.lineItems.map((line) => ({ sku: line.sku, quantity: line.quantity }));
+    const existing = merged.find((line) => line.sku.toLowerCase() === sku.toLowerCase());
+    if (existing) existing.quantity += quantity;
+    else merged.push({ sku, quantity });
+
+    await setDraftLinesForViewer(target._id, merged);
+
+    return { ok: true, draftId: target._id, draftName: target.name, sku, quantity };
 }

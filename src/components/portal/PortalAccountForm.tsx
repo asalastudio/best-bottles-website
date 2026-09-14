@@ -26,12 +26,10 @@ export default function PortalAccountForm({
     organizations,
     action,
     knownTiers,
-    knownTerms,
 }: {
     organizations: ClerkOrgOption[];
     action: (prev: AccountFormState, formData: FormData) => Promise<AccountFormState>;
     knownTiers: string[];
-    knownTerms: string[];
 }) {
     const [state, formAction, pending] = useActionState(action, { error: null, created: null });
 
@@ -88,10 +86,7 @@ export default function PortalAccountForm({
                 <div>
                     <label className={labelClass} htmlFor="netTerms">Payment terms</label>
                     <input id="netTerms" name="netTerms" required list="known-terms" defaultValue="Net 30" className={fieldClass} />
-                    <datalist id="known-terms">
-                        {knownTerms.map((term) => <option key={term} value={term} />)}
-                    </datalist>
-                </div>
+                    </div>
 
                 <div>
                     <label className={labelClass} htmlFor="accountManager">Account manager</label>

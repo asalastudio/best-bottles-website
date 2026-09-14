@@ -17,6 +17,18 @@ const kitSlotV = v.union(
     v.literal("tassel"), v.literal("reducer"), v.literal("pipette"),
 );
 
+const portalAddress = v.object({
+    contactName: v.string(),
+    company: v.string(),
+    phone: v.string(),
+    address1: v.string(),
+    address2: v.string(),
+    city: v.string(),
+    provinceCode: v.string(),
+    zip: v.string(),
+    countryCode: v.string(),
+});
+
 export default defineSchema({
     // ── Product Groups (Phase 1) ─────────────────────────────────────────────
     // ~230 parent groups. Each group = unique (family + capacityMl + color).
@@ -407,7 +419,10 @@ export default defineSchema({
         companyName: v.string(),
         tier: v.string(),                           // e.g. "The Scaler"
         accountManager: v.string(),
-        netTerms: v.string(),                       // e.g. "Net 30"
+        // Best Bottles extends no credit — there is no Net 30/60/90 and no
+        // credit facility. The field survives only so rows seeded before that
+        // was settled still validate; nothing reads it and nothing writes it.
+        netTerms: v.optional(v.string()),
         taxExempt: v.boolean(),
         memberSince: v.string(),                    // e.g. "March 2021"
         shopifyCustomerId: v.optional(v.string()),  // nullable until Shopify sync
@@ -419,6 +434,19 @@ export default defineSchema({
         billingEmail: v.optional(v.string()),           // email the Shopify customer is keyed on
         shopifyCustomerLinkedAt: v.optional(v.number()),
         shopifyCustomerLinkedBy: v.optional(v.string()), // Clerk user ID that triggered the link
+
+        // ─── Where orders ship ────────────────────────────────────────────
+        // A Shopify draft order with no address cannot be rated, taxed, or
+        // fulfilled, so this is what turns a submitted order into one the
+        // warehouse can actually pick. Held here rather than read from Shopify
+        // at submit time so the portal can show it, validate it, and refuse to
+        // submit without it.
+        shippingAddress: v.optional(portalAddress),
+        // Most wholesale buyers bill where they ship; the separate address is
+        // stored only when they say otherwise.
+        billingAddress: v.optional(portalAddress),
+        addressUpdatedAt: v.optional(v.number()),
+        addressUpdatedBy: v.optional(v.string()),
     })
         .index("by_clerkOrgId", ["clerkOrgId"])
         .index("by_accountNumber", ["accountNumber"])
@@ -483,8 +511,34 @@ export default defineSchema({
         ),
         orderDate: v.number(),
         estimatedDelivery: v.optional(v.string()),
+        // Kept for rows written before shipments existed, and still filled from
+        // the first shipment so anything reading a single number keeps working.
         trackingNumber: v.optional(v.string()),
         carrier: v.optional(v.string()),
+
+        // A wholesale order does not arrive in one box. Pallets ship on
+        // different days from different carriers, and collapsing that to one
+        // tracking number told the customer their order had shipped when half
+        // of it had — so every shipment is kept.
+        shipments: v.optional(v.array(v.object({
+            /** Shopify fulfilment id — the idempotency key for updates. */
+            shopifyFulfillmentId: v.optional(v.string()),
+            trackingNumber: v.optional(v.string()),
+            carrier: v.optional(v.string()),
+            /** Carrier's own tracking page, as Shopify resolved it. */
+            trackingUrl: v.optional(v.string()),
+            /** Shopify delivery state: in_transit, out_for_delivery, delivered… */
+            shipmentStatus: v.optional(v.string()),
+            shippedAt: v.optional(v.number()),
+            estimatedDelivery: v.optional(v.string()),
+            /** What travelled in this box, so a partial shipment is legible. */
+            lineItems: v.optional(v.array(v.object({
+                sku: v.string(),
+                description: v.string(),
+                quantity: v.number(),
+            }))),
+        }))),
+
         shipFrom: v.optional(v.string()),
         shipTo: v.optional(v.string()),
         totalAmount: v.optional(v.number()),
@@ -534,6 +588,13 @@ export default defineSchema({
         shopifyDraftOrderName: v.optional(v.string()),
         submittedAt: v.optional(v.number()),
         submittedBy: v.optional(v.string()),
+
+        // Set when a SUBMITTED draft is put away. An unsubmitted draft is a
+        // scratch document and is deleted outright; a submitted one is the
+        // record of what was sent to Shopify, so it is hidden rather than
+        // destroyed — otherwise the portal would disagree with the order.
+        archivedAt: v.optional(v.number()),
+        archivedBy: v.optional(v.string()),
     })
         .index("by_orgId", ["clerkOrgId"]),
 
