@@ -144,8 +144,8 @@
 .buildCopy{padding-left:0}
 /* Family cards trimmed 10px; the image crops symmetrically so the baseline stays put. */
 .build img{object-fit:cover;object-position:center;background:transparent}
-/* Family rail cards ~12% shorter than 4:5 (cover crop trims 6% top and bottom; groups sit in the middle half). */
-@media(min-width:641px){.railWrap .family img{aspect-ratio:10/11;height:auto;object-fit:cover;object-position:center}}
+/* Family rail cards cropped square from 4:5 (cover trims 10% top and bottom; groups sit in the middle half). */
+@media(min-width:641px){.railWrap .family img{aspect-ratio:1/1;height:auto;object-fit:cover;object-position:center}}
 /* Build scene: contain so the sprayer keeps its headroom; the bone in the render matches the section ground. */
 .build img{object-fit:contain;object-position:center bottom;background:transparent}
 /* Collection cards: the 12% tighter crop is baked into the -bone-v3 webp (finish.py ZOOM); image box stays 4:3. */
