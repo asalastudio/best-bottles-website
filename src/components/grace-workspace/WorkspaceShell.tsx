@@ -121,7 +121,7 @@ function WorkspaceShellView({
 
     // Identity — fall back gracefully when org/account aren't yet wired.
     const orgName = account?.companyName ?? organization?.name ?? null;
-    const tierLabel = account?.tier ?? (clerkOrgId ? "Authenticated" : user ? "Signed in" : "Sign in required");
+    const tierLabel = account?.tier ?? (clerkOrgId ? "Authenticated" : user ? "Signed in" : "Sessions not saved");
     const userFullName = user
         ? [user.firstName, user.lastName].filter(Boolean).join(" ") || (user.primaryEmailAddress?.emailAddress ?? "You")
         : "Guest";
@@ -231,11 +231,30 @@ function WorkspaceShellView({
                     )}
                 </div>
 
-                {/* Identity — real Clerk user + portal account when available */}
+                {/* Identity — real Clerk user + portal account when available.
+                    The workspace is public, so a guest sees a sign-in link
+                    here instead of a locked screen: signing in only adds
+                    account-linked history, it never gates the surface. */}
                 <div
                     className="mt-auto pt-3.5"
                     style={{ borderTop: "1px solid rgba(212, 197, 169, 0.55)" }}
                 >
+                    {!user && CLERK_ENABLED ? (
+                        <Link
+                            href="/sign-in?redirect_url=/grace-workspace"
+                            className="flex items-center gap-[9px] rounded-[2px] px-1.5 py-1 hover:bg-obsidian/[0.04] transition-colors"
+                        >
+                            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-muted-gold font-serif text-[13px] font-semibold text-obsidian">
+                                ·
+                            </div>
+                            <div className="min-w-0 flex-1">
+                                <div className="text-[12px] font-medium truncate">Sign in</div>
+                                <div className="text-[10px] text-slate truncate">
+                                    Save sessions and projects to your account
+                                </div>
+                            </div>
+                        </Link>
+                    ) : (
                     <div className="flex items-center gap-[9px] px-1.5 py-1">
                         {user?.imageUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element -- Clerk-hosted avatar URL changes per user; Next/Image needs whitelisted domain config
@@ -257,6 +276,7 @@ function WorkspaceShellView({
                             </div>
                         </div>
                     </div>
+                    )}
                 </div>
             </aside>
 

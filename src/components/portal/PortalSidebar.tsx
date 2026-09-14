@@ -87,9 +87,9 @@ const navSections = [
     },
     {
         items: [
-            // Full-screen Grace workspace lives at a top-level route (gated to
-            // authenticated B2B users). External arrow signals it leaves the
-            // portal shell into Grace's own surface.
+            // Full-screen Grace workspace lives at a public top-level route.
+            // External arrow signals it leaves the portal shell into Grace's
+            // own surface; signed-in customers get account-linked history there.
             { href: "/grace-workspace", label: "Grace Workspace ↗", id: "grace", external: true },
         ],
     },
