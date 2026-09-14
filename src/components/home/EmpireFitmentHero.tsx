@@ -17,7 +17,11 @@ import styles from "./EmpireFitmentHero.module.css";
  * mounted a beat early at opacity 0 and decoded, so the cut is one atomic paint with the layer
  * already there to catch it. The bare-neck beat renders nothing — the base IS the bare bottle.
  */
-const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v7";
+// v8 = v7 with the bottle centred in the arch. The generated plate stood it 32 px left of the
+// opening's centreline (body centre 960.5 vs opening centre 992.5 on the 1536 master); the bottle
+// was cut to its silhouette, recomposited on the empty-niche plate at the centre, and the kit
+// rebuilt so every closure re-anchored to the moved neck axis. v7 is intact — revert by name.
+const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v8";
 const MANIFEST = `/assets/hero/${HERO_SET}/manifest.json`;
 const HOLD_MS = 2000;     // one beat per closure (Jordan: "1, 2, switch")
 /** Layout (Jordan, 2026-09-14): the niche box is NICHE_HEIGHT of the hero height, the moulding's outer edge sits
