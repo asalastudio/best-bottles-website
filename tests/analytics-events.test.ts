@@ -17,6 +17,17 @@ vi.mock("mixpanel-browser", () => ({
   },
 }));
 
+vi.mock("posthog-js", () => ({
+  default: {
+    init: vi.fn(),
+    identify: vi.fn(),
+    reset: vi.fn(),
+    capture: track,
+    setPersonProperties: vi.fn(),
+    group: vi.fn(),
+  },
+}));
+
 import { analytics } from "@/lib/analytics";
 
 beforeEach(() => {

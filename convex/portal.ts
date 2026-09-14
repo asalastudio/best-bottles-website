@@ -2,6 +2,7 @@ import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 import type { Doc } from "./_generated/dataModel";
 import { verifyWriteToken } from "./portalAuth";
+import { captureServerEvent, distinctIdFor } from "./posthog";
 
 function orderTotal(order: Doc<"portalOrders">): number | null {
     if (typeof order.totalAmount === "number") return order.totalAmount;
@@ -767,6 +768,21 @@ export const markDraftSubmitted = mutation({
             submittedAt: Date.now(),
             submittedBy: args.clerkUserId,
             updatedAt: Date.now(),
+        });
+
+        // The conversion the browser cannot honestly report. A client-side
+        // "order sent" fires when the request leaves; this fires only once the
+        // order actually reached Shopify and the draft was frozen against it.
+        // Line count and value only — no SKUs, which the analytics privacy
+        // layer deliberately keeps out of event properties.
+        await captureServerEvent(ctx, {
+            distinctId: distinctIdFor({ clerkOrgId: args.clerkOrgId, clerkUserId: args.clerkUserId }),
+            event: "purchase_order_submitted",
+            properties: {
+                line_count: draft.lineItems.length,
+                order_value: draft.totalAmount ?? 0,
+                unit_count: draft.lineItems.reduce((n, line) => n + line.quantity, 0),
+            },
         });
 
         return { draftId: draft._id, shopifyDraftOrderName: args.shopifyDraftOrderName };
