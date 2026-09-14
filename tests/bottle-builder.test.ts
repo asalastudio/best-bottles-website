@@ -81,7 +81,9 @@ describe("builder catalog boundary", () => {
             websiteSku: ({ 15: "GBCrcl15RollBlkSh", 30: "GBCrcl30SpryBlk", 50: "GBCrcl50SpryShnBlk", 100: "GBCrcl100SpryShnBlk" } as Record<number, string>)[capacityMl], productGroupSlug: `circle-${capacityMl}ml-clear-rollon`,
         }).row)!);
         expect(groupBuilderBodies(configs).map(b => b.capacityMl)).toEqual([15, 30, 50, 100]);
-        for (const config of configs) expect(config.bodyImage?.url).toMatch(/bottle-builder\/circle/);
+        // Circle 15 keeps the 2026-09-02 Circle media; the larger sizes come from the
+        // recipes' uncapped body layers under /bodies (2026-09-14, no insert in the neck)
+        for (const config of configs) expect(config.bodyImage?.url).toMatch(/bottle-builder\/(circle|bodies)\/circle-/);
         expect(catalogConfigurationFromRow(fixture({ family: "Circle", capacityMl: 50, neckThreadSize: "18-400", color: "Frosted" }).row)).toBeNull();
     });
     it("keeps different molds separate when their capacity and neck match", () => {
