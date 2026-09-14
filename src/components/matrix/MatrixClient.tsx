@@ -10,6 +10,7 @@ import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, Sl
 import { useCart } from "@/components/CartProvider";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
 import FamilyLoadingStatus from "@/components/bottle-builder/FamilyLoadingStatus";
+import bodyHeightMedia from "@/lib/bottle-builder/body-heights.generated.json";
 import MobileBuilder from "@/components/bottle-builder/MobileBuilder";
 import BuilderImage from "@/components/bottle-builder/BuilderImage";
 import FitmentIllustration from "@/components/bottle-builder/FitmentIllustration";
@@ -40,11 +41,22 @@ const fitmentDescriptions: Record<string, string> = {
     "Vintage Bulb Sprayer with Tassel": "A squeeze-bulb spray with a decorative tassel.",
 };
 
-// Visual size cues for the chooser, not a dimensional product comparison.
-// Preserve the taller, slender 9 ml profile and a graduated size range.
-function chooserScale(body: BuilderBody) {
-    if (body.family === "Circle") return ({ 15: .68, 30: .79, 50: .9, 100: 1 } as Record<number, number>)[body.capacityMl] ?? 1;
-    if (body.family !== "Cylinder") return 1;
+// Chooser tiles keep the family's physical proportions: each body is shown at
+// its measured glass height relative to the tallest body on offer (canonical
+// body-geometry audit, 2026-07-12), floored so the smallest stays legible.
+// Cylinder keeps its hand-tuned cues for the two 9 ml necks the audit merges.
+const bodyHeights = (bodyHeightMedia as { heights: Record<string, { bodyHeightMm: number }> }).heights;
+export function bodyHeightMm(body: Pick<BuilderBody, "family" | "capacityMl">) {
+    return bodyHeights[`${body.family}|${body.capacityMl}`]?.bodyHeightMm ?? null;
+}
+function physicalChooserScale(body: BuilderBody, all: BuilderBody[]) {
+    const mine = bodyHeightMm(body);
+    const tallest = Math.max(...all.map(b => bodyHeightMm(b) ?? 0));
+    if (!mine || !tallest) return null;
+    return Math.max(.48, mine / tallest);
+}
+function chooserScale(body: BuilderBody, all: BuilderBody[] = [body]) {
+    if (body.family !== "Cylinder") return physicalChooserScale(body, all) ?? 1;
     if (body.capacityMl <= 5) return .52;
     if (body.capacityMl === 9 && body.neck === "13-415") return .84;
     if (body.capacityMl === 9 && body.neck === "17-415") return .68;
@@ -193,7 +205,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         onUpdate={patch => { update(patch); if (patch.bodyId || patch.color || patch.fitment) setShowCover(false); }} onReset={reset} onFamily={family => { reset(); startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}${searchParams.get("shop") ? `&shop=${encodeURIComponent(searchParams.get("shop")!)}` : ""}`)); }} onAdd={addToCart}
         size={size} neck={neck} application={application} onFilter={(filter, value) => { if (filter === "size") setSize(value); else if (filter === "neck") setNeck(value); else setApplication(value); }}
         pending={pending} adding={adding} hydrated={isCartHydrated} error={error} lastAdded={lastAdded} cartProgress={cartProgress}
-        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={chooserScale} />;
+        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={b => chooserScale(b, bodies)} />;
 
     return <div className={styles.builder} data-bottle-builder data-current-step={step} data-has-bottle={Boolean(body)} aria-busy={pending || adding}>
         <header className={styles.header}>
@@ -238,7 +250,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                 <fieldset aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
                 {step === 0 && <div className={styles.bottleGrid}>
                     {visibleBodies.map(b => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)}>
-                        <div className={styles.bottleThumb}><BuilderImage config={b.configurations[0]} parts={previewParts(b.configurations[0], "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b)} /></div>
+                        <div className={styles.bottleThumb}><BuilderImage config={b.configurations[0]} parts={previewParts(b.configurations[0], "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} /></div>
                         <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <small>{b.profileLabel}</small>}<span className={styles.neckBadge}>Neck: {b.neck}</span>
                     </Option>)}
                 </div>}

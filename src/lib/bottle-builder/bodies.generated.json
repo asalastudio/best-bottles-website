@@ -2,14 +2,14 @@
   "Circle|100|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/circle-100-clear-18-415.webp",
     "width": 1000,
-    "height": 1159,
-    "sha256": "765a27c351001c5a01971daa68a8c98db1bde4b3d8d34d789860d66fd8c70bcb"
+    "height": 1166,
+    "sha256": "b5d9e52d05d2cfda32b75f268f5d10b6868f58348b1cbc7e49ca617c7e460d32"
   },
   "Circle|100|Frosted|18-415": {
     "url": "/images/bottle-builder/bodies/circle-100-frosted-18-415.webp",
-    "width": 502,
-    "height": 598,
-    "sha256": "d88d663cf6cbdd8a59925a00a9ce9f8efd171933ae44bc1811a6a1d2c7991630"
+    "width": 497,
+    "height": 594,
+    "sha256": "30da82b9b6850866b5242cc108bde6b2e0d10ba8cf3da656e2d1aa0ba0728c9d"
   },
   "Circle|15|Clear|13-415": {
     "url": "/images/bottle-builder/circle/circle-15-clear-13-415.webp",
@@ -19,9 +19,9 @@
   },
   "Circle|30|Clear|15-415": {
     "url": "/images/bottle-builder/bodies/circle-30-clear-15-415.webp",
-    "width": 712,
-    "height": 931,
-    "sha256": "30abbdba3822bb3552c2791fd943ea83ab1a0885cc7ae265b20ebeb5b7ebc57e"
+    "width": 711,
+    "height": 927,
+    "sha256": "5144bee20a918437465151fbef8e3cdc82298ff8fb8703fddbce4d6d775177d1"
   },
   "Circle|50|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/circle-50-clear-18-415.webp",
@@ -32,8 +32,8 @@
   "Circle|50|Frosted|18-415": {
     "url": "/images/bottle-builder/bodies/circle-50-frosted-18-415.webp",
     "width": 1000,
-    "height": 1152,
-    "sha256": "0e0fa421c0ce5589fe7db7af6d0c916205956ff9d9e3ad3b44a406fa70ec115e"
+    "height": 1154,
+    "sha256": "f51592cbf7b44d9a309321dac192d77174d4eb340c48fee14d3e4ed7f2a456a5"
   },
   "Cylinder|9|Frosted|13-415": {
     "url": "/images/bottle-builder/bodies/cylinder-9-frosted-13-415.webp",
@@ -49,15 +49,15 @@
   },
   "Diva|100|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/diva-100-clear-18-415.webp",
-    "width": 592,
-    "height": 1079,
-    "sha256": "c21a6951dffb55d05b70cfedff3803024dd45498890d2f8f263796afe936aeee"
+    "width": 585,
+    "height": 1129,
+    "sha256": "7543682004dadd9327eb21261dd991770567b01c669456939e66e2b988506ed4"
   },
   "Diva|30|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/diva-30-clear-18-415.webp",
-    "width": 592,
-    "height": 1128,
-    "sha256": "a70ed06bff3265f2c06cf713a271401ab8fda26de743fe1acf242c41a982e8ed"
+    "width": 583,
+    "height": 1121,
+    "sha256": "fe49c54df3fc30fd3ea9f8b0768747a79e934c77b53561e4e94cdec2f57a0a86"
   },
   "Diva|46|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/diva-46-clear-18-415.webp",
@@ -67,15 +67,15 @@
   },
   "Diva|46|Frosted|18-415": {
     "url": "/images/bottle-builder/bodies/diva-46-frosted-18-415.webp",
-    "width": 613,
-    "height": 1150,
-    "sha256": "f9facbe1dcceb66300082e191c3d692b1a2d5bf556232e34008316116387e016"
+    "width": 604,
+    "height": 1144,
+    "sha256": "bebc9422a57fa8234e66cae94fdcabf1b65e4afc3ba31553703a24463c5b2528"
   },
   "Elegant|100|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/elegant-100-clear-18-415.webp",
-    "width": 693,
-    "height": 1200,
-    "sha256": "8ddc7639d3683610398c397054a3c3c31be03537dfe6d2dad2c7d634197d536f"
+    "width": 686,
+    "height": 1194,
+    "sha256": "394b60e1794e47bacd1d9ad67b1b5dbab52bf3661f8258edaefe1a3558d0a79c"
   },
   "Elegant|100|Frosted|18-415": {
     "url": "/images/bottle-builder/bodies/elegant-100-frosted-18-415.webp",
@@ -85,21 +85,21 @@
   },
   "Elegant|15|Clear|13-415": {
     "url": "/images/bottle-builder/bodies/elegant-15-clear-13-415.webp",
-    "width": 428,
-    "height": 708,
-    "sha256": "5bb07face9d715683fb3397969e39558a7fc22630a72ed33d9cc70e699fd66d2"
+    "width": 423,
+    "height": 702,
+    "sha256": "5d384a7949b2a918a8b3dc6df386192dc493636bd8a92d51cf55ae7c2e61ed97"
   },
   "Elegant|15|Frosted|13-415": {
     "url": "/images/bottle-builder/bodies/elegant-15-frosted-13-415.webp",
-    "width": 427,
-    "height": 710,
-    "sha256": "2afdc2495e6d7ef52ee2c87cb71d96f380fad50a15a18fdb87916755dcb7aaaa"
+    "width": 425,
+    "height": 705,
+    "sha256": "122dc447f0709d5deb67c5dab44e92afccaa38789992bbcbfa28d132ef521511"
   },
   "Elegant|30|Clear|15-415": {
     "url": "/images/bottle-builder/bodies/elegant-30-clear-15-415.webp",
-    "width": 545,
-    "height": 846,
-    "sha256": "73edbbae89872a423d9d10f798a274291d6c4b40e0712dbbc70ce3c00f2d111d"
+    "width": 539,
+    "height": 847,
+    "sha256": "a5658b681e70c2f0c403a4bda6e19d81265a8197923c62255abce551bd6cc988"
   },
   "Elegant|30|Frosted|15-415": {
     "url": "/images/bottle-builder/bodies/elegant-30-frosted-15-415.webp",
@@ -127,9 +127,9 @@
   },
   "Empire|50|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/empire-50-clear-18-415.webp",
-    "width": 499,
-    "height": 1164,
-    "sha256": "dc663cc5ca41114e7dd6f449b36d0611378c0b47c380f19f4ea3fccf1bf9b1b9"
+    "width": 496,
+    "height": 1160,
+    "sha256": "2ac9aa2af087d43508e1a9b5249580203869117cea2e30cda080c55b1755efb8"
   },
   "Round|128|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/round-128-clear-18-415.webp",
@@ -139,9 +139,9 @@
   },
   "Round|128|Frosted|18-415": {
     "url": "/images/bottle-builder/bodies/round-128-frosted-18-415.webp",
-    "width": 941,
-    "height": 1147,
-    "sha256": "73c0a0b50f66fbfa9847fd26d4c7d5d0d06338fbfbb0d084120e24784c1ca8cb"
+    "width": 936,
+    "height": 1141,
+    "sha256": "f8be685251c860d02e6d5d20d25fa3dabbaa115c12c2433e030be973e4a35e67"
   },
   "Round|78|Frosted|18-415": {
     "url": "/images/bottle-builder/bodies/round-78-frosted-18-415.webp",
