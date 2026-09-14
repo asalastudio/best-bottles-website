@@ -17,7 +17,7 @@ import styles from "./EmpireFitmentHero.module.css";
  */
 const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v7";
 const MANIFEST = `/assets/hero/${HERO_SET}/manifest.json`;
-const HOLD_MS = 3600;     // one beat per closure
+const HOLD_MS = 2000;     // one beat per closure (Jordan: "1, 2, switch")
 /** Focal point kept in view when the stage is cropped to the hero box (fractions of stage size). */
 const FOCAL = { x: 0.64, y: 0.5 };
 
