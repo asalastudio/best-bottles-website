@@ -118,8 +118,8 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
-    min-width: 120px;
-    max-width: 240px;
+    min-width: 170px;
+    max-width: 260px;
     padding: 9px 12px;
     background: rgba(245, 243, 239, 0.96);
     border: 1px solid rgba(28, 28, 30, 0.14);
@@ -132,7 +132,7 @@
     white-space: normal;
 }
 .spotFlip .spotCard { left: auto; right: 34px; transform: translateY(-50%) translateX(6px); }
-.spotLabel { font-family: var(--font-brand); font-size: 11px; font-weight: var(--brand-weight-display); letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.2; }
+.spotLabel { font-family: var(--font-brand); font-size: 11px; font-weight: var(--brand-weight-display); letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.2; white-space: nowrap; }
 .spotDetail { font-family: var(--font-brand); font-size: 12px; line-height: 1.45; color: rgba(28, 28, 30, 0.72); }
 .spot:hover .spotCard, .spot:focus-visible .spotCard { opacity: 1; transform: translateY(-50%) translateX(0); }
 .spot:hover .spotDot, .spot:focus-visible .spotDot { transform: scale(1.15); }
