@@ -49,7 +49,17 @@ describe("Team Hub dashboard catalog", () => {
         expect(byName["Backend Shopify Admin"]?.href).toContain("https://admin.shopify.com");
         expect(byName["Executive Hub"]?.href).toBe("/executive");
         expect(byName["Grace Workspace"]?.href).toBe("/grace-workspace");
-        expect(byName["B2B Portal Admin"]?.href).toBe("/portal");
+    });
+
+    it("never offers the customer portal to staff", () => {
+        // /portal is the CUSTOMER's surface. Staff hold no account on it, so
+        // listing it in the rail invited people to try a door that is not
+        // theirs — and implied the team administers customers from inside
+        // their own portal, which is not how any of it works. Staff manage
+        // wholesale customers from /team/portal-accounts and Shopify.
+        expect(tools.map((tool) => tool.href)).not.toContain("/portal");
+        expect(tools.map((tool) => tool.name)).not.toContain("B2B Portal Admin");
+        expect(tools.some((tool) => tool.href === "/team/portal-accounts")).toBe(true);
     });
 
     it("opens internal hubs in-place and marks third-party tools as external", () => {
@@ -59,7 +69,6 @@ describe("Team Hub dashboard catalog", () => {
         expect(internal).toEqual([
             "/team/resale-certificates",
             "/team/portal-accounts",
-            "/portal",
             "/team/products/new",
             "/team/asset-ledger",
             "/studio",
@@ -90,10 +99,21 @@ describe("Team Hub dashboard catalog", () => {
         expect(teamPreviewHref("/portal", true)).toBe("/portal");
     });
 
-    it("server-renders the tool cards instead of a client-only directory", () => {
+    it("renders every tool from the server, not from a client-only directory", () => {
+        // The bug this guards against is tools failing to appear at all. They
+        // now live in the rail rather than a card grid; the rail is a client
+        // component for its search box, but Next still server-renders its
+        // markup, so the links are in the HTML without JS. Verified against a
+        // running server: each tool name appears in the response body.
+        const rail = readFileSync(resolve(process.cwd(), "src/components/team/TeamHubRail.tsx"), "utf8");
+        expect(rail).toContain("{tool.name}");
+        expect(rail).toContain("groupTeamHubTools");
+
         const dashboard = readFileSync(resolve(process.cwd(), "src/components/team/TeamHubDashboard.tsx"), "utf8");
-        expect(dashboard).toContain('data-testid="team-hub-cards"');
-        expect(dashboard).toContain("{tool.name}");
+        expect(dashboard).toContain("TeamHubRail");
         expect(dashboard).not.toContain("TeamHubDirectory");
+        // The dashboard itself must stay a server component so the queue
+        // counts are read on the server and never shipped as a client fetch.
+        expect(dashboard).not.toContain('"use client"');
     });
 });

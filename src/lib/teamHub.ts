@@ -7,7 +7,11 @@ export const TEAM_HUB_SECTIONS = [
     {
         id: "customers",
         label: "Customers",
-        description: "Wholesale relationships and the storefront they buy from.",
+        // Staff manage wholesale customers from here and from Shopify. The
+        // customer portal itself is deliberately absent: it is the customer's
+        // surface, staff hold no account on it, and listing it invited people
+        // to try a door that is not theirs.
+        description: "Wholesale relationships, managed from the staff side.",
     },
     {
         id: "catalog",
@@ -61,14 +65,6 @@ export function buildTeamHubTools({ shopifyAdminHref, madisonStudioHref }: TeamH
             description: "Create and edit the accounts behind each wholesale customer — pricing tier, terms, billing email.",
             badge: "B2B",
             section: "operations",
-            quick: true,
-        },
-        {
-            name: "B2B Portal Admin",
-            href: "/portal",
-            description: "Customer accounts, draft quotes, and order tracking.",
-            badge: "B2B",
-            section: "customers",
             quick: true,
         },
         {

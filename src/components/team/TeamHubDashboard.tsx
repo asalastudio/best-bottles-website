@@ -1,73 +1,51 @@
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import BrandWordmark from "@/components/BrandWordmark";
-import { Card, CardContent } from "@/components/ui/card";
 import { PlatformStatusCard } from "@/components/team/PlatformStatusCard";
+import TeamHubRail from "@/components/team/TeamHubRail";
+import TeamHubToday from "@/components/team/TeamHubToday";
 import type { PlatformHealthSnapshot } from "@/lib/executive/platformHealth";
-import { groupTeamHubTools, teamPreviewHref, type TeamHubTool } from "@/lib/teamHub";
+import type { QueueItem } from "@/lib/team/queues";
+import { teamPreviewHref, type TeamHubTool } from "@/lib/teamHub";
 
 type TeamHubDashboardProps = {
     tools: TeamHubTool[];
     previewMode?: boolean;
     platformHealth: PlatformHealthSnapshot;
+    queueItems: QueueItem[];
+    /** href → number waiting, for the rail's counts. */
+    queueCounts: Record<string, number>;
 };
 
-function ToolCard({ tool, previewMode }: { tool: TeamHubTool; previewMode: boolean }) {
-    const href = teamPreviewHref(tool.href, previewMode);
-    const className =
-        "group flex min-h-40 flex-col border border-champagne/50 bg-linen px-5 py-5 shadow-[0_18px_45px_rgba(29,29,31,0.04)] transition duration-200 hover:-translate-y-0.5 hover:border-muted-gold/50 hover:shadow-[0_22px_60px_rgba(29,29,31,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold";
-
-    const body = (
-        <>
-            <Badge
-                variant="outline"
-                className="w-fit border-champagne/70 bg-bone px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-gold-dim"
-            >
-                {tool.badge}
-            </Badge>
-            <h3 className="mt-3 font-serif text-2xl font-semibold leading-tight text-obsidian">
-                {tool.name}
-            </h3>
-            <p className="mt-2 flex-1 text-sm leading-6 text-slate">{tool.description}</p>
-            <span className="mt-4 text-sm font-semibold text-obsidian transition-colors group-hover:text-muted-gold">
-                {tool.external ? "Open ↗" : "Open →"}
-            </span>
-        </>
-    );
-
-    if (tool.external) {
-        return (
-            <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
-                {body}
-            </a>
-        );
-    }
-
-    return (
-        <a href={href} className={className}>
-            {body}
-        </a>
-    );
-}
-
-export function TeamHubDashboard({ tools, previewMode = false, platformHealth }: TeamHubDashboardProps) {
+/**
+ * The Team Hub.
+ *
+ * Two panes: a rail that holds every tool, and a page about work rather than
+ * navigation. The previous version put fifteen tool cards down the middle,
+ * which meant the first thing a person saw each morning was a menu — and
+ * nothing at all about whether anything needed doing.
+ */
+export function TeamHubDashboard({
+    tools,
+    previewMode = false,
+    platformHealth,
+    queueItems,
+    queueCounts,
+}: TeamHubDashboardProps) {
     const quickActions = tools.filter((tool) => tool.quick);
-    const grouped = groupTeamHubTools(tools);
 
     return (
-        <main data-team-hub className="app-surface min-h-screen bg-bone px-5 py-8 sm:px-8 sm:py-10">
-            <div className="mx-auto max-w-6xl" data-testid="team-hub-dashboard">
-                <header className="mb-6 flex flex-col gap-4 border-b border-champagne/40 pb-6 lg:flex-row lg:items-end lg:justify-between">
-                    <div className="max-w-2xl">
-                        {/* The supplied wordmark, not the company name set as an
-                            eyebrow — the staff hub carries the same mark as the
-                            storefront and the client portal. */}
-                        <Link href="/" aria-label="Best Bottles home" className="mb-3 block">
-                            <BrandWordmark className="app-wordmark" />
-                        </Link>
-                        <div className="flex flex-wrap items-center gap-3">
-                            <h1 className="font-serif text-4xl leading-tight text-obsidian sm:text-5xl">
-                                Team Hub
+        <div
+            data-team-hub
+            className="app-surface flex min-h-screen flex-col lg:flex-row"
+            style={{ background: "var(--color-surface-sunken)" }}
+        >
+            <TeamHubRail tools={tools} previewMode={previewMode} counts={queueCounts} />
+
+            <main className="min-w-0 flex-1 px-5 py-8 sm:px-8 sm:py-10">
+                <div className="mx-auto max-w-5xl" data-testid="team-hub-dashboard">
+                    <header className="mb-8">
+                        <div className="flex flex-wrap items-baseline gap-3">
+                            <h1 className="font-serif text-4xl leading-tight text-obsidian sm:text-[44px]">
+                                Today
                             </h1>
                             {previewMode ? (
                                 <Badge
@@ -78,11 +56,44 @@ export function TeamHubDashboard({ tools, previewMode = false, platformHealth }:
                                 </Badge>
                             ) : null}
                         </div>
-                        <p className="mt-3 max-w-xl font-sans text-sm leading-6 text-slate">
-                            Operational home for queues, catalog truth, and the studios that keep Best Bottles consistent.
+                        <p className="mt-2.5 max-w-xl font-sans text-[14px] leading-6 text-slate">
+                            Queues, catalog truth, and the studios that keep Best Bottles consistent.
+                            Every tool is in the rail.
                         </p>
-                    </div>
-                    <p className="font-sans text-sm leading-6 text-slate lg:text-right">
+                    </header>
+
+                    <TeamHubToday items={queueItems} />
+
+                    <PlatformStatusCard snapshot={platformHealth} />
+
+                    {quickActions.length > 0 ? (
+                        <section aria-labelledby="team-hub-jump" className="mt-8">
+                            <h2
+                                id="team-hub-jump"
+                                className="mb-3 font-sans text-[11px] font-medium uppercase tracking-[0.18em] text-gold-dim"
+                            >
+                                Go straight to
+                            </h2>
+                            <div className="flex flex-wrap gap-2">
+                                {quickActions.map((tool) => (
+                                    <a
+                                        key={tool.href}
+                                        href={teamPreviewHref(tool.href, previewMode)}
+                                        className="rounded-full px-3.5 py-1.5 font-sans text-[13px] transition-colors hover:bg-travertine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
+                                        style={{
+                                            border: "1px solid var(--color-rule)",
+                                            background: "var(--color-surface)",
+                                            color: "var(--color-text-primary)",
+                                        }}
+                                    >
+                                        {tool.name}
+                                    </a>
+                                ))}
+                            </div>
+                        </section>
+                    ) : null}
+
+                    <p className="mt-10 font-sans text-[12.5px] leading-6 text-slate">
                         Need access to a tool? Contact Jordan{" "}
                         <a
                             href="mailto:jordan@asala.ai"
@@ -92,74 +103,8 @@ export function TeamHubDashboard({ tools, previewMode = false, platformHealth }:
                         </a>
                         .
                     </p>
-                </header>
-
-                <PlatformStatusCard snapshot={platformHealth} />
-
-                {quickActions.length > 0 ? (
-                    <section aria-labelledby="team-hub-today" className="mb-8">
-                        <div className="mb-3">
-                            <h2 id="team-hub-today" className="font-serif text-2xl font-semibold text-obsidian">
-                                Today
-                            </h2>
-                            <p className="mt-1 font-sans text-[13px] text-slate">
-                                Start with the work that usually needs a person first.
-                            </p>
-                        </div>
-                        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-                            {quickActions.map((tool) => (
-                                <a
-                                    key={tool.href}
-                                    href={teamPreviewHref(tool.href, previewMode)}
-                                    className="rounded-md border border-champagne/60 bg-linen px-4 py-3 text-left transition hover:border-muted-gold/50 hover:bg-travertine/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
-                                >
-                                    <span className="block text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-dim">
-                                        {tool.badge}
-                                    </span>
-                                    <span className="mt-1 block font-sans text-sm font-semibold text-obsidian">
-                                        {tool.name}
-                                    </span>
-                                </a>
-                            ))}
-                        </div>
-                    </section>
-                ) : null}
-
-                <div className="space-y-8" data-testid="team-hub-cards">
-                    {grouped.map((group) => (
-                        <section key={group.section.id} aria-labelledby={`team-hub-${group.section.id}`}>
-                            <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-end sm:justify-between">
-                                <div>
-                                    <h2
-                                        id={`team-hub-${group.section.id}`}
-                                        className="font-serif text-2xl font-semibold leading-tight text-obsidian"
-                                    >
-                                        {group.section.label}
-                                    </h2>
-                                    <p className="mt-1 max-w-2xl font-sans text-[13px] leading-5 text-slate">
-                                        {group.section.description}
-                                    </p>
-                                </div>
-                                <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-gold-dim">
-                                    {group.tools.length} {group.tools.length === 1 ? "tool" : "tools"}
-                                </p>
-                            </div>
-                            <div className="grid gap-3 md:grid-cols-2">
-                                {group.tools.map((tool) => (
-                                    <Card
-                                        key={tool.href}
-                                        className="border-0 bg-transparent p-0 shadow-none"
-                                    >
-                                        <CardContent className="p-0">
-                                            <ToolCard tool={tool} previewMode={previewMode} />
-                                        </CardContent>
-                                    </Card>
-                                ))}
-                            </div>
-                        </section>
-                    ))}
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
     );
 }

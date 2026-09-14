@@ -5,6 +5,7 @@ import { TeamHubDashboard } from "@/components/team/TeamHubDashboard";
 import { getPlatformHealthSnapshot } from "@/lib/executive/platformHealth";
 import { getUserEmailAddresses, hasTeamHubAccess } from "@/lib/teamAccess";
 import { buildTeamHubTools, getMadisonStudioHref, getShopifyAdminHref } from "@/lib/teamHub";
+import { buildQueueItems, getTeamHubQueues, type QueueItem } from "@/lib/team/queues";
 
 export const dynamic = "force-dynamic";
 
@@ -50,11 +51,30 @@ export default async function TeamPage({ searchParams }: TeamPageProps) {
         madisonStudioHref: getMadisonStudioHref(),
     });
 
+    // Local preview runs without Clerk, so the staff gate behind the queue
+    // query cannot pass. The hub still renders — with an empty band rather
+    // than invented numbers, which is the honest version of "not available".
+    let queueItems: QueueItem[] = [];
+    try {
+        queueItems = buildQueueItems(await getTeamHubQueues());
+    } catch (error) {
+        if (!previewMode) console.error("[team-hub] queue counts unavailable:", error);
+    }
+
+    // The rail shows a count against the tool that clears it, so several
+    // queues pointing at one destination add up there.
+    const queueCounts = queueItems.reduce<Record<string, number>>((counts, item) => {
+        counts[item.href] = (counts[item.href] ?? 0) + item.count;
+        return counts;
+    }, {});
+
     return (
         <TeamHubDashboard
             tools={tools}
             previewMode={previewMode}
             platformHealth={platformHealth}
+            queueItems={queueItems}
+            queueCounts={queueCounts}
         />
     );
 }
