@@ -39,6 +39,8 @@ export default defineSchema({
         shopifyUpdatedAt: v.optional(v.number()),                      // Last webhook sync timestamp
         sanitySlug: v.optional(v.union(v.string(), v.null())),
         heroImageUrl: v.optional(v.union(v.string(), v.null())),
+        /** Superseded Shopify CDN hero. See products.legacyShopifyImageUrl. */
+        legacyShopifyHeroImageUrl: v.optional(v.union(v.string(), v.null())),
         // Option A: applicator-first — unique applicator types in this group (e.g. ["Metal Roller", "Fine Mist Sprayer"])
         applicatorTypes: v.optional(v.array(v.string())),
         // Cached primary SKU — populated by backfill migration to eliminate N+1 on catalog page.
@@ -183,6 +185,12 @@ export default defineSchema({
         // when group.paperDollFamilyKey is set, but kept as a static gallery
         // alongside paper-doll for editorial/lifestyle views (Phase 2).
         imageUrlCapOff: v.optional(v.union(v.string(), v.null())),
+        // The Shopify CDN URL that `imageUrl` held before plate imagery was
+        // promoted into it. Kept, not discarded: those files are mostly deleted
+        // (a 40-URL probe returned 37 404s) but the value is the only record of
+        // what the row used to point at, and it makes the promotion reversible.
+        legacyShopifyImageUrl: v.optional(v.union(v.string(), v.null())),
+        legacyShopifyImageUrlCapOff: v.optional(v.union(v.string(), v.null())),
         productUrl: v.union(v.string(), v.null()),
         dataGrade: v.union(v.string(), v.null()),
         bottleCollection: v.union(v.string(), v.null()),
