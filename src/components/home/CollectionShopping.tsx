@@ -53,7 +53,8 @@ const DEMO_HOTSPOTS: NonNullable<HomepageData['heroHotspots']> = [
 export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSlides']; hotspots?:HomepageData['heroHotspots']}) {
     const [index,setIndex]=useState(0);
     const heroVideo=useRef<HTMLVideoElement>(null);
-    const fitmentHero=useSyncExternalStore(()=>()=>{}, ()=>new URLSearchParams(window.location.search).get('hero')==='fitments', ()=>false);
+    // The Empire niche scene is the hero (approved 2026-09-14). ?hero=water shows the previous water scene.
+    const fitmentHero=useSyncExternalStore(()=>()=>{}, ()=>new URLSearchParams(window.location.search).get('hero')!=='water', ()=>true);
     // ?hotspots=demo previews the hotspot design on the niche hero before any are placed in Sanity.
     const demoHotspots=useSyncExternalStore(()=>()=>{}, ()=>new URLSearchParams(window.location.search).get('hotspots')==='demo', ()=>false);
     const heroHotspots=hotspots?.length ? hotspots : demoHotspots ? DEMO_HOTSPOTS : undefined;
