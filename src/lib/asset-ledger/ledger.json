@@ -11802,7 +11802,7 @@
   "sourceHolds": 150,
   "note": "Current catalog snapshot; live legacy variant scope and physical bottle groups still require reconciliation."
  },
- "generatedAt": "2026-09-14T02:58:31.477Z",
+ "generatedAt": "2026-09-14T03:19:46.760Z",
  "deployment": "helpful-elephant-638",
  "sources": [
   {
@@ -11882,7 +11882,7 @@
   {
    "name": "plate.geometry",
    "path": "src/lib/asset-ledger/plate-geometry.json",
-   "generatedAt": "2026-09-14T02:55:44+00:00",
+   "generatedAt": "2026-09-14T03:17:17+00:00",
    "plates": 2075,
    "fetchFailures": 0,
    "measurementFailures": 0,
@@ -11897,19 +11897,12 @@
    "rows": 1876
   },
   {
-   "name": "boston.kit-release",
-   "path": "dist/paper-doll/boston-kit-release-2026-09-12/manifest.json",
-   "rows": 25,
-   "approved": 25,
-   "publicationAuthorized": true
-  },
-  {
    "name": "four-family.published-verification",
    "path": "docs/reviews/four-family-plates-2026-09-13/published-verification.json",
    "rows": 637,
    "hostedAssetsChecked": 1786,
    "deployment": "https://helpful-elephant-638.convex.cloud",
-   "manifest": "dist/paper-doll/four-family-plates-2026-09-13-release/manifest.json"
+   "manifest": "docs/reviews/four-family-plates-2026-09-13/release-manifest.json"
   },
   {
    "name": "plate.holds",
@@ -12238,7 +12231,8 @@
    "held": 0,
    "approvedAt": "2026-09-13T15:09:47.734Z",
    "publicationAuthorized": false,
-   "indexingAuthorized": false
+   "indexingAuthorized": false,
+   "published": false
   },
   {
    "name": "plate.release-lock",
@@ -12248,7 +12242,16 @@
    "held": 0,
    "approvedAt": "2026-09-13T19:17:45.194Z",
    "publicationAuthorized": false,
-   "indexingAuthorized": false
+   "indexingAuthorized": false,
+   "published": "2026-09-13T20:05:51.658Z"
+  },
+  {
+   "name": "plate.release-verified",
+   "release": "Four-family plate release 2026-09-13",
+   "rows": 637,
+   "promoted": 0,
+   "hostedAssetsChecked": 1786,
+   "verifiedAt": "2026-09-13T20:05:51.658Z"
   },
   {
    "name": "plate.release-lock",
@@ -12258,7 +12261,8 @@
    "held": 0,
    "approvedAt": "2026-09-14T01:30:06.561Z",
    "publicationAuthorized": false,
-   "indexingAuthorized": false
+   "indexingAuthorized": false,
+   "published": false
   },
   {
    "name": "plate.release-lock",
@@ -12268,7 +12272,16 @@
    "held": 1,
    "approvedAt": "2026-09-14T00:06:12.185Z",
    "publicationAuthorized": false,
-   "indexingAuthorized": false
+   "indexingAuthorized": false,
+   "published": "2026-09-14T03:15:16.460Z"
+  },
+  {
+   "name": "plate.release-verified",
+   "release": "tulip-plate-release-2026-09-13",
+   "rows": 59,
+   "promoted": 59,
+   "hostedAssetsChecked": 118,
+   "verifiedAt": "2026-09-14T03:15:16.460Z"
   }
  ],
  "states": {
@@ -169664,7 +169677,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -169723,7 +169742,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -169782,7 +169807,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -169830,7 +169861,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -169878,7 +169915,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -169926,7 +169969,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -169974,7 +170023,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170022,7 +170077,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170070,7 +170131,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170118,7 +170185,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170166,7 +170239,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170221,7 +170300,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170262,7 +170347,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170303,7 +170394,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170344,7 +170441,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170385,7 +170488,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170426,7 +170535,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170467,7 +170582,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170508,7 +170629,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170549,7 +170676,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170590,7 +170723,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170638,7 +170777,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170686,7 +170831,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170734,7 +170885,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170793,7 +170950,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170841,7 +171004,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170889,7 +171058,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170937,7 +171112,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -170985,7 +171166,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171033,7 +171220,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -171092,7 +171285,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171151,7 +171350,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171199,7 +171404,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171247,7 +171458,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171295,7 +171512,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171343,7 +171566,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171391,7 +171620,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -171439,7 +171674,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -171487,7 +171728,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -171535,7 +171782,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -171590,7 +171843,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171631,7 +171890,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171672,7 +171937,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171720,7 +171991,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171761,7 +172038,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171802,7 +172085,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171843,7 +172132,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171884,7 +172179,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171925,7 +172226,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -171966,7 +172273,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -172014,7 +172327,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -172062,7 +172381,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -172110,7 +172435,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -172158,7 +172489,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "held",
@@ -172217,7 +172554,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -172265,7 +172608,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -172313,7 +172662,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -172361,7 +172716,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -172409,7 +172770,13 @@
     "approval": null,
     "masterSourceRecorded": true,
     "checksPassed": true,
-    "complete": false
+    "complete": true,
+    "publishedVerification": {
+     "phase": "published",
+     "release": "tulip-plate-release-2026-09-13",
+     "verifiedAt": "2026-09-14T03:15:16.460Z",
+     "deployment": "https://helpful-elephant-638.convex.cloud"
+    }
    },
    "kit": {
     "state": "candidate",
@@ -237141,7 +237508,8 @@
    ],
    "held": [],
    "publicationAuthorized": false,
-   "indexingAuthorized": false
+   "indexingAuthorized": false,
+   "published": null
   },
   {
    "path": "docs/reviews/four-family-plates-2026-09-13/approved-lock.json",
@@ -237790,7 +238158,651 @@
    ],
    "held": [],
    "publicationAuthorized": false,
-   "indexingAuthorized": false
+   "indexingAuthorized": false,
+   "published": {
+    "verifiedAt": "2026-09-13T20:05:51.658Z",
+    "deployment": "https://helpful-elephant-638.convex.cloud",
+    "hostedAssetsChecked": 1786,
+    "skus": [
+     "GBCrcl100AnSpBlk",
+     "GBCrcl100AnSpGl",
+     "GBCrcl100AnSpIvyGl",
+     "GBCrcl100AnSpIvySl",
+     "GBCrcl100AnSpLvn",
+     "GBCrcl100AnSpMtSl",
+     "GBCrcl100AnSpPnk",
+     "GBCrcl100AnSpRed",
+     "GBCrcl100AnSpWht",
+     "GBCrcl100RdcrBlkLthr",
+     "GBCrcl100RdcrBrwnLthr",
+     "GBCrcl100RdcrIvyLthr",
+     "GBCrcl100RdcrLBrwnLthr",
+     "GBCrcl100RdcrMtSl",
+     "GBCrcl100RdcrMtSlTall",
+     "GBCrcl100RdcrPnkLthr",
+     "GBCrcl100RdcrShnBlk",
+     "GBCrcl100RdcrShnBlkTall",
+     "GBCrcl100RdcrShnGl",
+     "GBCrcl100RdcrShnSl",
+     "GBCrcl100RdcrWht",
+     "GBCrcl100SpryCu",
+     "GBCrcl100SpryMtGl",
+     "GBCrcl100SpryMtSl",
+     "GBCrcl100SpryShnBlk",
+     "GBCrcl100SpryShnGl",
+     "GBCrcl100SpryShnSl",
+     "GBCrcl15BlkSht",
+     "GBCrcl15Gl",
+     "GBCrcl15MtlRollBlkDot",
+     "GBCrcl15MtlRollBlkSh",
+     "GBCrcl15MtlRollCuMatt",
+     "GBCrcl15MtlRollGlMatt",
+     "GBCrcl15MtlRollGlSh",
+     "GBCrcl15MtlRollPinkDot",
+     "GBCrcl15MtlRollSlDot",
+     "GBCrcl15MtlRollSlMatt",
+     "GBCrcl15MtlRollSlSh",
+     "GBCrcl15RollBlkDot",
+     "GBCrcl15RollBlkSh",
+     "GBCrcl15RollCuMatt",
+     "GBCrcl15RollGlMatt",
+     "GBCrcl15RollGlSh",
+     "GBCrcl15RollPinkDot",
+     "GBCrcl15RollSlDot",
+     "GBCrcl15RollSlMatt",
+     "GBCrcl15RollSlSh",
+     "GBCrcl15Sl",
+     "GBCrcl15SpryBlkMatt",
+     "GBCrcl15SpryBlkSh",
+     "GBCrcl15SpryBluMatt",
+     "GBCrcl15SpryCuMatt",
+     "GBCrcl15SpryGlMatt",
+     "GBCrcl15SpryGlSh",
+     "GBCrcl15SprySlMatt",
+     "GBCrcl15SprySlSh",
+     "GBCrcl15WhtSht",
+     "GBCrcl30GlCap",
+     "GBCrcl30SlCap",
+     "GBCrcl50AnSpBlk",
+     "GBCrcl50AnSpGl",
+     "GBCrcl50AnSpIvyGl",
+     "GBCrcl50AnSpIvySl",
+     "GBCrcl50AnSpLvn",
+     "GBCrcl50AnSpMtSl",
+     "GBCrcl50AnSpPnk",
+     "GBCrcl50AnSpRed",
+     "GBCrcl50AnSpWht",
+     "GBCrcl50DrpCu",
+     "GBCrcl50DrpGl",
+     "GBCrcl50DrpSl",
+     "GBCrcl50RdcrBlkLthr",
+     "GBCrcl50RdcrBrwnLthr",
+     "GBCrcl50RdcrIvyLthr",
+     "GBCrcl50RdcrLBrwnLthr",
+     "GBCrcl50RdcrMtSl",
+     "GBCrcl50RdcrMtSlTall",
+     "GBCrcl50RdcrPnkLthr",
+     "GBCrcl50RdcrShnBlk",
+     "GBCrcl50RdcrShnBlkTall",
+     "GBCrcl50RdcrShnGl",
+     "GBCrcl50RdcrShnSl",
+     "GBCrcl50RdcrWht",
+     "GBCrcl50SpryCu",
+     "GBCrcl50SpryMtGl",
+     "GBCrcl50SpryMtSl",
+     "GBCrcl50SpryShnBlk",
+     "GBCrcl50SpryShnGl",
+     "GBCrcl50SpryShnSl",
+     "GBCrclFrst100AnSpBlk",
+     "GBCrclFrst100AnSpGl",
+     "GBCrclFrst100AnSpIvyGl",
+     "GBCrclFrst100AnSpIvySl",
+     "GBCrclFrst100AnSpLvn",
+     "GBCrclFrst100AnSpMtSl",
+     "GBCrclFrst100AnSpPnk",
+     "GBCrclFrst100AnSpRed",
+     "GBCrclFrst100AnSpWht",
+     "GBCrclFrst100RdcrBlkLthr",
+     "GBCrclFrst100RdcrBrwnLthr",
+     "GBCrclFrst100RdcrIvyLthr",
+     "GBCrclFrst100RdcrLBrwnLthr",
+     "GBCrclFrst100RdcrMtSl",
+     "GBCrclFrst100RdcrMtSlTall",
+     "GBCrclFrst100RdcrPnkLthr",
+     "GBCrclFrst100RdcrShnBlk",
+     "GBCrclFrst100RdcrShnBlkTall",
+     "GBCrclFrst100RdcrShnGl",
+     "GBCrclFrst100RdcrShnSl",
+     "GBCrclFrst100RdcrWht",
+     "GBCrclFrst50AnSpBlk",
+     "GBCrclFrst50AnSpGl",
+     "GBCrclFrst50AnSpIvyGl",
+     "GBCrclFrst50AnSpIvySl",
+     "GBCrclFrst50AnSpLvn",
+     "GBCrclFrst50AnSpMtSl",
+     "GBCrclFrst50AnSpPnk",
+     "GBCrclFrst50AnSpRed",
+     "GBCrclFrst50AnSpWht",
+     "GBCrclFrst50DrpCu",
+     "GBCrclFrst50DrpGl",
+     "GBCrclFrst50DrpSl",
+     "GBCrclFrst50RdcrBlkLthr",
+     "GBCrclFrst50RdcrBrwnLthr",
+     "GBCrclFrst50RdcrIvyLthr",
+     "GBCrclFrst50RdcrLBrwnLthr",
+     "GBCrclFrst50RdcrMtSl",
+     "GBCrclFrst50RdcrPnkLthr",
+     "GBCrclFrst50RdcrShnBlk",
+     "GBCrclFrst50RdcrShnBlkTall",
+     "GBCrclFrst50RdcrShnGl",
+     "GBCrclFrst50RdcrShnSl",
+     "GBCrclFrst50RdcrWht",
+     "GBCrclFrst50SpryCu",
+     "GBCrclFrst50SpryMtGl",
+     "GBCrclFrst50SpryMtSl",
+     "GBCrclFrst50SpryShnBlk",
+     "GBCrclFrst50SpryShnGl",
+     "GBCrclFrst50SpryShnSl",
+     "GBDiva100AnSpBlk",
+     "GBDiva100AnSpGl",
+     "GBDiva100AnSpIvyGl",
+     "GBDiva100AnSpIvySl",
+     "GBDiva100AnSpLvn",
+     "GBDiva100AnSpMtSl",
+     "GBDiva100AnSpPnk",
+     "GBDiva100AnSpRed",
+     "GBDiva100AnSpTslBlk",
+     "GBDiva100AnSpTslGl",
+     "GBDiva100AnSpTslIvyGl",
+     "GBDiva100AnSpTslIvySl",
+     "GBDiva100AnSpTslLvn",
+     "GBDiva100AnSpTslMtSl",
+     "GBDiva100AnSpTslPnk",
+     "GBDiva100AnSpTslRed",
+     "GBDiva100AnSpTslWht",
+     "GBDiva100AnSpWht",
+     "GBDiva100RdcrBlkLthr",
+     "GBDiva100RdcrBrwnLthr",
+     "GBDiva100RdcrIvyLthr",
+     "GBDiva100RdcrLBrwnLthr",
+     "GBDiva100RdcrMtSl",
+     "GBDiva100RdcrMtSlTall",
+     "GBDiva100RdcrPnkLthr",
+     "GBDiva100RdcrShnBlkTall",
+     "GBDiva100RdcrShnGl",
+     "GBDiva100RdcrShnSl",
+     "GBDiva100RdcrWht",
+     "GBDiva30AnSpBlk",
+     "GBDiva30AnSpGl",
+     "GBDiva30AnSpIvyGl",
+     "GBDiva30AnSpIvySl",
+     "GBDiva30AnSpLvn",
+     "GBDiva30AnSpMtSl",
+     "GBDiva30AnSpPnk",
+     "GBDiva30AnSpRed",
+     "GBDiva30AnSpWht",
+     "GBDiva30RdcrBlkLthr",
+     "GBDiva30RdcrBrwnLthr",
+     "GBDiva30RdcrIvyLthr",
+     "GBDiva30RdcrLBrwnLthr",
+     "GBDiva30RdcrMtSl",
+     "GBDiva30RdcrMtSlTall",
+     "GBDiva30RdcrPnkLthr",
+     "GBDiva30RdcrShnBlk",
+     "GBDiva30RdcrShnBlkTall",
+     "GBDiva30RdcrShnGl",
+     "GBDiva30RdcrShnSl",
+     "GBDiva30RdcrWht",
+     "GBDiva46AnSpBlk",
+     "GBDiva46AnSpBlkRng",
+     "GBDiva46AnSpGl",
+     "GBDiva46AnSpIvyGl",
+     "GBDiva46AnSpIvySl",
+     "GBDiva46AnSpIvySlRng",
+     "GBDiva46AnSpLvn",
+     "GBDiva46AnSpLvnRng",
+     "GBDiva46AnSpMtSl",
+     "GBDiva46AnSpPnk",
+     "GBDiva46AnSpRed",
+     "GBDiva46AnSpRedRng",
+     "GBDiva46AnSpTslBlkRng",
+     "GBDiva46AnSpTslGl",
+     "GBDiva46AnSpTslIvyGl",
+     "GBDiva46AnSpTslIvySl",
+     "GBDiva46AnSpTslIvySlRng",
+     "GBDiva46AnSpTslLvn",
+     "GBDiva46AnSpTslLvnRng",
+     "GBDiva46AnSpTslMtSl",
+     "GBDiva46AnSpTslPnk",
+     "GBDiva46AnSpTslRedRng",
+     "GBDiva46AnSpTslWht",
+     "GBDiva46AnSpTslWhtRng",
+     "GBDiva46AnSpWht",
+     "GBDiva46AnSpWhtRng",
+     "GBDiva46DrpCu",
+     "GBDiva46DrpGl",
+     "GBDiva46DrpSl",
+     "GBDiva46RdcrBlkLthr",
+     "GBDiva46RdcrBrwnLthr",
+     "GBDiva46RdcrIvyLthr",
+     "GBDiva46RdcrLBrwnLthr",
+     "GBDiva46RdcrMtSl",
+     "GBDiva46RdcrMtSlTall",
+     "GBDiva46RdcrPnkLthr",
+     "GBDiva46RdcrShnBlk",
+     "GBDiva46RdcrShnBlkTall",
+     "GBDiva46RdcrShnGl",
+     "GBDiva46RdcrShnSl",
+     "GBDiva46RdcrWht",
+     "GBDiva46SpryCu",
+     "GBDiva46SpryMtGl",
+     "GBDiva46SpryMtSl",
+     "GBDiva46SpryShnBlk",
+     "GBDiva46SpryShnGl",
+     "GBDiva46SpryShnSl",
+     "GBDivaFrst46AnSpBlk",
+     "GBDivaFrst46AnSpGl",
+     "GBDivaFrst46AnSpIvyGl",
+     "GBDivaFrst46AnSpIvySl",
+     "GBDivaFrst46AnSpLvn",
+     "GBDivaFrst46AnSpMtSl",
+     "GBDivaFrst46AnSpPnk",
+     "GBDivaFrst46AnSpRed",
+     "GBDivaFrst46AnSpTslGl",
+     "GBDivaFrst46AnSpTslIvyGl",
+     "GBDivaFrst46AnSpTslIvySl",
+     "GBDivaFrst46AnSpTslLvn",
+     "GBDivaFrst46AnSpTslPnk",
+     "GBDivaFrst46AnSpTslWht",
+     "GBDivaFrst46AnSpWht",
+     "GBDivaFrst46DrpCu",
+     "GBDivaFrst46DrpGl",
+     "GBDivaFrst46DrpSl",
+     "GBDivaFrst46RdcrBlkLthr",
+     "GBDivaFrst46RdcrBrwnLthr",
+     "GBDivaFrst46RdcrIvyLthr",
+     "GBDivaFrst46RdcrLBrwnLthr",
+     "GBDivaFrst46RdcrMtSl",
+     "GBDivaFrst46RdcrMtSlTall",
+     "GBDivaFrst46RdcrPnkLthr",
+     "GBDivaFrst46RdcrShnBlk",
+     "GBDivaFrst46RdcrShnBlkTall",
+     "GBDivaFrst46RdcrShnGl",
+     "GBDivaFrst46RdcrShnSl",
+     "GBDivaFrst46RdcrWht",
+     "GBDivaFrst46SpryCu",
+     "GBDivaFrst46SpryMtGl",
+     "GBDivaFrst46SpryMtSl",
+     "GBDivaFrst46SpryShnBlk",
+     "GBDivaFrst46SpryShnGl",
+     "GBDivaFrst46SpryShnSl",
+     "GBElg100AnSpBlk",
+     "GBElg100AnSpGl",
+     "GBElg100AnSpIvyGl",
+     "GBElg100AnSpIvySl",
+     "GBElg100AnSpLvn",
+     "GBElg100AnSpMtSl",
+     "GBElg100AnSpPnk",
+     "GBElg100AnSpRed",
+     "GBElg100AnSpWht",
+     "GBElg100RdcrBlkLthr",
+     "GBElg100RdcrBrwnLthr",
+     "GBElg100RdcrIvyLthr",
+     "GBElg100RdcrLBrwnLthr",
+     "GBElg100RdcrMtSl",
+     "GBElg100RdcrMtSlTall",
+     "GBElg100RdcrPnkLthr",
+     "GBElg100RdcrShnBlk",
+     "GBElg100RdcrShnBlkTall",
+     "GBElg100RdcrShnGl",
+     "GBElg100RdcrShnSl",
+     "GBElg100RdcrWht",
+     "GBElg100SpryCu",
+     "GBElg100SpryMtGl",
+     "GBElg100SpryMtSl",
+     "GBElg100SpryShnBlk",
+     "GBElg100SpryShnGl",
+     "GBElg100SpryShnSl",
+     "GBElg15MtlRollBlkDot",
+     "GBElg15RollBlkDot",
+     "GBElg15RollBlkSh",
+     "GBElg15RollCuMatt",
+     "GBElg15RollGlMatt",
+     "GBElg15RollGlSh",
+     "GBElg15RollPinkDot",
+     "GBElg15RollSlDot",
+     "GBElg15RollSlMatt",
+     "GBElg15RollSlSh",
+     "GBElg15SpryCuMatt",
+     "GBElg30GlCap",
+     "GBElg30SlCap",
+     "GBElg30SpryShGl",
+     "GBElg60AnSpBlk",
+     "GBElg60AnSpGl",
+     "GBElg60AnSpIvyGl",
+     "GBElg60AnSpIvySl",
+     "GBElg60AnSpLvn",
+     "GBElg60AnSpMtSl",
+     "GBElg60AnSpPnk",
+     "GBElg60AnSpRed",
+     "GBElg60AnSpTslBlk",
+     "GBElg60AnSpTslGl",
+     "GBElg60AnSpTslIvyGl",
+     "GBElg60AnSpTslIvySl",
+     "GBElg60AnSpTslLvn",
+     "GBElg60AnSpTslMtSl",
+     "GBElg60AnSpTslPnk",
+     "GBElg60AnSpTslRed",
+     "GBElg60AnSpTslWht",
+     "GBElg60AnSpWht",
+     "GBElg60DrpCu",
+     "GBElg60DrpGl",
+     "GBElg60DrpSl",
+     "GBElg60RdcrBlkLthr",
+     "GBElg60RdcrBrwnLthr",
+     "GBElg60RdcrIvyLthr",
+     "GBElg60RdcrLBrwnLthr",
+     "GBElg60RdcrMtSl",
+     "GBElg60RdcrMtSlTall",
+     "GBElg60RdcrPnkLthr",
+     "GBElg60RdcrShnBlk",
+     "GBElg60RdcrShnBlkTall",
+     "GBElg60RdcrShnGl",
+     "GBElg60RdcrShnSl",
+     "GBElg60RdcrWht",
+     "GBElg60SpryCu",
+     "GBElg60SpryMtGl",
+     "GBElg60SpryMtSl",
+     "GBElg60SpryShnBlk",
+     "GBElg60SpryShnGl",
+     "GBElg60SpryShnSl",
+     "GBElgFrst100AnSpBlk",
+     "GBElgFrst100AnSpGl",
+     "GBElgFrst100AnSpIvyGl",
+     "GBElgFrst100AnSpIvySl",
+     "GBElgFrst100AnSpLvn",
+     "GBElgFrst100AnSpMtSl",
+     "GBElgFrst100AnSpPnk",
+     "GBElgFrst100AnSpRed",
+     "GBElgFrst100AnSpWht",
+     "GBElgFrst100RdcrBlkLthr",
+     "GBElgFrst100RdcrBrwnLthr",
+     "GBElgFrst100RdcrIvyLthr",
+     "GBElgFrst100RdcrLBrwnLthr",
+     "GBElgFrst100RdcrMtSlTall",
+     "GBElgFrst100RdcrPnkLthr",
+     "GBElgFrst100RdcrShnBlk",
+     "GBElgFrst100RdcrShnBlkTall",
+     "GBElgFrst100RdcrShnGl",
+     "GBElgFrst100RdcrShnSl",
+     "GBElgFrst100RdcrWht",
+     "GBElgFrst15MtlRollBlkDot",
+     "GBElgFrst15RollBlkDot",
+     "GBElgFrst15SpryCuMatt",
+     "GBElgFrst15WhtSht",
+     "GBElgFrst30GlCap",
+     "GBElgFrst30SlCap",
+     "GBElgFrst60AnSpBlk",
+     "GBElgFrst60AnSpGl",
+     "GBElgFrst60AnSpIvyGl",
+     "GBElgFrst60AnSpIvySl",
+     "GBElgFrst60AnSpLvn",
+     "GBElgFrst60AnSpMtSl",
+     "GBElgFrst60AnSpPnk",
+     "GBElgFrst60AnSpRed",
+     "GBElgFrst60AnSpTslBlk",
+     "GBElgFrst60AnSpTslGl",
+     "GBElgFrst60AnSpTslIvyGl",
+     "GBElgFrst60AnSpTslIvySl",
+     "GBElgFrst60AnSpTslLvn",
+     "GBElgFrst60AnSpTslMtSl",
+     "GBElgFrst60AnSpTslPnk",
+     "GBElgFrst60AnSpTslRed",
+     "GBElgFrst60AnSpTslWht",
+     "GBElgFrst60AnSpWht",
+     "GBElgFrst60DrpCu",
+     "GBElgFrst60DrpGl",
+     "GBElgFrst60DrpSl",
+     "GBElgFrst60RdcrBlkLthr",
+     "GBElgFrst60RdcrBrwnLthr",
+     "GBElgFrst60RdcrIvyLthr",
+     "GBElgFrst60RdcrLBrwnLthr",
+     "GBElgFrst60RdcrMtSl",
+     "GBElgFrst60RdcrMtSlTall",
+     "GBElgFrst60RdcrPnkLthr",
+     "GBElgFrst60RdcrShnBlk",
+     "GBElgFrst60RdcrShnBlkTall",
+     "GBElgFrst60RdcrShnGl",
+     "GBElgFrst60RdcrShnSl",
+     "GBElgFrst60RdcrWht",
+     "GBSleek5RollSlSh",
+     "GBSleek8BlkSht",
+     "GBSleek8Gl",
+     "GBSleek8MtlRollBlkDot",
+     "GBSleek8MtlRollBlkSh",
+     "GBSleek8MtlRollCuMatt",
+     "GBSleek8MtlRollGlMatt",
+     "GBSleek8MtlRollGlSh",
+     "GBSleek8MtlRollPinkDot",
+     "GBSleek8MtlRollSlDot",
+     "GBSleek8MtlRollSlMatt",
+     "GBSleek8MtlRollSlSh",
+     "GBSleek8RollBlkDot",
+     "GBSleek8RollBlkSh",
+     "GBSleek8RollCuMatt",
+     "GBSleek8RollGlMatt",
+     "GBSleek8RollGlSh",
+     "GBSleek8RollPinkDot",
+     "GBSleek8RollSlDot",
+     "GBSleek8RollSlMatt",
+     "GBSleek8RollSlSh",
+     "GBSleek8Sl",
+     "GBSleek8SpryBlkMatt",
+     "GBSleek8SpryBlkSh",
+     "GBSleek8SpryBluMatt",
+     "GBSleek8SpryCuMatt",
+     "GBSleek8SpryGlMatt",
+     "GBSleek8SpryGlSh",
+     "GBSleek8SprySlMatt",
+     "GBSleek8SprySlSh",
+     "GBSleek8WhtSht",
+     "GBSlk100AnSpBlk",
+     "GBSlk100AnSpGl",
+     "GBSlk100AnSpIvyGl",
+     "GBSlk100AnSpIvySl",
+     "GBSlk100AnSpLvn",
+     "GBSlk100AnSpMtSl",
+     "GBSlk100AnSpPnk",
+     "GBSlk100AnSpRed",
+     "GBSlk100AnSpTslBlk",
+     "GBSlk100AnSpTslGl",
+     "GBSlk100AnSpTslIvyGl",
+     "GBSlk100AnSpTslIvySl",
+     "GBSlk100AnSpTslLvn",
+     "GBSlk100AnSpTslMtSl",
+     "GBSlk100AnSpTslPnk",
+     "GBSlk100AnSpTslRed",
+     "GBSlk100AnSpTslWht",
+     "GBSlk100AnSpWht",
+     "GBSlk100RdcrBlkLthr",
+     "GBSlk100RdcrBrwnLthr",
+     "GBSlk100RdcrIvyLthr",
+     "GBSlk100RdcrLBrwnLthr",
+     "GBSlk100RdcrMtSl",
+     "GBSlk100RdcrMtSlTall",
+     "GBSlk100RdcrPnkLthr",
+     "GBSlk100RdcrShnBlk",
+     "GBSlk100RdcrShnBlkTall",
+     "GBSlk100RdcrShnGl",
+     "GBSlk100RdcrShnSl",
+     "GBSlk100RdcrWht",
+     "GBSlk100SpryCu",
+     "GBSlk100SpryMtGl",
+     "GBSlk100SpryMtSl",
+     "GBSlk100SpryShnBlk",
+     "GBSlk100SpryShnGl",
+     "GBSlk100SpryShnSl",
+     "GBSlk30AnSpBlk",
+     "GBSlk30AnSpGl",
+     "GBSlk30AnSpIvyGl",
+     "GBSlk30AnSpIvySl",
+     "GBSlk30AnSpLvn",
+     "GBSlk30AnSpMtSl",
+     "GBSlk30AnSpPnk",
+     "GBSlk30AnSpRed",
+     "GBSlk30AnSpWht",
+     "GBSlk30DrpCu",
+     "GBSlk30DrpGl",
+     "GBSlk30DrpSl",
+     "GBSlk30RdcrBlkLthr",
+     "GBSlk30RdcrBrwnLthr",
+     "GBSlk30RdcrIvyLthr",
+     "GBSlk30RdcrLBrwnLthr",
+     "GBSlk30RdcrMtSl",
+     "GBSlk30RdcrMtSlTall",
+     "GBSlk30RdcrPnkLthr",
+     "GBSlk30RdcrShnBlk",
+     "GBSlk30RdcrShnBlkTall",
+     "GBSlk30RdcrShnSl",
+     "GBSlk30RdcrWht",
+     "GBSlk30SpryCu",
+     "GBSlk30SpryMtGl",
+     "GBSlk30SpryMtSl",
+     "GBSlk30SpryShnBlk",
+     "GBSlk30SpryShnGl",
+     "GBSlk30SpryShnSl",
+     "GBSlk50AnSpBlk",
+     "GBSlk50AnSpGl",
+     "GBSlk50AnSpIvyGl",
+     "GBSlk50AnSpIvySl",
+     "GBSlk50AnSpLvn",
+     "GBSlk50AnSpMtSl",
+     "GBSlk50AnSpPnk",
+     "GBSlk50AnSpRed",
+     "GBSlk50AnSpTslBlk",
+     "GBSlk50AnSpTslGl",
+     "GBSlk50AnSpTslIvyGl",
+     "GBSlk50AnSpTslIvySl",
+     "GBSlk50AnSpTslLvn",
+     "GBSlk50AnSpTslMtSl",
+     "GBSlk50AnSpTslPnk",
+     "GBSlk50AnSpTslRed",
+     "GBSlk50AnSpTslWht",
+     "GBSlk50AnSpWht",
+     "GBSlk50RdcrBlkLthr",
+     "GBSlk50RdcrBrwnLthr",
+     "GBSlk50RdcrIvyLthr",
+     "GBSlk50RdcrMtSl",
+     "GBSlk50RdcrMtSlTall",
+     "GBSlk50RdcrPnkLthr",
+     "GBSlk50RdcrShnBlk",
+     "GBSlk50RdcrShnBlkTall",
+     "GBSlk50RdcrShnGl",
+     "GBSlk50RdcrShnSl",
+     "GBSlk50RdcrWht",
+     "GBSlk50SpryCu",
+     "GBSlk50SpryMtGl",
+     "GBSlk50SpryMtSl",
+     "GBSlk50SpryShnBlk",
+     "GBSlk50SpryShnGl",
+     "GBSlk50SpryShnSl",
+     "LBCrcl100LtnClOvrCap",
+     "LBCrcl100LtnCu",
+     "LBCrcl100LtnMtGl",
+     "LBCrcl100LtnMtSl",
+     "LBCrcl100LtnShnBlk",
+     "LBCrcl100LtnShnGl",
+     "LBCrcl100LtnShnSl",
+     "LBCrcl50LtnClOvrCap",
+     "LBCrcl50LtnCu",
+     "LBCrcl50LtnMtGl",
+     "LBCrcl50LtnMtSl",
+     "LBCrcl50LtnShnBlk",
+     "LBCrcl50LtnShnGl",
+     "LBCrcl50LtnShnSl",
+     "LBCrclFrst100LtnClOvrCap",
+     "LBCrclFrst100LtnMtSl",
+     "LBCrclFrst100LtnShnBlk",
+     "LBCrclFrst100LtnShnGl",
+     "LBCrclFrst100LtnShnSl",
+     "LBCrclFrst50LtnClOvrCap",
+     "LBCrclFrst50LtnCu",
+     "LBCrclFrst50LtnMtGl",
+     "LBCrclFrst50LtnMtSl",
+     "LBCrclFrst50LtnShnBlk",
+     "LBCrclFrst50LtnShnGl",
+     "LBCrclFrst50LtnShnSl",
+     "LBDiva100LtnCu",
+     "LBDiva100LtnMtGl",
+     "LBDiva100LtnMtSl",
+     "LBDiva100LtnShnBlk",
+     "LBDiva100LtnShnGl",
+     "LBDiva100LtnShnSl",
+     "LBDiva30LtnMtGl",
+     "LBDiva30LtnMtSl",
+     "LBDiva30LtnShnBlk",
+     "LBDiva30LtnShnGl",
+     "LBDiva30LtnShnSl",
+     "LBDiva46LtnClOvrCap",
+     "LBDiva46LtnCu",
+     "LBDiva46LtnMtGl",
+     "LBDiva46LtnMtSl",
+     "LBDiva46LtnShnBlk",
+     "LBDiva46LtnShnGl",
+     "LBDiva46LtnShnSl",
+     "LBDivaFrst46LtnClOvrCap",
+     "LBDivaFrst46LtnCu",
+     "LBDivaFrst46LtnMtGl",
+     "LBDivaFrst46LtnMtSl",
+     "LBDivaFrst46LtnShnBlk",
+     "LBDivaFrst46LtnShnGl",
+     "LBDivaFrst46LtnShnSl",
+     "LBElg100LtnClOvrCap",
+     "LBElg100LtnCu",
+     "LBElg100LtnMtGl",
+     "LBElg100LtnMtSl",
+     "LBElg100LtnShnBlk",
+     "LBElg100LtnShnGl",
+     "LBElg100LtnShnSl",
+     "LBElg60LtnClrOvrCap",
+     "LBElg60LtnCu",
+     "LBElg60LtnMtGl",
+     "LBElg60LtnMtSl",
+     "LBElg60LtnShnBlk",
+     "LBElg60LtnShnGl",
+     "LBElg60LtnShnSl",
+     "LBElgFrst100LtnShnBlk",
+     "LBElgFrst100LtnShnGl",
+     "LBElgFrst100LtnShnSl",
+     "LBElgFrst60LtnMtGl",
+     "LBElgFrst60LtnShnBlk",
+     "LBElgFrst60LtnShnGl",
+     "LBSlk100LtnClOvrCap",
+     "LBSlk100LtnCu",
+     "LBSlk100LtnMtGl",
+     "LBSlk100LtnMtSl",
+     "LBSlk100LtnShnBlk",
+     "LBSlk100LtnShnGl",
+     "LBSlk100LtnShnSl",
+     "LBSlk100WhtRectClOverCap",
+     "LBSlk30LtnClOvrCap",
+     "LBSlk30LtnCu",
+     "LBSlk30LtnMtGl",
+     "LBSlk30LtnMtSl",
+     "LBSlk30LtnShnBlk",
+     "LBSlk30LtnShnGl",
+     "LBSlk30LtnShnSl",
+     "LBSlk30WhtRectClOverCap",
+     "LBSlk50LtnClOvrCap",
+     "LBSlk50LtnCu",
+     "LBSlk50LtnMtGl",
+     "LBSlk50LtnMtSl",
+     "LBSlk50LtnShnBlk",
+     "LBSlk50LtnShnGl",
+     "LBSlk50LtnShnSl",
+     "LBSlk50WhtRectClOverCap"
+    ]
+   }
   },
   {
    "path": "docs/reviews/missing-plate-acquisition-2026-09-13/approved-lock.json",
@@ -237876,7 +238888,8 @@
    ],
    "held": [],
    "publicationAuthorized": false,
-   "indexingAuthorized": false
+   "indexingAuthorized": false,
+   "published": null
   },
   {
    "path": "docs/reviews/tulip-plate-release-2026-09-13/approved-lock.json",
@@ -237952,7 +238965,73 @@
     }
    ],
    "publicationAuthorized": false,
-   "indexingAuthorized": false
+   "indexingAuthorized": false,
+   "published": {
+    "verifiedAt": "2026-09-14T03:15:16.460Z",
+    "deployment": "https://helpful-elephant-638.convex.cloud",
+    "hostedAssetsChecked": 118,
+    "skus": [
+     "GBTulip6BlkSht",
+     "GBTulip6Gl",
+     "GBTulip6MtlRollBlkDot",
+     "GBTulip6MtlRollBlkSh",
+     "GBTulip6MtlRollCuMatt",
+     "GBTulip6MtlRollGlMatt",
+     "GBTulip6MtlRollGlSh",
+     "GBTulip6MtlRollPinkDot",
+     "GBTulip6MtlRollSlDot",
+     "GBTulip6MtlRollSlMatt",
+     "GBTulip6MtlRollSlSh",
+     "GBTulip6RollBlkDot",
+     "GBTulip6RollBlkSh",
+     "GBTulip6RollCuMatt",
+     "GBTulip6RollGlMatt",
+     "GBTulip6RollGlSh",
+     "GBTulip6RollPinkDot",
+     "GBTulip6RollSlDot",
+     "GBTulip6RollSlMatt",
+     "GBTulip6RollSlSh",
+     "GBTulip6Sl",
+     "GBTulip6SpryBlkSh",
+     "GBTulip6SpryBluMatt",
+     "GBTulip6SpryCuMatt",
+     "GBTulip6SpryGlMatt",
+     "GBTulip6SpryGlSh",
+     "GBTulip6SprySlMatt",
+     "GBTulip6SprySlSh",
+     "GBTulip6WhtSht",
+     "GBTulipAmb5BlkSht",
+     "GBTulipAmb5Gl",
+     "GBTulipAmb5MtlRollBlkDot",
+     "GBTulipAmb5MtlRollBlkSh",
+     "GBTulipAmb5MtlRollCuMatt",
+     "GBTulipAmb5MtlRollGlMatt",
+     "GBTulipAmb5MtlRollGlSh",
+     "GBTulipAmb5MtlRollPinkDot",
+     "GBTulipAmb5MtlRollSlDot",
+     "GBTulipAmb5MtlRollSlMatt",
+     "GBTulipAmb5MtlRollSlSh",
+     "GBTulipAmb5RollBlkDot",
+     "GBTulipAmb5RollBlkSh",
+     "GBTulipAmb5RollCuMatt",
+     "GBTulipAmb5RollGlMatt",
+     "GBTulipAmb5RollGlSh",
+     "GBTulipAmb5RollPinkDot",
+     "GBTulipAmb5RollSlDot",
+     "GBTulipAmb5RollSlMatt",
+     "GBTulipAmb5RollSlSh",
+     "GBTulipAmb5Sl",
+     "GBTulipAmb5SpryBlkMatt",
+     "GBTulipAmb5SpryBlkSh",
+     "GBTulipAmb5SpryBluMatt",
+     "GBTulipAmb5SpryCuMatt",
+     "GBTulipAmb5SpryGlMatt",
+     "GBTulipAmb5SpryGlSh",
+     "GBTulipAmb5SprySlMatt",
+     "GBTulipAmb5SprySlSh",
+     "GBTulipAmb5WhtSht"
+    ]
+   }
   }
  ],
  "platePlan": {
@@ -238029,8 +239108,8 @@
   },
   "counts": {
    "total": 2183,
-   "complete": 1607,
-   "release": 133,
+   "complete": 1666,
+   "release": 74,
    "review": 0,
    "reconcile": 294,
    "missing": 149
@@ -238200,8 +239279,8 @@
    {
     "family": "Tulip",
     "total": 60,
-    "complete": 0,
-    "release": 59,
+    "complete": 59,
+    "release": 0,
     "review": 0,
     "reconcile": 0,
     "missing": 1,
@@ -295399,9 +296478,9 @@
     "productGroupId": "kh717xh4kg9gcrqzrt8bbwdvqs8dqka9",
     "groupSlug": "tulip-6ml-clear-13-415",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6BlkSht/eae9e1d8a4a1cbd4255219093fbeccbf092d3100fe7c57eb1966cfe8f6329058.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "eae9e1d8a4a1cbd4255219093fbeccbf092d3100fe7c57eb1966cfe8f6329058",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295435,9 +296514,9 @@
     "productGroupId": "kh717xh4kg9gcrqzrt8bbwdvqs8dqka9",
     "groupSlug": "tulip-6ml-clear-13-415",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6Gl/986da8a9387a6c532fa9ecfaba74fc4bf9cf7cbc17c56160ef39526015f15daa.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "986da8a9387a6c532fa9ecfaba74fc4bf9cf7cbc17c56160ef39526015f15daa",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295471,9 +296550,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollBlkDot/b0b503098abe7f35732119f2780a0c10038438c1e007f3f53ba123e31239c24d.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "b0b503098abe7f35732119f2780a0c10038438c1e007f3f53ba123e31239c24d",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295507,9 +296586,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollBlkSh/7f55232cd39030d21928a54362acc27846fdb84ce3bf680730c658687f1ebf0e.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "7f55232cd39030d21928a54362acc27846fdb84ce3bf680730c658687f1ebf0e",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295543,9 +296622,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollCuMatt/dc3df6b2b0452ea03e535984a3ed58120703ece03d2ebf55b304843dece5450e.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "dc3df6b2b0452ea03e535984a3ed58120703ece03d2ebf55b304843dece5450e",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295579,9 +296658,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollGlMatt/20304a9e325063bcbb006fe10543d34a35d3ea1452a74eb577c8a03db940190c.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "20304a9e325063bcbb006fe10543d34a35d3ea1452a74eb577c8a03db940190c",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295615,9 +296694,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollGlSh/0a97507a8b614088971e2ce752cd7c19119fd16ecf5bb378b699ea8e7e7f0bd8.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "0a97507a8b614088971e2ce752cd7c19119fd16ecf5bb378b699ea8e7e7f0bd8",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295651,9 +296730,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollPinkDot/8601f71735078bf5a4d6b2fd9f02976fb05f632787d55bea4795b13c779ede96.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "8601f71735078bf5a4d6b2fd9f02976fb05f632787d55bea4795b13c779ede96",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295687,9 +296766,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollSlDot/c2a34311d8d7665e379f044946e4133b7f8204b450b66d5713f1eb287f2519c6.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "c2a34311d8d7665e379f044946e4133b7f8204b450b66d5713f1eb287f2519c6",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295723,9 +296802,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollSlMatt/0a46890661c3a3788bed12177de468d7d74d7a2aa002232e493694309db89162.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "0a46890661c3a3788bed12177de468d7d74d7a2aa002232e493694309db89162",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295759,9 +296838,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6MtlRollSlSh/c2419a8272b020611a97e8a604bcb955b31e8652f0338c9c73650cc250df2fdc.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "c2419a8272b020611a97e8a604bcb955b31e8652f0338c9c73650cc250df2fdc",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295795,9 +296874,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollBlkDot/b0b503098abe7f35732119f2780a0c10038438c1e007f3f53ba123e31239c24d.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "b0b503098abe7f35732119f2780a0c10038438c1e007f3f53ba123e31239c24d",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295831,9 +296910,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollBlkSh/7f55232cd39030d21928a54362acc27846fdb84ce3bf680730c658687f1ebf0e.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "7f55232cd39030d21928a54362acc27846fdb84ce3bf680730c658687f1ebf0e",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295867,9 +296946,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollCuMatt/dc3df6b2b0452ea03e535984a3ed58120703ece03d2ebf55b304843dece5450e.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "dc3df6b2b0452ea03e535984a3ed58120703ece03d2ebf55b304843dece5450e",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295903,9 +296982,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollGlMatt/20304a9e325063bcbb006fe10543d34a35d3ea1452a74eb577c8a03db940190c.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "20304a9e325063bcbb006fe10543d34a35d3ea1452a74eb577c8a03db940190c",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295939,9 +297018,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollGlSh/0a97507a8b614088971e2ce752cd7c19119fd16ecf5bb378b699ea8e7e7f0bd8.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "0a97507a8b614088971e2ce752cd7c19119fd16ecf5bb378b699ea8e7e7f0bd8",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -295975,9 +297054,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollPinkDot/8601f71735078bf5a4d6b2fd9f02976fb05f632787d55bea4795b13c779ede96.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "8601f71735078bf5a4d6b2fd9f02976fb05f632787d55bea4795b13c779ede96",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296011,9 +297090,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollSlDot/c2a34311d8d7665e379f044946e4133b7f8204b450b66d5713f1eb287f2519c6.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "c2a34311d8d7665e379f044946e4133b7f8204b450b66d5713f1eb287f2519c6",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296047,9 +297126,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollSlMatt/0a46890661c3a3788bed12177de468d7d74d7a2aa002232e493694309db89162.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "0a46890661c3a3788bed12177de468d7d74d7a2aa002232e493694309db89162",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296083,9 +297162,9 @@
     "productGroupId": "kh7ack9n008kwgs9vej2ks0jv18dpvkx",
     "groupSlug": "tulip-6ml-clear-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6RollSlSh/c2419a8272b020611a97e8a604bcb955b31e8652f0338c9c73650cc250df2fdc.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "c2419a8272b020611a97e8a604bcb955b31e8652f0338c9c73650cc250df2fdc",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296119,9 +297198,9 @@
     "productGroupId": "kh717xh4kg9gcrqzrt8bbwdvqs8dqka9",
     "groupSlug": "tulip-6ml-clear-13-415",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6Sl/6cbd2ef94f176f20c3cd3499dc20b0fd2cbccec9b3b91e8f10ef35404b0b2805.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "6cbd2ef94f176f20c3cd3499dc20b0fd2cbccec9b3b91e8f10ef35404b0b2805",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296155,9 +297234,9 @@
     "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
     "groupSlug": "tulip-6ml-clear-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SpryBlkSh/ed2819550462089c0cd071a1728a065f02f6b2d1430586945805067c2c93ba6f.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "ed2819550462089c0cd071a1728a065f02f6b2d1430586945805067c2c93ba6f",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296191,9 +297270,9 @@
     "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
     "groupSlug": "tulip-6ml-clear-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SpryBluMatt/04db81e3cc6e8e86e012deab20a9d04a75b6a019eb88023d39ad126982f1b3ac.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "04db81e3cc6e8e86e012deab20a9d04a75b6a019eb88023d39ad126982f1b3ac",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296227,9 +297306,9 @@
     "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
     "groupSlug": "tulip-6ml-clear-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SpryCuMatt/c36093f8ef61469ded5cd525b19560bbda360bf25f185d18c2952ce1a8e86a7f.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "c36093f8ef61469ded5cd525b19560bbda360bf25f185d18c2952ce1a8e86a7f",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296263,9 +297342,9 @@
     "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
     "groupSlug": "tulip-6ml-clear-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SpryGlMatt/2bbb08ed2411024d415a267cb8a1b9636cb54c080088770a3c79e8ca430c83b0.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "2bbb08ed2411024d415a267cb8a1b9636cb54c080088770a3c79e8ca430c83b0",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296299,9 +297378,9 @@
     "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
     "groupSlug": "tulip-6ml-clear-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SpryGlSh/1ffbfa670def4f1513ff9fd51aa7f04caddc6f322cbe62fe18267f10d515b973.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "1ffbfa670def4f1513ff9fd51aa7f04caddc6f322cbe62fe18267f10d515b973",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296335,9 +297414,9 @@
     "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
     "groupSlug": "tulip-6ml-clear-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SprySlMatt/e80df9eee92d746914e3003b2eb08ce4aa7a3f1f67c9bf95d8e3f1715ae3ac65.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "e80df9eee92d746914e3003b2eb08ce4aa7a3f1f67c9bf95d8e3f1715ae3ac65",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296371,9 +297450,9 @@
     "productGroupId": "kh79qpnesrkgxrj70b76ccefvs8dpy5k",
     "groupSlug": "tulip-6ml-clear-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6SprySlSh/6035d96d0eee22384399691ff36e0bc7fa0cf05fc7ae73446906bed74f3ae3e9.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "6035d96d0eee22384399691ff36e0bc7fa0cf05fc7ae73446906bed74f3ae3e9",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296407,9 +297486,9 @@
     "productGroupId": "kh717xh4kg9gcrqzrt8bbwdvqs8dqka9",
     "groupSlug": "tulip-6ml-clear-13-415",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-6ml-clear-13-415/GBTulip6WhtSht/f258c8a65b157ff4a808a22c53eadfa0149170c1e7a8ba7dee9354bdca0783ba.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "f258c8a65b157ff4a808a22c53eadfa0149170c1e7a8ba7dee9354bdca0783ba",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296443,9 +297522,9 @@
     "productGroupId": "kh7efvmg1vcgbxb4t2mva10r598dpcv1",
     "groupSlug": "tulip-5ml-amber-13-415",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5BlkSht/ee620d54675ba8b11a09c1910be40f7a008de3b7cedbcb822819cce316cb872a.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "ee620d54675ba8b11a09c1910be40f7a008de3b7cedbcb822819cce316cb872a",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296479,9 +297558,9 @@
     "productGroupId": "kh7efvmg1vcgbxb4t2mva10r598dpcv1",
     "groupSlug": "tulip-5ml-amber-13-415",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5Gl/2991186eefeb538e7c643187ba37c0189f883f0bd80d8f52e5eeec339eb02db7.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "2991186eefeb538e7c643187ba37c0189f883f0bd80d8f52e5eeec339eb02db7",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296515,9 +297594,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkDot/c94eb029766b18f8afcaa451a8968072c090b1531b157cf28802896544e42a62.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "c94eb029766b18f8afcaa451a8968072c090b1531b157cf28802896544e42a62",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296551,9 +297630,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollBlkSh/6a1f51a277dec9871ababb92164f4e5f998960896328f88f2ef0acc173a992d5.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "6a1f51a277dec9871ababb92164f4e5f998960896328f88f2ef0acc173a992d5",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296587,9 +297666,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollCuMatt/19680b3a397515a61c3105dce9468452feedd67d94c6cd9df7d514af0580e303.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "19680b3a397515a61c3105dce9468452feedd67d94c6cd9df7d514af0580e303",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296623,9 +297702,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlMatt/57895b88ea7345b3ebe4b45f0690cab3effdd267f90a6c4e81c107ae707cdac7.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "57895b88ea7345b3ebe4b45f0690cab3effdd267f90a6c4e81c107ae707cdac7",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296659,9 +297738,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollGlSh/05655fba63bdf481302792ded2fa737d15410de78c7b176fd91a59b1d6156fbc.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "05655fba63bdf481302792ded2fa737d15410de78c7b176fd91a59b1d6156fbc",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296695,9 +297774,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollPinkDot/c310cfe0a0d885bb5f319dabde901602b4de66ab3cefdbba99e303fdd4e2ac0e.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "c310cfe0a0d885bb5f319dabde901602b4de66ab3cefdbba99e303fdd4e2ac0e",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296731,9 +297810,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlDot/9cc3f94117bd977b33e082669953c8110dc9864003ba6e42f1e1eafd1046967e.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "9cc3f94117bd977b33e082669953c8110dc9864003ba6e42f1e1eafd1046967e",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296767,9 +297846,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlMatt/a8bafc8bb34c5c41113e36fbef401a71441208686e84556cc77dab936cec007a.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "a8bafc8bb34c5c41113e36fbef401a71441208686e84556cc77dab936cec007a",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296803,9 +297882,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5MtlRollSlSh/9bfecf0577d95442951ec8f15936d86e6e13b4bc0796965c4fccf7e20f04ef3f.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "9bfecf0577d95442951ec8f15936d86e6e13b4bc0796965c4fccf7e20f04ef3f",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296839,9 +297918,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollBlkDot/c94eb029766b18f8afcaa451a8968072c090b1531b157cf28802896544e42a62.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "c94eb029766b18f8afcaa451a8968072c090b1531b157cf28802896544e42a62",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296875,9 +297954,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollBlkSh/6a1f51a277dec9871ababb92164f4e5f998960896328f88f2ef0acc173a992d5.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "6a1f51a277dec9871ababb92164f4e5f998960896328f88f2ef0acc173a992d5",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296911,9 +297990,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollCuMatt/19680b3a397515a61c3105dce9468452feedd67d94c6cd9df7d514af0580e303.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "19680b3a397515a61c3105dce9468452feedd67d94c6cd9df7d514af0580e303",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296947,9 +298026,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollGlMatt/57895b88ea7345b3ebe4b45f0690cab3effdd267f90a6c4e81c107ae707cdac7.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "57895b88ea7345b3ebe4b45f0690cab3effdd267f90a6c4e81c107ae707cdac7",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -296983,9 +298062,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollGlSh/05655fba63bdf481302792ded2fa737d15410de78c7b176fd91a59b1d6156fbc.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "05655fba63bdf481302792ded2fa737d15410de78c7b176fd91a59b1d6156fbc",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297019,9 +298098,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollPinkDot/c310cfe0a0d885bb5f319dabde901602b4de66ab3cefdbba99e303fdd4e2ac0e.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "c310cfe0a0d885bb5f319dabde901602b4de66ab3cefdbba99e303fdd4e2ac0e",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297055,9 +298134,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlDot/9cc3f94117bd977b33e082669953c8110dc9864003ba6e42f1e1eafd1046967e.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "9cc3f94117bd977b33e082669953c8110dc9864003ba6e42f1e1eafd1046967e",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297091,9 +298170,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlMatt/a8bafc8bb34c5c41113e36fbef401a71441208686e84556cc77dab936cec007a.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "a8bafc8bb34c5c41113e36fbef401a71441208686e84556cc77dab936cec007a",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297127,9 +298206,9 @@
     "productGroupId": "kh77gyjb623mye6rq0r66ypynx8dqemv",
     "groupSlug": "tulip-5ml-amber-13-415-rollon",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5RollSlSh/9bfecf0577d95442951ec8f15936d86e6e13b4bc0796965c4fccf7e20f04ef3f.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "9bfecf0577d95442951ec8f15936d86e6e13b4bc0796965c4fccf7e20f04ef3f",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297163,9 +298242,9 @@
     "productGroupId": "kh7efvmg1vcgbxb4t2mva10r598dpcv1",
     "groupSlug": "tulip-5ml-amber-13-415",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5Sl/efa4efddcfc7a6f7292e4bfabf53673b60b50581ac5e0f659a5ad7346d962f0f.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "efa4efddcfc7a6f7292e4bfabf53673b60b50581ac5e0f659a5ad7346d962f0f",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297199,9 +298278,9 @@
     "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
     "groupSlug": "tulip-5ml-amber-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkMatt/7680a42ed730ff5cadf86454e17db4b8b9c46af566d96f5b3be40d0cb2623886.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "7680a42ed730ff5cadf86454e17db4b8b9c46af566d96f5b3be40d0cb2623886",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297235,9 +298314,9 @@
     "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
     "groupSlug": "tulip-5ml-amber-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBlkSh/d1a147df80620ff79f5d7777c5a4ce2531882ee275f5af01500364299d1701bb.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "d1a147df80620ff79f5d7777c5a4ce2531882ee275f5af01500364299d1701bb",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297271,9 +298350,9 @@
     "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
     "groupSlug": "tulip-5ml-amber-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryBluMatt/44de54685bf2c30dcafca7a4aff520b4ff997f1c20cb8dc5f781cd21ffc86847.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "44de54685bf2c30dcafca7a4aff520b4ff997f1c20cb8dc5f781cd21ffc86847",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297307,9 +298386,9 @@
     "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
     "groupSlug": "tulip-5ml-amber-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryCuMatt/72306d6a80b708c18ac4ed05b613259b5713d79710bb8b3a52698c6b3182d333.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "72306d6a80b708c18ac4ed05b613259b5713d79710bb8b3a52698c6b3182d333",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297343,9 +298422,9 @@
     "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
     "groupSlug": "tulip-5ml-amber-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryGlMatt/21259bdd2da97ae2afd22b0005f7ebde7fb995fd9caf6e7265873b9f60ddc174.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "21259bdd2da97ae2afd22b0005f7ebde7fb995fd9caf6e7265873b9f60ddc174",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297379,9 +298458,9 @@
     "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
     "groupSlug": "tulip-5ml-amber-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SpryGlSh/523fbaecaab4d7725a95b7a8d3e20affa249fd34bd21ad392cdcc7fbcd9d5fc9.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "523fbaecaab4d7725a95b7a8d3e20affa249fd34bd21ad392cdcc7fbcd9d5fc9",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297415,9 +298494,9 @@
     "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
     "groupSlug": "tulip-5ml-amber-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SprySlMatt/1a18bfa685107fd85e14c1833f4580741079eb732bcfa42f7105baa96224c680.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "1a18bfa685107fd85e14c1833f4580741079eb732bcfa42f7105baa96224c680",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297451,9 +298530,9 @@
     "productGroupId": "kh71b3veyygfz4z7spbempk5998dq3b5",
     "groupSlug": "tulip-5ml-amber-13-415-finemist",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5SprySlSh/c16902dbd11c17b20913a1b8e44f1fd7a3466edb6e15260ab8ac20b6010e51d7.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "c16902dbd11c17b20913a1b8e44f1fd7a3466edb6e15260ab8ac20b6010e51d7",
     "releaseLock": "tulip-plate-release-2026-09-13",
@@ -297487,9 +298566,9 @@
     "productGroupId": "kh7efvmg1vcgbxb4t2mva10r598dpcv1",
     "groupSlug": "tulip-5ml-amber-13-415",
     "imageUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/tulip-5ml-amber-13-415/GBTulipAmb5WhtSht/07c894bc00e92824bf5d86174398253a21694040f0f8208ee5606b65f03f3af5.front-on-1000x1100.webp",
-    "stage": "release",
+    "stage": "complete",
     "reasons": [
-     "Exact image bytes are approved and locked under \"tulip-plate-release-2026-09-13\". Do not review these bytes again. Publish the named release, verify its hosted views, and register the indexed plates."
+     "Approved current image bytes; preserve this plate."
     ],
     "sha256": "07c894bc00e92824bf5d86174398253a21694040f0f8208ee5606b65f03f3af5",
     "releaseLock": "tulip-plate-release-2026-09-13",

@@ -453,7 +453,22 @@ out.plateReleaseLocks = readPlateReleaseLocks(root);
 for (const lock of out.plateReleaseLocks) {
     if (lock.skipped) { note("plate.release-lock-skipped", { path: lock.path, release: lock.release, reason: lock.skipped }); continue; }
     note("plate.release-lock", { path: lock.path, release: lock.release, rows: lock.rows, held: lock.held.length,
-        approvedAt: lock.approvedAt, publicationAuthorized: lock.publicationAuthorized, indexingAuthorized: lock.indexingAuthorized });
+        approvedAt: lock.approvedAt, publicationAuthorized: lock.publicationAuthorized, indexingAuthorized: lock.indexingAuthorized,
+        published: lock.published ? lock.published.verifiedAt : false });
+    // A release whose own verifier confirmed every approved byte against the
+    // indexed rows and the hosted objects is done, not awaiting release.
+    if (!lock.published) continue;
+    const verified = new Set(lock.published.skus);
+    let promoted = 0;
+    for (const row of rows) {
+        if (!verified.has(row.sku) || row.plate.complete) continue;
+        row.plate.complete = true;
+        row.plate.publishedVerification = { phase: "published", release: lock.release,
+            verifiedAt: lock.published.verifiedAt, deployment: lock.published.deployment };
+        promoted++;
+    }
+    note("plate.release-verified", { release: lock.release, rows: verified.size, promoted,
+        hostedAssetsChecked: lock.published.hostedAssetsChecked, verifiedAt: lock.published.verifiedAt });
 }
 out.platePlan = buildPlatePlan(out);
 writeFileSync(path.join(root, "src/lib/asset-ledger/ledger.json.tmp"), JSON.stringify(out, null, 1) + "\n");

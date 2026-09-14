@@ -26,9 +26,10 @@ export function readPlateReleaseLocks(root) {
         if (!entry.isDirectory()) continue;
         const file = path.join(dir, entry.name, "approved-lock.json");
         if (!existsSync(file)) continue;
-        let lock;
+        let lock, lockBytes;
         try {
-            lock = JSON.parse(readFileSync(file, "utf8"));
+            lockBytes = readFileSync(file);
+            lock = JSON.parse(lockBytes.toString("utf8"));
         } catch {
             locks.push({ path: path.relative(root, file), release: entry.name, skipped: "lock file is not readable JSON" });
             continue;
@@ -42,7 +43,7 @@ export function readPlateReleaseLocks(root) {
             locks.push({ path: rel, release: lock.release, skipped: "lock records no visual approval" });
             continue;
         }
-        const mismatch = evidenceMismatch(root, lock);
+        const mismatch = evidenceMismatch(root, lock, path.join(dir, entry.name));
         if (mismatch) {
             locks.push({ path: rel, release: lock.release, skipped: mismatch });
             continue;
@@ -62,24 +63,57 @@ export function readPlateReleaseLocks(root) {
             held: (lock.heldRows ?? []).map((h) => ({ sku: h.sku ?? h.websiteSku ?? null, reason: h.reason ?? null })),
             publicationAuthorized: lock.publicationAuthorized === true,
             indexingAuthorized: lock.indexingAuthorized === true,
+            published: publishedVerification(path.join(dir, entry.name), lockBytes, skus.length),
         });
     }
     return locks.sort((a, b) => a.release.localeCompare(b.release));
 }
 
 /** The approval evidence must still hash to exactly what was approved. */
-function evidenceMismatch(root, lock) {
+function evidenceMismatch(root, lock, dir) {
     const checks = [
-        [lock.approvalFile, lock.approvalFileSha256, "approval record"],
-        [lock.preparedManifest?.file, lock.preparedManifest?.sha256, "prepared manifest"],
+        [lock.approvalFile, lock.approvalFileSha256, "approval record", null],
+        // A prepared manifest often lives in the ignored build directory. A copy
+        // committed beside the lock keeps the evidence resolvable on a fresh
+        // clone and in CI; the hash checked is the same either way.
+        [lock.preparedManifest?.file, lock.preparedManifest?.sha256, "prepared manifest",
+            path.join(dir, "prepared-manifest.json")],
     ];
-    for (const [file, expected, label] of checks) {
+    for (const [file, expected, label, fallback] of checks) {
         if (!file || !expected) continue;
-        const abs = path.isAbsolute(file) ? file : path.join(root, file);
-        if (!existsSync(abs)) return `${label} is missing: ${file}`;
+        const primary = path.isAbsolute(file) ? file : path.join(root, file);
+        const abs = existsSync(primary) ? primary : (fallback && existsSync(fallback) ? fallback : null);
+        if (!abs) return `${label} is missing: ${file}`;
         if (sha256(readFileSync(abs)) !== expected) return `${label} no longer matches its approved hash: ${file}`;
     }
     return null;
+}
+
+/**
+ * A release is published only when its own verifier says so: zero failures over
+ * the complete row set, bound to this exact lock and to a ship authorization
+ * that authorises publication. Anything less leaves the rows awaiting release.
+ */
+function publishedVerification(dir, lockBytes, rowCount) {
+    const shipPath = path.join(dir, "ship-authorization.json");
+    const verificationPath = path.join(dir, "published-verification.json");
+    if (!existsSync(shipPath) || !existsSync(verificationPath)) return null;
+    let ship, verification;
+    try {
+        ship = JSON.parse(readFileSync(shipPath, "utf8"));
+        verification = JSON.parse(readFileSync(verificationPath, "utf8"));
+    } catch { return null; }
+    if (ship.publicationAuthorized !== true) return null;
+    if (verification.phase !== "published" || verification.partial) return null;
+    if ((verification.failures ?? ["unrecorded"]).length !== 0) return null;
+    if (verification.rows !== rowCount) return null;
+    const lockSha = sha256(lockBytes);
+    if (ship.approvedLockSha256 && ship.approvedLockSha256 !== lockSha) return null;
+    if (verification.approvedLockSha256 && verification.approvedLockSha256 !== lockSha) return null;
+    const skus = verification.verifiedSkus ?? [];
+    if (skus.length !== rowCount) return null;
+    return { verifiedAt: verification.verifiedAt ?? null, deployment: verification.deployment ?? null,
+        hostedAssetsChecked: verification.hostedAssetsChecked ?? 0, skus };
 }
 
 /** sku -> release name, for every lock whose evidence still checks out. */
