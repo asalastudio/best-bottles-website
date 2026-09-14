@@ -1,0 +1,1415 @@
+{
+  "revision": 1,
+  "decisions": {
+    "GBGrce55AnSpBlk:05fcddcb2a822e5e2b6dcbb071ba48f077cff5143a6ff53639b9518b2b04d762": {
+      "sku": "GBGrce55AnSpBlk",
+      "binding": "05fcddcb2a822e5e2b6dcbb071ba48f077cff5143a6ff53639b9518b2b04d762",
+      "sha256": "1af39978ead8d390c234269f62f0994abc751b727c14ebf525d712399011bd5d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpBlk/1af39978ead8d390c234269f62f0994abc751b727c14ebf525d712399011bd5d.front-on-1000x1100.webp",
+          "sha256": "1af39978ead8d390c234269f62f0994abc751b727c14ebf525d712399011bd5d",
+          "url": "/images/plate-contact-sheets/1af39978ead8d390c234269f62f0994abc751b727c14ebf525d712399011bd5d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpGl:9c1ead6ada7f2abda918812457cc528f261b1cf6781a4ef477544729dafcdaf2": {
+      "sku": "GBGrce55AnSpGl",
+      "binding": "9c1ead6ada7f2abda918812457cc528f261b1cf6781a4ef477544729dafcdaf2",
+      "sha256": "1d3871cd9f9e09a5c29db0a3f9d9f53056ce70cfcdd54f0f95efc5dda730d698",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpGl/1d3871cd9f9e09a5c29db0a3f9d9f53056ce70cfcdd54f0f95efc5dda730d698.front-on-1000x1100.webp",
+          "sha256": "1d3871cd9f9e09a5c29db0a3f9d9f53056ce70cfcdd54f0f95efc5dda730d698",
+          "url": "/images/plate-contact-sheets/1d3871cd9f9e09a5c29db0a3f9d9f53056ce70cfcdd54f0f95efc5dda730d698.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpPnk:ad09718d43a757459b5a92d01d2618716d4ce6dfdd83d878869171408540e7b0": {
+      "sku": "GBGrce55AnSpPnk",
+      "binding": "ad09718d43a757459b5a92d01d2618716d4ce6dfdd83d878869171408540e7b0",
+      "sha256": "96079f5c47e5077305d94dea6041983ede0aaad1d7e1cb4769267d0be500df46",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpPnk/96079f5c47e5077305d94dea6041983ede0aaad1d7e1cb4769267d0be500df46.front-on-1000x1100.webp",
+          "sha256": "96079f5c47e5077305d94dea6041983ede0aaad1d7e1cb4769267d0be500df46",
+          "url": "/images/plate-contact-sheets/96079f5c47e5077305d94dea6041983ede0aaad1d7e1cb4769267d0be500df46.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpRed:94e2398221536ae59123b39646ddf108661302cdd2d03d7eff47f72a8db74f3f": {
+      "sku": "GBGrce55AnSpRed",
+      "binding": "94e2398221536ae59123b39646ddf108661302cdd2d03d7eff47f72a8db74f3f",
+      "sha256": "cb11bf1bf83a37ec9e69dd49003b97beee625e77588e7bb47ae006e74b61e1e9",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpRed/cb11bf1bf83a37ec9e69dd49003b97beee625e77588e7bb47ae006e74b61e1e9.front-on-1000x1100.webp",
+          "sha256": "cb11bf1bf83a37ec9e69dd49003b97beee625e77588e7bb47ae006e74b61e1e9",
+          "url": "/images/plate-contact-sheets/cb11bf1bf83a37ec9e69dd49003b97beee625e77588e7bb47ae006e74b61e1e9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpTslBlk:9b8552dbf81ab6bcd3dd353b33aea2255214a1455193d56f7c620028efa1fb0d": {
+      "sku": "GBGrce55AnSpTslBlk",
+      "binding": "9b8552dbf81ab6bcd3dd353b33aea2255214a1455193d56f7c620028efa1fb0d",
+      "sha256": "ac908fc76c6c7fc89fa87a8aa15e19fed4843040454cc7f879c848bc6c1e6b60",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslBlk/ac908fc76c6c7fc89fa87a8aa15e19fed4843040454cc7f879c848bc6c1e6b60.front-on-1000x1100.webp",
+          "sha256": "ac908fc76c6c7fc89fa87a8aa15e19fed4843040454cc7f879c848bc6c1e6b60",
+          "url": "/images/plate-contact-sheets/ac908fc76c6c7fc89fa87a8aa15e19fed4843040454cc7f879c848bc6c1e6b60.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpTslGl:2515c15343e6ae5d29b74a730b02cce3e1099d968df23da669c19f2782f9e1fc": {
+      "sku": "GBGrce55AnSpTslGl",
+      "binding": "2515c15343e6ae5d29b74a730b02cce3e1099d968df23da669c19f2782f9e1fc",
+      "sha256": "27b55a1ff3beda08b44827215b2e33b7e35b495cecb4c69e0dac417d85b740fe",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslGl/27b55a1ff3beda08b44827215b2e33b7e35b495cecb4c69e0dac417d85b740fe.front-on-1000x1100.webp",
+          "sha256": "27b55a1ff3beda08b44827215b2e33b7e35b495cecb4c69e0dac417d85b740fe",
+          "url": "/images/plate-contact-sheets/27b55a1ff3beda08b44827215b2e33b7e35b495cecb4c69e0dac417d85b740fe.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpTslIvyGl:8bb3ccee009c0fcdc701d8aa084a7d003f3e1b8fd02dc54bcbc01795674dcb5f": {
+      "sku": "GBGrce55AnSpTslIvyGl",
+      "binding": "8bb3ccee009c0fcdc701d8aa084a7d003f3e1b8fd02dc54bcbc01795674dcb5f",
+      "sha256": "28071628240a010d5c07360e079364180d2edd3f45ba2c68e83038db193d7454",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslIvyGl/28071628240a010d5c07360e079364180d2edd3f45ba2c68e83038db193d7454.front-on-1000x1100.webp",
+          "sha256": "28071628240a010d5c07360e079364180d2edd3f45ba2c68e83038db193d7454",
+          "url": "/images/plate-contact-sheets/28071628240a010d5c07360e079364180d2edd3f45ba2c68e83038db193d7454.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpTslIvySl:5215622fe679fca054192a24e07d03fadc511ff99fc7897124497a19e6824c0b": {
+      "sku": "GBGrce55AnSpTslIvySl",
+      "binding": "5215622fe679fca054192a24e07d03fadc511ff99fc7897124497a19e6824c0b",
+      "sha256": "a61da535be9107cbfbd5ddc4a9f0e0583dca3caac6488919bdef3a70fa966b4c",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslIvySl/a61da535be9107cbfbd5ddc4a9f0e0583dca3caac6488919bdef3a70fa966b4c.front-on-1000x1100.webp",
+          "sha256": "a61da535be9107cbfbd5ddc4a9f0e0583dca3caac6488919bdef3a70fa966b4c",
+          "url": "/images/plate-contact-sheets/a61da535be9107cbfbd5ddc4a9f0e0583dca3caac6488919bdef3a70fa966b4c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpTslLvn:1c29237c4f0ca78302d0acb41a1266837c7ea257122f031cfa130df8d7246c82": {
+      "sku": "GBGrce55AnSpTslLvn",
+      "binding": "1c29237c4f0ca78302d0acb41a1266837c7ea257122f031cfa130df8d7246c82",
+      "sha256": "2a8b1132e9e64ac885598e8946486bf8ec8a60c3e452269d658f8216be7bf2ab",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslLvn/2a8b1132e9e64ac885598e8946486bf8ec8a60c3e452269d658f8216be7bf2ab.front-on-1000x1100.webp",
+          "sha256": "2a8b1132e9e64ac885598e8946486bf8ec8a60c3e452269d658f8216be7bf2ab",
+          "url": "/images/plate-contact-sheets/2a8b1132e9e64ac885598e8946486bf8ec8a60c3e452269d658f8216be7bf2ab.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpTslMtSl:e5a71d6a33a8ced395600832132e580633b0511881babb230308732425cf463d": {
+      "sku": "GBGrce55AnSpTslMtSl",
+      "binding": "e5a71d6a33a8ced395600832132e580633b0511881babb230308732425cf463d",
+      "sha256": "ef44f8f39f9c5aef88f74e5978f3903c5bd08e6dca92de98e02fb3b5e87b4352",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslMtSl/ef44f8f39f9c5aef88f74e5978f3903c5bd08e6dca92de98e02fb3b5e87b4352.front-on-1000x1100.webp",
+          "sha256": "ef44f8f39f9c5aef88f74e5978f3903c5bd08e6dca92de98e02fb3b5e87b4352",
+          "url": "/images/plate-contact-sheets/ef44f8f39f9c5aef88f74e5978f3903c5bd08e6dca92de98e02fb3b5e87b4352.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpTslPnk:bbd949f2c997c0db61c8455f68df4dcde00b9327244218f36a776c223fe66529": {
+      "sku": "GBGrce55AnSpTslPnk",
+      "binding": "bbd949f2c997c0db61c8455f68df4dcde00b9327244218f36a776c223fe66529",
+      "sha256": "ac846773963520d5b58d3b95ac2006c62c693c666e555f7f320cd8c80ff5f4ab",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslPnk/ac846773963520d5b58d3b95ac2006c62c693c666e555f7f320cd8c80ff5f4ab.front-on-1000x1100.webp",
+          "sha256": "ac846773963520d5b58d3b95ac2006c62c693c666e555f7f320cd8c80ff5f4ab",
+          "url": "/images/plate-contact-sheets/ac846773963520d5b58d3b95ac2006c62c693c666e555f7f320cd8c80ff5f4ab.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpTslRed:306494b1d0768a0041490bff3c6b8cc9a01d488f07662128efbc3310f0419b34": {
+      "sku": "GBGrce55AnSpTslRed",
+      "binding": "306494b1d0768a0041490bff3c6b8cc9a01d488f07662128efbc3310f0419b34",
+      "sha256": "9a3535d88a6d8aa0adaae8caa38a7a75cb9a40401c6fe359050546d547a24b53",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslRed/9a3535d88a6d8aa0adaae8caa38a7a75cb9a40401c6fe359050546d547a24b53.front-on-1000x1100.webp",
+          "sha256": "9a3535d88a6d8aa0adaae8caa38a7a75cb9a40401c6fe359050546d547a24b53",
+          "url": "/images/plate-contact-sheets/9a3535d88a6d8aa0adaae8caa38a7a75cb9a40401c6fe359050546d547a24b53.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55AnSpTslWht:b248989e6a6a3434b75b545ab128b91322dbf42e16da77c923f7972c791efdfc": {
+      "sku": "GBGrce55AnSpTslWht",
+      "binding": "b248989e6a6a3434b75b545ab128b91322dbf42e16da77c923f7972c791efdfc",
+      "sha256": "3ea925f5a6305f8eea4439614ca400834b9c9a8ba03fbc007db51ba4aa8182da",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslWht/3ea925f5a6305f8eea4439614ca400834b9c9a8ba03fbc007db51ba4aa8182da.front-on-1000x1100.webp",
+          "sha256": "3ea925f5a6305f8eea4439614ca400834b9c9a8ba03fbc007db51ba4aa8182da",
+          "url": "/images/plate-contact-sheets/3ea925f5a6305f8eea4439614ca400834b9c9a8ba03fbc007db51ba4aa8182da.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrBlkLthr:2b347c5d509c821e6dcb8c4319aabe767b13386a98d7bdb9d0ca90c7c848536f": {
+      "sku": "GBGrce55RdcrBlkLthr",
+      "binding": "2b347c5d509c821e6dcb8c4319aabe767b13386a98d7bdb9d0ca90c7c848536f",
+      "sha256": "bb344dd041d458e8ecd47b153ed66980073d9150d72e3f7902cc18849dd412f1",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrBlkLthr/bb344dd041d458e8ecd47b153ed66980073d9150d72e3f7902cc18849dd412f1.front-on-1000x1100.webp",
+          "sha256": "bb344dd041d458e8ecd47b153ed66980073d9150d72e3f7902cc18849dd412f1",
+          "url": "/images/plate-contact-sheets/bb344dd041d458e8ecd47b153ed66980073d9150d72e3f7902cc18849dd412f1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrBrwnLthr:78e00169137723b83eadc18f53da49055e6566176889cb452cc7668b4d26b105": {
+      "sku": "GBGrce55RdcrBrwnLthr",
+      "binding": "78e00169137723b83eadc18f53da49055e6566176889cb452cc7668b4d26b105",
+      "sha256": "13e72cc6f632ffbe26c0563da60329731fdd606ca89a13f31377902cf817d757",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrBrwnLthr/13e72cc6f632ffbe26c0563da60329731fdd606ca89a13f31377902cf817d757.front-on-1000x1100.webp",
+          "sha256": "13e72cc6f632ffbe26c0563da60329731fdd606ca89a13f31377902cf817d757",
+          "url": "/images/plate-contact-sheets/13e72cc6f632ffbe26c0563da60329731fdd606ca89a13f31377902cf817d757.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrIvyLthr:4827067f66e2a9d1c9d34bc6d8fd9c59c55882cc1c6e009baaad5a9553623af6": {
+      "sku": "GBGrce55RdcrIvyLthr",
+      "binding": "4827067f66e2a9d1c9d34bc6d8fd9c59c55882cc1c6e009baaad5a9553623af6",
+      "sha256": "d33c602b2c5f67ccbbd2abe17c886f44e94a7bd6677f5aa5ba960c5f445de84b",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrIvyLthr/d33c602b2c5f67ccbbd2abe17c886f44e94a7bd6677f5aa5ba960c5f445de84b.front-on-1000x1100.webp",
+          "sha256": "d33c602b2c5f67ccbbd2abe17c886f44e94a7bd6677f5aa5ba960c5f445de84b",
+          "url": "/images/plate-contact-sheets/d33c602b2c5f67ccbbd2abe17c886f44e94a7bd6677f5aa5ba960c5f445de84b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrLBrwnLthr:8b9a2625d8c5c2e79fdeec27f231df42fe6c4207cf2af9823f536f5318e2b551": {
+      "sku": "GBGrce55RdcrLBrwnLthr",
+      "binding": "8b9a2625d8c5c2e79fdeec27f231df42fe6c4207cf2af9823f536f5318e2b551",
+      "sha256": "dd60c2101090eef159b903bb444eb563710c18d9188a083ec1232caa35e4e112",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrLBrwnLthr/dd60c2101090eef159b903bb444eb563710c18d9188a083ec1232caa35e4e112.front-on-1000x1100.webp",
+          "sha256": "dd60c2101090eef159b903bb444eb563710c18d9188a083ec1232caa35e4e112",
+          "url": "/images/plate-contact-sheets/dd60c2101090eef159b903bb444eb563710c18d9188a083ec1232caa35e4e112.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrMtSl:a6e5c4f9e01d8d77f0ae6c92eaeac2365233d46aa5c57b67a84f0ad3f1bec005": {
+      "sku": "GBGrce55RdcrMtSl",
+      "binding": "a6e5c4f9e01d8d77f0ae6c92eaeac2365233d46aa5c57b67a84f0ad3f1bec005",
+      "sha256": "b513f1d33d51aeda2d7d6627831ee2202931d1b9f10db1eb477fc20aeec644d5",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrMtSl/b513f1d33d51aeda2d7d6627831ee2202931d1b9f10db1eb477fc20aeec644d5.front-on-1000x1100.webp",
+          "sha256": "b513f1d33d51aeda2d7d6627831ee2202931d1b9f10db1eb477fc20aeec644d5",
+          "url": "/images/plate-contact-sheets/b513f1d33d51aeda2d7d6627831ee2202931d1b9f10db1eb477fc20aeec644d5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrMtSlTall:5715533f3287c2d3607639d5de6560bd2c092c1b824c9cc21972ec8a233d497b": {
+      "sku": "GBGrce55RdcrMtSlTall",
+      "binding": "5715533f3287c2d3607639d5de6560bd2c092c1b824c9cc21972ec8a233d497b",
+      "sha256": "ba15942ad60e15af67693afef0ddf7c64255391919aaf0c011548683b3c890ba",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrMtSlTall/ba15942ad60e15af67693afef0ddf7c64255391919aaf0c011548683b3c890ba.front-on-1000x1100.webp",
+          "sha256": "ba15942ad60e15af67693afef0ddf7c64255391919aaf0c011548683b3c890ba",
+          "url": "/images/plate-contact-sheets/ba15942ad60e15af67693afef0ddf7c64255391919aaf0c011548683b3c890ba.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrPnkLthr:1a4793f0c54edcad9140496471badddbb022da99c72a1cd00305ebcc3ce43b56": {
+      "sku": "GBGrce55RdcrPnkLthr",
+      "binding": "1a4793f0c54edcad9140496471badddbb022da99c72a1cd00305ebcc3ce43b56",
+      "sha256": "66da3980f87a588f2d62402f85d7cfc69df3e5bd1ca6f6b6bf1a89eef67d7d30",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrPnkLthr/66da3980f87a588f2d62402f85d7cfc69df3e5bd1ca6f6b6bf1a89eef67d7d30.front-on-1000x1100.webp",
+          "sha256": "66da3980f87a588f2d62402f85d7cfc69df3e5bd1ca6f6b6bf1a89eef67d7d30",
+          "url": "/images/plate-contact-sheets/66da3980f87a588f2d62402f85d7cfc69df3e5bd1ca6f6b6bf1a89eef67d7d30.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrShnBlk:0fd163be145379cf3f61c76459c03706b70630bf3b6d120e8427d08903072daf": {
+      "sku": "GBGrce55RdcrShnBlk",
+      "binding": "0fd163be145379cf3f61c76459c03706b70630bf3b6d120e8427d08903072daf",
+      "sha256": "7c5df3cd41fbbfec7520c6d4b0e8fdbe6a439024276412279233c405dc93c799",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrShnBlk/7c5df3cd41fbbfec7520c6d4b0e8fdbe6a439024276412279233c405dc93c799.front-on-1000x1100.webp",
+          "sha256": "7c5df3cd41fbbfec7520c6d4b0e8fdbe6a439024276412279233c405dc93c799",
+          "url": "/images/plate-contact-sheets/7c5df3cd41fbbfec7520c6d4b0e8fdbe6a439024276412279233c405dc93c799.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrShnBlkTall:3051790ad04f5fd497b23639097c7ca901dd092ff70944af4d4ab7de0162bab3": {
+      "sku": "GBGrce55RdcrShnBlkTall",
+      "binding": "3051790ad04f5fd497b23639097c7ca901dd092ff70944af4d4ab7de0162bab3",
+      "sha256": "7649ff09ba61d5df86d7e4459ca29e317008fd30642963c4ba9d5b2b3f65dfe3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrShnBlkTall/7649ff09ba61d5df86d7e4459ca29e317008fd30642963c4ba9d5b2b3f65dfe3.front-on-1000x1100.webp",
+          "sha256": "7649ff09ba61d5df86d7e4459ca29e317008fd30642963c4ba9d5b2b3f65dfe3",
+          "url": "/images/plate-contact-sheets/7649ff09ba61d5df86d7e4459ca29e317008fd30642963c4ba9d5b2b3f65dfe3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrShnGl:02ac7170a5f29caa9cc7a510b83f6ed763dcf9276afaa4df05127b127e6f6e8f": {
+      "sku": "GBGrce55RdcrShnGl",
+      "binding": "02ac7170a5f29caa9cc7a510b83f6ed763dcf9276afaa4df05127b127e6f6e8f",
+      "sha256": "cb0bb1bdf008875e07852efa31e3351065cc6d2040004d57146e6efee73e662a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrShnGl/cb0bb1bdf008875e07852efa31e3351065cc6d2040004d57146e6efee73e662a.front-on-1000x1100.webp",
+          "sha256": "cb0bb1bdf008875e07852efa31e3351065cc6d2040004d57146e6efee73e662a",
+          "url": "/images/plate-contact-sheets/cb0bb1bdf008875e07852efa31e3351065cc6d2040004d57146e6efee73e662a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55RdcrShnSl:5ad7f265f81684c426eea83010e01f62ab18d7eab1e2605be11087671783d09f": {
+      "sku": "GBGrce55RdcrShnSl",
+      "binding": "5ad7f265f81684c426eea83010e01f62ab18d7eab1e2605be11087671783d09f",
+      "sha256": "869d8410ef4984e0f7bf70c29e6d38356b4216c80dc750f92bf52a8a6edeb1c6",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrShnSl/869d8410ef4984e0f7bf70c29e6d38356b4216c80dc750f92bf52a8a6edeb1c6.front-on-1000x1100.webp",
+          "sha256": "869d8410ef4984e0f7bf70c29e6d38356b4216c80dc750f92bf52a8a6edeb1c6",
+          "url": "/images/plate-contact-sheets/869d8410ef4984e0f7bf70c29e6d38356b4216c80dc750f92bf52a8a6edeb1c6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55SpryCu:054533890cb14b4714ca8ae7b0ee44aeb437d250c188c546e22a2227d84cf26f": {
+      "sku": "GBGrce55SpryCu",
+      "binding": "054533890cb14b4714ca8ae7b0ee44aeb437d250c188c546e22a2227d84cf26f",
+      "sha256": "78a10ad53d8707a2187cb1d9b73a318df5d416b2e931785e488fc8d379651a82",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryCu/78a10ad53d8707a2187cb1d9b73a318df5d416b2e931785e488fc8d379651a82.front-on-1000x1100.webp",
+          "sha256": "78a10ad53d8707a2187cb1d9b73a318df5d416b2e931785e488fc8d379651a82",
+          "url": "/images/plate-contact-sheets/78a10ad53d8707a2187cb1d9b73a318df5d416b2e931785e488fc8d379651a82.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryCu/6e25be4ae481df503574cf698e72ca61950a4894951be428454b35bfe8975559.front-off-1000x1100.webp",
+          "sha256": "6e25be4ae481df503574cf698e72ca61950a4894951be428454b35bfe8975559",
+          "url": "/images/plate-contact-sheets/6e25be4ae481df503574cf698e72ca61950a4894951be428454b35bfe8975559.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55SpryMtGl:0df38d6f58a1cc952c0189b06e8466a77b4458a7c442bff8466f3a4939bc2c6e": {
+      "sku": "GBGrce55SpryMtGl",
+      "binding": "0df38d6f58a1cc952c0189b06e8466a77b4458a7c442bff8466f3a4939bc2c6e",
+      "sha256": "b865ed4ae2c1e801ee093e488db1325822e73089222ac119ed9bda5b715674fc",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryMtGl/b865ed4ae2c1e801ee093e488db1325822e73089222ac119ed9bda5b715674fc.front-on-1000x1100.webp",
+          "sha256": "b865ed4ae2c1e801ee093e488db1325822e73089222ac119ed9bda5b715674fc",
+          "url": "/images/plate-contact-sheets/b865ed4ae2c1e801ee093e488db1325822e73089222ac119ed9bda5b715674fc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryMtGl/14ece87be0dfa1ebd39b007c66f56fab49b08cb2ef9e4a43bfb468a6cd741064.front-off-1000x1100.webp",
+          "sha256": "14ece87be0dfa1ebd39b007c66f56fab49b08cb2ef9e4a43bfb468a6cd741064",
+          "url": "/images/plate-contact-sheets/14ece87be0dfa1ebd39b007c66f56fab49b08cb2ef9e4a43bfb468a6cd741064.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55SpryMtSl:fd4a30a3525c86d815992124bc8cff76b9da0c0c783ce789a32a1411d1e0b2a7": {
+      "sku": "GBGrce55SpryMtSl",
+      "binding": "fd4a30a3525c86d815992124bc8cff76b9da0c0c783ce789a32a1411d1e0b2a7",
+      "sha256": "03329b6ce7bb8b9453b3fdcc6952324147b76b8ea0b6da3fba7a59fc9f511c44",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryMtSl/03329b6ce7bb8b9453b3fdcc6952324147b76b8ea0b6da3fba7a59fc9f511c44.front-on-1000x1100.webp",
+          "sha256": "03329b6ce7bb8b9453b3fdcc6952324147b76b8ea0b6da3fba7a59fc9f511c44",
+          "url": "/images/plate-contact-sheets/03329b6ce7bb8b9453b3fdcc6952324147b76b8ea0b6da3fba7a59fc9f511c44.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryMtSl/516112ae94c5d25087244439f85cf3882657569d6784e5a7efce56287d289713.front-off-1000x1100.webp",
+          "sha256": "516112ae94c5d25087244439f85cf3882657569d6784e5a7efce56287d289713",
+          "url": "/images/plate-contact-sheets/516112ae94c5d25087244439f85cf3882657569d6784e5a7efce56287d289713.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBGrce55SpryShnGl:e8163d3aecab73e0a1de1d825548a4de1c462f7b9bc3f863f5735f02f4704d47": {
+      "sku": "GBGrce55SpryShnGl",
+      "binding": "e8163d3aecab73e0a1de1d825548a4de1c462f7b9bc3f863f5735f02f4704d47",
+      "sha256": "074d5c0fa403d4b331efeb2141bdb91747750283396d159c1dd59f58fbcbddf0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryShnGl/074d5c0fa403d4b331efeb2141bdb91747750283396d159c1dd59f58fbcbddf0.front-on-1000x1100.webp",
+          "sha256": "074d5c0fa403d4b331efeb2141bdb91747750283396d159c1dd59f58fbcbddf0",
+          "url": "/images/plate-contact-sheets/074d5c0fa403d4b331efeb2141bdb91747750283396d159c1dd59f58fbcbddf0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryShnGl/df090003bf87ebed326bdb030f55cfc2161fe057712971e9913cd98f68bf48e3.front-off-1000x1100.webp",
+          "sha256": "df090003bf87ebed326bdb030f55cfc2161fe057712971e9913cd98f68bf48e3",
+          "url": "/images/plate-contact-sheets/df090003bf87ebed326bdb030f55cfc2161fe057712971e9913cd98f68bf48e3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "LBGrce55LtnCu:bdfe756dece2743bfd44708d9d7be8a3138d155a1cdade66a227b02ee8dbaca1": {
+      "sku": "LBGrce55LtnCu",
+      "binding": "bdfe756dece2743bfd44708d9d7be8a3138d155a1cdade66a227b02ee8dbaca1",
+      "sha256": "84f7e30f55073d73fb701a0819b755874444008a34bdbaee83be9d5468499285",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnCu/84f7e30f55073d73fb701a0819b755874444008a34bdbaee83be9d5468499285.front-on-1000x1100.webp",
+          "sha256": "84f7e30f55073d73fb701a0819b755874444008a34bdbaee83be9d5468499285",
+          "url": "/images/plate-contact-sheets/84f7e30f55073d73fb701a0819b755874444008a34bdbaee83be9d5468499285.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnCu/690b933eadb3dabbeaf7c1b5e53c5e5d080df9a4620667e8562e511fa409f764.front-off-1000x1100.webp",
+          "sha256": "690b933eadb3dabbeaf7c1b5e53c5e5d080df9a4620667e8562e511fa409f764",
+          "url": "/images/plate-contact-sheets/690b933eadb3dabbeaf7c1b5e53c5e5d080df9a4620667e8562e511fa409f764.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "LBGrce55LtnMtGl:33a5e95d8487094ca42a04a7a02c95fb8b327e43243ebafcc16d3aaa14294dfc": {
+      "sku": "LBGrce55LtnMtGl",
+      "binding": "33a5e95d8487094ca42a04a7a02c95fb8b327e43243ebafcc16d3aaa14294dfc",
+      "sha256": "8b47320083ef571ef361708bd1099c39742a365f8c8cefd7a235d2f62b7551d0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnMtGl/8b47320083ef571ef361708bd1099c39742a365f8c8cefd7a235d2f62b7551d0.front-on-1000x1100.webp",
+          "sha256": "8b47320083ef571ef361708bd1099c39742a365f8c8cefd7a235d2f62b7551d0",
+          "url": "/images/plate-contact-sheets/8b47320083ef571ef361708bd1099c39742a365f8c8cefd7a235d2f62b7551d0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnMtGl/17e0a48a1402b7d54d2a16bd6cc062c60f56609343ce2aa935da098134532576.front-off-1000x1100.webp",
+          "sha256": "17e0a48a1402b7d54d2a16bd6cc062c60f56609343ce2aa935da098134532576",
+          "url": "/images/plate-contact-sheets/17e0a48a1402b7d54d2a16bd6cc062c60f56609343ce2aa935da098134532576.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "LBGrce55LtnShnGl:12ae5ae073fe85f24e5cda23dc3141188368c08dc7ae0ae4e4407552ba9070d8": {
+      "sku": "LBGrce55LtnShnGl",
+      "binding": "12ae5ae073fe85f24e5cda23dc3141188368c08dc7ae0ae4e4407552ba9070d8",
+      "sha256": "ffcd22819d69729148e964310d707f00bdde46ba1c64bef4857dd3e7465e236a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnShnGl/ffcd22819d69729148e964310d707f00bdde46ba1c64bef4857dd3e7465e236a.front-on-1000x1100.webp",
+          "sha256": "ffcd22819d69729148e964310d707f00bdde46ba1c64bef4857dd3e7465e236a",
+          "url": "/images/plate-contact-sheets/ffcd22819d69729148e964310d707f00bdde46ba1c64bef4857dd3e7465e236a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnShnGl/a7b765f77174e9a76e0d32fad5253d99ebb6158400ffb595dd7a69388d0674e5.front-off-1000x1100.webp",
+          "sha256": "a7b765f77174e9a76e0d32fad5253d99ebb6158400ffb595dd7a69388d0674e5",
+          "url": "/images/plate-contact-sheets/a7b765f77174e9a76e0d32fad5253d99ebb6158400ffb595dd7a69388d0674e5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "LBGrce55LtnShnSl:e97bca165314a567fc3eeafcadf3206b9cbb192929e6732d4609b9e730c91910": {
+      "sku": "LBGrce55LtnShnSl",
+      "binding": "e97bca165314a567fc3eeafcadf3206b9cbb192929e6732d4609b9e730c91910",
+      "sha256": "cae787de61a8f81958b0002293fe0adae2b45137ac8616be78d4a9609b144c53",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnShnSl/cae787de61a8f81958b0002293fe0adae2b45137ac8616be78d4a9609b144c53.front-on-1000x1100.webp",
+          "sha256": "cae787de61a8f81958b0002293fe0adae2b45137ac8616be78d4a9609b144c53",
+          "url": "/images/plate-contact-sheets/cae787de61a8f81958b0002293fe0adae2b45137ac8616be78d4a9609b144c53.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnShnSl/574761180592d393be22e12285dd8c4a0d2809431bbfe0e2bf76e6f7b9d46ef8.front-off-1000x1100.webp",
+          "sha256": "574761180592d393be22e12285dd8c4a0d2809431bbfe0e2bf76e6f7b9d46ef8",
+          "url": "/images/plate-contact-sheets/574761180592d393be22e12285dd8c4a0d2809431bbfe0e2bf76e6f7b9d46ef8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "GBGrce55AnSpBlk",
+      "binding": "05fcddcb2a822e5e2b6dcbb071ba48f077cff5143a6ff53639b9518b2b04d762",
+      "sha256": "1af39978ead8d390c234269f62f0994abc751b727c14ebf525d712399011bd5d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpBlk/1af39978ead8d390c234269f62f0994abc751b727c14ebf525d712399011bd5d.front-on-1000x1100.webp",
+          "sha256": "1af39978ead8d390c234269f62f0994abc751b727c14ebf525d712399011bd5d",
+          "url": "/images/plate-contact-sheets/1af39978ead8d390c234269f62f0994abc751b727c14ebf525d712399011bd5d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpGl",
+      "binding": "9c1ead6ada7f2abda918812457cc528f261b1cf6781a4ef477544729dafcdaf2",
+      "sha256": "1d3871cd9f9e09a5c29db0a3f9d9f53056ce70cfcdd54f0f95efc5dda730d698",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpGl/1d3871cd9f9e09a5c29db0a3f9d9f53056ce70cfcdd54f0f95efc5dda730d698.front-on-1000x1100.webp",
+          "sha256": "1d3871cd9f9e09a5c29db0a3f9d9f53056ce70cfcdd54f0f95efc5dda730d698",
+          "url": "/images/plate-contact-sheets/1d3871cd9f9e09a5c29db0a3f9d9f53056ce70cfcdd54f0f95efc5dda730d698.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpPnk",
+      "binding": "ad09718d43a757459b5a92d01d2618716d4ce6dfdd83d878869171408540e7b0",
+      "sha256": "96079f5c47e5077305d94dea6041983ede0aaad1d7e1cb4769267d0be500df46",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpPnk/96079f5c47e5077305d94dea6041983ede0aaad1d7e1cb4769267d0be500df46.front-on-1000x1100.webp",
+          "sha256": "96079f5c47e5077305d94dea6041983ede0aaad1d7e1cb4769267d0be500df46",
+          "url": "/images/plate-contact-sheets/96079f5c47e5077305d94dea6041983ede0aaad1d7e1cb4769267d0be500df46.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpRed",
+      "binding": "94e2398221536ae59123b39646ddf108661302cdd2d03d7eff47f72a8db74f3f",
+      "sha256": "cb11bf1bf83a37ec9e69dd49003b97beee625e77588e7bb47ae006e74b61e1e9",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpRed/cb11bf1bf83a37ec9e69dd49003b97beee625e77588e7bb47ae006e74b61e1e9.front-on-1000x1100.webp",
+          "sha256": "cb11bf1bf83a37ec9e69dd49003b97beee625e77588e7bb47ae006e74b61e1e9",
+          "url": "/images/plate-contact-sheets/cb11bf1bf83a37ec9e69dd49003b97beee625e77588e7bb47ae006e74b61e1e9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpTslBlk",
+      "binding": "9b8552dbf81ab6bcd3dd353b33aea2255214a1455193d56f7c620028efa1fb0d",
+      "sha256": "ac908fc76c6c7fc89fa87a8aa15e19fed4843040454cc7f879c848bc6c1e6b60",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslBlk/ac908fc76c6c7fc89fa87a8aa15e19fed4843040454cc7f879c848bc6c1e6b60.front-on-1000x1100.webp",
+          "sha256": "ac908fc76c6c7fc89fa87a8aa15e19fed4843040454cc7f879c848bc6c1e6b60",
+          "url": "/images/plate-contact-sheets/ac908fc76c6c7fc89fa87a8aa15e19fed4843040454cc7f879c848bc6c1e6b60.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpTslGl",
+      "binding": "2515c15343e6ae5d29b74a730b02cce3e1099d968df23da669c19f2782f9e1fc",
+      "sha256": "27b55a1ff3beda08b44827215b2e33b7e35b495cecb4c69e0dac417d85b740fe",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslGl/27b55a1ff3beda08b44827215b2e33b7e35b495cecb4c69e0dac417d85b740fe.front-on-1000x1100.webp",
+          "sha256": "27b55a1ff3beda08b44827215b2e33b7e35b495cecb4c69e0dac417d85b740fe",
+          "url": "/images/plate-contact-sheets/27b55a1ff3beda08b44827215b2e33b7e35b495cecb4c69e0dac417d85b740fe.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpTslIvyGl",
+      "binding": "8bb3ccee009c0fcdc701d8aa084a7d003f3e1b8fd02dc54bcbc01795674dcb5f",
+      "sha256": "28071628240a010d5c07360e079364180d2edd3f45ba2c68e83038db193d7454",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslIvyGl/28071628240a010d5c07360e079364180d2edd3f45ba2c68e83038db193d7454.front-on-1000x1100.webp",
+          "sha256": "28071628240a010d5c07360e079364180d2edd3f45ba2c68e83038db193d7454",
+          "url": "/images/plate-contact-sheets/28071628240a010d5c07360e079364180d2edd3f45ba2c68e83038db193d7454.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpTslIvySl",
+      "binding": "5215622fe679fca054192a24e07d03fadc511ff99fc7897124497a19e6824c0b",
+      "sha256": "a61da535be9107cbfbd5ddc4a9f0e0583dca3caac6488919bdef3a70fa966b4c",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslIvySl/a61da535be9107cbfbd5ddc4a9f0e0583dca3caac6488919bdef3a70fa966b4c.front-on-1000x1100.webp",
+          "sha256": "a61da535be9107cbfbd5ddc4a9f0e0583dca3caac6488919bdef3a70fa966b4c",
+          "url": "/images/plate-contact-sheets/a61da535be9107cbfbd5ddc4a9f0e0583dca3caac6488919bdef3a70fa966b4c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpTslLvn",
+      "binding": "1c29237c4f0ca78302d0acb41a1266837c7ea257122f031cfa130df8d7246c82",
+      "sha256": "2a8b1132e9e64ac885598e8946486bf8ec8a60c3e452269d658f8216be7bf2ab",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslLvn/2a8b1132e9e64ac885598e8946486bf8ec8a60c3e452269d658f8216be7bf2ab.front-on-1000x1100.webp",
+          "sha256": "2a8b1132e9e64ac885598e8946486bf8ec8a60c3e452269d658f8216be7bf2ab",
+          "url": "/images/plate-contact-sheets/2a8b1132e9e64ac885598e8946486bf8ec8a60c3e452269d658f8216be7bf2ab.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpTslMtSl",
+      "binding": "e5a71d6a33a8ced395600832132e580633b0511881babb230308732425cf463d",
+      "sha256": "ef44f8f39f9c5aef88f74e5978f3903c5bd08e6dca92de98e02fb3b5e87b4352",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslMtSl/ef44f8f39f9c5aef88f74e5978f3903c5bd08e6dca92de98e02fb3b5e87b4352.front-on-1000x1100.webp",
+          "sha256": "ef44f8f39f9c5aef88f74e5978f3903c5bd08e6dca92de98e02fb3b5e87b4352",
+          "url": "/images/plate-contact-sheets/ef44f8f39f9c5aef88f74e5978f3903c5bd08e6dca92de98e02fb3b5e87b4352.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpTslPnk",
+      "binding": "bbd949f2c997c0db61c8455f68df4dcde00b9327244218f36a776c223fe66529",
+      "sha256": "ac846773963520d5b58d3b95ac2006c62c693c666e555f7f320cd8c80ff5f4ab",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslPnk/ac846773963520d5b58d3b95ac2006c62c693c666e555f7f320cd8c80ff5f4ab.front-on-1000x1100.webp",
+          "sha256": "ac846773963520d5b58d3b95ac2006c62c693c666e555f7f320cd8c80ff5f4ab",
+          "url": "/images/plate-contact-sheets/ac846773963520d5b58d3b95ac2006c62c693c666e555f7f320cd8c80ff5f4ab.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpTslRed",
+      "binding": "306494b1d0768a0041490bff3c6b8cc9a01d488f07662128efbc3310f0419b34",
+      "sha256": "9a3535d88a6d8aa0adaae8caa38a7a75cb9a40401c6fe359050546d547a24b53",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslRed/9a3535d88a6d8aa0adaae8caa38a7a75cb9a40401c6fe359050546d547a24b53.front-on-1000x1100.webp",
+          "sha256": "9a3535d88a6d8aa0adaae8caa38a7a75cb9a40401c6fe359050546d547a24b53",
+          "url": "/images/plate-contact-sheets/9a3535d88a6d8aa0adaae8caa38a7a75cb9a40401c6fe359050546d547a24b53.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55AnSpTslWht",
+      "binding": "b248989e6a6a3434b75b545ab128b91322dbf42e16da77c923f7972c791efdfc",
+      "sha256": "3ea925f5a6305f8eea4439614ca400834b9c9a8ba03fbc007db51ba4aa8182da",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55AnSpTslWht/3ea925f5a6305f8eea4439614ca400834b9c9a8ba03fbc007db51ba4aa8182da.front-on-1000x1100.webp",
+          "sha256": "3ea925f5a6305f8eea4439614ca400834b9c9a8ba03fbc007db51ba4aa8182da",
+          "url": "/images/plate-contact-sheets/3ea925f5a6305f8eea4439614ca400834b9c9a8ba03fbc007db51ba4aa8182da.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrBlkLthr",
+      "binding": "2b347c5d509c821e6dcb8c4319aabe767b13386a98d7bdb9d0ca90c7c848536f",
+      "sha256": "bb344dd041d458e8ecd47b153ed66980073d9150d72e3f7902cc18849dd412f1",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrBlkLthr/bb344dd041d458e8ecd47b153ed66980073d9150d72e3f7902cc18849dd412f1.front-on-1000x1100.webp",
+          "sha256": "bb344dd041d458e8ecd47b153ed66980073d9150d72e3f7902cc18849dd412f1",
+          "url": "/images/plate-contact-sheets/bb344dd041d458e8ecd47b153ed66980073d9150d72e3f7902cc18849dd412f1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrBrwnLthr",
+      "binding": "78e00169137723b83eadc18f53da49055e6566176889cb452cc7668b4d26b105",
+      "sha256": "13e72cc6f632ffbe26c0563da60329731fdd606ca89a13f31377902cf817d757",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrBrwnLthr/13e72cc6f632ffbe26c0563da60329731fdd606ca89a13f31377902cf817d757.front-on-1000x1100.webp",
+          "sha256": "13e72cc6f632ffbe26c0563da60329731fdd606ca89a13f31377902cf817d757",
+          "url": "/images/plate-contact-sheets/13e72cc6f632ffbe26c0563da60329731fdd606ca89a13f31377902cf817d757.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrIvyLthr",
+      "binding": "4827067f66e2a9d1c9d34bc6d8fd9c59c55882cc1c6e009baaad5a9553623af6",
+      "sha256": "d33c602b2c5f67ccbbd2abe17c886f44e94a7bd6677f5aa5ba960c5f445de84b",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrIvyLthr/d33c602b2c5f67ccbbd2abe17c886f44e94a7bd6677f5aa5ba960c5f445de84b.front-on-1000x1100.webp",
+          "sha256": "d33c602b2c5f67ccbbd2abe17c886f44e94a7bd6677f5aa5ba960c5f445de84b",
+          "url": "/images/plate-contact-sheets/d33c602b2c5f67ccbbd2abe17c886f44e94a7bd6677f5aa5ba960c5f445de84b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrLBrwnLthr",
+      "binding": "8b9a2625d8c5c2e79fdeec27f231df42fe6c4207cf2af9823f536f5318e2b551",
+      "sha256": "dd60c2101090eef159b903bb444eb563710c18d9188a083ec1232caa35e4e112",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrLBrwnLthr/dd60c2101090eef159b903bb444eb563710c18d9188a083ec1232caa35e4e112.front-on-1000x1100.webp",
+          "sha256": "dd60c2101090eef159b903bb444eb563710c18d9188a083ec1232caa35e4e112",
+          "url": "/images/plate-contact-sheets/dd60c2101090eef159b903bb444eb563710c18d9188a083ec1232caa35e4e112.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrMtSl",
+      "binding": "a6e5c4f9e01d8d77f0ae6c92eaeac2365233d46aa5c57b67a84f0ad3f1bec005",
+      "sha256": "b513f1d33d51aeda2d7d6627831ee2202931d1b9f10db1eb477fc20aeec644d5",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrMtSl/b513f1d33d51aeda2d7d6627831ee2202931d1b9f10db1eb477fc20aeec644d5.front-on-1000x1100.webp",
+          "sha256": "b513f1d33d51aeda2d7d6627831ee2202931d1b9f10db1eb477fc20aeec644d5",
+          "url": "/images/plate-contact-sheets/b513f1d33d51aeda2d7d6627831ee2202931d1b9f10db1eb477fc20aeec644d5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrMtSlTall",
+      "binding": "5715533f3287c2d3607639d5de6560bd2c092c1b824c9cc21972ec8a233d497b",
+      "sha256": "ba15942ad60e15af67693afef0ddf7c64255391919aaf0c011548683b3c890ba",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrMtSlTall/ba15942ad60e15af67693afef0ddf7c64255391919aaf0c011548683b3c890ba.front-on-1000x1100.webp",
+          "sha256": "ba15942ad60e15af67693afef0ddf7c64255391919aaf0c011548683b3c890ba",
+          "url": "/images/plate-contact-sheets/ba15942ad60e15af67693afef0ddf7c64255391919aaf0c011548683b3c890ba.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrPnkLthr",
+      "binding": "1a4793f0c54edcad9140496471badddbb022da99c72a1cd00305ebcc3ce43b56",
+      "sha256": "66da3980f87a588f2d62402f85d7cfc69df3e5bd1ca6f6b6bf1a89eef67d7d30",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrPnkLthr/66da3980f87a588f2d62402f85d7cfc69df3e5bd1ca6f6b6bf1a89eef67d7d30.front-on-1000x1100.webp",
+          "sha256": "66da3980f87a588f2d62402f85d7cfc69df3e5bd1ca6f6b6bf1a89eef67d7d30",
+          "url": "/images/plate-contact-sheets/66da3980f87a588f2d62402f85d7cfc69df3e5bd1ca6f6b6bf1a89eef67d7d30.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrShnBlk",
+      "binding": "0fd163be145379cf3f61c76459c03706b70630bf3b6d120e8427d08903072daf",
+      "sha256": "7c5df3cd41fbbfec7520c6d4b0e8fdbe6a439024276412279233c405dc93c799",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrShnBlk/7c5df3cd41fbbfec7520c6d4b0e8fdbe6a439024276412279233c405dc93c799.front-on-1000x1100.webp",
+          "sha256": "7c5df3cd41fbbfec7520c6d4b0e8fdbe6a439024276412279233c405dc93c799",
+          "url": "/images/plate-contact-sheets/7c5df3cd41fbbfec7520c6d4b0e8fdbe6a439024276412279233c405dc93c799.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrShnBlkTall",
+      "binding": "3051790ad04f5fd497b23639097c7ca901dd092ff70944af4d4ab7de0162bab3",
+      "sha256": "7649ff09ba61d5df86d7e4459ca29e317008fd30642963c4ba9d5b2b3f65dfe3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrShnBlkTall/7649ff09ba61d5df86d7e4459ca29e317008fd30642963c4ba9d5b2b3f65dfe3.front-on-1000x1100.webp",
+          "sha256": "7649ff09ba61d5df86d7e4459ca29e317008fd30642963c4ba9d5b2b3f65dfe3",
+          "url": "/images/plate-contact-sheets/7649ff09ba61d5df86d7e4459ca29e317008fd30642963c4ba9d5b2b3f65dfe3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrShnGl",
+      "binding": "02ac7170a5f29caa9cc7a510b83f6ed763dcf9276afaa4df05127b127e6f6e8f",
+      "sha256": "cb0bb1bdf008875e07852efa31e3351065cc6d2040004d57146e6efee73e662a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrShnGl/cb0bb1bdf008875e07852efa31e3351065cc6d2040004d57146e6efee73e662a.front-on-1000x1100.webp",
+          "sha256": "cb0bb1bdf008875e07852efa31e3351065cc6d2040004d57146e6efee73e662a",
+          "url": "/images/plate-contact-sheets/cb0bb1bdf008875e07852efa31e3351065cc6d2040004d57146e6efee73e662a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55RdcrShnSl",
+      "binding": "5ad7f265f81684c426eea83010e01f62ab18d7eab1e2605be11087671783d09f",
+      "sha256": "869d8410ef4984e0f7bf70c29e6d38356b4216c80dc750f92bf52a8a6edeb1c6",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55RdcrShnSl/869d8410ef4984e0f7bf70c29e6d38356b4216c80dc750f92bf52a8a6edeb1c6.front-on-1000x1100.webp",
+          "sha256": "869d8410ef4984e0f7bf70c29e6d38356b4216c80dc750f92bf52a8a6edeb1c6",
+          "url": "/images/plate-contact-sheets/869d8410ef4984e0f7bf70c29e6d38356b4216c80dc750f92bf52a8a6edeb1c6.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55SpryCu",
+      "binding": "054533890cb14b4714ca8ae7b0ee44aeb437d250c188c546e22a2227d84cf26f",
+      "sha256": "78a10ad53d8707a2187cb1d9b73a318df5d416b2e931785e488fc8d379651a82",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryCu/78a10ad53d8707a2187cb1d9b73a318df5d416b2e931785e488fc8d379651a82.front-on-1000x1100.webp",
+          "sha256": "78a10ad53d8707a2187cb1d9b73a318df5d416b2e931785e488fc8d379651a82",
+          "url": "/images/plate-contact-sheets/78a10ad53d8707a2187cb1d9b73a318df5d416b2e931785e488fc8d379651a82.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryCu/6e25be4ae481df503574cf698e72ca61950a4894951be428454b35bfe8975559.front-off-1000x1100.webp",
+          "sha256": "6e25be4ae481df503574cf698e72ca61950a4894951be428454b35bfe8975559",
+          "url": "/images/plate-contact-sheets/6e25be4ae481df503574cf698e72ca61950a4894951be428454b35bfe8975559.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55SpryMtGl",
+      "binding": "0df38d6f58a1cc952c0189b06e8466a77b4458a7c442bff8466f3a4939bc2c6e",
+      "sha256": "b865ed4ae2c1e801ee093e488db1325822e73089222ac119ed9bda5b715674fc",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryMtGl/b865ed4ae2c1e801ee093e488db1325822e73089222ac119ed9bda5b715674fc.front-on-1000x1100.webp",
+          "sha256": "b865ed4ae2c1e801ee093e488db1325822e73089222ac119ed9bda5b715674fc",
+          "url": "/images/plate-contact-sheets/b865ed4ae2c1e801ee093e488db1325822e73089222ac119ed9bda5b715674fc.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryMtGl/14ece87be0dfa1ebd39b007c66f56fab49b08cb2ef9e4a43bfb468a6cd741064.front-off-1000x1100.webp",
+          "sha256": "14ece87be0dfa1ebd39b007c66f56fab49b08cb2ef9e4a43bfb468a6cd741064",
+          "url": "/images/plate-contact-sheets/14ece87be0dfa1ebd39b007c66f56fab49b08cb2ef9e4a43bfb468a6cd741064.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55SpryMtSl",
+      "binding": "fd4a30a3525c86d815992124bc8cff76b9da0c0c783ce789a32a1411d1e0b2a7",
+      "sha256": "03329b6ce7bb8b9453b3fdcc6952324147b76b8ea0b6da3fba7a59fc9f511c44",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryMtSl/03329b6ce7bb8b9453b3fdcc6952324147b76b8ea0b6da3fba7a59fc9f511c44.front-on-1000x1100.webp",
+          "sha256": "03329b6ce7bb8b9453b3fdcc6952324147b76b8ea0b6da3fba7a59fc9f511c44",
+          "url": "/images/plate-contact-sheets/03329b6ce7bb8b9453b3fdcc6952324147b76b8ea0b6da3fba7a59fc9f511c44.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryMtSl/516112ae94c5d25087244439f85cf3882657569d6784e5a7efce56287d289713.front-off-1000x1100.webp",
+          "sha256": "516112ae94c5d25087244439f85cf3882657569d6784e5a7efce56287d289713",
+          "url": "/images/plate-contact-sheets/516112ae94c5d25087244439f85cf3882657569d6784e5a7efce56287d289713.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBGrce55SpryShnGl",
+      "binding": "e8163d3aecab73e0a1de1d825548a4de1c462f7b9bc3f863f5735f02f4704d47",
+      "sha256": "074d5c0fa403d4b331efeb2141bdb91747750283396d159c1dd59f58fbcbddf0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryShnGl/074d5c0fa403d4b331efeb2141bdb91747750283396d159c1dd59f58fbcbddf0.front-on-1000x1100.webp",
+          "sha256": "074d5c0fa403d4b331efeb2141bdb91747750283396d159c1dd59f58fbcbddf0",
+          "url": "/images/plate-contact-sheets/074d5c0fa403d4b331efeb2141bdb91747750283396d159c1dd59f58fbcbddf0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/GBGrce55SpryShnGl/df090003bf87ebed326bdb030f55cfc2161fe057712971e9913cd98f68bf48e3.front-off-1000x1100.webp",
+          "sha256": "df090003bf87ebed326bdb030f55cfc2161fe057712971e9913cd98f68bf48e3",
+          "url": "/images/plate-contact-sheets/df090003bf87ebed326bdb030f55cfc2161fe057712971e9913cd98f68bf48e3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "LBGrce55LtnCu",
+      "binding": "bdfe756dece2743bfd44708d9d7be8a3138d155a1cdade66a227b02ee8dbaca1",
+      "sha256": "84f7e30f55073d73fb701a0819b755874444008a34bdbaee83be9d5468499285",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnCu/84f7e30f55073d73fb701a0819b755874444008a34bdbaee83be9d5468499285.front-on-1000x1100.webp",
+          "sha256": "84f7e30f55073d73fb701a0819b755874444008a34bdbaee83be9d5468499285",
+          "url": "/images/plate-contact-sheets/84f7e30f55073d73fb701a0819b755874444008a34bdbaee83be9d5468499285.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnCu/690b933eadb3dabbeaf7c1b5e53c5e5d080df9a4620667e8562e511fa409f764.front-off-1000x1100.webp",
+          "sha256": "690b933eadb3dabbeaf7c1b5e53c5e5d080df9a4620667e8562e511fa409f764",
+          "url": "/images/plate-contact-sheets/690b933eadb3dabbeaf7c1b5e53c5e5d080df9a4620667e8562e511fa409f764.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "LBGrce55LtnMtGl",
+      "binding": "33a5e95d8487094ca42a04a7a02c95fb8b327e43243ebafcc16d3aaa14294dfc",
+      "sha256": "8b47320083ef571ef361708bd1099c39742a365f8c8cefd7a235d2f62b7551d0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnMtGl/8b47320083ef571ef361708bd1099c39742a365f8c8cefd7a235d2f62b7551d0.front-on-1000x1100.webp",
+          "sha256": "8b47320083ef571ef361708bd1099c39742a365f8c8cefd7a235d2f62b7551d0",
+          "url": "/images/plate-contact-sheets/8b47320083ef571ef361708bd1099c39742a365f8c8cefd7a235d2f62b7551d0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnMtGl/17e0a48a1402b7d54d2a16bd6cc062c60f56609343ce2aa935da098134532576.front-off-1000x1100.webp",
+          "sha256": "17e0a48a1402b7d54d2a16bd6cc062c60f56609343ce2aa935da098134532576",
+          "url": "/images/plate-contact-sheets/17e0a48a1402b7d54d2a16bd6cc062c60f56609343ce2aa935da098134532576.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "LBGrce55LtnShnGl",
+      "binding": "12ae5ae073fe85f24e5cda23dc3141188368c08dc7ae0ae4e4407552ba9070d8",
+      "sha256": "ffcd22819d69729148e964310d707f00bdde46ba1c64bef4857dd3e7465e236a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnShnGl/ffcd22819d69729148e964310d707f00bdde46ba1c64bef4857dd3e7465e236a.front-on-1000x1100.webp",
+          "sha256": "ffcd22819d69729148e964310d707f00bdde46ba1c64bef4857dd3e7465e236a",
+          "url": "/images/plate-contact-sheets/ffcd22819d69729148e964310d707f00bdde46ba1c64bef4857dd3e7465e236a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnShnGl/a7b765f77174e9a76e0d32fad5253d99ebb6158400ffb595dd7a69388d0674e5.front-off-1000x1100.webp",
+          "sha256": "a7b765f77174e9a76e0d32fad5253d99ebb6158400ffb595dd7a69388d0674e5",
+          "url": "/images/plate-contact-sheets/a7b765f77174e9a76e0d32fad5253d99ebb6158400ffb595dd7a69388d0674e5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "LBGrce55LtnShnSl",
+      "binding": "e97bca165314a567fc3eeafcadf3206b9cbb192929e6732d4609b9e730c91910",
+      "sha256": "cae787de61a8f81958b0002293fe0adae2b45137ac8616be78d4a9609b144c53",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:28.436Z",
+      "batchId": "c0d4fa4c-e000-4478-9a77-8946b3e93752",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnShnSl/cae787de61a8f81958b0002293fe0adae2b45137ac8616be78d4a9609b144c53.front-on-1000x1100.webp",
+          "sha256": "cae787de61a8f81958b0002293fe0adae2b45137ac8616be78d4a9609b144c53",
+          "url": "/images/plate-contact-sheets/cae787de61a8f81958b0002293fe0adae2b45137ac8616be78d4a9609b144c53.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/grace-55ml-clear-18-415/LBGrce55LtnShnSl/574761180592d393be22e12285dd8c4a0d2809431bbfe0e2bf76e6f7b9d46ef8.front-off-1000x1100.webp",
+          "sha256": "574761180592d393be22e12285dd8c4a0d2809431bbfe0e2bf76e6f7b9d46ef8",
+          "url": "/images/plate-contact-sheets/574761180592d393be22e12285dd8c4a0d2809431bbfe0e2bf76e6f7b9d46ef8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}

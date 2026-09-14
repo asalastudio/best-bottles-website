@@ -1,0 +1,5232 @@
+{
+  "schemaVersion": 1,
+  "id": "missing-plate-acquisition-2026-09-13",
+  "scope": "active plate rows with stage=missing",
+  "sourceRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "summary": {
+    "total": 223,
+    "candidatePrepared": 74,
+    "reviewEligible": 67,
+    "candidateHeldForPriorReconciliation": 7,
+    "noCandidateHolds": 149
+  },
+  "rows": [
+    {
+      "sku": "Alu100mlSprayBlack",
+      "family": "Aluminum Bottle",
+      "familyId": "aluminum-bottle-100ml-clear-20-410-finemist",
+      "productGroupId": "kh7134v41n6zq4rhk658mqgvd18dq93f",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Black",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "Alu500",
+      "family": "Aluminum Bottle",
+      "familyId": "aluminum-bottle-500ml-clear-20-410",
+      "productGroupId": "kh7ce9zwavec5yk680njg345es8dqvaf",
+      "capacityMl": 500,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBPearClear4ozStpr",
+      "family": "Apothecary",
+      "familyId": "apothecary-118ml-clear-ground",
+      "productGroupId": "kh74d6w3xat1mb55181s9jh8c18dqxe4",
+      "capacityMl": 118,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "10. Apothecary/4. 4oz Pear Apoth/GBPearClear4ozStpr.psd",
+        "sha256": "96a85b9e001879bae80e4102bb399a04dca631b9f8063b1b043ad954159ce550",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBPearClear4ozStpr.webp",
+        "sha256": "25c70b6cc81df5e1a9c9e0e0c0636aecd0dd73c777b5d46e5b0ace6129c41828",
+        "bytes": 17594,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBPearClear4ozStpr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBPearClear4ozStpr.webp",
+        "sha256": "1db3a2615c0c59316db3d652b782bcb645f0c9d9f6cff8bb357c0251dcaf6914",
+        "bytes": 19722,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/apothecary/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:20.957071+00:00"
+    },
+    {
+      "sku": "GBAtom5SlimGl",
+      "family": "Atomizer",
+      "familyId": "atomizer-5ml-clear-10mm",
+      "productGroupId": "kh7bnpjya3c95y2898etfeqa698dqsdy",
+      "capacityMl": 5,
+      "color": "Clear",
+      "applicator": "Atomizer",
+      "capColor": "Gold",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "8.   13-400 (5ml) (10ml) Atomizers/13-400 5ml Atomizers/3. GBAtom5SlimGl.psd",
+        "sha256": "f1b79284313755490174b152d8266f36d86f8081987a607df746387ed72b697d",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBAtom5SlimGl.webp",
+        "sha256": "4c00c8a47aea53388ee2f7240d06f95f79dddd4eb3a66adad86d1451aae48689",
+        "bytes": 21530,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBAtom5SlimGl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBAtom5SlimGl.webp",
+        "sha256": "703a367280174d46863e0e05e4208c17b2cf0159687e570eca78dff115a6bccd",
+        "bytes": 19416,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/atomizer/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:21.139862+00:00"
+    },
+    {
+      "sku": "GBAtom5SlimSl",
+      "family": "Atomizer",
+      "familyId": "atomizer-5ml-clear-10mm",
+      "productGroupId": "kh7bnpjya3c95y2898etfeqa698dqsdy",
+      "capacityMl": 5,
+      "color": "Clear",
+      "applicator": "Atomizer",
+      "capColor": "Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "8.   13-400 (5ml) (10ml) Atomizers/13-400 5ml Atomizers/2. GBAtom5SlimSl.psd",
+        "sha256": "310e520e2b9efd609ff7234c177b83d5f9ed03ded21524791a2c448314984f80",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBAtom5SlimSl.webp",
+        "sha256": "666a148b5c759f360e0d8aa77148fe4485e362bd6b356bd338299f9ad5a60bdd",
+        "bytes": 17748,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBAtom5SlimSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBAtom5SlimSl.webp",
+        "sha256": "8135f82f638bdb532ef5dc9184283b6fcea6cb2348902ac498efac4a199be2e5",
+        "bytes": 16036,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/atomizer/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:21.300961+00:00"
+    },
+    {
+      "sku": "GBBell10BlkShSht",
+      "family": "Bell",
+      "familyId": "bell-10ml-clear-13-415-capclosure",
+      "productGroupId": "kh732k25mgqvmvvw4yve19358d8dpp16",
+      "capacityMl": 10,
+      "color": "Clear",
+      "applicator": "Cap/Closure",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBBell10MtlRollBlkDot",
+      "family": "Bell",
+      "familyId": "bell-10ml-clear-13-415-rollon",
+      "productGroupId": "kh71maegdqexr99751mrxnb3518dp6ej",
+      "capacityMl": 10,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBBell10RollBlkDot",
+      "family": "Bell",
+      "familyId": "bell-10ml-clear-13-415-rollon",
+      "productGroupId": "kh71maegdqexr99751mrxnb3518dp6ej",
+      "capacityMl": 10,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBBell10SpryBlkSh",
+      "family": "Bell",
+      "familyId": "bell-10ml-clear-13-415-finemist",
+      "productGroupId": "kh75z555pxfh7trsamvthkzp2x8dqth3",
+      "capacityMl": 10,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "CJBlu3",
+      "family": "Cream Jar",
+      "familyId": "cream-jar-3ml-cobalt-blue",
+      "productGroupId": "kh7a589thqcf1pw74wfc86j3918dqxta",
+      "capacityMl": 3,
+      "color": "Cobalt Blue",
+      "applicator": null,
+      "capColor": "Blue",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "CJAmb30BlkCap",
+      "family": "Cream Jar",
+      "familyId": "cream-jar-30ml-amber",
+      "productGroupId": "kh70xbssy25grhkk4jgr33c2g18dp85n",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Black",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "CreamJarAmb40Blkcap",
+      "family": "Cream Jar",
+      "familyId": "cream-jar-40ml-amber",
+      "productGroupId": "kh7b0k275c1yprzknzv6hbz7n58dp4vg",
+      "capacityMl": 40,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Amber",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "CreamJarFrstdPlsBlkPls2oz",
+      "family": "Cream Jar",
+      "familyId": "cream-jar-60ml-frosted",
+      "productGroupId": "kh7c4czc0jzw7y2pdf0b99qx3h8dpt1v",
+      "capacityMl": 60,
+      "color": "Frosted",
+      "applicator": null,
+      "capColor": "Frosted",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBHeartFrst4KeyGld",
+      "family": "Decorative",
+      "familyId": "decorative-4ml-frosted-8mm",
+      "productGroupId": "kh7997y36c8sgvh27p0cwmdngn8dq3bs",
+      "capacityMl": 4,
+      "color": "Frosted",
+      "applicator": "Glass Stopper",
+      "capColor": "Gold",
+      "status": "pending-reconciliation",
+      "holdReasons": [
+        "no approved front in existing selection"
+      ],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "9.   8mm Deco Hearts /1. Small Decorative Hearts /1. Frst 4 ml Heart/1. Frst 4ml Heart/2. GBHeartFrst4KeyGld.psd",
+        "sha256": "e6bccfb33b8869c672eac4394d209e40c0a5fb842717aef93d7e3ee0871f9ab8",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBHeartFrst4KeyGld.webp",
+        "sha256": "058deb261a44f52d037340205e334e4ecfe5f9371113e24efe4f5ddc59424c93",
+        "bytes": 40204,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBHeartFrst4KeyGld.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBHeartFrst4KeyGld.webp",
+        "sha256": "d6a4d180cb8ac89383b28a0c280825e3ccbba83cee8a87ad96a0ec1cae027aa4",
+        "bytes": 44878,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/decorative/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:21.591149+00:00"
+    },
+    {
+      "sku": "GBHeartFrst4TslRed",
+      "family": "Decorative",
+      "familyId": "decorative-4ml-frosted-8mm",
+      "productGroupId": "kh708pvq202v9vnr48n375f2bd8dqase",
+      "capacityMl": 4,
+      "color": "Frosted",
+      "applicator": "Glass Stopper",
+      "capColor": "Red",
+      "status": "pending-reconciliation",
+      "holdReasons": [
+        "no approved front in existing selection"
+      ],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "9.   8mm Deco Hearts /1. Small Decorative Hearts /1. Frst 4 ml Heart/1. Frst 4ml Heart/4. GBHeartFrst4TslRed.psd",
+        "sha256": "01003021a0c290971f5dadf24652dc1fabe491d4f54ab1124945138b462732f4",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBHeartFrst4TslRed.webp",
+        "sha256": "9c5f810ade3319d4b2cd0481aed5a1e67f4bd5515aab0da944e67c4e437c5bc1",
+        "bytes": 44376,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBHeartFrst4TslRed.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBHeartFrst4TslRed.webp",
+        "sha256": "1a4f9c19bf8b516b14ca923fb8c075db7a646b3752a9c510ead421ee2401a4e8",
+        "bytes": 46936,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/decorative/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:21.782128+00:00"
+    },
+    {
+      "sku": "GBEternalFlameClear",
+      "family": "Decorative",
+      "familyId": "decorative-35ml-clear-ground",
+      "productGroupId": "kh70fwjemjz2w6x29hnwbxrks18dqxyv",
+      "capacityMl": 35,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "17. Additional Bottles/GBEternalFlameClear..psd",
+        "sha256": "13a89cf615c20a6cf580a8b3d9d9ad2af3e39ff2e74607d21044758f1fe3e5fc",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBEternalFlameClear.webp",
+        "sha256": "80d1cb032aa0177c55c1837f10d35950b761fa2581394abd66c736d533aa3e42",
+        "bytes": 6300,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBEternalFlameClear.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBEternalFlameClear.webp",
+        "sha256": "dd45f1fe8f1f512822fb5f4ca6b51a8b05638288dee5b1624eb992d7f9942491",
+        "bytes": 21142,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/decorative/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:22.991728+00:00"
+    },
+    {
+      "sku": "GBDmnd2ozSpryCu",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-perfumespray",
+      "productGroupId": "kh76gv8vhqaj0a7tedvh3stfqs8dq60n",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBDmnd2ozSpryMtGl",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-perfumespray",
+      "productGroupId": "kh76gv8vhqaj0a7tedvh3stfqs8dq60n",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBDmnd2ozSpryMtSl",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-perfumespray",
+      "productGroupId": "kh76gv8vhqaj0a7tedvh3stfqs8dq60n",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBDmnd2ozSpryShnBlk",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-perfumespray",
+      "productGroupId": "kh76gv8vhqaj0a7tedvh3stfqs8dq60n",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBDmnd2ozSpryShnGl",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-perfumespray",
+      "productGroupId": "kh76gv8vhqaj0a7tedvh3stfqs8dq60n",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBDmnd2ozSpryShnSl",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-perfumespray",
+      "productGroupId": "kh76gv8vhqaj0a7tedvh3stfqs8dq60n",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBDmnd2ozLtnClOvrCap",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79bywgdhw596ar2k3r4f9p2x8dphdv",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Clear Overcap",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBDmnd2ozLtnCu",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79bywgdhw596ar2k3r4f9p2x8dphdv",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBDmnd2ozLtnMtGl",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79bywgdhw596ar2k3r4f9p2x8dphdv",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBDmnd2ozLtnMtSl",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79bywgdhw596ar2k3r4f9p2x8dphdv",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBDmnd2ozLtnShnBlk",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79bywgdhw596ar2k3r4f9p2x8dphdv",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBDmnd2ozLtnShnGl",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79bywgdhw596ar2k3r4f9p2x8dphdv",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBDmnd2ozLtnShnSl",
+      "family": "Diamond",
+      "familyId": "diamond-60ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79bywgdhw596ar2k3r4f9p2x8dphdv",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBDiva46AnSpTslRed",
+      "family": "Diva",
+      "familyId": "diva-46ml-clear-18-415",
+      "productGroupId": "kh7avq3257cf78wgr0s9pa90mh8dq8fy",
+      "capacityMl": 46,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "capColor": "Red",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/47. GBDiva46AnSpTslRed.psd",
+        "sha256": "8ac4bfd06b498d98dc8ae88aca16fc50fc9b6d62f3890374bf2028e04d68b4bc",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBDiva46AnSpTslRed.webp",
+        "sha256": "859ec5ecf69bf8c763f86bf96b79881ff9ffeb2265620aff19ce8ab70ce2d5d9",
+        "bytes": 98894,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBDiva46AnSpTslRed.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBDiva46AnSpTslRed.webp",
+        "sha256": "e5010f1b8de90da7a78564df70461d8e0d617e11819d7ad65f4a853cc9a3b859",
+        "bytes": 108870,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/diva/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:23.716288+00:00"
+    },
+    {
+      "sku": "GBDivaFrst46AnSpTslBlk",
+      "family": "Diva",
+      "familyId": "diva-46ml-frosted-18-415",
+      "productGroupId": "kh7b5cwn10y6akvby0ad9d5qys8dqarj",
+      "capacityMl": 46,
+      "color": "Frosted",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "capColor": "Clear",
+      "status": "pending-reconciliation",
+      "holdReasons": [
+        "no approved front in existing selection"
+      ],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/48. GBDivaFrst46AnSpTslBlk.psd",
+        "sha256": "3ff70bd0d93cf2e8a1258ee0df7c9d568d17bbd739b9d5ec5519a0706a536af8",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBDivaFrst46AnSpTslBlk.webp",
+        "sha256": "8082f491f4fa83dd7b1f99065e3beb8c32306c1bfb5764f92d703d1dae566862",
+        "bytes": 55036,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBDivaFrst46AnSpTslBlk.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBDivaFrst46AnSpTslBlk.webp",
+        "sha256": "809e29161a400cad2c224ed6b49684adcee7ab1a477466a3d48b4c5a61bf0b21",
+        "bytes": 55988,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/diva/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:23.393332+00:00"
+    },
+    {
+      "sku": "GBDivaFrst46AnSpTslMtSl",
+      "family": "Diva",
+      "familyId": "diva-46ml-frosted-18-415",
+      "productGroupId": "kh7b5cwn10y6akvby0ad9d5qys8dqarj",
+      "capacityMl": 46,
+      "color": "Frosted",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "capColor": "Clear",
+      "status": "pending-reconciliation",
+      "holdReasons": [
+        "no approved front in existing selection"
+      ],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/49. GBDivaFrst46AnSpTslMtSl.psd",
+        "sha256": "b517d89b986fae46cfc951ec7582ea48c26776e3a34e18839d688910f39a0141",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBDivaFrst46AnSpTslMtSl.webp",
+        "sha256": "90f5aae99b125f674e1196ee518fac817e378beec9d5d59fa409f96e029e7c33",
+        "bytes": 64570,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBDivaFrst46AnSpTslMtSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBDivaFrst46AnSpTslMtSl.webp",
+        "sha256": "abae3e662864cf9fcbb83c284fa266265be2ac3af8e19b25698b41e0d2795d9b",
+        "bytes": 72060,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/diva/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:24.004210+00:00"
+    },
+    {
+      "sku": "GBDivaFrst46AnSpTslRed",
+      "family": "Diva",
+      "familyId": "diva-46ml-frosted-18-415",
+      "productGroupId": "kh7b5cwn10y6akvby0ad9d5qys8dqarj",
+      "capacityMl": 46,
+      "color": "Frosted",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "capColor": "Clear",
+      "status": "pending-reconciliation",
+      "holdReasons": [
+        "no approved front in existing selection"
+      ],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/47. GBDivaFrst46AnSpTslRed.psd",
+        "sha256": "edb275f03f388e60a73b129cd2c4e43b5395f2fab7fcf79799fb442420eb5be9",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBDivaFrst46AnSpTslRed.webp",
+        "sha256": "8e7ea7367ac7008a42769bdc1091368098fec59143d24ec44fb4addb21676bef",
+        "bytes": 73874,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBDivaFrst46AnSpTslRed.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBDivaFrst46AnSpTslRed.webp",
+        "sha256": "de459276b1c56d58a8564c6d8525b335746217de79ecc42cbe0e4b71c048c77c",
+        "bytes": 74968,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/diva/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:24.284405+00:00"
+    },
+    {
+      "sku": "GBElg15MinarCu",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-clear-13-415-capclosure",
+      "productGroupId": "kh77j7zcydhc6re1kr27jq59bh8dpksk",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "Cap/Closure",
+      "capColor": "Matte Copper",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBElgFrst15BlkShSht",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-frosted-13-415",
+      "productGroupId": "kh7c0h4rr1vktb8r5cbjm0zv1n8dqrch",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "applicator": "N/A",
+      "capColor": null,
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBElg30SpryShnSl",
+      "family": "Elegant",
+      "familyId": "elegant-30ml-clear-15-415-perfumespray",
+      "productGroupId": "kh7ayrjw1a47rvbhfmfa19ajvn8dpzat",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp50SpryCu",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7f2g12h2mptwyadmqmfq3ya58dqmft",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7f2g12h2mptwyadmqmfq3ya58dqmft",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp50SpryMtSl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7f2g12h2mptwyadmqmfq3ya58dqmft",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp50SpryShnBlk",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7f2g12h2mptwyadmqmfq3ya58dqmft",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp50SpryShnGl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7f2g12h2mptwyadmqmfq3ya58dqmft",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp50SpryShnSl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7f2g12h2mptwyadmqmfq3ya58dqmft",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp50LtnClOvrCap",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7542qstcqet4vy6vs71vg6sh8dpg9z",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Clear Overcap",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp50LtnCu",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7542qstcqet4vy6vs71vg6sh8dpg9z",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp50LtnMtGl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7542qstcqet4vy6vs71vg6sh8dpg9z",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp50LtnMtSl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7542qstcqet4vy6vs71vg6sh8dpg9z",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp50LtnShnBlk",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7542qstcqet4vy6vs71vg6sh8dpg9z",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp50LtnShnGl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7542qstcqet4vy6vs71vg6sh8dpg9z",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp50LtnShnSl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7542qstcqet4vy6vs71vg6sh8dpg9z",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp100SpryCu",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh786wekwbe5tbczqjg2x5jd1h8dpf5p",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh786wekwbe5tbczqjg2x5jd1h8dpf5p",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp100SpryMtSl",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh786wekwbe5tbczqjg2x5jd1h8dpf5p",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp100SpryShnBlk",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh786wekwbe5tbczqjg2x5jd1h8dpf5p",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp100SpryShnGl",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh786wekwbe5tbczqjg2x5jd1h8dpf5p",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBEmp100SpryShnSl",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh786wekwbe5tbczqjg2x5jd1h8dpf5p",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp100LtnClOvrCap",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh70axz73gj5yecg35atg433zd8dps6z",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Clear Overcap",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp100LtnCu",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh70axz73gj5yecg35atg433zd8dps6z",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp100LtnMtGl",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh70axz73gj5yecg35atg433zd8dps6z",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp100LtnMtSl",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh70axz73gj5yecg35atg433zd8dps6z",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp100LtnShnBlk",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh70axz73gj5yecg35atg433zd8dps6z",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp100LtnShnGl",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh70axz73gj5yecg35atg433zd8dps6z",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBEmp100LtnShnSl",
+      "family": "Empire",
+      "familyId": "empire-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh70axz73gj5yecg35atg433zd8dps6z",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBGrce55SpryShnBlk",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74xx3ymq29dzzfxs8ee4pj718dp0v5",
+      "capacityMl": 55,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBGrce55SpryShnSl",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74xx3ymq29dzzfxs8ee4pj718dp0v5",
+      "capacityMl": 55,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBGrce55LtnClOvrCap",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7d4hbjm3yr8jgce2ppbqac0d8dqgs3",
+      "capacityMl": 55,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Clear Overcap",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBGrce55LtnMtSl",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7d4hbjm3yr8jgce2ppbqac0d8dqgs3",
+      "capacityMl": 55,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBGrce55LtnShnBlk",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7d4hbjm3yr8jgce2ppbqac0d8dqgs3",
+      "capacityMl": 55,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LB1ozGl",
+      "family": "Lotion Bottle",
+      "familyId": "lotion-bottle-30ml-clear",
+      "productGroupId": "kh77fh9gch8hxtnyqhf79v4kq58dqgkn",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "familyId:missing:neck"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LB1ozSl",
+      "family": "Lotion Bottle",
+      "familyId": "lotion-bottle-30ml-clear",
+      "productGroupId": "kh77fh9gch8hxtnyqhf79v4kq58dqgkn",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Silver",
+      "status": "hold",
+      "holdReasons": [
+        "familyId:missing:neck"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBPillar9BlkShSht",
+      "family": "Pillar",
+      "familyId": "pillar-9ml-clear-13-415",
+      "productGroupId": "kh7bvxc5ysvsff87e5akrr5d798dpqe7",
+      "capacityMl": 9,
+      "color": "Clear",
+      "applicator": "N/A",
+      "capColor": "Clear",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBPillar9MtlRollBlkdot",
+      "family": "Pillar",
+      "familyId": "pillar-9ml-clear-13-415",
+      "productGroupId": "kh7bvxc5ysvsff87e5akrr5d798dpqe7",
+      "capacityMl": 9,
+      "color": "Clear",
+      "applicator": "N/A",
+      "capColor": null,
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBPillar9RollBlkDot",
+      "family": "Pillar",
+      "familyId": "pillar-9ml-clear-13-415",
+      "productGroupId": "kh7bvxc5ysvsff87e5akrr5d798dpqe7",
+      "capacityMl": 9,
+      "color": "Clear",
+      "applicator": "N/A",
+      "capColor": "Clear",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBPillar9SpryBlkMatt",
+      "family": "Pillar",
+      "familyId": "pillar-9ml-clear-17-415-finemist",
+      "productGroupId": "kh71x0xqrz0xcjxfn5cmr5381n8dq728",
+      "capacityMl": 9,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Black",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "PB10SpryNat",
+      "family": "Plastic Bottle",
+      "familyId": "plastic-bottle-10ml-clear",
+      "productGroupId": "kh755tpd48navw8v7pfa8r8mhh8dq8rp",
+      "capacityMl": 10,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Natural",
+      "status": "hold",
+      "holdReasons": [
+        "familyId:missing:neck"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "PB1ozSprySl",
+      "family": "Plastic Bottle",
+      "familyId": "plastic-bottle-30ml-clear",
+      "productGroupId": "kh782vydjf8gk0qchkxp761bxh8dphk5",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Silver",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSQSTBlue",
+      "family": "Rectangle",
+      "familyId": "rectangle-9ml-clear-ground",
+      "productGroupId": "kh7d9cvtpzaaq0pma35be5r89h8dqqqd",
+      "capacityMl": 9,
+      "color": "Clear",
+      "applicator": "Glass Stopper",
+      "capColor": "Clear",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "17. Additional Bottles/GBSQSTBlue...psd",
+        "sha256": "150a90e702f1653818f362c42e3a38493b6427399e4d74aa05f8bdc20423ac41",
+        "stateEvidence": "blob-count:1"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSQSTBlue.webp",
+        "sha256": "6c69ab4a8b471d774dd7440e9ad64aacac5cc57153565ded89094a34f3e8bdba",
+        "bytes": 29276,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSQSTBlue.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSQSTBlue.webp",
+        "sha256": "b88630fc38b08af3fb5cd6a2bd10419959981881a6547e44ade38a2857714033",
+        "bytes": 36404,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/rectangle/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:24.428104+00:00"
+    },
+    {
+      "sku": "GBTallRect10MtlRollPinkDo",
+      "family": "Rectangle",
+      "familyId": "tall-rectangle-10ml-clear-13-415-rollon",
+      "productGroupId": "kh79nfxrjrmbpg4thz4kspk5s58dp5c3",
+      "capacityMl": 10,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Clear",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBTallRect10RollBlkSh",
+      "family": "Rectangle",
+      "familyId": "tall-rectangle-10ml-clear-13-415-rollon",
+      "productGroupId": "kh79nfxrjrmbpg4thz4kspk5s58dp5c3",
+      "capacityMl": 10,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRnd78SpryMtGl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74gntktr8tzwg1n9zk2tkpjn8dpqr8",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRnd78SpryMtSl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74gntktr8tzwg1n9zk2tkpjn8dpqr8",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRnd78SpryShnBlk",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74gntktr8tzwg1n9zk2tkpjn8dpqr8",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRnd78SpryShnGl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74gntktr8tzwg1n9zk2tkpjn8dpqr8",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRnd78SpryShnSl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74gntktr8tzwg1n9zk2tkpjn8dpqr8",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst78SpryCu",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh77ww55m76yhr2172gbnaakvx8dq34k",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh77ww55m76yhr2172gbnaakvx8dq34k",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst78SpryMtSl",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh77ww55m76yhr2172gbnaakvx8dq34k",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst78SpryShnBlk",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh77ww55m76yhr2172gbnaakvx8dq34k",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst78SpryShnGl",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh77ww55m76yhr2172gbnaakvx8dq34k",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst78SpryShnSl",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh77ww55m76yhr2172gbnaakvx8dq34k",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRnd78LtnClOvrCap",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-lotionpump",
+      "productGroupId": "kh71n47hysn6vsjtj2n9dhj6fn8dp5j1",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Clear Overcap",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRnd78LtnMtGl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-lotionpump",
+      "productGroupId": "kh71n47hysn6vsjtj2n9dhj6fn8dp5j1",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRnd78LtnMtSl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-lotionpump",
+      "productGroupId": "kh71n47hysn6vsjtj2n9dhj6fn8dp5j1",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRnd78LtnShnBlk",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-lotionpump",
+      "productGroupId": "kh71n47hysn6vsjtj2n9dhj6fn8dp5j1",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRnd78LtnShnGl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-lotionpump",
+      "productGroupId": "kh71n47hysn6vsjtj2n9dhj6fn8dp5j1",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRnd78LtnShnSl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415-lotionpump",
+      "productGroupId": "kh71n47hysn6vsjtj2n9dhj6fn8dp5j1",
+      "capacityMl": 78,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst78LtnClOvrCap",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh763magvqtn0fpp7t3pf6xsn58dqxjr",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Frosted",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst78LtnCu",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh763magvqtn0fpp7t3pf6xsn58dqxjr",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Frosted",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst78LtnMtGl",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh763magvqtn0fpp7t3pf6xsn58dqxjr",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Frosted",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst78LtnMtSl",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh763magvqtn0fpp7t3pf6xsn58dqxjr",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Frosted",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst78LtnShnBlk",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh763magvqtn0fpp7t3pf6xsn58dqxjr",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Frosted",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst78LtnShnGl",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh763magvqtn0fpp7t3pf6xsn58dqxjr",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Frosted",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst78LtnShnSl",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh763magvqtn0fpp7t3pf6xsn58dqxjr",
+      "capacityMl": 78,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Frosted",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst128SpryCu",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh70s5cp8qvwexec1qhx7fed4d8dp04d",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst128SpryMtGl",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh70s5cp8qvwexec1qhx7fed4d8dp04d",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst128SpryMtSl",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh70s5cp8qvwexec1qhx7fed4d8dp04d",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst128SpryShnBlk",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh70s5cp8qvwexec1qhx7fed4d8dp04d",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst128SpryShnGl",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh70s5cp8qvwexec1qhx7fed4d8dp04d",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRndFrst128SpryShnSl",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-perfumespray",
+      "productGroupId": "kh70s5cp8qvwexec1qhx7fed4d8dp04d",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst128LtnClOvrCap",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh7crve3q86ppgwvz6z6wgj8wd8dqcy7",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Clear",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst128LtnCu",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh7crve3q86ppgwvz6z6wgj8wd8dqcy7",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst128LtnMtGl",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh7crve3q86ppgwvz6z6wgj8wd8dqcy7",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst128LtnMtSl",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh7crve3q86ppgwvz6z6wgj8wd8dqcy7",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst128LtnShnBlk",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh7crve3q86ppgwvz6z6wgj8wd8dqcy7",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst128LtnShnGl",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh7crve3q86ppgwvz6z6wgj8wd8dqcy7",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBRndFrst128LtnShnSl",
+      "family": "Round",
+      "familyId": "round-128ml-frosted-18-415-lotionpump",
+      "productGroupId": "kh7crve3q86ppgwvz6z6wgj8wd8dqcy7",
+      "capacityMl": 128,
+      "color": "Frosted",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBRoyal13RollBlkDot",
+      "family": "Royal",
+      "familyId": "royal-13ml-clear-13-415",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black Dotted",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /27. GBRoyal13RollBlkDot.psd",
+        "sha256": "1734887868631b5df66297b01a53363133d07d6bea27d3a82f661edbf5fedae5",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBRoyal13RollBlkDot.webp",
+        "sha256": "7ed43c9b2aa0db6afe9540af02aa76d5f2d32e1489c729e00f17edca249482c3",
+        "bytes": 24644,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBRoyal13RollBlkDot.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBRoyal13RollBlkDot.webp",
+        "sha256": "aa5cc6f7b79d4083430670645a4adaa1b706ae8ab6b822b18084c50fede442dc",
+        "bytes": 21698,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/royal/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:24.585628+00:00"
+    },
+    {
+      "sku": "GBSlk30RdcrShnGl",
+      "family": "Sleek",
+      "familyId": "sleek-30ml-clear-18-415",
+      "productGroupId": "kh78est5b4wyz8nch092py8b5n8dq3c6",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Gold",
+      "status": "pending-reconciliation",
+      "holdReasons": [
+        "no approved front in existing selection"
+      ],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /11. Sleek 30ml /1. Sleek 30ml PSD/1. GBSlk30RdcrShnGl.psd",
+        "sha256": "e35380983d55c70b2f523a89830a1c5e0d0e2d557540f103f157cb4eb62448cc",
+        "stateEvidence": "unknown-from-blob-count:5"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlk30RdcrShnGl.webp",
+        "sha256": "752f8475e007f822a48a34898e4db334be6ad5862e55951d331379dd06d8c472",
+        "bytes": 11048,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlk30RdcrShnGl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlk30RdcrShnGl.webp",
+        "sha256": "2581c7d54cef84064953af809eb0253ffce07bf3179c8d578cd4be1a34cb2125",
+        "bytes": 14366,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/sleek/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:24.737104+00:00"
+    },
+    {
+      "sku": "GBSlk50RdcrLBrwnLthr",
+      "family": "Sleek",
+      "familyId": "sleek-50ml-clear-18-415",
+      "productGroupId": "kh77by2zsvt8vgmwnpbsqdahk98dp3bp",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Light Brown Leather",
+      "status": "pending-reconciliation",
+      "holdReasons": [
+        "no approved front in existing selection"
+      ],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/6. GBSlk50RdcrLBrwnLthr.psd",
+        "sha256": "433dd5e7aee26f4db91e9d4545d164680ed12c1fcd42ca0f9d25921e4041c582",
+        "stateEvidence": "unknown-from-blob-count:6"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlk50RdcrLBrwnLthr.webp",
+        "sha256": "29fa28e3038eb2056a0e826e9b2f728f57140dcad84bdab91d5e11127be232ab",
+        "bytes": 24440,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlk50RdcrLBrwnLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlk50RdcrLBrwnLthr.webp",
+        "sha256": "6d4d5914ccda859f939fdc23b7bfc06c7982f3c7f250fd092d87628768220a20",
+        "bytes": 22326,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/sleek/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:24.912044+00:00"
+    },
+    {
+      "sku": "GBSlm30AnSpBlk",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh76t5951neccpaknf04vb0pys8dp1we",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Black",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/39. GBSlm30AnSpBlk.psd",
+        "sha256": "ae995105513535b6831f5714204f7f112e05f14736a8138c31391d0df162c9f9",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30AnSpBlk.webp",
+        "sha256": "dba5ce2e40c90a5b9764f526074732956c7cc924899e1701e21a42b33343c7a9",
+        "bytes": 38468,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpBlk.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpBlk.webp",
+        "sha256": "5a364295a7963e3e1e5c17e2d92677721f5203ae03808604f1e82e6e70fd8022",
+        "bytes": 42782,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:26.659601+00:00"
+    },
+    {
+      "sku": "GBSlm30AnSpGl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh76t5951neccpaknf04vb0pys8dp1we",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Gold",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/37. GBSlm30AnSpGl.psd",
+        "sha256": "be78726c66195909501176dcade4c8fe62f9f34e2efd23cb52ffc368dd3a31b5",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30AnSpGl.webp",
+        "sha256": "6795a6026b76db9138afc9540e0de8cfedfe338a883b1b56cc59eeb573a6d689",
+        "bytes": 57296,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpGl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpGl.webp",
+        "sha256": "c3ba3a9b0f1ef46c067c5b1c1ecf1656ef4b3cfd2fa648ce9e5391ba7482bb5a",
+        "bytes": 64492,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:32.991759+00:00"
+    },
+    {
+      "sku": "GBSlm30AnSpIvyGl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh76t5951neccpaknf04vb0pys8dp1we",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Ivory",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/38. GBSlm30AnSpIvyGl.psd",
+        "sha256": "8918300de030cc5b40329f156a96460a68e512ad81503fd3f7b3cb7e4a9c1a91",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30AnSpIvyGl.webp",
+        "sha256": "64fecb67e9807bb64e9d2dc21084b8269344246b7994529181c2abcfb4fddf4e",
+        "bytes": 43426,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpIvyGl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpIvyGl.webp",
+        "sha256": "42b61d6e84fb755931331b4f3f0205e411be75ee845b2bb9a6c5e9dc35174291",
+        "bytes": 47938,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:33.214019+00:00"
+    },
+    {
+      "sku": "GBSlm30AnSpIvySl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh76t5951neccpaknf04vb0pys8dp1we",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Ivory Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/36. GBSlm30AnSpIvySl.psd",
+        "sha256": "0e1a896fa56c6e84b505ee7264134d05305ca1fe709695850cdf609bf8d17d2c",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30AnSpIvySl.webp",
+        "sha256": "efa976ec56a1acbdde8421bd5606931cb4c89adf02e895198d9acc06207a9559",
+        "bytes": 41356,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpIvySl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpIvySl.webp",
+        "sha256": "9a6cb54ae7f14cc702fcb6ca4596987d4fb258dcce6bfb9de5392cc49ffbebc8",
+        "bytes": 45636,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:32.770157+00:00"
+    },
+    {
+      "sku": "GBSlm30AnSpLvn",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh76t5951neccpaknf04vb0pys8dp1we",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Lavender",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/33. GBSlm30AnSpLvn.psd",
+        "sha256": "b83577f7e74616b60dacc366afe5b64be6a37b6a74f0cfd87e2709e22fcdf094",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30AnSpLvn.webp",
+        "sha256": "b31d9cbc37e666a7f2fed1115dc9b99a8c8d1fe99f668b8f78d20793f729e94d",
+        "bytes": 56646,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpLvn.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpLvn.webp",
+        "sha256": "1d2395c7737e2f876ff7d9cd4d28c79f8dac3a9e1e448090a13e37057de4feed",
+        "bytes": 63998,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:31.995728+00:00"
+    },
+    {
+      "sku": "GBSlm30AnSpMtSl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh76t5951neccpaknf04vb0pys8dp1we",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Matte Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/35. GBSlm30AnSpMtSl.psd",
+        "sha256": "3516139c67526a4a6fc244f0b15fbb65f8e39fd2729a84e7cdfb03629b170139",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30AnSpMtSl.webp",
+        "sha256": "67eadd2bea1dcc5bf0b92319dea110ebefb38d9e8696cffe5c263b1128536232",
+        "bytes": 46100,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpMtSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpMtSl.webp",
+        "sha256": "04ff4b7954596b11f5b78b6a24ccc91a1963186aada21fcccd0b2e4d32b238b8",
+        "bytes": 52032,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:32.552849+00:00"
+    },
+    {
+      "sku": "GBSlm30AnSpPnk",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh76t5951neccpaknf04vb0pys8dp1we",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Pink",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/34. GBSlm30AnSpPnk.psd",
+        "sha256": "d2ef5bf739fbf4b78ea2a071dddb35b091c70c8d290487b9533090d825998d69",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30AnSpPnk.webp",
+        "sha256": "352235e5fe89e67043e1a7812d6b56e36ff9f8f8f909d843a54fcc6e3c7b7f67",
+        "bytes": 61988,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpPnk.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpPnk.webp",
+        "sha256": "47ccf8b08ae235f3526ef7f8548ebb3b04f3ab2e5ef4264f0bfd267a23de1616",
+        "bytes": 70458,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:32.222584+00:00"
+    },
+    {
+      "sku": "GBSlm30AnSpRed",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh76t5951neccpaknf04vb0pys8dp1we",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Red",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/41. GBSlm30AnSpRed.psd",
+        "sha256": "f17cb7d4e737bfb6831c6771bf5f615288f1600a41b055cd6230e70faeb421ea",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30AnSpRed.webp",
+        "sha256": "d7761f9fcb9af140ca77e515bdb7436d8629878ad7b35775a240896e46e6b65d",
+        "bytes": 49772,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpRed.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpRed.webp",
+        "sha256": "c2ace99e95b722fc9d23c464217e3feb14540b6fa1c199c89d2db2f40eb6eb44",
+        "bytes": 54050,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:33.653464+00:00"
+    },
+    {
+      "sku": "GBSlm30AnSpWht",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh76t5951neccpaknf04vb0pys8dp1we",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "White",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/40. GBSlm30AnSpWht.psd",
+        "sha256": "dbb7cd7b70be912227193ab67f6bbfdb4809cf5fd5d83eafd10a5e01b1cf9000",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30AnSpWht.webp",
+        "sha256": "35ebd03eef078b6f273d1062ddf6eb038de7e807ebec49a3e52f8f30f12c5f00",
+        "bytes": 36308,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpWht.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30AnSpWht.webp",
+        "sha256": "978c36bf8483b80b4d016b04f9791f9107f6620185f783b7c24a7568ca902513",
+        "bytes": 39898,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:33.434158+00:00"
+    },
+    {
+      "sku": "GBSlm30DrpGl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh74w6z63xc2f7m1wte3zahevn8dq5te",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Gold",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/43. GBSlm30DrpGl.psd",
+        "sha256": "4dbd6343cbd84d875a132ede0b73f6ca0ac5cb75fecaa98e5a79b95b57618f86",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30DrpGl.webp",
+        "sha256": "9f9ff7afff83ba732a273bfb1cb5ddc125f5949042dc5d5e187687ad2190f1fd",
+        "bytes": 14730,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30DrpGl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30DrpGl.webp",
+        "sha256": "3b2829a8f8a9f56ba74a660c56a912ed8a8d55ffbd5bf920129fc364055bcfbf",
+        "bytes": 16578,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:25.331331+00:00"
+    },
+    {
+      "sku": "GBSlm30DrpSl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh74w6z63xc2f7m1wte3zahevn8dq5te",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/42. GBSlm30DrpSl.psd",
+        "sha256": "15f8990d5f83b2260eda73a3681a327c2fb4f346c2346027340ab55e494c1e3f",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30DrpSl.webp",
+        "sha256": "5b4da5dc8d2fb8eb3c6a2e54780b04feaeb69740bedae87b8863e25ab5a710e8",
+        "bytes": 13748,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30DrpSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30DrpSl.webp",
+        "sha256": "d693705ae92a5b30d40234451c19be6c8c0298d0872724fb9f9adf46db7daf58",
+        "bytes": 15480,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:25.134827+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrBlkLthr",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Black Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/4. GBSlm30RdcrBlkLthr.psd",
+        "sha256": "9032dfc509d9b6ef911e5c7b4bc8014d93b086df04a3ff1093a42ccf4d7745fa",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrBlkLthr.webp",
+        "sha256": "4e641f84c1288174e708861c35244cb48a9d227104744b40708059808b2fed13",
+        "bytes": 21808,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrBlkLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrBlkLthr.webp",
+        "sha256": "8859ba3004aee2a22f54bdddb7e5a8125d3562c86c1f56297611ea1963f095c5",
+        "bytes": 27438,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:25.534810+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrBrwnLthr",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Brown Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/5. GBSlm30RdcrBrwnLthr.psd",
+        "sha256": "b273f8cfd491c8585be3824da4030609e3bdae4d3c7bad8c00c8e827bb49b7ab",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrBrwnLthr.webp",
+        "sha256": "a3d462b68e27b9caec4c8a6bf2aa1688a23d4b9dec59e82436a19cbd594c485b",
+        "bytes": 27554,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrBrwnLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrBrwnLthr.webp",
+        "sha256": "11631ae6bbeeb24519c0582aaa6bd3776fecdf8efea0bb393812a6bc3a9fdd5f",
+        "bytes": 33042,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:29.942681+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrIvyLthr",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Ivory Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/46. GBSlm30RdcrIvyLthr.psd",
+        "sha256": "977f8ca2a5c7bf2c8887c98c3fbcd8072b515a13cb074e8f8ea68ea54d5bb424",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrIvyLthr.webp",
+        "sha256": "11ad64555d9fe2794cc55213c1e7cef590790bbad4bbb1a1743de8f42dcc9968",
+        "bytes": 23990,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrIvyLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrIvyLthr.webp",
+        "sha256": "15fc47dd51fdfa3b838075b2933741cae6e865482b32ba2ecc58bdf5aec3da2e",
+        "bytes": 30728,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:31.570063+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrLBrwnLthr",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Light Brown Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/6. GBSlm30RdcrLBrwnLthr.psd",
+        "sha256": "387dc90127af3d33b013411a29cd8a4a9c16c1017e501657caccaf23e02565bf",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrLBrwnLthr.webp",
+        "sha256": "11a8aadd757a751cac82847d265db0b3ad9deb5951d4ea6fca6015ca5aebfff7",
+        "bytes": 26526,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrLBrwnLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrLBrwnLthr.webp",
+        "sha256": "49ae42859ac45ac41ca6f169144e7b8ea244e69fad07f34196511bae0360c9a6",
+        "bytes": 33022,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:30.136591+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrMtSl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Matte Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/9. GBSlm30RdcrMtSl.psd",
+        "sha256": "fefb021ea4ec344f3ff620e091550697d79ff68e417608f79992a92d766d80a4",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrMtSl.webp",
+        "sha256": "df79a6f8cf540b3b2d56392626f794d0f37ba190115fd05331ba1d0321573dbc",
+        "bytes": 11086,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrMtSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrMtSl.webp",
+        "sha256": "b61a86e9dfebea9e240d2098a79a9faf2d99516ed4df9db5faccdcba7a216d2b",
+        "bytes": 13442,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:30.985552+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrMtSlTall",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Matte Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/8. GBSlm30RdcrMtSlTall.psd",
+        "sha256": "db8cfa7881cd56346a5c03c8ab2b926b3825b1b79f7cb7c619b2581c90d50a37",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrMtSlTall.webp",
+        "sha256": "efd8778bfff8ab04283995032f015239ecc60b6f2226e9c91be7c0da55b802c2",
+        "bytes": 13424,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrMtSlTall.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrMtSlTall.webp",
+        "sha256": "f9b3699b51cb0d2e1d6ea99817e576dc2ffb1b0958a1a52ddd3e9e867d09f696",
+        "bytes": 17368,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:30.512655+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrPnkLthr",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Pink Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/45. GBSlm30RdcrPnkLthr.psd",
+        "sha256": "61dd5158b64c8df932259fdfd7941bfb092ec4bc6566460fabef3d5c32ffe2c4",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrPnkLthr.webp",
+        "sha256": "d07db7c18d405b29cb1bbe2cc567e5663012e7049624e7a909b74c0a5c627c29",
+        "bytes": 24170,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrPnkLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrPnkLthr.webp",
+        "sha256": "29ea3ea315d16182554bca94756fb431cbb164d129c6afd9eca0eebd3ca387ed",
+        "bytes": 29752,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:31.370464+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrShnBlk",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Black",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/3. GBSlm30RdcrShnBlk.psd",
+        "sha256": "eca77184e3c153006fe0a385b3d04e1ea1adf98b4ef539d8405504683377b5f0",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrShnBlk.webp",
+        "sha256": "18e7c97b85e0163c89cb729368b0f5b9b7364c2ab8e72d4dfb4b8e8409679d8b",
+        "bytes": 11936,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrShnBlk.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrShnBlk.webp",
+        "sha256": "9b9493393acb23a9aec101ab417ecd226f568212db3fca33f76c278183688007",
+        "bytes": 13796,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:29.744120+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrShnBlkTall",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Black",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/2. GBSlm30RdcrShnBlkTall.psd",
+        "sha256": "93c2eb86c441241d98e9492782bcfaf83b4a279a39dd47ca1387c4604ce14f09",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrShnBlkTall.webp",
+        "sha256": "0f7e7258b7ab108c84ee4727b97b53a7a6c723cc1ea4dad18595b7c13f7cf75c",
+        "bytes": 11906,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrShnBlkTall.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrShnBlkTall.webp",
+        "sha256": "de5dc78af97a0f897a79f289182540a9b42c0acffc5239b9c5e48a8f46833944",
+        "bytes": 14326,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:29.554569+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrShnGl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Gold",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/1. GBSlm30RdcrShnGl.psd",
+        "sha256": "c413c116b1e18156aa1b635d907e2afd83f989e294ddb697f13fc83fce9e496a",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrShnGl.webp",
+        "sha256": "1031c958085197d0139d5febd065f6b97e6aa82b87f7f57962ccd4965bbb8534",
+        "bytes": 12586,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrShnGl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrShnGl.webp",
+        "sha256": "d89b153e4b168f54838f1ebb3618cf3d3147fe1e892daebbad4439df78f41031",
+        "bytes": 14762,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:29.359576+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrShnSl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/7. GBSlm30RdcrShnSl.psd",
+        "sha256": "f6b4828835ac4f40abadf6416fb3edfe60d0892c72c5d394429c0790d3d87db5",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrShnSl.webp",
+        "sha256": "c2f606bfe9ceb8eeeb51936574fae110c30eea497ff4e1097208fc480f60f48b",
+        "bytes": 11720,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrShnSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrShnSl.webp",
+        "sha256": "c081a0d89d9617b9c04c38315e837572d63a94a90295ed0d713b18162b38d767",
+        "bytes": 14198,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:30.324439+00:00"
+    },
+    {
+      "sku": "GBSlm30RdcrWht",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh799p1pp8yta3ynr6rn0jcfkd8dps66",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "White",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/10. GBSlm30RdcrWht.psd",
+        "sha256": "846c86e72d4099c613758d5c26fb814887d3d9d0b933ac4318205638423c117c",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm30RdcrWht.webp",
+        "sha256": "39cbd7a50bd10ade3a0b662cd6ea2bde0e1a9cc54bddc9466409dd99dd7d0c92",
+        "bytes": 10528,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrWht.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm30RdcrWht.webp",
+        "sha256": "d5190582eb4c72daf3d71e06554470abafc7a466451b4a7ad46fbdfe85087ede",
+        "bytes": 12480,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:31.173094+00:00"
+    },
+    {
+      "sku": "GBSlm30SpryCu",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7e26rx16mkp7m6j5h1dbk5px8dq4m1",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm30SpryMtGl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7e26rx16mkp7m6j5h1dbk5px8dq4m1",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm30SpryMtSl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7e26rx16mkp7m6j5h1dbk5px8dq4m1",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm30SpryShnBlk",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7e26rx16mkp7m6j5h1dbk5px8dq4m1",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm30SpryShnGl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7e26rx16mkp7m6j5h1dbk5px8dq4m1",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm30SpryShnSl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-perfumespray",
+      "productGroupId": "kh7e26rx16mkp7m6j5h1dbk5px8dq4m1",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm30LtnClOvrCap",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7ff5ahtyjda9qhe28tg3bag58dqyp4",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Clear Overcap",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm30LtnCu",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7ff5ahtyjda9qhe28tg3bag58dqyp4",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm30LtnMtGl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7ff5ahtyjda9qhe28tg3bag58dqyp4",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm30LtnMtSl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7ff5ahtyjda9qhe28tg3bag58dqyp4",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm30LtnShnBlk",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7ff5ahtyjda9qhe28tg3bag58dqyp4",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm30LtnShnGl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7ff5ahtyjda9qhe28tg3bag58dqyp4",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm30LtnShnSl",
+      "family": "Slim",
+      "familyId": "slim-30ml-clear-18-415",
+      "productGroupId": "kh7ff5ahtyjda9qhe28tg3bag58dqyp4",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/31. LBSlm30LtnShnSl.psd",
+        "sha256": "89cef6149a5642b93e520107fb2e93c998c04f0abcbb0fc194e4faf07ac54046",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/LBSlm30LtnShnSl.webp",
+        "sha256": "542eb9f19ae77e81d514a4ea0dffd0aeeab41070346020ce8115f00f8fc4ab68",
+        "bytes": 18088,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/LBSlm30LtnShnSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/LBSlm30LtnShnSl.webp",
+        "sha256": "e1aa61f0b613fd0854ca3f56b5cc63ebb9c378ad10caba6d50cf27ad17febabf",
+        "bytes": 20488,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:31.769357+00:00"
+    },
+    {
+      "sku": "GBSlm50AnSpBlk",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh72kk495kmft237kyqbxtkt358dq6w0",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Black",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/39. GBSlm50AnSpBlk.psd",
+        "sha256": "7a51eb276388d4ceadc22f2219c02fe5f89a38affb5aa6bb99f1a14e431148d4",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50AnSpBlk.webp",
+        "sha256": "e109d72773cf3a917a240ac64d807f6ed2d9cada720654825a4ad73cf25a3cee",
+        "bytes": 33122,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50AnSpBlk.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50AnSpBlk.webp",
+        "sha256": "33c0aba284813a6f87db6496a2aa865d2e53551ecbe24c6071ecca7e434fb166",
+        "bytes": 33564,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:28.920946+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrBlkLthr",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Black Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/4. GBSlm50RdcrBlkLthr.psd",
+        "sha256": "3fae401be56104f9a44841418362ec4d320b5b9d59e580994d72cd2d2afeb576",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrBlkLthr.webp",
+        "sha256": "83b92b057023865c6dc8ce9a2e69076da1a42be8406ed24df12bbdb80f96bf76",
+        "bytes": 19514,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrBlkLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrBlkLthr.webp",
+        "sha256": "a480a183bdd4b1f2e06c6eda7a0ce04e49254b91956024a3eb9e536d6bb8404e",
+        "bytes": 21580,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:27.096311+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrBrwnLthr",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Brown Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/5. GBSlm50RdcrBrwnLthr.psd",
+        "sha256": "cb4aaf0677dfa5adc4ea3b4bddfcac784137c56a8f4453a05c77b98f0c2e4c1f",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrBrwnLthr.webp",
+        "sha256": "5869339da6050e1bd74823da7b4672654db06689303d6dd083a14e0741eb6319",
+        "bytes": 23450,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrBrwnLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrBrwnLthr.webp",
+        "sha256": "d64d7e5c8eab7af86786d22003ffe1a64e610e75a5685f28e4dfb69be69831dd",
+        "bytes": 25546,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:34.934564+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrIvyLthr",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Ivory Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/52. GBSlm50RdcrIvyLthr.psd",
+        "sha256": "91c33e573bc5ffb4ec38ae80345b4f5cd49497c3a26b110781c4e6601cda6caa",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrIvyLthr.webp",
+        "sha256": "a6558496af4766992f01a33992608e2e0e542e3d4603df28110035ecfd171762",
+        "bytes": 20114,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrIvyLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrIvyLthr.webp",
+        "sha256": "da966d99252da93331aab6d1ef7c83c4e296a9e92096e1f40e3750525717852f",
+        "bytes": 22834,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:33.875603+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrLBrwnLthr",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Light Brown Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/6. GBSlm50RdcrLBrwnLthr.psd",
+        "sha256": "e79798ed012325902be21cd938c6f9d53e243d7afd0656e4bb63c10a00a4843a",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrLBrwnLthr.webp",
+        "sha256": "002a28f798ca07f41fe01507c1423e9eb7731bfd003ffb5b824516bb26cce4cc",
+        "bytes": 23106,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrLBrwnLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrLBrwnLthr.webp",
+        "sha256": "2c864e6a77c314b1a25d77c59e55b4df3326627ba1cfac7f34ab13535b030536",
+        "bytes": 25160,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:35.152769+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrMtSl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Matte Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/9. GBSlm50RdcrMtSl.psd",
+        "sha256": "ffba0db7d32ff0f660b28a622f89667ea2a23c9aff9a94bfb5e1615fd09f2c38",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrMtSl.webp",
+        "sha256": "bb71601a653164ea3fbed1a51e99eeb8645a71a2fc55dd2e4bc41e2ed46ea55a",
+        "bytes": 10540,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrMtSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrMtSl.webp",
+        "sha256": "dcc0159e7857f102604f40a4372505e3900dd8d56ac1696e022714f168bfc7a8",
+        "bytes": 11320,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:35.781939+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrMtSlTall",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Matte Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/8. GBSlm50RdcrMtSlTall.psd",
+        "sha256": "15c465e8b965da8d7b74e78ee3972b005f57da10e71849e1e5d350d9fd2bdd99",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrMtSlTall.webp",
+        "sha256": "3f31db326f4b833ab5683d5d3ced52fa187c9f2d46b95480e07e6d30592b0606",
+        "bytes": 12002,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrMtSlTall.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrMtSlTall.webp",
+        "sha256": "feb018fb18a0234df8e2ea614cdf3e0eb0bf6ea39d90e86307a8c5ed8eb0b1ef",
+        "bytes": 14026,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:35.572564+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrPnkLthr",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Pink Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/51. GBSlm50RdcrPnkLthr.psd",
+        "sha256": "d780094232149c7098cef9906e10ae0bc55616261dcc8ba4b65f4a80f906d696",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrPnkLthr.webp",
+        "sha256": "326dfe8dc1dbd7887b74b7804ca13274eb11ab9c616312f65a8aaa3c73905684",
+        "bytes": 19940,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrPnkLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrPnkLthr.webp",
+        "sha256": "c328d720fc95788e55bf52e7f7cdda74e58f5cc34d390a5320f40b9b4a31366b",
+        "bytes": 22040,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:34.092616+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrShnBlk",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Black",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/3. GBSlm50RdcrShnBlk.psd",
+        "sha256": "6b870b9f84a73eb3b8e62c53de58b64eb25fdc2463ffa10169df2ee5473cf20b",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrShnBlk.webp",
+        "sha256": "8c46e29b7e429175df52ed58f499348254d5e8ead7c1f02c4103c09069e1a004",
+        "bytes": 10770,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrShnBlk.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrShnBlk.webp",
+        "sha256": "066c1cac9860c27daca2a82ff78d2c13a5f5ba0cfb0c32e0646f3932d0cbfb99",
+        "bytes": 11724,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:34.718070+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrShnBlkTall",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Black",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/2. GBSlm50RdcrShnBlkTall.psd",
+        "sha256": "e014af4c3afb83c951a098199f04447e88abe6110dfa7ee681306c1c8db8e461",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrShnBlkTall.webp",
+        "sha256": "8a16155cc168d33bd1f63a116891fe6ea01b32b9ef5609e48b8999833a9bd519",
+        "bytes": 11096,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrShnBlkTall.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrShnBlkTall.webp",
+        "sha256": "d37437b842d5f0a3ba387b063f680f0b426e6a5d826f76fd61cf1bc68fd7eb51",
+        "bytes": 11894,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:34.510065+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrShnGl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Gold",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/1. GBSlm50RdcrShnGl..psd",
+        "sha256": "09a55de42494c1e25b322169cc42cda81ee6c9774d535797f8177ee06aa6481a",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrShnGl.webp",
+        "sha256": "45d03e226f3366bcd4e248a595c097584183a9b88aa08662115d8debb6d5fdc9",
+        "bytes": 11546,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrShnGl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrShnGl.webp",
+        "sha256": "6ed10f8d40b286d54ccb33dd0e276f61005f05ddbbcfdeeb59c86652c0af79c3",
+        "bytes": 12308,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:34.302539+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrShnSl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/7. GBSlm50RdcrShnSl.psd",
+        "sha256": "ed1d2baac560d00fd960f4bdda06b8285e32434e97509ed2c6a6d6a4f58cfaad",
+        "stateEvidence": "unknown-from-blob-count:2"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrShnSl.webp",
+        "sha256": "5598160acf1095cbe9b3565e18ead940e7bb322a7dfa53cedb4761e320aba5fb",
+        "bytes": 11070,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrShnSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrShnSl.webp",
+        "sha256": "aa72281ae54fc2a0c072e41f792a33793a0602b43a457f2b1b3294e468b25ebd",
+        "bytes": 11894,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:35.361404+00:00"
+    },
+    {
+      "sku": "GBSlm50RdcrWht",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415",
+      "productGroupId": "kh7fgawt5esy87867q723btsj18dpywr",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "White",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/10. GBSlm50RdcrWht.psd",
+        "sha256": "b560470053fbd45df07d6bda2e21f91a381f91aac3bd4c070ef80b8025393009",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm50RdcrWht.webp",
+        "sha256": "bed19198ed07f0908ea162b05681ff137c3e535b38f82e0ae5d13bf229064226",
+        "bytes": 9992,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrWht.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm50RdcrWht.webp",
+        "sha256": "19b05009eb0a63b7e0aac4125b42410fbce7cb50e0694ac37801de5484638dc3",
+        "bytes": 10824,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:35.991665+00:00"
+    },
+    {
+      "sku": "GBSlm50SpryCu",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74s8fw9qn7cqeps847c0adw18dpn6r",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm50SpryMtGl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74s8fw9qn7cqeps847c0adw18dpn6r",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm50SpryMtSl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74s8fw9qn7cqeps847c0adw18dpn6r",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm50SpryShnBlk",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74s8fw9qn7cqeps847c0adw18dpn6r",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm50SpryShnGl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74s8fw9qn7cqeps847c0adw18dpn6r",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm50SpryShnSl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74s8fw9qn7cqeps847c0adw18dpn6r",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm50LtnClOvrCap",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7f1qke86j6kmk0y7tgbz8m9d8dp61p",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Clear Overcap",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm50LtnCu",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7f1qke86j6kmk0y7tgbz8m9d8dp61p",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm50LtnMtGl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7f1qke86j6kmk0y7tgbz8m9d8dp61p",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm50LtnMtSl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7f1qke86j6kmk0y7tgbz8m9d8dp61p",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm50LtnShnBlk",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7f1qke86j6kmk0y7tgbz8m9d8dp61p",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm50LtnShnGl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7f1qke86j6kmk0y7tgbz8m9d8dp61p",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm50LtnShnSl",
+      "family": "Slim",
+      "familyId": "slim-50ml-clear-18-415-lotionpump",
+      "productGroupId": "kh7f1qke86j6kmk0y7tgbz8m9d8dp61p",
+      "capacityMl": 50,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm100AnSpBlk",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh754tqfqg5ydx0kkyeavee6rd8dq7kp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Black",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/39. GBSlm100AnSpBlk.psd",
+        "sha256": "dc7d7a852bf760ecfa8193824a6bae16b1eb089a1896612337abf6fa80f3fe7b",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100AnSpBlk.webp",
+        "sha256": "82c179bd6e967a2eb8974030b7b3b57d6c1b320543e2758ee977bc48ecdc0b97",
+        "bytes": 29366,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpBlk.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpBlk.webp",
+        "sha256": "1a3f54d23e60b92f31612f1cb91cc7135be25858432ec9c6f078e95a93c7d17b",
+        "bytes": 27852,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:30.795308+00:00"
+    },
+    {
+      "sku": "GBSlm100AnSpGl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh754tqfqg5ydx0kkyeavee6rd8dq7kp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Gold",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/37. GBSlm100AnSpGl.psd",
+        "sha256": "f8e3c133a12e717191b8b8a6550a3bb4b530d93882935994a4b0a7c32375085f",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100AnSpGl.webp",
+        "sha256": "6361c171608c281cb6fda4752de74c4eabdbbb15cdfa940411fe60e0f5c779be",
+        "bytes": 40008,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpGl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpGl.webp",
+        "sha256": "d42cc60c269d1ee6be9e2233a4704bd4dae41cdcc77b67b175bc8387466a69c6",
+        "bytes": 37332,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:37.080709+00:00"
+    },
+    {
+      "sku": "GBSlm100AnSpIvyGl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh754tqfqg5ydx0kkyeavee6rd8dq7kp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Ivory",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/38. GBSlm100AnSpIvyGl.psd",
+        "sha256": "434f59a754a62385b721052afc3c5483ac6818141002251c6c4a17e4a2a3f50e",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100AnSpIvyGl.webp",
+        "sha256": "a345c396610e91739d6a64076e3e3f8b851087a43c84d44a421f3cb5e525e51f",
+        "bytes": 30624,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpIvyGl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpIvyGl.webp",
+        "sha256": "802c23e5f42be9a6ebfa84edf2013ccf112a75116125babfaa8a61408a34fb4f",
+        "bytes": 28682,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:36.538532+00:00"
+    },
+    {
+      "sku": "GBSlm100AnSpIvySl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh754tqfqg5ydx0kkyeavee6rd8dq7kp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Ivory",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/36. GBSlm100AnSpIvySl.psd",
+        "sha256": "dfaa659ade45b14989dcb2a576207e2ad7ee3bfbff5cc444038d9a89e59af7d2",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100AnSpIvySl.webp",
+        "sha256": "e8c0d9fbd6d56e205685586a558ad7995aa1a5e790aac1e14f33bb861a0743c9",
+        "bytes": 30894,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpIvySl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpIvySl.webp",
+        "sha256": "3342d3f3e272d0efebadba8c3dd810d7f56a886fcec538f57878f3ac4fa9b599",
+        "bytes": 28408,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:37.351403+00:00"
+    },
+    {
+      "sku": "GBSlm100AnSpLvn",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh754tqfqg5ydx0kkyeavee6rd8dq7kp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Lavender",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/33. GBSlm100AnSpLvn.psd",
+        "sha256": "0cd83588f6175fcd3589af5f4bfb03c4603126dec1d4274dbc4f3ecc20ecfb42",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100AnSpLvn.webp",
+        "sha256": "438c4da5b552f145190e2afddd9cd75ac72021d55fdf40da08b401ef308e9ae7",
+        "bytes": 38646,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpLvn.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpLvn.webp",
+        "sha256": "921a85f84b2378cef8d00f233372d7df261478a3575a887c21b2446646334133",
+        "bytes": 36312,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:36.810327+00:00"
+    },
+    {
+      "sku": "GBSlm100AnSpMtSl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh754tqfqg5ydx0kkyeavee6rd8dq7kp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Matte Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/35. GBSlm100AnSpMtSl.psd",
+        "sha256": "3242db47bf1e1d4931d3104e566edcce269e5761b782ac716c660198c56ca547",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100AnSpMtSl.webp",
+        "sha256": "f069db3bd1f6072aa2fc94d46051df475f9bf6bc3d161bb69805be73621bbc45",
+        "bytes": 32508,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpMtSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpMtSl.webp",
+        "sha256": "6fef922a2a0f370f4afacdaca1834ae30e3bbecda49b674dd89197ae671b292b",
+        "bytes": 30784,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:37.887101+00:00"
+    },
+    {
+      "sku": "GBSlm100AnSpPnk",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh754tqfqg5ydx0kkyeavee6rd8dq7kp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Pink",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/34. GBSlm100AnSpPnk.psd",
+        "sha256": "56bf21d11a5a4bb9e86dfde214367b21defb4408486665ba4eebe065d81bbc78",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100AnSpPnk.webp",
+        "sha256": "34253a4837b2013a94996d1ef27e6f436dff30619df3d548415d9b270313b24a",
+        "bytes": 43234,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpPnk.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpPnk.webp",
+        "sha256": "1ed8818de6a9e997db7e29033f644e74ba6ec758ae5c0cc40b792657423b901a",
+        "bytes": 39886,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:36.269146+00:00"
+    },
+    {
+      "sku": "GBSlm100AnSpRed",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh754tqfqg5ydx0kkyeavee6rd8dq7kp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "Red",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/41. GBSlm100AnSpRed.psd",
+        "sha256": "78eff73cb53554b2f18b3b62c8cf54bcabdcebddaac85ed588b8bbae0c938d98",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100AnSpRed.webp",
+        "sha256": "2dcba490c7edaf709fdcd026852598af6dd3a09e24ee761f7bfa2b8a2d9d10c9",
+        "bytes": 35874,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpRed.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpRed.webp",
+        "sha256": "9746654c025f305906cfbfe31d5d0771d869fceddd9e4882738ec94cd6fb91a4",
+        "bytes": 33168,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:37.619854+00:00"
+    },
+    {
+      "sku": "GBSlm100AnSpWht",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh754tqfqg5ydx0kkyeavee6rd8dq7kp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "capColor": "White",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/40. GBSlm100AnSpWht.psd",
+        "sha256": "2c1b6df57ee12212036c7581f30afcfba663de159aedd7cc68ad7fe84772378f",
+        "stateEvidence": "unknown-from-blob-count:5"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100AnSpWht.webp",
+        "sha256": "35f1bb6022e70ae992a577c6e6ee572961a8265c2f57b61f32bebd53c49d2342",
+        "bytes": 29310,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpWht.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100AnSpWht.webp",
+        "sha256": "98c4fa6de5bdacbabff15f39f9e68b4cf07f653be778991a71733484e588d7a5",
+        "bytes": 27676,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:38.157704+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrBlkLthr",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Black Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/4. GBSlm100RdcrBlkLthr.psd",
+        "sha256": "b451afc91397a88f33b5853c07b142c92cd6e0029a7d90565e64dbf5fa4f7d1a",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrBlkLthr.webp",
+        "sha256": "b88f7b59c807129f29c673cfb08d7ea6745ea3dd661c3d90ded0cbe009a47513",
+        "bytes": 19164,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrBlkLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrBlkLthr.webp",
+        "sha256": "e301dde762e20e471886431fec573517be26070327f352ebb4e7b00443c6828f",
+        "bytes": 18750,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:28.693994+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrBrwnLthr",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Brown Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/5. GBSlm100RdcrBrwnLthr.psd",
+        "sha256": "c758ec57260387807a9c5b76e4c381ce37c6e73c4cb19cf01e0bba1e280f2f1a",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrBrwnLthr.webp",
+        "sha256": "0b8bbd407eaa679da4838738accded3104914b1c48f61b095a586e4abb05b61a",
+        "bytes": 22772,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrBrwnLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrBrwnLthr.webp",
+        "sha256": "1b3de777acde3f64b12b1c1887f5a758e393fdf715e3faf16196b4982d3c4504",
+        "bytes": 21484,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:27.326407+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrIvyLthr",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Ivory Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/54. GBSlm100RdcrIvyLthr.psd",
+        "sha256": "5ad0aba4ba2839eedf933b221e8d0b444f6195461d74b8a50b2bcb579b357176",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrIvyLthr.webp",
+        "sha256": "5109f049506953dd22eadb46e7aa8279e622a0ccda027e22527d18c3e644692e",
+        "bytes": 19518,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrIvyLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrIvyLthr.webp",
+        "sha256": "8ff5c990218be2d1ef229cfecbb9cc820aefc73bdca9af80164acf73236c7912",
+        "bytes": 18824,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:25.768647+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrLBrwnLthr",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Light Brown Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/6. GBSlm100RdcrLBrwnLthr.psd",
+        "sha256": "e55b55f068ed7aca9ecd2a4f65057442e537b2da8010e7a6b10ce9ae0c8c7495",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrLBrwnLthr.webp",
+        "sha256": "b75e42b08bfe94ae71d7b8e5911c0fc756980757a94444dd3292409ea86d229e",
+        "bytes": 22476,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrLBrwnLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrLBrwnLthr.webp",
+        "sha256": "46b4247fdb6caf61aebf1640dbdd3b9cafbc5e5f746f7f9e2e4f30656d7761cc",
+        "bytes": 21024,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:27.556385+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrMtSl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Matte Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/9. GBSlm100RdcrMtSl.psd",
+        "sha256": "d02d2e414630c0b20cdbc1f6b914c2e1ff4ac87a8707883d6ef2e7c33ae0a823",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrMtSl.webp",
+        "sha256": "e51c6a0a357b6da8e6b757b2beff2651b8563243eeeb8fc11462b2b1e0ae87b5",
+        "bytes": 10906,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrMtSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrMtSl.webp",
+        "sha256": "428acef2e1099caf80ff47ddbb026a663cfa0e67e53fb47f9878b53ecc50cb06",
+        "bytes": 10654,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:28.237262+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrMtSlTall",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Matte Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/8. GBSlm100RdcrMtSlTall.psd",
+        "sha256": "5dee155165ba06e897b30177c28229f338bb1a11f303419d8b294d34b0249b62",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrMtSlTall.webp",
+        "sha256": "f4ba3b2cca20a5d8061f7e556d01c8ef205c216363dbffe2610b4a6f8f11c65b",
+        "bytes": 12046,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrMtSlTall.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrMtSlTall.webp",
+        "sha256": "e131d15e012cb19871a4c769ed50dabf7dbe00c7191e879e0e801de9f51b17cd",
+        "bytes": 12168,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:28.003030+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrPnkLthr",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Pink Leather",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/53. GBSlm100RdcrPnkLthr.psd",
+        "sha256": "5e171c85c4f59b444e800412cda398febfa6d624508b0aef39175eb763984d5d",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrPnkLthr.webp",
+        "sha256": "ec3edd76c4131d8bf2d5b17bedbb5ee4bc9d2ac8409d6bfba3c5ecaddbeac968",
+        "bytes": 19296,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrPnkLthr.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrPnkLthr.webp",
+        "sha256": "84088c625f918299b225744510d51b0584b80ea10568df1c13301cb03f87fc10",
+        "bytes": 18624,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:25.996880+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrShnBlk",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Black",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/3. GBSlm100RdcrShnBlk.psd",
+        "sha256": "be99d8317b82f17fd7513746f22afbd516cdc6a48aaa9d16494cd213d05d4650",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrShnBlk.webp",
+        "sha256": "dc5c570cd0f123bcbfde7f44ac208e0b61730657fd900e6330ddfc53961aefe5",
+        "bytes": 11226,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrShnBlk.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrShnBlk.webp",
+        "sha256": "e236c7050e0f4a0e465b18e0821da0ecdcd4f9145156107dcba6b746055fff16",
+        "bytes": 10968,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:26.879137+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrShnBlkTall",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Black",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/2. GBSlm100RdcrShnBlkTall.psd",
+        "sha256": "4e522cb7b099ea9ea677e9d13e1028b871e7614db782cb85f88132b6cedbeb54",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrShnBlkTall.webp",
+        "sha256": "3fbd4c8ec0774c91476f67ff428624b748cd1a6972a1b2fbda995046e4cfa2bd",
+        "bytes": 11430,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrShnBlkTall.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrShnBlkTall.webp",
+        "sha256": "5b6064d71a18108847b1dd37962730dbb2ccb53f5b166680159208f333f98160",
+        "bytes": 10842,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:26.441687+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrShnGl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Gold",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/1. GBSlm100RdcrShnGl.psd",
+        "sha256": "3be059e7c8ce10039e8eb648af7642ba547fa17460800f9ad6f7571bd542d5af",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrShnGl.webp",
+        "sha256": "75043c36ca1922037984dc0d0821158ccb38efb2513b16d9bb73d6457168a694",
+        "bytes": 11870,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrShnGl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrShnGl.webp",
+        "sha256": "1cfbf94de7fac8218662e9dbd95b47a8e505a2fc9e7abf4a98751def8f00adb0",
+        "bytes": 11264,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:26.220893+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrShnSl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "Shiny Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/7. GBSlm100RdcrShnSl.psd",
+        "sha256": "5097d8a4d8775e1b135de2de62f9d2adc6b356dc2e5c5c7059c927f286462942",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrShnSl.webp",
+        "sha256": "5607807eefdd239b0720fc7f623309c68e2cf1ac7b8d4e6b89b3a18988e8f4d3",
+        "bytes": 11404,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrShnSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrShnSl.webp",
+        "sha256": "8bf3b026464c236ab5487d1265e710ef6720c147792a9503aa3ff1b76177c334",
+        "bytes": 11006,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:27.778016+00:00"
+    },
+    {
+      "sku": "GBSlm100RdcrWht",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh77dezhvs9j4zazyjhzndabr98dqef9",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Reducer",
+      "capColor": "White",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/10. GBSlm100RdcrWht.psd",
+        "sha256": "6be4b4f6b92d2ebda23a2f1fc303812a779d61c1b5cf0e72a222b47a5a692610",
+        "stateEvidence": "unknown-from-blob-count:4"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100RdcrWht.webp",
+        "sha256": "27fd3c0bf2d51eb0918158152840e9e9b636c185a3803a2fcc92cd7f591385df",
+        "bytes": 10628,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrWht.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100RdcrWht.webp",
+        "sha256": "901bda19c263700b0311af742448b16228cab83b8e03208eae267a26c87ca227",
+        "bytes": 10076,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:28.464191+00:00"
+    },
+    {
+      "sku": "GBSlm100SpryCu",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74n2dr7efj9pzfmk35z5k3jx8dqgaf",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm100SpryMtGl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74n2dr7efj9pzfmk35z5k3jx8dqgaf",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm100SpryMtSl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "productGroupId": "kh74n2dr7efj9pzfmk35z5k3jx8dqgaf",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Matte Silver",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/23. GBSlm100SpryMtSl.psd",
+        "sha256": "f96a8a8f207349a2b489a7eebe20c994e5bf9005ef34d827121d44eab13c0bc8",
+        "stateEvidence": "unknown-from-blob-count:5"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBSlm100SpryMtSl.webp",
+        "sha256": "b48bbaad1f5b344b4ac87166d83a199093ac017070a949632b2ffb44d3c031fd",
+        "bytes": 12452,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBSlm100SpryMtSl.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBSlm100SpryMtSl.webp",
+        "sha256": "29de1802e491ad78854c64406855cd44c717570d8f9383e73672047c5aecc8c8",
+        "bytes": 12364,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/slim-v2/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:29.167936+00:00"
+    },
+    {
+      "sku": "GBSlm100SpryShnBlk",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74n2dr7efj9pzfmk35z5k3jx8dqgaf",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm100SpryShnGl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74n2dr7efj9pzfmk35z5k3jx8dqgaf",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBSlm100SpryShnSl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-perfumespray",
+      "productGroupId": "kh74n2dr7efj9pzfmk35z5k3jx8dqgaf",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Perfume Spray Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm100LtnCu",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79a9kh1m10qc6fs924yhk6818dp8vp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Copper",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm100LtnMtGl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79a9kh1m10qc6fs924yhk6818dp8vp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm100LtnMtSl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79a9kh1m10qc6fs924yhk6818dp8vp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm100LtnShnBlk",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79a9kh1m10qc6fs924yhk6818dp8vp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Black",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm100LtnShnGl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79a9kh1m10qc6fs924yhk6818dp8vp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Gold",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm100LtnShnSl",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79a9kh1m10qc6fs924yhk6818dp8vp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Shiny Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "LBSlm100MtSlClOvrCap",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415-lotionpump",
+      "productGroupId": "kh79a9kh1m10qc6fs924yhk6818dp8vp",
+      "capacityMl": 100,
+      "color": "Clear",
+      "applicator": "Lotion Pump",
+      "capColor": "Matte Silver",
+      "status": "hold",
+      "holdReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBTRDPClear",
+      "family": "Teardrop",
+      "familyId": "teardrop-9ml-clear-ground",
+      "productGroupId": "kh7edqrscss6wttxpvpsmwv4pn8dqjpr",
+      "capacityMl": 9,
+      "color": "Clear",
+      "applicator": "Glass Stopper",
+      "capColor": "Clear",
+      "status": "pending-review",
+      "holdReasons": [],
+      "presentation": "prepared cap-on candidate; cap-off not inferred",
+      "source": {
+        "library": "master",
+        "path": "17. Additional Bottles/GBTRDPClear..psd",
+        "sha256": "72beb73c3889836e480cf6e089516f46a38418bdf6156687a9231650452e6f77",
+        "stateEvidence": "unknown-from-blob-count:3"
+      },
+      "sourcePreview": {
+        "url": "/reviews/missing-plate-acquisition-2026-09-13/source-previews/GBTRDPClear.webp",
+        "sha256": "18391717df3672733e6617a1ee296507d302ddb1c66becf8a3c1d87724197487",
+        "bytes": 5358,
+        "width": 1000,
+        "height": 1100
+      },
+      "candidate": {
+        "url": "/images/missing-plate-acquisition-2026-09-13/GBTRDPClear.webp",
+        "path": "public/images/missing-plate-acquisition-2026-09-13/GBTRDPClear.webp",
+        "sha256": "d0c2b7136acaec8742664f8b0c5cc7aa168ad0fb0a7d93718a89e9f6ff3781fe",
+        "bytes": 21370,
+        "width": 1000,
+        "height": 1100
+      },
+      "batchManifest": "dist/paper-doll/missing-plates-2026-09-13/teardrop/plates/manifest.json",
+      "preparedAt": "2026-09-13T22:00:39.322659+00:00"
+    },
+    {
+      "sku": "GBTulip6BlkShSht",
+      "family": "Tulip",
+      "familyId": "tulip-6ml-clear-13-415",
+      "productGroupId": "kh717xh4kg9gcrqzrt8bbwdvqs8dqka9",
+      "capacityMl": 6,
+      "color": "Clear",
+      "applicator": "N/A",
+      "capColor": "Clear",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GB1mlVWht",
+      "family": "Vial",
+      "familyId": "vial-1ml-clear-Plug",
+      "productGroupId": "kh725fg9p2vc7w02vy9rmgaxa58dp14h",
+      "capacityMl": 1,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "White",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBVBlu1o9BlackCapSht",
+      "family": "Vial",
+      "familyId": "vial-3ml-blue-13-425",
+      "productGroupId": "kh7992w4gga3wa0d5wsz2bv1mh8dpjkf",
+      "capacityMl": 3,
+      "color": "Blue",
+      "applicator": null,
+      "capColor": "Black",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBVGreen2o4BlackCapSht",
+      "family": "Vial",
+      "familyId": "vial-3ml-green-13-425",
+      "productGroupId": "kh7793nm0vzg543esq22x303a98dpw3q",
+      "capacityMl": 3,
+      "color": "Green",
+      "applicator": null,
+      "capColor": "Green",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBVGreen2o4WhtCapSht",
+      "family": "Vial",
+      "familyId": "vial-3ml-green-13-425",
+      "productGroupId": "kh7793nm0vzg543esq22x303a98dpw3q",
+      "capacityMl": 3,
+      "color": "Green",
+      "applicator": null,
+      "capColor": "Green",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBV1DrmBlackCapSht",
+      "family": "Vial",
+      "familyId": "vial-4ml-clear-13-425",
+      "productGroupId": "kh7064mcswf136pqmanc63jpas8dqvn8",
+      "capacityMl": 4,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBV1DrmWhtCapSht",
+      "family": "Vial",
+      "familyId": "vial-4ml-clear-13-425",
+      "productGroupId": "kh7064mcswf136pqmanc63jpas8dqvn8",
+      "capacityMl": 4,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    },
+    {
+      "sku": "GBVAmb1DrmBlkDrpr",
+      "family": "Vial",
+      "familyId": "vial-4ml-amber-13-425-dropper",
+      "productGroupId": "kh78rzxw8s7m3wjq0x25hb8e5h8dq1fb",
+      "capacityMl": 4,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Clear",
+      "status": "hold",
+      "holdReasons": [
+        "match:no-psd"
+      ],
+      "candidate": null,
+      "source": null,
+      "sourcePreview": null
+    }
+  ],
+  "ledgerGeneratedAt": "2026-09-13T21:39:44.531Z",
+  "generatedAt": "2026-09-13T22:00:39.467749+00:00"
+}

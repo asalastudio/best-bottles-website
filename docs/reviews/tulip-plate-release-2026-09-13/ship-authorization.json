@@ -1,0 +1,25 @@
+{
+ "schemaVersion": 1,
+ "release": "tulip-plate-release-2026-09-13",
+ "actor": "Jordan Richter",
+ "instruction": "Ship Tulip, then start the 210 legacy rebuilds",
+ "authorizedAt": "2026-09-14T01:36:33.398235Z",
+ "publicationAuthorized": true,
+ "indexingAuthorized": true,
+ "approvedLockSha256": "20b5ec872df1553a4aa0ddf7c463d0ddfc38b306eceac25c68bb2c68feaf570f",
+ "manifest": "dist/paper-doll/technical-reconciliation-2026-09-13/tulip/plates/manifest.json",
+ "manifestSha256": "6a3d4acc6762821bf5bc138a78ea72c652beb204a34753ebf23530ee49396a21",
+ "rows": 59,
+ "heldRows": [
+  {
+   "sku": "GBTulip6BlkShSht",
+   "family": "Tulip",
+   "capacityMl": 6,
+   "color": "Clear",
+   "reason": "No exact PSD candidate in the verified master source audit (match:no-psd). Preserve as an explicit hold."
+  }
+ ],
+ "target": "development catalog (NEXT_PUBLIC_CONVEX_URL) and the best-bottles-plates Blob store",
+ "scope": "Publishes only the 59 rows in the approved lock. GBTulip6BlkShSht stays an explicit hold: no exact PSD candidate.",
+ "note": "This authorizes publication and indexing of these exact approved bytes. It is not a production website deployment."
+}

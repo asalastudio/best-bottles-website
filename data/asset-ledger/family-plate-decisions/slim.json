@@ -1,0 +1,767 @@
+{
+  "revision": 1,
+  "decisions": {
+    "GBSlm100AnSpTslBlk:0d9edc257f5c936bdf2359b8cceaed0c362551fbe666e61dd3298db5a47acce1": {
+      "sku": "GBSlm100AnSpTslBlk",
+      "binding": "0d9edc257f5c936bdf2359b8cceaed0c362551fbe666e61dd3298db5a47acce1",
+      "sha256": "3892bbdd88115656bf7abbcd012524aaa11a7eb5d54f188dccfd7625bd4f9df9",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslBlk/3892bbdd88115656bf7abbcd012524aaa11a7eb5d54f188dccfd7625bd4f9df9.front-on-1000x1100.webp",
+          "sha256": "3892bbdd88115656bf7abbcd012524aaa11a7eb5d54f188dccfd7625bd4f9df9",
+          "url": "/images/plate-contact-sheets/3892bbdd88115656bf7abbcd012524aaa11a7eb5d54f188dccfd7625bd4f9df9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm100AnSpTslGl:aa570b3053c64409d90166163b45b1500135b565d9dfb6d982466d167c6f6865": {
+      "sku": "GBSlm100AnSpTslGl",
+      "binding": "aa570b3053c64409d90166163b45b1500135b565d9dfb6d982466d167c6f6865",
+      "sha256": "4384c4195457210210274666e57781de2c1fa5781f0de82f7147e4b33c44fe5f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslGl/4384c4195457210210274666e57781de2c1fa5781f0de82f7147e4b33c44fe5f.front-on-1000x1100.webp",
+          "sha256": "4384c4195457210210274666e57781de2c1fa5781f0de82f7147e4b33c44fe5f",
+          "url": "/images/plate-contact-sheets/4384c4195457210210274666e57781de2c1fa5781f0de82f7147e4b33c44fe5f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm100AnSpTslIvyGl:ebf9ab664a788df238d872ec453d9d41fbee63ee50f8119b54f3259ffea23aa1": {
+      "sku": "GBSlm100AnSpTslIvyGl",
+      "binding": "ebf9ab664a788df238d872ec453d9d41fbee63ee50f8119b54f3259ffea23aa1",
+      "sha256": "1d645615c3a87d644b4847af45da4a485e4567f2aa788bec1277bfa90b4cd782",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslIvyGl/1d645615c3a87d644b4847af45da4a485e4567f2aa788bec1277bfa90b4cd782.front-on-1000x1100.webp",
+          "sha256": "1d645615c3a87d644b4847af45da4a485e4567f2aa788bec1277bfa90b4cd782",
+          "url": "/images/plate-contact-sheets/1d645615c3a87d644b4847af45da4a485e4567f2aa788bec1277bfa90b4cd782.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm100AnSpTslIvySl:4df024aa1cf70b5d87a95640d1f18a12721f4d6524ddfbf8571226d72102e73c": {
+      "sku": "GBSlm100AnSpTslIvySl",
+      "binding": "4df024aa1cf70b5d87a95640d1f18a12721f4d6524ddfbf8571226d72102e73c",
+      "sha256": "2085fcf1802bbdcda3d0255d13bfe2fc3c1dae79dbd32cef51c1ba1983186f5a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslIvySl/2085fcf1802bbdcda3d0255d13bfe2fc3c1dae79dbd32cef51c1ba1983186f5a.front-on-1000x1100.webp",
+          "sha256": "2085fcf1802bbdcda3d0255d13bfe2fc3c1dae79dbd32cef51c1ba1983186f5a",
+          "url": "/images/plate-contact-sheets/2085fcf1802bbdcda3d0255d13bfe2fc3c1dae79dbd32cef51c1ba1983186f5a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm100AnSpTslLvn:d64824114e3eb52c546e9c31cbe2b39ca0ba901ae1a9c74136c6729f325081b7": {
+      "sku": "GBSlm100AnSpTslLvn",
+      "binding": "d64824114e3eb52c546e9c31cbe2b39ca0ba901ae1a9c74136c6729f325081b7",
+      "sha256": "8f4ec577a1e0a5f282f0ee1ab556607b605c19ec56a77340264245533ff88ccb",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslLvn/8f4ec577a1e0a5f282f0ee1ab556607b605c19ec56a77340264245533ff88ccb.front-on-1000x1100.webp",
+          "sha256": "8f4ec577a1e0a5f282f0ee1ab556607b605c19ec56a77340264245533ff88ccb",
+          "url": "/images/plate-contact-sheets/8f4ec577a1e0a5f282f0ee1ab556607b605c19ec56a77340264245533ff88ccb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm100AnSpTslMtSl:dc0402a8b998f06f77b2e98fff5ec5904ee590cae92286a5ac6a7aea40ee6425": {
+      "sku": "GBSlm100AnSpTslMtSl",
+      "binding": "dc0402a8b998f06f77b2e98fff5ec5904ee590cae92286a5ac6a7aea40ee6425",
+      "sha256": "4f7b940c798d2cd6154c8ddcc95b7a2b2a59669ace658e35fe342286f2f6c35a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslMtSl/4f7b940c798d2cd6154c8ddcc95b7a2b2a59669ace658e35fe342286f2f6c35a.front-on-1000x1100.webp",
+          "sha256": "4f7b940c798d2cd6154c8ddcc95b7a2b2a59669ace658e35fe342286f2f6c35a",
+          "url": "/images/plate-contact-sheets/4f7b940c798d2cd6154c8ddcc95b7a2b2a59669ace658e35fe342286f2f6c35a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm100AnSpTslPnk:208f1a04ca27ef4bdac9b5b0be61e165081972fcef49fd7d316aaaa640a020de": {
+      "sku": "GBSlm100AnSpTslPnk",
+      "binding": "208f1a04ca27ef4bdac9b5b0be61e165081972fcef49fd7d316aaaa640a020de",
+      "sha256": "afe6b81ee6ef06672eb4c351161edb5273f416a002268687564d10daebfb2da5",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslPnk/afe6b81ee6ef06672eb4c351161edb5273f416a002268687564d10daebfb2da5.front-on-1000x1100.webp",
+          "sha256": "afe6b81ee6ef06672eb4c351161edb5273f416a002268687564d10daebfb2da5",
+          "url": "/images/plate-contact-sheets/afe6b81ee6ef06672eb4c351161edb5273f416a002268687564d10daebfb2da5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm100AnSpTslRed:36df33f775ce5e5ac44189cff3c30adfcec6a9b81b0fab0227cc018263f07572": {
+      "sku": "GBSlm100AnSpTslRed",
+      "binding": "36df33f775ce5e5ac44189cff3c30adfcec6a9b81b0fab0227cc018263f07572",
+      "sha256": "d9ee349936d085b9c6f5d3a8ee218cea9bdd3d2250c51257bb3635f7213e9a4d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslRed/d9ee349936d085b9c6f5d3a8ee218cea9bdd3d2250c51257bb3635f7213e9a4d.front-on-1000x1100.webp",
+          "sha256": "d9ee349936d085b9c6f5d3a8ee218cea9bdd3d2250c51257bb3635f7213e9a4d",
+          "url": "/images/plate-contact-sheets/d9ee349936d085b9c6f5d3a8ee218cea9bdd3d2250c51257bb3635f7213e9a4d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm100AnSpTslWht:b29891c1e9aed5065f3332f7c8a1c3b785655ec8561393d32cbb329e239b9d96": {
+      "sku": "GBSlm100AnSpTslWht",
+      "binding": "b29891c1e9aed5065f3332f7c8a1c3b785655ec8561393d32cbb329e239b9d96",
+      "sha256": "1967788e51d6bbe5b2e2bb6bbbee22a9a433610c2e75a15e20ea12a355c48d20",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslWht/1967788e51d6bbe5b2e2bb6bbbee22a9a433610c2e75a15e20ea12a355c48d20.front-on-1000x1100.webp",
+          "sha256": "1967788e51d6bbe5b2e2bb6bbbee22a9a433610c2e75a15e20ea12a355c48d20",
+          "url": "/images/plate-contact-sheets/1967788e51d6bbe5b2e2bb6bbbee22a9a433610c2e75a15e20ea12a355c48d20.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm30DrpCu:eaea54f1fae085afb147cc7211ec017a2bf73479fb6a70c8cce402b376f7ccd4": {
+      "sku": "GBSlm30DrpCu",
+      "binding": "eaea54f1fae085afb147cc7211ec017a2bf73479fb6a70c8cce402b376f7ccd4",
+      "sha256": "51f6499f2cc94d2b69d0337e606084c880ea9d683d1086a98e04c53819f8804d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-30ml-clear-18-415/GBSlm30DrpCu/51f6499f2cc94d2b69d0337e606084c880ea9d683d1086a98e04c53819f8804d.front-on-1000x1100.webp",
+          "sha256": "51f6499f2cc94d2b69d0337e606084c880ea9d683d1086a98e04c53819f8804d",
+          "url": "/images/plate-contact-sheets/51f6499f2cc94d2b69d0337e606084c880ea9d683d1086a98e04c53819f8804d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm50AnSpTslBlk:eb30bb0908705a0d95406d7e5feb330aced6109c2dda87d13103c2da9930230d": {
+      "sku": "GBSlm50AnSpTslBlk",
+      "binding": "eb30bb0908705a0d95406d7e5feb330aced6109c2dda87d13103c2da9930230d",
+      "sha256": "91f0455fb85093aab1772120add8f8444b9d1566096368835064f93b6a96b487",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslBlk/91f0455fb85093aab1772120add8f8444b9d1566096368835064f93b6a96b487.front-on-1000x1100.webp",
+          "sha256": "91f0455fb85093aab1772120add8f8444b9d1566096368835064f93b6a96b487",
+          "url": "/images/plate-contact-sheets/91f0455fb85093aab1772120add8f8444b9d1566096368835064f93b6a96b487.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm50AnSpTslGl:a1c7f4bd017d915a56991860357cff4dec03d0be376a877365a162c363fdfece": {
+      "sku": "GBSlm50AnSpTslGl",
+      "binding": "a1c7f4bd017d915a56991860357cff4dec03d0be376a877365a162c363fdfece",
+      "sha256": "382ed811df2525237fcbb52910f020dd0f9c8874f12912840ac4a5c0371209f9",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslGl/382ed811df2525237fcbb52910f020dd0f9c8874f12912840ac4a5c0371209f9.front-on-1000x1100.webp",
+          "sha256": "382ed811df2525237fcbb52910f020dd0f9c8874f12912840ac4a5c0371209f9",
+          "url": "/images/plate-contact-sheets/382ed811df2525237fcbb52910f020dd0f9c8874f12912840ac4a5c0371209f9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm50AnSpTslIvyGl:c329a4d7103fb201b76f6dfe1482ffd616dcb207dca3352a249f467e51cbf14f": {
+      "sku": "GBSlm50AnSpTslIvyGl",
+      "binding": "c329a4d7103fb201b76f6dfe1482ffd616dcb207dca3352a249f467e51cbf14f",
+      "sha256": "a862883572f1f986b5d38df8db36640986d44c8c83932247838e96897744f357",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslIvyGl/a862883572f1f986b5d38df8db36640986d44c8c83932247838e96897744f357.front-on-1000x1100.webp",
+          "sha256": "a862883572f1f986b5d38df8db36640986d44c8c83932247838e96897744f357",
+          "url": "/images/plate-contact-sheets/a862883572f1f986b5d38df8db36640986d44c8c83932247838e96897744f357.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm50AnSpTslIvySl:62d313450461fed27b34f25b559068b9d7dc24decb410c42166ade6d8b67b84a": {
+      "sku": "GBSlm50AnSpTslIvySl",
+      "binding": "62d313450461fed27b34f25b559068b9d7dc24decb410c42166ade6d8b67b84a",
+      "sha256": "1b358d5d38f55b3e897299cfbed3a44188b1abbd4e3ef9acdef2b89b433ab829",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslIvySl/1b358d5d38f55b3e897299cfbed3a44188b1abbd4e3ef9acdef2b89b433ab829.front-on-1000x1100.webp",
+          "sha256": "1b358d5d38f55b3e897299cfbed3a44188b1abbd4e3ef9acdef2b89b433ab829",
+          "url": "/images/plate-contact-sheets/1b358d5d38f55b3e897299cfbed3a44188b1abbd4e3ef9acdef2b89b433ab829.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm50AnSpTslLvn:e419a2d0269651d802fc83f1a4ea86f6c9e30328e15d8f884d4cec45e7615bc3": {
+      "sku": "GBSlm50AnSpTslLvn",
+      "binding": "e419a2d0269651d802fc83f1a4ea86f6c9e30328e15d8f884d4cec45e7615bc3",
+      "sha256": "ebf9e22082b605d5b42c8b271ecd1631728add0dcb9650ea7259078d5d5f3ae0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslLvn/ebf9e22082b605d5b42c8b271ecd1631728add0dcb9650ea7259078d5d5f3ae0.front-on-1000x1100.webp",
+          "sha256": "ebf9e22082b605d5b42c8b271ecd1631728add0dcb9650ea7259078d5d5f3ae0",
+          "url": "/images/plate-contact-sheets/ebf9e22082b605d5b42c8b271ecd1631728add0dcb9650ea7259078d5d5f3ae0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm50AnSpTslMtSl:b964f442860f72c9bd767daad9d4a18bef00797d753b4d41c67279c08f6d75d1": {
+      "sku": "GBSlm50AnSpTslMtSl",
+      "binding": "b964f442860f72c9bd767daad9d4a18bef00797d753b4d41c67279c08f6d75d1",
+      "sha256": "0afa9eff1f7f67904ad8ecfe13cd4684c48f9af9dc1f5c5421cfb72dce4954b3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslMtSl/0afa9eff1f7f67904ad8ecfe13cd4684c48f9af9dc1f5c5421cfb72dce4954b3.front-on-1000x1100.webp",
+          "sha256": "0afa9eff1f7f67904ad8ecfe13cd4684c48f9af9dc1f5c5421cfb72dce4954b3",
+          "url": "/images/plate-contact-sheets/0afa9eff1f7f67904ad8ecfe13cd4684c48f9af9dc1f5c5421cfb72dce4954b3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm50AnSpTslPnk:083df0b86450798e954498c3c7753b887498f008f71a9d6f27d32de86c9515f0": {
+      "sku": "GBSlm50AnSpTslPnk",
+      "binding": "083df0b86450798e954498c3c7753b887498f008f71a9d6f27d32de86c9515f0",
+      "sha256": "00d9977e8aceaa7d5535d0fae70b56b5724c5defbd797e753b3bdb8ed8336e0f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslPnk/00d9977e8aceaa7d5535d0fae70b56b5724c5defbd797e753b3bdb8ed8336e0f.front-on-1000x1100.webp",
+          "sha256": "00d9977e8aceaa7d5535d0fae70b56b5724c5defbd797e753b3bdb8ed8336e0f",
+          "url": "/images/plate-contact-sheets/00d9977e8aceaa7d5535d0fae70b56b5724c5defbd797e753b3bdb8ed8336e0f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm50AnSpTslRed:30fe2826e83a7c624428c3f563c0826b9ca4a0e2b86d1922bfbb6368e3499919": {
+      "sku": "GBSlm50AnSpTslRed",
+      "binding": "30fe2826e83a7c624428c3f563c0826b9ca4a0e2b86d1922bfbb6368e3499919",
+      "sha256": "5f7b4f946f6a363f2a8547e6419fec7e9f2e9f0a8af0f14bf8e5e8c89ce86eee",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslRed/5f7b4f946f6a363f2a8547e6419fec7e9f2e9f0a8af0f14bf8e5e8c89ce86eee.front-on-1000x1100.webp",
+          "sha256": "5f7b4f946f6a363f2a8547e6419fec7e9f2e9f0a8af0f14bf8e5e8c89ce86eee",
+          "url": "/images/plate-contact-sheets/5f7b4f946f6a363f2a8547e6419fec7e9f2e9f0a8af0f14bf8e5e8c89ce86eee.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBSlm50AnSpTslWht:05d4c58b8266be8bfa2a90f5a14b52decf8f68e18d132bdc936145f5acb6cac5": {
+      "sku": "GBSlm50AnSpTslWht",
+      "binding": "05d4c58b8266be8bfa2a90f5a14b52decf8f68e18d132bdc936145f5acb6cac5",
+      "sha256": "1388d59abd5802827c53127e1fcb9e2b5a4a4242928e6a4ca2b8a2ba969ac971",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslWht/1388d59abd5802827c53127e1fcb9e2b5a4a4242928e6a4ca2b8a2ba969ac971.front-on-1000x1100.webp",
+          "sha256": "1388d59abd5802827c53127e1fcb9e2b5a4a4242928e6a4ca2b8a2ba969ac971",
+          "url": "/images/plate-contact-sheets/1388d59abd5802827c53127e1fcb9e2b5a4a4242928e6a4ca2b8a2ba969ac971.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "GBSlm100AnSpTslBlk",
+      "binding": "0d9edc257f5c936bdf2359b8cceaed0c362551fbe666e61dd3298db5a47acce1",
+      "sha256": "3892bbdd88115656bf7abbcd012524aaa11a7eb5d54f188dccfd7625bd4f9df9",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslBlk/3892bbdd88115656bf7abbcd012524aaa11a7eb5d54f188dccfd7625bd4f9df9.front-on-1000x1100.webp",
+          "sha256": "3892bbdd88115656bf7abbcd012524aaa11a7eb5d54f188dccfd7625bd4f9df9",
+          "url": "/images/plate-contact-sheets/3892bbdd88115656bf7abbcd012524aaa11a7eb5d54f188dccfd7625bd4f9df9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm100AnSpTslGl",
+      "binding": "aa570b3053c64409d90166163b45b1500135b565d9dfb6d982466d167c6f6865",
+      "sha256": "4384c4195457210210274666e57781de2c1fa5781f0de82f7147e4b33c44fe5f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslGl/4384c4195457210210274666e57781de2c1fa5781f0de82f7147e4b33c44fe5f.front-on-1000x1100.webp",
+          "sha256": "4384c4195457210210274666e57781de2c1fa5781f0de82f7147e4b33c44fe5f",
+          "url": "/images/plate-contact-sheets/4384c4195457210210274666e57781de2c1fa5781f0de82f7147e4b33c44fe5f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm100AnSpTslIvyGl",
+      "binding": "ebf9ab664a788df238d872ec453d9d41fbee63ee50f8119b54f3259ffea23aa1",
+      "sha256": "1d645615c3a87d644b4847af45da4a485e4567f2aa788bec1277bfa90b4cd782",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslIvyGl/1d645615c3a87d644b4847af45da4a485e4567f2aa788bec1277bfa90b4cd782.front-on-1000x1100.webp",
+          "sha256": "1d645615c3a87d644b4847af45da4a485e4567f2aa788bec1277bfa90b4cd782",
+          "url": "/images/plate-contact-sheets/1d645615c3a87d644b4847af45da4a485e4567f2aa788bec1277bfa90b4cd782.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm100AnSpTslIvySl",
+      "binding": "4df024aa1cf70b5d87a95640d1f18a12721f4d6524ddfbf8571226d72102e73c",
+      "sha256": "2085fcf1802bbdcda3d0255d13bfe2fc3c1dae79dbd32cef51c1ba1983186f5a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslIvySl/2085fcf1802bbdcda3d0255d13bfe2fc3c1dae79dbd32cef51c1ba1983186f5a.front-on-1000x1100.webp",
+          "sha256": "2085fcf1802bbdcda3d0255d13bfe2fc3c1dae79dbd32cef51c1ba1983186f5a",
+          "url": "/images/plate-contact-sheets/2085fcf1802bbdcda3d0255d13bfe2fc3c1dae79dbd32cef51c1ba1983186f5a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm100AnSpTslLvn",
+      "binding": "d64824114e3eb52c546e9c31cbe2b39ca0ba901ae1a9c74136c6729f325081b7",
+      "sha256": "8f4ec577a1e0a5f282f0ee1ab556607b605c19ec56a77340264245533ff88ccb",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslLvn/8f4ec577a1e0a5f282f0ee1ab556607b605c19ec56a77340264245533ff88ccb.front-on-1000x1100.webp",
+          "sha256": "8f4ec577a1e0a5f282f0ee1ab556607b605c19ec56a77340264245533ff88ccb",
+          "url": "/images/plate-contact-sheets/8f4ec577a1e0a5f282f0ee1ab556607b605c19ec56a77340264245533ff88ccb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm100AnSpTslMtSl",
+      "binding": "dc0402a8b998f06f77b2e98fff5ec5904ee590cae92286a5ac6a7aea40ee6425",
+      "sha256": "4f7b940c798d2cd6154c8ddcc95b7a2b2a59669ace658e35fe342286f2f6c35a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslMtSl/4f7b940c798d2cd6154c8ddcc95b7a2b2a59669ace658e35fe342286f2f6c35a.front-on-1000x1100.webp",
+          "sha256": "4f7b940c798d2cd6154c8ddcc95b7a2b2a59669ace658e35fe342286f2f6c35a",
+          "url": "/images/plate-contact-sheets/4f7b940c798d2cd6154c8ddcc95b7a2b2a59669ace658e35fe342286f2f6c35a.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm100AnSpTslPnk",
+      "binding": "208f1a04ca27ef4bdac9b5b0be61e165081972fcef49fd7d316aaaa640a020de",
+      "sha256": "afe6b81ee6ef06672eb4c351161edb5273f416a002268687564d10daebfb2da5",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslPnk/afe6b81ee6ef06672eb4c351161edb5273f416a002268687564d10daebfb2da5.front-on-1000x1100.webp",
+          "sha256": "afe6b81ee6ef06672eb4c351161edb5273f416a002268687564d10daebfb2da5",
+          "url": "/images/plate-contact-sheets/afe6b81ee6ef06672eb4c351161edb5273f416a002268687564d10daebfb2da5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm100AnSpTslRed",
+      "binding": "36df33f775ce5e5ac44189cff3c30adfcec6a9b81b0fab0227cc018263f07572",
+      "sha256": "d9ee349936d085b9c6f5d3a8ee218cea9bdd3d2250c51257bb3635f7213e9a4d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslRed/d9ee349936d085b9c6f5d3a8ee218cea9bdd3d2250c51257bb3635f7213e9a4d.front-on-1000x1100.webp",
+          "sha256": "d9ee349936d085b9c6f5d3a8ee218cea9bdd3d2250c51257bb3635f7213e9a4d",
+          "url": "/images/plate-contact-sheets/d9ee349936d085b9c6f5d3a8ee218cea9bdd3d2250c51257bb3635f7213e9a4d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm100AnSpTslWht",
+      "binding": "b29891c1e9aed5065f3332f7c8a1c3b785655ec8561393d32cbb329e239b9d96",
+      "sha256": "1967788e51d6bbe5b2e2bb6bbbee22a9a433610c2e75a15e20ea12a355c48d20",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-100ml-clear-18-415/GBSlm100AnSpTslWht/1967788e51d6bbe5b2e2bb6bbbee22a9a433610c2e75a15e20ea12a355c48d20.front-on-1000x1100.webp",
+          "sha256": "1967788e51d6bbe5b2e2bb6bbbee22a9a433610c2e75a15e20ea12a355c48d20",
+          "url": "/images/plate-contact-sheets/1967788e51d6bbe5b2e2bb6bbbee22a9a433610c2e75a15e20ea12a355c48d20.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm30DrpCu",
+      "binding": "eaea54f1fae085afb147cc7211ec017a2bf73479fb6a70c8cce402b376f7ccd4",
+      "sha256": "51f6499f2cc94d2b69d0337e606084c880ea9d683d1086a98e04c53819f8804d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-30ml-clear-18-415/GBSlm30DrpCu/51f6499f2cc94d2b69d0337e606084c880ea9d683d1086a98e04c53819f8804d.front-on-1000x1100.webp",
+          "sha256": "51f6499f2cc94d2b69d0337e606084c880ea9d683d1086a98e04c53819f8804d",
+          "url": "/images/plate-contact-sheets/51f6499f2cc94d2b69d0337e606084c880ea9d683d1086a98e04c53819f8804d.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm50AnSpTslBlk",
+      "binding": "eb30bb0908705a0d95406d7e5feb330aced6109c2dda87d13103c2da9930230d",
+      "sha256": "91f0455fb85093aab1772120add8f8444b9d1566096368835064f93b6a96b487",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslBlk/91f0455fb85093aab1772120add8f8444b9d1566096368835064f93b6a96b487.front-on-1000x1100.webp",
+          "sha256": "91f0455fb85093aab1772120add8f8444b9d1566096368835064f93b6a96b487",
+          "url": "/images/plate-contact-sheets/91f0455fb85093aab1772120add8f8444b9d1566096368835064f93b6a96b487.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm50AnSpTslGl",
+      "binding": "a1c7f4bd017d915a56991860357cff4dec03d0be376a877365a162c363fdfece",
+      "sha256": "382ed811df2525237fcbb52910f020dd0f9c8874f12912840ac4a5c0371209f9",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslGl/382ed811df2525237fcbb52910f020dd0f9c8874f12912840ac4a5c0371209f9.front-on-1000x1100.webp",
+          "sha256": "382ed811df2525237fcbb52910f020dd0f9c8874f12912840ac4a5c0371209f9",
+          "url": "/images/plate-contact-sheets/382ed811df2525237fcbb52910f020dd0f9c8874f12912840ac4a5c0371209f9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm50AnSpTslIvyGl",
+      "binding": "c329a4d7103fb201b76f6dfe1482ffd616dcb207dca3352a249f467e51cbf14f",
+      "sha256": "a862883572f1f986b5d38df8db36640986d44c8c83932247838e96897744f357",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslIvyGl/a862883572f1f986b5d38df8db36640986d44c8c83932247838e96897744f357.front-on-1000x1100.webp",
+          "sha256": "a862883572f1f986b5d38df8db36640986d44c8c83932247838e96897744f357",
+          "url": "/images/plate-contact-sheets/a862883572f1f986b5d38df8db36640986d44c8c83932247838e96897744f357.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm50AnSpTslIvySl",
+      "binding": "62d313450461fed27b34f25b559068b9d7dc24decb410c42166ade6d8b67b84a",
+      "sha256": "1b358d5d38f55b3e897299cfbed3a44188b1abbd4e3ef9acdef2b89b433ab829",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslIvySl/1b358d5d38f55b3e897299cfbed3a44188b1abbd4e3ef9acdef2b89b433ab829.front-on-1000x1100.webp",
+          "sha256": "1b358d5d38f55b3e897299cfbed3a44188b1abbd4e3ef9acdef2b89b433ab829",
+          "url": "/images/plate-contact-sheets/1b358d5d38f55b3e897299cfbed3a44188b1abbd4e3ef9acdef2b89b433ab829.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm50AnSpTslLvn",
+      "binding": "e419a2d0269651d802fc83f1a4ea86f6c9e30328e15d8f884d4cec45e7615bc3",
+      "sha256": "ebf9e22082b605d5b42c8b271ecd1631728add0dcb9650ea7259078d5d5f3ae0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslLvn/ebf9e22082b605d5b42c8b271ecd1631728add0dcb9650ea7259078d5d5f3ae0.front-on-1000x1100.webp",
+          "sha256": "ebf9e22082b605d5b42c8b271ecd1631728add0dcb9650ea7259078d5d5f3ae0",
+          "url": "/images/plate-contact-sheets/ebf9e22082b605d5b42c8b271ecd1631728add0dcb9650ea7259078d5d5f3ae0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm50AnSpTslMtSl",
+      "binding": "b964f442860f72c9bd767daad9d4a18bef00797d753b4d41c67279c08f6d75d1",
+      "sha256": "0afa9eff1f7f67904ad8ecfe13cd4684c48f9af9dc1f5c5421cfb72dce4954b3",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslMtSl/0afa9eff1f7f67904ad8ecfe13cd4684c48f9af9dc1f5c5421cfb72dce4954b3.front-on-1000x1100.webp",
+          "sha256": "0afa9eff1f7f67904ad8ecfe13cd4684c48f9af9dc1f5c5421cfb72dce4954b3",
+          "url": "/images/plate-contact-sheets/0afa9eff1f7f67904ad8ecfe13cd4684c48f9af9dc1f5c5421cfb72dce4954b3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm50AnSpTslPnk",
+      "binding": "083df0b86450798e954498c3c7753b887498f008f71a9d6f27d32de86c9515f0",
+      "sha256": "00d9977e8aceaa7d5535d0fae70b56b5724c5defbd797e753b3bdb8ed8336e0f",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslPnk/00d9977e8aceaa7d5535d0fae70b56b5724c5defbd797e753b3bdb8ed8336e0f.front-on-1000x1100.webp",
+          "sha256": "00d9977e8aceaa7d5535d0fae70b56b5724c5defbd797e753b3bdb8ed8336e0f",
+          "url": "/images/plate-contact-sheets/00d9977e8aceaa7d5535d0fae70b56b5724c5defbd797e753b3bdb8ed8336e0f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm50AnSpTslRed",
+      "binding": "30fe2826e83a7c624428c3f563c0826b9ca4a0e2b86d1922bfbb6368e3499919",
+      "sha256": "5f7b4f946f6a363f2a8547e6419fec7e9f2e9f0a8af0f14bf8e5e8c89ce86eee",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslRed/5f7b4f946f6a363f2a8547e6419fec7e9f2e9f0a8af0f14bf8e5e8c89ce86eee.front-on-1000x1100.webp",
+          "sha256": "5f7b4f946f6a363f2a8547e6419fec7e9f2e9f0a8af0f14bf8e5e8c89ce86eee",
+          "url": "/images/plate-contact-sheets/5f7b4f946f6a363f2a8547e6419fec7e9f2e9f0a8af0f14bf8e5e8c89ce86eee.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBSlm50AnSpTslWht",
+      "binding": "05d4c58b8266be8bfa2a90f5a14b52decf8f68e18d132bdc936145f5acb6cac5",
+      "sha256": "1388d59abd5802827c53127e1fcb9e2b5a4a4242928e6a4ca2b8a2ba969ac971",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:37.689Z",
+      "batchId": "02dc61be-5236-47b6-9389-c33a0f967c9f",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/slim-50ml-clear-18-415/GBSlm50AnSpTslWht/1388d59abd5802827c53127e1fcb9e2b5a4a4242928e6a4ca2b8a2ba969ac971.front-on-1000x1100.webp",
+          "sha256": "1388d59abd5802827c53127e1fcb9e2b5a4a4242928e6a4ca2b8a2ba969ac971",
+          "url": "/images/plate-contact-sheets/1388d59abd5802827c53127e1fcb9e2b5a4a4242928e6a4ca2b8a2ba969ac971.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}
