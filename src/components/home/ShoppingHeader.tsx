@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useCart } from '@/components/CartProvider';
+import BrandWordmark from '@/components/BrandWordmark';
 import CartDrawer from '@/components/CartDrawer';
 import { useGrace } from '@/components/useGrace';
 import { CaretDown, List, MagnifyingGlass, ShoppingBag, User, X } from '@/components/icons';
@@ -50,7 +51,7 @@ export default function ShoppingHeader() {
         <header ref={header} className={styles.header}>
             <div className={styles.headerMain}>
                 <button className={styles.menuButton} aria-label={menu ? 'Close menu' : 'Open menu'} aria-expanded={menu} aria-controls="shopping-menu" onClick={() => setMenu(!menu)}>{menu ? <X size={22}/> : <List size={22}/>}</button>
-                <Link href="/" className={styles.brand} aria-label="Best Bottles home"><Image src="/assets/brand/best-bottles-wordmark.png" alt="Best Bottles" width={2172} height={724} priority/></Link>
+                <Link href="/" className={styles.brand} aria-label="Best Bottles home"><BrandWordmark/></Link>
                 <form action="/catalog" className={styles.search} role="search">
                     <input name="search" aria-label="Search the catalog" placeholder="Search bottles, dispensers, sizes…" type="search"/>
                     <button aria-label="Search"><MagnifyingGlass size={20}/></button>

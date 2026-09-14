@@ -62,7 +62,7 @@ export function ShoppingHero({ slides }: {slides?:HomepageData['heroSlides']}) {
     }, [slide]);
     return <section className={styles.hero} data-scene={!slide ? "empire-water" : undefined} aria-label="Featured bottles">
         {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? <ImmersiveHeroArt/> : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
-        <div className={styles.heroCopy}><h1>{slide?.headline || 'Beautifully contained.'}</h1><p>{slide?.subheadline || 'Distinctive glass. Thoughtful details. Endless possibilities.'}</p><div className={styles.buttons}><Link className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || 'Shop bottles'}</Link><Link className={styles.secondary} href="/matrix">Build your bottle</Link></div></div>
+        <div className={styles.heroCopy}><h1>{slide?.headline || 'Beautifully contained.'}</h1><p>{slide?.subheadline || 'Distinctive Glass. Thoughtful Details. Endless Possibilities.'}</p><div className={styles.buttons}><Link className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || 'Shop bottles'}</Link><Link className={styles.secondary} href="/matrix">Build your bottle</Link></div></div>
         {(slides?.length??0)>1 && <div className={styles.heroControls}>{slides!.map((_,i)=><button key={i} aria-label={`Show hero ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>{i+1}</button>)}</div>}
     </section>;
 }

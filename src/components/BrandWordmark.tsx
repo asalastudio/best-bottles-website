@@ -1,18 +1,15 @@
-import Image from "next/image";
 import styles from "./BrandWordmark.module.css";
 
-export default function BrandWordmark() {
+/**
+ * Best Bottles wordmark — single-weight direction from the Figma brand system:
+ * Montserrat, +12% tracking, all caps. Weight is set heavier than the Figma
+ * 400 proposal (SemiBold 600) so the mark carries the same presence as
+ * reference luxury wordmarks without tipping into Bold.
+ */
+export default function BrandWordmark({ className }: { className?: string }) {
     return (
-        <span className={styles.wordmark}>
-            <Image
-                src="/brand/best-bottles-wordmark.png"
-                alt="Best Bottles"
-                width={2172}
-                height={724}
-                className={styles.artwork}
-                priority
-                unoptimized
-            />
+        <span className={className ? `${styles.wordmark} ${className}` : styles.wordmark} aria-label="Best Bottles">
+            Best Bottles
         </span>
     );
 }

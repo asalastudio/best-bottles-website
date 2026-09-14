@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant, EB_Garamond, Inter } from "next/font/google";
+import { Cormorant, EB_Garamond, Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import AppProviders from "@/components/AppProviders";
 import { getMegaMenuPanels } from "@/sanity/lib/queries";
@@ -25,6 +25,12 @@ const ebGaramond = EB_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const inter = Inter({
@@ -100,7 +106,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${ebGaramond.variable} ${inter.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
+      <body className={`${cormorant.variable} ${ebGaramond.variable} ${inter.variable} ${montserrat.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationJsonLd()) }}
