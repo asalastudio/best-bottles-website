@@ -1,8 +1,9 @@
 export const dynamic = "force-dynamic";
 import Link from "next/link";
 import { PageHeader, PortalButton, PortalTag } from "@/components/portal/ui";
+import DiscardDraftButton from "@/components/portal/DiscardDraftButton";
 import { getPortalDraftsData } from "@/lib/portal/server";
-import { createDraftAction } from "../actions";
+import { createDraftAction, discardDraftAction } from "../actions";
 
 function formatCurrency(value: number | null | undefined) {
     if (typeof value !== "number") return "—";
@@ -25,7 +26,7 @@ function statusLabel(status: string) {
     return status === "in_review" ? "In Review" : status === "submitted" ? "Submitted" : "Draft";
 }
 
-const colClass = "grid grid-cols-[1fr_80px_100px_130px_100px_160px] gap-4 items-center";
+const colClass = "grid grid-cols-[1fr_80px_100px_130px_100px_200px] gap-4 items-center";
 
 export default async function PortalDrafts() {
     const { drafts } = await getPortalDraftsData();
@@ -68,11 +69,16 @@ export default async function PortalDrafts() {
                             <PortalTag variant={statusVariant(draft.status)}>{statusLabel(draft.status)}</PortalTag>
                             <div className="flex gap-1.5 justify-end">
                                 <Link
-                                        href={`/portal/drafts/${draft._id}`}
-                                        className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
-                                    >
-                                        {draft.status === "submitted" ? "View" : "Open"}
-                                    </Link>
+                                    href={`/portal/drafts/${draft._id}`}
+                                    className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
+                                >
+                                    {draft.status === "submitted" ? "View" : "Open"}
+                                </Link>
+                                <DiscardDraftButton
+                                    draftId={draft._id}
+                                    submitted={draft.status === "submitted"}
+                                    action={discardDraftAction}
+                                />
                             </div>
                         </div>
                     ))

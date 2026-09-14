@@ -244,10 +244,12 @@ export const getDashboardData = query({
         );
 
         const drafts = sortByNewest(
-            await ctx.db
+            (await ctx.db
                 .query("portalDrafts")
                 .withIndex("by_orgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
-                .collect()
+                .collect())
+                // Archived drafts are kept for the record, not for the customer.
+                .filter((draft) => !draft.archivedAt)
         );
 
         const now = new Date();
@@ -356,10 +358,12 @@ export const listDraftsByOrg = query({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
         const drafts = sortByNewest(
-            await ctx.db
+            (await ctx.db
                 .query("portalDrafts")
                 .withIndex("by_orgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
-                .collect()
+                .collect())
+                // Archived drafts are kept for the record, not for the customer.
+                .filter((draft) => !draft.archivedAt)
         );
 
         return drafts.map((draft) => ({
@@ -770,5 +774,49 @@ export const markDraftSubmitted = mutation({
         });
 
         return { draftId: draft._id, shopifyDraftOrderName: args.shopifyDraftOrderName };
+    },
+});
+
+/**
+ * Put a draft away.
+ *
+ * The two cases are genuinely different and deserve different fates:
+ *
+ *  - An UNSUBMITTED draft is a scratch document. Nothing downstream points at
+ *    it, so it is deleted. A customer who made three reorder drafts by mistake
+ *    wants them gone, not filed.
+ *  - A SUBMITTED draft is the record of what was sent to Shopify. Deleting it
+ *    would leave an order in Shopify with nothing in the portal explaining
+ *    where it came from, so it is archived instead and disappears from the
+ *    list without ceasing to exist.
+ */
+export const discardDraft = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        draftId: v.id("portalDrafts"),
+        clerkUserId: v.string(),
+    },
+    returns: v.object({ outcome: v.union(v.literal("deleted"), v.literal("archived")) }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        const draft = await ctx.db.get(args.draftId);
+        if (!draft || draft.clerkOrgId !== args.clerkOrgId) {
+            throw new Error("draft_not_found");
+        }
+
+        if (draft.status === "submitted") {
+            if (draft.archivedAt) return { outcome: "archived" as const };
+            await ctx.db.patch(draft._id, {
+                archivedAt: Date.now(),
+                archivedBy: args.clerkUserId,
+                updatedAt: Date.now(),
+            });
+            return { outcome: "archived" as const };
+        }
+
+        await ctx.db.delete(draft._id);
+        return { outcome: "deleted" as const };
     },
 });

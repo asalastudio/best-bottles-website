@@ -12,6 +12,7 @@ import {
     createGraceProjectForViewer,
     createPortalDraftForViewer,
     createPortalDraftFromOrderForViewer,
+    discardDraftForViewer,
     renameGraceProjectForViewer,
 } from "@/lib/portal/server";
 import {
@@ -35,6 +36,21 @@ export async function reorderToDraftAction(formData: FormData) {
     await createPortalDraftFromOrderForViewer(orderId);
     revalidatePath("/portal");
     revalidatePath("/portal/orders");
+    revalidatePath("/portal/drafts");
+    redirect("/portal/drafts");
+}
+
+/**
+ * Discard a draft. An unsubmitted draft is deleted outright; a submitted one
+ * is archived, so the portal keeps its record of what was sent to Shopify.
+ * Always lands back on the list, which is where the row just disappeared from.
+ */
+export async function discardDraftAction(formData: FormData) {
+    const draftId = String(formData.get("draftId") ?? "");
+    if (!draftId) return;
+
+    await discardDraftForViewer(draftId);
+    revalidatePath("/portal");
     revalidatePath("/portal/drafts");
     redirect("/portal/drafts");
 }

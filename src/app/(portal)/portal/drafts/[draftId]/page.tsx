@@ -5,8 +5,9 @@ import { notFound } from "next/navigation";
 import { PageHeader, PortalTag } from "@/components/portal/ui";
 import OrderPad from "@/components/portal/OrderPad";
 import SubmitDraftForm from "@/components/portal/SubmitDraftForm";
+import DiscardDraftButton from "@/components/portal/DiscardDraftButton";
 import { getDraftForViewer } from "@/lib/portal/draftEditor";
-import { saveDraftLinesAction, searchProductsAction, submitDraftAction } from "../../actions";
+import { discardDraftAction, saveDraftLinesAction, searchProductsAction, submitDraftAction } from "../../actions";
 
 function formatDate(value: number) {
     return new Date(value).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
@@ -41,9 +42,16 @@ export default async function PortalDraftDetail({
                         : "Add what you need, then send it to Best Bottles for review."
                 }
             >
-                <PortalTag variant={submitted ? "green" : "muted"}>
-                    {submitted ? "Sent" : "Draft"}
-                </PortalTag>
+                <div className="flex items-center gap-3">
+                    <PortalTag variant={submitted ? "green" : "muted"}>
+                        {submitted ? "Sent" : "Draft"}
+                    </PortalTag>
+                    <DiscardDraftButton
+                        draftId={draftId}
+                        submitted={submitted}
+                        action={discardDraftAction}
+                    />
+                </div>
             </PageHeader>
 
             {submitted && draft.shopifyDraftOrderName && (

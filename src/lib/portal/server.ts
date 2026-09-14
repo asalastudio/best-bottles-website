@@ -185,6 +185,21 @@ export async function createPortalDraftFromOrderForViewer(orderId: string) {
     });
 }
 
+/**
+ * Put a draft away. Unsubmitted drafts are deleted; submitted ones are
+ * archived, because they are the portal's record of what went to Shopify.
+ * Returns which of the two happened so the page can say so.
+ */
+export async function discardDraftForViewer(draftId: string) {
+    const viewer = await requirePortalViewer();
+    return await getPortalConvex().mutation(api.portal.discardDraft, {
+        writeToken: getPortalConvexWriteToken(),
+        clerkOrgId: viewer.clerkOrgId,
+        clerkUserId: viewer.clerkUserId,
+        draftId: draftId as Id<"portalDrafts">,
+    });
+}
+
 export async function createGraceProjectForViewer(name?: string) {
     const viewer = await requirePortalViewer();
     return await getPortalConvex().mutation(api.portal.createGraceProject, {

@@ -534,6 +534,13 @@ export default defineSchema({
         shopifyDraftOrderName: v.optional(v.string()),
         submittedAt: v.optional(v.number()),
         submittedBy: v.optional(v.string()),
+
+        // Set when a SUBMITTED draft is put away. An unsubmitted draft is a
+        // scratch document and is deleted outright; a submitted one is the
+        // record of what was sent to Shopify, so it is hidden rather than
+        // destroyed — otherwise the portal would disagree with the order.
+        archivedAt: v.optional(v.number()),
+        archivedBy: v.optional(v.string()),
     })
         .index("by_orgId", ["clerkOrgId"]),
 
