@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import WorkspaceModeServer from "./WorkspaceModeServer";
+import GraceWorkspaceClient from "./GraceWorkspaceClient";
 
 export const metadata: Metadata = {
     title: "Grace Workspace",
@@ -7,6 +7,12 @@ export const metadata: Metadata = {
     robots: { index: false, follow: false },
 };
 
+/**
+ * One surface for everyone. Staff used to get a separate internal knowledge
+ * console here; it drifted from the customer workspace and lost the
+ * microphone, so it was retired. Signing in adds account-linked history, it
+ * does not change the shape of the page.
+ */
 export default function GraceWorkspacePage() {
-    return <WorkspaceModeServer />;
+    return <GraceWorkspaceClient />;
 }
