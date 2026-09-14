@@ -121,6 +121,11 @@ const geom = existsSync(geomPath) ? readJson(geomPath) : null;
 if (geom) note("plate.geometry", { path: "src/lib/asset-ledger/plate-geometry.json", generatedAt: geom.generatedAt, ...geom.summary });
 // Product kinds that never take a plate: they are not bottles.
 const NO_PLATE_CATEGORY = new Set(["Component", "Packaging", "Accessory", "Gift Bag", "Gift Box"]);
+// Discontinued records imported by the confirmed retired-record reconciliation
+// are kept in the ledger for audit, but they are not active plate work. This is
+// derived from catalog lifecycle fields, never from a SKU or filename marker.
+const isRetiredScopeHold = (product) => product?.stockStatus === "Discontinued" &&
+    typeof product?.importSource === "string" && product.importSource.includes(":retired") && !product?.productGroupId;
 
 // ---------- local kit + plate ledgers ----------
 const kitCsv = new Map();
@@ -138,6 +143,29 @@ const bostonKitReleasePath = path.join(root, "dist/paper-doll/boston-kit-release
 const bostonKitRelease = existsSync(bostonKitReleasePath) ? readJson(bostonKitReleasePath) : null;
 const bostonKitApprovals = new Map((bostonKitRelease?.rows ?? []).filter(r => r.approval?.status === "approved").map(r => [r.sku, r]));
 if (bostonKitRelease) note("boston.kit-release", { path: path.relative(root, bostonKitReleasePath), rows: bostonKitRelease.rows.length, approved: bostonKitApprovals.size, publicationAuthorized: !!bostonKitRelease.publicationAuthorized });
+// A prepared approval remains "release" until the release-scoped verifier has
+// checked the indexed Convex rows and every hosted Blob byte. Only that exact
+// verification, bound to the immutable manifest and ship authorization, may
+// promote the approved rows to "complete" in the ledger. The manifest is read
+// from the release build when present, otherwise from the copy committed beside
+// the verification so the ledger stays true on a fresh clone.
+const fourFamilyManifestPath = [
+    path.join(root, "dist/paper-doll/four-family-plates-2026-09-13-release/manifest.json"),
+    path.join(root, "docs/reviews/four-family-plates-2026-09-13/release-manifest.json"),
+].find(existsSync);
+const fourFamilyVerificationPath = path.join(root, "docs/reviews/four-family-plates-2026-09-13/published-verification.json");
+const fourFamilyShipPath = path.join(root, "docs/reviews/four-family-plates-2026-09-13/ship-authorization.json");
+let fourFamilyPublishedVerification = null;
+if (existsSync(fourFamilyVerificationPath) && existsSync(fourFamilyShipPath) && fourFamilyManifestPath) {
+    const verification = readJson(fourFamilyVerificationPath);
+    const ship = readJson(fourFamilyShipPath);
+    const manifestSha = sha256(readFileSync(fourFamilyManifestPath));
+    if (verification.phase === "published" && verification.failures?.length === 0 && verification.rows === 637 &&
+        verification.manifestSha256 === manifestSha && ship.publicationAuthorized === true && ship.manifestSha256 === manifestSha) {
+        fourFamilyPublishedVerification = verification;
+        note("four-family.published-verification", { path: "docs/reviews/four-family-plates-2026-09-13/published-verification.json", rows: verification.rows, hostedAssetsChecked: verification.hostedAssetsChecked, deployment: verification.deployment, manifest: path.relative(root, fourFamilyManifestPath) });
+    }
+}
 const plateHolds = new Map();
 const holdPath = path.join(root, "data/paper-doll/priority-family-kit-holds-2026-09-08.json");
 if (existsSync(holdPath)) { for (const r of readJson(holdPath).rows) plateHolds.set(r.websiteSku, r); note("plate.holds", { path: "data/paper-doll/priority-family-kit-holds-2026-09-08.json", rows: plateHolds.size }); }
@@ -154,6 +182,7 @@ for (const sku of [...skus].sort()) {
     const p = productBySku.get(sku); const reg = registryBySku.get(sku); const man = manifestBySku.get(sku); const lock = heroLocks.get(sku); const rv = review.hero.get(sku); const kv = review.kit.get(sku);
     const g = p ? groupById.get(p.productGroupId) : null;
     const family = p?.family ?? reg?.family ?? kitCsv.get(sku)?.family ?? "Unknown";
+    const retiredScopeHold = isRetiredScopeHold(p);
     // hero
     let hero;
     if (reg) {
@@ -192,6 +221,14 @@ for (const sku of [...skus].sort()) {
     else if (NO_PLATE_CATEGORY.has(p?.category ?? "")) plate = { state: "not-applicable", reason: `${p.category}: not a bottle` };
     else plate = { state: convex ? "none" : "unknown" };
     if (pl && plateHolds.has(sku)) { plate.hold = plateHolds.get(sku).holdType; plate.reason = plateHolds.get(sku).reason; }
+    if (retiredScopeHold) {
+        plate.scopeExclusion = {
+            kind: "retired-scope-hold",
+            status: p.stockStatus,
+            importSource: p.importSource,
+            reason: "Discontinued catalog record with no product-group link. Preserve for audit; do not prepare an active plate.",
+        };
+    }
     const pv = review.plate.get(sku);
     if (pv) plate.candidate = {state:pv.status, sha256:pv.sha256, collection:pv.collection, bytesVerified:pv.bytesVerified};
     // A historical plate approval is visible evidence, never a hero approval.
@@ -339,6 +376,54 @@ const out = { schemaVersion: 2, sourceRecovery, platePreparation, bottleStandard
 }, summary, families, rows };
 
 mkdirSync(path.join(root, "src/lib/asset-ledger"), { recursive: true });
+// Local preparation is visible without counting unapproved candidates as indexed plates.
+const preparedReviewPath=path.join(root,"data/asset-ledger/four-family-plate-progress.json");
+out.preparedPlateReview = existsSync(preparedReviewPath) ? readJson(preparedReviewPath) : null;
+// The combined review writes approvals to a separate, append-only decision log.
+// Join that log back into the dashboard only after re-hashing the immutable
+// packet. Candidates remain unindexed until their named release is published.
+const fourFamilyPacketPath=path.join(root,"docs/reviews/four-family-plates-2026-09-13/prepared.json");
+const fourFamilyDecisionPath=path.join(root,"data/asset-ledger/four-family-plates-2026-09-13-decisions.json");
+if (out.preparedPlateReview && existsSync(fourFamilyPacketPath) && existsSync(fourFamilyDecisionPath)) {
+    const packetBytes=readFileSync(fourFamilyPacketPath), packet=JSON.parse(packetBytes.toString("utf8"));
+    const packetSha=sha256(packetBytes), decisions=readJson(fourFamilyDecisionPath);
+    const decision=(decisions.history??[]).findLast(d=>d.token===packetSha);
+    if (decision) {
+        const approvedEntries=(decision.entries??[]).filter(e=>e.status==='approved'&&e.publicationAuthorized===false);
+        const approvedSkus=[...new Set(approvedEntries.map(e=>e.sku))].sort();
+        if (approvedSkus.length!==approvedEntries.length) throw Error("Duplicate four-family approval identity.");
+        const packetReady=new Set((packet.rows??[]).filter(r=>r.status==='ready').map(r=>r.sku));
+        if (approvedSkus.some(sku=>!packetReady.has(sku))) throw Error("Four-family approval includes a row outside the eligible packet.");
+        out.preparedPlateReview={...out.preparedPlateReview,status:'approved',approvalRevision:decisions.revision,
+            approvalAt:decision.at,approvalId:decision.id,packetSha256:packetSha,approvedCount:approvedSkus.length,
+            approvedSkus,duplicateDispositionCount:(decision.duplicateEntries??[]).length,
+            recordedExceptions:(packet.counts?.hold??0)+(packet.counts?.legacy??0),publicationAuthorized:false};
+        note("four-family.approval",{path:"data/asset-ledger/four-family-plates-2026-09-13-decisions.json",approved:approvedSkus.length,
+            preserved:packet.counts?.preserved??0,exceptions:out.preparedPlateReview.recordedExceptions,
+            duplicates:out.preparedPlateReview.duplicateDispositionCount,publicationAuthorized:false});
+    }
+}
+if (fourFamilyPublishedVerification && out.preparedPlateReview?.approvedSkus?.length === 637) {
+    const publishedSkus = new Set(fourFamilyPublishedVerification.verifiedSkus ?? out.preparedPlateReview.approvedSkus);
+    if (publishedSkus.size === 637) {
+        out.preparedPlateReview = { ...out.preparedPlateReview, publicationVerifiedAt: fourFamilyPublishedVerification.verifiedAt,
+            publishedManifestSha256: fourFamilyPublishedVerification.manifestSha256, indexedCount: publishedSkus.size };
+        for (const row of rows) {
+            if (!publishedSkus.has(row.sku)) continue;
+            row.plate.complete = true;
+            row.plate.publishedVerification = {
+                phase: "published",
+                manifestSha256: fourFamilyPublishedVerification.manifestSha256,
+                verifiedAt: fourFamilyPublishedVerification.verifiedAt,
+            };
+        }
+        note("four-family.ledger-complete", { rows: publishedSkus.size, reason: "indexed rows and hosted bytes match the approved manifest" });
+    }
+}
+// Every family's exact-byte approval lock, so an image Jordan has already
+// signed off is never sent back for another review. A lock is visual approval
+// only; publication and indexing stay separate and are checked above.
+
 // Jordan's completeness rule, 2026-09-13: the live legacy site decides what
 // exists and what can still be obtained. Recording it here stops the plan
 // presenting a source hold as a dead end when the asset is in fact available.
