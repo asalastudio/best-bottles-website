@@ -165,7 +165,18 @@ body {
 
 /* ── Brand type system ──────────────────────────────────────────────────────
    Uppercase, tracked display in the brand face; lowercase body with no tracking.
-   Lives in @layer base so component utilities and CSS modules can still refine
+   Lives in /* The wordmark inside the portal rail and the team hub header.
+   BrandWordmark's own module fixes a pixel height and lets width follow; in a
+   220px rail that artwork overflows, and capping width alone would squash it
+   because the height stays pinned. Element+class outranks the module's single
+   class deterministically, whatever order the two sheets land in. */
+img.app-wordmark {
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+}
+
+@layer base so component utilities and CSS modules can still refine
    size/colour per surface. Tracking steps down with size. */
 @layer base {
   h1, h2, .brand-heading {

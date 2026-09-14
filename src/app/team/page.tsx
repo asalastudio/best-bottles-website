@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import BrandWordmark from "@/components/BrandWordmark";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { SwitchAccountButton } from "@/components/auth/SwitchAccountButton";
 import { PlatformStatusCard } from "@/components/team/PlatformStatusCard";
@@ -137,9 +139,12 @@ export default async function TeamPage({ searchParams }: TeamPageProps) {
         <main className="app-surface min-h-screen bg-bone px-6 py-20 sm:py-24">
             <div className="mx-auto max-w-5xl">
                 <header className="mb-10 max-w-2xl">
-                    <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-muted-gold">
-                        Best Bottles
-                    </p>
+                    {/* The supplied wordmark rather than the company name set as
+                        an eyebrow, so the staff hub carries the same mark as the
+                        storefront and the client portal. */}
+                    <Link href="/" aria-label="Best Bottles home" className="mb-5 block">
+                        <BrandWordmark className="app-wordmark" />
+                    </Link>
                     <h1 className="font-serif text-5xl leading-tight text-obsidian sm:text-6xl">
                         Team Hub
                     </h1>

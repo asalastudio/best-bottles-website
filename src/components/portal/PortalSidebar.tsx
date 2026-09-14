@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { UserButton, useOrganization } from "@clerk/nextjs";
+import BrandWordmark from "@/components/BrandWordmark";
 
 function NavIcon({ id }: { id: string }) {
     const icons: Record<string, React.ReactNode> = {
@@ -12,6 +13,12 @@ function NavIcon({ id }: { id: string }) {
                 <rect x="9" y="2" width="5" height="5" rx="1" />
                 <rect x="2" y="9" width="5" height="5" rx="1" />
                 <rect x="9" y="9" width="5" height="5" rx="1" />
+            </svg>
+        ),
+        catalog: (
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2.5 5.5 8 2.5l5.5 3v5L8 13.5l-5.5-3v-5Z" />
+                <path d="M2.5 5.5 8 8.5l5.5-3M8 8.5v5" />
             </svg>
         ),
         orders: (
@@ -100,8 +107,12 @@ const navSections: Array<{
     {
         items: [
             { href: "/portal", label: "Overview", id: "dashboard" },
-            { href: "/portal/orders", label: "Orders", id: "orders" },
-            { href: "/portal/drafts", label: "Drafts", id: "drafts" },
+            { href: "/portal/catalog", label: "Catalog", id: "catalog" },
+            // "Orders" is what the customer is building and has submitted;
+            // "Order history" is what Shopify has already fulfilled. Drafts is
+            // Best Bottles' internal word and does not belong in this rail.
+            { href: "/portal/drafts", label: "Orders", id: "drafts" },
+            { href: "/portal/orders", label: "Order history", id: "orders" },
         ],
     },
     {
@@ -159,12 +170,14 @@ export default function PortalSidebar({
             }}
         >
 
-            {/* Brand */}
+            {/* Brand — the supplied wordmark, the same artwork the storefront
+                header uses, so the portal is recognisably the same company
+                rather than type chosen to resemble it. */}
             <div className="px-5 pt-5 pb-4" style={{ borderBottom: "1px solid var(--color-rule)" }}>
-                <p className="font-sans text-[22px] font-semibold leading-tight tracking-tight text-[color:var(--color-text-primary)]">
-                    Best Bottles
-                </p>
-                <p className="font-sans text-[11px] mt-0.5 text-[color:var(--color-text-muted)]">Client Portal</p>
+                <Link href="/" aria-label="Best Bottles home" className="block">
+                    <BrandWordmark className="app-wordmark" />
+                </Link>
+                <p className="font-sans text-[11px] mt-1.5 text-[color:var(--color-text-muted)]">Client Portal</p>
             </div>
 
             {/* Org switcher */}
