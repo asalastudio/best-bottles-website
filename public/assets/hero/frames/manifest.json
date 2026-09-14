@@ -45,64 +45,9 @@
   "label": "Antique sprayer \u00b7 white"
  },
  {
-  "sku": "GBEmp50AnSpTslBlk",
-  "src": "/assets/hero/frames/frame-GBEmp50AnSpTslBlk.webp",
-  "label": "Antique sprayer \u00b7 tassel"
- },
- {
-  "sku": "GBEmp50AnSpTslGl",
-  "src": "/assets/hero/frames/frame-GBEmp50AnSpTslGl.webp",
-  "label": "Antique sprayer \u00b7 tassel"
- },
- {
-  "sku": "GBEmp50AnSpTslIvyGl",
-  "src": "/assets/hero/frames/frame-GBEmp50AnSpTslIvyGl.webp",
-  "label": "Antique sprayer \u00b7 tassel"
- },
- {
-  "sku": "GBEmp50AnSpTslIvySl",
-  "src": "/assets/hero/frames/frame-GBEmp50AnSpTslIvySl.webp",
-  "label": "Antique sprayer \u00b7 tassel"
- },
- {
-  "sku": "GBEmp50AnSpTslLvn",
-  "src": "/assets/hero/frames/frame-GBEmp50AnSpTslLvn.webp",
-  "label": "Antique sprayer \u00b7 tassel"
- },
- {
-  "sku": "GBEmp50AnSpTslMtSl",
-  "src": "/assets/hero/frames/frame-GBEmp50AnSpTslMtSl.webp",
-  "label": "Antique sprayer \u00b7 tassel"
- },
- {
-  "sku": "GBEmp50AnSpTslPnk",
-  "src": "/assets/hero/frames/frame-GBEmp50AnSpTslPnk.webp",
-  "label": "Antique sprayer \u00b7 tassel"
- },
- {
-  "sku": "GBEmp50AnSpTslRed",
-  "src": "/assets/hero/frames/frame-GBEmp50AnSpTslRed.webp",
-  "label": "Antique sprayer \u00b7 tassel"
- },
- {
-  "sku": "GBEmp50AnSpTslWht",
-  "src": "/assets/hero/frames/frame-GBEmp50AnSpTslWht.webp",
-  "label": "Antique sprayer \u00b7 tassel"
- },
- {
-  "sku": "GBEmp50DrpCu",
-  "src": "/assets/hero/frames/frame-GBEmp50DrpCu.webp",
-  "label": "Glass dropper \u00b7 copper"
- },
- {
-  "sku": "GBEmp50DrpGl",
-  "src": "/assets/hero/frames/frame-GBEmp50DrpGl.webp",
-  "label": "Glass dropper \u00b7 gold"
- },
- {
-  "sku": "GBEmp50DrpSl",
-  "src": "/assets/hero/frames/frame-GBEmp50DrpSl.webp",
-  "label": "Glass dropper \u00b7 silver"
+  "sku": "LBEmp50WhtClOvrCp",
+  "src": "/assets/hero/frames/frame-LBEmp50WhtClOvrCp.webp",
+  "label": "Lotion pump \u00b7 white"
  },
  {
   "sku": "GBEmp50RdcrBlkLthr",
@@ -163,10 +108,5 @@
   "sku": "GBEmp50RdcrWht",
   "src": "/assets/hero/frames/frame-GBEmp50RdcrWht.webp",
   "label": "Reducer \u00b7 white"
- },
- {
-  "sku": "LBEmp50WhtClOvrCp",
-  "src": "/assets/hero/frames/frame-LBEmp50WhtClOvrCp.webp",
-  "label": "Overcap \u00b7 white"
  }
 ]
