@@ -50,17 +50,19 @@
   /* ── Typography ───────────────────────────────────────────────────────── */
   --font-brand: var(--font-brand-face), "Montserrat", Arial, ui-sans-serif, sans-serif;
   --font-sans: var(--font-brand);
-  --font-serif: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
+  /* Sitewide the "serif" slot IS the brand face (Jordan, 2026-09-14: Montserrat everywhere; Garamond only on the
+     blog). The blog layout carries `.editorial`, which restores EB Garamond for its own subtree. */
+  --font-serif: var(--font-brand);
+  --font-editorial: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
 }
 
-/* Hero headline — explicit EB Garamond for "Beautifully Contained" */
+/* Display + accent utilities: brand face sitewide; `.editorial` (blog) restores the serifs. Title case is kept. */
 .font-display {
-  font-family: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
+  font-family: var(--font-brand);
   text-transform: none;
   letter-spacing: 0;
 }
 
-/* Brand face utility (Tailwind-styled components) */
 .font-brand {
   font-family: var(--font-brand);
 }
@@ -73,9 +75,19 @@
 }
 
 .font-cormorant {
-  font-family: var(--font-cormorant), var(--font-eb-garamond), ui-serif, Georgia, serif;
+  font-family: var(--font-brand);
   text-transform: none;
   letter-spacing: 0;
+}
+
+.editorial {
+  --font-serif: var(--font-editorial);
+}
+.editorial .font-display {
+  font-family: var(--font-editorial);
+}
+.editorial .font-cormorant {
+  font-family: var(--font-cormorant), var(--font-editorial);
 }
 
 :root {

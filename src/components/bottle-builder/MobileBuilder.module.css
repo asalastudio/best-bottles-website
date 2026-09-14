@@ -12,9 +12,9 @@
 .progress button { display: flex; align-items: center; justify-content: center; gap: 4px; font-size: .875rem; padding: 8px 0; }
 .progress button[aria-current] span { font-weight: 600; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 3px; text-underline-offset: 9px; }
 .progress svg { flex-shrink: 0; color: var(--gold); }
-.title { font-family: var(--font-eb-garamond),Georgia,serif; font-size: 2.15rem; line-height: 1.1; font-weight: 400; letter-spacing: -.025em; margin: 16px 0 12px; }
+.title { font-family: var(--font-brand); font-size: 2.15rem; line-height: 1.1; font-weight: 400; letter-spacing: -.025em; margin: 16px 0 12px; }
 .selectedBottle { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 0 6px; }
-.selectedBottle h2 { font-family: var(--font-eb-garamond),Georgia,serif; font-size: 1.4rem; line-height: 1.2;text-transform:none;letter-spacing:0}
+.selectedBottle h2 { font-family: var(--font-brand); font-size: 1.4rem; line-height: 1.2;text-transform:none;letter-spacing:0}
 .selectedBottle p { color: var(--quiet); font-size: .875rem; margin-top: 3px; }
 .selectedBottle button, .summary button, .recovery button, .case button { color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
 .filters { display: flex; align-items: center; gap: 12px; }
@@ -73,11 +73,11 @@
 .quantity input::-webkit-inner-spin-button { -webkit-appearance: none; }
 .totals > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .totals dd { text-align: right; }
-.totals > div:last-child dd { font-family: var(--font-eb-garamond),Georgia,serif; font-size: 1.65rem; font-weight: 600; }
+.totals > div:last-child dd { font-family: var(--font-brand); font-size: 1.65rem; font-weight: 600; }
 .dialog { position: fixed; inset: 0; margin: auto; padding: 20px; border: 1px solid #b5aea2; border-radius: 6px; width: min(92vw,480px); max-height: 85dvh; color: var(--ink); background: var(--bone); overflow-y: auto; }
 .dialog::backdrop { background: #0008; }
 .dialogHeading { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
-.dialogHeading h2 { font-family: var(--font-eb-garamond),Georgia,serif; font-size: 1.75rem;text-transform:none;letter-spacing:0}
+.dialogHeading h2 { font-family: var(--font-brand); font-size: 1.75rem;text-transform:none;letter-spacing:0}
 .dialogHeading button { display: grid; place-items: center; }
 .filterField { display: grid; gap: 8px; margin: 16px 0; }
 .dialog > .primary { width: 100%; margin-top: 16px; }
@@ -87,7 +87,7 @@
 .empty { display: grid; gap: 12px; padding: 20px 0; }
 .empty button, .empty a { text-decoration: underline; padding: 10px; }
 .success { border: 1px solid #bac5ad; background: #f4f6f0; padding: 16px; margin: 12px 0; }
-.success h2 { font-family: var(--font-eb-garamond),Georgia,serif; font-size: 1.65rem;text-transform:none;letter-spacing:0}
+.success h2 { font-family: var(--font-brand); font-size: 1.65rem;text-transform:none;letter-spacing:0}
 .success p { margin-block: 10px; }
 .success a { display: flex; justify-content: center; align-items: center; text-decoration: underline; }
 .srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
