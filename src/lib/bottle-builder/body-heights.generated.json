@@ -1,0 +1,349 @@
+{
+ "source": "data/audits/canonical-truth-2026-07-12/best-bottles-body-geometry.csv (canonical truth 2026-07-12; body height, glass only)",
+ "heights": {
+  "Aluminum Bottle|100": {
+   "bodyHeightMm": 128.0,
+   "widthMm": 50.0
+  },
+  "Aluminum Bottle|120": {
+   "bodyHeightMm": 114.0,
+   "widthMm": 45.0
+  },
+  "Aluminum Bottle|250": {
+   "bodyHeightMm": 128.0,
+   "widthMm": 60.0
+  },
+  "Aluminum Bottle|500": {
+   "bodyHeightMm": 178.0,
+   "widthMm": 74.0
+  },
+  "Aluminum Bottle|65": {
+   "bodyHeightMm": 94.0,
+   "widthMm": 36.0
+  },
+  "Apothecary|118": {
+   "bodyHeightMm": 52.0,
+   "widthMm": 27.0
+  },
+  "Apothecary|15": {
+   "bodyHeightMm": 58.0,
+   "widthMm": 30.0
+  },
+  "Apothecary|30": {
+   "bodyHeightMm": 58.0,
+   "widthMm": 37.0
+  },
+  "Atomizer|10": {
+   "bodyHeightMm": 82.0,
+   "widthMm": 23.0
+  },
+  "Atomizer|5": {
+   "bodyHeightMm": 76.0,
+   "widthMm": 18.0
+  },
+  "Bell|10": {
+   "bodyHeightMm": 55.0,
+   "widthMm": 27.0
+  },
+  "Boston Round|15": {
+   "bodyHeightMm": 68.0,
+   "widthMm": 25.0
+  },
+  "Boston Round|30": {
+   "bodyHeightMm": 78.0,
+   "widthMm": 33.0
+  },
+  "Boston Round|60": {
+   "bodyHeightMm": 94.0,
+   "widthMm": 39.0
+  },
+  "Circle|100": {
+   "bodyHeightMm": 105.0,
+   "widthMm": 89.0
+  },
+  "Circle|15": {
+   "bodyHeightMm": 60.0,
+   "widthMm": 50.0
+  },
+  "Circle|30": {
+   "bodyHeightMm": 74.0,
+   "widthMm": 60.0
+  },
+  "Circle|50": {
+   "bodyHeightMm": 87.0,
+   "widthMm": 72.0
+  },
+  "Cream Jar|15": {
+   "bodyHeightMm": 26.0,
+   "widthMm": 55.0
+  },
+  "Cream Jar|20": {
+   "bodyHeightMm": 34.0,
+   "widthMm": 55.0
+  },
+  "Cream Jar|3": {
+   "bodyHeightMm": 18.0,
+   "widthMm": 35.0
+  },
+  "Cream Jar|30": {
+   "bodyHeightMm": 35.0,
+   "widthMm": 52.0
+  },
+  "Cream Jar|40": {
+   "bodyHeightMm": 42.0,
+   "widthMm": 56.0
+  },
+  "Cream Jar|5": {
+   "bodyHeightMm": 24.0,
+   "widthMm": 31.0
+  },
+  "Cream Jar|60": {
+   "bodyHeightMm": 51.0,
+   "widthMm": 59.0
+  },
+  "Cream Jar|63": {
+   "bodyHeightMm": 51.0,
+   "widthMm": 59.0
+  },
+  "Cylinder|100": {
+   "bodyHeightMm": 154.0,
+   "widthMm": 35.0
+  },
+  "Cylinder|118": {
+   "bodyHeightMm": 116.0,
+   "widthMm": 41.0
+  },
+  "Cylinder|227": {
+   "bodyHeightMm": 156.0,
+   "widthMm": 51.0
+  },
+  "Cylinder|25": {
+   "bodyHeightMm": 83.0,
+   "widthMm": 32.0
+  },
+  "Cylinder|28": {
+   "bodyHeightMm": 81.0,
+   "widthMm": 31.0
+  },
+  "Cylinder|3": {
+   "bodyHeightMm": 37.0,
+   "widthMm": 14.0
+  },
+  "Cylinder|30": {
+   "bodyHeightMm": 51.0,
+   "widthMm": 42.0
+  },
+  "Cylinder|4": {
+   "bodyHeightMm": 49.0,
+   "widthMm": 14.0
+  },
+  "Cylinder|454": {
+   "bodyHeightMm": 195.0,
+   "widthMm": 62.0
+  },
+  "Cylinder|5": {
+   "bodyHeightMm": 53.0,
+   "widthMm": 17.0
+  },
+  "Cylinder|50": {
+   "bodyHeightMm": 117.0,
+   "widthMm": 32.0
+  },
+  "Cylinder|9": {
+   "bodyHeightMm": 70.0,
+   "widthMm": 20.0
+  },
+  "Decorative|10": {
+   "bodyHeightMm": 80.0,
+   "widthMm": 28.0
+  },
+  "Decorative|3": {
+   "bodyHeightMm": 42.0,
+   "widthMm": 18.0
+  },
+  "Decorative|32": {
+   "bodyHeightMm": 77.0,
+   "widthMm": 42.0
+  },
+  "Decorative|35": {
+   "bodyHeightMm": 44.0,
+   "widthMm": 63.0
+  },
+  "Decorative|355": {
+   "bodyHeightMm": 52.0,
+   "widthMm": 92.0
+  },
+  "Decorative|4": {
+   "bodyHeightMm": 46.0,
+   "widthMm": 32.0
+  },
+  "Decorative|5": {
+   "bodyHeightMm": 66.0,
+   "widthMm": 26.0
+  },
+  "Decorative|6": {
+   "bodyHeightMm": 48.0,
+   "widthMm": 22.0
+  },
+  "Diamond|60": {
+   "bodyHeightMm": 88.0,
+   "widthMm": 39.0
+  },
+  "Diva|100": {
+   "bodyHeightMm": 113.0,
+   "widthMm": 64.0
+  },
+  "Diva|30": {
+   "bodyHeightMm": 81.0,
+   "widthMm": 43.0
+  },
+  "Diva|46": {
+   "bodyHeightMm": 89.0,
+   "widthMm": 49.0
+  },
+  "Elegant|100": {
+   "bodyHeightMm": 109.0,
+   "widthMm": 61.0
+  },
+  "Elegant|15": {
+   "bodyHeightMm": 61.0,
+   "widthMm": 36.0
+  },
+  "Elegant|30": {
+   "bodyHeightMm": 75.0,
+   "widthMm": 44.0
+  },
+  "Elegant|60": {
+   "bodyHeightMm": 86.0,
+   "widthMm": 54.0
+  },
+  "Empire|100": {
+   "bodyHeightMm": 107.0,
+   "widthMm": 46.0
+  },
+  "Empire|50": {
+   "bodyHeightMm": 88.0,
+   "widthMm": 37.0
+  },
+  "Flair|15": {
+   "bodyHeightMm": 56.0,
+   "widthMm": 41.0
+  },
+  "Grace|55": {
+   "bodyHeightMm": 113.0,
+   "widthMm": 52.0
+  },
+  "Lotion Bottle|3": {
+   "bodyHeightMm": 118.0,
+   "widthMm": 33.0
+  },
+  "Lotion Bottle|30": {
+   "bodyHeightMm": 118.0,
+   "widthMm": 33.0
+  },
+  "Pillar|9": {
+   "bodyHeightMm": 57.0,
+   "widthMm": 21.0
+  },
+  "Plastic Bottle|10": {
+   "bodyHeightMm": 94.0,
+   "widthMm": 24.0
+  },
+  "Plastic Bottle|30": {
+   "bodyHeightMm": 68.0,
+   "widthMm": 24.0
+  },
+  "Rectangle|10": {
+   "bodyHeightMm": 50.0,
+   "widthMm": 29.0
+  },
+  "Rectangle|9": {
+   "bodyHeightMm": 47.0,
+   "widthMm": 24.0
+  },
+  "Round|128": {
+   "bodyHeightMm": 83.0,
+   "widthMm": 69.0
+  },
+  "Round|78": {
+   "bodyHeightMm": 73.0,
+   "widthMm": 59.0
+  },
+  "Royal|13": {
+   "bodyHeightMm": 56.0,
+   "widthMm": 44.0
+  },
+  "Royal|14": {
+   "bodyHeightMm": 64.0,
+   "widthMm": 44.0
+  },
+  "Sleek|100": {
+   "bodyHeightMm": 149.0,
+   "widthMm": 36.0
+  },
+  "Sleek|30": {
+   "bodyHeightMm": 98.0,
+   "widthMm": 28.0
+  },
+  "Sleek|5": {
+   "bodyHeightMm": 45.0,
+   "widthMm": 17.0
+  },
+  "Sleek|50": {
+   "bodyHeightMm": 139.0,
+   "widthMm": 28.0
+  },
+  "Sleek|8": {
+   "bodyHeightMm": 66.0,
+   "widthMm": 17.0
+  },
+  "Slim|100": {
+   "bodyHeightMm": 154.0,
+   "widthMm": 37.0
+  },
+  "Slim|30": {
+   "bodyHeightMm": 87.0,
+   "widthMm": 30.0
+  },
+  "Slim|50": {
+   "bodyHeightMm": 121.0,
+   "widthMm": 31.0
+  },
+  "Square|15": {
+   "bodyHeightMm": 52.0,
+   "widthMm": 26.0
+  },
+  "Tall Cylinder|9": {
+   "bodyHeightMm": 106.0,
+   "widthMm": 18.0
+  },
+  "Teardrop|9": {
+   "bodyHeightMm": 43.0,
+   "widthMm": 20.0
+  },
+  "Tulip|5": {
+   "bodyHeightMm": 45.0,
+   "widthMm": 23.0
+  },
+  "Tulip|6": {
+   "bodyHeightMm": 45.0,
+   "widthMm": 23.0
+  },
+  "Vial|1": {
+   "bodyHeightMm": 35.0,
+   "widthMm": 8.0
+  },
+  "Vial|2": {
+   "bodyHeightMm": 35.0,
+   "widthMm": 12.0
+  },
+  "Vial|3": {
+   "bodyHeightMm": 29.0,
+   "widthMm": 14.0
+  },
+  "Vial|4": {
+   "bodyHeightMm": 45.0,
+   "widthMm": 15.0
+  }
+ }
+}

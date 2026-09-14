@@ -74,5 +74,90 @@
       2
     ],
     "url": "/images/bottle-builder/mechanism-references/7.png"
+  },
+  {
+    "cell": "reducer",
+    "fitment": "Reducer",
+    "url": "/images/bottle-builder/fitment-pencil-reducer.png",
+    "sha256": "9a26fa0a0dc74e70209580707658c48af4da4d41c710da47b4fb8664ac353771",
+    "generatedWith": "Higgsfield gpt_image_2_5, quality high, 1k, job 02f84d05-c13d-425e-af1c-a72c354fe2b5 (2026-09-14)",
+    "references": [
+      {
+        "role": "geometry",
+        "media": "2cea011d-ef2d-47e2-b854-c243c87f8965",
+        "file": "data/paper-doll/reducer-illustration/reducer-reference-2026-09-14.png"
+      },
+      {
+        "role": "style",
+        "media": "8a0e4c62-2650-43ea-acb6-4e9aa3c14425",
+        "file": "public/images/bottle-builder/fitment-pencil-approved.png"
+      }
+    ],
+    "jordanExample": {
+      "note": "2026-09-14 Jordan pasted a photograph of the reducer in chat ('this is the correct design\u2026 do not change any geometry'); the pasted bytes never reached the filesystem, so the drawing is locked to the earlier photograph of the same part and its proportions were dictated in the prompt. Replace the geometry reference with Jordan's file when it is saved under data/paper-doll/reducer-illustration/."
+    },
+    "silhouetteQa": {
+      "referenceHeightOverWidth": 1.123,
+      "drawingHeightOverWidth": 1.202,
+      "heightRatioDrawingOverReference": 1.07,
+      "widthFractionByBand": [
+        {
+          "band": "top disc",
+          "reference": 0.643,
+          "drawing": 0.684
+        },
+        {
+          "band": "flange",
+          "reference": 0.992,
+          "drawing": 0.997
+        },
+        {
+          "band": "body upper",
+          "reference": 0.879,
+          "drawing": 0.867
+        },
+        {
+          "band": "body lower",
+          "reference": 0.873,
+          "drawing": 0.863
+        },
+        {
+          "band": "chamfer",
+          "reference": 0.816,
+          "drawing": 0.83
+        },
+        {
+          "band": "foot",
+          "reference": 0.686,
+          "drawing": 0.693
+        }
+      ],
+      "meanAbsWidthDiff": 0.016,
+      "maxAbsWidthDiff": 0.18
+    },
+    "status": "candidate \u2014 awaiting Jordan's approval on /reviews/builder-bodies-2026-09-14/reducer-illustration.jpg",
+    "rejected": [
+      {
+        "jobs": [
+          "7cb45ffe-2764-4ab3-b3f3-cb2515d4afde",
+          "1c481420-2999-4293-acae-744ac046f55d"
+        ],
+        "why": "orifice hole invented, no ribs"
+      },
+      {
+        "jobs": [
+          "6bbbcb47-f8d1-40b3-a0d0-9ffb112e75d7",
+          "8818feca-000e-4831-a5cf-70f558b5e4de"
+        ],
+        "why": "flange too wide (body 0.69\u20130.77 of flange), too tall; geometry reference was a mis-extracted screenshot"
+      },
+      {
+        "jobs": [
+          "97742064-586a-4cd8-b7dd-98b9d341610c",
+          "27a48d5d-4be1-49ac-b89a-7f209a90f9c5"
+        ],
+        "why": "e: 21% too tall; g: close second (ratio 1.089)"
+      }
+    ]
   }
 ]
