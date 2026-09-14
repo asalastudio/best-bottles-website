@@ -58,6 +58,22 @@ NICHE = (max(nx0 - 16, 0), max(ny0 - 16, 0), min(nx1 + 16, W), min(ny1 + sill + 
 json.dump({"niche": [int(v) for v in NICHE], "plaster": [nx0, ny0, nx1, ny1]}, open(f"{OUT}/geometry.json", "w"))
 log("niche", NICHE, "plaster", (nx0, ny0, nx1, ny1))
 m = np.full((H, W), 255, np.uint8); m[NICHE[1]:NICHE[3], NICHE[0]:NICHE[2]] = 0   # whole niche interior may change; the diff threshold keeps unchanged glass from the base
+# bottle body: per-row plaster reference (row median of the back wall, bottle is narrower than half the width),
+# pixels far from it are the bottle; the shaded side faces of the niche are excluded by a 10% inset.
+pw = nx1 - nx0; bx0, bx1 = nx0 + int(0.10 * pw), nx1 - int(0.10 * pw)
+bmask = np.zeros((H, W), bool)
+for y in range(ny0 + 8, ny1):
+    ref = np.median(ba[y, bx0:bx1], axis=0); bmask[y, bx0:bx1] = np.abs(ba[y, bx0:bx1] - ref).sum(axis=1) > 60
+col = bmask.mean(axis=0); cols = np.where(col > 0.04)[0]
+runs = np.split(cols, np.where(np.diff(cols) > 10)[0] + 1); centre = (bx0 + bx1) // 2
+run = min(runs, key=lambda r: abs((r.min() + r.max()) / 2 - centre)); xL, xR = int(run.min()), int(run.max())
+rowcov = bmask[:, xL:xR + 1].mean(axis=1); yrows = np.where(rowcov > 0.06)[0]; yTop, yBot = int(yrows.min()), int(yrows.max())
+span = {y: (np.where(bmask[y, xL:xR + 1])[0].max() - np.where(bmask[y, xL:xR + 1])[0].min()) for y in yrows}
+maxw = max(span.values()); shoulder = min(y for y, w in span.items() if w >= 0.80 * maxw)
+BODY = (xL - 6, int(shoulder) + 10, xR + 6, min(yBot + 40, H))
+m_cap = m.copy(); m_cap[BODY[1]:BODY[3], BODY[0]:BODY[2]] = 255
+json.dump({"niche": [int(v) for v in NICHE], "plaster": [nx0, ny0, nx1, ny1], "body": [int(v) for v in BODY]}, open(f"{OUT}/geometry.json", "w"))
+log("body lock (caps only)", BODY)
 
 # 4. frames
 def one(r):
@@ -65,10 +81,12 @@ def one(r):
     if not os.path.exists(raw):
         prompt = ("Fit the exact closure shown on the same bottle in the second image onto the bottle in the first image — same type, shape, proportions, colour and finish — seated on the neck at the same scale, lit by the niche's light from above with matching reflections. "
                   "Inside the glass, show exactly what the second image shows for this closure: a slim dip tube for a sprayer or pump, nothing for a cap or reducer. "
+                  "The closure must actually be fitted: it covers the threaded neck completely, so no bare threads remain visible. "
                   "Everything else — the glass bottle's shape and position, the sill, the plaster and the marble wall — stays exactly as in the first image. No text.")
         edit(prompt, [base, ref_png(sku)], raw)
     gen = np.asarray(Image.open(raw).convert("RGB").resize((W, H))).astype(float); bf = ba.astype(float)
-    changed = ((np.abs(gen - bf).sum(axis=2) > 40) & (m == 0)).astype(np.uint8) * 255
+    zone = m_cap if kind(sku) in ("Rdcr", "Cap") else m      # caps: body locked (empty bottle); sprayers/pumps: interior follows the closure
+    changed = ((np.abs(gen - bf).sum(axis=2) > 40) & (zone == 0)).astype(np.uint8) * 255
     a = np.asarray(Image.fromarray(changed).filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(2.5))).astype(float) / 255.0
     comp = bf * (1 - a[..., None]) + gen * a[..., None]
     Image.fromarray(comp.round().astype(np.uint8)).save(f"{OUT}/frame-{sku}.png")
