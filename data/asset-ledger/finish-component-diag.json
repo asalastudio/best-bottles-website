@@ -1,0 +1,5496 @@
+{
+ "generatedAt": "2026-09-14T14:23:22.572Z",
+ "rows": [
+  {
+   "sku": "Alu120mlLotionPumpWhite",
+   "family": "Aluminum Bottle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "White",
+   "neck": "20-410",
+   "reason": "no Lotion Pump listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "Alu120mlLotionPumpBlack",
+   "family": "Aluminum Bottle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Black",
+   "neck": "20-410",
+   "reason": "no Lotion Pump listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "Alu500",
+   "family": "Aluminum Bottle",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Clear",
+   "neck": "20-410",
+   "reason": "no Cap listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "Alu100mlSprayBlack",
+   "family": "Aluminum Bottle",
+   "applicator": "Fine Mist Sprayer",
+   "kind": "Sprayer",
+   "finish": "Black",
+   "neck": "20-410",
+   "reason": "listed Sprayer SKUs do not match the Sprayer pattern",
+   "steps": {
+    "listedOfKind": 1,
+    "withIds": 1,
+    "notRetiredInStock": 1,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "Alu65mlLotionPumpWhite",
+   "family": "Aluminum Bottle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "White",
+   "neck": "20-410",
+   "reason": "no Lotion Pump listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "Alu65mlLotionPumpBlack",
+   "family": "Aluminum Bottle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Black",
+   "neck": "20-410",
+   "reason": "no Lotion Pump listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBell10BlkShSht",
+   "family": "Bell",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Shiny Black Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Shiny Black Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonGl",
+   "family": "Boston Round",
+   "applicator": "Metal Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn2ozMtlRollGl",
+   "family": "Boston Round",
+   "applicator": "Metal Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropper",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrpr",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrprSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrprGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu15BlkDrprGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn1ozWhtDrp",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn1ozBlkDrpShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Shiny Gold Trim",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Shiny Gold Trim'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn1ozWhtDrpShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Shiny Gold Trim",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Shiny Gold Trim'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn1ozWhtDrpShnSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Shiny Silver Trim",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Shiny Silver Trim'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkDrpShnGl",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Shiny Gold",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Shiny Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDropper",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropper",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn2ozWhtDrpr",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn2ozBlkDrprShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn2ozWhtDrprShnSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn2ozBlkDrprShnSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn2ozWhtDrprShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDrpr",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropper",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropperShnGlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropperShnSlTrim",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "White",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'White'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn15BlkCapSht",
+   "family": "Boston Round",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "18-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 2,
+    "withIds": 2,
+    "notRetiredInStock": 2,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkCapSht",
+   "family": "Boston Round",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "18-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 2,
+    "withIds": 2,
+    "notRetiredInStock": 2,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu15BlkCapSht",
+   "family": "Boston Round",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "18-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 2,
+    "withIds": 2,
+    "notRetiredInStock": 2,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn1ozBlkCapSht",
+   "family": "Boston Round",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 1,
+    "withIds": 1,
+    "notRetiredInStock": 1,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkCapSht",
+   "family": "Boston Round",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 1,
+    "withIds": 1,
+    "notRetiredInStock": 1,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkCapSht",
+   "family": "Boston Round",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 1,
+    "withIds": 1,
+    "notRetiredInStock": 1,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn2ozBlkCapSht",
+   "family": "Boston Round",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 1,
+    "withIds": 1,
+    "notRetiredInStock": 1,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkCapSht",
+   "family": "Boston Round",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 1,
+    "withIds": 1,
+    "notRetiredInStock": 1,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkCapSht",
+   "family": "Boston Round",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 1,
+    "withIds": 1,
+    "notRetiredInStock": 1,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonGl",
+   "family": "Boston Round",
+   "applicator": "Plastic Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonGl",
+   "family": "Boston Round",
+   "applicator": "Plastic Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn2ozRollGl",
+   "family": "Boston Round",
+   "applicator": "Plastic Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonGl",
+   "family": "Boston Round",
+   "applicator": "Plastic Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu2ozRollonGl",
+   "family": "Boston Round",
+   "applicator": "Plastic Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonBlk",
+   "family": "Boston Round",
+   "applicator": "Metal Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonGl",
+   "family": "Boston Round",
+   "applicator": "Metal Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonGl",
+   "family": "Boston Round",
+   "applicator": "Metal Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn2ozMtlRollBlk",
+   "family": "Boston Round",
+   "applicator": "Metal Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonGl",
+   "family": "Boston Round",
+   "applicator": "Metal Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu2ozMtlRollonGl",
+   "family": "Boston Round",
+   "applicator": "Metal Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "neck": "20-400",
+   "reason": "no listed Roll-On Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropper",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu15BlkDrpr",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "18-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 5,
+    "neckOk": 5,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn1ozBlkDrp",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkDropper",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkDropper",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstn2ozBlkDrpr",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDrpr",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkDropper",
+   "family": "Boston Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Black",
+   "neck": "20-400",
+   "reason": "no listed Dropper with finish 'Black'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCrcl100LtnClOvrCap",
+   "family": "Circle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCrclFrst100LtnClOvrCap",
+   "family": "Circle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrcl100RdcrShnBlk",
+   "family": "Circle",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst100RdcrShnBlk",
+   "family": "Circle",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst50DrpSl",
+   "family": "Circle",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Silver",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst50DrpGl",
+   "family": "Circle",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Gold",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrcl100AnSpLvn",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrcl100AnSpRed",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrcl100AnSpIvyGl",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst100AnSpIvyGl",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst100AnSpLvn",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst100AnSpRed",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst100AnSpTslLvn",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst100AnSpTslRed",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCrcl50LtnMtSl",
+   "family": "Circle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBCrcl50RdcrShnBlk",
+   "family": "Circle",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCrclFrst50LtnMtSl",
+   "family": "Circle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBCrclFrst50RdcrShnBlk",
+   "family": "Circle",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst50RdcrIvyLthr",
+   "family": "Circle",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Ivory Leather",
+   "neck": "18-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 2,
+    "withIds": 2,
+    "notRetiredInStock": 2,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrcl50AnSpLvn",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrcl50AnSpIvyGl",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrcl50AnSpRed",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrcl50AnSpTslRed",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCrcl100LtnMtSl",
+   "family": "Circle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBCrclFrst50DrpCu",
+   "family": "Circle",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Copper",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst50AnSpLvn",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCrclFrst100LtnMtSl",
+   "family": "Circle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBCrclFrst50AnSpIvyGl",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCrclFrst50AnSpRed",
+   "family": "Circle",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCrcl50LtnClOvrCap",
+   "family": "Circle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCrclFrst50LtnClOvrCap",
+   "family": "Circle",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "CJClr15Pnk",
+   "family": "Cream Jar",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Pink",
+   "neck": "37mm",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 1,
+    "withIds": 1,
+    "notRetiredInStock": 1,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "CJClr15Wht",
+   "family": "Cream Jar",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "White",
+   "neck": "37mm",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 1,
+    "withIds": 1,
+    "notRetiredInStock": 1,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCyl100LtnClOvrCap",
+   "family": "Cylinder",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl100RdcrShnBlk",
+   "family": "Cylinder",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSpry1ozGl",
+   "family": "Cylinder",
+   "applicator": "Fine Mist Sprayer",
+   "kind": "Sprayer",
+   "finish": "Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSpry1ozSl",
+   "family": "Cylinder",
+   "applicator": "Fine Mist Sprayer",
+   "kind": "Sprayer",
+   "finish": "Silver",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Silver'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCyl25LtnMtSl",
+   "family": "Cylinder",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBCyl9SpryRd",
+   "family": "Cylinder",
+   "applicator": "Fine Mist Sprayer",
+   "kind": "Sprayer",
+   "finish": "Clear",
+   "neck": "17-415",
+   "reason": "no listed Sprayer with finish 'Clear'",
+   "steps": {
+    "listedOfKind": 6,
+    "withIds": 6,
+    "notRetiredInStock": 6,
+    "patternOk": 6,
+    "neckOk": 6,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl100AnSpLvn",
+   "family": "Cylinder",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl100AnSpIvyGl",
+   "family": "Cylinder",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl100AnSpRed",
+   "family": "Cylinder",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl50RdcrShnBlk",
+   "family": "Cylinder",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl50AnSpLvn",
+   "family": "Cylinder",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl50AnSpIvyGl",
+   "family": "Cylinder",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl50AnSpRed",
+   "family": "Cylinder",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBcyl25LtnClOvrCap",
+   "family": "Cylinder",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBCyl50LtnClOvrCap",
+   "family": "Cylinder",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl5WhtSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "White Short",
+   "neck": "13-415",
+   "reason": "no Cap listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCyl9WhtSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "White Short",
+   "neck": "13-415",
+   "reason": "no Cap listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl5BlkShSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Shiny Black Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Shiny Black Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl5CuSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Copper Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Copper Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl5GlMattSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Matte Gold Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Matte Gold Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl5GlSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Gold Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Gold Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl5SlMattSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Matte Silver Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Matte Silver Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCyl5SlSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Silver Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Silver Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCylBlu5CuSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Copper Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Copper Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCylBlu5GlMattSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Matte Gold Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Matte Gold Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCylBlu5GlSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Gold Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Gold Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCylBlu5SlMattSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Matte Silver Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Matte Silver Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBCylBlu5SlSht",
+   "family": "Cylinder",
+   "applicator": "Cap/Closure",
+   "kind": "Cap",
+   "finish": "Silver Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Silver Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCyl9BlkShSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Shiny Black Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Shiny Black Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCyl9CuSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Copper Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Copper Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCyl9GlMattSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Matte Gold Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Matte Gold Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCyl9GlSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Gold Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Gold Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCyl9SlMattSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Matte Silver Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Matte Silver Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCyl9SlSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Silver Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Silver Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCylFrst9BlkShSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Shiny Black Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Shiny Black Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCylFrst9CuSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Copper Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Copper Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCylFrst9GlMattSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Matte Gold Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Matte Gold Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCylFrst9GlSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Gold Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Gold Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCylFrst9SlMattSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Matte Silver Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Matte Silver Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallCylFrst9SlSht",
+   "family": "Cylinder",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Silver Short",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Silver Short'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDmnd2ozAnSpIvyGl",
+   "family": "Diamond",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDmnd2ozAnSpLvn",
+   "family": "Diamond",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDmnd2ozAnSpRed",
+   "family": "Diamond",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBDmnd2ozLtnMtSl",
+   "family": "Diamond",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBDmnd2ozRdcrShnBlk",
+   "family": "Diamond",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBDmnd2ozLtnClOvrCap",
+   "family": "Diamond",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBDiva100LtnClOvrCap",
+   "family": "Diva",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva100RdcrShnBlk",
+   "family": "Diva",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva30RdcrShnBlk",
+   "family": "Diva",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBDiva30LtnMtSl",
+   "family": "Diva",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBDiva46RdcrShnBlk",
+   "family": "Diva",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBDiva46LtnMtSl",
+   "family": "Diva",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnBlk",
+   "family": "Diva",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBDivaFrst46LtnMtSl",
+   "family": "Diva",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBDiva30AnSpRed",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva30AnSpIvyGl",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva30AnSpLvn",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva100AnSpIvyGl",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva100AnSpLvn",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva100AnSpRed",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva46AnSpLvnRng",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva46AnSpRedRng",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva46AnSpLvn",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva46AnSpIvyGl",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDiva46AnSpRed",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDivaFrst46AnSpLvn",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDivaFrst46AnSpIvyGl",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBDivaFrst46AnSpRed",
+   "family": "Diva",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBDiva100LtnMtSl",
+   "family": "Diva",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "LBDiva30LtnClOvrCap",
+   "family": "Diva",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBDiva46LtnClOvrCap",
+   "family": "Diva",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBDivaFrst46LtnClOvrCap",
+   "family": "Diva",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBElgFrst100LtnMtSl",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "LBElg100LtnClOvrCap",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBElgFrst100WhtClOvrCp",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'White Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBElgFrst100LtnClOvrCap",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg100RdcrShnBlk",
+   "family": "Elegant",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst100RdcrShnBlk",
+   "family": "Elegant",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg60AnSpLvn",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg60AnSpIvyGl",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg60AnSpRed",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg60AnSpTslRed",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst60AnSpIvyGl",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst60AnSpLvn",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst30GlCap",
+   "family": "Elegant",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Gold",
+   "neck": "15-415",
+   "reason": "no listed Cap with finish 'Gold'",
+   "steps": {
+    "listedOfKind": 2,
+    "withIds": 2,
+    "notRetiredInStock": 2,
+    "patternOk": 2,
+    "neckOk": 2,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst60AnSpRed",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg60DrpSl",
+   "family": "Elegant",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Silver",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg60DrpGl",
+   "family": "Elegant",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Gold",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst60DrpSl",
+   "family": "Elegant",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Silver",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst60DrpGl",
+   "family": "Elegant",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Gold",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg30SlCap",
+   "family": "Elegant",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Silver",
+   "neck": "15-415",
+   "reason": "no listed Cap with finish 'Silver'",
+   "steps": {
+    "listedOfKind": 2,
+    "withIds": 2,
+    "notRetiredInStock": 2,
+    "patternOk": 2,
+    "neckOk": 2,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst30SlCap",
+   "family": "Elegant",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Silver",
+   "neck": "15-415",
+   "reason": "no listed Cap with finish 'Silver'",
+   "steps": {
+    "listedOfKind": 2,
+    "withIds": 2,
+    "notRetiredInStock": 2,
+    "patternOk": 2,
+    "neckOk": 2,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg100AnSpLvn",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg100AnSpIvyGl",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg100AnSpRed",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst100AnSpRed",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst100AnSpIvyGl",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst100AnSpLvn",
+   "family": "Elegant",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBElg60LtnMtSl",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "LBElg60WhtClOvrCp",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'White Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBElgFrst60LtnMtSl",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "LBElgFrst60WhtClOvrCp",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'White Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg60DrpCu",
+   "family": "Elegant",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Copper",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst60DrpCu",
+   "family": "Elegant",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Copper",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElg60RdcrShnBlk",
+   "family": "Elegant",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBElgFrst60RdcrShnBlk",
+   "family": "Elegant",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBElg100LtnMtSl",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "LBElg100WhtClOvrCp",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'White Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBElg60LtnClrOvrCap",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBElgFrst60LtnClOvrCap",
+   "family": "Elegant",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBEmp100LtnClOvrCap",
+   "family": "Empire",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBEmp100RdcrShnBlk",
+   "family": "Empire",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBEmp50LtnMtSl",
+   "family": "Empire",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "LBEmp50WhtClOvrCp",
+   "family": "Empire",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'White Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBEmp50RdcrShnBlk",
+   "family": "Empire",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBEmp100AnSpLvn",
+   "family": "Empire",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBEmp100AnSpIvyGl",
+   "family": "Empire",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBEmp100AnSpRed",
+   "family": "Empire",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBEmp100LtnMtSl",
+   "family": "Empire",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "LBEmp100WhtClOvrCp",
+   "family": "Empire",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'White Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBEmp50AnSpLvn",
+   "family": "Empire",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBEmp50LtnClOvrCap",
+   "family": "Empire",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBEmp50AnSpIvyGl",
+   "family": "Empire",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBEmp50AnSpRed",
+   "family": "Empire",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBGrce55AnSpLvn",
+   "family": "Grace",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBGrce55AnSpIvyGl",
+   "family": "Grace",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBGrce55AnSpRed",
+   "family": "Grace",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBGrce55LtnMtSl",
+   "family": "Grace",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBGrce55RdcrShnBlk",
+   "family": "Grace",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBGrce55LtnClOvrCap",
+   "family": "Grace",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBPillar9SpryBlkMatt",
+   "family": "Pillar",
+   "applicator": "Fine Mist Sprayer",
+   "kind": "Sprayer",
+   "finish": "Matte Black",
+   "neck": "17-415",
+   "reason": "no listed Sprayer with finish 'Matte Black'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "PB1ozClearcap",
+   "family": "Plastic Bottle",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Clear",
+   "neck": "13-415",
+   "reason": "no listed Cap with finish 'Clear'",
+   "steps": {
+    "listedOfKind": 4,
+    "withIds": 4,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBTallRect10MtlRollPinkDo",
+   "family": "Rectangle",
+   "applicator": "Metal Roller Ball",
+   "kind": "Roll-On Cap",
+   "finish": "Clear",
+   "neck": "13-415",
+   "reason": "no listed Roll-On Cap with finish 'Clear'",
+   "steps": {
+    "listedOfKind": 9,
+    "withIds": 9,
+    "notRetiredInStock": 9,
+    "patternOk": 9,
+    "neckOk": 9,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst128AnSpRed",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslRed",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslIvyGl",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslLvn",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBRnd128LtnMtSl",
+   "family": "Round",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "LBRnd128LtnClOvrCap",
+   "family": "Round",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBRndFrst128LtnClOvrCap",
+   "family": "Round",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBRndFrst128LtnMtSl",
+   "family": "Round",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBRnd128DrpSl",
+   "family": "Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Silver",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRnd128DrpGl",
+   "family": "Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Gold",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst128DrpSl",
+   "family": "Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Silver",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst128DrpGl",
+   "family": "Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Gold",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRnd78AnSpLvn",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRnd78AnSpIvyGl",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRnd78AnSpRed",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRnd128RdcrShnBlk",
+   "family": "Round",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst78AnSpIvyGl",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst128RdcrShnBlk",
+   "family": "Round",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst78AnSpLvn",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst78AnSpRed",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBRnd78LtnMtSl",
+   "family": "Round",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "LBRndFrst78LtnMtSl",
+   "family": "Round",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBRnd128DrpCu",
+   "family": "Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Copper",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst128DrpCu",
+   "family": "Round",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Copper",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRnd128AnSpIvyGl",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRnd128AnSpLvn",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRnd128AnSpRed",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRnd78RdcrShnBlk",
+   "family": "Round",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst78RdcrShnBlk",
+   "family": "Round",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst128AnSpIvyGl",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBRnd78LtnClOvrCap",
+   "family": "Round",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBRndFrst128AnSpLvn",
+   "family": "Round",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBRndFrst78LtnClOvrCap",
+   "family": "Round",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk50AnSpLvn",
+   "family": "Sleek",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlk100LtnClOvrCap",
+   "family": "Sleek",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk50AnSpIvyGl",
+   "family": "Sleek",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk50AnSpRed",
+   "family": "Sleek",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk30DrpSl",
+   "family": "Sleek",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Silver",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk30DrpGl",
+   "family": "Sleek",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Gold",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk100RdcrShnBlk",
+   "family": "Sleek",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk30RdcrShnBlk",
+   "family": "Sleek",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlk30WhtRectClOverCap",
+   "family": "Sleek",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlk30LtnMtSl",
+   "family": "Sleek",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBSlk30AnSpLvn",
+   "family": "Sleek",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk30AnSpIvyGl",
+   "family": "Sleek",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk30AnSpRed",
+   "family": "Sleek",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlk50WhtRectClOverCap",
+   "family": "Sleek",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlk50LtnMtSl",
+   "family": "Sleek",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBSlk50RdcrShnBlk",
+   "family": "Sleek",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk100AnSpLvn",
+   "family": "Sleek",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk30DrpCu",
+   "family": "Sleek",
+   "applicator": "Dropper",
+   "kind": "Dropper",
+   "finish": "Copper",
+   "neck": "18-415",
+   "reason": "no Dropper listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk100AnSpIvyGl",
+   "family": "Sleek",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlk100AnSpRed",
+   "family": "Sleek",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlk30LtnClOvrCap",
+   "family": "Sleek",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlk100WhtRectClOverCap",
+   "family": "Sleek",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlk50LtnClOvrCap",
+   "family": "Sleek",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlk100LtnMtSl",
+   "family": "Sleek",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBSlm50AnSpLvn",
+   "family": "Slim",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlm50AnSpIvyGl",
+   "family": "Slim",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlm50AnSpRed",
+   "family": "Slim",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlm100RdcrShnBlk",
+   "family": "Slim",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlm30RdcrShnBlk",
+   "family": "Slim",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlm30LtnMtSl",
+   "family": "Slim",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBSlm30AnSpLvn",
+   "family": "Slim",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlm30AnSpIvyGl",
+   "family": "Slim",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlm30AnSpRed",
+   "family": "Slim",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlm50LtnMtSl",
+   "family": "Slim",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "GBSlm50RdcrShnBlk",
+   "family": "Slim",
+   "applicator": "Reducer",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "neck": "18-415",
+   "reason": "no listed Cap with finish 'Shiny Black'",
+   "steps": {
+    "listedOfKind": 11,
+    "withIds": 11,
+    "notRetiredInStock": 11,
+    "patternOk": 11,
+    "neckOk": 11,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlm100AnSpIvyGl",
+   "family": "Slim",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Ivory + Gold'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlm100AnSpLvn",
+   "family": "Slim",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Lavender'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBSlm100AnSpRed",
+   "family": "Slim",
+   "applicator": "Vintage Bulb Sprayer",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "neck": "18-415",
+   "reason": "no listed Sprayer with finish 'Red'",
+   "steps": {
+    "listedOfKind": 24,
+    "withIds": 24,
+    "notRetiredInStock": 10,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlm30LtnClOvrCap",
+   "family": "Slim",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlm50LtnClOvrCap",
+   "family": "Slim",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "LBSlm100LtnMtSl",
+   "family": "Slim",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver",
+   "neck": "18-415",
+   "reason": "unexplained",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 1
+   }
+  },
+  {
+   "sku": "LBSlm100MtSlClOvrCap",
+   "family": "Slim",
+   "applicator": "Lotion Pump",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver Clear Overcap",
+   "neck": "18-415",
+   "reason": "no listed Lotion Pump with finish 'Matte Silver Clear Overcap'",
+   "steps": {
+    "listedOfKind": 7,
+    "withIds": 7,
+    "notRetiredInStock": 4,
+    "patternOk": 4,
+    "neckOk": 4,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GB1mlAmbVialWht",
+   "family": "Vial",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "White",
+   "neck": "Plug",
+   "reason": "no Cap listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GB1mlVBlk",
+   "family": "Vial",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "Plug",
+   "reason": "no Cap listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBVAmb2WhtCap",
+   "family": "Vial",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Clear",
+   "neck": "8-425",
+   "reason": "no listed Cap with finish 'Clear'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBVialClr2mlWhtCap",
+   "family": "Vial",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "White",
+   "neck": "8-425",
+   "reason": "no listed Cap with finish 'White'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GB1mlAmbVBlk",
+   "family": "Vial",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Black",
+   "neck": "Plug",
+   "reason": "no Cap listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GB1mlVWht",
+   "family": "Vial",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "White",
+   "neck": "Plug",
+   "reason": "no Cap listed on the row",
+   "steps": {
+    "listedOfKind": 0,
+    "withIds": 0,
+    "notRetiredInStock": 0,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GBVAmb2BlackCap",
+   "family": "Vial",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Clear",
+   "neck": "8-425",
+   "reason": "no listed Cap with finish 'Clear'",
+   "steps": {
+    "listedOfKind": 5,
+    "withIds": 5,
+    "notRetiredInStock": 5,
+    "patternOk": 3,
+    "neckOk": 3,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GB09BlackCapApp",
+   "family": "Vial",
+   "applicator": "Glass Rod",
+   "kind": "Cap",
+   "finish": "Clear",
+   "neck": "18-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 2,
+    "withIds": 2,
+    "notRetiredInStock": 2,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  },
+  {
+   "sku": "GB09BlackCapSht",
+   "family": "Vial",
+   "applicator": "",
+   "kind": "Cap",
+   "finish": "Clear",
+   "neck": "18-400",
+   "reason": "listed Cap SKUs do not match the Cap pattern",
+   "steps": {
+    "listedOfKind": 2,
+    "withIds": 2,
+    "notRetiredInStock": 2,
+    "patternOk": 0,
+    "neckOk": 0,
+    "finishOk": 0
+   }
+  }
+ ]
+}

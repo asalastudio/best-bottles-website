@@ -5,7 +5,7 @@ import type { api } from "../../../convex/_generated/api";
 import type { CartItem } from "@/components/CartProvider";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
-import bodyMedia from "./circle-bodies.generated.json";
+import bodyMedia from "./bodies.generated.json";
 import assemblyMedia from "./circle-assemblies.generated.json";
 import fitmentMedia from "./fitments.generated.json";
 import rollerMedia from "./rollers.generated.json";
@@ -73,12 +73,17 @@ export function compatibleFinishComponent(row: CatalogRow) {
     const app = row.applicator ?? "";
     const kind = /roller/i.test(app) ? "Roll-On Cap" : /pump/i.test(app) && !/spray/i.test(app) ? "Lotion Pump"
         : /spray/i.test(app) ? "Sprayer" : /dropper/i.test(app) ? "Dropper" : "Cap";
+    // 2026-09-14: 16 tassel assemblies carry the plain "Vintage Bulb Sprayer"
+    // applicator; their catalogue name still says "with tassel", and the
+    // tassel sprayer is a different component from the plain bulb sprayer.
+    const tassel = /tassel/i.test(app) || (/vintage|bulb/i.test(app) && /with tassel/i.test(row.itemName ?? ""));
     const skuPattern = kind === "Sprayer"
-        ? /tassel/i.test(app) ? /^(AnSpTsl|CP\d+-\d+AnSpTsl)/i
+        ? tassel ? /^(AnSpTsl|CP\d+-\d+AnSpTsl)/i
         : /vintage|bulb/i.test(app) ? /^(AnSp(?!Tsl)|CP\d+-\d+AnSp(?!Tsl))/i
         : /^(Spry|CP\d+-\d+Spry)/i
         : kind === "Roll-On Cap" ? /^CPRoll/i : kind === "Lotion Pump" ? /^Ltn/i
-        : kind === "Dropper" ? /^Drp/i : /^CP(?!Roll|.*(?:Spry|AnSp))/i;
+        // Boston/Vial short caps are catalogued neck-first ("18-400CpShortBlk", "20-400cp1ozShortBlk")
+        : kind === "Dropper" ? /^Drp/i : /^(CP(?!Roll|.*(?:Spry|AnSp))|\d+-\d+cp)/i;
     const finish = getFinishFromWebsiteSku(row.websiteSku)?.label ?? row.capColor?.trim();
     if (!finish && !exact) return null;
     const matches = (row.components[kind] ?? []).filter(part => part.websiteSku && part.graceSku
@@ -92,8 +97,14 @@ export function compatibleFinishComponent(row: CatalogRow) {
 }
 
 export function reviewedBodyImage(row: CatalogRow) {
-    const key = `${row.family}|${row.capacityMl}|${row.color}|${row.neckThreadSize}`;
-    return (bodyMedia as Record<string, { url: string; width: number; height: number }>)[key] ?? null;
+    const media = bodyMedia as Record<string, { url: string; width: number; height: number }>;
+    // Distinct moulds of one family and capacity (Footed vs Tall Rectangle 10 ml)
+    // carry their own reviewed body, keyed by the group profile; the family key
+    // serves every family with a single mould at that capacity.
+    const marker = `-${row.capacityMl}ml-`;
+    const profile = row.productGroupSlug?.includes(marker) ? row.productGroupSlug.split(marker)[0] : null;
+    const byProfile = profile ? media[`${profile}|${row.capacityMl}|${row.color}|${row.neckThreadSize}`] : undefined;
+    return byProfile ?? media[`${row.family}|${row.capacityMl}|${row.color}|${row.neckThreadSize}`] ?? null;
 }
 
 export function reviewedFitmentImage(config: BuilderConfiguration) {
@@ -166,9 +177,11 @@ export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, pr
 
 /** A published separated kit or a reviewed source body is required. A complete
  * product photograph must never stand in for an unassembled bottle. */
-export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | null = null): BuilderConfiguration | null {
+export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | null = null, plateUrl: string | null = null): BuilderConfiguration | null {
     const bodyImage = reviewedBodyImage(row);
-    const assembly = (assemblyMedia as Record<string, { url: string }>)[row.websiteSku ?? ""];
+    // The complete-stage photograph: a reviewed Circle assembly, else the SKU's
+    // own published plate (the same exact master front, registered to the canvas).
+    const assembly = (assemblyMedia as Record<string, { url: string }>)[row.websiteSku ?? ""] ?? (plateUrl ? { url: plateUrl } : undefined);
     if (!isBuilderCandidate(row) || (!kit && (!bodyImage || !assembly)) || (row.family === "Cylinder" && row.capacityMl === 5.5)) return null;
     const { family, color, capacityMl, neckThreadSize: neck } = row;
     const app = row.applicator?.trim();
@@ -214,11 +227,11 @@ export function builderBodyIdentity(row: CatalogRow) {
 
 /** Reuse only a validated identical bare bottle/glass for the bottle-selection preview.
  * The selected SKU keeps its own complete assembly; canvases are never mixed. */
-export function resolveBuilderConfigurations(rows: CatalogRow[], kits: (BuilderKit | null)[]) {
+export function resolveBuilderConfigurations(rows: CatalogRow[], kits: (BuilderKit | null)[], plateUrls: (string | null)[] = []) {
     const full = rows.map((row, i) => configurationFromRow(row, kits[i]));
     return rows.map((row, i) => full[i] ?? full.reduce<BuilderConfiguration | null>((found, preview) =>
         found ?? (preview ? configurationFromRow(row, kits[i], preview) : null), null)
-        ?? catalogConfigurationFromRow(row));
+        ?? catalogConfigurationFromRow(row, null, plateUrls[i] ?? null));
 }
 
 export function groupBuilderBodies(configurations: BuilderConfiguration[]): BuilderBody[] {

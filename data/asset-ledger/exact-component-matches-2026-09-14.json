@@ -1,0 +1,3677 @@
+{
+ "generatedAt": "2026-09-14T14:59:53.486Z",
+ "method": "legacy description closure phrase ∩ listed component catalogue names; unique fit only",
+ "joins": [
+  {
+   "sku": "GBBstn1ozMtlRollonGl",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": "Metal Roller Ball",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "bottle: \"with metal roller plug and shiny gold cap\" (legacy description); component CPRoll20-400TallShnGl: \"Tall Shiny Gold cap or closure for rollon bottles, Threadsize 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 15,
+   "color": "Amber",
+   "neck": "18-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp18-40015mlShnSlTrimBlkBulb",
+   "evidence": "bottle: \"and black dropper with a shiny silver trim cap\" (legacy description); component Drp18-40015mlShnSlTrimBlkBulb: \"Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropper",
+   "family": "Boston Round",
+   "capacityMl": 15,
+   "color": "Amber",
+   "neck": "18-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp18-40015mlWhiteBulb",
+   "evidence": "bottle: \"with a white dropper\" (legacy description); component Drp18-40015mlWhiteBulb: \"White rubber bulb dropper with white cap. Glass stem length is 66 mm, Thread size 18-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 15,
+   "color": "Amber",
+   "neck": "18-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp18-40015mlShnGlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny gold trim cap\" (legacy description); component Drp18-40015mlShnGlTrimWhiteBulb: \"White rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 15,
+   "color": "Amber",
+   "neck": "18-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp18-40015mlShnSlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny silver trim cap\" (legacy description); component Drp18-40015mlShnSlTrimWhiteBulb: \"White rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 15,
+   "color": "Amber",
+   "neck": "18-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp18-40015mlShnGlTrimBlkBulb",
+   "evidence": "bottle: \"with black dropper with a shiny gold trim cap\" (legacy description); component Drp18-40015mlShnGlTrimBlkBulb: \"Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrpr",
+   "family": "Boston Round",
+   "capacityMl": 15,
+   "color": "Cobalt Blue",
+   "neck": "18-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp18-40015mlWhiteBulb",
+   "evidence": "bottle: \"with a white dropper\" (legacy description); component Drp18-40015mlWhiteBulb: \"White rubber bulb dropper with white cap. Glass stem length is 66 mm, Thread size 18-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrprSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 15,
+   "color": "Cobalt Blue",
+   "neck": "18-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp18-40015mlShnSlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper and a shiny silver trim cap\" (legacy description); component Drp18-40015mlShnSlTrimWhiteBulb: \"White rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrprGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 15,
+   "color": "Cobalt Blue",
+   "neck": "18-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp18-40015mlShnGlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper and a shiny gold trim cap\" (legacy description); component Drp18-40015mlShnGlTrimWhiteBulb: \"White rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 15,
+   "color": "Cobalt Blue",
+   "neck": "18-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp18-40015mlShnSlTrimBlkBulb",
+   "evidence": "bottle: \"and black dropper and a shiny silver trim cap\" (legacy description); component Drp18-40015mlShnSlTrimBlkBulb: \"Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 66 mm, Thread size 18-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu15BlkDrprGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 15,
+   "color": "Cobalt Blue",
+   "neck": "18-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp18-40015mlShnGlTrimBlkBulb",
+   "evidence": "bottle: \"with black dropper shiny gold trim cap\" (legacy description); component Drp18-40015mlShnGlTrimBlkBulb: \"Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 66 mm, Thread size 18-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn1ozWhtDrp",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozWhiteBulb",
+   "evidence": "bottle: \"with white dropper\" (legacy description); component Drp20-4001ozWhiteBulb: \"White rubber bulb dropper with white cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn1ozBlkDrpShnGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozShnGlTrimBlkBulb",
+   "evidence": "bottle: \"and black dropper with a shiny gold trim cap\" (legacy description); component Drp20-4001ozShnGlTrimBlkBulb: \"Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn1ozWhtDrpShnGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny gold trim cap\" (legacy description); component Drp20-4001ozlShnGlTrimWhiteBulb: \"White rubber bulb dropper with shiny gold collar cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn1ozWhtDrpShnSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny silver trim cap\" (legacy description); component Drp20-4001ozlShnSlTrimWhiteBulb: \"White rubber bulb dropper with shiny silver collar cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkDrpShnGl",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozShnGlTrimBlkBulb",
+   "evidence": "bottle: \"and black dropper with a shiny gold trim cap\" (legacy description); component Drp20-4001ozShnGlTrimBlkBulb: \"Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDropper",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozWhiteBulb",
+   "evidence": "bottle: \"with white dropper\" (legacy description); component Drp20-4001ozWhiteBulb: \"White rubber bulb dropper with white cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny gold trim cap\" (legacy description); component Drp20-4001ozlShnGlTrimWhiteBulb: \"White rubber bulb dropper with shiny gold collar cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny silver trim cap\" (legacy description); component Drp20-4001ozlShnSlTrimWhiteBulb: \"White rubber bulb dropper with shiny silver collar cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozShnGlTrimBlkBulb",
+   "evidence": "bottle: \"and black dropper with a shiny gold trim cap\" (legacy description); component Drp20-4001ozShnGlTrimBlkBulb: \"Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropper",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozWhiteBulb",
+   "evidence": "bottle: \"with white dropper\" (legacy description); component Drp20-4001ozWhiteBulb: \"White rubber bulb dropper with white cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny gold trim cap\" (legacy description); component Drp20-4001ozlShnGlTrimWhiteBulb: \"White rubber bulb dropper with shiny gold collar cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny silver trim cap\" (legacy description); component Drp20-4001ozlShnSlTrimWhiteBulb: \"White rubber bulb dropper with shiny silver collar cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn2ozWhtDrpr",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozWhiteBulb",
+   "evidence": "bottle: \"with white dropper\" (legacy description); component Drp20-4002ozWhiteBulb: \"White rubber bulb dropper with white cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn2ozBlkDrprShnSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozShnSlTrimBlkBulb",
+   "evidence": "bottle: \"and black dropper with a shiny silver trim cap\" (legacy description); component Drp20-4002ozShnSlTrimBlkBulb: \"Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn2ozWhtDrprShnGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny gold trim cap\" (legacy description); component Drp20-4002ozlShnGlTrimWhiteBulb: \"White rubber bulb dropper with shiny gold collar cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozShnGlTrimBlkBulb",
+   "evidence": "bottle: \"and black dropper with a shiny gold trim cap\" (legacy description); component Drp20-4002ozShnGlTrimBlkBulb: \"Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozShnSlTrimBlkBulb",
+   "evidence": "bottle: \"and black dropper with a shiny silver trim cap\" (legacy description); component Drp20-4002ozShnSlTrimBlkBulb: \"Black rubber bulb dropper with shiny silver collar cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDrpr",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozWhiteBulb",
+   "evidence": "bottle: \"with white dropper\" (legacy description); component Drp20-4002ozWhiteBulb: \"White rubber bulb dropper with white cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny gold trim cap\" (legacy description); component Drp20-4002ozlShnGlTrimWhiteBulb: \"White rubber bulb dropper with shiny gold collar cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny silver trim cap\" (legacy description); component Drp20-4002ozlShnSlTrimWhiteBulb: \"White rubber bulb dropper with shiny silver collar cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozShnGlTrimBlkBulb",
+   "evidence": "bottle: \"and black dropper with a shiny gold trim cap\" (legacy description); component Drp20-4002ozShnGlTrimBlkBulb: \"Black rubber bulb dropper with shiny gold collar cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropper",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozWhiteBulb",
+   "evidence": "bottle: \"with white dropper\" (legacy description); component Drp20-4002ozWhiteBulb: \"White rubber bulb dropper with white cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropperShnGlTrim",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny gold trim cap\" (legacy description); component Drp20-4002ozlShnGlTrimWhiteBulb: \"White rubber bulb dropper with shiny gold collar cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropperShnSlTrim",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle: \"and white dropper with a shiny silver trim cap\" (legacy description); component Drp20-4002ozlShnSlTrimWhiteBulb: \"White rubber bulb dropper with shiny silver collar cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn1ozBlkCapSht",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": null,
+   "componentSku": "20-400cp1ozShortBlk",
+   "evidence": "bottle: \"with short black cap\" (legacy description); component 20-400cp1ozShortBlk: \"Black lid or closure for glass bottle, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkCapSht",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": null,
+   "componentSku": "20-400cp1ozShortBlk",
+   "evidence": "bottle: \"with short black cap\" (legacy description); component 20-400cp1ozShortBlk: \"Black lid or closure for glass bottle, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkCapSht",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": null,
+   "componentSku": "20-400cp1ozShortBlk",
+   "evidence": "bottle: \"with short black cap\" (legacy description); component 20-400cp1ozShortBlk: \"Black lid or closure for glass bottle, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn2ozBlkCapSht",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": null,
+   "componentSku": "20-400Cp2ozShortBlk",
+   "evidence": "bottle: \"with short black cap\" (legacy description); component 20-400Cp2ozShortBlk: \"Black lid or closure for glass bottle, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkCapSht",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": null,
+   "componentSku": "20-400Cp2ozShortBlk",
+   "evidence": "bottle: \"with short black cap\" (legacy description); component 20-400Cp2ozShortBlk: \"Black lid or closure for glass bottle, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkCapSht",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": null,
+   "componentSku": "20-400Cp2ozShortBlk",
+   "evidence": "bottle: \"with short black cap\" (legacy description); component 20-400Cp2ozShortBlk: \"Black lid or closure for glass bottle, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn1ozBlkDrp",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozBlckBulb",
+   "evidence": "bottle: \"with black dropper\" (legacy description); component Drp20-4001ozBlckBulb: \"Black rubber bulb dropper with black cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkDropper",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Amber",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozBlckBulb",
+   "evidence": "bottle: \"with black dropper\" (legacy description); component Drp20-4001ozBlckBulb: \"Black rubber bulb dropper with black cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkDropper",
+   "family": "Boston Round",
+   "capacityMl": 30,
+   "color": "Cobalt Blue",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4001ozBlckBulb",
+   "evidence": "bottle: \"with black dropper\" (legacy description); component Drp20-4001ozBlckBulb: \"Black rubber bulb dropper with black cap. Glass stem length is 76 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBBstn2ozBlkDrpr",
+   "family": "Boston Round",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "20-400",
+   "applicator": "Dropper",
+   "componentSku": "Drp20-4002ozBlckBulb",
+   "evidence": "bottle: \"with black dropper\" (legacy description); component Drp20-4002ozBlckBulb: \"Black rubber bulb dropper with black cap. Glass stem length is 90 mm, Thread size 20-400\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBCrcl100LtnClOvrCap",
+   "family": "Circle",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBCrclFrst100LtnClOvrCap",
+   "family": "Circle",
+   "capacityMl": 100,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBCrcl100AnSpLvn",
+   "family": "Circle",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCrcl100AnSpRed",
+   "family": "Circle",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCrcl100AnSpIvyGl",
+   "family": "Circle",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCrclFrst100AnSpIvyGl",
+   "family": "Circle",
+   "capacityMl": 100,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBCrcl50LtnMtSl",
+   "family": "Circle",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBCrclFrst50LtnMtSl",
+   "family": "Circle",
+   "capacityMl": 50,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCrcl50AnSpLvn",
+   "family": "Circle",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCrcl50AnSpIvyGl",
+   "family": "Circle",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBCrcl100LtnMtSl",
+   "family": "Circle",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCrclFrst50AnSpLvn",
+   "family": "Circle",
+   "capacityMl": 50,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBCrclFrst100LtnMtSl",
+   "family": "Circle",
+   "capacityMl": 100,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCrclFrst50AnSpIvyGl",
+   "family": "Circle",
+   "capacityMl": 50,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCrclFrst50AnSpRed",
+   "family": "Circle",
+   "capacityMl": 50,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBCrcl50LtnClOvrCap",
+   "family": "Circle",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBCrclFrst50LtnClOvrCap",
+   "family": "Circle",
+   "capacityMl": 50,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBCyl100LtnClOvrCap",
+   "family": "Cylinder",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBCyl25LtnMtSl",
+   "family": "Cylinder",
+   "capacityMl": 25,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCyl100AnSpLvn",
+   "family": "Cylinder",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCyl100AnSpIvyGl",
+   "family": "Cylinder",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCyl100AnSpRed",
+   "family": "Cylinder",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCyl50AnSpLvn",
+   "family": "Cylinder",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCyl50AnSpIvyGl",
+   "family": "Cylinder",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBCyl50AnSpRed",
+   "family": "Cylinder",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBcyl25LtnClOvrCap",
+   "family": "Cylinder",
+   "capacityMl": 25,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBCyl50LtnClOvrCap",
+   "family": "Cylinder",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBDmnd2ozAnSpIvyGl",
+   "family": "Diamond",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDmnd2ozAnSpLvn",
+   "family": "Diamond",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDmnd2ozAnSpRed",
+   "family": "Diamond",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBDmnd2ozLtnMtSl",
+   "family": "Diamond",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBDmnd2ozLtnClOvrCap",
+   "family": "Diamond",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBDiva100LtnClOvrCap",
+   "family": "Diva",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBDiva30LtnMtSl",
+   "family": "Diva",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBDiva46LtnMtSl",
+   "family": "Diva",
+   "capacityMl": 46,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBDivaFrst46LtnMtSl",
+   "family": "Diva",
+   "capacityMl": 46,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDiva30AnSpRed",
+   "family": "Diva",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDiva30AnSpIvyGl",
+   "family": "Diva",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDiva30AnSpLvn",
+   "family": "Diva",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDiva100AnSpIvyGl",
+   "family": "Diva",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDiva100AnSpLvn",
+   "family": "Diva",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDiva100AnSpRed",
+   "family": "Diva",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDiva46AnSpLvnRng",
+   "family": "Diva",
+   "capacityMl": 46,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "Spry18-415ShnSl",
+   "evidence": "bottle: \"with lavendar vintage style bulb sprayer with shiny silver collar cap and jeweled silver ring\" (legacy description); component Spry18-415ShnSl: \"Shiny Silver collar sprayer, Thread size 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBDiva46AnSpLvn",
+   "family": "Diva",
+   "capacityMl": 46,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDiva46AnSpIvyGl",
+   "family": "Diva",
+   "capacityMl": 46,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDivaFrst46AnSpLvn",
+   "family": "Diva",
+   "capacityMl": 46,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDivaFrst46AnSpIvyGl",
+   "family": "Diva",
+   "capacityMl": 46,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBDivaFrst46AnSpRed",
+   "family": "Diva",
+   "capacityMl": 46,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBDiva100LtnMtSl",
+   "family": "Diva",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBDiva30LtnClOvrCap",
+   "family": "Diva",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBDiva46LtnClOvrCap",
+   "family": "Diva",
+   "capacityMl": 46,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBDivaFrst46LtnClOvrCap",
+   "family": "Diva",
+   "capacityMl": 46,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBElgFrst100LtnMtSl",
+   "family": "Elegant",
+   "capacityMl": 100,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBElg100LtnClOvrCap",
+   "family": "Elegant",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBElgFrst100LtnClOvrCap",
+   "family": "Elegant",
+   "capacityMl": 100,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBElg60AnSpLvn",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElg60AnSpIvyGl",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElg60AnSpRed",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElg60AnSpTslRed",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSpTsl18-415Red",
+   "evidence": "bottle: \"with Red vintage style bulb sprayer with tassel with shiny silver collar cap\" (legacy description); component AnSpTsl18-415Red: \"Red, Antique or Vintage style bulb sprayer with Silver fittings and tassel. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElgFrst60AnSpIvyGl",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElgFrst60AnSpLvn",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElgFrst30GlCap",
+   "family": "Elegant",
+   "capacityMl": 30,
+   "color": "Frosted",
+   "neck": "15-415",
+   "applicator": null,
+   "componentSku": "CP15-415ShnGl",
+   "evidence": "bottle: \"with shiny gold and cap\" (legacy description); component CP15-415ShnGl: \"Shiny Gold color Cap or Closure for 15-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBElgFrst60AnSpRed",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElg30SlCap",
+   "family": "Elegant",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "15-415",
+   "applicator": null,
+   "componentSku": "CP15-415ShnSl",
+   "evidence": "bottle: \"with shiny silver and cap\" (legacy description); component CP15-415ShnSl: \"Shiny Silver color Cap or Closure for 15-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBElgFrst30SlCap",
+   "family": "Elegant",
+   "capacityMl": 30,
+   "color": "Frosted",
+   "neck": "15-415",
+   "applicator": null,
+   "componentSku": "CP15-415ShnSl",
+   "evidence": "bottle: \"with shiny silver and cap\" (legacy description); component CP15-415ShnSl: \"Shiny Silver color Cap or Closure for 15-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBElg100AnSpLvn",
+   "family": "Elegant",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElg100AnSpIvyGl",
+   "family": "Elegant",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElg100AnSpRed",
+   "family": "Elegant",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElgFrst100AnSpRed",
+   "family": "Elegant",
+   "capacityMl": 100,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElgFrst100AnSpIvyGl",
+   "family": "Elegant",
+   "capacityMl": 100,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBElgFrst100AnSpLvn",
+   "family": "Elegant",
+   "capacityMl": 100,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBElg60LtnMtSl",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBElgFrst60LtnMtSl",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBElg100LtnMtSl",
+   "family": "Elegant",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBElg60LtnClrOvrCap",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBElgFrst60LtnClOvrCap",
+   "family": "Elegant",
+   "capacityMl": 60,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBEmp100LtnClOvrCap",
+   "family": "Empire",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBEmp50LtnMtSl",
+   "family": "Empire",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBEmp100AnSpLvn",
+   "family": "Empire",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBEmp100AnSpIvyGl",
+   "family": "Empire",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBEmp100AnSpRed",
+   "family": "Empire",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBEmp100LtnMtSl",
+   "family": "Empire",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBEmp50AnSpLvn",
+   "family": "Empire",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBEmp50LtnClOvrCap",
+   "family": "Empire",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBEmp50AnSpIvyGl",
+   "family": "Empire",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBEmp50AnSpRed",
+   "family": "Empire",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBGrce55AnSpLvn",
+   "family": "Grace",
+   "capacityMl": 55,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBGrce55AnSpIvyGl",
+   "family": "Grace",
+   "capacityMl": 55,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBGrce55AnSpRed",
+   "family": "Grace",
+   "capacityMl": 55,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBGrce55LtnMtSl",
+   "family": "Grace",
+   "capacityMl": 55,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBGrce55LtnClOvrCap",
+   "family": "Grace",
+   "capacityMl": 55,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBTallRect10MtlRollPinkDo",
+   "family": "Rectangle",
+   "capacityMl": 10,
+   "color": "Clear",
+   "neck": "13-415",
+   "applicator": "Metal Roller Ball",
+   "componentSku": "CPRoll13-415PinkDot",
+   "evidence": "bottle: \"with metal roller ball plug and pink cap with dots\" (legacy description); component CPRoll13-415PinkDot: \"Pink cap with dots or closure for rollon bottles, Threadsize 13-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslIvyGl",
+   "family": "Round",
+   "capacityMl": 128,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSpTsl18-415IvyGl",
+   "evidence": "bottle: \"with Ivory vintage style bulb sprayer with tassel and shiny gold collar cap\" (legacy description); component AnSpTsl18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings and tassel. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBRnd128LtnMtSl",
+   "family": "Round",
+   "capacityMl": 128,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBRnd128LtnClOvrCap",
+   "family": "Round",
+   "capacityMl": 128,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBRndFrst128LtnClOvrCap",
+   "family": "Round",
+   "capacityMl": 128,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBRndFrst128LtnMtSl",
+   "family": "Round",
+   "capacityMl": 128,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBRnd78AnSpLvn",
+   "family": "Round",
+   "capacityMl": 78,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBRnd78AnSpIvyGl",
+   "family": "Round",
+   "capacityMl": 78,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBRnd78AnSpRed",
+   "family": "Round",
+   "capacityMl": 78,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBRndFrst78AnSpIvyGl",
+   "family": "Round",
+   "capacityMl": 78,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBRndFrst78AnSpLvn",
+   "family": "Round",
+   "capacityMl": 78,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBRndFrst78AnSpRed",
+   "family": "Round",
+   "capacityMl": 78,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBRnd78LtnMtSl",
+   "family": "Round",
+   "capacityMl": 78,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBRndFrst78LtnMtSl",
+   "family": "Round",
+   "capacityMl": 78,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBRnd128AnSpIvyGl",
+   "family": "Round",
+   "capacityMl": 128,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBRnd128AnSpLvn",
+   "family": "Round",
+   "capacityMl": 128,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBRnd128AnSpRed",
+   "family": "Round",
+   "capacityMl": 128,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBRndFrst128AnSpIvyGl",
+   "family": "Round",
+   "capacityMl": 128,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBRnd78LtnClOvrCap",
+   "family": "Round",
+   "capacityMl": 78,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBRndFrst78LtnClOvrCap",
+   "family": "Round",
+   "capacityMl": 78,
+   "color": "Frosted",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBSlk50AnSpLvn",
+   "family": "Sleek",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBSlk100LtnClOvrCap",
+   "family": "Sleek",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBSlk50AnSpIvyGl",
+   "family": "Sleek",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlk50AnSpRed",
+   "family": "Sleek",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBSlk30LtnMtSl",
+   "family": "Sleek",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlk30AnSpLvn",
+   "family": "Sleek",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlk30AnSpIvyGl",
+   "family": "Sleek",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlk30AnSpRed",
+   "family": "Sleek",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBSlk50LtnMtSl",
+   "family": "Sleek",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlk100AnSpLvn",
+   "family": "Sleek",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlk100AnSpIvyGl",
+   "family": "Sleek",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlk100AnSpRed",
+   "family": "Sleek",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBSlk30LtnClOvrCap",
+   "family": "Sleek",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBSlk50LtnClOvrCap",
+   "family": "Sleek",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBSlk100LtnMtSl",
+   "family": "Sleek",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlm50AnSpLvn",
+   "family": "Slim",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlm50AnSpIvyGl",
+   "family": "Slim",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlm50AnSpRed",
+   "family": "Slim",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBSlm30LtnMtSl",
+   "family": "Slim",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlm30AnSpLvn",
+   "family": "Slim",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlm30AnSpIvyGl",
+   "family": "Slim",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlm30AnSpRed",
+   "family": "Slim",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBSlm50LtnMtSl",
+   "family": "Slim",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlm100AnSpIvyGl",
+   "family": "Slim",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415IvyGl",
+   "evidence": "bottle: \"with ivory vintage style bulb sprayer with shiny gold collar cap\" (legacy description); component AnSp18-415IvyGl: \"Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlm100AnSpLvn",
+   "family": "Slim",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Lvn",
+   "evidence": "bottle: \"with lavender vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Lvn: \"Lavender Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "GBSlm100AnSpRed",
+   "family": "Slim",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Vintage Bulb Sprayer",
+   "componentSku": "AnSp18-415Red",
+   "evidence": "bottle: \"with red vintage style bulb sprayer with shiny silver collar cap\" (legacy description); component AnSp18-415Red: \"Red Antique or Vintage style bulb sprayer with silver fittings. Thread Size 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBSlm30LtnClOvrCap",
+   "family": "Slim",
+   "capacityMl": 30,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBSlm50LtnClOvrCap",
+   "family": "Slim",
+   "capacityMl": 50,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "LBSlm100LtnMtSl",
+   "family": "Slim",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSl",
+   "evidence": "bottle: \"with matte silver lotion pump\" (legacy description); component Ltn18-415MtSl: \"Matte Silver Lotion or treatment pump, Threadsize 18-415\"",
+   "listedRetired": true
+  },
+  {
+   "sku": "LBSlm100MtSlClOvrCap",
+   "family": "Slim",
+   "capacityMl": 100,
+   "color": "Clear",
+   "neck": "18-415",
+   "applicator": "Lotion Pump",
+   "componentSku": "Ltn18-415MtSlCl",
+   "evidence": "bottle: \"with with a matte silver collar treatment pump and clear overcap\" (legacy description); component Ltn18-415MtSlCl: \"Matte Silver Lotion or treatment pump with clear overcap, Threadsize 18-415\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBVAmb2WhtCap",
+   "family": "Vial",
+   "capacityMl": 2,
+   "color": "Amber",
+   "neck": "8-425",
+   "applicator": null,
+   "componentSku": "8-425CpShortWhite",
+   "evidence": "bottle: \"design 2 ml Amber glass vial with short white cap\" (legacy description); component 8-425CpShortWhite: \"White lid or closure for glass bottle, Thread size 8-425\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBVialClr2mlWhtCap",
+   "family": "Vial",
+   "capacityMl": 2,
+   "color": "Clear",
+   "neck": "8-425",
+   "applicator": null,
+   "componentSku": "8-425CpShortWhite",
+   "evidence": "bottle: \"design 2 ml clear glass vial with short white cap.\" (legacy description); component 8-425CpShortWhite: \"White lid or closure for glass bottle, Thread size 8-425\"",
+   "listedRetired": false
+  },
+  {
+   "sku": "GBVAmb2BlackCap",
+   "family": "Vial",
+   "capacityMl": 2,
+   "color": "Amber",
+   "neck": "8-425",
+   "applicator": null,
+   "componentSku": "8-425CpShortBlack",
+   "evidence": "bottle: \"design 2 ml Amber glass vial with short black cap\" (legacy description); component 8-425CpShortBlack: \"Black lid or closure for glass bottle, Thread size 8-425\"",
+   "listedRetired": false
+  }
+ ],
+ "listingGaps": [
+  {
+   "sku": "GBBstnAmb15mlBlkDropper",
+   "kind": "Dropper",
+   "neck": "18-400",
+   "componentSku": "Drp18-40015mlBlckBulb",
+   "onDev": true,
+   "evidence": "bottle: \"with a black dropper\"; component Drp18-40015mlBlckBulb: \"Black rubber bulb dropper with black cap. Glass stem length is 66 mm, Thread size 18-400\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBBstnBlu15BlkDrpr",
+   "kind": "Dropper",
+   "neck": "18-400",
+   "componentSku": "Drp18-40015mlBlckBulb",
+   "onDev": true,
+   "evidence": "bottle: \"with a black dropper\"; component Drp18-40015mlBlckBulb: \"Black rubber bulb dropper with black cap. Glass stem length is 66 mm, Thread size 18-400\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBCyl5CuSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415CuSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short matte copper cap.\"; component CP13-415CuSht: \"Short matte copper or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBCyl5GlMattSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415GlMattSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short matte gold cap.\"; component CP13-415GlMattSht: \"Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBCyl5GlSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415GlSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short shiny gold cap.\"; component CP13-415GlSht: \"Short shiny gold or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBCyl5SlMattSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415SlMattSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short matte silver cap.\"; component CP13-415SlMattSht: \"Short matte silver or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBCyl5SlSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415SlSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short shiny silver cap.\"; component CP13-415SlSht: \"Short shiny silver or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBTallCyl9CuSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415CuSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short matte copper cap.\"; component CP13-415CuSht: \"Short matte copper or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBTallCyl9GlMattSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415GlMattSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short matte gold cap.\"; component CP13-415GlMattSht: \"Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBTallCyl9GlSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415GlSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short shiny gold cap.\"; component CP13-415GlSht: \"Short shiny gold or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBTallCyl9SlMattSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415SlMattSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short matte silver cap.\"; component CP13-415SlMattSht: \"Short matte silver or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBTallCyl9SlSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415SlSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short shiny silver cap.\"; component CP13-415SlSht: \"Short shiny silver or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBTallCylFrst9GlMattSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415GlMattSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short matte gold cap.\"; component CP13-415GlMattSht: \"Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBTallCylFrst9GlSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415GlSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short shiny gold cap.\"; component CP13-415GlSht: \"Short shiny gold or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  },
+  {
+   "sku": "GBTallCylFrst9SlSht",
+   "kind": "Cap",
+   "neck": "13-415",
+   "componentSku": "CP13-415SlSht",
+   "onDev": false,
+   "evidence": "bottle: \"with short shiny silver cap.\"; component CP13-415SlSht: \"Short shiny silver or closure for glass bottle with foam liner. Thread size 13-415\" exists but is not listed on the bottle"
+  }
+ ],
+ "skipped": [
+  {
+   "sku": "Alu120mlLotionPumpWhite",
+   "why": "no Lotion Pump listed on the row"
+  },
+  {
+   "sku": "Alu120mlLotionPumpBlack",
+   "why": "no Lotion Pump listed on the row"
+  },
+  {
+   "sku": "Alu500",
+   "why": "no Cap listed on the row"
+  },
+  {
+   "sku": "Alu100mlSprayBlack",
+   "why": "listed Sprayer SKUs do not match the Sprayer pattern"
+  },
+  {
+   "sku": "Alu65mlLotionPumpWhite",
+   "why": "no Lotion Pump listed on the row"
+  },
+  {
+   "sku": "Alu65mlLotionPumpBlack",
+   "why": "no Lotion Pump listed on the row"
+  },
+  {
+   "sku": "GBBell10BlkShSht",
+   "why": "description names no closure colour",
+   "phrase": ""
+  },
+  {
+   "sku": "GBBstn2ozBlkDrprShnGlTrim",
+   "why": "description names no closure colour",
+   "phrase": "Item Capacity: 60 ml (2.03 oz)"
+  },
+  {
+   "sku": "GBBstn2ozWhtDrprShnSlTrim",
+   "why": "description names no closure colour",
+   "phrase": "Item Capacity: 60 ml (2.03 oz)"
+  },
+  {
+   "sku": "GBBstn15BlkCapSht",
+   "why": "more than one listed component fits",
+   "phrase": "with short black cap",
+   "candidates": [
+    "18-400CpShortBlk",
+    "18-400CpAppBlk"
+   ],
+   "listed": [
+    "18-400CpShortBlk",
+    "18-400CpAppBlk"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkCapSht",
+   "why": "more than one listed component fits",
+   "phrase": "with short black cap",
+   "candidates": [
+    "18-400CpShortBlk",
+    "18-400CpAppBlk"
+   ],
+   "listed": [
+    "18-400CpShortBlk",
+    "18-400CpAppBlk"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu15BlkCapSht",
+   "why": "more than one listed component fits",
+   "phrase": "with short black cap",
+   "candidates": [
+    "18-400CpShortBlk",
+    "18-400CpAppBlk"
+   ],
+   "listed": [
+    "18-400CpShortBlk",
+    "18-400CpAppBlk"
+   ]
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonBlk",
+   "why": "more than one listed component fits",
+   "phrase": "with metal roll on and black cap, 1 oz capacity",
+   "candidates": [
+    "CPRoll20-400TallShnBlk",
+    "CPRoll20-400TallMattBlk"
+   ],
+   "listed": [
+    "CPRoll20-400TallMattSl",
+    "CPRoll20-400TallMattGl",
+    "CPRoll20-400TallShnGl",
+    "CPRoll20-400TallShnBlk",
+    "CPRoll20-400TallShnSl",
+    "CPRoll20-400TallMattBlk"
+   ]
+  },
+  {
+   "sku": "GBBstn2ozMtlRollBlk",
+   "why": "description names no closure colour",
+   "phrase": "Item Capacity: 60 ml (2.03 oz)"
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropper",
+   "why": "no listed component carries the named finish",
+   "phrase": "with a black dropper",
+   "candidates": [],
+   "listed": [
+    "Drp18-40015mlWhiteBulb",
+    "Drp18-40015mlShnSlTrimBlkBulb",
+    "Drp18-40015mlShnGlTrimWhiteBulb",
+    "Drp18-40015mlShnGlTrimBlkBulb",
+    "Drp18-40015mlShnSlTrimWhiteBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu15BlkDrpr",
+   "why": "no listed component carries the named finish",
+   "phrase": "with a black dropper",
+   "candidates": [],
+   "listed": [
+    "Drp18-40015mlWhiteBulb",
+    "Drp18-40015mlShnSlTrimBlkBulb",
+    "Drp18-40015mlShnGlTrimWhiteBulb",
+    "Drp18-40015mlShnGlTrimBlkBulb",
+    "Drp18-40015mlShnSlTrimWhiteBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDrpr",
+   "why": "description names no closure colour",
+   "phrase": "Item Capacity: 60 ml (2.03 oz)"
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkDropper",
+   "why": "description names no closure colour",
+   "phrase": "Item Capacity: 60 ml (2.03 oz)"
+  },
+  {
+   "sku": "GBCrcl100RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst50DrpSl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBCrclFrst50DrpGl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBCrcl50RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst50RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst50RdcrIvyLthr",
+   "why": "description names no closure colour",
+   "phrase": "with reducer and ivor faux leather cap"
+  },
+  {
+   "sku": "GBCrclFrst50DrpCu",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "CJClr15Pnk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with pink cap",
+   "candidates": [],
+   "listed": []
+  },
+  {
+   "sku": "CJClr15Wht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with white cap",
+   "candidates": [],
+   "listed": []
+  },
+  {
+   "sku": "GBCyl100RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSpry1ozGl",
+   "why": "more than one listed component fits",
+   "phrase": "with Gold Top and Base",
+   "candidates": [
+    "AnSp18-415Gl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl"
+   ],
+   "listed": [
+    "AnSp18-415Lvn",
+    "CP18-415AnSpPnk",
+    "AnSp18-415MtSl",
+    "AnSp18-415IvySl",
+    "AnSp18-415Gl",
+    "AnSp18-415IvyGl",
+    "AnSp18-415Wht",
+    "AnSp18-415Red",
+    "AnSpTsl18-415Lvn",
+    "AnSpTsl18-415IvyGl",
+    "AnSpTsl18-415IvySl",
+    "AnSpTsl18-415Wht",
+    "AnSpTsl18-415Pnk",
+    "AnSpTsl18-415Red",
+    "AnSpTsl18-415MtS",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "AnSpTsl18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSpry1ozSl",
+   "why": "more than one listed component fits",
+   "phrase": "with Silver Top and Base",
+   "candidates": [
+    "AnSp18-415MtSl",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl"
+   ],
+   "listed": [
+    "AnSp18-415Lvn",
+    "CP18-415AnSpPnk",
+    "AnSp18-415MtSl",
+    "AnSp18-415IvySl",
+    "AnSp18-415Gl",
+    "AnSp18-415IvyGl",
+    "AnSp18-415Wht",
+    "AnSp18-415Red",
+    "AnSpTsl18-415Lvn",
+    "AnSpTsl18-415IvyGl",
+    "AnSpTsl18-415IvySl",
+    "AnSpTsl18-415Wht",
+    "AnSpTsl18-415Pnk",
+    "AnSpTsl18-415Red",
+    "AnSpTsl18-415MtS",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "AnSpTsl18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCyl9SpryRd",
+   "why": "no listed component carries the named finish",
+   "phrase": "with fine mist sprayer with red trim and plastic overcap",
+   "candidates": [],
+   "listed": [
+    "Spry17-415Gl",
+    "Spry17-415MattSl",
+    "Spry17-415ShnSl",
+    "Spry17-415Red",
+    "Spry17-415Tur",
+    "Spry17-415Blk"
+   ]
+  },
+  {
+   "sku": "GBCyl50RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBCyl5WhtSht",
+   "why": "no Cap listed on the row"
+  },
+  {
+   "sku": "GBTallCyl9WhtSht",
+   "why": "no Cap listed on the row"
+  },
+  {
+   "sku": "GBCyl5BlkShSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short shiny black cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCyl5CuSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short matte copper cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCyl5GlMattSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short matte gold cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCyl5GlSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short shiny gold cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCyl5SlMattSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short matte silver cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCyl5SlSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short shiny silver cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCylBlu5CuSht",
+   "why": "already joined by a reviewed source-component link"
+  },
+  {
+   "sku": "GBCylBlu5GlMattSht",
+   "why": "already joined by a reviewed source-component link"
+  },
+  {
+   "sku": "GBCylBlu5GlSht",
+   "why": "already joined by a reviewed source-component link"
+  },
+  {
+   "sku": "GBCylBlu5SlMattSht",
+   "why": "already joined by a reviewed source-component link"
+  },
+  {
+   "sku": "GBCylBlu5SlSht",
+   "why": "already joined by a reviewed source-component link"
+  },
+  {
+   "sku": "GBTallCyl9BlkShSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short shiny black cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCyl9CuSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short matte copper cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCyl9GlMattSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short matte gold cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCyl9GlSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short shiny gold cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCyl9SlMattSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short matte silver cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCyl9SlSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short shiny silver cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9BlkShSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short shiny black cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9CuSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short matte silver cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9GlMattSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short matte gold cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9GlSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short shiny gold cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9SlMattSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short matte silver cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9SlSht",
+   "why": "no listed component carries the named finish",
+   "phrase": "with short shiny silver cap.",
+   "candidates": [],
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBDmnd2ozRdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBDiva100RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBDiva30RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBDiva46RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "LBElgFrst100WhtClOvrCp",
+   "why": "no listed component carries the named finish",
+   "phrase": "with white rectangular with clear over the cap",
+   "candidates": [],
+   "listed": [
+    "Ltn18-415MtGl",
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSl",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl",
+    "Ltn18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElg100RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBElgFrst100RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBElg60DrpSl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBElg60DrpGl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBElgFrst60DrpSl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBElgFrst60DrpGl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "LBElg60WhtClOvrCp",
+   "why": "no listed component carries the named finish",
+   "phrase": "with white rectangular with clear over the cap",
+   "candidates": [],
+   "listed": [
+    "Ltn18-415MtGl",
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSl",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl",
+    "Ltn18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBElgFrst60WhtClOvrCp",
+   "why": "no listed component carries the named finish",
+   "phrase": "with white rectangular with clear over the cap",
+   "candidates": [],
+   "listed": [
+    "Ltn18-415MtGl",
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSl",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl",
+    "Ltn18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElg60DrpCu",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBElgFrst60DrpCu",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBElg60RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBElgFrst60RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "LBElg100WhtClOvrCp",
+   "why": "no listed component carries the named finish",
+   "phrase": "with white rectangular with clear over the cap",
+   "candidates": [],
+   "listed": [
+    "Ltn18-415MtGl",
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSl",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl",
+    "Ltn18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBEmp100RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "LBEmp50WhtClOvrCp",
+   "why": "no listed component carries the named finish",
+   "phrase": "with white rectangular and clear over the cap",
+   "candidates": [],
+   "listed": [
+    "Ltn18-415MtGl",
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSl",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl",
+    "Ltn18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBEmp50RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "LBEmp100WhtClOvrCp",
+   "why": "no listed component carries the named finish",
+   "phrase": "with white rectangular with clear over the cap",
+   "candidates": [],
+   "listed": [
+    "Ltn18-415MtGl",
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSl",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl",
+    "Ltn18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBGrce55RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBPillar9SpryBlkMatt",
+   "why": "description names no closure colour",
+   "phrase": ""
+  },
+  {
+   "sku": "PB1ozClearcap",
+   "why": "description names no closure colour",
+   "phrase": "With Clear Screw on Cap.Capacity: 1oz (30ml)"
+  },
+  {
+   "sku": "GBRnd128DrpSl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBRnd128DrpGl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBRndFrst128DrpSl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBRndFrst128DrpGl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBRnd128RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBRnd128DrpCu",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBRndFrst128DrpCu",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBRnd78RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBRndFrst78RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSlk30DrpSl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBSlk30DrpGl",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "GBSlk100RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "LBSlk30WhtRectClOverCap",
+   "why": "no listed component carries the named finish",
+   "phrase": "with white rectangular with clear over the cap",
+   "candidates": [],
+   "listed": [
+    "Ltn18-415MtGl",
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSl",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl",
+    "Ltn18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBSlk50WhtRectClOverCap",
+   "why": "no listed component carries the named finish",
+   "phrase": "with white rectangular with clear over the cap",
+   "candidates": [],
+   "listed": [
+    "Ltn18-415MtGl",
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSl",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl",
+    "Ltn18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSlk30DrpCu",
+   "why": "no Dropper listed on the row"
+  },
+  {
+   "sku": "LBSlk100WhtRectClOverCap",
+   "why": "no listed component carries the named finish",
+   "phrase": "with white rectangular with clear over the cap",
+   "candidates": [],
+   "listed": [
+    "Ltn18-415MtGl",
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSl",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl",
+    "Ltn18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlm100RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSlm30RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSlm50RdcrShnBlk",
+   "why": "no listed component carries the named finish",
+   "phrase": "with reducer and black shiny cap",
+   "candidates": [],
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GB1mlAmbVialWht",
+   "why": "no Cap listed on the row"
+  },
+  {
+   "sku": "GB1mlVBlk",
+   "why": "no Cap listed on the row"
+  },
+  {
+   "sku": "GB1mlAmbVBlk",
+   "why": "no Cap listed on the row"
+  },
+  {
+   "sku": "GB1mlVWht",
+   "why": "no Cap listed on the row"
+  },
+  {
+   "sku": "GB09BlackCapApp",
+   "why": "more than one listed component fits",
+   "phrase": "with black cap with glass rod applicator",
+   "candidates": [
+    "18-400CpShortBlk",
+    "18-400CpAppBlk"
+   ],
+   "listed": [
+    "18-400CpShortBlk",
+    "18-400CpAppBlk"
+   ]
+  },
+  {
+   "sku": "GB09BlackCapSht",
+   "why": "more than one listed component fits",
+   "phrase": "with black short cap",
+   "candidates": [
+    "18-400CpShortBlk",
+    "18-400CpAppBlk"
+   ],
+   "listed": [
+    "18-400CpShortBlk",
+    "18-400CpAppBlk"
+   ]
+  },
+  {
+   "sku": "GBBstn2ozMtlRollGl",
+   "why": "duplicate pick: 2 rows of one body resolve to CPRoll20-400TallShnGl",
+   "siblings": [
+    "GBBstn2ozMtlRollGl",
+    "GBBstn2ozRollGl"
+   ]
+  },
+  {
+   "sku": "GBBstn2ozRollGl",
+   "why": "duplicate pick: 2 rows of one body resolve to CPRoll20-400TallShnGl",
+   "siblings": [
+    "GBBstn2ozMtlRollGl",
+    "GBBstn2ozRollGl"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonGl",
+   "why": "duplicate pick: 2 rows of one body resolve to CPRoll20-400TallShnGl",
+   "siblings": [
+    "GBBstnAmb1ozRollonGl",
+    "GBBstnAmb1ozMtlRollonGl"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonGl",
+   "why": "duplicate pick: 2 rows of one body resolve to CPRoll20-400TallShnGl",
+   "siblings": [
+    "GBBstnAmb1ozRollonGl",
+    "GBBstnAmb1ozMtlRollonGl"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonGl",
+   "why": "duplicate pick: 2 rows of one body resolve to CPRoll20-400TallShnGl",
+   "siblings": [
+    "GBBstnBlu1ozRollonGl",
+    "GBBstnBlu1ozMtlRollonGl"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonGl",
+   "why": "duplicate pick: 2 rows of one body resolve to CPRoll20-400TallShnGl",
+   "siblings": [
+    "GBBstnBlu1ozRollonGl",
+    "GBBstnBlu1ozMtlRollonGl"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonGl",
+   "why": "duplicate pick: 2 rows of one body resolve to CPRoll20-400TallShnGl",
+   "siblings": [
+    "GBBstnAmb2ozRollonGl",
+    "GBBstnAmb2ozMtlRollonGl"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonGl",
+   "why": "duplicate pick: 2 rows of one body resolve to CPRoll20-400TallShnGl",
+   "siblings": [
+    "GBBstnAmb2ozRollonGl",
+    "GBBstnAmb2ozMtlRollonGl"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu2ozRollonGl",
+   "why": "duplicate pick: 2 rows of one body resolve to CPRoll20-400TallShnGl",
+   "siblings": [
+    "GBBstnBlu2ozRollonGl",
+    "GBBstnBlu2ozMtlRollonGl"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu2ozMtlRollonGl",
+   "why": "duplicate pick: 2 rows of one body resolve to CPRoll20-400TallShnGl",
+   "siblings": [
+    "GBBstnBlu2ozRollonGl",
+    "GBBstnBlu2ozMtlRollonGl"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100AnSpLvn",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Lvn",
+   "siblings": [
+    "GBCrclFrst100AnSpLvn",
+    "GBCrclFrst100AnSpTslLvn"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100AnSpTslLvn",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Lvn",
+   "siblings": [
+    "GBCrclFrst100AnSpLvn",
+    "GBCrclFrst100AnSpTslLvn"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100AnSpRed",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Red",
+   "siblings": [
+    "GBCrclFrst100AnSpRed",
+    "GBCrclFrst100AnSpTslRed"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100AnSpTslRed",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Red",
+   "siblings": [
+    "GBCrclFrst100AnSpRed",
+    "GBCrclFrst100AnSpTslRed"
+   ]
+  },
+  {
+   "sku": "GBCrcl50AnSpRed",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Red",
+   "siblings": [
+    "GBCrcl50AnSpRed",
+    "GBCrcl50AnSpTslRed"
+   ]
+  },
+  {
+   "sku": "GBCrcl50AnSpTslRed",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Red",
+   "siblings": [
+    "GBCrcl50AnSpRed",
+    "GBCrcl50AnSpTslRed"
+   ]
+  },
+  {
+   "sku": "GBDiva46AnSpRedRng",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Red",
+   "siblings": [
+    "GBDiva46AnSpRedRng",
+    "GBDiva46AnSpRed"
+   ]
+  },
+  {
+   "sku": "GBDiva46AnSpRed",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Red",
+   "siblings": [
+    "GBDiva46AnSpRedRng",
+    "GBDiva46AnSpRed"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128AnSpRed",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Red",
+   "siblings": [
+    "GBRndFrst128AnSpRed",
+    "GBRndFrst128AnSpTslRed"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslRed",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Red",
+   "siblings": [
+    "GBRndFrst128AnSpRed",
+    "GBRndFrst128AnSpTslRed"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslLvn",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Lvn",
+   "siblings": [
+    "GBRndFrst128AnSpTslLvn",
+    "GBRndFrst128AnSpLvn"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128AnSpLvn",
+   "why": "duplicate pick: 2 rows of one body resolve to AnSp18-415Lvn",
+   "siblings": [
+    "GBRndFrst128AnSpTslLvn",
+    "GBRndFrst128AnSpLvn"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9CuSht",
+   "why": "duplicate pick: 2 rows of one body resolve to CP13-415SlMattSht",
+   "siblings": [
+    "GBTallCylFrst9CuSht",
+    "GBTallCylFrst9SlMattSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9SlMattSht",
+   "why": "duplicate pick: 2 rows of one body resolve to CP13-415SlMattSht",
+   "siblings": [
+    "GBTallCylFrst9CuSht",
+    "GBTallCylFrst9SlMattSht"
+   ]
+  }
+ ]
+}

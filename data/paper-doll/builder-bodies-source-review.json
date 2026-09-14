@@ -1,0 +1,1985 @@
+{
+  "generatedAt": "2026-09-14",
+  "note": "reviewed = written to bodies.generated.json; candidate = review set only",
+  "bodies": [
+    {
+      "body": "Boston Round|15|Amber|18-400",
+      "status": "no-candidate",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/6. GBBstnAmb15mlWhtDropper.psd",
+      "note": "no visible on-axis layer reaching the baseline"
+    },
+    {
+      "body": "Boston Round|15|Cobalt Blue|18-400",
+      "status": "no-candidate",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/2. GBBstnBlu15mlBlkDropperSlTrim.psd",
+      "note": "no visible on-axis layer reaching the baseline"
+    },
+    {
+      "body": "Boston Round|30|Amber|20-400",
+      "status": "no-candidate",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/10. GBBstnAmb1ozRollonMattGl.psd",
+      "note": "no visible on-axis layer reaching the baseline"
+    },
+    {
+      "body": "Boston Round|30|Clear|20-400",
+      "status": "candidate",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/1. GBBstn1ozMtlRollonMattSl.psd",
+      "sourceSha256": "59e291a10a6ff5d8114f0dfa5b79a8cafed5d41954e141bd45cc6eb971fe17d7",
+      "layerIndex": 1,
+      "layerName": "Layer 22",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            974,
+            1499
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 22",
+          "bbox": [
+            261,
+            482,
+            664,
+            1429
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 26",
+          "bbox": [
+            319,
+            289,
+            606,
+            709
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Boston Round|30|Cobalt Blue|20-400",
+      "status": "no-candidate",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/13. GBBstnBlu1ozWhtDropperShnGlTrim.psd",
+      "note": "no visible on-axis layer reaching the baseline"
+    },
+    {
+      "body": "Boston Round|60|Amber|20-400",
+      "status": "no-candidate",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/10. GBBstnAmb2ozRollonMattGl.psd",
+      "note": "no visible on-axis layer reaching the baseline"
+    },
+    {
+      "body": "Boston Round|60|Clear|20-400",
+      "status": "candidate",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/10. GBBstn2ozRollonMattGl.psd",
+      "sourceSha256": "75f0eea1eb20812b4ad9fc86d380fe5f45b5dc3cd66581e924838655e608b9d2",
+      "layerIndex": 1,
+      "layerName": "Layer 11",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            944,
+            1499
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 11",
+          "bbox": [
+            226,
+            310,
+            693,
+            1464
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 12",
+          "bbox": [
+            307,
+            102,
+            605,
+            549
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Boston Round|60|Cobalt Blue|20-400",
+      "status": "no-candidate",
+      "path": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/2. Cobalt Blue Bottle (2 ounce:60 ml) (capped)/Cobalt Blue 2oz - Alternating Caps (capped)/2. GBBstnBlu2ozMtlRollonShnSl.psd",
+      "note": "no visible on-axis layer reaching the baseline"
+    },
+    {
+      "body": "Circle|100|Clear|18-415",
+      "status": "reviewed",
+      "source": "circle-builder-media",
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-100-clear-18-415.webp",
+        "width": 1000,
+        "height": 1176,
+        "sha256": "04d4906352885e42e7c47a926f7440b65ff2e385ef1a00054b0f16d4d21d5fec"
+      }
+    },
+    {
+      "body": "Circle|100|Frosted|18-415",
+      "status": "reviewed",
+      "source": "circle-builder-media",
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-100-frosted-18-415.webp",
+        "width": 998,
+        "height": 1200,
+        "sha256": "0cc791ff4a4dadc23aeaf258477299f9da44232a4386c41124915a205844ff27"
+      }
+    },
+    {
+      "body": "Circle|15|Clear|13-415",
+      "status": "reviewed",
+      "source": "circle-builder-media",
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-15-clear-13-415.webp",
+        "width": 593,
+        "height": 733,
+        "sha256": "84a561beb99b7c789ad46f71807797b3b27b0a1f72ac857698b8e19958f4a677"
+      }
+    },
+    {
+      "body": "Circle|30|Clear|15-415",
+      "status": "reviewed",
+      "source": "circle-builder-media",
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-30-clear-15-415.webp",
+        "width": 713,
+        "height": 940,
+        "sha256": "57e98fe6ca812fa1608c06f4be99e12a5919dd5c8b66ac711eaf3c23671dee97"
+      }
+    },
+    {
+      "body": "Circle|50|Clear|18-415",
+      "status": "reviewed",
+      "source": "circle-builder-media",
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-50-clear-18-415.webp",
+        "width": 979,
+        "height": 1200,
+        "sha256": "a4781ea8dd9b59498af8361a1b75926cfeaab2ab4ddc5f1dc023d9f066d81f61"
+      }
+    },
+    {
+      "body": "Circle|50|Frosted|18-415",
+      "status": "reviewed",
+      "source": "circle-builder-media",
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-50-frosted-18-415.webp",
+        "width": 1000,
+        "height": 1179,
+        "sha256": "36eb895cb6c3ce910de7781d4a1df5ba1d5f54baf74d5ac17af5914588150102"
+      }
+    },
+    {
+      "body": "Cylinder|100|Clear|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/10. GBCyl100RdcrWht.psd",
+      "sourceSha256": "94f9a3288e11d5eb2669894984c24c14ed83c757cf12c861f04594de93772f61",
+      "layerIndex": 1,
+      "layerName": "Group 1",
+      "retouchIslandsDropped": 2,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            1749,
+            2624
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Group 1",
+          "bbox": [
+            631,
+            328,
+            1131,
+            2609
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 9",
+          "bbox": [
+            732,
+            193,
+            1026,
+            548
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|25|Clear|18-415",
+      "status": "no-candidate",
+      "path": null,
+      "note": "no capped master PSD for any plated SKU"
+    },
+    {
+      "body": "Cylinder|28|Clear|16mm",
+      "status": "no-candidate",
+      "path": null,
+      "note": "no capped master PSD for any plated SKU"
+    },
+    {
+      "body": "Cylinder|50|Clear|16mm",
+      "status": "candidate",
+      "path": "13. 16 mm/3. 50ml Capped/3. GBCyl50MtlRollBlk.psd",
+      "sourceSha256": "b22324d16e9273c6757d006365723041b0fba30abd0856fc7fdbfb8bab38f2bf",
+      "layerIndex": 1,
+      "layerName": "Layer 10",
+      "retouchIslandsDropped": 3,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            0,
+            0,
+            1399,
+            1924
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 10",
+          "bbox": [
+            449,
+            499,
+            948,
+            1820
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 11",
+          "bbox": [
+            503,
+            187,
+            884,
+            668
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 5",
+          "bbox": [
+            481,
+            162,
+            911,
+            669
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|50|Clear|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/1. GBCyl50RdcrShnGl.psd",
+      "sourceSha256": "e9d1643dc53e143fba778471067b0364be9a0e786022a566494af55ce3a28864",
+      "layerIndex": 1,
+      "layerName": "Layer 10",
+      "retouchIslandsDropped": 3,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            0,
+            0,
+            1399,
+            1924
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 10",
+          "bbox": [
+            483,
+            302,
+            929,
+            1895
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 7",
+          "bbox": [
+            565,
+            238,
+            849,
+            502
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|5|Clear|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/7. GBCyl5SpryGlMatt.psd",
+      "sourceSha256": "6edfe5d6caaa85aac2705679f87e407e9cbb6b4cf0a9e25de2b9905fd5e78916",
+      "layerIndex": 2,
+      "layerName": "Layer 20",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            599,
+            974
+          ],
+          "background": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 20",
+          "bbox": [
+            192,
+            316,
+            398,
+            947
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 18",
+          "bbox": [
+            275,
+            422,
+            333,
+            880
+          ],
+          "background": false
+        },
+        {
+          "index": 4,
+          "name": "Layer 22",
+          "bbox": [
+            197,
+            89,
+            392,
+            469
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|5|Cobalt Blue|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/1. GBCylBlu5BlkSht.psd",
+      "sourceSha256": "df958b77a57a0962343d3a98f0ab6b50f665247befd74178d1426b51d4ceb265",
+      "layerIndex": 1,
+      "layerName": "Layer 5",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            599,
+            826
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 5",
+          "bbox": [
+            197,
+            150,
+            401,
+            779
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 3",
+          "bbox": [
+            206,
+            130,
+            392,
+            247
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|9|Amber|17-415",
+      "status": "candidate",
+      "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/1. GBCylAmb9MtlRollMattSl.psd",
+      "sourceSha256": "f01d65763b64edfe286daae6653ed50d244be2220be8891ec13ee28740ce03b4",
+      "layerIndex": 2,
+      "layerName": "Layer 13",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            -75,
+            0,
+            824,
+            1593
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 7",
+          "bbox": [
+            157,
+            492,
+            509,
+            805
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 13",
+          "bbox": [
+            257,
+            615,
+            489,
+            1516
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 14",
+          "bbox": [
+            257,
+            457,
+            479,
+            778
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|9|Clear|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /10. GBTallCyl9MtlRollSlDot.psd",
+      "sourceSha256": "ac16a05ee88a45402bde2f3dc80e1aefd8ade004200a0e2c56c8f3ec220cc026",
+      "layerIndex": 2,
+      "layerName": "Layer 33",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            -75,
+            0,
+            824,
+            1593
+          ],
+          "background": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 33",
+          "bbox": [
+            250,
+            300,
+            481,
+            1549
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 32",
+          "bbox": [
+            261,
+            152,
+            455,
+            436
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|9|Clear|17-415",
+      "status": "candidate",
+      "path": "3.  17-415 Bottles/10. Clear  (Capped)/1. GBCyl9MtlRollMattSl.psd",
+      "sourceSha256": "e990fdd23c3cb3c96862621253bea4709ca8d242f4268dd748e2ce8eb3638939",
+      "layerIndex": 2,
+      "layerName": "Layer 16",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            -75,
+            0,
+            824,
+            1593
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 7",
+          "bbox": [
+            166,
+            492,
+            518,
+            805
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 16",
+          "bbox": [
+            262,
+            606,
+            509,
+            1520
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 17",
+          "bbox": [
+            264,
+            460,
+            491,
+            781
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|9|Cobalt Blue|17-415",
+      "status": "candidate",
+      "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/1. GBCylBlu9MtlRollMattSl.psd",
+      "sourceSha256": "ae67d5ab5f1cd8d4175692be0ba440a9f87cc36da835cd1c934ed70dd441eab6",
+      "layerIndex": 2,
+      "layerName": "Layer 11",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            -75,
+            0,
+            824,
+            1593
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 7",
+          "bbox": [
+            156,
+            492,
+            508,
+            805
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 11",
+          "bbox": [
+            256,
+            615,
+            490,
+            1516
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 12",
+          "bbox": [
+            257,
+            457,
+            479,
+            778
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|9|Frosted|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /10. GBTallCylFrst9MtlRollSlDot.psd",
+      "sourceSha256": "6f106c5a3069dc6f889670282cf6534f571c44a456bfabb6fe17dc5407f6086d",
+      "layerIndex": 2,
+      "layerName": "Layer 34",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            -75,
+            0,
+            824,
+            1593
+          ],
+          "background": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 34",
+          "bbox": [
+            256,
+            298,
+            471,
+            1550
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 32",
+          "bbox": [
+            261,
+            152,
+            455,
+            436
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|9|Frosted|17-415",
+      "status": "candidate",
+      "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/1. GBCylFrst9MtlRollMattSl.psd",
+      "sourceSha256": "422c3d9ed8e18332fa50363503515996e943e8608165a5bac2029bcafc511332",
+      "layerIndex": 2,
+      "layerName": "Layer 15",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            -75,
+            0,
+            824,
+            1593
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 7",
+          "bbox": [
+            155,
+            492,
+            507,
+            805
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 15",
+          "bbox": [
+            253,
+            618,
+            495,
+            1517
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 16",
+          "bbox": [
+            256,
+            460,
+            478,
+            781
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Cylinder|9|Swirl|17-415",
+      "status": "candidate",
+      "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/1. GBCylSwrl9MtlRollMattSl.psd",
+      "sourceSha256": "72ab2d59c6c42c52118bb62b6672c0f36a1a51756bd97ea14f9e399150d21141",
+      "layerIndex": 2,
+      "layerName": "Layer 17",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            -75,
+            0,
+            824,
+            1593
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 7",
+          "bbox": [
+            158,
+            490,
+            510,
+            804
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 17",
+          "bbox": [
+            256,
+            605,
+            501,
+            1517
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 18",
+          "bbox": [
+            264,
+            460,
+            486,
+            781
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Diamond|60|Clear|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/1. GBDmnd2ozRdcrShnGl....psd",
+      "sourceSha256": "78432cceb4d72d46c99844dc246b33c5ac572b1865e5c7126b4a70cb3542ae2e",
+      "layerIndex": 1,
+      "layerName": "Layer 9",
+      "retouchIslandsDropped": 2,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            1049,
+            1487
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 9",
+          "bbox": [
+            242,
+            207,
+            821,
+            1474
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 7",
+          "bbox": [
+            384,
+            153,
+            675,
+            428
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Diva|100|Clear|18-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "LBDiva100LtnCu",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/27.  100ml Diva (Clear) Ltn & Spry, capped/55. LBDiva100LtnCu.psd",
+      "sourceSha256": "512561075e606c74cee19af26b38830c35695cbc4b52f8d793329222d98b8702",
+      "layerIndex": 1,
+      "layerName": "Layer 1",
+      "evidence": "diva-paired-kit-recipes.json: 2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/diva-100-clear-18-415.webp",
+        "width": 592,
+        "height": 1200,
+        "sha256": "9dcaa6cda4cbb9ea99141e9371fb28f20e7d8170e345b3f2977b5f41928f31a9"
+      }
+    },
+    {
+      "body": "Diva|30|Clear|18-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "GBDiva30SpryShnSl",
+      "path": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /32. LBDiva30LtnShnSl.psd",
+      "sourceSha256": "c5c005fb0ad06f38bf16ef00fbe18e67a75929c4bc513d2cfdb213b439d0534f",
+      "layerIndex": 1,
+      "layerName": "Layer 5",
+      "evidence": "diva-paired-kit-recipes.json: 2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/diva-30-clear-18-415.webp",
+        "width": 592,
+        "height": 1165,
+        "sha256": "732a27004e6beef28c86265db61ab55cebbe300737f565ae8d3227afd8929167"
+      }
+    },
+    {
+      "body": "Diva|46|Clear|18-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "LBDiva46LtnClOvrCap",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/25.  46 Diva (Clear) Ltn & Spry, capped/28. LBDiva46LtnClOvrCap.psd",
+      "sourceSha256": "ee99b881c694a5ec1e5e031dd4b55c9ae7176f759fe8626eaa78c4aab28ecc32",
+      "layerIndex": 1,
+      "layerName": "Layer 1",
+      "evidence": "diva-paired-kit-recipes.json: 2026-09-08 Diva paired PSD layer review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/diva-46-clear-18-415.webp",
+        "width": 625,
+        "height": 1200,
+        "sha256": "1e90174bd22fe4651920e9e58c159195b964d0d988f6e58bdc50340dd91b0945"
+      }
+    },
+    {
+      "body": "Diva|46|Frosted|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/1. GBDivaFrst46RdcrShnGl.psd",
+      "sourceSha256": "c2c550d0164d27bd1886d00f3382d54bc7f3708b8316c475ee6b0b898f6249ae",
+      "layerIndex": 1,
+      "layerName": "Layer 3",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            1049,
+            1487
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 3",
+          "bbox": [
+            202,
+            368,
+            854,
+            1470
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 5",
+          "bbox": [
+            375,
+            192,
+            664,
+            458
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Elegant|100|Clear|18-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "LBElg100WhtClOvrCp",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/18.  100ml Elegant, Ltn & Spry, capped/53. LBElg100WhtClOvrCp.psd",
+      "sourceSha256": "224e8baa5ac2693e61b3cd9842859cb115dd25a7089c94bfb9b9a5bbe63dedee",
+      "layerIndex": 1,
+      "layerName": "Shape 1 copy",
+      "evidence": "elegant-paired-kit-recipes.json: 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/elegant-100-clear-18-415.webp",
+        "width": 689,
+        "height": 1200,
+        "sha256": "819415f455de83edb12b58194284e384d2ac548e25b026683cf474379e5b8c20"
+      }
+    },
+    {
+      "body": "Elegant|100|Frosted|18-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "GBElgFrst100SpryMtGl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/20.  100ml Eleg Frst, Ltn & Spry, capped/11. GBElgFrst100SpryMtGl.psd",
+      "sourceSha256": "7fd4a74e7c2b637b1b5fc95288a00685478c580bd6011e2779dad017092eba3a",
+      "layerIndex": 1,
+      "layerName": "Layer 8",
+      "evidence": "elegant-paired-kit-recipes.json: 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/elegant-100-frosted-18-415.webp",
+        "width": 676,
+        "height": 1200,
+        "sha256": "c14b6c8e804ca24acc7845f26cd3595ae834dc9db2903dbf6de52ca00dbde7ea"
+      }
+    },
+    {
+      "body": "Elegant|15|Clear|13-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "GBElg15MtlRollBlkSh",
+      "path": "5.  13-415 Bottles/8. Elegant 15ml Clear/2. Elegant 15ml (Capped) PSD/25. GBElg15RollBlkSh.psd",
+      "sourceSha256": "66d4d6740c6253f7e90a8b73cce181a1ecf1865ff6cacacd99291c58b9575322",
+      "layerIndex": 2,
+      "layerName": "Layer 33",
+      "evidence": "elegant-paired-kit-recipes.json: 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/elegant-15-clear-13-415.webp",
+        "width": 423,
+        "height": 718,
+        "sha256": "74bb9b47440c5197d0da13da4675f8d5819d1c15cdaa815e088c13e6cd265c35"
+      }
+    },
+    {
+      "body": "Elegant|15|Frosted|13-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "GBElgFrst15MtlRollBlkSh",
+      "path": "5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/24. GBElgFrst15MtlRollBlkSh.psd",
+      "sourceSha256": "ff2fb6d46caa33a0e0053046a48dfab3593a5db4b8c8f5e348c40a34f8b3c8a3",
+      "layerIndex": 2,
+      "layerName": "Layer 35",
+      "evidence": "elegant-paired-kit-recipes.json: 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/elegant-15-frosted-13-415.webp",
+        "width": 427,
+        "height": 713,
+        "sha256": "94dc42ecca940f94779450265e5079947c95b48373e2ee18efc7b89f449907c5"
+      }
+    },
+    {
+      "body": "Elegant|30|Clear|15-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "GBElg30SlCap",
+      "path": "4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/6. GBElg30SlCap..psd",
+      "sourceSha256": "5b7c125e6d9a2bfb8e5332e3e3c202434aac0d7843749038954d5a4a7593a738",
+      "layerIndex": 1,
+      "layerName": "Layer 3",
+      "evidence": "elegant-paired-kit-recipes.json: 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/elegant-30-clear-15-415.webp",
+        "width": 539,
+        "height": 857,
+        "sha256": "b69fc7c74ee699a5300772e1aab6f0664e6dddbeaf2cac41e5c640ee6bac616b"
+      }
+    },
+    {
+      "body": "Elegant|30|Frosted|15-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "GBElgFrst30SlCap",
+      "path": "4.  15-415 Bottles/7. Elegant Frosted 30ml - Capped/Elegant Frst 30/6. GBElgFrst30SlCap..psd",
+      "sourceSha256": "e6d9e9fb43a5fad15feb6bceaed0894acd25adb30c57082252f66f3fad18480d",
+      "layerIndex": 1,
+      "layerName": "Layer 13",
+      "evidence": "elegant-paired-kit-recipes.json: 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/elegant-30-frosted-15-415.webp",
+        "width": 543,
+        "height": 914,
+        "sha256": "44d60305445d708a038cb9f5f1731e04ce0c97676a712c7801aa3520b6fcb513"
+      }
+    },
+    {
+      "body": "Elegant|60|Clear|18-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "LBElg60WhtClOvrCp",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/54. LBElg60WhtClOvrCp.psd",
+      "sourceSha256": "e3c3b0bdb503d7ae1ad809268b4b8bea15749bb771cece96471334b52f5f7fe1",
+      "layerIndex": 1,
+      "layerName": "Shape 3",
+      "evidence": "elegant-paired-kit-recipes.json: 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/elegant-60-clear-18-415.webp",
+        "width": 789,
+        "height": 1200,
+        "sha256": "f14e7da343770745c9858b340b8cf9e316a6af6af7d3e262192708b826613f12"
+      }
+    },
+    {
+      "body": "Elegant|60|Frosted|18-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "LBElgFrst60LtnCu",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/19.  60ml Eleg Frst, Ltn & Spry, capped/61. LBElgFrst60LtnCu.psd",
+      "sourceSha256": "3042ef6800743b8b5fcaaa5afcd3ab0c3f5859341759ee8e4df6b33d04abe70d",
+      "layerIndex": 1,
+      "layerName": "Layer 3",
+      "evidence": "elegant-paired-kit-recipes.json: 2026-09-08 Elegant paired PSD layer contact-sheet review; current published front hash and capped PSD assembly are the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/elegant-60-frosted-18-415.webp",
+        "width": 751,
+        "height": 1200,
+        "sha256": "9f4016415eaedf231db093f5eb6c44d3e9df7aae5d4b03a9a9988e61fa4ddd64"
+      }
+    },
+    {
+      "body": "Empire|100|Clear|18-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "LBEmp100WhtClOvrCp",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/51. LBEmp100WhtClOvrCp.psd",
+      "sourceSha256": "6ae9f354dcfc959c01f08e07894a06e7fa754c0ff590aaa0b81e91c184587f01",
+      "layerIndex": 1,
+      "layerName": "Layer 22",
+      "evidence": "empire-paired-kit-recipes.json: 2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/empire-100-clear-18-415.webp",
+        "width": 556,
+        "height": 1200,
+        "sha256": "c5b78badc0906acefd6e9bb3599359da2d329871e743fe9f0db90e028f8a1c2a"
+      }
+    },
+    {
+      "body": "Empire|50|Clear|18-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "GBEmp50AnSpTslIvySl",
+      "path": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/44. GBEmp50AnSpTslIvySl.psd",
+      "sourceSha256": "a94eb861305a7a03ba5b646afdd96ad73ff0e9e3217e82c34cc0072769e718ba",
+      "layerIndex": 1,
+      "layerName": "Layer 45",
+      "evidence": "empire-paired-kit-recipes.json: 2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/empire-50-clear-18-415.webp",
+        "width": 503,
+        "height": 1200,
+        "sha256": "e823b256ad3c4c6b8d060a1b086884ca5e02b4b6758ecd31fb356e472b34db8a"
+      }
+    },
+    {
+      "body": "Flair|15|Clear|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/10. GBFlair15MtlRollSlDot.psd",
+      "sourceSha256": "c44c0ca4e37985a656def07c99997e6c421206a804226f79d29c66897fe93cce",
+      "layerIndex": 2,
+      "layerName": "Layer 34",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            0,
+            -173,
+            1049,
+            1396
+          ],
+          "background": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 34",
+          "bbox": [
+            231,
+            282,
+            822,
+            1179
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 35",
+          "bbox": [
+            432,
+            165,
+            625,
+            451
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Grace|55|Clear|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/10. GBGrce55RdcrWht.psd",
+      "sourceSha256": "9585fa750be7acf53b204b0bf17b324a03e65d22bcd5b39adf1c14017b6bfef9",
+      "layerIndex": 1,
+      "layerName": "Layer 12",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            1137,
+            1837
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 12",
+          "bbox": [
+            219,
+            215,
+            923,
+            1823
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 11",
+          "bbox": [
+            423,
+            107,
+            712,
+            473
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Round|128|Clear|18-415",
+      "status": "reviewed",
+      "source": "paired-kit-recipe",
+      "sku": "GBRnd128SpryShnSl",
+      "path": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/30. GBRnd128SpryShnSl.psd",
+      "sourceSha256": "a9635f4c5e845617b713952da0737ed5042652f5d29ac3f7e5743c5f8dcda927",
+      "layerIndex": 1,
+      "layerName": "Layer 26",
+      "evidence": "round-128-paired-kit-recipes.json: 2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "reviewedBy": "Jordan Richter and Codex",
+      "asset": {
+        "url": "/images/bottle-builder/bodies/round-128-clear-18-415.webp",
+        "width": 1000,
+        "height": 1136,
+        "sha256": "f3cd5b0172fb7add9bbb2f8d7cff20150482cbeca687064d1dcac44cc636d702"
+      }
+    },
+    {
+      "body": "Round|128|Frosted|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/10. GBRndFrst128RdcrWht.psd",
+      "sourceSha256": "d78cf5d779aa166b36c0dcfad8160f9972d320d72e5cb38ba9006aeee54348ac",
+      "layerIndex": 1,
+      "layerName": "Layer 10",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            1049,
+            1487
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 10",
+          "bbox": [
+            73,
+            277,
+            1010,
+            1435
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 8",
+          "bbox": [
+            387,
+            166,
+            678,
+            524
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Round|78|Clear|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /9. Round 78ml/1. Round 78ml PSD/4. GBRnd78RdcrBlkLthr.psd",
+      "sourceSha256": "b604cca9a69843c23df846b229d271bd223dee86498579d2dd89d7327b940548",
+      "layerIndex": 1,
+      "layerName": "Layer 10",
+      "retouchIslandsDropped": 6,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            1049,
+            1487
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 10",
+          "bbox": [
+            26,
+            185,
+            1051,
+            1353
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 6",
+          "bbox": [
+            363,
+            146,
+            726,
+            563
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Round|78|Frosted|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/1. GBRndFrst78RdcrShnGl.psd",
+      "sourceSha256": "f52ac2d0f5df6b8eb62c6b8cebf07b64027d26710827e5124c1b71e09a6f623d",
+      "layerIndex": 1,
+      "layerName": "Layer 5",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            1399,
+            1574
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 5",
+          "bbox": [
+            319,
+            365,
+            1129,
+            1376
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 2",
+          "bbox": [
+            575,
+            314,
+            868,
+            584
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Royal|13|Clear|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/1. GBRoyal13BlkSht.psd",
+      "sourceSha256": "4d9cfb9c1fa2395d53229f2d177aae0f12211e284f5df888bcb1940c9a67539a",
+      "layerIndex": 1,
+      "layerName": "Layer 1",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            0,
+            -234,
+            801,
+            1335
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 1",
+          "bbox": [
+            124,
+            236,
+            673,
+            1003
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 24",
+          "bbox": [
+            278,
+            208,
+            505,
+            348
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Sleek|100|Clear|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/1. GBSlk100RdcrShnGl.psd",
+      "sourceSha256": "b5ec7d2689f123bd80cde8872e5e5bef9ae6bbda7d0d7dc516b4ecc7ee6b41a2",
+      "layerIndex": 1,
+      "layerName": "Layer 4",
+      "retouchIslandsDropped": 6,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            874,
+            2624
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 4",
+          "bbox": [
+            189,
+            352,
+            801,
+            2414
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 8",
+          "bbox": [
+            299,
+            288,
+            575,
+            555
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Sleek|30|Clear|18-415",
+      "status": "no-candidate",
+      "path": "2.  18-415 Bottles /11. Sleek 30ml /1. Sleek 30ml PSD/48. GBSlk30RdcrIvyLthr.psd",
+      "note": "no visible on-axis layer reaching the baseline"
+    },
+    {
+      "body": "Sleek|50|Clear|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/10. GBSlk50RdcrWht.psd",
+      "sourceSha256": "d1a005b934b8160257abb8b532e431b8e5584d84a379f34f291a56a58ea252a8",
+      "layerIndex": 1,
+      "layerName": "new",
+      "retouchIslandsDropped": 22,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            899,
+            1874
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "new",
+          "bbox": [
+            93,
+            146,
+            670,
+            1967
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 12",
+          "bbox": [
+            293,
+            75,
+            542,
+            383
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Sleek|5|Clear|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 5ml (Capped) PSD/10. GBSleek5MtlRollSlDot.psd",
+      "sourceSha256": "51256f8b60816f47823b6bf3940072e220b31e2b6710cef5b8af40ad0985f716",
+      "layerIndex": 2,
+      "layerName": "Layer 25",
+      "retouchIslandsDropped": 2,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            599,
+            899
+          ],
+          "background": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 25",
+          "bbox": [
+            177,
+            250,
+            500,
+            859
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 26",
+          "bbox": [
+            201,
+            145,
+            394,
+            428
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Sleek|8|Clear|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/10. GBSleek8MtlRollSlDot.psd",
+      "sourceSha256": "46d8aafaa19facdfae1607247292fc539f6b10532692012c1c57d0be5cb56bb0",
+      "layerIndex": 2,
+      "layerName": "Layer 26",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            599,
+            1239
+          ],
+          "background": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 26",
+          "bbox": [
+            198,
+            321,
+            407,
+            1100
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 27",
+          "bbox": [
+            203,
+            185,
+            396,
+            471
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Slim|100|Clear|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/5. GBSlm100RdcrBrwnLthr.psd",
+      "sourceSha256": "c758ec57260387807a9c5b76e4c381ce37c6e73c4cb19cf01e0bba1e280f2f1a",
+      "layerIndex": 1,
+      "layerName": "Layer 14",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            0,
+            0,
+            1399,
+            2449
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 14",
+          "bbox": [
+            471,
+            240,
+            911,
+            2375
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 11",
+          "bbox": [
+            508,
+            53,
+            871,
+            479
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Slim|30|Clear|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/1. GBSlm30RdcrShnGl.psd",
+      "sourceSha256": "c413c116b1e18156aa1b635d907e2afd83f989e294ddb697f13fc83fce9e496a",
+      "layerIndex": 1,
+      "layerName": "Layer 3",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            1399,
+            1924
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 3",
+          "bbox": [
+            518,
+            508,
+            928,
+            1741
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 2",
+          "bbox": [
+            576,
+            464,
+            868,
+            729
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Slim|50|Clear|18-415",
+      "status": "candidate",
+      "path": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/10. GBSlm50RdcrWht.psd",
+      "sourceSha256": "b560470053fbd45df07d6bda2e21f91a381f91aac3bd4c070ef80b8025393009",
+      "layerIndex": 2,
+      "layerName": "Layer 10",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            1399,
+            2274
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 8",
+          "bbox": [
+            556,
+            211,
+            845,
+            569
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 10",
+          "bbox": [
+            493,
+            554,
+            916,
+            2027
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Square|15|Clear|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/1. GBSqr15BlkSht..psd",
+      "sourceSha256": "7d6012835d1b7ec565a07355d5409cf0978cc0d1923ff6cd7d3d41f815ad6011",
+      "layerIndex": 1,
+      "layerName": "Layer 1",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            0,
+            0,
+            899,
+            899
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 1",
+          "bbox": [
+            282,
+            202,
+            602,
+            820
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 2",
+          "bbox": [
+            340,
+            178,
+            531,
+            301
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Tulip|5|Amber|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/1. GBTulipAmb5BlkSht.psd",
+      "sourceSha256": "3201a38b9e88069133adf812f27477dcce616a7c4bbbad223368a49daf178854",
+      "layerIndex": 1,
+      "layerName": "Layer 1",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            599,
+            899
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 1",
+          "bbox": [
+            158,
+            248,
+            439,
+            781
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 2",
+          "bbox": [
+            201,
+            228,
+            387,
+            345
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "Tulip|6|Clear|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/19. Tulip 6ml Clear/2. Tulip 6ml (Capped) PSD /1. GBTulip6BlkSht.psd",
+      "sourceSha256": "b629820069aa5482641b888c40ec9798a10d038aec91ba1de2d582f1e84099a8",
+      "layerIndex": 1,
+      "layerName": "Layer 3",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            599,
+            899
+          ],
+          "background": true
+        },
+        {
+          "index": 1,
+          "name": "Layer 3",
+          "bbox": [
+            -5,
+            252,
+            699,
+            914
+          ],
+          "background": false
+        },
+        {
+          "index": 2,
+          "name": "Layer 2",
+          "bbox": [
+            201,
+            228,
+            387,
+            345
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "footed-rectangle|10|Clear|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/10. GBRect10MtlRollSlDot.psd",
+      "sourceSha256": "2bcc017f8dd3eabf52d23d081b274be40af762b06e609874b2a37b7cfaea483e",
+      "layerIndex": 2,
+      "layerName": "Layer 21",
+      "retouchIslandsDropped": 0,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Background",
+          "bbox": [
+            0,
+            0,
+            799,
+            1199
+          ],
+          "background": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 21",
+          "bbox": [
+            224,
+            350,
+            573,
+            984
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 23",
+          "bbox": [
+            299,
+            223,
+            492,
+            507
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    },
+    {
+      "body": "tall-rectangle|10|Clear|13-415",
+      "status": "candidate",
+      "path": "5.  13-415 Bottles/16. Tall Rectangular 10ml/2. Tall Rectangular (Capped) 10ml PSD /29. GBTallRect10Sl.psd",
+      "sourceSha256": "6dec5cb2c9fbdf636e83f6ed77c8f2ce25e320b7945c139c4bbfeeb56c5c97cb",
+      "layerIndex": 2,
+      "layerName": "Layer 29",
+      "retouchIslandsDropped": 2,
+      "layers": [
+        {
+          "index": 0,
+          "name": "Layer 0",
+          "bbox": [
+            -75,
+            0,
+            824,
+            1653
+          ],
+          "background": true
+        },
+        {
+          "index": 2,
+          "name": "Layer 29",
+          "bbox": [
+            173,
+            295,
+            522,
+            1630
+          ],
+          "background": false
+        },
+        {
+          "index": 3,
+          "name": "Layer 30",
+          "bbox": [
+            270,
+            179,
+            468,
+            474
+          ],
+          "background": false
+        }
+      ],
+      "note": "largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval"
+    }
+  ]
+}
