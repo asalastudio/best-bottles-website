@@ -7,6 +7,7 @@
  */
 
 import mixpanel from "mixpanel-browser";
+import posthog from "posthog-js";
 import { APPLICATOR_NAV, CATALOG_FAMILIES, type ApplicatorNavValue } from "@/lib/catalogFilters";
 
 // ─── Adapter interface ───────────────────────────────────────────────────────
@@ -61,9 +62,86 @@ const mixpanelAdapter: AnalyticsAdapter = {
   },
 };
 
+// ─── PostHog adapter ─────────────────────────────────────────────────────────
+
+/**
+ * PostHog is the conversion-rate surface; Mixpanel stays in the file so a
+ * provider change remains one line rather than an excavation.
+ *
+ * Three places PostHog does not map one-to-one onto the interface:
+ *
+ *  1. `timeEvent` has no native equivalent. Mixpanel holds a server-side timer
+ *     and attaches the duration when the event fires. Here the start is held in
+ *     a map and attached as `duration_seconds`, which is what the Grace
+ *     conversation-length reporting actually reads.
+ *  2. `registerSuperProperties` has no direct equivalent either. PostHog wants
+ *     properties registered per capture, so they are held and merged into every
+ *     subsequent event — the same observable behaviour.
+ *  3. Mixpanel's reserved `$name` / `$email` become plain `name` / `email`.
+ */
+
+const superProperties: Props = {};
+const eventStartedAt = new Map<string, number>();
+
+const posthogAdapter: AnalyticsAdapter = {
+  init(token, options) {
+    posthog.init(token, {
+      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
+      // Matches the Mixpanel configuration this replaces: autocapture on,
+      // full-URL pageviews, and session recording OFF. Recording would capture
+      // the raw DOM, which carries the SKUs and slugs the privacy layer in this
+      // file deliberately hashes out of event properties — turning it on needs
+      // the same review, not a config flag.
+      autocapture: true,
+      capture_pageview: true,
+      disable_session_recording: true,
+      person_profiles: "identified_only",
+      ...options,
+    });
+  },
+  identify(userId, traits) {
+    posthog.identify(userId, traits ? normalizeReservedTraits(traits) : undefined);
+  },
+  reset() {
+    posthog.reset();
+    eventStartedAt.clear();
+    for (const key of Object.keys(superProperties)) delete superProperties[key];
+  },
+  track(event, properties) {
+    const startedAt = eventStartedAt.get(event);
+    const timing: Props = {};
+    if (startedAt !== undefined) {
+      timing.duration_seconds = Math.round((Date.now() - startedAt) / 100) / 10;
+      eventStartedAt.delete(event);
+    }
+    posthog.capture(event, { ...superProperties, ...timing, ...(properties ?? {}) });
+  },
+  setUserProperties(properties) {
+    posthog.setPersonProperties(normalizeReservedTraits(properties));
+  },
+  registerSuperProperties(properties) {
+    Object.assign(superProperties, properties);
+  },
+  group(groupKey, groupId, traits) {
+    posthog.group(groupKey, groupId, traits);
+  },
+  timeEvent(event) {
+    eventStartedAt.set(event, Date.now());
+  },
+};
+
+/** Mixpanel reserves `$name` / `$email`; PostHog uses the bare keys. */
+function normalizeReservedTraits(properties: Props): Props {
+    const out: Props = {};
+    for (const [key, value] of Object.entries(properties)) {
+        out[key.startsWith("$") ? key.slice(1) : key] = value;
+    }
+    return out;
+}
+
 // ─── Active adapter (swap this line to change providers) ─────────────────────
 
-const adapter: AnalyticsAdapter = mixpanelAdapter;
+const adapter: AnalyticsAdapter = posthogAdapter;
 
 // ─── Initialization guard ────────────────────────────────────────────────────
 
