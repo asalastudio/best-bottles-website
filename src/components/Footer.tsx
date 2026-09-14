@@ -101,13 +101,13 @@ export default function Footer() {
             <div className="mx-auto max-w-[1440px] px-5 py-12 sm:px-6 lg:px-10 lg:py-16">
                 <div className="grid gap-12 border-b border-white/12 pb-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8 lg:pb-16">
                     <div className="lg:col-span-3">
-                        <Link href="/" className="font-montserrat text-[20px] font-semibold uppercase tracking-[0.12em] text-white transition-colors hover:text-muted-gold">
+                        <Link href="/" className="font-brand-display text-[22px] tracking-[0.115em] text-white transition-colors hover:text-muted-gold">
                             BEST BOTTLES
                         </Link>
                         <p className="mt-4 max-w-[260px] text-xs leading-relaxed text-white/58">
                             Premium glass bottles and closures for beauty, fragrance, and wellness brands.
                         </p>
-                        <p className="mt-5 font-montserrat text-[11px] font-medium uppercase tracking-[0.2em] text-muted-gold">Beautifully Contained.</p>
+                        <p className="mt-5 font-brand-display text-[11px] tracking-[0.2em] text-muted-gold">Beautifully Contained.</p>
                         <div className="mt-7 flex gap-2">
                             {socialLinks.map((social) => (
                                 <a

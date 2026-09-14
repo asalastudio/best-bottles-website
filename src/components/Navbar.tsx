@@ -385,7 +385,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                             <BrandWordmark />
                         </Link>
                         <nav
-                            className="hidden xl:flex items-center xl:gap-x-6 2xl:gap-x-12 text-sm font-medium text-obsidian tracking-wide normal-case shrink-0"
+                            className="hidden xl:flex items-center xl:gap-x-6 2xl:gap-x-12 text-[12px] font-normal text-obsidian uppercase tracking-[0.08em] shrink-0"
                             ref={megaRef}
                         >
                             {links.map((link) => {
@@ -402,7 +402,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                                     >
                                         <button
                                             onClick={() => setActiveMega(isOpen ? null : megaId)}
-                                            className={`flex items-center gap-1 transition-colors ${isOpen ? "text-muted-gold" : "hover:text-muted-gold"
+                                            className={`flex items-center gap-1 uppercase tracking-[0.08em] font-normal transition-colors ${isOpen ? "text-muted-gold" : "hover:text-muted-gold"
                                                 }`}
                                         >
                                             {link.label}

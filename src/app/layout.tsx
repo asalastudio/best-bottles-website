@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cormorant, EB_Garamond, Inter, Montserrat } from "next/font/google";
+import { brandFace, cormorant, ebGaramond } from "./fonts";
 import "./globals.css";
 import AppProviders from "@/components/AppProviders";
 import { getMegaMenuPanels } from "@/sanity/lib/queries";
@@ -12,32 +12,6 @@ import {
   buildOrganizationJsonLd,
   buildWebSiteJsonLd,
 } from "@/lib/seo";
-
-const cormorant = Cormorant({
-  variable: "--font-cormorant",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-});
-
-const ebGaramond = EB_Garamond({
-  variable: "--font-eb-garamond",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
-});
-
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -106,7 +80,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${cormorant.variable} ${ebGaramond.variable} ${inter.variable} ${montserrat.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
+      <body className={`${brandFace.variable} ${cormorant.variable} ${ebGaramond.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(buildOrganizationJsonLd()) }}

@@ -5,7 +5,7 @@
 .builder :is(button,a,select,input):focus-visible { outline: 2px solid #8b6f42; outline-offset: 4px; }
 .header { display: flex; justify-content: space-between; align-items: center; gap: 36px; margin-bottom: 28px; }
 .backLink { display: inline-flex; align-items: center; gap: 8px; color: var(--quiet); font-size: 11px; margin-bottom: 12px; }
-.header h1 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: clamp(36px, 3.5vw, 54px); letter-spacing: -.04em; line-height: 1.06; }
+.header h1 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: clamp(36px, 3.5vw, 54px); letter-spacing: -.04em; line-height: 1.06;text-transform:none;letter-spacing:0}
 .header p { margin-top: 10px; color: var(--quiet); font-size: 13px; line-height: 1.65; }
 .steps { display: flex; gap: 14px; flex-shrink: 0; }
 .steps button { display: flex; align-items: center; gap: 10px; font-size: 16px; position: relative; padding: 12px 0; color: #595750; }
@@ -30,7 +30,7 @@
 .options { padding: 24px 20px; min-height: 570px; }
 .optionHeader { margin-bottom: 24px; }
 .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: #8b6f42; }
-.optionHeader h2 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 28px; line-height: 1.15; margin: 7px 0 8px; letter-spacing: -.025em; }
+.optionHeader h2 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 28px; line-height: 1.15; margin: 7px 0 8px; letter-spacing: -.025em;text-transform:none;letter-spacing:0}
 .optionHeader h2:focus { outline: none; }
 .optionHeader p, .closureSection > p { font-size: 11px; line-height: 1.6; color: var(--quiet); }
 .optionFieldset { min-width: 0; border: 0; padding: 0; margin: 0; }
@@ -50,7 +50,7 @@
 .closureThumb > img { min-width: 0; min-height: 0; }
 .closureGrid .option strong { font-size: 10px; }
 .closureSection { border-top: 1px solid var(--line); padding-top: 23px; margin-top: 25px; }
-.closureSection h3 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 24px; letter-spacing: -.025em; }
+.closureSection h3 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 24px; letter-spacing: -.025em;text-transform:none;letter-spacing:0}
 .closureSection > p { margin: 5px 0 16px; }
 .previous { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; color: var(--quiet); margin-top: 26px; min-height: 36px; }
 .preview { position: sticky; top: 126px; border: 1px solid var(--line); border-radius: 6px; background: #eeebe5; min-height: 570px; overflow: hidden; display: flex; flex-direction: column; isolation: isolate; }
@@ -71,12 +71,12 @@
 .unavailableOption small { color: #756b5c; font-weight: 600; }
 
 .previewCaption { text-align: center; padding: 0 16px 25px; }
-.previewCaption h2 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 28px; line-height: 1.1; letter-spacing: -.025em; }
+.previewCaption h2 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 28px; line-height: 1.1; letter-spacing: -.025em;text-transform:none;letter-spacing:0}
 .previewCaption p { color: var(--quiet); font-size: 11px; margin-top: 9px; }
 .previewEmpty { flex: 1; display: grid; align-content: center; justify-items: center; gap: 16px; color: var(--quiet); min-height: 420px; font-size: 13px; }
 .summary { position: sticky; top: 126px; padding: 23px 20px 18px; }
 .summaryHeading { display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; }
-.summaryHeading h2 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 28px; line-height: 1.1; letter-spacing: -.025em; }
+.summaryHeading h2 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 28px; line-height: 1.1; letter-spacing: -.025em;text-transform:none;letter-spacing:0}
 .summaryLine { display: flex; align-items: flex-start; gap: 10px; border-top: 1px solid #eeece7; padding: 16px 0; }
 .summaryNumber { margin-top: 1px; flex-shrink: 0; width: 24px; height: 24px; display: grid; place-items: center; border: 1px solid #ddd5c7; border-radius: 50%; color: #9a9387; font-size: 10px; }
 .summaryComplete .summaryNumber { background: #f5eee1; color: #937439; border-color: #eadcc3; }
@@ -122,7 +122,7 @@
 .assurance > svg { flex-shrink: 0; color: #a17c3c; }
 .assurance small { display: block; margin-top: 3px; font-size: 9px; color: var(--quiet); }
 .review > svg { color: var(--gold); margin-bottom: 16px; }
-.review h3, .empty h3 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 26px; line-height: 1.15; margin-bottom: 12px; }
+.review h3, .empty h3 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 26px; line-height: 1.15; margin-bottom: 12px;text-transform:none;letter-spacing:0}
 .review p, .empty p { font-size: 12px; line-height: 1.8; color: var(--quiet); }
 .review dl { margin: 22px 0; }
 .review dl div { display: flex; justify-content: space-between; gap: 14px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 11px; }
@@ -132,7 +132,7 @@
 .addedNotice { display: flex; align-items: flex-start; gap: 14px; background: #f7f8f3; border: 1px solid #d9dfcf; border-radius: 6px; padding: 22px; margin-bottom: 18px; scroll-margin-top: 120px; animation: confirmationIn .3s ease-out; }
 .addedNotice > svg { color: #657a52; flex-shrink: 0; margin-top: 4px; }
 .addedNotice > div:first-of-type { flex: 1; }
-.addedNotice h2 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 26px; line-height: 1.2; }
+.addedNotice h2 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 26px; line-height: 1.2;text-transform:none;letter-spacing:0}
 .addedNotice p { font-size: 11px; color: var(--quiet); line-height: 1.7; margin-top: 5px; }
 .addedActions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: center; }
 
@@ -328,7 +328,7 @@
 .startOver:disabled { opacity: .5; cursor: wait; }
 
 .glassSection { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); scroll-margin-top: 120px; }
-.glassSection h3 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 25px; margin-bottom: 14px; }
+.glassSection h3 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 25px; margin-bottom: 14px;text-transform:none;letter-spacing:0}
 .glassSection h3:focus { outline: none; }
 .singleGlass { display: grid; grid-template-columns: minmax(120px, 180px); }
 .singleGlass .option { min-height: 48px; justify-content: center; padding: 12px 32px; }

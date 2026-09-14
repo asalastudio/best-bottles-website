@@ -48,30 +48,78 @@
   --color-popover-foreground: var(--color-obsidian);
 
   /* ── Typography ───────────────────────────────────────────────────────── */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-brand: var(--font-brand-face), "Montserrat", Arial, ui-sans-serif, sans-serif;
+  --font-sans: var(--font-brand);
   --font-serif: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
 }
 
 /* Hero headline — explicit EB Garamond for "Beautifully Contained" */
 .font-display {
   font-family: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
-/* Cormorant — logo and display typography */
-.font-montserrat {
-  font-family: var(--font-montserrat),"Montserrat",ui-sans-serif,system-ui,sans-serif;
+/* Brand face utility (Tailwind-styled components) */
+.font-brand {
+  font-family: var(--font-brand);
+}
+
+/* Uppercase display in the brand face at the system display weight */
+.font-brand-display {
+  font-family: var(--font-brand);
+  font-weight: var(--brand-weight-display);
+  text-transform: uppercase;
 }
 
 .font-cormorant {
   font-family: var(--font-cormorant), var(--font-eb-garamond), ui-serif, Georgia, serif;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+:root {
+  /* Display weight for uppercase headings + wordmark. Montserrat stand-in needs
+     600 to carry TT Norms Medium's presence; set to 500 once TT Norms Pro lands. */
+  --brand-weight-display: 600;
+  --brand-weight-body: 400;
 }
 
 body {
   background-color: var(--color-bone);
   color: var(--color-obsidian);
-  font-family: var(--font-sans);
+  font-family: var(--font-brand);
+  font-weight: var(--brand-weight-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Brand type system ──────────────────────────────────────────────────────
+   Uppercase, tracked display in the brand face; lowercase body with no tracking.
+   Lives in @layer base so component utilities and CSS modules can still refine
+   size/colour per surface. Tracking steps down with size. */
+@layer base {
+  h1, h2, .brand-heading {
+    font-family: var(--font-brand);
+    font-weight: var(--brand-weight-display);
+    text-transform: uppercase;
+  }
+  /* H3 / card headings: brand face, may be uppercase or Title Case per surface */
+  h3 {
+    font-family: var(--font-brand);
+    font-weight: var(--brand-weight-display);
+  }
+  h1 { font-size: clamp(2.5rem, 5vw, 5.5rem); line-height: 0.96; letter-spacing: 0.08em; }
+  h2 { font-size: clamp(2rem, 3.5vw, 3.75rem); line-height: 1; letter-spacing: 0.065em; }
+  h3 { font-size: 1.25rem; line-height: 1.15; letter-spacing: 0.04em; }
+  nav { font-family: var(--font-brand); font-weight: var(--brand-weight-body); text-transform: uppercase; letter-spacing: 0.08em; }
+  p, .body-copy, .product-description {
+    font-family: var(--font-brand);
+    font-weight: var(--brand-weight-body);
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.55;
+  }
 }
 
 /* ── Mobile Tab Bar spacing ────────────────────────────────────────────── */
