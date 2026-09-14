@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-14T18:37:07.968Z",
+ "generatedAt": "2026-09-14T18:45:39.450Z",
  "keys": [
   {
    "family": "Aluminum Bottle",
@@ -220,7 +220,7 @@
    "rows": 7,
    "sellable": 7,
    "plates": 7,
-   "offered": 5,
+   "offered": 6,
    "skus": [
     "GBBstnAmb15mlBlkDropperSlTrim",
     "GBBstnAmb15mlWhtDropper",
@@ -243,7 +243,7 @@
    "rows": 2,
    "sellable": 2,
    "plates": 2,
-   "offered": 0,
+   "offered": 1,
    "skus": [
     "GBBstn15BlkCapSht",
     "GBBstn15BlkDrp"
@@ -261,7 +261,7 @@
    "rows": 7,
    "sellable": 7,
    "plates": 7,
-   "offered": 5,
+   "offered": 6,
    "skus": [
     "GBBstnBlu15WhtDrpr",
     "GBBstnBlu15WhtDrprSlTrim",

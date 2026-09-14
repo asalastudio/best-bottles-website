@@ -19,7 +19,7 @@ import { checkoutMinimum, checkoutMinimumMessage } from "@/lib/checkout";
 import { analytics } from "@/lib/analytics";
 import {
     builderOrder, deriveBuilder, emptySelection, previewParts, reconcileSelection, selectBuilderBody,
-    MAX_QUANTITY, ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection, clearBodyPreview,
+    MAX_QUANTITY, ORDER_MINIMUM, type BuilderBody, type BuilderConfiguration, type BuilderSelection, bareGlassPreview, clearBodyPreview,
 } from "@/lib/bottle-builder/model";
 import hasIncludedCovers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import styles from "@/components/bottle-builder/Builder.module.css";
@@ -257,7 +257,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                 {step === 0 && !visibleBodies.length && <div className={styles.empty}><h3>No bottles for these choices.</h3><p>Try another size or bottle family.</p><button className={styles.secondary} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button><Link href={catalogHref}>Explore the full catalog <ArrowRight size={15} /></Link></div>}
                 {step === 0 && body && <div className={styles.glassSection}><h3 ref={glassHeading} tabIndex={-1}>Choose your glass</h3><div className={current.colors.length === 1 ? styles.singleGlass : styles.colorGrid}>
                     {current.colors.map(c => { const example = body!.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => update({ color: c, fitment: null, closure: null })}>
-                        {current.colors.length > 1 && <div className={styles.colorThumb}><BuilderImage config={example} parts={previewParts(example, "body")} label={`${c} bottle`} /></div>}<strong>{c}{current.colors.length === 1 ? " glass" : ""}</strong>
+                        {current.colors.length > 1 && <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} /></div>}<strong>{c}{current.colors.length === 1 ? " glass" : ""}</strong>
                     </Option>; })}
                 </div><div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>Your bottle is ready. Select <strong>Choose Fitment</strong> to continue.</span></>}</div></div>}
                 {(step === 1 || step === 2) && <>

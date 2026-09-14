@@ -117,7 +117,7 @@ describe("builder catalog boundary", () => {
     it("shows the chooser tile as bare clear glass even when only coloured glass is on offer", () => {
         const amber = catalogConfigurationFromRow(fixture({
             family: "Boston Round", capacityMl: 15, neckThreadSize: "18-400", color: "Amber", applicator: "Cap/Closure", capColor: "Black",
-            websiteSku: "GBBstnAmb15mlBlkCapSht", graceSku: "GBBstnAmb15mlBlkCapSht", itemName: "Boston round 15ml Amber glass bottle with black cap",
+            websiteSku: "TestBstnAmbCapSht", graceSku: "TestBstnAmbCapSht", itemName: "Boston round 15ml Amber glass bottle with black cap",
             productGroupSlug: "boston-round-15ml-amber-18-400",
         }).row, null, "https://example.com/plate.png")!;
         expect(amber.bodyImage?.url).toMatch(/boston-round-15-amber-18-400/);

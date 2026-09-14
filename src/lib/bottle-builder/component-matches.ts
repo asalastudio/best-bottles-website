@@ -15,6 +15,17 @@ const reviewed: Record<string, ExactComponentMatch> = {
     GBCrcl30SlCap: { family: "Circle", capacityMl: 30, color: "Clear", neck: "15-415", applicator: null, componentSku: "CP15-415ShnSl" },
     LBCyl50LtnMtSl: { family: "Cylinder", capacityMl: 50, color: "Clear", neck: "18-415", applicator: "Lotion Pump", componentSku: "Ltn18-415MtSl" },
     LBCyl100LtnMtSl: { family: "Cylinder", capacityMl: 100, color: "Clear", neck: "18-415", applicator: "Lotion Pump", componentSku: "Ltn18-415MtSl" },
+    // Boston Round 15 ml cap-only bottles (2026-09-14, Jordan: "no clear boston
+    // option" → GBBstn15BlkCapSht). Two listed black 18-400 caps fit the phrase
+    // "with short black cap": the plain closure and the glass-rod applicator cap.
+    // The bottle's description names no applicator, so only the plain closure
+    // fits — the same join the generator made for the 30/60 ml twins.
+    GBBstn15BlkCapSht: { family: "Boston Round", capacityMl: 15, color: "Clear", neck: "18-400", applicator: null, componentSku: "18-400CpShortBlk",
+        evidence: "bottle: \"with short black cap\" (legacy description, no applicator); component 18-400CpShortBlk: \"Black lid or closure for glass bottle, Thread size 18-400\"; 18-400CpAppBlk excluded: \"Black cap with glass rod applicator\"" },
+    GBBstnAmb15mlBlkCapSht: { family: "Boston Round", capacityMl: 15, color: "Amber", neck: "18-400", applicator: null, componentSku: "18-400CpShortBlk",
+        evidence: "bottle: \"with short black cap\" (legacy description, no applicator); component 18-400CpShortBlk: \"Black lid or closure for glass bottle, Thread size 18-400\"; 18-400CpAppBlk excluded: \"Black cap with glass rod applicator\"" },
+    GBBstnBlu15BlkCapSht: { family: "Boston Round", capacityMl: 15, color: "Cobalt Blue", neck: "18-400", applicator: null, componentSku: "18-400CpShortBlk",
+        evidence: "bottle: \"with short black cap\" (legacy description, no applicator); component 18-400CpShortBlk: \"Black lid or closure for glass bottle, Thread size 18-400\"; 18-400CpAppBlk excluded: \"Black cap with glass rod applicator\"" },
 };
 
 /** Generated joins (scripts/asset-ledger/build-exact-component-matches.ts):

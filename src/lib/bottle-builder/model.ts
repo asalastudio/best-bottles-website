@@ -121,6 +121,14 @@ export function clearBodyPreview(body: BuilderBody): BuilderConfiguration {
     return { ...first, color: "Clear", bodyImage: image, kit: null, previewKit: undefined };
 }
 
+/** Glass swatches show the same bare glass at the same size. A configuration
+ * that carries a kit would otherwise render through the kit's registered
+ * frame while its kit-less siblings render the body layer, so one colour
+ * came out small beside the others (Boston Round 15 ml, 2026-09-14). */
+export function bareGlassPreview(config: BuilderConfiguration): BuilderConfiguration {
+    return config.bodyImage ? { ...config, kit: null, previewKit: undefined } : config;
+}
+
 export function reviewedFitmentImage(config: BuilderConfiguration) {
     return (fitmentMedia as Record<string, { url: string; width: number; height: number }>)[`${config.family}|${config.capacityMl}|${config.neck}|${config.fitment}`] ?? null;
 }

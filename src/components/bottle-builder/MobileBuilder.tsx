@@ -4,7 +4,7 @@ import { fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitmen
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, Minus, Plus, SlidersHorizontal, X, ArrowsOutSimple } from "@/components/icons";
-import { builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderSelection } from "@/lib/bottle-builder/model";
+import { bareGlassPreview, builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderSelection } from "@/lib/bottle-builder/model";
 import { checkoutMinimum, checkoutMinimumMessage } from "@/lib/checkout";
 import BuilderImage from "./BuilderImage";
 import BuilderFinishImage from "./BuilderFinishImage";
@@ -192,7 +192,7 @@ export default function MobileBuilder(p: Props) {
             <p className={styles.selectionStatus} role="status">{stage === 3 ? `${finishLabel} · ` : ""}{selected ? <>{selected} selected <Check size={16} weight="bold" /></> : stage === 3 && p.current.closures.length === 0 ? "No finish available for this selection." : `Select ${stage === 1 ? "your glass" : stage === 2 ? "how your bottle works" : "a finish"}.`}</p>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>{stages[stage]}</legend>
                 {stage === 1 && <div className={styles.glassGrid}>{p.current.colors.map(c => { const example = body!.configurations.find(item => item.color === c)!; return <Choice key={c} name={`${id}-glass`} value={c} selected={color === c} label={c} onSelect={() => choose({ color: c })}>
-                    <div className={styles.glassThumb}><BuilderImage config={example} parts={previewParts(example, "body")} label={`${c} bottle`} /></div><strong>{c}</strong>
+                    <div className={styles.glassThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} /></div><strong>{c}</strong>
                 </Choice>; })}</div>}
                 {stage === 2 && <div className={styles.fitmentGrid}>{p.current.fitments.map(f => { return <Choice key={f} name={`${id}-fitment`} value={f} selected={fitment === f} label={f} onSelect={() => choose({ fitment: f })}>
                     <div className={styles.componentThumb}><FitmentIllustration fitment={f} /></div><strong>{f}</strong>{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}
