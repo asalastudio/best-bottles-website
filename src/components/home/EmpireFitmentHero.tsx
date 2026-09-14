@@ -13,7 +13,7 @@ import styles from "./EmpireFitmentHero.module.css";
  */
 export const EMPIRE_HERO_FAMILY = "empire-50ml-clear-18-415";
 /** Frame set in use. v1 = frames/ (all 34 fitments, locked body); v4 = bare-neck base, bulbs → pump → bare → reducers. */
-const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v4";
+const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v5";
 const MANIFEST = `/assets/hero/${HERO_SET}/manifest.json`;
 type Frame = { sku: string; src: string; label: string };
 const HOLD_MS = 3600;

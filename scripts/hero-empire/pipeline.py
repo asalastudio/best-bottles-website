@@ -98,6 +98,9 @@ if os.environ.get("BODY_BOX"):
     xL, shoulder, xR, yBot = [int(v) for v in os.environ["BODY_BOX"].split(",")]; shoulder -= 10; yBot -= 40
 BODY = (xL - 6, int(shoulder) + 10, xR + 6, min(yBot + 40, H))
 m_cap = m.copy(); m_cap[BODY[1]:BODY[3], BODY[0]:BODY[2]] = 255
+# sprayers/pumps: glass locked too, except a narrow column for the dip tube (so only the tube can change inside the body)
+TUBE_HALF = 16; ncx = int((BODY[0] + BODY[2]) / 2)
+m_tube = m_cap.copy(); m_tube[BODY[1]:BODY[3] - 40, ncx - TUBE_HALF:ncx + TUBE_HALF] = 0
 json.dump({"niche": [int(v) for v in NICHE], "plaster": [nx0, ny0, nx1, ny1], "body": [int(v) for v in BODY]}, open(f"{OUT}/geometry.json", "w"))
 log("body lock (caps only)", BODY)
 if os.environ.get("MEASURE_ONLY"): raise SystemExit("measure-only")
@@ -151,7 +154,7 @@ def render_and_composite(sku, r, raw, reinforced=False):
                        + (" A slim dip tube runs from the collar straight down inside the bottle, almost to the base, clearly visible through the glass." if kind(sku) in TUBE_KINDS else ""))
         edit(prompt, [base, ref_png(sku)], raw)
     gen = np.asarray(Image.open(raw).convert("RGB").resize((W, H))).astype(float); bf = ba.astype(float)
-    zone = m_cap if kind(sku) in ("Rdcr", "Cap") else m      # caps: body locked (empty bottle); sprayers/pumps: interior follows the closure
+    zone = m_cap if kind(sku) in ("Rdcr", "Cap") else m_tube   # caps: body locked (empty bottle); sprayers/pumps: only the tube column may change inside the glass
     changed = ((np.abs(gen - bf).sum(axis=2) > 40) & (zone == 0)).astype(np.uint8) * 255
     a = np.asarray(Image.fromarray(changed).filter(ImageFilter.MaxFilter(9)).filter(ImageFilter.GaussianBlur(2.5))).astype(float) / 255.0
     # KIT SNAP: measure where the collar landed and shift the closure layer onto the neck datum
