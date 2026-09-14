@@ -1,0 +1,871 @@
+{
+  "family": "Empire",
+  "visualApproved": true,
+  "productionPublished": false,
+  "localCatalogIntegrated": true,
+  "sourceRevisionApprovalPending": 0,
+  "canvas": [
+    1560,
+    1716
+  ],
+  "bone": "#F5F3EF",
+  "baselinePercent": 91,
+  "scaleRule": {
+    "bodyPixelsPerPublishedWidthMm": 11.4,
+    "width50": 421.8,
+    "width100": 524.4,
+    "reason": "Single family scale selected to leave clearance above the tallest capped lotion pump, retaining the complete tassels. No individual applicator sizing exceptions.",
+    "qualification": "Visual scale based on published body widths; not a calibrated physical image measurement."
+  },
+  "arc": {
+    "minWidthRatio": 1.2422575197025059,
+    "minHeightRatio": 1.1854099676966694
+  },
+  "rows": [
+    {
+      "sku": "GBEmp50AnSpGl",
+      "url": "/images/catalog/bone-review/GBEmp50AnSpGl.e441205f0179.png",
+      "assetSha256": "e441205f01797057ab01c73028482dd76ef239a62917b4a7519c813ffe192ffa",
+      "priorUrl": "/images/catalog/empty-heroes/GBEmp50AnSpGl.c06a68135151.webp",
+      "priorFraming": {
+        "scale": 0.6232409381663113,
+        "translateXPercent": 13.021037668798863,
+        "translateYPercent": 33.586289332557996
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/37. GBEmp50AnSpGl.psd",
+      "sourcePsdSha256": "73ebced4a2614f55d066f2466197e8fa9d07563f31319d57eb8e60e949beaed3",
+      "sourceAssemblySha256": "52da735235641a4a536803164051267a895a8c501b49270dbbadadc1f5bd0862",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 531,
+          "height": 1268,
+          "left": 564,
+          "top": 401,
+          "name": "Layer 36",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/0-layer-2.png",
+          "sha256": "46c67e540ba5507dce7378d79eb882bdb09651121fd995de9d44aa73226aefe9"
+        },
+        {
+          "index": 3,
+          "width": 97,
+          "height": 724,
+          "left": 779,
+          "top": 670,
+          "name": "Layer 4 copy",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/0-layer-3.png",
+          "sha256": "717d9d5a6b248e09c466814776df5dd7ddfb1f86af95886ed90d37b2fd669c6c"
+        },
+        {
+          "index": 4,
+          "width": 894,
+          "height": 596,
+          "left": 86,
+          "top": 66,
+          "name": "Layer 34",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/0-layer-4.png",
+          "sha256": "4e6c499e689b724fd7d989bdd188b9f6b0d6202e2927b9c6091e328708464c6c"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.0046177475434618295,
+        "maxChannelError": 2,
+        "changedChannels": 37918
+      },
+      "transform": {
+        "uniformScale": 0.8095238095238095,
+        "resizeWidth": 1275,
+        "resizeHeight": 1417,
+        "crop": {
+          "left": 69,
+          "top": 56,
+          "width": 815,
+          "height": 1295
+        },
+        "left": 373,
+        "top": 273
+      },
+      "body": {
+        "sourceTop": 409,
+        "sourceHeight": 1253,
+        "sourceWidth": 521,
+        "sourceBase": 1661,
+        "sourceLeft": 566,
+        "sourceRight": 1087,
+        "outputWidth": 421.76190476190476,
+        "outputBase": 1562,
+        "cx": 972.6666666666666,
+        "sourceShoulder": 662,
+        "outputShoulder": 752.9047619047619,
+        "outputHeight": 809.0952380952381
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 972.6666666666666,
+          "cy": 1569,
+          "sx": 84.36000000000001,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2101328,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 50,
+      "bodyWidthMm": 37,
+      "displayPixelsPerMm": 11.4,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-source-candidate-awaiting-review",
+      "qa": {
+        "backgroundMismatch": 0,
+        "perimeterMismatch": 0,
+        "bounds": {
+          "left": 373,
+          "right": 1187,
+          "top": 273,
+          "bottom": 1567
+        }
+      },
+      "alt": "50 ml Clear Empire Vintage Bulb Spray Bottle — Empty · assembled",
+      "groupSlug": "empire-50ml-clear-18-415-antiquespray",
+      "liveProductUrl": "https://www.bestbottles.com/product/empire-design-50-ml-glass-bottle-gold-vintage-style-sprayer-shiny-gold-collar-cap",
+      "physicalMeasurements": {
+        "widthMm": 37,
+        "heightWithoutCapMm": 88,
+        "neckThread": "18-415"
+      },
+      "sourceSelection": "Exact-SKU original PSD composition.",
+      "psdCandidateManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-candidates/manifest.json",
+      "visualApproved": true
+    },
+    {
+      "sku": "GBEmp50AnSpTslGl",
+      "url": "/images/catalog/bone-review/GBEmp50AnSpTslGl.02fd6b63e562.png",
+      "assetSha256": "02fd6b63e5621048b6900595967aca43356a7c066f06fa5309ce97a273bbd320",
+      "priorUrl": "/images/catalog/empty-heroes/GBEmp50AnSpTslGl.710fe3f8312b.webp",
+      "priorFraming": {
+        "scale": 0.671182548794489,
+        "translateXPercent": 5.478224263298898,
+        "translateYPercent": 31.203736561945526
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/50. GBEmp50AnSpTslGl.psd",
+      "sourcePsdSha256": "add0c3afdf3cc58c6c05e46154ea712e9feb814f58adee5fb93f344dbf5f6b2e",
+      "sourceAssemblySha256": "dea6f9b3a0420ab45a3b212646ef5c36a8cdf24b144dd7494d9e3a326b8b00cc",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 531,
+          "height": 1268,
+          "left": 943,
+          "top": 466,
+          "name": "Layer 57",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/1-layer-2.png",
+          "sha256": "437d95d1b41c412cbb69e4e1c76eae229b87cd136cc456d7bc806749754eca27"
+        },
+        {
+          "index": 3,
+          "width": 1142,
+          "height": 1365,
+          "left": 10,
+          "top": 287,
+          "name": "Layer 55",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/1-layer-3.png",
+          "sha256": "134bc302b7f25b3aac31280d11b7c457a4dbedbc1b5882c943a7323452b66e54"
+        },
+        {
+          "index": 4,
+          "width": 363,
+          "height": 544,
+          "left": 999,
+          "top": 174,
+          "name": "Layer 56",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/1-layer-4.png",
+          "sha256": "6e6059bfbf4b70fc6ca67ca223decb5a060020096b713749a54194490f604c15"
+        },
+        {
+          "index": 5,
+          "width": 97,
+          "height": 724,
+          "left": 1155,
+          "top": 730,
+          "name": "Layer 4 copy",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/1-layer-5.png",
+          "sha256": "500bb1b62a1ad3d68a99104f12b3fbc38ad2068bd3fb7799f64f9ff02184843b"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.008035192743764172,
+        "maxChannelError": 2,
+        "changedChannels": 65903
+      },
+      "transform": {
+        "uniformScale": 0.8095238095238095,
+        "resizeWidth": 1275,
+        "resizeHeight": 1417,
+        "crop": {
+          "left": 5,
+          "top": 137,
+          "width": 1184,
+          "height": 1263
+        },
+        "left": 188,
+        "top": 305
+      },
+      "body": {
+        "sourceTop": 470,
+        "sourceHeight": 1253,
+        "sourceWidth": 521,
+        "sourceBase": 1722,
+        "sourceLeft": 943,
+        "sourceRight": 1464,
+        "outputWidth": 421.76190476190476,
+        "outputBase": 1562,
+        "cx": 1156.857142857143,
+        "sourceShoulder": 718,
+        "outputShoulder": 749.2380952380953,
+        "outputHeight": 812.7619047619047
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 1156.857142857143,
+          "cy": 1569,
+          "sx": 84.36000000000001,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 1997223,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 50,
+      "bodyWidthMm": 37,
+      "displayPixelsPerMm": 11.4,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-source-candidate-awaiting-review",
+      "qa": {
+        "backgroundMismatch": 0,
+        "perimeterMismatch": 0,
+        "bounds": {
+          "left": 189,
+          "right": 1371,
+          "top": 307,
+          "bottom": 1567
+        }
+      },
+      "alt": "50 ml Clear Empire Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+      "groupSlug": "empire-50ml-clear-18-415-antiquespray-tassel",
+      "liveProductUrl": "https://www.bestbottles.com/product/empire-design-50-ml-glass-bottle-gold-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "physicalMeasurements": {
+        "widthMm": 37,
+        "heightWithoutCapMm": 88,
+        "neckThread": "18-415"
+      },
+      "sourceSelection": "Exact-SKU original PSD composition.",
+      "psdCandidateManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-candidates/manifest.json",
+      "visualApproved": true
+    },
+    {
+      "sku": "GBEmp50DrpGl",
+      "url": "/images/catalog/bone-review/GBEmp50DrpGl.7d886a6cdf1e.png",
+      "assetSha256": "7d886a6cdf1e75e6f29e3027dc45298aa708e7243af0b5e61ba28a048a293efd",
+      "priorUrl": "/images/catalog/empty-heroes/GBEmp50DrpGl.3f8314254491.webp",
+      "priorFraming": {
+        "scale": 0.6544029850746269,
+        "translateXPercent": 17.279850746268654,
+        "translateYPercent": 34.68168249660788
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/52. GBEmp50DrpGl.psd",
+      "sourcePsdSha256": "7c160d3fc12ec5cad1cc3c8a6a0d96bbdca852e363de7e829586b81cfd7edde2",
+      "sourceAssemblySha256": "037cce9ada3072a322ee45ac1a8a8e41ab6edbaf3cc3a1a0207230b01cfbf6cd",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 531,
+          "height": 1268,
+          "left": 272,
+          "top": 409,
+          "name": "Layer 18",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/2-layer-2.png",
+          "sha256": "45ceee255b7a22afd84a7282da79f940c86ab36bc794cf256eb80310ce993cfb"
+        },
+        {
+          "index": 3,
+          "width": 338,
+          "height": 1342,
+          "left": 361,
+          "top": 113,
+          "name": "Layer 16",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/2-layer-3.png",
+          "sha256": "af0642466a30ac414bf54a0336bd5bd24bf57342632260768989ec56e5d41b32"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.005072108843537415,
+        "maxChannelError": 2,
+        "changedChannels": 27781
+      },
+      "transform": {
+        "uniformScale": 0.8114285714285714,
+        "resizeWidth": 852,
+        "resizeHeight": 1420,
+        "crop": {
+          "left": 217,
+          "top": 95,
+          "width": 430,
+          "height": 1262
+        },
+        "left": 565,
+        "top": 306
+      },
+      "body": {
+        "sourceTop": 413,
+        "sourceHeight": 1253,
+        "sourceWidth": 520,
+        "sourceBase": 1665,
+        "sourceLeft": 272,
+        "sourceRight": 792,
+        "outputWidth": 421.9428571428571,
+        "outputBase": 1562,
+        "cx": 779.2742857142857,
+        "sourceShoulder": 669,
+        "outputShoulder": 753.8457142857143,
+        "outputHeight": 808.1542857142857
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 779.2742857142857,
+          "cy": 1569,
+          "sx": 84.36000000000001,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2232054,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 50,
+      "bodyWidthMm": 37,
+      "displayPixelsPerMm": 11.4,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-source-candidate-awaiting-review",
+      "qa": {
+        "backgroundMismatch": 0,
+        "perimeterMismatch": 0,
+        "bounds": {
+          "left": 566,
+          "right": 994,
+          "top": 306,
+          "bottom": 1567
+        }
+      },
+      "alt": "50 ml Clear Empire Dropper Bottle — Empty · assembled",
+      "groupSlug": "empire-50ml-clear-18-415-dropper",
+      "liveProductUrl": "https://www.bestbottles.com/product/empire-design-50-ml-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "physicalMeasurements": {
+        "widthMm": 37,
+        "heightWithoutCapMm": 88,
+        "neckThread": "18-415"
+      },
+      "sourceSelection": "Exact-SKU original PSD composition.",
+      "psdCandidateManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-candidates/manifest.json",
+      "visualApproved": true
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "url": "/images/catalog/bone-review/GBEmp50SpryMtGl.9fe529e763bc.png",
+      "assetSha256": "9fe529e763bcfdcab008f27dd922dbea327ce908f4b70af1001e0b03675f1080",
+      "priorUrl": "/images/catalog/empty-heroes/GBEmp50SpryMtGl.1fad1ee773a5.webp",
+      "priorFraming": {
+        "scale": 0.5816915422885571,
+        "translateXPercent": 27.31402985074627,
+        "translateYPercent": 37.9426805367104
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/13. GBEmp50SpryMtGl.psd",
+      "sourcePsdSha256": "4fc23d4c6cfd197531e43236163aff97e739af8c51c1f5f3aeb03562c9293e9a",
+      "sourceAssemblySha256": "040fea87afc23470e7172227c7803fdd640762ebd4447b2403645717ca7d6d00",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 531,
+          "height": 1268,
+          "left": 75,
+          "top": 401,
+          "name": "Layer 21",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/5-layer-2.png",
+          "sha256": "5e8e567673061ca86c2b4f404ac68a94417b76ac156e3588cf619eca4872bf1b"
+        },
+        {
+          "index": 3,
+          "width": 196,
+          "height": 1644,
+          "left": 186,
+          "top": 673,
+          "name": "Layer 18",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/5-layer-3.png",
+          "sha256": "7718ea69bcaf4c83827642728e04d3f4b38d83fe43b2893f8769b4a1f1f4c79f"
+        },
+        {
+          "index": 4,
+          "width": 310,
+          "height": 540,
+          "left": 181,
+          "top": 125,
+          "name": "Layer 19",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/5-layer-4.png",
+          "sha256": "8cc4690200ab3fb8a2a67da1c980d8510adfe782b47d93ef045f81ff0dd9d0de"
+        },
+        {
+          "index": 5,
+          "width": 333,
+          "height": 590,
+          "left": 650,
+          "top": 1066,
+          "name": "Layer 20",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/5-layer-5.png",
+          "sha256": "75489fb6127ebf528a452e6cf254d70aa605c312c3c9f1a8dface1c678029bb1"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.0053233560090702944,
+        "maxChannelError": 2,
+        "changedChannels": 29156
+      },
+      "transform": {
+        "uniformScale": 0.8095238095238095,
+        "resizeWidth": 850,
+        "resizeHeight": 1417,
+        "crop": {
+          "left": 60,
+          "top": 103,
+          "width": 737,
+          "height": 1249
+        },
+        "left": 412,
+        "top": 319
+      },
+      "body": {
+        "sourceTop": 411,
+        "sourceHeight": 1253,
+        "sourceWidth": 521,
+        "sourceBase": 1663,
+        "sourceLeft": 81,
+        "sourceRight": 602,
+        "outputWidth": 421.76190476190476,
+        "outputBase": 1562,
+        "cx": 628.047619047619,
+        "sourceShoulder": 665,
+        "outputShoulder": 754.3333333333334,
+        "outputHeight": 807.6666666666666
+      },
+      "cap": {
+        "cx": 1014.5952380952381,
+        "base": 1551.4761904761904
+      },
+      "shadows": [
+        {
+          "cx": 628.047619047619,
+          "cy": 1569,
+          "sx": 84.36000000000001,
+          "sy": 12,
+          "strength": 0.11
+        },
+        {
+          "cx": 1014.5952380952381,
+          "cy": 1557.4761904761904,
+          "sx": 77.71428571428571,
+          "sy": 10,
+          "strength": 0.1
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2095824,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 50,
+      "bodyWidthMm": 37,
+      "displayPixelsPerMm": 11.4,
+      "pose": "cap beside",
+      "scaleException": null,
+      "status": "PSD-source-candidate-awaiting-review",
+      "qa": {
+        "backgroundMismatch": 0,
+        "perimeterMismatch": 0,
+        "bounds": {
+          "left": 412,
+          "right": 1147,
+          "top": 319,
+          "bottom": 1566
+        }
+      },
+      "alt": "50 ml Clear Empire Bottle — Empty · cap beside",
+      "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+      "liveProductUrl": "https://www.bestbottles.com/product/empire-design-50-ml-glass-bottle-matte-gold-spray-pump-and-cap",
+      "physicalMeasurements": {
+        "widthMm": 37,
+        "heightWithoutCapMm": 88,
+        "neckThread": "18-415"
+      },
+      "sourceSelection": "Exact-SKU original PSD composition.",
+      "psdCandidateManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-candidates/manifest.json",
+      "visualApproved": true
+    },
+    {
+      "sku": "GBEmp50RdcrShnGl",
+      "url": "/images/catalog/bone-review/GBEmp50RdcrShnGl.9215b4d6a062.png",
+      "assetSha256": "9215b4d6a0623ab798d735559d898797b718be98f73dfc2738ea54d4699a67de",
+      "priorUrl": "/images/catalog/empty-heroes/GBEmp50RdcrShnGl.c7786a459173.webp",
+      "priorFraming": {
+        "scale": 0.46743070362473343,
+        "translateXPercent": 30.99115138592751,
+        "translateYPercent": 48.36465400271371
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/1. GBEmp50RdcrShnGl...psd",
+      "sourcePsdSha256": "ba0fb357caf9026ed675c452252d4d3ab437996f0708a47081e9331814a43805",
+      "sourceAssemblySha256": "237fbd93ddc42070291e99a9a75f1a96e48f7dbc07b57f64dd6449c4707d435a",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 531,
+          "height": 1268,
+          "left": 265,
+          "top": 201,
+          "name": "Layer 7",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/7-layer-2.png",
+          "sha256": "d8f87fe810dd39989e2c1d1e7415b30136351bae665a07ff5f86584200766cf4"
+        },
+        {
+          "index": 3,
+          "width": 16,
+          "height": 899,
+          "left": 269,
+          "top": 494,
+          "name": "Shape 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/7-layer-3.png",
+          "sha256": "b40625892e853fb0770476d831f7662c85556bd43100aec5142f472ad6ab0e4c"
+        },
+        {
+          "index": 4,
+          "width": 8,
+          "height": 899,
+          "left": 783,
+          "top": 494,
+          "name": "Shape 1 copy",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/7-layer-4.png",
+          "sha256": "41bca8b56b0c25de94fae1eac1377c943f36d45b330ff671716a5939f8186696"
+        },
+        {
+          "index": 5,
+          "width": 294,
+          "height": 400,
+          "left": 385,
+          "top": 62,
+          "name": "Layer 5",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/7-layer-5.png",
+          "sha256": "5a751b15aa4f9ca2aa9d57f89004ad4f5e54942c2eb3af4adf181349315965b9"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.004533196791261307,
+        "maxChannelError": 2,
+        "changedChannels": 21000
+      },
+      "transform": {
+        "uniformScale": 0.8095238095238095,
+        "resizeWidth": 850,
+        "resizeHeight": 1205,
+        "crop": {
+          "left": 213,
+          "top": 152,
+          "width": 432,
+          "height": 1038
+        },
+        "left": 564,
+        "top": 530
+      },
+      "body": {
+        "sourceTop": 211,
+        "sourceHeight": 1253,
+        "sourceWidth": 521,
+        "sourceBase": 1463,
+        "sourceLeft": 271,
+        "sourceRight": 792,
+        "outputWidth": 421.76190476190476,
+        "outputBase": 1562,
+        "cx": 780.8571428571429,
+        "sourceShoulder": 462,
+        "outputShoulder": 752,
+        "outputHeight": 810
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 780.8571428571429,
+          "cy": 1569,
+          "sx": 84.36000000000001,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2267406,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 50,
+      "bodyWidthMm": 37,
+      "displayPixelsPerMm": 11.4,
+      "pose": "capped",
+      "scaleException": null,
+      "status": "PSD-source-candidate-awaiting-review",
+      "qa": {
+        "backgroundMismatch": 0,
+        "perimeterMismatch": 0,
+        "bounds": {
+          "left": 565,
+          "right": 994,
+          "top": 531,
+          "bottom": 1566
+        }
+      },
+      "alt": "50 ml Clear Empire Reducer Bottle — Empty · capped",
+      "groupSlug": "empire-50ml-clear-18-415-reducer",
+      "liveProductUrl": "https://www.bestbottles.com/product/empire-design-50-ml-glass-bottle-reducer-shiny-gold-cap",
+      "physicalMeasurements": {
+        "widthMm": 37,
+        "heightWithoutCapMm": 88,
+        "neckThread": "18-415"
+      },
+      "sourceSelection": "Intact capped reducer master, following the approved Circle method.",
+      "psdCandidateManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-candidates/manifest.json",
+      "visualApproved": true
+    },
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "url": "/images/catalog/bone-review/LBEmp50WhtClOvrCp.49a6f2e62f03.png",
+      "assetSha256": "49a6f2e62f032f7b20481e464927de9694bba8a845faeb020c7f23d08a36e00d",
+      "priorUrl": "/images/catalog/empty-heroes/LBEmp50WhtClOvrCp.c4aa504f55cd.webp",
+      "priorFraming": {
+        "scale": 0.6384419366581725,
+        "translateXPercent": 18.929159082635607,
+        "translateYPercent": 33.34675844723171
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/56. LBEmp50WhtClOvrCp.psd",
+      "sourcePsdSha256": "9c43a052affa67cdd3d083ac8df1284c77613a3602fa922152155a41c851a9c3",
+      "sourceAssemblySha256": "92787e590bbded731b2b0b52ad1c69b8abfeab90aecf5ac08f0225e74e4ee7c1",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 531,
+          "height": 1268,
+          "left": 272,
+          "top": 439,
+          "name": "Layer 31",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/3-layer-2.png",
+          "sha256": "95c7610d9c07b10441f167937f93d71dcc2c6e09f6c970793186fe6c48ccca43"
+        },
+        {
+          "index": 3,
+          "width": 165,
+          "height": 1176,
+          "left": 421,
+          "top": 705,
+          "name": "Layer 30",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/3-layer-3.png",
+          "sha256": "c07939683fbd8c0dcdb8d703adc74413506b8628cf26e6ac3142842d12940058"
+        },
+        {
+          "index": 4,
+          "width": 368,
+          "height": 692,
+          "left": 345,
+          "top": 8,
+          "name": "Layer 1 copy",
+          "file": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-audit/3-layer-4.png",
+          "sha256": "3f5e339f45aa8de2ac1f44c42561653d070b9bfdb389bf2b4a07bab64995c0ab"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.004835736961451247,
+        "maxChannelError": 2,
+        "changedChannels": 26546
+      },
+      "transform": {
+        "uniformScale": 0.8114285714285714,
+        "resizeWidth": 852,
+        "resizeHeight": 1420,
+        "crop": {
+          "left": 217,
+          "top": 10,
+          "width": 430,
+          "height": 1371
+        },
+        "left": 565,
+        "top": 197
+      },
+      "body": {
+        "sourceTop": 443,
+        "sourceHeight": 1253,
+        "sourceWidth": 520,
+        "sourceBase": 1695,
+        "sourceLeft": 272,
+        "sourceRight": 792,
+        "outputWidth": 421.9428571428571,
+        "outputBase": 1562,
+        "cx": 779.2742857142857,
+        "sourceShoulder": 700,
+        "outputShoulder": 755,
+        "outputHeight": 807
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 779.2742857142857,
+          "cy": 1569,
+          "sx": 84.36000000000001,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2158197,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 50,
+      "bodyWidthMm": 37,
+      "displayPixelsPerMm": 11.4,
+      "pose": "capped",
+      "scaleException": null,
+      "status": "PSD-source-candidate-awaiting-review",
+      "qa": {
+        "backgroundMismatch": 0,
+        "perimeterMismatch": 0,
+        "bounds": {
+          "left": 566,
+          "right": 994,
+          "top": 197,
+          "bottom": 1567
+        }
+      },
+      "alt": "50 ml Clear Empire Lotion Pump Bottle — Empty · capped",
+      "groupSlug": "empire-50ml-clear-18-415-lotionpump",
+      "liveProductUrl": "https://www.bestbottles.com/product/empire-design-50-ml-glass-bottle-white-rectangular-clear-over-the-cap",
+      "physicalMeasurements": {
+        "widthMm": 37,
+        "heightWithoutCapMm": 88,
+        "neckThread": "18-415"
+      },
+      "sourceSelection": "Capped master retains the original clear overcap; no detached cap is synthesized.",
+      "psdCandidateManifest": "output/catalog-hero-refresh-2026-09-06/empire-family/psd-candidates/manifest.json",
+      "visualApproved": true
+    }
+  ],
+  "qa": {
+    "testsPassed": 382,
+    "originalPsdReconstructionMaxChannelError": 2,
+    "sourcePixelsPreserved": true,
+    "exposedBoneAndShadowChecksPassed": true,
+    "desktopFourAcross": {
+      "columns": 4,
+      "loaded": 11,
+      "overflow": false
+    },
+    "expandedFourAcross": {
+      "columns": 4,
+      "loaded": 11,
+      "overflow": false
+    },
+    "mobilePreview": {
+      "width": 390,
+      "columns": 1,
+      "loaded": 11,
+      "overflow": false
+    },
+    "actualCatalog": {
+      "status": 200,
+      "loaded": 11,
+      "overflow": false,
+      "normalViewportVisuallyChecked": true
+    },
+    "delivery": {
+      "images": 11,
+      "allBytesMatch": true
+    }
+  },
+  "approvedSkus": [
+    "GBEmp50AnSpGl",
+    "GBEmp50AnSpTslGl",
+    "GBEmp50DrpGl",
+    "GBEmp50SpryMtGl",
+    "GBEmp50RdcrShnGl",
+    "GBEmp100AnSpGl",
+    "GBEmp100AnSpTslGl",
+    "GBEmp100SpryMtGl",
+    "GBEmp100RdcrShnGl",
+    "LBEmp50WhtClOvrCp",
+    "LBEmp100WhtClOvrCp"
+  ],
+  "approval": {
+    "userStatement": "Yeah the Empires look great. We're ready to move forward. They're perfect",
+    "recordedAt": "2026-09-06T20:18:04.182Z",
+    "scope": "Complete 11-image Empire family. Prior five 100 mL images merged in PR #102; six 50 mL images now approved."
+  }
+}
