@@ -358,7 +358,7 @@ describe("Cylinder family-first client", () => {
         await act(async () => root.unmount());
     });
 
-    it("keeps Build a Bottle as the secondary action", () => {
+    it("keeps Build Your Bottle as the secondary action", () => {
         const html = renderToStaticMarkup(createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
             baseCatalog: allCylinderResult,
             initialResult: allCylinderResult,
@@ -367,7 +367,7 @@ describe("Cylinder family-first client", () => {
         }));
         const parsed = new DOMParser().parseFromString(html, "text/html");
         const buildLink = [...parsed.querySelectorAll("[data-desktop-family-catalog] a")]
-            .find((link) => link.textContent?.trim() === "Build a Bottle");
+            .find((link) => link.textContent?.trim() === "Build Your Bottle");
 
         expect(buildLink?.getAttribute("href")).toBe("/matrix?family=Cylinder&from=finder");
         expect(buildLink?.className).toContain("border-obsidian");
