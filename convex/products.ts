@@ -18,6 +18,7 @@ import {
     FAMILY_ORDER,
     canonicalGlassColor,
     catalogSearchMatches,
+    catalogSearchResultTieBreak,
     catalogSearchScore,
     classifyComponentType as classifyCatalogComponentType,
     normalizeRollerMaterials,
@@ -2684,14 +2685,21 @@ export const getCheckoutBlockedCount = query({
 /**
  * Product lookup for the portal's order pad.
  *
- * A wholesale buyer arrives with one of two things: a SKU they already know,
- * or a description of the thing they want. This answers both in one call —
- * exact SKU matches are hoisted to the top, then full-text on the item name
- * fills the rest.
+ * Uses the storefront's own search logic rather than raw full-text ranking, so
+ * the pad and the catalogue agree about what a query means. That matters: the
+ * first version ranked by the Convex search index alone, which scores term
+ * overlap and has no idea that a capacity is a constraint. "9ml roll metal"
+ * put a 1 oz Boston round first, because "roll" and "metal" matched and "9ml"
+ * was simply ignored.
  *
- * Deliberately bounded by the search index rather than a table scan: `products`
- * crossed Convex's per-execution read limit at 2,330 documents, so anything
- * that reads the whole table from a request path is a latent outage.
+ * `catalogSearchMatches` requires EVERY token to appear somewhere in the row,
+ * which is what excludes the wrong capacity. `catalogSearchScore` then ranks
+ * with the same field weights the catalogue uses, and ties break on capacity
+ * ascending, so the smallest matching size leads.
+ *
+ * The search index is still how candidates are gathered — `products` crossed
+ * Convex's per-execution read limit at 2,330 documents, so nothing here may
+ * read the whole table.
  */
 export const searchForOrderPad = query({
     args: { term: v.string(), limit: v.optional(v.number()) },
@@ -2700,9 +2708,7 @@ export const searchForOrderPad = query({
         if (term.length < 2) return [];
         const limit = Math.min(Math.max(args.limit ?? 8, 1), 20);
 
-        const found = new Map<string, Doc<"products">>();
-
-        // Superseded rows keep their old SKU with a "__RETIRED__" marker so the
+        // Superseded rows keep their old SKU behind a "__RETIRED__" marker so
         // history stays auditable. They are not buyable and must never surface
         // in a pad that exists to put things on an order.
         const isOfferable = (product: Doc<"products">) => {
@@ -2714,35 +2720,93 @@ export const searchForOrderPad = query({
             return true;
         };
 
-        // Exact SKU wins. Someone who typed a SKU wants that SKU, not the
-        // fuzzy neighbourhood around its name.
-        for (const candidate of new Set([term, term.toUpperCase()])) {
-            if (found.size > 0) break;
-            const byWebsite = await ctx.db
-                .query("products")
-                .withIndex("by_websiteSku", (q) => q.eq("websiteSku", candidate))
-                .first();
-            if (byWebsite && isOfferable(byWebsite)) found.set(byWebsite._id, byWebsite);
-            const byGrace = await ctx.db
-                .query("products")
-                .withIndex("by_graceSku", (q) => q.eq("graceSku", candidate))
-                .first();
-            if (byGrace && isOfferable(byGrace)) found.set(byGrace._id, byGrace);
-        }
+        const candidates = new Map<string, Doc<"products">>();
 
-        if (found.size < limit) {
-            const byName = await ctx.db
-                .query("products")
-                .withSearchIndex("search_itemName", (q) => q.search("itemName", term))
-                .take(limit * 4);
-            for (const product of byName) {
-                if (found.size >= limit) break;
-                if (!isOfferable(product)) continue;
-                found.set(product._id, product);
+        // Exact SKU wins outright. Someone who typed a SKU wants that SKU, not
+        // the fuzzy neighbourhood around its name.
+        const exact: Doc<"products">[] = [];
+        for (const candidate of new Set([term, term.toUpperCase()])) {
+            for (const row of [
+                await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", candidate)).first(),
+                await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", candidate)).first(),
+            ]) {
+                if (row && isOfferable(row) && !candidates.has(row._id)) {
+                    candidates.set(row._id, row);
+                    exact.push(row);
+                }
             }
         }
 
-        return [...found.values()].slice(0, limit).map((product) => ({
+        // A wide candidate net, because the index only searches itemName while
+        // the match runs across capacity, colour, neck and SKU as well.
+        const byName = await ctx.db
+            .query("products")
+            .withSearchIndex("search_itemName", (q) => q.search("itemName", term))
+            .take(180);
+        for (const product of byName) {
+            if (!isOfferable(product)) continue;
+            if (!candidates.has(product._id)) candidates.set(product._id, product);
+        }
+
+        const searchFields = (product: Doc<"products">) => [
+            product.itemName,
+            product.websiteSku,
+            product.graceSku,
+            product.family,
+            product.color,
+            product.capacity,
+            product.capacityMl == null ? null : `${product.capacityMl} ml`,
+            product.category,
+            product.neckThreadSize,
+            product.applicator,
+            product.capColor,
+            product.bottleCollection,
+        ];
+
+        const pool = [...candidates.values()].filter((p) => !exact.includes(p));
+        let matched = pool.filter((product) => catalogSearchMatches(term, searchFields(product)));
+        // Requiring every token is right when something matches and useless
+        // when nothing does; fall back to the scored pool rather than showing
+        // an empty pad for a reasonable query.
+        if (matched.length === 0) matched = pool;
+
+        const score = (product: Doc<"products">) => catalogSearchScore(term, [
+            { value: product.itemName, weight: 5 },
+            { value: product.websiteSku, weight: 5 },
+            { value: product.graceSku, weight: 5 },
+            { value: product.applicator, weight: 4 },
+            { value: product.family, weight: 3 },
+            { value: product.capacity, weight: 3 },
+            { value: product.capacityMl == null ? null : `${product.capacityMl} ml`, weight: 3 },
+            { value: product.color, weight: 2 },
+            { value: product.neckThreadSize, weight: 2 },
+            { value: product.capColor, weight: 2 },
+            { value: product.category, weight: 1 },
+            { value: product.bottleCollection, weight: 1 },
+        ]);
+
+        matched.sort((a, b) => score(b) - score(a) || catalogSearchResultTieBreak(
+            { capacityMl: a.capacityMl, family: a.family, displayName: a.itemName, slug: a.websiteSku },
+            { capacityMl: b.capacityMl, family: b.family, displayName: b.itemName, slug: b.websiteSku },
+        ));
+
+        // Diversity cap. Ranking alone fills the list with one product in eight
+        // cap colours, which looks like a broken search even when every row is
+        // a legitimate hit. Two per product group leaves room for four distinct
+        // products in eight slots; an exact SKU match is never capped.
+        const PER_GROUP = 2;
+        const perGroup = new Map<string, number>();
+        const diversified: Doc<"products">[] = [];
+        for (const product of matched) {
+            const key = product.productGroupId ?? product._id;
+            const seen = perGroup.get(key) ?? 0;
+            if (seen >= PER_GROUP) continue;
+            perGroup.set(key, seen + 1);
+            diversified.push(product);
+            if (diversified.length >= limit) break;
+        }
+
+        return [...exact, ...diversified].slice(0, limit).map((product) => ({
             sku: product.websiteSku ?? product.graceSku,
             itemName: product.itemName,
             capacity: product.capacity ?? null,
