@@ -1,16 +1,31 @@
 {
-  "note": "Jordan's approvals and corrections for builder bare-body sources. An entry here wins over the recipe-reviewed source and over the heuristic candidate for the same body key. Each names the master PSD, the descendants-order layer, and the instruction it answers.",
+  "note": "Jordan's approvals and corrections for builder bare-body sources. An entry here wins over the recipe-reviewed source and over the heuristic candidate for the same body key. Each names the master PSD, the descendants-order layer, and the instruction it answers. 2026-09-14 later: Jordan \u2014 'the actual reducer should not be inside the bottle'; reducer-bottle sources are no longer used for any body. Where a paired-kit recipe names an uncapped (off) source, its body layer is used; otherwise uncapped sprayer/pump/dropper sources are preferred, then cap-only capped sources, and reducer sources last.",
   "entries": [
-    { "body": "Diva|30|Clear|18-415", "path": "2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /4. GBDiva30RdcrBlkLthr.psd", "layer": 1,
-      "instruction": "2026-09-14 Jordan: 'the Diva has the reducer that's stuck in the top' — the lotion/sprayer sources carry the pump insert in the body layer; the reducer-bottle body layer shows a clean neck." },
-    { "body": "Diva|46|Clear|18-415", "path": "2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/4. GBDiva46RdcrBlkLthr.psd", "layer": 1,
-      "instruction": "2026-09-14 Jordan: reducer stuck in the top — clean-neck reducer-bottle source." },
-    { "body": "Diva|100|Clear|18-415", "path": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/4. GBDiva100RdcrBlkLthr.psd", "layer": 1,
-      "instruction": "2026-09-14 Jordan: reducer stuck in the top — clean-neck reducer-bottle source." },
-    { "body": "Diva|46|Frosted|18-415", "candidate": true, "instruction": "2026-09-14 Jordan: 'We need the frosted bottles… we need to add the frosted option.'" },
-    { "body": "Round|128|Frosted|18-415", "candidate": true, "instruction": "2026-09-14 Jordan: add the frosted option." },
-    { "body": "Round|78|Frosted|18-415", "candidate": true, "instruction": "2026-09-14 Jordan: add the frosted option." },
-    { "body": "Cylinder|9|Frosted|13-415", "candidate": true, "instruction": "2026-09-14 Jordan: add the frosted option." },
-    { "body": "Cylinder|9|Frosted|17-415", "candidate": true, "instruction": "2026-09-14 Jordan: add the frosted option." }
+    {
+      "body": "Diva|46|Frosted|18-415",
+      "instruction": "2026-09-14 Jordan: add the frosted option; then 'the top of the Diva bottle is cut off' \u2014 the reducer-capped source's body layer ends where the cap sat; the uncapped sprayer source carries the complete neck and no insert.",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/26.  46 Diva (Frosted) Ltn & Spry, uncapped/30. GBDivaFrst46SpryShnSl.psd",
+      "layer": 1
+    },
+    {
+      "body": "Round|128|Frosted|18-415",
+      "candidate": true,
+      "instruction": "2026-09-14 Jordan: add the frosted option."
+    },
+    {
+      "body": "Round|78|Frosted|18-415",
+      "candidate": true,
+      "instruction": "2026-09-14 Jordan: add the frosted option."
+    },
+    {
+      "body": "Cylinder|9|Frosted|13-415",
+      "candidate": true,
+      "instruction": "2026-09-14 Jordan: add the frosted option."
+    },
+    {
+      "body": "Cylinder|9|Frosted|17-415",
+      "candidate": true,
+      "instruction": "2026-09-14 Jordan: add the frosted option."
+    }
   ]
 }

@@ -73,8 +73,14 @@ for f in sorted(DATA.glob('*-paired-kit-recipes.json')):
     for row in json.loads(f.read_text())['rows']:
         k = key_of(row['websiteSku']); src = by_sha.get(row['onSourceSha256'])
         if not k or not src or k in reviewed: continue
-        reviewed[k] = {'sku': row['websiteSku'], 'relPath': src['relPath'], 'sha256': row['onSourceSha256'], 'layer': row['onBodyLayer'],
-                       'evidence': f"{f.name}: {row['evidence']}", 'reviewedBy': row.get('reviewedBy')}
+        # the uncapped (off) source shows the bare neck; the capped (on) body
+        # layer of a reducer, pump or sprayer bottle carries the insert
+        if row.get('offSourcePath') and row.get('offBodyLayer') is not None and (ROOT / row['offSourcePath']).exists():
+            reviewed[k] = {'sku': row['websiteSku'], 'relPath': row['offSourcePath'], 'sha256': row.get('offSourceSha256'), 'layer': row['offBodyLayer'],
+                           'evidence': f"{f.name} (uncapped source): {row['evidence']}", 'reviewedBy': row.get('reviewedBy')}
+        else:
+            reviewed[k] = {'sku': row['websiteSku'], 'relPath': src['relPath'], 'sha256': row['onSourceSha256'], 'layer': row['onBodyLayer'],
+                           'evidence': f"{f.name}: {row['evidence']}", 'reviewedBy': row.get('reviewedBy')}
 
 def largest_island(im):
     """Keep the connected alpha region of the glass; disconnected retouch cards
@@ -123,15 +129,23 @@ def candidate_for(k):
         stem = re.sub(r'[^a-z0-9]', '', sku.lower())
         for f in master_psd:
             if re.sub(r'[^a-z0-9]', '', f['stem'].lower()) != stem: continue
-            if 'uncapped' in f['relPath'].lower() or 'tassel' in f['relPath'].lower(): continue
-            pool.append((0 if re.search(r'Cap|Sht|Rdcr', sku) else 1, f['layerCount'], f))
+            if 'tassel' in f['relPath'].lower(): continue
+            # capped cap-only/reducer sources first (cleanest cut-outs); uncapped
+            # sources last — they show the whole neck but often carry fused
+            # retouch cards, so they serve as the fallback, or by explicit approval
+            # never a reducer bottle first: its body layer carries the reducer.
+            # uncapped sprayer/pump/dropper sources show the empty neck; then
+            # cap-only capped sources; reducer sources only as the last resort
+            uncapped = 'uncapped' in f['relPath'].lower()
+            rank = 0 if uncapped and re.search(r'Spry|Ltn|Drp|AnSp', sku) else 1 if uncapped else 2 if re.search(r'Cap|Sht', sku) and not re.search(r'Rdcr', sku) else 4 if re.search(r'Rdcr', sku) else 3
+            pool.append((rank, f['layerCount'], f))
     if not pool: return None
     pool.sort(key=lambda t: (t[0], t[1], t[2]['relPath']))
     seen = set(); last = None
     for _, _, f in pool:
         if f['sha256'] in seen: continue
         seen.add(f['sha256'])
-        if len(seen) > 6: break
+        if len(seen) > 14: break
         psd = PSDImage.open(ROOT / f['relPath']); stats = layer_stats(psd)
         fg = [s for s in stats if s and not s['background']]
         last = {'relPath': f['relPath'], 'sha256': f['sha256'], 'stats': stats, 'pick': None}
@@ -141,8 +155,11 @@ def candidate_for(k):
         # a sparse bounding box)
         floor = max(s['bbox'][3] for s in fg); top = min(s['bbox'][1] for s in fg)
         # in a capped source the closure is the highest layer; the glass starts below it
-        body = [s for s in fg if s['axisOffset'] < 0.08 and s['bbox'][3] >= floor - 0.02 * psd.height
-                and (s['bbox'][3] - s['bbox'][1]) >= 0.6 * (floor - top) and s['bbox'][1] > top + 0.03 * (floor - top)]
+        uncapped = 'uncapped' in f['relPath'].lower()
+        # uncapped: the bare bottle stands beside its closure, so the axis test
+        # does not apply and the glass is simply the tallest layer on the floor
+        body = [s for s in fg if (uncapped or s['axisOffset'] < 0.08) and s['bbox'][3] >= floor - 0.02 * psd.height
+                and (s['bbox'][3] - s['bbox'][1]) >= 0.6 * (floor - top) and (uncapped or s['bbox'][1] > top + 0.03 * (floor - top))]
         if not body: continue
         body.sort(key=lambda s: -s['area'])
         return {'relPath': f['relPath'], 'sha256': f['sha256'], 'stats': stats, 'pick': body[0]['index']}
@@ -164,8 +181,8 @@ for k in keys:
         lineage.append({'body': k, 'status': 'reviewed', 'source': 'jordan-approved', 'path': a['path'], 'sourceSha256': sha_of.get(a['path']),
                         'layerIndex': a['layer'], 'layerName': layer.name, 'retouchIslandsDropped': dropped, 'evidence': a['instruction'], 'asset': media})
         tiles.append((k, 'approved', cleaned, a['path'], a['layer'], layer.name)); continue
-    if k in circle:
-        lineage.append({'body': k, 'status': 'reviewed', 'source': 'circle-builder-media', 'asset': circle[k]}); continue
+    if k in circle and k not in reviewed:
+        lineage.append({'body': k, 'status': 'reviewed', 'source': 'circle-builder-media (reducer-bottle layer; replace when an uncapped source is found)', 'asset': circle[k]}); continue
     if k in reviewed:
         r = reviewed[k]; psd = PSDImage.open(ROOT / r['relPath']); layer = list(psd.descendants())[r['layer']]
         if not args.review_only:
