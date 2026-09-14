@@ -52,6 +52,7 @@ import type * as paperDoll from "../paperDoll.js";
 import type * as patchFromMasterV83 from "../patchFromMasterV83.js";
 import type * as portal from "../portal.js";
 import type * as portalAuth from "../portalAuth.js";
+import type * as posthog from "../posthog.js";
 import type * as pricing from "../pricing.js";
 import type * as productGroupNames from "../productGroupNames.js";
 import type * as productGroups from "../productGroups.js";
@@ -116,6 +117,7 @@ declare const fullApi: ApiFromModules<{
   patchFromMasterV83: typeof patchFromMasterV83;
   portal: typeof portal;
   portalAuth: typeof portalAuth;
+  posthog: typeof posthog;
   pricing: typeof pricing;
   productGroupNames: typeof productGroupNames;
   productGroups: typeof productGroups;
@@ -158,4 +160,5 @@ export declare const internal: FilterApi<
 
 export declare const components: {
   agent: import("@convex-dev/agent/_generated/component.js").ComponentApi<"agent">;
+  posthog: import("@posthog/convex/_generated/component.js").ComponentApi<"posthog">;
 };
