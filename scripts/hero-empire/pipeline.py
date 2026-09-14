@@ -30,6 +30,8 @@ if not os.path.exists(wall):
 
 # 2. base frame
 rows = json.load(open("scripts/hero-empire/empire-50-rows.json"))
+EXTRA_ROWS = os.environ.get("EXTRA_ROWS_JSON")   # e.g. cylinder-50 sprayer plates: same 18-415 closure on a different bottle
+if EXTRA_ROWS: rows = rows + json.load(open(EXTRA_ROWS))
 def ref_png(sku, key="image"):
     r = next(x for x in rows if x["sku"] == sku); p = f"{S}/refs/{sku}-{key}.png"
     if not os.path.exists(p):
@@ -40,18 +42,21 @@ if not os.path.exists(base):
     if BARE_BASE:
         prompt = ("Using the second image as the exact product reference, place this bare Empire 50 mL clear glass perfume bottle — no closure, an open threaded 18-415 neck, nothing inside the bottle — standing upright on the stone sill inside the lit niche of the first image, "
                   "centred in the niche with clear space either side, scaled so the bottle fills about sixty percent of the niche's height, leaving room above the neck for a tall closure. Reproduce the bottle's shape, proportions and glass faithfully, at high fidelity: crisp glass edges, the plaster wall refracting through the glass, a soft contact shadow and a faint reflection on the polished sill, lit by the niche's light from above. "
-                  "Everything else — the black marble wall, the niche, the plaster, the sill — stays exactly as in the first image. No text.")
+                  "Everything else in the first image — the wall, the niche, the plaster, the sill — stays exactly as it is. No text.")
     else:
         prompt = ("Using the second image as the exact product reference, place this Empire 50 mL clear glass perfume bottle with its closure standing upright on the stone sill inside the lit niche of the first image, "
                   "centred in the niche with clear space either side, scaled so the bottle and closure together fill about seventy percent of the niche's height. Reproduce the bottle's shape, proportions, glass and finish faithfully, at high fidelity: crisp glass edges, the plaster wall refracting through the glass, a soft contact shadow and a faint reflection on the polished sill, lit by the niche's light from above. "
-                  "Everything else — the black marble wall, the niche, the plaster, the sill — stays exactly as in the first image. No text.")
+                  "Everything else in the first image — the wall, the niche, the plaster, the sill — stays exactly as it is. No text.")
     edit(prompt, [wall, ref_png(BASE_REF_SKU, BASE_REF_KEY)], base); log("base written")
 
 # 3. measure the niche interior: pale plaster by row/column coverage (thin bright marble veins never reach 30% coverage)
 wa = np.asarray(Image.open(wall).convert("RGB")).astype(int); ba = np.asarray(Image.open(base).convert("RGB").resize((W, H))).astype(int)
-pale = wa.mean(axis=2) > 150
-col_cov = pale.mean(axis=0); xs = np.where(col_cov > 0.30)[0]; nx0, nx1 = int(xs.min()), int(xs.max())
-row_cov = pale[:, nx0:nx1 + 1].mean(axis=1); ys = np.where(row_cov > 0.30)[0]; ny0, ny1 = int(ys.min()), int(ys.max())
+if os.environ.get("NICHE_BOX"):
+    nx0, ny0, nx1, ny1 = [int(v) for v in os.environ["NICHE_BOX"].split(",")]
+else:
+    pale = wa.mean(axis=2) > 150
+    col_cov = pale.mean(axis=0); xs = np.where(col_cov > 0.30)[0]; nx0, nx1 = int(xs.min()), int(xs.max())
+    row_cov = pale[:, nx0:nx1 + 1].mean(axis=1); ys = np.where(row_cov > 0.30)[0]; ny0, ny1 = int(ys.min()), int(ys.max())
 # sill: dark band directly under the plaster; include ~8% of the niche height below the plaster for the sill + reflection
 sill = int(0.08 * (ny1 - ny0))
 NICHE = (max(nx0 - 16, 0), max(ny0 - 16, 0), min(nx1 + 16, W), min(ny1 + sill + 16, H))
@@ -76,13 +81,52 @@ json.dump({"niche": [int(v) for v in NICHE], "plaster": [nx0, ny0, nx1, ny1], "b
 log("body lock (caps only)", BODY)
 
 # 4. frames
+NECK_CX = (BODY[0] + BODY[2]) / 2; SHOULDER = BODY[1] - 10; NECK_TOP = yTop
+def seat_metrics(frame):
+    """closure pixels = frame vs base diff above the shoulder, within ±90px of the neck centre.
+    seat = collar bottom (in the ±30px neck band) minus the shoulder line; dx = closure centre minus neck centre."""
+    d = np.abs(frame - ba).sum(axis=2) > 40
+    y0 = max(NICHE[1], 0); band = d[y0:SHOULDER + 14, int(NECK_CX) - 30:int(NECK_CX) + 30]
+    rows_hit = np.where(band.any(axis=1))[0]
+    if len(rows_hit) == 0: return None
+    seat = int(rows_hit.max()) + y0 - SHOULDER
+    wide = d[y0:SHOULDER, int(NECK_CX) - 90:int(NECK_CX) + 90]; ys_, xs_ = np.where(wide)
+    dx = float(xs_.mean()) + int(NECK_CX) - 90 - NECK_CX if len(xs_) else 0.0
+    return seat, dx
+SEAT_TOL, DX_TOL, MAX_TRIES = 12, 8, 3
+TUBE_KINDS = ("AnSp", "LB", "Spry")
+def tube_present(frame):
+    """a dip tube = changed pixels forming a thin vertical run inside the body, near the neck centre, over most of the body height"""
+    d = np.abs(frame - ba).sum(axis=2) > 30
+    band = d[BODY[1] + 20:BODY[3] - 60, int(NECK_CX) - 40:int(NECK_CX) + 40]
+    rows_with = band.any(axis=1).mean()
+    return rows_with > 0.55
 def one(r):
     sku = r["sku"]; raw = f"{OUT}/raw-{sku}.png"
+    best = None
+    for attempt in range(MAX_TRIES):
+        if attempt > 0 and os.path.exists(raw): os.rename(raw, f"{OUT}/raw-{sku}.try{attempt}.png")
+        res = render_and_composite(sku, r, raw, reinforced=attempt > 0)
+        frame = np.asarray(Image.open(f"{OUT}/frame-{sku}.png").convert("RGB")).astype(float)
+        mt = seat_metrics(frame)
+        tube_ok = tube_present(frame) if kind(sku) in TUBE_KINDS else True
+        score = ((abs(mt[0]) + abs(mt[1])) if mt else 999) + (0 if tube_ok else 200)
+        os.replace(f"{OUT}/frame-{sku}.png", f"{OUT}/frame-{sku}.a{attempt}.png")
+        if best is None or score < best[0]: best = (score, mt, res, attempt)
+        if mt and abs(mt[0]) <= SEAT_TOL and abs(mt[1]) <= DX_TOL and tube_ok: break
+        log(f"{sku}: seat {mt} tube {tube_ok} — attempt {attempt + 1}/{MAX_TRIES}")
+    os.replace(f"{OUT}/frame-{sku}.a{best[3]}.png", f"{OUT}/frame-{sku}.png")
+    for f in glob.glob(f"{OUT}/frame-{sku}.a*.png"): os.remove(f)
+    return sku, best[2][1], best[1]
+def render_and_composite(sku, r, raw, reinforced=False):
     if not os.path.exists(raw):
-        prompt = ("Fit the exact closure shown on the same bottle in the second image onto the bottle in the first image — same type, shape, proportions, colour and finish — seated on the neck at the same scale, lit by the niche's light from above with matching reflections. "
+        prompt = ("Fit the exact closure shown on the bottle in the second image onto the bottle in the first image — same type, shape, proportions, colour and finish — seated on the neck at the same scale, lit by the niche's light from above with matching reflections. "
                   "Inside the glass, show exactly what the second image shows for this closure: a slim dip tube for a sprayer or pump, nothing for a cap or reducer. "
                   "The closure must actually be fitted: it covers the threaded neck completely, so no bare threads remain visible. "
-                  "Everything else — the glass bottle's shape and position, the sill, the plaster and the marble wall — stays exactly as in the first image. No text.")
+                  "Everything else — the glass bottle's shape and position, the sill, the plaster and the wall — stays exactly as in the first image. No text.")
+        if reinforced:
+            prompt += (" The closure's collar rests exactly on the bottle's shoulder line and is centred on the neck; it must not sink into the bottle or float above it."
+                       + (" A slim dip tube runs from the collar straight down inside the bottle, almost to the base, clearly visible through the glass." if kind(sku) in TUBE_KINDS else ""))
         edit(prompt, [base, ref_png(sku)], raw)
     gen = np.asarray(Image.open(raw).convert("RGB").resize((W, H))).astype(float); bf = ba.astype(float)
     zone = m_cap if kind(sku) in ("Rdcr", "Cap") else m      # caps: body locked (empty bottle); sprayers/pumps: interior follows the closure
@@ -92,11 +136,13 @@ def one(r):
     Image.fromarray(comp.round().astype(np.uint8)).save(f"{OUT}/frame-{sku}.png")
     return sku, 100 * (a > 0.5).mean()
 def kind(sku):
-    return "Tsl" if "AnSpTsl" in sku else "AnSp" if "AnSp" in sku else "Drp" if "Drp" in sku else "Rdcr" if "Rdcr" in sku else "LB" if sku.startswith("LB") else "other"
+    if sku == "BARE": return "BARE"
+    return ("Tsl" if "AnSpTsl" in sku else "AnSp" if "AnSp" in sku else "Spry" if "Spry" in sku else "Drp" if "Drp" in sku
+            else "Rdcr" if "Rdcr" in sku else "LB" if sku.startswith("LB") else "other")
 todo = [r for r in rows if kind(r["sku"]) in SEQUENCE]
 log("sequence", SEQUENCE, "→", len(todo), "frames")
 with concurrent.futures.ThreadPoolExecutor(8) as ex:
-    for sku, pct in ex.map(one, todo): log(f"{sku}: replaced {pct:.1f}%")
+    for sku, pct, mt in ex.map(one, todo): log(f"{sku}: replaced {pct:.1f}% · seat {mt[0]:+d}px dx {mt[1]:+.1f}px" if mt else f"{sku}: replaced {pct:.1f}% · seat n/a")
 if BARE_BASE: Image.open(base).convert("RGB").save(f"{OUT}/frame-BARE.png")
 
 # 5. manifest + webp + review sheet
@@ -105,10 +151,13 @@ COL = [(r"IvyGl","ivory & gold"),(r"IvySl","ivory & silver"),(r"MtSl","matte sil
 def label(sku):
     if sku == "BARE": return "Bare bottle · 18-415 neck"
     if sku.startswith("LB"): return "Lotion pump · white"
+    if "Spry" in sku:
+        col = next((l for p_, l in COL if re.search(p_, re.sub(r"^GB(Cyl|Emp)50Spry", "", sku))), None)
+        return f"Fine-mist sprayer · {col}" if col else "Fine-mist sprayer"
     tail = re.sub(r"^[GL]BEmp50", "", sku); kind = next((l for p, l in KIND if re.search(p, tail)), "Closure")
     col = next((l for p, l in COL if re.search(p, re.sub(r"Tsl|AnSp|Drp|Rdcr|Tall|OvrCp|Cl", "", tail))), None)
     return f"{kind} · {col}" if col and "·" not in kind else kind
-ORDER = {"AnSp": 0, "Tsl": 1, "LB": 2, "BARE": 3, "Rdcr": 4, "Drp": 5, "other": 6}
+ORDER = {"AnSp": 0, "Tsl": 1, "LB": 2, "Spry": 3, "BARE": 4, "Rdcr": 5, "Drp": 6, "other": 7}
 rank = lambda s: ORDER["BARE" if s == "BARE" else kind(s)]
 skus = sorted([os.path.basename(p)[6:-4] for p in glob.glob(f"{OUT}/frame-*.png")], key=lambda s: (rank(s), s))
 manifest = []

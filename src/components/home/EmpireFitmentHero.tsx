@@ -16,8 +16,8 @@ export const EMPIRE_HERO_FAMILY = "empire-50ml-clear-18-415";
 const HERO_SET = process.env.NEXT_PUBLIC_HERO_SET ?? "v4";
 const MANIFEST = `/assets/hero/${HERO_SET}/manifest.json`;
 type Frame = { sku: string; src: string; label: string };
-const HOLD_MS = 2600;
-const FADE_MS = 700;
+const HOLD_MS = 3600;
+const FADE_MS = 900;
 
 const TOKENS: Array<[RegExp, string]> = [
     [/AnSpTsl/, "Antique sprayer · tassel"],
