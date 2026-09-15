@@ -1,0 +1,1726 @@
+[
+ {
+  "body": "boston-round-60ml-20-400",
+  "target_body_w": 438.8,
+  "anchor_scale": 0.889,
+  "from_skus": [
+   {
+    "sku": "GBBstn2ozBlkCapSht",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 1197,
+    "cur_pct": 69.8,
+    "scale": 0.817,
+    "target_w": 407.8,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstn2ozBlkDrprShnGlTrim",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 1252,
+    "cur_pct": 73.0,
+    "scale": 0.781,
+    "target_w": 386.7,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstn2ozMtlRollGl",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 1018,
+    "cur_pct": 59.3,
+    "scale": 0.961,
+    "target_w": 469.8,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstn2ozRollonMattGl",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 990,
+    "cur_pct": 57.7,
+    "scale": 0.988,
+    "target_w": 472.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnAmb2ozBlkCapSht",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1270,
+    "cur_pct": 74.0,
+    "scale": 0.676,
+    "target_w": 326.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnAmb2ozRollonMattGl",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 1013,
+    "cur_pct": 59.0,
+    "scale": 0.966,
+    "target_w": 478.0,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnAmb2ozMtlRollonMattGl",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 986,
+    "cur_pct": 57.5,
+    "scale": 0.992,
+    "target_w": 482.1,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 1265,
+    "cur_pct": 73.7,
+    "scale": 0.773,
+    "target_w": 386.6,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnBlu2ozBlkCapSht",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 1233,
+    "cur_pct": 71.9,
+    "scale": 0.793,
+    "target_w": 389.5,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 1229,
+    "cur_pct": 71.6,
+    "scale": 0.796,
+    "target_w": 392.4,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnBlu2ozMtlRollonMattSl",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 978,
+    "cur_pct": 57.0,
+    "scale": 1.0,
+    "target_w": 496.1,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnBlu2ozRollonMattGl",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 978,
+    "cur_pct": 57.0,
+    "scale": 1.0,
+    "target_w": 491.1,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "cylinder-5ml-13-415",
+  "target_body_w": 206.3,
+  "anchor_scale": 0.7935,
+  "from_skus": [
+   {
+    "sku": "GBCylBlu5RollBlkDot",
+    "pct": 37.5,
+    "scope": "glass_body",
+    "cur_px": 809,
+    "cur_pct": 47.1,
+    "scale": 0.795,
+    "target_w": 207.6,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   },
+   {
+    "sku": "GBCyl5RollBlkDot",
+    "pct": 37.5,
+    "scope": "glass_body",
+    "cur_px": 813,
+    "cur_pct": 47.4,
+    "scale": 0.792,
+    "target_w": 205.0,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "cylinder-9ml-17-415",
+  "target_body_w": 192.2,
+  "anchor_scale": 0.818,
+  "from_skus": [
+   {
+    "sku": "GBCylAmb9RollBlkDot",
+    "pct": 45.0,
+    "scope": "glass_body",
+    "cur_px": 1000,
+    "cur_pct": 58.3,
+    "scale": 0.772,
+    "target_w": 180.7,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   },
+   {
+    "sku": "GBCyl9RollBlkDot",
+    "pct": 45.0,
+    "scope": "glass_body",
+    "cur_px": 901,
+    "cur_pct": 52.5,
+    "scale": 0.857,
+    "target_w": 198.8,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   },
+   {
+    "sku": "GBCylBlu9RollBlkDot",
+    "pct": 45.0,
+    "scope": "glass_body",
+    "cur_px": 1006,
+    "cur_pct": 58.6,
+    "scale": 0.768,
+    "target_w": 180.4,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   },
+   {
+    "sku": "GBCylFrst9RollBlkDot",
+    "pct": 45.0,
+    "scope": "glass_body",
+    "cur_px": 944,
+    "cur_pct": 55.0,
+    "scale": 0.818,
+    "target_w": 192.2,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   },
+   {
+    "sku": "GBCylSwrl9RollBlkDot",
+    "pct": 45.0,
+    "scope": "glass_body",
+    "cur_px": 911,
+    "cur_pct": 53.1,
+    "scale": 0.848,
+    "target_w": 195.0,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "boston-round-30ml-20-400",
+  "target_body_w": 362.2,
+  "anchor_scale": 0.7875,
+  "from_skus": [
+   {
+    "sku": "GBBstn1ozRollonShBlk",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1031,
+    "cur_pct": 60.1,
+    "scale": 0.832,
+    "target_w": 382.8,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstn1ozMtlRollonMattGl",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1001,
+    "cur_pct": 58.3,
+    "scale": 0.857,
+    "target_w": 400.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstn1ozBlkDrpShnGlTrim",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1170,
+    "cur_pct": 68.2,
+    "scale": 0.733,
+    "target_w": 339.5,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstn1ozBlkCapSht",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1155,
+    "cur_pct": 67.3,
+    "scale": 0.743,
+    "target_w": 341.7,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnAmb1ozBlkCapSht",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1176,
+    "cur_pct": 68.5,
+    "scale": 0.73,
+    "target_w": 336.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1176,
+    "cur_pct": 68.5,
+    "scale": 0.73,
+    "target_w": 334.9,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnAmb1ozRollonMattGl",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1003,
+    "cur_pct": 58.4,
+    "scale": 0.855,
+    "target_w": 396.1,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnAmb1ozMtlRollonMattSl",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1007,
+    "cur_pct": 58.7,
+    "scale": 0.852,
+    "target_w": 396.2,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnBlu1ozMtlRollonMattSl",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1030,
+    "cur_pct": 60.0,
+    "scale": 0.833,
+    "target_w": 396.5,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1193,
+    "cur_pct": 69.5,
+    "scale": 0.719,
+    "target_w": 337.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnBlu1ozBlkCapSht",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1187,
+    "cur_pct": 69.2,
+    "scale": 0.723,
+    "target_w": 340.5,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBstnBlu1ozRollonMattBlk",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1007,
+    "cur_pct": 58.7,
+    "scale": 0.852,
+    "target_w": 395.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "circle-15ml-13-415",
+  "target_body_w": 643.9,
+  "anchor_scale": 0.9385,
+  "from_skus": [
+   {
+    "sku": "GBCrcl15Gl",
+    "pct": 40.0,
+    "scope": "glass_body",
+    "cur_px": 753,
+    "cur_pct": 43.9,
+    "scale": 0.912,
+    "target_w": 629.9,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl15SpryGlMatt",
+    "pct": 40.0,
+    "scope": "glass_body",
+    "cur_px": 713,
+    "cur_pct": 41.6,
+    "scale": 0.963,
+    "target_w": 726.8,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl15RollBlkSh",
+    "pct": 40.0,
+    "scope": "glass_body",
+    "cur_px": 626,
+    "cur_pct": 36.5,
+    "scale": 1.096,
+    "target_w": 657.9,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl15MtlRollGlMatt",
+    "pct": 40.0,
+    "scope": "glass_body",
+    "cur_px": 751,
+    "cur_pct": 43.8,
+    "scale": 0.914,
+    "target_w": 620.6,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "cylinder-50ml-16mm",
+  "target_body_w": 348.2,
+  "anchor_scale": 0.851,
+  "from_skus": [
+   {
+    "sku": "GBCyl50RollWht",
+    "pct": 57.5,
+    "scope": "glass_body",
+    "cur_px": 1159,
+    "cur_pct": 67.5,
+    "scale": 0.851,
+    "target_w": 348.2,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "tall-cylinder-9ml-13-415",
+  "target_body_w": 186.1,
+  "anchor_scale": 0.921,
+  "from_skus": [
+   {
+    "sku": "GBTallCyl9RollBlkDot",
+    "pct": 65.0,
+    "scope": "glass_body",
+    "cur_px": 1169,
+    "cur_pct": 68.1,
+    "scale": 0.954,
+    "target_w": 193.7,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   },
+   {
+    "sku": "GBTallCylFrst9RollBlkDot",
+    "pct": 65.0,
+    "scope": "glass_body",
+    "cur_px": 1256,
+    "cur_pct": 73.2,
+    "scale": 0.888,
+    "target_w": 178.5,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "diva-46ml-18-415",
+  "target_body_w": 253.6,
+  "anchor_scale": 1.117,
+  "from_skus": [
+   {
+    "sku": "GBDiva46DrpSl",
+    "pct": 42.0,
+    "scope": "glass_body",
+    "cur_px": 645,
+    "cur_pct": 37.6,
+    "scale": 1.117,
+    "target_w": 253.6,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "elegant-15ml-13-415",
+  "target_body_w": 586.2,
+  "anchor_scale": 1.002,
+  "from_skus": [
+   {
+    "sku": "GBElg15RollSlSh",
+    "pct": 48.0,
+    "scope": "glass_body",
+    "cur_px": 822,
+    "cur_pct": 47.9,
+    "scale": 1.002,
+    "target_w": 586.2,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "flair-15ml-13-415",
+  "target_body_w": 452.6,
+  "anchor_scale": 1.23,
+  "from_skus": [
+   {
+    "sku": "GBFlair15RollSlDot",
+    "pct": 42.0,
+    "scope": "glass_body",
+    "cur_px": 586,
+    "cur_pct": 34.1,
+    "scale": 1.23,
+    "target_w": 452.6,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "tulip-5ml-13-415",
+  "target_body_w": 475.4,
+  "anchor_scale": 1.071,
+  "from_skus": [
+   {
+    "sku": "GBTulipAmb5RollBlkDot",
+    "pct": 40.0,
+    "scope": "glass_body",
+    "cur_px": 641,
+    "cur_pct": 37.4,
+    "scale": 1.071,
+    "target_w": 475.4,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "tulip-6ml-13-415",
+  "target_body_w": 495.1,
+  "anchor_scale": 1.036,
+  "from_skus": [
+   {
+    "sku": "GBTulip6RollBlkDot",
+    "pct": 44.0,
+    "scope": "glass_body",
+    "cur_px": 729,
+    "cur_pct": 42.5,
+    "scale": 1.036,
+    "target_w": 495.1,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "square-15ml-13-415",
+  "target_body_w": 514.6,
+  "anchor_scale": 0.964,
+  "from_skus": [
+   {
+    "sku": "GBSqr15RollSlSh",
+    "pct": 47.0,
+    "scope": "glass_body",
+    "cur_px": 837,
+    "cur_pct": 48.8,
+    "scale": 0.964,
+    "target_w": 514.6,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "royal-13ml-13-415",
+  "target_body_w": 785.8,
+  "anchor_scale": 0.941,
+  "from_skus": [
+   {
+    "sku": "GBRoyal13RollSlDot",
+    "pct": 51.0,
+    "scope": "glass_body",
+    "cur_px": 930,
+    "cur_pct": 54.2,
+    "scale": 0.941,
+    "target_w": 785.8,
+    "collection": "sunburst-v2-missing-groups-2026-09-09"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "vial-1ml-Plug",
+  "target_body_w": 90.2,
+  "anchor_scale": 1.0345,
+  "from_skus": [
+   {
+    "sku": "GB1mlAmbVialWht",
+    "pct": 51.5,
+    "scope": "glass_body",
+    "cur_px": 894,
+    "cur_pct": 52.1,
+    "scale": 0.989,
+    "target_w": 22.7,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GB1mlVBlk",
+    "pct": 51.5,
+    "scope": "glass_body",
+    "cur_px": 818,
+    "cur_pct": 47.7,
+    "scale": 1.08,
+    "target_w": 157.7,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "decorative-4ml-8mm",
+  "target_body_w": 115.5,
+  "anchor_scale": 0.896,
+  "from_skus": [
+   {
+    "sku": "GBHeartFrst4KeyGld",
+    "pct": 34.5,
+    "scope": "glass_body",
+    "cur_px": 712,
+    "cur_pct": 41.5,
+    "scale": 0.831,
+    "target_w": 166.7,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r4"
+   },
+   {
+    "sku": "GBHeartFrst4TslRed",
+    "pct": 35.0,
+    "scope": "glass_body",
+    "cur_px": 625,
+    "cur_pct": 36.4,
+    "scale": 0.961,
+    "target_w": 64.4,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r4"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "decorative-10ml-17.52mm",
+  "target_body_w": 260.6,
+  "anchor_scale": 1.086,
+  "from_skus": [
+   {
+    "sku": "GBMtlMrblLarge",
+    "pct": 62.0,
+    "scope": "glass_body",
+    "cur_px": 980,
+    "cur_pct": 57.1,
+    "scale": 1.086,
+    "target_w": 260.6,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "decorative-5ml-17.52mm",
+  "target_body_w": 261.1,
+  "anchor_scale": 1.028,
+  "from_skus": [
+   {
+    "sku": "GBMtlMrblSmall",
+    "pct": 46.0,
+    "scope": "glass_body",
+    "cur_px": 768,
+    "cur_pct": 44.8,
+    "scale": 1.028,
+    "target_w": 261.1,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "bell-10ml-13-415",
+  "target_body_w": 532.0,
+  "anchor_scale": 1.007,
+  "from_skus": [
+   {
+    "sku": "GBBell10SpryBlkSh",
+    "pct": 54.0,
+    "scope": "glass_body",
+    "cur_px": 927,
+    "cur_pct": 54.0,
+    "scale": 1.0,
+    "target_w": 529.8,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBell10RollBlkDot",
+    "pct": 54.0,
+    "scope": "glass_body",
+    "cur_px": 924,
+    "cur_pct": 53.8,
+    "scale": 1.003,
+    "target_w": 534.5,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBell10MtlRollBlkDot",
+    "pct": 54.0,
+    "scope": "glass_body",
+    "cur_px": 917,
+    "cur_pct": 53.4,
+    "scale": 1.011,
+    "target_w": 529.5,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBBell10BlkShSht",
+    "pct": 54.0,
+    "scope": "glass_body",
+    "cur_px": 914,
+    "cur_pct": 53.3,
+    "scale": 1.014,
+    "target_w": 534.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "boston-round-15ml-18-400",
+  "target_body_w": 299.8,
+  "anchor_scale": 0.837,
+  "from_skus": [
+   {
+    "sku": "GBBstn15BlkCapSht",
+    "pct": 50.5,
+    "scope": "glass_body",
+    "cur_px": 1039,
+    "cur_pct": 60.5,
+    "scale": 0.834,
+    "target_w": 310.3,
+    "collection": "chat-override"
+   },
+   {
+    "sku": "GBBstnAmb15mlBlkCapSht",
+    "pct": 50.5,
+    "scope": "glass_body",
+    "cur_px": 1033,
+    "cur_pct": 60.2,
+    "scale": 0.839,
+    "target_w": 300.3,
+    "collection": "chat-override"
+   },
+   {
+    "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+    "pct": 50.5,
+    "scope": "glass_body",
+    "cur_px": 1043,
+    "cur_pct": 60.8,
+    "scale": 0.831,
+    "target_w": 295.8,
+    "collection": "chat-override"
+   },
+   {
+    "sku": "GBBstnBlu15BlkCapSht",
+    "pct": 50.5,
+    "scope": "glass_body",
+    "cur_px": 1035,
+    "cur_pct": 60.3,
+    "scale": 0.837,
+    "target_w": 298.9,
+    "collection": "chat-override"
+   },
+   {
+    "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+    "pct": 50.5,
+    "scope": "glass_body",
+    "cur_px": 1032,
+    "cur_pct": 60.1,
+    "scale": 0.84,
+    "target_w": 299.8,
+    "collection": "chat-override"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "circle-100ml-18-415",
+  "target_body_w": 894.8,
+  "anchor_scale": 0.995,
+  "from_skus": [
+   {
+    "sku": "GBCrcl100RdcrShnGl",
+    "pct": 55.0,
+    "scope": "glass_body",
+    "cur_px": 879,
+    "cur_pct": 51.2,
+    "scale": 1.074,
+    "target_w": 860.0,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl100SpryMtGl",
+    "pct": 55.0,
+    "scope": "glass_body",
+    "cur_px": 864,
+    "cur_pct": 50.3,
+    "scale": 1.092,
+    "target_w": 929.6,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl100AnSpTslGl",
+    "pct": 55.0,
+    "scope": "glass_body",
+    "cur_px": 1040,
+    "cur_pct": 60.6,
+    "scale": 0.908,
+    "target_w": 1131.7,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl100AnSpGl",
+    "pct": 55.0,
+    "scope": "glass_body",
+    "cur_px": 1246,
+    "cur_pct": 72.6,
+    "scale": 0.757,
+    "target_w": 649.1,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrclFrst100AnSpGl",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 1068,
+    "cur_pct": 62.2,
+    "scale": 0.916,
+    "target_w": 38.5,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "LBCrcl100LtnMtGl",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 875,
+    "cur_pct": 51.0,
+    "scale": 1.118,
+    "target_w": 950.7,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "circle-30ml-15-415",
+  "target_body_w": 703.8,
+  "anchor_scale": 1.169,
+  "from_skus": [
+   {
+    "sku": "GBCrcl30GlCap",
+    "pct": 45.0,
+    "scope": "glass_body",
+    "cur_px": 662,
+    "cur_pct": 38.6,
+    "scale": 1.166,
+    "target_w": 678.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl30SpryMattGl",
+    "pct": 45.0,
+    "scope": "glass_body",
+    "cur_px": 659,
+    "cur_pct": 38.4,
+    "scale": 1.172,
+    "target_w": 729.4,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "circle-50ml-18-415",
+  "target_body_w": 834.2,
+  "anchor_scale": 1.168,
+  "from_skus": [
+   {
+    "sku": "GBCrcl50AnSpGl",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1126,
+    "cur_pct": 65.6,
+    "scale": 0.762,
+    "target_w": 571.1,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl50AnSpTslIvyGl",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 1024,
+    "cur_pct": 59.7,
+    "scale": 0.838,
+    "target_w": 481.8,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl50RdcrShnGl",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 739,
+    "cur_pct": 43.1,
+    "scale": 1.161,
+    "target_w": 804.6,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl50DrpGl",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 719,
+    "cur_pct": 41.9,
+    "scale": 1.193,
+    "target_w": 884.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCrcl50SpryMtGl",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 730,
+    "cur_pct": 42.5,
+    "scale": 1.175,
+    "target_w": 863.9,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "LBCrcl50LtnMtGl",
+    "pct": 50.0,
+    "scope": "glass_body",
+    "cur_px": 730,
+    "cur_pct": 42.5,
+    "scale": 1.175,
+    "target_w": 868.6,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "cylinder-100ml-18-415",
+  "target_body_w": 226.1,
+  "anchor_scale": 0.8325,
+  "from_skus": [
+   {
+    "sku": "GBCyl100AnSpMtSl",
+    "pct": 67.0,
+    "scope": "glass_body",
+    "cur_px": 1508,
+    "cur_pct": 87.9,
+    "scale": 0.762,
+    "target_w": 202.0,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCyl100AnSpTslMtSl",
+    "pct": 67.0,
+    "scope": "glass_body",
+    "cur_px": 1398,
+    "cur_pct": 81.5,
+    "scale": 0.822,
+    "target_w": 217.9,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCyl100RdcrMtSl",
+    "pct": 67.0,
+    "scope": "glass_body",
+    "cur_px": 1183,
+    "cur_pct": 68.9,
+    "scale": 0.972,
+    "target_w": 270.2,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCyl100SpryMtGl",
+    "pct": 67.0,
+    "scope": "glass_body",
+    "cur_px": 1364,
+    "cur_pct": 79.5,
+    "scale": 0.843,
+    "target_w": 234.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "cylinder-50ml-18-415",
+  "target_body_w": 247.8,
+  "anchor_scale": 0.7575,
+  "from_skus": [
+   {
+    "sku": "GBCyl50AnSpMtSl",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 1362,
+    "cur_pct": 79.4,
+    "scale": 0.718,
+    "target_w": 218.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   },
+   {
+    "sku": "GBCyl50AnSpTslMtSl",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 1227,
+    "cur_pct": 71.5,
+    "scale": 0.797,
+    "target_w": 277.4,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r3"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "apothecary-30ml-Ground",
+  "target_body_w": 328.4,
+  "anchor_scale": 0.697,
+  "from_skus": [
+   {
+    "sku": "GB1ozApthGreen",
+    "pct": 42.0,
+    "scope": "glass_body",
+    "cur_px": 1034,
+    "cur_pct": 60.3,
+    "scale": 0.697,
+    "target_w": 335.3,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r4"
+   },
+   {
+    "sku": "GB1ozApthBlue",
+    "pct": 42.0,
+    "scope": "glass_body",
+    "cur_px": 1042,
+    "cur_pct": 60.7,
+    "scale": 0.692,
+    "target_w": 323.0,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r4"
+   },
+   {
+    "sku": "GB1ozApth",
+    "pct": 42.0,
+    "scope": "glass_body",
+    "cur_px": 1005,
+    "cur_pct": 58.6,
+    "scale": 0.717,
+    "target_w": 328.4,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r4"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "apothecary-118ml-Ground",
+  "target_body_w": 740.4,
+  "anchor_scale": 1.206,
+  "from_skus": [
+   {
+    "sku": "GBPearClear4ozStpr",
+    "pct": 52.0,
+    "scope": "glass_body",
+    "cur_px": 740,
+    "cur_pct": 43.1,
+    "scale": 1.206,
+    "target_w": 740.4,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r4"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "decorative-35ml-Ground",
+  "target_body_w": 1023.1,
+  "anchor_scale": 1.29,
+  "from_skus": [
+   {
+    "sku": "GBEternalFlameBlue",
+    "pct": 30.0,
+    "scope": "glass_body",
+    "cur_px": 399,
+    "cur_pct": 23.3,
+    "scale": 1.29,
+    "target_w": 1023.1,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r4"
+   },
+   {
+    "sku": "GBEternalFlameClear",
+    "pct": 30.0,
+    "scope": "glass_body",
+    "cur_px": 392,
+    "cur_pct": 22.8,
+    "scale": 1.313,
+    "target_w": 1030.9,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r4"
+   },
+   {
+    "sku": "GBEternalFlameGreen",
+    "pct": 30.0,
+    "scope": "glass_body",
+    "cur_px": 879,
+    "cur_pct": 51.2,
+    "scale": 0.586,
+    "target_w": 106.6,
+    "collection": "sunburst-all-heroes-latest-2026-09-09-r4"
+   }
+  ],
+  "conflict": true
+ },
+ {
+  "body": "apothecary-15ml-Ground",
+  "target_body_w": 339.1,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 45.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 339.1,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "circle-50ml-18-400",
+  "target_body_w": 52.3,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 52.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 52.3,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "cylinder-114ml-none",
+  "target_body_w": 364.1,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 57.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 364.1,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "cylinder-227ml-none",
+  "target_body_w": 359.6,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 64.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 359.6,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "cylinder-25ml-18-415",
+  "target_body_w": 288.5,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 51.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 288.5,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "cylinder-28ml-16mm",
+  "target_body_w": 310.5,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 51.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 310.5,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "cylinder-3.3ml-12mm",
+  "target_body_w": 158.1,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 39.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 158.1,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "cylinder-30ml-18-415",
+  "target_body_w": 195.0,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 43.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 195.0,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "cylinder-454ml-none",
+  "target_body_w": 360.8,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 69.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 360.8,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "cylinder-4ml-12mm",
+  "target_body_w": 157.1,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 43.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 157.1,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "cylinder-5.5ml-13-415",
+  "target_body_w": 185.3,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 44.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 185.3,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "diamond-60ml-18-415",
+  "target_body_w": 476.8,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 52.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 476.8,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "diva-100ml-18-415",
+  "target_body_w": 417.4,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 417.4,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "diva-30ml-18-415",
+  "target_body_w": 272.0,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 51.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 272.0,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "elegant-100ml-18-415",
+  "target_body_w": 599.4,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 56.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 599.4,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "elegant-30ml-15-415",
+  "target_body_w": 581.4,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 49.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 581.4,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "elegant-60ml-18-415",
+  "target_body_w": 635.9,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 52.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 635.9,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "empire-100ml-18-415",
+  "target_body_w": 484.5,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 56.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 484.5,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "empire-50ml-18-415",
+  "target_body_w": 395.7,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 52.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 395.7,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "grace-55ml-18-415",
+  "target_body_w": 392.9,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 57.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 392.9,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "pillar-9ml-13-415",
+  "target_body_w": 383.8,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 45.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 383.8,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "pillar-9ml-17-415",
+  "target_body_w": 304.5,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 45.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 304.5,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "rectangle-10ml-13-415",
+  "target_body_w": 521.4,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 43.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 521.4,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "rectangle-9ml-Ground",
+  "target_body_w": 367.9,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 42.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 367.9,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "round-128ml-18-415",
+  "target_body_w": 877.0,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 51.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 877.0,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "round-78ml-18-415",
+  "target_body_w": 535.3,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 49.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 535.3,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "royal-14ml-11mm",
+  "target_body_w": 418.5,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 47.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 418.5,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "sleek-100ml-18-415",
+  "target_body_w": 239.2,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 63.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 239.2,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "sleek-30ml-18-415",
+  "target_body_w": 255.4,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 54.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 255.4,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "sleek-50ml-18-415",
+  "target_body_w": 198.9,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 61.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 198.9,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "sleek-5ml-13-415",
+  "target_body_w": 272.8,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 41.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 272.8,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "sleek-8ml-13-415",
+  "target_body_w": 206.2,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 47.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 206.2,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "slim-100ml-18-415",
+  "target_body_w": 206.4,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 63.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 206.4,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "slim-30ml-18-415",
+  "target_body_w": 263.0,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 52.0,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 263.0,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ },
+ {
+  "body": "slim-50ml-18-415",
+  "target_body_w": 231.4,
+  "anchor_scale": 1.0,
+  "from_skus": [
+   {
+    "sku": "(proposed)",
+    "pct": 58.5,
+    "scope": "glass_body",
+    "cur_px": 0,
+    "cur_pct": 0,
+    "scale": 1.0,
+    "target_w": 231.4,
+    "collection": "fit-proposal"
+   }
+  ],
+  "conflict": false
+ }
+]

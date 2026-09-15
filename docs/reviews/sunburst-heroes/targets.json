@@ -1,0 +1,558 @@
+{
+ "boston-round-60ml-20-400": {
+  "target_w": 438.8,
+  "anchor_scale": 0.889,
+  "anchors": [
+   "GBBstn2ozBlkCapSht",
+   "GBBstn2ozBlkDrprShnGlTrim",
+   "GBBstn2ozMtlRollGl",
+   "GBBstn2ozRollonMattGl",
+   "GBBstnAmb2ozBlkCapSht",
+   "GBBstnAmb2ozRollonMattGl",
+   "GBBstnAmb2ozMtlRollonMattGl",
+   "GBBstnAmb2ozBlkDropperShnGlTrim",
+   "GBBstnBlu2ozBlkCapSht",
+   "GBBstnBlu2ozBlkDropperShnGlTrim",
+   "GBBstnBlu2ozMtlRollonMattSl",
+   "GBBstnBlu2ozRollonMattGl"
+  ],
+  "target_pct": 57.0,
+  "source": "jordan"
+ },
+ "cylinder-5ml-13-415": {
+  "target_w": 206.3,
+  "anchor_scale": 0.7935,
+  "anchors": [
+   "GBCylBlu5RollBlkDot",
+   "GBCyl5RollBlkDot"
+  ],
+  "target_pct": 37.5,
+  "source": "jordan"
+ },
+ "cylinder-9ml-17-415": {
+  "target_w": 192.2,
+  "anchor_scale": 0.818,
+  "anchors": [
+   "GBCylAmb9RollBlkDot",
+   "GBCyl9RollBlkDot",
+   "GBCylBlu9RollBlkDot",
+   "GBCylFrst9RollBlkDot",
+   "GBCylSwrl9RollBlkDot"
+  ],
+  "target_pct": 45.0,
+  "source": "jordan"
+ },
+ "boston-round-30ml-20-400": {
+  "target_w": 362.2,
+  "anchor_scale": 0.7875,
+  "anchors": [
+   "GBBstn1ozRollonShBlk",
+   "GBBstn1ozMtlRollonMattGl",
+   "GBBstn1ozBlkDrpShnGlTrim",
+   "GBBstn1ozBlkCapSht",
+   "GBBstnAmb1ozBlkCapSht",
+   "GBBstnAmb1ozWhtDropperShnGlTrim",
+   "GBBstnAmb1ozRollonMattGl",
+   "GBBstnAmb1ozMtlRollonMattSl",
+   "GBBstnBlu1ozMtlRollonMattSl",
+   "GBBstnBlu1ozBlkDropperShnGlTrim",
+   "GBBstnBlu1ozBlkCapSht",
+   "GBBstnBlu1ozRollonMattBlk"
+  ],
+  "target_pct": 50.0,
+  "source": "jordan"
+ },
+ "circle-15ml-13-415": {
+  "target_w": 643.9,
+  "anchor_scale": 0.9385,
+  "anchors": [
+   "GBCrcl15Gl",
+   "GBCrcl15SpryGlMatt",
+   "GBCrcl15RollBlkSh",
+   "GBCrcl15MtlRollGlMatt"
+  ],
+  "target_pct": 40.0,
+  "source": "jordan"
+ },
+ "cylinder-50ml-16mm": {
+  "target_w": 348.2,
+  "anchor_scale": 0.851,
+  "anchors": [
+   "GBCyl50RollWht"
+  ],
+  "target_pct": 57.5,
+  "source": "jordan"
+ },
+ "tall-cylinder-9ml-13-415": {
+  "target_w": 186.1,
+  "anchor_scale": 0.921,
+  "anchors": [
+   "GBTallCyl9RollBlkDot",
+   "GBTallCylFrst9RollBlkDot"
+  ],
+  "target_pct": 65.0,
+  "source": "jordan"
+ },
+ "diva-46ml-18-415": {
+  "target_w": 253.6,
+  "anchor_scale": 1.117,
+  "anchors": [
+   "GBDiva46DrpSl"
+  ],
+  "target_pct": 42.0,
+  "source": "jordan"
+ },
+ "elegant-15ml-13-415": {
+  "target_w": 586.2,
+  "anchor_scale": 1.002,
+  "anchors": [
+   "GBElg15RollSlSh"
+  ],
+  "target_pct": 48.0,
+  "source": "jordan"
+ },
+ "flair-15ml-13-415": {
+  "target_w": 452.6,
+  "anchor_scale": 1.23,
+  "anchors": [
+   "GBFlair15RollSlDot"
+  ],
+  "target_pct": 42.0,
+  "source": "jordan"
+ },
+ "tulip-5ml-13-415": {
+  "target_w": 475.4,
+  "anchor_scale": 1.071,
+  "anchors": [
+   "GBTulipAmb5RollBlkDot"
+  ],
+  "target_pct": 40.0,
+  "source": "jordan"
+ },
+ "tulip-6ml-13-415": {
+  "target_w": 495.1,
+  "anchor_scale": 1.036,
+  "anchors": [
+   "GBTulip6RollBlkDot"
+  ],
+  "target_pct": 44.0,
+  "source": "jordan"
+ },
+ "square-15ml-13-415": {
+  "target_w": 514.6,
+  "anchor_scale": 0.964,
+  "anchors": [
+   "GBSqr15RollSlSh"
+  ],
+  "target_pct": 47.0,
+  "source": "jordan"
+ },
+ "royal-13ml-13-415": {
+  "target_w": 785.8,
+  "anchor_scale": 0.941,
+  "anchors": [
+   "GBRoyal13RollSlDot"
+  ],
+  "target_pct": 51.0,
+  "source": "jordan"
+ },
+ "vial-1ml-Plug": {
+  "target_w": 90.2,
+  "anchor_scale": 1.0345,
+  "anchors": [
+   "GB1mlAmbVialWht",
+   "GB1mlVBlk"
+  ],
+  "target_pct": 51.5,
+  "source": "jordan"
+ },
+ "decorative-4ml-8mm": {
+  "target_w": 115.5,
+  "anchor_scale": 0.896,
+  "anchors": [
+   "GBHeartFrst4KeyGld",
+   "GBHeartFrst4TslRed"
+  ],
+  "target_pct": 34.75,
+  "source": "jordan"
+ },
+ "decorative-10ml-17.52mm": {
+  "target_w": 260.6,
+  "anchor_scale": 1.086,
+  "anchors": [
+   "GBMtlMrblLarge"
+  ],
+  "target_pct": 62.0,
+  "source": "jordan"
+ },
+ "decorative-5ml-17.52mm": {
+  "target_w": 261.1,
+  "anchor_scale": 1.028,
+  "anchors": [
+   "GBMtlMrblSmall"
+  ],
+  "target_pct": 46.0,
+  "source": "jordan"
+ },
+ "bell-10ml-13-415": {
+  "target_w": 532.0,
+  "anchor_scale": 1.007,
+  "anchors": [
+   "GBBell10SpryBlkSh",
+   "GBBell10RollBlkDot",
+   "GBBell10MtlRollBlkDot",
+   "GBBell10BlkShSht"
+  ],
+  "target_pct": 54.0,
+  "source": "jordan"
+ },
+ "boston-round-15ml-18-400": {
+  "target_w": 299.8,
+  "anchor_scale": 0.837,
+  "anchors": [
+   "GBBstn15BlkCapSht",
+   "GBBstnAmb15mlBlkCapSht",
+   "GBBstnAmb15mlWhtDropperGlTrim",
+   "GBBstnBlu15BlkCapSht",
+   "GBBstnBlu15mlBlkDropperSlTrim"
+  ],
+  "target_pct": 50.5,
+  "source": "jordan"
+ },
+ "circle-100ml-18-415": {
+  "target_w": 894.8,
+  "anchor_scale": 0.995,
+  "anchors": [
+   "GBCrcl100RdcrShnGl",
+   "GBCrcl100SpryMtGl",
+   "GBCrcl100AnSpTslGl",
+   "GBCrcl100AnSpGl",
+   "GBCrclFrst100AnSpGl",
+   "LBCrcl100LtnMtGl"
+  ],
+  "target_pct": 55.0,
+  "source": "jordan"
+ },
+ "circle-30ml-15-415": {
+  "target_w": 703.8,
+  "anchor_scale": 1.169,
+  "anchors": [
+   "GBCrcl30GlCap",
+   "GBCrcl30SpryMattGl"
+  ],
+  "target_pct": 45.0,
+  "source": "jordan"
+ },
+ "circle-50ml-18-415": {
+  "target_w": 834.2,
+  "anchor_scale": 1.168,
+  "anchors": [
+   "GBCrcl50AnSpGl",
+   "GBCrcl50AnSpTslIvyGl",
+   "GBCrcl50RdcrShnGl",
+   "GBCrcl50DrpGl",
+   "GBCrcl50SpryMtGl",
+   "LBCrcl50LtnMtGl"
+  ],
+  "target_pct": 50.0,
+  "source": "jordan"
+ },
+ "cylinder-100ml-18-415": {
+  "target_w": 226.1,
+  "anchor_scale": 0.8325,
+  "anchors": [
+   "GBCyl100AnSpMtSl",
+   "GBCyl100AnSpTslMtSl",
+   "GBCyl100RdcrMtSl",
+   "GBCyl100SpryMtGl"
+  ],
+  "target_pct": 67.0,
+  "source": "jordan"
+ },
+ "cylinder-50ml-18-415": {
+  "target_w": 247.8,
+  "anchor_scale": 0.7575,
+  "anchors": [
+   "GBCyl50AnSpMtSl",
+   "GBCyl50AnSpTslMtSl"
+  ],
+  "target_pct": 57.0,
+  "source": "jordan"
+ },
+ "apothecary-30ml-Ground": {
+  "target_w": 328.4,
+  "anchor_scale": 0.697,
+  "anchors": [
+   "GB1ozApthGreen",
+   "GB1ozApthBlue",
+   "GB1ozApth"
+  ],
+  "target_pct": 42.0,
+  "source": "jordan"
+ },
+ "apothecary-118ml-Ground": {
+  "target_w": 740.4,
+  "anchor_scale": 1.206,
+  "anchors": [
+   "GBPearClear4ozStpr"
+  ],
+  "target_pct": 52.0,
+  "source": "jordan"
+ },
+ "decorative-35ml-Ground": {
+  "target_w": 1023.1,
+  "anchor_scale": 1.29,
+  "anchors": [
+   "GBEternalFlameBlue",
+   "GBEternalFlameClear",
+   "GBEternalFlameGreen"
+  ],
+  "target_pct": 30.0,
+  "source": "jordan"
+ },
+ "apothecary-15ml-Ground": {
+  "target_w": 339.1,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 45.5,
+  "source": "proposed"
+ },
+ "circle-50ml-18-400": {
+  "target_w": 52.3,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 52.0,
+  "source": "proposed"
+ },
+ "cylinder-114ml-none": {
+  "target_w": 364.1,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 57.5,
+  "source": "proposed"
+ },
+ "cylinder-227ml-none": {
+  "target_w": 359.6,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 64.0,
+  "source": "proposed"
+ },
+ "cylinder-25ml-18-415": {
+  "target_w": 288.5,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 51.5,
+  "source": "proposed"
+ },
+ "cylinder-28ml-16mm": {
+  "target_w": 310.5,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 51.0,
+  "source": "proposed"
+ },
+ "cylinder-3.3ml-12mm": {
+  "target_w": 158.1,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 39.0,
+  "source": "proposed"
+ },
+ "cylinder-30ml-18-415": {
+  "target_w": 195.0,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 43.5,
+  "source": "proposed"
+ },
+ "cylinder-454ml-none": {
+  "target_w": 360.8,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 69.0,
+  "source": "proposed"
+ },
+ "cylinder-4ml-12mm": {
+  "target_w": 157.1,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 43.0,
+  "source": "proposed"
+ },
+ "cylinder-5.5ml-13-415": {
+  "target_w": 185.3,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 44.0,
+  "source": "proposed"
+ },
+ "diamond-60ml-18-415": {
+  "target_w": 476.8,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 52.5,
+  "source": "proposed"
+ },
+ "diva-100ml-18-415": {
+  "target_w": 417.4,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 57.0,
+  "source": "proposed"
+ },
+ "diva-30ml-18-415": {
+  "target_w": 272.0,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 51.0,
+  "source": "proposed"
+ },
+ "elegant-100ml-18-415": {
+  "target_w": 599.4,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 56.5,
+  "source": "proposed"
+ },
+ "elegant-30ml-15-415": {
+  "target_w": 581.4,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 49.5,
+  "source": "proposed"
+ },
+ "elegant-60ml-18-415": {
+  "target_w": 635.9,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 52.0,
+  "source": "proposed"
+ },
+ "empire-100ml-18-415": {
+  "target_w": 484.5,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 56.0,
+  "source": "proposed"
+ },
+ "empire-50ml-18-415": {
+  "target_w": 395.7,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 52.5,
+  "source": "proposed"
+ },
+ "grace-55ml-18-415": {
+  "target_w": 392.9,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 57.0,
+  "source": "proposed"
+ },
+ "pillar-9ml-13-415": {
+  "target_w": 383.8,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 45.0,
+  "source": "proposed"
+ },
+ "pillar-9ml-17-415": {
+  "target_w": 304.5,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 45.0,
+  "source": "proposed"
+ },
+ "rectangle-10ml-13-415": {
+  "target_w": 521.4,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 43.0,
+  "source": "proposed"
+ },
+ "rectangle-9ml-Ground": {
+  "target_w": 367.9,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 42.0,
+  "source": "proposed"
+ },
+ "round-128ml-18-415": {
+  "target_w": 877.0,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 51.5,
+  "source": "proposed"
+ },
+ "round-78ml-18-415": {
+  "target_w": 535.3,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 49.0,
+  "source": "proposed"
+ },
+ "royal-14ml-11mm": {
+  "target_w": 418.5,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 47.0,
+  "source": "proposed"
+ },
+ "sleek-100ml-18-415": {
+  "target_w": 239.2,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 63.0,
+  "source": "proposed"
+ },
+ "sleek-30ml-18-415": {
+  "target_w": 255.4,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 54.5,
+  "source": "proposed"
+ },
+ "sleek-50ml-18-415": {
+  "target_w": 198.9,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 61.5,
+  "source": "proposed"
+ },
+ "sleek-5ml-13-415": {
+  "target_w": 272.8,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 41.5,
+  "source": "proposed"
+ },
+ "sleek-8ml-13-415": {
+  "target_w": 206.2,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 47.5,
+  "source": "proposed"
+ },
+ "slim-100ml-18-415": {
+  "target_w": 206.4,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 63.5,
+  "source": "proposed"
+ },
+ "slim-30ml-18-415": {
+  "target_w": 263.0,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 52.0,
+  "source": "proposed"
+ },
+ "slim-50ml-18-415": {
+  "target_w": 231.4,
+  "anchor_scale": 1.0,
+  "anchors": [],
+  "target_pct": 58.5,
+  "source": "proposed"
+ }
+}
