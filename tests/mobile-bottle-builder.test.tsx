@@ -97,7 +97,7 @@ describe('mobile presentation over shared configuration',()=>{
  it('keeps the first option row in the compact mobile chrome and does not repeat selected copy',()=>{
   const css=readFileSync("src/components/bottle-builder/MobileBuilder.module.css","utf8");
   expect(css).toContain("height: 168px");
-  expect(css).toContain("font-size: clamp(1.75rem, 8vw, 2rem)");
+  expect(css).toContain("font-size: clamp(1.625rem, 7.2vw, 1.875rem)");
   expect(css).toContain("min-height: 44px");
   choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');
   expect(container.textContent).not.toContain('Clear selected');

@@ -18,7 +18,7 @@
 .more > button { display: grid; place-items: center; width: 40px; min-width: 40px; min-height: 40px; }
 .moreMenu { position: absolute; right: 0; top: 100%; z-index: 8; display: grid; min-width: 160px; padding: 6px; background: #fff; border: 1px solid var(--line); box-shadow: 0 10px 24px rgba(28,28,30,.12); }
 .moreMenu button, .moreMenu a { display: flex; align-items: center; justify-content: flex-start; min-height: 44px; padding: 0 10px; font-size: .875rem; }
-.title { font-family: var(--font-brand); font-size: clamp(1.75rem, 8vw, 2rem); line-height: 1.1; font-weight: 400; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; margin: 8px 0 10px; }
+.title { font-family: var(--font-brand); font-size: clamp(1.625rem, 7.2vw, 1.875rem); line-height: 1.15; font-weight: 400; letter-spacing: 0; text-transform: none; white-space: nowrap; margin: 6px 0 8px; }
 .selectedBottle { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 0 2px; }
 .selectedBottle h2 { font-family: var(--font-brand); font-size: 1rem; line-height: 1.2; font-weight: 600; text-transform: none; letter-spacing: 0; }
 .selectedBottle p { color: var(--quiet); font-size: .75rem; margin-top: 1px; }
@@ -43,7 +43,7 @@
 .check { position: absolute; z-index: 1; right: 4px; top: 4px; width: 22px; height: 22px; border-radius: 50%; color: white; background: var(--gold); display: grid; place-items: center; }
 .bottleGrid .choice, .glassGrid .choice { background: #eeebe5; }
 .bottleGrid strong, .glassGrid strong { font-size: 1rem; font-weight: 600; }
-.bottleThumb, .glassThumb { width: 100%; aspect-ratio: 1 / .92; min-height: 118px; max-height: 148px; margin-bottom: 4px; display: flex; align-items: flex-end; justify-content: center; }
+.bottleThumb, .glassThumb { width: 100%; aspect-ratio: 1 / .78; min-height: 110px; max-height: 132px; margin-bottom: 4px; display: flex; align-items: flex-end; justify-content: center; }
 .componentThumb, .finishThumb { position: relative; overflow: hidden; width: 100%; height: 80px; display: grid; place-items: center; padding: 6px; background: #eeebe5; }
 .componentThumb { height: 92px; }
 .componentThumb img, .finishThumb img { object-fit: contain; width: 100%; height: 100%; mix-blend-mode: multiply; min-height: 0; }
@@ -57,7 +57,7 @@
 .actionBar .error { margin: 0 0 6px; font-size: .8125rem; }
 .actionRow { display: grid; grid-template-columns: auto minmax(0,1fr); align-items: center; gap: 10px; }
 .back { display: flex; align-items: center; justify-content: center; gap: 4px; padding: 8px 4px; min-height: 44px; }
-.primary { min-height: 44px; padding: 10px 14px; background: var(--ink); color: #fff; display: flex; justify-content: center; align-items: center; gap: 6px; border-radius: 3px; font-size: .875rem; line-height: 1.3; }
+.primary { min-height: 44px; padding: 10px 12px; background: var(--ink); color: #fff; display: flex; justify-content: center; align-items: center; gap: 6px; border-radius: 3px; font-size: .8125rem; line-height: 1.2; white-space: nowrap; }
 .secondary { min-height: 44px; padding: 10px 14px; border: 1px solid var(--ink); color: var(--ink); background: transparent; display: flex; justify-content: center; align-items: center; border-radius: 3px; font-size: .875rem; }
 .primary svg { flex-shrink: 0; }
 .primary:disabled { background: #dedbd5; color: #565149; }
