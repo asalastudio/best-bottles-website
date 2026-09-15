@@ -85,12 +85,21 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
             data-bb-website-sku={variants[0]?.websiteSku}>
             {displayImage ? <Image src={displayImage} alt={title} fill
                 unoptimized={displayImage.includes(".public.blob.vercel-storage.com/")}
-                className="object-contain" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                className="object-contain" sizes="(max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                 onError={() => fail(displayImage)} />
                 : <span className="flex h-full flex-col items-center justify-center gap-3 text-xs text-slate"><Package className="h-10 w-10" />Product image coming soon</span>}
         </Link>}
-        {showRail && <CatalogCapOptions title={title} href={href} variants={variants}
-            photo={(variant) => { const url = photo(variant); return url && !failed.has(url) ? url : undefined; }}
-            onImageError={fail} />}
+        {showRail && (
+            <>
+                <p className="px-3 pt-2 text-[12px] leading-tight text-slate lg:hidden">
+                    {variants.length} cap option{variants.length === 1 ? "" : "s"}
+                </p>
+                <div className="hidden lg:block">
+                    <CatalogCapOptions title={title} href={href} variants={variants}
+                        photo={(variant) => { const url = photo(variant); return url && !failed.has(url) ? url : undefined; }}
+                        onImageError={fail} />
+                </div>
+            </>
+        )}
     </div>;
 }

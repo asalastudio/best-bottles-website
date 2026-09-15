@@ -7,7 +7,6 @@ import { getCatalogConvexClient, searchCatalogServer } from "@/lib/catalogServer
 import { SITE_URL } from "@/lib/seo";
 
 const PAGE_SIZE = 24;
-const MAX_VISIBLE_LIMIT = 48; // one Convex execution reads whole product docs per group; larger limits hit the 16 MB budget
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -31,12 +30,6 @@ function toURLSearchParams(input: Record<string, string | string[] | undefined>)
     return params;
 }
 
-function clampVisibleLimit(rawLimit: string | null): number {
-    const parsed = Number(rawLimit);
-    if (!Number.isFinite(parsed) || parsed <= PAGE_SIZE) return PAGE_SIZE;
-    return Math.min(Math.ceil(parsed / PAGE_SIZE) * PAGE_SIZE, MAX_VISIBLE_LIMIT);
-}
-
 export default async function CatalogPage({
     searchParams,
 }: {
@@ -45,7 +38,6 @@ export default async function CatalogPage({
     const resolvedSearchParams = await searchParams;
     const urlSearchParams = toURLSearchParams(resolvedSearchParams);
     const initialState = paramsToFilters(urlSearchParams);
-    const initialLimit = clampVisibleLimit(urlSearchParams.get("limit"));
     const convex = getCatalogConvexClient();
 
     const [initialResult, initialTaxonomy] = await Promise.all([
@@ -53,7 +45,7 @@ export default async function CatalogPage({
             filters: initialState.filters,
             sort: initialState.sort,
             view: initialState.view,
-            limit: initialLimit,
+            limit: PAGE_SIZE,
             cursor: null,
         }) as Promise<CatalogSearchResult>,
         convex.query(api.products.getCatalogTaxonomy, {}),

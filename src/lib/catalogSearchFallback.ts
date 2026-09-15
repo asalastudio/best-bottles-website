@@ -298,3 +298,37 @@ export function buildCatalogSearchResult(input: {
         variantPreviewRows: input.variantPreviewRows.filter((row) => visibleIds.has(row.groupId)),
     };
 }
+
+function mergeRowsByGroupId<T extends { groupId: string }>(previous: T[], next: T[]): T[] {
+    const merged = new Map<string, T>();
+    for (const row of previous) merged.set(row.groupId, row);
+    for (const row of next) merged.set(row.groupId, row);
+    return [...merged.values()];
+}
+
+type CatalogPageMergeable = {
+    items: Array<{ _id: string }>;
+    primarySkus: Array<{ groupId: string }>;
+    variantPreviewRows: Array<{ groupId: string }>;
+    nextCursor: string | null;
+};
+
+/** Append a cursor page onto the already-rendered catalog without dropping earlier cards. */
+export function mergeCatalogSearchPages<T extends CatalogPageMergeable>(
+    previous: T,
+    nextPage: T,
+): T {
+    const seen = new Set(previous.items.map((item) => item._id));
+    const items = [...previous.items] as T["items"];
+    for (const item of nextPage.items) {
+        if (seen.has(item._id)) continue;
+        seen.add(item._id);
+        items.push(item);
+    }
+    return {
+        ...nextPage,
+        items,
+        primarySkus: mergeRowsByGroupId(previous.primarySkus, nextPage.primarySkus) as T["primarySkus"],
+        variantPreviewRows: mergeRowsByGroupId(previous.variantPreviewRows, nextPage.variantPreviewRows) as T["variantPreviewRows"],
+    };
+}

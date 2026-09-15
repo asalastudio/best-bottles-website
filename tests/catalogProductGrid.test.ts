@@ -64,7 +64,8 @@ describe("continuous catalog product grid", () => {
         );
         expect(source).toContain("gap-px");
         expect(source).toContain("border-champagne");
-        expect(source).toContain("sm:grid-cols-2");
+        expect(source).toContain("grid-cols-2");
+        expect(source).toContain("lg:grid-cols-3");
         expect(source).toContain("xl:grid-cols-4");
     });
 
@@ -90,8 +91,9 @@ describe("continuous catalog product grid", () => {
         expect(cylinder).toContain("focus-within:outline");
     });
 
-    it("keeps product titles readable instead of truncating them", () => {
+    it("clamps mobile catalog titles without truncating the desktop card", () => {
         const master = readFileSync(join(process.cwd(), "src/app/catalog/CatalogClient.tsx"), "utf8");
+        expect(master).toContain("max-lg:line-clamp-2");
         expect(master).not.toContain("leading-snug line-clamp-2 mb-3");
     });
 });

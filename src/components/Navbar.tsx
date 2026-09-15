@@ -435,7 +435,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                             <button
                                 aria-label="Cart"
                                 onClick={() => setCartOpen(true)}
-                                className="hidden xl:flex items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
+                                className={`${variant === "catalog" ? "flex" : "hidden xl:flex"} items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer`}
                             >
                                 <ShoppingBag className="text-obsidian" size={20} />
                                 {mounted && isCartHydrated && itemCount > 0 && (
