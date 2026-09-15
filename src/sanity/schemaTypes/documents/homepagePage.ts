@@ -7,6 +7,18 @@ export const homepagePage = defineType({
     type: "document",
     icon: HomeIcon,
     fields: [
+        defineField({name:"useEditorialArtwork",title:"Use custom hero and family artwork",type:"boolean",initialValue:false,
+            description:"Enable after replacing the older hero and family images below with the approved stone photography. Until enabled, the redesigned homepage uses its curated stone artwork. Collection cards and Build your bottle fields are always active."}),
+        defineField({ name: "collectionCards", title: "Shop by Collection", type: "array",
+            of: [defineArrayMember({type:"shopCollectionCard"})],
+            description: "Shared desktop and mobile merchandising. Leave unset for the six default collections. The full directory always exposes all eleven. Destinations follow the selected collection, never a manually typed URL.",
+            validation: rule => rule.max(11).custom(cards => {
+                if (!cards) return true;
+                const keys = cards.map(card => (card as {collectionKey?:string}).collectionKey).filter(Boolean);
+                return new Set(keys).size === keys.length || "Each collection may appear only once.";
+            }),
+        }),
+        defineField({name:"buildYourBottle", title:"Build your bottle section",type:"buildYourBottleBlock"}),
         defineField({
             name: "heroSlides",
             title: "Hero Slider",
@@ -14,6 +26,24 @@ export const homepagePage = defineType({
             of: [defineArrayMember({ type: "heroBlock" })],
             validation: (Rule) => Rule.min(1).max(6),
             description: "Add 1 slide for a static hero, or 2+ for a rotating carousel (e.g. Black Friday, seasonal promos). Each slide has its own image, text, and button link.",
+        }),
+        defineField({
+            name: "heroHotspotImage",
+            title: "Hero hotspots — reference still",
+            type: "image",
+            description: "The current hero frame at its full extent (download it from /assets/hero/v7/base.webp). Hotspots below are placed by clicking on this still and mapped onto the live hero, so it must match the live scene exactly.",
+        }),
+        defineField({
+            name: "heroHotspots",
+            title: "Hero hotspots",
+            type: "array",
+            of: [defineArrayMember({ type: "heroHotspot" })],
+            options: {
+                // sanity-plugin-hotspot-array: click on the reference still to add and move spots
+                imageHotspot: { imagePath: "heroHotspotImage", descriptionPath: "label" },
+            } as never,
+            validation: (Rule) => Rule.max(8),
+            description: "Dots on the homepage hero scene (Empire bottle in the niche). Click the reference still to add one, drag to move. Up to 8.",
         }),
         defineField({
             name: "mobileHeroMode",

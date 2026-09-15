@@ -107,7 +107,9 @@ describe("Paper Doll draft preview contract", () => {
         // Blob); the page has no draft path at all, so nothing can leak one.
         expect(productPageSource).toContain('from "@/lib/paper-doll/plates"');
         expect(productPageSource).toContain("loadPlatesForVariants(");
-        expect(productPageSource).toContain("platesBySku={platesBySku}");
+        // Only the explicit local review may overlay candidates. Ordinary
+        // product requests retain the unmodified Convex plate index.
+        expect(productPageSource).toContain("platesBySku={localAssetPreview ? pilot.plates : platesBySku}");
         expect(productPageSource).not.toContain("isPaperDollDraftPreviewAllowed");
         expect(productPageSource).not.toContain("paperDollPreview");
     });

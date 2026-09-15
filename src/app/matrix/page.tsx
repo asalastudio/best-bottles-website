@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { getShopCollection, shopCollectionHref } from "@/lib/shopCollections";
+import { builderCollectionBodies, BUILDER_COLLECTION_FITMENTS } from "@/lib/bottle-builder/collection-context";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import Navbar from "@/components/Navbar";
@@ -16,8 +19,9 @@ export const metadata: Metadata = {
     alternates: { canonical: `${SITE_URL}/matrix` },
 };
 
-export default async function MatrixPage({ searchParams }: { searchParams: Promise<{ family?: string }> }) {
-    const { family: familyParam } = await searchParams;
+export default async function MatrixPage({ searchParams }: { searchParams: Promise<{ family?: string; shop?: string }> }) {
+    const { family: familyParam, shop } = await searchParams;
+    const collection = shop && BUILDER_COLLECTION_FITMENTS[shop] ? getShopCollection(shop) : undefined;
     const breadcrumb = buildBreadcrumbJsonLd([
         { name: "Home", url: SITE_URL },
         { name: "Build Your Bottle", url: `${SITE_URL}/matrix` },
@@ -26,13 +30,14 @@ export default async function MatrixPage({ searchParams }: { searchParams: Promi
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
         <Navbar hideMobileSearch builderMobile />
         <main className="min-h-screen bg-bone pt-[104px] sm:pt-[120px]" data-builder-page>
-            <Suspense fallback={<BuilderLoading />}><Builder familyParam={familyParam} /></Suspense>
+            {collection && <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-4 px-5 py-4 text-sm"><span>Building from {collection.title}</span><Link className="underline" href={shopCollectionHref(collection.key)}>Back to collection</Link><Link className="underline" href="/matrix">Explore all fitments</Link></div>}
+            <Suspense fallback={<BuilderLoading />}><Builder familyParam={familyParam} collection={collection?.key} /></Suspense>
         </main>
         <Footer />
     </>;
 }
 
-async function Builder({ familyParam }: { familyParam?: string }) {
+async function Builder({ familyParam, collection }: { familyParam?: string; collection?: string }) {
     const entry = await loadBuilderEntry(familyParam, { family: loadBuilderFamily, families: loadBuilderFamilies });
-    return <MatrixClient key={entry.openFamily} {...entry} />;
+    return <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}`} {...entry} bodies={builderCollectionBodies(entry.bodies, collection)} />;
 }

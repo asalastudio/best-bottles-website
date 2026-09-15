@@ -19,7 +19,7 @@ export const clerkPortalAppearance: Appearance = {
         colorInputBackground: "#FFFFFF",
         colorInputText: "#171717",
         colorDanger: "#B4453C",
-        fontFamily: "var(--font-inter), ui-sans-serif, system-ui, sans-serif",
+        fontFamily: "var(--font-brand)",
         fontSize: "0.875rem",
         borderRadius: "8px",
     },

@@ -1,0 +1,911 @@
+{
+  "schemaVersion": 1,
+  "id": "royal-plates-2026-09-14",
+  "family": "Royal",
+  "createdAt": "2026-09-14T01:00:07.308Z",
+  "ledgerAt": "2026-09-14T00:39:35.157Z",
+  "scope": "Current development catalog; legacy scope remains open.",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "rows": [
+    {
+      "sku": "GBMtlCylGl",
+      "graceSku": "GB-RYL-CLR-14ML-T",
+      "productGroupId": "kh7am1b71a7xt0evm5k4ddaqb98dpc09",
+      "capacityMl": 14,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Royal cylinder bottle with Crystal Cap with glass applicator.Capacity: Approx 14ml",
+      "groupSlug": "royal-14ml-clear-11mm",
+      "familyId": "royal-14ml-clear-11mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-14ml-clear-11mm/GBMtlCylGl/9c778b130b212cf2e3fe2d818eea909506272028faf6d89a822450597cb0c263.front-on-1000x1100.webp",
+          "sha256": "9c778b130b212cf2e3fe2d818eea909506272028faf6d89a822450597cb0c263",
+          "url": "/images/plate-contact-sheets/9c778b130b212cf2e3fe2d818eea909506272028faf6d89a822450597cb0c263.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13BlkSht",
+      "graceSku": "GB-RYL-CLR-13ML-BLK-S",
+      "productGroupId": "kh7ffc6p83zt74536b8sdgcgn98dpevk",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with short black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13BlkSht/4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830.front-on-1000x1100.webp",
+          "sha256": "4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830",
+          "url": "/images/plate-contact-sheets/4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13BlkSht/0a5019d647c13d74b023680d849ffaa7f23f4d8633efe9271b703fbe6cff3c32.front-off-1000x1100.webp",
+          "sha256": "0a5019d647c13d74b023680d849ffaa7f23f4d8633efe9271b703fbe6cff3c32",
+          "url": "/images/plate-contact-sheets/0a5019d647c13d74b023680d849ffaa7f23f4d8633efe9271b703fbe6cff3c32.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13Gl",
+      "graceSku": "GB-VIA-CLR-13ML-GLD-T",
+      "productGroupId": "kh7ffc6p83zt74536b8sdgcgn98dpevk",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Gold",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Gl/67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a.front-on-1000x1100.webp",
+          "sha256": "67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a",
+          "url": "/images/plate-contact-sheets/67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Gl/016de717c45b838357bab909b307c799cf9420385fe05dff523a63594098ce3e.front-off-1000x1100.webp",
+          "sha256": "016de717c45b838357bab909b307c799cf9420385fe05dff523a63594098ce3e",
+          "url": "/images/plate-contact-sheets/016de717c45b838357bab909b307c799cf9420385fe05dff523a63594098ce3e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13MtlRollBlkDot",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-BKDT",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black Dotted",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with metal roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants.",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkDot/7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5.front-on-1000x1100.webp",
+          "sha256": "7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5",
+          "url": "/images/plate-contact-sheets/7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkDot/46a0b9473b4c76035a5db84aaf3b50bfc5a9fd5a667fa838caf5f876b31d7849.front-off-1000x1100.webp",
+          "sha256": "46a0b9473b4c76035a5db84aaf3b50bfc5a9fd5a667fa838caf5f876b31d7849",
+          "url": "/images/plate-contact-sheets/46a0b9473b4c76035a5db84aaf3b50bfc5a9fd5a667fa838caf5f876b31d7849.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13MtlRollBlkSh",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-SBLK",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with metal roller ball plug and black shiny cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price eac",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkSh/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.front-on-1000x1100.webp",
+          "sha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+          "url": "/images/plate-contact-sheets/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollBlkSh/cd10881210677c4a1a0d706b33e77adacb85c521e81c554ee2ccb723285211d3.front-off-1000x1100.webp",
+          "sha256": "cd10881210677c4a1a0d706b33e77adacb85c521e81c554ee2ccb723285211d3",
+          "url": "/images/plate-contact-sheets/cd10881210677c4a1a0d706b33e77adacb85c521e81c554ee2ccb723285211d3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13MtlRollCuMatt",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-MCPR",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Copper",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with metal roller ball plug and matte copper cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollCuMatt/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.front-on-1000x1100.webp",
+          "sha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+          "url": "/images/plate-contact-sheets/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollCuMatt/dd96036bfdfb30f462e255058ee65ad8abdf6267d21fc1ff6dba10c0809cbeaf.front-off-1000x1100.webp",
+          "sha256": "dd96036bfdfb30f462e255058ee65ad8abdf6267d21fc1ff6dba10c0809cbeaf",
+          "url": "/images/plate-contact-sheets/dd96036bfdfb30f462e255058ee65ad8abdf6267d21fc1ff6dba10c0809cbeaf.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13MtlRollGlMatt",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-MGLD",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with metal roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlMatt/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.front-on-1000x1100.webp",
+          "sha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+          "url": "/images/plate-contact-sheets/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlMatt/78e9f12fb0541b1e364b7b2cbf0121c622665d0aaff001ed18ff4a0326ec5136.front-off-1000x1100.webp",
+          "sha256": "78e9f12fb0541b1e364b7b2cbf0121c622665d0aaff001ed18ff4a0326ec5136",
+          "url": "/images/plate-contact-sheets/78e9f12fb0541b1e364b7b2cbf0121c622665d0aaff001ed18ff4a0326ec5136.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13MtlRollGlSh",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-SGLD",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with metal roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlSh/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.front-on-1000x1100.webp",
+          "sha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+          "url": "/images/plate-contact-sheets/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollGlSh/bc13e59e770a82355bd2491959aeac069c6c15788b9254e9cd75d3087b95ba1f.front-off-1000x1100.webp",
+          "sha256": "bc13e59e770a82355bd2491959aeac069c6c15788b9254e9cd75d3087b95ba1f",
+          "url": "/images/plate-contact-sheets/bc13e59e770a82355bd2491959aeac069c6c15788b9254e9cd75d3087b95ba1f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13MtlRollPinkDot",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-PKDT",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Pink Dotted",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with metal roller ball plug and pink cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollPinkDot/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.front-on-1000x1100.webp",
+          "sha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+          "url": "/images/plate-contact-sheets/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollPinkDot/fa2d549bf80c41bb551143134771532b6b0b00b2ea5720818395886beb1996ed.front-off-1000x1100.webp",
+          "sha256": "fa2d549bf80c41bb551143134771532b6b0b00b2ea5720818395886beb1996ed",
+          "url": "/images/plate-contact-sheets/fa2d549bf80c41bb551143134771532b6b0b00b2ea5720818395886beb1996ed.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13MtlRollSlDot",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-SLDT",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Silver Dotted",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with metal roller ball plug and silver cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Pric",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlDot/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.front-on-1000x1100.webp",
+          "sha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+          "url": "/images/plate-contact-sheets/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlDot/d3fc1e7d634ee1abd66ba4cb39a110ad3819fc53a730a6bcd6ede00a6f6ba772.front-off-1000x1100.webp",
+          "sha256": "d3fc1e7d634ee1abd66ba4cb39a110ad3819fc53a730a6bcd6ede00a6f6ba772",
+          "url": "/images/plate-contact-sheets/d3fc1e7d634ee1abd66ba4cb39a110ad3819fc53a730a6bcd6ede00a6f6ba772.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13MtlRollSlMatt",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-MSLV",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with metal roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlMatt/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.front-on-1000x1100.webp",
+          "sha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+          "url": "/images/plate-contact-sheets/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlMatt/72c16b75bc5be916e2524466d79d1958e2f48ffa9efc15b96f51de1afaf953c2.front-off-1000x1100.webp",
+          "sha256": "72c16b75bc5be916e2524466d79d1958e2f48ffa9efc15b96f51de1afaf953c2",
+          "url": "/images/plate-contact-sheets/72c16b75bc5be916e2524466d79d1958e2f48ffa9efc15b96f51de1afaf953c2.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13MtlRollSlSh",
+      "graceSku": "GB-RYL-CLR-13ML-MRL-SSLV",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlSh/85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354.front-on-1000x1100.webp",
+          "sha256": "85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354",
+          "url": "/images/plate-contact-sheets/85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13MtlRollSlSh/71fa4d1681594b42309a16e0c76f066833f877f0385036432ba9e5a94885cab4.front-off-1000x1100.webp",
+          "sha256": "71fa4d1681594b42309a16e0c76f066833f877f0385036432ba9e5a94885cab4",
+          "url": "/images/plate-contact-sheets/71fa4d1681594b42309a16e0c76f066833f877f0385036432ba9e5a94885cab4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13RollBlkDot",
+      "graceSku": "GB-RYL-CLR-13ML-ROL-BKDT",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Black Dotted",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decant",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13RollBlkSh",
+      "graceSku": "GB-RYL-CLR-13ML-ROL-SBLK",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and black shiny cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price e",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollBlkSh/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.front-on-1000x1100.webp",
+          "sha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+          "url": "/images/plate-contact-sheets/202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollBlkSh/1d942deed32b7db9f19ba28ca094f8afd5550bbd628a3e894cb7d4bd8128e701.front-off-1000x1100.webp",
+          "sha256": "1d942deed32b7db9f19ba28ca094f8afd5550bbd628a3e894cb7d4bd8128e701",
+          "url": "/images/plate-contact-sheets/1d942deed32b7db9f19ba28ca094f8afd5550bbd628a3e894cb7d4bd8128e701.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13RollCuMatt",
+      "graceSku": "GB-RYL-CLR-13ML-ROL-MCPR",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Copper",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and matte copper cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollCuMatt/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.front-on-1000x1100.webp",
+          "sha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+          "url": "/images/plate-contact-sheets/c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollCuMatt/127fb78a71934adfddf3bff07734e213941f304c2e293b1a08ee7fb19f5fa46b.front-off-1000x1100.webp",
+          "sha256": "127fb78a71934adfddf3bff07734e213941f304c2e293b1a08ee7fb19f5fa46b",
+          "url": "/images/plate-contact-sheets/127fb78a71934adfddf3bff07734e213941f304c2e293b1a08ee7fb19f5fa46b.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13RollGlMatt",
+      "graceSku": "GB-RYL-CLR-13ML-ROL-MGLD",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlMatt/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.front-on-1000x1100.webp",
+          "sha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+          "url": "/images/plate-contact-sheets/1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlMatt/3268b6486ac686cde31e613f8a6f83734ae04de28fafbedae9f1b29377cb7985.front-off-1000x1100.webp",
+          "sha256": "3268b6486ac686cde31e613f8a6f83734ae04de28fafbedae9f1b29377cb7985",
+          "url": "/images/plate-contact-sheets/3268b6486ac686cde31e613f8a6f83734ae04de28fafbedae9f1b29377cb7985.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13RollGlSh",
+      "graceSku": "GB-RYL-CLR-13ML-ROL-SGLD",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price ea",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlSh/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.front-on-1000x1100.webp",
+          "sha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+          "url": "/images/plate-contact-sheets/a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollGlSh/916f244f20eeb27d1ce18da18c07ae3d2e82c6b50f9973cf577cbcbdf4006fe8.front-off-1000x1100.webp",
+          "sha256": "916f244f20eeb27d1ce18da18c07ae3d2e82c6b50f9973cf577cbcbdf4006fe8",
+          "url": "/images/plate-contact-sheets/916f244f20eeb27d1ce18da18c07ae3d2e82c6b50f9973cf577cbcbdf4006fe8.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13RollPinkDot",
+      "graceSku": "GB-RYL-CLR-13ML-ROL-PKDT",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Pink Dotted",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and pink cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Pric",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollPinkDot/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.front-on-1000x1100.webp",
+          "sha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+          "url": "/images/plate-contact-sheets/59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollPinkDot/1a81448ce5cb88fcef1d14f9066fecffc52b9a9e6349a9c8e817005986d035b7.front-off-1000x1100.webp",
+          "sha256": "1a81448ce5cb88fcef1d14f9066fecffc52b9a9e6349a9c8e817005986d035b7",
+          "url": "/images/plate-contact-sheets/1a81448ce5cb88fcef1d14f9066fecffc52b9a9e6349a9c8e817005986d035b7.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13RollSlDot",
+      "graceSku": "GB-RYL-CLR-13ML-ROL-SLDT",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Silver Dotted",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and silver cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Pr",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlDot/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.front-on-1000x1100.webp",
+          "sha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+          "url": "/images/plate-contact-sheets/5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlDot/fbf34e9278cbe6bd82dadc4875ce396b7200f2506a7d7e3fd442f56467b0ca48.front-off-1000x1100.webp",
+          "sha256": "fbf34e9278cbe6bd82dadc4875ce396b7200f2506a7d7e3fd442f56467b0ca48",
+          "url": "/images/plate-contact-sheets/fbf34e9278cbe6bd82dadc4875ce396b7200f2506a7d7e3fd442f56467b0ca48.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13RollSlMatt",
+      "graceSku": "GB-RYL-CLR-13ML-ROL-MSLV",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlMatt/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.front-on-1000x1100.webp",
+          "sha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+          "url": "/images/plate-contact-sheets/76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlMatt/8fd3a42e4afaa564de6b38df92b45af2a49b425cd041295e2f05c8a5fe43e1c9.front-off-1000x1100.webp",
+          "sha256": "8fd3a42e4afaa564de6b38df92b45af2a49b425cd041295e2f05c8a5fe43e1c9",
+          "url": "/images/plate-contact-sheets/8fd3a42e4afaa564de6b38df92b45af2a49b425cd041295e2f05c8a5fe43e1c9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13RollSlSh",
+      "graceSku": "GB-RYL-CLR-13ML-ROL-SSLV",
+      "productGroupId": "kh7aan510gwjs6x0qcvwsgc49n8dq8zt",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price",
+      "groupSlug": "royal-13ml-clear-13-415-rollon",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlSh/f2d3be1037efa405e1b01ed65c478d0467faab98747c8ed6f256c0e517c79cc2.plate-1000x1100.webp",
+          "sha256": "f2d3be1037efa405e1b01ed65c478d0467faab98747c8ed6f256c0e517c79cc2",
+          "url": "/images/plate-contact-sheets/f2d3be1037efa405e1b01ed65c478d0467faab98747c8ed6f256c0e517c79cc2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13RollSlSh/3ea88661b971cde17c2c730adedf57a1d5fefb3c26d35c4646e6568473d2dbaa.plateCapOff-1000x1100.webp",
+          "sha256": "3ea88661b971cde17c2c730adedf57a1d5fefb3c26d35c4646e6568473d2dbaa",
+          "url": "/images/plate-contact-sheets/3ea88661b971cde17c2c730adedf57a1d5fefb3c26d35c4646e6568473d2dbaa.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13Sl",
+      "graceSku": "GB-VIA-CLR-13ML-SLV-T",
+      "productGroupId": "kh7ffc6p83zt74536b8sdgcgn98dpevk",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Silver",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Sl/5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f.front-on-1000x1100.webp",
+          "sha256": "5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f",
+          "url": "/images/plate-contact-sheets/5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13Sl/a402c321e628714014fb5774fef59d403b9119589caac78ff7a93366b279d22e.front-off-1000x1100.webp",
+          "sha256": "a402c321e628714014fb5774fef59d403b9119589caac78ff7a93366b279d22e",
+          "url": "/images/plate-contact-sheets/a402c321e628714014fb5774fef59d403b9119589caac78ff7a93366b279d22e.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13SpryBlkSh",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-SBLK",
+      "productGroupId": "kh78gg0y786db54t4q27bnrq4n8dqdd0",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Black",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with shiny black spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415-finemist",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBlkSh/d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d.front-on-1000x1100.webp",
+          "sha256": "d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d",
+          "url": "/images/plate-contact-sheets/d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBlkSh/5b42f14c78ae6e1374539af0349dbcf26c79a56e9dfa2131bd983b506d923a34.front-off-1000x1100.webp",
+          "sha256": "5b42f14c78ae6e1374539af0349dbcf26c79a56e9dfa2131bd983b506d923a34",
+          "url": "/images/plate-contact-sheets/5b42f14c78ae6e1374539af0349dbcf26c79a56e9dfa2131bd983b506d923a34.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13SpryBluMatt",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-MBLU",
+      "productGroupId": "kh78gg0y786db54t4q27bnrq4n8dqdd0",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Blue",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with matte blue spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415-finemist",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBluMatt/f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148.front-on-1000x1100.webp",
+          "sha256": "f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148",
+          "url": "/images/plate-contact-sheets/f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryBluMatt/ff6d5a9501bb4ab86370632a62bc112f3945cf5f0bfb86708a630ccf76812403.front-off-1000x1100.webp",
+          "sha256": "ff6d5a9501bb4ab86370632a62bc112f3945cf5f0bfb86708a630ccf76812403",
+          "url": "/images/plate-contact-sheets/ff6d5a9501bb4ab86370632a62bc112f3945cf5f0bfb86708a630ccf76812403.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13SpryCuMatt",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-MCPR",
+      "productGroupId": "kh78gg0y786db54t4q27bnrq4n8dqdd0",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Copper",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with matte copper spray. For use with fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415-finemist",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryCuMatt/6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495.front-on-1000x1100.webp",
+          "sha256": "6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495",
+          "url": "/images/plate-contact-sheets/6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryCuMatt/d43dbe1f744d0f7ee1ead4963d0ade30356310a7c5d3c2b44ad12ffed381c2d9.front-off-1000x1100.webp",
+          "sha256": "d43dbe1f744d0f7ee1ead4963d0ade30356310a7c5d3c2b44ad12ffed381c2d9",
+          "url": "/images/plate-contact-sheets/d43dbe1f744d0f7ee1ead4963d0ade30356310a7c5d3c2b44ad12ffed381c2d9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13SpryGlMatt",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-MGLD",
+      "productGroupId": "kh78gg0y786db54t4q27bnrq4n8dqdd0",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Gold",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with matte gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415-finemist",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlMatt/665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d.front-on-1000x1100.webp",
+          "sha256": "665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d",
+          "url": "/images/plate-contact-sheets/665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlMatt/7ee2a676899c9dfa04005e42007dfc2cf4c4cfa01b6c26e1a95fdd8003de6ea0.front-off-1000x1100.webp",
+          "sha256": "7ee2a676899c9dfa04005e42007dfc2cf4c4cfa01b6c26e1a95fdd8003de6ea0",
+          "url": "/images/plate-contact-sheets/7ee2a676899c9dfa04005e42007dfc2cf4c4cfa01b6c26e1a95fdd8003de6ea0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13SpryGlSh",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-SGLD",
+      "productGroupId": "kh78gg0y786db54t4q27bnrq4n8dqdd0",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Gold",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with shiny gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415-finemist",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlSh/c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab.front-on-1000x1100.webp",
+          "sha256": "c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab",
+          "url": "/images/plate-contact-sheets/c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SpryGlSh/8da45a2da6c236a7b9062f279d188b197f5c24dc08844b72aa62bdfb3109a7b4.front-off-1000x1100.webp",
+          "sha256": "8da45a2da6c236a7b9062f279d188b197f5c24dc08844b72aa62bdfb3109a7b4",
+          "url": "/images/plate-contact-sheets/8da45a2da6c236a7b9062f279d188b197f5c24dc08844b72aa62bdfb3109a7b4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13SprySlMatt",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-MSLV",
+      "productGroupId": "kh78gg0y786db54t4q27bnrq4n8dqdd0",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Matte Silver",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with matte silver spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415-finemist",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlMatt/7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638.front-on-1000x1100.webp",
+          "sha256": "7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638",
+          "url": "/images/plate-contact-sheets/7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlMatt/f63d14c2351e0b02ba005b1504db96127b0aeebaa029b5407d0db48e02b4d517.front-off-1000x1100.webp",
+          "sha256": "f63d14c2351e0b02ba005b1504db96127b0aeebaa029b5407d0db48e02b4d517",
+          "url": "/images/plate-contact-sheets/f63d14c2351e0b02ba005b1504db96127b0aeebaa029b5407d0db48e02b4d517.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13SprySlSh",
+      "graceSku": "GB-RYL-CLR-13ML-SPR-SSLV",
+      "productGroupId": "kh78gg0y786db54t4q27bnrq4n8dqdd0",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "capColor": "Shiny Silver",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with shiny silver spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415-finemist",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlSh/3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970.front-on-1000x1100.webp",
+          "sha256": "3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970",
+          "url": "/images/plate-contact-sheets/3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13SprySlSh/941348919fe29cb1ff0b714d3869c92e0a5aacbbf09b3c989fe7ef40f98903ea.front-off-1000x1100.webp",
+          "sha256": "941348919fe29cb1ff0b714d3869c92e0a5aacbbf09b3c989fe7ef40f98903ea",
+          "url": "/images/plate-contact-sheets/941348919fe29cb1ff0b714d3869c92e0a5aacbbf09b3c989fe7ef40f98903ea.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBRoyal13WhtSht",
+      "graceSku": "GB-VIA-WHT-13ML-WHT-S",
+      "productGroupId": "kh7ffc6p83zt74536b8sdgcgn98dpevk",
+      "capacityMl": 13,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "White",
+      "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with short white cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each",
+      "groupSlug": "royal-13ml-clear-13-415",
+      "familyId": "royal-13ml-clear-13-415",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/royal-13ml-clear-13-415/GBRoyal13WhtSht/f403f4e880747c038f66723f5b8149a878fc28089dd3252a44a50cf33ea572c1.front-on-1000x1100.webp",
+          "sha256": "f403f4e880747c038f66723f5b8149a878fc28089dd3252a44a50cf33ea572c1",
+          "url": "/images/plate-contact-sheets/f403f4e880747c038f66723f5b8149a878fc28089dd3252a44a50cf33ea572c1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    }
+  ]
+}

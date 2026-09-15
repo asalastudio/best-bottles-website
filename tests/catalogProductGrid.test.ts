@@ -2,9 +2,11 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
 import type { GuidedFinderFamily } from "@/lib/products/guided-finder";
+vi.mock("@/components/CartProvider", () => ({ useCart: () => ({ addItems: () => {}, itemCount: 0, isCartHydrated: true }) }));
+vi.mock("convex/react", () => ({ useQuery: () => undefined }));
 
 const cylinderFamilies: GuidedFinderFamily[] = [{
     family: "Cylinder",
@@ -28,6 +30,10 @@ const cylinderFamilies: GuidedFinderFamily[] = [{
         shopifySellable: true,
         checkoutReady: true,
         href: "/products/cylinder-9ml-rollon",
+        purchase: null,
+        variantPreviews: [],
+        capKind: null,
+        slug: "fixture-slug",
     }],
 }];
 
@@ -45,8 +51,8 @@ describe("continuous catalog product grid", () => {
         const fallback = readFileSync(join(process.cwd(), "src/lib/catalogSearchFallback.ts"), "utf8");
         const convex = readFileSync(join(process.cwd(), "convex/products.ts"), "utf8");
 
-        for (const field of ["stockStatus", "caseQuantity", "webPrice1pc", "shopifyVariantId", "shopifySellable"]) {
-            expect(fallback).toContain(`${field}:`);
+        for (const field of ["stockStatus", "caseQuantity", "webPrice1pc", "shopifyVariantId", "shopifySellable", "webPrice10pc", "webPrice12pc", "priceTiers"]) {
+            expect(fallback).toMatch(new RegExp(`${field}\\??:`));
             expect(convex).toContain(`${field}: variant.${field} ?? null`);
         }
     });

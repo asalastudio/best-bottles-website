@@ -1,0 +1,3197 @@
+{
+  "schemaVersion": 1,
+  "family": "Boston Round",
+  "ledgerAt": "2026-09-13T03:46:00.598Z",
+  "policy": "Existing review images and master hashes verified. Historical extraction gates are not fresh component-file validation. No kit approvals or publication. Reuse the 21 candidates on preserved plates first; realign four against corrected plates; resolve the remaining 98 by exact master parts.",
+  "rows": [
+    {
+      "sku": "GBBstn15BlkCapSht",
+      "graceSku": "GB-BSR-CLR-15ML-BLK-S",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-15ml-clear-18-400",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "realign",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/cb11490cbe2104d37535b896d8d685f9958eddd92041e62254a27e8554de4236.webp",
+          "sha256": "cb11490cbe2104d37535b896d8d685f9958eddd92041e62254a27e8554de4236"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/e5dcb3977b72eb14d87d34e8d107017dff2ccea179b96a49f1ea445d2f8522a0.webp",
+          "sha256": "e5dcb3977b72eb14d87d34e8d107017dff2ccea179b96a49f1ea445d2f8522a0"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/3f4782d4f691ba06233bc0625f97a2d43173e489688df169c44de949b7e7b69e.webp",
+          "sha256": "3f4782d4f691ba06233bc0625f97a2d43173e489688df169c44de949b7e7b69e"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+      "sourceSha256": "1c994a66c9d0eb524d3aff308514532efe560d0659f2df9c99860e4e4891fa71",
+      "plateSha256": "cb11490cbe2104d37535b896d8d685f9958eddd92041e62254a27e8554de4236",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8143,
+            "semiTransparentPixels": 6226,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9714,
+            "semiTransparentPixels": 1741,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.5405,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.5405; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false
+    },
+    {
+      "sku": "GBBstn15BlkDrp",
+      "graceSku": "GB-BSR-CLR-15ML-DRP-BLK",
+      "capacityMl": 15,
+      "color": "Clear",
+      "applicator": "N/A",
+      "capColor": null,
+      "itemName": "Boston round design 15ml, 1/2 oz  Clear glass bottle with a black dropper. For use with perfume oils, diffuser oils, ser",
+      "groupSlug": "boston-round-15ml-clear-18-400",
+      "kitState": "held",
+      "reason": "Drp requires manual semantic mapping",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn1ozBlkCapSht",
+      "graceSku": "GB-BSR-CLR-30ML-BLK-S",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "realign",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/85d25d540709059c89bddb9ab2e820ad7cc895e52579abc9bc8924ead0f1d267.webp",
+          "sha256": "85d25d540709059c89bddb9ab2e820ad7cc895e52579abc9bc8924ead0f1d267"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/7970a1c7848cc013a8d9670451826e06a7be44f858a34863f2987cff1679642d.webp",
+          "sha256": "7970a1c7848cc013a8d9670451826e06a7be44f858a34863f2987cff1679642d"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/e893ea920c4c0c8f98265514e4da559629ed9c98d894243211e749ff6364864b.webp",
+          "sha256": "e893ea920c4c0c8f98265514e4da559629ed9c98d894243211e749ff6364864b"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+      "sourceSha256": "8f3adeb586877cc3a1ca8b58901f43022fe388187aa2c5b8d11bfa8edc4f6f1e",
+      "plateSha256": "85d25d540709059c89bddb9ab2e820ad7cc895e52579abc9bc8924ead0f1d267",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.785,
+            "semiTransparentPixels": 6280,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9744,
+            "semiTransparentPixels": 1560,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.5199,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.5199; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false
+    },
+    {
+      "sku": "GBBstn1ozBlkDrp",
+      "graceSku": "GB-BSR-CLR-30ML-DRP-BLK-T",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-dropper",
+      "kitState": "held",
+      "reason": "Drp requires manual semantic mapping",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn1ozBlkDrpShnGlTrim",
+      "graceSku": "GB-BSR-CLR-30ML-DRP-SGTR-T-01",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Shiny Gold Trim",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle and black dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-dropper",
+      "kitState": "held",
+      "reason": "Drp requires manual semantic mapping",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonBlk",
+      "graceSku": "GB-BSR-CLR-30ML-MRL-BLK",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black",
+      "itemName": "Boston round clear glass bottle with metal roll on and black cap, 1 oz capacity",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonGl",
+      "graceSku": "GB-BSR-CLR-30ML-MRO-GLD",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Gold",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with metal roller plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonMattBlk",
+      "graceSku": "GB-BSR-CLR-30ML-MRO-MBLK",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with metal roller plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonMattGl",
+      "graceSku": "GB-BSR-CLR-30ML-MRO-MGLD",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with metal roller plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonMattSl",
+      "graceSku": "GB-BSR-CLR-30ML-MRO-MSLV",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with metal roller plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonShnSl",
+      "graceSku": "GB-BSR-CLR-30ML-MRO-SSLV",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with metal roller plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozRollonMattBlk",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-MBLK",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozRollonMattGl",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-MGLD",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozRollonMattSl",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-MSLV",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozRollonShBlk",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-SBLK",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozRollonShGl",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-SGLD",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozRollonShnSl",
+      "graceSku": "GB-BSR-CLR-30ML-RBL-SSLV",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn1ozWhtDrp",
+      "graceSku": "GB-BSR-CLR-30ML-DRP-WHT-T",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle with white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-dropper",
+      "kitState": "held",
+      "reason": "Drp requires manual semantic mapping",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn1ozWhtDrpShnGlTrim",
+      "graceSku": "GB-BSR-CLR-30ML-DRP-SGTR-T-02",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Shiny Gold Trim",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle and white dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-dropper",
+      "kitState": "held",
+      "reason": "Drp requires manual semantic mapping",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn1ozWhtDrpShnSlTrim",
+      "graceSku": "GB-BSR-CLR-30ML-DRP-SSTR-T",
+      "capacityMl": 30,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Shiny Silver Trim",
+      "itemName": "Boston round design 30ml, 1oz Clear glass bottle and white dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-clear-20-400-dropper",
+      "kitState": "held",
+      "reason": "Drp requires manual semantic mapping",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn2ozBlkCapSht",
+      "graceSku": "GB-BSR-CLR-60ML-BLK-S",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "realign",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/ada43cc85a767d0851e1fefc4f91daa838deec4ac48cc21a29a1a0b080e4f7b5.webp",
+          "sha256": "ada43cc85a767d0851e1fefc4f91daa838deec4ac48cc21a29a1a0b080e4f7b5"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/f532af5c964fadede7e42bcf74ec6367271c4ac79a00e193d7da4cd5f783f412.webp",
+          "sha256": "f532af5c964fadede7e42bcf74ec6367271c4ac79a00e193d7da4cd5f783f412"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/182f28279a4c40ab8a511e2c4b43770c118939cebc897a9c5b6d68efae5d4209.webp",
+          "sha256": "182f28279a4c40ab8a511e2c4b43770c118939cebc897a9c5b6d68efae5d4209"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+      "sourceSha256": "82dacf0eeb9397d6ead784ff4dad5144d7882f6e843b12e511505ee16f87cdf0",
+      "plateSha256": "ada43cc85a767d0851e1fefc4f91daa838deec4ac48cc21a29a1a0b080e4f7b5",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6717,
+            "semiTransparentPixels": 7797,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9732,
+            "semiTransparentPixels": 1775,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.4228,
+          "tailOver40": 5e-06
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.4228; tail >40: 5e-06",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false
+    },
+    {
+      "sku": "GBBstn2ozBlkDrpr",
+      "graceSku": "GB-BSR-CLR-60ML-BLK-T-01",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn2ozBlkDrprShnGlTrim",
+      "graceSku": "GB-BSR-CLR-60ML-BLK-T-02",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 2 ounce clear glass bottle and black dropper with a shiny gold trim cap, price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn2ozBlkDrprShnSlTrim",
+      "graceSku": "GB-BSR-CLR-60ML-BLK-T-03",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle and black dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn2ozMtlRollBlk",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-BLK",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Black",
+      "itemName": "Boston round design 2 ounce clear glass bottle with metal roller ball plug and shiny black cap, price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozMtlRollGl",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-SGLD",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price ea",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattBlk",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-MBLK",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price e",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattGl",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-MGLD",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price ea",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozMtlRollMattSl",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-MSLV",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. P",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozMtlRollShnSl",
+      "graceSku": "GB-BSR-CLR-60ML-MRL-SSLV",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozRollGl",
+      "graceSku": "GB-BSR-CLR-60ML-RBL-SGLD",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozRollMattBlk",
+      "graceSku": "GB-BSR-CLR-60ML-RBL-MBLK",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozRollMattSl",
+      "graceSku": "GB-BSR-CLR-60ML-RBL-MSLV",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozRollShnBlk",
+      "graceSku": "GB-BSR-CLR-60ML-RBL-SBLK",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozRollShnSl",
+      "graceSku": "GB-BSR-CLR-60ML-RON-SSLV",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozRollonMattGl",
+      "graceSku": "GB-BSR-CLR-60ML-RBL-MGLD",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstn2ozWhtDrpr",
+      "graceSku": "GB-BSR-CLR-60ML-WHT-T-01",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle with white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn2ozWhtDrprShnGlTrim",
+      "graceSku": "GB-BSR-CLR-60ML-WHT-T-02",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Clear glass bottle and white dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstn2ozWhtDrprShnSlTrim",
+      "graceSku": "GB-BSR-CLR-60ML-WHT-T-03",
+      "capacityMl": 60,
+      "color": "Clear",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 2 ounce clear glass bottle and white dropper with a shiny silver trim cap, price each",
+      "groupSlug": "boston-round-60ml-clear-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkCapSht",
+      "graceSku": "GB-BSR-AMB-15ML-BLK-S",
+      "capacityMl": 15,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Amber glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-15ml-amber-18-400",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6911, 'semiTransparentPixels': 20695, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": []
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropper",
+      "graceSku": "GB-BSR-AMB-15ML-BLK-T-01",
+      "capacityMl": 15,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Amber glass bottle with a black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-amber-18-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13.webp",
+          "sha256": "8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/ac63ec381780e787141c5e1f22a254fc25fedbe6d89592bdbf51af6eac11cd8c.webp",
+          "sha256": "ac63ec381780e787141c5e1f22a254fc25fedbe6d89592bdbf51af6eac11cd8c"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/ad8a1818cca81a55fec2ba4468945fde745e3f3643db4c9ba23782ad17f73204.webp",
+          "sha256": "ad8a1818cca81a55fec2ba4468945fde745e3f3643db4c9ba23782ad17f73204"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/5. GBBstnAmb15mlBlkDropper.psd",
+      "sourceSha256": "1b11102a8e4308c7b498fd3ea1188e9cd78060fa5cc3f3daded0f9bc71139c97",
+      "plateSha256": "8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7935,
+            "semiTransparentPixels": 13601,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9513,
+            "semiTransparentPixels": 2231,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1649,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.1649; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+      "graceSku": "GB-BSR-AMB-15ML-BLK-T-02",
+      "capacityMl": 15,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Amber glass bottle with black dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-amber-18-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f.webp",
+          "sha256": "d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/399b0d7ff038455c3b2b6a58248b7b7959e20b80967c6d48bc6616f4eb20583d.webp",
+          "sha256": "399b0d7ff038455c3b2b6a58248b7b7959e20b80967c6d48bc6616f4eb20583d"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/956d5b64a75f3ce8d4cb7c712b84729a616a2e89b781803c201780d281243d18.webp",
+          "sha256": "956d5b64a75f3ce8d4cb7c712b84729a616a2e89b781803c201780d281243d18"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/7. GBBstnAmb15mlBlkDropperGlTrim.psd",
+      "sourceSha256": "b2b52c85a1784af992b1958e7c64ce7db8c21af30db6a516edcbe5d2d5ee524e",
+      "plateSha256": "d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7936,
+            "semiTransparentPixels": 13570,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9488,
+            "semiTransparentPixels": 3180,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.253,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.253; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+      "graceSku": "GB-BSR-AMB-15ML-BLK-T-03",
+      "capacityMl": 15,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Amber glass bottle and black dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-amber-18-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6.webp",
+          "sha256": "08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/f6a72d0944763aea8afbedcbae1e1a04051c39c12e2de29ff8ff5cb3f5cb2c95.webp",
+          "sha256": "f6a72d0944763aea8afbedcbae1e1a04051c39c12e2de29ff8ff5cb3f5cb2c95"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/92e49d543fa21f3567c0572fe7bae04fdf228919105c98d19f36a7c85ea1dd1f.webp",
+          "sha256": "92e49d543fa21f3567c0572fe7bae04fdf228919105c98d19f36a7c85ea1dd1f"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/2. GBBstnAmb15mlBlkDropperSlTrim.psd",
+      "sourceSha256": "e07dbdba792fbf30ebeabb532e7f0779c44be1174893009581d0c60dcfa1bc80",
+      "plateSha256": "08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7936,
+            "semiTransparentPixels": 13547,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9476,
+            "semiTransparentPixels": 3095,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1779,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.1779; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropper",
+      "graceSku": "GB-BSR-AMB-15ML-WHT-T-01",
+      "capacityMl": 15,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 15ml, 1/2 oz  Amber glass bottle with a white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-amber-18-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f.webp",
+          "sha256": "b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/54a49f1231a0c5f4477d574111a6bb66c2f113871d0d46c0d4c87639d0ecdc00.webp",
+          "sha256": "54a49f1231a0c5f4477d574111a6bb66c2f113871d0d46c0d4c87639d0ecdc00"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/66620cd1e75d668af4618ff6bd153adb16d0b894c2ebfa05cc1ed3d6287d6a08.webp",
+          "sha256": "66620cd1e75d668af4618ff6bd153adb16d0b894c2ebfa05cc1ed3d6287d6a08"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/6. GBBstnAmb15mlWhtDropper.psd",
+      "sourceSha256": "eb5e161f1f1581b6f41f08dbcdca7950ecc841f7fd4571f35df6af1c661be8e1",
+      "plateSha256": "b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7948,
+            "semiTransparentPixels": 13707,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9438,
+            "semiTransparentPixels": 3695,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2598,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.2598; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+      "graceSku": "GB-BSR-AMB-15ML-WHT-T-02",
+      "capacityMl": 15,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 15ml, 1/2 oz  Amber glass bottle and white dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-amber-18-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8.webp",
+          "sha256": "05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/d414a0f4b0909db1ce292e26984b85a44ccf0d50ba389429909ff47da3863eff.webp",
+          "sha256": "d414a0f4b0909db1ce292e26984b85a44ccf0d50ba389429909ff47da3863eff"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/411e3de4cafff60bcbab9c1f737ed311ff35968d683bcf0e5ae6f39dcbdd2d2b.webp",
+          "sha256": "411e3de4cafff60bcbab9c1f737ed311ff35968d683bcf0e5ae6f39dcbdd2d2b"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/4. GBBstnAmb15mlWhtDropperGlTrim.psd",
+      "sourceSha256": "818aeca0fc4b78a459781384726469dfe74e7a4ef8620a3a33791736d7d81193",
+      "plateSha256": "05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7949,
+            "semiTransparentPixels": 13611,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9491,
+            "semiTransparentPixels": 3096,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2249,
+          "tailOver40": 1.3e-05
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.2249; tail >40: 1.3e-05",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+      "graceSku": "GB-BSR-AMB-15ML-WHT-T-03",
+      "capacityMl": 15,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 15ml, 1/2 oz  Amber glass bottle and white dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-amber-18-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8.webp",
+          "sha256": "a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/dc3b3cfe633896a7c1097246c209c9f947325e150474fa1b44b9f149167b82cf.webp",
+          "sha256": "dc3b3cfe633896a7c1097246c209c9f947325e150474fa1b44b9f149167b82cf"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/d13dd2222a6c295b279f9b2bb5549b45648b33b61b4df781a806d334b76fc310.webp",
+          "sha256": "d13dd2222a6c295b279f9b2bb5549b45648b33b61b4df781a806d334b76fc310"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/3. GBBstnAmb15mlWhtDropperSlTrim.psd",
+      "sourceSha256": "968b57b3b9ec4eb169506c51d8d07f8a88c98eabeeebe62923ebf31a0a08cb95",
+      "plateSha256": "a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7949,
+            "semiTransparentPixels": 13532,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9483,
+            "semiTransparentPixels": 3290,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2057,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.2057; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkCapSht",
+      "graceSku": "GB-BSR-AMB-30ML-BLK-S",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4256, 'semiTransparentPixels': 7449, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": []
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkDropper",
+      "graceSku": "GB-BSR-AMB-30ML-BLK-T-01",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4.webp",
+          "sha256": "a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/49ecd9c75f7e8d140393f4f3f935ba8c3c4490ccc722728535a29f247688c495.webp",
+          "sha256": "49ecd9c75f7e8d140393f4f3f935ba8c3c4490ccc722728535a29f247688c495"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/15a3c183df1dc0bd1829fb0c7e27fe0fe976610bcbefd2d3018dbb937c68ad5a.webp",
+          "sha256": "15a3c183df1dc0bd1829fb0c7e27fe0fe976610bcbefd2d3018dbb937c68ad5a"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/16. GBBstnAmb1ozBlkDropper.psd",
+      "sourceSha256": "4f2ef5e45614acebdf51d947d0048f14dd008b4c69626ab531f50a6e664d2372",
+      "plateSha256": "a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5869,
+            "semiTransparentPixels": 6679,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9518,
+            "semiTransparentPixels": 19824,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2441,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.2441; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkDrpShnGl",
+      "graceSku": "GB-BSR-AMB-30ML-BLK-T-02",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle and black dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonGl",
+      "graceSku": "GB-BSR-AMB-30ML-MRO-GLD",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Gold",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 32.8604, 'tailOver40': 0.201337}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "graceSku": "GB-BSR-AMB-30ML-MRL-MBLK",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.webp",
+          "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/80a799d70ef8bd01a6a637c97f7f058d3d22dc0895d34a2c865be50403346b28.webp",
+          "sha256": "80a799d70ef8bd01a6a637c97f7f058d3d22dc0895d34a2c865be50403346b28"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/bf86755066a978a60862c08f4587dcdca7c9adda084b1d1bcd79ac86d808a202.webp",
+          "sha256": "bf86755066a978a60862c08f4587dcdca7c9adda084b1d1bcd79ac86d808a202"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/3. GBBstnAmb1ozMtlRollonMattBlk.psd",
+      "sourceSha256": "987864a06140f0a1c8638d278dbdd66fa2a0e90d1db2f3c376a772e75db08bb1",
+      "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.406,
+            "semiTransparentPixels": 7562,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9695,
+            "semiTransparentPixels": 2433,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9096,
+            "semiTransparentPixels": 3415,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.8742,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, roller, cap",
+        "Parity mean: 0.8742; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug.",
+      "componentConcern": "The saved metal and plastic configurations share identical separated-parts preview bytes. Verify the exposed roller against each approved source pair before reusing this kit."
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattGl",
+      "graceSku": "GB-BSR-AMB-30ML-MRL-MGLD",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 30.9174, 'tailOver40': 0.219065}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "graceSku": "GB-BSR-AMB-30ML-MRL-MSLV",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.webp",
+          "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/ccae8c4355cf8ba872376043f2b80b0999fcde3c6a40d42aa0f6a525312626f2.webp",
+          "sha256": "ccae8c4355cf8ba872376043f2b80b0999fcde3c6a40d42aa0f6a525312626f2"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/11ee643776ecb929b30092306b4faf46827a58fe7eb79f0009b233b4b98bc742.webp",
+          "sha256": "11ee643776ecb929b30092306b4faf46827a58fe7eb79f0009b233b4b98bc742"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/1. GBBstnAmb1ozMtlRollonMattSl.psd",
+      "sourceSha256": "3ca84fa59dffed11eb26323d63a6b8b7b74dc54ea6a1b06a4b7ce39e8f26c84f",
+      "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.4108,
+            "semiTransparentPixels": 6494,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9695,
+            "semiTransparentPixels": 2454,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9186,
+            "semiTransparentPixels": 2640,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9645,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, roller, cap",
+        "Parity mean: 0.9645; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug.",
+      "componentConcern": "The saved metal and plastic configurations share identical separated-parts preview bytes. Verify the exposed roller against each approved source pair before reusing this kit."
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonShnBlk",
+      "graceSku": "GB-BSR-AMB-30ML-MRL-SBLK",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 25.2045, 'tailOver40': 0.142166}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonShnSl",
+      "graceSku": "GB-BSR-AMB-30ML-MRL-SSLV",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with metal roller plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "realign",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec.webp",
+          "sha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/e27fb09a09ac07ea7938ddcd3bd717ea52f977ae5290d0c9fa92b323aa32393b.webp",
+          "sha256": "e27fb09a09ac07ea7938ddcd3bd717ea52f977ae5290d0c9fa92b323aa32393b"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/5c3f15f0bf7ec0b637df699d06cc3cccff0385728e38f6341c419711a163d880.webp",
+          "sha256": "5c3f15f0bf7ec0b637df699d06cc3cccff0385728e38f6341c419711a163d880"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/2. GBBstnAmb1ozMtlRollonShnSl.psd",
+      "sourceSha256": "ee7e9381873be932835946e1dac8a2b9875d0e5e6d2a8f4f92d3763e6def51e7",
+      "plateSha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.4098,
+            "semiTransparentPixels": 7629,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9695,
+            "semiTransparentPixels": 2388,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.917,
+            "semiTransparentPixels": 4905,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0611,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, roller, cap",
+        "Parity mean: 1.0611; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonGl",
+      "graceSku": "GB-BSR-AMB-30ML-RON-GLD",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Gold",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnAmb1ozMtlRollonGl' does not match website SKU 'GBBstnAmb1ozRollonGl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "graceSku": "GB-BSR-AMB-30ML-RON-MBLK",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.webp",
+          "sha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/80a799d70ef8bd01a6a637c97f7f058d3d22dc0895d34a2c865be50403346b28.webp",
+          "sha256": "80a799d70ef8bd01a6a637c97f7f058d3d22dc0895d34a2c865be50403346b28"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/bf86755066a978a60862c08f4587dcdca7c9adda084b1d1bcd79ac86d808a202.webp",
+          "sha256": "bf86755066a978a60862c08f4587dcdca7c9adda084b1d1bcd79ac86d808a202"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/8. GBBstnAmb1ozRollonMattBlk.psd",
+      "sourceSha256": "db8aa09ebb4d60407aeaff1bad20da32f7fd01bd071d72bc57420ca1ba85ebd9",
+      "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.406,
+            "semiTransparentPixels": 7562,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9695,
+            "semiTransparentPixels": 2433,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9096,
+            "semiTransparentPixels": 3415,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.8742,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, roller, cap",
+        "Parity mean: 0.8742; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug.",
+      "componentConcern": "The saved metal and plastic configurations share identical separated-parts preview bytes. Verify the exposed roller against each approved source pair before reusing this kit."
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattGl",
+      "graceSku": "GB-BSR-AMB-30ML-RON-MGLD",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 30.4423, 'tailOver40': 0.217877}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "graceSku": "GB-BSR-AMB-30ML-RON-MSLV",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68.webp",
+          "sha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/ccae8c4355cf8ba872376043f2b80b0999fcde3c6a40d42aa0f6a525312626f2.webp",
+          "sha256": "ccae8c4355cf8ba872376043f2b80b0999fcde3c6a40d42aa0f6a525312626f2"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/11ee643776ecb929b30092306b4faf46827a58fe7eb79f0009b233b4b98bc742.webp",
+          "sha256": "11ee643776ecb929b30092306b4faf46827a58fe7eb79f0009b233b4b98bc742"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/6. GBBstnAmb1ozRollonMattSl.psd",
+      "sourceSha256": "7eabadd67036eb3e1edb72415913f98b487612974de3fdf27194af86b2e139eb",
+      "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.4108,
+            "semiTransparentPixels": 6494,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9695,
+            "semiTransparentPixels": 2454,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9186,
+            "semiTransparentPixels": 2640,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9645,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, roller, cap",
+        "Parity mean: 0.9645; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug.",
+      "componentConcern": "The saved metal and plastic configurations share identical separated-parts preview bytes. Verify the exposed roller against each approved source pair before reusing this kit."
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonShnBlk",
+      "graceSku": "GB-BSR-AMB-30ML-RBL-SBLK",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Cylinder design 30ml,1 oz Amber glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 25.917, 'tailOver40': 0.14461}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonShnSl",
+      "graceSku": "GB-BSR-AMB-30ML-RON-SSLV",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnAmb1ozMtlRollonShnSl' does not match website SKU 'GBBstnAmb1ozRollonShnSl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDropper",
+      "graceSku": "GB-BSR-AMB-30ML-WHT-T-01",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle with white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2.webp",
+          "sha256": "f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/590e06a614c93dd7f27aeb3a487c8bdf645fdd70ed858af9feb43cc48d52e51f.webp",
+          "sha256": "590e06a614c93dd7f27aeb3a487c8bdf645fdd70ed858af9feb43cc48d52e51f"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/4731737107f0d6582fec54a9e9abc512d193c582a77398076e814451e8b4b788.webp",
+          "sha256": "4731737107f0d6582fec54a9e9abc512d193c582a77398076e814451e8b4b788"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/11. GBBstnAmb1ozWhtDropper.psd",
+      "sourceSha256": "d78cb22c182b16eff4c338fa3ec34d937fde529b1dc08b15ca0b2fbe403297c3",
+      "plateSha256": "f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5869,
+            "semiTransparentPixels": 6644,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9545,
+            "semiTransparentPixels": 2654,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1003,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.1003; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+      "graceSku": "GB-BSR-AMB-30ML-WHT-T-02",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle and white dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03.webp",
+          "sha256": "670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/b37fbd74edacafc4e749abb9d0564d98e08387e5044c4b4054b2f44208c0ed55.webp",
+          "sha256": "b37fbd74edacafc4e749abb9d0564d98e08387e5044c4b4054b2f44208c0ed55"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/00e4641f70092dddb31b73bdb2ecaf7e5ed413e5b665774174a25b950a359c40.webp",
+          "sha256": "00e4641f70092dddb31b73bdb2ecaf7e5ed413e5b665774174a25b950a359c40"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/13. GBBstnAmb1ozWhtDropperShnGlTrim.psd",
+      "sourceSha256": "e21d4abb5bc5a513004a8778f69f8de8a4f23cddd271f2ee7da8cf33e9185046",
+      "plateSha256": "670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5869,
+            "semiTransparentPixels": 6702,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9588,
+            "semiTransparentPixels": 2276,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1388,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.1388; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+      "graceSku": "GB-BSR-AMB-30ML-WHT-T-03",
+      "capacityMl": 30,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 30ml, 1oz Amber glass bottle and white dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-amber-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkCapSht",
+      "graceSku": "GB-BSR-AMB-60ML-BLK-S",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-60ml-amber-20-400",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.3499, 'semiTransparentPixels': 7980, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": []
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+      "graceSku": "GB-BSR-AMB-60ML-BLK-T-01",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle and black dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-amber-20-400-dropper",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6218, 'semiTransparentPixels': 5766, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDrpr",
+      "graceSku": "GB-BSR-AMB-60ML-BLK-T-02",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 2 ounce amber glass bottle with black dropper, price each",
+      "groupSlug": "boston-round-60ml-amber-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+      "graceSku": "GB-BSR-AMB-60ML-BLK-T-03",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle and black dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-amber-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonGl",
+      "graceSku": "GB-BSR-AMB-60ML-MRL-SGLD",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with metal roller ball plug and shiny gold cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. Pri",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4253, 'semiTransparentPixels': 4668, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattBlk",
+      "graceSku": "GB-BSR-AMB-60ML-MRL-MBLK",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with metal roller ball plug and matte black cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. Pr",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4253, 'semiTransparentPixels': 5658, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattGl",
+      "graceSku": "GB-BSR-AMB-60ML-MRL-MGLD",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with metal roller ball plug and matte gold cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. Pri",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4313, 'semiTransparentPixels': 5617, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattSl",
+      "graceSku": "GB-BSR-AMB-60ML-MRL-MSLV",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with metal roller ball plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. P",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4333, 'semiTransparentPixels': 5628, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonShnSl",
+      "graceSku": "GB-BSR-AMB-60ML-MRL-SSLV",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with metal roller ball plug and shiny silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball. P",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4293, 'semiTransparentPixels': 5628, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonGl",
+      "graceSku": "GB-BSR-AMB-60ML-RON-GLD",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Gold",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter roller ball. Price e",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnAmb2ozMtlRollonGl' does not match website SKU 'GBBstnAmb2ozRollonGl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattBlk",
+      "graceSku": "GB-BSR-AMB-60ML-RON-MBLK",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with plastic roller ball plug and matte black cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnAmb2ozMtlRollonMattBlk' does not match website SKU 'GBBstnAmb2ozRollonMattBlk'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattGl",
+      "graceSku": "GB-BSR-AMB-60ML-RON-MGLD",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with plastic roller ball plug and matte gold cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter roller ball. Price e",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4313, 'semiTransparentPixels': 4604, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattSl",
+      "graceSku": "GB-BSR-AMB-60ML-RON-MSLV",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with plastic roller ball plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnAmb2ozMtlRollonMattSl' does not match website SKU 'GBBstnAmb2ozRollonMattSl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonShnBlk",
+      "graceSku": "GB-BSR-AMB-60ML-RBL-SBLK",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Boston Round design 60ml,2 oz Amber glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4273, 'semiTransparentPixels': 5759, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonShnSl",
+      "graceSku": "GB-BSR-AMB-60ML-RON-SSLV",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnAmb2ozMtlRollonShnSl' does not match website SKU 'GBBstnAmb2ozRollonShnSl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+      "graceSku": "GB-BSR-AMB-60ML-WHT-T-01",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle and white dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-amber-20-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6.webp",
+          "sha256": "2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/732cca804137bd4cfbd9296f174963bc21f021ba70a7b8728f8fe00f2a849612.webp",
+          "sha256": "732cca804137bd4cfbd9296f174963bc21f021ba70a7b8728f8fe00f2a849612"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/556ddc02f833ea2f6ed6b5d87c2432192eec4997ce41f01df60e68e90ef4b8d2.webp",
+          "sha256": "556ddc02f833ea2f6ed6b5d87c2432192eec4997ce41f01df60e68e90ef4b8d2"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/13. GBBstnAmb2ozWhtDropperShnGlTrim.psd",
+      "sourceSha256": "b71d5adf2d7e17c8b9de829e920a8dd75aaad1e8b5894892d8467cb15d8b8318",
+      "plateSha256": "2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6287,
+            "semiTransparentPixels": 5254,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9633,
+            "semiTransparentPixels": 1571,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1695,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.1695; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+      "graceSku": "GB-BSR-AMB-60ML-WHT-T-02",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle and white dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-amber-20-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079.webp",
+          "sha256": "bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/07e9556e1efc55a7283bddefdd42d99760950e4b284cf97852c257ad6e631e01.webp",
+          "sha256": "07e9556e1efc55a7283bddefdd42d99760950e4b284cf97852c257ad6e631e01"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/0f1220b66e1103cda8ec8a72486395c3b5d0fabc1f9cd7c7d9af9279a820e88f.webp",
+          "sha256": "0f1220b66e1103cda8ec8a72486395c3b5d0fabc1f9cd7c7d9af9279a820e88f"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/14. GBBstnAmb2ozWhtDropperShnSlTrim.psd",
+      "sourceSha256": "5c9a5008294957db16d2e47687a921d0e788b6f4bf9b7ce2c9cf40e7702c81aa",
+      "plateSha256": "bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6278,
+            "semiTransparentPixels": 5247,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9641,
+            "semiTransparentPixels": 1707,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1582,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.1582; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnAmb2ozWhtDrpr",
+      "graceSku": "GB-BSR-AMB-60ML-WHT-T-03",
+      "capacityMl": 60,
+      "color": "Amber",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Amber glass bottle with white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-amber-20-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu15BlkCapSht",
+      "graceSku": "GB-BSR-CBL-15ML-BLK-S",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-15ml-cobalt-blue-18-400",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6911, 'semiTransparentPixels': 20695, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": []
+    },
+    {
+      "sku": "GBBstnBlu15BlkDrpr",
+      "graceSku": "GB-BSR-CBL-15ML-BLK-T-01",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle with a black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu15BlkDrprGlTrim",
+      "graceSku": "GB-BSR-CBL-15ML-BLK-T-02",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle with black dropper shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu15WhtDrpr",
+      "graceSku": "GB-BSR-CBL-15ML-WHT-T-01",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle with a white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu15WhtDrprGlTrim",
+      "graceSku": "GB-BSR-CBL-15ML-WHT-T-02",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle and white dropper and a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu15WhtDrprSlTrim",
+      "graceSku": "GB-BSR-CBL-15ML-WHT-T-03",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle and white dropper and a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+      "kitState": "none",
+      "reason": null,
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+      "graceSku": "GB-BSR-CBL-15ML-BLK-T-03",
+      "capacityMl": 15,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 15ml, 1/2 oz  Cobalt blue glass bottle and black dropper and a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-15ml-cobalt-blue-18-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c.webp",
+          "sha256": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/88d51a41f1dee910df455e79049270acaab5b0f93714351de761add86886c515.webp",
+          "sha256": "88d51a41f1dee910df455e79049270acaab5b0f93714351de761add86886c515"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/ec799feb32073951141b88d6b1d195e016b2bfc7ee0604a2ea5fc1fca1896ffb.webp",
+          "sha256": "ec799feb32073951141b88d6b1d195e016b2bfc7ee0604a2ea5fc1fca1896ffb"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/2. GBBstnBlu15mlBlkDropperSlTrim.psd",
+      "sourceSha256": "54f455b539a529b31b984cec83e41cc430ce82de334967b234d33e179cff0742",
+      "plateSha256": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7922,
+            "semiTransparentPixels": 13648,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9469,
+            "semiTransparentPixels": 3268,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2906,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.2906; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu1ozBlkCapSht",
+      "graceSku": "GB-BSR-CBL-30ML-BLK-S",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.4109, 'semiTransparentPixels': 8078, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": []
+    },
+    {
+      "sku": "GBBstnBlu1ozBlkDropper",
+      "graceSku": "GB-BSR-CBL-30ML-BLK-T-01",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d.webp",
+          "sha256": "a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/169380dab6180874b89c8787b3946d314fe9232f5621d01dd24c104f80e6e6a2.webp",
+          "sha256": "169380dab6180874b89c8787b3946d314fe9232f5621d01dd24c104f80e6e6a2"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/22a4c82858528fe038cb654e0c7121fc0057b13998dfb4195f5efdff9ce3feec.webp",
+          "sha256": "22a4c82858528fe038cb654e0c7121fc0057b13998dfb4195f5efdff9ce3feec"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/16. GBBstnBlu1ozBlkDropper.psd",
+      "sourceSha256": "79bc6518e047a45f8ba8d015bfdd20926f502cc47409f2ca13d1f1dc255ccbea",
+      "plateSha256": "a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5968,
+            "semiTransparentPixels": 6196,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9524,
+            "semiTransparentPixels": 19802,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3822,
+          "tailOver40": 4e-06
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.3822; tail >40: 4e-06",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "graceSku": "GB-BSR-CBL-30ML-BLK-T-02",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle and black dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea.webp",
+          "sha256": "9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/89ce3d4dceff1d6e61f3e4052e1cf76646c2c279c7356ccd66367dd91c1aab6c.webp",
+          "sha256": "89ce3d4dceff1d6e61f3e4052e1cf76646c2c279c7356ccd66367dd91c1aab6c"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/448b8368266e97b06840961f691219076f6b001cd166c6c1b65ddbb8481fc6ee.webp",
+          "sha256": "448b8368266e97b06840961f691219076f6b001cd166c6c1b65ddbb8481fc6ee"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/12. GBBstnBlu1ozBlkDropperShnGlTrim.psd",
+      "sourceSha256": "aea9ad03ed77e7aea60f9e9814cc78488d26340ff8724ec781a6647f959f7e59",
+      "plateSha256": "9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5959,
+            "semiTransparentPixels": 6244,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9603,
+            "semiTransparentPixels": 2763,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2837,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.2837; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonGl",
+      "graceSku": "GB-BSR-BLU-30ML-MRO-GLD",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Gold",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with metal roller plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price e",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonMattBlk",
+      "graceSku": "GB-BSR-BLU-30ML-MRO-MBLK",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with metal roller plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnBlu1ozMtlRollonMattBlk copy' does not match website SKU 'GBBstnBlu1ozMtlRollonMattBlk'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonMattGl",
+      "graceSku": "GB-BSR-BLU-30ML-MRO-MGLD",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with metal roller plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price e",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnBlu1ozRollonMattGl' does not match website SKU 'GBBstnBlu1ozMtlRollonMattGl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonMattSl",
+      "graceSku": "GB-BSR-BLU-30ML-MRO-MSLV",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with metal roller plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller ball.",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnBlu1ozMtlRollonMattSl copy' does not match website SKU 'GBBstnBlu1ozMtlRollonMattSl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonShnSl",
+      "graceSku": "GB-BSR-BLU-30ML-MRO-SSLV",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with metal roller plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Price",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnBlu1ozMtlRollonShnSl copy' does not match website SKU 'GBBstnBlu1ozMtlRollonShnSl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonGl",
+      "graceSku": "GB-BSR-BLU-30ML-RON-GLD",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Gold",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnBlu1ozMtlRollonGl' does not match website SKU 'GBBstnBlu1ozRollonGl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonMattBlk",
+      "graceSku": "GB-BSR-BLU-30ML-RON-MBLK",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnBlu1ozMtlRollonMattBlk copy' does not match website SKU 'GBBstnBlu1ozRollonMattBlk'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonMattGl",
+      "graceSku": "GB-BSR-BLU-30ML-RON-MGLD",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonMattSl",
+      "graceSku": "GB-BSR-CBL-30ML-RBL-MSLV",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Pric",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnBlu1ozMtlRollonMattSl copy' does not match website SKU 'GBBstnBlu1ozRollonMattSl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonShnBlk",
+      "graceSku": "GB-BSR-CBL-30ML-RBL-SBLK",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Cylinder design 30ml,1 oz Blue glass bottle with plastic roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnBlu1ozRollonShnBlk copy' does not match website SKU 'GBBstnBlu1ozRollonShnBlk'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonShnSl",
+      "graceSku": "GB-BSR-BLU-30ML-RON-SSLV",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Pric",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "Source recovery or identity reconciliation required: source_preflight:front source basename 'GBBstnBlu1ozMtlRollonShnSl copy' does not match website SKU 'GBBstnBlu1ozRollonShnSl'",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu1ozWhtDropper",
+      "graceSku": "GB-BSR-CBL-30ML-WHT-T-01",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle with white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d.webp",
+          "sha256": "0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/bda13ef95d3766d97a93f6ba89ebc78d032d350b52d7aed2d98b2b91d5a0e6f1.webp",
+          "sha256": "bda13ef95d3766d97a93f6ba89ebc78d032d350b52d7aed2d98b2b91d5a0e6f1"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/6b10a4d02690db4b7eaae10d2edee3d6547d414549c9c3e594bcab2eea88acbc.webp",
+          "sha256": "6b10a4d02690db4b7eaae10d2edee3d6547d414549c9c3e594bcab2eea88acbc"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/11. GBBstnBlu1ozWhtDropper.psd",
+      "sourceSha256": "8f6e134c62b41c1055e0189ee75cc83c5cf3c5229d279dad8e49e17829eccd45",
+      "plateSha256": "0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5899,
+            "semiTransparentPixels": 5752,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9542,
+            "semiTransparentPixels": 2499,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2357,
+          "tailOver40": 4e-06
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.2357; tail >40: 4e-06",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+      "graceSku": "GB-BSR-CBL-30ML-WHT-T-02",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle and white dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1.webp",
+          "sha256": "d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/9689c6e0bb623c16b6d208a1d0c2a9f892b8360b2f1ee9e3052b8c5f742f4dc3.webp",
+          "sha256": "9689c6e0bb623c16b6d208a1d0c2a9f892b8360b2f1ee9e3052b8c5f742f4dc3"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/a51179daca9bf8da6e01e991a118cda32bcedad28fbcccadd24c849fd32d0990.webp",
+          "sha256": "a51179daca9bf8da6e01e991a118cda32bcedad28fbcccadd24c849fd32d0990"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/13. GBBstnBlu1ozWhtDropperShnGlTrim.psd",
+      "sourceSha256": "714159bd99d69a90561e67e2a823939f39b4c0cffa716cebff99f1e8136ff70c",
+      "plateSha256": "d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.589,
+            "semiTransparentPixels": 6688,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9584,
+            "semiTransparentPixels": 2289,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2663,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.2663; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+      "graceSku": "GB-BSR-CBL-30ML-WHT-T-03",
+      "capacityMl": 30,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 30ml, 1oz Cobalt blue glass bottle and white dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-dropper",
+      "kitState": "candidate",
+      "reason": "Source-qualified paired PSD mapping passed alpha and exact plate-parity gates; visual approval required.",
+      "lane": "reuse",
+      "images": [
+        {
+          "label": "Current indexed plate",
+          "url": "/images/boston-kit-review/83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46.webp",
+          "sha256": "83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46"
+        },
+        {
+          "label": "Existing kit reconstruction",
+          "url": "/images/boston-kit-review/3ca3145261108ec6d047beaced79fbc3ce30342ac4a2a101fdd49c52b9234d0f.webp",
+          "sha256": "3ca3145261108ec6d047beaced79fbc3ce30342ac4a2a101fdd49c52b9234d0f"
+        },
+        {
+          "label": "Existing separated-parts preview",
+          "url": "/images/boston-kit-review/b0417ea98644bc529bf5411c029bed9bc2258661c2faeffdfb4480ab98dfc524.webp",
+          "sha256": "b0417ea98644bc529bf5411c029bed9bc2258661c2faeffdfb4480ab98dfc524"
+        }
+      ],
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/14. GBBstnBlu1ozWhtDropperShnSlTrim.psd",
+      "sourceSha256": "58bef541605f043890b700b2de976e4c3ccfc9c299884688699db4f0f158e7d6",
+      "plateSha256": "83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46",
+      "priorGates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5899,
+            "semiTransparentPixels": 6781,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9595,
+            "semiTransparentPixels": 2208,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2384,
+          "tailOver40": 0.0
+        }
+      },
+      "reviewNotes": [
+        "Parts: body, cap",
+        "Parity mean: 1.2384; tail >40: 0.0",
+        "Main: reconstructed kit. Previous: registered plate. Source: exploded component view."
+      ],
+      "componentFilesValidated": false,
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu2ozBlkCapSht",
+      "graceSku": "GB-BSR-BLU-60ML-BLK-S",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": null,
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400",
+      "kitState": "held",
+      "reason": "assembled source exposes no independent component layer",
+      "lane": "prepare",
+      "images": []
+    },
+    {
+      "sku": "GBBstnBlu2ozBlkDropper",
+      "graceSku": "GB-BSR-CBL-60ML-BLK-T-01",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 2 ounce cobalt blue glass bottle with black dropper, price each",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+      "kitState": "held",
+      "reason": "assembled source exposes no independent component layer",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "graceSku": "GB-BSR-CBL-60ML-BLK-T-02",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "Black",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle and black dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+      "kitState": "held",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 31.6304, 'tailOver40': 0.620589}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonGl",
+      "graceSku": "GB-BSR-CBL-60ML-MRL-SGLD",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Gold",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Pr",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonMattBlk",
+      "graceSku": "GB-BSR-BLU-60ML-MRO-MBLK",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. P",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonMattGl",
+      "graceSku": "GB-BSR-CBL-60ML-MRL-MGLD",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball. Pr",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonMattSl",
+      "graceSku": "GB-BSR-BLU-60ML-MRO-MSLV",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and matte silver cap. For use with perfume, fragrance oil, essential oils, body oils, thin lotions and ointments. Refillable bottle with large, 12mm diameter metal-roller b",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonShnSl",
+      "graceSku": "GB-BSR-BLU-60ML-MRO-SSLV",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Metal Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball.",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonGl",
+      "graceSku": "GB-BSR-BLU-60ML-RON-GLD",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Gold",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with plastic roller ball plug and shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. .   oils. Refillable bottle with large, 12mm diameter roller ba",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattBlk",
+      "graceSku": "GB-BSR-BLU-60ML-RON-MBLK",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Black",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with plastic roller ball plug and matte black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Price",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattGl",
+      "graceSku": "GB-BSR-BLU-60ML-RON-MGLD",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Gold",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with plastic roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. .   oils. Refillable bottle with large, 12mm diameter roller ba",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattSl",
+      "graceSku": "GB-BSR-BLU-60ML-RON-MSLV",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Matte Silver",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Pric",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6341, 'semiTransparentPixels': 5436, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonShnBlk",
+      "graceSku": "GB-BSR-CBL-60ML-RBL-SBLK",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Black",
+      "itemName": "Boston design 60ml,2 oz blue glass bottle with plastic roller ball plug and black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "roller is not independently recoverable",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonShnSl",
+      "graceSku": "GB-BSR-BLU-60ML-RON-SSLV",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Plastic Roller Ball",
+      "capColor": "Shiny Silver",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter roller ball. Pric",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "kitState": "held",
+      "reason": "ValueError: body alpha gate failed: {'transparentFraction': 0.6334, 'semiTransparentPixels': 6478, 'touchesOwnEdge': True}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "roller-seated",
+      "presentationReason": "Jordan confirmed the source insert is cropped at its seat. Keep the roller installed in the glass; use the matching cap-off photograph for cap removal. No floating roller or fabricated lower plug."
+    },
+    {
+      "sku": "GBBstnBlu2ozWhtDropper",
+      "graceSku": "GB-BSR-CBL-60ML-WHT-T-01",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with white dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+      "kitState": "held",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 30.3185, 'tailOver40': 0.616941}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu2ozWhtDropperShnGlTrim",
+      "graceSku": "GB-BSR-CBL-60ML-WHT-T-02",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle and white dropper with a shiny gold trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+      "kitState": "held",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 31.2208, 'tailOver40': 0.613449}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    },
+    {
+      "sku": "GBBstnBlu2ozWhtDropperShnSlTrim",
+      "graceSku": "GB-BSR-CBL-60ML-WHT-T-03",
+      "capacityMl": 60,
+      "color": "Cobalt Blue",
+      "applicator": "Dropper",
+      "capColor": "White",
+      "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle and white dropper with a shiny silver trim cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-dropper",
+      "kitState": "held",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 31.6954, 'tailOver40': 0.623347}",
+      "lane": "prepare",
+      "images": [],
+      "presentation": "assembled-only",
+      "presentationReason": "Jordan approved assembled-only dropper presentation. Swap the complete photographed configuration; no exploded or cap-off view, and no fabricated pipette. The historical separated preview is retained as evidence only."
+    }
+  ]
+}

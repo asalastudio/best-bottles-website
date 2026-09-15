@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "mobile": false,
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "state": "on",
+      "actualLayers": true
+    },
+    {
+      "mobile": false,
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "state": "off",
+      "actualLayers": true
+    },
+    {
+      "mobile": false,
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "state": "on",
+      "actualLayers": true
+    },
+    {
+      "mobile": false,
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "state": "off",
+      "actualLayers": true
+    },
+    {
+      "mobile": false,
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "state": "on",
+      "actualLayers": true
+    },
+    {
+      "mobile": false,
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "state": "off",
+      "actualLayers": true
+    },
+    {
+      "mobile": false,
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "state": "on",
+      "actualLayers": true
+    },
+    {
+      "mobile": false,
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "state": "off",
+      "actualLayers": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "state": "on",
+      "actualLayers": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "state": "off",
+      "actualLayers": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "state": "on",
+      "actualLayers": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "state": "off",
+      "actualLayers": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "state": "on",
+      "actualLayers": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBBstnAmb1ozRollonMattBlk",
+      "state": "off",
+      "actualLayers": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "state": "on",
+      "actualLayers": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBBstnAmb1ozRollonMattSl",
+      "state": "off",
+      "actualLayers": true
+    }
+  ],
+  "errors": [],
+  "failure": "TimeoutError: Waiting failed: 30000ms exceeded"
+}

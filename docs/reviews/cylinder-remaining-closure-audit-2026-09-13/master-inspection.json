@@ -1,0 +1,2095 @@
+{
+  "masterRoot": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+  "fileCount": 29,
+  "sources": [
+    {
+      "id": 1,
+      "path": "17. Additional Bottles/GBSpry1ozSl.psd",
+      "sha256": "4b00f35c25bd70eb50da2183de7756dac8bec525300919a62f28be144ae40ecd",
+      "preview": "sources/4b00f35c25bd70eb50da2183de7756dac8bec525300919a62f28be144ae40ecd.png",
+      "previewSha256": "efdf34b76af9a69a7a3ca922d669dda52e136df615c05ee577887f5b2659d70e",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Hue/Saturation 1",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2398,
+            325,
+            3124,
+            3146
+          ]
+        },
+        {
+          "name": "Brightness/Contrast 1",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2402,
+            325,
+            3880,
+            3172
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 2,
+      "path": "17. Additional Bottles/GBSpry3mlClBlk..psd",
+      "sha256": "4010a54843424f947432363420d864fe520fe259c682e93950a214d660f02445",
+      "preview": "sources/4010a54843424f947432363420d864fe520fe259c682e93950a214d660f02445.png",
+      "previewSha256": "0beaa8856d3202081ee64191f6277677784691a56abe2a6799eabadac7ba6e48",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 4 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            1862,
+            1930,
+            2712,
+            4770
+          ]
+        },
+        {
+          "name": "Layer 2",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2194,
+            1000,
+            2719,
+            1943
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": false,
+          "bbox": [
+            1425,
+            2231,
+            1926,
+            3022
+          ]
+        },
+        {
+          "name": "Layer 7",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2213,
+            890,
+            2694,
+            1605
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2213,
+            890,
+            2693,
+            1594
+          ]
+        },
+        {
+          "name": "Layer 8",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2356,
+            1975,
+            2548,
+            2947
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 3,
+      "path": "17. Additional Bottles/GBSpry3mlClBlk.psd",
+      "sha256": "f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06",
+      "preview": "sources/f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06.png",
+      "previewSha256": "213553d5bfbf57ee21042ae1d0d95bae4955d9a91b72a7ea75acc35eaa4722fb",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 4 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            1862,
+            1930,
+            2712,
+            4770
+          ]
+        },
+        {
+          "name": "Layer 2",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2194,
+            1000,
+            2719,
+            1943
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": false,
+          "bbox": [
+            1425,
+            2231,
+            1926,
+            3022
+          ]
+        },
+        {
+          "name": "Layer 7",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            1622,
+            2313,
+            2103,
+            3028
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            1622,
+            2313,
+            2102,
+            3017
+          ]
+        },
+        {
+          "name": "Layer 8",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2356,
+            1975,
+            2548,
+            2947
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 4,
+      "path": "17. Additional Bottles/GBSpry3mlClWht..psd",
+      "sha256": "1c3b17e52c49f6b7a9c6801a30f9fe76030ec3737f72a2df7b2e614cb2c75859",
+      "preview": "sources/1c3b17e52c49f6b7a9c6801a30f9fe76030ec3737f72a2df7b2e614cb2c75859.png",
+      "previewSha256": "3136855535d0f6709fc4ebee48780236a19dc3a0f3bd2dec5dc777655bf920de",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2815,
+            1937,
+            3678,
+            4775
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3151,
+            1042,
+            3675,
+            1974
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3177,
+            917,
+            3657,
+            1635
+          ]
+        },
+        {
+          "name": "Layer 8",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3329,
+            1991,
+            3521,
+            2963
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3177,
+            917,
+            3657,
+            1621
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 5,
+      "path": "17. Additional Bottles/GBSpry3mlClWht.psd",
+      "sha256": "190a4afd95a58b2efe546acd1450de3f40cf9a21c66a0d5949a7b0d3508fb4d4",
+      "preview": "sources/190a4afd95a58b2efe546acd1450de3f40cf9a21c66a0d5949a7b0d3508fb4d4.png",
+      "previewSha256": "42f272368131247512381d677291640af04d2340683a3f5bc9d324a5e933ce9c",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2815,
+            1937,
+            3678,
+            4775
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3151,
+            1042,
+            3675,
+            1974
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2575,
+            2350,
+            3055,
+            3068
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2575,
+            2350,
+            3055,
+            3054
+          ]
+        },
+        {
+          "name": "Layer 7",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3325,
+            1983,
+            3517,
+            2955
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 6,
+      "path": "17. Additional Bottles/GBSpry4mlClBlk..psd",
+      "sha256": "87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626",
+      "preview": "sources/87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626.png",
+      "previewSha256": "bb97ac92bb4e52e447ceeb38a92f91e7a4f07d60b78cc2f47b5a15c6c2258760",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 10",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            1880,
+            1922,
+            2705,
+            5443
+          ]
+        },
+        {
+          "name": "Layer 2",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2210,
+            1022,
+            2710,
+            1965
+          ]
+        },
+        {
+          "name": "Layer 7",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2754,
+            2608,
+            3235,
+            3323
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2766,
+            2596,
+            3246,
+            3300
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 7,
+      "path": "17. Additional Bottles/GBSpry4mlClBlk.psd",
+      "sha256": "df4a28c21ae7a5dba2e659d6b0641ce0bb742181c737a17f99a9d935f32032ea",
+      "preview": "sources/df4a28c21ae7a5dba2e659d6b0641ce0bb742181c737a17f99a9d935f32032ea.png",
+      "previewSha256": "70753dbedf3006c54b9ee4a45967653494878aa1351700c3a2a8289a3e09aa4d",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 10",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            1880,
+            1922,
+            2705,
+            5443
+          ]
+        },
+        {
+          "name": "Layer 2",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2210,
+            1022,
+            2710,
+            1965
+          ]
+        },
+        {
+          "name": "Layer 7",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2213,
+            920,
+            2694,
+            1635
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2225,
+            908,
+            2705,
+            1612
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 8,
+      "path": "17. Additional Bottles/GBSpry4mlClWh..psd",
+      "sha256": "bdb1553385148221c84a8e7c14b66b7ed64d2af4585a59151362da30ae30d5ed",
+      "preview": "sources/bdb1553385148221c84a8e7c14b66b7ed64d2af4585a59151362da30ae30d5ed.png",
+      "previewSha256": "73798900aacc756dd16da58edaae88c4586aac6a8c8cc5cd2c46e82090fb5758",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2841,
+            1950,
+            3666,
+            5471
+          ]
+        },
+        {
+          "name": "Layer 9",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3348,
+            1996,
+            3562,
+            3226
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3151,
+            1062,
+            3675,
+            1994
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2601,
+            2611,
+            3081,
+            3329
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 9,
+      "path": "17. Additional Bottles/GBSpry4mlClWh.psd",
+      "sha256": "e19dbc706e02350cf0e953dc467f0fd71fbe6639bfe0a7a9d361b785cd098aa0",
+      "preview": "sources/e19dbc706e02350cf0e953dc467f0fd71fbe6639bfe0a7a9d361b785cd098aa0.png",
+      "previewSha256": "eac6e34c6c10434d16fd4dfad4f54e07de3db0fc4522ba00f08895f1ef35e95a",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 8",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3324,
+            2011,
+            3516,
+            2983
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2841,
+            1950,
+            3666,
+            5471
+          ]
+        },
+        {
+          "name": "Layer 9",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3348,
+            1996,
+            3562,
+            3226
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3151,
+            1062,
+            3675,
+            1994
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3177,
+            937,
+            3657,
+            1655
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 10,
+      "path": "18. Perfume Glass Bottles with Metal Decoration/GBSpry1ozSl.psd",
+      "sha256": "c1f3997dac5a55dc8cf90bc3ac2f3ad715fbf4a4b12f440947877417ba91ba6a",
+      "preview": "sources/c1f3997dac5a55dc8cf90bc3ac2f3ad715fbf4a4b12f440947877417ba91ba6a.png",
+      "previewSha256": "67893783e706680bc236e5033feffe694eefc9efb78e7d75b714d78b94384446",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Hue/Saturation 1",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2398,
+            325,
+            3124,
+            3146
+          ]
+        },
+        {
+          "name": "Brightness/Contrast 1",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2402,
+            325,
+            3880,
+            3168
+          ]
+        },
+        {
+          "name": "Layer 1",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2451,
+            294,
+            3057,
+            1371
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 11,
+      "path": "18. Perfume Glass Bottles with Metal Decoration/GBSpry3mlClWht...psd",
+      "sha256": "3004f36b18ed29880def7c894831444d815ae587a8c4af2ffce150fbe0b1bb3f",
+      "preview": "sources/3004f36b18ed29880def7c894831444d815ae587a8c4af2ffce150fbe0b1bb3f.png",
+      "previewSha256": "f03dc3d7ba12c11264ed83436ff3d3dcb9cb422a1eeb114623b2f46866d9431b",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2833,
+            1977,
+            3674,
+            4819
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3148,
+            1084,
+            3668,
+            2019
+          ]
+        },
+        {
+          "name": "Cap",
+          "kind": "group",
+          "visible": true,
+          "bbox": [
+            3840,
+            2385,
+            4329,
+            3100
+          ]
+        },
+        {
+          "name": "Layer 10",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3840,
+            2385,
+            4329,
+            3100
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3841,
+            2385,
+            4329,
+            3089
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": false,
+          "bbox": [
+            3814,
+            2350,
+            4294,
+            3068
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": false,
+          "bbox": [
+            2575,
+            2350,
+            3055,
+            3054
+          ]
+        },
+        {
+          "name": "Layer 7",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3328,
+            2023,
+            3519,
+            2996
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 12,
+      "path": "18. Perfume Glass Bottles with Metal Decoration/GBSpry3mlClWht..psd",
+      "sha256": "b5c7015ca1ff785ebfcfa1e59f9f821e60b8060b06a8193a1c55c29813588e8f",
+      "preview": "sources/b5c7015ca1ff785ebfcfa1e59f9f821e60b8060b06a8193a1c55c29813588e8f.png",
+      "previewSha256": "189f60cd18e5421f005895e0e8f7658ea2b879d94c991eea3013cff8162c0936",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2833,
+            1977,
+            3674,
+            4819
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3148,
+            1084,
+            3668,
+            2019
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": false,
+          "bbox": [
+            3814,
+            2350,
+            4294,
+            3068
+          ]
+        },
+        {
+          "name": "Cap",
+          "kind": "group",
+          "visible": true,
+          "bbox": [
+            3162,
+            958,
+            3659,
+            1685
+          ]
+        },
+        {
+          "name": "Layer 9",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3173,
+            970,
+            3659,
+            1685
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3162,
+            958,
+            3647,
+            1662
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": false,
+          "bbox": [
+            2575,
+            2350,
+            3055,
+            3054
+          ]
+        },
+        {
+          "name": "Layer 7",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3328,
+            2023,
+            3519,
+            2996
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 13,
+      "path": "18. Perfume Glass Bottles with Metal Decoration/GBSpry3mlClWht.psd",
+      "sha256": "8eeeb6056d3a357a09c4ba21a98324892c44fc437f6dcf1eb39775bddcecb6ba",
+      "preview": "sources/8eeeb6056d3a357a09c4ba21a98324892c44fc437f6dcf1eb39775bddcecb6ba.png",
+      "previewSha256": "2e1891b3412a52661322b9687727d67d94d37c02ad1ab6d1a820578123d1a9e5",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2833,
+            1977,
+            3674,
+            4819
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3148,
+            1084,
+            3668,
+            2019
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3814,
+            2350,
+            4294,
+            3068
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": false,
+          "bbox": [
+            2575,
+            2350,
+            3055,
+            3054
+          ]
+        },
+        {
+          "name": "Layer 7",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3328,
+            2023,
+            3519,
+            2996
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 14,
+      "path": "18. Perfume Glass Bottles with Metal Decoration/GBSpry4mlClBlk...psd",
+      "sha256": "6a5faa90f5958a49ec9cc7159aabfd547630813a345fa4aa9bc4aa657731bc95",
+      "preview": "sources/6a5faa90f5958a49ec9cc7159aabfd547630813a345fa4aa9bc4aa657731bc95.png",
+      "previewSha256": "17a7e5bb7c908885b7d9ed116c833c3b84a2e4d2b5f957db54a9f5d2ea0c6ca1",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 2",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3169,
+            1038,
+            3669,
+            1981
+          ]
+        },
+        {
+          "name": "Layer 13",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3182,
+            944,
+            3635,
+            1659
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3193,
+            932,
+            3645,
+            1636
+          ]
+        },
+        {
+          "name": "Layer 11",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2865,
+            1959,
+            3678,
+            5474
+          ]
+        },
+        {
+          "name": "Layer 12",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3343,
+            1994,
+            3566,
+            3225
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 15,
+      "path": "18. Perfume Glass Bottles with Metal Decoration/GBSpry4mlClBlk..psd",
+      "sha256": "3f8eddba98c104906a6d5d592852f4d99c2f265d09850cfb6a6c59179446e4ef",
+      "preview": "sources/3f8eddba98c104906a6d5d592852f4d99c2f265d09850cfb6a6c59179446e4ef.png",
+      "previewSha256": "c175491096b081761415309b70082abc27852e3aa811ab7c88364639ffdf1676",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 2",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3169,
+            1038,
+            3669,
+            1981
+          ]
+        },
+        {
+          "name": "Layer 11",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2865,
+            1959,
+            3678,
+            5474
+          ]
+        },
+        {
+          "name": "Layer 12",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3343,
+            1994,
+            3566,
+            3225
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3768,
+            2611,
+            4248,
+            3329
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 16,
+      "path": "18. Perfume Glass Bottles with Metal Decoration/GBSpry4mlClWh...psd",
+      "sha256": "fcfee93834d4d0306b963107b1d410016373d14c6584d8579bd74bc32e9e8be1",
+      "preview": "sources/fcfee93834d4d0306b963107b1d410016373d14c6584d8579bd74bc32e9e8be1.png",
+      "previewSha256": "c68b4578d34c889254d190c82ce49a2470cc6c3521eabade0ba7ee3f68d515e4",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2865,
+            1959,
+            3678,
+            5474
+          ]
+        },
+        {
+          "name": "Layer 9",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3343,
+            1994,
+            3566,
+            3225
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3152,
+            1061,
+            3676,
+            1996
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": false,
+          "bbox": [
+            3768,
+            2611,
+            4248,
+            3329
+          ]
+        },
+        {
+          "name": "Cap",
+          "kind": "group",
+          "visible": true,
+          "bbox": [
+            3166,
+            934,
+            3663,
+            1661
+          ]
+        },
+        {
+          "name": "Layer 10",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3177,
+            946,
+            3663,
+            1661
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3166,
+            934,
+            3651,
+            1638
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 17,
+      "path": "18. Perfume Glass Bottles with Metal Decoration/GBSpry4mlClWh..psd",
+      "sha256": "5854bf51f6f87c9f19dd7ef5cd1f075f0c46314dad8aa0afa869bc5afdf6ad49",
+      "preview": "sources/5854bf51f6f87c9f19dd7ef5cd1f075f0c46314dad8aa0afa869bc5afdf6ad49.png",
+      "previewSha256": "b60209685293a35309edb315401755b0345156479f9e697bac294ca699a5a49c",
+      "dimensions": [
+        6000,
+        4000
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            6000,
+            4000
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            2865,
+            1959,
+            3678,
+            5474
+          ]
+        },
+        {
+          "name": "Layer 9",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3343,
+            1994,
+            3566,
+            3225
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3152,
+            1061,
+            3676,
+            1996
+          ]
+        },
+        {
+          "name": "Layer 6 copy",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            3768,
+            2611,
+            4248,
+            3329
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 18,
+      "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/1. GBTallCyl9BlkSht.psd",
+      "sha256": "19b91e46778658e9a004bbe647b9bc22b6cf7f395d35eae7a76e7219c53cabb6",
+      "preview": "sources/19b91e46778658e9a004bbe647b9bc22b6cf7f395d35eae7a76e7219c53cabb6.png",
+      "previewSha256": "c2cfac638eb40bd1bbbf53522eb425e9f5a3ca75919e0ddce1338f7458068d8c",
+      "dimensions": [
+        750,
+        1417
+      ],
+      "layers": [
+        {
+          "name": "Layer 0",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            -75,
+            0,
+            825,
+            1417
+          ]
+        },
+        {
+          "name": "Bottle",
+          "kind": "group",
+          "visible": true,
+          "bbox": [
+            126,
+            127,
+            369,
+            1381
+          ]
+        },
+        {
+          "name": "Layer 11",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            126,
+            127,
+            369,
+            1381
+          ]
+        },
+        {
+          "name": "Layer 12",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            307,
+            258,
+            327,
+            1126
+          ]
+        },
+        {
+          "name": "Layer 13",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            150,
+            263,
+            186,
+            1130
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            425,
+            1252,
+            617,
+            1381
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 19,
+      "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /1. GBTallCyl9BlkSht.psd",
+      "sha256": "1b97231006b2462b01852bf4f7da316bbb599f1cbf6cd210b511473a5710ad9f",
+      "preview": "sources/1b97231006b2462b01852bf4f7da316bbb599f1cbf6cd210b511473a5710ad9f.png",
+      "previewSha256": "af64d539bfa8f7f39cddb14a6f1e60e509468e8faa6af9408f60bd6fcf1db08e",
+      "dimensions": [
+        750,
+        1417
+      ],
+      "layers": [
+        {
+          "name": "Layer 0",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            -75,
+            0,
+            825,
+            1417
+          ]
+        },
+        {
+          "name": "Bottle",
+          "kind": "group",
+          "visible": true,
+          "bbox": [
+            236,
+            127,
+            479,
+            1381
+          ]
+        },
+        {
+          "name": "Layer 11",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            236,
+            127,
+            479,
+            1381
+          ]
+        },
+        {
+          "name": "Layer 12",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            417,
+            258,
+            437,
+            1126
+          ]
+        },
+        {
+          "name": "Layer 13",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            260,
+            263,
+            296,
+            1130
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            254,
+            120,
+            446,
+            249
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 20,
+      "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /1. GBCyl5BlkSht.psd",
+      "sha256": "2961edfea8dc9b0ec0cea6e168cec86e286d7af3dced74262b5882f9248d0884",
+      "preview": "sources/2961edfea8dc9b0ec0cea6e168cec86e286d7af3dced74262b5882f9248d0884.png",
+      "previewSha256": "dd65b72644c0356a7938dfcbe4a166dc8114546781e2260a09b05b7df025284d",
+      "dimensions": [
+        600,
+        827
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            600,
+            827
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            71,
+            145,
+            289,
+            781
+          ]
+        },
+        {
+          "name": "Layer 3",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            355,
+            659,
+            543,
+            781
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 21,
+      "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/1. GBCyl5BlkSht.psd",
+      "sha256": "e2b0b85826c0d8374f15fe42f1976873272e716ffa46a0828aacad5924405f9d",
+      "preview": "sources/e2b0b85826c0d8374f15fe42f1976873272e716ffa46a0828aacad5924405f9d.png",
+      "previewSha256": "6d561412ff56d5c2e8153b77fe9e4c46a6c5b240cb29aed65b4cd843b11988f0",
+      "dimensions": [
+        600,
+        827
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            600,
+            827
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            191,
+            145,
+            409,
+            781
+          ]
+        },
+        {
+          "name": "Layer 3",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            205,
+            130,
+            393,
+            252
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 22,
+      "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/1. GBTallCylFrst9BlkSht.psd",
+      "sha256": "4c44728403529b40459fa8ad783229c3ceeb1e81b9adc8dc7e19f2256e1e65d1",
+      "preview": "sources/4c44728403529b40459fa8ad783229c3ceeb1e81b9adc8dc7e19f2256e1e65d1.png",
+      "previewSha256": "9a71f069f94aaa896370a8f75d3126ffcd964aadfe66972abf70f8dafc6bfb48",
+      "dimensions": [
+        750,
+        1417
+      ],
+      "layers": [
+        {
+          "name": "Layer 0",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            -75,
+            0,
+            825,
+            1417
+          ]
+        },
+        {
+          "name": "Layer 14",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            169,
+            127,
+            385,
+            1381
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            449,
+            1252,
+            641,
+            1381
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 23,
+      "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /1. GBTallCylFrst9BlkSht.psd",
+      "sha256": "334b12f147c615342edefcecc155c643c4f13d83987f60bf080bd5dee297138e",
+      "preview": "sources/334b12f147c615342edefcecc155c643c4f13d83987f60bf080bd5dee297138e.png",
+      "previewSha256": "ae5795769f2b2682cae57d6d3bed29f32ef143fbe10549cbc1a57d981177d460",
+      "dimensions": [
+        750,
+        1417
+      ],
+      "layers": [
+        {
+          "name": "Layer 0",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            -75,
+            0,
+            825,
+            1417
+          ]
+        },
+        {
+          "name": "Bottle",
+          "kind": "group",
+          "visible": true,
+          "bbox": [
+            260,
+            258,
+            437,
+            1130
+          ]
+        },
+        {
+          "name": "Layer 12",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            417,
+            258,
+            437,
+            1126
+          ]
+        },
+        {
+          "name": "Layer 13",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            260,
+            263,
+            296,
+            1130
+          ]
+        },
+        {
+          "name": "Layer 14",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            245,
+            127,
+            461,
+            1381
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            254,
+            120,
+            446,
+            249
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 24,
+      "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/1. GBCylBlu5BlkSht.psd",
+      "sha256": "df958b77a57a0962343d3a98f0ab6b50f665247befd74178d1426b51d4ceb265",
+      "preview": "sources/df958b77a57a0962343d3a98f0ab6b50f665247befd74178d1426b51d4ceb265.png",
+      "previewSha256": "d4f69419f39acb6d5276c76109a95ee3aceff93e3ec7cc1c1c0d795167a9c1d8",
+      "dimensions": [
+        600,
+        827
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            600,
+            827
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            197,
+            145,
+            403,
+            781
+          ]
+        },
+        {
+          "name": "Layer 3",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            205,
+            130,
+            393,
+            252
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 25,
+      "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Clear 5ml Cly (Capped) PSD/1. GBCyl5BlkSht.psd",
+      "sha256": "e2b0b85826c0d8374f15fe42f1976873272e716ffa46a0828aacad5924405f9d",
+      "preview": "sources/e2b0b85826c0d8374f15fe42f1976873272e716ffa46a0828aacad5924405f9d.png",
+      "previewSha256": "6d561412ff56d5c2e8153b77fe9e4c46a6c5b240cb29aed65b4cd843b11988f0",
+      "dimensions": [
+        600,
+        827
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            600,
+            827
+          ]
+        },
+        {
+          "name": "Layer 4",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            191,
+            145,
+            409,
+            781
+          ]
+        },
+        {
+          "name": "Layer 3",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            205,
+            130,
+            393,
+            252
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 26,
+      "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Frosted Tall Cyl 9ml (capped) PSD /1. GBTallCylFrst9BlkSht.psd",
+      "sha256": "334b12f147c615342edefcecc155c643c4f13d83987f60bf080bd5dee297138e",
+      "preview": "sources/334b12f147c615342edefcecc155c643c4f13d83987f60bf080bd5dee297138e.png",
+      "previewSha256": "ae5795769f2b2682cae57d6d3bed29f32ef143fbe10549cbc1a57d981177d460",
+      "dimensions": [
+        750,
+        1417
+      ],
+      "layers": [
+        {
+          "name": "Layer 0",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            -75,
+            0,
+            825,
+            1417
+          ]
+        },
+        {
+          "name": "Bottle",
+          "kind": "group",
+          "visible": true,
+          "bbox": [
+            260,
+            258,
+            437,
+            1130
+          ]
+        },
+        {
+          "name": "Layer 12",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            417,
+            258,
+            437,
+            1126
+          ]
+        },
+        {
+          "name": "Layer 13",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            260,
+            263,
+            296,
+            1130
+          ]
+        },
+        {
+          "name": "Layer 14",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            245,
+            127,
+            461,
+            1381
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            254,
+            120,
+            446,
+            249
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 27,
+      "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tall Cyl 9ml (capped) PSD /1. GBTallCyl9BlkSht.psd",
+      "sha256": "1b97231006b2462b01852bf4f7da316bbb599f1cbf6cd210b511473a5710ad9f",
+      "preview": "sources/1b97231006b2462b01852bf4f7da316bbb599f1cbf6cd210b511473a5710ad9f.png",
+      "previewSha256": "af64d539bfa8f7f39cddb14a6f1e60e509468e8faa6af9408f60bd6fcf1db08e",
+      "dimensions": [
+        750,
+        1417
+      ],
+      "layers": [
+        {
+          "name": "Layer 0",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            -75,
+            0,
+            825,
+            1417
+          ]
+        },
+        {
+          "name": "Bottle",
+          "kind": "group",
+          "visible": true,
+          "bbox": [
+            236,
+            127,
+            479,
+            1381
+          ]
+        },
+        {
+          "name": "Layer 11",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            236,
+            127,
+            479,
+            1381
+          ]
+        },
+        {
+          "name": "Layer 12",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            417,
+            258,
+            437,
+            1126
+          ]
+        },
+        {
+          "name": "Layer 13",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            260,
+            263,
+            296,
+            1130
+          ]
+        },
+        {
+          "name": "Layer 6",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            254,
+            120,
+            446,
+            249
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 28,
+      "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/1. GBCylBlu5BlkSht.psd",
+      "sha256": "9e3d31d5321f4a5ded3c4efac7124ff21cfdad6deeec1de9b1044fe433d5e606",
+      "preview": "sources/9e3d31d5321f4a5ded3c4efac7124ff21cfdad6deeec1de9b1044fe433d5e606.png",
+      "previewSha256": "bc4d46464c2bb40790ab6cffbbd6ed232bc39defd9cfc0b1e314ee46f37f5492",
+      "dimensions": [
+        600,
+        827
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            600,
+            827
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            93,
+            145,
+            299,
+            781
+          ]
+        },
+        {
+          "name": "Layer 3",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            344,
+            659,
+            532,
+            781
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    },
+    {
+      "id": 29,
+      "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/1. GBCylBlu5BlkSht.psd",
+      "sha256": "df958b77a57a0962343d3a98f0ab6b50f665247befd74178d1426b51d4ceb265",
+      "preview": "sources/df958b77a57a0962343d3a98f0ab6b50f665247befd74178d1426b51d4ceb265.png",
+      "previewSha256": "d4f69419f39acb6d5276c76109a95ee3aceff93e3ec7cc1c1c0d795167a9c1d8",
+      "dimensions": [
+        600,
+        827
+      ],
+      "layers": [
+        {
+          "name": "Background",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            0,
+            0,
+            600,
+            827
+          ]
+        },
+        {
+          "name": "Layer 5",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            197,
+            145,
+            403,
+            781
+          ]
+        },
+        {
+          "name": "Layer 3",
+          "kind": "pixel",
+          "visible": true,
+          "bbox": [
+            205,
+            130,
+            393,
+            252
+          ]
+        }
+      ],
+      "status": "Inspection candidate only; filename discovery does not prove identity"
+    }
+  ]
+}

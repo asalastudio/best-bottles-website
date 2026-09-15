@@ -1,0 +1,292 @@
+#!/usr/bin/env python3
+"""Bare-body builder media for every plated body, from reviewed master PSD layers.
+
+A body key is family|capacityMl|color|neck. Its bare-glass image is one visible
+pixel layer of one exact master PSD — never generated geometry, never a
+flattened product photograph. Sources come from, in order:
+  1. the Circle media already reviewed (src/lib/bottle-builder/circle-bodies.generated.json);
+  2. the 2026-09-07/08 paired-kit recipes reviewed by Jordan and Codex
+     (data/paper-doll/*-paired-kit-recipes.json: onSourceSha256 + onBodyLayer);
+  3. otherwise a CANDIDATE: the layer of a representative capped master PSD whose
+     alpha footprint sits on the bottle axis and reaches the canvas baseline. A
+     candidate is written to the review set only, never to the reviewed file,
+     until Jordan approves it on the contact sheet.
+
+    /opt/homebrew/bin/python3 scripts/paperdoll/build_builder_bodies.py [--review-only]
+
+Writes public/images/bottle-builder/bodies/<key>.webp, src/lib/bottle-builder/bodies.generated.json
+(reviewed keys only), data/paper-doll/builder-bodies-source-review.json (every key,
+with lineage and status) and a contact sheet under public/reviews/builder-bodies-2026-09-14/.
+"""
+import argparse, hashlib, json, re, sys
+from pathlib import Path
+import numpy as np
+from PIL import Image, ImageDraw, ImageFont
+from psd_tools import PSDImage
+
+ROOT = Path('/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master')
+REPO = Path(__file__).resolve().parents[2]
+OUT = REPO / 'public/images/bottle-builder/bodies'; OUT.mkdir(parents=True, exist_ok=True)
+REVIEW_DIR = REPO / 'public/reviews/builder-bodies-2026-09-14'; REVIEW_DIR.mkdir(parents=True, exist_ok=True)
+DATA = REPO / 'data/paper-doll'
+
+snapshot = {r['sku']: r for r in json.loads((REPO / 'data/asset-ledger/builder-catalog-snapshot.json').read_text())['rows']}
+ledger = json.loads((REPO / 'src/lib/asset-ledger/ledger.json').read_text())['platePlan']['rows']
+inventory = json.loads((DATA / 'inventory.json').read_text())['files']
+by_sha = {f['sha256']: f for f in inventory}
+master_psd = [f for f in inventory if f['library'] == 'master' and f['ext'] == 'psd']
+circle = json.loads((REPO / 'src/lib/bottle-builder/circle-bodies.generated.json').read_text())
+
+def profile_of(r):
+    slug = r.get('productGroupSlug') or ''; marker = f"-{r['capacityMl']}ml-"
+    return slug.split(marker)[0] if marker in slug else None
+
+# a family+capacity that holds two moulds (Footed vs Tall Rectangle 10 ml) is keyed by profile
+_profiles = {}
+for r in snapshot.values():
+    if r.get('neck') and re.search(r'bottle|vial', r.get('category') or '', re.I) and profile_of(r):
+        _profiles.setdefault(f"{r['family']}|{r['capacityMl']}|{r['color']}|{r['neck']}", set()).add(profile_of(r))
+SPLIT = {k for k, v in _profiles.items() if len(v) > 1}
+
+def key_of(sku):
+    r = snapshot.get(sku)
+    if not r or not r.get('neck'): return None
+    fam = f"{r['family']}|{r['capacityMl']}|{r['color']}|{r['neck']}"
+    if fam in SPLIT:
+        p = profile_of(r)
+        return f"{p}|{r['capacityMl']}|{r['color']}|{r['neck']}" if p else None
+    return fam
+
+# which body keys carry plates (the builder can only show bodies whose assemblies exist)
+plated = {}
+for r in ledger:
+    k = key_of(r['sku'])
+    if not k or re.search(r'Component|Gift|Packaging|Tool|Internal', k): continue
+    plated.setdefault(k, {'complete': 0, 'total': 0, 'skus': []})
+    plated[k]['total'] += 1
+    if r['stage'] == 'complete': plated[k]['complete'] += 1; plated[k]['skus'].append(r['sku'])
+_approved_keys = {e['body'] for e in json.loads((DATA / 'builder-bodies-approved.json').read_text())['entries']}
+# a key Jordan has approved a source for is built even when fewer than three
+# plates are complete (Boston Round 15 ml clear carries two)
+# the published plate index outranks the ledger stage: a body whose plates are
+# live (builder-body-coverage.json, from productPlates) is built even when the
+# ledger has since moved its rows back to "reconcile" (Round 128 ml clear)
+_coverage = Path(REPO / 'data/asset-ledger/builder-body-coverage.json')
+_live = set()
+if _coverage.exists():
+    for e in json.loads(_coverage.read_text())['keys']:
+        if e.get('plates', 0) < 3: continue
+        fam = f"{e['family']}|{e['capacityMl']}|{e['color']}|{e['neck']}"
+        if fam in SPLIT: _live.update(f"{p}|{e['capacityMl']}|{e['color']}|{e['neck']}" for p in e.get('profiles', []))
+        else: _live.add(fam)
+keys = sorted(k for k in set(plated) | _live | _approved_keys if plated.get(k, {}).get('complete', 0) >= 3 or k in _live or k in _approved_keys)
+
+# reviewed sources from the paired-kit recipes: one per key, the most-reviewed SKU first
+reviewed = {}
+for f in sorted(DATA.glob('*-paired-kit-recipes.json')):
+    for row in json.loads(f.read_text())['rows']:
+        k = key_of(row['websiteSku']); src = by_sha.get(row['onSourceSha256'])
+        if not k or not src or k in reviewed: continue
+        # the uncapped (off) source shows the bare neck; the capped (on) body
+        # layer of a reducer, pump or sprayer bottle carries the insert
+        if row.get('offSourcePath') and row.get('offBodyLayer') is not None and (ROOT / row['offSourcePath']).exists():
+            reviewed[k] = {'sku': row['websiteSku'], 'relPath': row['offSourcePath'], 'sha256': row.get('offSourceSha256'), 'layer': row['offBodyLayer'],
+                           'evidence': f"{f.name} (uncapped source): {row['evidence']}", 'reviewedBy': row.get('reviewedBy')}
+        else:
+            reviewed[k] = {'sku': row['websiteSku'], 'relPath': src['relPath'], 'sha256': row['onSourceSha256'], 'layer': row['onBodyLayer'],
+                           'evidence': f"{f.name}: {row['evidence']}", 'reviewedBy': row.get('reviewedBy')}
+
+def largest_island(im):
+    """Keep the connected alpha region of the glass; disconnected retouch cards
+    (white patches saved into the same layer) are dropped and counted."""
+    from scipy import ndimage
+    im = im.convert('RGBA'); a = np.asarray(im.getchannel('A')) > 8
+    labels, n = ndimage.label(a)
+    if n <= 1: return im, 0
+    sizes = ndimage.sum(a, labels, range(1, n + 1)); keep = int(np.argmax(sizes)) + 1
+    mask = labels == keep
+    arr = np.asarray(im).copy(); arr[..., 3] = np.where(mask, arr[..., 3], 0)
+    return Image.fromarray(arr, 'RGBA'), int(n - 1)
+
+def strip_white_ground(im, tol=28):
+    """Some master body layers are the photograph itself: the glass on a white
+    studio ground, the ground only partly cut away. Drop the near-white region
+    connected to the layer border. Only used where an approved entry says
+    ground: white, and only for opaque coloured glass — clear or frosted glass
+    reads as white and would be eaten."""
+    from scipy import ndimage
+    im = im.convert('RGBA'); arr = np.asarray(im).copy()
+    rgb = arr[..., :3].astype(int); a = arr[..., 3] > 8
+    white = a & (rgb.min(axis=2) >= 255 - tol)
+    labels, n = ndimage.label(white)
+    border = np.zeros_like(white); border[0, :] = border[-1, :] = border[:, 0] = border[:, -1] = True
+    border |= ~a  # ground touching an already-transparent cut counts as border too
+    edge_labels = np.unique(labels[border & white]); edge_labels = edge_labels[edge_labels > 0]
+    ground = np.isin(labels, edge_labels)
+    # one pixel of soft edge so the anti-aliased rim keeps its partial alpha
+    inner = ndimage.binary_erosion(~ground, iterations=1)
+    alpha = arr[..., 3].astype(float)
+    alpha[ground] = 0
+    rim = ~ground & ~inner & a
+    whiteness = np.clip((rgb.min(axis=2)[rim] - (255 - tol * 2)) / float(tol * 2), 0, 1)
+    alpha[rim] = alpha[rim] * (1 - whiteness)
+    arr[..., 3] = alpha.round().astype(np.uint8)
+    return Image.fromarray(arr, 'RGBA'), int(ground.sum())
+
+def save(im, name):
+    im = im.convert('RGBA'); box = im.getchannel('A').getbbox()
+    if not box: raise ValueError('empty layer')
+    im = im.crop(box); im.thumbnail((1000, 1200), Image.Resampling.LANCZOS)
+    path = OUT / f'{name}.webp'; im.save(path, 'WEBP', lossless=True)
+    return {'url': f'/images/bottle-builder/bodies/{path.name}', 'width': im.width, 'height': im.height, 'sha256': hashlib.sha256(path.read_bytes()).hexdigest()}
+
+def layer_stats(psd):
+    # indices follow enumerate(psd.descendants()), the order the reviewed recipes use
+    W, H = psd.width, psd.height; out = []
+    for i, l in enumerate(psd.descendants()):
+        if l.is_group() or not l.is_visible(): out.append(None); continue
+        im = l.composite()
+        if im is None: out.append(None); continue
+        a = np.asarray(im.convert('RGBA').getchannel('A'))
+        ys, xs = np.nonzero(a > 8)
+        if not len(xs): out.append(None); continue
+        # composite() is layer-local: translate into canvas coordinates
+        ox, oy = int(l.left), int(l.top)
+        l0, r0, t0, b0 = ox + int(xs.min()), ox + int(xs.max()), oy + int(ys.min()), oy + int(ys.max())
+        cx = (l0 + r0) / 2
+        background = (r0 - l0 + 1) * (b0 - t0 + 1) >= 0.97 * W * H and (a > 8).mean() > 0.97
+        out.append({'index': i, 'name': l.name, 'bbox': [l0, t0, r0, b0], 'area': int((a > 8).sum()), 'axisOffset': abs(cx - W / 2) / W,
+                    'fill': float((a > 8).sum()) / max(1, (r0 - l0 + 1) * (b0 - t0 + 1)),
+                    'reachesBottom': b0 >= 0.80 * H, 'background': bool(background), 'image': im})
+    return out
+
+def candidate_for(k):
+    """Representative capped PSD: prefer a cap-only or reducer SKU with the fewest layers."""
+    skus = plated.get(k, {}).get('skus') or [r['sku'] for r in ledger if key_of(r['sku']) == k]
+    pool = []
+    for sku in skus:
+        stem = re.sub(r'[^a-z0-9]', '', sku.lower())
+        for f in master_psd:
+            if re.sub(r'[^a-z0-9]', '', f['stem'].lower()) != stem: continue
+            if 'tassel' in f['relPath'].lower(): continue
+            # capped cap-only/reducer sources first (cleanest cut-outs); uncapped
+            # sources last — they show the whole neck but often carry fused
+            # retouch cards, so they serve as the fallback, or by explicit approval
+            # never a reducer bottle first: its body layer carries the reducer.
+            # uncapped sprayer/pump/dropper sources show the empty neck; then
+            # cap-only capped sources; reducer sources only as the last resort
+            uncapped = 'uncapped' in f['relPath'].lower()
+            rank = 0 if uncapped and re.search(r'Spry|Ltn|Drp|AnSp', sku) else 1 if uncapped else 2 if re.search(r'Cap|Sht', sku) and not re.search(r'Rdcr', sku) else 4 if re.search(r'Rdcr', sku) else 3
+            pool.append((rank, f['layerCount'], f))
+    if not pool: return None
+    pool.sort(key=lambda t: (t[0], t[1], t[2]['relPath']))
+    seen = set(); last = None
+    for _, _, f in pool:
+        if f['sha256'] in seen: continue
+        seen.add(f['sha256'])
+        if len(seen) > 14: break
+        psd = PSDImage.open(ROOT / f['relPath']); stats = layer_stats(psd)
+        fg = [s for s in stats if s and not s['background']]
+        last = {'relPath': f['relPath'], 'sha256': f['sha256'], 'stats': stats, 'pick': None}
+        if not fg: continue
+        # the glass is the on-axis layer that stands lowest (the foot), is tall
+        # (a cap is short) and is a clean cut-out (a rotated retouch patch leaves
+        # a sparse bounding box)
+        floor = max(s['bbox'][3] for s in fg); top = min(s['bbox'][1] for s in fg)
+        # in a capped source the closure is the highest layer; the glass starts below it
+        uncapped = 'uncapped' in f['relPath'].lower()
+        # uncapped: the bare bottle stands beside its closure, so the axis test
+        # does not apply and the glass is simply the tallest layer on the floor
+        body = [s for s in fg if (uncapped or s['axisOffset'] < 0.08) and s['bbox'][3] >= floor - 0.02 * psd.height
+                and (s['bbox'][3] - s['bbox'][1]) >= 0.6 * (floor - top) and (uncapped or s['bbox'][1] > top + 0.03 * (floor - top))]
+        if not body: continue
+        body.sort(key=lambda s: -s['area'])
+        return {'relPath': f['relPath'], 'sha256': f['sha256'], 'stats': stats, 'pick': body[0]['index']}
+    return last
+
+ap = argparse.ArgumentParser(); ap.add_argument('--review-only', action='store_true'); args = ap.parse_args()
+# Jordan's approvals/corrections: an explicit source, or 'candidate: true' to accept the heuristic pick
+approved = {e['body']: e for e in json.loads((DATA / 'builder-bodies-approved.json').read_text())['entries']}
+sha_of = {f['relPath']: f['sha256'] for f in inventory}
+bodies = dict(circle); lineage = []; tiles = []
+for k in keys:
+    name = re.sub(r'[^a-z0-9]+', '-', k.lower())
+    a = approved.get(k)
+    if a and a.get('generated'):
+        # Jordan-approved GPT Image 2.5 edit of the master body layer (insert removed);
+        # the cut-out is scaled back to the input's pixel size so the glass keeps its size
+        g = a['generated']
+        if g.get('splicedPng'):
+            # the no-drift result: master pixels everywhere but the neck bore
+            # (scripts/paperdoll/splice_neck_edit.py), already at source size
+            c = Image.open(REPO / g['splicedPng']).convert('RGBA')
+        else:
+            c = Image.open(REPO / g['cutoutPng']).convert('RGBA'); inp = Image.open(REPO / g['input'])
+            scale = inp.width / c.width; c = c.resize((int(c.width * scale), int(c.height * scale)), Image.Resampling.LANCZOS)
+        media = None if args.review_only else save(c, name)
+        if media: bodies[k] = media
+        lineage.append({'body': k, 'status': 'reviewed', 'source': 'jordan-approved generated edit', 'path': g['input'], 'editJob': g['editJob'], 'cutoutJob': g['cutoutJob'],
+                        'model': g['model'], 'evidence': a['instruction'], 'asset': media})
+        tiles.append((k, 'approved', c, g['input'], '-', 'generated'))
+        continue
+    if a and not a.get('candidate'):
+        psd = PSDImage.open(ROOT / a['path']); layer = list(psd.descendants())[a['layer']]
+        raw = layer.composite(); ground_px = 0
+        if a.get('ground') == 'white': raw, ground_px = strip_white_ground(raw)
+        cleaned, dropped = largest_island(raw)
+        media = None if args.review_only else save(cleaned, name)
+        if media: bodies[k] = media
+        lineage.append({'body': k, 'status': 'reviewed', 'source': 'jordan-approved', 'path': a['path'], 'sourceSha256': sha_of.get(a['path']),
+                        'layerIndex': a['layer'], 'layerName': layer.name, 'retouchIslandsDropped': dropped, 'whiteGroundPixelsDropped': ground_px,
+                        'evidence': a['instruction'], 'asset': media})
+        tiles.append((k, 'approved', cleaned, a['path'], a['layer'], layer.name)); continue
+    if k in circle and k not in reviewed:
+        lineage.append({'body': k, 'status': 'reviewed', 'source': 'circle-builder-media (reducer-bottle layer; replace when an uncapped source is found)', 'asset': circle[k]}); continue
+    if k in reviewed:
+        r = reviewed[k]; psd = PSDImage.open(ROOT / r['relPath']); layer = list(psd.descendants())[r['layer']]
+        if not args.review_only:
+            media = save(layer.composite(), name); bodies[k] = media
+        else: media = None
+        lineage.append({'body': k, 'status': 'reviewed', 'source': 'paired-kit-recipe', 'sku': r['sku'], 'path': r['relPath'], 'sourceSha256': r['sha256'],
+                        'layerIndex': r['layer'], 'layerName': layer.name, 'evidence': r['evidence'], 'reviewedBy': r['reviewedBy'], 'asset': media})
+        tiles.append((k, 'reviewed', layer.composite(), r['relPath'], r['layer'], layer.name)); continue
+    c = candidate_for(k)
+    if not c or c['pick'] is None:
+        lineage.append({'body': k, 'status': 'no-candidate', 'path': c['relPath'] if c else None, 'note': 'no visible on-axis layer reaching the baseline' if c else 'no capped master PSD for any plated SKU'}); continue
+    s = c['stats'][c['pick']]
+    cleaned, dropped = largest_island(s['image'])
+    if a and a.get('candidate'):
+        media = None if args.review_only else save(cleaned, name)
+        if media: bodies[k] = media
+        lineage.append({'body': k, 'status': 'reviewed', 'source': 'jordan-approved candidate', 'path': c['relPath'], 'sourceSha256': c['sha256'], 'layerIndex': c['pick'],
+                        'layerName': s['name'], 'retouchIslandsDropped': dropped, 'evidence': a['instruction'], 'asset': media})
+        tiles.append((k, 'approved', cleaned, c['relPath'], c['pick'], s['name'])); continue
+    lineage.append({'body': k, 'status': 'candidate', 'path': c['relPath'], 'sourceSha256': c['sha256'], 'layerIndex': c['pick'], 'layerName': s['name'],
+                    'retouchIslandsDropped': dropped,
+                    'layers': [{'index': x['index'], 'name': x['name'], 'bbox': x['bbox'], 'background': x['background']} for x in c['stats'] if x],
+                    'note': 'largest on-axis layer reaching the baseline in the representative capped PSD; needs visual approval'})
+    tiles.append((k, f"candidate{' · ' + str(dropped) + ' retouch card(s) dropped' if dropped else ''}", cleaned, c['relPath'], c['pick'], s['name']))
+
+if not args.review_only:
+    (REPO / 'src/lib/bottle-builder/bodies.generated.json').write_text(json.dumps(dict(sorted(bodies.items())), indent=2) + '\n')
+(DATA / 'builder-bodies-source-review.json').write_text(json.dumps({'generatedAt': '2026-09-14', 'note': 'reviewed = written to bodies.generated.json; candidate = review set only', 'bodies': lineage}, indent=2) + '\n')
+
+# contact sheet: every tile at the same scale (1 mm is not known here; tiles share a 520 px height box, bone ground)
+TW, TH = 300, 560; cols = 6; rows = (len(tiles) + cols - 1) // cols
+sheet = Image.new('RGB', (cols * TW, rows * TH), (245, 243, 239)); draw = ImageDraw.Draw(sheet)
+try: font = ImageFont.truetype('/System/Library/Fonts/Helvetica.ttc', 13)
+except Exception: font = ImageFont.load_default()
+for n, (k, status, im, rel, idx, lname) in enumerate(tiles):
+    x0, y0 = (n % cols) * TW, (n // cols) * TH
+    im = im.convert('RGBA'); box = im.getchannel('A').getbbox(); im = im.crop(box) if box else im
+    im.thumbnail((TW - 20, TH - 90), Image.Resampling.LANCZOS)
+    sheet.paste(im, (x0 + (TW - im.width) // 2, y0 + 10), im)
+    draw.rectangle([x0, y0, x0 + TW - 1, y0 + TH - 1], outline=(200, 195, 188))
+    draw.text((x0 + 8, y0 + TH - 72), k, fill=(30, 30, 30), font=font)
+    draw.text((x0 + 8, y0 + TH - 54), f"{status} · layer {idx} '{lname}'"[:52], fill=(120, 40, 40) if status.startswith('candidate') else (30, 60, 140) if status == 'approved' else (40, 100, 40), font=font)
+    draw.text((x0 + 8, y0 + TH - 36), Path(rel).name[:40], fill=(90, 90, 90), font=font)
+sheet.save(REVIEW_DIR / 'bodies-contact-sheet.jpg', quality=88)
+counts = {s: sum(1 for l in lineage if l['status'] == s) for s in ['reviewed', 'candidate', 'no-candidate']}
+print(json.dumps({'bodyKeys': len(keys), **counts, 'written': len(bodies) if not args.review_only else 0}))
+for l in lineage:
+    if l['status'] != 'reviewed': print(f"  {l['status']:13} {l['body']:34} {(l.get('path') or '')[:80]} layer={l.get('layerIndex')} {l.get('note','')[:60]}")

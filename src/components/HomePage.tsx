@@ -11,10 +11,10 @@ import {
 import { motion } from "framer-motion";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import HomeCatalogBrowser from "@/components/home/HomeCatalogBrowser";
 import homeStyles from "@/components/home/HomeCatalogBrowser.module.css";
+import ShoppingHeader from "@/components/home/ShoppingHeader";
+import CollectionShopping from "@/components/home/CollectionShopping";
+import Footer from "@/components/Footer";
 import type { HomeBrowseData } from "@/lib/homepageBrowse";
 import { useGrace } from "@/components/useGrace";
 import { urlFor } from "@/sanity/lib/image";
@@ -838,11 +838,11 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
                 <div className="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end">
                     <FadeUp>
                         <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">{sectionEyebrow}</p>
-                        <h2 className="font-display text-[34px] font-medium leading-none text-obsidian lg:text-[42px]">{sectionTitle}</h2>
+                        <h2 className="font-brand-display text-[20px] leading-tight tracking-[0.065em] text-obsidian lg:text-[22px]">{sectionTitle}</h2>
                     </FadeUp>
                     <FadeUp delay={0.12}>
                         <Link href={viewAllHref} className="flex items-center text-xs font-semibold uppercase tracking-[0.16em] text-muted-gold transition-colors hover:text-obsidian">
-                            View All Articles <ArrowRight className="ml-2" size={15} />
+                            View All Articles
                         </Link>
                     </FadeUp>
                 </div>
@@ -863,7 +863,7 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
                                 <h3 className="text-balance font-display text-[22px] leading-[1.05] text-obsidian transition-colors group-hover:text-muted-gold">{article.title}</h3>
                                 <p className="mt-3 text-xs leading-relaxed text-slate">{article.excerpt}</p>
                                 <span className="mt-4 flex items-center text-[11px] font-semibold uppercase tracking-[0.13em] text-obsidian transition-colors group-hover:text-muted-gold">
-                                    Read More <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={13} />
+                                    Read More
                                 </span>
                             </Link>
                         </FadeUp>
@@ -877,17 +877,8 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
 export default function HomePage({ homepageData, browseData }: { homepageData: HomepageData | null; browseData: HomeBrowseData | null }) {
     return (
         <main className="min-h-screen">
-            <Navbar variant="home" hideMobileSearch headerClassName={homeStyles.homeHeader} />
-            <Hero heroSlides={homepageData?.heroSlides} mobileHeroMode="categories" />
-            <MobilePostHeroSearch />
-            <HomeCatalogBrowser data={browseData} designFamilyCards={homepageData?.designFamilyCards} />
-            <TrustBar />
-            <SampleTestersFeature />
-            <ApplicationShowcase />
-            <EditorialStories />
-            <PackagingAccessoriesStory />
-            <PathChooser />
-            <SocialProof />
+            <ShoppingHeader />
+            <CollectionShopping data={homepageData} />
             <EducationPreview educationPreview={homepageData?.educationPreview} />
             <Footer />
         </main>

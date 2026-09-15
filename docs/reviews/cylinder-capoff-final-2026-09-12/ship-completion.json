@@ -1,0 +1,108 @@
+{
+  "release": "Cylinder paired plate release 2026-09-12",
+  "status": "verified",
+  "completedAt": "2026-09-13T07:23:40.659Z",
+  "reviewPacketSha256": "efdd955f5f8c0ba573546fe5190bd6bdaee0a340713f297870186bf0a731bc11",
+  "manifestSha256": "a85d0e21099429cf0c8266ff39020176696a3fd63ac03b24a532f7cab0bc90bf",
+  "deployment": "https://helpful-elephant-638.convex.cloud",
+  "scope": "Publish the 25 approved paired plates to the development catalog used by localhost:3040. Preserve other rows and family metadata. No kits, heroes or website deployment.",
+  "skus": [
+    "GBCyl1ozRollWht",
+    "GBCyl5RollBlkSh",
+    "GBCyl5RollCuMatt",
+    "GBCyl5RollGlMatt",
+    "GBCyl5RollGlSh",
+    "GBCyl5RollPinkDot",
+    "GBCyl5RollSlMatt",
+    "GBCyl5RollSlSh",
+    "GBCyl5WhtSht",
+    "GBCylBlu5RollBlkDot",
+    "GBCylBlu5RollBlkSh",
+    "GBCylBlu5RollCuMatt",
+    "GBCylBlu5RollGlMatt",
+    "GBCylBlu5RollGlSh",
+    "GBCylBlu5RollPinkDot",
+    "GBCylBlu5RollSlDot",
+    "GBCylBlu5RollSlMatt",
+    "GBCylBlu5RollSlSh",
+    "GBMtlRoll28Blk",
+    "GBMtlRoll28Wht",
+    "GBRoll28Blk",
+    "GBTallCyl9RollGlMatt",
+    "GBTallCyl9RollGlSh",
+    "GBTallCyl9RollSlMatt",
+    "GBTallCylFrst9MtlRollBlkDot"
+  ],
+  "countsBefore": {
+    "at": "2026-09-13T07:13:58.009Z",
+    "global": {
+      "total": 2305,
+      "complete": 661,
+      "review": 431,
+      "reconcile": 702,
+      "missing": 511
+    },
+    "family": {
+      "family": "Cylinder",
+      "total": 436,
+      "complete": 373,
+      "review": 0,
+      "reconcile": 63,
+      "missing": 0,
+      "sizes": [
+        3.3,
+        4,
+        5,
+        5.5,
+        9,
+        25,
+        28,
+        30,
+        50,
+        100,
+        114,
+        227,
+        454
+      ],
+      "unlinked": 0
+    }
+  },
+  "countsAfter": {
+    "at": "2026-09-13T07:23:19.385Z",
+    "global": {
+      "total": 2305,
+      "complete": 686,
+      "review": 431,
+      "reconcile": 677,
+      "missing": 511
+    },
+    "family": {
+      "family": "Cylinder",
+      "total": 436,
+      "complete": 398,
+      "review": 0,
+      "reconcile": 38,
+      "missing": 0,
+      "sizes": [
+        3.3,
+        4,
+        5,
+        5.5,
+        9,
+        25,
+        28,
+        30,
+        50,
+        100,
+        114,
+        227,
+        454
+      ],
+      "unlinked": 0
+    }
+  },
+  "verification": "published-verification.json",
+  "approvalRegistration": "registered-approvals.json",
+  "uiVerification": "ui-verification.json",
+  "remainingHolds": 38
+}

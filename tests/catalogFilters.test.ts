@@ -71,6 +71,7 @@ function groupMatchesSearch(query: string, group: ProductGroupFixture): boolean 
 describe("constants integrity", () => {
     it("EMPTY_FILTERS has all required fields", () => {
         expect(EMPTY_FILTERS).toEqual({
+            shopCollection: null,
             category: null,
             collection: null,
             applicators: [],
@@ -220,6 +221,7 @@ describe("URL round-trip serialization", () => {
 
     it("round-trips fully populated filters", () => {
         const filters: CatalogFilters = {
+            shopCollection: "glass-spray-bottles",
             category: "Glass Bottle",
             collection: "Cylinder",
             applicators: ["rollon", "finemist"] as ApplicatorBucket[],

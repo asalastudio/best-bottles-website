@@ -1,0 +1,24 @@
+{
+  "http": 200,
+  "pageErrors": [],
+  "familyRows": 123,
+  "sizeCounts": [
+    16,
+    53,
+    54
+  ],
+  "csvRows": 123,
+  "mobileOverflow": false,
+  "checks": [
+    "size batches",
+    "glass-color filter",
+    "kit review filter",
+    "pagination",
+    "family CSV export",
+    "exact approved 30 mL review preserved",
+    "mobile size switching",
+    "component-type filter"
+  ],
+  "snapshot": "2026-09-13T00:46:11.822Z",
+  "componentFilterCount": 12
+}

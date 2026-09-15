@@ -1,0 +1,9 @@
+{
+  "registeredAt": "2026-09-13T07:20:07.148Z",
+  "manifestSha256": "a85d0e21099429cf0c8266ff39020176696a3fd63ac03b24a532f7cab0bc90bf",
+  "approvedPairs": 25,
+  "newPairBindings": 25,
+  "newAppearanceBindings": 19,
+  "existingHistoryPreserved": 827,
+  "revision": 5
+}

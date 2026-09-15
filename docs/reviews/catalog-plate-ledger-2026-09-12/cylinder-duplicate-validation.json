@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-09-13T06:09:43.053Z",
+  "before": {
+    "counts": {
+      "total": 2312,
+      "complete": 661,
+      "review": 431,
+      "reconcile": 702,
+      "missing": 518
+    },
+    "family": {
+      "family": "Cylinder",
+      "total": 443,
+      "complete": 373,
+      "review": 0,
+      "reconcile": 63,
+      "missing": 7,
+      "sizes": [
+        3.3,
+        4,
+        5,
+        5.5,
+        9,
+        25,
+        28,
+        30,
+        50,
+        100,
+        114,
+        227,
+        454
+      ],
+      "unlinked": 7
+    }
+  },
+  "after": {
+    "counts": {
+      "total": 2305,
+      "complete": 661,
+      "review": 431,
+      "reconcile": 702,
+      "missing": 511
+    },
+    "family": {
+      "family": "Cylinder",
+      "total": 436,
+      "complete": 373,
+      "review": 0,
+      "reconcile": 63,
+      "missing": 0,
+      "sizes": [
+        3.3,
+        4,
+        5,
+        5.5,
+        9,
+        25,
+        28,
+        30,
+        50,
+        100,
+        114,
+        227,
+        454
+      ],
+      "unlinked": 0
+    }
+  },
+  "excludedDuplicates": 7,
+  "retainedRawCatalogRecords": 2536,
+  "unchangedRawRowsExceptScope": true,
+  "approvalFileUnchanged": true,
+  "contactSheetFileUnchanged": true,
+  "activeContactSheetRows": 436,
+  "visuallyApproved": 436,
+  "technicalReconciliation": 63,
+  "verification": {
+    "focusedTestsPassed": 26,
+    "typecheck": "passed",
+    "localLedgerHttp": 200,
+    "localContactSheetHttp": 200,
+    "browser": "Verified 436 active, 373 complete, 63 reconcile, 0 missing and all seven canonical links",
+    "sameZoomComparison": "cylinder-duplicates-comparison.html"
+  }
+}

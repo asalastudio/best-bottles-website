@@ -10,6 +10,9 @@ import {
 } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import CartDrawer from "./CartDrawer";
+import AnnouncementMarquee from "./AnnouncementMarquee";
+import BrandWordmark from "./BrandWordmark";
+import RegionSelector from "./RegionSelector";
 import { useMegaMenuPanels } from "./SanityMegaMenuProvider";
 import { urlFor } from "@/sanity/lib/image";
 import { MEGA_MENU_PANELS, type MegaMenuId, type MegaMenuPanelContent } from "@/lib/megaMenu";
@@ -17,6 +20,7 @@ import { MEGA_MENU_PANELS, type MegaMenuId, type MegaMenuPanelContent } from "@/
 interface NavbarProps {
     variant?: "home" | "catalog";
     initialSearchValue?: string;
+    hideSearch?: boolean;
     hideMobileSearch?: boolean;
     builderMobile?: boolean;
     headerClassName?: string;
@@ -68,18 +72,18 @@ type NavLinkDef =
 
 const NAV_LINKS: Record<string, NavLinkDef[]> = {
     home: [
-        { label: "Bottles", href: "/catalog?category=Glass+Bottle", megaId: "bottles" as MegaMenuId },
+        { label: "Bottle Families", href: "/bottle-families" },
         { label: "Closures", href: "/catalog?category=Component", megaId: "closures" as MegaMenuId },
-        { label: "Specialty", href: "/catalog", megaId: "specialty" as MegaMenuId },
+        { label: "Collections", href: "/collections" },
         { label: "Catalog", href: "/catalog" },
         { label: "Build Your Bottle", href: "/matrix" },
         { label: "Journal", href: "/blog" },
         { label: "About", href: "/about" },
     ],
     catalog: [
-        { label: "Bottles", href: "/catalog?category=Glass+Bottle", megaId: "bottles" as MegaMenuId },
+        { label: "Bottle Families", href: "/bottle-families" },
         { label: "Closures", href: "/catalog?category=Component", megaId: "closures" as MegaMenuId },
-        { label: "Specialty", href: "/catalog", megaId: "specialty" as MegaMenuId },
+        { label: "Collections", href: "/collections" },
         { label: "Catalog", href: "/catalog" },
         { label: "Build Your Bottle", href: "/matrix" },
         { label: "Journal", href: "/blog" },
@@ -98,7 +102,7 @@ const SEARCH_SUGGESTIONS = [
     { label: "Cream Jar", helper: "Category", query: "cream jar" },
 ];
 
-export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch = false, builderMobile = false, headerClassName = "" }: NavbarProps) {
+export default function Navbar({ variant = "home", initialSearchValue, hideSearch = false, hideMobileSearch = false, builderMobile = false, headerClassName = "" }: NavbarProps) {
     const router = useRouter();
     // Grace trigger moved to the floating launcher; useGrace no longer needed here.
     const { itemCount, isCartHydrated } = useCart();
@@ -343,22 +347,17 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                     } ${variant === "catalog" ? "border-b border-champagne" : ""}`}
                 style={{ right: "var(--grace-content-inset, 0px)" }}
             >
-                <div className="bg-obsidian py-1.5 text-center px-4">
-                    <p className="text-xs uppercase tracking-[0.15em] text-bone font-medium">
-                        <span>Free shipping on orders above $99</span>
-                        <span className="hidden md:inline"> · Need fitment help? Talk with Grace, AI Bottling Specialist</span>
-                    </p>
-                </div>
+                <AnnouncementMarquee />
 
                 {builderMobile && <div className="builder-mobile-brand">
                     <Link href="/catalog" aria-label="Back to bottles"><ArrowLeft size={22} /></Link>
-                    <Link href="/" className="font-cormorant">BEST BOTTLES</Link>
+                    <Link href="/" aria-label="Best Bottles home"><BrandWordmark /></Link>
                     <button aria-label={`Cart${mounted && isCartHydrated ? `, ${itemCount} items` : ""}`} onClick={() => setCartOpen(true)}><ShoppingBag size={24} />{mounted && isCartHydrated && itemCount > 0 && <span>{itemCount > 99 ? "99+" : itemCount}</span>}</button>
                     <button aria-label="Open menu" onClick={() => setMobileMenuOpen(true)}><List size={20} /></button>
                 </div>}
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-                    {/* Row 1: desktop = logo | nav | search | actions. mobile = hamburger | actions */}
-                    <div className="relative flex h-[56px] items-center gap-2 sm:gap-4 xl:h-[72px] xl:gap-4 2xl:gap-6">
+                    {/* Row 1: desktop = [reserved: region/currency] | centred wordmark | search + actions. mobile = hamburger | centred wordmark | spacer */}
+                    <div className="relative flex h-[56px] items-center gap-2 sm:gap-4 xl:grid xl:grid-cols-[1fr_auto_1fr] xl:h-[60px] xl:gap-4 2xl:gap-6">
                         <button
                             aria-label="Open menu"
                             className="xl:hidden p-2 -ml-2 text-obsidian hover:text-muted-gold transition-colors shrink-0"
@@ -366,80 +365,21 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         >
                             <List size={20} weight="regular" />
                         </button>
-                        {/* Mobile logo — text, Cormorant, left-aligned */}
+                        <div className="hidden xl:flex xl:justify-self-start"><RegionSelector /></div>
                         <Link
                             href="/"
-                            className="xl:hidden ml-1 font-cormorant text-lg font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
+                            aria-label="Best Bottles home"
+                            className="flex flex-1 min-h-11 items-center justify-center xl:flex-none xl:justify-self-center"
                         >
-                            BEST BOTTLES
+                            <BrandWordmark tagline />
                         </Link>
-                        {/* Desktop logo — Cormorant font */}
-                        <Link
-                            href="/"
-                            className="hidden xl:flex shrink-0 xl:mr-2 2xl:mr-4 font-cormorant text-2xl font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
-                        >
-                            BEST BOTTLES
-                        </Link>
-                        <nav
-                            className="hidden xl:flex items-center xl:gap-x-6 2xl:gap-x-12 text-sm font-medium text-obsidian tracking-wide normal-case shrink-0"
-                            ref={megaRef}
-                        >
-                            {links.map((link) => {
-                                const hasMega = "megaId" in link;
-                                const megaId = hasMega ? (link as NavLinkDef & { megaId: MegaMenuId }).megaId : null;
-                                const isOpen = megaId !== null && activeMega === megaId;
-
-                                return hasMega && megaId ? (
-                                    <div
-                                        key={link.label}
-                                        className="relative"
-                                        onMouseEnter={() => openMega(megaId)}
-                                        onMouseLeave={closeMega}
-                                    >
-                                        <button
-                                            onClick={() => setActiveMega(isOpen ? null : megaId)}
-                                            className={`flex items-center gap-1 transition-colors ${isOpen ? "text-muted-gold" : "hover:text-muted-gold"
-                                                }`}
-                                        >
-                                            {link.label}
-                                            <CaretDown
-                                                className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-                                                size={14}
-                                            />
-                                        </button>
-
-                                        {isOpen && (
-                                            <div
-                                                className="fixed left-0 right-0 mt-[22px] z-50"
-                                                style={{ right: "var(--grace-content-inset, 0px)" }}
-                                                onMouseEnter={cancelClose}
-                                                onMouseLeave={closeMega}
-                                            >
-                                                <MegaMenuPanel
-                                                    panel={MEGA_PANELS[megaId]}
-                                                    sanityFeatured={megaMenuPanels?.[megaId]}
-                                                    onClose={() => setActiveMega(null)}
-                                                />
-                                            </div>
-                                        )}
-                                    </div>
-                                ) : (
-                                    <Link
-                                        key={link.label}
-                                        href={link.href}
-                                        className="hover:text-muted-gold transition-colors"
-                                        onMouseEnter={() => setActiveMega(null)}
-                                    >
-                                        {link.label}
-                                    </Link>
-                                );
-                            })}
-                        </nav>
-                        <form
-                            onSubmit={handleSearchSubmit}
-                            className="group/search relative hidden min-w-0 items-center space-x-2 rounded-xl border border-champagne bg-white/60 px-3 py-2 transition-all duration-200 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 xl:flex xl:min-w-[320px] xl:max-w-[420px] xl:flex-1 2xl:min-w-[520px] 2xl:max-w-[520px]"
-                            suppressHydrationWarning
-                        >
+                        <div className="ml-auto flex min-w-9 shrink-0 items-center justify-end space-x-2 xl:ml-0 xl:min-w-0 xl:justify-self-end">
+                        {!hideSearch && (
+                            <form
+                                onSubmit={handleSearchSubmit}
+                                className="group/search relative hidden min-w-0 items-center space-x-2 rounded-xl border border-champagne bg-white/60 px-3 py-2 transition-all duration-200 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 xl:flex xl:w-[240px] 2xl:w-[300px]"
+                                suppressHydrationWarning
+                            >
                             <MagnifyingGlass className="text-slate shrink-0" size={16} />
                             <input
                                 type="search"
@@ -480,9 +420,9 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                     </div>
                                 </div>
                             )}
-                        </form>
-                        <div className="hidden xl:flex flex-1" />
-                        <div className="ml-auto flex shrink-0 items-center justify-end space-x-2 xl:ml-0">
+                            </form>
+                        )}
+
                             {/* Grace AI trigger removed from navbar in v3 — Grace now opens
                                 via the floating bottom-right launcher (GraceLauncher.tsx)
                                 so the entry point matches the PRD's collapsed-launcher spec.
@@ -507,10 +447,69 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         </div>
                     </div>
 
-                    {/* Row 2: full-width search bar (mobile only) */}
-                    {!hideMobileSearch && (
-                    <div data-mobile-search="" className="flex xl:hidden pb-3 border-t border-champagne/40 pt-2">
-                        <form
+                    {/* Row 2 (desktop): centred navigation under the wordmark */}
+                    <div className="hidden xl:flex h-[40px] items-center justify-center border-t border-champagne/40">
+                        <nav
+                            className="flex items-center xl:gap-x-8 2xl:gap-x-12 text-[12px] font-normal text-obsidian uppercase tracking-[0.08em] shrink-0"
+                            ref={megaRef}
+                        >
+                            {links.map((link) => {
+                                const hasMega = "megaId" in link;
+                                const megaId = hasMega ? (link as NavLinkDef & { megaId: MegaMenuId }).megaId : null;
+                                const isOpen = megaId !== null && activeMega === megaId;
+
+                                return hasMega && megaId ? (
+                                    <div
+                                        key={link.label}
+                                        className="relative"
+                                        onMouseEnter={() => openMega(megaId)}
+                                        onMouseLeave={closeMega}
+                                    >
+                                        <button
+                                            onClick={() => setActiveMega(isOpen ? null : megaId)}
+                                            className={`flex items-center gap-1 uppercase tracking-[0.08em] font-normal transition-colors ${isOpen ? "text-muted-gold" : "hover:text-muted-gold"
+                                                }`}
+                                        >
+                                            {link.label}
+                                            <CaretDown
+                                                className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                                                size={14}
+                                            />
+                                        </button>
+
+                                        {isOpen && (
+                                            <div
+                                                className="fixed left-0 right-0 mt-[22px] z-50"
+                                                style={{ right: "var(--grace-content-inset, 0px)" }}
+                                                onMouseEnter={cancelClose}
+                                                onMouseLeave={closeMega}
+                                            >
+                                                <MegaMenuPanel
+                                                    panel={MEGA_PANELS[megaId]}
+                                                    sanityFeatured={megaMenuPanels?.[megaId]}
+                                                    onClose={() => setActiveMega(null)}
+                                                />
+                                            </div>
+                                        )}
+                                    </div>
+                                ) : (
+                                    <Link
+                                        key={link.label}
+                                        href={link.href}
+                                        className="hover:text-muted-gold transition-colors"
+                                        onMouseEnter={() => setActiveMega(null)}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                );
+                            })}
+                        </nav>
+                    </div>
+
+                    {/* Row 3: full-width search bar (mobile only) */}
+                    {!hideSearch && !hideMobileSearch && (
+                        <div data-mobile-search="" className="flex xl:hidden pb-3 border-t border-champagne/40 pt-2">
+                            <form
                             onSubmit={handleSearchSubmit}
                             className="group/search relative flex flex-1 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2"
                             suppressHydrationWarning
@@ -556,8 +555,8 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                     </div>
                                 </div>
                             )}
-                        </form>
-                    </div>
+                            </form>
+                        </div>
                     )}
 
                 </div>
@@ -585,10 +584,11 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                             <Link
                                 href="/"
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="font-cormorant text-2xl font-semibold tracking-tight text-obsidian"
+                                aria-label="Best Bottles home"
+                                className="flex min-h-11 items-center"
                                 data-testid="mobile-menu-wordmark"
                             >
-                                BEST BOTTLES
+                                <BrandWordmark />
                             </Link>
                             <button
                                 aria-label="Close menu"
@@ -598,6 +598,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                 <X size={20} />
                             </button>
                         </div>
+                        <div className="px-4 py-2 border-b border-champagne"><RegionSelector inline /></div>
 
                         <div className="flex-1 overflow-y-auto px-4 py-4">
                             <nav className="space-y-2">
@@ -623,7 +624,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                         <div key={link.label} className="border-b border-champagne/40 pb-2">
                                             <button
                                                 onClick={() => setMobileOpenSection(isExpanded ? null : link.megaId)}
-                                                className="w-full flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold tracking-wide text-obsidian"
+                                                className="w-full flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold uppercase tracking-wide text-obsidian"
                                                 aria-expanded={isExpanded}
                                             >
                                                 {link.label}
@@ -768,7 +769,7 @@ function MegaMenuPanel({
                                     <FeaturedIcon className="text-muted-gold" size={20} />
                                 </div>
                             )}
-                            <h4 className="font-serif text-lg text-obsidian font-medium normal-case mb-2 group-hover:text-muted-gold transition-colors">
+                            <h4 className="font-brand-display text-[13px] tracking-[0.06em] text-obsidian mb-2 group-hover:text-muted-gold transition-colors">
                                 {title}
                             </h4>
                             <p className="text-[12px] text-slate normal-case leading-relaxed">

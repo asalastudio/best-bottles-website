@@ -1,0 +1,666 @@
+{
+  "capturedAt": "2026-09-13T06:55:43.674Z",
+  "deployment": "https://helpful-elephant-638.convex.cloud",
+  "scope": "Read-only rollback snapshot for exactly the 25 staged Cylinder products. No publication authorized.",
+  "rows": [
+    {
+      "familyId": "cylinder-28ml-clear-16mm",
+      "graceSku": "GB-CYL-CLR-28ML-RBL-WHT",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 1,
+      "sku": "GBCyl1ozRollWht",
+      "sourcePath": "13. 16 mm/1. 28ml Capped/4.  GBCyl28RollWht.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBCyl1ozRollWht/0a2e1317f61945e70b25cb6b56e1b9bbd19697e963722848c03ac058aa4d5715.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCyl1ozRollWht"
+    },
+    {
+      "familyId": "cylinder-28ml-clear-16mm",
+      "graceSku": "GB-CYL-CLR-28ML-MRL-01",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 1,
+      "sku": "GBMtlRoll28Blk",
+      "sourcePath": "13. 16 mm/1. 28ml Capped/1. GBCyl28MtlRollBlk.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBMtlRoll28Blk/ff11ee752cd064edb135a064fed9e5717c991f970ccdef83749735226876bde1.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBMtlRoll28Blk"
+    },
+    {
+      "familyId": "cylinder-28ml-clear-16mm",
+      "graceSku": "GB-CYL-CLR-28ML-MRL-02",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 1,
+      "sku": "GBMtlRoll28Wht",
+      "sourcePath": "13. 16 mm/1. 28ml Capped/2.  GBCyl28MtlRollWht.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBMtlRoll28Wht/e1fd4384f323016de24a274d792f77628861a5e54933786f3213d7707a718252.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBMtlRoll28Wht"
+    },
+    {
+      "familyId": "cylinder-28ml-clear-16mm",
+      "graceSku": "GB-CYL-CLR-28ML-RBL",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBRoll28Blk/6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 1,
+      "sku": "GBRoll28Blk",
+      "sourcePath": "13. 16 mm/1. 28ml Capped/3. GBCyl28RollBlk.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-28ml-clear-16mm/GBRoll28Blk/19a6ae86cdba761245469976aa3067f9133bcc0ede5f081c2b06d1c17ea051d0.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBRoll28Blk"
+    },
+    {
+      "familyId": "cylinder-5ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SGLD",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/b05009c22fc7521b7779751cf2ceb7f4772d89a9adce745d52884b0c6caf0a44.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCyl5RollGlSh",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCyl5RollGlSh.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollGlSh/01bebee37aa3bc58ea569a453e429775fd796ed94f366e20682b92fbf47c06a2.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCyl5RollGlSh"
+    },
+    {
+      "familyId": "cylinder-5ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MGLD",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/2d7e1e65544060ab2bd8ae446317fffbbaf42f8155658bce8f7488f0a9618c7b.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCyl5RollGlMatt",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCyl5RollGlMatt.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollGlMatt/b96c79d846c4ecbecd6514e2e4099981f95c0969ac28fa29be2e23d053e02cd4.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCyl5RollGlMatt"
+    },
+    {
+      "familyId": "cylinder-5ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-PKDT",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/e6f43b955b35959d8922aac8f418b752b85caebdcba28c7dd95e0c2c5aa9bfac.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCyl5RollPinkDot",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCyl5RollPinkDot.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollPinkDot/17f4695692ce7b310a7d7f7bc5b35d96832e61a38e219c1b4e8b92e2063ddf2f.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCyl5RollPinkDot"
+    },
+    {
+      "familyId": "cylinder-5ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MCPR",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/fac6752784f1c4bf714a0b7474f08eabb298d11a858ddcdff74337e34532b398.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCyl5RollCuMatt",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCyl5RollCuMatt.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollCuMatt/a6fe1aae75511655998f57b2e619aafb4527270fd0b25ec6ae55eddd5224084b.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCyl5RollCuMatt"
+    },
+    {
+      "familyId": "cylinder-5ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MSLV",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/d9031fd5f263ae79457ad7c005d2d267da3af25f3e70784fa4ea264709e8d16b.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCyl5RollSlMatt",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCyl5RollSlMatt.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollSlMatt/2bd93855bb5f05cd46244c1719bdfb8ed5c8ae50908f4da829e4949a028f243c.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCyl5RollSlMatt"
+    },
+    {
+      "familyId": "cylinder-5ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SSLV",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/01e9bb4ae28437b5bf7e500ccfd9c1c5990183541ee2e8ec051f113c648bbbb2.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCyl5RollSlSh",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCyl5RollSlSh.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollSlSh/feee3e665aab7024b499a301c04c7f2a56a2ed9028b4ca7497b85e5053949b18.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCyl5RollSlSh"
+    },
+    {
+      "familyId": "cylinder-5ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SBLK",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/e049bf9635e69d6224a18346dde0e27378ad283bb00e705ed747c6b82ca70f90.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCyl5RollBlkSh",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCyl5RollBlkSh.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5RollBlkSh/e4563c88b49828c76d16f0ffc3405f527b5e12f966c334bb50c5d7968610b572.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCyl5RollBlkSh"
+    },
+    {
+      "familyId": "cylinder-5ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-5ML-WHT-S",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 2,
+      "sku": "GBCyl5WhtSht",
+      "sourcePath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/2. GBCyl5WhtSht.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-clear-13-415/GBCyl5WhtSht/f536c0b5e598df78d257e3cae11e5ed4cf3d293b16b283ecda53a8f3f5317f84.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCyl5WhtSht"
+    },
+    {
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SLDT",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/b787f846979b38f7828e3bf15fbed353eb02de285d69f7f2399738346aaf52e5.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCylBlu5RollSlDot",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCylBlu5RollSlDot.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlDot/9d15756019ea820c1f2bdac3bf5aaddcd6f02b40825e3b2eb66f7ed06ad6ffa2.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCylBlu5RollSlDot"
+    },
+    {
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-BKDT",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/aaf1bb4b9abb9090926df92ed7c344e2247bc19aa11cb5746d965619e3b43acb.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCylBlu5RollBlkDot",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCylBlu5RollBlkDot.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkDot/0a789fc0c0682ae4e2d6e4a1c5658cca71bb724453298dc09aaea8a27a1a7faa.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCylBlu5RollBlkDot"
+    },
+    {
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-PKDT",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/316cf6e41cfc7b311f0be36996dae4494262a35ba6a91543146667f0850743f5.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCylBlu5RollPinkDot",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCylBlu5RollPinkDot.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollPinkDot/2eb7453e9397a53f33d503a235b0211e2862b3bd53b7edf762cb261bf64838d0.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCylBlu5RollPinkDot"
+    },
+    {
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MCPR",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/132b0833224147aad42180dd6d2e77a3634a68c0a2f01b4a0ee3a92a15f2e5dc.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCylBlu5RollCuMatt",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCylBlu5RollCuMatt.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollCuMatt/fc395dd3130f096a5a2f87975f11112125b990064f60764e466729d8bbc72dc4.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCylBlu5RollCuMatt"
+    },
+    {
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MGLD",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/245bf92b428a0d476424fb8359f7fea486e71b51eab4c73532bd08dd2235f79b.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCylBlu5RollGlMatt",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCylBlu5RollGlMatt.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlMatt/0ae7d4ec37306cf354d27b4e0025829eb186d41f8e2234c362bf939c45d51125.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCylBlu5RollGlMatt"
+    },
+    {
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SBLK",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/bef83c5a6221cd09b6d87027e6c2b83b515a2874e307656e8ee004dd2f100bc2.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCylBlu5RollBlkSh",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCylBlu5RollBlkSh.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollBlkSh/a91d813990f0440604a5bb98b1b590ca83b598aedf5a7878c5cbb81c72d395cf.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCylBlu5RollBlkSh"
+    },
+    {
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SSLV",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/d0d518891d1794a06bb86e32bb51647b5f4320f3734eea605273903191302b2e.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCylBlu5RollSlSh",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCylBlu5RollSlSh.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlSh/668234ce56244ed6e40eccc53e0922015bbaed2d045c15bd1c6d9d4657c63f5d.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCylBlu5RollSlSh"
+    },
+    {
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MSLV",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/9a7b3f640872fa98e721e5b848a64df99aa0747c435d761274ea612ef1d9bd61.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCylBlu5RollSlMatt",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCylBlu5RollSlMatt.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollSlMatt/395b41432a37a33a885322e2134bad4917b4f871ab3d99dae8b163c9210d2a0f.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCylBlu5RollSlMatt"
+    },
+    {
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SGLD",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/0261392c3c6da08b67cae2357cce3a0d039f2ed20dec1cc8a6d2891cf454b807.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBCylBlu5RollGlSh",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBCylBlu5RollGlSh.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-5ml-cobalt-blue-13-415/GBCylBlu5RollGlSh/0876efb3b12c1d944671c543bebcc1e765f664abc7a92c48bddbc2ed35122dc9.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBCylBlu5RollGlSh"
+    },
+    {
+      "familyId": "cylinder-9ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-9ML-ROL-MGLD-02",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/175ff055aebe8af9d68d4308137e20476c6a2335e61d4488d49fde6847276b49.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBTallCyl9RollGlMatt",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBTallCyl9RollGlMatt.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlMatt/eb857a91a3f37ea47b4b163a2e0fa66a7c43a2f7cc524ad0637f73a97fa28ea3.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBTallCyl9RollGlMatt"
+    },
+    {
+      "familyId": "cylinder-9ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-9ML-ROL-SGLD-02",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/a637ea75a88eaa8fc1c123f26dd0b313369132e9ade236776a21e765c3d351a9.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBTallCyl9RollGlSh",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBTallCyl9RollGlSh.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollGlSh/4361e0937a7bf197e4453a436c494989b022bc149f39350aacb85c7866828c17.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBTallCyl9RollGlSh"
+    },
+    {
+      "familyId": "cylinder-9ml-clear-13-415",
+      "graceSku": "GB-CYL-CLR-9ML-ROL-MSLV-02",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/609b99de8715fda56b03f723e7ec96db4c29112151fe61c8da0528c6d0051345.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBTallCyl9RollSlMatt",
+      "sourcePath": "https://www.bestbottles.com/images/store/capped/GBTallCyl9RollSlMatt.gif",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-13-415/GBTallCyl9RollSlMatt/81223d76c72dc048ea5737da6ef35781bffcbdab3a5a2a7c19d639421ab7f861.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBTallCyl9RollSlMatt"
+    },
+    {
+      "familyId": "cylinder-9ml-frosted-13-415",
+      "graceSku": "GB-CYL-FRS-9ML-T-02",
+      "image": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5.front-on-1000x1100.webp",
+      "imageCapOff": null,
+      "revision": 3,
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "sourcePath": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /26. GBTallCylFrst9MtlRollBlkDot copy.psd",
+      "thumb": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-frosted-13-415/GBTallCylFrst9MtlRollBlkDot/e01a84a9712c7cc32dada0dae979aedacea446109b2cb7f86d9acdfeb16f7b2f.front-on-240x240.webp",
+      "thumbCapOff": null,
+      "views": [],
+      "websiteSku": "GBTallCylFrst9MtlRollBlkDot"
+    }
+  ],
+  "families": [
+    {
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "closures": [
+        {
+          "count": 2,
+          "id": "Plastic Roller Ball",
+          "label": "Plastic Roller Ball"
+        },
+        {
+          "count": 2,
+          "id": "Metal Roller Ball",
+          "label": "Metal Roller Ball"
+        }
+      ],
+      "familyId": "cylinder-28ml-clear-16mm",
+      "name": "Cylinder 28 ml (0.95 oz) Clear",
+      "neckFinish": "16mm",
+      "publishedAt": 1788573943929,
+      "variantCount": 4
+    },
+    {
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "closures": [
+        {
+          "count": 10,
+          "id": "Cap/Closure",
+          "label": "Cap/Closure"
+        },
+        {
+          "count": 9,
+          "id": "Metal Roller Ball",
+          "label": "Metal Roller Ball"
+        },
+        {
+          "count": 9,
+          "id": "Plastic Roller Ball",
+          "label": "Plastic Roller Ball"
+        },
+        {
+          "count": 7,
+          "id": "Fine Mist Sprayer",
+          "label": "Fine Mist Sprayer"
+        }
+      ],
+      "familyId": "cylinder-5ml-clear-13-415",
+      "name": "Cylinder 5 ml (0.17 oz) Clear",
+      "neckFinish": "13-415",
+      "publishedAt": 1788573943929,
+      "variantCount": 35
+    },
+    {
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "closures": [
+        {
+          "count": 10,
+          "id": "Cap/Closure",
+          "label": "Cap/Closure"
+        },
+        {
+          "count": 9,
+          "id": "Metal Roller Ball",
+          "label": "Metal Roller Ball"
+        },
+        {
+          "count": 9,
+          "id": "Plastic Roller Ball",
+          "label": "Plastic Roller Ball"
+        },
+        {
+          "count": 7,
+          "id": "Fine Mist Sprayer",
+          "label": "Fine Mist Sprayer"
+        }
+      ],
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "name": "Cylinder 5 ml (0.17 oz) Cobalt Blue",
+      "neckFinish": "13-415",
+      "publishedAt": 1788573943929,
+      "variantCount": 35
+    },
+    {
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "closures": [
+        {
+          "count": 10,
+          "id": "Complete product",
+          "label": "Complete product"
+        },
+        {
+          "count": 9,
+          "id": "Metal Roller Ball",
+          "label": "Metal Roller Ball"
+        },
+        {
+          "count": 9,
+          "id": "Plastic Roller Ball",
+          "label": "Plastic Roller Ball"
+        },
+        {
+          "count": 8,
+          "id": "Fine Mist Sprayer",
+          "label": "Fine Mist Sprayer"
+        }
+      ],
+      "familyId": "cylinder-9ml-clear-13-415",
+      "name": "Cylinder 9 ml (0.3 oz) Clear",
+      "neckFinish": "13-415",
+      "publishedAt": 1788573943929,
+      "variantCount": 36
+    },
+    {
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "closures": [
+        {
+          "count": 10,
+          "id": "Complete product",
+          "label": "Complete product"
+        },
+        {
+          "count": 9,
+          "id": "Metal Roller Ball",
+          "label": "Metal Roller Ball"
+        },
+        {
+          "count": 9,
+          "id": "Plastic Roller Ball",
+          "label": "Plastic Roller Ball"
+        },
+        {
+          "count": 8,
+          "id": "Fine Mist Sprayer",
+          "label": "Fine Mist Sprayer"
+        }
+      ],
+      "familyId": "cylinder-9ml-frosted-13-415",
+      "name": "Cylinder 9 ml (0.3 oz) Frosted",
+      "neckFinish": "13-415",
+      "publishedAt": 1788573943929,
+      "variantCount": 36
+    }
+  ],
+  "identity": [
+    {
+      "sku": "GBCyl1ozRollWht",
+      "productGroupId": "kh74mv3vd64tqn8kkvg5rwkd3s8dq8q6",
+      "productId": "kd7cxga66f2v8bww6zdk9awgcx81v2ke",
+      "graceSku": "GB-CYL-CLR-28ML-RBL-WHT",
+      "groupSlug": "cylinder-28ml-clear-16mm-rollon"
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "productId": "kd72rnyy2z37h9kwxhsgsqazen81tjht",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SBLK",
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon"
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "productId": "kd7chww6frred7jecd88wekx0x81t5gv",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MCPR",
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon"
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "productId": "kd78y78kzaf67zb0aps1ereqhx81tmgs",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MGLD",
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon"
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "productId": "kd75p31ad5y31fbyqmsrgskbfx81vzsa",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SGLD",
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon"
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "productId": "kd774erp2xb5n85fbwpfn67hpn81vwqn",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-PKDT",
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon"
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "productId": "kd7cr825bp3bm50haypvape4bd81tyh6",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MSLV",
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon"
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "productGroupId": "kh7cg4q3te980y8e8pzh55tk458dpqtf",
+      "productId": "kd703fenbgegh1ap42rx12e5k581vkbn",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SSLV",
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon"
+    },
+    {
+      "sku": "GBCyl5WhtSht",
+      "productGroupId": "kh70ryfm2hmz484j4z93mqzfwn8dp590",
+      "productId": "kd79f95zdhdvjr570v7j0yjb9s86a9zt",
+      "graceSku": "GB-CYL-CLR-5ML-WHT-S",
+      "groupSlug": "cylinder-5ml-clear-13-415"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "productId": "kd7aw2tc5ed8hngthevhx6nrr581t2sn",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-BKDT",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkSh",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "productId": "kd726txc611ksv12072t2e5cqx81tnvp",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SBLK",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+    },
+    {
+      "sku": "GBCylBlu5RollCuMatt",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "productId": "kd7fjsv5t540j6hdhrstmnpyhn81vc47",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MCPR",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+    },
+    {
+      "sku": "GBCylBlu5RollGlMatt",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "productId": "kd7cgyg41ncfk0jmt3t74872zn81t19a",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MGLD",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+    },
+    {
+      "sku": "GBCylBlu5RollGlSh",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "productId": "kd7d2cwqzqnv7yx6y10n5me7ys81tfmr",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SGLD",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+    },
+    {
+      "sku": "GBCylBlu5RollPinkDot",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "productId": "kd733htk2x2dqzx6mpfczqp9k581vkhx",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-PKDT",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+    },
+    {
+      "sku": "GBCylBlu5RollSlDot",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "productId": "kd749d5gwf3r3h2m93a1pvr4qn81va2z",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SLDT",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+    },
+    {
+      "sku": "GBCylBlu5RollSlMatt",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "productId": "kd749fmf4cwdrfw72rz9dydps581thgb",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-MSLV",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+    },
+    {
+      "sku": "GBCylBlu5RollSlSh",
+      "productGroupId": "kh7bfn4x5y5b3sr0dmp26z00a18dp5js",
+      "productId": "kd7c138z8cwzgrceydd4ptft5x81tkwv",
+      "graceSku": "GB-CYL-BLU-5ML-ROL-SSLV",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon"
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "productGroupId": "kh74mv3vd64tqn8kkvg5rwkd3s8dq8q6",
+      "productId": "kd712tkda2qy1c8m943kp8bra981tp75",
+      "graceSku": "GB-CYL-CLR-28ML-MRL-01",
+      "groupSlug": "cylinder-28ml-clear-16mm-rollon"
+    },
+    {
+      "sku": "GBMtlRoll28Wht",
+      "productGroupId": "kh74mv3vd64tqn8kkvg5rwkd3s8dq8q6",
+      "productId": "kd79ft7xbc5654fmfwc54w6q9981v61g",
+      "graceSku": "GB-CYL-CLR-28ML-MRL-02",
+      "groupSlug": "cylinder-28ml-clear-16mm-rollon"
+    },
+    {
+      "sku": "GBRoll28Blk",
+      "productGroupId": "kh74mv3vd64tqn8kkvg5rwkd3s8dq8q6",
+      "productId": "kd7eds9b9xeky0chzw0k29xkfh81tm2n",
+      "graceSku": "GB-CYL-CLR-28ML-RBL",
+      "groupSlug": "cylinder-28ml-clear-16mm-rollon"
+    },
+    {
+      "sku": "GBTallCyl9RollGlMatt",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "productId": "kd7fnr8cc0cdyj7enfjc0j3sr981v75h",
+      "graceSku": "GB-CYL-CLR-9ML-ROL-MGLD-02",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon"
+    },
+    {
+      "sku": "GBTallCyl9RollGlSh",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "productId": "kd70qzt9nq4ysaqgzbxwn2phf581te57",
+      "graceSku": "GB-CYL-CLR-9ML-ROL-SGLD-02",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon"
+    },
+    {
+      "sku": "GBTallCyl9RollSlMatt",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "productId": "kd74hp0krav6pny3t52v0ryrms81tb8b",
+      "graceSku": "GB-CYL-CLR-9ML-ROL-MSLV-02",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon"
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "productGroupId": "kh7en6gmhng3tbc86e2pyxgb698dpsgp",
+      "productId": "kd73nza7s81ycrbm45f9r0d77n81tq76",
+      "graceSku": "GB-CYL-FRS-9ML-T-02",
+      "groupSlug": "cylinder-9ml-frosted-13-415-rollon"
+    }
+  ]
+}

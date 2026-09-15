@@ -1,0 +1,567 @@
+{
+  "revision": 1,
+  "decisions": {
+    "GB09BlackCapApp:0035be99b2c8fd587e931122cade408010c8d3544d0467a0d3c2a6e7b3ede7f9": {
+      "sku": "GB09BlackCapApp",
+      "binding": "0035be99b2c8fd587e931122cade408010c8d3544d0467a0d3c2a6e7b3ede7f9",
+      "sha256": "bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-9ml-clear-18-400/GB09BlackCapApp/bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1.front-on-1000x1100.webp",
+          "sha256": "bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1",
+          "url": "/images/plate-contact-sheets/bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-9ml-clear-18-400/GB09BlackCapApp/86e8dae8937edc8acf104a1294c6793a8756ee44a6724304be705bf710ac7bf4.front-off-1000x1100.webp",
+          "sha256": "86e8dae8937edc8acf104a1294c6793a8756ee44a6724304be705bf710ac7bf4",
+          "url": "/images/plate-contact-sheets/86e8dae8937edc8acf104a1294c6793a8756ee44a6724304be705bf710ac7bf4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBVAmb1DrmBlackCapSht:f8de947d0360de5dfa1774ec34ec2e4563ee2bccb32672648a955e8ef621f080": {
+      "sku": "GBVAmb1DrmBlackCapSht",
+      "binding": "f8de947d0360de5dfa1774ec34ec2e4563ee2bccb32672648a955e8ef621f080",
+      "sha256": "e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmBlackCapSht/e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5.front-on-1000x1100.webp",
+          "sha256": "e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5",
+          "url": "/images/plate-contact-sheets/e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmBlackCapSht/76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79.front-off-1000x1100.webp",
+          "sha256": "76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79",
+          "url": "/images/plate-contact-sheets/76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBVAmb1DrmWhtCapSht:72657691baf5d8b4472731cd03a8b9568a40623786559d5501e55fa25c21c581": {
+      "sku": "GBVAmb1DrmWhtCapSht",
+      "binding": "72657691baf5d8b4472731cd03a8b9568a40623786559d5501e55fa25c21c581",
+      "sha256": "65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmWhtCapSht/65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2.front-on-1000x1100.webp",
+          "sha256": "65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2",
+          "url": "/images/plate-contact-sheets/65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmWhtCapSht/dd5b6bd0b8fa32b88ac4d7aa637552eaca5ebf1e50aaff4cc1a3eb0e543788eb.front-off-1000x1100.webp",
+          "sha256": "dd5b6bd0b8fa32b88ac4d7aa637552eaca5ebf1e50aaff4cc1a3eb0e543788eb",
+          "url": "/images/plate-contact-sheets/dd5b6bd0b8fa32b88ac4d7aa637552eaca5ebf1e50aaff4cc1a3eb0e543788eb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBVAmb2BlackCap:f47afdd4017f290452d51d6618dd30af2282bc6f05b4fdf6b7763b5f496a7c16": {
+      "sku": "GBVAmb2BlackCap",
+      "binding": "f47afdd4017f290452d51d6618dd30af2282bc6f05b4fdf6b7763b5f496a7c16",
+      "sha256": "dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2BlackCap/dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102.front-on-1000x1100.webp",
+          "sha256": "dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102",
+          "url": "/images/plate-contact-sheets/dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2BlackCap/c3115a061de988833fda76e01193ddc9b719e7555780e9f1facaf01ef445a55f.front-off-1000x1100.webp",
+          "sha256": "c3115a061de988833fda76e01193ddc9b719e7555780e9f1facaf01ef445a55f",
+          "url": "/images/plate-contact-sheets/c3115a061de988833fda76e01193ddc9b719e7555780e9f1facaf01ef445a55f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBVAmb2WhtCap:3733d29a5a4c64182c3d3ef51864fe8f72b7f197be22a5b79d6836313fafa95b": {
+      "sku": "GBVAmb2WhtCap",
+      "binding": "3733d29a5a4c64182c3d3ef51864fe8f72b7f197be22a5b79d6836313fafa95b",
+      "sha256": "94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2WhtCap/94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0.front-on-1000x1100.webp",
+          "sha256": "94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0",
+          "url": "/images/plate-contact-sheets/94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2WhtCap/8ce2639283c5c5fd499432dba0befbf8d5893ffe49b9a063f3979da8f3b05707.front-off-1000x1100.webp",
+          "sha256": "8ce2639283c5c5fd499432dba0befbf8d5893ffe49b9a063f3979da8f3b05707",
+          "url": "/images/plate-contact-sheets/8ce2639283c5c5fd499432dba0befbf8d5893ffe49b9a063f3979da8f3b05707.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBVBlu1DrmBlackCapSht:72fc66c42d28362d07a5fcdd06475dbc873c3f80e78e1749e2cc7f3910be704a": {
+      "sku": "GBVBlu1DrmBlackCapSht",
+      "binding": "72fc66c42d28362d07a5fcdd06475dbc873c3f80e78e1749e2cc7f3910be704a",
+      "sha256": "0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlackCapSht/0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a.front-on-1000x1100.webp",
+          "sha256": "0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a",
+          "url": "/images/plate-contact-sheets/0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlackCapSht/cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0.front-off-1000x1100.webp",
+          "sha256": "cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0",
+          "url": "/images/plate-contact-sheets/cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBVBlu1DrmWhtCapSht:8812cd02d1d4494a9b4d0f98348ce2c8f8ff070291d1bf689f5f1fbcd1d0b0a5": {
+      "sku": "GBVBlu1DrmWhtCapSht",
+      "binding": "8812cd02d1d4494a9b4d0f98348ce2c8f8ff070291d1bf689f5f1fbcd1d0b0a5",
+      "sha256": "8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmWhtCapSht/8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde.front-on-1000x1100.webp",
+          "sha256": "8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde",
+          "url": "/images/plate-contact-sheets/8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmWhtCapSht/ae6b08f036e7efa3feee1e3245cb36fdf0fe794d9485fe7074c1ea7fb4fe49d4.front-off-1000x1100.webp",
+          "sha256": "ae6b08f036e7efa3feee1e3245cb36fdf0fe794d9485fe7074c1ea7fb4fe49d4",
+          "url": "/images/plate-contact-sheets/ae6b08f036e7efa3feee1e3245cb36fdf0fe794d9485fe7074c1ea7fb4fe49d4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBVGr1DrmBlackCapSht:2e22ea361af9bb1d82cf255a35ac571bd96395663048962dec31dc624d9f7655": {
+      "sku": "GBVGr1DrmBlackCapSht",
+      "binding": "2e22ea361af9bb1d82cf255a35ac571bd96395663048962dec31dc624d9f7655",
+      "sha256": "e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlackCapSht/e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df.front-on-1000x1100.webp",
+          "sha256": "e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df",
+          "url": "/images/plate-contact-sheets/e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlackCapSht/12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1.front-off-1000x1100.webp",
+          "sha256": "12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1",
+          "url": "/images/plate-contact-sheets/12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBVGr1DrmWhtCapSht:b7dbd6f05f50860754ac2dde00bd79a8c10c5b5bd89e2fadb5078c2c55129425": {
+      "sku": "GBVGr1DrmWhtCapSht",
+      "binding": "b7dbd6f05f50860754ac2dde00bd79a8c10c5b5bd89e2fadb5078c2c55129425",
+      "sha256": "3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmWhtCapSht/3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d.front-on-1000x1100.webp",
+          "sha256": "3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d",
+          "url": "/images/plate-contact-sheets/3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmWhtCapSht/284839fa0fcbf512b2a5aa456cc95698b1dd9ec849997605b4cc126c3f107403.front-off-1000x1100.webp",
+          "sha256": "284839fa0fcbf512b2a5aa456cc95698b1dd9ec849997605b4cc126c3f107403",
+          "url": "/images/plate-contact-sheets/284839fa0fcbf512b2a5aa456cc95698b1dd9ec849997605b4cc126c3f107403.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    "GBVialAmb1o5WhtCapSht:36e0c2d57427b8886f87ea63d4625d9a24200a796a0811fe75eccf7157410cd5": {
+      "sku": "GBVialAmb1o5WhtCapSht",
+      "binding": "36e0c2d57427b8886f87ea63d4625d9a24200a796a0811fe75eccf7157410cd5",
+      "sha256": "bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-13-425/GBVialAmb1o5WhtCapSht/bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa.front-on-1000x1100.webp",
+          "sha256": "bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa",
+          "url": "/images/plate-contact-sheets/bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-13-425/GBVialAmb1o5WhtCapSht/aadfbeec66e7ff0cd316620f79824e6bfe509e827c30e9fc30aca0d63e5f9516.front-off-1000x1100.webp",
+          "sha256": "aadfbeec66e7ff0cd316620f79824e6bfe509e827c30e9fc30aca0d63e5f9516",
+          "url": "/images/plate-contact-sheets/aadfbeec66e7ff0cd316620f79824e6bfe509e827c30e9fc30aca0d63e5f9516.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "sku": "GB09BlackCapApp",
+      "binding": "0035be99b2c8fd587e931122cade408010c8d3544d0467a0d3c2a6e7b3ede7f9",
+      "sha256": "bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-9ml-clear-18-400/GB09BlackCapApp/bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1.front-on-1000x1100.webp",
+          "sha256": "bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1",
+          "url": "/images/plate-contact-sheets/bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-9ml-clear-18-400/GB09BlackCapApp/86e8dae8937edc8acf104a1294c6793a8756ee44a6724304be705bf710ac7bf4.front-off-1000x1100.webp",
+          "sha256": "86e8dae8937edc8acf104a1294c6793a8756ee44a6724304be705bf710ac7bf4",
+          "url": "/images/plate-contact-sheets/86e8dae8937edc8acf104a1294c6793a8756ee44a6724304be705bf710ac7bf4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBVAmb1DrmBlackCapSht",
+      "binding": "f8de947d0360de5dfa1774ec34ec2e4563ee2bccb32672648a955e8ef621f080",
+      "sha256": "e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmBlackCapSht/e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5.front-on-1000x1100.webp",
+          "sha256": "e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5",
+          "url": "/images/plate-contact-sheets/e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmBlackCapSht/76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79.front-off-1000x1100.webp",
+          "sha256": "76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79",
+          "url": "/images/plate-contact-sheets/76aeb8ae80cdb548a452df0c5fd6dd8112d0ded1b5016e39d0a9dcd25906fb79.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBVAmb1DrmWhtCapSht",
+      "binding": "72657691baf5d8b4472731cd03a8b9568a40623786559d5501e55fa25c21c581",
+      "sha256": "65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmWhtCapSht/65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2.front-on-1000x1100.webp",
+          "sha256": "65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2",
+          "url": "/images/plate-contact-sheets/65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-amber-13-425/GBVAmb1DrmWhtCapSht/dd5b6bd0b8fa32b88ac4d7aa637552eaca5ebf1e50aaff4cc1a3eb0e543788eb.front-off-1000x1100.webp",
+          "sha256": "dd5b6bd0b8fa32b88ac4d7aa637552eaca5ebf1e50aaff4cc1a3eb0e543788eb",
+          "url": "/images/plate-contact-sheets/dd5b6bd0b8fa32b88ac4d7aa637552eaca5ebf1e50aaff4cc1a3eb0e543788eb.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBVAmb2BlackCap",
+      "binding": "f47afdd4017f290452d51d6618dd30af2282bc6f05b4fdf6b7763b5f496a7c16",
+      "sha256": "dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2BlackCap/dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102.front-on-1000x1100.webp",
+          "sha256": "dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102",
+          "url": "/images/plate-contact-sheets/dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2BlackCap/c3115a061de988833fda76e01193ddc9b719e7555780e9f1facaf01ef445a55f.front-off-1000x1100.webp",
+          "sha256": "c3115a061de988833fda76e01193ddc9b719e7555780e9f1facaf01ef445a55f",
+          "url": "/images/plate-contact-sheets/c3115a061de988833fda76e01193ddc9b719e7555780e9f1facaf01ef445a55f.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBVAmb2WhtCap",
+      "binding": "3733d29a5a4c64182c3d3ef51864fe8f72b7f197be22a5b79d6836313fafa95b",
+      "sha256": "94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2WhtCap/94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0.front-on-1000x1100.webp",
+          "sha256": "94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0",
+          "url": "/images/plate-contact-sheets/94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-8-425/GBVAmb2WhtCap/8ce2639283c5c5fd499432dba0befbf8d5893ffe49b9a063f3979da8f3b05707.front-off-1000x1100.webp",
+          "sha256": "8ce2639283c5c5fd499432dba0befbf8d5893ffe49b9a063f3979da8f3b05707",
+          "url": "/images/plate-contact-sheets/8ce2639283c5c5fd499432dba0befbf8d5893ffe49b9a063f3979da8f3b05707.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBVBlu1DrmBlackCapSht",
+      "binding": "72fc66c42d28362d07a5fcdd06475dbc873c3f80e78e1749e2cc7f3910be704a",
+      "sha256": "0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlackCapSht/0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a.front-on-1000x1100.webp",
+          "sha256": "0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a",
+          "url": "/images/plate-contact-sheets/0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmBlackCapSht/cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0.front-off-1000x1100.webp",
+          "sha256": "cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0",
+          "url": "/images/plate-contact-sheets/cbbe282508f054cf7c3717de1affe20087abd6279c74bd428a20ceff206c3ca0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBVBlu1DrmWhtCapSht",
+      "binding": "8812cd02d1d4494a9b4d0f98348ce2c8f8ff070291d1bf689f5f1fbcd1d0b0a5",
+      "sha256": "8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmWhtCapSht/8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde.front-on-1000x1100.webp",
+          "sha256": "8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde",
+          "url": "/images/plate-contact-sheets/8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-blue-13-425/GBVBlu1DrmWhtCapSht/ae6b08f036e7efa3feee1e3245cb36fdf0fe794d9485fe7074c1ea7fb4fe49d4.front-off-1000x1100.webp",
+          "sha256": "ae6b08f036e7efa3feee1e3245cb36fdf0fe794d9485fe7074c1ea7fb4fe49d4",
+          "url": "/images/plate-contact-sheets/ae6b08f036e7efa3feee1e3245cb36fdf0fe794d9485fe7074c1ea7fb4fe49d4.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBVGr1DrmBlackCapSht",
+      "binding": "2e22ea361af9bb1d82cf255a35ac571bd96395663048962dec31dc624d9f7655",
+      "sha256": "e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlackCapSht/e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df.front-on-1000x1100.webp",
+          "sha256": "e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df",
+          "url": "/images/plate-contact-sheets/e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmBlackCapSht/12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1.front-off-1000x1100.webp",
+          "sha256": "12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1",
+          "url": "/images/plate-contact-sheets/12ebaae81f8131fb77aafcef284f629569a085d9b407e959fbbef14ad5f176a1.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBVGr1DrmWhtCapSht",
+      "binding": "b7dbd6f05f50860754ac2dde00bd79a8c10c5b5bd89e2fadb5078c2c55129425",
+      "sha256": "3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmWhtCapSht/3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d.front-on-1000x1100.webp",
+          "sha256": "3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d",
+          "url": "/images/plate-contact-sheets/3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-4ml-green-13-425/GBVGr1DrmWhtCapSht/284839fa0fcbf512b2a5aa456cc95698b1dd9ec849997605b4cc126c3f107403.front-off-1000x1100.webp",
+          "sha256": "284839fa0fcbf512b2a5aa456cc95698b1dd9ec849997605b4cc126c3f107403",
+          "url": "/images/plate-contact-sheets/284839fa0fcbf512b2a5aa456cc95698b1dd9ec849997605b4cc126c3f107403.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    },
+    {
+      "sku": "GBVialAmb1o5WhtCapSht",
+      "binding": "36e0c2d57427b8886f87ea63d4625d9a24200a796a0811fe75eccf7157410cd5",
+      "sha256": "bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa",
+      "status": "approved",
+      "notes": "Family batch approval of the existing indexed plate. Jordan, 2026-09-13: everything already here, qualified and awaiting review is approved and signed off. Cap-on where that is the only served view.",
+      "updatedAt": "2026-09-14T01:07:40.412Z",
+      "batchId": "054d6258-a6c2-46cb-9128-c3df89792ea7",
+      "scope": "existing-plate-visual-review",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-13-425/GBVialAmb1o5WhtCapSht/bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa.front-on-1000x1100.webp",
+          "sha256": "bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa",
+          "url": "/images/plate-contact-sheets/bb05fdf0303b02347eacc47a7dd930f66d146bba4d918c2649fc6ce1002356aa.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/vial-2ml-amber-13-425/GBVialAmb1o5WhtCapSht/aadfbeec66e7ff0cd316620f79824e6bfe509e827c30e9fc30aca0d63e5f9516.front-off-1000x1100.webp",
+          "sha256": "aadfbeec66e7ff0cd316620f79824e6bfe509e827c30e9fc30aca0d63e5f9516",
+          "url": "/images/plate-contact-sheets/aadfbeec66e7ff0cd316620f79824e6bfe509e827c30e9fc30aca0d63e5f9516.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ]
+    }
+  ]
+}

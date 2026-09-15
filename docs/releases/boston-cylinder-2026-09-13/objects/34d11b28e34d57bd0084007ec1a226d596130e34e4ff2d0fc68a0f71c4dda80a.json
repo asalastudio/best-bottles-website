@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "boston-30ml-final-size-v1-2026-09-12",
+  "title": "Boston Round 30 mL — saved final sizing candidate",
+  "count": 1,
+  "createdAt": "2026-09-13T00:26:46.221Z",
+  "baselinePercent": 91,
+  "background": "#F5F3EF",
+  "scope": "visual-review-only",
+  "assetStorage": "copied-files",
+  "sourceManifestSha256": "76cb57c1a8eb9e462ab701b5df525879bd810dd7dd6003aceab498fc9d6e2a1b",
+  "feedbackSnapshotSha256": "9f7e432133b2a6719e6eb90acee4ffe4b9eccfe7fde6586bd871f61d19ad3dad"
+}

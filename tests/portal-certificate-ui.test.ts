@@ -42,6 +42,9 @@ const VALID = {
     legalBusinessName: "Lumière Atelier LLC",
     issuingState: "CA",
     permitNumber: "123-456789",
+    // A complete submission now carries the certificate itself. A permit
+    // number on its own is an assertion, not something a reviewer can check.
+    documentStorageId: "kg2abc",
 };
 
 beforeEach(() => {
@@ -68,11 +71,16 @@ describe("submitCertificateAction", () => {
         expect(submitResaleCertificateForViewer).not.toHaveBeenCalled();
     });
 
-    it("treats the document as optional", async () => {
-        await submitCertificateAction(EMPTY, form(VALID));
-        expect(submitResaleCertificateForViewer).toHaveBeenCalledWith(
-            expect.objectContaining({ documentStorageId: undefined }),
-        );
+    it("refuses a submission with no certificate attached", async () => {
+        // Without this, a permit number alone reaches the queue and sits there
+        // with nothing for a reviewer to open — which is exactly how the queue
+        // filled with rows nobody could action.
+        const { documentStorageId: _omitted, ...withoutDocument } = VALID;
+        const result = await submitCertificateAction(EMPTY, form(withoutDocument));
+
+        expect(result.ok).toBe(false);
+        expect(result.error).toMatch(/attach/i);
+        expect(submitResaleCertificateForViewer).not.toHaveBeenCalled();
     });
 
     it("passes an uploaded document through", async () => {

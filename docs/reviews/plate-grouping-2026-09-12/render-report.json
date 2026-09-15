@@ -1,0 +1,679 @@
+[
+ {
+  "familyId": "boston-round-15ml-amber-18-400",
+  "scope": 7,
+  "preflightPass": 7,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/boston-round-15ml-amber-18-400",
+  "holds": [],
+  "counts": {
+   "rows": 7,
+   "publishable": 7,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "boston-round-15ml-cobalt-blue-18-400",
+  "scope": 2,
+  "preflightPass": 2,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/boston-round-15ml-cobalt-blue-18-400",
+  "holds": [],
+  "counts": {
+   "rows": 2,
+   "publishable": 2,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "boston-round-30ml-amber-20-400",
+  "scope": 16,
+  "preflightPass": 14,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/boston-round-30ml-amber-20-400",
+  "holds": [
+   {
+    "sku": "GBBstnAmb1ozMtlRollonShnSl",
+    "reasons": [
+     "front source basename 'GBBstnAmb1ozRollonShnSl' does not match website SKU 'GBBstnAmb1ozMtlRollonShnSl'"
+    ]
+   },
+   {
+    "sku": "GBBstnAmb1ozMtlRollonGl",
+    "reasons": [
+     "front source basename 'GBBstnAmb1ozRollonGl' does not match website SKU 'GBBstnAmb1ozMtlRollonGl'"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 14,
+   "publishable": 14,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "boston-round-30ml-clear-20-400",
+  "scope": 12,
+  "preflightPass": 8,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/boston-round-30ml-clear-20-400",
+  "holds": [
+   {
+    "sku": "GBBstn1ozMtlRollonMattSl",
+    "reasons": [
+     "front source basename 'GBBstn1ozRollMattSl' does not match website SKU 'GBBstn1ozMtlRollonMattSl'"
+    ]
+   },
+   {
+    "sku": "GBBstn1ozMtlRollonMattBlk",
+    "reasons": [
+     "front source basename 'GBBstn1ozRollMattBlk' does not match website SKU 'GBBstn1ozMtlRollonMattBlk'"
+    ]
+   },
+   {
+    "sku": "GBBstn1ozMtlRollonGl",
+    "reasons": [
+     "front source basename 'GBBstn1ozRollShGl' does not match website SKU 'GBBstn1ozMtlRollonGl'"
+    ]
+   },
+   {
+    "sku": "GBBstn1ozMtlRollonMattGl",
+    "reasons": [
+     "front source basename 'GBBstn1ozRollMattGl' does not match website SKU 'GBBstn1ozMtlRollonMattGl'"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 8,
+   "publishable": 8,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "boston-round-30ml-cobalt-blue-20-400",
+  "scope": 17,
+  "preflightPass": 11,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/boston-round-30ml-cobalt-blue-20-400",
+  "holds": [
+   {
+    "sku": "GBBstnBlu1ozMtlRollonMattSl",
+    "reasons": [
+     "front source basename 'GBBstnBlu1ozMtlRollonMattSl copy' does not match website SKU 'GBBstnBlu1ozMtlRollonMattSl'"
+    ]
+   },
+   {
+    "sku": "GBBstnBlu1ozMtlRollonShnSl",
+    "reasons": [
+     "front source basename 'GBBstnBlu1ozRollonShnSl' does not match website SKU 'GBBstnBlu1ozMtlRollonShnSl'"
+    ]
+   },
+   {
+    "sku": "GBBstnBlu1ozRollonMattBlk",
+    "reasons": [
+     "front source basename 'GBBstnBlu1ozMtlRollonMattBlk' does not match website SKU 'GBBstnBlu1ozRollonMattBlk'"
+    ]
+   },
+   {
+    "sku": "GBBstnBlu1ozRollonMattSl",
+    "reasons": [
+     "front source basename 'GBBstnBlu1ozMtlRollonMattSl copy' does not match website SKU 'GBBstnBlu1ozRollonMattSl'"
+    ]
+   },
+   {
+    "sku": "GBBstnBlu1ozRollonMattGl",
+    "reasons": [
+     "front source basename 'GBBstnBlu1ozMtlRollonMattGl' does not match website SKU 'GBBstnBlu1ozRollonMattGl'"
+    ]
+   },
+   {
+    "sku": "GBBstnBlu1ozMtlRollonGl",
+    "reasons": [
+     "front source basename 'GBBstnBlu1ozRollonGl' does not match website SKU 'GBBstnBlu1ozMtlRollonGl'"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 11,
+   "publishable": 11,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "boston-round-60ml-amber-20-400",
+  "scope": 15,
+  "preflightPass": 10,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/boston-round-60ml-amber-20-400",
+  "holds": [
+   {
+    "sku": "GBBstnAmb2ozMtlRollonMattSl",
+    "reasons": [
+     "front source basename 'GBBstnAmb2ozRollonMattSl' does not match website SKU 'GBBstnAmb2ozMtlRollonMattSl'"
+    ]
+   },
+   {
+    "sku": "GBBstnAmb2ozMtlRollonShnSl",
+    "reasons": [
+     "front source basename 'GBBstnAmb2ozRollonShnSl' does not match website SKU 'GBBstnAmb2ozMtlRollonShnSl'"
+    ]
+   },
+   {
+    "sku": "GBBstnAmb2ozRollonMattBlk",
+    "reasons": [
+     "front source basename 'GBBstnAmb2ozMtlRollonMattBlk' does not match website SKU 'GBBstnAmb2ozRollonMattBlk'"
+    ]
+   },
+   {
+    "sku": "GBBstnAmb2ozRollonShnBlk",
+    "reasons": [
+     "front source basename 'GBBstnAmb2ozMtlRollonShnBlk' does not match website SKU 'GBBstnAmb2ozRollonShnBlk'"
+    ]
+   },
+   {
+    "sku": "GBBstnAmb2ozRollonGl",
+    "reasons": [
+     "front source basename 'GBBstnAmb2ozMtlRollonGl' does not match website SKU 'GBBstnAmb2ozRollonGl'"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 10,
+   "publishable": 10,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "boston-round-60ml-clear-20-400",
+  "scope": 2,
+  "preflightPass": 1,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/boston-round-60ml-clear-20-400",
+  "holds": [
+   {
+    "sku": "GBBstn2ozRollonMattGl",
+    "reasons": [
+     "front source basename 'GBBstn2ozMtlRollonMattGl' does not match website SKU 'GBBstn2ozRollonMattGl'"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 1,
+   "publishable": 1,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "boston-round-60ml-cobalt-blue-20-400",
+  "scope": 17,
+  "preflightPass": 17,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/boston-round-60ml-cobalt-blue-20-400",
+  "holds": [],
+  "counts": {
+   "rows": 17,
+   "publishable": 17,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "circle-30ml-clear-15-415",
+  "scope": 7,
+  "preflightPass": 7,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/circle-30ml-clear-15-415",
+  "holds": [],
+  "counts": {
+   "rows": 7,
+   "publishable": 7,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "cream-jar-30ml-mixed-45mm",
+  "scope": 3,
+  "preflightPass": 0,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/cream-jar-30ml-mixed-45mm",
+  "holds": [
+   {
+    "sku": "CJAmb30SlCap",
+    "reasons": [
+     "family changed: cream-jar-30ml-amber-45mm"
+    ]
+   },
+   {
+    "sku": "CJFrst30BlkCap",
+    "reasons": [
+     "family changed: cream-jar-30ml-frosted-45mm"
+    ]
+   },
+   {
+    "sku": "CJFrst30SlCap",
+    "reasons": [
+     "family changed: cream-jar-30ml-frosted-45mm"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 0,
+   "publishable": 0,
+   "families": 0
+  }
+ },
+ {
+  "familyId": "cream-jar-40ml-mixed-48-400",
+  "scope": 3,
+  "preflightPass": 0,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/cream-jar-40ml-mixed-48-400",
+  "holds": [
+   {
+    "sku": "CJAmb40SlCap",
+    "reasons": [
+     "family changed: cream-jar-40ml-amber-48-400"
+    ]
+   },
+   {
+    "sku": "CJFrst40BlkCap",
+    "reasons": [
+     "family changed: cream-jar-40ml-frosted-48-400"
+    ]
+   },
+   {
+    "sku": "CJFrst40SlCap",
+    "reasons": [
+     "family changed: cream-jar-40ml-frosted-48-400"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 0,
+   "publishable": 0,
+   "families": 0
+  }
+ },
+ {
+  "familyId": "cream-jar-5ml-mixed-27mm",
+  "scope": 2,
+  "preflightPass": 0,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/cream-jar-5ml-mixed-27mm",
+  "holds": [
+   {
+    "sku": "CJAmb5mlBlkCap",
+    "reasons": [
+     "family changed: cream-jar-5ml-amber-27mm"
+    ]
+   },
+   {
+    "sku": "CJClr5mlClrCap",
+    "reasons": [
+     "family changed: cream-jar-5ml-clear-27mm"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 0,
+   "publishable": 0,
+   "families": 0
+  }
+ },
+ {
+  "familyId": "decorative-4ml-frosted-8mm",
+  "scope": 2,
+  "preflightPass": 0,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/decorative-4ml-frosted-8mm",
+  "holds": [
+   {
+    "sku": "GBHeartFrst4KeyGld",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBHeartFrst4TslRed",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 0,
+   "publishable": 0,
+   "families": 0
+  }
+ },
+ {
+  "familyId": "diva-46ml-frosted-18-415",
+  "scope": 44,
+  "preflightPass": 0,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/diva-46ml-frosted-18-415",
+  "holds": [
+   {
+    "sku": "GBDivaFrst46SpryMtGl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46SpryShnGl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46SpryShnBlk",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46SpryMtSl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46SpryShnSl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDiva46DrpSl",
+    "reasons": [
+     "family changed: diva-46ml-clear-18-415",
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46SpryCu",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrBlkLthr",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpBlk",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpTslBlk",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrShnGl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrShnBlkTall",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrShnBlk",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrBrwnLthr",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "LBDivaFrst46LtnMtGl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrLBrwnLthr",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "LBDivaFrst46LtnMtSl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrShnSl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "LBDivaFrst46LtnCu",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrMtSlTall",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "LBDivaFrst46LtnShnGl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrMtSl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "LBDivaFrst46LtnShnBlk",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrWht",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "LBDivaFrst46LtnShnSl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrPnkLthr",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46RdcrIvyLthr",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpLvn",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpPnk",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpMtSl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpIvySl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpGl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpIvyGl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpWht",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpRed",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpTslLvn",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpTslIvyGl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpTslIvySl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpTslWht",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpTslPnk",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpTslMtSl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpTslGl",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "GBDivaFrst46AnSpTslRed",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   },
+   {
+    "sku": "LBDivaFrst46LtnClOvrCap",
+    "reasons": [
+     "no approved front in existing selection"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 0,
+   "publishable": 0,
+   "families": 0
+  }
+ },
+ {
+  "familyId": "elegant-30ml-clear-15-415",
+  "scope": 5,
+  "preflightPass": 5,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/elegant-30ml-clear-15-415",
+  "holds": [],
+  "counts": {
+   "rows": 5,
+   "publishable": 5,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "elegant-30ml-frosted-15-415",
+  "scope": 7,
+  "preflightPass": 7,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/elegant-30ml-frosted-15-415",
+  "holds": [],
+  "counts": {
+   "rows": 7,
+   "publishable": 7,
+   "families": 1
+  }
+ },
+ {
+  "familyId": "plastic-bottle-30ml-mixed-13-415",
+  "scope": 2,
+  "preflightPass": 0,
+  "exitCode": 0,
+  "batch": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.claude/worktrees/threejs-blender-render-location-96d90c/dist/paper-doll/step1-grouping-2026-09-12/plastic-bottle-30ml-mixed-13-415",
+  "holds": [
+   {
+    "sku": "PB1ozClearcap",
+    "reasons": [
+     "family changed: plastic-bottle-30ml-clear-13-415"
+    ]
+   },
+   {
+    "sku": "PB1ozSpryNat",
+    "reasons": [
+     "family changed: plastic-bottle-30ml-clear-13-415"
+    ]
+   }
+  ],
+  "counts": {
+   "rows": 0,
+   "publishable": 0,
+   "families": 0
+  }
+ }
+]

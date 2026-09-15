@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-09-13T15:03:38.644Z",
+  "global": {
+    "total": 2305,
+    "complete": 686,
+    "review": 431,
+    "reconcile": 677,
+    "missing": 511
+  },
+  "family": {
+    "family": "Cylinder",
+    "total": 436,
+    "complete": 398,
+    "review": 0,
+    "reconcile": 38,
+    "missing": 0,
+    "sizes": [
+      3.3,
+      4,
+      5,
+      5.5,
+      9,
+      25,
+      28,
+      30,
+      50,
+      100,
+      114,
+      227,
+      454
+    ],
+    "unlinked": 0
+  },
+  "preparation": {
+    "name": "cylinder.final-plate-preparation",
+    "state": "pending",
+    "preparedPairs": 38,
+    "legacySourceDecisions": 27,
+    "alignmentFailures": 0,
+    "reviewUrl": "/reviews/cylinder-final38-2026-09-13/index.html",
+    "token": "b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b"
+  }
+}

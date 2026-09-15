@@ -1,0 +1,32 @@
+[
+  {
+    "width": 1440,
+    "http": 200,
+    "rows": 38,
+    "images": 82,
+    "loaded": 82,
+    "overflow": false,
+    "buttonInitiallyDisabled": true,
+    "apiStatus": "Exact image and source checks passed. Review the pairs above.",
+    "filtered": 3,
+    "oneAckBlocked": true,
+    "enabledAfterBoth": true,
+    "rejected": 409,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "http": 200,
+    "rows": 38,
+    "images": 82,
+    "loaded": 82,
+    "overflow": false,
+    "buttonInitiallyDisabled": true,
+    "apiStatus": "Exact image and source checks passed. Review the pairs above.",
+    "filtered": 3,
+    "oneAckBlocked": true,
+    "enabledAfterBoth": true,
+    "rejected": 409,
+    "errors": []
+  }
+]

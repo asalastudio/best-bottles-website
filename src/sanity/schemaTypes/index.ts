@@ -1,9 +1,11 @@
+import { shopCollectionCard, buildYourBottleBlock } from "./objects/shopCollectionCard";
 import { journal } from "./documents/journal";
 import { product } from "./documents/product";
 import { homepagePage } from "./documents/homepagePage";
 import { productFamilyContent } from "./documents/productFamilyContent";
 import { productGroupContent } from "./documents/productGroupContent";
 import { heroBlock } from "./objects/heroBlock";
+import { heroHotspot } from "./objects/heroHotspot";
 import { startHereCard } from "./objects/startHereCard";
 import { designFamilyCard } from "./objects/designFamilyCard";
 import { educationPreview } from "./objects/educationPreview";
@@ -38,7 +40,10 @@ export const schemaTypes = [
     marketingHeroAsset,
     paperDollBeautyGallery,
     // Objects — Homepage
+    shopCollectionCard,
+    buildYourBottleBlock,
     heroBlock,
+    heroHotspot,
     startHereCard,
     designFamilyCard,
     mobileCategoryCard,

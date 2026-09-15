@@ -7,10 +7,15 @@ describe("responsive shell contract", () => {
     it("keeps the compact navigation through 1279px so the expanded header fits at 1440px", () => {
         const navbar = read("src/components/Navbar.tsx");
 
+        // Compact shell below 1280px: menu button, no desktop nav row, no region selector.
         expect(navbar).toContain('className="xl:hidden p-2');
-        expect(navbar).toContain('className="hidden xl:flex shrink-0');
-        expect(navbar).toContain("xl:gap-x-6 2xl:gap-x-12");
-        expect(navbar).toContain("xl:min-w-[320px] xl:max-w-[420px]");
+        expect(navbar).toContain('className="hidden xl:flex xl:justify-self-start"');
+        expect(navbar).toContain('className="hidden xl:flex h-[40px]');
+        // Expanded header from 1280px: three-column row (region · centred wordmark · utilities),
+        // nav on its own row with spacing that opens up at 1536px, compact search field until then.
+        expect(navbar).toContain("xl:grid xl:grid-cols-[1fr_auto_1fr] xl:h-[60px]");
+        expect(navbar).toContain("gap-x-8 2xl:gap-x-12");
+        expect(navbar).toContain("xl:w-[240px] 2xl:w-[300px]");
     });
 
     it("uses the typographic wordmark in the mobile menu instead of a missing image asset", () => {

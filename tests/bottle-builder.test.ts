@@ -3,7 +3,7 @@ import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import tallRollers from "@/lib/bottle-builder/rollers.generated.json";
 import cobaltRollers from "@/lib/bottle-builder/rollers-cobalt.generated.json";
 import {
-    builderCartItem, builderOrder, catalogConfigurationFromRow, compatibleFinishComponent, configurationFromRow, deriveBuilder, emptySelection,
+    builderCartItem, builderOrder, catalogConfigurationFromRow, clearBodyPreview, compatibleFinishComponent, configurationFromRow, deriveBuilder, emptySelection,
     groupBuilderBodies, resolveBuilderConfigurations, previewParts, reconcileSelection, selectBuilderBody, type BuilderConfiguration, type BuilderKit, type CatalogRow,
 } from "@/lib/bottle-builder/model";
 
@@ -81,8 +81,50 @@ describe("builder catalog boundary", () => {
             websiteSku: ({ 15: "GBCrcl15RollBlkSh", 30: "GBCrcl30SpryBlk", 50: "GBCrcl50SpryShnBlk", 100: "GBCrcl100SpryShnBlk" } as Record<number, string>)[capacityMl], productGroupSlug: `circle-${capacityMl}ml-clear-rollon`,
         }).row)!);
         expect(groupBuilderBodies(configs).map(b => b.capacityMl)).toEqual([15, 30, 50, 100]);
-        for (const config of configs) expect(config.bodyImage?.url).toMatch(/bottle-builder\/circle/);
+        // Circle 15 keeps the 2026-09-02 Circle media; the larger sizes come from the
+        // recipes' uncapped body layers under /bodies (2026-09-14, no insert in the neck)
+        for (const config of configs) expect(config.bodyImage?.url).toMatch(/bottle-builder\/(circle|bodies)\/circle-/);
         expect(catalogConfigurationFromRow(fixture({ family: "Circle", capacityMl: 50, neckThreadSize: "18-400", color: "Frosted" }).row)).toBeNull();
+    });
+    it("names a dropper by bulb and trim collar so trims stay distinct choices", () => {
+        // Boston Round 15 ml amber: three white-bulb droppers (plain, gold trim, silver trim)
+        // all carry capColor "White" and collapsed into one "White Collar" (2026-09-14)
+        const dropper = (websiteSku: string, itemName: string) => catalogConfigurationFromRow(fixture({
+            family: "Boston Round", capacityMl: 15, neckThreadSize: "18-400", color: "Amber", applicator: "Dropper", capColor: "White",
+            websiteSku, graceSku: websiteSku, itemName, productGroupSlug: "boston-round-15ml-amber-18-400-dropper",
+            components: { Dropper: [{ graceSku: "DRP", itemName: "Dropper Thread 18-400", imageUrl: null, capColor: "White", stockStatus: "In Stock",
+                webPrice1pc: .3, webPrice12pc: null, websiteSku: "Drp18-400Wht", productGroupSlug: "droppers", shopifyVariantId: "gid://shopify/ProductVariant/3", shopifySellable: true }] },
+        }).row, null, "https://example.com/plate.png")!;
+        const plain = dropper("TestBstnWhtDropper", "Boston round design 15ml Amber glass bottle with a white dropper.");
+        const gold = dropper("TestBstnWhtDropperGlTrim", "Boston round design 15ml Amber glass bottle and white dropper with a shiny gold trim cap.");
+        const silver = dropper("TestBstnWhtDropperSlTrim", "Boston round design 15ml Amber glass bottle and white dropper with a shiny silver trim cap.");
+        expect(plain.closure).toBe("White Collar");
+        expect(gold.closure).toBe("White Bulb, Shiny Gold Trim Collar");
+        expect(silver.closure).toBe("White Bulb, Shiny Silver Trim Collar");
+        expect(groupBuilderBodies([plain, gold, silver])[0].configurations).toHaveLength(3);
+    });
+    it("takes tall or short from the listed cap's own name, not the row's capStyle", () => {
+        // Diva 46 frosted reducer: both rows say capStyle Tall; the caps are named Tall and Short
+        const reducer = (websiteSku: string, capName: string, capSku: string) => catalogConfigurationFromRow(fixture({
+            family: "Diva", capacityMl: 46, neckThreadSize: "18-415", color: "Frosted", applicator: "Reducer", capColor: "Matte Silver", capStyle: "Tall",
+            websiteSku, graceSku: websiteSku, itemName: "Diva 46 ml (1.56 oz) Frosted Glass Bottle Tall Cap", productGroupSlug: "diva-46ml-frosted-18-415",
+            components: { Cap: [{ graceSku: "CAP", itemName: capName, imageUrl: null, capColor: "Matte Silver", stockStatus: "In Stock",
+                webPrice1pc: .3, webPrice12pc: null, websiteSku: capSku, productGroupSlug: "caps", shopifyVariantId: "gid://shopify/ProductVariant/4", shopifySellable: true }] },
+        }).row, null, "https://example.com/plate.png")!;
+        expect(reducer("TestDivaRdcrMtSlTall", "Tall Matt Silver caps for glass bottles. Thread size 18-415", "CP18-415MtSlTall").closure).toMatch(/^Tall /);
+        expect(reducer("TestDivaRdcrMtSl", "Short Matt Silver caps for glass bottles, Thread size 18-415", "CP18-415MtSl").closure).not.toMatch(/Tall/);
+    });
+    it("shows the chooser tile as bare clear glass even when only coloured glass is on offer", () => {
+        const amber = catalogConfigurationFromRow(fixture({
+            family: "Boston Round", capacityMl: 15, neckThreadSize: "18-400", color: "Amber", applicator: "Cap/Closure", capColor: "Black",
+            websiteSku: "TestBstnAmbCapSht", graceSku: "TestBstnAmbCapSht", itemName: "Boston round 15ml Amber glass bottle with black cap",
+            productGroupSlug: "boston-round-15ml-amber-18-400",
+        }).row, null, "https://example.com/plate.png")!;
+        expect(amber.bodyImage?.url).toMatch(/boston-round-15-amber-18-400/);
+        const preview = clearBodyPreview(groupBuilderBodies([amber])[0]);
+        expect(preview.color).toBe("Clear");
+        expect(preview.bodyImage?.url).toMatch(/boston-round-15-clear-18-400/);
+        expect(preview.kit).toBeNull();
     });
     it("keeps different molds separate when their capacity and neck match", () => {
         const configs = ["footed-rectangle", "tall-rectangle"].map(profile => {

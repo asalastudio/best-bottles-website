@@ -1,3 +1,4 @@
+import { matchesShopCollection } from "./shopCollections";
 import {
     APPLICATOR_BUCKETS,
     BOTTLE_CATEGORIES,
@@ -69,6 +70,10 @@ export interface CatalogSearchVariantPreviewRow {
         webPrice1pc: number | null;
         shopifyVariantId: string | null;
         shopifySellable: boolean | null;
+        webPrice10pc?: number | null;
+        webPrice12pc?: number | null;
+        /** Published quantity-break ladder (site truth); drives the grid card tier table. */
+        priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
     }>;
 }
 
@@ -150,7 +155,7 @@ export function buildCatalogSearchResult(input: {
         return applicatorBucketMatchesProductValues(bucket as never, group.applicatorTypes ?? []);
     };
     const runFilters = (skipKeys = new Set<keyof CatalogFilters>()) => {
-        let rows = [...groups];
+        let rows = filters.shopCollection ? groups.filter(group => matchesShopCollection(group, filters.shopCollection!)) : [...groups];
         if (filters.search) {
             rows = rows.filter((group) => catalogSearchMatches(filters.search, [
                 group.displayName,

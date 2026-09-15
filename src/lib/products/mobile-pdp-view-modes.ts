@@ -1,3 +1,5 @@
+import { requiresAssembledClosure } from "./closure-presentation";
+
 /**
  * Mobile PDP presentation state. A view mode decides how the currently
  * configured product is shown; it never touches the resolved SKU, price, or
@@ -12,6 +14,8 @@ export type ProductViewMode = "assembled" | "capOff";
 export type MobilePickerType = "glass" | "roller" | "capFinish";
 
 export type MobileViewCapabilities = {
+    applicator?: string | null;
+    websiteSku?: string | null;
     /** A cap-off plate exists, or the kit carries a removable closure part. */
     hasCapOffAsset: boolean;
 };
@@ -20,16 +24,17 @@ export type MobileViewModeOption = { id: ProductViewMode; label: string };
 
 /** Data-driven Cap On | Cap Off control: a bottle with no removable cap never sees "Cap Off". */
 export function getMobileViewModes(caps: MobileViewCapabilities): MobileViewModeOption[] {
+    const hasCapOffAsset = caps.hasCapOffAsset && !requiresAssembledClosure(caps.applicator, caps.websiteSku);
     const modes: MobileViewModeOption[] = [
-        { id: "assembled", label: caps.hasCapOffAsset ? "Cap On" : "Product" },
+        { id: "assembled", label: hasCapOffAsset ? "Cap On" : "Product" },
     ];
-    if (caps.hasCapOffAsset) modes.push({ id: "capOff", label: "Cap Off" });
+    if (hasCapOffAsset) modes.push({ id: "capOff", label: "Cap Off" });
     return modes;
 }
 
 /** Keep a stored/previous mode only while the current configuration can render it. */
 export function coerceMobileViewMode(mode: ProductViewMode, caps: MobileViewCapabilities): ProductViewMode {
-    if (mode === "capOff" && !caps.hasCapOffAsset) return "assembled";
+    if (mode === "capOff" && (!caps.hasCapOffAsset || requiresAssembledClosure(caps.applicator, caps.websiteSku))) return "assembled";
     return mode;
 }
 
@@ -45,7 +50,7 @@ export function preferredViewForPicker(
 ): ProductViewMode | null {
     switch (picker) {
         case "roller":
-            return caps.hasCapOffAsset ? "capOff" : "assembled";
+            return coerceMobileViewMode("capOff", caps);
         case "capFinish":
             return "assembled";
         case "glass":

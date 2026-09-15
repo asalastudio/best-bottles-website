@@ -19,11 +19,20 @@ for (const key of requiredEnvVars) {
 
 const nextConfig: NextConfig = {
     reactStrictMode: false,
+    // Required by the /ingest PostHog proxy below — without it Next 308s
+    // PostHog's trailing-slash paths and the requests fail.
+    skipTrailingSlashRedirect: true,
     outputFileTracingRoot: projectRoot,
+    // Cursor's preview browser hits the VM as 127.0.0.1. Without this, Next
+    // blocks /_next assets and Team Hub client islands (the tool cards) never paint.
+    allowedDevOrigins: ["127.0.0.1", "localhost"],
     experimental: {
         // Sentry adds a custom Webpack hook, disabling Next's default worker.
         // Isolate compilation so its memory is released before TypeScript runs.
         webpackBuildWorker: true,
+        // Vercel's standard build container OOM-killed the webpack worker on
+        // 2026-09-14; this trades a little build time for a lower peak heap.
+        webpackMemoryOptimizations: true,
     },
     turbopack: {
         root: projectRoot,
@@ -47,6 +56,16 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: "https",
+                // The plate store. Pinned to our own bucket rather than
+                // wildcarded: *.public.blob.vercel-storage.com would let any
+                // Vercel Blob store on the internet use /_next/image as a
+                // proxy, the same reason the Supabase host above is pinned.
+                // Product pages render plates through next/image, so without
+                // this every PDP throws "Invalid src prop".
+                hostname: "yzy7l20k4yt6znzz.public.blob.vercel-storage.com",
+            },
+            {
+                protocol: "https",
                 hostname: "www.bestbottles.com",
             },
         ],
@@ -54,6 +73,11 @@ const nextConfig: NextConfig = {
 
     async redirects() {
         return [
+            {
+                source: "/team/new",
+                destination: "/team/products/new",
+                permanent: false,
+            },
             // ── Legacy /product/ → new /products/ (singular → plural) ──────
             {
                 source: "/product/:slug",
@@ -104,6 +128,30 @@ const nextConfig: NextConfig = {
 
             // ── Non-www → www canonicalization (handled at DNS/Vercel level,
             //    but this catches any direct hits) ──────────────────────────
+        ];
+    },
+
+    // PostHog ingestion, proxied through our own origin.
+    //
+    // Ad-blockers block us.i.posthog.com by name, which silently drops a
+    // meaningful share of traffic. That is worse than collecting nothing,
+    // because a heatmap built on the unblocked remainder looks complete while
+    // being systematically biased toward people who do not run blockers.
+    // Serving ingestion from /ingest on this domain keeps the measurement
+    // representative.
+    //
+    // skipTrailingSlashRedirect below is required: Next would otherwise 308
+    // PostHog's own trailing-slash paths and break the requests.
+    async rewrites() {
+        return [
+            {
+                source: "/ingest/static/:path*",
+                destination: "https://us-assets.i.posthog.com/static/:path*",
+            },
+            {
+                source: "/ingest/:path*",
+                destination: "https://us.i.posthog.com/:path*",
+            },
         ];
     },
 

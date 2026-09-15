@@ -11,6 +11,7 @@ import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { ArrowLeft, Plus } from "./icons";
+import type { RailFamily, RailSession } from "@/lib/grace/workspaceRailTypes";
 
 /**
  * Error boundary scoped to one rail section. Used for the Popular Families
@@ -52,6 +53,10 @@ interface ProjectItem {
 interface WorkspaceShellProps {
     children: ReactNode;
     onNewConversation: () => void;
+    /** Bottle families with approved Sanity artwork, resolved on the server. */
+    families?: RailFamily[];
+    /** This viewer's recent Grace conversations. Empty when signed out. */
+    sessions?: RailSession[];
 }
 
 type WorkspaceUser = {
@@ -90,6 +95,8 @@ function WorkspaceShellWithClerk(props: WorkspaceShellProps) {
 function WorkspaceShellView({
     children,
     onNewConversation,
+    families = [],
+    sessions = [],
     user,
     organization,
 }: WorkspaceShellProps & {
@@ -110,18 +117,24 @@ function WorkspaceShellView({
         clerkOrgId ? { clerkOrgId } : "skip",
     );
 
+    // The rail shows the newest project only. A list of older ones repeated
+    // what /portal/grace already does better, and crowded out the two things
+    // a returning customer actually looks for: their last conversation and
+    // what they saved. The count is the useful part, not the age.
     const sortedProjects = projects ?? [];
-    const activeProject: ProjectItem | null = sortedProjects[0]
-        ? { name: sortedProjects[0].name, sub: relativeTime(sortedProjects[0].updatedAt) }
+    const newest = sortedProjects[0];
+    const activeProject: ProjectItem | null = newest
+        ? {
+            name: newest.name,
+            sub: newest.savedBottleCount > 0
+                ? `${newest.savedBottleCount} saved · ${relativeTime(newest.updatedAt)}`
+                : relativeTime(newest.updatedAt),
+        }
         : null;
-    const recentProjects: ProjectItem[] = sortedProjects.slice(1, 4).map((p) => ({
-        name: p.name,
-        sub: relativeTime(p.updatedAt),
-    }));
 
     // Identity — fall back gracefully when org/account aren't yet wired.
     const orgName = account?.companyName ?? organization?.name ?? null;
-    const tierLabel = account?.tier ?? (clerkOrgId ? "Authenticated" : user ? "Signed in" : "Sign in required");
+    const tierLabel = account?.tier ?? (clerkOrgId ? "Authenticated" : user ? "Signed in" : "Sessions not saved");
     const userFullName = user
         ? [user.firstName, user.lastName].filter(Boolean).join(" ") || (user.primaryEmailAddress?.emailAddress ?? "You")
         : "Guest";
@@ -131,25 +144,30 @@ function WorkspaceShellView({
         <div
             className="flex h-dvh w-screen overflow-hidden bg-bone text-obsidian font-sans"
         >
-            {/* ── Left rail ─────────────────────────────────────── */}
+            {/* ── Left rail ─────────────────────────────────────────
+                Obsidian against a light canvas. The dark frames the
+                conversation and reads as a tool rather than a page; product
+                artwork never sits on it except small matted thumbnails, so
+                the approved bone-ground imagery is untouched. */}
             <aside
-                className="hidden md:flex flex-col shrink-0 bg-linen px-3.5 py-[18px]"
+                className="hidden md:flex flex-col shrink-0 px-3.5 py-[18px]"
                 style={{
                     width: SIDEBAR_W,
-                    borderRight: "1px solid rgba(212, 197, 169, 0.55)",
+                    background: "var(--color-obsidian)",
+                    borderRight: "1px solid rgba(255, 255, 255, 0.08)",
                 }}
             >
                 {/* Brand — clicks back to the home site */}
                 <Link
                     href="/"
-                    className="flex items-center gap-[9px] rounded-[2px] px-1.5 pb-3.5 pt-1 -mx-1.5 -mt-1 hover:bg-obsidian/[0.03] transition-colors"
+                    className="flex items-center gap-[9px] rounded-[2px] px-1.5 pb-3.5 pt-1 -mx-1.5 -mt-1 hover:bg-white/[0.06] transition-colors"
                     title="Back to bestbottles.company"
                     aria-label="Back to Best Bottles home"
                 >
                     <GraceMark />
                     <div className="leading-none">
-                        <div className="font-serif text-[18px] font-medium tracking-[0.04em]">Grace</div>
-                        <div className="mt-[3px] text-[9.5px] font-semibold uppercase tracking-[0.18em] text-slate">
+                        <div className="font-serif text-[18px] font-medium tracking-[0.04em] text-white/[0.92]">Grace</div>
+                        <div className="mt-[3px] text-[9.5px] font-semibold uppercase tracking-[0.18em] text-white/40">
                             Best Bottles
                         </div>
                     </div>
@@ -158,84 +176,99 @@ function WorkspaceShellView({
                 {/* New conversation */}
                 <button
                     onClick={onNewConversation}
-                    className="flex items-center justify-center gap-1.5 rounded-[2px] px-2.5 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-obsidian cursor-pointer"
+                    className="flex items-center justify-center gap-1.5 rounded-[2px] px-2.5 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] cursor-pointer transition-colors hover:bg-white/[0.10]"
                     style={{
-                        background: "rgba(255, 255, 255, 0.7)",
-                        border: "1px solid rgba(212, 197, 169, 0.7)",
+                        background: "rgba(255, 255, 255, 0.06)",
+                        border: "1px solid rgba(255, 255, 255, 0.14)",
                         borderBottom: "2px solid var(--color-muted-gold)",
+                        color: "rgba(255, 255, 255, 0.92)",
                     }}
                 >
                     <Plus size={11} weight="bold" />
                     New conversation
                 </button>
 
-                {/* Active */}
-                <div className="mt-[18px]">
-                    <Eyebrow>Active</Eyebrow>
-                    {activeProject ? (
-                        <div
-                            className="mt-1.5 flex items-center gap-2 rounded-[1px] px-1.5 py-2"
-                            style={{
-                                background: "rgba(197, 160, 101, 0.08)",
-                                borderLeft: "2px solid var(--color-muted-gold)",
-                            }}
-                        >
-                            <div className="min-w-0 flex-1">
-                                <div className="font-serif text-[13.5px] font-medium tracking-[0.02em]">
-                                    {activeProject.name}
-                                </div>
-                                <div className="mt-0.5 text-[10px] text-slate">{activeProject.sub}</div>
+                <div className="mt-5 min-h-0 flex-1 overflow-y-auto -mx-1 px-1">
+                    {/* Where was I? — the first thing a returning customer wants. */}
+                    {sessions.length > 0 && (
+                        <div className="mb-5">
+                            <Eyebrow>Recent</Eyebrow>
+                            <div className="mt-1.5">
+                                {sessions.map((session) => (
+                                    <Link
+                                        key={session.id}
+                                        href={`/portal/sessions/${session.id}`}
+                                        className="block rounded-[2px] px-1.5 py-[7px] hover:bg-white/[0.06] transition-colors"
+                                    >
+                                        <span className="block truncate text-[12.5px] text-white/[0.85]">
+                                            {session.title}
+                                        </span>
+                                        <span className="mt-0.5 block text-[10px] text-white/35">
+                                            {relativeTime(session.lastMessageAt)}
+                                        </span>
+                                    </Link>
+                                ))}
                             </div>
-                            {conversationActive && (
-                                <span
-                                    className="h-1.5 w-1.5 shrink-0 rounded-full bg-muted-gold"
-                                    style={{ boxShadow: "0 0 0 3px rgba(197, 160, 101, 0.18)" }}
-                                    aria-label="Conversation active"
-                                />
-                            )}
-                        </div>
-                    ) : (
-                        <div className="mt-1.5 px-1.5 py-2 text-[11.5px] text-slate italic leading-snug">
-                            No active project yet — click <span className="not-italic font-medium text-obsidian">+ New conversation</span> to start one.
                         </div>
                     )}
-                </div>
 
-                {/* Recent OR Popular families fallback when no projects yet */}
-                <div className="mt-[18px] min-h-0 flex-1 overflow-y-auto -mx-1 px-1">
-                    {recentProjects.length > 0 ? (
-                        <>
-                            <Eyebrow>Recent projects</Eyebrow>
-                            {recentProjects.map((p) => (
-                                <div key={p.name} className="mt-1 px-1.5 py-2">
-                                    <div className="font-serif text-[13px] font-medium tracking-[0.02em] text-obsidian">
-                                        {p.name}
-                                    </div>
-                                    <div className="mt-0.5 text-[10px] text-slate">{p.sub}</div>
-                                </div>
-                            ))}
-                        </>
-                    ) : (
-                        <RailSectionErrorBoundary
-                            fallback={
-                                <>
-                                    <Eyebrow>Recent projects</Eyebrow>
-                                    <div className="mt-1.5 px-1.5 py-2 text-[11px] text-slate italic">
-                                        Nothing yet.
-                                    </div>
-                                </>
-                            }
-                        >
-                            <PopularFamiliesStrip />
-                        </RailSectionErrorBoundary>
+                    {/* What did I keep? */}
+                    {activeProject && (
+                        <div className="mb-5">
+                            <Eyebrow>Saved</Eyebrow>
+                            <Link
+                                href="/portal/grace"
+                                className="mt-1.5 flex items-center gap-2 rounded-[2px] px-1.5 py-[7px] hover:bg-white/[0.06] transition-colors"
+                            >
+                                <span className="min-w-0 flex-1">
+                                    <span className="block truncate text-[12.5px] text-white/[0.85]">
+                                        {activeProject.name}
+                                    </span>
+                                    <span className="mt-0.5 block text-[10px] text-white/35">
+                                        {activeProject.sub}
+                                    </span>
+                                </span>
+                                {conversationActive && (
+                                    <span
+                                        className="h-1.5 w-1.5 shrink-0 rounded-full bg-muted-gold"
+                                        style={{ boxShadow: "0 0 0 3px rgba(197, 160, 101, 0.22)" }}
+                                        aria-label="Conversation active"
+                                    />
+                                )}
+                            </Link>
+                        </div>
                     )}
+
+                    {/* Ways in, for someone who has never done this before. */}
+                    <RailSectionErrorBoundary fallback={null}>
+                        <RailFamilies families={families} />
+                    </RailSectionErrorBoundary>
                 </div>
 
-                {/* Identity — real Clerk user + portal account when available */}
+                {/* Identity — real Clerk user + portal account when available.
+                    The workspace is public, so a guest sees a sign-in link
+                    here instead of a locked screen: signing in only adds
+                    account-linked history, it never gates the surface. */}
                 <div
                     className="mt-auto pt-3.5"
-                    style={{ borderTop: "1px solid rgba(212, 197, 169, 0.55)" }}
+                    style={{ borderTop: "1px solid rgba(255, 255, 255, 0.08)" }}
                 >
+                    {!user && CLERK_ENABLED ? (
+                        <Link
+                            href="/sign-in?redirect_url=/grace-workspace"
+                            className="flex items-center gap-[9px] rounded-[2px] px-1.5 py-1 hover:bg-white/[0.06] transition-colors"
+                        >
+                            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-muted-gold font-serif text-[13px] font-semibold text-obsidian">
+                                ·
+                            </div>
+                            <div className="min-w-0 flex-1">
+                                <div className="text-[12px] font-medium truncate text-white/[0.88]">Sign in</div>
+                                <div className="text-[10px] text-white/35 truncate">
+                                    Save sessions and projects
+                                </div>
+                            </div>
+                        </Link>
+                    ) : (
                     <div className="flex items-center gap-[9px] px-1.5 py-1">
                         {user?.imageUrl ? (
                             // eslint-disable-next-line @next/next/no-img-element -- Clerk-hosted avatar URL changes per user; Next/Image needs whitelisted domain config
@@ -243,7 +276,7 @@ function WorkspaceShellView({
                                 src={user.imageUrl}
                                 alt={userFullName}
                                 className="h-7 w-7 rounded-full object-cover"
-                                style={{ border: "1px solid rgba(212,197,169,0.6)" }}
+                                style={{ border: "1px solid rgba(255,255,255,0.18)" }}
                             />
                         ) : (
                             <div className="flex h-7 w-7 items-center justify-center rounded-full bg-muted-gold font-serif text-[13px] font-semibold text-obsidian">
@@ -251,12 +284,13 @@ function WorkspaceShellView({
                             </div>
                         )}
                         <div className="min-w-0 flex-1">
-                            <div className="text-[12px] font-medium truncate">{userFullName}</div>
-                            <div className="text-[10px] text-slate truncate">
+                            <div className="text-[12px] font-medium truncate text-white/[0.88]">{userFullName}</div>
+                            <div className="text-[10px] text-white/35 truncate">
                                 {orgName ? `${orgName} · ${tierLabel}` : tierLabel}
                             </div>
                         </div>
                     </div>
+                    )}
                 </div>
             </aside>
 
@@ -328,24 +362,11 @@ function WorkspaceShellView({
                     </div>
                 </div>
 
-                {/* Main content area with faded champagne grid background */}
-                <div className="relative flex min-h-0 flex-1 flex-col">
-                    <div
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0 z-0"
-                        style={{
-                            backgroundImage:
-                                "linear-gradient(rgba(212,197,169,0.32) 1px, transparent 1px), linear-gradient(90deg, rgba(212,197,169,0.32) 1px, transparent 1px)",
-                            backgroundSize: "56px 56px",
-                            maskImage:
-                                "radial-gradient(ellipse 85% 65% at 50% 38%, #000 25%, transparent 85%)",
-                            WebkitMaskImage:
-                                "radial-gradient(ellipse 85% 65% at 50% 38%, #000 25%, transparent 85%)",
-                        }}
-                    />
-                    <div className="relative z-10 flex min-h-0 flex-1 flex-col">
-                        {children}
-                    </div>
+                {/* Main content area. Deliberately flat: the champagne grid
+                    that used to sit here read as decoration, and the composer's
+                    own shadow gives the canvas all the depth it needs. */}
+                <div className="flex min-h-0 flex-1 flex-col">
+                    {children}
                 </div>
             </div>
         </div>
@@ -354,81 +375,70 @@ function WorkspaceShellView({
 
 function Eyebrow({ children }: { children: ReactNode }) {
     return (
-        <div className="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate">
+        <div className="px-1.5 text-[10px] font-semibold uppercase tracking-[0.22em] text-white/[0.38]">
             {children}
         </div>
     );
 }
 
 /**
- * Renders when a workspace user has no recent projects yet — converts the
- * empty rail real-estate into a product-discovery surface. Fetches the top
- * families by variant count from Convex and renders them as clickable tiles
- * that open the full catalog filtered to that family.
+ * Bottle families as a compact list, not a tile grid.
+ *
+ * The grid showed six large images and filled half the rail; worse, it read
+ * `productGroups.heroImageUrl`, whose Shopify URLs now 404, so every tile
+ * rendered broken. Rows show twice as many families in a third of the space,
+ * take the approved Sanity artwork the rest of the site uses, and degrade to
+ * a lettered chip when a family has no card yet.
  */
-function PopularFamiliesStrip() {
-    const families = useQuery(api.products.getPopularFamilies, { limit: 6 });
-    if (families === undefined) {
-        return (
-            <>
-                <Eyebrow>Popular families</Eyebrow>
-                <div className="mt-1.5 px-1.5 py-2 text-[11px] text-slate italic">Loading…</div>
-            </>
-        );
-    }
-    if (!families || families.length === 0) {
-        return (
-            <>
-                <Eyebrow>Recent projects</Eyebrow>
-                <div className="mt-1.5 px-1.5 py-2 text-[11px] text-slate italic">Nothing yet.</div>
-            </>
-        );
-    }
+function RailFamilies({ families }: { families: RailFamily[] }) {
+    if (families.length === 0) return null;
     return (
         <>
-            <Eyebrow>Popular families</Eyebrow>
-            <div className="mt-2 grid grid-cols-2 gap-2">
+            <Eyebrow>Browse by family</Eyebrow>
+            <div className="mt-1.5">
                 {families.map((f) => (
                     <Link
                         key={f.family}
                         href={`/catalog?family=${encodeURIComponent(f.family)}`}
-                        className="group rounded-[2px] overflow-hidden cursor-pointer transition-colors"
-                        style={{
-                            background: "var(--color-linen)",
-                            border: "1px solid rgba(212, 197, 169, 0.55)",
-                        }}
+                        className="flex items-center gap-3 rounded-[2px] px-1.5 py-[7px] hover:bg-white/[0.06] transition-colors"
                         title={`Browse ${f.family}`}
                     >
-                        <div
-                            className="relative w-full"
-                            style={{ aspectRatio: "1 / 1.1", background: "var(--color-travertine)" }}
+                        <span
+                            className="flex h-[64px] w-[64px] shrink-0 items-center justify-center overflow-hidden rounded-[2px]"
+                            style={{
+                                border: "1px solid rgba(255, 255, 255, 0.12)",
+                                background: "rgba(255, 255, 255, 0.06)",
+                            }}
                         >
-                            {f.heroImageUrl ? (
-                                // eslint-disable-next-line @next/next/no-img-element -- Convex/Sanity URL set per group; Next/Image needs whitelisted domain config
+                            {f.imageUrl ? (
+                                // eslint-disable-next-line @next/next/no-img-element -- Sanity CDN URL; Next/Image needs whitelisted domain config
                                 <img
-                                    src={f.heroImageUrl}
-                                    alt={f.family}
-                                    className="absolute inset-0 h-full w-full object-cover"
+                                    src={f.imageUrl}
+                                    alt=""
+                                    className="h-full w-full object-cover"
                                 />
                             ) : (
-                                <div
-                                    className="absolute inset-0 flex items-center justify-center font-cormorant"
-                                    style={{ color: "rgba(29, 29, 31, 0.3)", fontSize: 24 }}
-                                >
+                                <span className="font-cormorant text-[26px] leading-none text-white/40">
                                     {f.family[0]}
-                                </div>
+                                </span>
                             )}
-                        </div>
-                        <div className="px-1.5 py-1.5">
-                            <div className="font-serif text-[11.5px] font-medium tracking-[0.01em] truncate text-obsidian group-hover:text-gold-dim transition-colors">
+                        </span>
+                        <span className="min-w-0 flex-1">
+                            <span className="block truncate text-[13px] text-white/[0.88]">
                                 {f.family}
-                            </div>
-                            <div className="text-[9px] uppercase tracking-wider text-slate mt-0.5">
-                                {f.variantCount} variant{f.variantCount === 1 ? "" : "s"}
-                            </div>
-                        </div>
+                            </span>
+                            <span className="mt-0.5 block text-[10.5px] tabular-nums text-white/35">
+                                {f.variantCount} variants
+                            </span>
+                        </span>
                     </Link>
                 ))}
+                <Link
+                    href="/catalog"
+                    className="mt-1 block rounded-[2px] px-1.5 py-2 text-[11px] font-medium tracking-[0.04em] text-white/45 hover:bg-white/[0.06] hover:text-white/70 transition-colors"
+                >
+                    All families →
+                </Link>
             </div>
         </>
     );
@@ -439,12 +449,12 @@ function GraceMark() {
         <div
             className="relative flex h-[26px] w-[26px] items-center justify-center rounded-[2px]"
             style={{
-                border: "1px solid rgba(29, 29, 31, 0.18)",
-                background: "rgba(255, 255, 255, 0.6)",
+                border: "1px solid rgba(255, 255, 255, 0.20)",
+                background: "rgba(255, 255, 255, 0.08)",
             }}
         >
             <span
-                className="font-cormorant font-semibold leading-none text-obsidian"
+                className="font-cormorant font-semibold leading-none text-white/[0.92]"
                 style={{ fontSize: 14, letterSpacing: "-0.02em" }}
             >
                 G

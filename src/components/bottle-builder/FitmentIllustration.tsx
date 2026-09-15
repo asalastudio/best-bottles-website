@@ -10,6 +10,11 @@ const cells: Record<string, number> = {
 };
 export default function FitmentIllustration({ fitment }: { fitment: string }) {
     const cell = cells[fitment];
+    // The orifice reducer is drawn on its own sheet (2026-09-14): pencil after the
+    // reducer photograph, proportions locked to it; see data/paper-doll/fitment-illustration-sources.json.
+    // eslint-disable-next-line @next/next/no-img-element
+    if (fitment === "Reducer") return <img src="/images/bottle-builder/fitment-pencil-reducer.png" alt="Reducer mechanism illustration"
+        loading="lazy" style={{ width: 84, maxWidth: "100%", height: 100, maxHeight: "100%", objectFit: "contain", mixBlendMode: "multiply" }} />;
     if (cell == null) return <span className={styles.mechanismFallback} aria-hidden="true">{fitment}</span>;
     const frames = ["65 40 260 430", "510 95 195 220", "895 95 195 220", "1180 45 320 425",
         "65 550 260 430", "405 635 350 255", "790 590 360 350", "1260 550 160 430"];

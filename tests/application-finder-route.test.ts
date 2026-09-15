@@ -52,6 +52,7 @@ vi.mock("@/components/CartProvider", () => ({
 
 vi.mock("@/components/CartDrawer", () => ({ default: () => null }));
 vi.mock("@/components/Footer", () => ({ default: () => createElement("footer", null, "Footer") }));
+vi.mock("convex/react", () => ({ useQuery: () => undefined }));
 vi.mock("@/lib/analytics", () => ({
     analytics: {
         finderEntered: mocks.finderEntered,

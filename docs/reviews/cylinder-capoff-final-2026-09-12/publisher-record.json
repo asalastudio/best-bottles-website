@@ -1,0 +1,71 @@
+{
+  "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/_builds/2026-09-13T07-15-13-102Z-cylinder-28ml-clear-16mm+cylinder-5ml-clear-13-415+cylinder-5ml-cobalt-blue-13-415+cylinder-9ml-clear-13-415+cylinder-9m.json",
+  "buildId": "2026-09-13T07-15-13-102Z",
+  "builder": {
+    "name": "publish.mjs",
+    "version": "1.0.0"
+  },
+  "convexUrl": "https://helpful-elephant-638.convex.cloud",
+  "families": [
+    {
+      "familyId": "cylinder-28ml-clear-16mm",
+      "uploaded": 4,
+      "existed": 12,
+      "verified": 16,
+      "written": 4,
+      "unchanged": 0,
+      "skipped": [],
+      "duplicateSku": 0,
+      "graceRestamped": 0,
+      "errors": []
+    },
+    {
+      "familyId": "cylinder-5ml-clear-13-415",
+      "uploaded": 15,
+      "existed": 17,
+      "verified": 32,
+      "written": 8,
+      "unchanged": 0,
+      "skipped": [],
+      "duplicateSku": 0,
+      "graceRestamped": 0,
+      "errors": []
+    },
+    {
+      "familyId": "cylinder-5ml-cobalt-blue-13-415",
+      "uploaded": 18,
+      "existed": 18,
+      "verified": 36,
+      "written": 9,
+      "unchanged": 0,
+      "skipped": [],
+      "duplicateSku": 0,
+      "graceRestamped": 0,
+      "errors": []
+    },
+    {
+      "familyId": "cylinder-9ml-clear-13-415",
+      "uploaded": 6,
+      "existed": 6,
+      "verified": 12,
+      "written": 3,
+      "unchanged": 0,
+      "skipped": [],
+      "duplicateSku": 0,
+      "graceRestamped": 0,
+      "errors": []
+    },
+    {
+      "familyId": "cylinder-9ml-frosted-13-415",
+      "uploaded": 1,
+      "existed": 3,
+      "verified": 4,
+      "written": 1,
+      "unchanged": 0,
+      "skipped": [],
+      "duplicateSku": 0,
+      "graceRestamped": 0,
+      "errors": []
+    }
+  ]
+}

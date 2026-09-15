@@ -24,6 +24,7 @@
   --color-ink: #2C2C2E;
   --color-gold-dim: #8B6F42;
 
+
   /* ── shadcn/ui Tailwind v4 color mappings ──────────────────────────────
      Maps semantic shadcn tokens → Best Bottles brand colors.
      Enables bg-primary, text-muted-foreground, etc. to use brand palette. */
@@ -48,26 +49,173 @@
   --color-popover-foreground: var(--color-obsidian);
 
   /* ── Typography ───────────────────────────────────────────────────────── */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
+  --font-brand: var(--font-brand-face), "Montserrat", Arial, ui-sans-serif, sans-serif;
+  --font-sans: var(--font-brand);
+  /* Sitewide the "serif" slot IS the brand face (Jordan, 2026-09-14: Montserrat everywhere; Garamond only on the
+     blog). The blog layout carries `.editorial`, which restores EB Garamond for its own subtree. */
+  --font-serif: var(--font-brand);
+  --font-editorial: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
 }
 
-/* Hero headline — explicit EB Garamond for "Beautifully Contained" */
+/* ── Interface tokens ─────────────────────────────────────────────────────
+   `static` is load-bearing: Tailwind v4 tree-shakes theme variables that no
+   utility class references, and these are read through inline `var()` as well
+   as through utilities. Without it they silently resolve to nothing, which
+   collapses every icon that sizes itself from one. */
+@theme static {
+  /* ── Interface surfaces ───────────────────────────────────────────────
+     A calm B2B register: warm neutrals, one charcoal, colour only where it
+     carries meaning. Brand warmth lives in the grounds and in photography,
+     not in the controls.
+
+     The rule that keeps this coherent: GOLD IS NOT DECORATION. It marks the
+     destination you are on and deliberate brand emphasis. When gold appears on
+     two things at once, neither reads as selected — which is exactly what the
+     mobile bar does today with Home and Grace both gold.
+
+     Surfaces run from the warmest ground outward to the coolest content, so a
+     card reads as lifted without needing a heavy border:
+       page (bone) → rail (linen) → card (white) → sunken panel */
+  --color-surface: #FFFFFF;          /* cards and content areas */
+  --color-surface-rail: var(--color-linen);   /* persistent navigation */
+  --color-surface-sunken: #F4F2EF;   /* supporting panels, table headers */
+  --color-surface-selected: #E8E4DE; /* the current navigation row */
+  --color-rule: #DCD7D0;             /* dividers, inputs, card edges */
+
+  /* One charcoal for body text and every standard icon. `ink` already held
+     it; these name the roles so a component never reaches for a raw hex. */
+  --color-text-primary: var(--color-ink);
+  --color-text-secondary: #6B6660;   /* labels and supporting copy */
+  --color-text-muted: var(--color-ash);
+
+  /* ── Status ───────────────────────────────────────────────────────────
+     Each pair is a pale ground with text dark enough to clear WCAG AA on it.
+     A status colour never appears without words: the badge says "Tax exempt",
+     the green only agrees with it. Colour alone is invisible to a reader who
+     cannot distinguish it and meaningless to one who has not learned the
+     convention. */
+  --color-status-positive-surface: #E6EFE1;
+  --color-status-positive-text: #2F5233;
+  --color-status-warning-surface: #F5EDD6;
+  --color-status-warning-text: #6B5220;
+  --color-status-info-surface: #DEE3EE;
+  --color-status-info-text: #33415C;
+  --color-status-neutral-surface: var(--color-surface-sunken);
+  --color-status-neutral-text: var(--color-text-secondary);
+
+  /* ── Icons ────────────────────────────────────────────────────────────
+     One outline family at a consistent weight. Mobile gets the heavier stroke
+     because fine hairlines disappear at arm's length on a phone. */
+  --icon-size-desktop: 20px;
+  --icon-size-mobile: 24px;
+  --icon-stroke-desktop: 1.5px;
+  --icon-stroke-mobile: 2px;
+}
+
+
+/* Display + accent utilities: brand face sitewide; `.editorial` (blog) restores the serifs. Title case is kept. */
 .font-display {
-  font-family: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
+  font-family: var(--font-brand);
+  text-transform: none;
+  letter-spacing: 0;
 }
 
-/* Cormorant — logo and display typography */
+.font-brand {
+  font-family: var(--font-brand);
+}
+
+/* Uppercase display in the brand face at the system display weight */
+.font-brand-display {
+  font-family: var(--font-brand);
+  font-weight: var(--brand-weight-display);
+  text-transform: uppercase;
+}
+
 .font-cormorant {
-  font-family: var(--font-cormorant), var(--font-eb-garamond), ui-serif, Georgia, serif;
+  font-family: var(--font-brand);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.editorial {
+  --font-serif: var(--font-editorial);
+}
+.editorial .font-display {
+  font-family: var(--font-editorial);
+}
+.editorial .font-cormorant {
+  font-family: var(--font-cormorant), var(--font-editorial);
+}
+
+:root {
+  /* Display weight for uppercase headings + wordmark. Montserrat stand-in needs
+     600 to carry TT Norms Medium's presence; set to 500 once TT Norms Pro lands. */
+  --brand-weight-display: 600;
+  --brand-weight-body: 400;
 }
 
 body {
   background-color: var(--color-bone);
   color: var(--color-obsidian);
-  font-family: var(--font-sans);
+  font-family: var(--font-brand);
+  font-weight: var(--brand-weight-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* The wordmark inside the portal rail and the team hub header.
+   BrandWordmark's own module fixes a pixel height and lets width follow; in a
+   220px rail that artwork overflows, and capping width alone would squash it
+   because the height stays pinned. Element+class outranks the module's single
+   class deterministically, whatever order the two sheets land in. */
+img.app-wordmark {
+    height: auto;
+    width: 100%;
+    max-width: 170px;
+}
+
+/* ── Brand type system ──────────────────────────────────────────────────────
+   Uppercase, tracked display in the brand face; lowercase body with no tracking.
+   Lives in @layer base so component utilities and CSS modules can still refine
+   size/colour per surface. Tracking steps down with size. */
+@layer base {
+  h1, h2, .brand-heading {
+    font-family: var(--font-brand);
+    font-weight: var(--brand-weight-display);
+    text-transform: uppercase;
+  }
+  /* H3 / card headings: brand face, may be uppercase or Title Case per surface */
+  h3 {
+    font-family: var(--font-brand);
+    font-weight: var(--brand-weight-display);
+  }
+  h1 { font-size: clamp(2.5rem, 5vw, 5.5rem); line-height: 0.96; letter-spacing: 0.08em; }
+  h2 { font-size: clamp(2rem, 3.5vw, 3.75rem); line-height: 1; letter-spacing: 0.065em; }
+  h3 { font-size: 1.25rem; line-height: 1.15; letter-spacing: 0.04em; }
+  nav { font-family: var(--font-brand); font-weight: var(--brand-weight-body); text-transform: uppercase; letter-spacing: 0.08em; }
+
+  /* Tools opt out of the display type. The uppercase, widely tracked brand
+     face is a storefront voice — it belongs on a hero, not on "Welcome back,
+     ASALA" or on a ten-item navigation rail. Shouting every heading and
+     tracking every nav label to 0.08em makes a dense working screen harder to
+     scan, which is the opposite of what an operator needs. The storefront is
+     untouched; only surfaces that carry `.app-surface` step out. */
+  .app-surface h1,
+  .app-surface h2,
+  .app-surface h3,
+  .app-surface nav {
+    text-transform: none;
+    letter-spacing: normal;
+  }
+  .app-surface h1 { font-size: inherit; line-height: inherit; }
+  .app-surface h2 { font-size: inherit; line-height: inherit; }
+  p, .body-copy, .product-description {
+    font-family: var(--font-brand);
+    font-weight: var(--brand-weight-body);
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.55;
+  }
 }
 
 /* ── Mobile Tab Bar spacing ────────────────────────────────────────────── */
@@ -658,3 +806,4 @@ body {
   body:has([data-mobile-builder]) footer .grid > * { min-width: 0; overflow-wrap: anywhere; }
   .builder-mobile-brand > a:nth-child(2) { text-align: center; line-height: 1.15; }
 }
+

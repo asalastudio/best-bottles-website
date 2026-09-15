@@ -7,3 +7,11 @@ export function urlFor(source: { asset?: { _ref: string }; _type?: string } | nu
     if (!source?.asset?._ref || !builder) return "";
     return builder.image(source).url();
 }
+
+/** Resize through Sanity's builder so the stored crop and hotspot are honored. */
+export function editorialImageUrl(source: { asset?: { _ref: string } } | undefined, width: number, height?: number): string | undefined {
+    if (!source?.asset?._ref || !builder) return undefined;
+    let image = builder.image(source).width(width).auto('format');
+    if (height) image = image.height(height).fit('crop');
+    return image.url();
+}

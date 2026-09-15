@@ -1,0 +1,3910 @@
+{
+ "generatedAt": "2026-09-14T18:45:38.781Z",
+ "funnelGeneratedAt": "2026-09-14T18:45:38.049Z",
+ "totals": {
+  "clusters": 278,
+  "complete": 87,
+  "partial": 75,
+  "none": 116,
+  "assemblies": 2130,
+  "offered": 1094
+ },
+ "reasonTotals": {
+  "gate: no compatible finish component": 195,
+  "no configuration: no kit indexed (has reviewed body image but no plate)": 57,
+  "no configuration: Cylinder 5.5 ml excluded by rule": 1,
+  "not on dev": 95,
+  "no configuration: no kit indexed (plate present but no reviewed body image)": 569,
+  "no configuration: body derivation background-matte": 1,
+  "gate: compatibility unresolved (no listed components)": 25,
+  "no configuration: kit completeness capSplit": 22,
+  "no configuration: no kit indexed (no reviewed body image and no plate)": 71
+ },
+ "clusters": [
+  {
+   "body": "Cylinder|9|Amber|17-415",
+   "members": 10,
+   "offered": 10,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Amber|17-415",
+   "members": 10,
+   "offered": 10,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Clear|17-415",
+   "members": 10,
+   "offered": 10,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Cobalt Blue|17-415",
+   "members": 10,
+   "offered": 10,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Frosted|17-415",
+   "members": 10,
+   "offered": 10,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Frosted|17-415",
+   "members": 10,
+   "offered": 10,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Swirl|17-415",
+   "members": 10,
+   "offered": 10,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|100|Frosted|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|100|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|15|Clear|13-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|15|Clear|13-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|50|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|100|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|5|Cobalt Blue|13-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|5|Clear|13-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|50|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|100|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|100|Frosted|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|100|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|15|Clear|13-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|15|Clear|13-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|60|Frosted|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|60|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Empire|100|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Empire|50|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Round|128|Frosted|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Round|128|Clear|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Round|78|Frosted|18-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Frosted|13-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Frosted|13-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Clear|13-415",
+   "members": 9,
+   "offered": 9,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|15|Clear|13-415",
+   "members": 8,
+   "offered": 8,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|15|Frosted|13-415",
+   "members": 8,
+   "offered": 8,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|15|Frosted|13-415",
+   "members": 8,
+   "offered": 8,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|15|Clear|13-415",
+   "members": 8,
+   "offered": 8,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Frosted|13-415",
+   "members": 8,
+   "offered": 8,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Clear|13-415",
+   "members": 8,
+   "offered": 8,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|100|Frosted|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|100|Clear|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|50|Frosted|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|50|Clear|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|100|Clear|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|25|Clear|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|5|Cobalt Blue|13-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|50|Clear|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|100|Clear|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|30|Clear|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|46|Frosted|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|46|Clear|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Round|128|Clear|18-415",
+   "members": 7,
+   "offered": 7,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Boston Round|30|Clear|20-400",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|100|Frosted|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|100|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|50|Frosted|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|50|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|100|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|50|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Amber|17-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Cobalt Blue|17-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Frosted|17-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Swirl|17-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|100|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|30|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|46|Frosted|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|46|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|100|Frosted|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|100|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|60|Frosted|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|60|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Round|128|Clear|18-415",
+   "members": 6,
+   "offered": 6,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Boston Round|30|Amber|20-400",
+   "members": 5,
+   "offered": 5,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Boston Round|30|Clear|20-400",
+   "members": 5,
+   "offered": 5,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Boston Round|30|Cobalt Blue|20-400",
+   "members": 5,
+   "offered": 5,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|30|Clear|15-415",
+   "members": 5,
+   "offered": 5,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|46|Clear|18-415",
+   "members": 5,
+   "offered": 5,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|30|Frosted|15-415",
+   "members": 5,
+   "offered": 5,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|50|Clear|18-415",
+   "members": 3,
+   "offered": 3,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Amber|17-415",
+   "members": 3,
+   "offered": 3,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Clear|17-415",
+   "members": 3,
+   "offered": 3,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Cobalt Blue|17-415",
+   "members": 3,
+   "offered": 3,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Frosted|17-415",
+   "members": 3,
+   "offered": 3,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Cylinder|9|Swirl|17-415",
+   "members": 3,
+   "offered": 3,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Diva|46|Clear|18-415",
+   "members": 3,
+   "offered": 3,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Empire|50|Clear|18-415",
+   "members": 3,
+   "offered": 3,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|30|Clear|15-415",
+   "members": 2,
+   "offered": 2,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|30|Clear|15-415",
+   "members": 2,
+   "offered": 2,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Elegant|30|Frosted|15-415",
+   "members": 2,
+   "offered": 2,
+   "complete": true,
+   "reasons": {},
+   "missing": []
+  },
+  {
+   "body": "Circle|100|Frosted|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBCrclFrst100RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Circle|100|Clear|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBCrcl100RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Circle|50|Clear|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBCrcl50RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Diva|100|Clear|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBDiva100RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Diva|30|Clear|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBDiva30RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Diva|46|Frosted|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBDivaFrst46RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Diva|46|Clear|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBDiva46RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Elegant|100|Clear|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBElg100RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Elegant|60|Frosted|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBElgFrst60RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Elegant|60|Clear|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBElg60RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Empire|100|Clear|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBEmp100RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Empire|50|Clear|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBEmp50RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Round|128|Frosted|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBRndFrst128RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Round|128|Clear|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBRnd128RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Round|78|Frosted|18-415",
+   "members": 12,
+   "offered": 11,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBRndFrst78RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Elegant|100|Frosted|18-415",
+   "members": 11,
+   "offered": 10,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBElgFrst100RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Diva|46|Clear|18-415",
+   "members": 9,
+   "offered": 8,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 1
+   },
+   "missing": [
+    "GBDiva46AnSpTslRed"
+   ]
+  },
+  {
+   "body": "Cylinder|5.5|Clear|13-415",
+   "members": 8,
+   "offered": 7,
+   "complete": false,
+   "reasons": {
+    "no configuration: Cylinder 5.5 ml excluded by rule": 1
+   },
+   "missing": [
+    "GBCyl5SpryBlkMatt"
+   ]
+  },
+  {
+   "body": "Elegant|100|Frosted|18-415",
+   "members": 8,
+   "offered": 7,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "LBElgFrst100WhtClOvrCp"
+   ]
+  },
+  {
+   "body": "Elegant|100|Clear|18-415",
+   "members": 8,
+   "offered": 7,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "LBElg100WhtClOvrCp"
+   ]
+  },
+  {
+   "body": "Elegant|15|Frosted|13-415",
+   "members": 8,
+   "offered": 7,
+   "complete": false,
+   "reasons": {
+    "not on dev": 1
+   },
+   "missing": [
+    "GBElgFrst15SpryGlMatt"
+   ]
+  },
+  {
+   "body": "Elegant|60|Frosted|18-415",
+   "members": 8,
+   "offered": 7,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "LBElgFrst60WhtClOvrCp"
+   ]
+  },
+  {
+   "body": "Elegant|60|Clear|18-415",
+   "members": 8,
+   "offered": 7,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "LBElg60WhtClOvrCp"
+   ]
+  },
+  {
+   "body": "Boston Round|30|Amber|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb1ozRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Amber|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb2ozRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Cobalt Blue|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnBlu2ozRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|30|Cobalt Blue|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnBlu1ozRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Amber|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb2ozBlkDrpr"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Clear|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstn2ozRollGl"
+   ]
+  },
+  {
+   "body": "Boston Round|30|Amber|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb1ozMtlRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|30|Clear|20-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstn1ozMtlRollonBlk"
+   ]
+  },
+  {
+   "body": "Boston Round|15|Amber|18-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb15mlBlkDropper"
+   ]
+  },
+  {
+   "body": "Boston Round|15|Cobalt Blue|18-400",
+   "members": 6,
+   "offered": 5,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnBlu15BlkDrpr"
+   ]
+  },
+  {
+   "body": "Circle|50|Frosted|18-415",
+   "members": 11,
+   "offered": 9,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 2
+   },
+   "missing": [
+    "GBCrclFrst50RdcrIvyLthr",
+    "GBCrclFrst50RdcrShnBlk"
+   ]
+  },
+  {
+   "body": "Cylinder|9|Clear|17-415",
+   "members": 10,
+   "offered": 8,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 2
+   },
+   "missing": [
+    "GBCyl9RollBlkDot",
+    "GBCyl9RollPnkDot"
+   ]
+  },
+  {
+   "body": "Cylinder|9|Cobalt Blue|17-415",
+   "members": 10,
+   "offered": 8,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 2
+   },
+   "missing": [
+    "GBCylBlu9RollPnkDot",
+    "GBCylBlu9RollSlDot"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Amber|20-400",
+   "members": 5,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnAmb2ozMtlRollonGl"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Cobalt Blue|20-400",
+   "members": 5,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnBlu2ozBlkDropper"
+   ]
+  },
+  {
+   "body": "Boston Round|30|Cobalt Blue|20-400",
+   "members": 5,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBBstnBlu1ozMtlRollonGl"
+   ]
+  },
+  {
+   "body": "Elegant|30|Clear|15-415",
+   "members": 5,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 1
+   },
+   "missing": [
+    "GBElg30SpryShnSl"
+   ]
+  },
+  {
+   "body": "Circle|100|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBCrclFrst100AnSpIvyGl",
+    "GBCrclFrst100AnSpLvn",
+    "GBCrclFrst100AnSpRed"
+   ]
+  },
+  {
+   "body": "Circle|100|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBCrcl100AnSpIvyGl",
+    "GBCrcl100AnSpLvn",
+    "GBCrcl100AnSpRed"
+   ]
+  },
+  {
+   "body": "Circle|50|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBCrclFrst50AnSpIvyGl",
+    "GBCrclFrst50AnSpLvn",
+    "GBCrclFrst50AnSpRed"
+   ]
+  },
+  {
+   "body": "Circle|50|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBCrcl50AnSpIvyGl",
+    "GBCrcl50AnSpLvn",
+    "GBCrcl50AnSpRed"
+   ]
+  },
+  {
+   "body": "Cylinder|100|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBCyl100AnSpIvyGl",
+    "GBCyl100AnSpLvn",
+    "GBCyl100AnSpRed"
+   ]
+  },
+  {
+   "body": "Cylinder|50|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBCyl50AnSpIvyGl",
+    "GBCyl50AnSpLvn",
+    "GBCyl50AnSpRed"
+   ]
+  },
+  {
+   "body": "Diva|100|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBDiva100AnSpIvyGl",
+    "GBDiva100AnSpLvn",
+    "GBDiva100AnSpRed"
+   ]
+  },
+  {
+   "body": "Diva|30|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBDiva30AnSpIvyGl",
+    "GBDiva30AnSpLvn",
+    "GBDiva30AnSpRed"
+   ]
+  },
+  {
+   "body": "Diva|46|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBDivaFrst46AnSpIvyGl",
+    "GBDivaFrst46AnSpLvn",
+    "GBDivaFrst46AnSpRed"
+   ]
+  },
+  {
+   "body": "Diva|46|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 3
+   },
+   "missing": [
+    "GBDivaFrst46AnSpTslBlk",
+    "GBDivaFrst46AnSpTslMtSl",
+    "GBDivaFrst46AnSpTslRed"
+   ]
+  },
+  {
+   "body": "Diva|46|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBDiva46AnSpIvyGl",
+    "GBDiva46AnSpLvn",
+    "GBDiva46AnSpRed"
+   ]
+  },
+  {
+   "body": "Elegant|100|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBElgFrst100AnSpIvyGl",
+    "GBElgFrst100AnSpLvn",
+    "GBElgFrst100AnSpRed"
+   ]
+  },
+  {
+   "body": "Elegant|100|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBElg100AnSpIvyGl",
+    "GBElg100AnSpLvn",
+    "GBElg100AnSpRed"
+   ]
+  },
+  {
+   "body": "Elegant|60|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBElgFrst60AnSpIvyGl",
+    "GBElgFrst60AnSpLvn",
+    "GBElgFrst60AnSpRed"
+   ]
+  },
+  {
+   "body": "Elegant|60|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBElg60AnSpIvyGl",
+    "GBElg60AnSpLvn",
+    "GBElg60AnSpRed"
+   ]
+  },
+  {
+   "body": "Empire|100|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBEmp100AnSpIvyGl",
+    "GBEmp100AnSpLvn",
+    "GBEmp100AnSpRed"
+   ]
+  },
+  {
+   "body": "Empire|50|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBEmp50AnSpIvyGl",
+    "GBEmp50AnSpLvn",
+    "GBEmp50AnSpRed"
+   ]
+  },
+  {
+   "body": "Round|128|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBRndFrst128AnSpIvyGl",
+    "GBRndFrst128AnSpLvn",
+    "GBRndFrst128AnSpRed"
+   ]
+  },
+  {
+   "body": "Round|128|Clear|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBRnd128AnSpIvyGl",
+    "GBRnd128AnSpLvn",
+    "GBRnd128AnSpRed"
+   ]
+  },
+  {
+   "body": "Round|78|Frosted|18-415",
+   "members": 9,
+   "offered": 6,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBRndFrst78AnSpIvyGl",
+    "GBRndFrst78AnSpLvn",
+    "GBRndFrst78AnSpRed"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Clear|20-400",
+   "members": 6,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 2
+   },
+   "missing": [
+    "GBBstn2ozBlkDrprShnGlTrim",
+    "GBBstn2ozWhtDrprShnSlTrim"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Clear|20-400",
+   "members": 6,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 2
+   },
+   "missing": [
+    "GBBstn2ozMtlRollBlk",
+    "GBBstn2ozMtlRollGl"
+   ]
+  },
+  {
+   "body": "Boston Round|60|Cobalt Blue|20-400",
+   "members": 6,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1,
+    "not on dev": 1
+   },
+   "missing": [
+    "GBBstnBlu2ozMtlRollonGl",
+    "GBBstnBlu2ozMtlRollonShnBlk"
+   ]
+  },
+  {
+   "body": "Cylinder|9|Clear|17-415",
+   "members": 6,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 1
+   },
+   "missing": [
+    "GBCyl9SpryRd",
+    "GBCyl9SpryShSl"
+   ]
+  },
+  {
+   "body": "Diva|46|Clear|18-415",
+   "members": 5,
+   "offered": 3,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 2
+   },
+   "missing": [
+    "GBDiva46AnSpLvnRng",
+    "GBDiva46AnSpRedRng"
+   ]
+  },
+  {
+   "body": "Circle|15|Clear|13-415",
+   "members": 10,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "not on dev": 6
+   },
+   "missing": [
+    "GBCrcl15BlkShSht",
+    "GBCrcl15CuSht",
+    "GBCrcl15GlMattSht",
+    "GBCrcl15GlSht",
+    "GBCrcl15SlMattSht",
+    "GBCrcl15SlSht"
+   ]
+  },
+  {
+   "body": "Cylinder|5|Cobalt Blue|13-415",
+   "members": 10,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "no configuration: body derivation background-matte": 1,
+    "gate: no compatible finish component": 5
+   },
+   "missing": [
+    "GBCylBlu5BlkShSht",
+    "GBCylBlu5CuSht",
+    "GBCylBlu5GlMattSht",
+    "GBCylBlu5GlSht",
+    "GBCylBlu5SlMattSht",
+    "GBCylBlu5SlSht"
+   ]
+  },
+  {
+   "body": "Cylinder|9|Frosted|13-415",
+   "members": 10,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 6
+   },
+   "missing": [
+    "GBTallCylFrst9BlkShSht",
+    "GBTallCylFrst9CuSht",
+    "GBTallCylFrst9GlMattSht",
+    "GBTallCylFrst9GlSht",
+    "GBTallCylFrst9SlMattSht",
+    "GBTallCylFrst9SlSht"
+   ]
+  },
+  {
+   "body": "Elegant|15|Frosted|13-415",
+   "members": 12,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 1,
+    "not on dev": 7
+   },
+   "missing": [
+    "GBElgFrst15BlkShSht",
+    "GBElgFrst15CuSht",
+    "GBElgFrst15GlMattSht",
+    "GBElgFrst15GlSht",
+    "GBElgFrst15MinarCu",
+    "GBElgFrst15MinarSl",
+    "GBElgFrst15SlMattSht",
+    "GBElgFrst15SlSht"
+   ]
+  },
+  {
+   "body": "Elegant|15|Clear|13-415",
+   "members": 12,
+   "offered": 4,
+   "complete": false,
+   "reasons": {
+    "not on dev": 7,
+    "gate: compatibility unresolved (no listed components)": 1
+   },
+   "missing": [
+    "GBElg15BlkShSht",
+    "GBElg15CuSht",
+    "GBElg15GlMattSht",
+    "GBElg15GlSht",
+    "GBElg15MinarCu",
+    "GBElg15MinarSl",
+    "GBElg15SlMattSht",
+    "GBElg15SlSht"
+   ]
+  },
+  {
+   "body": "Cylinder|9|Clear|13-415",
+   "members": 9,
+   "offered": 3,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6
+   },
+   "missing": [
+    "GBTallCyl9RollBlkSh",
+    "GBTallCyl9RollCuMatt",
+    "GBTallCyl9RollGlMatt",
+    "GBTallCyl9RollGlSh",
+    "GBTallCyl9RollSlMatt",
+    "GBTallCyl9RollSlSh"
+   ]
+  },
+  {
+   "body": "Cylinder|5|Clear|13-415",
+   "members": 10,
+   "offered": 3,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 7
+   },
+   "missing": [
+    "GBCyl5BlkShSht",
+    "GBCyl5CuSht",
+    "GBCyl5GlMattSht",
+    "GBCyl5GlSht",
+    "GBCyl5SlMattSht",
+    "GBCyl5SlSht",
+    "GBCyl5WhtSht"
+   ]
+  },
+  {
+   "body": "Cylinder|9|Swirl|17-415",
+   "members": 10,
+   "offered": 3,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 7
+   },
+   "missing": [
+    "GBCylSwrl9RollMattCu",
+    "GBCylSwrl9RollMattGl",
+    "GBCylSwrl9RollMattSl",
+    "GBCylSwrl9RollShBlk",
+    "GBCylSwrl9RollShnGl",
+    "GBCylSwrl9RollShnSl",
+    "GBCylSwrl9RollWht"
+   ]
+  },
+  {
+   "body": "Cylinder|9|Clear|13-415",
+   "members": 10,
+   "offered": 3,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 7
+   },
+   "missing": [
+    "GBTallCyl9BlkShSht",
+    "GBTallCyl9CuSht",
+    "GBTallCyl9GlMattSht",
+    "GBTallCyl9GlSht",
+    "GBTallCyl9SlMattSht",
+    "GBTallCyl9SlSht",
+    "GBTallCyl9WhtSht"
+   ]
+  },
+  {
+   "body": "Cylinder|5|Clear|13-415",
+   "members": 9,
+   "offered": 2,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 7
+   },
+   "missing": [
+    "GBCyl5RollBlkSh",
+    "GBCyl5RollCuMatt",
+    "GBCyl5RollGlMatt",
+    "GBCyl5RollGlSh",
+    "GBCyl5RollPinkDot",
+    "GBCyl5RollSlMatt",
+    "GBCyl5RollSlSh"
+   ]
+  },
+  {
+   "body": "Cylinder|100|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: kit completeness capSplit": 11,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBCyl100RdcrBlkLthr",
+    "GBCyl100RdcrBrwnLthr",
+    "GBCyl100RdcrIvyLthr",
+    "GBCyl100RdcrLBrwnLthr",
+    "GBCyl100RdcrMtSl",
+    "GBCyl100RdcrMtSlTall",
+    "GBCyl100RdcrPnkLthr",
+    "GBCyl100RdcrShnBlk",
+    "GBCyl100RdcrShnBlkTall",
+    "GBCyl100RdcrShnGl",
+    "GBCyl100RdcrShnSl",
+    "GBCyl100RdcrWht"
+   ]
+  },
+  {
+   "body": "Cylinder|50|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: kit completeness capSplit": 11,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBCyl50RdcrBlkLthr",
+    "GBCyl50RdcrBrwnLthr",
+    "GBCyl50RdcrIvyLthr",
+    "GBCyl50RdcrLBrwnLthr",
+    "GBCyl50RdcrMtSl",
+    "GBCyl50RdcrMtSlTall",
+    "GBCyl50RdcrPnkLthr",
+    "GBCyl50RdcrShnBlk",
+    "GBCyl50RdcrShnBlkTall",
+    "GBCyl50RdcrShnGl",
+    "GBCyl50RdcrShnSl",
+    "GBCyl50RdcrWht"
+   ]
+  },
+  {
+   "body": "Diamond|60|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 11,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBDmnd2ozRdcrBlkLthr",
+    "GBDmnd2ozRdcrBrwnLthr",
+    "GBDmnd2ozRdcrIvyLthr",
+    "GBDmnd2ozRdcrLBrwnLthr",
+    "GBDmnd2ozRdcrMtSl",
+    "GBDmnd2ozRdcrMtSlTall",
+    "GBDmnd2ozRdcrPnkLthr",
+    "GBDmnd2ozRdcrShnBlk",
+    "GBDmnd2ozRdcrShnBlkTall",
+    "GBDmnd2ozRdcrShnGl",
+    "GBDmnd2ozRdcrShnSl",
+    "GBDmnd2ozRdcrWht"
+   ]
+  },
+  {
+   "body": "Flair|15|Clear|13-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "not on dev": 8,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
+   },
+   "missing": [
+    "GBFlair15BlkShSht",
+    "GBFlair15BlkSht",
+    "GBFlair15CuSht",
+    "GBFlair15Gl",
+    "GBFlair15GlMattSht",
+    "GBFlair15GlSht",
+    "GBFlair15MinarCu",
+    "GBFlair15MinarSl",
+    "GBFlair15Sl",
+    "GBFlair15SlMattSht",
+    "GBFlair15SlSht",
+    "GBFlair15WhtSht"
+   ]
+  },
+  {
+   "body": "Rectangle|10|Clear|13-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "not on dev": 8,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
+   },
+   "missing": [
+    "GBRect10BlkShSht",
+    "GBRect10BlkSht",
+    "GBRect10CuSht",
+    "GBRect10Gl",
+    "GBRect10GlMattSht",
+    "GBRect10GlSht",
+    "GBRect10MinarCu",
+    "GBRect10MinarSl",
+    "GBRect10Sl",
+    "GBRect10SlMattSht",
+    "GBRect10SlSht",
+    "GBRect10WhtSht"
+   ]
+  },
+  {
+   "body": "Grace|55|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 11,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBGrce55RdcrBlkLthr",
+    "GBGrce55RdcrBrwnLthr",
+    "GBGrce55RdcrIvyLthr",
+    "GBGrce55RdcrLBrwnLthr",
+    "GBGrce55RdcrMtSl",
+    "GBGrce55RdcrMtSlTall",
+    "GBGrce55RdcrPnkLthr",
+    "GBGrce55RdcrShnBlk",
+    "GBGrce55RdcrShnBlkTall",
+    "GBGrce55RdcrShnGl",
+    "GBGrce55RdcrShnSl",
+    "GBGrce55RdcrWht"
+   ]
+  },
+  {
+   "body": "Round|78|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 11,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBRnd78RdcrBlkLthr",
+    "GBRnd78RdcrBrwnLthr",
+    "GBRnd78RdcrIvyLthr",
+    "GBRnd78RdcrLBrwnLthr",
+    "GBRnd78RdcrMtSl",
+    "GBRnd78RdcrMtSlTall",
+    "GBRnd78RdcrPnkLthr",
+    "GBRnd78RdcrShnBlk",
+    "GBRnd78RdcrShnBlkTall",
+    "GBRnd78RdcrShnGl",
+    "GBRnd78RdcrShnSl",
+    "GBRnd78RdcrWht"
+   ]
+  },
+  {
+   "body": "Royal|13|Clear|13-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "not on dev": 8,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
+   },
+   "missing": [
+    "GBRoyal13BlkShSht",
+    "GBRoyal13BlkSht",
+    "GBRoyal13CuSht",
+    "GBRoyal13Gl",
+    "GBRoyal13GlMattSht",
+    "GBRoyal13GlSht",
+    "GBRoyal13MinarCu",
+    "GBRoyal13MinarSl",
+    "GBRoyal13Sl",
+    "GBRoyal13SlMattSht",
+    "GBRoyal13SlSht",
+    "GBRoyal13WhtSht"
+   ]
+  },
+  {
+   "body": "Sleek|100|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 11,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBSlk100RdcrBlkLthr",
+    "GBSlk100RdcrBrwnLthr",
+    "GBSlk100RdcrIvyLthr",
+    "GBSlk100RdcrLBrwnLthr",
+    "GBSlk100RdcrMtSl",
+    "GBSlk100RdcrMtSlTall",
+    "GBSlk100RdcrPnkLthr",
+    "GBSlk100RdcrShnBlk",
+    "GBSlk100RdcrShnBlkTall",
+    "GBSlk100RdcrShnGl",
+    "GBSlk100RdcrShnSl",
+    "GBSlk100RdcrWht"
+   ]
+  },
+  {
+   "body": "Sleek|30|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 10,
+    "gate: no compatible finish component": 1,
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 1
+   },
+   "missing": [
+    "GBSlk30RdcrBlkLthr",
+    "GBSlk30RdcrBrwnLthr",
+    "GBSlk30RdcrIvyLthr",
+    "GBSlk30RdcrLBrwnLthr",
+    "GBSlk30RdcrMtSl",
+    "GBSlk30RdcrMtSlTall",
+    "GBSlk30RdcrPnkLthr",
+    "GBSlk30RdcrShnBlk",
+    "GBSlk30RdcrShnBlkTall",
+    "GBSlk30RdcrShnGl",
+    "GBSlk30RdcrShnSl",
+    "GBSlk30RdcrWht"
+   ]
+  },
+  {
+   "body": "Sleek|50|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 10,
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 1,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBSlk50RdcrBlkLthr",
+    "GBSlk50RdcrBrwnLthr",
+    "GBSlk50RdcrIvyLthr",
+    "GBSlk50RdcrLBrwnLthr",
+    "GBSlk50RdcrMtSl",
+    "GBSlk50RdcrMtSlTall",
+    "GBSlk50RdcrPnkLthr",
+    "GBSlk50RdcrShnBlk",
+    "GBSlk50RdcrShnBlkTall",
+    "GBSlk50RdcrShnGl",
+    "GBSlk50RdcrShnSl",
+    "GBSlk50RdcrWht"
+   ]
+  },
+  {
+   "body": "Slim|100|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 11,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBSlm100RdcrBlkLthr",
+    "GBSlm100RdcrBrwnLthr",
+    "GBSlm100RdcrIvyLthr",
+    "GBSlm100RdcrLBrwnLthr",
+    "GBSlm100RdcrMtSl",
+    "GBSlm100RdcrMtSlTall",
+    "GBSlm100RdcrPnkLthr",
+    "GBSlm100RdcrShnBlk",
+    "GBSlm100RdcrShnBlkTall",
+    "GBSlm100RdcrShnGl",
+    "GBSlm100RdcrShnSl",
+    "GBSlm100RdcrWht"
+   ]
+  },
+  {
+   "body": "Slim|30|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 11,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBSlm30RdcrBlkLthr",
+    "GBSlm30RdcrBrwnLthr",
+    "GBSlm30RdcrIvyLthr",
+    "GBSlm30RdcrLBrwnLthr",
+    "GBSlm30RdcrMtSl",
+    "GBSlm30RdcrMtSlTall",
+    "GBSlm30RdcrPnkLthr",
+    "GBSlm30RdcrShnBlk",
+    "GBSlm30RdcrShnBlkTall",
+    "GBSlm30RdcrShnGl",
+    "GBSlm30RdcrShnSl",
+    "GBSlm30RdcrWht"
+   ]
+  },
+  {
+   "body": "Slim|50|Clear|18-415",
+   "members": 12,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 11,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "GBSlm50RdcrBlkLthr",
+    "GBSlm50RdcrBrwnLthr",
+    "GBSlm50RdcrIvyLthr",
+    "GBSlm50RdcrLBrwnLthr",
+    "GBSlm50RdcrMtSl",
+    "GBSlm50RdcrMtSlTall",
+    "GBSlm50RdcrPnkLthr",
+    "GBSlm50RdcrShnBlk",
+    "GBSlm50RdcrShnBlkTall",
+    "GBSlm50RdcrShnGl",
+    "GBSlm50RdcrShnSl",
+    "GBSlm50RdcrWht"
+   ]
+  },
+  {
+   "body": "Sleek|5|Clear|13-415",
+   "members": 10,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "not on dev": 6,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
+   },
+   "missing": [
+    "GBSleek5BlkShSht",
+    "GBSleek5BlkSht",
+    "GBSleek5CuSht",
+    "GBSleek5Gl",
+    "GBSleek5GlMattSht",
+    "GBSleek5GlSht",
+    "GBSleek5Sl",
+    "GBSleek5SlMattSht",
+    "GBSleek5SlSht",
+    "GBSleek5WhtSht"
+   ]
+  },
+  {
+   "body": "Sleek|8|Clear|13-415",
+   "members": 10,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "not on dev": 6,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
+   },
+   "missing": [
+    "GBSleek8BlkShSht",
+    "GBSleek8BlkSht",
+    "GBSleek8CuSht",
+    "GBSleek8Gl",
+    "GBSleek8GlMattSht",
+    "GBSleek8GlSht",
+    "GBSleek8Sl",
+    "GBSleek8SlMattSht",
+    "GBSleek8SlSht",
+    "GBSleek8WhtSht"
+   ]
+  },
+  {
+   "body": "Rectangle|10|Clear|13-415",
+   "members": 10,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "not on dev": 6,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
+   },
+   "missing": [
+    "GBTallRect10BlkShSht",
+    "GBTallRect10BlkSht",
+    "GBTallRect10CuSht",
+    "GBTallRect10Gl",
+    "GBTallRect10GlMattSht",
+    "GBTallRect10GlSht",
+    "GBTallRect10Sl",
+    "GBTallRect10SlMattSht",
+    "GBTallRect10SlSht",
+    "GBTallRect10WhtSht"
+   ]
+  },
+  {
+   "body": "Tulip|5|Amber|13-415",
+   "members": 10,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "not on dev": 6,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
+   },
+   "missing": [
+    "GBTulipAmb5BlkShSht",
+    "GBTulipAmb5BlkSht",
+    "GBTulipAmb5CuSht",
+    "GBTulipAmb5Gl",
+    "GBTulipAmb5GlMattSht",
+    "GBTulipAmb5GlSht",
+    "GBTulipAmb5Sl",
+    "GBTulipAmb5SlMattSht",
+    "GBTulipAmb5SlSht",
+    "GBTulipAmb5WhtSht"
+   ]
+  },
+  {
+   "body": "Tulip|6|Clear|13-415",
+   "members": 10,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 1,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4,
+    "not on dev": 5
+   },
+   "missing": [
+    "GBTulip6BlkShSht",
+    "GBTulip6BlkSht",
+    "GBTulip6CuSht",
+    "GBTulip6Gl",
+    "GBTulip6GlMattSht",
+    "GBTulip6GlSht",
+    "GBTulip6Sl",
+    "GBTulip6SlMattSht",
+    "GBTulip6SlSht",
+    "GBTulip6WhtSht"
+   ]
+  },
+  {
+   "body": "Gift Box|0|Clear|?",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "not on dev": 9
+   },
+   "missing": [
+    "GBCrclFrst50AnSpTslBlk",
+    "GBCrclFrst50AnSpTslGl",
+    "GBCrclFrst50AnSpTslIvyGl",
+    "GBCrclFrst50AnSpTslIvySl",
+    "GBCrclFrst50AnSpTslLvn",
+    "GBCrclFrst50AnSpTslMtSl",
+    "GBCrclFrst50AnSpTslPnk",
+    "GBCrclFrst50AnSpTslRed",
+    "GBCrclFrst50AnSpTslWht"
+   ]
+  },
+  {
+   "body": "Cylinder|5|Cobalt Blue|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBCylBlu5RollBlkDot",
+    "GBCylBlu5RollBlkSh",
+    "GBCylBlu5RollCuMatt",
+    "GBCylBlu5RollGlMatt",
+    "GBCylBlu5RollGlSh",
+    "GBCylBlu5RollPinkDot",
+    "GBCylBlu5RollSlDot",
+    "GBCylBlu5RollSlMatt",
+    "GBCylBlu5RollSlSh"
+   ]
+  },
+  {
+   "body": "Diamond|60|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBDmnd2ozAnSpBlk",
+    "GBDmnd2ozAnSpGl",
+    "GBDmnd2ozAnSpIvyGl",
+    "GBDmnd2ozAnSpIvySl",
+    "GBDmnd2ozAnSpLvn",
+    "GBDmnd2ozAnSpMtSl",
+    "GBDmnd2ozAnSpPnk",
+    "GBDmnd2ozAnSpRed",
+    "GBDmnd2ozAnSpWht"
+   ]
+  },
+  {
+   "body": "Diamond|60|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBDmnd2ozAnSpTslBlk",
+    "GBDmnd2ozAnSpTslGl",
+    "GBDmnd2ozAnSpTslIvyGl",
+    "GBDmnd2ozAnSpTslIvySl",
+    "GBDmnd2ozAnSpTslLvn",
+    "GBDmnd2ozAnSpTslMtSl",
+    "GBDmnd2ozAnSpTslPnk",
+    "GBDmnd2ozAnSpTslRed",
+    "GBDmnd2ozAnSpTslWht"
+   ]
+  },
+  {
+   "body": "Flair|15|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBFlair15MtlRollBlkDot",
+    "GBFlair15MtlRollBlkSh",
+    "GBFlair15MtlRollCuMatt",
+    "GBFlair15MtlRollGlMatt",
+    "GBFlair15MtlRollGlSh",
+    "GBFlair15MtlRollPinkDot",
+    "GBFlair15MtlRollSlDot",
+    "GBFlair15MtlRollSlMatt",
+    "GBFlair15MtlRollSlSh"
+   ]
+  },
+  {
+   "body": "Flair|15|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBFlair15RollBlkDot",
+    "GBFlair15RollBlkSh",
+    "GBFlair15RollCuMatt",
+    "GBFlair15RollGlMatt",
+    "GBFlair15RollGlSh",
+    "GBFlair15RollPinkDot",
+    "GBFlair15RollSlDot",
+    "GBFlair15RollSlMatt",
+    "GBFlair15RollSlSh"
+   ]
+  },
+  {
+   "body": "Rectangle|10|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBRect10MtlRollBlkDot",
+    "GBRect10MtlRollBlkSh",
+    "GBRect10MtlRollCuMatt",
+    "GBRect10MtlRollGlMatt",
+    "GBRect10MtlRollGlSh",
+    "GBRect10MtlRollPinkDot",
+    "GBRect10MtlRollSlDot",
+    "GBRect10MtlRollSlMatt",
+    "GBRect10MtlRollSlSh"
+   ]
+  },
+  {
+   "body": "Rectangle|10|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBRect10RollBlkDot",
+    "GBRect10RollBlkSh",
+    "GBRect10RollCuMatt",
+    "GBRect10RollGlMatt",
+    "GBRect10RollGlSh",
+    "GBRect10RollPinkDot",
+    "GBRect10RollSlDot",
+    "GBRect10RollSlMatt",
+    "GBRect10RollSlSh"
+   ]
+  },
+  {
+   "body": "Grace|55|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBGrce55AnSpBlk",
+    "GBGrce55AnSpGl",
+    "GBGrce55AnSpIvyGl",
+    "GBGrce55AnSpIvySl",
+    "GBGrce55AnSpLvn",
+    "GBGrce55AnSpMtSl",
+    "GBGrce55AnSpPnk",
+    "GBGrce55AnSpRed",
+    "GBGrce55AnSpWht"
+   ]
+  },
+  {
+   "body": "Grace|55|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBGrce55AnSpTslBlk",
+    "GBGrce55AnSpTslGl",
+    "GBGrce55AnSpTslIvyGl",
+    "GBGrce55AnSpTslIvySl",
+    "GBGrce55AnSpTslLvn",
+    "GBGrce55AnSpTslMtSl",
+    "GBGrce55AnSpTslPnk",
+    "GBGrce55AnSpTslRed",
+    "GBGrce55AnSpTslWht"
+   ]
+  },
+  {
+   "body": "Round|78|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBRnd78AnSpBlk",
+    "GBRnd78AnSpGl",
+    "GBRnd78AnSpIvyGl",
+    "GBRnd78AnSpIvySl",
+    "GBRnd78AnSpLvn",
+    "GBRnd78AnSpMtSl",
+    "GBRnd78AnSpPnk",
+    "GBRnd78AnSpRed",
+    "GBRnd78AnSpWht"
+   ]
+  },
+  {
+   "body": "Round|78|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBRnd78AnSpTslBlk",
+    "GBRnd78AnSpTslGl",
+    "GBRnd78AnSpTslIvyGl",
+    "GBRnd78AnSpTslIvySl",
+    "GBRnd78AnSpTslLvn",
+    "GBRnd78AnSpTslMtSl",
+    "GBRnd78AnSpTslPnk",
+    "GBRnd78AnSpTslRed",
+    "GBRnd78AnSpTslWht"
+   ]
+  },
+  {
+   "body": "Royal|13|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBRoyal13MtlRollBlkDot",
+    "GBRoyal13MtlRollBlkSh",
+    "GBRoyal13MtlRollCuMatt",
+    "GBRoyal13MtlRollGlMatt",
+    "GBRoyal13MtlRollGlSh",
+    "GBRoyal13MtlRollPinkDot",
+    "GBRoyal13MtlRollSlDot",
+    "GBRoyal13MtlRollSlMatt",
+    "GBRoyal13MtlRollSlSh"
+   ]
+  },
+  {
+   "body": "Royal|13|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 1,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 8
+   },
+   "missing": [
+    "GBRoyal13RollBlkDot",
+    "GBRoyal13RollBlkSh",
+    "GBRoyal13RollCuMatt",
+    "GBRoyal13RollGlMatt",
+    "GBRoyal13RollGlSh",
+    "GBRoyal13RollPinkDot",
+    "GBRoyal13RollSlDot",
+    "GBRoyal13RollSlMatt",
+    "GBRoyal13RollSlSh"
+   ]
+  },
+  {
+   "body": "Sleek|100|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBSlk100AnSpBlk",
+    "GBSlk100AnSpGl",
+    "GBSlk100AnSpIvyGl",
+    "GBSlk100AnSpIvySl",
+    "GBSlk100AnSpLvn",
+    "GBSlk100AnSpMtSl",
+    "GBSlk100AnSpPnk",
+    "GBSlk100AnSpRed",
+    "GBSlk100AnSpWht"
+   ]
+  },
+  {
+   "body": "Sleek|100|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBSlk100AnSpTslBlk",
+    "GBSlk100AnSpTslGl",
+    "GBSlk100AnSpTslIvyGl",
+    "GBSlk100AnSpTslIvySl",
+    "GBSlk100AnSpTslLvn",
+    "GBSlk100AnSpTslMtSl",
+    "GBSlk100AnSpTslPnk",
+    "GBSlk100AnSpTslRed",
+    "GBSlk100AnSpTslWht"
+   ]
+  },
+  {
+   "body": "Sleek|30|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBSlk30AnSpBlk",
+    "GBSlk30AnSpGl",
+    "GBSlk30AnSpIvyGl",
+    "GBSlk30AnSpIvySl",
+    "GBSlk30AnSpLvn",
+    "GBSlk30AnSpMtSl",
+    "GBSlk30AnSpPnk",
+    "GBSlk30AnSpRed",
+    "GBSlk30AnSpWht"
+   ]
+  },
+  {
+   "body": "Sleek|5|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBSleek5MtlRollBlkDot",
+    "GBSleek5MtlRollBlkSh",
+    "GBSleek5MtlRollCuMatt",
+    "GBSleek5MtlRollGlMatt",
+    "GBSleek5MtlRollGlSh",
+    "GBSleek5MtlRollPinkDot",
+    "GBSleek5MtlRollSlDot",
+    "GBSleek5MtlRollSlMatt",
+    "GBSleek5MtlRollSlSh"
+   ]
+  },
+  {
+   "body": "Sleek|5|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBSleek5RollBlkDot",
+    "GBSleek5RollBlkSh",
+    "GBSleek5RollCuMatt",
+    "GBSleek5RollGlMatt",
+    "GBSleek5RollGlSh",
+    "GBSleek5RollPinkDot",
+    "GBSleek5RollSlDot",
+    "GBSleek5RollSlMatt",
+    "GBSleek5RollSlSh"
+   ]
+  },
+  {
+   "body": "Sleek|50|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBSlk50AnSpBlk",
+    "GBSlk50AnSpGl",
+    "GBSlk50AnSpIvyGl",
+    "GBSlk50AnSpIvySl",
+    "GBSlk50AnSpLvn",
+    "GBSlk50AnSpMtSl",
+    "GBSlk50AnSpPnk",
+    "GBSlk50AnSpRed",
+    "GBSlk50AnSpWht"
+   ]
+  },
+  {
+   "body": "Sleek|50|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBSlk50AnSpTslBlk",
+    "GBSlk50AnSpTslGl",
+    "GBSlk50AnSpTslIvyGl",
+    "GBSlk50AnSpTslIvySl",
+    "GBSlk50AnSpTslLvn",
+    "GBSlk50AnSpTslMtSl",
+    "GBSlk50AnSpTslPnk",
+    "GBSlk50AnSpTslRed",
+    "GBSlk50AnSpTslWht"
+   ]
+  },
+  {
+   "body": "Sleek|8|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBSleek8MtlRollBlkDot",
+    "GBSleek8MtlRollBlkSh",
+    "GBSleek8MtlRollCuMatt",
+    "GBSleek8MtlRollGlMatt",
+    "GBSleek8MtlRollGlSh",
+    "GBSleek8MtlRollPinkDot",
+    "GBSleek8MtlRollSlDot",
+    "GBSleek8MtlRollSlMatt",
+    "GBSleek8MtlRollSlSh"
+   ]
+  },
+  {
+   "body": "Sleek|8|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBSleek8RollBlkDot",
+    "GBSleek8RollBlkSh",
+    "GBSleek8RollCuMatt",
+    "GBSleek8RollGlMatt",
+    "GBSleek8RollGlSh",
+    "GBSleek8RollPinkDot",
+    "GBSleek8RollSlDot",
+    "GBSleek8RollSlMatt",
+    "GBSleek8RollSlSh"
+   ]
+  },
+  {
+   "body": "Slim|100|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBSlm100AnSpBlk",
+    "GBSlm100AnSpGl",
+    "GBSlm100AnSpIvyGl",
+    "GBSlm100AnSpIvySl",
+    "GBSlm100AnSpLvn",
+    "GBSlm100AnSpMtSl",
+    "GBSlm100AnSpPnk",
+    "GBSlm100AnSpRed",
+    "GBSlm100AnSpWht"
+   ]
+  },
+  {
+   "body": "Slim|100|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBSlm100AnSpTslBlk",
+    "GBSlm100AnSpTslGl",
+    "GBSlm100AnSpTslIvyGl",
+    "GBSlm100AnSpTslIvySl",
+    "GBSlm100AnSpTslLvn",
+    "GBSlm100AnSpTslMtSl",
+    "GBSlm100AnSpTslPnk",
+    "GBSlm100AnSpTslRed",
+    "GBSlm100AnSpTslWht"
+   ]
+  },
+  {
+   "body": "Slim|30|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBSlm30AnSpBlk",
+    "GBSlm30AnSpGl",
+    "GBSlm30AnSpIvyGl",
+    "GBSlm30AnSpIvySl",
+    "GBSlm30AnSpLvn",
+    "GBSlm30AnSpMtSl",
+    "GBSlm30AnSpPnk",
+    "GBSlm30AnSpRed",
+    "GBSlm30AnSpWht"
+   ]
+  },
+  {
+   "body": "Slim|50|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6,
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBSlm50AnSpBlk",
+    "GBSlm50AnSpGl",
+    "GBSlm50AnSpIvyGl",
+    "GBSlm50AnSpIvySl",
+    "GBSlm50AnSpLvn",
+    "GBSlm50AnSpMtSl",
+    "GBSlm50AnSpPnk",
+    "GBSlm50AnSpRed",
+    "GBSlm50AnSpWht"
+   ]
+  },
+  {
+   "body": "Slim|50|Clear|18-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBSlm50AnSpTslBlk",
+    "GBSlm50AnSpTslGl",
+    "GBSlm50AnSpTslIvyGl",
+    "GBSlm50AnSpTslIvySl",
+    "GBSlm50AnSpTslLvn",
+    "GBSlm50AnSpTslMtSl",
+    "GBSlm50AnSpTslPnk",
+    "GBSlm50AnSpTslRed",
+    "GBSlm50AnSpTslWht"
+   ]
+  },
+  {
+   "body": "Square|15|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBSqr15MtlRollBlkDot",
+    "GBSqr15MtlRollBlkSh",
+    "GBSqr15MtlRollCuMatt",
+    "GBSqr15MtlRollGlMatt",
+    "GBSqr15MtlRollGlSh",
+    "GBSqr15MtlRollPinkDot",
+    "GBSqr15MtlRollSlDot",
+    "GBSqr15MtlRollSlMatt",
+    "GBSqr15MtlRollSlSh"
+   ]
+  },
+  {
+   "body": "Square|15|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBSqr15RollBlkDot",
+    "GBSqr15RollBlkSh",
+    "GBSqr15RollCuMatt",
+    "GBSqr15RollGlMatt",
+    "GBSqr15RollGlSh",
+    "GBSqr15RollPinkDot",
+    "GBSqr15RollSlDot",
+    "GBSqr15RollSlMatt",
+    "GBSqr15RollSlSh"
+   ]
+  },
+  {
+   "body": "Square|15|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "not on dev": 5,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
+   },
+   "missing": [
+    "GBSqr15BlkShSht",
+    "GBSqr15BlkSht",
+    "GBSqr15CuSht",
+    "GBSqr15Gl",
+    "GBSqr15GlMattSht",
+    "GBSqr15GlSht",
+    "GBSqr15Sl",
+    "GBSqr15SlMattSht",
+    "GBSqr15WhtSht"
+   ]
+  },
+  {
+   "body": "Rectangle|10|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 8,
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 1
+   },
+   "missing": [
+    "GBTallRect10MtlRollBlkDot",
+    "GBTallRect10MtlRollBlkSh",
+    "GBTallRect10MtlRollCuMatt",
+    "GBTallRect10MtlRollGlMatt",
+    "GBTallRect10MtlRollGlSh",
+    "GBTallRect10MtlRollPinkDo",
+    "GBTallRect10MtlRollSlDot",
+    "GBTallRect10MtlRollSlMatt",
+    "GBTallRect10MtlRollSlSh"
+   ]
+  },
+  {
+   "body": "Rectangle|10|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 8,
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 1
+   },
+   "missing": [
+    "GBTallRect10RollBlkDot",
+    "GBTallRect10RollBlkSh",
+    "GBTallRect10RollCuMatt",
+    "GBTallRect10RollGlMatt",
+    "GBTallRect10RollGlSh",
+    "GBTallRect10RollPinkDot",
+    "GBTallRect10RollSlDot",
+    "GBTallRect10RollSlMatt",
+    "GBTallRect10RollSlSh"
+   ]
+  },
+  {
+   "body": "Tulip|5|Amber|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBTulipAmb5MtlRollBlkDot",
+    "GBTulipAmb5MtlRollBlkSh",
+    "GBTulipAmb5MtlRollCuMatt",
+    "GBTulipAmb5MtlRollGlMatt",
+    "GBTulipAmb5MtlRollGlSh",
+    "GBTulipAmb5MtlRollPinkDot",
+    "GBTulipAmb5MtlRollSlDot",
+    "GBTulipAmb5MtlRollSlMatt",
+    "GBTulipAmb5MtlRollSlSh"
+   ]
+  },
+  {
+   "body": "Tulip|5|Amber|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBTulipAmb5RollBlkDot",
+    "GBTulipAmb5RollBlkSh",
+    "GBTulipAmb5RollCuMatt",
+    "GBTulipAmb5RollGlMatt",
+    "GBTulipAmb5RollGlSh",
+    "GBTulipAmb5RollPinkDot",
+    "GBTulipAmb5RollSlDot",
+    "GBTulipAmb5RollSlMatt",
+    "GBTulipAmb5RollSlSh"
+   ]
+  },
+  {
+   "body": "Tulip|6|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBTulip6MtlRollBlkDot",
+    "GBTulip6MtlRollBlkSh",
+    "GBTulip6MtlRollCuMatt",
+    "GBTulip6MtlRollGlMatt",
+    "GBTulip6MtlRollGlSh",
+    "GBTulip6MtlRollPinkDot",
+    "GBTulip6MtlRollSlDot",
+    "GBTulip6MtlRollSlMatt",
+    "GBTulip6MtlRollSlSh"
+   ]
+  },
+  {
+   "body": "Tulip|6|Clear|13-415",
+   "members": 9,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 9
+   },
+   "missing": [
+    "GBTulip6RollBlkDot",
+    "GBTulip6RollBlkSh",
+    "GBTulip6RollCuMatt",
+    "GBTulip6RollGlMatt",
+    "GBTulip6RollGlSh",
+    "GBTulip6RollPinkDot",
+    "GBTulip6RollSlDot",
+    "GBTulip6RollSlMatt",
+    "GBTulip6RollSlSh"
+   ]
+  },
+  {
+   "body": "Empire|100|Clear|18-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 7,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "LBEmp100LtnClOvrCap",
+    "LBEmp100LtnCu",
+    "LBEmp100LtnMtGl",
+    "LBEmp100LtnMtSl",
+    "LBEmp100LtnShnBlk",
+    "LBEmp100LtnShnGl",
+    "LBEmp100LtnShnSl",
+    "LBEmp100WhtClOvrCp"
+   ]
+  },
+  {
+   "body": "Empire|50|Clear|18-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 7,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "LBEmp50LtnClOvrCap",
+    "LBEmp50LtnCu",
+    "LBEmp50LtnMtGl",
+    "LBEmp50LtnMtSl",
+    "LBEmp50LtnShnBlk",
+    "LBEmp50LtnShnGl",
+    "LBEmp50LtnShnSl",
+    "LBEmp50WhtClOvrCp"
+   ]
+  },
+  {
+   "body": "Flair|15|Clear|13-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 8
+   },
+   "missing": [
+    "GBFlair15SpryBlkMatt",
+    "GBFlair15SpryBlkSh",
+    "GBFlair15SpryBluMatt",
+    "GBFlair15SpryCuMatt",
+    "GBFlair15SpryGlMatt",
+    "GBFlair15SpryGlSh",
+    "GBFlair15SprySlMatt",
+    "GBFlair15SprySlSh"
+   ]
+  },
+  {
+   "body": "Rectangle|10|Clear|13-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 8
+   },
+   "missing": [
+    "GBRect10SpryBlkMatt",
+    "GBRect10SpryBlkSh",
+    "GBRect10SpryBluMatt",
+    "GBRect10SpryCuMatt",
+    "GBRect10SpryGlMatt",
+    "GBRect10SpryGlSh",
+    "GBRect10SprySlMatt",
+    "GBRect10SprySlSh"
+   ]
+  },
+  {
+   "body": "Sleek|100|Clear|18-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 7,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "LBSlk100LtnClOvrCap",
+    "LBSlk100LtnCu",
+    "LBSlk100LtnMtGl",
+    "LBSlk100LtnMtSl",
+    "LBSlk100LtnShnBlk",
+    "LBSlk100LtnShnGl",
+    "LBSlk100LtnShnSl",
+    "LBSlk100WhtRectClOverCap"
+   ]
+  },
+  {
+   "body": "Sleek|30|Clear|18-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 7,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "LBSlk30LtnClOvrCap",
+    "LBSlk30LtnCu",
+    "LBSlk30LtnMtGl",
+    "LBSlk30LtnMtSl",
+    "LBSlk30LtnShnBlk",
+    "LBSlk30LtnShnGl",
+    "LBSlk30LtnShnSl",
+    "LBSlk30WhtRectClOverCap"
+   ]
+  },
+  {
+   "body": "Sleek|5|Clear|13-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 8
+   },
+   "missing": [
+    "GBSleek5SpryBlkMatt",
+    "GBSleek5SpryBlkSh",
+    "GBSleek5SpryBluMatt",
+    "GBSleek5SpryCuMatt",
+    "GBSleek5SpryGlMatt",
+    "GBSleek5SpryGlSh",
+    "GBSleek5SprySlMatt",
+    "GBSleek5SprySlSh"
+   ]
+  },
+  {
+   "body": "Sleek|50|Clear|18-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 7,
+    "gate: no compatible finish component": 1
+   },
+   "missing": [
+    "LBSlk50LtnClOvrCap",
+    "LBSlk50LtnCu",
+    "LBSlk50LtnMtGl",
+    "LBSlk50LtnMtSl",
+    "LBSlk50LtnShnBlk",
+    "LBSlk50LtnShnGl",
+    "LBSlk50LtnShnSl",
+    "LBSlk50WhtRectClOverCap"
+   ]
+  },
+  {
+   "body": "Sleek|8|Clear|13-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 8
+   },
+   "missing": [
+    "GBSleek8SpryBlkMatt",
+    "GBSleek8SpryBlkSh",
+    "GBSleek8SpryBluMatt",
+    "GBSleek8SpryCuMatt",
+    "GBSleek8SpryGlMatt",
+    "GBSleek8SpryGlSh",
+    "GBSleek8SprySlMatt",
+    "GBSleek8SprySlSh"
+   ]
+  },
+  {
+   "body": "Rectangle|10|Clear|13-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 8
+   },
+   "missing": [
+    "GBTallRect10SpryBlkMatt",
+    "GBTallRect10SpryBlkSh",
+    "GBTallRect10SpryBluMatt",
+    "GBTallRect10SpryCuMatt",
+    "GBTallRect10SpryGlMatt",
+    "GBTallRect10SpryGlSh",
+    "GBTallRect10SprySlMatt",
+    "GBTallRect10SprySlSh"
+   ]
+  },
+  {
+   "body": "Tulip|5|Amber|13-415",
+   "members": 8,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 8
+   },
+   "missing": [
+    "GBTulipAmb5SpryBlkMatt",
+    "GBTulipAmb5SpryBlkSh",
+    "GBTulipAmb5SpryBluMatt",
+    "GBTulipAmb5SpryCuMatt",
+    "GBTulipAmb5SpryGlMatt",
+    "GBTulipAmb5SpryGlSh",
+    "GBTulipAmb5SprySlMatt",
+    "GBTulipAmb5SprySlSh"
+   ]
+  },
+  {
+   "body": "Diamond|60|Clear|18-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 7
+   },
+   "missing": [
+    "LBDmnd2ozLtnClOvrCap",
+    "LBDmnd2ozLtnCu",
+    "LBDmnd2ozLtnMtGl",
+    "LBDmnd2ozLtnMtSl",
+    "LBDmnd2ozLtnShnBlk",
+    "LBDmnd2ozLtnShnGl",
+    "LBDmnd2ozLtnShnSl"
+   ]
+  },
+  {
+   "body": "Grace|55|Clear|18-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 3,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4
+   },
+   "missing": [
+    "LBGrce55LtnClOvrCap",
+    "LBGrce55LtnCu",
+    "LBGrce55LtnMtGl",
+    "LBGrce55LtnMtSl",
+    "LBGrce55LtnShnBlk",
+    "LBGrce55LtnShnGl",
+    "LBGrce55LtnShnSl"
+   ]
+  },
+  {
+   "body": "Round|128|Frosted|18-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 7
+   },
+   "missing": [
+    "LBRndFrst128LtnClOvrCap",
+    "LBRndFrst128LtnCu",
+    "LBRndFrst128LtnMtGl",
+    "LBRndFrst128LtnMtSl",
+    "LBRndFrst128LtnShnBlk",
+    "LBRndFrst128LtnShnGl",
+    "LBRndFrst128LtnShnSl"
+   ]
+  },
+  {
+   "body": "Round|78|Frosted|18-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 7
+   },
+   "missing": [
+    "LBRndFrst78LtnClOvrCap",
+    "LBRndFrst78LtnCu",
+    "LBRndFrst78LtnMtGl",
+    "LBRndFrst78LtnMtSl",
+    "LBRndFrst78LtnShnBlk",
+    "LBRndFrst78LtnShnGl",
+    "LBRndFrst78LtnShnSl"
+   ]
+  },
+  {
+   "body": "Round|78|Clear|18-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 6,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 1
+   },
+   "missing": [
+    "LBRnd78LtnClOvrCap",
+    "LBRnd78LtnCu",
+    "LBRnd78LtnMtGl",
+    "LBRnd78LtnMtSl",
+    "LBRnd78LtnShnBlk",
+    "LBRnd78LtnShnGl",
+    "LBRnd78LtnShnSl"
+   ]
+  },
+  {
+   "body": "Royal|13|Clear|13-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 7
+   },
+   "missing": [
+    "GBRoyal13SpryBlkSh",
+    "GBRoyal13SpryBluMatt",
+    "GBRoyal13SpryCuMatt",
+    "GBRoyal13SpryGlMatt",
+    "GBRoyal13SpryGlSh",
+    "GBRoyal13SprySlMatt",
+    "GBRoyal13SprySlSh"
+   ]
+  },
+  {
+   "body": "Slim|100|Clear|18-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 7
+   },
+   "missing": [
+    "LBSlm100LtnCu",
+    "LBSlm100LtnMtGl",
+    "LBSlm100LtnMtSl",
+    "LBSlm100LtnShnBlk",
+    "LBSlm100LtnShnGl",
+    "LBSlm100LtnShnSl",
+    "LBSlm100MtSlClOvrCap"
+   ]
+  },
+  {
+   "body": "Slim|30|Clear|18-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 6,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 1
+   },
+   "missing": [
+    "LBSlm30LtnClOvrCap",
+    "LBSlm30LtnCu",
+    "LBSlm30LtnMtGl",
+    "LBSlm30LtnMtSl",
+    "LBSlm30LtnShnBlk",
+    "LBSlm30LtnShnGl",
+    "LBSlm30LtnShnSl"
+   ]
+  },
+  {
+   "body": "Slim|50|Clear|18-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 7
+   },
+   "missing": [
+    "LBSlm50LtnClOvrCap",
+    "LBSlm50LtnCu",
+    "LBSlm50LtnMtGl",
+    "LBSlm50LtnMtSl",
+    "LBSlm50LtnShnBlk",
+    "LBSlm50LtnShnGl",
+    "LBSlm50LtnShnSl"
+   ]
+  },
+  {
+   "body": "Square|15|Clear|13-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 7
+   },
+   "missing": [
+    "GBSqr15SpryBlkSh",
+    "GBSqr15SpryBluMatt",
+    "GBSqr15SpryCuMatt",
+    "GBSqr15SpryGlMatt",
+    "GBSqr15SpryGlSh",
+    "GBSqr15SprySlMatt",
+    "GBSqr15SprySlSh"
+   ]
+  },
+  {
+   "body": "Tulip|6|Clear|13-415",
+   "members": 7,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 7
+   },
+   "missing": [
+    "GBTulip6SpryBlkSh",
+    "GBTulip6SpryBluMatt",
+    "GBTulip6SpryCuMatt",
+    "GBTulip6SpryGlMatt",
+    "GBTulip6SpryGlSh",
+    "GBTulip6SprySlMatt",
+    "GBTulip6SprySlSh"
+   ]
+  },
+  {
+   "body": "Gift Box|0|Clear|?",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "not on dev": 6
+   },
+   "missing": [
+    "CP13-415BlkShShtMtl",
+    "CP13-415CuSht",
+    "CP13-415GlMattSht",
+    "CP13-415GlSht",
+    "CP13-415SlMattSht",
+    "CP13-415SlSht"
+   ]
+  },
+  {
+   "body": "Diamond|60|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 6
+   },
+   "missing": [
+    "GBDmnd2ozSpryCu",
+    "GBDmnd2ozSpryMtGl",
+    "GBDmnd2ozSpryMtSl",
+    "GBDmnd2ozSpryShnBlk",
+    "GBDmnd2ozSpryShnGl",
+    "GBDmnd2ozSpryShnSl"
+   ]
+  },
+  {
+   "body": "Empire|100|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 6
+   },
+   "missing": [
+    "GBEmp100SpryCu",
+    "GBEmp100SpryMtGl",
+    "GBEmp100SpryMtSl",
+    "GBEmp100SpryShnBlk",
+    "GBEmp100SpryShnGl",
+    "GBEmp100SpryShnSl"
+   ]
+  },
+  {
+   "body": "Empire|50|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 6
+   },
+   "missing": [
+    "GBEmp50SpryCu",
+    "GBEmp50SpryMtGl",
+    "GBEmp50SpryMtSl",
+    "GBEmp50SpryShnBlk",
+    "GBEmp50SpryShnGl",
+    "GBEmp50SpryShnSl"
+   ]
+  },
+  {
+   "body": "Grace|55|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 4,
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 2
+   },
+   "missing": [
+    "GBGrce55SpryCu",
+    "GBGrce55SpryMtGl",
+    "GBGrce55SpryMtSl",
+    "GBGrce55SpryShnBlk",
+    "GBGrce55SpryShnGl",
+    "GBGrce55SpryShnSl"
+   ]
+  },
+  {
+   "body": "Round|128|Frosted|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 6
+   },
+   "missing": [
+    "GBRndFrst128SpryCu",
+    "GBRndFrst128SpryMtGl",
+    "GBRndFrst128SpryMtSl",
+    "GBRndFrst128SpryShnBlk",
+    "GBRndFrst128SpryShnGl",
+    "GBRndFrst128SpryShnSl"
+   ]
+  },
+  {
+   "body": "Round|78|Frosted|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (has reviewed body image but no plate)": 6
+   },
+   "missing": [
+    "GBRndFrst78SpryCu",
+    "GBRndFrst78SpryMtGl",
+    "GBRndFrst78SpryMtSl",
+    "GBRndFrst78SpryShnBlk",
+    "GBRndFrst78SpryShnGl",
+    "GBRndFrst78SpryShnSl"
+   ]
+  },
+  {
+   "body": "Round|78|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 1,
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 5
+   },
+   "missing": [
+    "GBRnd78SpryCu",
+    "GBRnd78SpryMtGl",
+    "GBRnd78SpryMtSl",
+    "GBRnd78SpryShnBlk",
+    "GBRnd78SpryShnGl",
+    "GBRnd78SpryShnSl"
+   ]
+  },
+  {
+   "body": "Sleek|100|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6
+   },
+   "missing": [
+    "GBSlk100SpryCu",
+    "GBSlk100SpryMtGl",
+    "GBSlk100SpryMtSl",
+    "GBSlk100SpryShnBlk",
+    "GBSlk100SpryShnGl",
+    "GBSlk100SpryShnSl"
+   ]
+  },
+  {
+   "body": "Sleek|30|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6
+   },
+   "missing": [
+    "GBSlk30SpryCu",
+    "GBSlk30SpryMtGl",
+    "GBSlk30SpryMtSl",
+    "GBSlk30SpryShnBlk",
+    "GBSlk30SpryShnGl",
+    "GBSlk30SpryShnSl"
+   ]
+  },
+  {
+   "body": "Sleek|50|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 6
+   },
+   "missing": [
+    "GBSlk50SpryCu",
+    "GBSlk50SpryMtGl",
+    "GBSlk50SpryMtSl",
+    "GBSlk50SpryShnBlk",
+    "GBSlk50SpryShnGl",
+    "GBSlk50SpryShnSl"
+   ]
+  },
+  {
+   "body": "Slim|100|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 5,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 1
+   },
+   "missing": [
+    "GBSlm100SpryCu",
+    "GBSlm100SpryMtGl",
+    "GBSlm100SpryMtSl",
+    "GBSlm100SpryShnBlk",
+    "GBSlm100SpryShnGl",
+    "GBSlm100SpryShnSl"
+   ]
+  },
+  {
+   "body": "Slim|30|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 6
+   },
+   "missing": [
+    "GBSlm30SpryCu",
+    "GBSlm30SpryMtGl",
+    "GBSlm30SpryMtSl",
+    "GBSlm30SpryShnBlk",
+    "GBSlm30SpryShnGl",
+    "GBSlm30SpryShnSl"
+   ]
+  },
+  {
+   "body": "Slim|50|Clear|18-415",
+   "members": 6,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (no reviewed body image and no plate)": 6
+   },
+   "missing": [
+    "GBSlm50SpryCu",
+    "GBSlm50SpryMtGl",
+    "GBSlm50SpryMtSl",
+    "GBSlm50SpryShnBlk",
+    "GBSlm50SpryShnGl",
+    "GBSlm50SpryShnSl"
+   ]
+  },
+  {
+   "body": "Circle|50|Frosted|18-415",
+   "members": 3,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBCrclFrst50DrpCu",
+    "GBCrclFrst50DrpGl",
+    "GBCrclFrst50DrpSl"
+   ]
+  },
+  {
+   "body": "Elegant|60|Frosted|18-415",
+   "members": 3,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBElgFrst60DrpCu",
+    "GBElgFrst60DrpGl",
+    "GBElgFrst60DrpSl"
+   ]
+  },
+  {
+   "body": "Elegant|60|Clear|18-415",
+   "members": 3,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBElg60DrpCu",
+    "GBElg60DrpGl",
+    "GBElg60DrpSl"
+   ]
+  },
+  {
+   "body": "Round|128|Frosted|18-415",
+   "members": 3,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBRndFrst128DrpCu",
+    "GBRndFrst128DrpGl",
+    "GBRndFrst128DrpSl"
+   ]
+  },
+  {
+   "body": "Round|128|Clear|18-415",
+   "members": 3,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBRnd128DrpCu",
+    "GBRnd128DrpGl",
+    "GBRnd128DrpSl"
+   ]
+  },
+  {
+   "body": "Sleek|30|Clear|18-415",
+   "members": 3,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 3
+   },
+   "missing": [
+    "GBSlk30DrpCu",
+    "GBSlk30DrpGl",
+    "GBSlk30DrpSl"
+   ]
+  },
+  {
+   "body": "Slim|30|Clear|18-415",
+   "members": 3,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 3
+   },
+   "missing": [
+    "GBSlm30DrpCu",
+    "GBSlm30DrpGl",
+    "GBSlm30DrpSl"
+   ]
+  },
+  {
+   "body": "Aluminum Bottle|120|Clear|20-410",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 2
+   },
+   "missing": [
+    "Alu120mlLotionPumpBlack",
+    "Alu120mlLotionPumpWhite"
+   ]
+  },
+  {
+   "body": "Aluminum Bottle|65|Clear|20-410",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 2
+   },
+   "missing": [
+    "Alu65mlLotionPumpBlack",
+    "Alu65mlLotionPumpWhite"
+   ]
+  },
+  {
+   "body": "Cylinder|4|Clear|12mm",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBSpry4mlClBlk",
+    "GBSpry4mlClWh"
+   ]
+  },
+  {
+   "body": "Cylinder|3.3|Clear|12mm",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBSpry3mlClBlk",
+    "GBSpry3mlClWht"
+   ]
+  },
+  {
+   "body": "Vial|4|Amber|13-425",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBVAmb1DrmBlackCapSht",
+    "GBVAmb1DrmWhtCapSht"
+   ]
+  },
+  {
+   "body": "Vial|4|Blue|13-425",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBVBlu1DrmBlackCapSht",
+    "GBVBlu1DrmWhtCapSht"
+   ]
+  },
+  {
+   "body": "Vial|4|Clear|13-425",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBV1DrmBlackCapSht",
+    "GBV1DrmWhtCapSht"
+   ]
+  },
+  {
+   "body": "Vial|4|Green|13-425",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBVGr1DrmBlackCapSht",
+    "GBVGr1DrmWhtCapSht"
+   ]
+  },
+  {
+   "body": "Vial|2|Amber|8-425",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 2
+   },
+   "missing": [
+    "GBVAmb2BlackCap",
+    "GBVAmb2WhtCap"
+   ]
+  },
+  {
+   "body": "Vial|2|Clear|8-425",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 1,
+    "no configuration: no kit indexed (plate present but no reviewed body image)": 1
+   },
+   "missing": [
+    "GBVialClr2mlBlackCap",
+    "GBVialClr2mlWhtCap"
+   ]
+  },
+  {
+   "body": "Vial|3|Green|13-425",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBVGreen2o4BlackCapSht",
+    "GBVGreen2o4WhtCapSht"
+   ]
+  },
+  {
+   "body": "Vial|1|Amber|Plug",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 2
+   },
+   "missing": [
+    "GB1mlAmbVBlk",
+    "GB1mlAmbVialWht"
+   ]
+  },
+  {
+   "body": "Vial|1|Clear|Plug",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: no compatible finish component": 2
+   },
+   "missing": [
+    "GB1mlVBlk",
+    "GB1mlVWht"
+   ]
+  },
+  {
+   "body": "Cylinder|28|Clear|16mm",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBMtlRoll28Blk",
+    "GBMtlRoll28Wht"
+   ]
+  },
+  {
+   "body": "Cylinder|28|Clear|16mm",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBCyl1ozRollWht",
+    "GBRoll28Blk"
+   ]
+  },
+  {
+   "body": "Cylinder|50|Clear|16mm",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBCyl50MtlRollBlk",
+    "GBCyl50MtlRollWht"
+   ]
+  },
+  {
+   "body": "Cylinder|50|Clear|16mm",
+   "members": 2,
+   "offered": 0,
+   "complete": false,
+   "reasons": {
+    "gate: compatibility unresolved (no listed components)": 2
+   },
+   "missing": [
+    "GBCyl50RollBlk",
+    "GBCyl50RollWht"
+   ]
+  }
+ ]
+}

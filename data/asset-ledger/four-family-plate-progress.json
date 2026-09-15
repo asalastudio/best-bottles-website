@@ -1,0 +1,53 @@
+{
+  "id": "four-family-plates-2026-09-13",
+  "status": "ready",
+  "reviewUrl": "/reviews/four-family-plates-2026-09-13/index.html",
+  "families": [
+    "Elegant",
+    "Diva",
+    "Circle",
+    "Sleek"
+  ],
+  "preparedFamilies": [
+    {
+      "family": "Elegant",
+      "catalogRows": 290,
+      "preserved": 92,
+      "candidates": 158,
+      "paired": 51,
+      "holds": 4,
+      "duplicateProposals": 36,
+      "eligible": 159
+    },
+    {
+      "family": "Diva",
+      "catalogRows": 228,
+      "preserved": 15,
+      "candidates": 138,
+      "paired": 24,
+      "holds": 26,
+      "duplicateProposals": 49,
+      "eligible": 158
+    },
+    {
+      "family": "Circle",
+      "catalogRows": 209,
+      "preserved": 40,
+      "candidates": 151,
+      "paired": 62,
+      "holds": 14,
+      "duplicateProposals": 4,
+      "eligible": 165
+    },
+    {
+      "family": "Sleek",
+      "catalogRows": 192,
+      "preserved": 0,
+      "candidates": 178,
+      "paired": 112,
+      "holds": 8,
+      "duplicateProposals": 6,
+      "eligible": 155
+    }
+  ]
+}

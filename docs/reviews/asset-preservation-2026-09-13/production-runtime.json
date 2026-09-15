@@ -1,0 +1,94 @@
+{
+  "at": "2026-09-13T15:20:02.814Z",
+  "target": "Local production build, development catalog; not production deployment",
+  "homeStatus": 200,
+  "reviewApiStatus": 403,
+  "results": [
+    {
+      "width": 1440,
+      "status": 200,
+      "errors": [],
+      "title": "30 ml Amber Boston Round Roll-On Bottle - Matte Black Cap | Best Bottles",
+      "overflow": false,
+      "localCandidates": 0,
+      "images": [
+        {
+          "loaded": true,
+          "src": "http://localhost:3041/brand/best-bottles-wordmark.png"
+        },
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://localhost:3041/assets/glass-swatches/amber-v6.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://localhost:3041/assets/glass-swatches/clear-v6.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://localhost:3041/assets/glass-swatches/cobalt-v6.webp"
+        },
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattBlk/d31c537995112284f98fbaea368026163ede91e4a4300716a0ffa63ebecd218a.front-on-240x240.webp"
+        },
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattGl/1f4d7e6d329baba606a7a6b49cc2b224e7e2fc0a9caed8165c8950a292cf476a.front-on-240x240.webp"
+        },
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattSl/a7c910418e0c1ec84894c1a05df23f2b0001bd680030eb484b76bcbdfb3e0d12.front-on-240x240.webp"
+        },
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnSl/1e13d7b77d8d5883a32d1a8aaac01a5bb2cc1d0ee2cc297ff096fd74e538dac9.front-on-240x240.webp"
+        },
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnBlk/a5b46fed559752601f7f693fd545be3ff7363ac530d7f57d0d6e1e085a7ab0db.front-on-240x240.webp"
+        },
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallShnGl/c338a2c2de3bcd1fe6d673bcf58a9384417768f0a90b902dfa54314ce88d183d.front-on-240x240.webp"
+        }
+      ],
+      "body": "FREE SHIPPING ON ORDERS ABOVE $99 · NEED FITMENT HELP? TALK WITH GRACE, AI BOTTLING SPECIALIST\n\nBottles\nClosures\nSpecialty\nCatalog\nBuild Your Bottle\nJournal\nAbout\nHome\nCatalog\nBoston Round\n30 ml Amber Boston Round Roll-On Bottle - Matte Black Cap\nCAP ON\nPhoto\nDimensions\n\nGLASS BOTTLE · BOSTON ROUND\n\n30 ml Amber Boston Round Roll-On Bottle - Matte B"
+    },
+    {
+      "width": 390,
+      "status": 200,
+      "errors": [],
+      "title": "30 ml Amber Boston Round Roll-On Bottle - Matte Black Cap | Best Bottles",
+      "overflow": false,
+      "localCandidates": 0,
+      "images": [
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0.front-on-1000x1100.webp"
+        },
+        {
+          "loaded": true,
+          "src": "http://localhost:3041/assets/glass-swatches/amber-v6.webp"
+        },
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/fed8bacf88c6fb16b823b3336664f7a10f32629f15598ff9ef63099e2dc7f59f.front-off-240x240.webp"
+        },
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/roll-on-cap-20-400/CPRoll20-400TallMattBlk/d31c537995112284f98fbaea368026163ede91e4a4300716a0ffa63ebecd218a.front-on-240x240.webp"
+        },
+        {
+          "loaded": true,
+          "src": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/boston-round-30ml-amber-20-400/GBBstnAmb1ozMtlRollonMattBlk/1d9cd3c82954dad493ad721b81cec161b63ec8963b79b6cbc48d34b19c0384a0.front-on-240x240.webp"
+        }
+      ],
+      "body": "View Larger\nConfigure this bottle\n\nTap a row to change an option. The bottle updates above.\n\nGLASS FINISH\nAmber\n2 other options\nChange\nROLLER\nMetal Roller\n1 other option\nChange\nCAP COLOR\nMatte Black\n5 other options\nChange\n\nGLASS BOTTLE · BOSTON ROUND\n\n30 ml Amber Boston Round Roll-On Bottle - Matte Black Cap\n\n$1.07/each\n\nAVAILABLE TO ORDER\nNECK\n20-"
+    }
+  ]
+}

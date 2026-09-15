@@ -15,7 +15,6 @@ const REQUIRED: Array<[keyof typeof LABELS, string]> = [
     ["accountNumber", "accountNumber"],
     ["tier", "tier"],
     ["accountManager", "accountManager"],
-    ["netTerms", "netTerms"],
     ["memberSince", "memberSince"],
 ];
 
@@ -25,7 +24,6 @@ const LABELS = {
     accountNumber: "Enter an account number.",
     tier: "Enter the pricing tier.",
     accountManager: "Enter the account manager.",
-    netTerms: "Enter the payment terms.",
     memberSince: "Enter when this account started.",
 } as const;
 

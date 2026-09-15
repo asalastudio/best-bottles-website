@@ -1,0 +1,800 @@
+[
+  {
+    "sku": "GBCyl1ozRollWht",
+    "sourceSha256": "6f63bd84d0ababc7a48ab3c26c6804c7ca2e19e032c6828dcbda1fc1534534d0",
+    "sourcePath": "13. 16 mm/2. 28ml  Uncapped/4.  GBCyl28RollWht.psd",
+    "glass": {
+      "width": 429.0,
+      "baseY": 1825,
+      "topY": 477,
+      "centerX": 420.0,
+      "left": 204,
+      "right": 639
+    },
+    "capCandidates": [
+      {
+        "index": 3,
+        "name": "Layer 6",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          773,
+          1313,
+          1269,
+          1828
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCyl5RollBlkSh",
+    "sourceSha256": "70ea08f12d4df91a7f696949259206c9478e29fb57d087c7677b34b74a585c10",
+    "sourcePath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /25. GBCyl5RollBlkSh.psd",
+    "glass": {
+      "width": 201.0,
+      "baseY": 873,
+      "topY": 145,
+      "centerX": 165.0,
+      "left": 62,
+      "right": 268
+    },
+    "capCandidates": []
+  },
+  {
+    "sku": "GBCyl5RollCuMatt",
+    "sourceSha256": "8210a78ade614a0cbd874693b008514ffac38ce550bda113fda1c27d0813e2db",
+    "sourcePath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /23. GBCyl5RollCuMatt.psd",
+    "glass": {
+      "width": 201.0,
+      "baseY": 873,
+      "topY": 145,
+      "centerX": 165.0,
+      "left": 62,
+      "right": 268
+    },
+    "capCandidates": [
+      {
+        "index": 3,
+        "name": "Layer 32",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          330,
+          574,
+          526,
+          870
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCyl5RollGlMatt",
+    "sourceSha256": "a1c793b2526d82f39cc93039a5af2287126df93d2865a7e0c2840cd725a1b45b",
+    "sourcePath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /17. GBCyl5RollGlMatt.psd",
+    "glass": {
+      "width": 201.0,
+      "baseY": 872,
+      "topY": 145,
+      "centerX": 165.0,
+      "left": 62,
+      "right": 268
+    },
+    "capCandidates": []
+  },
+  {
+    "sku": "GBCyl5RollGlSh",
+    "sourceSha256": "361054bf8fcffde78949152ebb984354c195bbb2c0f2aac7f74bbe5417c11062",
+    "sourcePath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /19. GBCyl5RollGlSh.psd",
+    "glass": {
+      "width": 201.0,
+      "baseY": 872,
+      "topY": 145,
+      "centerX": 165.0,
+      "left": 62,
+      "right": 268
+    },
+    "capCandidates": [
+      {
+        "index": 3,
+        "name": "Layer 30",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          330,
+          569,
+          531,
+          870
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCyl5RollPinkDot",
+    "sourceSha256": "94d54eeaf98142f3cdf6cdc0d40884209d17b92380ec6cd24e50e2ae06d71e47",
+    "sourcePath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /13. GBCyl5RollPinkDot.psd",
+    "glass": {
+      "width": 201.0,
+      "baseY": 869,
+      "topY": 145,
+      "centerX": 165.0,
+      "left": 62,
+      "right": 268
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Capped",
+        "kind": "group",
+        "opacity": 255,
+        "blend": "BlendMode.PASS_THROUGH",
+        "bounds": [
+          328,
+          589,
+          529,
+          873
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCyl5RollSlMatt",
+    "sourceSha256": "0b5d8ca174438c8a73c4f2f17341d0163e6c7a9b6d589774f4d6472d895ea00f",
+    "sourcePath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /15. GBCyl5RollSlMatt.psd",
+    "glass": {
+      "width": 201.0,
+      "baseY": 872,
+      "topY": 145,
+      "centerX": 165.0,
+      "left": 62,
+      "right": 268
+    },
+    "capCandidates": []
+  },
+  {
+    "sku": "GBCyl5RollSlSh",
+    "sourceSha256": "04c277216f2f86b61a39907f07cd31937c54fe14eb11f1b60ec8ae565faa6d17",
+    "sourcePath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /21. GBCyl5RollSlSh.psd",
+    "glass": {
+      "width": 201.0,
+      "baseY": 873,
+      "topY": 145,
+      "centerX": 165.0,
+      "left": 62,
+      "right": 268
+    },
+    "capCandidates": []
+  },
+  {
+    "sku": "GBCyl5WhtSht",
+    "sourceSha256": "34da6a19e04971098672d825d186fecea690495aa1a3c17079e42905aa8f31dc",
+    "sourcePath": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /2. GBCyl5WhtSht.psd",
+    "glass": {
+      "width": 201.5,
+      "baseY": 776,
+      "topY": 148,
+      "centerX": 169.25,
+      "left": 66,
+      "right": 272
+    },
+    "capCandidates": [
+      {
+        "index": 2,
+        "name": "Layer 6",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          331,
+          658,
+          517,
+          781
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5RollBlkDot",
+    "sourceSha256": "48d61d4a2f06f9b1844490331dc24b3d612934dcb58dce0ca25fb9d86898b290",
+    "sourcePath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/27. GBCylBlu5RollBlkDot.psd",
+    "glass": {
+      "width": 203.0,
+      "baseY": 936,
+      "topY": 212,
+      "centerX": 182.0,
+      "left": 80,
+      "right": 283
+    },
+    "capCandidates": [
+      {
+        "index": 2,
+        "name": "Layer 18",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          335,
+          648,
+          544,
+          937
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5RollBlkSh",
+    "sourceSha256": "5a09b5b1cd73fad59945894a2385158f6160565fab201fc1e0d46680a2706c02",
+    "sourcePath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/25. GBCylBlu5RollBlkSh.psd",
+    "glass": {
+      "width": 203.0,
+      "baseY": 936,
+      "topY": 212,
+      "centerX": 182.0,
+      "left": 80,
+      "right": 283
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 13",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          343,
+          646,
+          543,
+          939
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5RollCuMatt",
+    "sourceSha256": "92b5439c8c9680259e9af9f6ec1b76c69d37147de71458ef3dc0b00ced7994f4",
+    "sourcePath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/23. GBCylBlu5RollCuMatt.psd",
+    "glass": {
+      "width": 203.0,
+      "baseY": 936,
+      "topY": 212,
+      "centerX": 175.0,
+      "left": 73,
+      "right": 276
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 12",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          344,
+          647,
+          541,
+          937
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5RollGlMatt",
+    "sourceSha256": "f4a9e129107a4c7087862dcc83416e582d8667fb45b8c70a0a0cd568d9321374",
+    "sourcePath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/17. GBCylBlu5RollGlMatt.psd",
+    "glass": {
+      "width": 203.0,
+      "baseY": 936,
+      "topY": 212,
+      "centerX": 176.0,
+      "left": 74,
+      "right": 277
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 9",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          340,
+          645,
+          542,
+          940
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5RollGlSh",
+    "sourceSha256": "e7e1dd604c6f9bdc58931fa94d1452ca16b19d77f45f5e3d77f864dbdc8b9a76",
+    "sourcePath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/19. GBCylBlu5RollGlSh.psd",
+    "glass": {
+      "width": 203.0,
+      "baseY": 936,
+      "topY": 212,
+      "centerX": 178.0,
+      "left": 76,
+      "right": 279
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 10",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          341,
+          637,
+          542,
+          938
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5RollPinkDot",
+    "sourceSha256": "520d49f2f56b18ff3bedbb00e38de02f6d68c1f4f2028bd4675f4b20517aa053",
+    "sourcePath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/13. GBCylBlu5RollPinkDot.psd",
+    "glass": {
+      "width": 203.0,
+      "baseY": 936,
+      "topY": 212,
+      "centerX": 179.0,
+      "left": 77,
+      "right": 280
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 6",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          340,
+          654,
+          541,
+          938
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5RollSlDot",
+    "sourceSha256": "775425cdf1b6d7f83547f079bdf7c22b9e81b8f5963bd740725e16ad52255cff",
+    "sourcePath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/11. GBCylBlu5RollSlDot.psd",
+    "glass": {
+      "width": 203.0,
+      "baseY": 936,
+      "topY": 212,
+      "centerX": 169.0,
+      "left": 68,
+      "right": 271
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 18",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          336,
+          652,
+          537,
+          938
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5RollSlMatt",
+    "sourceSha256": "0e1695bb3a3ecdb5432bf8617425f62b73c3ca66d27df47611cef0f8bfd05d1e",
+    "sourcePath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/15. GBCylBlu5RollSlMatt.psd",
+    "glass": {
+      "width": 203.0,
+      "baseY": 936,
+      "topY": 212,
+      "centerX": 179.0,
+      "left": 77,
+      "right": 280
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          341,
+          646,
+          542,
+          936
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBCylBlu5RollSlSh",
+    "sourceSha256": "c2736322a0b6c88b1b258d0395bcadce281a96cfa8cae003fd50da46f9028cae",
+    "sourcePath": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/21. GBCylBlu5RollSlSh.psd",
+    "glass": {
+      "width": 203.0,
+      "baseY": 936,
+      "topY": 212,
+      "centerX": 176.0,
+      "left": 74,
+      "right": 277
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 11",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          339,
+          643,
+          541,
+          940
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBMtlRoll28Blk",
+    "sourceSha256": "50d44a77f0efb65fe6c3b4e569d2138799acbe4a0136fd5708cba59286fb958c",
+    "sourcePath": "13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd",
+    "glass": {
+      "width": 429.0,
+      "baseY": 1825,
+      "topY": 484,
+      "centerX": 420.0,
+      "left": 204,
+      "right": 639
+    },
+    "capCandidates": [
+      {
+        "index": 3,
+        "name": "Layer 5",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          825,
+          1313,
+          1255,
+          1822
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBMtlRoll28Wht",
+    "sourceSha256": "14a4c0e68cc5821aa0da5f8f4f1a1ad9578c5850eb3e8f80fd28c5666faf1bd4",
+    "sourcePath": "13. 16 mm/2. 28ml  Uncapped/2.  GBCyl28MtlRollWht.psd",
+    "glass": {
+      "width": 429.0,
+      "baseY": 1825,
+      "topY": 484,
+      "centerX": 420.0,
+      "left": 204,
+      "right": 639
+    },
+    "capCandidates": [
+      {
+        "index": 3,
+        "name": "Layer 6",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          773,
+          1313,
+          1269,
+          1828
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBRoll28Blk",
+    "sourceSha256": "27e61c60b32e4fb7c762a46239de914bbabeb54b0f90009bde6f69774a395745",
+    "sourcePath": "13. 16 mm/2. 28ml  Uncapped/3. GBCyl28RollBlk.psd",
+    "glass": {
+      "width": 429.0,
+      "baseY": 1825,
+      "topY": 479,
+      "centerX": 420.0,
+      "left": 204,
+      "right": 639
+    },
+    "capCandidates": [
+      {
+        "index": 4,
+        "name": "Layer 5",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          825,
+          1313,
+          1255,
+          1822
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBSpry1ozSl",
+    "sourceSha256": "c1f3997dac5a55dc8cf90bc3ac2f3ad715fbf4a4b12f440947877417ba91ba6a",
+    "sourcePath": "17. Additional Bottles/GB1ozSl..psd",
+    "glass": {
+      "width": 595.0,
+      "baseY": 1898,
+      "topY": 296,
+      "centerX": 2752.0,
+      "left": 2453,
+      "right": 3049
+    },
+    "capCandidates": []
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkDot",
+    "sourceSha256": "c3907748833354c4f820ecb0c47aabb6e03521d89c151a81191998507c67ff28",
+    "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/26. GBTallCyl9MtlRollBlkDot.psd",
+    "glass": {
+      "width": 219.0,
+      "baseY": 1513,
+      "topY": 164,
+      "centerX": 248.0,
+      "left": 133,
+      "right": 362
+    },
+    "capCandidates": [
+      {
+        "index": 3,
+        "name": "Layer 10",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          455,
+          1225,
+          660,
+          1513
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBTallCyl9RollBlkDot",
+    "sourceSha256": "fbcae3a6c0f238b634856b778cfe00d148550c809ab1c19b7056b2bb8b26dbe7",
+    "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/27. GBTallCyl9RollBlkDot.psd",
+    "glass": {
+      "width": 219.0,
+      "baseY": 1513,
+      "topY": 167,
+      "centerX": 248.0,
+      "left": 133,
+      "right": 362
+    },
+    "capCandidates": [
+      {
+        "index": 2,
+        "name": "Layer 10",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          455,
+          1225,
+          660,
+          1513
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBTallCyl9RollBlkSh",
+    "sourceSha256": "c12f3217c0346fe5bad323e8982152f6563419c28a4c6c28fd13da040463ac76",
+    "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/25. GBTallCyl9RollBlkSh.psd",
+    "glass": {
+      "width": 219.0,
+      "baseY": 1515,
+      "topY": 167,
+      "centerX": 249.0,
+      "left": 134,
+      "right": 363
+    },
+    "capCandidates": [
+      {
+        "index": 3,
+        "name": "Layer 8",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          458,
+          1223,
+          666,
+          1518
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBTallCyl9RollCuMatt",
+    "sourceSha256": "f668feec8d88d20bc2f933d1f9e7d874f852328a733bfdc417ae1c5ea3ef244f",
+    "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/23. GBTallCyl9RollCuMatt.psd",
+    "glass": {
+      "width": 219.0,
+      "baseY": 1516,
+      "topY": 167,
+      "centerX": 249.0,
+      "left": 134,
+      "right": 363
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 9",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          448,
+          1221,
+          644,
+          1518
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBTallCyl9RollGlMatt",
+    "sourceSha256": "8e31e0003c11c398de1ec7fa84caa4bb0ccf5f29cb9966c7989a32ec69dc28bc",
+    "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/17. GBTallCyl9RollGlMatt.psd",
+    "glass": {
+      "width": 219.0,
+      "baseY": 1516,
+      "topY": 168,
+      "centerX": 258.0,
+      "left": 142,
+      "right": 372
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 6",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          458,
+          1213,
+          661,
+          1508
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBTallCyl9RollGlSh",
+    "sourceSha256": "9a866a458722fb452fc24bc030507b48293107672e4c65f60cfc71ed5570b5e1",
+    "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/19. GBTallCyl9RollGlSh.psd",
+    "glass": {
+      "width": 219.0,
+      "baseY": 1516,
+      "topY": 168,
+      "centerX": 248.0,
+      "left": 132,
+      "right": 362
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 7",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          439,
+          1215,
+          645,
+          1518
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBTallCyl9RollSlMatt",
+    "sourceSha256": "3636e17c77b5abf829804eaafb7e7abba3a9f802b10a64a76ab31182494f8e84",
+    "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/15. GBTallCyl9RollSlMatt.psd",
+    "glass": {
+      "width": 219.0,
+      "baseY": 1516,
+      "topY": 169,
+      "centerX": 278.0,
+      "left": 162,
+      "right": 392
+    },
+    "capCandidates": [
+      {
+        "index": 3,
+        "name": "Layer 23",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          463,
+          1228,
+          664,
+          1518
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBTallCyl9RollSlSh",
+    "sourceSha256": "d4ccce46670d31d414d08d3db58703cc94a9580240d0e057479260f6dcb7932c",
+    "sourcePath": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/21. GBTallCyl9RollSlSh.psd",
+    "glass": {
+      "width": 219.0,
+      "baseY": 1516,
+      "topY": 167,
+      "centerX": 249.0,
+      "left": 134,
+      "right": 363
+    },
+    "capCandidates": [
+      {
+        "index": 1,
+        "name": "Layer 8",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          434,
+          1220,
+          637,
+          1518
+        ]
+      }
+    ]
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollBlkDot",
+    "sourceSha256": "97770771eb7a2e57aedef67f0ef298b94c31d41c5fa7bc28be97bdeedf17668d",
+    "sourcePath": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/26. GBTallCylFrst9MtlRollBlkDot.psd",
+    "glass": {
+      "width": 208.0,
+      "baseY": 1518,
+      "topY": 164,
+      "centerX": 242.5,
+      "left": 137,
+      "right": 348
+    },
+    "capCandidates": [
+      {
+        "index": 3,
+        "name": "Layer 10",
+        "kind": "pixel",
+        "opacity": 255,
+        "blend": "BlendMode.NORMAL",
+        "bounds": [
+          455,
+          1225,
+          660,
+          1513
+        ]
+      }
+    ]
+  }
+]

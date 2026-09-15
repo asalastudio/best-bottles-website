@@ -1,0 +1,878 @@
+{
+  "writtenAt": "2026-09-12T02:24:32.584Z",
+  "registry": "src/lib/products/catalog-heroes.json",
+  "manifest": "docs/reviews/catalog-complete-hero-release-2026-09-07.json",
+  "note": "Restore each `from` (url, manifest sha256, framing) to undo the Sunburst release 1 repoint.",
+  "rows": [
+    {
+      "websiteSku": "FunnelMetalGl",
+      "family": "Tool",
+      "from": {
+        "url": "/images/catalog/bone-review/FunnelMetalGl.42533e4072ba.png",
+        "manifestSha256": "42533e4072baed5ba13c68a9eefbae00ab02b7999cc2732ac68e018001427127",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/FunnelMetalGl.cd3bde0eb208.png",
+        "sha256": "cd3bde0eb208e60222a65b14693a59bdb89b5eed6e41ccd25e1a490ac18e432a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:04.848Z"
+    },
+    {
+      "websiteSku": "GB09BlackCapApp",
+      "family": "Vial",
+      "from": {
+        "url": "/images/catalog/bone-review/GB09BlackCapApp.ef0a4e27861e.png",
+        "manifestSha256": "ef0a4e27861eb4a80e3286fa677f13df305444a6353b7d50e161184aa5d209c1",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GB09BlackCapApp.3e70fd89b054.png",
+        "sha256": "3e70fd89b054a0d7a9292e19cd5875e55589c70b9042b9708877e41abc5492de",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:09.811Z"
+    },
+    {
+      "websiteSku": "GB15ApthBlue",
+      "family": "Apothecary",
+      "from": {
+        "url": "/images/catalog/bone-review/GB15ApthBlue.db2ca82a7ccd.png",
+        "manifestSha256": "db2ca82a7ccd7b4bad0c31000b8d39e18516392ef2bac1e2cd5b78e6d3a535dd",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GB15ApthBlue.fbf439e63916.png",
+        "sha256": "fbf439e639162d02b7fb7b69e0511ab57e75eb855a09f295a69d3d58507b6925",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:12.690Z"
+    },
+    {
+      "websiteSku": "GB1ozGenieCl",
+      "family": "Decorative",
+      "from": {
+        "url": "/images/catalog/bone-review/GB1ozGenieCl.80c67dd52ba9.png",
+        "manifestSha256": "80c67dd52ba93f59b8b972aa1f029f56ee08347dca1168713bcdb6fac1087348",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GB1ozGenieCl.2f951f4bbc06.png",
+        "sha256": "2f951f4bbc06b65903b85685da96abf06a7605dd27517b04454f74e00d2b2810",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:26.382Z"
+    },
+    {
+      "websiteSku": "GB3TPlGl",
+      "family": "Decorative",
+      "from": {
+        "url": "/images/catalog/bone-review/GB3TPlGl.358aeaaf70a4.png",
+        "manifestSha256": "358aeaaf70a48882ef2e2084fdbedf8f8582436a71e75d923c51ef50eec5db06",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GB3TPlGl.3f8144514e31.png",
+        "sha256": "3f8144514e31abecc5664b2f63df9fa858f7584bec88ac1d42716a6a9ab3d878",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:25.831Z"
+    },
+    {
+      "websiteSku": "GBAtom10Blk",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom10Blk.5c2e4a045eb1.png",
+        "manifestSha256": "5c2e4a045eb1a983f190315e5a248e69dd9df13a003385ce385c5046fb64a11a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom10Blk.93294ef8c127.png",
+        "sha256": "93294ef8c12759dd8c2906444c0e18209ae2f456259f4de01db0935c9f62f130",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:42.094Z"
+    },
+    {
+      "websiteSku": "GBAtom10Blu",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom10Blu.4997592e9827.png",
+        "manifestSha256": "4997592e9827f7eea2833a3b03536083bc2f1dca716aab6d5d90e54c751609e8",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom10Blu.0bdcb429bba6.png",
+        "sha256": "0bdcb429bba6db90721bd1fb7e048539b5e78da84dd12404b5c52fe733825485",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:42.605Z"
+    },
+    {
+      "websiteSku": "GBAtom10Gl",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom10Gl.e6059c9d0c99.png",
+        "manifestSha256": "e6059c9d0c99a56f9c762acb7ba4666398cf1691bd5c236ded26a6c6db9bc11e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom10Gl.c34d6b368329.png",
+        "sha256": "c34d6b3683299d39e1fd173a5ac228ffbd488511bf80e92d8b34cf6551308113",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:43.415Z"
+    },
+    {
+      "websiteSku": "GBAtom10Gr",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom10Gr.d191428a5513.png",
+        "manifestSha256": "d191428a55137984387bb3200ceb0bee3f3d3912b97948e50e1f0eac13c0f9d3",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom10Gr.f28979d78ba8.png",
+        "sha256": "f28979d78ba8671022042cfc40d476253f62303e655b5b6b7722b76588b0d2dd",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:43.965Z"
+    },
+    {
+      "websiteSku": "GBAtom10Lv",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom10Lv.ed24857780e7.png",
+        "manifestSha256": "ed24857780e7325db95e18a87c379cfcd42be9d63c63721351056263eb3b05c3",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom10Lv.b10e2702abc8.png",
+        "sha256": "b10e2702abc8ce47590b6f7f3d78cf72ee0ebe67925d02177306c10c8dac1fbe",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:50.396Z"
+    },
+    {
+      "websiteSku": "GBAtom10Pnk",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom10Pnk.bce25761537f.png",
+        "manifestSha256": "bce25761537f4f54f8366fc730cf5bbd6eaed7970eaeea91edaed625314d19d6",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom10Pnk.5afcb965c86f.png",
+        "sha256": "5afcb965c86fb65d693a648a6622fdb0e797619b36db9ac69036d3f36bd58f55",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:49.825Z"
+    },
+    {
+      "websiteSku": "GBAtom10Red",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom10Red.ce3108e4e3a8.png",
+        "manifestSha256": "ce3108e4e3a837e057f18dc4c080ff4a383b597a1ab469c3954b908d287924df",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom10Red.0d131e700a12.png",
+        "sha256": "0d131e700a12f5dc7f5548d03400df880c1cebbbd20a77c7b64823b6700b5c4a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:49.266Z"
+    },
+    {
+      "websiteSku": "GBAtom10SlStars",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom10SlStars.ff6ffcab9274.png",
+        "manifestSha256": "ff6ffcab9274d5389064807776d61980f41c44b70cf7e74346f813f6cf92a9c1",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom10SlStars.769d44f12dc8.png",
+        "sha256": "769d44f12dc85ee9e5dbc3b1b6c3c2e953f93a4a1684b6e242f82b74fec5a052",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:48.666Z"
+    },
+    {
+      "websiteSku": "GBAtom5Blk",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom5Blk.3b600a28ceb3.png",
+        "manifestSha256": "3b600a28ceb3993b2b4bc44c79e0c52b94e8d7610f7ec325945e7f412c0ea97e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom5Blk.309f38bf503b.png",
+        "sha256": "309f38bf503bc4d7150aef1f967181090cc1060b19ed195f71b7311fea969e4e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:57.823Z"
+    },
+    {
+      "websiteSku": "GBAtom5BlkDot",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom5BlkDot.3fd30f533eee.png",
+        "manifestSha256": "3fd30f533eee35712683119c300182d30f34a6b28b46ba4c4db4a470a3ce1c04",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom5BlkDot.0707c6145029.png",
+        "sha256": "0707c61450295c89a3fd4588b059718bf338140eabe33fba0dd437c30bb47393",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:58.582Z"
+    },
+    {
+      "websiteSku": "GBAtom5Blu",
+      "family": "Atomizer",
+      "from": {
+        "url": "/images/catalog/bone-review/GBAtom5Blu.3f87150071d8.png",
+        "manifestSha256": "3f87150071d896849336f7c55d1f58715da6544b09eada9de92bca03e0ee8dbf",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBAtom5Blu.5439ec026219.png",
+        "sha256": "5439ec02621911302f7e3c6a7dd9ea27d83fd89d2d2ed2c5dc793241a3da6aea",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:59.290Z"
+    },
+    {
+      "websiteSku": "GBBell10MtlRollBlkDot",
+      "family": "Bell",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBell10MtlRollBlkDot.2d3e7993e79f.png",
+        "manifestSha256": "2d3e7993e79f694a35ef7472e2ca336a762837aef6957e49bb48d35dc39293c7",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBell10MtlRollBlkDot.cd58c576dfe1.png",
+        "sha256": "cd58c576dfe1a3004f5f624520f4b5169da2dea63d5ef8cb05191f2ee7e54913",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:18:04.860Z"
+    },
+    {
+      "websiteSku": "GBBell10SpryBlkSh",
+      "family": "Bell",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBell10SpryBlkSh.7b6c85618c7c.png",
+        "manifestSha256": "7b6c85618c7c112e47d8503953581408781ad02e181a8e53a201d071cfc5313d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBell10SpryBlkSh.5f41d01e9a4c.png",
+        "sha256": "5f41d01e9a4c48ff6c1f390c24922ede04a35ebc168152a783e24916d187efbd",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:18:03.533Z"
+    },
+    {
+      "websiteSku": "GBBstn1ozBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.5a1795216223.png",
+        "manifestSha256": "5a17952162234aed03bb269b00683d2208e93f7ed85dfc3ddc1508a51d80d013",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.d1ca21c8a1dd.png",
+        "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:19:40.420Z"
+    },
+    {
+      "websiteSku": "GBBstn2ozBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstn2ozBlkCapSht.3394b07f25e0.png",
+        "manifestSha256": "3394b07f25e03dc9b4194a7ddd254b1d4c9cc42659d7424587611fdf05bedc66",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstn2ozBlkCapSht.6f5506b0bf8f.png",
+        "sha256": "6f5506b0bf8f1583404b55a27c3c4dae8669afae9ac0fe0d68fb07540a483adc",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:18:58.842Z"
+    },
+    {
+      "websiteSku": "GBBstn2ozBlkDrprShnGlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstn2ozBlkDrprShnGlTrim.545c80067882.png",
+        "manifestSha256": "545c8006788267d454719c5ed8eff4e720c6f267af2220d3355dc9c8a30553ec",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstn2ozBlkDrprShnGlTrim.28965cd6cec0.png",
+        "sha256": "28965cd6cec063c5aa47524add4cc3e7f4b2890d9597c18121450e77b9bc9317",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:18:54.435Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb15mlWhtDropperGlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb15mlWhtDropperGlTrim.c187b126126c.png",
+        "manifestSha256": "c187b126126c81a5963706e052da006a7daaaa014a7c9dd8fdf1cf82fff48edd",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb15mlWhtDropperGlTrim.328611f750e9.png",
+        "sha256": "328611f750e9d8064545727a040da7e45f372730d3737ae41e082a79522f1891",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:19:33.420Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb1ozBlkCapSht.6faf4b8b6c10.png",
+        "manifestSha256": "6faf4b8b6c104d5eb38d820b1f584d191990956057490f7fe2dfce098dd78a87",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb1ozBlkCapSht.862068a58da1.png",
+        "sha256": "862068a58da1641185d127450dcd5496e19cca80f47f6d9f79f53cf96aba421e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:19:31.707Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozMtlRollonMattSl",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb1ozMtlRollonMattSl.6dd238ef1080.png",
+        "manifestSha256": "6dd238ef1080e2ff288498e40ce4af8a4cf7991c8e91a32b19b5ec6f00375b16",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb1ozMtlRollonMattSl.c8abdf0ac6d2.png",
+        "sha256": "c8abdf0ac6d2471ae3e259798caeb96b64fdd00f2b62e619c14d86fa0412a4f8",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:19:31.121Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb1ozWhtDropperShnGlTrim.88c732f88850.png",
+        "manifestSha256": "88c732f88850b4241bab816b0f25eca7214195f8453c07269cd7c985b495c4af",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb1ozWhtDropperShnGlTrim.7ca9ea270a2f.png",
+        "sha256": "7ca9ea270a2f451cc13dfa2eddce87b5dda54bc30cc8d27c99eb68e4037149ea",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:19:54.800Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkCapSht.0a049bf81a7e.png",
+        "manifestSha256": "0a049bf81a7e58bf50a78ae7b75794c4754f02639c43c142edc20b29663bb188",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkCapSht.1ed776afb876.png",
+        "sha256": "1ed776afb876d9efcc3ac0c9cef518802dc518d3a3b21d696e2db8e7295689ea",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:19:54.201Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkDropperShnGlTrim.1a16a706700b.png",
+        "manifestSha256": "1a16a706700b4cd2c9fcabb12e899a50029648512795044ff5d8d5f32a8391ef",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkDropperShnGlTrim.b8fb228d863e.png",
+        "sha256": "b8fb228d863ee858ce20e6e5b5a31ed38550b9574a6e4e13004b55c2527073b5",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:19:53.732Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozMtlRollonMattGl",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozMtlRollonMattGl.dcf1ad432414.png",
+        "manifestSha256": "dcf1ad432414b5b3794b30fb720ad9e0f55fcb055fadf4dbc643a30a6d199ca4",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozMtlRollonMattGl.45ed3646a6be.png",
+        "sha256": "45ed3646a6bea88e4f5b7088a0dd413cc77221829655743ec0e473a45cefa87a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:20:00.603Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu15BlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu15BlkCapSht.62ea28710ce8.png",
+        "manifestSha256": "62ea28710ce8c9287aa7b93a05fcace99a2d14467b5a7f22153090a470f8988f",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu15BlkCapSht.a79ca8c075a4.png",
+        "sha256": "a79ca8c075a42407e25fde99196e8762e7634573ff10406d9c869b4e1e23f202",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:20:02.142Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu15mlBlkDropperSlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu15mlBlkDropperSlTrim.ccca37eb05b3.png",
+        "manifestSha256": "ccca37eb05b38c7e9d915354d66f8f735bb201a83aadefb9652a7b450a339f3d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu15mlBlkDropperSlTrim.b70a912a72ea.png",
+        "sha256": "b70a912a72eab5190d1398d83b28b33136d03c8ad1041fe82ab0b263d9ddf139",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:20:02.682Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkDropperShnGlTrim.1ff1776e2635.png",
+        "manifestSha256": "1ff1776e26351cd1494b4e3206ecc76eca2d905826c8695c1fb8ab792e5163ef",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkDropperShnGlTrim.036590a86c6e.png",
+        "sha256": "036590a86c6e4929a61628aa6f3bb72fced37e2a3f5ec1722ab7a4ca9fedda77",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:20:10.887Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkCapSht.2ca680e98a02.png",
+        "manifestSha256": "2ca680e98a022db8a71487c502bfad2dde869abc5264f2c46e08a0a328fa19b7",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkCapSht.289623853ece.png",
+        "sha256": "289623853ece3f8a30aaebd41cef8c7f309912a91c02b78c13a12a69380ecc02",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:20:12.114Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkDropperShnGlTrim.18de2c402cad.png",
+        "manifestSha256": "18de2c402caddcd0c454f1a671da7b772a66399dd011efee93665d22c8c6501f",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkDropperShnGlTrim.650b424ffa6e.png",
+        "sha256": "650b424ffa6e448dedb5f0be7b14d5eb48a735ad6c71264f1fe4f76dae971bd7",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:20:12.955Z"
+    },
+    {
+      "websiteSku": "GBCB12ozPear",
+      "family": "Decorative",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCB12ozPear.f88ac19f77fc.png",
+        "manifestSha256": "f88ac19f77fcabf2dad4d147c0196cd2216f89805c3b21d44c25779a3708057c",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCB12ozPear.39042325635d.png",
+        "sha256": "39042325635d8d3c0c3bb484d77685345f86a491b4604d0ee9326e368f6d5226",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:24.613Z"
+    },
+    {
+      "websiteSku": "GBHeartFrst4TslRed",
+      "family": "Decorative",
+      "from": {
+        "url": "/images/catalog/bone-review/GBHeartFrst4TslRed.bfc64e86fae1.png",
+        "manifestSha256": "bfc64e86fae1e3092fc8b8e1f8d5be3b2dfa1c7cba30c84ed57cff2297fca505",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBHeartFrst4TslRed.72085c2aa183.png",
+        "sha256": "72085c2aa1830c424b586ce9dd5abab7179bafce0d7b2899c7854c62058259b5",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "r7-resettle-approved-2026-09-11",
+      "approvedAt": "2026-09-12T02:17:25.242Z"
+    }
+  ],
+  "skipped": [
+    {
+      "sku": "GBBell10RollBlkDot",
+      "why": "no registry row yet (new product group) — needs a row with group slug and variant before it can be indexed"
+    },
+    {
+      "sku": "GBBstn1ozRollonShBlk",
+      "why": "no registry row yet (new product group) — needs a row with group slug and variant before it can be indexed"
+    },
+    {
+      "sku": "GBBstn2ozMtlRollGl",
+      "why": "no registry row yet (new product group) — needs a row with group slug and variant before it can be indexed"
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattGl",
+      "why": "no registry row yet (new product group) — needs a row with group slug and variant before it can be indexed"
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattGl",
+      "why": "no registry row yet (new product group) — needs a row with group slug and variant before it can be indexed"
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonMattBlk",
+      "why": "no registry row yet (new product group) — needs a row with group slug and variant before it can be indexed"
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattGl",
+      "why": "no registry row yet (new product group) — needs a row with group slug and variant before it can be indexed"
+    }
+  ]
+}

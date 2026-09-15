@@ -3,7 +3,7 @@
 import { act, createElement } from "react";
 import { createRoot } from "react-dom/client";
 import { renderToStaticMarkup } from "react-dom/server";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import FocusedApplicationCards from "@/components/catalog/FocusedApplicationCards";
 import FocusedFinderControls, { exclusiveFacetValue } from "@/components/catalog/FocusedFinderControls";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
@@ -18,6 +18,8 @@ import {
     safeCatalogReturnPath,
 } from "@/components/catalog/FinderNavigationMemory";
 import type { GuidedFinderFamily, GuidedFinderProduct } from "@/lib/products/guided-finder";
+vi.mock("@/components/CartProvider", () => ({ useCart: () => ({ addItems: () => {}, itemCount: 0, isCartHydrated: true }) }));
+vi.mock("convex/react", () => ({ useQuery: () => undefined }));
 
 const finderUrl = "/catalog/application/roll-on?capacity=9+ml&rollerMaterial=metal";
 
@@ -41,6 +43,10 @@ const product: GuidedFinderProduct = {
     shopifySellable: true,
     checkoutReady: true,
     href: "/products/cylinder-9ml-amber",
+    purchase: null,
+        variantPreviews: [],
+        capKind: null,
+        slug: "fixture-slug",
 };
 
 const families: GuidedFinderFamily[] = [{ family: "Cylinder", exactProducts: [product] }];

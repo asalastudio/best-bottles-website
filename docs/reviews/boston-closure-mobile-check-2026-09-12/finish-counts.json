@@ -1,0 +1,22 @@
+{
+  "before": {
+    "at": "2026-09-13T02:08:59.243Z",
+    "platesApproved": 62,
+    "prepared": 61,
+    "candidateApprovals": 0,
+    "indexedGaps": 33,
+    "kitsLive": 0,
+    "heroGroupsComplete": 23,
+    "changed": false
+  },
+  "after": {
+    "at": "2026-09-13T02:17:05.454Z",
+    "platesApproved": 62,
+    "prepared": 61,
+    "candidateApprovals": 0,
+    "indexedGaps": 33,
+    "kitsLive": 0,
+    "heroGroupsComplete": 23
+  },
+  "countsChanged": false
+}

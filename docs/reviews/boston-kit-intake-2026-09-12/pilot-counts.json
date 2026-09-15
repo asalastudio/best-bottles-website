@@ -1,0 +1,28 @@
+{
+  "before": {
+    "at": "2026-09-13T02:41:47.083Z",
+    "catalogSkus": 123,
+    "approvedPlates": 62,
+    "preparedPlates": 61,
+    "candidatePlateApprovals": 0,
+    "indexedGaps": 33,
+    "liveKits": 0,
+    "kitCandidates": 25,
+    "kitHolds": 65,
+    "sunburstCompleteGroups": 23
+  },
+  "after": {
+    "at": "2026-09-13T02:41:47.083Z",
+    "catalogSkus": 123,
+    "approvedPlates": 62,
+    "preparedPlates": 61,
+    "candidatePlateApprovals": 0,
+    "indexedGaps": 33,
+    "liveKits": 0,
+    "kitCandidates": 25,
+    "kitHolds": 65,
+    "sunburstCompleteGroups": 23
+  },
+  "changed": false,
+  "reason": "Pilot preparation and local UI wiring do not alter ledger approvals or publication."
+}

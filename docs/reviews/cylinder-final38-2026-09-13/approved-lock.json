@@ -1,0 +1,816 @@
+{
+  "schemaVersion": 1,
+  "release": "Cylinder final plate release 2026-09-13",
+  "approvedAt": "2026-09-13T15:09:47.734Z",
+  "actor": "Jordan · explicit local batch approval",
+  "approvalId": "1eee7172-e161-46ee-9427-60bb128ec270",
+  "reviewPacketSha256": "b26271bbda3fe698e4134e459b3ac6ede866843157f17de13e0f3a35ba3cc89b",
+  "approvalFile": "data/asset-ledger/cylinder-final38-decisions.json",
+  "approvalFileSha256": "2ee4c7dd9fc9c22d2f31745430860b2820fb910845e575518e545f594666cf2c",
+  "manifestFile": "dist/paper-doll/cylinder-final38-2026-09-13/manifest.json",
+  "manifestSha256": "d582ba68ec391fc044192936d6e4ff81a0175fffa5f20151ffc275123208ccf0",
+  "visualApproved": true,
+  "legacySourcesAccepted": true,
+  "publicationAuthorized": false,
+  "rows": [
+    {
+      "sku": "GBCyl5BlkShSht",
+      "productGroupId": "kh70ryfm2hmz484j4z93mqzfwn8dp590",
+      "binding": "ba898909781cad57960583a265079e9016605552487175ca8b2834e089618d0e",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879",
+          "url": "/images/plate-contact-sheets/821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/cylinder-plate-candidates/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCyl5CuSht",
+      "productGroupId": "kh70ryfm2hmz484j4z93mqzfwn8dp590",
+      "binding": "e5baf266d9637d58802a1dfcd3d72e29a280fed23b80bdb7d2264c154e72cf53",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985",
+          "url": "/images/plate-contact-sheets/1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/cylinder-plate-candidates/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "productGroupId": "kh70ryfm2hmz484j4z93mqzfwn8dp590",
+      "binding": "4b3299fb8312f17bc3c04ea5bb05fb2641d9f61234a69a1d80ad8d8dde4a10ba",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+          "url": "/images/plate-contact-sheets/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/cylinder-plate-candidates/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCyl5GlSht",
+      "productGroupId": "kh70ryfm2hmz484j4z93mqzfwn8dp590",
+      "binding": "0b862c48549746cd2ec254989e93b401fdef091e3f667f72335802ae3a8b728a",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a",
+          "url": "/images/plate-contact-sheets/5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/cylinder-plate-candidates/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCyl5SlMattSht",
+      "productGroupId": "kh70ryfm2hmz484j4z93mqzfwn8dp590",
+      "binding": "74caf01b50396c1a8dec3d1596512adf9b1244ee4603d175bf4dabf9ec52637f",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1",
+          "url": "/images/plate-contact-sheets/f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/cylinder-plate-candidates/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCyl5SlSht",
+      "productGroupId": "kh70ryfm2hmz484j4z93mqzfwn8dp590",
+      "binding": "58e8c35987d1a78acfb1dcb204a8169e75da2a16ef3343bfb39989f10e07599d",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43",
+          "url": "/images/plate-contact-sheets/ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+          "url": "/images/cylinder-plate-candidates/b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "productGroupId": "kh75ptrynjv451y99spj3x3eas8dq0at",
+      "binding": "2bb92ef427dbfce6384297218c4195c963b1479287a602cbfe3e986f04e839ca",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3",
+          "url": "/images/plate-contact-sheets/2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/cylinder-plate-candidates/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCylBlu5CuSht",
+      "productGroupId": "kh75ptrynjv451y99spj3x3eas8dq0at",
+      "binding": "2634cd17b0172d2a6c1298ec378c818aab347d6384bde5051324efb256cb3467",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16",
+          "url": "/images/plate-contact-sheets/fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/cylinder-plate-candidates/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCylBlu5GlMattSht",
+      "productGroupId": "kh75ptrynjv451y99spj3x3eas8dq0at",
+      "binding": "2076e4ee8cb5a06aa682e0dc7b6482bca35ace74ec0f5266cd71036fef625e76",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964",
+          "url": "/images/plate-contact-sheets/2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/cylinder-plate-candidates/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCylBlu5GlSht",
+      "productGroupId": "kh75ptrynjv451y99spj3x3eas8dq0at",
+      "binding": "aa6bbad8723f28bab3711282898296b91955164069b34db11dbb957aef8d1538",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc",
+          "url": "/images/plate-contact-sheets/791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/cylinder-plate-candidates/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "productGroupId": "kh75ptrynjv451y99spj3x3eas8dq0at",
+      "binding": "4172c6fa0386a42fbc3331e6f76e890b65de56a628f81b0dea6dde4599b9b288",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+          "url": "/images/plate-contact-sheets/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/cylinder-plate-candidates/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBCylBlu5SlSht",
+      "productGroupId": "kh75ptrynjv451y99spj3x3eas8dq0at",
+      "binding": "9a783892f5711e3d2409c28a03af36112242ab966af1c7e0388b8d7e0da78d95",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8",
+          "url": "/images/plate-contact-sheets/7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+          "url": "/images/cylinder-plate-candidates/51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "productGroupId": "kh7dg044pwzppgcwrf80pbnax98dp3wd",
+      "binding": "356263c71bc355b110f4c7a3b69d4713165e99bfdb9114489afe7706ddaea15b",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2",
+          "url": "/images/cylinder-plate-candidates/747b5c3e8915b9ee3b5e71079abffd98f425d6382e924a1c453d86b958b960e2.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9",
+          "url": "/images/cylinder-plate-candidates/e8fe4f8339ec30d75077afc3d5138ebd2858e1bd809222640575e9d0df16d6f9.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBSpry1ozSl",
+      "productGroupId": "kh7dg044pwzppgcwrf80pbnax98dp3wd",
+      "binding": "7882bbfaaa62d2d50f320177ad79cf711f8b0f0d4567f09ef6ca213abf362e0a",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1",
+          "url": "/images/cylinder-plate-candidates/4fc9b930f58a2770b7f1e5eba9731b0c754880c3faf98e9994766da58b2f90d1.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946",
+          "url": "/images/cylinder-plate-candidates/36831aefc963e87cc0cb84f27cd2cae2d7455e7df794271247b8427d03cf0946.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "productGroupId": "kh78ggmcz9yg9pqeshm10w52qs8dqgpd",
+      "binding": "dce64408db9f07a0cfc79dc0593dc6fd326f44e2113f39c06ecfd311f82183f1",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+          "url": "/images/plate-contact-sheets/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47",
+          "url": "/images/cylinder-plate-candidates/79480a6feb9b91e9ea3dfed9852127b27b6778d5717fa0225a854677320e8b47.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBSpry3mlClWht",
+      "productGroupId": "kh78ggmcz9yg9pqeshm10w52qs8dqgpd",
+      "binding": "28342f1d88d7faef93d6a77eab44a1469cc53c17e1c03de06cc33e03631e1dec",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99",
+          "url": "/images/plate-contact-sheets/2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7",
+          "url": "/images/cylinder-plate-candidates/d709645dcab87412997045a713eef969eb79ab3d1b2b9615534195d677d439e7.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "productGroupId": "kh72q206redmhy3ptx2a2m4xhx8dp6p1",
+      "binding": "04647497844de1d6af76b3223213b54ea6706f84eab202cf691c1453c1129d42",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a",
+          "url": "/images/plate-contact-sheets/4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa",
+          "url": "/images/cylinder-plate-candidates/fab9df26ce3d6d7e8b1c1fb4bd07842c11dfe8e8266f87aea6ef86785380e2fa.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBSpry4mlClWh",
+      "productGroupId": "kh72q206redmhy3ptx2a2m4xhx8dp6p1",
+      "binding": "7f89fbc701f5da99f8e27b93a050d6f4756be9a3adb7c58e22bfab6d1c6502fb",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c",
+          "url": "/images/plate-contact-sheets/b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b",
+          "url": "/images/cylinder-plate-candidates/69677903f7ab82a92e48c2c5f0abf03015ebf49f4edd149c37eec19b71076c5b.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9BlkShSht",
+      "productGroupId": "kh77qdq3rnwa7c01jcbapzbmpd8dqcky",
+      "binding": "3751ca3334290d3edd1cfdc0e43d128b1dea3d1272f212aec0e77eb80d1343dd",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3",
+          "url": "/images/plate-contact-sheets/f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/cylinder-plate-candidates/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9CuSht",
+      "productGroupId": "kh77qdq3rnwa7c01jcbapzbmpd8dqcky",
+      "binding": "4a03636e2a6a8dfd289f21725952c760ec23ad6d29e441124fba5c0dd6a5a6e3",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9",
+          "url": "/images/plate-contact-sheets/bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/cylinder-plate-candidates/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "productGroupId": "kh77qdq3rnwa7c01jcbapzbmpd8dqcky",
+      "binding": "1ec486f840b7999ce248720a8c86b0527e07aa08dc40a4353ca10f8eb69f1502",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+          "url": "/images/plate-contact-sheets/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/cylinder-plate-candidates/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9GlSht",
+      "productGroupId": "kh77qdq3rnwa7c01jcbapzbmpd8dqcky",
+      "binding": "97210e5cc9aa562e4e242a382821383b7cc7aa1157a3ef4dce7a2aef6fc99bb9",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf",
+          "url": "/images/plate-contact-sheets/0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/cylinder-plate-candidates/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "binding": "8667c7174dea09aea90c70d058f4ac677361dc420a284d48c4872ac3c44c5e36",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7",
+          "url": "/images/plate-contact-sheets/1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b",
+          "url": "/images/cylinder-plate-candidates/930506b5d78fa416f240d873563521e3fe9c4920f90d5c1c9bdc69d7f33acc0b.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "binding": "0162f123bafbcc84c34534bc67fb5dc0966a736d48a3a7cd9caf8486a450b5b2",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220",
+          "url": "/images/plate-contact-sheets/656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112",
+          "url": "/images/cylinder-plate-candidates/4ed8b88f2120bd13c71a7f08e9c07577af30922bef523a6fd920967e8cf58112.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9RollBlkSh",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "binding": "7eb84b615afca988f97705f99ab4e3f6a95cc827d9b9ef99797f2bca354513b4",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6",
+          "url": "/images/cylinder-plate-candidates/323e2722ac04ddd0102e653689de505609daaba988c40a3fa4c0b8fefcadead6.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192",
+          "url": "/images/cylinder-plate-candidates/9962e60f9e1c9631e06a8a81d1a7a89ccc675892d45b02d69d9ef28a76ff3192.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9RollCuMatt",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "binding": "80adb321a805852999f051b78f53d097e089851089168c289bef128bf608670b",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3",
+          "url": "/images/cylinder-plate-candidates/c321e00df399a0893c962a60b2609ef082a529f67c4a47da253e19db8fac8ef3.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f",
+          "url": "/images/cylinder-plate-candidates/e9f913a3dcfbffc617e546672d33ce93ddb6af79ac778dd1848cd363ee88397f.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9RollSlSh",
+      "productGroupId": "kh78r3vqahaac36khdjgj336158dqj1x",
+      "binding": "8bb352718b9d7a51be46e069dfb7b08f7e153558c5f95a095c478419f645e6e3",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4",
+          "url": "/images/cylinder-plate-candidates/ff3a6988894fe3cce5a65ba825a0479fc7d3cf07f5f3ffd1ddb9dd20c40abdf4.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0",
+          "url": "/images/cylinder-plate-candidates/e0ae623b688ca4626750141ae9e8a3c1ce7a3dc033cadfd5f5a3cf917efe7ba0.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "verified-master-psd",
+      "sourceDecision": null,
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9SlMattSht",
+      "productGroupId": "kh77qdq3rnwa7c01jcbapzbmpd8dqcky",
+      "binding": "f0a8c5dd324432324cff6d7995df432317b580f8066963f6bcba4bbf98522986",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15",
+          "url": "/images/plate-contact-sheets/c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/cylinder-plate-candidates/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCyl9SlSht",
+      "productGroupId": "kh77qdq3rnwa7c01jcbapzbmpd8dqcky",
+      "binding": "b2a021b8ea3b8e6710c399a1fd1d7bce3b4d59b1bd356396c83060c5ce323046",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc",
+          "url": "/images/plate-contact-sheets/7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+          "url": "/images/cylinder-plate-candidates/ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCylFrst9BlkShSht",
+      "productGroupId": "kh79x3kb9scsk0bqmw5gwjwxp98dpfkn",
+      "binding": "3ff94c7306688916a0882cb6ddf8275707bfea26843fcd02a242d9080d2d3e80",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12",
+          "url": "/images/plate-contact-sheets/4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4",
+          "url": "/images/cylinder-plate-candidates/2039f5383576849339dcf01964efa7b70a5704eab8ff9bb6eb81614544fef0f4.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCylFrst9CuSht",
+      "productGroupId": "kh79x3kb9scsk0bqmw5gwjwxp98dpfkn",
+      "binding": "e89cebf21201a7566616f58a94ce7f90a5bad4343ad7916a21c19fa4a63cb13b",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d",
+          "url": "/images/plate-contact-sheets/58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa",
+          "url": "/images/cylinder-plate-candidates/30efc311035ae329f92aba3487a813ad86c28e89c9100774c0c5469601ddadfa.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "productGroupId": "kh79x3kb9scsk0bqmw5gwjwxp98dpfkn",
+      "binding": "4ec860fb6b9f4015b92a5ab5d78dc10cac33106b031a53fca267bc7ae684f53b",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+          "url": "/images/plate-contact-sheets/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+          "url": "/images/cylinder-plate-candidates/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCylFrst9GlSht",
+      "productGroupId": "kh79x3kb9scsk0bqmw5gwjwxp98dpfkn",
+      "binding": "af9e912c77d696e20b55873484efc25d1b33035d5cb877981374cf7ca7386880",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae",
+          "url": "/images/plate-contact-sheets/97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+          "url": "/images/cylinder-plate-candidates/d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCylFrst9SlMattSht",
+      "productGroupId": "kh79x3kb9scsk0bqmw5gwjwxp98dpfkn",
+      "binding": "86395b383b715c91ef6a0c9075896c93c5221c7653e91c0fbe60dee210bb753e",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b",
+          "url": "/images/plate-contact-sheets/d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d",
+          "url": "/images/cylinder-plate-candidates/21794d04f0cb60880019fa150e6aade11ed063d4264fd3731bcc300bf3f5448d.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "GBTallCylFrst9SlSht",
+      "productGroupId": "kh79x3kb9scsk0bqmw5gwjwxp98dpfkn",
+      "binding": "72870f111f41e78aede9e8821599de41c572f8c9846555aa91fdb7923bb75c17",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261",
+          "url": "/images/plate-contact-sheets/7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d",
+          "url": "/images/cylinder-plate-candidates/cd6ca90b93a1d173f297e66dedfb8aafb66fdcc8ed8e0ef7ae89c12958eb663d.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "PbClear4ozFlpWh",
+      "productGroupId": "kh71pgfxv1mhn727a6p4k80ptd8dpyvj",
+      "binding": "e957a502e5178b0137bef87ff6480b7922b60b3ee80ac69b8ef1eefd0fc7700a",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5",
+          "url": "/images/plate-contact-sheets/fe1715099019d64da357d1699e5570b5e4ab2b8662f0c5e4719e1c386fdc51d5.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0",
+          "url": "/images/cylinder-plate-candidates/57e311826e0189c51a319c58dd5616a48fd62b7d35c0b8ccee39d7be67ca42f0.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "PbClear8ozFlpWh",
+      "productGroupId": "kh73w6mzb8ybpx7837pc57q1fd8dpyn7",
+      "binding": "66e9f2a4448b161050dda1dd57138f979db040e4ee3df2c3239d8aba5c9035a4",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e",
+          "url": "/images/plate-contact-sheets/26e00bec493eecbb6793c36be5f10d41db0f1b95059ac541fc627ecf991c1c9e.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327",
+          "url": "/images/cylinder-plate-candidates/30dc4c43dd722149d9d5e4d54d10abf5952b92e5d32d23c0057d247c2be28327.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    },
+    {
+      "sku": "PbNat16ozFlpWh",
+      "productGroupId": "kh70e6y4fq7w64z5zrte7fm4q98dp4ss",
+      "binding": "865ba08bbed7e61a98bd69fa5089bbe0c133967c29ac203a3e9c2d1101806593",
+      "views": [
+        {
+          "role": "on",
+          "sha256": "1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8",
+          "url": "/images/plate-contact-sheets/1c560dba76bf61ba0d1bc7b5990230a2bb8bf094aaaa448b43754d02c0b438b8.webp"
+        },
+        {
+          "role": "off",
+          "sha256": "d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4",
+          "url": "/images/cylinder-plate-candidates/d36c8934531e57f495a6707a12b709b0d31f41e029ea1cc78bbc47697bc2c1e4.webp"
+        }
+      ],
+      "status": "approved",
+      "sourceBasis": "accepted-exact-original-legacy-raster",
+      "sourceDecision": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+      "publicationAuthorized": false
+    }
+  ],
+  "note": "Immutable approval and exact staged-byte lock. A separate release-specific ship and hosted verification remain required."
+}

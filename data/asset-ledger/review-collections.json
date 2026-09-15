@@ -1,0 +1,514 @@
+{
+  "schemaVersion": 1,
+  "note": "Explicit collection types, never product identity inferred from an identifier. Unknown collections stay unclassified. This audit grants no visual approval.",
+  "collections": {
+    "catalog-kit-candidates-2026-09-08": {
+      "kind": "kit",
+      "title": "Catalog component kit candidates",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-candidates-2026-09-08-r2": {
+      "kind": "kit",
+      "title": "Catalog component kit candidates — complete 212 review",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-candidates-2026-09-08-r3": {
+      "kind": "kit",
+      "title": "Catalog component kit candidates — complete 274 review",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-candidates-2026-09-08-r4": {
+      "kind": "kit",
+      "title": "Catalog component kit candidates — complete 277 review",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-candidates-2026-09-08-r5": {
+      "kind": "kit",
+      "title": "Catalog component kit candidates — complete 320 review",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-candidates-2026-09-08-r6": {
+      "kind": "kit",
+      "title": "Catalog kit candidates — 368 approval-ready",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-candidates-2026-09-08-r7": {
+      "kind": "kit",
+      "title": "Catalog kit candidates — 411 approval-ready",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-needs-review-2026-09-08-r1": {
+      "kind": "kit",
+      "title": "Catalog component kits — 49 remediation cases",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-needs-review-2026-09-08-r2": {
+      "kind": "kit",
+      "title": "Catalog component kits — 55 remediation cases",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-needs-review-2026-09-08-r3": {
+      "kind": "kit",
+      "title": "Catalog component kits — 62 remediation cases",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-needs-review-2026-09-08-r4": {
+      "kind": "kit",
+      "title": "Catalog kit reconciliation — 183 source-qualified holds",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-kit-needs-review-2026-09-08-r5": {
+      "kind": "kit",
+      "title": "Catalog kit reconciliation — 202 source-qualified holds",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "catalog-replacements-2026-09-07": {
+      "kind": "hero",
+      "title": "Catalog replacements — September 2026",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "circle-aligned-matte-v2-2026-09-07": {
+      "kind": "hero",
+      "title": "Circle · applied shoulder targets and matte correction",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "circle-broken-link-recovery-2026-09-07": {
+      "kind": "plate",
+      "title": "Circle broken-link recovery · 96 exact plates",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "circle-kits-2026-09-08": {
+      "kind": "kit",
+      "title": "Circle exact paired PSD kits",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "circle-shoulder-review-2026-09-07": {
+      "kind": "hero",
+      "title": "Circle · shoulder sizing and edge review",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "clear-bone-corrections-2026-09-07": {
+      "kind": "hero",
+      "title": "Empire, clear Boston Round, and 118 mL Pear · bone correction",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "diva-broken-link-recovery-2026-09-07": {
+      "kind": "plate",
+      "title": "Diva broken-link recovery · 25 exact plates",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "diva-kits-2026-09-08": {
+      "kind": "kit",
+      "title": "Diva exact paired PSD kits",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "elegant-broken-link-recovery-2026-09-07": {
+      "kind": "plate",
+      "title": "Elegant broken-link recovery · 102 exact plates",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "elegant-kits-2026-09-08": {
+      "kind": "kit",
+      "title": "Elegant exact paired PSD kits",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "elegant-roller-retouch-repair-2026-09-09": {
+      "kind": "kit",
+      "title": "Elegant 15 ml roll-on — white retouch removed from the roller part (preview)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "empire-broken-link-recovery-2026-09-07": {
+      "kind": "plate",
+      "title": "Empire broken-link recovery · 27 exact plates",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "empire-kits-2026-09-08": {
+      "kind": "kit",
+      "title": "Empire exact PSD kits",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "exact-broken-link-recovery-499-2026-09-07": {
+      "kind": "plate",
+      "title": "Exact broken-link recovery · 499 paired plates",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "exact-source-conflicts-14-2026-09-07": {
+      "kind": "unclassified",
+      "title": "Exact PSD source conflicts · 14 SKUs",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "exact-source-conflicts-14-2026-09-07-v2": {
+      "kind": "unclassified",
+      "title": "Exact PSD source conflicts · 14 SKUs",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r10-circle-frost-2026-09-12": {
+      "kind": "hero",
+      "title": "Circle frosted — two-line prompt, sized to the approved frames",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r11-circle-frost-resize-2026-09-12": {
+      "kind": "hero",
+      "title": "Circle frosted — the reducer bottle, sized to match its twin",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r12-rollon-resize-2026-09-12": {
+      "kind": "hero",
+      "title": "Roll-ons and others — resized to your saved targets",
+      "evidence": "Collection title and current review-card content audited 2026-09-12.",
+      "supersededBy": "r15-rollon-matched-2026-09-12"
+    },
+    "r13-rollon-resize-2026-09-12": {
+      "kind": "hero",
+      "title": "Roll-ons — second pass at your revised heights",
+      "evidence": "Collection title and current review-card content audited 2026-09-12.",
+      "supersededBy": "r15-rollon-matched-2026-09-12"
+    },
+    "r14-rollon-resize-2026-09-12": {
+      "kind": "hero",
+      "title": "Roll-ons — third pass, with the live sibling for scale",
+      "evidence": "Collection title and current review-card content audited 2026-09-12.",
+      "supersededBy": "r15-rollon-matched-2026-09-12"
+    },
+    "r15-rollon-matched-2026-09-12": {
+      "kind": "hero",
+      "title": "Roll-ons — matched to the bottle already live in each group",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-aluminum-bottle-2026-09-10": {
+      "kind": "hero",
+      "title": "Aluminum Bottle — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-apothecary-2026-09-10": {
+      "kind": "hero",
+      "title": "Apothecary — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-atomizer-2026-09-10": {
+      "kind": "hero",
+      "title": "Atomizer — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-boston-round-2026-09-10": {
+      "kind": "hero",
+      "title": "Boston Round — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-cap-closure-2026-09-10": {
+      "kind": "hero",
+      "title": "Cap/Closure — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-circle-2026-09-10": {
+      "kind": "hero",
+      "title": "Circle — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-cream-jar-2026-09-10": {
+      "kind": "hero",
+      "title": "Cream Jar — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-cylinder-2026-09-10": {
+      "kind": "hero",
+      "title": "Cylinder — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-decorative-2026-09-10": {
+      "kind": "hero",
+      "title": "Decorative — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-diamond-2026-09-10": {
+      "kind": "hero",
+      "title": "Diamond — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-diva-2026-09-10": {
+      "kind": "hero",
+      "title": "Diva — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-elegant-2026-09-10": {
+      "kind": "hero",
+      "title": "Elegant — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-empire-2026-09-10": {
+      "kind": "hero",
+      "title": "Empire — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-flair-2026-09-10": {
+      "kind": "hero",
+      "title": "Flair — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-gift-bag-2026-09-10": {
+      "kind": "hero",
+      "title": "Gift Bag — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-gift-box-2026-09-10": {
+      "kind": "hero",
+      "title": "Gift Box — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-grace-2026-09-10": {
+      "kind": "hero",
+      "title": "Grace — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-lotion-bottle-2026-09-10": {
+      "kind": "hero",
+      "title": "Lotion Bottle — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-lotion-pump-2026-09-10": {
+      "kind": "hero",
+      "title": "Lotion Pump — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-packaging-supply-2026-09-10": {
+      "kind": "hero",
+      "title": "Packaging Supply — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-pillar-2026-09-10": {
+      "kind": "hero",
+      "title": "Pillar — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-plastic-bottle-2026-09-10": {
+      "kind": "hero",
+      "title": "Plastic Bottle — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-rectangle-2026-09-10": {
+      "kind": "hero",
+      "title": "Rectangle — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-roll-on-cap-2026-09-10": {
+      "kind": "hero",
+      "title": "Roll-On Cap — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-round-2026-09-10": {
+      "kind": "hero",
+      "title": "Round — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-royal-2026-09-10": {
+      "kind": "hero",
+      "title": "Royal — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-sleek-2026-09-10": {
+      "kind": "hero",
+      "title": "Sleek — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-slim-2026-09-10": {
+      "kind": "hero",
+      "title": "Slim — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-sprayer-2026-09-10": {
+      "kind": "hero",
+      "title": "Sprayer — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-square-2026-09-10": {
+      "kind": "hero",
+      "title": "Square — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-teardrop-2026-09-10": {
+      "kind": "hero",
+      "title": "Teardrop — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-tool-2026-09-10": {
+      "kind": "hero",
+      "title": "Tool — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-tulip-2026-09-10": {
+      "kind": "hero",
+      "title": "Tulip — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r5-vial-2026-09-10": {
+      "kind": "hero",
+      "title": "Vial — Sunburst 2.5 heroes (r5), needs approval",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r6-circle-2026-09-11": {
+      "kind": "hero",
+      "title": "Circle — your size targets applied (Sunburst 2.5)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r6-circle-settled-2026-09-11": {
+      "kind": "hero",
+      "title": "Circle — size targets applied and the baseline/centre drift fixed (Sunburst 2.5)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r7-resettle-approved-2026-09-11": {
+      "kind": "hero",
+      "title": "Re-settled approved heroes — same image, slid onto the baseline and centre",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r8-circle-frost-2026-09-12": {
+      "kind": "hero",
+      "title": "Circle frosted — re-rendered with the frost kept",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "r9-circle-frost-2026-09-12": {
+      "kind": "hero",
+      "title": "Circle frosted — your restoration prompt, sized to the approved frames",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "round-128-kits-2026-09-07": {
+      "kind": "kit",
+      "title": "Round 128 mL component kits",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "round-broken-link-recovery-2026-09-07": {
+      "kind": "plate",
+      "title": "Round broken-link recovery · 32 exact plates",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "round-premium-family-2026-09-07": {
+      "kind": "hero",
+      "title": "Round premium family — shoulder and baseline review",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "round-premium-family-2026-09-07-v2": {
+      "kind": "hero",
+      "title": "Round premium family — aligned final candidates",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "round-premium-family-2026-09-07-v3": {
+      "kind": "hero",
+      "title": "Round premium family — final aligned catalog set",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "round-premium-family-2026-09-09-final": {
+      "kind": "hero",
+      "title": "Round premium family — final catalog set",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "round-premium-family-2026-09-09-final-49": {
+      "kind": "hero",
+      "title": "Round premium family — final catalog set · 128 ml at 49%",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "round-premium-family-2026-09-09-v4": {
+      "kind": "hero",
+      "title": "Round premium family — rework of the 21 returned images",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "slim-plates-2026-09-09": {
+      "kind": "plate",
+      "title": "Slim — 45 new plates (was 19)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-all-heroes-latest-2026-09-09": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — EVERY registry hero, latest version (sized, locked shadow) — approve / needs changes / reject here",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-all-heroes-latest-2026-09-09-r2": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — ALL heroes, r2 (group-centred placement; 391 registry + 29 new)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-all-heroes-latest-2026-09-09-r3": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — ALL heroes, r3 (Jordan's target heights applied per body; group-centred; 391 registry + 29 new)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-all-heroes-latest-2026-09-09-r4": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — ALL heroes, r4 (satin-aware baseline; Jordan's r3 targets + labelled proposals for unset bodies)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-all-heroes-latest-2026-09-09-r5": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — ALL heroes, r5 (33 approvals locked; aluminum atomizers, collar, funnel re-rendered; Boston 15 +12%; tall bodies split; canvas caps)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-r3-corrections-nonbottle-2026-09-10": {
+      "kind": "hero",
+      "title": "r3 corrections — closures and jars (closure-only / material wording)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-relook-2026-09-10": {
+      "kind": "hero",
+      "title": "Re-look — heroes you approved whose image changed since",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v1-circle-2026-09-09-r3": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — Circle r3 (frosted kept frosted, contact + 2 o'clock cast, sized)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v1-elegant-boston-round-sleek-diva-slim-2026-09-09": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — Elegant · Boston Round · Round · Sleek · Diva · Slim (sized, visual review)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v1-elegant-boston-round-sleek-diva-slim-2026-09-09-r2": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — Elegant · Boston Round · Round · Sleek · Diva · Slim (r2: locked shadow, sized)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v1-empire-cylinder-circle-2026-09-09": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — Empire · Cylinder · Circle (sized, visual review)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v1-empire-cylinder-circle-2026-09-09-r2": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — Empire · Cylinder · Circle (r2: 2:30 feathered shadow, sized)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v1-missing-groups-2026-09-09": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — NEW heroes for product groups that had none (PSD-built base → Sunburst, sized, locked shadow)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v1-non-bottle-products-2026-09-09": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — caps, sprayers, droppers, gift bags/boxes, decoratives, tools (sized, locked shadow)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v1-remaining-families-2026-09-09": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — remaining families (sized, visual review)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v1-remaining-families-2026-09-09-r2": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes — remaining families (r2: locked shadow, sized)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v2-missing-groups-2026-09-09": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes v2 — NEW heroes for product groups that had none (roller fitted, cap beside; PSD-built base → Sunburst, sized, locked shadow)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "sunburst-v3-missing-groups-2026-09-09": {
+      "kind": "hero",
+      "title": "Sunburst 2.5 heroes v3 — NEW heroes for product groups that had none (roller fitted, cap beside; PSD-built base → Sunburst, sized, locked shadow)",
+      "evidence": "Collection title and current review-card content audited 2026-09-12."
+    },
+    "boston-30ml-final-size-v1-2026-09-12": {
+      "kind": "hero",
+      "title": "Boston Round 30 mL — saved final sizing candidate",
+      "evidence": "Exact catalog SKU and group verified; complete-photo sizing of the original approved Sunburst image. New bytes require new visual approval."
+    }
+  }
+}

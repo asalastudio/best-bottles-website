@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { auth, currentUser } from "@clerk/nextjs/server";
 
 import { SwitchAccountButton } from "@/components/auth/SwitchAccountButton";
-import { ExecutiveDashboard } from "@/components/executive/ExecutiveDashboard";
-import { EXECUTIVE_HUB_FIXTURE } from "@/lib/executive/fixture";
+import { ExecutiveBoard } from "@/components/executive/ExecutiveBoard";
+import { getExecutiveCommerce } from "@/lib/executive/commerce";
 import { getGraceOperationsSnapshot } from "@/lib/executive/graceOperations";
 import { getPlatformHealthSnapshot } from "@/lib/executive/platformHealth";
+import { getShopifyAdminHref } from "@/lib/teamHub";
 import { getUserEmailAddresses, hasExecutiveHubAccess } from "@/lib/teamAccess";
 
 export const dynamic = "force-dynamic";
@@ -52,16 +53,21 @@ export default async function ExecutivePage({ searchParams }: ExecutivePageProps
 
     const accessFallback = await getExecutiveAccessFallback(previewMode);
     if (accessFallback) return accessFallback;
-    const [graceOperations, platformHealth] = await Promise.all([
+    const [commerce, graceOperations, platformHealth] = await Promise.all([
+        getExecutiveCommerce(),
         getGraceOperationsSnapshot(),
         getPlatformHealthSnapshot(),
     ]);
 
     return (
-        <ExecutiveDashboard
-            snapshot={EXECUTIVE_HUB_FIXTURE}
+        <ExecutiveBoard
+            commerce={commerce}
             graceOperations={graceOperations}
             platformHealth={platformHealth}
+            // Read on the server: the browser key says nothing about whether
+            // the Convex deployment can record server-side events.
+            analyticsConfigured={Boolean(process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim())}
+            shopifyAdminUrl={getShopifyAdminHref()}
             previewMode={previewMode}
         />
     );

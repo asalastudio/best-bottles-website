@@ -68,7 +68,7 @@ export default function DockedComposer({
 
     return (
         <div
-            className="shrink-0 bg-bone px-6 py-3.5 pb-5"
+            className="shrink-0 bg-bone px-6 py-4 pb-6"
             style={{ borderTop: "1px solid rgba(212, 197, 169, 0.5)" }}
         >
             <form
@@ -76,7 +76,7 @@ export default function DockedComposer({
                     e.preventDefault();
                     if (!disabled && input.trim()) onSubmit();
                 }}
-                className="mx-auto flex max-w-[880px] items-center gap-3 rounded-[3px] px-4 py-3"
+                className="mx-auto flex max-w-[680px] items-center gap-3 rounded-[10px] px-4 py-3"
                 style={{
                     background: "rgba(255, 255, 255, 0.7)",
                     border: voiceEnabled
@@ -123,7 +123,7 @@ export default function DockedComposer({
                         aria-pressed={voiceEnabled}
                         aria-label={voiceEnabled ? "End voice conversation with Grace" : "Talk with Grace"}
                         title={voiceEnabled ? "End voice conversation" : "Talk with Grace"}
-                        className="flex cursor-pointer items-center justify-center rounded-[2px] px-2 py-1.5 transition-colors"
+                        className="flex cursor-pointer items-center justify-center rounded-[6px] px-2 py-1.5 transition-colors"
                         style={{
                             border: voiceEnabled ? "none" : "1px solid rgba(99, 117, 136, 0.32)",
                             background: voiceEnabled ? "var(--color-muted-gold)" : "transparent",
@@ -137,7 +137,7 @@ export default function DockedComposer({
                     type="submit"
                     disabled={disabled || !input.trim()}
                     aria-label="Send"
-                    className="flex cursor-pointer items-center justify-center rounded-[2px] border-none bg-obsidian p-1.5 text-white disabled:cursor-not-allowed disabled:opacity-40 hover:bg-black transition-colors"
+                    className="flex cursor-pointer items-center justify-center rounded-[6px] border-none bg-obsidian p-1.5 text-white disabled:cursor-not-allowed disabled:opacity-40 hover:bg-black transition-colors"
                 >
                     <PaperPlaneTilt size={15} />
                 </button>

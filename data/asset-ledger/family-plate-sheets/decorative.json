@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "id": "decorative-plates-2026-09-14",
+  "family": "Decorative",
+  "createdAt": "2026-09-14T01:00:14.453Z",
+  "ledgerAt": "2026-09-14T00:39:35.157Z",
+  "scope": "Current development catalog; legacy scope remains open.",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "rows": [
+    {
+      "sku": "GB1ozGenieBl",
+      "graceSku": "GB-GNI-BLU-32ML",
+      "productGroupId": "kh7c48tv4kf3ng3j37aqxe8h358dp4nz",
+      "capacityMl": 32,
+      "color": "Cobalt Blue",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Blue Genie glass bottle. Capacity: 1.14oz (32ml)",
+      "groupSlug": "genie-32ml-cobalt-blue-Ground",
+      "familyId": "decorative-32ml-cobalt-blue-ground",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-cobalt-blue-ground/GB1ozGenieBl/6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801.front-on-1000x1100.webp",
+          "sha256": "6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801",
+          "url": "/images/plate-contact-sheets/6ffb69a7402b29b36f0e5ef2d52622e55010ec0c8feb68db6b5e8f88b412a801.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-cobalt-blue-ground/GB1ozGenieBl/aa73026f5aa7944e823716ff13034b759c5516730e8748db049ef75598df0331.front-off-1000x1100.webp",
+          "sha256": "aa73026f5aa7944e823716ff13034b759c5516730e8748db049ef75598df0331",
+          "url": "/images/plate-contact-sheets/aa73026f5aa7944e823716ff13034b759c5516730e8748db049ef75598df0331.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GB1ozGenieCl",
+      "graceSku": "GB-GNI-CLR-32ML",
+      "productGroupId": "kh73pskzdy1rrnk6xg6rt2y2758dqyzd",
+      "capacityMl": 32,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Clear Genie glass bottle. Capacity: 1.14oz (32ml)",
+      "groupSlug": "genie-32ml-clear-Ground",
+      "familyId": "decorative-32ml-clear-ground",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-clear-ground/GB1ozGenieCl/32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8.front-on-1000x1100.webp",
+          "sha256": "32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8",
+          "url": "/images/plate-contact-sheets/32a07ccf004bd15b10f392c7f2dde216e7bb0fbd69d4899023b442aa349977e8.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-32ml-clear-ground/GB1ozGenieCl/2ae4cc9565d7c9d4ab42d310b5cc21e6bb12ab2256eb6e28e6fd70b4e17b7dc9.front-off-1000x1100.webp",
+          "sha256": "2ae4cc9565d7c9d4ab42d310b5cc21e6bb12ab2256eb6e28e6fd70b4e17b7dc9",
+          "url": "/images/plate-contact-sheets/2ae4cc9565d7c9d4ab42d310b5cc21e6bb12ab2256eb6e28e6fd70b4e17b7dc9.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GB3TPlGl",
+      "graceSku": "GB-DEC-CLR-3ML-T",
+      "productGroupId": "kh7f59dk8tfyn073f18qat2sz18dq22a",
+      "capacityMl": 3,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Octagonal style 3 ml glass bottle with shiny gold cap and red bead. For use with perfume oil, aromatic oils, fragrance oils and attars. These bottles are traditionally called 'tola' bottles. Price each",
+      "groupSlug": "tola-3ml-clear-14.3mm",
+      "familyId": "decorative-3ml-clear-14-3mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-3ml-clear-14-3mm/GB3TPlGl/de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e.front-on-1000x1100.webp",
+          "sha256": "de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e",
+          "url": "/images/plate-contact-sheets/de638fefaee75d4d7dbae8aae2c84e5bc1400718ef4693f30f1cf7170aa8674e.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-3ml-clear-14-3mm/GB3TPlGl/0d429254960f16440c2d5f46bb1a4d2bb9eed8323f26fc74aafe3a09de83f1f3.front-off-1000x1100.webp",
+          "sha256": "0d429254960f16440c2d5f46bb1a4d2bb9eed8323f26fc74aafe3a09de83f1f3",
+          "url": "/images/plate-contact-sheets/0d429254960f16440c2d5f46bb1a4d2bb9eed8323f26fc74aafe3a09de83f1f3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GB6TPlGl",
+      "graceSku": "GB-DEC-CLR-6ML-T",
+      "productGroupId": "kh7223zsrdc9mprnee00nxpna18dpyw6",
+      "capacityMl": 6,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Octagonal style 6 ml glass bottle with shiny gold cap and red bead. For use with perfume oil, aromatic oils, fragrance oils and attars. These bottles are traditionally called 'tola' bottles. Price each",
+      "groupSlug": "tola-6ml-clear-14.3mm",
+      "familyId": "decorative-6ml-clear-14-3mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.front-on-1000x1100.webp",
+          "sha256": "d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1",
+          "url": "/images/plate-contact-sheets/d82ca4bb5b8e3d7a18427ba74d5e39bbdf972fb010cc00f76bb425f9a9ef3bf1.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-6ml-clear-14-3mm/GB6TPlGl/4c679db72f962ba60fe297c7d23ed858875ab23d7fd62740e662237371ed56fc.front-off-1000x1100.webp",
+          "sha256": "4c679db72f962ba60fe297c7d23ed858875ab23d7fd62740e662237371ed56fc",
+          "url": "/images/plate-contact-sheets/4c679db72f962ba60fe297c7d23ed858875ab23d7fd62740e662237371ed56fc.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBCB12ozPear",
+      "graceSku": "GB-DEC-CLR-355ML-T",
+      "productGroupId": "kh7cqxwtz4p0p9knnvxncvtj2n8dp480",
+      "capacityMl": 355,
+      "color": "Clear",
+      "applicator": "Glass Stopper",
+      "capColor": "Clear",
+      "itemName": "Pear shaped blue bottle with glass stopper. Capacity : 12oz (336ml)",
+      "groupSlug": "pear-355ml-clear-Ground-glassapplicator",
+      "familyId": "decorative-355ml-clear-ground",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-355ml-clear-ground/GBCB12ozPear/48cc12afba38433b245086972ed9ccc008477b4927fdc8258776f11c792611b0.front-on-1000x1100.webp",
+          "sha256": "48cc12afba38433b245086972ed9ccc008477b4927fdc8258776f11c792611b0",
+          "url": "/images/plate-contact-sheets/48cc12afba38433b245086972ed9ccc008477b4927fdc8258776f11c792611b0.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBEternalFlameBlue",
+      "graceSku": "GB-ETF-BLU-35ML",
+      "productGroupId": "kh70qa1f6crff7wz895756ka098dq4ve",
+      "capacityMl": 35,
+      "color": "Cobalt Blue",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Cobalt Blue bottle with ground glass neck and stopper.Capacity: Approx 1 1/4oz",
+      "groupSlug": "eternal-flame-35ml-cobalt-blue-Ground",
+      "familyId": "decorative-35ml-cobalt-blue-ground",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-cobalt-blue-ground/GBEternalFlameBlue/944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26.front-on-1000x1100.webp",
+          "sha256": "944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26",
+          "url": "/images/plate-contact-sheets/944026f3c095b751bca1f1634b046b06d6dacc016809f9df995563bf0eb77b26.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-cobalt-blue-ground/GBEternalFlameBlue/493b0df9e181e03080166c1511ec69142ee9e4ba3d334622ae176abfc7443131.front-off-1000x1100.webp",
+          "sha256": "493b0df9e181e03080166c1511ec69142ee9e4ba3d334622ae176abfc7443131",
+          "url": "/images/plate-contact-sheets/493b0df9e181e03080166c1511ec69142ee9e4ba3d334622ae176abfc7443131.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBEternalFlameClear",
+      "graceSku": "GB-ETF-CLR-35ML",
+      "productGroupId": "kh70fwjemjz2w6x29hnwbxrks18dqxyv",
+      "capacityMl": 35,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Clear glass bottle with ground glass neck and stopper.Capacity: Approx 1 1/4oz (35ml)",
+      "groupSlug": "eternal-flame-35ml-clear-Ground",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBEternalFlameGreen",
+      "graceSku": "GB-ETF-GRN-35ML",
+      "productGroupId": "kh7dke8ayvym4n56vsq13k09rx8dqpdf",
+      "capacityMl": 35,
+      "color": "Green",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Eternal Flame - 1 1/4 oz (35ml)Green glass bottle with ground glass neck and stopp",
+      "groupSlug": "eternal-flame-35ml-green-Ground",
+      "familyId": "decorative-35ml-green-ground",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-green-ground/GBEternalFlameGreen/89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092.front-on-1000x1100.webp",
+          "sha256": "89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092",
+          "url": "/images/plate-contact-sheets/89528509574b25ba048ef274b7af3c4453b017895f9876f1192ad699e0d0f092.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-35ml-green-ground/GBEternalFlameGreen/10f63ec49c86fc3bf748d4e181ddb40c15e26b4c4cbf5325116e7f65acbd7ad5.front-off-1000x1100.webp",
+          "sha256": "10f63ec49c86fc3bf748d4e181ddb40c15e26b4c4cbf5325116e7f65acbd7ad5",
+          "url": "/images/plate-contact-sheets/10f63ec49c86fc3bf748d4e181ddb40c15e26b4c4cbf5325116e7f65acbd7ad5.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBHeartFrst4KeyGld",
+      "graceSku": "GB-DEC-FRS-4ML-GST-GLD-T",
+      "productGroupId": "kh7997y36c8sgvh27p0cwmdngn8dq3bs",
+      "capacityMl": 4,
+      "color": "Frosted",
+      "applicator": "Glass Stopper",
+      "capColor": "Gold",
+      "itemName": "Heart design 4 ml, Frosted glass bottle with gold key chain. For use with perfume or fragrance oil, essential oil. Great for Valentines, gifts, promotions, and wedding and party favors. Price each",
+      "groupSlug": "heart-4ml-frosted-8mm-keychain-glassapplicator",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBHeartFrst4TslRed",
+      "graceSku": "GB-DEC-FRS-4ML-GST-RED-T",
+      "productGroupId": "kh708pvq202v9vnr48n375f2bd8dqase",
+      "capacityMl": 4,
+      "color": "Frosted",
+      "applicator": "Glass Stopper",
+      "capColor": "Red",
+      "itemName": "Heart design 4 ml, Frosted glass bottle with red tassel. For use with perfume or fragrance oil, essential oil. Great for Valentines, gifts, promotions, and wedding and party favors. Price each",
+      "groupSlug": "heart-4ml-frosted-8mm-tassel-glassapplicator",
+      "familyId": null,
+      "views": [],
+      "error": null
+    },
+    {
+      "sku": "GBMtlMrblLarge",
+      "graceSku": "GB-DEC-CLR-10ML-T",
+      "productGroupId": "kh7bqavnz5zwphq2ynm6jzkd298dp7gj",
+      "capacityMl": 10,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Marble bottle with Crystal Cap with glass applicator.Capacity: Approx 1/3oz (10ml",
+      "groupSlug": "marble-10ml-clear-17.52mm",
+      "familyId": "decorative-10ml-clear-17-52mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-10ml-clear-17-52mm/GBMtlMrblLarge/79f8b1fb0a2647acb66acc57bce28ee774f437d51f466c2d1a344f00fa85f7f3.front-on-1000x1100.webp",
+          "sha256": "79f8b1fb0a2647acb66acc57bce28ee774f437d51f466c2d1a344f00fa85f7f3",
+          "url": "/images/plate-contact-sheets/79f8b1fb0a2647acb66acc57bce28ee774f437d51f466c2d1a344f00fa85f7f3.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    },
+    {
+      "sku": "GBMtlMrblSmall",
+      "graceSku": "GB-DEC-CLR-5ML-T",
+      "productGroupId": "kh7br935emha534yx018af19xh8dpzc8",
+      "capacityMl": 5,
+      "color": "Clear",
+      "applicator": null,
+      "capColor": "Clear",
+      "itemName": "Marble bottle with Crystal Cap and glass applicator.Capacity: Approx 1/6oz (5ml)",
+      "groupSlug": "marble-5ml-clear-17.52mm",
+      "familyId": "decorative-5ml-clear-17-52mm",
+      "views": [
+        {
+          "label": "Cap on",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-5ml-clear-17-52mm/GBMtlMrblSmall/9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff.front-on-1000x1100.webp",
+          "sha256": "9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff",
+          "url": "/images/plate-contact-sheets/9c5f59c099e9e4d3790287c3d48eecea46b00b175eca8e89229d478597deedff.webp",
+          "width": 1000,
+          "height": 1100
+        },
+        {
+          "label": "Cap off",
+          "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/decorative-5ml-clear-17-52mm/GBMtlMrblSmall/5103ee22a68ddcf7865bb189608f1cd65a9e6f183dc6869b202cc76d3c31772c.front-off-1000x1100.webp",
+          "sha256": "5103ee22a68ddcf7865bb189608f1cd65a9e6f183dc6869b202cc76d3c31772c",
+          "url": "/images/plate-contact-sheets/5103ee22a68ddcf7865bb189608f1cd65a9e6f183dc6869b202cc76d3c31772c.webp",
+          "width": 1000,
+          "height": 1100
+        }
+      ],
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "url": "http://localhost:3040/reviews/cylinder-remaining-closure-audit-2026-09-13/index.html",
+  "httpStatus": 200,
+  "activeHeldRows": 38,
+  "sprayerSourcePairs": 6,
+  "originalApprovalImageHashesVerified": 38,
+  "browserImageCount": 44,
+  "browserImageLoadFailures": 0,
+  "browserHorizontalOverflow": false,
+  "verification": "Displayed audit sheet inspected in Codex browser; every source and current-plate image loaded. Immutable cached current front hashes all match existing approvals."
+}
