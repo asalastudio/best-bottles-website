@@ -9,6 +9,7 @@ import { CYLINDER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { familyFinderHref } from "@/lib/products/focused-shopping";
 import type { GuidedFinderFamily } from "@/lib/products/guided-finder";
 vi.mock("@/components/CartProvider", () => ({ useCart: () => ({ addItems: () => {}, itemCount: 0, isCartHydrated: true }) }));
+vi.mock("convex/react", () => ({ useQuery: () => undefined }));
 
 describe("catalog Refine states", () => {
     const master = readFileSync(join(process.cwd(), "src/app/catalog/CatalogClient.tsx"), "utf8");
@@ -35,6 +36,9 @@ describe("catalog Refine states", () => {
             checkoutReady: true,
             href: "/products/cylinder-9ml-rollon",
             purchase: null,
+        variantPreviews: [],
+        capKind: null,
+        slug: "fixture-slug",
         }],
     }];
 

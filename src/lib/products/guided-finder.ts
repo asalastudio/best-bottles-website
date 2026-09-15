@@ -1,9 +1,11 @@
 import { APPLICATOR_BUCKETS, APPLICATOR_NAV, FAMILY_ORDER, normalizeCapacityFilterValue, rollerMaterialMatchesProductValues, type RollerMaterial } from "@/lib/catalogFilters";
+import { catalogCapKind, type CatalogCapKind } from "@/lib/products/catalog-cap-photos";
+import { COMPONENT_CATEGORIES } from "@/lib/catalogFilters";
 import { resolveCatalogCardPurchaseVariant, type CatalogPurchaseVariant } from "@/lib/products/catalog-card-purchase";
 import type { CatalogSearchResultShape, CatalogSearchVariantPreviewRow } from "@/lib/catalogSearchFallback";
 import { isCheckoutReady } from "@/lib/checkout";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
-import { getProductCardVariantPreviews } from "@/lib/products/product-card-variant-previews";
+import { getCatalogCardVariantPreviews, getProductCardVariantPreviews, type ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
 import type { BrowseContext } from "@/lib/products/focused-shopping";
 import { getCatalogHero, getCatalogHeroProductHref, type CatalogHero } from "@/lib/products/catalog-heroes";
 
@@ -39,6 +41,14 @@ export type GuidedFinderProduct = {
      * it is what stops the two drifting again.
      */
     purchase: CatalogPurchaseVariant | null;
+    /**
+     * Everything the catalogue card's preview needs to offer the fitment
+     * chooser — the cap/closure rail that lets a buyer see the same bottle
+     * with a different sprayer or roller before committing.
+     */
+    variantPreviews: ProductCardVariantPreview[];
+    capKind: CatalogCapKind | null;
+    slug: string;
 };
 
 export type GuidedFinderFamily = {
@@ -129,6 +139,13 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
         const variant = variants.find((candidate) => candidate.websiteSku === catalogHero?.websiteSku) ?? variants[0] ?? null;
         const displayName = getCustomerFacingProductName({ group, variant, fallbackName: group.displayName }).displayName;
         const family = group.family ?? group.category;
+        const variantPreviews = getCatalogCardVariantPreviews(variants, {
+            primarySku: catalogHero?.websiteSku ?? primarySkuFor(group._id) ?? undefined,
+            productTitle: displayName,
+            defaultImageUrl: group.heroImageUrl,
+            groupColor: group.color,
+            productHref: `/products/${group.slug}`,
+        });
         const product: GuidedFinderProduct = {
             id: variant?.id ?? group._id,
             groupId: group._id,
@@ -154,6 +171,13 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
                 shopifySellable: variant.shopifySellable,
             }) : false,
             href: getCatalogHeroProductHref(catalogHero, `/products/${group.slug}`),
+            variantPreviews,
+            // Components (caps, sprayers sold alone) have no cap chooser of
+            // their own — the thing being chosen IS the product.
+            capKind: COMPONENT_CATEGORIES.has(group.category)
+                ? null
+                : catalogCapKind(group.applicatorTypes ?? [], variantPreviews),
+            slug: group.slug,
             purchase: resolveCatalogCardPurchaseVariant(variants, {
                 picturedSku: catalogHero?.websiteSku ?? variant?.websiteSku ?? variant?.graceSku ?? null,
                 primarySku: primarySkuFor(group._id),

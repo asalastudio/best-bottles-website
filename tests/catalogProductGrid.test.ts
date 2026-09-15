@@ -6,6 +6,7 @@ import { describe, expect, it, vi } from "vitest";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
 import type { GuidedFinderFamily } from "@/lib/products/guided-finder";
 vi.mock("@/components/CartProvider", () => ({ useCart: () => ({ addItems: () => {}, itemCount: 0, isCartHydrated: true }) }));
+vi.mock("convex/react", () => ({ useQuery: () => undefined }));
 
 const cylinderFamilies: GuidedFinderFamily[] = [{
     family: "Cylinder",
@@ -30,6 +31,9 @@ const cylinderFamilies: GuidedFinderFamily[] = [{
         checkoutReady: true,
         href: "/products/cylinder-9ml-rollon",
         purchase: null,
+        variantPreviews: [],
+        capKind: null,
+        slug: "fixture-slug",
     }],
 }];
 
