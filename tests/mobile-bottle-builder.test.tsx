@@ -100,7 +100,7 @@ describe('mobile presentation over shared configuration',()=>{
   expect(css).toContain("font-size: clamp(1.625rem, 7.2vw, 1.875rem)");
   expect(css).toContain("min-height: 44px");
   expect(css).toContain(".zoom:modal");
-  expect(css).toContain("max-width: 100%");
+  expect(css).toContain("width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh");
   expect(css).toContain("place-items: center");
   expect(css).not.toContain("top: 12px; right: 12px");
   choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');
