@@ -60,7 +60,7 @@ import {
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchClient";
-import { catalogGroupSkuLabel, resolveCatalogGroupSku } from "@/lib/catalogSearchFallback";
+import { catalogGroupSkuLabel, mergeCatalogSearchPages, resolveCatalogGroupSku } from "@/lib/catalogSearchFallback";
 import { MASTER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { analytics } from "@/lib/analytics";
 import { familyFinderHref } from "@/lib/products/focused-shopping";
@@ -69,7 +69,6 @@ import { familyFinderHref } from "@/lib/products/focused-shopping";
 
 const PAGE_SIZE = 24;
 const SEARCH_DEBOUNCE_MS = 300;
-const MAX_VISIBLE_LIMIT = 48; // one Convex execution reads whole product docs per group; larger limits hit the 16 MB budget
 
 // ─── Sanity Family Banner ─────────────────────────────────────────────────────
 
@@ -195,12 +194,6 @@ interface Facets {
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
-
-function clampVisibleLimit(rawLimit: string | null): number {
-    const parsed = Number(rawLimit);
-    if (!Number.isFinite(parsed) || parsed <= PAGE_SIZE) return PAGE_SIZE;
-    return Math.min(Math.ceil(parsed / PAGE_SIZE) * PAGE_SIZE, MAX_VISIBLE_LIMIT);
-}
 
 // ─── URL Serialization ──────────────────────────────────────────────────────
 
@@ -1524,7 +1517,6 @@ export default function CatalogClient({
     const [filters, setFilters] = useState<CatalogFilters>(initialState.filters);
     const [sortBy, setSortBy] = useState<SortValue>(initialState.sort);
     const [viewMode, setViewMode] = useState<ViewMode>(initialState.view);
-    const [visibleCount, setVisibleCount] = useState(() => clampVisibleLimit(searchParams.get("limit")));
     const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>(() => {
         if (typeof window === "undefined") return {};
         try {
@@ -1538,8 +1530,12 @@ export default function CatalogClient({
     const [searchInput, setSearchInput] = useState(initialState.filters.search);
     const [activeResult, setActiveResult] = useState<CatalogSearchResult>(initialResult);
     const [isFetchingCatalog, setIsFetchingCatalog] = useState(false);
+    const [isLoadingMore, setIsLoadingMore] = useState(false);
     const [queryError, setQueryError] = useState<string | null>(null);
     const [retryNonce, setRetryNonce] = useState(0);
+    const catalogGenerationRef = useRef(0);
+    const loadMoreLockRef = useRef(false);
+    const loadMoreAbortRef = useRef<AbortController | null>(null);
 
     // Sync externally-driven URL changes (including Grace) into the live grid.
     // Local state is intentional for responsive interactions, but the URL is
@@ -1550,15 +1546,14 @@ export default function CatalogClient({
         setSortBy(urlState.sort);
         setViewMode(urlState.view);
         setSearchInput(urlState.filters.search);
-        setVisibleCount(clampVisibleLimit(new URLSearchParams(initialSearchParams).get("limit")));
         setActiveResult(initialResult);
+        setIsLoadingMore(false);
     }, [initialSearchParams, initialResult]);
 
     // Sync URL when filters/sort/view change
     const pushToUrl = useCallback(
-        (f: CatalogFilters, s: SortValue, v: ViewMode, limit?: number) => {
+        (f: CatalogFilters, s: SortValue, v: ViewMode) => {
             const params = filtersToParams(f, s, v);
-            if (limit && limit > PAGE_SIZE) params.set("limit", String(limit));
             const qs = params.toString();
             router.push(`${pathname}${qs ? `?${qs}` : ""}`, { scroll: false });
         },
@@ -1589,7 +1584,6 @@ export default function CatalogClient({
     }, [mobileFilterOpen]);
 
     // ── Convex Queries ──────────────────────────────────────────────────────
-    const queryLimit = Math.max(PAGE_SIZE, visibleCount);
     // Structure only (which collections belong to which category) — counts come
     // from the search facets, so no live full-table subscription is needed.
     const taxonomy = initialTaxonomy;
@@ -1722,7 +1716,7 @@ export default function CatalogClient({
 
         return next;
     }, [variantPreviewRows, visibleProducts, skuMap]);
-    const hasMore = visibleProducts.length < totalCount;
+    const hasMore = activeResult.nextCursor != null;
     const isLoading = isFetchingCatalog && activeResult.items.length === 0;
     const searchRecoverySuggestions = useMemo(
         () => catalogSearchRecoverySuggestions(filters.search),
@@ -1731,24 +1725,31 @@ export default function CatalogClient({
 
     useEffect(() => {
         const controller = new AbortController();
+        const generation = ++catalogGenerationRef.current;
+        loadMoreAbortRef.current?.abort();
+        loadMoreAbortRef.current = null;
+        loadMoreLockRef.current = true;
         const loadingTimer = window.setTimeout(() => {
-            if (!controller.signal.aborted) {
-                setIsFetchingCatalog(true);
-                setQueryError(null);
-            }
+            if (generation !== catalogGenerationRef.current) return;
+            setIsFetchingCatalog(true);
+            setQueryError(null);
+            setIsLoadingMore(false);
         }, 0);
         fetchCatalogSearch(buildCatalogSearchArgs({
             surface: MASTER_CATALOG_SURFACE,
             filters,
             sort: sortBy,
             view: viewMode,
-            limit: queryLimit,
+            limit: PAGE_SIZE,
+            cursor: null,
         }), controller.signal)
             .then((result) => {
+                if (generation !== catalogGenerationRef.current) return;
                 setActiveResult(result as CatalogSearchResult);
             })
             .catch((error) => {
                 if (error instanceof DOMException && error.name === "AbortError") return;
+                if (generation !== catalogGenerationRef.current) return;
                 console.error("[Catalog] Search failed:", error);
                 setQueryError("Unable to update these results. Your selected filters are still applied.");
                 analytics.catalogRefineIncident({
@@ -1761,13 +1762,16 @@ export default function CatalogClient({
             })
             .finally(() => {
                 window.clearTimeout(loadingTimer);
-                if (!controller.signal.aborted) setIsFetchingCatalog(false);
+                if (generation === catalogGenerationRef.current) {
+                    loadMoreLockRef.current = false;
+                    setIsFetchingCatalog(false);
+                }
             });
         return () => {
             controller.abort();
             window.clearTimeout(loadingTimer);
         };
-    }, [filters, sortBy, viewMode, queryLimit, retryNonce]);
+    }, [filters, sortBy, viewMode, retryNonce]);
 
     // ── Handler Functions ────────────────────────────────────────────────────
 
@@ -1779,7 +1783,6 @@ export default function CatalogClient({
                 setTimeout(() => pushToUrl(next, sortBy, viewMode), 0);
                 return next;
             });
-            setVisibleCount(PAGE_SIZE);
             if (!mobileFilterOpen) window.scrollTo({ top: 0, behavior: "smooth" });
         },
         [mobileFilterOpen, pushToUrl, sortBy, viewMode],
@@ -1787,7 +1790,6 @@ export default function CatalogClient({
 
     const handleClearAll = useCallback(() => {
         setFilters(EMPTY_FILTERS);
-        setVisibleCount(PAGE_SIZE);
         setSearchInput("");
         pushToUrl(EMPTY_FILTERS, sortBy, viewMode);
     }, [pushToUrl, sortBy, viewMode]);
@@ -1795,14 +1797,12 @@ export default function CatalogClient({
     const handleClearFacets = useCallback(() => {
         const next = { ...EMPTY_FILTERS, search: filters.search };
         setFilters(next);
-        setVisibleCount(PAGE_SIZE);
         pushToUrl(next, sortBy, viewMode);
     }, [filters.search, pushToUrl, sortBy, viewMode]);
 
     const handleSortChange = useCallback(
         (value: SortValue) => {
             setSortBy(value);
-            setVisibleCount(PAGE_SIZE);
             pushToUrl(filters, value, viewMode);
         },
         [pushToUrl, filters, viewMode],
@@ -1811,16 +1811,47 @@ export default function CatalogClient({
     const handleViewChange = useCallback(
         (value: ViewMode) => {
             setViewMode(value);
-            pushToUrl(filters, sortBy, value, visibleCount);
+            pushToUrl(filters, sortBy, value);
         },
-        [pushToUrl, filters, sortBy, visibleCount],
+        [pushToUrl, filters, sortBy],
     );
 
     const handleLoadMore = useCallback(() => {
-        const next = Math.min(visibleCount + PAGE_SIZE, totalCount);
-        setVisibleCount(next);
-        pushToUrl(filters, sortBy, viewMode, next);
-    }, [totalCount, filters, pushToUrl, sortBy, viewMode, visibleCount]);
+        const cursor = activeResult.nextCursor;
+        if (!cursor || isFetchingCatalog || loadMoreLockRef.current) return;
+        loadMoreLockRef.current = true;
+        const generation = catalogGenerationRef.current;
+        const controller = new AbortController();
+        loadMoreAbortRef.current?.abort();
+        loadMoreAbortRef.current = controller;
+        setIsLoadingMore(true);
+        setQueryError(null);
+        fetchCatalogSearch(buildCatalogSearchArgs({
+            surface: MASTER_CATALOG_SURFACE,
+            filters,
+            sort: sortBy,
+            view: viewMode,
+            limit: PAGE_SIZE,
+            cursor,
+        }), controller.signal)
+            .then((result) => {
+                if (generation !== catalogGenerationRef.current) return;
+                setActiveResult((prev) => mergeCatalogSearchPages(prev, result as CatalogSearchResult));
+            })
+            .catch((error) => {
+                if (error instanceof DOMException && error.name === "AbortError") return;
+                if (generation !== catalogGenerationRef.current) return;
+                console.error("[Catalog] Load more failed:", error);
+                setQueryError("Unable to load more products. Your selected filters are still applied.");
+            })
+            .finally(() => {
+                if (loadMoreAbortRef.current === controller) loadMoreAbortRef.current = null;
+                if (generation === catalogGenerationRef.current) {
+                    loadMoreLockRef.current = false;
+                    setIsLoadingMore(false);
+                }
+            });
+    }, [activeResult.nextCursor, isFetchingCatalog, filters, sortBy, viewMode]);
 
     const handleSearchInput = useCallback(
         (term: string) => {
@@ -2451,10 +2482,13 @@ export default function CatalogClient({
                                     Showing {visibleProducts.length} of {totalCount} products
                                 </p>
                                 <button
+                                    type="button"
+                                    data-testid="catalog-load-more"
                                     onClick={handleLoadMore}
-                                    className="px-8 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors rounded-sm"
+                                    disabled={isLoadingMore || isFetchingCatalog}
+                                    className="min-h-11 px-8 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors rounded-sm disabled:cursor-wait disabled:opacity-70"
                                 >
-                                    Load More
+                                    {isLoadingMore ? "Loading…" : "Load More"}
                                 </button>
                             </div>
                         )}
