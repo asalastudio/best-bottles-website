@@ -28,12 +28,16 @@ const HOLD_MS = 2000;     // one beat per closure (Jordan: "1, 2, switch")
  *  RIGHT_GAP px from the hero's right edge, the frame is centred vertically. Beside the stage the page fills with the
  *  plaster tones from the manifest and the stage's outer edges are masked into them (no seam). Light reads in ONE
  *  direction: a stage-space overlay flattens the wall's baked left-bright gradient, then one hero-space gradient
- *  (.shade) fades the plaster out to the left from the moulding's left edge. At phone widths the copy stacks above
- *  the scene (CSS) and the frame is centred instead. */
+ *  (.shade) fades the plaster out to the left from the moulding's left edge. From 641–1100px the copy stacks above
+ *  the scene (CSS) and the frame is centred. At phone widths the copy overlays the left of a compact scene so
+ *  Popular Families can appear in the first viewport. */
 const NICHE_HEIGHT = 0.8;
 const RIGHT_GAP = 110;
-const STACK_BELOW = 1100;     // matches the page CSS: at this width and below the copy stacks above the scene
+const STACK_BELOW = 1100;     // matches the page CSS: tablet stacks copy above the scene
+const MOBILE_MAX = 640;       // overlay composition — do not stack on phones
 const COPY_SHARE = 0.55;      // the moulding never crosses this share of the width, where the copy lives
+const MOBILE_COPY_SHARE = 0.46;
+const MOBILE_RIGHT_GAP = 8;
 
 type Patch = { src: string; x: number; y: number; w: number; h: number };
 type Frame = { sku: string; src: string; label: string; patch?: Patch };
@@ -100,12 +104,15 @@ export default function EmpireFitmentHero({ hotspots }: { hotspots?: HeroHotspot
             const n: Box = manifest.niche ?? [0, 0, manifest.width, manifest.height];
             const f: Box = manifest.frame ?? n;
             const nh = n[3] - n[1], fw = f[2] - f[0], fcx = (f[0] + f[2]) / 2, fcy = (f[1] + f[3]) / 2;
-            const stacked = bw <= STACK_BELOW;
+            const mobile = bw <= MOBILE_MAX;
+            const stacked = bw <= STACK_BELOW && !mobile;
+            const rightGap = mobile ? MOBILE_RIGHT_GAP : RIGHT_GAP;
+            const copyShare = mobile ? MOBILE_COPY_SHARE : COPY_SHARE;
             let scale = (bh * NICHE_HEIGHT) / nh;
-            scale = Math.min(scale, stacked ? (bw * 0.9) / fw : (bw * (1 - COPY_SHARE) - RIGHT_GAP) / fw);   // the frame never crosses into the copy
+            scale = Math.min(scale, stacked ? (bw * 0.9) / fw : (bw * (1 - copyShare) - rightGap) / fw);   // the frame never crosses into the copy
             scale = Math.max(scale, bh / manifest.height);                                       // but the stage always covers the box vertically
             const sh = manifest.height * scale;
-            const x = stacked ? bw / 2 - fcx * scale : bw - RIGHT_GAP - f[2] * scale;
+            const x = stacked ? bw / 2 - fcx * scale : bw - rightGap - f[2] * scale;
             let y = bh / 2 - fcy * scale;
             y = sh >= bh ? Math.min(0, Math.max(bh - sh, y)) : (bh - sh) / 2;
             setFit({ scale, x, y, mouldingLeft: x + f[0] * scale });
