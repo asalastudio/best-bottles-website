@@ -43,8 +43,8 @@ const reapproved=(sku:string)=>{
 const expectBone=(px:number[])=>{ const bone=[245,243,239]; for(let i=0;i<3;i++) expect(Math.abs(px[i]-bone[i])).toBeLessThanOrEqual(2); };
 describe('approved catalog hero release',()=>{
  it('includes the expanded release and preserves every prior approved registration',()=>{
-  expect(heroes).toHaveLength(391);
-  expect(new Set(heroes.map(h=>h.websiteSku)).size).toBe(391);
+  expect(heroes).toHaveLength(399);
+  expect(new Set(heroes.map(h=>h.websiteSku)).size).toBe(399);
   for(const a of approved) {
    const h=getProductHero(a.sku)!;
    if(reapproved(a.sku)) {
