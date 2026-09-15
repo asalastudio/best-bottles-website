@@ -55,7 +55,8 @@
     "review:heroes": "node tools/hero-review/server.cjs",
     "ledger:build": "node scripts/asset-ledger/build.mjs",
     "review:heroes:import": "node tools/hero-review/import.cjs",
-    "review:heroes:archive": "node tools/hero-review/archive.cjs"
+    "review:heroes:archive": "node tools/hero-review/archive.cjs",
+    "seo:verify-redirects": "node scripts/verify-legacy-redirects.mjs"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.64",
