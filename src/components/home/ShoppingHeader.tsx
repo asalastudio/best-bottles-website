@@ -35,11 +35,14 @@ export default function ShoppingHeader() {
         const closeOutside = (event: PointerEvent) => {
             if (!header.current?.contains(event.target as Node)) setActiveMega(null);
         };
+        const openCart = () => setCart(true);
         window.addEventListener('keydown', close);
         window.addEventListener('pointerdown', closeOutside);
+        window.addEventListener('open-cart-drawer', openCart);
         return () => {
             window.removeEventListener('keydown', close);
             window.removeEventListener('pointerdown', closeOutside);
+            window.removeEventListener('open-cart-drawer', openCart);
         };
     }, []);
 
@@ -56,8 +59,8 @@ export default function ShoppingHeader() {
                 <div className={styles.headerLeft}>
                     <button className={styles.menuButton} aria-label={menu ? 'Close menu' : 'Open menu'} aria-expanded={menu} aria-controls="shopping-menu" onClick={() => setMenu(!menu)}>{menu ? <X size={22}/> : <List size={22}/>}</button>
                     <form action="/catalog" className={styles.search} role="search">
-                        <input name="search" aria-label="Search the catalog" placeholder="Search" type="search"/>
-                        <button aria-label="Search"><MagnifyingGlass size={18}/></button>
+                        <button type="submit" aria-label="Search"><MagnifyingGlass size={18}/></button>
+                        <input name="search" aria-label="Search the catalog" placeholder="Search bottles, closures, sizes..." type="search"/>
                     </form>
                     <RegionSelector className={styles.region}/>
                 </div>

@@ -167,3 +167,157 @@
 /* --plaster = the wall tone along the top of the v6 base image (#b8a58d), so the copy block reads as the same wall; white copy on it. */
 @media(max-width:1100px){.hero[data-scene="empire-niche"]{--plaster:#b8a58d;display:flex;flex-direction:column;height:auto;background:var(--plaster)}.hero[data-scene="empire-niche"] .heroCopy{order:-1;padding:32px 6% 28px;max-width:none;margin:0}.hero[data-scene="empire-niche"] .heroCopy h1{max-width:600px}.hero[data-scene="empire-niche"] .heroCopy p{max-width:420px}}
 @media(max-width:640px){.hero[data-scene="empire-niche"] .heroCopy{padding:28px 22px 22px}.hero[data-scene="empire-niche"] .heroCopy h1{font-size:30px;max-width:340px}.hero[data-scene="empire-niche"] .heroCopy p{max-width:320px;margin:16px 0 20px}.hero[data-scene="empire-niche"] .buttons{flex-direction:row;gap:10px}}
+
+/* Desktop keeps current labels; mobile uses the approved compact copy. */
+.headingMobile,.heroLeadMobile,.secondaryMobile,.viewAllArrow{display:none}
+.heroCopy h1 span{display:block}
+
+/* Approved mobile homepage (2026-09-15): compact chrome, overlay hero, Popular Families in the first viewport.
+   Desktop and tablet rules above are left intact; these overrides apply only at phone widths. */
+@media(max-width:640px){
+  .headingDesktop,.secondaryDesktop{display:none}
+  .headingMobile,.secondaryMobile{display:inline}
+  .viewAllArrow{display:inline}
+  .heroCopy:has(.heroLeadMobile) .heroLead{display:none}
+  .heroLeadMobile{display:block}
+
+  .header{background:#fbfaf7}
+  .headerMain{
+    grid-template-columns:44px minmax(0,1fr) 44px;
+    gap:8px 8px;
+    padding:8px 16px 12px;
+    min-height:62px;
+  }
+  .headerLeft,.headerRight{display:contents}
+  .grace,.searchTrigger,.portal{display:none}
+  .menuButton,.cartButton{
+    display:grid;
+    place-items:center;
+    width:44px;
+    height:44px;
+    min-height:44px;
+    padding:0;
+  }
+  .brand{justify-self:center;min-height:0;max-width:100%}
+  .search{
+    grid-row:2;
+    grid-column:1/-1;
+    width:100%;
+    height:50px;
+    align-items:center;
+    background:#f5f3ef;
+    border:1px solid #d5c9b6;
+    border-radius:4px;
+  }
+  .search input{
+    height:50px;
+    padding:0 12px 0 2px;
+    font-size:16px;
+    line-height:1.2;
+  }
+  .search input::placeholder{color:#8a8176}
+  .search button{
+    height:50px;
+    padding:0 2px 0 14px;
+    min-width:44px;
+    color:#7a746c;
+  }
+
+  /* Overlay composition: copy on the left, niche on the right, one short hero. */
+  .hero[data-scene="empire-niche"]{
+    display:block;
+    position:relative;
+    height:clamp(248px,70vw,318px);
+    overflow:hidden;
+    background:#ece5d8;
+  }
+  .hero[data-scene="empire-niche"] .heroCopy{
+    order:unset;
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    height:100%;
+    max-width:min(68%,272px);
+    margin:0;
+    padding:18px 12px 16px 18px;
+  }
+  .hero[data-scene="empire-niche"] .heroCopy h1{
+    font-size:clamp(32px,9.8vw,42px);
+    line-height:.94;
+    letter-spacing:.03em;
+    max-width:none;
+    color:#222220;
+  }
+  .hero[data-scene="empire-niche"] .heroCopy p,
+  .hero[data-scene="empire-niche"] .heroLeadMobile{
+    display:block;
+    white-space:normal;
+    max-width:18.5em;
+    margin:10px 0 14px;
+    font-size:12px;
+    line-height:1.35;
+    color:#3f3b36;
+  }
+  .hero[data-scene="empire-niche"] .heroCopy:has(.heroLeadMobile) .heroLead{display:none}
+  .hero[data-scene="empire-niche"] .buttons{
+    flex-direction:column;
+    align-items:stretch;
+    gap:8px;
+    max-width:168px;
+  }
+  .hero[data-scene="empire-niche"] .primary,
+  .hero[data-scene="empire-niche"] .secondary{
+    min-height:44px;
+    padding:10px 14px;
+    font-size:11px;
+    letter-spacing:.08em;
+  }
+  .hero[data-scene="empire-niche"] .primary{background:#1d1d1f;color:#fff;border-color:#1d1d1f}
+  .hero[data-scene="empire-niche"] .secondary{
+    min-height:40px;
+    background:#f4efe6;
+    color:#35322e;
+    border-color:#cfc6b8;
+  }
+
+  .families{padding:18px 16px 10px}
+  .families .heading{margin-bottom:12px;align-items:baseline}
+  .families .heading h2{
+    font-size:22px;
+    line-height:1.15;
+    letter-spacing:0;
+    text-transform:none;
+    font-weight:500;
+    max-width:none;
+  }
+  .families .heading>a{
+    font-size:13px;
+    letter-spacing:.02em;
+    text-transform:none;
+    white-space:nowrap;
+    max-width:none;
+    color:var(--color-muted-gold,#c5a065);
+  }
+  .families .rail{gap:10px;margin-right:-16px;padding-right:16px}
+  .families .railWrap .family{
+    flex-basis:calc((100% - 30px) / 3.55);
+    border-radius:4px;
+    background:#f7f4ee;
+  }
+  .families .railWrap .family img{
+    aspect-ratio:1/1.08;
+    object-fit:contain;
+    background:#f7f4ee;
+  }
+  .families .familyTitle{
+    justify-content:center;
+    text-align:center;
+    padding:8px 6px 10px;
+    font-size:11px;
+    letter-spacing:.03em;
+  }
+  .families .edgeControls,
+  .families .railControls{display:none}
+}

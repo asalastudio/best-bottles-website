@@ -3,9 +3,8 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { House, GridFour, ShoppingBag, User, X, Microphone } from "@/components/icons";
+import { House, GridFour, Wrench, User, X, Microphone } from "@/components/icons";
 import { motion, AnimatePresence } from "framer-motion";
-import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
 import { analytics } from "@/lib/analytics";
 
@@ -20,13 +19,13 @@ interface Tab {
     label: string;
     icon: React.ComponentType<{ className?: string; size?: number; weight?: IconWeight }>;
     href?: string;
-    action?: "cart" | "grace";
+    action?: "grace";
 }
 
 const TABS: Tab[] = [
     { key: "home", label: "Home", icon: House, href: "/" },
     { key: "catalog", label: "Catalog", icon: GridFour, href: "/catalog" },
-    { key: "cart", label: "Cart", icon: ShoppingBag, action: "cart" },
+    { key: "build", label: "Build", icon: Wrench, href: "/matrix" },
     { key: "grace", label: "Grace", icon: Microphone, action: "grace" },
     { key: "account", label: "Account", icon: User, href: "/sign-in" },
 ];
@@ -35,10 +34,8 @@ const TABS: Tab[] = [
 
 export default function MobileTabBar() {
     const pathname = usePathname();
-    const { itemCount, isCartHydrated } = useCart();
     const { openPanel } = useGrace();
     const [showGraceTooltip, setShowGraceTooltip] = useState(false);
-    const [mounted, setMounted] = useState(false);
     const isProductPage = pathname.startsWith("/products/");
     const tabs = TABS;
 
@@ -49,7 +46,6 @@ export default function MobileTabBar() {
         pathname.startsWith("/team");
 
     useEffect(() => {
-        setMounted(true); // eslint-disable-line react-hooks/set-state-in-effect -- hydration guard
         if (typeof window !== "undefined" && !localStorage.getItem(GRACE_TAB_ONBOARDING_KEY)) {
             setShowGraceTooltip(true);
         }
@@ -70,16 +66,12 @@ export default function MobileTabBar() {
         return () => clearTimeout(t);
     }, [showGraceTooltip]);
 
-    function handleAction(action: "cart" | "grace") {
-        if (action === "cart") {
-            window.dispatchEvent(new Event("open-cart-drawer"));
-        } else {
-            dismissGraceTooltip();
-            if (isProductPage) {
-                analytics.graceMobilePdpOpened({ pathname });
-            }
-            openPanel();
+    function handleAction() {
+        dismissGraceTooltip();
+        if (isProductPage) {
+            analytics.graceMobilePdpOpened({ pathname });
         }
+        openPanel();
     }
 
     function isActive(tab: Tab): boolean {
@@ -119,11 +111,6 @@ export default function MobileTabBar() {
                                         size={20}
                                         weight={active ? "bold" : "regular"}
                                     />
-                                    {tab.key === "cart" && mounted && isCartHydrated && itemCount > 0 && (
-                                        <span className="absolute -top-1.5 -right-2.5 min-w-[16px] h-4 flex items-center justify-center rounded-full bg-muted-gold text-[10px] font-semibold text-obsidian px-1 leading-none">
-                                            {itemCount > 99 ? "99+" : itemCount}
-                                        </span>
-                                    )}
                                 </span>
                             )}
                             <span
@@ -168,7 +155,7 @@ export default function MobileTabBar() {
                                     role="tab"
                                     aria-selected={false}
                                     aria-label={isGrace ? "Ask Grace AI" : tab.label}
-                                    onClick={() => handleAction(tab.action!)}
+                                    onClick={() => handleAction()}
                                     className="group w-full flex items-center justify-center h-full min-w-[44px] cursor-pointer"
                                 >
                                     {inner}
