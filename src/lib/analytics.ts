@@ -3,10 +3,9 @@
  *
  * All tracking flows through this module. The underlying provider (Mixpanel
  * today, Gemini/GA4/Amplitude tomorrow) is swappable by changing the adapter.
- * Application code never imports mixpanel-browser directly — only this file.
+ * Application code never imports an analytics SDK directly — only this file.
  */
 
-import mixpanel from "mixpanel-browser";
 import posthog from "posthog-js";
 import { APPLICATOR_NAV, CATALOG_FAMILIES, type ApplicatorNavValue } from "@/lib/catalogFilters";
 
@@ -24,43 +23,12 @@ interface AnalyticsAdapter {
   registerSuperProperties(properties: Props): void;
   group(groupKey: string, groupId: string, traits?: Props): void;
   timeEvent(event: string): void;
+  /**
+   * Turn session recording on or off for the page being viewed. Called on every
+   * navigation, because replay is scoped by route — see sessionReplayScope.
+   */
+  setSessionRecording(enabled: boolean): void;
 }
-
-// ─── Mixpanel adapter ────────────────────────────────────────────────────────
-
-const mixpanelAdapter: AnalyticsAdapter = {
-  init(token, options) {
-    mixpanel.init(token, {
-      autocapture: true,
-      track_pageview: "full-url",
-      record_sessions_percent: 0,
-      ...options,
-    });
-  },
-  identify(userId, traits) {
-    mixpanel.identify(userId);
-    if (traits) mixpanel.people.set(traits);
-  },
-  reset() {
-    mixpanel.reset();
-  },
-  track(event, properties) {
-    mixpanel.track(event, properties ?? {});
-  },
-  setUserProperties(properties) {
-    mixpanel.people.set(properties);
-  },
-  registerSuperProperties(properties) {
-    mixpanel.register(properties);
-  },
-  group(groupKey, groupId, traits) {
-    mixpanel.set_group(groupKey, groupId);
-    if (traits) mixpanel.get_group(groupKey, groupId).set(traits);
-  },
-  timeEvent(event) {
-    mixpanel.time_event(event);
-  },
-};
 
 // ─── PostHog adapter ─────────────────────────────────────────────────────────
 
@@ -86,18 +54,60 @@ const eventStartedAt = new Map<string, number>();
 const posthogAdapter: AnalyticsAdapter = {
   init(token, options) {
     posthog.init(token, {
-      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
-      // Matches the Mixpanel configuration this replaces: autocapture on,
-      // full-URL pageviews, and session recording OFF. Recording would capture
-      // the raw DOM, which carries the SKUs and slugs the privacy layer in this
-      // file deliberately hashes out of event properties — turning it on needs
-      // the same review, not a config flag.
+      // Same-origin by default, proxied to PostHog by the /ingest rewrites in
+      // next.config.ts. Ad-blockers block us.i.posthog.com by name, and a
+      // heatmap built only on people who do not run blockers looks complete
+      // while being systematically biased. NEXT_PUBLIC_POSTHOG_HOST still
+      // overrides it, so a preview can point straight at PostHog.
+      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "/ingest",
+      // Links in the PostHog UI (toolbar, "view in PostHog") must point at the
+      // real app, not at our proxy path.
+      ui_host: "https://us.posthog.com",
+
       autocapture: true,
       capture_pageview: true,
+
+      // Heatmaps are a separate stream from autocapture: pointer position,
+      // scroll depth and rageclicks, none of which autocapture records. Pinned
+      // here rather than left to the project's remote toggle so the behaviour
+      // is visible in the codebase instead of depending on a setting nobody
+      // remembers changing.
+      capture_heatmaps: true,
+      // Clicks on things that are not clickable. On a catalogue this is the
+      // highest-signal thing PostHog collects — it finds the places people
+      // expect an affordance that is not there.
+      capture_dead_clicks: true,
+
+      // Recording never starts on its own. MixpanelProvider turns it on per
+      // route, and only for pages sessionReplayScope allows — so a page that
+      // has not been considered is not recorded by default.
+      //
+      // The earlier reasoning here was wrong and is worth correcting: the
+      // concern is NOT SKUs and slugs. Those are public, and PostHog already
+      // receives them in the pageview URLs. The concern is the authenticated
+      // surfaces — shipping addresses, billing emails, permit numbers,
+      // uploaded certificates — which are rendered text that input masking
+      // would not touch.
       disable_session_recording: true,
+      session_recording: {
+        maskAllInputs: true,
+        // Belt and braces for anything rendered rather than typed.
+        maskTextSelector: "[data-ph-mask]",
+      },
+
       person_profiles: "identified_only",
       ...options,
     });
+  },
+  setSessionRecording(enabled) {
+    // Guarded: these are no-ops before init, and a replay failure must never
+    // take a page down with it.
+    try {
+      if (enabled) posthog.startSessionRecording();
+      else posthog.stopSessionRecording();
+    } catch {
+      // Recording is not worth an exception on a customer's page.
+    }
   },
   identify(userId, traits) {
     posthog.identify(userId, traits ? normalizeReservedTraits(traits) : undefined);
@@ -300,6 +310,15 @@ export const analytics = {
 
   identify(userId: string, traits?: Props) {
     adapter.identify(userId, traits);
+  },
+
+  /**
+   * Scope session replay to the page being viewed. No-ops before init, so a
+   * navigation that lands before the SDK is ready cannot start a recording.
+   */
+  setSessionRecording(enabled: boolean) {
+    if (!_initialized) return;
+    adapter.setSessionRecording(enabled);
   },
 
   reset() {

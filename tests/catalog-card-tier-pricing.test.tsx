@@ -5,12 +5,6 @@ import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vite
 
 const track = vi.hoisted(() => vi.fn());
 const addItems = vi.hoisted(() => vi.fn());
-vi.mock("mixpanel-browser", () => ({
-    default: {
-        init: vi.fn(), identify: vi.fn(), reset: vi.fn(), track, people: { set: vi.fn() },
-        register: vi.fn(), set_group: vi.fn(), get_group: vi.fn(() => ({ set: vi.fn() })), time_event: vi.fn(),
-    },
-}));
 
 vi.mock("posthog-js", () => ({
   default: {
@@ -211,7 +205,7 @@ describe("tier pricing dialog on the catalog card", () => {
         card();
         type($("catalog-card-qty") as HTMLInputElement, "12");
         track.mockImplementation((event: string) => {
-            if (event === "quick_add_clicked" || event === "Cart Item Added") throw new Error("mixpanel down");
+            if (event === "quick_add_clicked" || event === "Cart Item Added") throw new Error("analytics down");
         });
         try {
             click($("catalog-card-add"));

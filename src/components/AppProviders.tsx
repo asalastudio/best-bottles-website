@@ -14,7 +14,7 @@ import GraceProvider from "@/components/grace/GraceProvider";
 import GraceChatDrawer from "@/components/grace/GraceChatDrawer";
 import GraceLauncher from "@/components/grace/GraceLauncher";
 import GraceLayoutShell from "@/components/grace/GraceLayoutShell";
-import { MixpanelProvider } from "@/components/MixpanelProvider";
+import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { clerkAppearance } from "@/lib/clerkAppearance";
 
@@ -60,7 +60,7 @@ function ProviderContent({
                         <GraceLauncher />
                     </GraceProvider>
                 </Suspense>
-                <MixpanelProvider withClerk={withClerk} />
+                <AnalyticsProvider withClerk={withClerk} />
             </CartProvider>
         </ConvexClientProvider>
         </RegionProvider>
