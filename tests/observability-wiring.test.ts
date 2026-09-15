@@ -69,7 +69,10 @@ describe("the Sentry → Convex → dashboard bridge", () => {
 
     it("the cron keeps counts truthful and the hubs render the panel", () => {
         expect(read("convex/crons.ts")).toContain("internal.observability.syncFromSentry");
-        expect(read("src/components/executive/ExecutiveBoard.tsx")).toContain("<PlatformHealthPanel");
+        // The executive board renders Sentry through its own panel now; the dark
+        // console PlatformHealthPanel belonged to the fixture board.
+        expect(read("src/components/executive/ExecutiveBoard.tsx")).toContain("<ExecutiveErrorPanel");
+        expect(read("src/components/executive/ExecutiveErrorPanel.tsx")).toContain("awaitingFirstDelivery");
         expect(read("src/components/team/TeamHubDashboard.tsx")).toContain("<PlatformStatusCard");
         expect(read("src/app/executive/page.tsx")).toContain("getPlatformHealthSnapshot()");
     });

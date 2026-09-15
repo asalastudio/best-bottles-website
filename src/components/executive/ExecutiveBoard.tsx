@@ -1,17 +1,17 @@
 import Link from "next/link";
 import BrandWordmark from "@/components/BrandWordmark";
-import ExecutiveFigure from "@/components/executive/ExecutiveFigure";
 import ExecutiveColumnChart from "@/components/executive/ExecutiveColumnChart";
+import ExecutiveDonut from "@/components/executive/ExecutiveDonut";
+import ExecutiveErrorPanel from "@/components/executive/ExecutiveErrorPanel";
+import ExecutivePanel from "@/components/executive/ExecutivePanel";
 import ExecutiveRail from "@/components/executive/ExecutiveRail";
 import { GraceAuditPanel } from "@/components/executive/GraceAuditPanel";
-import { GraceOperationsPanel } from "@/components/executive/GraceOperationsPanel";
-import { PlatformHealthPanel } from "@/components/executive/PlatformHealthPanel";
 import type { ExecutiveCommerce } from "@/lib/executive/commerce";
 import type { GraceOperationsSnapshot } from "@/lib/executive/graceOperations";
 import type { PlatformHealthSnapshot } from "@/lib/executive/platformHealth";
 
 function money(amount: number | null, currency: string) {
-    if (amount === null) return null;
+    if (amount === null) return "—";
     return amount.toLocaleString("en-US", {
         style: "currency",
         currency,
@@ -20,70 +20,59 @@ function money(amount: number | null, currency: string) {
 }
 
 /**
- * A way out to the system that owns the number.
+ * One figure in the summary strip.
  *
- * The board is a reading surface, not an investigation tool — when something
- * looks wrong the next move is the source, so every panel that has one says
- * where it is rather than leaving the reader to find the tab.
+ * Numeral and noun on one serif line, label beneath — the register Faire uses
+ * for figures. `attention` is not an alarm colour; it is the gold the rest of
+ * the system uses to mean "this is the thing to look at", so a number that
+ * wants a person reads differently from one that is merely true.
  */
-function SourceLink({ href, children }: { href: string; children: React.ReactNode }) {
+function Figure({
+    value,
+    unit,
+    label,
+    attention = false,
+    note,
+}: {
+    value: string;
+    unit?: string;
+    label: string;
+    attention?: boolean;
+    note?: string;
+}) {
     return (
-        <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-full border border-champagne px-3.5 py-1.5 font-sans text-[12.5px] text-obsidian transition-colors hover:bg-travertine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
-        >
-            {children}
-        </a>
+        <div className="min-w-0">
+            <p
+                className="font-serif text-[30px] leading-[1.05]"
+                style={{ color: attention ? "var(--color-gold-dim)" : "var(--color-obsidian)" }}
+            >
+                {value}
+                {unit ? <span className="text-[19px]"> {unit}</span> : null}
+            </p>
+            <p className="mt-1 font-sans text-[12px] font-medium text-obsidian">{label}</p>
+            {note ? <p className="mt-0.5 font-sans text-[11.5px] leading-4 text-slate">{note}</p> : null}
+        </div>
     );
 }
 
-function Section({
-    id,
-    eyebrow,
-    title,
-    children,
-    aside,
-}: {
-    id: string;
-    eyebrow: string;
-    title: string;
-    children: React.ReactNode;
-    aside?: React.ReactNode;
-}) {
-    return (
-        <section className="border-t border-champagne/50 py-9">
-            <div className="mb-6 flex flex-wrap items-baseline justify-between gap-3">
-                <div>
-                    <p className="mb-1.5 font-sans text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gold-dim">
-                        {eyebrow}
-                    </p>
-                    {/* scroll-mt keeps the heading clear of the top edge when
-                        the rail jumps to it. */}
-                    <h2 id={id} className="scroll-mt-8 font-serif text-[26px] leading-tight text-obsidian">
-                        {title}
-                    </h2>
-                </div>
-                {aside}
-            </div>
-            {children}
-        </section>
-    );
+/** Group unresolved errors by the route they happen on. */
+function errorsBySurface(snapshot: PlatformHealthSnapshot) {
+    const grouped = new Map<string, number>();
+    for (const issue of snapshot.data?.issues ?? []) {
+        const label = issue.culprit?.trim() || "unattributed";
+        grouped.set(label, (grouped.get(label) ?? 0) + issue.count);
+    }
+    return [...grouped.entries()].map(([label, value]) => ({ label, value }));
 }
 
 /**
  * The Executive Hub.
  *
- * Deliberately a different surface from the Team Hub: no tool rail, one wide
- * column, and figures rather than queues. The team hub answers "what do I do
- * next"; this answers "where is the business", and the two should not be
- * mistaken for each other at a glance.
- *
- * Every number is read live. The board it replaces rendered a fixture — $1.84M
- * revenue, a 2.4x pipeline, an EBITDA line — while the store had taken one
- * order for $100. That is worse than an empty board, because nothing on the
- * page told a reader which numbers were real.
+ * A summary strip of the numbers that matter, then a grid of panels — so the
+ * business fits on a screen or two rather than a long scroll past three
+ * sections to reach the fourth. Every figure is read live; where a source is
+ * not connected it reads "—" and says why, because "not connected" and "zero"
+ * are different facts and drawing them the same way lies about the second.
  */
 export function ExecutiveBoard({
     commerce,
@@ -96,11 +85,15 @@ export function ExecutiveBoard({
     commerce: ExecutiveCommerce;
     graceOperations: GraceOperationsSnapshot;
     platformHealth: PlatformHealthSnapshot;
-    /** PostHog only reports once a deployment carries the project token. */
     analyticsConfigured: boolean;
     shopifyAdminUrl: string;
     previewMode?: boolean;
 }) {
+    const sentryConnected = platformHealth.status === "source-backed" && !platformHealth.awaitingFirstDelivery;
+    const openErrors = platformHealth.data?.summary.unresolved ?? 0;
+    const needsSetup = commerce.wholesaleAccounts - commerce.wholesaleReadyToOrder;
+    const surfaces = errorsBySurface(platformHealth);
+    const countsAreLive = Boolean(platformHealth.data?.apiSyncConfigured);
 
     return (
         <div className="app-surface flex min-h-screen flex-col bg-bone lg:flex-row lg:items-start">
@@ -108,8 +101,8 @@ export function ExecutiveBoard({
                 sections={[
                     { id: "commerce", label: "Commerce" },
                     { id: "wholesale", label: "Wholesale" },
-                    { id: "catalogue", label: "Catalogue" },
-                    { id: "systems", label: "Systems" },
+                    { id: "reliability", label: "Reliability" },
+                    { id: "grace", label: "Grace" },
                 ]}
                 sources={[
                     { label: "Shopify admin", href: shopifyAdminUrl },
@@ -118,228 +111,200 @@ export function ExecutiveBoard({
                 ]}
             />
 
-            <main className="min-w-0 flex-1 px-6 py-10 sm:px-10 sm:py-14">
-                <div className="mx-auto max-w-4xl">
-                <header className="pb-8">
-                    <Link href="/" aria-label="Best Bottles home" className="mb-5 block">
-                        <BrandWordmark className="app-wordmark" />
-                    </Link>
-                    <h1 className="font-serif text-[40px] leading-[1.1] text-obsidian sm:text-[52px]">
-                        The business today
-                    </h1>
-                    <p className="mt-3 max-w-2xl font-sans text-[14px] leading-6 text-slate">
-                        Read live from Shopify, Convex and Sentry at the moment this page loaded.
-                        Where a source is not connected the figure reads “—”, never zero.
-                        {previewMode ? " Local preview." : ""}
-                    </p>
+            <main className="min-w-0 flex-1 px-6 py-8 sm:px-8 sm:py-10">
+                <div className="mx-auto max-w-[1080px]">
+                    <header className="mb-6">
+                        <Link href="/" aria-label="Best Bottles home" className="mb-4 block">
+                            <BrandWordmark className="app-wordmark" />
+                        </Link>
+                        <div className="flex flex-wrap items-baseline justify-between gap-3">
+                            <h1 className="font-serif text-[34px] leading-tight text-obsidian sm:text-[40px]">
+                                The business today
+                            </h1>
+                            <p className="font-sans text-[12px] text-slate">
+                                Read live from Shopify, Convex and Sentry{previewMode ? " · local preview" : ""}
+                            </p>
+                        </div>
+                    </header>
 
-                    {/* Scope, stated once and plainly. The reader needs to know
-                        what this board can and cannot see before they read a
-                        single figure on it. */}
+                    {/* ─── Summary strip ────────────────────────────────── */}
                     <div
-                        className="mt-6 rounded-lg px-5 py-4"
+                        className="mb-4 grid gap-x-6 gap-y-5 rounded-lg px-6 py-5 sm:grid-cols-3 lg:grid-cols-5"
                         style={{ background: "var(--color-travertine)" }}
                     >
-                        <p className="font-sans text-[13px] leading-6 text-obsidian">
-                            <span className="font-medium">Trading history is not here yet.</span>{" "}
-                            These figures cover what has gone through Shopify. The company&rsquo;s
-                            order history lives in QuickBooks and has not been imported, so revenue
-                            and order counts read far lower than the business has actually done.
-                        </p>
-                    </div>
-                </header>
-
-                {/* ─── Commerce ─────────────────────────────────────────── */}
-                <Section
-                    id="commerce"
-                    eyebrow="Commerce"
-                    title="What has sold through Shopify"
-                    aside={
-                        <SourceLink href={shopifyAdminUrl}>Open Shopify ↗</SourceLink>
-                    }
-                >
-                    <div className="grid gap-x-10 gap-y-8 sm:grid-cols-3">
-                        <ExecutiveFigure
+                        <Figure
                             value={money(commerce.revenueAllTime, commerce.currencyCode)}
                             label="Revenue, all time"
-                            availability={commerce.revenueAvailability}
+                            note="Shopify only"
                         />
-                        <ExecutiveFigure
+                        <Figure
                             value={commerce.ordersAllTime.toLocaleString()}
                             unit={commerce.ordersAllTime === 1 ? "order" : "orders"}
                             label="Orders, all time"
-                            availability={commerce.revenueAvailability}
+                            note={`${commerce.ordersLast30} in the last 30 days`}
                         />
-                        <ExecutiveFigure
-                            value={commerce.ordersLast30.toLocaleString()}
-                            unit={commerce.ordersLast30 === 1 ? "order" : "orders"}
-                            label="Last 30 days"
+                        <Figure
+                            value={commerce.portalOrdersAwaiting.toLocaleString()}
+                            unit={commerce.portalOrdersAwaiting === 1 ? "order" : "orders"}
+                            label="Awaiting a person"
+                            attention={commerce.portalOrdersAwaiting > 0}
+                            note={commerce.portalOrdersAwaiting > 0 ? "Submitted, not yet invoiced" : undefined}
                         />
-                    </div>
-
-                    <div className="mt-8">
-                        <p className="mb-3 font-sans text-[12.5px] font-medium text-obsidian">
-                            Orders per month, last 12
-                        </p>
-                        <ExecutiveColumnChart series={commerce.ordersByMonth} />
-                    </div>
-                </Section>
-
-                {/* ─── Wholesale ────────────────────────────────────────── */}
-                <Section
-                    id="wholesale"
-                    eyebrow="Wholesale"
-                    title="The B2B channel"
-                    aside={
-                        <Link
-                            href="/team/portal-accounts"
-                            className="font-sans text-[13px] text-gold-dim underline underline-offset-4"
-                        >
-                            Manage accounts →
-                        </Link>
-                    }
-                >
-                    <div className="grid gap-x-10 gap-y-8 sm:grid-cols-3">
-                        <ExecutiveFigure
+                        <Figure
                             value={commerce.wholesaleAccounts.toLocaleString()}
                             unit={commerce.wholesaleAccounts === 1 ? "account" : "accounts"}
                             label="Wholesale accounts"
+                            note={needsSetup > 0 ? `${needsSetup} cannot order yet` : "all able to order"}
                         />
-                        <ExecutiveFigure
-                            value={commerce.wholesaleReadyToOrder.toLocaleString()}
-                            unit="ready"
-                            label="Able to place an order"
-                            availability={
-                                commerce.wholesaleReadyToOrder < commerce.wholesaleAccounts
-                                    ? {
-                                          state: "partial",
-                                          note: `${commerce.wholesaleAccounts - commerce.wholesaleReadyToOrder} still need a shipping address or a linked Shopify customer.`,
-                                      }
-                                    : undefined
-                            }
-                        />
-                        <ExecutiveFigure
-                            value={commerce.portalOrdersAwaiting.toLocaleString()}
-                            unit={commerce.portalOrdersAwaiting === 1 ? "order" : "orders"}
-                            label="Submitted, awaiting a person"
-                            availability={
-                                commerce.portalOrdersAwaiting > 0
-                                    ? { state: "partial", note: "Sitting in Shopify as drafts. Each needs confirming and invoicing." }
-                                    : undefined
-                            }
+                        <Figure
+                            value={sentryConnected ? openErrors.toLocaleString() : "—"}
+                            unit={sentryConnected && openErrors > 0 ? "open" : undefined}
+                            label="Errors unresolved"
+                            attention={sentryConnected && openErrors > 0}
+                            note={sentryConnected ? undefined : "Sentry not reporting"}
                         />
                     </div>
 
-                    {commerce.accountLocations.length > 0 ? (
-                        <div className="mt-8 border-t border-champagne/40 pt-6">
-                            <p className="mb-3 font-sans text-[12.5px] font-medium text-obsidian">
-                                Where accounts ship
+                    {/* Scope, stated once. The reader needs to know what this
+                        board cannot see before reading a figure on it. */}
+                    <p
+                        className="mb-6 rounded-lg px-5 py-3 font-sans text-[12.5px] leading-5 text-obsidian"
+                        style={{ background: "var(--color-linen)", border: "1px solid var(--color-rule)" }}
+                    >
+                        <span className="font-medium">Trading history is not here yet.</span>{" "}
+                        These figures cover Shopify. The company&rsquo;s order history lives in QuickBooks
+                        and has not been imported, so revenue and order counts read far lower than the
+                        business has actually done.
+                    </p>
+
+                    {/* ─── Grid ─────────────────────────────────────────── */}
+                    <div className="grid gap-4 lg:grid-cols-2">
+                        <ExecutivePanel
+                            eyebrow="Commerce"
+                            title="Orders per month"
+                            action={{ label: "Shopify ↗", href: shopifyAdminUrl, external: true }}
+                        >
+                            <ExecutiveColumnChart series={commerce.ordersByMonth} height={104} />
+                        </ExecutivePanel>
+
+                        <ExecutivePanel
+                            eyebrow="Reliability"
+                            title="What is breaking"
+                            action={{
+                                label: "Sentry ↗",
+                                href: platformHealth.sentryIssuesUrl ?? "https://sentry.io/",
+                                external: true,
+                            }}
+                        >
+                            <ExecutiveErrorPanel snapshot={platformHealth} limit={4} />
+                        </ExecutivePanel>
+
+                        {surfaces.length > 0 ? (
+                            <ExecutivePanel
+                                eyebrow="Reliability"
+                                title={countsAreLive ? "Where errors happen" : "Which routes have errors"}
+                            >
+                                <ExecutiveDonut
+                                    segments={surfaces}
+                                    centreLabel={countsAreLive ? "Events" : "Issues"}
+                                    size={148}
+                                />
+                                {!countsAreLive ? (
+                                    <p className="mt-3 font-sans text-[11.5px] leading-4 text-slate">
+                                        Counting distinct issues, not events — event counts are not
+                                        syncing from Sentry yet.
+                                    </p>
+                                ) : null}
+                            </ExecutivePanel>
+                        ) : null}
+
+                        <ExecutivePanel
+                            eyebrow="Wholesale"
+                            title="The B2B channel"
+                            action={{ label: "Manage accounts", href: "/team/portal-accounts" }}
+                        >
+                            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                                <Figure
+                                    value={commerce.wholesaleReadyToOrder.toLocaleString()}
+                                    unit="ready"
+                                    label="Able to place an order"
+                                />
+                                <Figure
+                                    value={commerce.productsPublished.toLocaleString()}
+                                    unit="products"
+                                    label="Live in Shopify"
+                                />
+                            </div>
+                            {commerce.accountLocations.length > 0 ? (
+                                <div className="mt-4 border-t border-champagne/40 pt-3">
+                                    <p className="mb-1.5 font-sans text-[11.5px] font-medium text-obsidian">
+                                        Where accounts ship
+                                    </p>
+                                    <ul className="flex flex-wrap gap-x-5 gap-y-1">
+                                        {commerce.accountLocations.map((location) => (
+                                            <li
+                                                key={`${location.countryCode}-${location.provinceCode}`}
+                                                className="font-sans text-[12.5px] text-slate"
+                                            >
+                                                <span className="text-obsidian">{location.label}</span>
+                                                {location.count > 1 ? ` · ${location.count}` : ""}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ) : null}
+                        </ExecutivePanel>
+
+                        <ExecutivePanel
+                            eyebrow="Audience"
+                            title="Behaviour"
+                            action={{ label: "PostHog ↗", href: "https://us.posthog.com/", external: true }}
+                        >
+                            <p className="font-sans text-[13px] leading-6 text-slate">
+                                {analyticsConfigured
+                                    ? "Heatmaps, dead clicks and scroll depth are recording on the storefront. Heatmaps are viewed over the live site through PostHog's toolbar rather than embedded here — there is no widget for them."
+                                    : "No project token on this deployment, so nothing is being recorded."}
                             </p>
-                            <ul className="flex flex-wrap gap-x-8 gap-y-2">
-                                {commerce.accountLocations.map((location) => (
-                                    <li key={`${location.countryCode}-${location.provinceCode}`} className="font-sans text-[13px] text-slate">
-                                        <span className="text-obsidian">{location.label}</span>
-                                        {location.count > 1 ? ` · ${location.count}` : ""}
-                                    </li>
-                                ))}
-                            </ul>
-                            {/* A world map of one or two points is theatre. It
-                                earns its place once there are accounts across
-                                enough regions for the shape to say something. */}
-                            <p className="mt-3 font-sans text-[12px] text-ash">
-                                Shown as a list while there are {commerce.accountLocations.length}{" "}
-                                {commerce.accountLocations.length === 1 ? "location" : "locations"}; a map
-                                replaces it once accounts spread across more regions.
-                            </p>
-                        </div>
-                    ) : null}
-                </Section>
+                        </ExecutivePanel>
 
-                {/* ─── Catalogue ────────────────────────────────────────── */}
-                <Section id="catalogue" eyebrow="Catalogue" title="What is published">
-                    <div className="grid gap-x-10 gap-y-8 sm:grid-cols-3">
-                        <ExecutiveFigure
-                            value={commerce.productsPublished.toLocaleString()}
-                            unit="products"
-                            label="Live in Shopify"
-                        />
-                    </div>
-                </Section>
-
-                {/* ─── Systems ──────────────────────────────────────────── */}
-                <Section
-                    id="systems"
-                    eyebrow="Systems"
-                    title="What is watching the site"
-                    aside={
-                        <div className="flex flex-wrap gap-2">
-                            <SourceLink href={platformHealth.sentryIssuesUrl ?? "https://sentry.io/"}>
-                                Open Sentry ↗
-                            </SourceLink>
-                            <SourceLink href="https://us.posthog.com/">Open PostHog ↗</SourceLink>
-                        </div>
-                    }
-                >
-                    <div className="grid gap-x-10 gap-y-8 sm:grid-cols-3">
-                        {/* awaitingFirstDelivery is the whole point of this
-                            field: "zero errors found" and "zero errors ever
-                            reported" are identical in the numbers and opposite
-                            in meaning, so the second must never render as a
-                            calm zero. */}
-                        <ExecutiveFigure
-                            value={
-                                platformHealth.status === "source-backed" && !platformHealth.awaitingFirstDelivery
-                                    ? String(platformHealth.data?.summary.unresolved ?? 0)
-                                    : null
-                            }
-                            unit={
-                                platformHealth.status === "source-backed" && !platformHealth.awaitingFirstDelivery
-                                    ? "unresolved"
-                                    : undefined
-                            }
-                            label="Sentry errors"
-                            availability={
-                                platformHealth.status !== "source-backed"
-                                    ? { state: "unavailable", note: platformHealth.message ?? "Sentry is not connected." }
-                                    : platformHealth.awaitingFirstDelivery
-                                      ? {
-                                            state: "unavailable",
-                                            note: "Connected, but Sentry has never delivered an event — so this is not a clean bill of health. See docs/observability/SENTRY_RUNBOOK.md.",
-                                        }
-                                      : { state: "live" }
-                            }
-                        />
-                        <ExecutiveFigure
-                            value={analyticsConfigured ? "Collecting" : null}
-                            label="PostHog"
-                            availability={
-                                analyticsConfigured
-                                    ? { state: "partial", note: "Configured. Figures appear here once there is traffic to report." }
-                                    : { state: "unavailable", note: "No project token on this deployment, so nothing is being recorded." }
-                            }
-                        />
-                        <ExecutiveFigure
-                            value={
-                                graceOperations.status === "source-backed" && graceOperations.requestCount !== null
-                                    ? graceOperations.requestCount.toLocaleString()
-                                    : null
-                            }
-                            unit="requests"
-                            label="Grace, trailing 30 days"
-                            availability={
-                                graceOperations.status === "source-backed"
-                                    ? { state: "partial", note: "Employee responses only — customer conversations are not counted here." }
-                                    : { state: "unavailable", note: graceOperations.message ?? "Grace operations are not reporting." }
-                            }
-                        />
+                        <ExecutivePanel
+                            eyebrow="Grace"
+                            title="AI operations"
+                            action={{ label: "Workspace", href: "/grace-workspace" }}
+                        >
+                            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+                                <Figure
+                                    value={
+                                        graceOperations.status === "source-backed" && graceOperations.requestCount !== null
+                                            ? graceOperations.requestCount.toLocaleString()
+                                            : "—"
+                                    }
+                                    unit="requests"
+                                    label="Trailing 30 days"
+                                    note="Employee responses only"
+                                />
+                                <Figure
+                                    value={
+                                        graceOperations.pendingCorrections === null
+                                            ? "—"
+                                            : graceOperations.pendingCorrections.toLocaleString()
+                                    }
+                                    label="Pending corrections"
+                                    attention={(graceOperations.pendingCorrections ?? 0) > 0}
+                                />
+                            </div>
+                        </ExecutivePanel>
                     </div>
 
-                    <div className="mt-8 flex flex-col gap-4">
-                        <PlatformHealthPanel snapshot={platformHealth} />
-                        <GraceOperationsPanel snapshot={graceOperations} />
+                    <div id="grace" className="mt-4 scroll-mt-8">
                         <GraceAuditPanel />
                     </div>
-                </Section>
+
+                    {/* Anchors for the rail. The headings live inside panels, so
+                        the observer needs targets at the grid's own rhythm. */}
+                    <span id="commerce" aria-hidden className="sr-only" />
+                    <span id="wholesale" aria-hidden className="sr-only" />
+                    <span id="reliability" aria-hidden className="sr-only" />
                 </div>
             </main>
         </div>
