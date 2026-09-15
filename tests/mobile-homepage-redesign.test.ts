@@ -46,6 +46,7 @@ describe("mobile homepage redesign", () => {
         expect(html).toContain("Glass packaging for fragrance &amp; beauty brands.");
         expect(html).toContain("Shop bottles");
         expect(html).toContain("Build Your Bottle");
+        expect(html).not.toContain("Build Your Bottle →");
         expect(html).toContain('href="/matrix"');
         expect(html).toContain('href="/catalog"');
     });
