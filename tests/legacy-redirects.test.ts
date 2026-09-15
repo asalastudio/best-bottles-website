@@ -188,6 +188,27 @@ describe("middleware wiring", () => {
         expect(proxySource).toContain("301");
     });
 
+    it("does not let next.config shadow the map", () => {
+        // next.config redirects run BEFORE middleware. A `/product/:slug` rule
+        // there rewrote every legacy product URL to /products/:slug, where an
+        // unknown slug answers HTTP 200 with a "Product Not Found" page — a
+        // soft 404 that keeps the URL indexed, passes no ranking, and looks
+        // healthy to any status-code check. It also shadowed all ~2,700
+        // specific product mappings.
+        const config = readFileSync(resolve(process.cwd(), "next.config.ts"), "utf8");
+        expect(config).not.toContain('source: "/product/:slug"');
+        expect(config).not.toContain('source: "/all-bottles/:path*"');
+        expect(config).not.toContain('source: "/:path*.php"');
+    });
+
+    it("lets .html reach the middleware", () => {
+        // The legacy site served pages at .html. Excluding the extension from
+        // the matcher meant those URLs never reached the map and 404'd.
+        const matcher = /"\/\(\(\?!_next[^"]+"/.exec(proxySource)?.[0] ?? "";
+        expect(matcher, "matcher not found").not.toBe("");
+        expect(matcher, ".html must not be excluded from the matcher").not.toContain("html?");
+    });
+
     it("carries query parameters through", () => {
         // A legacy link in a live ad still has its utm_* attached; dropping
         // them makes that traffic look like it arrived from nowhere.

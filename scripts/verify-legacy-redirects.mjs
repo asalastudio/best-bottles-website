@@ -30,6 +30,10 @@ const info = (s) => console.log(`${D}  ${s}${X}`);
 const args = process.argv.slice(2);
 const baseUrl = (args[args.indexOf("--url") + 1] || "").replace(/\/$/, "");
 const sampleSize = Number(args[args.indexOf("--sample") + 1]) || 25;
+// Destination checking is one request each and the map now holds thousands.
+// Sample by default; --all before a cutover, when it must be exhaustive.
+const checkAllDestinations = args.includes("--all");
+const destSample = Number(args[args.indexOf("--dest-sample") + 1]) || 150;
 
 if (!baseUrl || !/^https?:\/\//.test(baseUrl)) {
     bad("Pass --url https://your-deployment");
@@ -55,25 +59,57 @@ info(`Target:       ${baseUrl}`);
 info(`Redirects:    ${pairs.length}`);
 info(`Destinations: ${destinations.length}`);
 
-async function status(path, { follow = true } = {}) {
+/**
+ * Phrases a page shows while still answering 200 — a SOFT 404.
+ *
+ * This is the check a status code cannot make, and the one that matters most
+ * here. /products/[slug] answers an unknown slug with HTTP 200 and a "Product
+ * Not Found" page, so ~2,700 legacy product URLs once redirected to pages that
+ * looked healthy to every automated check and were worthless to a visitor.
+ * Google keeps soft 404s indexed and passes them no ranking at all.
+ */
+const SOFT_404_MARKERS = [
+    "product not found",
+    "page not found",
+    "404",
+    "we couldn't find",
+    "we could not find",
+];
+
+async function status(path, { follow = true, readBody = false } = {}) {
     try {
         const res = await fetch(`${baseUrl}${path}`, {
             redirect: follow ? "follow" : "manual",
             headers: { "user-agent": "best-bottles-redirect-verifier" },
         });
-        return { code: res.status, location: res.headers.get("location") };
+        let soft404 = false;
+        if (readBody && res.status === 200) {
+            const contentType = res.headers.get("content-type") ?? "";
+            if (contentType.includes("text/html")) {
+                const body = await res.text();
+                const title = (/<title>([^<]*)<\/title>/i.exec(body)?.[1] ?? "").toLowerCase();
+                soft404 = SOFT_404_MARKERS.some((marker) => title.includes(marker));
+            }
+        }
+        return { code: res.status, location: res.headers.get("location"), soft404 };
     } catch (error) {
         return { code: 0, error: error instanceof Error ? error.message : String(error) };
     }
 }
 
-console.log(`\n${B}1. Destinations answer 200${X}`);
-const broken = [];
-for (const dest of destinations) {
-    const { code } = await status(dest);
-    if (code !== 200) { broken.push([dest, code]); bad(`${String(code).padEnd(3)} ${dest}`); }
+const destStep = checkAllDestinations ? 1 : Math.max(1, Math.floor(destinations.length / destSample));
+const destsToCheck = destinations.filter((_, index) => index % destStep === 0);
+console.log(`\n${B}1. Destinations answer 200 and are not soft 404s${X}`);
+if (!checkAllDestinations && destsToCheck.length < destinations.length) {
+    info(`checking ${destsToCheck.length} of ${destinations.length} — pass --all before a cutover`);
 }
-if (broken.length === 0) ok(`all ${destinations.length} destinations return 200`);
+const broken = [];
+for (const dest of destsToCheck) {
+    const { code, soft404 } = await status(dest, { readBody: true });
+    if (code !== 200) { broken.push([dest, code]); bad(`${String(code).padEnd(3)} ${dest}`); }
+    else if (soft404) { broken.push([dest, "soft 404"]); bad(`200 but SOFT 404  ${dest}`); }
+}
+if (broken.length === 0) ok(`all ${destsToCheck.length} destinations checked return a real page`);
 
 console.log(`\n${B}2. Legacy paths 301 to the mapped destination${X}`);
 const step = Math.max(1, Math.floor(pairs.length / sampleSize));

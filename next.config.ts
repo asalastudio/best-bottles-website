@@ -79,11 +79,6 @@ const nextConfig: NextConfig = {
                 permanent: false,
             },
             // ── Legacy /product/ → new /products/ (singular → plural) ──────
-            {
-                source: "/product/:slug",
-                destination: "/products/:slug",
-                permanent: true,
-            },
 
             // ── Legacy PHP category pages → /catalog with filters ──────────
 

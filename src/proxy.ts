@@ -59,7 +59,12 @@ export const config = {
     matcher: [
         // Skip Next.js internals and static files
         // monitoring-tunnel is the Sentry browser tunnel (next.config.ts) — no auth, no Clerk.
-        "/((?!_next|monitoring-tunnel|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
+        // .html is deliberately NOT excluded. The legacy site served pages at
+        // .html (/testlocation/*.html), and excluding the extension meant those
+        // URLs never reached the redirect map and simply 404'd. Nothing this app
+        // serves ends in .html, and an unmapped .html still falls through
+        // untouched, so letting them through costs nothing.
+        "/((?!_next|monitoring-tunnel|[^?]*\\.(?:css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
         // Always run for API routes
         "/(api|trpc)(.*)",
     ],
