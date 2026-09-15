@@ -38,7 +38,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
     const { x, y, width, height } = previewFrame(registration?.anchors ?? kit.anchors,
         layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
-    return <svg role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" style={{ width: "100%", height: "100%", overflow: "hidden" }}>
+    return <svg role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" preserveAspectRatio="xMidYMid meet" style={{ width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", overflow: "visible" }}>
         <title id={titleId}>{label}</title>
         {layers.map(({ part, transform }) => <image key={part.slot} href={part.image.url} width={part.image.width} height={part.image.height} transform={transform}
             x="0" y="0" style={{ mixBlendMode: (config.color === "Clear" && ["body", "diptube"].includes(part.slot)) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
