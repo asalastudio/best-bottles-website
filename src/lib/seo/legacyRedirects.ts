@@ -131,14 +131,12 @@ export const LEGACY_REDIRECTS: ReadonlyMap<string, string> = new Map([
     ["/all-bottles/perfume-vials-glass-bottles/small-decorative-gift-perfume-bottles-heart-shape-sun-moon-genie.php", "/catalog?shop=decorative-bottles"],
     ["/all-bottles/perfume-vials-glass-bottles/sun-moon-30ml-clear-decorative.php", "/products/sun-moon-30ml-clear"],
     ["/all-bottles/perfume-vials-glass-bottles/tassel-cap-15ml-decorative.php", "/products/tassel-cap-15ml-decorative"],
-    // INTERIM. The May audit's intent is that /bestbottles-compressed.pdf
-    // SERVES the catalogue PDF at that exact filename, so external buyer-guide
-    // links do not rot, and that these two alternates 301 to it. The file was
-    // never placed in /public, so pointing at it would 301 into a 404 — the
-    // precise failure this whole map exists to avoid. Restore the PDF and
-    // change both of these back to "/bestbottles-compressed.pdf".
-    ["/bestbottles-catalog.pdf", "/catalog"],
-    ["/catalog.pdf", "/catalog"],
+    // The catalogue PDF keeps its exact legacy filename, served from /public,
+    // so external buyer-guide links to it do not rot. These two alternate
+    // spellings 301 to it. The file itself must NEVER be redirected — that is
+    // the whole point of preserving the name.
+    ["/bestbottles-catalog.pdf", "/bestbottles-compressed.pdf"],
+    ["/catalog.pdf", "/bestbottles-compressed.pdf"],
     ["/contact-us.php", "/contact"],
     ["/default.php", "/"],
     ["/faq.php", "/resources"],

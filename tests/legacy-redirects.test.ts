@@ -97,6 +97,13 @@ describe("resolveLegacyRedirect", () => {
         }
     });
 
+    it("never redirects the catalogue PDF itself", () => {
+        // Its exact legacy filename is the asset. Redirecting it would rot
+        // every external buyer-guide link that points at it — which is the
+        // reason it is served from /public under that name at all.
+        expect(resolveLegacyRedirect("/bestbottles-compressed.pdf")).toBeNull();
+    });
+
     it("leaves the PHP paths the site still serves alone", () => {
         expect(resolveLegacyRedirect("/robots.txt")).toBeNull();
         expect(resolveLegacyRedirect("/sitemap.xml")).toBeNull();
