@@ -99,8 +99,10 @@ describe('mobile presentation over shared configuration',()=>{
   expect(css).toContain("height: 168px");
   expect(css).toContain("font-size: clamp(1.625rem, 7.2vw, 1.875rem)");
   expect(css).toContain("min-height: 44px");
-  expect(css).toContain("width: 100vw; max-width: none; height: 100dvh; max-height: none");
-  expect(css).toContain("justify-content: center");
+  expect(css).toContain(".zoom:modal");
+  expect(css).toContain("max-width: 100%");
+  expect(css).toContain("place-items: center");
+  expect(css).not.toContain("top: 12px; right: 12px");
   choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');
   expect(container.textContent).not.toContain('Clear selected');
   expect(container.querySelector('.glassGrid, [class*="glassGrid"]') || container.querySelector('input[aria-label="Frosted"]')).toBeTruthy();
