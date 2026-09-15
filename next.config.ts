@@ -19,6 +19,9 @@ for (const key of requiredEnvVars) {
 
 const nextConfig: NextConfig = {
     reactStrictMode: false,
+    // Required by the /ingest PostHog proxy below — without it Next 308s
+    // PostHog's trailing-slash paths and the requests fail.
+    skipTrailingSlashRedirect: true,
     outputFileTracingRoot: projectRoot,
     // Cursor's preview browser hits the VM as 127.0.0.1. Without this, Next
     // blocks /_next assets and Team Hub client islands (the tool cards) never paint.
@@ -125,6 +128,30 @@ const nextConfig: NextConfig = {
 
             // ── Non-www → www canonicalization (handled at DNS/Vercel level,
             //    but this catches any direct hits) ──────────────────────────
+        ];
+    },
+
+    // PostHog ingestion, proxied through our own origin.
+    //
+    // Ad-blockers block us.i.posthog.com by name, which silently drops a
+    // meaningful share of traffic. That is worse than collecting nothing,
+    // because a heatmap built on the unblocked remainder looks complete while
+    // being systematically biased toward people who do not run blockers.
+    // Serving ingestion from /ingest on this domain keeps the measurement
+    // representative.
+    //
+    // skipTrailingSlashRedirect below is required: Next would otherwise 308
+    // PostHog's own trailing-slash paths and break the requests.
+    async rewrites() {
+        return [
+            {
+                source: "/ingest/static/:path*",
+                destination: "https://us-assets.i.posthog.com/static/:path*",
+            },
+            {
+                source: "/ingest/:path*",
+                destination: "https://us.i.posthog.com/:path*",
+            },
         ];
     },
 

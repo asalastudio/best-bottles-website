@@ -86,15 +86,36 @@ const eventStartedAt = new Map<string, number>();
 const posthogAdapter: AnalyticsAdapter = {
   init(token, options) {
     posthog.init(token, {
-      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
-      // Matches the Mixpanel configuration this replaces: autocapture on,
-      // full-URL pageviews, and session recording OFF. Recording would capture
-      // the raw DOM, which carries the SKUs and slugs the privacy layer in this
-      // file deliberately hashes out of event properties — turning it on needs
-      // the same review, not a config flag.
+      // Same-origin by default, proxied to PostHog by the /ingest rewrites in
+      // next.config.ts. Ad-blockers block us.i.posthog.com by name, and a
+      // heatmap built only on people who do not run blockers looks complete
+      // while being systematically biased. NEXT_PUBLIC_POSTHOG_HOST still
+      // overrides it, so a preview can point straight at PostHog.
+      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "/ingest",
+      // Links in the PostHog UI (toolbar, "view in PostHog") must point at the
+      // real app, not at our proxy path.
+      ui_host: "https://us.posthog.com",
+
       autocapture: true,
       capture_pageview: true,
+
+      // Heatmaps are a separate stream from autocapture: pointer position,
+      // scroll depth and rageclicks, none of which autocapture records. Pinned
+      // here rather than left to the project's remote toggle so the behaviour
+      // is visible in the codebase instead of depending on a setting nobody
+      // remembers changing.
+      capture_heatmaps: true,
+      // Clicks on things that are not clickable. On a catalogue this is the
+      // highest-signal thing PostHog collects — it finds the places people
+      // expect an affordance that is not there.
+      capture_dead_clicks: true,
+
+      // Session recording stays OFF. It captures the raw DOM, which carries
+      // the SKUs and slugs the privacy layer in this file deliberately hashes
+      // out of event properties — turning it on is a decision about masking,
+      // not a config flag.
       disable_session_recording: true,
+
       person_profiles: "identified_only",
       ...options,
     });
