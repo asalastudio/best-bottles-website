@@ -99,7 +99,7 @@ describe("session replay scope", () => {
 
 describe("replay wiring", () => {
     const analytics = readFileSync(resolve(process.cwd(), "src/lib/analytics.ts"), "utf8");
-    const provider = readFileSync(resolve(process.cwd(), "src/components/MixpanelProvider.tsx"), "utf8");
+    const provider = readFileSync(resolve(process.cwd(), "src/components/AnalyticsProvider.tsx"), "utf8");
 
     it("never starts recording on its own", () => {
         // disable_session_recording keeps it off at init; the provider turns it

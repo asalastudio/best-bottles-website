@@ -87,7 +87,6 @@
     "convex": "^1.32.0",
     "convex-helpers": "^0.1.114",
     "framer-motion": "^12.34.3",
-    "mixpanel-browser": "^2.77.0",
     "next": "^16.2.12",
     "next-sanity": "^12.1.6",
     "next-sitemap": "^4.2.3",

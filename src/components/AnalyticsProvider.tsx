@@ -8,17 +8,17 @@ import { analytics } from "@/lib/analytics";
 import { mayRecordSession } from "@/lib/analytics/sessionReplayScope";
 
 /**
- * The Mixpanel token used to be hardcoded here, which meant every preview
- * deployment wrote into the production project — there was no way to separate
- * environments. The PostHog key comes from the environment instead, so a
- * preview can point at its own project or at nothing.
+ * The analytics token used to be a hardcoded Mixpanel key, which meant every
+ * preview deployment wrote into the production project — there was no way to
+ * separate environments. The PostHog key comes from the environment instead,
+ * so a preview can point at its own project or at nothing.
  *
  * Absent key means analytics simply does not start. That is deliberate: a
  * missing key is a configuration gap, not a reason to fail a page render.
  */
 const ANALYTICS_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY?.trim();
 
-function MixpanelProviderBase({
+function AnalyticsProviderBase({
   userId,
   isSignedIn,
   user,
@@ -91,12 +91,12 @@ function MixpanelProviderBase({
   return null;
 }
 
-function MixpanelProviderWithClerk() {
+function AnalyticsProviderWithClerk() {
   const { userId, isSignedIn } = useAuth();
   const { user } = useUser();
 
   return (
-    <MixpanelProviderBase
+    <AnalyticsProviderBase
       userId={userId ?? null}
       isSignedIn={!!isSignedIn}
       user={user ?? null}
@@ -104,10 +104,10 @@ function MixpanelProviderWithClerk() {
   );
 }
 
-export function MixpanelProvider({ withClerk = false }: { withClerk?: boolean }) {
+export function AnalyticsProvider({ withClerk = false }: { withClerk?: boolean }) {
   if (withClerk) {
-    return <MixpanelProviderWithClerk />;
+    return <AnalyticsProviderWithClerk />;
   }
 
-  return <MixpanelProviderBase userId={null} isSignedIn={false} user={null} />;
+  return <AnalyticsProviderBase userId={null} isSignedIn={false} user={null} />;
 }

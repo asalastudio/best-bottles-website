@@ -3,10 +3,9 @@
  *
  * All tracking flows through this module. The underlying provider (Mixpanel
  * today, Gemini/GA4/Amplitude tomorrow) is swappable by changing the adapter.
- * Application code never imports mixpanel-browser directly — only this file.
+ * Application code never imports an analytics SDK directly — only this file.
  */
 
-import mixpanel from "mixpanel-browser";
 import posthog from "posthog-js";
 import { APPLICATOR_NAV, CATALOG_FAMILIES, type ApplicatorNavValue } from "@/lib/catalogFilters";
 
@@ -30,45 +29,6 @@ interface AnalyticsAdapter {
    */
   setSessionRecording(enabled: boolean): void;
 }
-
-// ─── Mixpanel adapter ────────────────────────────────────────────────────────
-
-const mixpanelAdapter: AnalyticsAdapter = {
-  // Mixpanel's recording is disabled by record_sessions_percent: 0 below and
-  // this adapter is no longer the active one; nothing to toggle.
-  setSessionRecording() {},
-  init(token, options) {
-    mixpanel.init(token, {
-      autocapture: true,
-      track_pageview: "full-url",
-      record_sessions_percent: 0,
-      ...options,
-    });
-  },
-  identify(userId, traits) {
-    mixpanel.identify(userId);
-    if (traits) mixpanel.people.set(traits);
-  },
-  reset() {
-    mixpanel.reset();
-  },
-  track(event, properties) {
-    mixpanel.track(event, properties ?? {});
-  },
-  setUserProperties(properties) {
-    mixpanel.people.set(properties);
-  },
-  registerSuperProperties(properties) {
-    mixpanel.register(properties);
-  },
-  group(groupKey, groupId, traits) {
-    mixpanel.set_group(groupKey, groupId);
-    if (traits) mixpanel.get_group(groupKey, groupId).set(traits);
-  },
-  timeEvent(event) {
-    mixpanel.time_event(event);
-  },
-};
 
 // ─── PostHog adapter ─────────────────────────────────────────────────────────
 
