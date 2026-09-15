@@ -44,6 +44,7 @@ describe("mobile catalog compression", () => {
         expect(preview).toContain("cap option");
         expect(preview).toContain("hidden lg:block");
         expect(purchase).toContain("catalog-card-add-compact");
+        expect(purchase).toContain("catalog-card-tier-toggle-compact");
         expect(purchase).toContain("hidden items-start gap-3 lg:flex");
     });
 
