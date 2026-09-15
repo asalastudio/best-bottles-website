@@ -2,6 +2,7 @@ import Link from "next/link";
 import BrandWordmark from "@/components/BrandWordmark";
 import ExecutiveFigure from "@/components/executive/ExecutiveFigure";
 import ExecutiveColumnChart from "@/components/executive/ExecutiveColumnChart";
+import ExecutiveRail from "@/components/executive/ExecutiveRail";
 import { GraceAuditPanel } from "@/components/executive/GraceAuditPanel";
 import { GraceOperationsPanel } from "@/components/executive/GraceOperationsPanel";
 import { PlatformHealthPanel } from "@/components/executive/PlatformHealthPanel";
@@ -39,11 +40,13 @@ function SourceLink({ href, children }: { href: string; children: React.ReactNod
 }
 
 function Section({
+    id,
     eyebrow,
     title,
     children,
     aside,
 }: {
+    id: string;
     eyebrow: string;
     title: string;
     children: React.ReactNode;
@@ -56,7 +59,11 @@ function Section({
                     <p className="mb-1.5 font-sans text-[10.5px] font-semibold uppercase tracking-[0.18em] text-gold-dim">
                         {eyebrow}
                     </p>
-                    <h2 className="font-serif text-[26px] leading-tight text-obsidian">{title}</h2>
+                    {/* scroll-mt keeps the heading clear of the top edge when
+                        the rail jumps to it. */}
+                    <h2 id={id} className="scroll-mt-8 font-serif text-[26px] leading-tight text-obsidian">
+                        {title}
+                    </h2>
                 </div>
                 {aside}
             </div>
@@ -96,8 +103,23 @@ export function ExecutiveBoard({
 }) {
 
     return (
-        <main className="app-surface min-h-screen bg-bone px-6 py-10 sm:px-10 sm:py-14">
-            <div className="mx-auto max-w-4xl">
+        <div className="app-surface flex min-h-screen flex-col bg-bone lg:flex-row lg:items-start">
+            <ExecutiveRail
+                sections={[
+                    { id: "commerce", label: "Commerce" },
+                    { id: "wholesale", label: "Wholesale" },
+                    { id: "catalogue", label: "Catalogue" },
+                    { id: "systems", label: "Systems" },
+                ]}
+                sources={[
+                    { label: "Shopify admin", href: shopifyAdminUrl },
+                    { label: "Sentry", href: platformHealth.sentryIssuesUrl ?? "https://sentry.io/" },
+                    { label: "PostHog", href: "https://us.posthog.com/" },
+                ]}
+            />
+
+            <main className="min-w-0 flex-1 px-6 py-10 sm:px-10 sm:py-14">
+                <div className="mx-auto max-w-4xl">
                 <header className="pb-8">
                     <Link href="/" aria-label="Best Bottles home" className="mb-5 block">
                         <BrandWordmark className="app-wordmark" />
@@ -129,6 +151,7 @@ export function ExecutiveBoard({
 
                 {/* ─── Commerce ─────────────────────────────────────────── */}
                 <Section
+                    id="commerce"
                     eyebrow="Commerce"
                     title="What has sold through Shopify"
                     aside={
@@ -164,6 +187,7 @@ export function ExecutiveBoard({
 
                 {/* ─── Wholesale ────────────────────────────────────────── */}
                 <Section
+                    id="wholesale"
                     eyebrow="Wholesale"
                     title="The B2B channel"
                     aside={
@@ -232,7 +256,7 @@ export function ExecutiveBoard({
                 </Section>
 
                 {/* ─── Catalogue ────────────────────────────────────────── */}
-                <Section eyebrow="Catalogue" title="What is published">
+                <Section id="catalogue" eyebrow="Catalogue" title="What is published">
                     <div className="grid gap-x-10 gap-y-8 sm:grid-cols-3">
                         <ExecutiveFigure
                             value={commerce.productsPublished.toLocaleString()}
@@ -244,6 +268,7 @@ export function ExecutiveBoard({
 
                 {/* ─── Systems ──────────────────────────────────────────── */}
                 <Section
+                    id="systems"
                     eyebrow="Systems"
                     title="What is watching the site"
                     aside={
@@ -315,7 +340,8 @@ export function ExecutiveBoard({
                         <GraceAuditPanel />
                     </div>
                 </Section>
-            </div>
-        </main>
+                </div>
+            </main>
+        </div>
     );
 }
