@@ -46,6 +46,7 @@ describe("mobile homepage redesign", () => {
         expect(html).toContain("Glass packaging for fragrance &amp; beauty brands.");
         expect(html).toContain("Shop bottles");
         expect(html).toContain("Build Your Bottle");
+        expect(html).not.toContain("Build Your Bottle →");
         expect(html).toContain('href="/matrix"');
         expect(html).toContain('href="/catalog"');
     });
@@ -56,6 +57,7 @@ describe("mobile homepage redesign", () => {
         const heroCss = read("src/components/home/EmpireFitmentHero.module.css");
         expect(css).toContain(".hero[data-scene=\"empire-niche\"]{");
         expect(css).toContain("height:clamp(248px,70vw,318px)");
+        expect(css).toContain("font-size:clamp(28px,8.2vw,36px)");
         expect(css).toContain(".families .railWrap .family{");
         expect(hero).toContain("const MOBILE_MAX = 640");
         expect(hero).toContain("const stacked = bw <= STACK_BELOW && !mobile");
