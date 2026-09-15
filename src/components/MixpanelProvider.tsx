@@ -5,6 +5,7 @@ import { useAuth, useUser } from "@clerk/nextjs";
 import { useCart } from "@/components/CartProvider";
 import { usePathname } from "next/navigation";
 import { analytics } from "@/lib/analytics";
+import { mayRecordSession } from "@/lib/analytics/sessionReplayScope";
 
 /**
  * The Mixpanel token used to be hardcoded here, which meant every preview
@@ -36,7 +37,16 @@ function MixpanelProviderBase({
 
   useEffect(() => {
     if (!ANALYTICS_KEY) return;
-    analytics.init(ANALYTICS_KEY);
+    // The initial route decides whether recording starts at all. Calling
+    // startSessionRecording() after an init that disabled it does not
+    // reliably take effect — the recorder script is never fetched — so the
+    // first page must be decided here rather than corrected afterwards.
+    // Still fail-closed: an unrecognised path disables it.
+    analytics.init(ANALYTICS_KEY, {
+      disable_session_recording: !mayRecordSession(window.location.pathname),
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- init runs once; the
+    // route is read from the live location, not from a render-time value.
   }, []);
 
   useEffect(() => {
@@ -70,6 +80,12 @@ function MixpanelProviderBase({
       : "other";
 
     analytics.setSuperProperties({ currentPageType: pageType });
+
+    // Replay is scoped by route, re-evaluated on every navigation rather than
+    // decided once at init: this is a single-page app, so a customer can walk
+    // from the catalogue into the portal without a page load, and a recording
+    // started on the storefront would happily follow them in.
+    analytics.setSessionRecording(ANALYTICS_KEY ? mayRecordSession(pathname) : false);
   }, [pathname]);
 
   return null;

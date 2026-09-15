@@ -24,11 +24,19 @@ interface AnalyticsAdapter {
   registerSuperProperties(properties: Props): void;
   group(groupKey: string, groupId: string, traits?: Props): void;
   timeEvent(event: string): void;
+  /**
+   * Turn session recording on or off for the page being viewed. Called on every
+   * navigation, because replay is scoped by route — see sessionReplayScope.
+   */
+  setSessionRecording(enabled: boolean): void;
 }
 
 // ─── Mixpanel adapter ────────────────────────────────────────────────────────
 
 const mixpanelAdapter: AnalyticsAdapter = {
+  // Mixpanel's recording is disabled by record_sessions_percent: 0 below and
+  // this adapter is no longer the active one; nothing to toggle.
+  setSessionRecording() {},
   init(token, options) {
     mixpanel.init(token, {
       autocapture: true,
@@ -110,15 +118,36 @@ const posthogAdapter: AnalyticsAdapter = {
       // expect an affordance that is not there.
       capture_dead_clicks: true,
 
-      // Session recording stays OFF. It captures the raw DOM, which carries
-      // the SKUs and slugs the privacy layer in this file deliberately hashes
-      // out of event properties — turning it on is a decision about masking,
-      // not a config flag.
+      // Recording never starts on its own. MixpanelProvider turns it on per
+      // route, and only for pages sessionReplayScope allows — so a page that
+      // has not been considered is not recorded by default.
+      //
+      // The earlier reasoning here was wrong and is worth correcting: the
+      // concern is NOT SKUs and slugs. Those are public, and PostHog already
+      // receives them in the pageview URLs. The concern is the authenticated
+      // surfaces — shipping addresses, billing emails, permit numbers,
+      // uploaded certificates — which are rendered text that input masking
+      // would not touch.
       disable_session_recording: true,
+      session_recording: {
+        maskAllInputs: true,
+        // Belt and braces for anything rendered rather than typed.
+        maskTextSelector: "[data-ph-mask]",
+      },
 
       person_profiles: "identified_only",
       ...options,
     });
+  },
+  setSessionRecording(enabled) {
+    // Guarded: these are no-ops before init, and a replay failure must never
+    // take a page down with it.
+    try {
+      if (enabled) posthog.startSessionRecording();
+      else posthog.stopSessionRecording();
+    } catch {
+      // Recording is not worth an exception on a customer's page.
+    }
   },
   identify(userId, traits) {
     posthog.identify(userId, traits ? normalizeReservedTraits(traits) : undefined);
@@ -321,6 +350,15 @@ export const analytics = {
 
   identify(userId: string, traits?: Props) {
     adapter.identify(userId, traits);
+  },
+
+  /**
+   * Scope session replay to the page being viewed. No-ops before init, so a
+   * navigation that lands before the SDK is ready cannot start a recording.
+   */
+  setSessionRecording(enabled: boolean) {
+    if (!_initialized) return;
+    adapter.setSessionRecording(enabled);
   },
 
   reset() {
