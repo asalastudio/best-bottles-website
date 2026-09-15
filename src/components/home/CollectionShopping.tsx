@@ -78,7 +78,7 @@ export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSl
             {!slide?.subheadline && <p className={styles.heroLeadMobile}>Glass packaging for fragrance &amp; beauty brands.</p>}
             <div className={styles.buttons}>
                 <Link className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || 'Shop bottles'}</Link>
-                <Link className={styles.secondary} href="/matrix"><span className={styles.secondaryDesktop}>Build your bottle</span><span className={styles.secondaryMobile}>Build Your Bottle →</span></Link>
+                <Link className={styles.secondary} href="/matrix"><span className={styles.secondaryDesktop}>Build your bottle</span><span className={styles.secondaryMobile}>Build Your Bottle</span></Link>
             </div>
         </div>
         {(slides?.length??0)>1 && <div className={styles.heroControls}>{slides!.map((_,i)=><button key={i} aria-label={`Show hero ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>{i+1}</button>)}</div>}
