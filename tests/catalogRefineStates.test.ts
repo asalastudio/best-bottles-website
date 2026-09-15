@@ -2,12 +2,13 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
 import { buildCatalogSearchArgs } from "@/lib/catalogSearchClient";
 import { CYLINDER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { familyFinderHref } from "@/lib/products/focused-shopping";
 import type { GuidedFinderFamily } from "@/lib/products/guided-finder";
+vi.mock("@/components/CartProvider", () => ({ useCart: () => ({ addItems: () => {}, itemCount: 0, isCartHydrated: true }) }));
 
 describe("catalog Refine states", () => {
     const master = readFileSync(join(process.cwd(), "src/app/catalog/CatalogClient.tsx"), "utf8");
@@ -33,6 +34,7 @@ describe("catalog Refine states", () => {
             shopifySellable: true,
             checkoutReady: true,
             href: "/products/cylinder-9ml-rollon",
+            purchase: null,
         }],
     }];
 

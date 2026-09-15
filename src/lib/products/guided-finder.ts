@@ -1,4 +1,5 @@
 import { APPLICATOR_BUCKETS, APPLICATOR_NAV, FAMILY_ORDER, normalizeCapacityFilterValue, rollerMaterialMatchesProductValues, type RollerMaterial } from "@/lib/catalogFilters";
+import { resolveCatalogCardPurchaseVariant, type CatalogPurchaseVariant } from "@/lib/products/catalog-card-purchase";
 import type { CatalogSearchResultShape, CatalogSearchVariantPreviewRow } from "@/lib/catalogSearchFallback";
 import { isCheckoutReady } from "@/lib/checkout";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
@@ -29,6 +30,15 @@ export type GuidedFinderProduct = {
     shopifySellable: boolean | null;
     checkoutReady: boolean;
     href: string;
+    /**
+     * The assembly this card sells, resolved by the SAME function the main
+     * catalogue grid uses. The family pages were a second catalogue with none
+     * of the first one's purchase affordances — no tier ladder, no quantity,
+     * no add — so a buyer who arrived through Bottle Families got a worse
+     * version of the same product. Sharing the resolver rather than rebuilding
+     * it is what stops the two drifting again.
+     */
+    purchase: CatalogPurchaseVariant | null;
 };
 
 export type GuidedFinderFamily = {
@@ -107,6 +117,10 @@ function imageFor(
 
 export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): GuidedFinderFamily[] {
     const rowsByGroupId = new Map(result.variantPreviewRows.map((row) => [row.groupId, row]));
+    const primarySkuFor = (groupId: string) => {
+        const row = result.primarySkus?.find((entry) => entry.groupId === groupId);
+        return row?.websiteSku ?? row?.graceSku ?? null;
+    };
     const grouped = new Map<string, GuidedFinderProduct[]>();
 
     for (const group of result.items) {
@@ -140,6 +154,11 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
                 shopifySellable: variant.shopifySellable,
             }) : false,
             href: getCatalogHeroProductHref(catalogHero, `/products/${group.slug}`),
+            purchase: resolveCatalogCardPurchaseVariant(variants, {
+                picturedSku: catalogHero?.websiteSku ?? variant?.websiteSku ?? variant?.graceSku ?? null,
+                primarySku: primarySkuFor(group._id),
+                productTitle: displayName,
+            }),
         };
         const products = grouped.get(family) ?? [];
         products.push(product);

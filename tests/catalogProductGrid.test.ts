@@ -2,9 +2,10 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
 import type { GuidedFinderFamily } from "@/lib/products/guided-finder";
+vi.mock("@/components/CartProvider", () => ({ useCart: () => ({ addItems: () => {}, itemCount: 0, isCartHydrated: true }) }));
 
 const cylinderFamilies: GuidedFinderFamily[] = [{
     family: "Cylinder",
@@ -28,6 +29,7 @@ const cylinderFamilies: GuidedFinderFamily[] = [{
         shopifySellable: true,
         checkoutReady: true,
         href: "/products/cylinder-9ml-rollon",
+        purchase: null,
     }],
 }];
 

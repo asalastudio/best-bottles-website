@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CatalogCardPurchase from "@/components/catalog/CatalogCardPurchase";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getProductCardVariantPreviews } from "@/lib/products/product-card-variant-previews";
@@ -97,12 +98,35 @@ export default function FocusedProductCard({ product, finderUrl, onOpen }: Focus
                         <dd className="mt-0.5 text-obsidian">{product.caseQuantity ?? "Confirm"}</dd>
                     </div>
                 </dl>
+                {/* The starting price stays inside the link; the purchase
+                    controls must not, or every quantity click would navigate
+                    to the PDP instead of adding. */}
                 <p className="mt-auto pt-5 text-sm font-semibold text-obsidian">
                     {product.startingUnitPrice != null
                         ? `From ${formatPrice(product.startingUnitPrice)}/ea`
                         : "Request pricing"}
                 </p>
             </Link>
+            {/* Same component, same resolver and the same tier ladder as the
+                main catalogue grid. A buyer who arrives through Bottle Families
+                was getting a strictly worse version of the same product. */}
+            <CatalogCardPurchase
+                productId={product.groupId}
+                title={productTitle}
+                href={productHref}
+                variant={product.purchase}
+                groupStartingPrice={product.startingUnitPrice}
+                imageUrl={product.imageUrl}
+                context={{
+                    family: product.family,
+                    capacity: product.capacity,
+                    color: product.color,
+                    // The finder does not carry the group's category, and the
+                    // cart uses it for reporting rather than for pricing.
+                    category: null,
+                    neckThreadSize: product.neckFinish,
+                }}
+            />
         </article>
     );
 }
