@@ -34,6 +34,8 @@ describe("mobile catalog compression", () => {
         const grid = read("src/components/catalog/CatalogProductGrid.tsx");
         const preview = read("src/components/catalog/CatalogCardPreview.tsx");
         const purchase = read("src/components/catalog/CatalogCardPurchase.tsx");
+        expect(catalog).toContain("flex w-[300px] max-w-[85vw] flex-col");
+        expect(catalog).toContain("min-h-0 flex-1 overflow-y-auto");
         expect(catalog).toContain("lg:hidden mb-3 flex items-center gap-2");
         expect(catalog).toContain("<ViewToggle value={viewMode} onChange={handleViewChange} />");
         expect(catalog).toContain('aria-label="Line item view"');
@@ -43,5 +45,28 @@ describe("mobile catalog compression", () => {
         expect(preview).toContain("hidden lg:block");
         expect(purchase).toContain("catalog-card-add-compact");
         expect(purchase).toContain("hidden items-start gap-3 lg:flex");
+    });
+
+    it("clears mobile facet chips without wiping the search query", () => {
+        const catalog = read("src/app/catalog/CatalogClient.tsx");
+        expect(catalog).toContain("handleClearFacets");
+        expect(catalog).toContain("search: filters.search");
+        expect(catalog).toContain("onClearAll={handleClearFacets}");
+        expect(catalog).toContain("onClick={handleClearFacets}");
+        expect(catalog).toContain("onClick={handleClearAll}");
+    });
+
+    it("shows the existing cart control on the catalog mobile header", () => {
+        const navbar = read("src/components/Navbar.tsx");
+        expect(navbar).toContain('variant === "catalog" ? "flex" : "hidden xl:flex"');
+        expect(navbar).toContain('aria-label="Cart"');
+    });
+
+    it("keeps mobile list view as a richer single-column card", () => {
+        const catalog = read("src/app/catalog/CatalogClient.tsx");
+        expect(catalog).toContain("h-[112px] w-[112px]");
+        expect(catalog).toContain("line-clamp-2 whitespace-normal");
+        expect(catalog).toContain("LineItemMobileGrid");
+        expect(catalog).toContain("hidden lg:block");
     });
 });
