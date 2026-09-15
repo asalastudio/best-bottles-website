@@ -929,7 +929,9 @@ function FilterSidebarContent({
 
     return (
         <>
-            <h3 className="font-serif text-xl text-obsidian border-b border-champagne pb-3 mb-6">Browse</h3>
+            {!mobileOptimized && (
+                <h3 className="font-serif text-xl text-obsidian border-b border-champagne pb-3 mb-6">Browse</h3>
+            )}
             {shopCollectionSection}
 
             <button
@@ -1205,18 +1207,24 @@ function LineItemMobileCard({
 
     const incrementQty = () => setQuantity((q) => Math.min(q + 1, 9999));
     const decrementQty = () => setQuantity((q) => Math.max(q - 1, 1));
+    const cardSpecs = [
+        group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity?.replace(/\s*\([^)]*\)/g, ""),
+        group.neckThreadSize,
+        group.color,
+    ].filter(Boolean).join(" · ");
 
     return (
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: Math.min(index * 0.02, 0.3) }}
-            className="bg-white border border-champagne/40 rounded-lg overflow-hidden"
+            className="bg-white border border-champagne/40 overflow-hidden"
         >
-            <div className="flex items-center p-3 gap-3">
-                {/* Thumbnail */}
-                <div
-                    className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative"
+            <div className="flex items-stretch gap-3 p-3">
+                <Link
+                    href={href}
+                    className="relative block h-[112px] w-[112px] shrink-0 overflow-hidden bg-[#f0ebe3]"
+                    aria-label={`View ${customerDisplayName}`}
                     data-bb-image-audit="catalog-mobile-line-item"
                     data-bb-family={group.family ?? undefined}
                     data-bb-product-group-slug={group.slug}
@@ -1228,54 +1236,58 @@ function LineItemMobileCard({
                             src={thumbnailUrl}
                             alt={customerDisplayName}
                             fill
-                            data-bb-image-audit="catalog-mobile-line-item"
-                            data-bb-family={group.family ?? undefined}
-                            data-bb-product-group-slug={group.slug}
-                            data-bb-grace-sku={primaryGraceSku ?? undefined}
-                            data-bb-website-sku={primaryWebsiteSku ?? sku}
-                            className="object-contain p-1"
-                            sizes="56px"
+                            className="object-contain"
+                            sizes="112px"
                             unoptimized
                         />
                     ) : (
-                        <Package className="w-6 h-6 text-champagne" strokeWidth={1} />
+                        <span className="flex h-full items-center justify-center">
+                            <Package className="h-8 w-8 text-champagne" strokeWidth={1} />
+                        </span>
                     )}
-                </div>
+                </Link>
 
-                {/* Core Info */}
-                <div className="flex-1 min-w-0">
-                    <p className="text-[9px] text-muted-gold uppercase tracking-wider font-bold">
-                        {group.category}
-                    </p>
-                    <Link href={href}>
-                        <p className="font-serif text-sm text-obsidian font-medium leading-tight truncate hover:text-muted-gold transition-colors">
+                <div className="flex min-w-0 flex-1 flex-col">
+                    <Link href={href} className="min-w-0">
+                        <p className="line-clamp-2 whitespace-normal break-words text-[15px] font-medium leading-tight text-obsidian hover:text-muted-gold">
                             {customerDisplayName}
                         </p>
                     </Link>
-                    <div className="flex items-center gap-2 mt-1">
-                        <span className="text-[10px] text-slate font-mono bg-bone px-1.5 py-0.5 rounded">
-                            {sku}
-                        </span>
-                        <span className="text-xs font-semibold text-obsidian">
-                            {formatPrice(group.priceRangeMin)}
-                        </span>
-                        <span className="text-[10px] text-slate bg-bone px-1.5 py-0.5 rounded">
-                            {group.variantCount} variant{group.variantCount !== 1 ? "s" : ""}
-                        </span>
+                    {cardSpecs && (
+                        <p className="mt-1 truncate text-[12px] leading-snug text-slate">{cardSpecs}</p>
+                    )}
+                    <p className="mt-1 text-[15px] font-medium leading-tight text-obsidian">
+                        From {formatPrice(group.priceRangeMin)}
+                        <span className="text-sm font-normal text-slate">/ea</span>
+                    </p>
+                    <div className="mt-auto flex items-center justify-between gap-2 pt-2">
+                        <p className="text-[12px] leading-tight text-slate">
+                            {group.variantCount}{" "}
+                            {COMPONENT_CATEGORIES.has(group.category)
+                                ? `variant${group.variantCount === 1 ? "" : "s"}`
+                                : `cap option${group.variantCount === 1 ? "" : "s"}`}
+                        </p>
+                        <div className="flex items-center gap-1">
+                            <Link
+                                href={href}
+                                className="flex h-11 w-11 items-center justify-center bg-obsidian text-white"
+                                aria-label={`View ${customerDisplayName}`}
+                            >
+                                <ShoppingCart className="h-4 w-4" aria-hidden />
+                            </Link>
+                            <button
+                                onClick={() => setExpanded(!expanded)}
+                                className="flex h-11 w-11 items-center justify-center rounded-lg hover:bg-travertine transition-colors"
+                                aria-expanded={expanded}
+                                aria-label={expanded ? "Collapse details" : "Expand details"}
+                            >
+                                <ChevronDown
+                                    className={`h-4 w-4 text-slate transition-transform ${expanded ? "rotate-180" : ""}`}
+                                />
+                            </button>
+                        </div>
                     </div>
                 </div>
-
-                {/* Expand Toggle */}
-                <button
-                    onClick={() => setExpanded(!expanded)}
-                    className="p-2 rounded-lg hover:bg-travertine transition-colors"
-                    aria-expanded={expanded}
-                    aria-label={expanded ? "Collapse details" : "Expand details"}
-                >
-                    <ChevronDown
-                        className={`w-4 h-4 text-slate transition-transform ${expanded ? "rotate-180" : ""}`}
-                    />
-                </button>
             </div>
 
             {/* Expanded Details */}
@@ -1477,7 +1489,7 @@ function BackToTop() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 20 }}
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                    className="fixed bottom-6 left-6 z-40 w-10 h-10 rounded-full bg-obsidian text-bone flex items-center justify-center shadow-xl hover:bg-muted-gold transition-colors"
+                    className="fixed bottom-6 left-6 z-40 w-10 h-10 rounded-full bg-obsidian text-bone flex items-center justify-center shadow-xl hover:bg-muted-gold transition-colors max-xl:bottom-[calc(4.75rem+env(safe-area-inset-bottom,0px))]"
                     aria-label="Back to top"
                 >
                     <ChevronUp className="w-5 h-5" />
@@ -1780,6 +1792,13 @@ export default function CatalogClient({
         pushToUrl(EMPTY_FILTERS, sortBy, viewMode);
     }, [pushToUrl, sortBy, viewMode]);
 
+    const handleClearFacets = useCallback(() => {
+        const next = { ...EMPTY_FILTERS, search: filters.search };
+        setFilters(next);
+        setVisibleCount(PAGE_SIZE);
+        pushToUrl(next, sortBy, viewMode);
+    }, [filters.search, pushToUrl, sortBy, viewMode]);
+
     const handleSortChange = useCallback(
         (value: SortValue) => {
             setSortBy(value);
@@ -1927,7 +1946,7 @@ export default function CatalogClient({
                                 value={searchInput}
                                 onChange={(e) => handleSearchInput(e.target.value)}
                                 placeholder="Search products, SKUs, families..."
-                                className="bg-transparent text-base lg:text-sm focus:outline-none w-full placeholder-slate/60 text-obsidian"
+                                className="bg-transparent text-base lg:text-sm focus:outline-none w-full placeholder-slate/60 text-obsidian [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
                                 aria-label="Search products"
                                 data-testid="catalog-search-input"
                             />
@@ -1983,7 +2002,7 @@ export default function CatalogClient({
                 <div className="lg:hidden mb-3 flex items-center gap-2">
                     <button
                         onClick={() => setMobileFilterOpen(true)}
-                        className="inline-flex min-h-11 items-center gap-2 px-4 py-2.5 bg-white border border-champagne rounded-lg text-sm font-medium text-obsidian hover:border-muted-gold transition-colors"
+                        className="inline-flex min-h-11 items-center gap-1.5 px-3 py-2.5 bg-white border border-champagne rounded-lg text-sm font-medium text-obsidian hover:border-muted-gold transition-colors"
                         data-testid="catalog-mobile-filter-button"
                     >
                         <SlidersHorizontal className="w-4 h-4" />
@@ -2000,7 +2019,7 @@ export default function CatalogClient({
                             value={sortBy}
                             onChange={(e) => handleSortChange(e.target.value as SortValue)}
                             aria-label="Sort catalog results"
-                            className="h-11 w-full appearance-none bg-white border border-champagne rounded-lg px-3 text-sm text-obsidian pr-8 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none"
+                            className="h-11 w-full appearance-none bg-white border border-champagne rounded-lg px-2.5 text-sm text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none"
                         >
                             {SORT_OPTIONS.filter((opt) => opt.value !== "best-match" || filters.search).map((opt) => (
                                 <option key={opt.value} value={opt.value}>{opt.label}</option>
@@ -2032,14 +2051,14 @@ export default function CatalogClient({
                                 role="dialog"
                                 aria-modal="true"
                                 aria-label="Filter products"
-                                className="fixed top-0 left-0 z-50 w-[300px] max-w-[85vw] bg-warm-white overflow-y-auto lg:hidden"
+                                className="fixed top-0 left-0 z-50 flex w-[300px] max-w-[85vw] flex-col bg-warm-white lg:hidden"
                                 style={{
                                     bottom: "calc(4rem + env(safe-area-inset-bottom, 0px))",
                                     boxShadow: "8px 0 40px rgba(29,29,31,0.15)",
                                 }}
                                 data-testid="catalog-filter-drawer"
                             >
-                                <div className="flex items-center justify-between px-5 py-4 border-b border-champagne/50 sticky top-0 bg-warm-white z-10">
+                                <div className="flex shrink-0 items-center justify-between px-5 py-4 border-b border-champagne/50 bg-warm-white">
                                     <div className="flex items-center gap-2">
                                         <h3 className="font-serif text-lg text-obsidian font-medium">Filters</h3>
                                         {facetFilterCount > 0 && (
@@ -2058,7 +2077,7 @@ export default function CatalogClient({
                                         <X className="w-5 h-5 text-slate" />
                                     </button>
                                 </div>
-                                <div className="px-5 py-4 pb-8">
+                                <div className="min-h-0 flex-1 overflow-y-auto px-5 py-4">
                                     <FilterSidebarContent
                                         facets={facets}
                                         taxonomy={taxonomy ?? null}
@@ -2067,17 +2086,16 @@ export default function CatalogClient({
                                         expandedCategories={expandedCategories}
                                         toggleCategory={toggleCategory}
                                         onFilterChange={handleFilterChange}
-                                        onClearAll={handleClearAll}
+                                        onClearAll={handleClearFacets}
                                         mobileOptimized
                                     />
                                 </div>
-                                {/* Sticky "View results" button at bottom */}
-                                <div className="sticky bottom-0 px-5 py-4 bg-warm-white border-t border-champagne/50">
+                                <div className="shrink-0 px-5 py-4 bg-warm-white border-t border-champagne/50">
                                     <div className="flex gap-2">
                                         {facetFilterCount > 0 && (
                                             <button
                                                 type="button"
-                                                onClick={handleClearAll}
+                                                onClick={handleClearFacets}
                                                 className="min-h-11 flex-1 border border-champagne px-3 text-xs font-semibold uppercase tracking-wider text-obsidian"
                                             >
                                                 Clear all
@@ -2273,7 +2291,7 @@ export default function CatalogClient({
                                 </span>
                             ))}
                             <button
-                                onClick={handleClearAll}
+                                onClick={handleClearFacets}
                                 className="shrink-0 min-h-11 px-2 text-xs font-semibold text-muted-gold hover:text-obsidian"
                             >
                                 Clear
