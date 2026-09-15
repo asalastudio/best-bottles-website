@@ -46,8 +46,12 @@ export default function MobileTabBar() {
         pathname.startsWith("/team");
 
     useEffect(() => {
-        if (typeof window !== "undefined" && !localStorage.getItem(GRACE_TAB_ONBOARDING_KEY)) {
-            setShowGraceTooltip(true);
+        try {
+            if (!localStorage.getItem(GRACE_TAB_ONBOARDING_KEY)) {
+                setShowGraceTooltip(true); // eslint-disable-line react-hooks/set-state-in-effect -- one-time init from localStorage
+            }
+        } catch {
+            /* ignore */
         }
     }, []);
 
