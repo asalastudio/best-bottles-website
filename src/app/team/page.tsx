@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import BrandWordmark from "@/components/BrandWordmark";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { SwitchAccountButton } from "@/components/auth/SwitchAccountButton";
-import { PlatformStatusCard } from "@/components/team/PlatformStatusCard";
+import { TeamHubDashboard } from "@/components/team/TeamHubDashboard";
 import { getPlatformHealthSnapshot } from "@/lib/executive/platformHealth";
 import { getUserEmailAddresses, hasTeamHubAccess } from "@/lib/teamAccess";
+import { buildTeamHubTools, getMadisonStudioHref, getShopifyAdminHref } from "@/lib/teamHub";
+import { buildQueueItems, getTeamHubQueues, type QueueItem } from "@/lib/team/queues";
 
 export const dynamic = "force-dynamic";
 
@@ -27,94 +27,6 @@ function isLocalPreview(searchParams: Record<string, string | string[] | undefin
     return previewValues.some((value) => value === "1" || value === "true");
 }
 
-function getShopifyAdminHref() {
-    const domain = process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN
-        ?.trim()
-        .replace(/^https?:\/\//, "")
-        .replace(/\/.*$/, "");
-
-    if (!domain) return "https://admin.shopify.com";
-
-    const storeHandle = domain.replace(/\.myshopify\.com$/i, "").split(".")[0];
-    return storeHandle ? `https://admin.shopify.com/store/${storeHandle}` : "https://admin.shopify.com";
-}
-
-function getMadisonStudioHref() {
-    // Madison's own production domain, not the Vercel deployment URL that
-    // happens to serve it — the vercel.app host is an implementation detail and
-    // changes whenever the project is renamed or redeployed elsewhere.
-    return process.env.NEXT_PUBLIC_MADISON_STUDIO_URL?.trim() || "https://app.madisonstudio.io";
-}
-
-const tools = [
-    {
-        name: "Sanity Studio",
-        href: "/studio",
-        description: "Edit homepage, journal articles, and product copy. Click any text in Presentation to edit it live.",
-        badge: "CMS",
-    },
-    {
-        name: "B2B Portal Admin",
-        href: "/portal",
-        description: "Customer accounts, draft quotes, and order tracking.",
-        badge: "B2B",
-    },
-    {
-        name: "Executive Hub",
-        href: "/executive",
-        description: "Business overview and Grace operations. Separate access list from the Team Hub.",
-        badge: "Exec",
-    },
-    {
-        name: "Grace Workspace",
-        href: "/grace-workspace",
-        description: "The full Grace workspace — ask across live product truth, fitments and policies by voice or text. Same surface customers use.",
-        badge: "Grace",
-    },
-    {
-        name: "Certificate Review Queue",
-        href: "/team/resale-certificates",
-        description: "Approve or reject wholesale resale certificates. Approving removes sales tax for that account.",
-        badge: "Tax",
-    },
-    {
-        name: "Wholesale Accounts",
-        href: "/team/portal-accounts",
-        description: "Create and edit the accounts behind each wholesale customer — pricing tier, terms, billing email.",
-        badge: "B2B",
-    },
-    {
-        name: "Visual Asset Ledger",
-        href: "/team/asset-ledger",
-        description: "Every SKU with the state of its hero, plate and kit imagery, read from every store at once.",
-        badge: "Imagery",
-    },
-    {
-        name: "Backend Shopify Admin",
-        href: getShopifyAdminHref(),
-        description: "Open the Shopify backend for orders, inventory, refunds, and product publishing.",
-        badge: "Storefront",
-    },
-    {
-        name: "Madison Studio",
-        href: getMadisonStudioHref(),
-        description: "Generate and refine Best Bottles product photography.",
-        badge: "Image Studio",
-    },
-    {
-        name: "Best Bottles Packaging Studio",
-        href: "https://best-bottles-packaging-studio.vercel.app/",
-        description: "Create and review Best Bottles packaging layouts and studio assets.",
-        badge: "Packaging",
-    },
-    {
-        name: "Vercel",
-        href: "https://vercel.com/asala/best-bottles-website",
-        description: "Deploys, environment variables, and analytics.",
-        badge: "Infrastructure",
-    },
-];
-
 export default async function TeamPage({ searchParams }: TeamPageProps) {
     const resolvedSearchParams = searchParams ? await searchParams : undefined;
     const previewMode = isLocalPreview(resolvedSearchParams);
@@ -134,71 +46,36 @@ export default async function TeamPage({ searchParams }: TeamPageProps) {
     }
 
     const platformHealth = await getPlatformHealthSnapshot({ issueLimit: 3, activityLimit: 0 });
+    const tools = buildTeamHubTools({
+        shopifyAdminHref: getShopifyAdminHref(),
+        madisonStudioHref: getMadisonStudioHref(),
+    });
+
+    // Local preview runs without Clerk, so the staff gate behind the queue
+    // query cannot pass. The hub still renders — with an empty band rather
+    // than invented numbers, which is the honest version of "not available".
+    let queueItems: QueueItem[] = [];
+    try {
+        queueItems = buildQueueItems(await getTeamHubQueues());
+    } catch (error) {
+        if (!previewMode) console.error("[team-hub] queue counts unavailable:", error);
+    }
+
+    // The rail shows a count against the tool that clears it, so several
+    // queues pointing at one destination add up there.
+    const queueCounts = queueItems.reduce<Record<string, number>>((counts, item) => {
+        counts[item.href] = (counts[item.href] ?? 0) + item.count;
+        return counts;
+    }, {});
 
     return (
-        <main className="app-surface min-h-screen bg-bone px-6 py-20 sm:py-24">
-            <div className="mx-auto max-w-5xl">
-                <header className="mb-10 max-w-2xl">
-                    {/* The supplied wordmark rather than the company name set as
-                        an eyebrow, so the staff hub carries the same mark as the
-                        storefront and the client portal. */}
-                    <Link href="/" aria-label="Best Bottles home" className="mb-5 block">
-                        <BrandWordmark className="app-wordmark" />
-                    </Link>
-                    <h1 className="font-serif text-5xl leading-tight text-obsidian sm:text-6xl">
-                        Team Hub
-                    </h1>
-                    <p className="mt-5 text-lg leading-relaxed text-slate">
-                        Everything the team needs, one click away.
-                    </p>
-                    {previewMode ? (
-                        <p className="mt-4 inline-flex rounded-full border border-muted-gold/30 bg-linen px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-gold-dim">
-                            Local preview mode
-                        </p>
-                    ) : null}
-                </header>
-
-                <PlatformStatusCard snapshot={platformHealth} />
-
-                <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                    {tools.map((tool) => (
-                        <a
-                            key={tool.name}
-                            href={tool.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="group relative min-h-48 border border-champagne/50 bg-linen px-6 py-6 shadow-[0_18px_45px_rgba(29,29,31,0.04)] transition duration-200 hover:-translate-y-0.5 hover:border-muted-gold/50 hover:shadow-[0_22px_60px_rgba(29,29,31,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
-                        >
-                            <span className="absolute right-5 top-5 rounded-full border border-champagne/50 bg-bone px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-gold-dim">
-                                {tool.badge}
-                            </span>
-                            <div className="flex h-full flex-col pr-20">
-                                <h2 className="font-serif text-2xl font-semibold leading-tight text-obsidian">
-                                    {tool.name}
-                                </h2>
-                                <p className="mt-4 max-w-md text-sm leading-6 text-slate">
-                                    {tool.description}
-                                </p>
-                                <span className="mt-auto pt-8 text-sm font-semibold text-obsidian transition-colors group-hover:text-muted-gold">
-                                    Open →
-                                </span>
-                            </div>
-                        </a>
-                    ))}
-                </section>
-
-                <p className="mt-10 text-sm leading-6 text-slate">
-                    Need access to a tool? Contact Jordan{" "}
-                    <a
-                        href="mailto:jordan@asala.ai"
-                        className="font-medium text-obsidian underline decoration-champagne underline-offset-4 hover:text-muted-gold"
-                    >
-                        (jordan@asala.ai)
-                    </a>
-                    .
-                </p>
-            </div>
-        </main>
+        <TeamHubDashboard
+            tools={tools}
+            previewMode={previewMode}
+            platformHealth={platformHealth}
+            queueItems={queueItems}
+            queueCounts={queueCounts}
+        />
     );
 }
 

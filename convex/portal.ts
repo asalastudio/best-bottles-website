@@ -951,3 +951,59 @@ export const saveAccountAddress = mutation({
         return null;
     },
 });
+
+/**
+ * The numbers on the Team Hub's "Today" band.
+ *
+ * Every one of these is work waiting on a person, counted from the same tables
+ * the queues themselves read — not a summary table that could drift from them.
+ * Nothing here is estimated or projected: a staff dashboard that shows a
+ * plausible number is worse than one that shows none, because a wrong zero
+ * means nobody goes and looks.
+ *
+ * Staff-only. The caller must gate before using it.
+ */
+export const getTeamHubQueues = query({
+    args: {},
+    returns: v.object({
+        certificatesAwaitingReview: v.number(),
+        certificatesLapsed: v.number(),
+        certificatesAwaitingShopifySync: v.number(),
+        ordersSubmitted: v.number(),
+        accountsWithoutShippingAddress: v.number(),
+        accountsWithoutShopifyCustomer: v.number(),
+        accountTotal: v.number(),
+    }),
+    handler: async (ctx) => {
+        const [certificates, drafts, accounts] = await Promise.all([
+            ctx.db.query("resaleCertificates").collect(),
+            ctx.db.query("portalDrafts").collect(),
+            ctx.db.query("portalAccounts").collect(),
+        ]);
+
+        const now = Date.now();
+
+        return {
+            certificatesAwaitingReview: certificates.filter((c) => c.status === "pending").length,
+            // Approved but past its expiry: Shopify may still be exempting an
+            // account that no longer holds a valid permit, which is the
+            // expensive direction of this mistake.
+            certificatesLapsed: certificates.filter(
+                (c) => c.status === "approved" && c.expiresAt !== undefined && c.expiresAt < now,
+            ).length,
+            // Approved here but never written to Shopify — the account is still
+            // being charged tax it should not be.
+            certificatesAwaitingShopifySync: certificates.filter(
+                (c) => c.status === "approved" && !c.shopifySyncedAt,
+            ).length,
+            // Orders the customer has sent that nobody has turned into a real
+            // Shopify order yet.
+            ordersSubmitted: drafts.filter((d) => d.status === "submitted" && !d.archivedAt).length,
+            // An account with no address cannot submit an order at all, so this
+            // is a silently stuck customer rather than a tidiness problem.
+            accountsWithoutShippingAddress: accounts.filter((a) => !a.shippingAddress).length,
+            accountsWithoutShopifyCustomer: accounts.filter((a) => !a.shopifyCustomerId).length,
+            accountTotal: accounts.length,
+        };
+    },
+});

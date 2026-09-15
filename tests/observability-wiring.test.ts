@@ -69,9 +69,8 @@ describe("the Sentry → Convex → dashboard bridge", () => {
 
     it("the cron keeps counts truthful and the hubs render the panel", () => {
         expect(read("convex/crons.ts")).toContain("internal.observability.syncFromSentry");
-        expect(read("src/components/executive/ExecutiveDashboard.tsx")).toContain("<PlatformHealthPanel");
-        expect(read("src/components/executive/ExecutiveNavigation.tsx")).toContain('{ short: "PL", label: "Platform", href: "#platform", available: true }');
-        expect(read("src/app/team/page.tsx")).toContain("<PlatformStatusCard");
+        expect(read("src/components/executive/ExecutiveBoard.tsx")).toContain("<PlatformHealthPanel");
+        expect(read("src/components/team/TeamHubDashboard.tsx")).toContain("<PlatformStatusCard");
         expect(read("src/app/executive/page.tsx")).toContain("getPlatformHealthSnapshot()");
     });
 

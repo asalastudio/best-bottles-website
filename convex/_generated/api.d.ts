@@ -64,6 +64,7 @@ import type * as repairCylinderPilot from "../repairCylinderPilot.js";
 import type * as resaleCertificates from "../resaleCertificates.js";
 import type * as seedProducts from "../seedProducts.js";
 import type * as shopifySync from "../shopifySync.js";
+import type * as staffProducts from "../staffProducts.js";
 import type * as writeToken from "../writeToken.js";
 
 import type {
@@ -129,6 +130,7 @@ declare const fullApi: ApiFromModules<{
   resaleCertificates: typeof resaleCertificates;
   seedProducts: typeof seedProducts;
   shopifySync: typeof shopifySync;
+  staffProducts: typeof staffProducts;
   writeToken: typeof writeToken;
 }>;
 

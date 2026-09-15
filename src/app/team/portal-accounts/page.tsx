@@ -87,7 +87,7 @@ export default async function PortalAccountsPage() {
                         accounts.map((account, i) => (
                             <div
                                 key={account._id}
-                                className={`grid grid-cols-[1fr_110px_110px_1fr_90px] gap-4 items-center px-5 py-3 ${
+                                className={`grid grid-cols-[1fr_100px_1fr_130px_90px] gap-4 items-center px-5 py-3 ${
                                     i < accounts.length - 1 ? "border-b border-neutral-100" : ""
                                 }`}
                             >
@@ -104,6 +104,21 @@ export default async function PortalAccountsPage() {
                                     {account.billingEmail ?? (
                                         // Without this, an approved certificate has nowhere to go.
                                         <span className="text-amber-700">No billing email</span>
+                                    )}
+                                </p>
+                                {/* The Team Hub counts accounts with no shipping
+                                    address, because those customers cannot submit
+                                    an order at all. That count has to land
+                                    somewhere that says which ones. */}
+                                <p className="font-sans text-[12px] truncate">
+                                    {account.shippingAddress ? (
+                                        <span className="text-neutral-400">
+                                            {[account.shippingAddress.city, account.shippingAddress.provinceCode]
+                                                .filter(Boolean)
+                                                .join(", ") || "Address on file"}
+                                        </span>
+                                    ) : (
+                                        <span className="text-amber-700">No shipping address</span>
                                     )}
                                 </p>
                                 <div className="flex justify-end">
