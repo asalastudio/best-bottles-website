@@ -1,8 +1,9 @@
 // @vitest-environment jsdom
 import React, { act, useState } from "react";
+import { readFileSync } from "node:fs";
 import { createRoot, type Root } from "react-dom/client";
 import { beforeEach, afterEach, describe, it, expect, vi } from "vitest";
-import MobileBuilder from "@/components/bottle-builder/MobileBuilder";
+import MobileBuilder, { shortFinishLabel } from "@/components/bottle-builder/MobileBuilder";
 import { deriveBuilder, emptySelection, reconcileSelection, builderOrder, type BuilderBody, type BuilderConfiguration } from "@/lib/bottle-builder/model";
 vi.mock("@/components/bottle-builder/BuilderImage", () => ({ default: ({ label }: { label: string }) => <span role="img" aria-label={label} /> }));
 vi.mock("@/components/bottle-builder/BuilderFinishImage", () => ({ default: () => <span>Finish photo</span> }));
@@ -93,4 +94,32 @@ describe('mobile presentation over shared configuration',()=>{
  it('keeps the selected drawings at fitment and resets only the draft',()=>{
   toFinish();button('Back');expect(container.textContent).toContain('Metal Roller drawing');button('Start over');expect(stage()).toBe('0');expect(add).not.toHaveBeenCalled();expect(container.querySelector('input:checked')).toBeNull();
  });
+ it('keeps the first option row in the compact mobile chrome and does not repeat selected copy',()=>{
+  const css=readFileSync("src/components/bottle-builder/MobileBuilder.module.css","utf8");
+  expect(css).toContain("height: 168px");
+  expect(css).toContain("font-size: clamp(1.75rem, 8vw, 2rem)");
+  expect(css).toContain("min-height: 44px");
+  choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');
+  expect(container.textContent).not.toContain('Clear selected');
+  expect(container.querySelector('.glassGrid, [class*="glassGrid"]') || container.querySelector('input[aria-label="Frosted"]')).toBeTruthy();
+ });
+ it('shortens finish labels and treats glass as two visual cards',()=>{
+  expect(shortFinishLabel("Black with Dots Cap")).toBe("Black + Dots");
+  expect(shortFinishLabel("Matte Copper Cap")).toBe("Matte Copper");
+  toFinish();
+  expect(container.textContent).toContain("Gold");
+  expect(container.textContent).not.toContain("Gold Cap");
+ });
+ it('shows a dedicated added state instead of restarting the chooser',async()=>{
+  await act(async()=>root.render(<AddedHarness/>));
+  expect(container.textContent).toContain("Added to cart");
+  expect(container.textContent).toContain("9 ml Cylinder");
+  expect(container.textContent).toContain("Checkout");
+  expect(container.textContent).toContain("Build another bottle");
+  expect(container.querySelector('input[aria-label="9 ml, 13-415 neck"]')).toBeNull();
+  expect(container.textContent).not.toContain("Your bottle has been added.");
+ });
 });
+function AddedHarness(){
+ return <MobileBuilder families={[{family:'Cylinder',groups:2}]} family="Cylinder" bodies={bodies} selection={emptySelection()} current={deriveBuilder(bodies,emptySelection())} order={builderOrder(null,12,[])} stage={0} onStage={()=>{}} onUpdate={()=>{}} onReset={()=>{}} onFamily={()=>{}} onAdd={add} size="" neck="" application="" onFilter={()=>{}} pending={false} adding={false} hydrated error="" lastAdded={{name:"9 ml Cylinder",quantity:12,total:9.84,lines:["9 ml Cylinder","Clear","Metal Roller","Gold"]}} cartProgress={{subtotal:1862.6,remaining:0,met:true}} hasIncludedCover={false} showCover={false} onCover={()=>{}} chooserScale={()=>1} />;
+}
