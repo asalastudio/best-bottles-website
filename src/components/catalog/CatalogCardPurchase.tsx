@@ -19,7 +19,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useId, useRef, useState, type KeyboardEvent, type MouseEvent } from "react";
-import { Check, Minus, Plus, X } from "@/components/icons";
+import { Check, Minus, Plus, X, ShoppingCart } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import { analytics } from "@/lib/analytics";
 import {
@@ -191,8 +191,8 @@ export default function CatalogCardPurchase({
 
     if (!variant || variant.webPrice1pc == null || variant.webPrice1pc <= 0) {
         return (
-            <div className="border-t border-champagne/55 px-4 pb-5 pt-4 sm:px-5" data-testid="catalog-card-purchase" data-state="unpriced">
-                <p className="text-lg font-semibold text-obsidian" data-testid="catalog-card-price">
+            <div className="border-t border-champagne/55 px-3 pb-3 pt-3 sm:px-5 lg:px-4 lg:pb-5 lg:pt-4" data-testid="catalog-card-purchase" data-state="unpriced">
+                <p className="text-[15px] font-medium text-obsidian lg:text-lg lg:font-semibold" data-testid="catalog-card-price">
                     {groupStartingPrice != null
                         ? <>From {formatPrice(groupStartingPrice)}<span className="text-sm font-normal text-slate">/ea</span></>
                         : "Request pricing"}
@@ -309,22 +309,41 @@ export default function CatalogCardPurchase({
 
     return (
         <div
-            className="border-t border-champagne/55 px-4 pb-4 pt-3 sm:px-5"
+            className="border-t border-champagne/55 px-3 pb-3 pt-3 sm:px-5 lg:px-4 lg:pb-4 lg:pt-3"
             data-testid="catalog-card-purchase"
             data-state={purchasable ? "purchasable" : "quote"}
         >
-            <p className="text-lg font-semibold text-obsidian" data-testid="catalog-card-price">
+            <p className="text-[15px] font-medium leading-tight text-obsidian lg:text-lg lg:font-semibold" data-testid="catalog-card-price">
                 From {formatPrice(startingPrice ?? variant.webPrice1pc)}
                 <span className="text-sm font-normal text-slate">/ea</span>
             </p>
             {variant.optionLabel && (
-                <p className="mt-0.5 text-[11px] text-slate">
+                <p className="mt-0.5 hidden text-[11px] text-slate lg:block">
                     Adds <span className="text-obsidian">{variant.optionLabel}</span>
                 </p>
             )}
 
-            {/* Quantity → rate → tier pricing → add, top-down on every width. */}
-            <div className="mt-3 flex items-start gap-3">
+            <div className="mt-2 flex items-center justify-end lg:hidden">
+                {purchasable ? (
+                    <button
+                        type="button"
+                        data-testid="catalog-card-add-compact"
+                        onClick={handleAdd}
+                        disabled={qty == null}
+                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-obsidian text-white ${FOCUS_RING}`}
+                        aria-label={`Add ${qty ?? 1} ${title} to cart`.replace(/\s+/g, " ")}
+                    >
+                        {added != null ? <Check className="h-4 w-4" aria-hidden /> : <ShoppingCart className="h-4 w-4" aria-hidden />}
+                    </button>
+                ) : (
+                    <Link href={quoteHref} data-testid="catalog-card-quote-compact" className={`flex h-11 min-w-11 items-center px-2 text-[10px] font-bold uppercase tracking-wider text-obsidian underline ${FOCUS_RING}`}>
+                        Quote
+                    </Link>
+                )}
+            </div>
+
+            {/* Quantity → rate → tier pricing → add, top-down on every desktop width. */}
+            <div className="mt-3 hidden items-start gap-3 lg:flex">
                 {renderStepper("card")}
                 {renderLiveLine("card")}
             </div>
@@ -339,7 +358,7 @@ export default function CatalogCardPurchase({
                         aria-expanded={tiersOpen}
                         aria-controls={dialogId}
                         onClick={openTiers}
-                        className={`mt-1 flex min-h-11 w-full items-center justify-between gap-2 text-xs font-semibold text-obsidian transition-colors motion-reduce:transition-none hover:text-muted-gold sm:min-h-9 ${FOCUS_RING}`}
+                        className={`mt-1 hidden min-h-11 w-full items-center justify-between gap-2 text-xs font-semibold text-obsidian transition-colors motion-reduce:transition-none hover:text-muted-gold sm:min-h-9 lg:flex ${FOCUS_RING}`}
                     >
                         <span>View tier pricing</span>
                         <Plus weight="thin" className="h-4 w-4 shrink-0" aria-hidden />
@@ -448,7 +467,7 @@ export default function CatalogCardPurchase({
                 </>
             )}
 
-            <div className="mt-2">{renderAddButton("card")}</div>
+            <div className="mt-2 hidden lg:block">{renderAddButton("card")}</div>
 
             {added != null && (
                 <p role="status" className="mt-1.5 flex items-center gap-2 text-[11px] text-obsidian" data-testid="catalog-card-added">
