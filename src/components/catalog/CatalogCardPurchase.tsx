@@ -91,6 +91,7 @@ export default function CatalogCardPurchase({
     const committedQty = useRef(1);
     const dialogRef = useRef<HTMLDialogElement>(null);
     const triggerRef = useRef<HTMLButtonElement>(null);
+    const openerRef = useRef<HTMLButtonElement | null>(null);
     const tierRefs = useRef<Array<HTMLButtonElement | null>>([]);
     const addedTimer = useRef<number | null>(null);
 
@@ -107,7 +108,8 @@ export default function CatalogCardPurchase({
     const sku = variant?.websiteSku ?? variant?.graceSku ?? null;
     const eventBase = { productId, sku, quantity: qty ?? 0, tier: catalogTierLabel(activeTier) };
 
-    const openTiers = () => {
+    const openTiers = (event?: MouseEvent<HTMLButtonElement>) => {
+        if (event) openerRef.current = event.currentTarget;
         const dialog = dialogRef.current;
         if (!dialog || dialog.open) return;
         dialog.showModal();
@@ -125,7 +127,7 @@ export default function CatalogCardPurchase({
     const handleDialogClose = () => {
         setTiersOpen(false);
         track(() => analytics.catalogTierPricingToggled({ open: false, ...eventBase }));
-        triggerRef.current?.focus({ preventScroll: true });
+        (openerRef.current ?? triggerRef.current)?.focus({ preventScroll: true });
     };
 
     const onDialogClick = (event: MouseEvent<HTMLDialogElement>) => {
@@ -323,7 +325,20 @@ export default function CatalogCardPurchase({
                 </p>
             )}
 
-            <div className="mt-2 flex items-center justify-end lg:hidden">
+            <div className={`mt-2 flex items-center gap-2 lg:hidden ${tiers.length > 0 ? "" : "justify-end"}`}>
+                {tiers.length > 0 && (
+                    <button
+                        type="button"
+                        data-testid="catalog-card-tier-toggle-compact"
+                        aria-haspopup="dialog"
+                        aria-expanded={tiersOpen}
+                        aria-controls={dialogId}
+                        onClick={openTiers}
+                        className={`min-h-11 min-w-0 flex-1 text-left text-[11px] font-semibold leading-tight text-obsidian hover:text-muted-gold ${FOCUS_RING}`}
+                    >
+                        View tier pricing
+                    </button>
+                )}
                 {purchasable ? (
                     <button
                         type="button"
