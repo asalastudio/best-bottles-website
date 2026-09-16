@@ -10,6 +10,7 @@ import {
     Tag, Globe, CaretDown, CaretRight,
 } from "@/components/icons";
 import { urlFor } from "@/sanity/lib/image";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 
 // ─── Shared types ─────────────────────────────────────────────────────────────
 
@@ -198,7 +199,7 @@ function RichDescriptionBlock({ block }: { block: PdpRichDescriptionBlock }) {
                 </p>
             )}
             {block.heading && (
-                <h2 className="font-serif text-2xl text-obsidian font-medium mb-5">{block.heading}</h2>
+                <h2 className="font-serif text-2xl text-obsidian font-medium mb-5">{displayApplicatorName(block.heading)}</h2>
             )}
             {block.body && (
                 <PortableText

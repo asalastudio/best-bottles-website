@@ -77,7 +77,7 @@ export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSl
         return()=>preference.removeEventListener('change',sync);
     }, [slide]);
     return <section className={styles.hero} data-scene={!slide ? (fitmentHero ? "empire-niche" : "empire-water") : undefined} aria-label="Featured bottles">
-        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (fitmentHero ? <EmpireFitmentHero hotspots={heroHotspots}/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
+        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (fitmentHero ? <EmpireFitmentHero hotspots={heroHotspots}/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage style bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
         <div className={styles.heroCopy}>
             <h1>{slide?.headline || <><span>Beautifully</span><span>Contained.</span></>}</h1>
             <p className={styles.heroLead}>{slide?.subheadline || 'Distinctive glass with endless possibilities.'}</p>

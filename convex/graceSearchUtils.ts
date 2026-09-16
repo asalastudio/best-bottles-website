@@ -18,6 +18,10 @@ export const APPLICATOR_VALUE_ALIASES: Record<string, string> = {
     "antique bulb sprayer with tassel": "Vintage Bulb Sprayer with Tassel",
     "vintage bulb sprayer": "Vintage Bulb Sprayer",
     "vintage bulb sprayer with tassel": "Vintage Bulb Sprayer with Tassel",
+    "vintage style bulb sprayer": "Vintage Bulb Sprayer",
+    "vintage style bulb sprayer with tassel": "Vintage Bulb Sprayer with Tassel",
+    "vintage style bulb": "Vintage Bulb Sprayer",
+    "vintage style bulb with tassel": "Vintage Bulb Sprayer with Tassel",
 };
 
 // ─── Family minimum sizes ───────────────────────────────────────────────────

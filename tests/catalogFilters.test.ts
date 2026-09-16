@@ -27,6 +27,7 @@ import {
     expandCapacityFilterValues,
     filtersAreEmpty,
     filtersToParams,
+    displayApplicatorName,
     normalizeApplicatorBuckets,
     paramsToFilters,
     rollerMaterialMatchesProductValues,
@@ -555,6 +556,34 @@ describe("applicatorBucketMatchesProductValues", () => {
         expect(applicatorBucketMatchesProductValues("antiquespray-tassel", ["Vintage Bulb Sprayer with Tassel"])).toBe(true);
         // Tassel variant should NOT match the non-tassel bucket
         expect(applicatorBucketMatchesProductValues("antiquespray", ["Vintage Bulb Sprayer with Tassel"])).toBe(false);
+    });
+
+    it("shows vintage style labels without changing stored applicator values", () => {
+        const plain = APPLICATOR_BUCKETS.find((bucket) => bucket.value === "antiquespray")!;
+        const tassel = APPLICATOR_BUCKETS.find((bucket) => bucket.value === "antiquespray-tassel")!;
+        expect(plain.label).toBe("Vintage Style Bulb Spray");
+        expect(tassel.label).toBe("Vintage Style Bulb Spray with Tassel");
+        expect(plain.productValues).toContain("Vintage Bulb Sprayer");
+        expect(tassel.productValues).toContain("Vintage Bulb Sprayer with Tassel");
+        expect(plain.productValues).not.toContain("Vintage Style Bulb Sprayer");
+    });
+
+    it("rewrites stored applicator names for customer-facing copy", () => {
+        expect(displayApplicatorName("Vintage Bulb Sprayer")).toBe("Vintage Style Bulb Sprayer");
+        expect(displayApplicatorName("Vintage Bulb Sprayer with Tassel")).toBe("Vintage Style Bulb Sprayer with Tassel");
+        expect(displayApplicatorName("Fine Mist Sprayer")).toBe("Fine Mist Sprayer");
+    });
+
+    it("maps vintage style and legacy vintage bulb labels to the same buckets", () => {
+        expect(normalizeApplicatorBuckets([
+            "Vintage Bulb Spray",
+            "Vintage Style Bulb Spray",
+            "Vintage Style Bulb Sprayer",
+        ])).toEqual(["antiquespray"]);
+        expect(normalizeApplicatorBuckets([
+            "Vintage Bulb Spray with Tassel",
+            "Vintage Style Bulb Spray with Tassel",
+        ])).toEqual(["antiquespray-tassel"]);
     });
 });
 

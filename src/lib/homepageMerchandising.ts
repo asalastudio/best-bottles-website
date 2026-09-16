@@ -95,7 +95,7 @@ export const HOME_EDITORIAL_STORIES = [
         key: "antique-bulb-sprayers",
         eyebrow: "The Art of Fragrance",
         title: "Antique Bulb Sprayers",
-        description: "A signature finishing touch for the vanity: sculptural glass paired with vintage bulbs, braided hoses, and tassels.",
+        description: "A signature finishing touch for the vanity: sculptural glass paired with vintage style bulbs, braided hoses, and tassels.",
         href: "/catalog?families=Diva&applicators=antiquespray%2Cantiquespray-tassel&sort=best-match",
         image: "/assets/editorial-sketches/antique-bulb-sprayers-pencil.webp",
         imageAlt: "Two antique perfume bottles with black and red bulb sprayers arranged on a sketched vanity",

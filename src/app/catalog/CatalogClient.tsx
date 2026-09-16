@@ -108,6 +108,7 @@ function FamilyBanner({ family }: { family: string }) {
                 alt={family}
                 fill
                 className="object-cover object-center"
+                sizes="100vw"
                 unoptimized
             />
             <div className="absolute inset-0 bg-gradient-to-r from-obsidian/60 via-obsidian/20 to-transparent" />
@@ -1232,6 +1233,7 @@ function LineItemMobileCard({
                             className="object-contain"
                             sizes="112px"
                             unoptimized
+                            priority={index === 0}
                         />
                     ) : (
                         <span className="flex h-full items-center justify-center">
@@ -2200,7 +2202,7 @@ export default function CatalogClient({
                             <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Box"]})}>Boxes</button>
                         </div>}
                         {filters.shopCollection === "glass-spray-bottles" && <div className="mb-5 hidden flex-wrap gap-3 text-sm lg:flex">
-                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["antiquespray","antiquespray-tassel"]})}>Vintage Bulb Spray Bottles</button>
+                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["antiquespray","antiquespray-tassel"]})}>Vintage Style Bulb Spray Bottles</button>
                             <Link className="underline" href="/catalog?category=Component&componentType=Sprayer">Loose sprayer components</Link>
                         </div>}
                         {/* Family banner — shown when a single design family is filtered */}

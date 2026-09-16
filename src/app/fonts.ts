@@ -39,6 +39,8 @@ export const ebGaramond = EB_Garamond({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
     style: ["normal", "italic"],
+    display: "swap",
+    preload: false,
 });
 
 export const cormorant = Cormorant({
@@ -46,4 +48,6 @@ export const cormorant = Cormorant({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
     style: ["normal", "italic"],
+    display: "swap",
+    preload: false,
 });
