@@ -116,6 +116,21 @@
       "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
     },
     {
+      "body": "Empire|50|Clear|18-415",
+      "generated": {
+        "input": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-input.png",
+        "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
+        "editJob": "e12bef5a-7232-4aef-a3b9-93005362739f",
+        "cutoutJob": "2ac49acd-76c0-4ec8-b232-ccca26912bad",
+        "generatedPng": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-generated.png",
+        "cutoutPng": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-cutout.png",
+        "splicedPng": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-spliced.png",
+        "preEdit": "data/paper-doll/neck-cleanup/pre-edit/empire-50-clear-18-415.webp",
+        "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
+      },
+      "instruction": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle… either by using GPT 2.5 to recreate these bodies' — pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot)."
+    },
+    {
       "body": "Circle|30|Clear|15-415",
       "generated": {
         "input": "data/paper-doll/neck-cleanup/circle-30-clear-15-415-input.png",
@@ -270,25 +285,6 @@
       "path": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/29. GBRnd128SpryShnSl.psd",
       "layer": 1,
       "instruction": "Pinned 2026-09-14: the paired-kit recipe layer already serving the builder; main's ledger moved the Round 128 ml clear plates to 'reconcile', which must not drop a reviewed body."
-    },
-    {
-      "body": "Empire|50|Clear|18-415",
-      "path": "2.  18-415 Bottles /21. Empire 50ml/2. Empire 50ml (18-415) Sideviews/6 copy 3.psd",
-      "layer": 1,
-      "instruction": "2026-09-16 Jordan: 'the Empire already has the reducer inside it that should not be there. That needs to be a bare glass bottle at that stage.' The master's own bare front photograph from the Empire 50 Sideviews folder (clean cut-out, empty neck) replaces the GPT-edited body.",
-      "supersedes": {
-        "generated": {
-          "input": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-input.png",
-          "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
-          "editJob": "e12bef5a-7232-4aef-a3b9-93005362739f",
-          "cutoutJob": "2ac49acd-76c0-4ec8-b232-ccca26912bad",
-          "generatedPng": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-generated.png",
-          "cutoutPng": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-cutout.png",
-          "splicedPng": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-spliced.png",
-          "preEdit": "data/paper-doll/neck-cleanup/pre-edit/empire-50-clear-18-415.webp",
-          "splice": "neck only: source silhouette ∩ edit silhouette in the neck rows, edit colour inside the bore, source pixels everywhere else (splice-report.json: 0 changes below the neck)"
-        }
-      }
     }
   ]
 }
