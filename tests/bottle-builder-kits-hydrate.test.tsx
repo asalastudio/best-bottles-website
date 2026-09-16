@@ -3,7 +3,7 @@ import React, { act } from "react";
 import { createRoot } from "react-dom/client";
 import { it, expect, vi } from "vitest";
 import { useBuilderKits } from "@/components/bottle-builder/useBuilderKits";
-import type { BuilderBody, BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/model";
+import type { BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/model";
 import { slimBuilderBodies } from "@/lib/bottle-builder/payload";
 
 const kit = {
@@ -28,7 +28,7 @@ function Harness({ bodyId }: { bodyId: string | null }) {
 
 it("loads kit layers only after a bottle is selected", async () => {
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
-    const fetcher = vi.fn(async () => ({ ok: true, json: async () => ({ kits: { Cylinder9MetalBlack: kit } }) }));
+    const fetcher = vi.fn(async (_url: RequestInfo | URL) => ({ ok: true, json: async () => ({ kits: { Cylinder9MetalBlack: kit } }) }));
     vi.stubGlobal("fetch", fetcher);
     const el = document.createElement("div");
     const root = createRoot(el);
@@ -38,7 +38,7 @@ it("loads kit layers only after a bottle is selected", async () => {
         expect(fetcher).not.toHaveBeenCalled();
         await act(async () => root.render(<Harness bodyId={bodies[0]!.id} />));
         expect(fetcher).toHaveBeenCalledTimes(1);
-        expect(String(fetcher.mock.calls[0]?.[0])).toContain("family=Cylinder");
+        expect(fetcher).toHaveBeenCalledWith(expect.stringContaining("family=Cylinder"), expect.anything());
         expect(el.textContent).toBe("layered");
     } finally {
         act(() => root.unmount());
