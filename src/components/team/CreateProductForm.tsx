@@ -5,7 +5,8 @@ import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { createProductAction, type CreateProductState } from "@/app/team/products/actions";
+import { createProductAction, createProductImageUploadUrlAction, resolveProductImageUrlAction, type CreateProductState } from "@/app/team/products/actions";
+import ProductImageDropField from "@/components/team/ProductImageDropField";
 import {
     CREATE_PRODUCT_CATEGORY_OPTIONS,
     CREATE_PRODUCT_COLOR_OPTIONS,
@@ -181,16 +182,37 @@ export default function CreateProductForm({ previewMode = false }: { previewMode
                             ) : null}
 
                             {section.id === "imagery" ? (
-                                <div className="grid gap-4">
-                                    <Field label="Hero image URL" name="heroImageUrl" hint="Catalog card and PDP fallback. Shopify or approved host — not Sanity.">
-                                        <input id="heroImageUrl" name="heroImageUrl" className={controlClass} value={draft.heroImageUrl} onChange={(event) => set("heroImageUrl", event.target.value)} />
-                                    </Field>
-                                    <Field label="Primary variant image URL" name="imageUrl" hint="Cap-on / default gallery image.">
-                                        <input id="imageUrl" name="imageUrl" className={controlClass} value={draft.imageUrl} onChange={(event) => set("imageUrl", event.target.value)} />
-                                    </Field>
-                                    <Field label="Cap-off image URL" name="imageUrlCapOff">
-                                        <input id="imageUrlCapOff" name="imageUrlCapOff" className={controlClass} value={draft.imageUrlCapOff} onChange={(event) => set("imageUrlCapOff", event.target.value)} />
-                                    </Field>
+                                <div className="grid gap-5">
+                                    <ProductImageDropField
+                                        id="heroImageUrl"
+                                        name="heroImageUrl"
+                                        label="Hero image"
+                                        hint="Catalog card and PDP fallback. Upload a photo here — Shopify or Convex URLs also work. Not Sanity."
+                                        value={draft.heroImageUrl}
+                                        onChange={(url) => set("heroImageUrl", url)}
+                                        createUploadUrl={createProductImageUploadUrlAction}
+                                        resolveUrl={resolveProductImageUrlAction}
+                                    />
+                                    <ProductImageDropField
+                                        id="imageUrl"
+                                        name="imageUrl"
+                                        label="Cap-on / default gallery"
+                                        hint="The primary variant image on the product page."
+                                        value={draft.imageUrl}
+                                        onChange={(url) => set("imageUrl", url)}
+                                        createUploadUrl={createProductImageUploadUrlAction}
+                                        resolveUrl={resolveProductImageUrlAction}
+                                    />
+                                    <ProductImageDropField
+                                        id="imageUrlCapOff"
+                                        name="imageUrlCapOff"
+                                        label="Cap-off image"
+                                        hint="Secondary gallery view, without the closure."
+                                        value={draft.imageUrlCapOff}
+                                        onChange={(url) => set("imageUrlCapOff", url)}
+                                        createUploadUrl={createProductImageUploadUrlAction}
+                                        resolveUrl={resolveProductImageUrlAction}
+                                    />
                                     {preview.paperDollEligible ? (
                                         <Field
                                             label="Paper-doll family key"

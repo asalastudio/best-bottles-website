@@ -17,6 +17,24 @@ for (const key of requiredEnvVars) {
     }
 }
 
+function convexStorageImagePatterns() {
+    const raw = process.env.NEXT_PUBLIC_CONVEX_URL;
+    if (!raw) return [];
+    try {
+        const host = new URL(raw).hostname;
+        const hosts = new Set([host]);
+        if (host.endsWith(".convex.site")) hosts.add(host.replace(/\.convex\.site$/, ".convex.cloud"));
+        if (host.endsWith(".convex.cloud")) hosts.add(host.replace(/\.convex\.cloud$/, ".convex.site"));
+        return [...hosts].map((hostname) => ({
+            protocol: "https" as const,
+            hostname,
+            pathname: "/api/storage/**",
+        }));
+    } catch {
+        return [];
+    }
+}
+
 const nextConfig: NextConfig = {
     reactStrictMode: false,
     // Required by the /ingest PostHog proxy below — without it Next 308s
@@ -68,6 +86,7 @@ const nextConfig: NextConfig = {
                 protocol: "https",
                 hostname: "www.bestbottles.com",
             },
+            ...convexStorageImagePatterns(),
         ],
     },
 
