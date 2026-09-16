@@ -138,7 +138,7 @@
 }
 
 .editorial {
-  --font-serif: var(--font-editorial);
+  --font-serif: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
 }
 .editorial .font-display {
   font-family: var(--font-editorial);
@@ -152,6 +152,12 @@
      600 to carry TT Norms Medium's presence; set to 500 once TT Norms Pro lands. */
   --brand-weight-display: 600;
   --brand-weight-body: 400;
+}
+
+html {
+  /* Clip rather than hide so position:sticky still works. 100vw tracks and
+     rails must not create a second page-level scrollbar. */
+  overflow-x: clip;
 }
 
 body {

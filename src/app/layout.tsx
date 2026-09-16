@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { brandFace, cormorant, ebGaramond } from "./fonts";
 import "./globals.css";
 import { cookies } from "next/headers";
@@ -68,6 +68,16 @@ export const metadata: Metadata = {
       "msvalidate.01": "DD2ECFD7F20F418A4A67662DFC0D0B03",
     },
   },
+};
+
+// viewport-fit: cover is required for env(safe-area-inset-*) on iOS. Without
+// it the tab bar, sticky PDP chrome, and builder sheets sit under the home
+// indicator and the URL-bar overlay (see mobile-pdp-chrome.ts).
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#F5F3EF",
 };
 
 export default async function RootLayout({
