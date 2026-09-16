@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
+    GRACE_VOICE_ECHO_TAIL_MS,
     isLikelyAssistantEcho,
+    isVoiceEchoGuardActive,
+    shouldCancelEchoGeneratedResponse,
     shouldIgnoreVoiceUserTranscript,
 } from "../src/lib/grace/voiceEchoGuard";
 
@@ -37,6 +40,30 @@ describe("Grace voice echo guard", () => {
             echoGuardUntil: 1_450,
             transcript: "Take us to the 28 ml bottle",
             lastAssistantText: "Want me to open the 28 milliliter bottle?",
+        })).toBe(false);
+    });
+
+    it("cancels a new response only after she has finished and the speaker tail is still open", () => {
+        expect(GRACE_VOICE_ECHO_TAIL_MS).toBeGreaterThanOrEqual(1200);
+        expect(isVoiceEchoGuardActive({
+            now: 1_000,
+            assistantSpeaking: true,
+            echoGuardUntil: 0,
+        })).toBe(true);
+        expect(shouldCancelEchoGeneratedResponse({
+            now: 1_000,
+            assistantSpeaking: true,
+            echoGuardUntil: 2_200,
+        })).toBe(false);
+        expect(shouldCancelEchoGeneratedResponse({
+            now: 1_400,
+            assistantSpeaking: false,
+            echoGuardUntil: 2_200,
+        })).toBe(true);
+        expect(shouldCancelEchoGeneratedResponse({
+            now: 2_400,
+            assistantSpeaking: false,
+            echoGuardUntil: 2_200,
         })).toBe(false);
     });
 });

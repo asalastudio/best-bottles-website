@@ -1,4 +1,5 @@
 import {
+    OpenAIRealtimeWebRTC,
     RealtimeAgent,
     RealtimeSession,
     tool,
@@ -26,7 +27,10 @@ import {
     type CompressibleHistoryItem,
 } from "./sessionCompression";
 import {
+    GRACE_VOICE_AUDIO_CONSTRAINTS,
     GRACE_VOICE_ECHO_TAIL_MS,
+    isVoiceEchoGuardActive,
+    shouldCancelEchoGeneratedResponse,
     shouldIgnoreVoiceUserTranscript,
 } from "./voiceEchoGuard";
 
@@ -57,18 +61,22 @@ export type GraceRealtimeAgentConfig = {
 
 export type GraceRealtimeSessionConfig = {
     model: typeof GRACE_REALTIME_MODEL;
-    transport: "webrtc";
+    transport: "webrtc" | "websocket";
+    mediaStream?: MediaStream;
     config: {
         outputModalities: Array<"text" | "audio">;
         voice: typeof GRACE_REALTIME_VOICE;
         audio: {
             input: {
                 transcription: { model: "gpt-4o-mini-transcribe" };
+                noiseReduction: { type: "far_field" };
                 turnDetection: {
                     type: "semantic_vad";
-                    eagerness: "auto";
-                    // Speakerphone echo on phones looks like barge-in. Mute +
-                    // this flag keep Grace from answering her own TTS.
+                    // Low eagerness waits longer before committing a turn so
+                    // leftover speaker audio is less likely to become a reply.
+                    eagerness: "low";
+                    // Speaker echo looks like barge-in. Mute + this flag keep
+                    // Grace from cutting herself off, then answering the echo.
                     interrupt_response: boolean;
                 };
             };
@@ -88,6 +96,9 @@ export type GraceRealtimeSessionLike = {
     mute?(muted: boolean): void;
     interrupt(): void;
     close(): void;
+    transport?: {
+        sendEvent?(event: { type: string }): void;
+    };
 }
 
 function muteRealtimeMicrophone(session: GraceRealtimeSessionLike, muted: boolean): void {
@@ -96,6 +107,30 @@ function muteRealtimeMicrophone(session: GraceRealtimeSessionLike, muted: boolea
     } catch {
         // Transport may not expose mute (tests, websocket).
     }
+}
+
+function clearRealtimeInputBuffer(session: GraceRealtimeSessionLike): void {
+    try {
+        session.transport?.sendEvent?.({ type: "input_audio_buffer.clear" });
+    } catch {
+        // Transport may not expose sendEvent (tests, websocket).
+    }
+}
+
+function cancelEchoResponse(session: GraceRealtimeSessionLike): void {
+    try {
+        session.interrupt();
+    } catch {
+        // No active response to cancel.
+    }
+    clearRealtimeInputBuffer(session);
+}
+
+export async function createGraceVoiceMediaStream(
+    getUserMedia: (constraints: MediaStreamConstraints) => Promise<MediaStream> = (constraints) =>
+        navigator.mediaDevices.getUserMedia(constraints),
+): Promise<MediaStream> {
+    return getUserMedia({ audio: { ...GRACE_VOICE_AUDIO_CONSTRAINTS } });
 }
 
 function assistantTextFromTransportEvent(event: Record<string, unknown>): string | null {
@@ -117,6 +152,7 @@ function assistantTextFromTransportEvent(event: Record<string, unknown>): string
 type GraceRealtimeDependencies = {
     createAgent(config: GraceRealtimeAgentConfig): unknown;
     createSession(agent: unknown, config: GraceRealtimeSessionConfig): GraceRealtimeSessionLike;
+    createVoiceStream?(): Promise<MediaStream | undefined>;
 };
 
 export type GraceOpenAIRealtimeAdapter = {
@@ -182,10 +218,32 @@ const defaultDependencies: GraceRealtimeDependencies = {
         instructions: config.instructions,
         tools: config.tools,
     }),
-    createSession: (agent, config) => new RealtimeSession(
-        agent as RealtimeAgent,
-        config,
-    ) as unknown as GraceRealtimeSessionLike,
+    createVoiceStream: async () => {
+        if (typeof navigator === "undefined" || !navigator.mediaDevices?.getUserMedia) {
+            return undefined;
+        }
+        try {
+            return await createGraceVoiceMediaStream();
+        } catch {
+            return undefined;
+        }
+    },
+    createSession: (agent, config) => {
+        const { mediaStream, ...sessionOptions } = config;
+        if (mediaStream) {
+            return new RealtimeSession(
+                agent as RealtimeAgent,
+                {
+                    ...sessionOptions,
+                    transport: new OpenAIRealtimeWebRTC({ mediaStream }),
+                },
+            ) as unknown as GraceRealtimeSessionLike;
+        }
+        return new RealtimeSession(
+            agent as RealtimeAgent,
+            sessionOptions,
+        ) as unknown as GraceRealtimeSessionLike;
+    },
 };
 
 function buildInstructions(baseInstructions: string, context: string): string {
@@ -307,12 +365,14 @@ export function createGraceOpenAIRealtimeAdapter({
                 echoUnmuteTimer = null;
             }
             muteRealtimeMicrophone(activeSession, true);
+            clearRealtimeInputBuffer(activeSession);
             callbacks.onModeChange?.("speaking");
         };
 
         const endSpeakingGuard = () => {
             assistantSpeaking = false;
             echoGuardUntil = Date.now() + GRACE_VOICE_ECHO_TAIL_MS;
+            clearRealtimeInputBuffer(activeSession);
             callbacks.onModeChange?.("listening");
             echoUnmuteTimer = setTimeout(() => {
                 echoUnmuteTimer = null;
@@ -323,7 +383,16 @@ export function createGraceOpenAIRealtimeAdapter({
         };
 
         activeSession.on("audio_start", () => {
-            if (isCurrentSession()) beginSpeakingGuard();
+            if (!isCurrentSession()) return;
+            if (shouldCancelEchoGeneratedResponse({
+                now: Date.now(),
+                assistantSpeaking,
+                echoGuardUntil,
+            })) {
+                cancelEchoResponse(activeSession);
+                return;
+            }
+            beginSpeakingGuard();
         });
         activeSession.on("audio_stopped", () => {
             if (isCurrentSession()) endSpeakingGuard();
@@ -358,6 +427,53 @@ export function createGraceOpenAIRealtimeAdapter({
                 return;
             }
 
+            if (event.type === "input_audio_buffer.speech_started") {
+                if (isVoiceEchoGuardActive({
+                    now: Date.now(),
+                    assistantSpeaking,
+                    echoGuardUntil,
+                })) {
+                    clearRealtimeInputBuffer(activeSession);
+                    if (shouldCancelEchoGeneratedResponse({
+                        now: Date.now(),
+                        assistantSpeaking,
+                        echoGuardUntil,
+                    })) {
+                        cancelEchoResponse(activeSession);
+                    }
+                }
+                return;
+            }
+
+            if (
+                event.type === "response.created"
+                && shouldCancelEchoGeneratedResponse({
+                    now: Date.now(),
+                    assistantSpeaking,
+                    echoGuardUntil,
+                })
+            ) {
+                cancelEchoResponse(activeSession);
+                return;
+            }
+
+            if (
+                (event.type === "response.output_audio.delta"
+                    || event.type === "response.output_audio_transcript.delta"
+                    || event.type === "output_audio_buffer.started")
+                && !assistantSpeaking
+            ) {
+                if (shouldCancelEchoGeneratedResponse({
+                    now: Date.now(),
+                    assistantSpeaking,
+                    echoGuardUntil,
+                })) {
+                    cancelEchoResponse(activeSession);
+                    return;
+                }
+                beginSpeakingGuard();
+            }
+
             if (
                 event.type === "conversation.item.input_audio_transcription.completed"
                 && typeof event.transcript === "string"
@@ -370,6 +486,15 @@ export function createGraceOpenAIRealtimeAdapter({
                     transcript: event.transcript,
                     lastAssistantText,
                 })) {
+                    if (shouldCancelEchoGeneratedResponse({
+                        now: Date.now(),
+                        assistantSpeaking,
+                        echoGuardUntil,
+                    })) {
+                        cancelEchoResponse(activeSession);
+                    } else {
+                        clearRealtimeInputBuffer(activeSession);
+                    }
                     return;
                 }
                 callbacks.onMessage?.({ role: "user", text: event.transcript.trim() });
@@ -402,18 +527,25 @@ export function createGraceOpenAIRealtimeAdapter({
 
             currentRole = "merchandiser";
             const agent = createCurrentAgent();
+            const mediaStream = mode === "voice" && dependencies.createVoiceStream
+                ? await dependencies.createVoiceStream().catch(() => undefined)
+                : undefined;
             const activeSession = dependencies.createSession(agent, {
                 model: GRACE_REALTIME_MODEL,
-                transport: "webrtc",
+                // Text sessions must not use WebRTC — Chrome still requests the
+                // microphone for a webrtc transport even when output is text.
+                transport: mode === "voice" ? "webrtc" : "websocket",
+                ...(mediaStream ? { mediaStream } : {}),
                 config: {
                     outputModalities: [mode === "voice" ? "audio" : "text"],
                     voice: GRACE_REALTIME_VOICE,
                     audio: {
                         input: {
                             transcription: { model: "gpt-4o-mini-transcribe" },
+                            noiseReduction: { type: "far_field" },
                             turnDetection: {
                                 type: "semantic_vad",
-                                eagerness: "auto",
+                                eagerness: "low",
                                 interrupt_response: false,
                             },
                         },
