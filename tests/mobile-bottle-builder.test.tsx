@@ -107,6 +107,7 @@ describe('mobile presentation over shared configuration',()=>{
   expect(css).toContain("position: absolute; inset: 0");
   expect(css).toContain("clamp(44px, 12vw, 56px)");
   expect(css).toContain("place-items: center");
+  expect(css).toContain("justify-items: end");
   expect(css).toContain("slateSweep");
   expect(css).toContain("[data-slate]");
   expect(css).not.toContain("top: 12px; right: 12px");
