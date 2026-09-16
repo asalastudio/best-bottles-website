@@ -99,9 +99,19 @@ for sku, (rel, sha, layers, psd) in inventories.items():
         elif h <= 0.22 * bh and w <= 0.55 * bw and y0 >= by0 and y1 <= by0 + 0.35 * bh: slot = 'roller'
         elif 'Dropper' in app: slot = 'fitment'
         elif 'Vintage' in app or 'Antique' in app or 'Bulb' in app: slot = 'sprayer'
-        elif 'Pump' in app: slot = 'pump'
+        elif 'Pump' in app or 'Mist' in app or 'Spray' in app: slot = 'sprayer' if ('Spray' in app or 'Mist' in app) else 'pump'
         else: slot = 'cap'
         parts.setdefault(slot, []).append(l['index']); evidence.append(f"{slot}: {desc(l)}")
+    # a photographed pump or sprayer with its overcap on: two top layers, the larger
+    # (the overcap, worn over the mechanism) becomes 'overcap' so the preview can
+    # stand it beside the bottle; the smaller stays the mechanism
+    for mech in ('sprayer', 'pump'):
+        ids = parts.get(mech, [])
+        if len(ids) >= 2 and ('Pump' in app or 'Mist' in app or 'Spray' in app) and 'Vintage' not in app and 'Bulb' not in app:
+            by = {l['index']: l for l in visible}
+            top = max(ids, key=lambda i: area(by[i]))
+            parts['overcap'] = [top]; parts[mech] = [i for i in ids if i != top]
+            evidence.append(f"overcap: layer {top} (the larger of the two top layers, worn over the {mech})")
     matte = {}
     all_layers = list(psd.descendants()); body_layer = all_layers[body['index']]
     body_im = psd.composite(force=True, ignore_preview=True, alpha=0.0, color=1.0, layer_filter=lambda x, b=body_layer: x.is_group() or x is b)
