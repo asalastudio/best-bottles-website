@@ -37,6 +37,20 @@ the size locked for each body on 2026-09-07.
    body lands on one line (all 9 ml at y = 816, all 5 ml at y = 936). The
    100 ml figure is the lock's own clearance-limited one; nothing else is
    capped.
+
+   **Amendment, 2026-09-16** (`lock-amendment-2026-09-16.json`). Checked
+   bottle-to-bottle against Jordan's true-scale lineup, the lock drew the 9 ml
+   Slim (106 mm) above the 50 ml Cylinder (117 mm), the 50 ml roller (98 mm)
+   level with it, and the 28 ml (81 mm) above the 25 ml (83 mm), because it
+   had kept each group's legacy framing. Jordan: the 9 ml Slim should stand
+   taller than the 50 ml roller and close to the 50 ml Cylinder. Four bodies
+   moved onto the lock's own progression through its consistent anchors
+   (`shoulder % = 3.965 × mm^0.560`): 28 ml 50.5 → 46.5, 25 ml 46.5 → 47.2,
+   50 ml roller 56 → 51.8, 9 ml Slim 62.5 → 54.1. Every other body is
+   unchanged; `approved-lock.json` records both figures per SKU. The two
+   9 ml Slim SKUs that have no PSD (`GBTallCyl9GlMattSht`,
+   `GBTallCylFrst9GlMattSht`) keep their photographs, scaled about the foot
+   onto the same 54.1 % line so the body shows one size.
 4. **Bone.** The rendered paper is flattened to #F5F3EF and its grain pulled
    onto exact bone with a soft ramp, so the corner pixels meet the registry's
    2/255 rule and the rendered shadow keeps its gradient.
@@ -52,15 +66,15 @@ thin clear glass.
 
 ## Colour
 
-Sunburst renders matte silver 12 to 57 levels darker than the master and lets matte
-gold go pale. The prompt therefore locks colour to the input (matte gold stays pale
-champagne, matte silver stays neutral silver, clear glass colourless, neutral white
-balance), and every hero's fitment is measured against the base's own pixels above
-the glass shoulder. Seventeen matte-silver and pale-gold heroes were re-rendered with
-that clause, which halved the drift; the opaque fitment (head, collar, pump, cap
-beside) was then brought to the master's colour with one per-channel gain, the
-glass left to the model. After that every metal fitment sits within 4 levels and
-2 of hue of its master.
+Sunburst first rendered matte silver darker than the master and let matte gold go
+pale. The prompt now locks colour to the input, and names the finish of the
+hardware from the SKU: matte silver is light satin anodised aluminium, not chrome,
+no visible threads. A brightness lift applied after rendering was tried and
+rejected by Jordan (the reducer caps read as a decal that would rub off), so every
+matte-silver fitment ships as rendered, satin, with no post-correction. Remaining
+fitments that drifted carry at most a mild per-channel gain against the master's
+own pixels above the glass shoulder, with the glass untouched. Model:
+`gpt-image-2.5-sunburst` throughout.
 
 ## The 25 ml
 
