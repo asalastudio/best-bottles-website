@@ -120,7 +120,9 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         && (!neck || b.neck === neck) && (!application || b.configurations.some(c => c.fitment === application))), [bodies, size, neck, application]);
     const preview = configuration ?? current.fitted[0] ?? current.colored[0] ?? body?.configurations[0];
     // one fixed body per bottle and glass: the first full kit (vintage first, its body is the reference for the bulb sprayers)
-    const bodyReference = current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full") ?? current.colored.find(c => c.kit?.completeness === "full")
+    // reducer photographs carry the insert inside the neck, so a reducer body is the last choice of reference
+    const bodyReference = current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full")
+        ?? current.colored.find(c => c.kit?.completeness === "full" && c.fitment !== "Reducer") ?? current.colored.find(c => c.kit?.completeness === "full")
         ?? current.colored[0] ?? body?.configurations[0];
     const hasIncludedCover = Boolean(configuration && /Sprayer|Pump/.test(configuration.fitment)
         && ((configuration.id in hasIncludedCovers) || (configuration.kit?.parts.some(p => p.slot === "overcap")

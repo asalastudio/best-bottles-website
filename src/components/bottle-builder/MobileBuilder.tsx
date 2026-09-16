@@ -58,7 +58,7 @@ export default function MobileBuilder(p: Props) {
     const preview = configuration ?? p.current.fitted[0] ?? p.current.colored[0] ?? body?.configurations[0];
     const previewStage = stage < 2 || !fitment ? "body" : stage === 2 ? "fitment" : configuration ? "complete" : "fitment";
     const parts = preview ? previewParts(preview, previewStage) : [];
-    const bodyReference = p.current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full") ?? p.current.colored.find(c => c.kit?.completeness === "full") ?? p.current.colored[0] ?? body?.configurations[0];
+    const bodyReference = p.current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full") ?? p.current.colored.find(c => c.kit?.completeness === "full" && c.fitment !== "Reducer") ?? p.current.colored.find(c => c.kit?.completeness === "full") ?? p.current.colored[0] ?? body?.configurations[0];
     const unavailable = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === fitment) ?? [];
     const visible = p.bodies.filter(b => (!p.size || b.capacityMl === Number(p.size)) && (!p.neck || b.neck === p.neck) && (!p.application || b.configurations.some(c => c.fitment === p.application)));
     const selected = stage === 1 ? color : stage === 2 ? fitment : stage === 3 ? closure : null;

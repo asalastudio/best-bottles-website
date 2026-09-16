@@ -34,12 +34,17 @@ def digest_image(im):
 
 def layer_inventory(psd):
     out=[]
+    ADJUSTMENTS={'blackandwhite','brightnesscontrast','curves','levels','huesaturation','colorbalance','exposure','vibrance','photofilter','selectivecolor','channelmixer','gradientmap','posterize','threshold','invert','solidcolorfill','gradientfill','patternfill'}
     for i,l in enumerate(psd.descendants()):
         if l.is_group(): continue
-        if l.kind != 'pixel':
-            raise ValueError(f'non-pixel layer {i} requires source review')
+        if l.kind in ADJUSTMENTS:
+            # an adjustment layer is not a part: it colours whatever sits below it and is
+            # applied to every slot composite so each part matches the plate's colour
+            out.append({'index':i,'name':l.name,'kind':l.kind,'adjustment':True,'visible':l.is_visible(),'bounds':[0,0,0,0],'background':False,'pixelHash':f'adjustment:{i}','size':[0,0]}); continue
+        if l.kind not in ('pixel','shape'):
+            raise ValueError(f'{l.kind} layer {i} requires source review')
         visible=l.is_visible()
-        if l.opacity != 255 or str(l.blend_mode.value) not in ("b'norm'",'norm'):
+        if (l.kind=='pixel' and l.opacity != 255) or str(l.blend_mode.value) not in ("b'norm'",'norm'):
             raise ValueError(f'layer {i} blending/opacity requires source review')
         im=l.topil()
         if im is None: continue
@@ -52,8 +57,8 @@ def layer_inventory(psd):
         background=(fraction>=0.98 and float((alpha>=250).mean())>=0.98 and blank)
         # a hidden layer contributes nothing to the plate; it is recorded here and
         # must be named in the part map's exclusions, or the kit stays in review
-        out.append({'index':i,'name':l.name,'bounds':list(l.bbox),'background':background,'visible':visible,
-                    'pixelHash':digest_image(im),'size':list(im.size)})
+        out.append({'index':i,'name':l.name,'kind':l.kind,'bounds':list(l.bbox),'background':background,'visible':visible,
+                    'pixelHash':digest_image(im),'size':list(im.size),'opacity':int(l.opacity)})
     return out
 
 def validate_part_map(mapping,foreground,source_sha):
@@ -69,6 +74,7 @@ def validate_part_map(mapping,foreground,source_sha):
     # the plate parity gate still has to pass without it
     excluded=mapping.get('exclude',{})
     if isinstance(excluded,list): excluded={str(i):'' for i in excluded}
+    foreground=[l for l in foreground if not l.get('adjustment')]
     by_index={l['index']:l for l in foreground}
     for key,evidence in excluded.items():
         i=int(key); layer=by_index.get(i)
@@ -204,7 +210,8 @@ def main():
             plate_path=plates/src['key'];plate_bytes=plate_path.read_bytes()
             if hashlib.sha256(plate_bytes).hexdigest()!=src['sha256']:raise ValueError('plate hash drift')
             psd=PSDImage.open(path);layers=layer_inventory(psd);foreground=[l for l in layers if not l['background']]
-            if sku not in maps and any(not l.get('visible',True) for l in foreground): raise ValueError(f"hidden layer {next(l['index'] for l in foreground if not l.get('visible',True))} requires source review")
+            adjustments={l['index'] for l in layers if l.get('adjustment') and l.get('visible',True)}
+            if sku not in maps and any(not l.get('visible',True) and not l.get('adjustment') for l in foreground): raise ValueError(f"hidden layer {next(l['index'] for l in foreground if not l.get('visible',True))} requires source review")
             record.update({'sourcePath':src['sourceRelPath'],'sourceSha256':source_sha,'layers':layers,'applicator':products[sku].get('applicator')})
             if sku in maps:
                 parts=validate_part_map(maps[sku],foreground,source_sha); mapping_evidence=maps[sku]
@@ -223,7 +230,7 @@ def main():
             ordered=sorted(parts.items(),key=lambda kv:min(kv[1])); previous=-1
             for slot,ids in ordered:
                 if min(ids)<=previous:raise ValueError('interleaved physical-part layers need review')
-                previous=max(ids); selected={id(all_layers[i]) for i in ids}
+                previous=max(ids); selected={id(all_layers[i]) for i in list(ids)+sorted(adjustments)}
                 im=psd.composite(force=True,ignore_preview=True,alpha=0.0,color=1.0,layer_filter=lambda l:l.is_group() or id(l) in selected).convert('RGBA')
                 # a photographed layer with its white studio ground still baked in:
                 # the reviewer asks for the ground to be stripped (matte), never

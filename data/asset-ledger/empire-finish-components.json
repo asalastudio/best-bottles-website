@@ -1,0 +1,857 @@
+{
+ "GBEmp50AnSpTslRed": {
+  "finish": "AnSpTsl18-415Red",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-AST-RED"
+ },
+ "GBEmp50AnSpTslWht": {
+  "finish": "AnSpTsl18-415Wht",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-AST-WHT"
+ },
+ "GBEmp50AnSpTslMtSl": {
+  "finish": "AnSpTsl18-415MtS",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-AST-MSLV"
+ },
+ "LBEmp100LtnClOvrCap": {
+  "finish": "Ltn18-415MtSlCl",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-100ML-LPM-COCP"
+ },
+ "GBEmp50SpryMtSl": {
+  "finish": "Spry18-415MtSl",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-SPR-MSLV"
+ },
+ "GBEmp50SpryShnSl": {
+  "finish": "Spry18-415ShnSl",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-SPR-SSLV"
+ },
+ "GBEmp50SpryShnGl": {
+  "finish": "Spry18-415ShnGl",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-SPR-SGLD"
+ },
+ "GBEmp50SpryShnBlk": {
+  "finish": "Spry18-415ShnBlk",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-SPR-SBLK"
+ },
+ "GBEmp50SpryMtGl": {
+  "finish": "Spry18-415MtGl",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-SPR-MGLD"
+ },
+ "GBEmp100RdcrShnGl": {
+  "finish": "CP18-415ShnGl",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-SGLD"
+ },
+ "GBEmp100RdcrShnBlkTall": {
+  "finish": "CP18-415ShnBlkTall",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-SBLK-T"
+ },
+ "GBEmp50SpryCu": {
+  "finish": "Spry18-415Cu",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-SPR-CPR"
+ },
+ "GBEmp100RdcrBrwnLthr": {
+  "finish": "CP18-415BrwnLthr",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-BRLT"
+ },
+ "GBEmp50DrpSl": {
+  "finish": "Drp18-415Sl",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-DRP-SLV"
+ },
+ "GBEmp100RdcrLBrwnLthr": {
+  "finish": "CP18-415LBrwnLthr",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-LBLT"
+ },
+ "GBEmp50DrpGl": {
+  "finish": "Drp18-415Gl",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-DRP-GLD"
+ },
+ "GBEmp100RdcrShnSl": {
+  "finish": "CP18-415ShnSl",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-SSLV"
+ },
+ "GBEmp100RdcrMtSlTall": {
+  "finish": "CP18-415MtSlTall",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-MSLV-T"
+ },
+ "GBEmp100RdcrMtSl": {
+  "finish": "CP18-415MtSl",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-MSLV"
+ },
+ "GBEmp100RdcrWht": {
+  "finish": "CP18-415Wh",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-WHT"
+ },
+ "GBEmp100RdcrPnkLthr": {
+  "finish": "CP18-415LPnkLthr",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-PKLT"
+ },
+ "GBEmp100RdcrIvyLthr": {
+  "finish": "CP18-415LIvyLthr",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-IVLT"
+ },
+ "GBEmp100RdcrShnBlk": {
+  "finish": null,
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-SBLK"
+ },
+ "GBEmp100SpryCu": {
+  "finish": "Spry18-415Cu",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-SPR-CPR"
+ },
+ "GBEmp50RdcrBlkLthr": {
+  "finish": "CP18-415BlkLthr",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-BKLT"
+ },
+ "GBEmp50AnSpBlk": {
+  "finish": "AnSp18-415Blk",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-ASP-BLK"
+ },
+ "GBEmp100RdcrBlkLthr": {
+  "finish": "CP18-415BlkLthr",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-BKLT"
+ },
+ "GBEmp50AnSpTslBlk": {
+  "finish": "AnSpTsl18-415Blk",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-AST-BLK"
+ },
+ "GBEmp100SpryMtGl": {
+  "finish": "Spry18-415MtGl",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-SPR-MGLD"
+ },
+ "GBEmp100SpryShnGl": {
+  "finish": "Spry18-415ShnGl",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-SPR-SGLD"
+ },
+ "GBEmp100SpryShnBlk": {
+  "finish": "Spry18-415ShnBlk",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-SPR-SBLK"
+ },
+ "GBEmp100SpryMtSl": {
+  "finish": "Spry18-415MtSl",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-SPR-MSLV"
+ },
+ "GBEmp100SpryShnSl": {
+  "finish": "Spry18-415ShnSl",
+  "applicator": "Perfume Spray Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-SPR-SSLV"
+ },
+ "GBEmp100AnSpBlk": {
+  "finish": "AnSp18-415Blk",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-ASP-BLK"
+ },
+ "GBEmp100AnSpTslBlk": {
+  "finish": "AnSpTsl18-415Blk",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-AST-BLK"
+ },
+ "LBEmp50LtnMtGl": {
+  "finish": "Ltn18-415MtGl",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-50ML-LPM-MGLD"
+ },
+ "LBEmp50LtnShnGl": {
+  "finish": "Ltn18-415ShnGl",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-50ML-LPM-SGLD"
+ },
+ "LBEmp50LtnShnBlk": {
+  "finish": "Ltn18-415ShnBlk",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-50ML-LPM-SBLK"
+ },
+ "LBEmp50LtnMtSl": {
+  "finish": "Ltn18-415MtSl",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-50ML-LPM-MSLV"
+ },
+ "LBEmp50LtnShnSl": {
+  "finish": "Ltn18-415ShnSl",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-50ML-LPM-SSLV"
+ },
+ "LBEmp50WhtClOvrCp": {
+  "finish": null,
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "LB-EMP-CLR-50ML-LPM-OVCP-T"
+ },
+ "LBEmp50LtnCu": {
+  "finish": "Ltn18-415Cu",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-50ML-LPM-CPR"
+ },
+ "GBEmp50RdcrShnSl": {
+  "finish": "CP18-415ShnSl",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-SSLV"
+ },
+ "GBEmp50RdcrShnGl": {
+  "finish": "CP18-415ShnGl",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-SGLD"
+ },
+ "GBEmp50RdcrShnBlk": {
+  "finish": null,
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-SBLK"
+ },
+ "GBEmp50RdcrIvyLthr": {
+  "finish": "CP18-415LIvyLthr",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-IVLT"
+ },
+ "GBEmp50RdcrPnkLthr": {
+  "finish": "CP18-415LPnkLthr",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-PKLT"
+ },
+ "GBEmp50RdcrShnBlkTall": {
+  "finish": "CP18-415ShnBlkTall",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-SBLK-T"
+ },
+ "GBEmp50RdcrBrwnLthr": {
+  "finish": "CP18-415BrwnLthr",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-BRLT"
+ },
+ "GBEmp50RdcrLBrwnLthr": {
+  "finish": "CP18-415LBrwnLthr",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-LBLT"
+ },
+ "GBEmp50RdcrMtSlTall": {
+  "finish": "CP18-415MtSlTall",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-MSLV-T"
+ },
+ "GBEmp50RdcrMtSl": {
+  "finish": "CP18-415MtSl",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-MSLV"
+ },
+ "GBEmp50RdcrWht": {
+  "finish": "CP18-415Wh",
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-WHT"
+ },
+ "GBEmp100AnSpLvn": {
+  "finish": null,
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-100ML-ASP-LVN"
+ },
+ "GBEmp100AnSpPnk": {
+  "finish": "CP18-415AnSpPnk",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-ASP-PNK"
+ },
+ "GBEmp100AnSpMtSl": {
+  "finish": "AnSp18-415MtSl",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-ASP-MSLV"
+ },
+ "GBEmp100AnSpIvyGl": {
+  "finish": null,
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-100ML-ASP-IVGD"
+ },
+ "GBEmp100AnSpWht": {
+  "finish": "AnSp18-415Wht",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-ASP-WHT"
+ },
+ "GBEmp100AnSpRed": {
+  "finish": null,
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-100ML-ASP-RED"
+ },
+ "GBEmp100AnSpGl": {
+  "finish": "AnSp18-415Gl",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-ASP-GLD"
+ },
+ "GBEmp100AnSpIvySl": {
+  "finish": "AnSp18-415IvySl",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-ASP-IVSL"
+ },
+ "GBEmp100AnSpTslIvySl": {
+  "finish": "AnSpTsl18-415IvySl",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-AST-IVSL"
+ },
+ "GBEmp100AnSpTslWht": {
+  "finish": "AnSpTsl18-415Wht",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-AST-WHT"
+ },
+ "GBEmp100AnSpTslMtSl": {
+  "finish": "AnSpTsl18-415MtS",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-AST-MSLV"
+ },
+ "GBEmp100AnSpTslGl": {
+  "finish": "CP18-415AnSpTslGl",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-AST-GLD"
+ },
+ "GBEmp100AnSpTslIvyGl": {
+  "finish": "AnSpTsl18-415IvyGl",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-AST-IVGD"
+ },
+ "GBEmp100AnSpTslLvn": {
+  "finish": "AnSpTsl18-415Lvn",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-AST-LVN"
+ },
+ "GBEmp100AnSpTslPnk": {
+  "finish": "AnSpTsl18-415Pnk",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-AST-PNK"
+ },
+ "GBEmp100AnSpTslRed": {
+  "finish": "AnSpTsl18-415Red",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-100ML-AST-RED"
+ },
+ "GBEmp50DrpCu": {
+  "finish": "Drp18-415Cu",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-DRP-CPR"
+ },
+ "LBEmp100LtnMtGl": {
+  "finish": "Ltn18-415MtGl",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-100ML-LPM-MGLD"
+ },
+ "LBEmp100LtnShnGl": {
+  "finish": "Ltn18-415ShnGl",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-100ML-LPM-SGLD"
+ },
+ "LBEmp100LtnShnBlk": {
+  "finish": "Ltn18-415ShnBlk",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-100ML-LPM-SBLK"
+ },
+ "LBEmp100LtnMtSl": {
+  "finish": "Ltn18-415MtSl",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-100ML-LPM-MSLV"
+ },
+ "LBEmp100LtnShnSl": {
+  "finish": "Ltn18-415ShnSl",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-100ML-LPM-SSLV"
+ },
+ "LBEmp100WhtClOvrCp": {
+  "finish": null,
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "LB-EMP-CLR-100ML-LPM-OVCP-T"
+ },
+ "LBEmp100LtnCu": {
+  "finish": "Ltn18-415Cu",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-100ML-LPM-CPR"
+ },
+ "GBEmp50AnSpGl": {
+  "finish": "AnSp18-415Gl",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-ASP-GLD"
+ },
+ "GBEmp50AnSpLvn": {
+  "finish": null,
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-50ML-ASP-LVN"
+ },
+ "GBEmp50AnSpPnk": {
+  "finish": "CP18-415AnSpPnk",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-ASP-PNK"
+ },
+ "LBEmp50LtnClOvrCap": {
+  "finish": "Ltn18-415MtSlCl",
+  "applicator": "Lotion Pump",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "LB-EMP-CLR-50ML-LPM-COCP"
+ },
+ "GBEmp50AnSpIvyGl": {
+  "finish": null,
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-50ML-ASP-IVGD"
+ },
+ "GBEmp50AnSpIvySl": {
+  "finish": "AnSp18-415IvySl",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-ASP-IVSL"
+ },
+ "GBEmp50AnSpRed": {
+  "finish": null,
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-50ML-ASP-RED"
+ },
+ "GBEmp50AnSpMtSl": {
+  "finish": "AnSp18-415MtSl",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-ASP-MSLV"
+ },
+ "GBEmp50AnSpWht": {
+  "finish": "AnSp18-415Wht",
+  "applicator": "Vintage Bulb Sprayer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-ASP-WHT"
+ },
+ "GBEmp50AnSpTslGl": {
+  "finish": "CP18-415AnSpTslGl",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-AST-GLD"
+ },
+ "GBEmp50AnSpTslIvyGl": {
+  "finish": "AnSpTsl18-415IvyGl",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-AST-IVGD"
+ },
+ "GBEmp50AnSpTslLvn": {
+  "finish": "AnSpTsl18-415Lvn",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-AST-LVN"
+ },
+ "GBEmp50AnSpTslPnk": {
+  "finish": "AnSpTsl18-415Pnk",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-AST-PNK"
+ },
+ "GBEmp50AnSpTslIvySl": {
+  "finish": "AnSpTsl18-415IvySl",
+  "applicator": "Vintage Bulb Sprayer with Tassel",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": true,
+  "graceSku": "GB-EMP-CLR-50ML-AST-IVSL"
+ },
+ "GBEmp100RdcrMtSl__RETIRED__GB-EMP-CLR-100ML-RDC-MSLV-01__kd71drkqqztgasgx9vbfa4t27186bvxq": {
+  "finish": null,
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-MSLV-01"
+ },
+ "GBEmp100RdcrShnBlk__RETIRED__GB-EMP-CLR-100ML-RDC-SBLK-01__kd795y26wmybz9y9cphdzs7zb186bqrt": {
+  "finish": null,
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 100,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-100ML-RDC-SBLK-01"
+ },
+ "GBEmp50RdcrMtSl__RETIRED__GB-EMP-CLR-50ML-RDC-MSLV-01__kd78k2mr1q3q6etzy7xqqcatyn86b4d5": {
+  "finish": null,
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-MSLV-01"
+ },
+ "GBEmp50RdcrShnBlk__RETIRED__GB-EMP-CLR-50ML-RDC-SBLK-01__kd7dr6k2cq74kxvce1h2d9ar9586a4wz": {
+  "finish": null,
+  "applicator": "Reducer",
+  "color": "Clear",
+  "capacityMl": 50,
+  "neck": "18-415",
+  "candidate": false,
+  "graceSku": "GB-EMP-CLR-50ML-RDC-SBLK-01"
+ }
+}
