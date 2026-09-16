@@ -1,0 +1,3292 @@
+{
+ "proposals": [
+  {
+   "sku": "GBBell10BlkShSht",
+   "kind": "Cap",
+   "componentSku": "CP13-415BlkSht",
+   "evidence": "short cap; finish 'Shiny Black'"
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonGl",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "a matte gold sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstn2ozMtlRollGl",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "a matte gold sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropperSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp18-40015mlShnSlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with silver trim"
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp18-40015mlShnGlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp18-40015mlShnSlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with silver trim"
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp18-40015mlShnGlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrprSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp18-40015mlShnSlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with silver trim"
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrprGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp18-40015mlShnGlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp18-40015mlShnSlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with silver trim"
+  },
+  {
+   "sku": "GBBstnBlu15BlkDrprGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp18-40015mlShnGlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with gold trim"
+  },
+  {
+   "sku": "GBBstn1ozBlkDrpShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4001ozShnGlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with gold trim"
+  },
+  {
+   "sku": "GBBstn1ozWhtDrpShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4001ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with gold trim"
+  },
+  {
+   "sku": "GBBstn1ozWhtDrpShnSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4001ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with silver trim"
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4001ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4001ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with silver trim"
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4001ozShnGlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4001ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4001ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with silver trim"
+  },
+  {
+   "sku": "GBBstn2ozBlkDrprShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozShnGlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with gold trim"
+  },
+  {
+   "sku": "GBBstn2ozWhtDrprShnSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with silver trim"
+  },
+  {
+   "sku": "GBBstn2ozBlkDrprShnSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozShnSlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with silver trim"
+  },
+  {
+   "sku": "GBBstn2ozWhtDrprShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozShnGlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozShnSlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with silver trim"
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with silver trim"
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozShnGlTrimBlkBulb",
+   "evidence": "bottle SKU says black bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropperShnGlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozlShnGlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with gold trim"
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropperShnSlTrim",
+   "kind": "Dropper",
+   "componentSku": "Drp20-4002ozlShnSlTrimWhiteBulb",
+   "evidence": "bottle SKU says white bulb with silver trim"
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonGl",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "a matte gold sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonGl",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "a matte gold sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonGl",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "a matte gold sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstnBlu2ozRollonGl",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "a matte gold sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonBlk",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnBlk",
+   "evidence": "a matte black sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonGl",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "a matte gold sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonGl",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "a matte gold sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstn2ozMtlRollBlk",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnBlk",
+   "evidence": "a matte black sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonGl",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "a matte gold sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBBstnBlu2ozMtlRollonGl",
+   "kind": "Roll-On Cap",
+   "componentSku": "CPRoll20-400TallShnGl",
+   "evidence": "a matte gold sibling exists as its own SKU, so the unqualified one is shiny"
+  },
+  {
+   "sku": "GBCyl5BlkShSht",
+   "kind": "Cap",
+   "componentSku": "CP13-415BlkSht",
+   "evidence": "short cap; finish 'Shiny Black'"
+  },
+  {
+   "sku": "GBTallCyl9BlkShSht",
+   "kind": "Cap",
+   "componentSku": "CP13-415BlkSht",
+   "evidence": "short cap; finish 'Shiny Black'"
+  },
+  {
+   "sku": "GBTallCylFrst9BlkShSht",
+   "kind": "Cap",
+   "componentSku": "CP13-415BlkSht",
+   "evidence": "short cap; finish 'Shiny Black'"
+  },
+  {
+   "sku": "GBElgFrst30GlCap",
+   "kind": "Cap",
+   "componentSku": "CP15-415ShnGl",
+   "evidence": "unqualified gold cap → shiny"
+  },
+  {
+   "sku": "GBElg30SlCap",
+   "kind": "Cap",
+   "componentSku": "CP15-415ShnSl",
+   "evidence": "unqualified silver cap → shiny"
+  },
+  {
+   "sku": "GBElgFrst30SlCap",
+   "kind": "Cap",
+   "componentSku": "CP15-415ShnSl",
+   "evidence": "unqualified silver cap → shiny"
+  }
+ ],
+ "ambiguous": [
+  {
+   "sku": "GBBstnAmb15mlWhtDropper",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp18-40015mlWhiteBulb",
+    "Drp18-40015mlShnGlTrimWhiteBulb",
+    "Drp18-40015mlShnSlTrimWhiteBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrpr",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp18-40015mlWhiteBulb",
+    "Drp18-40015mlShnGlTrimWhiteBulb",
+    "Drp18-40015mlShnSlTrimWhiteBulb"
+   ]
+  },
+  {
+   "sku": "GBBstn1ozWhtDrp",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4001ozWhiteBulb",
+    "Drp20-4001ozlShnGlTrimWhiteBulb",
+    "Drp20-4001ozlShnSlTrimWhiteBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkDrpShnGl",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4001ozShnSlTrimBlkBulb",
+    "Drp20-4001ozShnGlTrimBlkBulb",
+    "Drp20-4001ozBlckBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDropper",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4001ozWhiteBulb",
+    "Drp20-4001ozlShnGlTrimWhiteBulb",
+    "Drp20-4001ozlShnSlTrimWhiteBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu1ozWhtDropper",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4001ozWhiteBulb",
+    "Drp20-4001ozlShnGlTrimWhiteBulb",
+    "Drp20-4001ozlShnSlTrimWhiteBulb"
+   ]
+  },
+  {
+   "sku": "GBBstn2ozWhtDrpr",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4002ozWhiteBulb",
+    "Drp20-4002ozlShnGlTrimWhiteBulb",
+    "Drp20-4002ozlShnSlTrimWhiteBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDrpr",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4002ozWhiteBulb",
+    "Drp20-4002ozlShnGlTrimWhiteBulb",
+    "Drp20-4002ozlShnSlTrimWhiteBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu2ozWhtDropper",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4002ozWhiteBulb",
+    "Drp20-4002ozlShnGlTrimWhiteBulb",
+    "Drp20-4002ozlShnSlTrimWhiteBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkDropper",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp18-40015mlShnSlTrimBlkBulb",
+    "Drp18-40015mlShnGlTrimBlkBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu15BlkDrpr",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp18-40015mlShnSlTrimBlkBulb",
+    "Drp18-40015mlShnGlTrimBlkBulb"
+   ]
+  },
+  {
+   "sku": "GBBstn1ozBlkDrp",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4001ozShnSlTrimBlkBulb",
+    "Drp20-4001ozShnGlTrimBlkBulb",
+    "Drp20-4001ozBlckBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkDropper",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4001ozShnSlTrimBlkBulb",
+    "Drp20-4001ozShnGlTrimBlkBulb",
+    "Drp20-4001ozBlckBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkDropper",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4001ozShnSlTrimBlkBulb",
+    "Drp20-4001ozShnGlTrimBlkBulb",
+    "Drp20-4001ozBlckBulb"
+   ]
+  },
+  {
+   "sku": "GBBstn2ozBlkDrpr",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4002ozShnSlTrimBlkBulb",
+    "Drp20-4002ozShnGlTrimBlkBulb",
+    "Drp20-4002ozBlckBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDrpr",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4002ozShnSlTrimBlkBulb",
+    "Drp20-4002ozShnGlTrimBlkBulb",
+    "Drp20-4002ozBlckBulb"
+   ]
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkDropper",
+   "kind": "Dropper",
+   "candidates": [
+    "Drp20-4002ozShnSlTrimBlkBulb",
+    "Drp20-4002ozShnGlTrimBlkBulb",
+    "Drp20-4002ozBlckBulb"
+   ]
+  }
+ ],
+ "unmatched": [
+  {
+   "sku": "GBBstn2ozRollGl",
+   "kind": "Roll-On Cap",
+   "finish": "Gold",
+   "listed": [
+    "CPRoll20-400TallMattSl",
+    "CPRoll20-400TallMattGl",
+    "CPRoll20-400TallShnGl",
+    "CPRoll20-400TallShnBlk",
+    "CPRoll20-400TallShnSl",
+    "CPRoll20-400TallMattBlk"
+   ]
+  },
+  {
+   "sku": "LBCrcl100LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBCrclFrst100LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBCrcl100RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBCrcl100AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrcl100AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrcl100AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100AnSpTslLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst100AnSpTslRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrcl50RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst50RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBCrcl50AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrcl50AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrcl50AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrcl50AnSpTslRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst50AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst50AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCrclFrst50AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBCrcl50LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBCrclFrst50LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBCyl100LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBCyl100RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSpry1ozGl",
+   "kind": "Sprayer",
+   "finish": "Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSpry1ozSl",
+   "kind": "Sprayer",
+   "finish": "Silver",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCyl9SpryRd",
+   "kind": "Sprayer",
+   "finish": "Clear",
+   "listed": [
+    "Spry17-415Gl",
+    "Spry17-415MattSl",
+    "Spry17-415ShnSl",
+    "Spry17-415Red",
+    "Spry17-415Tur",
+    "Spry17-415Blk"
+   ]
+  },
+  {
+   "sku": "GBCyl100AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCyl100AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCyl100AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCyl50RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBCyl50AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCyl50AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBCyl50AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBcyl25LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBCyl50LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBCyl5CuSht",
+   "kind": "Cap",
+   "finish": "Copper Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCyl5GlMattSht",
+   "kind": "Cap",
+   "finish": "Matte Gold Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCyl5GlSht",
+   "kind": "Cap",
+   "finish": "Gold Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCyl5SlMattSht",
+   "kind": "Cap",
+   "finish": "Matte Silver Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCyl5SlSht",
+   "kind": "Cap",
+   "finish": "Silver Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCylBlu5CuSht",
+   "kind": "Cap",
+   "finish": "Copper Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCylBlu5GlMattSht",
+   "kind": "Cap",
+   "finish": "Matte Gold Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCylBlu5GlSht",
+   "kind": "Cap",
+   "finish": "Gold Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCylBlu5SlMattSht",
+   "kind": "Cap",
+   "finish": "Matte Silver Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBCylBlu5SlSht",
+   "kind": "Cap",
+   "finish": "Silver Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCyl9CuSht",
+   "kind": "Cap",
+   "finish": "Copper Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCyl9GlMattSht",
+   "kind": "Cap",
+   "finish": "Matte Gold Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCyl9GlSht",
+   "kind": "Cap",
+   "finish": "Gold Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCyl9SlMattSht",
+   "kind": "Cap",
+   "finish": "Matte Silver Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCyl9SlSht",
+   "kind": "Cap",
+   "finish": "Silver Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9CuSht",
+   "kind": "Cap",
+   "finish": "Copper Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9GlMattSht",
+   "kind": "Cap",
+   "finish": "Matte Gold Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9GlSht",
+   "kind": "Cap",
+   "finish": "Gold Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9SlMattSht",
+   "kind": "Cap",
+   "finish": "Matte Silver Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallCylFrst9SlSht",
+   "kind": "Cap",
+   "finish": "Silver Short",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBDmnd2ozAnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDmnd2ozAnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDmnd2ozAnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDmnd2ozRdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "LBDmnd2ozLtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBDiva100LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBDiva100RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBDiva30RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBDiva46RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBDiva30AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDiva30AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDiva30AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDiva100AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDiva100AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDiva100AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDiva46AnSpLvnRng",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDiva46AnSpRedRng",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDiva46AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDiva46AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDiva46AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBDivaFrst46AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBDiva30LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBDiva46LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBDivaFrst46LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBElg100LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBElgFrst100WhtClOvrCp",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBElgFrst100LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBElg100RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBElgFrst100RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBElg60AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElg60AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElg60AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElg60AnSpTslRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElgFrst60AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElgFrst60AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElgFrst60AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElg100AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElg100AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElg100AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElgFrst100AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElgFrst100AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBElgFrst100AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBElg60WhtClOvrCp",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBElgFrst60WhtClOvrCp",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBElg60RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBElgFrst60RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "LBElg100WhtClOvrCp",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBElg60LtnClrOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBElgFrst60LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBEmp100LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBEmp100RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "LBEmp50WhtClOvrCp",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBEmp50RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBEmp100AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBEmp100AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBEmp100AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBEmp100WhtClOvrCp",
+   "kind": "Lotion Pump",
+   "finish": "White Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBEmp50AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBEmp50LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBEmp50AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBEmp50AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBGrce55AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBGrce55AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBGrce55AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBGrce55RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "LBGrce55LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBPillar9SpryBlkMatt",
+   "kind": "Sprayer",
+   "finish": "Matte Black",
+   "listed": [
+    "Spry17-415Gl",
+    "Spry17-415MattSl",
+    "Spry17-415ShnSl",
+    "Spry17-415Blk"
+   ]
+  },
+  {
+   "sku": "PB1ozClearcap",
+   "kind": "Cap",
+   "finish": "Clear",
+   "listed": [
+    "CP13-415WhtSht",
+    "CP13-415Sl",
+    "CP13-415Gl",
+    "CP13-415BlkSht"
+   ]
+  },
+  {
+   "sku": "GBTallRect10MtlRollPinkDo",
+   "kind": "Roll-On Cap",
+   "finish": "Clear",
+   "listed": [
+    "CPRoll13-415SlDot",
+    "CPRoll13-415SlMt",
+    "CPRoll13-415PinkDot",
+    "CPRoll13-415GlMt",
+    "CPRoll13-415SlSh",
+    "CPRoll13-415Cu",
+    "CPRoll13-415GlSh",
+    "CPRoll13-415BlkSh",
+    "CPRoll13-415BlackDot"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBRnd128LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBRndFrst128LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBRnd78AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRnd78AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRnd78AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRnd128RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBRndFrst78AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBRndFrst78AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRndFrst78AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRnd128AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRnd128AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRnd128AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBRnd78RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBRndFrst78RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBRnd78LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBRndFrst128AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBRndFrst78LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBSlk100LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlk50AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlk100RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSlk30RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "LBSlk30WhtRectClOverCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlk30AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBSlk50WhtRectClOverCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBSlk50RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlk100AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBSlk30LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBSlk100WhtRectClOverCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBSlk50LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBSlm50AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlm50AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlm50AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlm100RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSlm30RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSlm30AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlm30AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlm30AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlm50RdcrShnBlk",
+   "kind": "Cap",
+   "finish": "Shiny Black",
+   "listed": [
+    "CP18-415BrwnLthr",
+    "CP18-415LBrwnLthr",
+    "CP18-415LIvyLthr",
+    "CP18-415LPnkLthr",
+    "CP18-415ShnGl",
+    "CP18-415ShnBlkTall",
+    "CP18-415ShnSl",
+    "CP18-415MtSlTall",
+    "CP18-415Wh",
+    "CP18-415BlkLthr",
+    "CP18-415MtSl"
+   ]
+  },
+  {
+   "sku": "GBSlm100AnSpIvyGl",
+   "kind": "Sprayer",
+   "finish": "Ivory + Gold",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlm100AnSpLvn",
+   "kind": "Sprayer",
+   "finish": "Lavender",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "GBSlm100AnSpRed",
+   "kind": "Sprayer",
+   "finish": "Red",
+   "listed": [
+    "CP18-415AnSpPnk",
+    "AnSp18-415Gl",
+    "CP18-415AnSpTslGl",
+    "Spry18-415MtGl",
+    "Spry18-415ShnGl",
+    "Spry18-415ShnBlk",
+    "Spry18-415MtSl",
+    "Spry18-415ShnSl",
+    "AnSp18-415Blk",
+    "Spry18-415Cu"
+   ]
+  },
+  {
+   "sku": "LBSlm30LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBSlm50LtnClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "LBSlm100MtSlClOvrCap",
+   "kind": "Lotion Pump",
+   "finish": "Matte Silver Clear Overcap",
+   "listed": [
+    "Ltn18-415ShnGl",
+    "Ltn18-415ShnBlk",
+    "Ltn18-415MtSlCl",
+    "Ltn18-415ShnSl"
+   ]
+  },
+  {
+   "sku": "GBVAmb2WhtCap",
+   "kind": "Cap",
+   "finish": "Clear",
+   "listed": [
+    "8-425CpShortWhite",
+    "CP8-425TallShnSl",
+    "CP8-425TallShnGl",
+    "8-425CpShortBlack",
+    "CP8-425TallBlack"
+   ]
+  },
+  {
+   "sku": "GBVialClr2mlWhtCap",
+   "kind": "Cap",
+   "finish": "White",
+   "listed": [
+    "8-425CpShortWhite",
+    "CP8-425TallShnSl",
+    "CP8-425TallShnGl",
+    "8-425CpShortBlack",
+    "CP8-425TallBlack"
+   ]
+  },
+  {
+   "sku": "GBVAmb2BlackCap",
+   "kind": "Cap",
+   "finish": "Clear",
+   "listed": [
+    "8-425CpShortWhite",
+    "CP8-425TallShnSl",
+    "CP8-425TallShnGl",
+    "8-425CpShortBlack",
+    "CP8-425TallBlack"
+   ]
+  }
+ ]
+}

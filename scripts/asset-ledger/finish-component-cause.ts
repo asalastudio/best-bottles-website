@@ -1,0 +1,24 @@
+import { readFileSync, writeFileSync } from "node:fs"; import path from "node:path";
+import { ConvexHttpClient } from "convex/browser"; import { api } from "../../convex/_generated/api";
+import { getFinishFromWebsiteSku } from "../../src/lib/paper-doll/tokens.generated";
+const root=process.cwd();
+const diag=JSON.parse(readFileSync(path.join(root,"data/asset-ledger/finish-component-diag.json"),"utf8")).rows as any[];
+const snap=JSON.parse(readFileSync(path.join(root,"data/asset-ledger/builder-catalog-snapshot.json"),"utf8")).rows as any[];
+const bySku=new Map(snap.map((r:any)=>[r.sku,r]));
+const missingGrace=new Set<string>(); const labelGap=new Set<string>(); const cause:Record<string,number>={}; const rowsOut:any[]=[];
+for(const d of diag){ if(!(d.reason.startsWith("no listed")&&d.reason.includes("with finish")))continue;
+ const row=bySku.get(d.sku); const listed=(row?.components?.[d.kind]??[]) as any[];
+ const nullSku=listed.filter(p=>!p.websiteSku); const present=listed.filter(p=>p.websiteSku&&p.websiteSku.includes(d.neck));
+ const nullLabel=present.filter(p=>getFinishFromWebsiteSku(p.websiteSku)==null);
+ nullSku.forEach(p=>p.graceSku&&missingGrace.add(p.graceSku)); nullLabel.forEach(p=>labelGap.add(p.websiteSku));
+ const c = nullSku.length && !present.some(p=>getFinishFromWebsiteSku(p.websiteSku)?.label===d.finish) ? "a listed component has no dev product (websiteSku null)" : nullLabel.length ? "a listed component's websiteSku yields no finish label (token gap)" : "listed components resolve, but none carries this finish (catalog mapping gap)";
+ cause[c]=(cause[c]??0)+1; rowsOut.push({sku:d.sku,kind:d.kind,finish:d.finish,neck:d.neck,cause:c,nullSkuGrace:nullSku.map(p=>p.graceSku),nullLabelSkus:nullLabel.map(p=>p.websiteSku)});
+}
+console.log("label-mismatch rows by cause:"); for(const [k,v] of Object.entries(cause).sort((a,b)=>b[1]-a[1]))console.log(`  ${String(v).padStart(5)}  ${k}`);
+console.log(`\ncomponent graceSkus with NO dev product: ${missingGrace.size}`); console.log("  "+[...missingGrace].slice(0,24).join(", "));
+console.log(`\ncomponent websiteSkus with NO finish label: ${labelGap.size}`); console.log("  "+[...labelGap].slice(0,24).join(", "));
+(async()=>{ const prod=new ConvexHttpClient("https://precise-raccoon-123.convex.cloud"); const found:any[]=[]; const skus=[...missingGrace]; let i=0;
+ await Promise.all(Array.from({length:8},async()=>{while(i<skus.length){const g=skus[i++];try{const r=await prod.query(api.products.lookupSku,{sku:g});const p=r&&(r as any).product;found.push({graceSku:g,onProd:!!p,websiteSku:p?.websiteSku??null,category:p?.category??null});}catch{found.push({graceSku:g,onProd:null});}}}));
+ console.log(`\nof those, on PROD: ${found.filter(f=>f.onProd).length} / ${found.length}`);
+ writeFileSync(path.join(root,"data/asset-ledger/finish-component-cause.json"),JSON.stringify({rows:rowsOut,missingComponentProducts:found,labelGapSkus:[...labelGap]},null,1));
+})();
