@@ -1,24 +1,28 @@
 // Portrait editorial scenes under the locked material-board recipe (bone #F5F3EF, one daylight, one baseline,
 // family material base in the lower quarter). Regenerate with scripts/family-cards. Not SKU plates.
 //
-// FAMILY_ART is the mobile / default plate. Cylinder, Boston Round, Round and Circle use
+// FAMILY_ART is the mobile / default plate. Cylinder, Boston Round, Round, Circle and Diva use
 // nearly-square v4 mobile crops; desktop cards use the separate 3:4 lineups below.
+// Diva and Empire v4 are Jordan's supplied photographs (2026-09-16), on the v4 paper; the mobile cards are
+// near-square crops of the same images.
 export const FAMILY_ART: Record<string, string> = {
     "Cylinder": "family-cylinder-mobile-v4",
     "Boston Round": "family-boston-round-mobile-v4",
     "Round": "family-round-mobile-v4",
     "Circle": "family-circle-mobile-v4",
     "Elegant": "family-elegant-bone-v3",
-    "Diva": "family-diva-bone-v3",
+    "Diva": "family-diva-mobile-v4",
     "Grace": "family-grace-bone-v3",
-    "Empire": "family-empire-bone-v3"
+    "Empire": "family-empire-mobile-v4"
 };
 
 export const FAMILY_ART_DESKTOP: Record<string, string> = {
     "Cylinder": "family-cylinder-desktop-v4",
     "Boston Round": "family-boston-round-desktop-v4",
     "Round": "family-round-desktop-v4",
-    "Circle": "family-circle-desktop-v4"
+    "Circle": "family-circle-desktop-v4",
+    "Diva": "family-diva-desktop-v4",
+    "Empire": "family-empire-desktop-v4"
 };
 
 export type FamilyCardSources = { desktop: string; mobile: string };
