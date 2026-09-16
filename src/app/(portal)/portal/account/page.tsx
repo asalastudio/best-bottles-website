@@ -20,11 +20,11 @@ export default async function PortalAccount() {
         .reduce((sum, order) => sum + (order.totalAmount ?? 0), 0);
 
     return (
-        <div className="px-6 py-6 max-w-[1200px]">
+        <div className="mx-auto max-w-[1200px] px-4 py-4 lg:px-6 lg:py-6">
             <PageHeader eyebrow="Account" title="Account & Pricing" />
 
             {account ? (
-                <div className="grid grid-cols-[1fr_320px] gap-4">
+                <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_320px]">
                     <div className="bg-white rounded-lg border border-neutral-200">
                         <div className="px-5 py-3 border-b border-neutral-200 flex items-center justify-between">
                             <h2 className="font-sans text-[14px] font-semibold text-neutral-900">Account Details</h2>
@@ -34,7 +34,7 @@ export default async function PortalAccount() {
                                 </PortalTag>
                             </div>
                         </div>
-                        <div className="px-5 py-4 grid grid-cols-2 gap-x-6 gap-y-4">
+                        <div className="grid grid-cols-1 gap-x-6 gap-y-4 px-5 py-4 sm:grid-cols-2">
                             {[
                                 ["Company", account.companyName],
                                 ["Account Number", account.accountNumber],
@@ -70,13 +70,13 @@ export default async function PortalAccount() {
                         <div className="flex flex-col gap-2">
                             <a
                                 href={`mailto:sales@bestbottles.com?subject=${encodeURIComponent(`Best Bottles account ${account.accountNumber} — ${account.companyName}`)}`}
-                                className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
+                                className="inline-flex h-11 min-h-11 items-center justify-center px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors lg:h-8 lg:min-h-8"
                             >
                                 Email your account manager
                             </a>
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-colors"
+                                className="inline-flex h-11 min-h-11 items-center justify-center px-3 text-[13px] font-sans font-medium rounded-md border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-colors lg:h-8 lg:min-h-8"
                             >
                                 Request a call
                             </Link>
@@ -87,8 +87,8 @@ export default async function PortalAccount() {
                         Orders cannot be sent without it, so it lives on the page
                         the customer already visits rather than behind a step in
                         the order flow. */}
-                    <div className="col-span-2">
-                        <div className="flex items-center justify-between mb-2">
+                    <div className="lg:col-span-2">
+                        <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                             <h2 className="font-sans text-[14px] font-semibold text-neutral-900">
                                 Shipping address
                             </h2>

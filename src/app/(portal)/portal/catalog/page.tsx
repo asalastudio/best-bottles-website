@@ -32,7 +32,7 @@ export default async function PortalCatalog({
     const items = buildCatalogLineItems(result);
 
     return (
-        <div className="px-6 py-6 max-w-[1400px]">
+        <div className="mx-auto max-w-[1400px] px-4 py-4 lg:px-6 lg:py-6">
             <PageHeader
                 eyebrow="Catalogue"
                 title="Products"

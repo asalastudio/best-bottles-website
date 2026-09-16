@@ -207,14 +207,14 @@ export default function CatalogLineItems({
     return (
         <div>
             {/* Search */}
-            <div className="flex items-center gap-2 mb-3">
+            <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-center">
                 <input
                     value={term}
                     onChange={(e) => setTerm(e.target.value)}
                     onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); runSearch(term); } }}
                     placeholder="Search the catalogue — SKU, capacity, colour, family"
                     aria-label="Search the catalogue"
-                    className="flex-1 h-9 px-3 font-sans text-[13px] rounded-md border outline-none"
+                    className="h-11 flex-1 rounded-md border px-3 font-sans text-[16px] outline-none sm:h-9 sm:text-[13px]"
                     style={{
                         borderColor: "var(--color-rule)",
                         background: "var(--color-surface)",
@@ -224,7 +224,7 @@ export default function CatalogLineItems({
                 <button
                     type="button"
                     onClick={() => runSearch(term)}
-                    className="h-9 px-4 font-sans text-[13px] font-medium rounded-md"
+                    className="h-11 px-4 font-sans text-[13px] font-medium rounded-md sm:h-9"
                     style={{ background: "var(--color-text-primary)", color: "var(--color-surface)" }}
                 >
                     Search

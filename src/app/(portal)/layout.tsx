@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import PortalSidebar from "@/components/portal/PortalSidebar";
-import PortalTopBar from "@/components/portal/PortalTopBar";
+import PortalChrome from "@/components/portal/PortalChrome";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { getPortalShellData } from "@/lib/portal/server";
 
@@ -34,34 +33,26 @@ export default async function PortalLayout({ children }: { children: ReactNode }
     const shell = await getPortalShellData();
 
     return (
-        <div
-            className="app-surface flex h-screen overflow-hidden"
-            style={{ background: "var(--color-surface-sunken)" }}
+        <PortalChrome
+            companyName={shell.account?.companyName ?? null}
+            tierLabel={shell.account?.tier ?? null}
+            inTransitCount={shell.inTransitCount}
         >
-            <PortalSidebar
-                companyName={shell.account?.companyName ?? null}
-                tierLabel={shell.account?.tier ?? null}
-            />
-            <div className="flex flex-col flex-1 min-w-0 overflow-hidden">
-                <PortalTopBar inTransitCount={shell.inTransitCount} />
-                <main className="flex-1 overflow-auto bg-neutral-50">
-                    {shell.viewer.clerkOrgId ? (
-                        children
-                    ) : (
-                        <div className="px-6 py-10 max-w-[760px]">
-                            <div className="bg-white border border-neutral-200 rounded-lg px-6 py-6">
-                                <h1 className="font-sans text-[22px] font-semibold text-neutral-900 mb-2">
-                                    Choose your organization to use the portal
-                                </h1>
-                                <p className="font-sans text-sm text-neutral-500 leading-relaxed">
-                                    Your account is signed in, but there is no active Clerk organization selected for this session yet.
-                                    Once an organization is active, orders, drafts, and account data will sync to the portal automatically.
-                                </p>
-                            </div>
-                        </div>
-                    )}
-                </main>
-            </div>
-        </div>
+            {shell.viewer.clerkOrgId ? (
+                children
+            ) : (
+                <div className="max-w-[760px] px-4 py-6 lg:px-6 lg:py-10">
+                    <div className="rounded-lg border border-neutral-200 bg-white px-5 py-6">
+                        <h1 className="mb-2 font-sans text-[22px] font-semibold leading-tight text-neutral-900">
+                            Choose your organization to use the portal
+                        </h1>
+                        <p className="font-sans text-sm leading-relaxed text-neutral-500">
+                            Your account is signed in, but there is no active Clerk organization selected for this session yet.
+                            Once an organization is active, orders, drafts, and account data will sync to the portal automatically.
+                        </p>
+                    </div>
+                </div>
+            )}
+        </PortalChrome>
     );
 }

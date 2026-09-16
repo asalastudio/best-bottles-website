@@ -68,7 +68,7 @@ export default async function PortalOrderDetail({
         typeof unitPrice === "number" ? unitPrice * quantity : undefined;
 
     return (
-        <div className="px-6 py-6 max-w-[900px]">
+        <div className="mx-auto max-w-[900px] px-4 py-4 lg:px-6 lg:py-6">
             <Link
                 href="/portal/orders"
                 className="inline-block font-sans text-[12px] mb-3 transition-colors text-[color:var(--color-text-muted)] hover:text-[color:var(--color-text-primary)]"
@@ -180,6 +180,7 @@ export default async function PortalOrderDetail({
                     style={{ borderColor: "var(--color-rule)", background: "var(--color-surface)" }}
                 >
                     <div
+                        data-portal-table-head
                         className="grid grid-cols-[1fr_90px_110px_120px] gap-3 px-5 py-2.5"
                         style={{ borderBottom: "1px solid var(--color-rule)", background: "var(--color-surface-sunken)" }}
                     >
@@ -196,10 +197,11 @@ export default async function PortalOrderDetail({
                     {order.lineItems.map((line, i) => (
                         <div
                             key={`${line.sku}-${i}`}
+                            data-portal-table-row
                             className="grid grid-cols-[1fr_90px_110px_120px] gap-3 items-center px-5 py-3"
                             style={i < order.lineItems.length - 1 ? { borderBottom: "1px solid var(--color-rule)" } : undefined}
                         >
-                            <div className="min-w-0">
+                            <div data-label="Item" className="min-w-0">
                                 <p className="font-sans text-[11px] font-medium uppercase tracking-wide text-[color:var(--color-text-muted)]">
                                     {line.sku}
                                 </p>
@@ -207,13 +209,13 @@ export default async function PortalOrderDetail({
                                     {line.description}
                                 </p>
                             </div>
-                            <p className="font-sans text-[13px] tabular-nums text-[color:var(--color-text-primary)]">
+                            <p data-label="Qty" className="font-sans text-[13px] tabular-nums text-[color:var(--color-text-primary)]">
                                 {line.quantity.toLocaleString()}
                             </p>
-                            <p className="font-sans text-[13px] tabular-nums text-[color:var(--color-text-secondary)]">
+                            <p data-label="Unit" className="font-sans text-[13px] tabular-nums text-[color:var(--color-text-secondary)]">
                                 {money(line.unitPrice)}
                             </p>
-                            <p className="font-sans text-[13px] font-medium tabular-nums text-[color:var(--color-text-primary)]">
+                            <p data-label="Line total" className="font-sans text-[13px] font-medium tabular-nums text-[color:var(--color-text-primary)]">
                                 {money(lineTotal(line.unitPrice, line.quantity))}
                             </p>
                         </div>
