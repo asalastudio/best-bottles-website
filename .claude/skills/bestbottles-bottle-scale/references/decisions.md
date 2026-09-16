@@ -30,7 +30,7 @@ bug: the Classic's glass was 20 % shorter, but the pump head closed the gap. Opt
 The 50 ml Cylinder can rise at most to 62.5 % (its atomizer bulb meets the top margin); raising both was mocked.
 **Decision: leave it as it is** (Slim 54.1 %, 50 ml 56 %).
 
-**Cylinder lock amendment (approved, on PR #179).** Checked bottle to bottle against Jordan's true-scale lineup
+**Cylinder lock amendment (approved, merged to main via PR #179).** Checked bottle to bottle against Jordan's true-scale lineup
 (5 ml 53, 9 ml 70, 28 ml 81, 50 ml roller 98, 9 ml Slim 106, 25 ml 83, 50 ml 117, 100 ml 154 mm; "not exact geometry,
 just the visual scale"; "we'd have to account for roller balls, fitments"). Four bodies moved onto the lock's own
 progression through 5/9/50/100 (`shoulder % = 3.965 × mm^0.56`): 28 ml 50.5 → 46.5, 25 ml 46.5 → 47.2, 50 ml roller

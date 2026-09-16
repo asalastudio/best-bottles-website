@@ -16,9 +16,9 @@ are in `references/decisions.md`.
 | Measurements snapshot: 2,269 live SKUs → 108 glass bodies (97 if frosted/swirl twins count once), 27 families | Pulled from production Convex | `docs/reviews/bottle-measurements-2026-09-16/` |
 | 19 glasses with measurement problems | Sent to Jordan's boss to check, awaiting his reply | `…/Best Bottles bottle heights - please check (sent 2026-09-16).xlsx` |
 | Universal scale card v1 | **Proposal, not approved** | `…/scale-card/`, control points in `references/approved-sizes-2026-09-16.json` |
-| Cylinder hero sizes | **Locked** 2026-09-07, **amended** 2026-09-16 (four bodies) | `docs/reviews/cylinder-family-final-manifest-2026-09-07.json` + `docs/reviews/sunburst-heroes-release-5/lock-amendment-2026-09-16.json` (PR #179) |
+| Cylinder hero sizes | **Locked** 2026-09-07, **amended** 2026-09-16 (four bodies), both on main | `docs/reviews/cylinder-family-final-manifest-2026-09-07.json` + `docs/reviews/sunburst-heroes-release-5/lock-amendment-2026-09-16.json` |
 | Boston Round 15/30/60 ml | **Locked** 2026-09-12, full-glass % | `data/asset-ledger/bottle-standards.json` |
-| Cylinder photoreal heroes | 45 of 52 on PR #179; 7 have no PSD | `scripts/hero-pipeline/` |
+| Cylinder photoreal heroes | 45 of 52 live on main (PR #179, merged 2026-09-16); 7 have no PSD | `scripts/hero-pipeline/` |
 
 ## Rules that are not re-derived
 

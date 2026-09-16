@@ -1,4 +1,4 @@
-# Photoreal hero pipeline (as used for the Cylinder release, PR #179)
+# Photoreal hero pipeline (as used for the Cylinder release, PR #179, merged 2026-09-16)
 
 Turns PSD masters into photoreal 1560 × 1716 heroes on bone (#F5F3EF) with a real contact shadow, sized by the family's
 lock. Preserved as run on 2026-09-16. Paths come from `hero_paths.py`:
