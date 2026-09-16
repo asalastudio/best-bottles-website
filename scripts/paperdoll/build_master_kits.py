@@ -10,6 +10,7 @@ python3 scripts/paperdoll/build_master_kits.py --batch dist/paper-doll/cylinder-
 """
 from __future__ import annotations
 import argparse
+import re
 import hashlib
 import json
 import sys
@@ -177,7 +178,12 @@ def render_exploded(parts, output):
     return exploded
 
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--batch',type=Path,required=True);ap.add_argument('--part-map',type=Path);ap.add_argument('--sku',action='append');args=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--batch',type=Path,required=True);ap.add_argument('--part-map',type=Path);ap.add_argument('--sku',action='append')
+    # --aliases: {sku: {sourceBasename, evidence}} — a source whose basename is not
+    # the SKU, accepted only because an already-published plate for that SKU names
+    # this exact file and hash (the plate index is the crosswalk, never the name)
+    ap.add_argument('--aliases',type=Path);args=ap.parse_args()
+    aliases=json.loads(args.aliases.read_text()) if args.aliases else {}
     batch=args.batch.resolve(); plates=batch/'plates'; output=batch/'kits';output.mkdir(exist_ok=True)
     manifest=json.loads((plates/'manifest.json').read_text());xref=json.loads((batch/'input/xref.json').read_text());qualified={r['websiteSku'] for r in xref['products'] if r['publishable'] and r.get('kitApplicability')!='notApplicable'}
     catalog=json.loads((batch/'input/convex-snapshot.json').read_text()); products={p['websiteSku']:p for p in catalog['products']}
@@ -189,7 +195,10 @@ def main():
         record={'sku':sku,'familyId':row['familyId'],'status':'review','publishable':False,'parts':[]}
         try:
             if not row['publishable']:raise ValueError('plate registration failed')
-            src=row['plate'];path=checked_source(MASTER/src['sourceRelPath']);validate_front_source({'relPath':src['sourceRelPath']},sku)
+            src=row['plate'];path=checked_source(MASTER/src['sourceRelPath'])
+            alias=aliases.get(sku); stem=re.sub(r'^\s*\d+[.-]?\s*','',Path(src['sourceRelPath']).stem).rstrip('.').strip()
+            if alias and alias.get('sourceBasename')==stem: validate_front_source({'relPath':src['sourceRelPath']},stem); record['sourceAlias']=alias
+            else: validate_front_source({'relPath':src['sourceRelPath']},sku)
             source_sha=hashlib.sha256(path.read_bytes()).hexdigest()
             if source_sha!=src['sourceSha256']:raise ValueError('source hash drift')
             plate_path=plates/src['key'];plate_bytes=plate_path.read_bytes()

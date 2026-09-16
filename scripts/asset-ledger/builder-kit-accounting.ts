@@ -20,7 +20,7 @@ if (!process.env.NEXT_PUBLIC_CONVEX_URL && existsSync(path.join(root, ".env.loca
     }
 }
 const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
-const LOCAL_BATCHES = ["dist/paper-doll/boston-current-2026-09-16"];
+const LOCAL_BATCHES = ["dist/paper-doll/boston-current-2026-09-16", "dist/paper-doll/boston-remaining-2026-09-16"];
 
 async function main() {
     const funnel = JSON.parse(readFileSync(path.join(root, "data/asset-ledger/builder-funnel.json"), "utf8"));
