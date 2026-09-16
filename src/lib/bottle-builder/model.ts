@@ -172,7 +172,8 @@ export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, pr
     if (kit.completeness !== "full" && !(capOnly && kit.completeness === "capSplit") && !assemblySplit) return null;
     const body = kit.parts.find(part => part.slot === "body");
     if (!body || !kit.parts.some(part => part.slot !== "body")) return null;
-    if (body.derivation !== "psd-layer" && body.derivation !== "madison") return null;
+    // background-matte: the master photograph with its white studio ground stripped (Boston amber/cobalt, 2026-09-16)
+    if (!["psd-layer", "madison", "background-matte"].includes(body.derivation)) return null;
     if (!kit.parts.every(part => part.image.width === kit.canvas.width && part.image.height === kit.canvas.height
         && part.image.url.startsWith("https://") && part.assembled.x === 0 && part.assembled.y === 0
         && part.bounds.right > part.bounds.left && part.bounds.bottom > part.bounds.top)) return null;

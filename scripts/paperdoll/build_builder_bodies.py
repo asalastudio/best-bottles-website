@@ -23,6 +23,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from psd_tools import PSDImage
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 ROOT = Path('/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master')
 REPO = Path(__file__).resolve().parents[2]
@@ -108,30 +109,7 @@ def largest_island(im):
     arr = np.asarray(im).copy(); arr[..., 3] = np.where(mask, arr[..., 3], 0)
     return Image.fromarray(arr, 'RGBA'), int(n - 1)
 
-def strip_white_ground(im, tol=28):
-    """Some master body layers are the photograph itself: the glass on a white
-    studio ground, the ground only partly cut away. Drop the near-white region
-    connected to the layer border. Only used where an approved entry says
-    ground: white, and only for opaque coloured glass — clear or frosted glass
-    reads as white and would be eaten."""
-    from scipy import ndimage
-    im = im.convert('RGBA'); arr = np.asarray(im).copy()
-    rgb = arr[..., :3].astype(int); a = arr[..., 3] > 8
-    white = a & (rgb.min(axis=2) >= 255 - tol)
-    labels, n = ndimage.label(white)
-    border = np.zeros_like(white); border[0, :] = border[-1, :] = border[:, 0] = border[:, -1] = True
-    border |= ~a  # ground touching an already-transparent cut counts as border too
-    edge_labels = np.unique(labels[border & white]); edge_labels = edge_labels[edge_labels > 0]
-    ground = np.isin(labels, edge_labels)
-    # one pixel of soft edge so the anti-aliased rim keeps its partial alpha
-    inner = ndimage.binary_erosion(~ground, iterations=1)
-    alpha = arr[..., 3].astype(float)
-    alpha[ground] = 0
-    rim = ~ground & ~inner & a
-    whiteness = np.clip((rgb.min(axis=2)[rim] - (255 - tol * 2)) / float(tol * 2), 0, 1)
-    alpha[rim] = alpha[rim] * (1 - whiteness)
-    arr[..., 3] = alpha.round().astype(np.uint8)
-    return Image.fromarray(arr, 'RGBA'), int(ground.sum())
+from matte import strip_white_ground  # shared with build_master_kits.py
 
 def save(im, name):
     im = im.convert('RGBA'); box = im.getchannel('A').getbbox()

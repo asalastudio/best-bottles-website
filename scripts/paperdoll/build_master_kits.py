@@ -24,6 +24,7 @@ sys.path.insert(0,str(HERE))
 from family_batch import checked_source, MASTER
 from build_plates import validate_front_source
 from build_cyl9_kits import alpha_gate, save_part
+from matte import strip_white_ground
 
 SLOTS={'body','fitment','roller','cap','overcap','sprayer','pump','diptube','collar','bulb','tassel','reducer','pipette'}
 
@@ -36,16 +37,21 @@ def layer_inventory(psd):
         if l.is_group(): continue
         if l.kind != 'pixel':
             raise ValueError(f'non-pixel layer {i} requires source review')
-        if not l.is_visible():
-            raise ValueError(f'hidden layer {i} requires source review')
+        visible=l.is_visible()
         if l.opacity != 255 or str(l.blend_mode.value) not in ("b'norm'",'norm'):
             raise ValueError(f'layer {i} blending/opacity requires source review')
         im=l.topil()
         if im is None: continue
-        alpha=np.asarray(im.convert('RGBA').getchannel('A'))
+        rgba=np.asarray(im.convert('RGBA')); alpha=rgba[...,3]
         fraction=im.width*im.height/(psd.width*psd.height)
-        background=(fraction>=0.98 and float((alpha>=250).mean())>=0.98)
-        out.append({'index':i,'name':l.name,'bounds':list(l.bbox),'background':background,
+        # a background is a full-canvas, opaque, blank white sheet; a photograph
+        # of the glass that still carries its white studio ground is as large and
+        # as opaque, but it is not blank (the cobalt 60 ml Boston bodies)
+        blank=float((rgba[...,:3].min(axis=2)>=245).mean())>=0.98
+        background=(fraction>=0.98 and float((alpha>=250).mean())>=0.98 and blank)
+        # a hidden layer contributes nothing to the plate; it is recorded here and
+        # must be named in the part map's exclusions, or the kit stays in review
+        out.append({'index':i,'name':l.name,'bounds':list(l.bbox),'background':background,'visible':visible,
                     'pixelHash':digest_image(im),'size':list(im.size)})
     return out
 
@@ -57,9 +63,23 @@ def validate_part_map(mapping,foreground,source_sha):
     parts=mapping.get('parts',{})
     if 'body' not in parts or len(parts)<2 or set(parts)-SLOTS:
         raise ValueError('part map needs a body and valid physical component slots')
+    # explicit exclusions: hidden alternatives, or a visible layer the reviewer
+    # names with evidence (an unused twin body fully covered by the body above it);
+    # the plate parity gate still has to pass without it
+    excluded=mapping.get('exclude',{})
+    if isinstance(excluded,list): excluded={str(i):'' for i in excluded}
+    by_index={l['index']:l for l in foreground}
+    for key,evidence in excluded.items():
+        i=int(key); layer=by_index.get(i)
+        if layer is None: raise ValueError(f'excluded layer {i} is not a foreground layer')
+        if layer.get('visible',True) and not evidence: raise ValueError(f'excluding visible layer {i} requires evidence')
+    hidden=[l['index'] for l in foreground if not l.get('visible',True) and str(l['index']) not in excluded]
+    if hidden: raise ValueError(f'hidden layer {hidden[0]} requires source review')
     assigned=[i for ids in parts.values() for i in ids]
-    if any(not ids for ids in parts.values()) or len(assigned)!=len(set(assigned)) or set(assigned)!={l['index'] for l in foreground}:
+    expected={l['index'] for l in foreground}-{int(k) for k in excluded}
+    if any(not ids for ids in parts.values()) or len(assigned)!=len(set(assigned)) or set(assigned)!=expected:
         raise ValueError('part map must cover each foreground layer exactly once')
+    if any(not by_index[i].get('visible',True) for i in assigned): raise ValueError('a hidden layer cannot be a part')
     return parts
 
 def automatic_cap_map(product,foreground,off_psd):
@@ -175,6 +195,7 @@ def main():
             plate_path=plates/src['key'];plate_bytes=plate_path.read_bytes()
             if hashlib.sha256(plate_bytes).hexdigest()!=src['sha256']:raise ValueError('plate hash drift')
             psd=PSDImage.open(path);layers=layer_inventory(psd);foreground=[l for l in layers if not l['background']]
+            if sku not in maps and any(not l.get('visible',True) for l in foreground): raise ValueError(f"hidden layer {next(l['index'] for l in foreground if not l.get('visible',True))} requires source review")
             record.update({'sourcePath':src['sourceRelPath'],'sourceSha256':source_sha,'layers':layers,'applicator':products[sku].get('applicator')})
             if sku in maps:
                 parts=validate_part_map(maps[sku],foreground,source_sha); mapping_evidence=maps[sku]
@@ -195,6 +216,12 @@ def main():
                 if min(ids)<=previous:raise ValueError('interleaved physical-part layers need review')
                 previous=max(ids); selected={id(all_layers[i]) for i in ids}
                 im=psd.composite(force=True,ignore_preview=True,alpha=0.0,color=1.0,layer_filter=lambda l:l.is_group() or id(l) in selected).convert('RGBA')
+                # a photographed layer with its white studio ground still baked in:
+                # the reviewer asks for the ground to be stripped (matte), never
+                # for clear or frosted glass
+                derivation='psd-layer'; ground_px=0
+                if mapping_evidence.get('matte',{}).get(slot)=='white-ground':
+                    im,ground_px=strip_white_ground(im); derivation='background-matte'
                 transformed=im.transform((1000,1100),Image.Transform.AFFINE,(1/scale,0,-ox/scale,0,1/scale,-oy/scale),resample=Image.Resampling.BICUBIC)
                 ok,gate=alpha_gate(np.asarray(transformed));gates.append({'slot':slot,'ok':ok,**gate})
                 if not ok:raise ValueError(f'{slot} alpha gate failed: {gate}')
@@ -206,7 +233,7 @@ def main():
                 part_rows.append({'slot':slot,'variantKey':None,'zOrder':len(part_rows),'explodeIndex':explode_index,
                   'image':f'parts/{name}','storeKey':f"kits/master-parts/{name}",**asset,'width':1000,'height':1100,
                   'bounds':{'left':bbox[0],'top':bbox[1],'right':bbox[2],'bottom':bbox[3]},'assembled':{'x':0,'y':0},
-                  'exploded':{'dx':0,'dy':0},'derivation':'psd-layer','sourceLayerIndices':ids})
+                  'exploded':{'dx':0,'dy':0},'derivation':derivation,'sourceLayerIndices':ids,'whiteGroundPixelsDropped':ground_px})
             place_exploded(part_rows)
             pg=parity(composite,Image.open(plate_path))
             if not pg['ok']:raise ValueError(f'plate parity failed: {pg}')

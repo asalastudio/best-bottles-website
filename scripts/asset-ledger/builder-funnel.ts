@@ -55,7 +55,7 @@ function kitReason(row: CatalogRow, kit: BuilderKit | null): string | null {
     const body = kit.parts.find(p => p.slot === "body");
     if (!body) return "kit has no body part";
     if (!kit.parts.some(p => p.slot !== "body")) return "kit has only a body";
-    if (body.derivation !== "psd-layer" && body.derivation !== "madison") return `body derivation ${body.derivation}`;
+    if (!["psd-layer", "madison", "background-matte"].includes(body.derivation)) return `body derivation ${body.derivation}`;
     const suffix = `-${String(row.color).toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${String(row.neckThreadSize).toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
     if (!kit.familyId.endsWith(suffix) || !kit.familyId.includes(`-${row.capacityMl}ml-`)) return "kit familyId disagrees with row";
     if (row.family === "Cylinder" && row.capacityMl === 5.5) return "Cylinder 5.5 ml excluded by rule";
