@@ -10,6 +10,7 @@ import BuilderLoading from "@/components/bottle-builder/BuilderLoading";
 import { loadBuilderEntry } from "@/lib/bottle-builder/entry";
 import MatrixClient from "@/components/matrix/MatrixClient";
 import { loadBuilderFamilies, loadBuilderFamily } from "@/lib/bottle-builder/server";
+import { slimBuilderBodies } from "@/lib/bottle-builder/payload";
 import { chooserPreloadUrls, preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/lib/seo";
 
@@ -42,7 +43,7 @@ export default async function MatrixPage({ searchParams }: { searchParams: Promi
 async function Builder({ familyParam, collection }: { familyParam?: string; collection?: string }) {
     const preferMobile = preferMobileRequest(await headers());
     const entry = await loadBuilderEntry(familyParam, { family: loadBuilderFamily, families: loadBuilderFamilies });
-    const bodies = builderCollectionBodies(entry.bodies, collection);
+    const bodies = slimBuilderBodies(builderCollectionBodies(entry.bodies, collection));
     const preloads = preferMobile ? chooserPreloadUrls(bodies) : [];
     return <>
         {preloads.map(href => <link key={href} rel="preload" as="image" href={href} />)}
