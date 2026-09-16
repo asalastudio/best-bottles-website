@@ -53,7 +53,7 @@ export default async function CreateProductPage({
                         Create Products
                     </h1>
                     <p className="mt-3 text-sm leading-6 text-slate">
-                        Enter the same fields the product page already shows. Upload photos on a phone or drop them on desktop. This writes Convex catalog truth, stays quote-only until Shopify sync, and can join an existing paper-doll family when one applies.
+                        Enter the same fields the product page already shows. Upload photos on a phone or drop them on desktop — the product page prefers a 10:11 portrait at 2080×2288, up to 8 MB. This writes Convex catalog truth, stays quote-only until Shopify sync, and can join an existing paper-doll family when one applies.
                     </p>
                     {previewMode ? (
                         <p className="mt-4 inline-flex rounded-full border border-muted-gold/30 bg-linen px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-dim">

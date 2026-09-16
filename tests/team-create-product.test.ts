@@ -65,6 +65,7 @@ describe("Team Hub create product", () => {
         expect(drop).toContain("Drop an image here");
         expect(drop).toContain('type="file"');
         expect(drop).toContain("Take or choose a photo");
+        expect(drop).toContain("PRODUCT_IMAGE_SPEC_SUMMARY");
     });
 
     it("rejects Sanity CDN imagery so the PDP stays on product truth", () => {

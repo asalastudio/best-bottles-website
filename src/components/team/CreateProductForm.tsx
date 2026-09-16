@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { createProductAction, createProductImageUploadUrlAction, resolveProductImageUrlAction, type CreateProductState } from "@/app/team/products/actions";
 import ProductImageDropField from "@/components/team/ProductImageDropField";
+import { PRODUCT_IMAGE_SPEC } from "@/lib/team/productImageUpload";
 import {
     CREATE_PRODUCT_CATEGORY_OPTIONS,
     CREATE_PRODUCT_COLOR_OPTIONS,
@@ -183,6 +184,35 @@ export default function CreateProductForm({ previewMode = false }: { previewMode
 
                             {section.id === "imagery" ? (
                                 <div className="grid gap-5">
+                                    <aside
+                                        data-product-image-spec
+                                        className="rounded-md border border-champagne/70 bg-bone px-4 py-4"
+                                    >
+                                        <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.12em] text-gold-dim">
+                                            Product page photo spec
+                                        </p>
+                                        <p className="mt-1 text-[12px] leading-5 text-slate">
+                                            Use this frame so the gallery, catalog card, and paper-doll stage stay aligned.
+                                        </p>
+                                        <dl className="mt-3 grid gap-2 text-[13px] sm:grid-cols-2">
+                                            <div>
+                                                <dt className="font-sans text-[11px] font-medium uppercase tracking-[0.12em] text-gold-dim">Aspect ratio</dt>
+                                                <dd className="mt-0.5 font-medium text-obsidian">{PRODUCT_IMAGE_SPEC.aspectLabel}</dd>
+                                            </div>
+                                            <div>
+                                                <dt className="font-sans text-[11px] font-medium uppercase tracking-[0.12em] text-gold-dim">Preferred size</dt>
+                                                <dd className="mt-0.5 font-medium text-obsidian">{PRODUCT_IMAGE_SPEC.preferredPixels} px</dd>
+                                            </div>
+                                            <div>
+                                                <dt className="font-sans text-[11px] font-medium uppercase tracking-[0.12em] text-gold-dim">File limit</dt>
+                                                <dd className="mt-0.5 font-medium text-obsidian">{PRODUCT_IMAGE_SPEC.maxFileLabel}</dd>
+                                            </div>
+                                            <div>
+                                                <dt className="font-sans text-[11px] font-medium uppercase tracking-[0.12em] text-gold-dim">Formats</dt>
+                                                <dd className="mt-0.5 font-medium text-obsidian">{PRODUCT_IMAGE_SPEC.formatsLabel}</dd>
+                                            </div>
+                                        </dl>
+                                    </aside>
                                     <ProductImageDropField
                                         id="heroImageUrl"
                                         name="heroImageUrl"

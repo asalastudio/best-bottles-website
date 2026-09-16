@@ -1,8 +1,34 @@
 "use client";
 
 import { useId, useRef, useState } from "react";
-import { PRODUCT_IMAGE_ACCEPT, validateProductImageFile } from "@/lib/team/productImageUpload";
+import {
+    PRODUCT_IMAGE_ACCEPT,
+    PRODUCT_IMAGE_SPEC_SUMMARY,
+    assessProductImageDimensions,
+    validateProductImageFile,
+} from "@/lib/team/productImageUpload";
 import { cn } from "@/lib/utils";
+
+function readImageSize(source: File | string): Promise<{ width: number; height: number } | null> {
+    return new Promise((resolve) => {
+        const image = new Image();
+        const src = typeof source === "string" ? source : URL.createObjectURL(source);
+        image.onload = () => {
+            resolve({ width: image.naturalWidth, height: image.naturalHeight });
+            if (typeof source !== "string") URL.revokeObjectURL(src);
+        };
+        image.onerror = () => {
+            resolve(null);
+            if (typeof source !== "string") URL.revokeObjectURL(src);
+        };
+        image.src = src;
+    });
+}
+
+async function noteForSource(source: File | string): Promise<string | null> {
+    const size = await readImageSize(source);
+    return size ? assessProductImageDimensions(size.width, size.height) : null;
+}
 
 export default function ProductImageDropField({
     id,
@@ -28,6 +54,7 @@ export default function ProductImageDropField({
     const [dragging, setDragging] = useState(false);
     const [uploading, setUploading] = useState(false);
     const [error, setError] = useState<string | null>(null);
+    const [specNote, setSpecNote] = useState<string | null>(null);
 
     async function ingest(file: File) {
         const problem = validateProductImageFile(file);
@@ -36,6 +63,7 @@ export default function ProductImageDropField({
             return;
         }
         setError(null);
+        setSpecNote(await noteForSource(file));
         setUploading(true);
         try {
             const uploadUrl = await createUploadUrl();
@@ -102,22 +130,24 @@ export default function ProductImageDropField({
                         if (file) void ingest(file);
                     }}
                 />
-                {value ? (
-                    // eslint-disable-next-line @next/next/no-img-element -- staff preview of a just-uploaded or pasted URL
-                    <img src={value} alt="" className="h-20 w-20 rounded-md object-contain bg-white" />
-                ) : (
-                    <span className="grid h-11 w-11 place-items-center rounded-full border border-champagne bg-white text-lg text-obsidian" aria-hidden>
-                        +
-                    </span>
-                )}
+                <span className="relative flex aspect-[10/11] w-[4.5rem] items-center justify-center overflow-hidden rounded-sm border border-champagne bg-white">
+                    {value ? (
+                        // eslint-disable-next-line @next/next/no-img-element -- staff preview of a just-uploaded or pasted URL
+                        <img src={value} alt="" className="h-full w-full object-contain" />
+                    ) : (
+                        <span className="text-lg text-obsidian" aria-hidden>
+                            +
+                        </span>
+                    )}
+                </span>
                 <span className="font-sans text-[13px] font-medium text-obsidian">
                     {uploading ? "Uploading…" : value ? "Replace photo" : "Add photo"}
                 </span>
-                <span className="hidden font-sans text-[12px] text-slate lg:block">
-                    Drop an image here, or click to browse. PNG, JPEG, or WebP, up to 8 MB.
+                <span className="hidden font-sans text-[12px] leading-5 text-slate lg:block">
+                    Drop an image here, or click to browse. {PRODUCT_IMAGE_SPEC_SUMMARY}. PNG, JPEG, or WebP.
                 </span>
-                <span className="font-sans text-[12px] text-slate lg:hidden">
-                    Take or choose a photo. PNG, JPEG, or WebP, up to 8 MB.
+                <span className="font-sans text-[12px] leading-5 text-slate lg:hidden">
+                    Take or choose a photo. {PRODUCT_IMAGE_SPEC_SUMMARY}. PNG, JPEG, or WebP.
                 </span>
             </label>
             {value ? (
@@ -127,6 +157,7 @@ export default function ProductImageDropField({
                     onClick={() => {
                         onChange("");
                         setError(null);
+                        setSpecNote(null);
                     }}
                 >
                     Remove photo
@@ -140,11 +171,27 @@ export default function ProductImageDropField({
                     type="text"
                     inputMode="url"
                     value={value}
-                    onChange={(event) => onChange(event.target.value)}
+                    onChange={(event) => {
+                        const next = event.target.value;
+                        onChange(next);
+                        if (!next) setSpecNote(null);
+                    }}
+                    onBlur={() => {
+                        if (!value) {
+                            setSpecNote(null);
+                            return;
+                        }
+                        void noteForSource(value).then(setSpecNote);
+                    }}
                     placeholder="https://"
                     className="h-11 w-full rounded-md border border-champagne/70 bg-white px-3 font-sans text-[16px] text-obsidian placeholder:text-ash lg:h-10 lg:text-sm"
                 />
             </label>
+            {specNote ? (
+                <p className="mt-2 font-sans text-[12px] leading-5 text-gold-dim" data-product-image-spec-note>
+                    {specNote}
+                </p>
+            ) : null}
             {error ? (
                 <p className="mt-2 font-sans text-[12px] text-red-700" role="alert">
                     {error}
