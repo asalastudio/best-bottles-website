@@ -257,9 +257,12 @@ export default function MobileBuilder(p: Props) {
             </div>
         </div>}
         <dialog ref={filters} className={styles.sheet} aria-labelledby={`${id}-filters`} onCancel={closeFilters} onClose={() => { setFilterOpen(false); filterTrigger.current?.focus(); }}>
-            <div className={styles.dialogHeading}><h2 id={`${id}-filters`}>Filters</h2><button aria-label="Close filters" onClick={closeFilters}><X size={22} /></button></div>
-            {([['size', 'Capacity', [...new Set(p.bodies.map(b => b.capacityMl))].sort((a,b) => a-b).map(n => [String(n), `${n} ml`])], ['neck', 'Neck', [...new Set(p.bodies.map(b => b.neck))].map(n => [n,n])], ['application', 'Application', [...new Set(p.bodies.flatMap(b => b.configurations.map(c => c.fitment)))].map(n => [n,n])]] as ["size" | "neck" | "application", string, string[][]][]).map(([key,label,values]) => <label className={styles.filterField} key={key}>{label}<select aria-label={label} value={p[key]} onChange={e => p.onFilter(key,e.target.value)}><option value="">All {label.toLowerCase()}{key === "size" ? "s" : " options"}</option>{values.map(([value,text]) => <option value={value} key={value}>{text}</option>)}</select></label>)}
-            <button onClick={clearFilters}>Clear filters</button><button className={styles.primary} onClick={closeFilters}>Show {visible.length} {visible.length === 1 ? "bottle" : "bottles"}</button>
+            <div className={styles.dialogHeading}><h2 id={`${id}-filters`}>Filters</h2><button type="button" className={styles.closePreview} aria-label="Close filters" onClick={closeFilters}><X size={20} /></button></div>
+            <div className={styles.filterBody}>
+                {([['size', 'Capacity', [...new Set(p.bodies.map(b => b.capacityMl))].sort((a,b) => a-b).map(n => [String(n), `${n} ml`])], ['neck', 'Neck', [...new Set(p.bodies.map(b => b.neck))].map(n => [n,n])], ['application', 'Application', [...new Set(p.bodies.flatMap(b => b.configurations.map(c => c.fitment)))].map(n => [n,n])]] as ["size" | "neck" | "application", string, string[][]][]).map(([key,label,values]) => <label className={styles.filterField} key={key}>{label}<select aria-label={label} value={p[key]} onChange={e => p.onFilter(key,e.target.value)}><option value="">All {label.toLowerCase()}{key === "size" ? "s" : " options"}</option>{values.map(([value,text]) => <option value={value} key={value}>{text}</option>)}</select></label>)}
+                <button type="button" className={styles.filterClear} onClick={clearFilters}>Clear filters</button>
+            </div>
+            <div className={styles.sheetActions}><button type="button" className={styles.primary} onClick={closeFilters}>Show {visible.length} {visible.length === 1 ? "bottle" : "bottles"}</button></div>
         </dialog>
         <dialog ref={expanded} className={styles.zoom} aria-label="Expanded bottle preview" onClose={() => { closePreview(); expandTrigger.current?.focus({ preventScroll: true }); }}>
             <form method="dialog" className={styles.previewControls}>

@@ -100,7 +100,9 @@ describe('mobile presentation over shared configuration',()=>{
   expect(css).toContain("font-size: clamp(1.625rem, 7.2vw, 1.875rem)");
   expect(css).toContain("min-height: 44px");
   expect(css).toContain(".zoom:modal");
+  expect(css).toContain(".sheet:modal");
   expect(css).toContain("width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh");
+  expect(css).not.toContain("max-height: 78dvh");
   expect(css).toContain("position: absolute; inset: 0");
   expect(css).toContain("clamp(44px, 12vw, 56px)");
   expect(css).toContain("place-items: center");
@@ -110,6 +112,14 @@ describe('mobile presentation over shared configuration',()=>{
   choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');
   expect(container.textContent).not.toContain('Clear selected');
   expect(container.querySelector('.glassGrid, [class*="glassGrid"]') || container.querySelector('input[aria-label="Frosted"]')).toBeTruthy();
+ });
+ it('opens filters as a full-viewport overlay with a circular close control',()=>{
+  const dialog=container.querySelector<HTMLDialogElement>('dialog[aria-labelledby]')!;
+  dialog.showModal=()=>{dialog.open=true;};
+  click(container.querySelector('button[aria-haspopup="dialog"]'));
+  expect(dialog.querySelector('button[aria-label="Close filters"]')).toBeTruthy();
+  expect(dialog.textContent).toContain('Capacity');
+  expect(dialog.textContent).toMatch(/Show \d+ bottles?/);
  });
  it('shortens finish labels and treats glass as two visual cards',()=>{
   expect(shortFinishLabel("Black with Dots Cap")).toBe("Black + Dots");
