@@ -55,13 +55,13 @@ export default function CreateProductForm({ previewMode = false }: { previewMode
     };
 
     return (
-        <form action={formAction} className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start lg:gap-6">
-            <aside className="h-fit space-y-4 lg:col-start-2 lg:row-start-1 lg:sticky lg:top-6" data-create-product-preview>
+        <form action={formAction} className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,1fr)_320px] lg:items-start lg:gap-6">
+            <aside className="h-fit min-w-0 w-full space-y-4 lg:col-start-2 lg:row-start-1 lg:sticky lg:top-6" data-create-product-preview>
                 <Card className="border-champagne/50 bg-linen shadow-[0_18px_45px_rgba(29,29,31,0.04)]">
                     <CardContent className="px-4 py-4 sm:px-5 sm:py-5">
                         <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-dim">Product page preview</p>
                         <h2 className="mt-1.5 font-serif text-xl leading-tight text-obsidian sm:mt-2 sm:text-3xl">{preview.displayName}</h2>
-                        <p className="mt-1.5 font-sans text-[13px] text-slate sm:mt-2">
+                        <p className="mt-1.5 break-all font-sans text-[13px] text-slate sm:mt-2">
                             /products/{preview.slug}
                         </p>
                         <dl className="mt-3 space-y-2 text-sm sm:mt-4">
@@ -115,11 +115,11 @@ export default function CreateProductForm({ previewMode = false }: { previewMode
                 ) : null}
             </aside>
 
-            <div className="space-y-6 lg:col-start-1 lg:row-start-1">
+            <div className="min-w-0 space-y-6 lg:col-start-1 lg:row-start-1">
                 <nav
                     aria-label="Create product sections"
                     data-create-product-jumps
-                    className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 lg:hidden"
+                    className="-mx-1 flex gap-2 overflow-x-auto px-1 pb-1 [scrollbar-width:none] lg:hidden"
                 >
                     {CREATE_PRODUCT_SECTIONS.map((section) => (
                         <a
@@ -365,7 +365,7 @@ export default function CreateProductForm({ previewMode = false }: { previewMode
 
                 <div
                     data-create-product-cta
-                    className="sticky bottom-0 z-10 -mx-4 flex flex-wrap gap-3 border-t border-champagne/50 bg-bone/95 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom,0px))] backdrop-blur supports-[backdrop-filter]:bg-bone/85 sm:-mx-8 sm:px-8 lg:static lg:mx-0 lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none"
+                    className="sticky bottom-0 z-10 flex w-full min-w-0 flex-wrap gap-3 border-t border-champagne/50 bg-bone/95 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom,0px))] backdrop-blur supports-[backdrop-filter]:bg-bone/85 lg:static lg:border-0 lg:bg-transparent lg:p-0 lg:backdrop-blur-none"
                 >
                     <Button type="submit" disabled={pending} className="min-h-11 rounded-md border border-obsidian bg-obsidian px-5 text-linen hover:border-muted-gold hover:bg-muted-gold hover:text-obsidian lg:min-h-10">
                         {pending ? "Creating…" : "Create product"}

@@ -45,8 +45,8 @@ export default async function CreateProductPage({
 
     return (
         <TeamHubShell previewMode={previewMode}>
-            <div className="px-4 py-4 sm:px-8 sm:py-8">
-                <div className="mx-auto max-w-6xl">
+            <div className="min-w-0 px-4 py-4 sm:px-8 sm:py-8">
+                <div className="mx-auto min-w-0 max-w-6xl">
                     <header className="mb-4 max-w-2xl lg:mb-5">
                         <h1 className="font-serif text-[28px] leading-tight text-obsidian sm:text-5xl">
                             Create Products
