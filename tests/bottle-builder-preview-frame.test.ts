@@ -24,6 +24,13 @@ it("includes registered bulb hose and tassel bounds without stretching component
     expect(frame.y + frame.height).toBeGreaterThan(hose.bottom);
 });
 
+it("centers the expanded frame on the bottle axis so zoom overlays do not sit left", () => {
+    const frame = previewFrame(anchors, bounds, { expanded: true });
+    expect(frame.x + frame.width / 2).toBeCloseTo(anchors.axisX);
+    expect(frame.x).toBeLessThan(bounds[0].left);
+    expect(frame.x + frame.width).toBeGreaterThan(bounds[0].right);
+});
+
 it("keeps thumbnail padding and normal bottle baseline conventions", () => {
     const frame = previewFrame(anchors, [bounds[0]], { thumbnail: true });
     expect(frame.width).toBe(frame.height);

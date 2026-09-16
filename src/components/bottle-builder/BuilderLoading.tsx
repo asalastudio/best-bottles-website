@@ -15,6 +15,6 @@ export default function BuilderLoading() {
             <p>Bringing your bottles and compatible finishes together.</p>
             <span className={styles.track} aria-hidden="true"><span /></span>
         </div>
-        <div className={styles.skeleton} aria-hidden="true"><span /><span /><span /><span /></div>
+        <div className={styles.skeleton} aria-hidden="true"><span /><span /><span /><span /><span /><span /></div>
     </section>;
 }

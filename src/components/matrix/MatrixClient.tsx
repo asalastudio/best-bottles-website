@@ -27,7 +27,7 @@ import styles from "@/components/bottle-builder/Builder.module.css";
 const money = (value: number | null) => value == null ? "—" : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
 const subscribeMobile = (callback: () => void) => { const query = window.matchMedia("(max-width: 1099px)"); query.addEventListener("change", callback); return () => query.removeEventListener("change", callback); };
 const mobileSnapshot = () => window.matchMedia("(max-width: 1099px)").matches;
-const serverMobileSnapshot = () => false;
+const serverMobileSnapshot = (preferMobile: boolean) => () => preferMobile;
 const steps = ["Bottle", "Fitment", "Appearance", "Review"];
 const fitmentDescriptions: Record<string, string> = {
     "Screw Cap": "Close and reopen your bottle.",
@@ -66,10 +66,11 @@ function chooserScale(body: BuilderBody, all: BuilderBody[] = [body]) {
     return 1;
 }
 
-export default function MatrixClient({ families: initialFamilies, openFamily, bodies }: {
+export default function MatrixClient({ families: initialFamilies, openFamily, bodies, preferMobile = false }: {
     families: { family: string; groups: number }[];
     openFamily: string;
     bodies: BuilderBody[];
+    preferMobile?: boolean;
 }) {
     const { formatPrice } = useRegion();
     const money = (value: number | null) => (value == null ? "—" : formatPrice(value));
@@ -81,7 +82,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const [selection, setSelection] = useState<BuilderSelection>(emptySelection);
     const [step, setStep] = useState(0);
     const [mobileStage, setMobileStage] = useState(0);
-    const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot);
+    const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot(preferMobile));
     const [previewExpanded, setPreviewExpanded] = useState(false);
     const reviewHeading = useRef<HTMLHeadingElement>(null);
     const previewId = useId();
@@ -96,7 +97,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     // next family loads it must show the family the customer just chose.
     const [chosenFamily, setChosenFamily] = useState(openFamily);
     const [adding, setAdding] = useState(false);
-    const [lastAdded, setLastAdded] = useState<{ name: string; quantity: number } | null>(null);
+    const [lastAdded, setLastAdded] = useState<{ name: string; quantity: number; total?: number | null; lines?: string[] } | null>(null);
     const confirmation = useRef<HTMLDivElement>(null);
     const [error, setError] = useState("");
     const optionHeading = useRef<HTMLHeadingElement>(null);
@@ -182,9 +183,17 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
             if (!freshOrder.canAdd) throw new Error("This build is no longer available. Refresh the builder and try again.");
             if (freshOrder.unitPrice !== order.unitPrice) throw new Error("The price has changed. Refresh the builder before adding this bottle.");
             addItems([{ ...fresh.product, quantity: selection.quantity, unitPrice: freshOrder.unitPrice }]);
-            // Recycle the builder only after the exact configuration is in the cart.
-            setMobileStage(0); setSelection(emptySelection()); setShowCover(false); setSize(""); setNeck(""); setApplication(""); setMoreFilters(false); setStep(0);
-            setLastAdded({ name: fresh.product.itemName, quantity: selection.quantity });
+            setLastAdded({
+                name: fresh.product.itemName,
+                quantity: selection.quantity,
+                total: freshOrder.total,
+                lines: [`${fresh.capacityMl} ml ${fresh.profileLabel}`, fresh.color, fresh.fitment, fresh.closure],
+            });
+            // Desktop recycles into a fresh chooser. Mobile keeps this build
+            // on screen so the confirmation is not mistaken for a reset.
+            if (!isMobile) {
+                setMobileStage(0); setSelection(emptySelection()); setShowCover(false); setSize(""); setNeck(""); setApplication(""); setMoreFilters(false); setStep(0);
+            }
             requestAnimationFrame(() => {
                 confirmation.current?.focus({ preventScroll: true });
                 confirmation.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });

@@ -50,6 +50,7 @@ export {
     Truck,
     Package,
     SlidersHorizontal,
+    DotsThree,
     ArrowsDownUp,
     Rows,
     Diamond,
