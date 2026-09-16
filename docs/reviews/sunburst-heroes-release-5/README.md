@@ -22,13 +22,20 @@ their size comes from measurement rather than from a neighbouring image.
    a real photograph on bone with a real contact shadow. The glass clause
    (clear, frosted, amber, cobalt, swirl) and the components clause are read off
    the SKU. 2080 × 2288 at `high`, then down to 1560 × 1716.
-3. **Sized.** The standing assembly — glass plus fitment, without the loose
-   cap — is scaled about its foot to match the product's measured
-   `heightWithoutCap` in Convex, through the size curve fitted to Jordan's
-   approved targets (`share = 1.785 × mm^0.768`). The level is anchored so the
-   approved frosted 9 ml roller (`GBCylFrst9MtlRollBlkDot`) does not move.
-   Scaling the glass alone double-counts the fitment: every sprayer and pump
-   came out ~11 % too tall and the 28 ml roll-on 33 % too small.
+3. **Sized by the glass shoulder.** Convex's `heightWithoutCap` is the bare
+   glass: it reads 70 mm for the 9 ml sprayer, roll-on and pump alike. So the
+   glass is what must match across a body, and the fitment rides on top at its
+   own height. Each render is scaled about its foot so shoulder-to-foot equals
+   `curve(heightWithoutCap) × R`, where the curve is the one fitted to Jordan's
+   approved targets (`share = 1.785 × mm^0.768`) and R = 0.805 is one family
+   constant, the shoulder-to-rim ratio of the 9 ml clear body, so that body
+   keeps its approved size. The shoulder and foot come from the PSD body
+   layer's own alpha (the barrel is the median width 15–35 % up from the foot;
+   the shoulder is the highest row still at 92 % of it), which is the one
+   measurement here that does not depend on reading clear glass off a picture.
+   Every SKU of a body lands on the same shoulder line — all 12 clear 9 ml
+   SKUs at y = 918 on the 1716 canvas. A body whose tallest fitment would leave
+   the frame is capped as a body, so its siblings stay matched; none needed it.
 4. **Bone.** The rendered paper is flattened to #F5F3EF and its grain pulled
    onto exact bone with a soft ramp, so the corner pixels meet the registry's
    2/255 rule and the rendered shadow keeps its gradient.
