@@ -32,11 +32,12 @@ beforeEach(() => {
     root = createRoot(host);
     act(() =>
         root.render(
-            createElement(
-                PortalChrome,
-                { companyName: "ASALA", tierLabel: "Portal access", inTransitCount: 0 },
-                createElement("h1", null, "Welcome back, ASALA"),
-            ),
+            createElement(PortalChrome, {
+                companyName: "ASALA",
+                tierLabel: "Portal access",
+                inTransitCount: 0,
+                children: createElement("h1", null, "Welcome back, ASALA"),
+            }),
         ),
     );
 });
