@@ -207,8 +207,8 @@ export default function MobileBuilder(p: Props) {
                 <button ref={filterTrigger} className={styles.filterButton} aria-haspopup="dialog" aria-expanded={filterOpen} onClick={() => { setFilterOpen(true); filters.current?.showModal(); }}><SlidersHorizontal size={18} /> Filter{activeFilters && <span aria-label="active">●</span>}</button>
             </div><p className={styles.count}>{visible.length} bottle {visible.length === 1 ? "option" : "options"}</p>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>Bottle</legend><div className={styles.bottleGrid}>
-                {visible.map(b => <Choice key={b.id} name={`${id}-bottle`} value={b.id} selected={body?.id === b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} onSelect={() => choose({ bodyId: b.id })}>
-                    <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} scale={1.08 * Math.max(.55, p.chooserScale(b))} label={`${b.capacityMl} ml ${b.profileLabel}`} /></div>
+                {visible.map((b, index) => <Choice key={b.id} name={`${id}-bottle`} value={b.id} selected={body?.id === b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} onSelect={() => choose({ bodyId: b.id })}>
+                    <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} scale={1.08 * Math.max(.55, p.chooserScale(b))} label={`${b.capacityMl} ml ${b.profileLabel}`} thumbnail placeholder priority={index < 4} /></div>
                     <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <span>{b.profileLabel}</span>}<span>Neck: {b.neck}</span>
                 </Choice>)}
             </div></fieldset>
@@ -217,7 +217,7 @@ export default function MobileBuilder(p: Props) {
         {stage > 0 && stage < 4 && <>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>{stages[stage]}</legend>
                 {stage === 1 && <div className={styles.glassGrid}>{p.current.colors.map(c => { const example = body!.configurations.find(item => item.color === c)!; return <Choice key={c} name={`${id}-glass`} value={c} selected={color === c} label={c} onSelect={() => choose({ color: c })}>
-                    <div className={styles.glassThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} /></div><strong>{c}</strong>
+                    <div className={styles.glassThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
                 </Choice>; })}</div>}
                 {stage === 2 && <div className={styles.fitmentGrid}>{p.current.fitments.map(f => { return <Choice key={f} name={`${id}-fitment`} value={f} selected={fitment === f} label={f} onSelect={() => choose({ fitment: f })}>
                     <div className={styles.componentThumb}><FitmentIllustration fitment={f} /></div><strong>{f}</strong>{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}

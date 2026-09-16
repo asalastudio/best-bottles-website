@@ -6,8 +6,13 @@
 .track { display: block; width: 104px; height: 2px; margin: auto; overflow: hidden; background: #dfd9cf; }
 .track span { display: block; width: 42%; height: 100%; background: #947236; animation: travel 2.4s ease-in-out infinite; }
 .skeleton { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-.skeleton span { display: block; height: 170px; border-radius: 4px; background: #eae6df; opacity: .55; }
+.skeleton span { display: block; height: 170px; border-radius: 4px; background: linear-gradient(105deg, #b7c0c9 0%, #e4e9ee 42%, #b7c0c9 86%); background-size: 220% 100%; animation: slateSweep 1.3s ease-in-out infinite; opacity: .85; }
+.skeleton span:nth-child(2) { animation-delay: .1s; }
+.skeleton span:nth-child(3) { animation-delay: .2s; }
+.skeleton span:nth-child(4) { animation-delay: .3s; }
+.skeleton span:nth-child(5), .skeleton span:nth-child(6) { display: none; }
 @keyframes breathe { 50% { opacity: .45; } }
 @keyframes travel { 0%, 100% { transform: translateX(-110%); } 50% { transform: translateX(250%); } }
-@media (max-width: 1099px) { .workspace { padding: 16px 16px 48px; } .skeleton { grid-template-columns: repeat(2, 1fr); } .skeleton span { height: 130px; } }
-@media (prefers-reduced-motion: reduce) { .bottle, .track span { animation: none; } .track span { margin: auto; } }
+@keyframes slateSweep { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0 0; } }
+@media (max-width: 1099px) { .workspace { padding: 16px 16px 32px; } .status { padding: 8px 0 16px; } .bottle { display: none; } .skeleton { grid-template-columns: repeat(2, 1fr); gap: 10px 8px; } .skeleton span { height: 132px; } .skeleton span:nth-child(5), .skeleton span:nth-child(6) { display: block; } .skeleton span:nth-child(5) { animation-delay: .4s; } .skeleton span:nth-child(6) { animation-delay: .5s; } }
+@media (prefers-reduced-motion: reduce) { .bottle, .track span, .skeleton span { animation: none; } .track span { margin: auto; } }

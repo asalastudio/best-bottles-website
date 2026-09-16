@@ -27,7 +27,7 @@ import styles from "@/components/bottle-builder/Builder.module.css";
 const money = (value: number | null) => value == null ? "—" : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
 const subscribeMobile = (callback: () => void) => { const query = window.matchMedia("(max-width: 1099px)"); query.addEventListener("change", callback); return () => query.removeEventListener("change", callback); };
 const mobileSnapshot = () => window.matchMedia("(max-width: 1099px)").matches;
-const serverMobileSnapshot = () => false;
+const serverMobileSnapshot = (preferMobile: boolean) => () => preferMobile;
 const steps = ["Bottle", "Fitment", "Appearance", "Review"];
 const fitmentDescriptions: Record<string, string> = {
     "Screw Cap": "Close and reopen your bottle.",
@@ -66,10 +66,11 @@ function chooserScale(body: BuilderBody, all: BuilderBody[] = [body]) {
     return 1;
 }
 
-export default function MatrixClient({ families: initialFamilies, openFamily, bodies }: {
+export default function MatrixClient({ families: initialFamilies, openFamily, bodies, preferMobile = false }: {
     families: { family: string; groups: number }[];
     openFamily: string;
     bodies: BuilderBody[];
+    preferMobile?: boolean;
 }) {
     const { formatPrice } = useRegion();
     const money = (value: number | null) => (value == null ? "—" : formatPrice(value));
@@ -81,7 +82,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const [selection, setSelection] = useState<BuilderSelection>(emptySelection);
     const [step, setStep] = useState(0);
     const [mobileStage, setMobileStage] = useState(0);
-    const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot);
+    const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot(preferMobile));
     const [previewExpanded, setPreviewExpanded] = useState(false);
     const reviewHeading = useRef<HTMLHeadingElement>(null);
     const previewId = useId();
