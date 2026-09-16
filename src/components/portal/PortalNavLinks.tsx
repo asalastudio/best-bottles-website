@@ -33,6 +33,7 @@ export default function PortalNavLinks({
                             <Link
                                 key={item.href}
                                 href={item.href}
+                                aria-label={item.label}
                                 aria-current={active ? "page" : undefined}
                                 onClick={onNavigate}
                                 className="mx-2 flex items-center gap-2.5 rounded-md px-3 font-sans text-[13px] transition-colors duration-100"
