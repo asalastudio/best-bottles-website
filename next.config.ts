@@ -192,18 +192,21 @@ const nextConfig: NextConfig = {
 
 // ── Sentry ─────────────────────────────────────────────────────────────────
 // The SDK itself is a no-op until NEXT_PUBLIC_SENTRY_DSN is set (see
-// src/instrumentation*.ts). withSentryConfig only adds build-time work — and
-// only uploads source maps when SENTRY_AUTH_TOKEN is present, so local and
-// preview builds stay exactly as fast as before.
+// src/instrumentation*.ts). The Vercel integration sets SENTRY_AUTH_TOKEN on
+// every environment, including Preview. Source-map upload + widenClientFileUpload
+// are production-only so Preview webpack stays inside the 8 GB container.
+const sentrySourceMapsEnabled = Boolean(process.env.SENTRY_AUTH_TOKEN)
+    && process.env.VERCEL_ENV !== "preview";
+
 export default withSentryConfig(nextConfig, {
     org: process.env.SENTRY_ORG,
     project: process.env.SENTRY_PROJECT,
     authToken: process.env.SENTRY_AUTH_TOKEN,
     silent: !process.env.CI,
     telemetry: false,
-    widenClientFileUpload: true,
+    widenClientFileUpload: sentrySourceMapsEnabled,
     sourcemaps: {
-        disable: !process.env.SENTRY_AUTH_TOKEN,
+        disable: !sentrySourceMapsEnabled,
         deleteSourcemapsAfterUpload: true,
     },
     // Route browser events through our own origin so ad blockers cannot hide
