@@ -8,11 +8,14 @@ import PortalNavIcon from "./PortalNavIcon";
 export default function PortalNavLinks({
     onNavigate,
     compact = false,
+    pathname: pathnameOverride,
 }: {
     onNavigate?: () => void;
     compact?: boolean;
+    pathname?: string;
 }) {
-    const pathname = usePathname();
+    const livePathname = usePathname();
+    const pathname = pathnameOverride ?? livePathname;
 
     return (
         <nav aria-label="Portal">

@@ -25,11 +25,14 @@ describe("portal mobile shell", () => {
         expect(layout).not.toContain("PortalSidebar");
         expect(chrome).toContain("data-portal-shell");
         expect(chrome).toContain("Open portal menu");
+        expect(chrome).toContain("PortalChromeFrame");
+        expect(read("src/app/lab/portal-shell/page.tsx")).toContain("PortalChromeFrame");
         expect(css).toContain(".mobileBar");
         expect(css).toContain(".drawer");
         expect(css).toContain("@media (min-width: 1024px)");
         expect(css).toContain("width: 220px");
         expect(tabs).toContain('pathname.startsWith("/portal")');
+        expect(tabs).toContain('pathname.startsWith("/lab/portal-shell")');
         expect(globals).toContain("body:has([data-portal-shell]) [data-mobile-tab-bar]");
         expect(globals).toContain("[data-portal-table-row]");
     });

@@ -44,7 +44,8 @@ export default function MobileTabBar() {
         pathname.startsWith("/grace-workspace") ||
         pathname.startsWith("/executive") ||
         pathname.startsWith("/team") ||
-        pathname.startsWith("/portal");
+        pathname.startsWith("/portal") ||
+        pathname.startsWith("/lab/portal-shell");
 
     useEffect(() => {
         try {

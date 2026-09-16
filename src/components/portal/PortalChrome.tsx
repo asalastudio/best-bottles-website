@@ -9,23 +9,28 @@ import { orgInitials, portalSectionLabel } from "./nav";
 import PortalNavLinks from "./PortalNavLinks";
 import styles from "./PortalChrome.module.css";
 
-export default function PortalChrome({
-    companyName,
+export function PortalChromeFrame({
+    orgName,
     tierLabel,
     inTransitCount,
+    accountControl,
+    sectionLabel,
+    navPathname,
     children,
 }: {
-    companyName?: string | null;
+    orgName: string;
     tierLabel?: string | null;
     inTransitCount: number;
+    accountControl: ReactNode;
+    sectionLabel?: string;
+    navPathname?: string;
     children: ReactNode;
 }) {
     const pathname = usePathname();
-    const { organization } = useOrganization();
     const [navOpen, setNavOpen] = useState(false);
     const drawerId = useId();
-    const section = portalSectionLabel(pathname);
-    const orgName = companyName ?? organization?.name ?? "Your organization";
+    const resolvedPath = navPathname ?? pathname;
+    const section = sectionLabel ?? portalSectionLabel(resolvedPath);
 
     useEffect(() => {
         setNavOpen(false);
@@ -64,14 +69,14 @@ export default function PortalChrome({
                     </div>
                 </div>
                 <div className="flex-1 overflow-y-auto py-2">
-                    <PortalNavLinks />
+                    <PortalNavLinks pathname={resolvedPath} />
                 </div>
                 <div className="flex items-center justify-between border-t border-[color:var(--color-rule)] px-5 py-3">
                     <div className="flex items-center gap-2">
                         <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                         <span className="font-sans text-[11px] text-neutral-400">Grace online</span>
                     </div>
-                    <UserButton appearance={{ elements: { avatarBox: "w-6 h-6" } }} />
+                    {accountControl}
                 </div>
             </aside>
 
@@ -154,18 +159,41 @@ export default function PortalChrome({
                             </div>
                         </div>
                         <div className={styles.drawerNav}>
-                            <PortalNavLinks compact onNavigate={() => setNavOpen(false)} />
+                            <PortalNavLinks compact pathname={resolvedPath} onNavigate={() => setNavOpen(false)} />
                         </div>
                         <div className={styles.drawerFoot}>
                             <div className="flex items-center gap-2">
                                 <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
                                 <span className="font-sans text-[11px] text-neutral-400">Grace online</span>
                             </div>
-                            <UserButton appearance={{ elements: { avatarBox: "w-7 h-7" } }} />
+                            {accountControl}
                         </div>
                     </div>
                 </>
             )}
         </div>
+    );
+}
+
+export default function PortalChrome({
+    companyName,
+    tierLabel,
+    inTransitCount,
+    children,
+}: {
+    companyName?: string | null;
+    tierLabel?: string | null;
+    inTransitCount: number;
+    children: ReactNode;
+}) {
+    const { organization } = useOrganization();
+    return (
+        <PortalChromeFrame
+            orgName={companyName ?? organization?.name ?? "Your organization"}
+            tierLabel={tierLabel}
+            inTransitCount={inTransitCount}
+            accountControl={<UserButton appearance={{ elements: { avatarBox: "w-6 h-6" } }} />}
+            children={children}
+        />
     );
 }

@@ -13,8 +13,8 @@ export type AddressFormState = {
 
 const label = "block font-sans text-[12px] mb-1.5 text-[color:var(--color-text-secondary)]";
 const field =
-    "w-full h-9 px-3 font-sans text-[13px] rounded-md border outline-none " +
-    "focus:border-[color:var(--color-text-secondary)]";
+    "w-full h-11 min-h-11 px-3 font-sans text-[16px] rounded-md border outline-none " +
+    "lg:h-9 lg:min-h-9 lg:text-[13px] focus:border-[color:var(--color-text-secondary)]";
 const fieldStyle = {
     borderColor: "var(--color-rule)",
     background: "var(--color-surface)",

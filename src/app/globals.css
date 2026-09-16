@@ -834,6 +834,10 @@ img.app-wordmark {
     gap: 8px;
     padding-top: 4px;
   }
+  [data-portal-table-row] > [data-actions] > :is(a, button),
+  [data-portal-table-row] > [data-actions] form :is(a, button) {
+    min-height: 44px;
+  }
 }
 
 .builder-mobile-brand { display: none; }

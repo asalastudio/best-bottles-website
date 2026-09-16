@@ -78,7 +78,7 @@ export default async function PortalDrafts() {
                             <div data-actions className="flex gap-1.5 justify-end">
                                 <Link
                                     href={`/portal/drafts/${draft._id}`}
-                                    className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
+                                    className="inline-flex h-11 min-h-11 items-center justify-center px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors lg:h-8 lg:min-h-8"
                                 >
                                     {draft.status === "submitted" ? "View" : "Open"}
                                 </Link>

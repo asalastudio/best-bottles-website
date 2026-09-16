@@ -29,7 +29,7 @@ export default async function PortalGraceProjects({
             >
                 <Link
                     href="/grace-workspace"
-                    className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
+                    className="inline-flex h-11 min-h-11 items-center justify-center px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors lg:h-8 lg:min-h-8"
                 >
                     Open Grace Workspace ↗
                 </Link>
@@ -45,7 +45,7 @@ export default async function PortalGraceProjects({
                     <div className="flex items-center gap-2 mt-4">
                         <Link
                             href="/grace-workspace"
-                            className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
+                            className="inline-flex h-11 min-h-11 items-center justify-center px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors lg:h-8 lg:min-h-8"
                         >
                             Talk with Grace
                         </Link>

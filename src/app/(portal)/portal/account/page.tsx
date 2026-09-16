@@ -70,13 +70,13 @@ export default async function PortalAccount() {
                         <div className="flex flex-col gap-2">
                             <a
                                 href={`mailto:sales@bestbottles.com?subject=${encodeURIComponent(`Best Bottles account ${account.accountNumber} — ${account.companyName}`)}`}
-                                className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
+                                className="inline-flex h-11 min-h-11 items-center justify-center px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors lg:h-8 lg:min-h-8"
                             >
                                 Email your account manager
                             </a>
                             <Link
                                 href="/contact"
-                                className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-colors"
+                                className="inline-flex h-11 min-h-11 items-center justify-center px-3 text-[13px] font-sans font-medium rounded-md border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-colors lg:h-8 lg:min-h-8"
                             >
                                 Request a call
                             </Link>
@@ -87,8 +87,8 @@ export default async function PortalAccount() {
                         Orders cannot be sent without it, so it lives on the page
                         the customer already visits rather than behind a step in
                         the order flow. */}
-                    <div className="col-span-2">
-                        <div className="flex items-center justify-between mb-2">
+                    <div className="lg:col-span-2">
+                        <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                             <h2 className="font-sans text-[14px] font-semibold text-neutral-900">
                                 Shipping address
                             </h2>

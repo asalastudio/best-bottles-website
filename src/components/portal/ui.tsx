@@ -192,8 +192,8 @@ export function PortalButton({
     };
 
     const sizeClass: Record<BtnSize, string> = {
-        sm: "h-8 px-3 text-[13px]",
-        md: "h-9 px-4 text-sm",
+        sm: "h-11 min-h-11 px-3 text-[13px] lg:h-8 lg:min-h-8",
+        md: "h-11 min-h-11 px-4 text-sm lg:h-9 lg:min-h-9",
     };
 
     return (
