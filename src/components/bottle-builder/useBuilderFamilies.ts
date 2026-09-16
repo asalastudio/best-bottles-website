@@ -21,13 +21,13 @@ export function useBuilderFamilies(initial: BuilderFamily[]) {
                 }).catch(() => { if (!controller.signal.aborted) setStatus("error"); });
         };
         let idleId: number | undefined;
-        let timeoutId: ReturnType<typeof setTimeout> | undefined;
+        let timeoutId: number | undefined;
         if (typeof requestIdleCallback === "function") idleId = requestIdleCallback(discover, { timeout: 800 });
         else timeoutId = window.setTimeout(discover, 0);
         return () => {
             controller.abort();
             if (idleId != null && typeof cancelIdleCallback === "function") cancelIdleCallback(idleId);
-            if (timeoutId != null) clearTimeout(timeoutId);
+            if (timeoutId != null) window.clearTimeout(timeoutId);
         };
     }, [attempt]);
     return { families, status, retry: () => { setStatus("loading"); setAttempt(n => n + 1); } };
