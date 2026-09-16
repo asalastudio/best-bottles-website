@@ -47,16 +47,28 @@ for sku, (rel, sha, layers, psd) in inventories.items():
     # visible pixel layers (a tassel hangs beside the bottle and can be larger than it)
     pix = [l for l in visible if l.get('kind', 'pixel') == 'pixel']
     ux0 = min(l['bounds'][0] for l in pix); ux1 = max(l['bounds'][2] for l in pix); uy1 = max(l['bounds'][3] for l in pix)
-    foot = [l for l in pix if l['bounds'][3] >= uy1 - 0.02 * psd.height and l['bounds'][0] <= (ux0 + ux1) / 2 <= l['bounds'][2]]
-    body = max(foot or pix, key=area); bx0, by0, bx1, by1 = body['bounds']; bw, bh = bx1 - bx0, by1 - by0
-    parts = {'body': [body['index']]}; evidence = [f"body: {desc(body)} (owns the foot at the bottom centre)"]
+    # a dip tube can hang below the foot: the body is also wide (at least 40 % of the union)
+    foot = [l for l in pix if l['bounds'][3] >= uy1 - 0.05 * psd.height and l['bounds'][0] <= (ux0 + ux1) / 2 <= l['bounds'][2] and (l['bounds'][2] - l['bounds'][0]) >= 0.4 * (ux1 - ux0)]
+    # the same glass photograph is reused across a bottle's SKUs, a top is not: a
+    # layer whose pixels recur in other masters is the body before a tassel
+    # assembly that happens to be larger and to reach the foot
+    # every other part sits on the bottle's axis: the body is the foot candidate
+    # whose width spans the centres of the most other layers (a tassel assembly
+    # hangs beside the bottle and spans none of them); ties go to the layer whose
+    # pixels recur in other masters, then to area
+    def spans(l):
+        x0, x1 = l['bounds'][0], l['bounds'][2]
+        return sum(1 for o in pix if o is not l and x0 <= (o['bounds'][0] + o['bounds'][2]) / 2 <= x1)
+    cands = foot or pix
+    body = max(cands, key=lambda l: (spans(l), share[l['pixelHash']] >= 2, area(l))); bx0, by0, bx1, by1 = body['bounds']; bw, bh = bx1 - bx0, by1 - by0
+    parts = {'body': [body['index']]}; evidence = [f"body: {desc(body)} (owns the foot, spans {spans(body)} other layer centre(s))"]
     for l in visible:
         if l is body: continue
         x0, y0, x1, y1 = l['bounds']; w, h = x1 - x0, y1 - y0
         if l.get('kind') == 'shape':
             # vector retouch strokes on the glass belong with the body
             parts['body'].append(l['index']); evidence.append(f"body (vector retouch stroke): {desc(l)}"); continue
-        if area(l) >= 0.6 * area(body) and h >= 0.8 * bh:
+        if area(l) >= 0.6 * area(body) and h >= 0.8 * bh and w >= 0.9 * bw:
             exclude[str(l['index'])] = f"unused twin body left under the body layer: {desc(l)}; covered by layer {body['index']}, plate parity proves it"; continue
         inside = x0 >= bx0 - 5 and x1 <= bx1 + 5 and y0 >= by0 - 5 and y1 <= by1 + 5
         if h > 0.45 * bh and w < 0.35 * bw and inside: slot = 'diptube' if 'Dropper' not in app else 'pipette'
