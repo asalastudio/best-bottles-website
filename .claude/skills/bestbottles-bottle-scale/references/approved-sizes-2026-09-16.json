@@ -1,0 +1,194 @@
+{
+ "name": "Approved hero sizes and scale card inputs, as of 2026-09-16",
+ "canvas": {
+  "width": 1560,
+  "height": 1716,
+  "baselinePercent": 91
+ },
+ "cylinderLock": {
+  "file": "docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+  "measure": "glass SHOULDER height as % of the card, foot on the 91 % baseline",
+  "shoulderPercent": {
+   "3.3 ml": 26.5,
+   "4 ml": 31.5,
+   "5 ml": 36.5,
+   "9 ml 17-415": 43.5,
+   "9 ml Slim 13-415": 62.5,
+   "25 ml": 46.5,
+   "28 ml": 50.5,
+   "30 ml": 46.0,
+   "50 ml 18-415": 56.0,
+   "50 ml roller 16 mm (98 mm)": 56.0,
+   "100 ml": 67.5,
+   "plastic 114/227/454 ml": [
+    49.5,
+    63.0,
+    71.5
+   ]
+  }
+ },
+ "cylinderAmendment": {
+  "file": "docs/reviews/sunburst-heroes-release-5/lock-amendment-2026-09-16.json (on PR #179, branch feat/cylinder-sunburst-heroes)",
+  "shoulderPercent": {
+   "28 ml": 46.5,
+   "25 ml": 47.2,
+   "50 ml roller 16 mm (98 mm)": 51.8,
+   "9 ml Slim 13-415": 54.1
+  },
+  "why": "bottle-to-bottle order against Jordan's true-scale lineup; Jordan: 'It's actually just right'"
+ },
+ "bostonStandards": {
+  "file": "data/asset-ledger/bottle-standards.json",
+  "measure": "FULL glass % (foot to rim)",
+  "glassPercent": {
+   "15 ml (68 mm)": 46.7,
+   "30 ml (78 mm)": 52.4,
+   "60 ml (94 mm)": 62.4
+  }
+ },
+ "rimOverShoulder": {
+  "note": "Cylinder rim-to-foot / shoulder-to-foot from the PSD body layer of SKUs whose shoulder agreed with the lock",
+  "5 ml": 1.31,
+  "9 ml 17-415": 1.222,
+  "28 ml": 1.206,
+  "50 ml roller": 1.14,
+  "9 ml Slim": 1.128,
+  "50 ml": 1.14,
+  "100 ml": 1.107,
+  "25 ml (estimated from the 50 ml 18-415 neck)": 1.2,
+  "vials (estimated)": 1.12
+ },
+ "todayFullGlassPercent": [
+  {
+   "body": "Cylinder 3.3 ml vial",
+   "mm": 37,
+   "todayPct": 29.7,
+   "estimated": true
+  },
+  {
+   "body": "Cylinder 4 ml vial",
+   "mm": 49,
+   "todayPct": 35.3,
+   "estimated": true
+  },
+  {
+   "body": "Cylinder 5 ml",
+   "mm": 53,
+   "todayPct": 47.8,
+   "estimated": false
+  },
+  {
+   "body": "Cylinder 9 ml Classic",
+   "mm": 70,
+   "todayPct": 53.2,
+   "estimated": false
+  },
+  {
+   "body": "Cylinder 28 ml roller",
+   "mm": 81,
+   "todayPct": 56.1,
+   "estimated": false
+  },
+  {
+   "body": "Cylinder 25 ml",
+   "mm": 83,
+   "todayPct": 56.6,
+   "estimated": true
+  },
+  {
+   "body": "Cylinder 50 ml roller",
+   "mm": 98,
+   "todayPct": 59.1,
+   "estimated": false
+  },
+  {
+   "body": "Cylinder 9 ml Slim",
+   "mm": 106,
+   "todayPct": 61.0,
+   "estimated": false
+  },
+  {
+   "body": "Cylinder 50 ml",
+   "mm": 117,
+   "todayPct": 63.8,
+   "estimated": false
+  },
+  {
+   "body": "Cylinder 100 ml",
+   "mm": 154,
+   "todayPct": 74.7,
+   "estimated": false
+  },
+  {
+   "body": "Boston Round 15 ml",
+   "mm": 68,
+   "todayPct": 46.7,
+   "estimated": false
+  },
+  {
+   "body": "Boston Round 30 ml",
+   "mm": 78,
+   "todayPct": 52.4,
+   "estimated": false
+  },
+  {
+   "body": "Boston Round 60 ml",
+   "mm": 94,
+   "todayPct": 62.4,
+   "estimated": false
+  }
+ ],
+ "scaleCardV1": {
+  "status": "PROPOSAL, not approved (2026-09-16)",
+  "controlPoints": [
+   [
+    20,
+    23.0,
+    "smallest jars stay readable"
+   ],
+   [
+    40,
+    33.0,
+    "sample vials larger than today"
+   ],
+   [
+    68,
+    46.7,
+    "Boston Round 15 ml, locked 09-12"
+   ],
+   [
+    78,
+    52.4,
+    "Boston Round 30 ml, locked 09-12"
+   ],
+   [
+    106,
+    65.5,
+    "9 ml Slim clearly taller than the 9 ml Classic"
+   ],
+   [
+    117,
+    68.0,
+    "50 ml Cylinder a little taller than the Slim"
+   ],
+   [
+    154,
+    74.0,
+    "100 ml at the frame limit"
+   ],
+   [
+    195,
+    80.0,
+    "tallest glass at the frame limit"
+   ]
+  ]
+ },
+ "exampleProduct": {
+  "sku": "GBCyl9MtlRollBlkDot",
+  "title": "9 ml Clear Cylinder Roll-On Bottle",
+  "subtitle": "9 ml · Roll-On · Metal roller · 17-415 neck",
+  "glassMm": 70,
+  "shoulderPercentNow": 43.5,
+  "rimOverShoulder": 1.236
+ }
+}
