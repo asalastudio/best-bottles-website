@@ -1,6 +1,6 @@
 # Sunburst release 5 — Cylinder family, photoreal, sized from millimetres
 
-Approved by Jordan 2026-09-16. 39 of the 52 registered Cylinder heroes.
+Approved by Jordan 2026-09-16. 45 of the 52 registered Cylinder heroes.
 
 ## What changed from earlier releases
 
@@ -50,15 +50,32 @@ the body layer. Their gate reads the foot and the translucent overcap at 40
 levels against the base's own placement bounds; the 70-level mask cannot see
 thin clear glass.
 
+## Colour
+
+Sunburst renders matte silver 12 to 57 levels darker than the master and lets matte
+gold go pale. The prompt therefore locks colour to the input (matte gold stays pale
+champagne, matte silver stays neutral silver, clear glass colourless, neutral white
+balance), and every hero's fitment is measured against the base's own pixels above
+the glass shoulder. Seventeen matte-silver and pale-gold heroes were re-rendered with
+that clause, which halved the drift; the opaque fitment (head, collar, pump, cap
+beside) was then brought to the master's colour with one per-channel gain, the
+glass left to the model. After that every metal fitment sits within 4 levels and
+2 of hue of its master.
+
+## The 25 ml
+
+The six 25 ml SKUs are built from the 30 ml masters the lock itself aliased for them
+(`1. Cylindrical 25ml /1. Cylindrical 30ml PSD`), sized on the lock's 46.5 % line.
+Their glass height is 83 mm. The two atomizers drift 6 px past the gate on soft parts
+(the mesh bulb's crown, the tassel's fringe) and were accepted on inspection.
+
 ## Not in this release
 
-13 registered Cylinder SKUs keep their earlier images: 9 have no source PSD
-(`GBCyl5GlMattSht`, `GBCylBlu5SlMattSht`, `GBTallCyl9GlMattSht`,
-`GBTallCylFrst9GlMattSht`, `GBcyl25SpryMtGl`, `LBCyl25LtnMtGl`,
-`PbClear4ozFlpWh`, `PbClear8ozFlpWh`, `PbNat16ozFlpWh`), and 4 have neither a
-height nor a diameter recorded in Convex, so there is nothing to size them from
-(`GBcyl25AnSpIvyGl`, `GBcyl25AnSpTslIvyGl`, `GBCyl25DrpGl`, `GBCyl25RdcrShnGl`).
-The 25 ml size is the real gap: six of its SKUs are in this list.
+7 registered Cylinder SKUs keep their earlier images because the lock built them
+from legacy product photographs and no PSD master exists: the four short-cap bare
+bottles (`GBCyl5GlMattSht`, `GBCylBlu5SlMattSht`, `GBTallCyl9GlMattSht`,
+`GBTallCylFrst9GlMattSht`) and the three plastic flip-tops (`PbClear4ozFlpWh`,
+`PbClear8ozFlpWh`, `PbNat16ozFlpWh`).
 
 `approved-lock.json` records each file's sha256, its locked shoulder height and
 the PSD it was built from.

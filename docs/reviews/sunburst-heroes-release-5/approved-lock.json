@@ -1,19 +1,19 @@
 {
   "GBCyl100AnSpMtSl": {
-    "sha256": "7cdbc37fa6e9054580c9f0224f6a597ee12c31dc7339e60a2ebd834a9bede4aa",
-    "file": "public/images/catalog/bone-review/GBCyl100AnSpMtSl.7cdbc37fa6e9.png",
+    "sha256": "1046be93f7356ebe8211973df886ee719bac6043725f91bab58537d48e11308d",
+    "file": "public/images/catalog/bone-review/GBCyl100AnSpMtSl.1046be93f735.png",
     "glassHeightMm": 154.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "100-standard",
     "lockedShoulderPercent": 67.5,
     "shoulderY": 403.7,
     "shoulderToFootPx": 1158.3,
-    "standingHeightPercent": 87.8,
+    "standingHeightPercent": 88.1,
     "source": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/35. GBCyl100AnSpMtSl.psd"
   },
   "GBCyl100AnSpTslMtSl": {
-    "sha256": "bcefdd432a8709272a13e6324ad57bf0169188cf13e3e7a24864b52657c0ba91",
-    "file": "public/images/catalog/bone-review/GBCyl100AnSpTslMtSl.bcefdd432a87.png",
+    "sha256": "63ab942da9c1c26e35e0496517a2e4fd6c621336f93db907367a7ccbf87c5c98",
+    "file": "public/images/catalog/bone-review/GBCyl100AnSpTslMtSl.63ab942da9c1.png",
     "glassHeightMm": 154.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "100-standard",
@@ -24,8 +24,8 @@
     "source": "21. Tassels/Updated Tassels/49. GBCyl100AnSpTslMtSl.psd"
   },
   "GBCyl100RdcrMtSl": {
-    "sha256": "6d09116fed0e1144cc44238e0ab410e192000e8d013d293e29347b2d688a655a",
-    "file": "public/images/catalog/bone-review/GBCyl100RdcrMtSl.6d09116fed0e.png",
+    "sha256": "c473f797420ae675e18448944aafe87efbf9e451ecc14b90e1fb31e69cc139d1",
+    "file": "public/images/catalog/bone-review/GBCyl100RdcrMtSl.c473f797420a.png",
     "glassHeightMm": 154.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "100-standard",
@@ -36,8 +36,8 @@
     "source": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/9. GBCyl100RdcrMtSl.psd"
   },
   "GBCyl100SpryMtGl": {
-    "sha256": "d903fe61b6b9ec093cd5df2218fd7a9c6b88f01da545ca74ef851355569783ff",
-    "file": "public/images/catalog/bone-review/GBCyl100SpryMtGl.d903fe61b6b9.png",
+    "sha256": "bece4449129a450070125bd48c88a50f27407b690940d4d439c49f684f48117f",
+    "file": "public/images/catalog/bone-review/GBCyl100SpryMtGl.bece4449129a.png",
     "glassHeightMm": 154.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "100-standard",
@@ -45,23 +45,47 @@
     "shoulderY": 403.7,
     "shoulderToFootPx": 1158.3,
     "standingHeightPercent": 85.4,
-    "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/11. GBCyl100SpryMtGl.psd"
+    "source": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/13. GBCyl100SpryMtGl.psd"
+  },
+  "GBCyl25DrpGl": {
+    "sha256": "5e7dbe42642cbd2310051be657469d2948a79e0ac583e5a41c32009978dbc33a",
+    "file": "public/images/catalog/bone-review/GBCyl25DrpGl.5e7dbe42642c.png",
+    "glassHeightMm": 83.0,
+    "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+    "lockGroup": "25-standard",
+    "lockedShoulderPercent": 46.5,
+    "shoulderY": 764.1,
+    "shoulderToFootPx": 797.9,
+    "standingHeightPercent": 71.8,
+    "source": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /55. GBCyl30DrpGl.psd"
+  },
+  "GBCyl25RdcrShnGl": {
+    "sha256": "83506dec6eafaac3f83fc4e93099bca7a511a95cd23248c47e9a5806eb521961",
+    "file": "public/images/catalog/bone-review/GBCyl25RdcrShnGl.83506dec6eaf.png",
+    "glassHeightMm": 83.0,
+    "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+    "lockGroup": "25-standard",
+    "lockedShoulderPercent": 46.5,
+    "shoulderY": 764.1,
+    "shoulderToFootPx": 797.9,
+    "standingHeightPercent": 59.9,
+    "source": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /1. GBCyl30RdcrShnGl.psd"
   },
   "GBCyl50AnSpMtSl": {
-    "sha256": "bba0dac4c9a7ee43b505fcc873734977829a15111fda364699dc13679e46c4ca",
-    "file": "public/images/catalog/bone-review/GBCyl50AnSpMtSl.bba0dac4c9a7.png",
+    "sha256": "c2652df208fb8f2b524eade0014775f4e1ddfe5a94ac074524cf14a238fda33f",
+    "file": "public/images/catalog/bone-review/GBCyl50AnSpMtSl.c2652df208fb.png",
     "glassHeightMm": 117.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "50-standard",
     "lockedShoulderPercent": 56,
     "shoulderY": 601.0,
     "shoulderToFootPx": 961.0,
-    "standingHeightPercent": 79.7,
+    "standingHeightPercent": 79.4,
     "source": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/35. GBCyl50AnSpMtSl.psd"
   },
   "GBCyl50AnSpTslMtSl": {
-    "sha256": "b602742bd5a688a71db338a145a7da22f6a3becb0fe6e8b4983a09f5807d2dbb",
-    "file": "public/images/catalog/bone-review/GBCyl50AnSpTslMtSl.b602742bd5a6.png",
+    "sha256": "6549b532eeb32506ac52bcd847146175460737b255aca77c8ff6c468488b222a",
+    "file": "public/images/catalog/bone-review/GBCyl50AnSpTslMtSl.6549b532eeb3.png",
     "glassHeightMm": 117.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "50-standard",
@@ -84,8 +108,8 @@
     "source": "13. 16 mm/4. 50ml Uncapped/3. GBCyl50MtlRollBlk.psd"
   },
   "GBCyl50RdcrMtSl": {
-    "sha256": "b812e2467be2a23420d5a7aad36c667759a69f4717f79f262b4bd3e685cecc17",
-    "file": "public/images/catalog/bone-review/GBCyl50RdcrMtSl.b812e2467be2.png",
+    "sha256": "37ce96514a26216119b67751dc1a2095b94a82b0b8d4cd88a72cec89c1173cc9",
+    "file": "public/images/catalog/bone-review/GBCyl50RdcrMtSl.37ce96514a26.png",
     "glassHeightMm": 117.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "50-standard",
@@ -96,8 +120,8 @@
     "source": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/9. GBCyl50RdcrMtSl.psd"
   },
   "GBCyl50SpryMtGl": {
-    "sha256": "6a8d7684af6e8f9aa23a76c8de3970472b1226cc328cdf87ed3bd695ece60ff9",
-    "file": "public/images/catalog/bone-review/GBCyl50SpryMtGl.6a8d7684af6e.png",
+    "sha256": "9519998d7b132582ffd4569641a8112c2298b280c6ec58bac4729927002ec8ad",
+    "file": "public/images/catalog/bone-review/GBCyl50SpryMtGl.9519998d7b13.png",
     "glassHeightMm": 117.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "50-standard",
@@ -105,7 +129,7 @@
     "shoulderY": 601.0,
     "shoulderToFootPx": 961.0,
     "standingHeightPercent": 78.1,
-    "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/11. GBCyl50SpryMtGl.psd"
+    "source": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/13. GBCyl50SpryMtGl.psd"
   },
   "GBCyl5MtlRollBlkDot": {
     "sha256": "43c5466f313383f599473da648fa3b25869353b7de012f5aef9056fffc8781f9",
@@ -120,8 +144,8 @@
     "source": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /26. GBCyl5MtlRollBlkDot.psd"
   },
   "GBCyl5SpryBlkMatt": {
-    "sha256": "5cd7799e484708200615bdfebe6c398e4028e36ee3d0eebe85f4a1136f8a173a",
-    "file": "public/images/catalog/bone-review/GBCyl5SpryBlkMatt.5cd7799e4847.png",
+    "sha256": "822be776652d31c3a651c9401b28cfd4ff37d20adef2cb4dd211efe013fa0dfa",
+    "file": "public/images/catalog/bone-review/GBCyl5SpryBlkMatt.822be776652d.png",
     "glassHeightMm": 53.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "5-standard",
@@ -132,15 +156,15 @@
     "source": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /3. GBCyl5SpryBlkMatt.psd"
   },
   "GBCyl5SprySlMatt": {
-    "sha256": "7c1dc067d9cf16f20233b229cb749f46ba429091d56393eb593e4e399cabe503",
-    "file": "public/images/catalog/bone-review/GBCyl5SprySlMatt.7c1dc067d9cf.png",
+    "sha256": "f5a42d9134be12ee191ab2c83ec9bc5a3329bdf52dd9489b95ca7bd44016a21a",
+    "file": "public/images/catalog/bone-review/GBCyl5SprySlMatt.f5a42d9134be.png",
     "glassHeightMm": 53.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "5-standard",
     "lockedShoulderPercent": 36.5,
     "shoulderY": 935.7,
     "shoulderToFootPx": 626.3,
-    "standingHeightPercent": 62.7,
+    "standingHeightPercent": 62.8,
     "source": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /8. GBCyl5SprySlMatt.psd"
   },
   "GBCyl9MtlRollBlkDot": {
@@ -156,15 +180,15 @@
     "source": "3.  17-415 Bottles/9. Clear  (Uncapped)/2. GBCyl9MtlRollBlkDot.psd"
   },
   "GBCyl9SpryGl": {
-    "sha256": "32efcd8877fbd9d0f7bd59fcafcb86ea10ff34c3aac68fc95e92046394aa44df",
-    "file": "public/images/catalog/bone-review/GBCyl9SpryGl.32efcd8877fb.png",
+    "sha256": "962edd3d8ddf9b9aa23b1db31985349ae3e0fc166ed8c56b6227e3538c9f26a7",
+    "file": "public/images/catalog/bone-review/GBCyl9SpryGl.962edd3d8ddf.png",
     "glassHeightMm": 70.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-standard",
     "lockedShoulderPercent": 43.5,
     "shoulderY": 815.5,
     "shoulderToFootPx": 746.5,
-    "standingHeightPercent": 67.9,
+    "standingHeightPercent": 67.8,
     "source": "3.  17-415 Bottles/9. Clear  (Uncapped)/21. GBCyl9SpryGl.psd"
   },
   "GBCylAmb9MtlRollBlkDot": {
@@ -180,8 +204,8 @@
     "source": "3.  17-415 Bottles/3. Amber 9ml (Uncapped)/2. GBCylAmb9MtlRollBlkDot.psd"
   },
   "GBCylAmb9SpryMattSl": {
-    "sha256": "b360d700ccd10de840b1bd858b45a7acfc587be0115454cdd7d889d0e15c3ffe",
-    "file": "public/images/catalog/bone-review/GBCylAmb9SpryMattSl.b360d700ccd1.png",
+    "sha256": "d91df8882a7d27191a18f0d3ba5e1b0c6708ec394f44a7b47e9db3981b56fc56",
+    "file": "public/images/catalog/bone-review/GBCylAmb9SpryMattSl.d91df8882a7d.png",
     "glassHeightMm": 70.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-standard",
@@ -204,8 +228,8 @@
     "source": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/26. GBCylBlu5MtlRollBlkDot.psd"
   },
   "GBCylBlu5SpryGlMatt": {
-    "sha256": "ba4d6a3c8f2c18fa4c6c677409d8f49b0feea8ca9086d33a30f5e90ead4252a7",
-    "file": "public/images/catalog/bone-review/GBCylBlu5SpryGlMatt.ba4d6a3c8f2c.png",
+    "sha256": "0b12dca26124fad9c3e82280de2498c00aab18a7fd2a97b57c625388d4fcdeea",
+    "file": "public/images/catalog/bone-review/GBCylBlu5SpryGlMatt.0b12dca26124.png",
     "glassHeightMm": 53.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "5-standard",
@@ -228,15 +252,15 @@
     "source": "3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/2. GBCylBlu9MtlRollBlkDot.psd"
   },
   "GBCylBlu9SpryMattSl": {
-    "sha256": "b9cb7a634f82a64ffa7fdd28e3047516c878519895fc11f9114a2b1923436c68",
-    "file": "public/images/catalog/bone-review/GBCylBlu9SpryMattSl.b9cb7a634f82.png",
+    "sha256": "9bb845a44ab92a78db867a34d23bfff622a58b3916c905c2b2c46d55c056b3be",
+    "file": "public/images/catalog/bone-review/GBCylBlu9SpryMattSl.9bb845a44ab9.png",
     "glassHeightMm": 70.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-standard",
     "lockedShoulderPercent": 43.5,
     "shoulderY": 815.5,
     "shoulderToFootPx": 746.5,
-    "standingHeightPercent": 68.2,
+    "standingHeightPercent": 68.1,
     "source": "3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/22. GBCylBlu9SpryMattSl.psd"
   },
   "GBCylFrst9MtlRollBlkDot": {
@@ -252,8 +276,8 @@
     "source": "3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/2. GBCylFrst9MtlRollBlkDot.psd"
   },
   "GBCylFrst9SpryMattSl": {
-    "sha256": "78c272d39dc8419972be6ecad8f78a9db2e634fc4a456d8e3bd1b399cf099e82",
-    "file": "public/images/catalog/bone-review/GBCylFrst9SpryMattSl.78c272d39dc8.png",
+    "sha256": "d763a5f0868e6de33d3178fb35887dcd7dea56950d95770f71a7976d654f5976",
+    "file": "public/images/catalog/bone-review/GBCylFrst9SpryMattSl.d763a5f0868e.png",
     "glassHeightMm": 74.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-standard",
@@ -276,15 +300,15 @@
     "source": "3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/2. GBCylSwrl9MtlRollBlkDot.psd"
   },
   "GBCylSwrl9SpryMattSl": {
-    "sha256": "6f9b89cdc1219107c2350f2717974d768b55c19387848f8f0cb178bd6eb51d98",
-    "file": "public/images/catalog/bone-review/GBCylSwrl9SpryMattSl.6f9b89cdc121.png",
+    "sha256": "d8a07c2d59ef8bb5795626a0e905e4e84e831221f562a680b0e3bd0386ae4eb1",
+    "file": "public/images/catalog/bone-review/GBCylSwrl9SpryMattSl.d8a07c2d59ef.png",
     "glassHeightMm": 74.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-standard",
     "lockedShoulderPercent": 43.5,
     "shoulderY": 815.5,
     "shoulderToFootPx": 746.5,
-    "standingHeightPercent": 68.3,
+    "standingHeightPercent": 68.2,
     "source": "3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/22. GBCylSwrl9SpryMattSl.psd"
   },
   "GBMtlRoll28Blk": {
@@ -300,8 +324,8 @@
     "source": "13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd"
   },
   "GBSpry1ozGl": {
-    "sha256": "977263a33453e6e64c3ed5fa3393058ef2e66856ff6d55f738524be8daf52291",
-    "file": "public/images/catalog/bone-review/GBSpry1ozGl.977263a33453.png",
+    "sha256": "a74ebd3e62358ba2fe5a2172df635a2e8b978f3e04b6a3fdbdc72e41af80d941",
+    "file": "public/images/catalog/bone-review/GBSpry1ozGl.a74ebd3e6235.png",
     "glassHeightMm": 50.8,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "30-standard",
@@ -348,8 +372,8 @@
     "source": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/26. GBTallCyl9MtlRollBlkDot.psd"
   },
   "GBTallCyl9SpryGlMatt": {
-    "sha256": "4f5a2ac77a60e1a344a402600a113f6d3ef40251db99addea765903d81ed6ee5",
-    "file": "public/images/catalog/bone-review/GBTallCyl9SpryGlMatt.4f5a2ac77a60.png",
+    "sha256": "26cbefd63538a5f2100f6407191f6aaa972a9d151315932703b022d2216153c1",
+    "file": "public/images/catalog/bone-review/GBTallCyl9SpryGlMatt.26cbefd63538.png",
     "glassHeightMm": 106.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-tall",
@@ -372,20 +396,56 @@
     "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/26. GBTallCylFrst9MtlRollBlkDot.psd"
   },
   "GBTallCylFrst9SpryGlMatt": {
-    "sha256": "a2f586b7d0d8fa6927c7db43d1cff6e938e12b0223debc78c11622566b28b1c7",
-    "file": "public/images/catalog/bone-review/GBTallCylFrst9SpryGlMatt.a2f586b7d0d8.png",
+    "sha256": "335388ba51cac91a3a9c12f30dd2ac24154a430ece7d5847b4d25db1b3bbbce7",
+    "file": "public/images/catalog/bone-review/GBTallCylFrst9SpryGlMatt.335388ba51ca.png",
     "glassHeightMm": 106.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-tall",
     "lockedShoulderPercent": 62.5,
     "shoulderY": 489.5,
     "shoulderToFootPx": 1072.5,
-    "standingHeightPercent": 81.1,
+    "standingHeightPercent": 81.2,
     "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/7. GBTallCylFrst9SpryGlMatt.psd"
   },
+  "GBcyl25AnSpIvyGl": {
+    "sha256": "c623130949e80aead5868f114458752e3618945c27a64de95d1020b5c3f88ef5",
+    "file": "public/images/catalog/bone-review/GBcyl25AnSpIvyGl.c623130949e8.png",
+    "glassHeightMm": 83.0,
+    "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+    "lockGroup": "25-standard",
+    "lockedShoulderPercent": 46.5,
+    "shoulderY": 764.1,
+    "shoulderToFootPx": 797.9,
+    "standingHeightPercent": 75.5,
+    "source": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /38. GBCyl30AnSpIvyGl.psd"
+  },
+  "GBcyl25AnSpTslIvyGl": {
+    "sha256": "76f872da3b58857c7a1fe018a126cb82226ff79fdf2b126961877569b141d3c4",
+    "file": "public/images/catalog/bone-review/GBcyl25AnSpTslIvyGl.76f872da3b58.png",
+    "glassHeightMm": 83.0,
+    "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+    "lockGroup": "25-standard",
+    "lockedShoulderPercent": 46.5,
+    "shoulderY": 764.1,
+    "shoulderToFootPx": 797.9,
+    "standingHeightPercent": 74.4,
+    "source": "21. Tassels/Updated Tassels/43. GBCyl30AnSpTslIvyGl.psd"
+  },
+  "GBcyl25SpryMtGl": {
+    "sha256": "4961125958557db50ef61b3d1416e8db249627539b005ffc3d9093d7754a5ec5",
+    "file": "public/images/catalog/bone-review/GBcyl25SpryMtGl.496112595855.png",
+    "glassHeightMm": 83.0,
+    "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+    "lockGroup": "25-standard",
+    "lockedShoulderPercent": 46.5,
+    "shoulderY": 764.1,
+    "shoulderToFootPx": 797.9,
+    "standingHeightPercent": 73.3,
+    "source": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /13. GBCyl30SpryMtGl.psd"
+  },
   "LBCyl100LtnMtGl": {
-    "sha256": "54e8d25c1f1478999f2f1d99a95d4ea9f401d3e612d35d9e8caaa342dcaba828",
-    "file": "public/images/catalog/bone-review/LBCyl100LtnMtGl.54e8d25c1f14.png",
+    "sha256": "1bf89f7a37375cb41bdff15ef38af1d284aa4c068ca31e443ea6d3d1bd79eafd",
+    "file": "public/images/catalog/bone-review/LBCyl100LtnMtGl.1bf89f7a3737.png",
     "glassHeightMm": 154.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "100-standard",
@@ -393,23 +453,35 @@
     "shoulderY": 403.7,
     "shoulderToFootPx": 1158.3,
     "standingHeightPercent": 85.2,
-    "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/12. LBCyl100LtnMtGl.psd"
+    "source": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/14. LBCyl100LtnMtGl.psd"
+  },
+  "LBCyl25LtnMtGl": {
+    "sha256": "328096d9cb7bad7a409fcb7a834f7f588d6d96a45af423f86997b7f5596db2d3",
+    "file": "public/images/catalog/bone-review/LBCyl25LtnMtGl.328096d9cb7b.png",
+    "glassHeightMm": 83.0,
+    "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+    "lockGroup": "25-standard",
+    "lockedShoulderPercent": 46.5,
+    "shoulderY": 764.1,
+    "shoulderToFootPx": 797.9,
+    "standingHeightPercent": 74.9,
+    "source": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /12. LBCyl30LtnMtGl.psd"
   },
   "LBCyl50LtnMtGl": {
-    "sha256": "48cc3c0454c6d79b861521d50b02e49c3e83ce30a1e9da35d906a9992c70982f",
-    "file": "public/images/catalog/bone-review/LBCyl50LtnMtGl.48cc3c0454c6.png",
+    "sha256": "246ec05cf50affa752b986dfdc7f6f04c1299244c4d22be63314c41b11a7fabf",
+    "file": "public/images/catalog/bone-review/LBCyl50LtnMtGl.246ec05cf50a.png",
     "glassHeightMm": 117.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "50-standard",
     "lockedShoulderPercent": 56,
     "shoulderY": 601.0,
     "shoulderToFootPx": 961.0,
-    "standingHeightPercent": 78.0,
-    "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/12. LBCyl50LtnMtGl.psd"
+    "standingHeightPercent": 77.9,
+    "source": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/14. LBCyl50LtnMtGl.psd"
   },
   "LBCyl9LtnGl": {
-    "sha256": "c03b33f91b58a76d6ac642f4a63edd5354686dc17d2dbeff85274a42bd9a04a2",
-    "file": "public/images/catalog/bone-review/LBCyl9LtnGl.c03b33f91b58.png",
+    "sha256": "fa208b7e87a8a257365c131544c9255e52e6953592cdb17691d539b4cb04cd2a",
+    "file": "public/images/catalog/bone-review/LBCyl9LtnGl.fa208b7e87a8.png",
     "glassHeightMm": 70.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-standard",
@@ -420,20 +492,20 @@
     "source": "3.  17-415 Bottles/9. Clear  (Uncapped)/28. LBCyl9LtnGl.psd"
   },
   "LBCylAmb9LtnMtSl": {
-    "sha256": "282b263a5473aa909c3dccdf447d5acb6aeb760dd78259435cebf0c4652bcca8",
-    "file": "public/images/catalog/bone-review/LBCylAmb9LtnMtSl.282b263a5473.png",
+    "sha256": "2ea7ee282e89aa221579f6fb10baa480afda2a7416225156312585387e1cd258",
+    "file": "public/images/catalog/bone-review/LBCylAmb9LtnMtSl.2ea7ee282e89.png",
     "glassHeightMm": 70.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-standard",
     "lockedShoulderPercent": 43.5,
     "shoulderY": 815.5,
     "shoulderToFootPx": 746.5,
-    "standingHeightPercent": 68.4,
+    "standingHeightPercent": 68.5,
     "source": "3.  17-415 Bottles/3. Amber 9ml (Uncapped)/27. LBCylAmb9LtnMtSl.psd"
   },
   "LBCylBlu9LtnMattSl": {
-    "sha256": "94402a80de91ae22a3cf0a4c6cd65afd061bd6ca3692a803f364321dc72b7257",
-    "file": "public/images/catalog/bone-review/LBCylBlu9LtnMattSl.94402a80de91.png",
+    "sha256": "1db937072a1610cf1871353aa49c136a112485fdc225ef0997d847df9b67c021",
+    "file": "public/images/catalog/bone-review/LBCylBlu9LtnMattSl.1db937072a16.png",
     "glassHeightMm": 70.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-standard",
@@ -444,8 +516,8 @@
     "source": "3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/27. LBCylBlu9LtnMattSl.psd"
   },
   "LBCylFrst9LtnMtSl": {
-    "sha256": "b95916ebe03dc0a8cc9e22e575faf79509ca17e2e551e38ab194e933196ea5a0",
-    "file": "public/images/catalog/bone-review/LBCylFrst9LtnMtSl.b95916ebe03d.png",
+    "sha256": "93c5568f6725a8ac4c5790ea8cb1fc5d9cabf27f2396844576ba198127204c39",
+    "file": "public/images/catalog/bone-review/LBCylFrst9LtnMtSl.93c5568f6725.png",
     "glassHeightMm": 74.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-standard",
@@ -456,15 +528,15 @@
     "source": "3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/27. LBCylFrst9LtnMtSl.psd"
   },
   "LBCylSwrl9LtnMtSl": {
-    "sha256": "3de8a3ba3eb15b31e5184483e1c9f02f7a23d7bcc04306a6e02b9c44f245c666",
-    "file": "public/images/catalog/bone-review/LBCylSwrl9LtnMtSl.3de8a3ba3eb1.png",
+    "sha256": "4905221163132e90c8e4aa7fe81b51c336c3317ed64ea00f7186e787433fa54d",
+    "file": "public/images/catalog/bone-review/LBCylSwrl9LtnMtSl.490522116313.png",
     "glassHeightMm": 74.0,
     "sizedBy": "glass shoulder on the height locked for this body in docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
     "lockGroup": "9-standard",
     "lockedShoulderPercent": 43.5,
     "shoulderY": 815.5,
     "shoulderToFootPx": 746.5,
-    "standingHeightPercent": 68.3,
+    "standingHeightPercent": 68.2,
     "source": "3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/27. LBCylSwrl9LtnMtSl.psd"
   }
 }

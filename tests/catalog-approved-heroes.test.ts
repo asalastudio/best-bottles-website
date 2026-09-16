@@ -102,7 +102,7 @@ describe('approved catalog hero release',()=>{
   const hero=getCatalogHero('cylinder-30ml-clear-18-415',[{websiteSku:'GBSpry1ozGl'}]);
   expect(hero?.websiteSku).toBe('GBSpry1ozGl');
   expect(hero?.groupSlug).toBe('cylinder-30ml-clear-18-415');
-  expect(hero?.url).toBe('/images/catalog/bone-review/GBSpry1ozGl.977263a33453.png');
+  expect(hero?.url).toBe('/images/catalog/bone-review/GBSpry1ozGl.a74ebd3e6235.png');
   expect(getCatalogHero('cylinder-30ml-clear-18-415',[{websiteSku:'GBSpry1ozSl'}])).toBeNull();
  });
  it('keeps catalog media out of product detail implementations',()=>{
