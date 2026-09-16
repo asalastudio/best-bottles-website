@@ -1,15 +1,17 @@
 import type { BuilderConfiguration, BuilderPart } from "./model";
 
-/** A vintage finish changes the top, not the glass or the camera. Keep the
- * selected bottle's bare layer and register the exact top assembly uniformly
- * using its photographed body center and baseline. This affects display only. */
+/** A finish changes the top, not the glass or the camera. Keep the selected
+ * bottle's bare layer and register the exact top assembly uniformly using its
+ * photographed body center and baseline. This affects display only.
+ * 2026-09-16: every fitment, not only the vintage sprayers — Jordan: swapping a
+ * top must not swap the whole image (Boston Round kits). */
 export function registerVintagePreview(
     config: BuilderConfiguration,
     parts: BuilderPart[],
     reference?: BuilderConfiguration,
 ) {
     const referenceKit = reference?.previewKit ?? reference?.kit;
-    if (!reference || !/Vintage|Antique/.test(config.fitment)
+    if (!reference || config.id === reference.id
         || config.bodyId !== reference.bodyId || config.family !== reference.family
         || config.capacityMl !== reference.capacityMl || config.color !== reference.color
         || config.neck !== reference.neck || config.kit?.completeness !== "full"

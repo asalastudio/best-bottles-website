@@ -33,7 +33,21 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
             onError={() => setFailedUrl(url)} style={{ width: "100%", height: "100%", objectFit: "contain", mixBlendMode: config.color === "Clear" && stage !== "complete" ? "multiply" : undefined, transform: expanded ? undefined : `scale(${scale * .88})`, transformOrigin: "bottom center" }} />;
     }
     const registration = !thumbnail ? registerVintagePreview(config, parts, bodyReference) : null;
-    const layers = registration?.layers ?? parts.map(part => ({ part, bounds: part.bounds, transform: undefined }));
+    let layers = registration?.layers ?? parts.map(part => ({ part, bounds: part.bounds, transform: undefined }));
+    // A pump or sprayer is shown working, its overcap standing on the ground
+    // beside the bottle so the shopper sees what comes with it (Jordan,
+    // 2026-09-16). Display only: the assembled registration is untouched.
+    if (!thumbnail && !showCover && stage !== "body" && layers.some(l => l.part.slot === "overcap") && layers.some(l => !["body", "overcap", "diptube"].includes(l.part.slot))) {
+        const body = layers.find(l => l.part.slot === "body");
+        const baseline = registration?.anchors.baselineY ?? kit.anchors.baselineY;
+        layers = layers.map(l => {
+            if (l.part.slot !== "overcap" || !body) return l;
+            const gap = Math.max(18, (body.bounds.right - body.bounds.left) * .08);
+            const dx = body.bounds.right + gap - l.bounds.left, dy = baseline - l.bounds.bottom;
+            return { ...l, bounds: { left: l.bounds.left + dx, right: l.bounds.right + dx, top: l.bounds.top + dy, bottom: l.bounds.bottom + dy },
+                transform: `translate(${dx} ${dy})${l.transform ? ` ${l.transform}` : ""}` };
+        });
+    }
     const failed = layers.some(({ part }) => part.image.url === failedUrl);
     if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
     const { x, y, width, height } = previewFrame(registration?.anchors ?? kit.anchors,

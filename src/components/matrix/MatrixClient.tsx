@@ -119,13 +119,15 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const visibleBodies = useMemo(() => bodies.filter(b => (!size || b.capacityMl === Number(size))
         && (!neck || b.neck === neck) && (!application || b.configurations.some(c => c.fitment === application))), [bodies, size, neck, application]);
     const preview = configuration ?? current.fitted[0] ?? current.colored[0] ?? body?.configurations[0];
-    const bodyReference = current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full")
+    // one fixed body per bottle and glass: the first full kit (vintage first, its body is the reference for the bulb sprayers)
+    const bodyReference = current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full") ?? current.colored.find(c => c.kit?.completeness === "full")
         ?? current.colored[0] ?? body?.configurations[0];
     const hasIncludedCover = Boolean(configuration && /Sprayer|Pump/.test(configuration.fitment)
         && ((configuration.id in hasIncludedCovers) || (configuration.kit?.parts.some(p => p.slot === "overcap")
         && configuration.kit?.parts.some(p => !["body", "overcap", "diptube"].includes(p.slot)))));
     const previewStage = step === 0 ? "body" : configuration ? "complete" : fitment ? "fitment" : "body";
-    const displayParts = preview ? previewParts(preview, previewStage).filter(p => !(hasIncludedCover && !showCover && p.slot === "overcap")) : [];
+    // the overcap is never dropped from the preview: worn when showCover, standing on the ground beside the bottle otherwise (BuilderImage)
+    const displayParts = preview ? previewParts(preview, previewStage) : [];
     const completed = [Boolean(body && color), Boolean(fitment), Boolean(configuration), false];
     const canContinue = step === 0 ? Boolean(body && color) : step === 1 ? Boolean(fitment) : Boolean(configuration);
     const fitmentReady = step === 0 && canContinue && !pending;
