@@ -41,7 +41,11 @@ for row in manifest['rows']:
     reg = json.load(open(dst_reg)); key = f"{row['websiteSku']}.front-on"
     if row.get('registrationSource') != 'solved-from-plate': continue
     psd = PSDImage.open(MASTER / row['plate']['sourceRelPath'])
-    comp = psd.composite(force=True, ignore_preview=True).convert('RGBA')
+    try: comp = psd.composite(force=True, ignore_preview=True).convert('RGBA')
+    except Exception as e:
+        # a source this tool cannot flatten (vector shapes without a rasteriser, an
+        # unsupported adjustment): record it and move on rather than lose the batch
+        failed.append({'sku': row['websiteSku'], 'error': f'{type(e).__name__}: {str(e)[:80]}'}); continue
     flat = Image.new('RGBA', comp.size, 'white'); flat.alpha_composite(comp)
     plate = Image.open(args.batch / 'plates' / row['plate']['key']).convert('RGB')
     cx0, cy0, cx1, cy1 = ink_bbox(flat); px0, py0, px1, py1 = ink_bbox(plate)

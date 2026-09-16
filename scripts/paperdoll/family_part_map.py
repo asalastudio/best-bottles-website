@@ -36,6 +36,23 @@ for r in plates:
 share = Counter(l['pixelHash'] for _, _, layers, _ in inventories.values() for l in layers if not l['background'])
 def area(l): x0, y0, x1, y1 = l['bounds']; return (x1 - x0) * (y1 - y0)
 def desc(l): x0, y0, x1, y1 = l['bounds']; return f"layer {l['index']} '{l['name']}' {x1-x0}×{y1-y0} at ({x0},{y0}), identical pixels in {share[l['pixelHash']]} master(s)"
+# batch-wide body signature: the glass photograph recurs across a bottle's SKUs
+# (identical pixels in ≥2 masters, taller than wide, at least half the canvas
+# tall); its dimensions and aspect identify the body when a SKU's own glass
+# layer is unique or a tassel assembly outweighs it
+import statistics
+_sig = []
+for _sku, (_rel, _sha, _layers, _psd) in inventories.items():
+    for l in _layers:
+        if l['background'] or l.get('adjustment') or not l.get('visible', True) or l.get('kind', 'pixel') != 'pixel': continue
+        w, h = l['bounds'][2] - l['bounds'][0], l['bounds'][3] - l['bounds'][1]
+        if share[l['pixelHash']] >= 2 and h > 1.05 * w and h >= 0.5 * _psd.height: _sig.append((w, h))
+BODY_ASPECT = statistics.median(h / w for w, h in _sig) if _sig else 2.0
+# a tassel assembly shared by two masters is not a glass signature: keep only dimensions near the family's median aspect
+BODY_DIMS = sorted({(w, h) for w, h in _sig if abs(h / w - BODY_ASPECT) <= 0.25 * BODY_ASPECT})
+def dims_match(l, tol=0.05):
+    w, h = l['bounds'][2] - l['bounds'][0], l['bounds'][3] - l['bounds'][1]
+    return any(abs(w - bw) <= tol * bw and abs(h - bh) <= tol * bh for bw, bh in BODY_DIMS)
 maps = {}; notes = []
 for sku, (rel, sha, layers, psd) in inventories.items():
     fg = [l for l in layers if not l['background'] and not l.get('adjustment')]
@@ -48,7 +65,8 @@ for sku, (rel, sha, layers, psd) in inventories.items():
     pix = [l for l in visible if l.get('kind', 'pixel') == 'pixel']
     ux0 = min(l['bounds'][0] for l in pix); ux1 = max(l['bounds'][2] for l in pix); uy1 = max(l['bounds'][3] for l in pix)
     # a dip tube can hang below the foot: the body is also wide (at least 40 % of the union)
-    foot = [l for l in pix if l['bounds'][3] >= uy1 - 0.05 * psd.height and l['bounds'][0] <= (ux0 + ux1) / 2 <= l['bounds'][2] and (l['bounds'][2] - l['bounds'][0]) >= 0.4 * (ux1 - ux0)]
+    # (the union's centre is not a test: a tassel hanging beside the bottle skews it)
+    foot = [l for l in pix if l['bounds'][3] >= uy1 - 0.05 * psd.height and (l['bounds'][2] - l['bounds'][0]) >= 0.25 * (ux1 - ux0)]
     # the same glass photograph is reused across a bottle's SKUs, a top is not: a
     # layer whose pixels recur in other masters is the body before a tassel
     # assembly that happens to be larger and to reach the foot
@@ -59,16 +77,21 @@ for sku, (rel, sha, layers, psd) in inventories.items():
     def spans(l):
         x0, x1 = l['bounds'][0], l['bounds'][2]
         return sum(1 for o in pix if o is not l and x0 <= (o['bounds'][0] + o['bounds'][2]) / 2 <= x1)
-    cands = foot or pix
-    body = max(cands, key=lambda l: (spans(l), share[l['pixelHash']] >= 2, area(l))); bx0, by0, bx1, by1 = body['bounds']; bw, bh = bx1 - bx0, by1 - by0
-    parts = {'body': [body['index']]}; evidence = [f"body: {desc(body)} (owns the foot, spans {spans(body)} other layer centre(s))"]
+    tall = [l for l in pix if (l['bounds'][3] - l['bounds'][1]) > 1.05 * (l['bounds'][2] - l['bounds'][0]) and (l['bounds'][3] - l['bounds'][1]) >= 0.5 * psd.height]
+    matching = [l for l in tall if dims_match(l)]
+    if matching: body = max(matching, key=area); how = 'dimensions of the glass photograph shared across this family'
+    else:
+        cands = tall or foot or pix
+        body = min(cands, key=lambda l: (abs((l['bounds'][3] - l['bounds'][1]) / max(1, l['bounds'][2] - l['bounds'][0]) - BODY_ASPECT), -spans(l), -area(l))); how = f"aspect closest to the family's glass ({BODY_ASPECT:.2f}), spans {spans(body)} other layer centre(s)"
+    bx0, by0, bx1, by1 = body['bounds']; bw, bh = bx1 - bx0, by1 - by0
+    parts = {'body': [body['index']]}; evidence = [f"body: {desc(body)} ({how})"]
     for l in visible:
         if l is body: continue
         x0, y0, x1, y1 = l['bounds']; w, h = x1 - x0, y1 - y0
         if l.get('kind') == 'shape':
             # vector retouch strokes on the glass belong with the body
             parts['body'].append(l['index']); evidence.append(f"body (vector retouch stroke): {desc(l)}"); continue
-        if area(l) >= 0.6 * area(body) and h >= 0.8 * bh and w >= 0.9 * bw:
+        if abs(w - bw) <= 0.05 * bw and abs(h - bh) <= 0.05 * bh:
             exclude[str(l['index'])] = f"unused twin body left under the body layer: {desc(l)}; covered by layer {body['index']}, plate parity proves it"; continue
         inside = x0 >= bx0 - 5 and x1 <= bx1 + 5 and y0 >= by0 - 5 and y1 <= by1 + 5
         if h > 0.45 * bh and w < 0.35 * bw and inside: slot = 'diptube' if 'Dropper' not in app else 'pipette'
