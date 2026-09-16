@@ -59,8 +59,10 @@ describe("mobile homepage redesign", () => {
         expect(html).toContain('srcSet="/assets/homepage/family-boston-round-desktop-v4.webp"');
         expect(html).toContain('srcSet="/assets/homepage/family-round-desktop-v4.webp"');
         expect(html).toContain('srcSet="/assets/homepage/family-circle-desktop-v4.webp"');
-        expect(html).toContain('src="/assets/homepage/family-cylinder-bone-v3.webp"');
-        expect(html).toContain('src="/assets/homepage/family-boston-round-bone-v3.webp"');
+        expect(html).toContain('src="/assets/homepage/family-cylinder-mobile-v4.webp"');
+        expect(html).toContain('src="/assets/homepage/family-boston-round-mobile-v4.webp"');
+        expect(html).toContain('src="/assets/homepage/family-round-mobile-v4.webp"');
+        expect(html).toContain('src="/assets/homepage/family-circle-mobile-v4.webp"');
         expect(html).toContain('media="(min-width:641px)"');
         expect(html).not.toContain("family-elegant-desktop-v4");
     });
@@ -73,7 +75,7 @@ describe("mobile homepage redesign", () => {
         expect(css).toContain("height:clamp(248px,70vw,318px)");
         expect(css).toContain("font-size:clamp(26px,7vw,31px)");
         expect(css).toContain(".families .railWrap .family{");
-        expect(css).toContain("aspect-ratio:1/1.08");
+        expect(css).toContain("aspect-ratio:10/11");
         expect(css).toContain("aspect-ratio:3/4");
         expect(hero).toContain("const MOBILE_MAX = 640");
         expect(hero).toContain("const stacked = bw <= STACK_BELOW && !mobile");

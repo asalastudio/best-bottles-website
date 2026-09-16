@@ -1,13 +1,13 @@
 // Portrait editorial scenes under the locked material-board recipe (bone #F5F3EF, one daylight, one baseline,
 // family material base in the lower quarter). Regenerate with scripts/family-cards. Not SKU plates.
 //
-// Mobile / square cards keep the bone-v3 plates. Desktop family cards use the v4 3:4 lineups
-// where they exist (Cylinder, Boston Round, Round, Circle), falling back to bone-v3 otherwise.
+// FAMILY_ART is the mobile / default plate. Cylinder, Boston Round, Round and Circle use
+// nearly-square v4 mobile crops; desktop cards use the separate 3:4 lineups below.
 export const FAMILY_ART: Record<string, string> = {
-    "Cylinder": "family-cylinder-bone-v3",
-    "Boston Round": "family-boston-round-bone-v3",
-    "Round": "family-round-bone-v3",
-    "Circle": "family-circle-bone-v3",
+    "Cylinder": "family-cylinder-mobile-v4",
+    "Boston Round": "family-boston-round-mobile-v4",
+    "Round": "family-round-mobile-v4",
+    "Circle": "family-circle-mobile-v4",
     "Elegant": "family-elegant-bone-v3",
     "Diva": "family-diva-bone-v3",
     "Grace": "family-grace-bone-v3",
