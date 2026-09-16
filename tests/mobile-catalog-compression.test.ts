@@ -15,6 +15,7 @@ describe("mobile catalog compression", () => {
         const catalog = read("src/app/catalog/CatalogClient.tsx");
         expect(catalog).toContain("hidden lg:block");
         expect(catalog).toContain("<span className=\"lg:hidden\">Catalog</span>");
+        expect(catalog).toContain("page-heading");
         expect(catalog).toContain("Master Catalog");
         expect(catalog).toContain("Need help? Talk with Grace");
         expect(catalog).toContain("hidden lg:inline");

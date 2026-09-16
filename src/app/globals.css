@@ -218,6 +218,19 @@ img.app-wordmark {
   }
 }
 
+/* Interior page titles on phones. The wordmark lockup is 19px tall; a 32px
+   Montserrat display H1 reads as a second logo. 28px / 0.05em sits a hair
+   above the mark (~21px cap) without competing with it. Desktop headings
+   keep their own sizes. */
+@media (max-width: 1023px) {
+  .page-heading {
+    font-size: 1.75rem;
+    line-height: 1.15;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+  }
+}
+
 /* ── Mobile Tab Bar spacing ────────────────────────────────────────────── */
 /* Add bottom padding on mobile so content isn't hidden behind the tab bar */
 @media (max-width: 1279px) {
