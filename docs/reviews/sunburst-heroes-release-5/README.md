@@ -5,8 +5,8 @@ Approved by Jordan 2026-09-16. 39 of the 52 registered Cylinder heroes.
 ## What changed from earlier releases
 
 Earlier Cylinder heroes were Photoshop composites placed on bone. These are
-photographs rendered by `gpt-image-2.5-sunburst` from a geometry-only base, and
-their size comes from measurement rather than from a neighbouring image.
+photographs rendered by `gpt-image-2.5-sunburst` from a geometry-only base, at
+the size locked for each body on 2026-09-07.
 
 ## How each hero was made
 
@@ -22,28 +22,33 @@ their size comes from measurement rather than from a neighbouring image.
    a real photograph on bone with a real contact shadow. The glass clause
    (clear, frosted, amber, cobalt, swirl) and the components clause are read off
    the SKU. 2080 × 2288 at `high`, then down to 1560 × 1716.
-3. **Sized by the glass shoulder.** Convex's `heightWithoutCap` is the bare
-   glass: it reads 70 mm for the 9 ml sprayer, roll-on and pump alike. So the
-   glass is what must match across a body, and the fitment rides on top at its
-   own height. Each render is scaled about its foot so shoulder-to-foot equals
-   `curve(heightWithoutCap) × R`, where the curve is the one fitted to Jordan's
-   approved targets (`share = 1.785 × mm^0.768`) and R = 0.805 is one family
-   constant, the shoulder-to-rim ratio of the 9 ml clear body, so that body
-   keeps its approved size. The shoulder and foot come from the PSD body
-   layer's own alpha (the barrel is the median width 15–35 % up from the foot;
-   the shoulder is the highest row still at 92 % of it), which is the one
-   measurement here that does not depend on reading clear glass off a picture.
-   Every SKU of a body lands on the same shoulder line — all 12 clear 9 ml
-   SKUs at y = 918 on the 1716 canvas. A body whose tallest fitment would leave
-   the frame is capped as a body, so its siblings stay matched; none needed it.
+3. **Sized on the locked shoulder line.** On 2026-09-07 Jordan locked every
+   Cylinder hero's glass-shoulder height per physical body
+   (`docs/reviews/cylinder-family-final-manifest-2026-09-07.json`, foot on the
+   91 % baseline): 3.3 ml 26.5 %, 4 ml 31.5 %, 5 ml 36.5 %, 9 ml 43.5 %,
+   Tall 9 ml 62.5 %, 28 ml 50.5 %, 30 ml 46 %, 50 ml 56 %, 100 ml 67.5 % of the
+   1716 canvas. Those numbers are the plan; nothing here re-derives them. Each
+   render is scaled about its foot so its glass shoulder lands on its body's
+   locked line. The shoulder position comes from the lock itself: the lock
+   records where the shoulder and the contact base sit in each SKU's source
+   assembly, and the render is that same assembly with its geometry held by the
+   gate, so shoulder-to-foot is the same fraction of the render's standing
+   height. No width or edge is read off clear glass anywhere. Every SKU of a
+   body lands on one line (all 9 ml at y = 816, all 5 ml at y = 936). The
+   100 ml figure is the lock's own clearance-limited one; nothing else is
+   capped.
 4. **Bone.** The rendered paper is flattened to #F5F3EF and its grain pulled
    onto exact bone with a soft ramp, so the corner pixels meet the registry's
    2/255 rule and the rendered shadow keeps its gradient.
 
-## Held at the frame limit
+## The two sample vials
 
-`heldAtFrameLimit` marks the five 100 ml bottles whose fitment would rise past
-the top of the canvas at full size; they are fitted to the frame instead.
+`GBSpry3mlClBlk` and `GBSpry4mlClBlk` are built from the merged composites the
+lock itself measured (`17. Additional Bottles/<sku>..psd`), because their
+layered masters carry a mirror reflection under the glass that reads as part of
+the body layer. Their gate reads the foot and the translucent overcap at 40
+levels against the base's own placement bounds; the 70-level mask cannot see
+thin clear glass.
 
 ## Not in this release
 
@@ -55,5 +60,5 @@ height nor a diameter recorded in Convex, so there is nothing to size them from
 (`GBcyl25AnSpIvyGl`, `GBcyl25AnSpTslIvyGl`, `GBCyl25DrpGl`, `GBCyl25RdcrShnGl`).
 The 25 ml size is the real gap: six of its SKUs are in this list.
 
-`approved-lock.json` records each file's sha256, its measured standing height
-and the PSD it was built from.
+`approved-lock.json` records each file's sha256, its locked shoulder height and
+the PSD it was built from.
