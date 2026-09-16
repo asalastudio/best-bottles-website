@@ -5,7 +5,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import type { HomepageData } from '@/sanity/lib/queries';
 import { editorialImageUrl } from '@/sanity/lib/image';
-import { FAMILY_ART } from '@/lib/homepageFamilyArt';
+import { FAMILY_ART, familyCardSources } from '@/lib/homepageFamilyArt';
 import { CATALOG_FAMILIES } from '@/lib/catalogFilters';
 import { familyFinderHref } from '@/lib/products/focused-shopping';
 import { SHOP_COLLECTIONS, featuredCollectionCards, shopCollectionHref } from '@/lib/shopCollections';
@@ -38,10 +38,16 @@ export function FamilyCarousel({ cards }: { cards?: HomepageData['designFamilyCa
     function move(direction:number){rail.current?.scrollBy({left:direction*((rail.current.firstElementChild?.getBoundingClientRect().width??280)+(window.innerWidth<=640?14:20)),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
     return <section className={`${styles.section} ${styles.families}`} aria-labelledby="family-heading"><div className={styles.heading}><h2 id="family-heading"><span className={styles.headingDesktop}>Bottle Families</span><span className={styles.headingMobile}>Popular Families</span></h2><Link href="/bottle-families">View all<span className={styles.viewAllArrow} aria-hidden="true"> →</span></Link></div>
         <div className={styles.railWrap}><div ref={rail} id="family-carousel" className={styles.rail} onScroll={update} aria-label="Bottle families">
-            {entries.map(c => <Link href={familyFinderHref(c.family)} className={styles.family} key={c.family}>
-                {(c.image?.asset?._ref || FAMILY_ART[c.family]) && <img src={cmsImage(c.image,800)??asset(FAMILY_ART[c.family])} alt={`${c.family} bottle family`} width={800} height={1000} loading="lazy"/>}
-                <span className={styles.familyTitle}>{c.title || c.family}</span>
-            </Link>)}
+            {entries.map(c => {
+                const art = familyCardSources(c.family, cmsImage(c.image, 800));
+                return <Link href={familyFinderHref(c.family)} className={styles.family} key={c.family}>
+                    {art && <picture>
+                        {art.desktop !== art.mobile && <source media="(min-width:641px)" srcSet={art.desktop}/>}
+                        <img src={art.mobile} alt={`${c.family} bottle family`} width={800} height={1000} loading="lazy"/>
+                    </picture>}
+                    <span className={styles.familyTitle}>{c.title || c.family}</span>
+                </Link>;
+            })}
         </div>
         <div className={styles.edgeControls}><button aria-label="Previous bottle family" aria-controls="family-carousel" disabled={position.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label="Next bottle family" aria-controls="family-carousel" disabled={position.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div></div><div className={styles.railControls} aria-live="polite">{position.index} / {entries.length}</div>
     </section>;

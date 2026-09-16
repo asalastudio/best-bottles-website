@@ -51,6 +51,20 @@ describe("mobile homepage redesign", () => {
         expect(html).toContain('href="/catalog"');
     });
 
+    it("opens the family rail with Cylinder, Boston Round, Round, then Circle", () => {
+        const html = renderToStaticMarkup(createElement(CollectionShopping, { data: null }));
+        const families = [...html.matchAll(/alt="([^"]+) bottle family"/g)].map((match) => match[1]);
+        expect(families.slice(0, 4)).toEqual(["Cylinder", "Boston Round", "Round", "Circle"]);
+        expect(html).toContain('srcSet="/assets/homepage/family-cylinder-desktop-v4.webp"');
+        expect(html).toContain('srcSet="/assets/homepage/family-boston-round-desktop-v4.webp"');
+        expect(html).toContain('srcSet="/assets/homepage/family-round-desktop-v4.webp"');
+        expect(html).toContain('srcSet="/assets/homepage/family-circle-desktop-v4.webp"');
+        expect(html).toContain('src="/assets/homepage/family-cylinder-bone-v3.webp"');
+        expect(html).toContain('src="/assets/homepage/family-boston-round-bone-v3.webp"');
+        expect(html).toContain('media="(min-width:641px)"');
+        expect(html).not.toContain("family-elegant-desktop-v4");
+    });
+
     it("keeps the empire niche overlay composition on phones instead of stacking copy above the art", () => {
         const css = read("src/components/home/CollectionShopping.module.css");
         const hero = read("src/components/home/EmpireFitmentHero.tsx");
@@ -59,6 +73,8 @@ describe("mobile homepage redesign", () => {
         expect(css).toContain("height:clamp(248px,70vw,318px)");
         expect(css).toContain("font-size:clamp(26px,7vw,31px)");
         expect(css).toContain(".families .railWrap .family{");
+        expect(css).toContain("aspect-ratio:1/1.08");
+        expect(css).toContain("aspect-ratio:3/4");
         expect(hero).toContain("const MOBILE_MAX = 640");
         expect(hero).toContain("const stacked = bw <= STACK_BELOW && !mobile");
         expect(heroCss).toContain("position: absolute");
