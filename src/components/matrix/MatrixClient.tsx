@@ -165,6 +165,8 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         setShowCover(false);
         setSelection(next); setLastAdded(null); setError("");
         requestAnimationFrame(() => {
+            // several glasses: bring the colour choice into view; one glass: the
+            // action bar is sticky, so the shopper's eye stays on the preview
             glassHeading.current?.focus({ preventScroll: true });
             glassHeading.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "nearest" });
         });
@@ -255,11 +257,12 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                     </Option>)}
                 </div>}
                 {step === 0 && !visibleBodies.length && <div className={styles.empty}><h3>No bottles for these choices.</h3><p>Try another size or bottle family.</p><button className={styles.secondary} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button><Link href={catalogHref}>Explore the full catalog <ArrowRight size={15} /></Link></div>}
-                {step === 0 && body && <div className={styles.glassSection}><h3 ref={glassHeading} tabIndex={-1}>Choose your glass</h3><div className={current.colors.length === 1 ? styles.singleGlass : styles.colorGrid}>
+                {step === 0 && body && current.colors.length > 1 && <div className={styles.glassSection}><h3 ref={glassHeading} tabIndex={-1}>Choose your glass color</h3><div className={styles.colorGrid}>
                     {current.colors.map(c => { const example = body!.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => update({ color: c, fitment: null, closure: null })}>
-                        {current.colors.length > 1 && <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} /></div>}<strong>{c}{current.colors.length === 1 ? " glass" : ""}</strong>
+                        <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} /></div><strong>{c}</strong>
                     </Option>; })}
-                </div><div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>Your bottle is ready. Select <strong>Choose Fitment</strong> to continue.</span></>}</div></div>}
+                </div></div>}
+                {step === 0 && body && <div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>{current.colors.length === 1 ? <>{color} glass, the only glass for this bottle. Select <strong>Choose Fitment</strong> to continue.</> : <>Your bottle is ready. Select <strong>Choose Fitment</strong> to continue.</>}</span></>}</div>}
                 {(step === 1 || step === 2) && <>
                     <div className={styles.compatibilityContext}><ShieldCheck size={18} /><span><strong>{body?.capacityMl} ml {body?.family} · {color}</strong><span>Neck: {body?.neck} · Compatible components below</span></span></div>
                     {step === 1 ? <div className={styles.fitmentGrid}>{current.fitments.map(f => {

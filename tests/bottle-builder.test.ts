@@ -218,8 +218,9 @@ describe("selection transitions and preview", () => {
         const selected = { bodyId: clear.bodyId, color: clear.color, fitment: clear.fitment, closure: clear.closure, quantity: 68 };
         const next = selectBuilderBody(bodies, selected, clear.bodyId);
         expect(next).toEqual({ bodyId: clear.bodyId, color: null, fitment: null, closure: null, quantity: 68 });
+        // one glass only: taken as read (2026-09-16), the top still starts empty
         const onlyClear = selectBuilderBody(groupBuilderBodies([clear]), selected, clear.bodyId);
-        expect(onlyClear.color).toBeNull();
+        expect(onlyClear.color).toBe("Clear");
         expect(onlyClear.fitment).toBeNull();
         expect(onlyClear.closure).toBeNull();
     });
@@ -229,10 +230,12 @@ describe("selection transitions and preview", () => {
         expect(deriveBuilder(bodies, state).configuration).toBeNull();
         expect(previewParts(clear, "body").map(p => p.slot)).toEqual(["body"]);
     });
-    it("requires explicit glass selection even when clear is the only option", () => {
+    it("takes the only glass as read, but never picks one colour among several", () => {
         const state = reconcileSelection(groupBuilderBodies([clear]), { ...emptySelection(), bodyId: clear.bodyId });
-        expect(state.color).toBeNull();
+        expect(state.color).toBe("Clear");
         expect(state.fitment).toBeNull();
+        const choice = reconcileSelection(bodies, { ...emptySelection(), bodyId: clear.bodyId });
+        expect(choice.color).toBeNull();
     });
     it("changing color removes incompatible fitment and cap", () => {
         const selected = { bodyId: clear.bodyId, color: "Clear", fitment: clear.fitment, closure: clear.closure, quantity: 50 };

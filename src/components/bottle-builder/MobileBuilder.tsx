@@ -50,7 +50,7 @@ export default function MobileBuilder(p: Props) {
     const busy = p.pending || p.adding;
     const canAdvance = [Boolean(body), Boolean(color), Boolean(fitment), Boolean(configuration), p.order.canAdd && p.hydrated][stage];
     const reason = p.pending ? "Loading compatible choices…" : stage === 0 ? "Select a bottle to choose its glass."
-        : stage === 1 ? "Select your glass to continue." : stage === 2 ? "Select a fitment to continue."
+        : stage === 1 ? "Select your glass color to continue." : stage === 2 ? "Select a fitment to continue."
         : stage === 3 ? "Select an available finish to continue."
         : !p.order.validQuantity ? "Enter a whole-number quantity from 1 to 1,000,000."
         : !p.hydrated ? "Loading your cart…" : "This combination is unavailable. Edit your choices to continue.";
@@ -119,8 +119,12 @@ export default function MobileBuilder(p: Props) {
     useEffect(() => {
         if (p.lastAdded) root.current?.querySelector<HTMLElement>("[role=status]")?.focus();
     }, [p.lastAdded]);
-    function go(next: number) {
+    function go(target: number) {
         if (busy) return;
+        // A bottle with one glass has no glass stage: the colour is taken as read
+        // and the Glass step is passed over in either direction.
+        const skipGlass = Boolean(body) && p.current.colors.length === 1;
+        const next = skipGlass && target === 1 ? (stage < 1 ? 2 : 0) : target;
         p.onStage(next); setNotice("");
         requestAnimationFrame(() => {
             heading.current?.focus({ preventScroll: true });
@@ -189,7 +193,7 @@ export default function MobileBuilder(p: Props) {
             {!body && <p className={styles.guidance}>Select a bottle to choose its glass.</p>}
         </>}
         {stage > 0 && stage < 4 && <>
-            <p className={styles.selectionStatus} role="status">{stage === 3 ? `${finishLabel} · ` : ""}{selected ? <>{selected} selected <Check size={16} weight="bold" /></> : stage === 3 && p.current.closures.length === 0 ? "No finish available for this selection." : `Select ${stage === 1 ? "your glass" : stage === 2 ? "how your bottle works" : "a finish"}.`}</p>
+            <p className={styles.selectionStatus} role="status">{stage === 3 ? `${finishLabel} · ` : ""}{selected ? <>{selected} selected <Check size={16} weight="bold" /></> : stage === 3 && p.current.closures.length === 0 ? "No finish available for this selection." : `Select ${stage === 1 ? "your glass color" : stage === 2 ? "how your bottle works" : "a finish"}.`}</p>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>{stages[stage]}</legend>
                 {stage === 1 && <div className={styles.glassGrid}>{p.current.colors.map(c => { const example = body!.configurations.find(item => item.color === c)!; return <Choice key={c} name={`${id}-glass`} value={c} selected={color === c} label={c} onSelect={() => choose({ color: c })}>
                     <div className={styles.glassThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} /></div><strong>{c}</strong>

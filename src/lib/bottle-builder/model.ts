@@ -334,6 +334,10 @@ export function reconcileSelection(bodies: BuilderBody[], state: BuilderSelectio
     let derived = deriveBuilder(bodies, next);
     if (!derived.body) return { ...emptySelection(), quantity: state.quantity };
     next.color = derived.color;
+    // One glass only (clear-only bottles): there is nothing to choose, so the
+    // glass is taken as read and the shopper goes straight to the fitment
+    // (Jordan, 2026-09-16: "if there's just single-color glass, is it necessary?").
+    if (!next.color && derived.colors.length === 1) next.color = derived.colors[0];
     derived = deriveBuilder(bodies, next);
     next.fitment = derived.fitment;
     next.closure = deriveBuilder(bodies, next).closure;
