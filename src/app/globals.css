@@ -154,6 +154,12 @@
   --brand-weight-body: 400;
 }
 
+html {
+  /* Clip rather than hide so position:sticky still works. 100vw tracks and
+     rails must not create a second page-level scrollbar. */
+  overflow-x: clip;
+}
+
 body {
   background-color: var(--color-bone);
   color: var(--color-obsidian);

@@ -108,6 +108,7 @@ function FamilyBanner({ family }: { family: string }) {
                 alt={family}
                 fill
                 className="object-cover object-center"
+                sizes="100vw"
                 unoptimized
             />
             <div className="absolute inset-0 bg-gradient-to-r from-obsidian/60 via-obsidian/20 to-transparent" />

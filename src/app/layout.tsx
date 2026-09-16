@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import { brandFace, cormorant, ebGaramond } from "./fonts";
+import type { Metadata, Viewport } from "next";
+import { brandFace } from "./fonts";
 import "./globals.css";
 import { cookies } from "next/headers";
 import AppProviders from "@/components/AppProviders";
@@ -70,6 +70,16 @@ export const metadata: Metadata = {
   },
 };
 
+// viewport-fit: cover is required for env(safe-area-inset-*) on iOS. Without
+// it the tab bar, sticky PDP chrome, and builder sheets sit under the home
+// indicator and the URL-bar overlay (see mobile-pdp-chrome.ts).
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#F5F3EF",
+};
+
 export default async function RootLayout({
   children,
 }: Readonly<{
@@ -82,7 +92,7 @@ export default async function RootLayout({
   const initialMarketCode = (await cookies()).get(REGION_COOKIE)?.value ?? null;
 
   return (
-    <html lang="en" className={`${brandFace.variable} ${cormorant.variable} ${ebGaramond.variable}`}>
+    <html lang="en" className={brandFace.variable}>
       <body className="antialiased selection:bg-muted-gold/20 selection:text-obsidian">
         <script
           type="application/ld+json"
