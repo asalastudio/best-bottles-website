@@ -6,6 +6,7 @@ import PortalAccountForm from "@/components/portal/PortalAccountForm";
 import { listClerkOrganizationsForStaff, listPortalAccountsForStaff } from "@/lib/portal/accounts";
 import { isStaffAccessError } from "@/lib/portal/staff";
 import { upsertPortalAccountAction } from "./actions";
+import TeamHubShell from "@/components/team/TeamHubShell";
 
 export const metadata = { title: { absolute: "Wholesale Accounts — Best Bottles" } };
 
@@ -48,7 +49,8 @@ export default async function PortalAccountsPage() {
     const knownTiers = [...new Set(accounts.map((a) => a.tier).filter(Boolean))];
 
     return (
-        <div className="min-h-screen bg-neutral-50 px-6 py-10">
+        <TeamHubShell>
+            <div className="bg-neutral-50 px-5 py-8 sm:px-6 sm:py-10">
             <div className="max-w-[1000px] mx-auto">
                 <div className="flex items-end justify-between mb-6">
                     <div>
@@ -137,6 +139,7 @@ export default async function PortalAccountsPage() {
                     knownTiers={knownTiers.length > 0 ? knownTiers : FALLBACK_TIERS}
                 />
             </div>
-        </div>
+            </div>
+        </TeamHubShell>
     );
 }

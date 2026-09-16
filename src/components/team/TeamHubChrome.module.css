@@ -1,0 +1,154 @@
+.shell {
+    display: flex;
+    height: 100svh;
+    overflow: hidden;
+    background: var(--color-surface-sunken, #f5f3ef);
+}
+
+.rail {
+    display: none;
+}
+
+.column {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1;
+    overflow: auto;
+}
+
+.mobileBar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 56px;
+    padding: 6px 12px;
+    padding-top: max(6px, env(safe-area-inset-top, 0px));
+    background: var(--color-surface-rail, #fbfaf7);
+    border-bottom: 1px solid var(--color-rule, #e8e2d9);
+}
+
+.menuButton,
+.closeButton {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-text-primary, #1d1d1f);
+}
+
+.titleBlock {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerMark {
+    display: flex;
+    min-width: 0;
+    max-width: 140px;
+    min-height: 44px;
+    flex: 0 1 auto;
+    align-items: center;
+}
+
+.headerMark :global(img) {
+    height: 11px;
+    width: auto;
+    max-width: 140px;
+}
+
+.titleCopy {
+    min-width: 0;
+}
+
+.eyebrow {
+    margin: 0;
+    font-family: var(--font-sans, inherit);
+    font-size: 11px;
+    line-height: 1.2;
+    color: var(--color-text-muted, #8a8175);
+}
+
+.title {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: var(--font-sans, inherit);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-primary, #1d1d1f);
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    background: rgba(29, 29, 31, 0.4);
+}
+
+.drawer {
+    position: fixed;
+    inset: 0;
+    z-index: 61;
+    display: flex;
+    width: 100%;
+    max-width: 100vw;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--color-surface-rail, #fbfaf7);
+}
+
+.drawerHead {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: max(16px, env(safe-area-inset-top, 0px)) 12px 16px 20px;
+    border-bottom: 1px solid var(--color-rule, #e8e2d9);
+}
+
+.drawerBrand p {
+    margin: 6px 0 0;
+    font-size: 11px;
+    color: var(--color-text-muted, #8a8175);
+}
+
+.drawerNav {
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+    .rail {
+        display: flex;
+        width: 244px;
+        min-width: 244px;
+        height: 100%;
+        flex-direction: column;
+        overflow: hidden;
+        background: var(--color-surface-rail, #fbfaf7);
+        border-right: 1px solid var(--color-rule, #e8e2d9);
+    }
+
+    .mobileBar,
+    .backdrop,
+    .drawer {
+        display: none;
+    }
+}

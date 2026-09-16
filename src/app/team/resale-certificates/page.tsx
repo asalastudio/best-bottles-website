@@ -6,6 +6,7 @@ import { listAllCertificatesForStaff } from "@/lib/portal/certificates";
 import { isStaffAccessError } from "@/lib/portal/staff";
 import { permitVerificationLinks } from "@/lib/portal/permitVerification";
 import { approveCertificateAction, rejectCertificateAction } from "@/app/(portal)/portal/actions";
+import TeamHubShell from "@/components/team/TeamHubShell";
 
 export const metadata = { title: { absolute: "Certificate Review Queue — Best Bottles" } };
 
@@ -90,7 +91,8 @@ export default async function CertificateReviewQueue() {
     const attention = certificates.filter((c) => c.awaitingShopifySync || c.lapsed);
 
     return (
-        <div className="min-h-screen bg-neutral-50 px-6 py-10">
+        <TeamHubShell>
+            <div className="bg-neutral-50 px-5 py-8 sm:px-6 sm:py-10">
             <div className="max-w-[1180px] mx-auto">
                 <div className="flex items-end justify-between mb-6 gap-4 flex-wrap">
                     <div>
@@ -310,6 +312,7 @@ export default async function CertificateReviewQueue() {
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
+        </TeamHubShell>
     );
 }

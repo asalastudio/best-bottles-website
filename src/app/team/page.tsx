@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { SwitchAccountButton } from "@/components/auth/SwitchAccountButton";
 import { TeamHubDashboard } from "@/components/team/TeamHubDashboard";
+import TeamHubShell from "@/components/team/TeamHubShell";
 import { getPlatformHealthSnapshot } from "@/lib/executive/platformHealth";
 import { getUserEmailAddresses, hasTeamHubAccess } from "@/lib/teamAccess";
 import { buildTeamHubTools, getMadisonStudioHref, getShopifyAdminHref } from "@/lib/teamHub";
@@ -61,21 +62,15 @@ export default async function TeamPage({ searchParams }: TeamPageProps) {
         if (!previewMode) console.error("[team-hub] queue counts unavailable:", error);
     }
 
-    // The rail shows a count against the tool that clears it, so several
-    // queues pointing at one destination add up there.
-    const queueCounts = queueItems.reduce<Record<string, number>>((counts, item) => {
-        counts[item.href] = (counts[item.href] ?? 0) + item.count;
-        return counts;
-    }, {});
-
     return (
-        <TeamHubDashboard
-            tools={tools}
-            previewMode={previewMode}
-            platformHealth={platformHealth}
-            queueItems={queueItems}
-            queueCounts={queueCounts}
-        />
+        <TeamHubShell previewMode={previewMode}>
+            <TeamHubDashboard
+                tools={tools}
+                previewMode={previewMode}
+                platformHealth={platformHealth}
+                queueItems={queueItems}
+            />
+        </TeamHubShell>
     );
 }
 
