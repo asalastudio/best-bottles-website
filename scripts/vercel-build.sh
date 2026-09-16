@@ -5,10 +5,16 @@
 set -e
 if [ "$VERCEL_ENV" = "preview" ] && [ "$BB_CONVEX_PREVIEW_DEPLOY" = "true" ]; then
   case "${CONVEX_DEPLOY_KEY:-}" in
-    preview:*\|*) ;;
-    *) echo "Preview backend deployment requires a preview-scoped CONVEX_DEPLOY_KEY." >&2; exit 1 ;;
+    preview:*\|*)
+      npx convex deploy --cmd-url-env-var-name NEXT_PUBLIC_CONVEX_URL --cmd 'npx next build --webpack'
+      ;;
+    *)
+      # Never deploy a shared/prod Convex with a preview flag. Still ship the
+      # storefront so an accidental project-wide opt-in cannot fail every PR.
+      echo "Preview backend deployment skipped: CONVEX_DEPLOY_KEY is not preview-scoped. Building the frontend only." >&2
+      npx next build --webpack
+      ;;
   esac
-  npx convex deploy --cmd-url-env-var-name NEXT_PUBLIC_CONVEX_URL --cmd 'npx next build --webpack'
 elif [ "$VERCEL_ENV" = "production" ] && [ "$VERCEL_GIT_COMMIT_REF" = "main" ]; then
   npx convex deploy --cmd 'npx next build --webpack'
 else
