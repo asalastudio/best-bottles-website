@@ -1,4 +1,5 @@
 import { buildCatalogPrintCss } from "./styles";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 import type {
     CatalogPdfData,
     PrintableCatalogGroup,
@@ -251,10 +252,10 @@ function ProductCard({
     return (
         <article className="product-card no-break">
             <div className="product-card-media">
-                <PrintImage src={group.heroImageUrl} alt={group.displayName} />
+                <PrintImage src={group.heroImageUrl} alt={displayApplicatorName(group.displayName)} />
             </div>
             <div className="product-card-body">
-                <h3 className="product-name">{group.displayName}</h3>
+                <h3 className="product-name">{displayApplicatorName(group.displayName)}</h3>
                 <div className="product-meta">
                     <span>
                         <b>Family</b> {compact(group.family)}
@@ -333,7 +334,7 @@ function SpecProduct({ product, data }: { product: PrintableProduct; data: Catal
                     <SpecCell label="Capacity" value={product.capacity} />
                     <SpecCell label="Color" value={product.color} />
                     <SpecCell label="Thread" value={product.neckThreadSize} />
-                    <SpecCell label="Applicator" value={product.applicator} />
+                    <SpecCell label="Applicator" value={product.applicator ? displayApplicatorName(product.applicator) : product.applicator} />
                     <SpecCell label="Height" value={product.heightWithCap} />
                     <SpecCell label="Diameter" value={product.diameter} />
                     <SpecCell label="Case Qty" value={product.caseQuantity} />

@@ -2200,7 +2200,7 @@ export default function CatalogClient({
                             <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Box"]})}>Boxes</button>
                         </div>}
                         {filters.shopCollection === "glass-spray-bottles" && <div className="mb-5 hidden flex-wrap gap-3 text-sm lg:flex">
-                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["antiquespray","antiquespray-tassel"]})}>Vintage Bulb Spray Bottles</button>
+                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["antiquespray","antiquespray-tassel"]})}>Vintage Style Bulb Spray Bottles</button>
                             <Link className="underline" href="/catalog?category=Component&componentType=Sprayer">Loose sprayer components</Link>
                         </div>}
                         {/* Family banner — shown when a single design family is filtered */}

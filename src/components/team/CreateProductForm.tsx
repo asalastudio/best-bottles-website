@@ -19,6 +19,7 @@ import {
     type CreateProductDraft,
 } from "@/lib/team/createProduct";
 import { cn } from "@/lib/utils";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 
 const initialState: CreateProductState = { error: null, slug: null, websiteSku: null };
 
@@ -109,9 +110,9 @@ export default function CreateProductForm({ previewMode = false }: { previewMode
                                 <div className="grid gap-4 sm:grid-cols-2">
                                     <Field label="Applicator" name="applicator">
                                         <select id="applicator" name="applicator" className={controlClass} value={draft.applicator} onChange={(event) => set("applicator", event.target.value as typeof draft.applicator)}>
-                                            {STAFF_APPLICATOR_VALUES.map((applicator) => (
-                                                <option key={applicator} value={applicator}>{applicator}</option>
-                                            ))}
+                                                {STAFF_APPLICATOR_VALUES.map((applicator) => (
+                                                    <option key={applicator} value={applicator}>{displayApplicatorName(applicator)}</option>
+                                                ))}
                                         </select>
                                     </Field>
                                     <Field label="Glass color" name="color">
@@ -295,7 +296,7 @@ export default function CreateProductForm({ previewMode = false }: { previewMode
                             </div>
                             <div className="flex justify-between gap-4">
                                 <dt className="text-slate">Applicator</dt>
-                                <dd className="font-medium text-obsidian">{draft.applicator}</dd>
+                                <dd className="font-medium text-obsidian">{displayApplicatorName(draft.applicator)}</dd>
                             </div>
                             <div className="flex justify-between gap-4">
                                 <dt className="text-slate">1-pc price</dt>

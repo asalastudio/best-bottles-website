@@ -14,8 +14,8 @@ export const APPLICATOR_BUCKETS = [
     { value: "reducer", label: "Reducer", productValues: ["Reducer"] },
     { value: "dropper", label: "Dropper", productValues: ["Dropper"] },
     { value: "lotionpump", label: "Lotion Pump", productValues: ["Lotion Pump"] },
-    { value: "antiquespray", label: "Vintage Bulb Spray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
-    { value: "antiquespray-tassel", label: "Vintage Bulb Spray with Tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
+    { value: "antiquespray", label: "Vintage Style Bulb Spray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
+    { value: "antiquespray-tassel", label: "Vintage Style Bulb Spray with Tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
     // Bottles sold with a plain screw cap and no dispensing applicator. 95 of
     // 362 catalogue groups carry this value (2026-09-02 dev snapshot), so
     // without a bucket the Product Type facet could not reach a quarter of the
@@ -191,6 +191,31 @@ function normalizeApplicatorToken(value: string): string {
 }
 
 /**
+ * Customer-facing applicator copy. Stored Convex identity stays
+ * `Vintage Bulb Sprayer` / `Vintage Bulb Sprayer with Tassel`.
+ */
+export function displayApplicatorName(value: string): string {
+    return value
+        .replace(/\bVintage Bulb\b/g, "Vintage Style Bulb")
+        .replace(/\bvintage bulb\b/g, "vintage style bulb")
+        .replace(/\bVINTAGE BULB\b/g, "VINTAGE STYLE BULB");
+}
+
+/** Historic UI labels still accepted in URLs and Grace refine after the vintage-style rename. */
+const LEGACY_APPLICATOR_LABEL_TOKENS: Record<string, ApplicatorBucket> = {
+    vintagebulbspray: "antiquespray",
+    vintagebulbspraywithtassel: "antiquespray-tassel",
+    vintagebulbspraybottle: "antiquespray",
+    vintagebulbspraybottlewithtassel: "antiquespray-tassel",
+    vintagebulbspraybottles: "antiquespray",
+    vintagebulbsprayers: "antiquespray",
+};
+
+function applicatorLookupToken(token: string): string {
+    return token.replaceAll("vintagestylebulb", "vintagebulb");
+}
+
+/**
  * Accept the customer-facing labels and product-level applicator values that
  * Grace may return, but serialize only the canonical catalog bucket values.
  */
@@ -213,12 +238,20 @@ export function normalizeApplicatorBuckets(values: readonly string[]): Applicato
             continue;
         }
 
+        const lookupToken = applicatorLookupToken(token);
         const bucket = APPLICATOR_BUCKETS.find((candidate) =>
-            normalizeApplicatorToken(candidate.value) === token
-            || normalizeApplicatorToken(candidate.label) === token
-            || candidate.productValues.some((value) => normalizeApplicatorToken(value) === token)
+            [token, lookupToken].some((candidateToken) =>
+                normalizeApplicatorToken(candidate.value) === candidateToken
+                || normalizeApplicatorToken(candidate.label) === candidateToken
+                || candidate.productValues.some((value) => normalizeApplicatorToken(value) === candidateToken)
+            )
         );
-        if (bucket) add(bucket.value);
+        if (bucket) {
+            add(bucket.value);
+            continue;
+        }
+        const aliased = LEGACY_APPLICATOR_LABEL_TOKENS[lookupToken];
+        if (aliased) add(aliased);
     }
 
     return resolved;
