@@ -22,7 +22,7 @@ import Navbar from "@/components/Navbar";
 import Breadcrumbs, { type BreadcrumbStep } from "@/components/Breadcrumbs";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
-import { APPLICATOR_BUCKETS, APPLICATOR_NAV, type ApplicatorNavValue } from "@/lib/catalogFilters";
+import { APPLICATOR_BUCKETS, APPLICATOR_NAV, displayApplicatorName, type ApplicatorNavValue } from "@/lib/catalogFilters";
 import { buildCapOptionPhotoKeys } from "@/lib/products/closure-swatch-keys";
 import { reconcilePdpEditorialDescriptions } from "@/lib/products/pdp-editorial-description";
 import { decoratedCapFinish } from "@/lib/products/decorated-cap-finish";
@@ -3125,7 +3125,7 @@ export default function ProductDetailClient({
                                     <SpecRow label="Case Quantity" value={selectedVariant.caseQuantity ? `${selectedVariant.caseQuantity} units/case` : "Confirm before ordering"} />
                                     <SpecRow label="Capacity" value={selectedVariant.capacity} />
                                     <SpecRow label="Glass Color" value={selectedVariant.color} />
-                                    <SpecRow label="Applicator" value={selectedVariant.applicator} />
+                                    <SpecRow label="Applicator" value={selectedVariant.applicator ? displayApplicatorName(selectedVariant.applicator) : selectedVariant.applicator} />
                                     <SpecRow label="Ball Material" value={selectedVariant.ballMaterial} />
                                     <SpecRow label="Cap Style" value={selectedVariant.capStyle} />
                                     <SpecRow label="Cap Profile" value={selectedVariant.componentProfile || selectedVariant.capHeight} />

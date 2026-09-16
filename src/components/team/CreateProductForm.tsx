@@ -296,7 +296,7 @@ export default function CreateProductForm({ previewMode = false }: { previewMode
                             </div>
                             <div className="flex justify-between gap-4">
                                 <dt className="text-slate">Applicator</dt>
-                                <dd className="font-medium text-obsidian">{draft.applicator}</dd>
+                                <dd className="font-medium text-obsidian">{displayApplicatorName(draft.applicator)}</dd>
                             </div>
                             <div className="flex justify-between gap-4">
                                 <dt className="text-slate">1-pc price</dt>

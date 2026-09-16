@@ -1,5 +1,6 @@
 import { parseBrowseContext, type BrowseContext } from "@/lib/products/focused-shopping";
 import { getCanonicalProductSlug } from "@/lib/products/legacy-product-route-overrides";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 
 export const PDP_CONTEXT_CHANGE_EVENT = "bestbottles:pdp-context-change" as const;
 
@@ -81,7 +82,7 @@ export function formatGraceNowViewingLines(args: {
         lines.push(`  Family: ${args.family ?? ""} | Size: ${args.capacity ?? ""}`.replace(/\s+\|/g, " |").trim());
     }
     if (args.glass) lines.push(`  Glass on screen: ${args.glass}`);
-    if (args.applicator) lines.push(`  Applicator on screen: ${args.applicator}`);
+    if (args.applicator) lines.push(`  Applicator on screen: ${displayApplicatorName(args.applicator)}`);
     if (args.rollerMaterial) lines.push(`  Roller: ${args.rollerMaterial}`);
     if (args.finish) lines.push(`  Cap finish: ${args.finish}`);
     if (args.selectedWebsiteSku) lines.push(`  Selected website SKU: ${args.selectedWebsiteSku}`);
