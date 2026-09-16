@@ -53,7 +53,7 @@ export const CREATE_PRODUCT_SECTIONS = [
         id: "imagery",
         label: "Imagery",
         pdpAnchor: "Hero gallery and paper-doll plates",
-        description: "Hero and cap-off views. Paper-doll families keep using the existing plate kit lane.",
+        description: "Upload a 10:11 portrait photo (2080×2288 preferred, 8 MB max), drop one on desktop, or paste a Shopify/Convex URL. Paper-doll families keep using the existing plate kit lane.",
     },
 ] as const;
 

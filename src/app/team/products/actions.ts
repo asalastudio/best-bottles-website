@@ -2,7 +2,10 @@
 
 import { isStaffAccessError } from "@/lib/portal/staff";
 import { EMPTY_CREATE_PRODUCT_DRAFT, type CreateProductDraft } from "@/lib/team/createProduct";
-import { createStaffProductFromDraft } from "@/lib/team/createProductStaff";
+import { createStaffProductFromDraft, requireStaffViewerOrLocalPreview } from "@/lib/team/createProductStaff";
+import { getPortalConvex, getPortalConvexWriteToken } from "@/lib/portal/convexClient";
+import { api } from "../../../../convex/_generated/api";
+import type { Id } from "../../../../convex/_generated/dataModel";
 
 export type CreateProductState = {
     error: string | null;
@@ -64,4 +67,21 @@ export async function createProductAction(
         const message = error instanceof Error ? error.message : "We couldn't create that product.";
         return { error: message, slug: null, websiteSku: null };
     }
+}
+
+export async function createProductImageUploadUrlAction(): Promise<string> {
+    await requireStaffViewerOrLocalPreview();
+    return await getPortalConvex().mutation(api.staffProducts.generateImageUploadUrl, {
+        writeToken: getPortalConvexWriteToken(),
+    });
+}
+
+export async function resolveProductImageUrlAction(storageId: string): Promise<string> {
+    await requireStaffViewerOrLocalPreview();
+    const url = await getPortalConvex().mutation(api.staffProducts.resolveImageUrl, {
+        writeToken: getPortalConvexWriteToken(),
+        storageId: storageId as Id<"_storage">,
+    });
+    if (!url) throw new Error("That upload finished, but we couldn't get a usable image URL.");
+    return url;
 }

@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
     CREATE_PRODUCT_SECTIONS,
@@ -54,6 +55,17 @@ describe("Team Hub create product", () => {
         ]);
         expect(ready.paperDollEligible).toBe(true);
         expect(ready.imageUrl).toContain("cdn.shopify.com");
+    });
+
+    it("lets staff upload photos instead of pasting URLs", () => {
+        const form = readFileSync(new URL("../src/components/team/CreateProductForm.tsx", import.meta.url), "utf8");
+        const drop = readFileSync(new URL("../src/components/team/ProductImageDropField.tsx", import.meta.url), "utf8");
+        expect(form).toContain("ProductImageDropField");
+        expect(drop).toContain("data-desktop-drop-zone");
+        expect(drop).toContain("Drop an image here");
+        expect(drop).toContain('type="file"');
+        expect(drop).toContain("Take or choose a photo");
+        expect(drop).toContain("PRODUCT_IMAGE_SPEC_SUMMARY");
     });
 
     it("rejects Sanity CDN imagery so the PDP stays on product truth", () => {

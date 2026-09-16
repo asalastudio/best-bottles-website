@@ -179,3 +179,25 @@ export const createStaffProduct = mutation({
         };
     },
 });
+
+/** One-shot Convex storage URL for a Team Hub product photo. */
+export const generateImageUploadUrl = mutation({
+    args: { writeToken: v.string() },
+    returns: v.string(),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        return await ctx.storage.generateUploadUrl();
+    },
+});
+
+export const resolveImageUrl = mutation({
+    args: {
+        writeToken: v.string(),
+        storageId: v.id("_storage"),
+    },
+    returns: v.union(v.string(), v.null()),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        return await ctx.storage.getUrl(args.storageId);
+    },
+});
