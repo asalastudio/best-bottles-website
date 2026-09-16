@@ -28,13 +28,15 @@ export function PortalChromeFrame({
 }) {
     const pathname = usePathname();
     const [navOpen, setNavOpen] = useState(false);
+    const [menuPath, setMenuPath] = useState(pathname);
     const drawerId = useId();
     const resolvedPath = navPathname ?? pathname;
     const section = sectionLabel ?? portalSectionLabel(resolvedPath);
 
-    useEffect(() => {
+    if (menuPath !== pathname) {
+        setMenuPath(pathname);
         setNavOpen(false);
-    }, [pathname]);
+    }
 
     useEffect(() => {
         if (!navOpen) return;
@@ -193,7 +195,8 @@ export default function PortalChrome({
             tierLabel={tierLabel}
             inTransitCount={inTransitCount}
             accountControl={<UserButton appearance={{ elements: { avatarBox: "w-6 h-6" } }} />}
-            children={children}
-        />
+        >
+            {children}
+        </PortalChromeFrame>
     );
 }
