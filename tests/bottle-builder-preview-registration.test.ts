@@ -36,7 +36,12 @@ describe('vintage bottle registration', () => {
             expect(registerVintagePreview(source, source.kit!.parts, { ...reference, ...mismatch })).toBeNull();
         }
         expect(registerVintagePreview(source, source.kit!.parts)).toBeNull();
-        expect(registerVintagePreview({ ...source, fitment: 'Metal Roller' }, source.kit!.parts, reference)).toBeNull();
+        // Every fitment keeps the bottle's one fixed body (Jordan, 2026-09-16): a roller
+        // on the same physical bottle registers onto the reference glass, it is not refused.
+        const roller = registerVintagePreview({ ...source, fitment: 'Metal Roller' }, source.kit!.parts, reference);
+        expect(roller).not.toBeNull();
+        expect(roller!.layers.find(layer => layer.part.slot === 'body')!.part).toBe(reference.kit!.parts.find(part => part.slot === 'body'));
+        expect(registerVintagePreview(reference, reference.kit!.parts, reference)).toBeNull();
         expect(registerVintagePreview({ ...source, kit: { ...source.kit!, completeness: 'capSplit' } }, source.kit!.parts, reference)).toBeNull();
     });
 });

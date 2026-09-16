@@ -13,7 +13,11 @@ export async function POST(request: NextRequest) {
         if (rateLimited) return rateLimited;
 
         const args = await request.json() as CatalogSearchArgs;
-        const result = await searchCatalogServer(args);
+        const limit = Number(args.limit);
+        if (!Number.isFinite(limit) || limit < 1 || limit > 48) {
+            return NextResponse.json({ error: "limit must be between 1 and 48" }, { status: 400 });
+        }
+        const result = await searchCatalogServer({ ...args, limit });
         return NextResponse.json(result);
     } catch (error) {
         reportError(error, { area: "catalog-search" });

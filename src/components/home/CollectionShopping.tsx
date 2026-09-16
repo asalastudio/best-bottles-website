@@ -5,7 +5,7 @@ import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import type { HomepageData } from '@/sanity/lib/queries';
 import { editorialImageUrl } from '@/sanity/lib/image';
-import { FAMILY_ART } from '@/lib/homepageFamilyArt';
+import { FAMILY_ART, familyCardSources } from '@/lib/homepageFamilyArt';
 import { CATALOG_FAMILIES } from '@/lib/catalogFilters';
 import { familyFinderHref } from '@/lib/products/focused-shopping';
 import { SHOP_COLLECTIONS, featuredCollectionCards, shopCollectionHref } from '@/lib/shopCollections';
@@ -36,12 +36,18 @@ export function FamilyCarousel({ cards }: { cards?: HomepageData['designFamilyCa
     const update = () => { const el=rail.current; if(el) {const step=(el.firstElementChild?.getBoundingClientRect().width??280)+(window.innerWidth<=640?14:20);setPosition({start:el.scrollLeft<2,end:el.scrollLeft+el.clientWidth>=el.scrollWidth-2,index:Math.min(entries.length,Math.round(el.scrollLeft/step)+1)});} };
     useEffect(() => { const el=rail.current; if(!el)return;const observer=new ResizeObserver(update);observer.observe(el);return()=>observer.disconnect(); }, [entries.length]); // eslint-disable-line react-hooks/exhaustive-deps
     function move(direction:number){rail.current?.scrollBy({left:direction*((rail.current.firstElementChild?.getBoundingClientRect().width??280)+(window.innerWidth<=640?14:20)),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
-    return <section className={styles.section} aria-labelledby="family-heading"><div className={styles.heading}><h2 id="family-heading">Bottle Families</h2><Link href="/bottle-families">View all</Link></div>
+    return <section className={`${styles.section} ${styles.families}`} aria-labelledby="family-heading"><div className={styles.heading}><h2 id="family-heading"><span className={styles.headingDesktop}>Bottle Families</span><span className={styles.headingMobile}>Popular Families</span></h2><Link href="/bottle-families">View all<span className={styles.viewAllArrow} aria-hidden="true"> →</span></Link></div>
         <div className={styles.railWrap}><div ref={rail} id="family-carousel" className={styles.rail} onScroll={update} aria-label="Bottle families">
-            {entries.map(c => <Link href={familyFinderHref(c.family)} className={styles.family} key={c.family}>
-                {(c.image?.asset?._ref || FAMILY_ART[c.family]) && <img src={cmsImage(c.image,800)??asset(FAMILY_ART[c.family])} alt={`${c.family} bottle family`} width={800} height={1000} loading="lazy"/>}
-                <span className={styles.familyTitle}>{c.title || c.family}</span>
-            </Link>)}
+            {entries.map(c => {
+                const art = familyCardSources(c.family, cmsImage(c.image, 800));
+                return <Link href={familyFinderHref(c.family)} className={styles.family} key={c.family}>
+                    {art && <picture>
+                        {art.desktop !== art.mobile && <source media="(min-width:641px)" srcSet={art.desktop}/>}
+                        <img src={art.mobile} alt={`${c.family} bottle family`} width={800} height={1000} loading="lazy"/>
+                    </picture>}
+                    <span className={styles.familyTitle}>{c.title || c.family}</span>
+                </Link>;
+            })}
         </div>
         <div className={styles.edgeControls}><button aria-label="Previous bottle family" aria-controls="family-carousel" disabled={position.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label="Next bottle family" aria-controls="family-carousel" disabled={position.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div></div><div className={styles.railControls} aria-live="polite">{position.index} / {entries.length}</div>
     </section>;
@@ -71,8 +77,16 @@ export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSl
         return()=>preference.removeEventListener('change',sync);
     }, [slide]);
     return <section className={styles.hero} data-scene={!slide ? (fitmentHero ? "empire-niche" : "empire-water") : undefined} aria-label="Featured bottles">
-        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (fitmentHero ? <EmpireFitmentHero hotspots={heroHotspots}/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
-        <div className={styles.heroCopy}><h1>{slide?.headline || 'Beautifully contained.'}</h1><p>{slide?.subheadline || 'Distinctive glass with endless possibilities.'}</p><div className={styles.buttons}><Link className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || 'Shop bottles'}</Link><Link className={styles.secondary} href="/matrix">Build your bottle</Link></div></div>
+        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (fitmentHero ? <EmpireFitmentHero hotspots={heroHotspots}/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage style bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
+        <div className={styles.heroCopy}>
+            <h1>{slide?.headline || <><span>Beautifully</span><span>Contained.</span></>}</h1>
+            <p className={styles.heroLead}>{slide?.subheadline || 'Distinctive glass with endless possibilities.'}</p>
+            {!slide?.subheadline && <p className={styles.heroLeadMobile}>Glass packaging for fragrance &amp; beauty brands.</p>}
+            <div className={styles.buttons}>
+                <Link className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || 'Shop bottles'}</Link>
+                <Link className={styles.secondary} href="/matrix"><span className={styles.secondaryDesktop}>Build your bottle</span><span className={styles.secondaryMobile}>Build Your Bottle</span></Link>
+            </div>
+        </div>
         {(slides?.length??0)>1 && <div className={styles.heroControls}>{slides!.map((_,i)=><button key={i} aria-label={`Show hero ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>{i+1}</button>)}</div>}
     </section>;
 }

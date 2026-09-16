@@ -2,7 +2,10 @@ import "server-only";
 
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { api } from "../../../convex/_generated/api";
+import type { Id } from "../../../convex/_generated/dataModel";
 import { getPortalConvex, getPortalConvexWriteToken } from "./convexClient";
+import { normalizeAddress, validateAddress, type PortalAddress } from "./address";
+import { pushAddressToShopifyCustomer } from "./addressSync";
 import { CLERK_ENABLED } from "@/lib/clerk";
 import { getUserEmailAddresses } from "@/lib/teamAccess";
 import {
@@ -42,6 +45,83 @@ export async function requirePortalViewer() {
     };
 }
 
+/**
+ * Read the account's addresses, normalised, for the form and the submit gate.
+ * Returns nulls rather than throwing when there is no account yet — a new org
+ * has no address, which is the state the portal is meant to prompt about.
+ */
+export async function getPortalAddresses(): Promise<{
+    shippingAddress: PortalAddress | null;
+    billingAddress: PortalAddress | null;
+    shopifyCustomerId: string | null;
+}> {
+    if (!CLERK_ENABLED) return { shippingAddress: null, billingAddress: null, shopifyCustomerId: null };
+
+    const viewer = await getPortalViewer();
+    if (!viewer.clerkOrgId) return { shippingAddress: null, billingAddress: null, shopifyCustomerId: null };
+
+    const account = await getPortalConvex().query(api.portal.getAccountByOrg, {
+        clerkOrgId: viewer.clerkOrgId,
+    });
+
+    return {
+        shippingAddress: account?.shippingAddress ? normalizeAddress(account.shippingAddress) : null,
+        billingAddress: account?.billingAddress ? normalizeAddress(account.billingAddress) : null,
+        shopifyCustomerId: account?.shopifyCustomerId ?? null,
+    };
+}
+
+/**
+ * Save the account's addresses and mirror them onto the Shopify customer.
+ *
+ * The Convex copy is authoritative: it is what the submit gate checks and what
+ * gets attached to the draft order. Shopify is a mirror for the staff who work
+ * the order, so a mirror failure is surfaced to the caller as a warning rather
+ * than rolling back a save the customer just made.
+ */
+export async function savePortalAddressesForViewer(input: {
+    shippingAddress: Partial<PortalAddress>;
+    billingAddress?: Partial<PortalAddress> | null;
+}): Promise<{ ok: boolean; errors: ReturnType<typeof validateAddress>; shopifyWarning: string | null }> {
+    const viewer = await requirePortalViewer();
+
+    const shippingAddress = normalizeAddress(input.shippingAddress);
+    const errors = validateAddress(shippingAddress);
+    if (Object.keys(errors).length > 0) return { ok: false, errors, shopifyWarning: null };
+
+    const billingAddress = input.billingAddress ? normalizeAddress(input.billingAddress) : undefined;
+    if (billingAddress) {
+        const billingErrors = validateAddress(billingAddress);
+        if (Object.keys(billingErrors).length > 0) return { ok: false, errors: billingErrors, shopifyWarning: null };
+    }
+
+    await getPortalConvex().mutation(api.portal.saveAccountAddress, {
+        writeToken: getPortalConvexWriteToken(),
+        clerkOrgId: viewer.clerkOrgId,
+        clerkUserId: viewer.clerkUserId,
+        shippingAddress,
+        billingAddress,
+    });
+
+    const account = await getPortalConvex().query(api.portal.getAccountByOrg, {
+        clerkOrgId: viewer.clerkOrgId,
+    });
+
+    let shopifyWarning: string | null = null;
+    if (account?.shopifyCustomerId) {
+        const pushed = await pushAddressToShopifyCustomer({
+            shopifyCustomerId: account.shopifyCustomerId,
+            address: shippingAddress,
+        });
+        if (!pushed.ok) {
+            console.error("[portal] address mirror to Shopify failed:", pushed.error);
+            shopifyWarning = "Saved here, but we could not update your Shopify record. Your account manager has the details.";
+        }
+    }
+
+    return { ok: true, errors: {}, shopifyWarning };
+}
+
 export async function getPortalShellData() {
     const viewer = await getPortalViewer();
     if (!viewer.clerkOrgId) {
@@ -73,7 +153,7 @@ export async function getPortalDashboardData() {
                 activeOrderCount: 0,
                 inTransitCount: 0,
                 unitsInFlight: 0,
-                availableCredit: 0,
+                openDraftCount: 0,
             },
             activeOrders: [],
             recentOrders: [],
@@ -99,6 +179,18 @@ export async function getPortalOrdersData() {
         clerkOrgId: viewer.clerkOrgId,
     });
     return { viewer, orders };
+}
+
+export async function getPortalOrder(orderId: string) {
+    if (!CLERK_ENABLED) return null;
+
+    const viewer = await getPortalViewer();
+    if (!viewer.clerkOrgId) return null;
+
+    return await getPortalConvex().query(api.portal.getOrderForOrg, {
+        clerkOrgId: viewer.clerkOrgId,
+        orderId,
+    });
 }
 
 export async function getPortalAccountData() {
@@ -146,6 +238,26 @@ export async function getPortalGraceWorkspace(projectId?: string) {
     return { viewer, ...workspace };
 }
 
+// ─── Grace sessions (recorded for signed-in customers) ──────────────────────
+
+export async function getPortalGraceSessions() {
+    const viewer = await requirePortalViewer();
+    const sessions = await getPortalConvex().query(api.graceSessions.listForViewer, {
+        clerkOrgId: viewer.clerkOrgId,
+        clerkUserId: viewer.clerkUserId,
+    });
+    return { viewer, sessions };
+}
+
+export async function getPortalGraceSession(sessionId: string) {
+    const viewer = await requirePortalViewer();
+    return await getPortalConvex().query(api.graceSessions.getForViewer, {
+        clerkOrgId: viewer.clerkOrgId,
+        clerkUserId: viewer.clerkUserId,
+        sessionId: sessionId as Id<"graceSessions">,
+    });
+}
+
 export async function createPortalDraftForViewer(name?: string) {
     const viewer = await requirePortalViewer();
     return await getPortalConvex().mutation(api.portal.createDraft, {
@@ -161,6 +273,21 @@ export async function createPortalDraftFromOrderForViewer(orderId: string) {
         writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         orderId,
+    });
+}
+
+/**
+ * Put a draft away. Unsubmitted drafts are deleted; submitted ones are
+ * archived, because they are the portal's record of what went to Shopify.
+ * Returns which of the two happened so the page can say so.
+ */
+export async function discardDraftForViewer(draftId: string) {
+    const viewer = await requirePortalViewer();
+    return await getPortalConvex().mutation(api.portal.discardDraft, {
+        writeToken: getPortalConvexWriteToken(),
+        clerkOrgId: viewer.clerkOrgId,
+        clerkUserId: viewer.clerkUserId,
+        draftId: draftId as Id<"portalDrafts">,
     });
 }
 
@@ -198,44 +325,14 @@ export async function saveProductToGraceProjectForViewer(args: {
     return { ...result, projectId };
 }
 
-export async function askGraceForViewerProject(projectId: string, message: string) {
+export async function renameGraceProjectForViewer(projectId: string, name: string) {
     const viewer = await requirePortalViewer();
-
-    const workspace = await getPortalConvex().query(api.portal.getGraceWorkspaceByOrg, {
-        clerkOrgId: viewer.clerkOrgId,
-        projectId: projectId as never,
-    });
-
-    if (!workspace.activeProject) {
-        throw new Error("Grace project not found.");
-    }
-
-    const history = [
-        ...workspace.messages.map((entry) => ({
-            role: entry.role,
-            content: entry.content,
-        })),
-        {
-            role: "user" as const,
-            content: message,
-        },
-    ];
-
-    const assistantMessage = await getPortalConvex().action(api.grace.askGrace, {
-        messages: history,
-        voiceMode: false,
-    });
-
-    await getPortalConvex().mutation(api.portal.saveGraceChatTurn, {
+    return await getPortalConvex().mutation(api.portal.renameGraceProject, {
         writeToken: getPortalConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
-        clerkUserId: viewer.clerkUserId,
-        projectId: projectId as never,
-        userMessage: message,
-        assistantMessage,
+        projectId: projectId as Id<"graceProjects">,
+        name,
     });
-
-    return { assistantMessage };
 }
 
 // ─── Identity bridge (Clerk org ↔ Shopify customer) ─────────────────────────

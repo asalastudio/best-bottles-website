@@ -102,7 +102,7 @@ export default function MobileFamilyCatalog(p: Props) {
       aria-labelledby="mobile-family-title"
     >
       <header className={styles.heading}>
-        <h1 id="mobile-family-title">
+        <h1 id="mobile-family-title" className="page-heading">
           {p.family}
           {/bottles?$|jars?$/i.test(p.family) ? "" : " bottles"}
         </h1>

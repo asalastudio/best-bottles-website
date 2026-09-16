@@ -3,17 +3,15 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const track = vi.hoisted(() => vi.fn());
 
-vi.mock("mixpanel-browser", () => ({
+
+vi.mock("posthog-js", () => ({
   default: {
     init: vi.fn(),
     identify: vi.fn(),
     reset: vi.fn(),
-    track,
-    people: { set: vi.fn() },
-    register: vi.fn(),
-    set_group: vi.fn(),
-    get_group: vi.fn(() => ({ set: vi.fn() })),
-    time_event: vi.fn(),
+    capture: track,
+    setPersonProperties: vi.fn(),
+    group: vi.fn(),
   },
 }));
 

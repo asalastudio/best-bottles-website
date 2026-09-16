@@ -46,7 +46,6 @@ export default async function PortalAccountsPage() {
     // Offer what this business actually uses rather than a taxonomy invented
     // here, falling back only when there is nothing to learn from yet.
     const knownTiers = [...new Set(accounts.map((a) => a.tier).filter(Boolean))];
-    const knownTerms = [...new Set(accounts.map((a) => a.netTerms).filter(Boolean))];
 
     return (
         <div className="min-h-screen bg-neutral-50 px-6 py-10">
@@ -88,7 +87,7 @@ export default async function PortalAccountsPage() {
                         accounts.map((account, i) => (
                             <div
                                 key={account._id}
-                                className={`grid grid-cols-[1fr_110px_110px_1fr_90px] gap-4 items-center px-5 py-3 ${
+                                className={`grid grid-cols-[1fr_100px_1fr_130px_90px] gap-4 items-center px-5 py-3 ${
                                     i < accounts.length - 1 ? "border-b border-neutral-100" : ""
                                 }`}
                             >
@@ -101,11 +100,25 @@ export default async function PortalAccountsPage() {
                                     </p>
                                 </div>
                                 <p className="font-sans text-[13px] text-neutral-500">{account.tier}</p>
-                                <p className="font-sans text-[13px] text-neutral-500">{account.netTerms}</p>
                                 <p className="font-sans text-[12px] text-neutral-400 truncate">
                                     {account.billingEmail ?? (
                                         // Without this, an approved certificate has nowhere to go.
                                         <span className="text-amber-700">No billing email</span>
+                                    )}
+                                </p>
+                                {/* The Team Hub counts accounts with no shipping
+                                    address, because those customers cannot submit
+                                    an order at all. That count has to land
+                                    somewhere that says which ones. */}
+                                <p className="font-sans text-[12px] truncate">
+                                    {account.shippingAddress ? (
+                                        <span className="text-neutral-400">
+                                            {[account.shippingAddress.city, account.shippingAddress.provinceCode]
+                                                .filter(Boolean)
+                                                .join(", ") || "Address on file"}
+                                        </span>
+                                    ) : (
+                                        <span className="text-amber-700">No shipping address</span>
                                     )}
                                 </p>
                                 <div className="flex justify-end">
@@ -122,7 +135,6 @@ export default async function PortalAccountsPage() {
                     organizations={organizations}
                     action={upsertPortalAccountAction}
                     knownTiers={knownTiers.length > 0 ? knownTiers : FALLBACK_TIERS}
-                    knownTerms={knownTerms.length > 0 ? knownTerms : FALLBACK_TERMS}
                 />
             </div>
         </div>

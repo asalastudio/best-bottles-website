@@ -1,8 +1,9 @@
 // @vitest-environment jsdom
 import React, { act, useState } from "react";
+import { readFileSync } from "node:fs";
 import { createRoot, type Root } from "react-dom/client";
 import { beforeEach, afterEach, describe, it, expect, vi } from "vitest";
-import MobileBuilder from "@/components/bottle-builder/MobileBuilder";
+import MobileBuilder, { shortFinishLabel } from "@/components/bottle-builder/MobileBuilder";
 import { deriveBuilder, emptySelection, reconcileSelection, builderOrder, type BuilderBody, type BuilderConfiguration } from "@/lib/bottle-builder/model";
 vi.mock("@/components/bottle-builder/BuilderImage", () => ({ default: ({ label }: { label: string }) => <span role="img" aria-label={label} /> }));
 vi.mock("@/components/bottle-builder/BuilderFinishImage", () => ({ default: () => <span>Finish photo</span> }));
@@ -81,7 +82,10 @@ describe('mobile presentation over shared configuration',()=>{
   toFinish();choose('Gold');button('Review bottle');click(container.querySelector('button[aria-label="Edit glass"]'));choose('Frosted');button('Continue to fitment');expect((container.querySelector('input[aria-label="Metal Roller"]') as HTMLInputElement).checked).toBe(true);button('Continue to finish');expect((container.querySelector('input[aria-label="Gold"]') as HTMLInputElement).checked).toBe(true);
  });
  it('explains invalid dependencies while preserving quantity and requiring reselection',()=>{
-  toFinish();choose('Gold');button('Review bottle');button('Use case quantity');click(container.querySelector('button[aria-label="Edit bottle"]'));choose('9 ml, 17-415 neck');expect(container.textContent).toContain('Choose a compatible fitment');button('Continue to glass');expect((container.querySelector('input[aria-label="Clear"]') as HTMLInputElement).checked).toBe(true);button('Continue to fitment');choose('Pump');button('Continue to finish');expect((container.querySelector('input[aria-label="White"]') as HTMLInputElement).checked).toBe(true);button('Review bottle');expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('24');
+  toFinish();choose('Gold');button('Review bottle');button('Use case quantity');click(container.querySelector('button[aria-label="Edit bottle"]'));choose('9 ml, 17-415 neck');expect(container.textContent).toContain('Choose a compatible fitment');button('Continue to fitment');expect(stage()).toBe('2');expect(container.querySelector('input[aria-label="Clear"]')).toBeNull();choose('Pump');button('Continue to finish');expect((container.querySelector('input[aria-label="White"]') as HTMLInputElement).checked).toBe(true);button('Review bottle');expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('24');
+ });
+ it('passes over the glass step for a bottle made in one glass, in both directions',()=>{
+  choose('9 ml, 17-415 neck');expect([...container.querySelectorAll('button')].some(b=>b.textContent?.trim()==='Continue to glass')).toBe(false);button('Continue to fitment');expect(stage()).toBe('2');button('Back');expect(stage()).toBe('0');
  });
  it('allows a valid build below the cart minimum through the existing add callback',()=>{
   toFinish();choose('Silver');button('Review bottle');expect(container.textContent).toContain('Add to cart · $9.84');button('Add to cart · $9.84');expect(add).toHaveBeenCalledOnce();
@@ -93,4 +97,52 @@ describe('mobile presentation over shared configuration',()=>{
  it('keeps the selected drawings at fitment and resets only the draft',()=>{
   toFinish();button('Back');expect(container.textContent).toContain('Metal Roller drawing');button('Start over');expect(stage()).toBe('0');expect(add).not.toHaveBeenCalled();expect(container.querySelector('input:checked')).toBeNull();
  });
+ it('keeps the first option row in the compact mobile chrome and does not repeat selected copy',()=>{
+  const css=readFileSync("src/components/bottle-builder/MobileBuilder.module.css","utf8");
+  expect(css).toContain("height: 168px");
+  expect(css).toContain("font-size: clamp(1.625rem, 7.2vw, 1.875rem)");
+  expect(css).toContain("min-height: 44px");
+  expect(css).toContain(".zoom:modal");
+  expect(css).toContain(".sheet:modal");
+  expect(css).toContain(".sheet:not([open]), .zoom:not([open])");
+  expect(css).toContain("width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh");
+  expect(css).not.toContain("max-height: 78dvh");
+  expect(css).toContain("position: absolute; inset: 0");
+  expect(css).toContain("clamp(44px, 12vw, 56px)");
+  expect(css).toContain("place-items: center");
+  expect(css).toContain("justify-items: end");
+  expect(css).toContain("slateSweep");
+  expect(css).toContain("[data-slate]");
+  expect(css).not.toContain("top: 12px; right: 12px");
+  choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');
+  expect(container.textContent).not.toContain('Clear selected');
+  expect(container.querySelector('.glassGrid, [class*="glassGrid"]') || container.querySelector('input[aria-label="Frosted"]')).toBeTruthy();
+ });
+ it('opens filters as a full-viewport overlay with a circular close control',()=>{
+  const dialog=container.querySelector<HTMLDialogElement>('dialog[aria-labelledby]')!;
+  dialog.showModal=()=>{dialog.open=true;};
+  click(container.querySelector('button[aria-haspopup="dialog"]'));
+  expect(dialog.querySelector('button[aria-label="Close filters"]')).toBeTruthy();
+  expect(dialog.textContent).toContain('Capacity');
+  expect(dialog.textContent).toMatch(/Show \d+ bottles?/);
+ });
+ it('shortens finish labels and treats glass as two visual cards',()=>{
+  expect(shortFinishLabel("Black with Dots Cap")).toBe("Black + Dots");
+  expect(shortFinishLabel("Matte Copper Cap")).toBe("Matte Copper");
+  toFinish();
+  expect(container.textContent).toContain("Gold");
+  expect(container.textContent).not.toContain("Gold Cap");
+ });
+ it('shows a dedicated added state instead of restarting the chooser',async()=>{
+  await act(async()=>root.render(<AddedHarness/>));
+  expect(container.textContent).toContain("Added to cart");
+  expect(container.textContent).toContain("9 ml Cylinder");
+  expect(container.textContent).toContain("Checkout");
+  expect(container.textContent).toContain("Build another bottle");
+  expect(container.querySelector('input[aria-label="9 ml, 13-415 neck"]')).toBeNull();
+  expect(container.textContent).not.toContain("Your bottle has been added.");
+ });
 });
+function AddedHarness(){
+ return <MobileBuilder families={[{family:'Cylinder',groups:2}]} family="Cylinder" bodies={bodies} selection={emptySelection()} current={deriveBuilder(bodies,emptySelection())} order={builderOrder(null,12,[])} stage={0} onStage={()=>{}} onUpdate={()=>{}} onReset={()=>{}} onFamily={()=>{}} onAdd={add} size="" neck="" application="" onFilter={()=>{}} pending={false} adding={false} hydrated error="" lastAdded={{name:"9 ml Cylinder",quantity:12,total:9.84,lines:["9 ml Cylinder","Clear","Metal Roller","Gold"]}} cartProgress={{subtotal:1862.6,remaining:0,met:true}} hasIncludedCover={false} showCover={false} onCover={()=>{}} chooserScale={()=>1} />;
+}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PortalTag } from "@/components/portal/ui";
 import { listAllCertificatesForStaff } from "@/lib/portal/certificates";
 import { isStaffAccessError } from "@/lib/portal/staff";
+import { permitVerificationLinks } from "@/lib/portal/permitVerification";
 import { approveCertificateAction, rejectCertificateAction } from "@/app/(portal)/portal/actions";
 
 export const metadata = { title: { absolute: "Certificate Review Queue — Best Bottles" } };
@@ -166,6 +167,34 @@ export default async function CertificateReviewQueue() {
                                         <p className="font-sans text-[13px] text-neutral-500 mt-1">
                                             {cert.legalBusinessName} · {cert.issuingState} · permit{" "}
                                             <span className="tabular-nums">{cert.permitNumber}</span>
+                                        </p>
+                                        {/* Verification is a per-state errand — there is no
+                                            nationwide registry — so the reviewer gets the
+                                            issuing state's own lookup rather than a search box
+                                            that would only pretend to check. */}
+                                        <p className="font-sans text-[12px] text-neutral-500 mt-1.5">
+                                            {permitVerificationLinks(cert.issuingState).length > 0 ? (
+                                                <>
+                                                    Verify at{" "}
+                                                    {permitVerificationLinks(cert.issuingState).map((link, idx) => (
+                                                        <span key={link.url}>
+                                                            {idx > 0 && " · "}
+                                                            <a
+                                                                href={link.url}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                className="text-muted-gold underline underline-offset-2 hover:text-gold-dim"
+                                                            >
+                                                                {link.label} ↗
+                                                            </a>
+                                                        </span>
+                                                    ))}
+                                                </>
+                                            ) : (
+                                                <span className="text-neutral-400">
+                                                    {cert.issuingState} publishes no public lookup we can link — verify with the state directly.
+                                                </span>
+                                            )}
                                         </p>
                                         <p className="font-sans text-[12px] text-neutral-400 mt-1">
                                             Submitted {formatAge(cert.submittedAt)}

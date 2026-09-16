@@ -5,11 +5,16 @@ import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vite
 
 const track = vi.hoisted(() => vi.fn());
 const addItems = vi.hoisted(() => vi.fn());
-vi.mock("mixpanel-browser", () => ({
-    default: {
-        init: vi.fn(), identify: vi.fn(), reset: vi.fn(), track, people: { set: vi.fn() },
-        register: vi.fn(), set_group: vi.fn(), get_group: vi.fn(() => ({ set: vi.fn() })), time_event: vi.fn(),
-    },
+
+vi.mock("posthog-js", () => ({
+  default: {
+    init: vi.fn(),
+    identify: vi.fn(),
+    reset: vi.fn(),
+    capture: track,
+    setPersonProperties: vi.fn(),
+    group: vi.fn(),
+  },
 }));
 vi.mock("@/components/CartProvider", () => ({ useCart: () => ({ addItems }) }));
 vi.mock("next/image", () => ({ default: (props: ImgHTMLAttributes<HTMLImageElement> & { fill?: boolean }) => {
@@ -113,6 +118,22 @@ describe("tier pricing dialog on the catalog card", () => {
         expect(events()).toEqual(["tier_pricing_opened", "tier_pricing_closed"]);
     });
 
+    it("opens the same ladder from the compact mobile trigger", () => {
+        card();
+        const compact = $("catalog-card-tier-toggle-compact");
+        expect(compact.tagName).toBe("BUTTON");
+        expect(compact.getAttribute("aria-haspopup")).toBe("dialog");
+        expect(compact.getAttribute("aria-controls")).toBe(dialog().id);
+        expect(compact.textContent).toBe("View tier pricing");
+        click(compact);
+        expect(dialog().hasAttribute("open")).toBe(true);
+        expect(compact.getAttribute("aria-expanded")).toBe("true");
+        expect($("catalog-card-tier-toggle").getAttribute("aria-expanded")).toBe("true");
+        click($("catalog-card-tier-close"));
+        expect(dialog().hasAttribute("open")).toBe(false);
+        expect(document.activeElement).toBe(compact);
+    });
+
     it("prepopulates the quantity from a tier and mirrors it between the dialog and the card", () => {
         card();
         click($("catalog-card-tier-toggle"));
@@ -200,7 +221,7 @@ describe("tier pricing dialog on the catalog card", () => {
         card();
         type($("catalog-card-qty") as HTMLInputElement, "12");
         track.mockImplementation((event: string) => {
-            if (event === "quick_add_clicked" || event === "Cart Item Added") throw new Error("mixpanel down");
+            if (event === "quick_add_clicked" || event === "Cart Item Added") throw new Error("analytics down");
         });
         try {
             click($("catalog-card-add"));
@@ -217,6 +238,7 @@ describe("tier pricing dialog on the catalog card", () => {
         card({ priceTiers: null, webPrice10pc: null, webPrice12pc: null, webPrice1pc: 0.95 });
         expect($("catalog-card-price").textContent).toBe("From $0.95/ea");
         expect(el.querySelector('[data-testid="catalog-card-tier-toggle"]')).toBeNull();
+        expect(el.querySelector('[data-testid="catalog-card-tier-toggle-compact"]')).toBeNull();
         expect(el.querySelector("dialog")).toBeNull();
         type($("catalog-card-qty") as HTMLInputElement, "10");
         expect($("catalog-card-active-tier").textContent).toBe("$0.95/eaSubtotal $9.50");

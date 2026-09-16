@@ -73,7 +73,7 @@ describe("customer-facing product names", () => {
                     capColor: "Clear",
                 },
             }).displayName,
-        ).toBe("46 ml Clear Diva Vintage Bulb Spray Bottle - Lavender");
+        ).toBe("46 ml Clear Diva Vintage Style Bulb Spray Bottle - Lavender");
 
         expect(
             getCustomerFacingProductName({
@@ -86,7 +86,7 @@ describe("customer-facing product names", () => {
                     capColor: "White",
                 },
             }).displayName,
-        ).toBe("46 ml Clear Diva Vintage Bulb Spray Bottle with Tassel - White");
+        ).toBe("46 ml Clear Diva Vintage Style Bulb Spray Bottle with Tassel - White");
     });
 
     it("adds component-specific finish language for reducers, droppers, and roll-ons", () => {
@@ -202,5 +202,13 @@ describe("customer-facing product names", () => {
         expect(JSON.stringify(variant)).toBe(before);
         expect(result.displayName).not.toContain(variant.graceSku);
         expect(result.displayName).not.toContain(variant.websiteSku);
+    });
+
+    it("rewrites stored Vintage Bulb display names in the fallback path", () => {
+        expect(
+            getCustomerFacingProductName({
+                fallbackName: "46 ml Clear Diva Vintage Bulb Spray Bottle - Lavender",
+            }).displayName,
+        ).toBe("46 ml Clear Diva Vintage Style Bulb Spray Bottle - Lavender");
     });
 });

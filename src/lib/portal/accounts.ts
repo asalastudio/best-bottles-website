@@ -55,7 +55,6 @@ export interface UpsertAccountInput {
     companyName: string;
     tier: string;
     accountManager: string;
-    netTerms: string;
     memberSince: string;
     billingEmail?: string;
 }
@@ -70,7 +69,6 @@ export async function upsertPortalAccountAsStaff(input: UpsertAccountInput) {
         companyName: input.companyName,
         tier: input.tier,
         accountManager: input.accountManager,
-        netTerms: input.netTerms,
         memberSince: input.memberSince,
         billingEmail: input.billingEmail,
         // taxExempt is deliberately not settable here — it belongs to the

@@ -39,3 +39,20 @@
 @media (prefers-reduced-motion: reduce) {
     .line { animation: none; left: 0; right: 0; text-align: center; }
 }
+
+@media (max-width: 640px) {
+    .bar { height: 26px; }
+    .line {
+        animation: none;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        padding: 0 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

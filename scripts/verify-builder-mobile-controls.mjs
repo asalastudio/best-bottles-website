@@ -23,7 +23,7 @@ if(target==='edge')point={x:box.x+box.width-3,y:box.y+box.height-3};
 assert(await btn.evaluate((el,pt)=>el.contains(document.elementFromPoint(pt.x,pt.y)),point),'button covered');
 await p.touchscreen.tap(point.x,point.y);await p.waitForFunction(expected=>document.querySelector('[data-mobile-builder]')?.dataset.stage===String(expected),stage,{timeout:4000});}
 for(const [width,height] of [[390,844],[320,740],[844,390]])for(const glass of ['Clear','Cobalt Blue']){
- await p.setViewportSize({width,height});if(await r.getByRole('button',{name:'Start over',exact:true}).count())await r.getByRole('button',{name:'Start over',exact:true}).tap();
+ await p.setViewportSize({width,height});if(await r.getByRole('button',{name:'More actions',exact:true}).count())await r.getByRole('button',{name:'More actions',exact:true}).tap();if(await r.getByRole('button',{name:'Start over',exact:true}).count())await r.getByRole('button',{name:'Start over',exact:true}).tap();
  await r.getByRole('radio',{name:'5 ml, 13-415 neck',exact:true}).check();await tapAction('Continue to glass',1,'arrow');
  await r.getByRole('radio',{name:glass,exact:true}).check();await p.evaluate(()=>window.scrollTo(0,400));await tapAction('Continue to fitment',2,'edge');
  const preview=r.locator('section[aria-label="Live bottle preview"]');assert.deepEqual(await preview.locator('[data-builder-layer]').evaluateAll(es=>es.map(e=>e.dataset.builderLayer)),['body']);

@@ -2,9 +2,11 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
 import type { GuidedFinderFamily } from "@/lib/products/guided-finder";
+vi.mock("@/components/CartProvider", () => ({ useCart: () => ({ addItems: () => {}, itemCount: 0, isCartHydrated: true }) }));
+vi.mock("convex/react", () => ({ useQuery: () => undefined }));
 
 const cylinderFamilies: GuidedFinderFamily[] = [{
     family: "Cylinder",
@@ -28,6 +30,10 @@ const cylinderFamilies: GuidedFinderFamily[] = [{
         shopifySellable: true,
         checkoutReady: true,
         href: "/products/cylinder-9ml-rollon",
+        purchase: null,
+        variantPreviews: [],
+        capKind: null,
+        slug: "fixture-slug",
     }],
 }];
 
@@ -58,7 +64,8 @@ describe("continuous catalog product grid", () => {
         );
         expect(source).toContain("gap-px");
         expect(source).toContain("border-champagne");
-        expect(source).toContain("sm:grid-cols-2");
+        expect(source).toContain("grid-cols-2");
+        expect(source).toContain("lg:grid-cols-3");
         expect(source).toContain("xl:grid-cols-4");
     });
 
@@ -84,8 +91,9 @@ describe("continuous catalog product grid", () => {
         expect(cylinder).toContain("focus-within:outline");
     });
 
-    it("keeps product titles readable instead of truncating them", () => {
+    it("clamps mobile catalog titles without truncating the desktop card", () => {
         const master = readFileSync(join(process.cwd(), "src/app/catalog/CatalogClient.tsx"), "utf8");
+        expect(master).toContain("max-lg:line-clamp-2");
         expect(master).not.toContain("leading-snug line-clamp-2 mb-3");
     });
 });

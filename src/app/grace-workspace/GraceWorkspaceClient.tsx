@@ -7,8 +7,15 @@ import WorkspaceShell from "@/components/grace-workspace/WorkspaceShell";
 import GreetingState from "@/components/grace-workspace/GreetingState";
 import ChatFeed from "@/components/grace-workspace/ChatFeed";
 import DockedComposer from "@/components/grace-workspace/DockedComposer";
+import type { RailFamily, RailSession } from "@/lib/grace/workspaceRailTypes";
 
-export default function GraceWorkspaceClient() {
+export default function GraceWorkspaceClient({
+    families = [],
+    sessions = [],
+}: {
+    families?: RailFamily[];
+    sessions?: RailSession[];
+}) {
     const {
         messages,
         streamingText,
@@ -53,7 +60,7 @@ export default function GraceWorkspaceClient() {
     };
 
     return (
-        <WorkspaceShell onNewConversation={handleNewConversation}>
+        <WorkspaceShell onNewConversation={handleNewConversation} families={families} sessions={sessions}>
             <AnimatePresence mode="wait" initial={false}>
                 {!showChat ? (
                     <motion.div

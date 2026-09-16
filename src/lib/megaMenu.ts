@@ -129,7 +129,7 @@ export const MEGA_MENU_PANELS: Record<MegaMenuId, MegaMenuPanelContent> = {
                     { label: "Plastic spray bottles", href: catalogHref({ families: ["Plastic Bottle"] }) },
                     { label: "Apothecary", href: catalogHref({ families: ["Apothecary"] }) },
                     { label: "Decorative & shaped glass", href: catalogHref({ families: ["Decorative"] }) },
-                    { label: "Vintage bulb sprayers", href: catalogHref({ applicators: ["antiquespray", "antiquespray-tassel"] }) },
+                    { label: "Vintage style bulb sprayers", href: catalogHref({ applicators: ["antiquespray", "antiquespray-tassel"] }) },
                 ],
             },
             {

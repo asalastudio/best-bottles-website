@@ -184,3 +184,18 @@
     .scene { height: 320px; }
     .caption { left: 22px; bottom: 12px; font-size: 10px; }
 }
+
+/* Phone overlay hero: the scene fills the compact hero box so copy can sit on the left. */
+@media (max-width: 640px) {
+    .scene {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: auto;
+    }
+    .topBlend,
+    .caption { display: none; }
+    .shade {
+        background: linear-gradient(90deg, rgba(58, 48, 36, 0.1) 0%, rgba(58, 48, 36, 0.04) 36%, rgba(58, 48, 36, 0) 58%);
+    }
+}

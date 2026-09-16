@@ -351,9 +351,8 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
 
                 {builderMobile && <div className="builder-mobile-brand">
                     <Link href="/catalog" aria-label="Back to bottles"><ArrowLeft size={22} /></Link>
-                    <Link href="/" aria-label="Best Bottles home"><BrandWordmark /></Link>
+                    <p className="builder-mobile-title">Build your bottle</p>
                     <button aria-label={`Cart${mounted && isCartHydrated ? `, ${itemCount} items` : ""}`} onClick={() => setCartOpen(true)}><ShoppingBag size={24} />{mounted && isCartHydrated && itemCount > 0 && <span>{itemCount > 99 ? "99+" : itemCount}</span>}</button>
-                    <button aria-label="Open menu" onClick={() => setMobileMenuOpen(true)}><List size={20} /></button>
                 </div>}
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
                     {/* Row 1: desktop = [reserved: region/currency] | centred wordmark | search + actions. mobile = hamburger | centred wordmark | spacer */}
@@ -435,7 +434,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                             <button
                                 aria-label="Cart"
                                 onClick={() => setCartOpen(true)}
-                                className="hidden xl:flex items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
+                                className={`${variant === "catalog" ? "flex" : "hidden xl:flex"} items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer`}
                             >
                                 <ShoppingBag className="text-obsidian" size={20} />
                                 {mounted && isCartHydrated && itemCount > 0 && (

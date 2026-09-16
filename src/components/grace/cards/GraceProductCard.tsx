@@ -7,6 +7,7 @@ import type { ProductCard } from "@/components/GraceContext";
 import { useGrace } from "@/components/useGrace";
 import { isGraceProductPageHref } from "@/lib/grace/agenticHandoff";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 import GraceCtaRow from "./GraceCtaRow";
 
 /**
@@ -196,7 +197,7 @@ export default function GraceProductCard({
                     </div>
                     {product.applicator && (
                         <div className="text-[10.5px] text-slate mt-1 leading-tight">
-                            {product.applicator}
+                            {displayApplicatorName(product.applicator)}
                         </div>
                     )}
                     <span className="flex-1" />

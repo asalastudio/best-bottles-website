@@ -19,7 +19,7 @@ import { clerkPortalAppearance } from "@/lib/clerkPortalAppearance";
 export default function PortalSettings() {
     if (!CLERK_ENABLED) {
         return (
-            <div className="px-6 py-6 max-w-[1200px]">
+            <div className="mx-auto max-w-[1200px] px-4 py-4 lg:px-6 lg:py-6">
                 <PageHeader eyebrow="Settings" title="Profile & Security" />
                 <div className="rounded-lg border border-neutral-200 bg-white px-6 py-6">
                     <p className="font-sans text-sm leading-relaxed text-neutral-500">
@@ -32,7 +32,7 @@ export default function PortalSettings() {
     }
 
     return (
-        <div className="max-w-[1200px] px-6 py-6">
+        <div className="mx-auto max-w-[1200px] px-4 py-4 lg:px-6 lg:py-6">
             <PageHeader
                 eyebrow="Settings"
                 title="Profile & Security"

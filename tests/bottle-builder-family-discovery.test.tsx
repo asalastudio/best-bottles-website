@@ -9,6 +9,8 @@ function Harness() {
 }
 it("keeps the selected workspace available during discovery, failure and retry", async () => {
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
+    vi.stubGlobal("requestIdleCallback", (cb: () => void) => { cb(); return 1; });
+    vi.stubGlobal("cancelIdleCallback", () => {});
     let resolve!: (response: unknown) => void;
     const fetcher = vi.fn(() => new Promise(r => { resolve = r; })); vi.stubGlobal("fetch", fetcher);
     const el = document.createElement("div"); const root = createRoot(el);

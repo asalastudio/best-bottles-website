@@ -27,8 +27,8 @@ export default function ChatFeed({
     }, [messages, streamingText, isAwaitingReply]);
 
     return (
-        <div className="min-h-0 flex-1 overflow-y-auto px-6 py-6">
-            <div className="mx-auto max-w-[760px]">
+        <div className="min-h-0 flex-1 overflow-y-auto px-6 py-10">
+            <div className="mx-auto max-w-[680px]">
                 {messages.map((m) => (
                     <GraceChatMessage key={m.id} message={m} />
                 ))}
