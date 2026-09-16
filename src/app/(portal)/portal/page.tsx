@@ -45,27 +45,27 @@ export default async function PortalDashboard() {
     const accountNumber = account?.accountNumber ?? "Awaiting sync";
 
     return (
-        <div className="px-6 py-6 max-w-[1200px]">
+        <div className="mx-auto max-w-[1200px] px-4 py-4 lg:px-6 lg:py-6">
 
             {/* Welcome bar */}
-            <div className="flex items-center justify-between mb-6">
-                <div>
-                    <h1 className="font-sans text-[22px] font-semibold text-neutral-900 leading-tight">
+            <div className="mb-5 flex flex-col gap-3 lg:mb-6 lg:flex-row lg:items-center lg:justify-between">
+                <div className="min-w-0">
+                    <h1 className="font-sans text-[20px] font-semibold leading-tight text-neutral-900 lg:text-[22px]">
                         Welcome back, {companyName}
                     </h1>
-                    <p className="font-sans text-sm text-neutral-400 mt-0.5">
+                    <p className="mt-0.5 font-sans text-sm text-neutral-400">
                         {accountNumber} · {account?.taxExempt ? "Tax Exempt" : "Taxable"}
                     </p>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                     <Link
                         href="/grace-workspace"
-                        className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-colors"
+                        className="inline-flex h-11 min-h-11 items-center justify-center rounded-md border border-neutral-300 bg-white px-3 font-sans text-[13px] font-medium text-neutral-700 hover:bg-neutral-50 lg:h-8 lg:min-h-8"
                     >
                         Talk with Grace
                     </Link>
                     <form action={createDraftAction}>
-                        <PortalButton size="sm" type="submit">
+                        <PortalButton size="sm" type="submit" className="h-11 min-h-11 px-4 lg:h-8 lg:min-h-8">
                             New Draft
                         </PortalButton>
                     </form>
@@ -73,14 +73,14 @@ export default async function PortalDashboard() {
             </div>
 
             {/* KPI row */}
-            <div className="grid grid-cols-4 gap-3 mb-6">
-                <StatCard label="YTD Spend" numericValue={stats.ytdSpend} format={formatCurrency} sub="Delivered orders this year" highlight />
-                <StatCard label="Active Orders" numericValue={stats.activeOrderCount} sub={`${stats.inTransitCount} in transit`} />
-                <StatCard label="Units In Flight" numericValue={stats.unitsInFlight} sub="Across active shipments" />
-                <StatCard label="Open Drafts" numericValue={stats.openDraftCount} sub={account ? account.tier : "Available after account sync"} />
+            <div className="mb-5 grid grid-cols-2 gap-2.5 lg:mb-6 lg:grid-cols-4 lg:gap-3">
+                <StatCard href="/portal/orders" label="YTD Spend" numericValue={stats.ytdSpend} format={formatCurrency} sub="Delivered orders this year" highlight />
+                <StatCard href="/portal/orders" label="Active Orders" numericValue={stats.activeOrderCount} sub={`${stats.inTransitCount} in transit`} />
+                <StatCard href="/portal/orders" label="Units In Flight" numericValue={stats.unitsInFlight} sub="Across active shipments" />
+                <StatCard href="/portal/drafts" label="Open Drafts" numericValue={stats.openDraftCount} sub={account ? account.tier : "Available after account sync"} />
             </div>
 
-            <div className="grid grid-cols-[1.5fr_1fr] gap-4 mb-4">
+            <div className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-[1.5fr_1fr]">
 
                 {/* Active orders table */}
                 <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
@@ -165,7 +165,7 @@ export default async function PortalDashboard() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-[1fr_1fr] gap-4">
+            <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                 <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
                     <div className="px-5 py-3 border-b border-neutral-200 flex items-center justify-between">
                         <h2 className="font-sans text-[14px] font-semibold text-neutral-900">Saved Drafts</h2>

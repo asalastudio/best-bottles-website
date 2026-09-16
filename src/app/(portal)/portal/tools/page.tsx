@@ -14,7 +14,7 @@ export default function PortalTools() {
     const safeZone = labelH - 6;
 
     return (
-        <div className="px-6 py-6 max-w-[1200px]">
+        <div className="mx-auto max-w-[1200px] px-4 py-4 lg:px-6 lg:py-6">
             <PageHeader
                 eyebrow="Tools"
                 title="Packaging Tools"

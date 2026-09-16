@@ -21,7 +21,7 @@ export default async function PortalGraceSessions() {
     const { sessions } = await getPortalGraceSessions();
 
     return (
-        <div className="px-6 py-6 max-w-[1000px]">
+        <div className="mx-auto max-w-[1000px] px-4 py-4 lg:px-6 lg:py-6">
             <PageHeader
                 eyebrow="Grace AI"
                 title="Grace sessions"
@@ -49,11 +49,12 @@ export default async function PortalGraceSessions() {
                         <Link
                             key={session._id}
                             href={`/portal/sessions/${session._id}`}
+                            data-portal-table-row
                             className={`grid grid-cols-[1fr_110px_140px_80px] gap-4 items-center px-5 py-3.5 hover:bg-neutral-50 transition-colors ${
                                 i < sessions.length - 1 ? "border-b border-neutral-100" : ""
                             }`}
                         >
-                            <div className="min-w-0">
+                            <div data-label="Session" className="min-w-0">
                                 <p className="font-sans text-[13px] font-medium text-neutral-900 truncate">
                                     {session.title}
                                 </p>
@@ -63,15 +64,15 @@ export default async function PortalGraceSessions() {
                                     </p>
                                 )}
                             </div>
-                            <div>
+                            <div data-label="Surface">
                                 <PortalTag variant={session.surface === "workspace" ? "gold" : "muted"}>
                                     {surfaceLabel(session.surface)}
                                 </PortalTag>
                             </div>
-                            <p className="font-sans text-[12px] text-neutral-500 tabular-nums">
+                            <p data-label="Updated" className="font-sans text-[12px] text-neutral-500 tabular-nums">
                                 {formatWhen(session.lastMessageAt)}
                             </p>
-                            <p className="font-sans text-[12px] text-neutral-400 text-right tabular-nums">
+                            <p data-label="Messages" className="font-sans text-[12px] text-neutral-400 text-right tabular-nums">
                                 {session.messageCount} msgs
                             </p>
                         </Link>

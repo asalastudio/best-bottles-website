@@ -800,6 +800,42 @@ img.app-wordmark {
   body:has(main[data-builder-page]) { --mobile-tab-bar-clearance: env(safe-area-inset-bottom, 0px); }
 }
 
+/* The client portal owns the phone chrome. The storefront tab bar would sit
+   under a second navigation system and steal the first viewport. */
+@media (max-width: 1023px) {
+  body:has([data-portal-shell]) [data-mobile-tab-bar] { display: none; }
+  body:has([data-portal-shell]) { --mobile-tab-bar-clearance: env(safe-area-inset-bottom, 0px); }
+  [data-portal-table-head] { display: none; }
+  [data-portal-table-row] {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 10px !important;
+    padding: 16px !important;
+  }
+  [data-portal-table-row] > [data-label] {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    align-items: start;
+    gap: 8px;
+  }
+  [data-portal-table-row] > [data-label]::before {
+    content: attr(data-label);
+    padding-top: 2px;
+    font-family: var(--font-brand);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #a3a3a3;
+  }
+  [data-portal-table-row] > [data-actions] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 4px;
+  }
+}
+
 .builder-mobile-brand { display: none; }
 .builder-mobile-title { display: none; }
 @media (max-width: 1099px) {

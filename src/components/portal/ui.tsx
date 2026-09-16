@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 // ─── Divider ──────────────────────────────────────────────────────────────────
@@ -31,14 +32,14 @@ export function PageHeader({
     children?: React.ReactNode;
 }) {
     return (
-        <div className="flex items-end justify-between mb-6">
-            <div>
+        <div className="mb-5 flex flex-col gap-3 lg:mb-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="min-w-0">
                 {eyebrow && <SectionLabel>{eyebrow}</SectionLabel>}
-                <h1 className="font-sans text-[22px] font-semibold text-neutral-900 leading-tight">
+                <h1 className="font-sans text-[20px] font-semibold leading-tight text-neutral-900 lg:text-[22px]">
                     {title}
                 </h1>
                 {subtitle && (
-                    <p className="font-sans text-sm text-neutral-500 mt-1">
+                    <p className="mt-1 font-sans text-sm text-neutral-500">
                         {subtitle}
                     </p>
                 )}
@@ -87,6 +88,7 @@ export function StatCard({
     sub,
     highlight = false,
     format,
+    href,
 }: {
     label: string;
     value?: string;
@@ -94,22 +96,24 @@ export function StatCard({
     sub?: string;
     highlight?: boolean;
     format?: (n: number) => string;
+    href?: string;
 }) {
     const displayValue = numericValue !== undefined
         ? (format ?? ((n: number) => n.toLocaleString()))(numericValue)
         : value;
 
-    return (
+    const card = (
         <div
             className={cn(
-                "bg-white rounded-lg border border-neutral-200 px-5 py-4",
-                highlight && "border-l-2 border-l-amber-500"
+                "rounded-lg border border-neutral-200 bg-white px-4 py-3.5 lg:px-5 lg:py-4",
+                highlight && "border-l-2 border-l-amber-500",
+                href && "transition-colors hover:bg-neutral-50"
             )}
         >
             <p className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide mb-1">
                 {label}
             </p>
-            <p className="font-sans text-2xl font-semibold text-neutral-900 leading-tight">
+            <p className="font-sans text-xl font-semibold leading-tight text-neutral-900 lg:text-2xl">
                 {displayValue}
             </p>
             {sub && (
@@ -117,6 +121,15 @@ export function StatCard({
             )}
         </div>
     );
+
+    if (href) {
+        return (
+            <Link href={href} className="block min-w-0">
+                {card}
+            </Link>
+        );
+    }
+    return card;
 }
 
 // ─── PortalCard ───────────────────────────────────────────────────────────────

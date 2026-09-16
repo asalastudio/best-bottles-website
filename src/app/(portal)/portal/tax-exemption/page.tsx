@@ -42,7 +42,7 @@ export default async function PortalTaxExemption() {
         !pending && !active && certificates[0]?.status === "rejected" ? certificates[0] : null;
 
     return (
-        <div className="px-6 py-6 max-w-[900px]">
+        <div className="mx-auto max-w-[900px] px-4 py-4 lg:px-6 lg:py-6">
             <PageHeader
                 eyebrow="Tax Exemption"
                 title="Resale certificate"
@@ -56,7 +56,7 @@ export default async function PortalTaxExemption() {
                             <p className="font-sans text-sm font-medium text-neutral-900">
                                 Resale certificate verified
                             </p>
-                            <dl className="grid grid-cols-[132px_1fr] gap-x-4 gap-y-1.5 mt-3">
+                            <dl className="mt-3 grid grid-cols-1 gap-y-1.5 sm:grid-cols-[132px_1fr] sm:gap-x-4">
                                 <dt className="font-sans text-[12px] text-neutral-400">Permit no.</dt>
                                 <dd className="font-sans text-[13px] text-neutral-700 tabular-nums">{active.permitNumber}</dd>
                                 <dt className="font-sans text-[12px] text-neutral-400">Issuing state</dt>
@@ -124,18 +124,19 @@ export default async function PortalTaxExemption() {
                         {certificates.map((cert, i) => (
                             <div
                                 key={cert._id}
+                                data-portal-table-row
                                 className={`grid grid-cols-[1fr_90px_120px_130px] gap-4 items-center px-5 py-3 ${
                                     i < certificates.length - 1 ? "border-b border-neutral-100" : ""
                                 }`}
                             >
-                                <p className="font-sans text-[13px] text-neutral-900">
+                                <p data-label="Business" className="font-sans text-[13px] text-neutral-900">
                                     {cert.legalBusinessName}
                                 </p>
-                                <p className="font-sans text-[13px] text-neutral-500">{cert.issuingState}</p>
-                                <p className="font-sans text-[13px] text-neutral-500 tabular-nums">
+                                <p data-label="State" className="font-sans text-[13px] text-neutral-500">{cert.issuingState}</p>
+                                <p data-label="Submitted" className="font-sans text-[13px] text-neutral-500 tabular-nums">
                                     {formatDate(cert.submittedAt)}
                                 </p>
-                                <div className="flex justify-end">
+                                <div data-label="Status" className="flex justify-end">
                                     <PortalTag variant={statusVariant(cert.status)}>
                                         {STATUS_LABEL[cert.status] ?? cert.status}
                                     </PortalTag>

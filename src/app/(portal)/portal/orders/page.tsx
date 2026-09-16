@@ -43,7 +43,7 @@ export default async function PortalOrders() {
     const { orders } = await getPortalOrdersData();
 
     return (
-        <div className="px-6 py-6 max-w-[1200px]">
+        <div className="mx-auto max-w-[1200px] px-4 py-4 lg:px-6 lg:py-6">
             <PageHeader
                 eyebrow="History"
                 title="Order history"
@@ -56,7 +56,7 @@ export default async function PortalOrders() {
 
             <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
                 {/* Table header */}
-                <div className={`${colClass} px-5 py-3 bg-neutral-50 border-b border-neutral-200`}>
+                <div data-portal-table-head className={`${colClass} px-5 py-3 bg-neutral-50 border-b border-neutral-200`}>
                     {["Order", "Product", "Date", "Tracking", "Status", ""].map((h) => (
                         <p key={h} className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide">
                             {h}
@@ -75,17 +75,19 @@ export default async function PortalOrders() {
                     orders.map((order, i) => (
                         <div
                             key={order._id}
+                            data-portal-table-row
                             className={`${colClass} px-5 py-3.5 hover:bg-neutral-50 transition-colors ${
                                 i < orders.length - 1 ? "border-b border-neutral-100" : ""
                             }`}
                         >
                             <Link
+                                data-label="Order"
                                 href={`/portal/orders/${encodeURIComponent(order.orderId)}`}
                                 className="font-sans text-[13px] font-medium text-neutral-900 hover:underline"
                             >
                                 {order.orderId}
                             </Link>
-                            <div>
+                            <div data-label="Product">
                                 <p className="font-sans text-[13px] text-neutral-900">
                                     {order.primaryLineItem?.description ?? "Order items"}
                                 </p>
@@ -93,12 +95,12 @@ export default async function PortalOrders() {
                                     {order.itemCount} units · {formatCurrency(order.totalAmount)}
                                 </p>
                             </div>
-                            <span className="font-sans text-[13px] text-neutral-500">{formatDate(order.orderDate)}</span>
+                            <span data-label="Date" className="font-sans text-[13px] text-neutral-500">{formatDate(order.orderDate)}</span>
                             {/* The tracking link is the thing a customer opens this
                                 page for, so it sits in the row rather than one
                                 click deeper. Several shipments collapse to a count
                                 that opens the order. */}
-                            <div className="min-w-0">
+                            <div data-label="Tracking" className="min-w-0">
                                 {order.shipments.length > 1 ? (
                                     <Link
                                         href={`/portal/orders/${encodeURIComponent(order.orderId)}`}
@@ -123,8 +125,8 @@ export default async function PortalOrders() {
                                     <span className="font-sans text-[13px] text-neutral-400">—</span>
                                 )}
                             </div>
-                            <PortalTag variant={statusVariant(order.status)}>{statusLabel(order.status)}</PortalTag>
-                            <div className="flex gap-1.5 justify-end">
+                            <div data-label="Status"><PortalTag variant={statusVariant(order.status)}>{statusLabel(order.status)}</PortalTag></div>
+                            <div data-actions className="flex gap-1.5 justify-end">
                                 <form action={reorderToDraftAction}>
                                     <input type="hidden" name="orderId" value={order.orderId} />
                                     <PortalButton variant="outline" size="sm" type="submit">

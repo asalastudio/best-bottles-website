@@ -43,7 +43,8 @@ export default function MobileTabBar() {
     const hideTabBar =
         pathname.startsWith("/grace-workspace") ||
         pathname.startsWith("/executive") ||
-        pathname.startsWith("/team");
+        pathname.startsWith("/team") ||
+        pathname.startsWith("/portal");
 
     useEffect(() => {
         try {

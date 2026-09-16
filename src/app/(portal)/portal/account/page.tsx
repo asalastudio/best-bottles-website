@@ -20,11 +20,11 @@ export default async function PortalAccount() {
         .reduce((sum, order) => sum + (order.totalAmount ?? 0), 0);
 
     return (
-        <div className="px-6 py-6 max-w-[1200px]">
+        <div className="mx-auto max-w-[1200px] px-4 py-4 lg:px-6 lg:py-6">
             <PageHeader eyebrow="Account" title="Account & Pricing" />
 
             {account ? (
-                <div className="grid grid-cols-[1fr_320px] gap-4">
+                <div className="grid grid-cols-1 gap-4 lg:grid-cols-[1fr_320px]">
                     <div className="bg-white rounded-lg border border-neutral-200">
                         <div className="px-5 py-3 border-b border-neutral-200 flex items-center justify-between">
                             <h2 className="font-sans text-[14px] font-semibold text-neutral-900">Account Details</h2>
@@ -34,7 +34,7 @@ export default async function PortalAccount() {
                                 </PortalTag>
                             </div>
                         </div>
-                        <div className="px-5 py-4 grid grid-cols-2 gap-x-6 gap-y-4">
+                        <div className="grid grid-cols-1 gap-x-6 gap-y-4 px-5 py-4 sm:grid-cols-2">
                             {[
                                 ["Company", account.companyName],
                                 ["Account Number", account.accountNumber],

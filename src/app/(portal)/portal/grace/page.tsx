@@ -21,7 +21,7 @@ export default async function PortalGraceProjects({
     const { projects, activeProject } = await getPortalGraceWorkspace(params?.project);
 
     return (
-        <div className="px-6 py-6 max-w-[1100px]">
+        <div className="mx-auto max-w-[1100px] px-4 py-4 lg:px-6 lg:py-6">
             <PageHeader
                 eyebrow="Grace AI"
                 title="Projects"
@@ -57,7 +57,7 @@ export default async function PortalGraceProjects({
                     </div>
                 </div>
             ) : (
-                <div className="grid grid-cols-[260px_1fr] gap-4 items-start">
+                <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[260px_1fr]">
 
                     {/* Project list */}
                     <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
