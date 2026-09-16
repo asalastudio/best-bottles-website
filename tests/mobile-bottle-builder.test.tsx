@@ -101,6 +101,7 @@ describe('mobile presentation over shared configuration',()=>{
   expect(css).toContain("min-height: 44px");
   expect(css).toContain(".zoom:modal");
   expect(css).toContain(".sheet:modal");
+  expect(css).toContain(".sheet:not([open]), .zoom:not([open])");
   expect(css).toContain("width: 100vw; max-width: 100vw; height: 100dvh; max-height: 100dvh");
   expect(css).not.toContain("max-height: 78dvh");
   expect(css).toContain("position: absolute; inset: 0");
