@@ -179,3 +179,13 @@ export function teamPreviewHref(href: string, previewMode: boolean) {
     if (!previewMode || !href.startsWith("/team")) return href;
     return href.includes("?") ? `${href}&preview=1` : `${href}?preview=1`;
 }
+
+/** Short label for the phone header so operators know which desk they're on. */
+export function teamHubSectionLabel(pathname: string): string {
+    if (pathname === "/team" || pathname === "/team/") return "Today";
+    if (pathname.startsWith("/team/products")) return "Create Products";
+    if (pathname.startsWith("/team/resale-certificates")) return "Certificates";
+    if (pathname.startsWith("/team/portal-accounts")) return "Wholesale Accounts";
+    if (pathname.startsWith("/team/asset-ledger")) return "Asset Ledger";
+    return "Team Hub";
+}

@@ -1,4 +1,5 @@
 import { auth, currentUser } from "@clerk/nextjs/server";
+import type { ReactNode } from "react";
 import ledgerJson from "@/lib/asset-ledger/ledger.json";
 import { type Ledger } from "@/lib/asset-ledger/types";
 import LedgerDashboard from "./LedgerDashboard";
@@ -12,6 +13,7 @@ import {readCompletion} from "../../../../scripts/asset-ledger/plate-completion.
 import {readSourceRecovery} from "../../../../scripts/asset-ledger/source-recovery.mjs";
 import {readPlateSheet,availablePlateSheetFamilies} from "../../../../scripts/asset-ledger/plate-contact-sheet.mjs";
 import { getUserEmailAddresses, hasTeamHubAccess } from "@/lib/teamAccess";
+import TeamHubShell from "@/components/team/TeamHubShell";
 import {readStandards} from '../../../../scripts/asset-ledger/standard-review.mjs';
 import {readCylinderFinalPlates} from '../../../../scripts/asset-ledger/cylinder-final-plates.mjs';
 
@@ -42,28 +44,33 @@ export default async function Page({ searchParams }: { searchParams?: Promise<Re
         if (!hasTeamHubAccess(user?.publicMetadata, { emailAddresses })) return <AccessPending />;
     }
 
+    const previewMode = isLocalPreview(params);
     const localReview = process.env.NODE_ENV === 'development';
-    if (!params?.view || params.view === 'plate-catalog') return <PlateCatalog
-        plan={buildPlatePlan(ledger)} generatedAt={ledger.generatedAt} deployment={ledger.deployment}
-        initialFamily={typeof params?.family === 'string' ? params.family : ''}
-        preview={isLocalPreview(params)} contactSheetFamilies={await availablePlateSheetFamilies(process.cwd())} />;
-    if (localReview && params?.view === 'kits') return <KitIntake />;
-    if(params?.view === 'completion'){
-        const completion=await readCompletion(process.cwd());
-        if(completion) return <PlateCompletion initial={completion} localReview={localReview}/>;
+    let desk: ReactNode;
+    if (!params?.view || params.view === 'plate-catalog') {
+        desk = <PlateCatalog
+            plan={buildPlatePlan(ledger)} generatedAt={ledger.generatedAt} deployment={ledger.deployment}
+            initialFamily={typeof params?.family === 'string' ? params.family : ''}
+            preview={previewMode} contactSheetFamilies={await availablePlateSheetFamilies(process.cwd())} />;
+    } else if (localReview && params?.view === 'kits') {
+        desk = <KitIntake />;
+    } else if (params?.view === 'completion') {
+        const completion = await readCompletion(process.cwd());
+        desk = completion ? <PlateCompletion initial={completion} localReview={localReview}/> : <LedgerDashboard snapshot={ledger} localReview={localReview} />;
+    } else if (params?.view === 'sources') {
+        const recovery = await readSourceRecovery(process.cwd());
+        desk = recovery ? <SourceRecovery data={recovery}/> : <LedgerDashboard snapshot={ledger} localReview={localReview} />;
+    } else if (params?.view === 'plates') {
+        const family = typeof params.family === 'string' ? params.family : 'Boston Round';
+        const sheet = await readPlateSheet(process.cwd(), family);
+        const finalPreparation = family === 'Cylinder' && localReview ? await readCylinderFinalPlates(process.cwd()).catch(() => null) : null;
+        desk = sheet ? <PlateContactSheet initial={sheet} localReview={localReview} finalPreparation={finalPreparation}/> : <LedgerDashboard snapshot={ledger} localReview={localReview} />;
+    } else {
+        const snapshot = localReview ? {...ledger,bottleStandards:{standards:(await readStandards(process.cwd())).standards}} : ledger;
+        desk = <LedgerDashboard snapshot={snapshot} localReview={localReview} />;
     }
-    if(params?.view === 'sources'){
-        const recovery=await readSourceRecovery(process.cwd());
-        if(recovery) return <SourceRecovery data={recovery}/>;
-    }
-    if(params?.view === 'plates'){
-        const family=typeof params.family==='string'?params.family:'Boston Round';
-        const sheet = await readPlateSheet(process.cwd(),family);
-        const finalPreparation=family==='Cylinder'&&localReview?await readCylinderFinalPlates(process.cwd()).catch(()=>null):null;
-        if(sheet) return <PlateContactSheet initial={sheet} localReview={localReview} finalPreparation={finalPreparation}/>;
-    }
-    const snapshot = localReview ? {...ledger,bottleStandards:{standards:(await readStandards(process.cwd())).standards}} : ledger;
-    return <LedgerDashboard snapshot={snapshot} localReview={localReview} />;
+
+    return <TeamHubShell previewMode={previewMode}>{desk}</TeamHubShell>;
 }
 
 function AccessPending() {

@@ -6,6 +6,7 @@ import {
     buildTeamHubTools,
     filterTeamHubTools,
     groupTeamHubTools,
+    teamHubSectionLabel,
     teamPreviewHref,
 } from "@/lib/teamHub";
 
@@ -100,20 +101,44 @@ describe("Team Hub dashboard catalog", () => {
     });
 
     it("renders every tool from the server, not from a client-only directory", () => {
-        // The bug this guards against is tools failing to appear at all. They
-        // now live in the rail rather than a card grid; the rail is a client
-        // component for its search box, but Next still server-renders its
-        // markup, so the links are in the HTML without JS. Verified against a
-        // running server: each tool name appears in the response body.
+        // Tools live in TeamHubChrome's rail (desktop) and drawer (phone).
+        // The rail is a client component for its search box, but Next still
+        // server-renders its markup, so the links are in the HTML without JS.
         const rail = readFileSync(resolve(process.cwd(), "src/components/team/TeamHubRail.tsx"), "utf8");
         expect(rail).toContain("{tool.name}");
         expect(rail).toContain("groupTeamHubTools");
+        expect(rail).toContain("Today");
+
+        const chrome = readFileSync(resolve(process.cwd(), "src/components/team/TeamHubChrome.tsx"), "utf8");
+        expect(chrome).toContain("TeamHubRail");
+        expect(chrome).toContain("Open Team Hub menu");
 
         const dashboard = readFileSync(resolve(process.cwd(), "src/components/team/TeamHubDashboard.tsx"), "utf8");
-        expect(dashboard).toContain("TeamHubRail");
+        expect(dashboard).not.toContain("TeamHubRail");
         expect(dashboard).not.toContain("TeamHubDirectory");
         // The dashboard itself must stay a server component so the queue
         // counts are read on the server and never shipped as a client fetch.
         expect(dashboard).not.toContain('"use client"');
+    });
+
+    it("labels phone-header desks from the path", () => {
+        expect(teamHubSectionLabel("/team")).toBe("Today");
+        expect(teamHubSectionLabel("/team/products/new")).toBe("Create Products");
+        expect(teamHubSectionLabel("/team/resale-certificates")).toBe("Certificates");
+        expect(teamHubSectionLabel("/team/portal-accounts")).toBe("Wholesale Accounts");
+        expect(teamHubSectionLabel("/team/asset-ledger")).toBe("Asset Ledger");
+    });
+
+    it("wraps staff desks in Team Hub chrome so operators never drop out", () => {
+        const pages = [
+            "src/app/team/page.tsx",
+            "src/app/team/products/new/page.tsx",
+            "src/app/team/resale-certificates/page.tsx",
+            "src/app/team/portal-accounts/page.tsx",
+            "src/app/team/asset-ledger/page.tsx",
+        ];
+        for (const page of pages) {
+            expect(readFileSync(resolve(process.cwd(), page), "utf8")).toContain("TeamHubShell");
+        }
     });
 });

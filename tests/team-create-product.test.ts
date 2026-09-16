@@ -68,6 +68,20 @@ describe("Team Hub create product", () => {
         expect(drop).toContain("PRODUCT_IMAGE_SPEC_SUMMARY");
     });
 
+    it("keeps the phone desk dense: preview first, 44px fields, sticky create", () => {
+        const form = readFileSync(new URL("../src/components/team/CreateProductForm.tsx", import.meta.url), "utf8");
+        const page = readFileSync(new URL("../src/app/team/products/new/page.tsx", import.meta.url), "utf8");
+        expect(form).toContain("data-create-product-preview");
+        expect(form).toContain("lg:col-start-2");
+        expect(form).toContain("data-create-product-cta");
+        expect(form).toContain("sticky bottom-0");
+        expect(form).toContain("min-h-11");
+        expect(form).toContain("text-[16px]");
+        expect(form).toContain("data-create-product-jumps");
+        expect(page).toContain("TeamHubShell");
+        expect(page).toContain("10:11, 2080×2288, 8 MB max");
+    });
+
     it("rejects Sanity CDN imagery so the PDP stays on product truth", () => {
         expect(() => prepareCreateProduct({
             ...EMPTY_CREATE_PRODUCT_DRAFT,

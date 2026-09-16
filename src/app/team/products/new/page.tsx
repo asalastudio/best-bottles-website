@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import CreateProductForm from "@/components/team/CreateProductForm";
+import TeamHubShell from "@/components/team/TeamHubShell";
 import { getUserEmailAddresses, hasTeamHubAccess } from "@/lib/teamAccess";
 
 export const dynamic = "force-dynamic";
@@ -43,26 +44,25 @@ export default async function CreateProductPage({
     }
 
     return (
-        <main data-team-hub className="min-h-screen bg-bone px-5 py-8 sm:px-8 sm:py-10">
-            <div className="mx-auto max-w-6xl">
-                <header className="mb-8 max-w-2xl">
-                    <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-gold">
-                        Team Hub
-                    </p>
-                    <h1 className="font-serif text-4xl leading-tight text-obsidian sm:text-5xl">
-                        Create Products
-                    </h1>
-                    <p className="mt-3 text-sm leading-6 text-slate">
-                        Enter the same fields the product page already shows. Upload photos on a phone or drop them on desktop — the product page prefers a 10:11 portrait at 2080×2288, up to 8 MB. This writes Convex catalog truth, stays quote-only until Shopify sync, and can join an existing paper-doll family when one applies.
-                    </p>
-                    {previewMode ? (
-                        <p className="mt-4 inline-flex rounded-full border border-muted-gold/30 bg-linen px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-dim">
-                            Local preview mode
+        <TeamHubShell previewMode={previewMode}>
+            <div className="min-w-0 px-4 py-4 sm:px-8 sm:py-8">
+                <div className="mx-auto min-w-0 max-w-6xl">
+                    <header className="mb-4 max-w-2xl lg:mb-5">
+                        <h1 className="font-serif text-[28px] leading-tight text-obsidian sm:text-5xl">
+                            Create Products
+                        </h1>
+                        <p className="mt-1.5 text-sm leading-6 text-slate">
+                            Same fields as the product page. Photos: 10:11, 2080×2288, 8 MB max.
                         </p>
-                    ) : null}
-                </header>
-                <CreateProductForm previewMode={previewMode} />
+                        {previewMode ? (
+                            <p className="mt-3 inline-flex rounded-full border border-muted-gold/30 bg-linen px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-gold-dim">
+                                Local preview mode
+                            </p>
+                        ) : null}
+                    </header>
+                    <CreateProductForm previewMode={previewMode} />
+                </div>
             </div>
-        </main>
+        </TeamHubShell>
     );
 }
