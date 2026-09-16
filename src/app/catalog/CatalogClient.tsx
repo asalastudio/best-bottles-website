@@ -1944,7 +1944,7 @@ export default function CatalogClient({
                 {/* Catalog Header */}
                 <div className="mb-4 sm:mb-12 border-b border-champagne/50 pb-4 sm:pb-8 flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-6 max-lg:mb-3 max-lg:border-0 max-lg:pb-0">
                     <div>
-                        <h1 className="text-[32px] font-medium leading-none text-obsidian mb-1 sm:mb-2 lg:font-serif lg:text-4xl lg:leading-[1.1] xl:text-5xl">
+                        <h1 className="page-heading font-medium leading-none text-obsidian mb-1 sm:mb-2 lg:font-serif lg:text-4xl lg:leading-[1.1] xl:text-5xl">
                             <span className="lg:hidden">Catalog</span>
                             <span className="hidden lg:inline">Master Catalog</span>
                         </h1>
