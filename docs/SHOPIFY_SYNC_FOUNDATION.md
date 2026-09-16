@@ -29,6 +29,19 @@ Shopify inventoryItem.id
 
 Checkout must use `products.shopifyVariantId`. It should not infer Shopify variant IDs from labels, handles, selected options, or SKU suffixes.
 
+## Checkout Handoff
+
+Shopify Plus hosted checkout remains the payment surface. The headless
+storefront never rebuilds checkout.
+
+1. Re-validate stored variant IDs against Shopify publication status.
+2. Signed-in wholesale accounts create a **draft order** so the Shopify
+   customer (and any approved resale certificate) is attached.
+3. Everyone else creates a **Storefront API Cart** (`cartCreate`) and
+   redirects to `cart.checkoutUrl`.
+4. If `SHOPIFY_STOREFRONT_TOKEN` is missing or `cartCreate` fails, fall
+   back to the `/cart/{id}:{qty}` permalink so checkout is never blocked.
+
 ## Run Order
 
 1. Validate Convex data only:

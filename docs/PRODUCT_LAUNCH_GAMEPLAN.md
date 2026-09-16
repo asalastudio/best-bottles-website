@@ -157,9 +157,9 @@
   - `orders/create` → track orders in Convex for Grace AI context
 
 - [ ] **3.5** Build checkout flow
-  - "Add to Cart" creates Shopify checkout with correct variant ID
-  - Use Shopify Storefront API `checkoutCreate` mutation
-  - Redirect to Shopify checkout for payment
+  - "Add to Cart" keeps the merchandising cart on the storefront
+  - Use Shopify Storefront API `cartCreate` (not the deprecated `checkoutCreate`)
+  - Redirect to the hosted Shopify `checkoutUrl` for payment
 
 - [ ] **3.6** Test end-to-end purchase flow
   - Select variant → Add to cart → Checkout → Test payment → Order confirmed
