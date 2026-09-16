@@ -175,7 +175,7 @@ export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, pr
     // background-matte: the master photograph with its white studio ground stripped (Boston amber/cobalt, 2026-09-16)
     if (!["psd-layer", "madison", "background-matte"].includes(body.derivation)) return null;
     if (!kit.parts.every(part => part.image.width === kit.canvas.width && part.image.height === kit.canvas.height
-        && part.image.url.startsWith("https://") && part.assembled.x === 0 && part.assembled.y === 0
+        && (part.image.url.startsWith("https://") || part.image.url.startsWith("/local-kits/")) && part.assembled.x === 0 && part.assembled.y === 0
         && part.bounds.right > part.bounds.left && part.bounds.bottom > part.bounds.top)) return null;
     if (!(kit.anchors.baselineY > kit.anchors.seatY && kit.anchors.seatY >= 0
         && kit.anchors.baselineY <= kit.canvas.height)) return null;

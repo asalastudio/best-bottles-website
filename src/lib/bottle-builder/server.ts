@@ -12,6 +12,28 @@ const client = () => new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 const cachedKit = unstable_cache(async (websiteSku: string, graceSku: string) =>
     client().query(api.productKits.forSku, { websiteSku, graceSku }), ["bottle-builder-kit-v1"], { revalidate: 300 });
 
+// Local preview of kits that are extracted but not yet published: BUILDER_LOCAL_KITS
+// names a kits.json staged by scripts/paperdoll/local-kit-overlay.mjs, whose part
+// URLs live under public/local-kits/. Never set in production; nothing here writes.
+let localKitRows: Record<string, BuilderKit> | null | undefined;
+function localKits() {
+    if (localKitRows !== undefined) return localKitRows;
+    const file = process.env.BUILDER_LOCAL_KITS;
+    if (!file) return (localKitRows = null);
+    try {
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        const { readFileSync } = require("node:fs") as typeof import("node:fs");
+        localKitRows = JSON.parse(readFileSync(file, "utf8")).rows as Record<string, BuilderKit>;
+    } catch { localKitRows = null; }
+    return localKitRows;
+}
+async function kitFor(websiteSku: string | null, graceSku: string | null): Promise<BuilderKit | null> {
+    const local = localKits();
+    const staged = local && ((websiteSku && local[websiteSku]) || (graceSku && local[graceSku]));
+    if (staged) return staged;
+    return cachedKit(websiteSku ?? "", graceSku ?? "");
+}
+
 // Raw matrix rows repeat compatibility lists and can exceed Next's 2 MB cache
 // entry limit. Cache only the small family summary and individual image kits.
 const familyRows = (family: string) => client().query(api.matrix.getFamilyRows, { family });
@@ -67,7 +89,7 @@ export async function loadBuilderBodies(rows: CatalogRow[]) {
         while (cursor < candidates.length) {
             const index = cursor++;
             const row = candidates[index];
-            const kit = await cachedKit(row.websiteSku!, row.graceSku!);
+            const kit = await kitFor(row.websiteSku!, row.graceSku!);
             configurations[index] = kit;
         }
     }));
@@ -95,7 +117,6 @@ export async function freshConfiguration(family: string, sku: string) {
     if (target.length !== 1) return null;
     const rows = await resolveListedComponents(data.rows.filter(row => row.capacityMl === target[0].capacityMl
         && row.color === target[0].color && row.neckThreadSize === target[0].neckThreadSize), async sku => (await convex.query(api.products.lookupSku, { sku }))?.product ?? null);
-    const kits = await Promise.all(rows.map(row => convex.query(api.productKits.forSku,
-        { websiteSku: row.websiteSku ?? null, graceSku: row.graceSku ?? null })));
+    const kits = await Promise.all(rows.map(row => kitFor(row.websiteSku ?? null, row.graceSku ?? null)));
     return resolveBuilderConfigurations(rows, kits, await loadPlateUrls(convex, rows)).find(config => config?.id === sku) ?? null;
 }
