@@ -59,6 +59,8 @@
 .liveDot { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #69695f; white-space: nowrap; }
 .liveDot::before { content: ''; height: 4px; width: 4px; border-radius: 100%; background: #79836a; }
 .previewImage { width: 100%; height: 450px; padding: 8px 20px 0; }
+/* A configuration with no layered kit shows its whole plate, rendered on a white 1000×1100 canvas. Until its kit exists the stage goes white behind it so the canvas does not read as a box (2026-09-16). */
+.previewImage.plateStage { background: #fff; border-radius: 4px; }
 .includedCover { display: flex; align-items: center; gap: 12px; margin-top: 20px; padding: 14px; border: 1px solid var(--line); border-radius: 4px; background: #f5f3ef; }
 .includedCoverImage { flex: 0 0 54px; height: 72px; }
 .includedCover > div:not(.includedCoverImage) { flex: 1; min-width: 0; }

@@ -173,7 +173,7 @@ export default function MobileBuilder(p: Props) {
         </div>}
         {stage === 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{titles[stage]}</h1>}
         {stage > 0 && preview && <section className={styles.preview} aria-label="Live bottle preview">
-            <div className={styles.previewImage}>{previewImage()}</div>
+            <div className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}>{previewImage()}</div>
             <button ref={expandTrigger} className={styles.expand} aria-label="Expand bottle preview" onClick={() => expanded.current?.showModal()}><ArrowsOutSimple size={20} /></button>
             {stage >= 3 && p.hasIncludedCover && <button className={styles.coverToggle} aria-pressed={p.showCover} onClick={p.onCover}>{p.showCover ? "Hide overcap" : "Show included overcap"}</button>}
         </section>}
