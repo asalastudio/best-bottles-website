@@ -1,12 +1,12 @@
 {
- "generatedAt": "2026-09-16T18:27:34.179Z",
+ "generatedAt": "2026-09-16T20:22:37.867Z",
  "deployment": "https://helpful-elephant-638.convex.cloud",
  "families": [
   {
    "family": "Cylinder",
-   "configurations": 289,
+   "configurations": 290,
    "kitFull": 228,
-   "kitCapSplit": 61,
+   "kitCapSplit": 62,
    "kitBodyOnly": 0,
    "kitStale": 0,
    "localReady": 0,
@@ -49,11 +49,11 @@
   {
    "family": "Boston Round",
    "configurations": 104,
-   "kitFull": 0,
-   "kitCapSplit": 8,
-   "kitBodyOnly": 16,
+   "kitFull": 99,
+   "kitCapSplit": 0,
+   "kitBodyOnly": 0,
    "kitStale": 0,
-   "localReady": 75,
+   "localReady": 0,
    "localHeld": 5,
    "none": 0
   },
@@ -71,11 +71,11 @@
   {
    "family": "Empire",
    "configurations": 55,
-   "kitFull": 0,
+   "kitFull": 50,
    "kitCapSplit": 0,
    "kitBodyOnly": 0,
    "kitStale": 0,
-   "localReady": 50,
+   "localReady": 0,
    "localHeld": 5,
    "none": 0
   },
@@ -402,6 +402,13 @@
  "rows": [
   {
    "family": "Cylinder",
+   "sku": "GBCyl5Gl",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCyl5Sl",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
@@ -416,16 +423,9 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylBlu5Sl",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylAmb9SpryBlk",
+   "sku": "GBCyl9SpryBlk",
    "status": "kit:full",
-   "kitParts": "sprayer+body+overcap+collar",
+   "kitParts": "body+sprayer+overcap+collar",
    "local": null
   },
   {
@@ -437,23 +437,23 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl9SpryBlk",
+   "sku": "GBCylAmb9SpryBlk",
    "status": "kit:full",
-   "kitParts": "body+sprayer+overcap+collar",
+   "kitParts": "sprayer+body+overcap+collar",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl5Gl",
+   "sku": "GBCylBlu5Sl",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylFrst9SpryBlk",
-   "status": "kit:full",
-   "kitParts": "body+sprayer+overcap+collar",
+   "sku": "GBCylBlu5WhtSht",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
    "local": null
   },
   {
@@ -465,7 +465,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCylFrst9SpryBlkMatt",
+   "sku": "GBCyl50SpryShnGl",
    "status": "kit:full",
    "kitParts": "body+diptube+sprayer+overcap",
    "local": null
@@ -486,21 +486,21 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl50SpryShnBlk",
+   "sku": "GBCylFrst9SpryBlk",
    "status": "kit:full",
-   "kitParts": "body+diptube+sprayer+overcap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl50SpryShnGl",
-   "status": "kit:full",
-   "kitParts": "body+diptube+sprayer+overcap",
+   "kitParts": "body+sprayer+overcap+collar",
    "local": null
   },
   {
    "family": "Cylinder",
    "sku": "GBCyl50SpryMtSl",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer+overcap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBTallCylFrst9SpryBlkMatt",
    "status": "kit:full",
    "kitParts": "body+diptube+sprayer+overcap",
    "local": null
@@ -514,21 +514,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCylFrst9WhtSht",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBTallCylFrst9Gl",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBTallCyl9Gl",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
    "local": null
@@ -542,16 +528,23 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCylFrst9Sl",
+   "sku": "GBTallCyl9Gl",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl100SpryCu",
-   "status": "kit:full",
-   "kitParts": "diptube+body+sprayer+overcap",
+   "sku": "GBTallCylFrst9WhtSht",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBTallCylFrst9Sl",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
    "local": null
   },
   {
@@ -563,9 +556,30 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCyl50SpryShnBlk",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer+overcap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl100SpryCu",
+   "status": "kit:full",
+   "kitParts": "diptube+body+sprayer+overcap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCyl5MtlRollCuMatt",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl5MtlRollGlMatt",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": null
   },
   {
@@ -584,20 +598,6 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl5MtlRollPinkDot",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl5MtlRollGlMatt",
-   "status": "kit:full",
-   "kitParts": "roller+body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBCyl5MtlRollSlDot",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
@@ -605,7 +605,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl5MtlRollSlSh",
+   "sku": "GBCyl5MtlRollPinkDot",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
    "local": null
@@ -626,9 +626,16 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylBlu5MtlRollCuMatt",
+   "sku": "GBCyl5MtlRollSlSh",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl5SpryBlkSh",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer+overcap",
    "local": null
   },
   {
@@ -647,35 +654,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl5SpryBlkSh",
-   "status": "kit:full",
-   "kitParts": "body+diptube+sprayer+overcap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl5SprySlSh",
-   "status": "kit:full",
-   "kitParts": "body+diptube+sprayer+overcap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl5SpryGlSh",
-   "status": "kit:full",
-   "kitParts": "body+diptube+sprayer+overcap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl100SpryMtGl",
-   "status": "kit:full",
-   "kitParts": "body+diptube+sprayer+overcap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylBlu5MtlRollPinkDot",
+   "sku": "GBCylBlu5MtlRollCuMatt",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
    "local": null
@@ -689,7 +668,42 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCyl5SpryGlSh",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer+overcap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCylBlu5MtlRollPinkDot",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl100SpryMtGl",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer+overcap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl5SprySlSh",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer+overcap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCyl100SpryShnGl",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer+overcap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl5SpryBluMatt",
    "status": "kit:full",
    "kitParts": "body+diptube+sprayer+overcap",
    "local": null
@@ -699,13 +713,6 @@
    "sku": "GBCylBlu5MtlRollSlDot",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl5SpryBluMatt",
-   "status": "kit:full",
-   "kitParts": "body+diptube+sprayer+overcap",
    "local": null
   },
   {
@@ -738,9 +745,9 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylBlu5MtlRollSlSh",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
+   "sku": "GBCyl100SpryShnSl",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer+overcap",
    "local": null
   },
   {
@@ -752,21 +759,21 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl50AnSpBlk",
+   "sku": "GBCylBlu5MtlRollSlSh",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl50AnSpTslBlk",
    "status": "kit:full",
    "kitParts": "diptube+body+sprayer",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl100SpryShnSl",
-   "status": "kit:full",
-   "kitParts": "body+diptube+sprayer+overcap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl50AnSpTslBlk",
+   "sku": "GBCyl50AnSpBlk",
    "status": "kit:full",
    "kitParts": "diptube+body+sprayer",
    "local": null
@@ -780,16 +787,16 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylBlu5SprySlSh",
+   "sku": "LBCylAmb9LtnMtSl",
    "status": "kit:full",
-   "kitParts": "body+sprayer+overcap",
+   "kitParts": "body+pump+overcap+collar",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "LBCylAmb9LtnMtSl",
+   "sku": "GBCylBlu5SprySlSh",
    "status": "kit:full",
-   "kitParts": "body+pump+overcap+collar",
+   "kitParts": "body+sprayer+overcap",
    "local": null
   },
   {
@@ -808,14 +815,14 @@
   },
   {
    "family": "Cylinder",
-   "sku": "LBCyl9LtnGl",
+   "sku": "LBCyl9LtnMtSl",
    "status": "kit:full",
    "kitParts": "body+pump+overcap+collar",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "LBCyl9LtnMtSl",
+   "sku": "LBCyl9LtnGl",
    "status": "kit:full",
    "kitParts": "body+pump+overcap+collar",
    "local": null
@@ -843,13 +850,6 @@
   },
   {
    "family": "Cylinder",
-   "sku": "LBCylBlu9LtnMattSl",
-   "status": "kit:full",
-   "kitParts": "body+pump+overcap+collar",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBCylBlu5SprySlMatt",
    "status": "kit:full",
    "kitParts": "body+sprayer+overcap",
@@ -857,14 +857,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "LBCylFrst9LtnGl",
-   "status": "kit:full",
-   "kitParts": "body+pump+overcap+collar",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "LBCylBlu9LtnGl",
+   "sku": "LBCylBlu9LtnMattSl",
    "status": "kit:full",
    "kitParts": "body+pump+overcap+collar",
    "local": null
@@ -878,7 +871,21 @@
   },
   {
    "family": "Cylinder",
+   "sku": "LBCylBlu9LtnGl",
+   "status": "kit:full",
+   "kitParts": "body+pump+overcap+collar",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "LBCylSwrl9LtnMtSl",
+   "status": "kit:full",
+   "kitParts": "body+pump+overcap+collar",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "LBCylFrst9LtnGl",
    "status": "kit:full",
    "kitParts": "body+pump+overcap+collar",
    "local": null
@@ -892,16 +899,16 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl5RollBlkDot",
+   "sku": "LBCyl25LtnMtGl",
    "status": "kit:full",
-   "kitParts": "body+roller+cap",
+   "kitParts": "diptube+body+overcap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "LBCyl25LtnMtGl",
+   "sku": "GBCyl5RollBlkDot",
    "status": "kit:full",
-   "kitParts": "diptube+body+overcap",
+   "kitParts": "body+roller+cap",
    "local": null
   },
   {
@@ -913,14 +920,14 @@
   },
   {
    "family": "Cylinder",
-   "sku": "LBCyl25LtnShnBlk",
+   "sku": "LBCyl25LtnMtSl",
    "status": "kit:full",
    "kitParts": "diptube+body+overcap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "LBCyl25LtnMtSl",
+   "sku": "LBCyl25LtnShnBlk",
    "status": "kit:full",
    "kitParts": "diptube+body+overcap",
    "local": null
@@ -948,16 +955,16 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylAmb9RollBlkDot",
+   "sku": "GBCyl100AnSpBlk",
    "status": "kit:full",
-   "kitParts": "body+roller+cap",
+   "kitParts": "body+diptube+sprayer",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl100AnSpBlk",
+   "sku": "GBCylAmb9RollBlkDot",
    "status": "kit:full",
-   "kitParts": "body+diptube+sprayer",
+   "kitParts": "body+roller+cap",
    "local": null
   },
   {
@@ -983,15 +990,15 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylSwrl9RollBlkDot",
-   "status": "kit:full",
+   "sku": "GBTallCyl9RollBlkDot",
+   "status": "kit:capSplit",
    "kitParts": "body+roller+cap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCyl9RollBlkDot",
-   "status": "kit:capSplit",
+   "sku": "GBCylSwrl9RollBlkDot",
+   "status": "kit:full",
    "kitParts": "body+roller+cap",
    "local": null
   },
@@ -1004,7 +1011,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl9MtlRollPnkDot",
+   "sku": "GBCyl9MtlRollSlDot",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
    "local": null
@@ -1018,7 +1025,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl9MtlRollSlDot",
+   "sku": "GBCyl9MtlRollPnkDot",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
    "local": null
@@ -1060,21 +1067,14 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylAmb9MtlRollWht",
+   "sku": "GBCyl9MtlRollWht",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl9SpryGl",
-   "status": "kit:full",
-   "kitParts": "body+sprayer+overcap+collar",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl9MtlRollWht",
+   "sku": "GBCylAmb9MtlRollWht",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
    "local": null
@@ -1088,7 +1088,21 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCylAmb9MtlRollMattGl",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCyl9SpryMattSl",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+overcap+collar",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl9SpryGl",
    "status": "kit:full",
    "kitParts": "body+sprayer+overcap+collar",
    "local": null
@@ -1109,7 +1123,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylAmb9MtlRollMattGl",
+   "sku": "GBCylAmb9MtlRollShBlk",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
    "local": null
@@ -1137,7 +1151,21 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylAmb9MtlRollShBlk",
+   "sku": "GBCylAmb9MtlRollShnSl",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCylAmb9SpryMattSl",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+overcap+collar",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCylAmb9MtlRollSlDot",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
    "local": null
@@ -1158,48 +1186,6 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylAmb9SpryMattSl",
-   "status": "kit:full",
-   "kitParts": "body+sprayer+overcap+collar",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylAmb9MtlRollSlDot",
-   "status": "kit:full",
-   "kitParts": "roller+body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylAmb9MtlRollShnSl",
-   "status": "kit:full",
-   "kitParts": "roller+body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylBlu9SpryTur",
-   "status": "kit:full",
-   "kitParts": "body+sprayer+overcap+collar",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylBlu5MtlRollBlkDot",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl100AnSpPnk",
-   "status": "kit:full",
-   "kitParts": "body+diptube+sprayer",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBCylAmb9SpryRd",
    "status": "kit:full",
    "kitParts": "body+sprayer+overcap+collar",
@@ -1214,9 +1200,23 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl100AnSpMtSl",
+   "sku": "GBCylBlu5MtlRollBlkDot",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCylBlu9SpryTur",
    "status": "kit:full",
-   "kitParts": "body+sprayer+diptube",
+   "kitParts": "body+sprayer+overcap+collar",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl100AnSpPnk",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": null
   },
   {
@@ -1228,16 +1228,9 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylBlu9MtlRollMattSl",
+   "sku": "GBCyl100AnSpMtSl",
    "status": "kit:full",
-   "kitParts": "roller+body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylBlu5WhtSht",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
+   "kitParts": "body+sprayer+diptube",
    "local": null
   },
   {
@@ -1245,6 +1238,13 @@
    "sku": "GBCylBlu9SpryGl",
    "status": "kit:full",
    "kitParts": "body+sprayer+overcap+collar",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCylBlu9MtlRollMattSl",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": null
   },
   {
@@ -1270,6 +1270,13 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCylBlu9SpryShSl",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+overcap+collar",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCyl100AnSpGl",
    "status": "kit:full",
    "kitParts": "body+diptube+sprayer",
@@ -1280,13 +1287,6 @@
    "sku": "GBCylAmb9MtlRollBlkDot",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylBlu9SpryShSl",
-   "status": "kit:full",
-   "kitParts": "body+sprayer+overcap+collar",
    "local": null
   },
   {
@@ -1305,16 +1305,16 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylBlu9MtlRollMattGl",
+   "sku": "GBCylFrst9SpryGl",
    "status": "kit:full",
-   "kitParts": "roller+body+cap",
+   "kitParts": "body+sprayer+overcap+collar",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylFrst9SpryGl",
+   "sku": "GBCylBlu9MtlRollMattGl",
    "status": "kit:full",
-   "kitParts": "body+sprayer+overcap+collar",
+   "kitParts": "roller+body+cap",
    "local": null
   },
   {
@@ -1336,13 +1336,6 @@
    "sku": "GBCylBlu9MtlRollShnGl",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylFrst9SpryMattSl",
-   "status": "kit:full",
-   "kitParts": "body+sprayer+collar+overcap",
    "local": null
   },
   {
@@ -1382,6 +1375,13 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCylFrst9SpryTur",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+overcap+collar",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCylBlu9MtlRollMattCu",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
@@ -1403,9 +1403,9 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylFrst9SpryTur",
+   "sku": "GBCylFrst9SpryMattSl",
    "status": "kit:full",
-   "kitParts": "body+sprayer+overcap+collar",
+   "kitParts": "body+sprayer+collar+overcap",
    "local": null
   },
   {
@@ -1459,6 +1459,13 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCylSwrl9SpryMattSl",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+overcap+collar",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCylFrst9MtlRollWht",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
@@ -1469,13 +1476,6 @@
    "sku": "GBCyl100AnSpTslPnk",
    "status": "kit:full",
    "kitParts": "diptube+body+sprayer",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylSwrl9SpryMattSl",
-   "status": "kit:full",
-   "kitParts": "body+sprayer+overcap+collar",
    "local": null
   },
   {
@@ -1508,16 +1508,16 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl100AnSpTslMtSl",
+   "sku": "GBCylSwrl9SpryRd",
    "status": "kit:full",
-   "kitParts": "diptube+body+sprayer",
+   "kitParts": "body+sprayer+overcap+collar",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylSwrl9SpryRd",
+   "sku": "GBCyl100AnSpTslMtSl",
    "status": "kit:full",
-   "kitParts": "body+sprayer+overcap+collar",
+   "kitParts": "diptube+body+sprayer",
    "local": null
   },
   {
@@ -1571,13 +1571,6 @@
   },
   {
    "family": "Cylinder",
-   "sku": "LBCyl50LtnMtGl",
-   "status": "kit:full",
-   "kitParts": "body+diptube+pump+overcap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBTallCyl9SpryBlkSh",
    "status": "kit:full",
    "kitParts": "body+diptube+sprayer+overcap",
@@ -1588,6 +1581,13 @@
    "sku": "GBCylFrst9MtlRollShnGl",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "LBCyl50LtnMtGl",
+   "status": "kit:full",
+   "kitParts": "body+diptube+pump+overcap",
    "local": null
   },
   {
@@ -1627,13 +1627,6 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylAmb9RollMattCu",
-   "status": "kit:full",
-   "kitParts": "body+roller+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBCylFrst9MtlRollShBlk",
    "status": "kit:full",
    "kitParts": "roller+body+cap",
@@ -1644,6 +1637,13 @@
    "sku": "GBTallCyl9SpryGlSh",
    "status": "kit:full",
    "kitParts": "body+diptube+sprayer+overcap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCylAmb9RollMattCu",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
    "local": null
   },
   {
@@ -1669,13 +1669,6 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCyl9SprySlMatt",
-   "status": "kit:full",
-   "kitParts": "body+diptube+sprayer+overcap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "LBCyl50LtnShnSl",
    "status": "kit:full",
    "kitParts": "body+diptube+pump+overcap",
@@ -1690,9 +1683,9 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylSwrl9MtlRollSlDot",
+   "sku": "GBTallCyl9SprySlMatt",
    "status": "kit:full",
-   "kitParts": "roller+body+cap",
+   "kitParts": "body+diptube+sprayer+overcap",
    "local": null
   },
   {
@@ -1711,6 +1704,13 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCylSwrl9MtlRollSlDot",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCylAmb9RollPnkDot",
    "status": "kit:full",
    "kitParts": "body+roller+cap",
@@ -1718,16 +1718,16 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCylFrst9SpryBlkSh",
+   "sku": "GBCylSwrl9MtlRollPnkDot",
    "status": "kit:full",
-   "kitParts": "body+diptube+sprayer+overcap",
+   "kitParts": "roller+body+cap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylSwrl9MtlRollPnkDot",
+   "sku": "GBTallCylFrst9SpryBlkSh",
    "status": "kit:full",
-   "kitParts": "roller+body+cap",
+   "kitParts": "body+diptube+sprayer+overcap",
    "local": null
   },
   {
@@ -1781,13 +1781,6 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylSwrl9MtlRollShnSl",
-   "status": "kit:full",
-   "kitParts": "roller+body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBTallCylFrst9SpryGlMatt",
    "status": "kit:full",
    "kitParts": "body+diptube+sprayer+overcap",
@@ -1823,6 +1816,13 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCylSwrl9MtlRollShnSl",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBTallCylFrst9SprySlSh",
    "status": "kit:full",
    "kitParts": "body+diptube+sprayer+overcap",
@@ -1837,13 +1837,6 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCyl9MtlRollBlkSh",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBTallCyl9MtlRollCuMatt",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
@@ -1851,7 +1844,21 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBTallCyl9MtlRollBlkSh",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBTallCyl9MtlRollGlMatt",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBTallCyl9MtlRollPinkDot",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
    "local": null
@@ -1872,9 +1879,9 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCyl9MtlRollPinkDot",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
+   "sku": "GBCylBlu9RollWht",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
    "local": null
   },
   {
@@ -1882,13 +1889,6 @@
    "sku": "GBTallCyl9MtlRollSlMatt",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylBlu9RollWht",
-   "status": "kit:full",
-   "kitParts": "body+roller+cap",
    "local": null
   },
   {
@@ -1949,6 +1949,13 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCylBlu9RollMattGl",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBTallCylFrst9MtlRollGlMatt",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
@@ -1977,16 +1984,16 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylFrst9RollShBlk",
-   "status": "kit:full",
-   "kitParts": "body+roller+cap",
+   "sku": "GBTallCylFrst9MtlRollCuMatt",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCylFrst9MtlRollCuMatt",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
+   "sku": "GBCylFrst9RollShBlk",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
    "local": null
   },
   {
@@ -1999,13 +2006,6 @@
   {
    "family": "Cylinder",
    "sku": "GBCylFrst9RollShnGl",
-   "status": "kit:full",
-   "kitParts": "body+roller+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylBlu9RollMattGl",
    "status": "kit:full",
    "kitParts": "body+roller+cap",
    "local": null
@@ -2054,6 +2054,13 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCyl9RollShnGl",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCyl9RollShnSl",
    "status": "kit:full",
    "kitParts": "body+roller+cap",
@@ -2068,20 +2075,6 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl9RollShBlk",
-   "status": "kit:full",
-   "kitParts": "body+roller+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCylFrst9RollWht",
-   "status": "kit:full",
-   "kitParts": "body+roller+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBCyl9RollMattCu",
    "status": "kit:full",
    "kitParts": "body+roller+cap",
@@ -2089,7 +2082,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl9RollShnGl",
+   "sku": "GBCyl9RollShBlk",
    "status": "kit:full",
    "kitParts": "body+roller+cap",
    "local": null
@@ -2110,6 +2103,13 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCylFrst9RollWht",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCyl9RollMattGl",
    "status": "kit:full",
    "kitParts": "body+roller+cap",
@@ -2117,14 +2117,14 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylSwrl9RollSlDot",
+   "sku": "GBCylSwrl9RollPnkDot",
    "status": "kit:full",
    "kitParts": "body+roller+cap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBCylSwrl9RollPnkDot",
+   "sku": "GBCylSwrl9RollSlDot",
    "status": "kit:full",
    "kitParts": "body+roller+cap",
    "local": null
@@ -2145,14 +2145,14 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCylFrst9RollPinkDot",
+   "sku": "GBTallCylFrst9RollSlDot",
    "status": "kit:capSplit",
    "kitParts": "body+roller+cap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCylFrst9RollSlDot",
+   "sku": "GBTallCylFrst9RollPinkDot",
    "status": "kit:capSplit",
    "kitParts": "body+roller+cap",
    "local": null
@@ -2180,13 +2180,6 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCylFrst9RollGlSh",
-   "status": "kit:capSplit",
-   "kitParts": "body+roller+cap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBCylBlu5BlkSht",
    "status": "kit:capSplit",
    "kitParts": "body+cap",
@@ -2194,14 +2187,21 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCylFrst9RollCuMatt",
+   "sku": "GBTallCylFrst9RollSlSh",
    "status": "kit:capSplit",
    "kitParts": "body+roller+cap",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "GBTallCylFrst9RollSlSh",
+   "sku": "GBTallCylFrst9RollGlSh",
+   "status": "kit:capSplit",
+   "kitParts": "body+roller+cap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBTallCylFrst9RollCuMatt",
    "status": "kit:capSplit",
    "kitParts": "body+roller+cap",
    "local": null
@@ -2229,6 +2229,13 @@
   },
   {
    "family": "Cylinder",
+   "sku": "LBCyl100LtnShnBlk",
+   "status": "kit:full",
+   "kitParts": "body+diptube+pump+overcap",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "LBCyl100LtnShnGl",
    "status": "kit:full",
    "kitParts": "body+diptube+pump+overcap",
@@ -2237,13 +2244,6 @@
   {
    "family": "Cylinder",
    "sku": "LBCyl100LtnShnSl",
-   "status": "kit:full",
-   "kitParts": "body+diptube+pump+overcap",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "LBCyl100LtnShnBlk",
    "status": "kit:full",
    "kitParts": "body+diptube+pump+overcap",
    "local": null
@@ -2264,16 +2264,16 @@
   },
   {
    "family": "Cylinder",
-   "sku": "LBCylAmb9LtnBlk",
+   "sku": "LBCyl100LtnCu",
    "status": "kit:full",
-   "kitParts": "body+pump+overcap+collar",
+   "kitParts": "body+pump+overcap+diptube",
    "local": null
   },
   {
    "family": "Cylinder",
-   "sku": "LBCyl100LtnCu",
+   "sku": "LBCylAmb9LtnBlk",
    "status": "kit:full",
-   "kitParts": "body+pump+overcap+diptube",
+   "kitParts": "body+pump+overcap+collar",
    "local": null
   },
   {
@@ -2285,9 +2285,9 @@
   },
   {
    "family": "Cylinder",
-   "sku": "LBCylBlu9LtnBlk",
+   "sku": "GBCyl50AnSpPnk",
    "status": "kit:full",
-   "kitParts": "body+pump+overcap+collar",
+   "kitParts": "diptube+body+sprayer",
    "local": null
   },
   {
@@ -2299,23 +2299,9 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl50AnSpPnk",
+   "sku": "LBCylBlu9LtnBlk",
    "status": "kit:full",
-   "kitParts": "diptube+body+sprayer",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl50AnSpIvySl",
-   "status": "kit:full",
-   "kitParts": "diptube+body+sprayer",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl50AnSpWht",
-   "status": "kit:full",
-   "kitParts": "diptube+body+sprayer",
+   "kitParts": "body+pump+overcap+collar",
    "local": null
   },
   {
@@ -2327,7 +2313,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl50AnSpTslLvn",
+   "sku": "GBCyl50AnSpIvySl",
    "status": "kit:full",
    "kitParts": "diptube+body+sprayer",
    "local": null
@@ -2341,7 +2327,14 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl50AnSpTslIvyGl",
+   "sku": "GBCyl50AnSpWht",
+   "status": "kit:full",
+   "kitParts": "diptube+body+sprayer",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl50AnSpTslLvn",
    "status": "kit:full",
    "kitParts": "diptube+body+sprayer",
    "local": null
@@ -2355,7 +2348,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl50AnSpTslIvySl",
+   "sku": "GBCyl50AnSpTslIvyGl",
    "status": "kit:full",
    "kitParts": "diptube+body+sprayer",
    "local": null
@@ -2369,7 +2362,28 @@
   },
   {
    "family": "Cylinder",
+   "sku": "GBCyl50AnSpTslPnk",
+   "status": "kit:full",
+   "kitParts": "diptube+body+sprayer",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl50AnSpTslIvySl",
+   "status": "kit:full",
+   "kitParts": "diptube+body+sprayer",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
    "sku": "GBCyl50AnSpTslRed",
+   "status": "kit:full",
+   "kitParts": "diptube+body+sprayer",
+   "local": null
+  },
+  {
+   "family": "Cylinder",
+   "sku": "GBCyl50AnSpTslMtSl",
    "status": "kit:full",
    "kitParts": "diptube+body+sprayer",
    "local": null
@@ -2383,21 +2397,7 @@
   },
   {
    "family": "Cylinder",
-   "sku": "GBCyl50AnSpTslPnk",
-   "status": "kit:full",
-   "kitParts": "diptube+body+sprayer",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
    "sku": "GBCyl50AnSpTslGl",
-   "status": "kit:full",
-   "kitParts": "diptube+body+sprayer",
-   "local": null
-  },
-  {
-   "family": "Cylinder",
-   "sku": "GBCyl50AnSpTslMtSl",
    "status": "kit:full",
    "kitParts": "diptube+body+sprayer",
    "local": null
@@ -2424,6 +2424,13 @@
    "local": null
   },
   {
+   "family": "Cylinder",
+   "sku": "GBCylBlu5BlkShSht",
+   "status": "kit:capSplit",
+   "kitParts": "body+cap",
+   "local": null
+  },
+  {
    "family": "Elegant",
    "sku": "LBElgFrst100LtnShnGl",
    "status": "none",
@@ -2432,7 +2439,21 @@
   },
   {
    "family": "Elegant",
+   "sku": "GBElg30SpryMattSl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
    "sku": "LBElgFrst100LtnShnBlk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "LBElg100LtnClOvrCap",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2453,7 +2474,7 @@
   },
   {
    "family": "Elegant",
-   "sku": "LBElgFrst100LtnCu",
+   "sku": "LBElgFrst100LtnMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2467,34 +2488,6 @@
   },
   {
    "family": "Elegant",
-   "sku": "LBElgFrst100LtnMtSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "LBElg100LtnClOvrCap",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "GBElg30SpryMattSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "GBElgFrst30SpryMattSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
    "sku": "GBElg30SpryMattGl",
    "status": "none",
    "kitParts": null,
@@ -2502,35 +2495,7 @@
   },
   {
    "family": "Elegant",
-   "sku": "LBElgFrst100LtnClOvrCap",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "GBElg15RollGlSh",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "GBElg15RollSlDot",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "GBElgFrst30SpryShnGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "GBElg15RollSlSh",
+   "sku": "LBElgFrst100LtnCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2544,28 +2509,28 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15RollCuMatt",
+   "sku": "GBElgFrst30SpryShnGl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst15RollSlDot",
+   "sku": "LBElgFrst100LtnClOvrCap",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15RollSlMatt",
+   "sku": "GBElgFrst30SpryMattSl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15RollBlkSh",
+   "sku": "GBElg15RollSlSh",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2586,14 +2551,42 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst15RollSlMatt",
+   "sku": "GBElg15RollGlSh",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst15RollBlkSh",
+   "sku": "GBElg15RollSlMatt",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElg15RollSlDot",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElg15RollCuMatt",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElg15RollBlkSh",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElgFrst15RollSlDot",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2607,21 +2600,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15SpryBlkMatt",
+   "sku": "GBElgFrst15RollPinkDot",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst15SpryBlkMatt",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "GBElgFrst15RollCuMatt",
+   "sku": "GBElgFrst15RollSlMatt",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2642,21 +2628,28 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst15RollPinkDot",
+   "sku": "GBElgFrst15RollCuMatt",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100RdcrPnkLthr",
+   "sku": "GBElgFrst15RollBlkSh",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100RdcrShnSl",
+   "sku": "GBElgFrst15SpryBlkMatt",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElg15SpryBlkMatt",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2670,7 +2663,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100RdcrShnGl",
+   "sku": "GBElg100RdcrShnSl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElg100RdcrPnkLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2678,6 +2678,13 @@
   {
    "family": "Elegant",
    "sku": "GBElg100RdcrIvyLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElg100RdcrShnGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2705,21 +2712,7 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst100RdcrWht",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
    "sku": "GBElg100RdcrWht",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "GBElgFrst100RdcrPnkLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2740,14 +2733,21 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg30SpryBlk",
+   "sku": "GBElgFrst100RdcrWht",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst30SpryBlk",
+   "sku": "GBElgFrst100RdcrPnkLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElg30SpryBlk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2761,7 +2761,7 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst100RdcrBrwnLthr",
+   "sku": "GBElgFrst30SpryBlk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2769,6 +2769,13 @@
   {
    "family": "Elegant",
    "sku": "GBElgFrst100RdcrShnBlkTall",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElgFrst100RdcrBrwnLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2831,14 +2838,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg60AnSpWht",
+   "sku": "GBElg60SpryShnBlk",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg60SpryShnBlk",
+   "sku": "GBElg60AnSpWht",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2866,14 +2873,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15WhtSht",
+   "sku": "GBElg60AnSpTslLvn",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg60AnSpTslLvn",
+   "sku": "GBElg15WhtSht",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2887,14 +2894,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg60AnSpTslIvyGl",
+   "sku": "GBElg60SpryCu",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg60SpryCu",
+   "sku": "GBElg60AnSpTslIvyGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2908,13 +2915,6 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst60SpryShnBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
    "sku": "GBElg60AnSpTslIvySl",
    "status": "none",
    "kitParts": null,
@@ -2922,7 +2922,7 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst60SpryCu",
+   "sku": "GBElgFrst60SpryShnBlk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2930,6 +2930,13 @@
   {
    "family": "Elegant",
    "sku": "GBElg15BlkSht",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElgFrst60SpryCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2950,21 +2957,7 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst15BlkSht",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
    "sku": "GBElg60AnSpTslWht",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "GBElgFrst60SpryMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2978,7 +2971,21 @@
   },
   {
    "family": "Elegant",
+   "sku": "GBElgFrst15BlkSht",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
    "sku": "GBElg60AnSpTslPnk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElgFrst60SpryMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -2992,14 +2999,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst15Sl",
+   "sku": "GBElg60AnSpTslRed",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg60AnSpTslRed",
+   "sku": "GBElgFrst15Sl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3041,14 +3048,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst60AnSpIvySl",
+   "sku": "GBElgFrst100SpryCu",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst100SpryCu",
+   "sku": "GBElgFrst60AnSpIvySl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3090,14 +3097,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst60AnSpTslIvyGl",
+   "sku": "GBElgFrst60AnSpTslGl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst60AnSpTslGl",
+   "sku": "GBElgFrst60AnSpTslIvyGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3146,13 +3153,6 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst60RdcrBlkLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
    "sku": "GBElg60RdcrBlkLthr",
    "status": "none",
    "kitParts": null,
@@ -3161,6 +3161,13 @@
   {
    "family": "Elegant",
    "sku": "GBElg100RdcrBlkLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElgFrst60RdcrBlkLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3195,14 +3202,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100SpryShnSl",
+   "sku": "GBElg100SpryMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100SpryMtSl",
+   "sku": "GBElg100SpryShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3216,14 +3223,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst100SpryShnGl",
+   "sku": "GBElgFrst100SpryMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst100SpryMtSl",
+   "sku": "GBElgFrst100SpryShnGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3258,13 +3265,6 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst60AnSpTslBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
    "sku": "GBElgFrst60AnSpBlk",
    "status": "none",
    "kitParts": null,
@@ -3272,14 +3272,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg30SlCap",
+   "sku": "GBElgFrst60AnSpTslBlk",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst30SlCap",
+   "sku": "GBElg30SlCap",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3294,6 +3294,13 @@
   {
    "family": "Elegant",
    "sku": "GBElg100AnSpTslBlk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElgFrst30SlCap",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3342,14 +3349,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100AnSpMtSl",
+   "sku": "GBElg100AnSpPnk",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100AnSpPnk",
+   "sku": "GBElg100AnSpMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3363,14 +3370,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100AnSpGl",
+   "sku": "GBElg100AnSpWht",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100AnSpWht",
+   "sku": "GBElg100AnSpGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3384,14 +3391,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100AnSpTslIvyGl",
+   "sku": "GBElg100AnSpTslIvySl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg100AnSpTslIvySl",
+   "sku": "GBElg100AnSpTslIvyGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3440,14 +3447,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst100AnSpWht",
+   "sku": "GBElgFrst100AnSpGl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst100AnSpGl",
+   "sku": "GBElgFrst100AnSpWht",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3496,14 +3503,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "LBElg60LtnCu",
+   "sku": "GBElgFrst100AnSpTslLvn",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst100AnSpTslLvn",
+   "sku": "LBElg60LtnCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3524,14 +3531,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst100AnSpTslRed",
+   "sku": "LBElg60LtnShnBlk",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "LBElg60LtnShnBlk",
+   "sku": "GBElgFrst100AnSpTslRed",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3552,14 +3559,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst100AnSpTslWht",
+   "sku": "LBElgFrst60LtnMtGl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "LBElgFrst60LtnMtGl",
+   "sku": "GBElgFrst100AnSpTslWht",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3601,14 +3608,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15SpryBlkSh",
+   "sku": "LBElgFrst60LtnShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "LBElgFrst60LtnShnSl",
+   "sku": "GBElg15SpryBlkSh",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3622,13 +3629,6 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15SpryBluMatt",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
    "sku": "GBElg15SprySlMatt",
    "status": "none",
    "kitParts": null,
@@ -3636,14 +3636,21 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15SpryCuMatt",
+   "sku": "GBElg15SprySlSh",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15SprySlSh",
+   "sku": "GBElg15SpryBluMatt",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElg15SpryCuMatt",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3671,6 +3678,13 @@
   },
   {
    "family": "Elegant",
+   "sku": "GBElgFrst15SpryGlSh",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
    "sku": "GBElgFrst15SprySlMatt",
    "status": "none",
    "kitParts": null,
@@ -3685,13 +3699,6 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg60RdcrShnBlkTall",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
    "sku": "GBElgFrst15SpryCuMatt",
    "status": "none",
    "kitParts": null,
@@ -3699,14 +3706,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst15SpryGlSh",
+   "sku": "GBElg60RdcrWht",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg60RdcrWht",
+   "sku": "GBElg60RdcrShnBlkTall",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3748,13 +3755,6 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15MtlRollCuMatt",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
    "sku": "GBElg60RdcrShnSl",
    "status": "none",
    "kitParts": null,
@@ -3762,7 +3762,7 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15MtlRollGlMatt",
+   "sku": "GBElg15MtlRollCuMatt",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3776,7 +3776,7 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg60RdcrMtSl",
+   "sku": "GBElg15MtlRollGlMatt",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3784,6 +3784,13 @@
   {
    "family": "Elegant",
    "sku": "GBElg15MtlRollGlSh",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElg60RdcrMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3804,14 +3811,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "LBElg100LtnMtGl",
+   "sku": "GBElg15MtlRollSlDot",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15MtlRollSlMatt",
+   "sku": "LBElg100LtnMtGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3825,7 +3832,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15MtlRollSlDot",
+   "sku": "GBElg15MtlRollSlMatt",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "GBElg15MtlRollSlSh",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3846,28 +3860,7 @@
   },
   {
    "family": "Elegant",
-   "sku": "GBElg15MtlRollSlSh",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
    "sku": "LBElg100LtnShnBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "GBElgFrst15MtlRollSlDot",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Elegant",
-   "sku": "LBElg100LtnMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3895,14 +3888,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "LBElg100LtnShnSl",
+   "sku": "LBElg100LtnMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst15MtlRollPinkDot",
+   "sku": "LBElg100LtnShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3916,14 +3909,21 @@
   },
   {
    "family": "Elegant",
-   "sku": "LBElg100LtnCu",
+   "sku": "GBElgFrst15MtlRollSlDot",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Elegant",
-   "sku": "GBElgFrst60RdcrMtSlTall",
+   "sku": "GBElgFrst15MtlRollPinkDot",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
+   "sku": "LBElg100LtnCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -3979,6 +3979,13 @@
   },
   {
    "family": "Elegant",
+   "sku": "LBElg60LtnClrOvrCap",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Elegant",
    "sku": "GBElgFrst15MtlRollBlkSh",
    "status": "none",
    "kitParts": null,
@@ -3993,14 +4000,14 @@
   },
   {
    "family": "Elegant",
-   "sku": "LBElg60LtnClrOvrCap",
+   "sku": "GBElgFrst60RdcrMtSlTall",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100RdcrShnGl",
+   "sku": "GBCrcl15RollGlSh",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4008,27 +4015,6 @@
   {
    "family": "Circle",
    "sku": "GBCrcl100RdcrPnkLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "LBCrclFrst100LtnClOvrCap",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrcl15RollCuMatt",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrcl15RollBlkSh",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4049,14 +4035,35 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl15RollGlSh",
+   "sku": "GBCrcl15RollBlkSh",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl15RollSlDot",
+   "sku": "LBCrclFrst100LtnClOvrCap",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl100RdcrShnGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl15RollCuMatt",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl100RdcrShnBlkTall",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4070,7 +4077,21 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100RdcrShnBlkTall",
+   "sku": "GBCrcl15RollSlDot",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl100RdcrLBrwnLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl100RdcrBrwnLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4091,49 +4112,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100RdcrBrwnLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrcl100RdcrLBrwnLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrcl100RdcrShnSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrcl100RdcrIvyLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrcl100RdcrMtSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrcl100RdcrWht",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrclFrst100RdcrShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4147,7 +4126,35 @@
   },
   {
    "family": "Circle",
+   "sku": "GBCrcl100RdcrMtSl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrclFrst100RdcrShnSl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl100RdcrWht",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
    "sku": "GBCrclFrst100RdcrShnGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl100RdcrIvyLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4168,13 +4175,6 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrclFrst100RdcrBrwnLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrclFrst100RdcrLBrwnLthr",
    "status": "none",
    "kitParts": null,
@@ -4182,7 +4182,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrclFrst100RdcrShnBlkTall",
+   "sku": "GBCrclFrst100RdcrBrwnLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4196,14 +4196,21 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrclFrst100RdcrWht",
+   "sku": "GBCrclFrst100RdcrMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Circle",
-   "sku": "GBCrclFrst100RdcrMtSl",
+   "sku": "GBCrclFrst100RdcrShnBlkTall",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrclFrst100RdcrWht",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4224,20 +4231,6 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl50SpryShnGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrclFrst50SpryMtGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrcl50SpryShnSl",
    "status": "none",
    "kitParts": null,
@@ -4245,14 +4238,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrclFrst50SpryShnBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrclFrst50SpryShnGl",
+   "sku": "GBCrcl50SpryShnGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4266,7 +4252,28 @@
   },
   {
    "family": "Circle",
+   "sku": "GBCrclFrst50SpryShnGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrclFrst50SpryShnBlk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
    "sku": "GBCrclFrst50SpryMtSl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrclFrst50SpryMtGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4287,14 +4294,14 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl50SpryCu",
+   "sku": "GBCrcl30SpryBlk",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl50DrpSl",
+   "sku": "GBCrcl50SpryCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4308,7 +4315,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl30SpryBlk",
+   "sku": "GBCrcl50DrpSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4336,7 +4343,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl15WhtSht",
+   "sku": "GBCrcl100SpryCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4350,14 +4357,14 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrclFrst100SpryCu",
+   "sku": "GBCrcl15WhtSht",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100SpryCu",
+   "sku": "GBCrclFrst100SpryCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4399,21 +4406,14 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100SpryShnBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrcl100SpryShnSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrclFrst50RdcrBlkLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl100SpryShnBlk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4428,6 +4428,13 @@
   {
    "family": "Circle",
    "sku": "GBCrclFrst100SpryMtGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl100SpryShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4462,20 +4469,6 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100RdcrBlkLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrcl50AnSpTslBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrcl50AnSpBlk",
    "status": "none",
    "kitParts": null,
@@ -4483,7 +4476,21 @@
   },
   {
    "family": "Circle",
+   "sku": "GBCrcl100RdcrBlkLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
    "sku": "GBCrclFrst100RdcrBlkLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl50AnSpTslBlk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4504,7 +4511,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrclFrst100AnSpTslBlk",
+   "sku": "GBCrcl100AnSpTslBlk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4518,7 +4525,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100AnSpTslBlk",
+   "sku": "GBCrclFrst100AnSpTslBlk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4539,13 +4546,6 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100AnSpMtSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrcl100AnSpWht",
    "status": "none",
    "kitParts": null,
@@ -4553,14 +4553,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100AnSpPnk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrcl100AnSpTslGl",
+   "sku": "GBCrcl100AnSpMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4574,6 +4567,20 @@
   },
   {
    "family": "Circle",
+   "sku": "GBCrcl100AnSpTslGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl100AnSpPnk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
    "sku": "GBCrcl100AnSpTslLvn",
    "status": "none",
    "kitParts": null,
@@ -4581,14 +4588,14 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100AnSpTslPnk",
+   "sku": "GBCrcl100AnSpTslIvySl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl100AnSpTslIvySl",
+   "sku": "GBCrcl100AnSpTslPnk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4609,13 +4616,6 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl15RollBlkDot",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrcl100AnSpTslMtSl",
    "status": "none",
    "kitParts": null,
@@ -4630,7 +4630,14 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrclFrst100AnSpWht",
+   "sku": "GBCrcl15RollBlkDot",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrclFrst100AnSpPnk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4644,7 +4651,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrclFrst100AnSpPnk",
+   "sku": "GBCrclFrst100AnSpWht",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4679,6 +4686,13 @@
   },
   {
    "family": "Circle",
+   "sku": "GBCrclFrst100AnSpTslLvn",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
    "sku": "GBCrclFrst100AnSpTslPnk",
    "status": "none",
    "kitParts": null,
@@ -4700,13 +4714,6 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrclFrst100AnSpTslLvn",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrclFrst100AnSpTslMtSl",
    "status": "none",
    "kitParts": null,
@@ -4715,6 +4722,13 @@
   {
    "family": "Circle",
    "sku": "LBCrcl50LtnMtGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "LBCrcl50LtnShnGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4735,7 +4749,7 @@
   },
   {
    "family": "Circle",
-   "sku": "LBCrcl50LtnShnGl",
+   "sku": "LBCrcl50LtnMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4749,13 +4763,6 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl50RdcrIvyLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "LBCrcl50LtnShnSl",
    "status": "none",
    "kitParts": null,
@@ -4763,7 +4770,7 @@
   },
   {
    "family": "Circle",
-   "sku": "LBCrcl50LtnMtSl",
+   "sku": "GBCrcl50RdcrIvyLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4777,7 +4784,21 @@
   },
   {
    "family": "Circle",
+   "sku": "GBCrcl50RdcrShnBlkTall",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
    "sku": "LBCrcl50LtnCu",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl50RdcrBrwnLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4791,21 +4812,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl50RdcrShnBlkTall",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "LBCrclFrst50LtnShnGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrcl50RdcrBrwnLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4924,13 +4931,6 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl15SpryBlkSh",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrclFrst50RdcrPnkLthr",
    "status": "none",
    "kitParts": null,
@@ -4938,14 +4938,14 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl15SpryBluMatt",
+   "sku": "GBCrcl15SpryBlkSh",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl50AnSpPnk",
+   "sku": "GBCrcl15SpryBluMatt",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -4974,6 +4974,13 @@
   {
    "family": "Circle",
    "sku": "GBCrcl50AnSpIvySl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrcl50AnSpPnk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5015,13 +5022,6 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl50AnSpTslLvn",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrcl50AnSpTslIvyGl",
    "status": "none",
    "kitParts": null,
@@ -5036,6 +5036,13 @@
   },
   {
    "family": "Circle",
+   "sku": "LBCrcl100LtnMtGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
    "sku": "GBCrcl50AnSpTslWht",
    "status": "none",
    "kitParts": null,
@@ -5043,7 +5050,7 @@
   },
   {
    "family": "Circle",
-   "sku": "LBCrcl100LtnMtGl",
+   "sku": "GBCrcl50AnSpTslLvn",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5071,7 +5078,7 @@
   },
   {
    "family": "Circle",
-   "sku": "LBCrcl100LtnMtSl",
+   "sku": "GBCrcl50AnSpTslRed",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5085,7 +5092,7 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl50AnSpTslRed",
+   "sku": "LBCrcl100LtnMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5099,14 +5106,14 @@
   },
   {
    "family": "Circle",
-   "sku": "LBCrcl100LtnShnSl",
+   "sku": "GBCrcl50AnSpTslGl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl50AnSpTslGl",
+   "sku": "LBCrcl100LtnShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5120,7 +5127,21 @@
   },
   {
    "family": "Circle",
+   "sku": "LBCrclFrst100LtnMtGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
    "sku": "GBCrclFrst50AnSpPnk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Circle",
+   "sku": "GBCrclFrst50AnSpMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5134,14 +5155,7 @@
   },
   {
    "family": "Circle",
-   "sku": "LBCrclFrst100LtnMtGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "GBCrclFrst50AnSpMtSl",
+   "sku": "LBCrclFrst100LtnMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5162,7 +5176,7 @@
   },
   {
    "family": "Circle",
-   "sku": "LBCrclFrst100LtnMtSl",
+   "sku": "LBCrclFrst100LtnCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5184,13 +5198,6 @@
   {
    "family": "Circle",
    "sku": "GBCrcl15MtlRollBlkSh",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
-   "sku": "LBCrclFrst100LtnCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5232,14 +5239,14 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl15MtlRollSlMatt",
+   "sku": "GBCrcl15MtlRollSlDot",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl15MtlRollSlDot",
+   "sku": "GBCrcl15MtlRollSlMatt",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5260,13 +5267,6 @@
   },
   {
    "family": "Circle",
-   "sku": "GBCrcl30SpryMattSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Circle",
    "sku": "GBCrcl30SpryShnGl",
    "status": "none",
    "kitParts": null,
@@ -5274,7 +5274,7 @@
   },
   {
    "family": "Circle",
-   "sku": "LBCrcl50LtnClOvrCap",
+   "sku": "GBCrcl30SpryMattSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5294,15 +5294,8 @@
    "local": null
   },
   {
-   "family": "Diva",
-   "sku": "GBDiva46SpryMtSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
-   "sku": "LBDiva100LtnClOvrCap",
+   "family": "Circle",
+   "sku": "LBCrcl50LtnClOvrCap",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5316,7 +5309,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDivaFrst46SpryMtGl",
+   "sku": "GBDiva46SpryMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5324,6 +5317,13 @@
   {
    "family": "Diva",
    "sku": "GBDiva46SpryMtGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
+   "sku": "GBDivaFrst46SpryMtGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5351,7 +5351,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDivaFrst46SpryMtSl",
+   "sku": "LBDiva100LtnClOvrCap",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5365,14 +5365,14 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100RdcrShnGl",
+   "sku": "GBDivaFrst46SpryMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "GBDivaFrst46SpryShnSl",
+   "sku": "GBDiva100RdcrShnGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5386,14 +5386,14 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100RdcrBrwnLthr",
+   "sku": "GBDivaFrst46SpryShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100RdcrShnSl",
+   "sku": "GBDiva100RdcrBrwnLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5407,14 +5407,14 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100RdcrMtSlTall",
+   "sku": "GBDiva100RdcrShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100RdcrWht",
+   "sku": "GBDiva100RdcrMtSlTall",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5428,6 +5428,13 @@
   },
   {
    "family": "Diva",
+   "sku": "GBDiva100RdcrWht",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
    "sku": "GBDiva100RdcrPnkLthr",
    "status": "none",
    "kitParts": null,
@@ -5435,14 +5442,14 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva30SpryCu",
+   "sku": "GBDiva100RdcrIvyLthr",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100RdcrIvyLthr",
+   "sku": "GBDiva30SpryCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5463,21 +5470,14 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva46DrpGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
-   "sku": "GBDiva30RdcrBlkLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
    "sku": "GBDivaFrst46SpryCu",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
+   "sku": "GBDiva46DrpGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5492,6 +5492,13 @@
   {
    "family": "Diva",
    "sku": "GBDiva46RdcrBlkLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
+   "sku": "GBDiva30RdcrBlkLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5526,20 +5533,6 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva46AnSpTslBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
-   "sku": "GBDivaFrst46AnSpBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
    "sku": "GBDiva46AnSpBlk",
    "status": "none",
    "kitParts": null,
@@ -5547,7 +5540,21 @@
   },
   {
    "family": "Diva",
+   "sku": "GBDiva46AnSpTslBlk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
    "sku": "GBDiva30RdcrShnGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
+   "sku": "GBDivaFrst46AnSpBlk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5575,6 +5582,13 @@
   },
   {
    "family": "Diva",
+   "sku": "GBDiva100SpryMtGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
    "sku": "GBDiva30RdcrShnSl",
    "status": "none",
    "kitParts": null,
@@ -5582,14 +5596,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100SpryShnGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
-   "sku": "GBDiva100SpryMtGl",
+   "sku": "GBDiva100RdcrBlkLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5603,7 +5610,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100RdcrBlkLthr",
+   "sku": "GBDiva100SpryShnGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5631,7 +5638,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100SpryMtSl",
+   "sku": "GBDiva100SpryShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5645,7 +5652,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100SpryShnSl",
+   "sku": "GBDiva100SpryMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5666,14 +5673,14 @@
   },
   {
    "family": "Diva",
-   "sku": "LBDiva30LtnShnGl",
+   "sku": "LBDiva30LtnShnBlk",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "LBDiva30LtnShnBlk",
+   "sku": "LBDiva30LtnShnGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5687,13 +5694,6 @@
   },
   {
    "family": "Diva",
-   "sku": "LBDiva30LtnMtSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
    "sku": "GBDiva100AnSpTslBlk",
    "status": "none",
    "kitParts": null,
@@ -5701,7 +5701,7 @@
   },
   {
    "family": "Diva",
-   "sku": "LBDiva30LtnCu",
+   "sku": "LBDiva30LtnMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5715,7 +5715,21 @@
   },
   {
    "family": "Diva",
+   "sku": "LBDiva30LtnCu",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
    "sku": "GBDiva46RdcrShnGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
+   "sku": "GBDiva46RdcrBrwnLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5736,20 +5750,6 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva46RdcrBrwnLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
-   "sku": "GBDiva46RdcrMtSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
    "sku": "GBDiva46RdcrShnSl",
    "status": "none",
    "kitParts": null,
@@ -5764,7 +5764,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva46RdcrPnkLthr",
+   "sku": "GBDiva46RdcrMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5772,6 +5772,13 @@
   {
    "family": "Diva",
    "sku": "GBDiva46RdcrWht",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
+   "sku": "GBDiva46RdcrPnkLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5799,13 +5806,6 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDivaFrst46RdcrShnGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
    "sku": "LBDiva46LtnShnBlk",
    "status": "none",
    "kitParts": null,
@@ -5813,7 +5813,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDivaFrst46RdcrShnBlkTall",
+   "sku": "GBDivaFrst46RdcrShnGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5827,14 +5827,14 @@
   },
   {
    "family": "Diva",
-   "sku": "LBDiva46LtnCu",
+   "sku": "GBDivaFrst46RdcrShnBlkTall",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "GBDivaFrst46RdcrBrwnLthr",
+   "sku": "LBDiva46LtnCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5848,21 +5848,14 @@
   },
   {
    "family": "Diva",
+   "sku": "GBDivaFrst46RdcrBrwnLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
    "sku": "LBDivaFrst46LtnMtGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
-   "sku": "GBDivaFrst46RdcrShnSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
-   "sku": "GBDiva30AnSpMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5876,6 +5869,13 @@
   },
   {
    "family": "Diva",
+   "sku": "GBDiva30AnSpMtSl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
    "sku": "LBDivaFrst46LtnMtSl",
    "status": "none",
    "kitParts": null,
@@ -5883,7 +5883,14 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDivaFrst46RdcrMtSlTall",
+   "sku": "GBDivaFrst46RdcrShnSl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
+   "sku": "GBDiva30AnSpWht",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5897,7 +5904,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva30AnSpWht",
+   "sku": "GBDivaFrst46RdcrMtSlTall",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5918,6 +5925,13 @@
   },
   {
    "family": "Diva",
+   "sku": "GBDiva30AnSpGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
    "sku": "LBDivaFrst46LtnShnBlk",
    "status": "none",
    "kitParts": null,
@@ -5932,13 +5946,6 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva30AnSpGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
    "sku": "LBDivaFrst46LtnShnSl",
    "status": "none",
    "kitParts": null,
@@ -5946,14 +5953,14 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDivaFrst46RdcrPnkLthr",
+   "sku": "GBDiva30AnSpIvySl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "GBDiva30AnSpIvySl",
+   "sku": "GBDivaFrst46RdcrPnkLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -5981,14 +5988,14 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100AnSpWht",
+   "sku": "GBDiva100AnSpGl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100AnSpGl",
+   "sku": "GBDiva100AnSpWht",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -6037,13 +6044,6 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100AnSpTslIvyGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
    "sku": "GBDiva100AnSpTslIvySl",
    "status": "none",
    "kitParts": null,
@@ -6051,14 +6051,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva100AnSpTslLvn",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
-   "sku": "GBDiva100AnSpTslPnk",
+   "sku": "GBDiva100AnSpTslIvyGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -6072,14 +6065,21 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva46AnSpWhtRng",
+   "sku": "GBDiva100AnSpTslPnk",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "GBDiva46AnSpTslIvySlRng",
+   "sku": "GBDiva100AnSpTslLvn",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
+   "sku": "GBDiva46AnSpWhtRng",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -6093,6 +6093,13 @@
   },
   {
    "family": "Diva",
+   "sku": "GBDiva46AnSpTslRedRng",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
    "sku": "GBDiva46AnSpTslWhtRng",
    "status": "none",
    "kitParts": null,
@@ -6100,7 +6107,14 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva46AnSpTslRedRng",
+   "sku": "GBDiva46AnSpTslIvySlRng",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
+   "sku": "GBDiva46AnSpPnk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -6121,13 +6135,6 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva46AnSpPnk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
    "sku": "GBDiva46AnSpMtSl",
    "status": "none",
    "kitParts": null,
@@ -6142,13 +6149,6 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva46AnSpTslLvn",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
    "sku": "GBDiva46AnSpTslIvyGl",
    "status": "none",
    "kitParts": null,
@@ -6157,6 +6157,13 @@
   {
    "family": "Diva",
    "sku": "GBDiva46AnSpTslPnk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
+   "sku": "GBDiva46AnSpTslLvn",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -6268,14 +6275,14 @@
   },
   {
    "family": "Diva",
-   "sku": "LBDiva100LtnMtGl",
+   "sku": "GBDiva46DrpCu",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "GBDiva46DrpCu",
+   "sku": "LBDiva100LtnMtGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -6289,13 +6296,6 @@
   },
   {
    "family": "Diva",
-   "sku": "LBDiva100LtnMtSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Diva",
    "sku": "LBDiva100LtnShnBlk",
    "status": "none",
    "kitParts": null,
@@ -6303,7 +6303,7 @@
   },
   {
    "family": "Diva",
-   "sku": "LBDiva100LtnCu",
+   "sku": "LBDiva100LtnMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -6317,6 +6317,13 @@
   },
   {
    "family": "Diva",
+   "sku": "LBDiva100LtnCu",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Diva",
    "sku": "LBDiva30LtnClOvrCap",
    "status": "none",
    "kitParts": null,
@@ -6324,7 +6331,7 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva30SpryShnBlk",
+   "sku": "LBDiva46LtnClOvrCap",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -6352,7 +6359,7 @@
   },
   {
    "family": "Diva",
-   "sku": "LBDiva46LtnClOvrCap",
+   "sku": "GBDiva30SpryShnBlk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -6366,14 +6373,14 @@
   },
   {
    "family": "Diva",
-   "sku": "GBDiva30SpryShnSl",
+   "sku": "GBDivaFrst46DrpCu",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Diva",
-   "sku": "GBDivaFrst46DrpCu",
+   "sku": "GBDiva30SpryShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -6395,28 +6402,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn1ozMtlRollonShnSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb1ozMtlRollonMattSl",
-   "status": "kit:capSplit",
+   "status": "kit:full",
    "kitParts": "body+cap",
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb1ozMtlRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6435,9 +6422,29 @@
   },
   {
    "family": "Boston Round",
+   "sku": "GBBstn1ozMtlRollonMattBlk",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
    "sku": "GBBstn1ozMtlRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb1ozMtlRollonMattSl",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6446,18 +6453,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn1ozMtlRollonMattSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstn1ozMtlRollonMattBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6466,8 +6463,38 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb1ozMtlRollonMattBlk",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb1ozMtlRollonMattGl",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb1ozMtlRollonShnSl",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb1ozMtlRollonShnBlk",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6476,28 +6503,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu1ozMtlRollonShnSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb1ozMtlRollonShnSl",
-   "status": "kit:capSplit",
+   "status": "kit:full",
    "kitParts": "body+cap",
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnBlu1ozMtlRollonMattBlk",
-   "status": "local:ready",
-   "kitParts": null,
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6506,8 +6513,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu1ozMtlRollonMattSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6516,8 +6523,28 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu1ozMtlRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstn2ozMtlRollMattBlk",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnBlu1ozMtlRollonMattBlk",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6526,28 +6553,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn2ozMtlRollMattGl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb1ozMtlRollonShnBlk",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstn2ozMtlRollMattBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6556,8 +6563,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn2ozMtlRollMattSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6565,19 +6572,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnAmb2ozMtlRollonMattSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnBlu2ozMtlRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstnAmb2ozMtlRollonMattBlk",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6586,8 +6583,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn2ozMtlRollShnSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6595,29 +6592,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnAmb2ozMtlRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
    "sku": "GBBstnAmb2ozMtlRollonShnSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb2ozMtlRollonMattBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6626,8 +6603,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu2ozMtlRollonMattBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6635,9 +6612,29 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnBlu2ozMtlRollonShnSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstnAmb2ozMtlRollonMattSl",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb2ozMtlRollonMattGl",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnBlu2ozMtlRollonMattGl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6646,8 +6643,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu2ozMtlRollonMattSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6655,19 +6652,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnBlu15WhtDrpr",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb15mlWhtDropperSlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "sku": "GBBstnBlu2ozMtlRollonShnSl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6676,18 +6663,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb15mlBlkDropperSlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb15mlBlkDropperGlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6696,38 +6673,58 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb15mlWhtDropper",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb15mlWhtDropperSlTrim",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb15mlBlkDropperGlTrim",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnBlu15WhtDrpr",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
    }
   },
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb15mlWhtDropperGlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnBlu15WhtDrprGlTrim",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
    }
   },
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu15WhtDrprSlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6735,19 +6732,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstn1ozWhtDrpShnGlTrim",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnBlu15BlkDrprGlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstnBlu15WhtDrprGlTrim",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6755,9 +6742,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstn1ozBlkDrpShnGlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6766,8 +6753,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn1ozWhtDrp",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+pipette+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6775,9 +6762,29 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnBlu15mlBlkDropperSlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "sku": "GBBstnBlu15BlkDrprGlTrim",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstn1ozBlkDrpShnGlTrim",
+   "status": "kit:full",
+   "kitParts": "body+pipette+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstn1ozWhtDrpShnGlTrim",
+   "status": "kit:full",
+   "kitParts": "body+pipette+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6786,29 +6793,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn1ozRollonShBlk",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstn1ozRollonShGl",
-   "status": "local:held",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "review",
-    "reason": "KeyError: 'GBBstn1ozRollonShGl.front-on'"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb1ozBlkDrpShnGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6817,8 +6803,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn1ozWhtDrpShnSlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+pipette+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6837,19 +6823,20 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstn1ozRollonMattSl",
-   "status": "local:ready",
+   "sku": "GBBstn1ozRollonShGl",
+   "status": "local:held",
    "kitParts": null,
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
+    "status": "review",
+    "reason": "KeyError: 'GBBstn1ozRollonShGl.front-on'"
    }
   },
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb1ozWhtDropper",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6857,9 +6844,29 @@
   },
   {
    "family": "Boston Round",
+   "sku": "GBBstnAmb1ozBlkDrpShnGl",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstn1ozRollonMattSl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
    "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6868,28 +6875,18 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn1ozRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb1ozRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
    }
   },
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6897,9 +6894,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnAmb1ozRollonMattBlk",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
+   "sku": "GBBstnAmb1ozRollonMattSl",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6907,9 +6904,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnBlu1ozWhtDropper",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "sku": "GBBstnAmb1ozRollonMattGl",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6918,8 +6915,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6927,9 +6924,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnAmb1ozRollonMattSl",
-   "status": "kit:capSplit",
-   "kitParts": "body+cap",
+   "sku": "GBBstnBlu1ozWhtDropper",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6937,9 +6934,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "sku": "GBBstnAmb1ozRollonMattBlk",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6948,8 +6945,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb1ozRollonShnSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6958,8 +6955,18 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu1ozWhtDropperShnSlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6968,8 +6975,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb1ozRollonShnBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -6977,9 +6984,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnBlu1ozRollonMattBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstnBlu1ozRollonShnSl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6987,9 +6994,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnBlu1ozRollonShnSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstnBlu1ozRollonMattBlk",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -6998,18 +7005,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu1ozRollonMattSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnBlu1ozRollonShnBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -7018,10 +7015,20 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu1ozRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnBlu1ozRollonShnBlk",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
    }
   },
@@ -7039,8 +7046,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn2ozRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7049,48 +7056,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn2ozRollMattBlk",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstn2ozRollMattSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstn2ozRollShnSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb2ozRollonMattBlk",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb2ozRollonMattSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -7099,8 +7066,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb2ozRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7108,9 +7075,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstn2ozWhtDrpr",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstn2ozRollShnSl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -7118,9 +7085,39 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnAmb2ozRollonShnSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstn2ozRollMattSl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb2ozRollonMattBlk",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstn2ozWhtDrpr",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb2ozRollonMattSl",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -7129,8 +7126,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb2ozRollonShnBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7138,19 +7135,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnBlu2ozRollonMattGl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstn2ozBlkDrprShnSlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstnAmb2ozRollonShnSl",
+   "status": "kit:full",
+   "kitParts": "body+roller+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -7158,9 +7145,29 @@
   },
   {
    "family": "Boston Round",
+   "sku": "GBBstn2ozBlkDrprShnSlTrim",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnBlu2ozRollonMattGl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
    "sku": "GBBstnBlu2ozRollonMattBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7169,8 +7176,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn2ozWhtDrprShnGlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -7178,9 +7185,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstnBlu2ozRollonMattSl",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7188,9 +7195,9 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnBlu2ozRollonMattSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7199,38 +7206,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu2ozRollonShnSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnBlu2ozRollonShnBlk",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb2ozWhtDrpr",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "roller+body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7239,8 +7216,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -7248,9 +7225,39 @@
   },
   {
    "family": "Boston Round",
+   "sku": "GBBstnBlu2ozRollonShnBlk",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb2ozWhtDrpr",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
    "sku": "GBBstnAmb2ozWhtDropperShnSlTrim",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7259,8 +7266,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7269,18 +7276,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu2ozWhtDropper",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnBlu2ozWhtDropperShnGlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7289,8 +7286,18 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu2ozWhtDropperShnSlTrim",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstnBlu2ozWhtDropperShnGlTrim",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7299,7 +7306,7 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn15BlkCapSht",
-   "status": "kit:capSplit",
+   "status": "kit:full",
    "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
@@ -7309,8 +7316,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb15mlBlkCapSht",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7319,8 +7326,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnBlu15BlkCapSht",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7329,7 +7336,7 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn1ozBlkCapSht",
-   "status": "kit:capSplit",
+   "status": "kit:full",
    "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
@@ -7339,27 +7346,7 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb1ozBlkCapSht",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnBlu1ozBlkCapSht",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstn2ozBlkCapSht",
-   "status": "kit:capSplit",
+   "status": "kit:full",
    "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
@@ -7368,9 +7355,19 @@
   },
   {
    "family": "Boston Round",
-   "sku": "GBBstnBlu2ozBlkCapSht",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBBstnBlu1ozBlkCapSht",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstn2ozBlkCapSht",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7389,9 +7386,19 @@
   },
   {
    "family": "Boston Round",
+   "sku": "GBBstnBlu2ozBlkCapSht",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
    "sku": "GBBstn1ozRollonMattBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/boston-remaining-2026-09-16",
     "status": "candidate"
@@ -7400,28 +7407,8 @@
   {
    "family": "Boston Round",
    "sku": "GBBstn1ozBlkDrp",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-current-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstn2ozBlkDrpr",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Boston Round",
-   "sku": "GBBstnBlu1ozBlkDropper",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "body+pipette+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
@@ -7430,16 +7417,71 @@
   {
    "family": "Boston Round",
    "sku": "GBBstnAmb1ozBlkDropper",
-   "status": "kit:bodyOnly",
-   "kitParts": "body",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/boston-current-2026-09-16",
     "status": "candidate"
    }
   },
   {
+   "family": "Boston Round",
+   "sku": "GBBstnBlu1ozBlkDropper",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-current-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Boston Round",
+   "sku": "GBBstn2ozBlkDrpr",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst78RdcrMtSlTall",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst78RdcrIvyLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst128AnSpMtSl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
    "family": "Round",
    "sku": "GBRndFrst128AnSpWht",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst78RdcrWht",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst128AnSpTslRed",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7460,62 +7502,6 @@
   },
   {
    "family": "Round",
-   "sku": "GBRndFrst78RdcrIvyLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst78RdcrWht",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst78RdcrMtSlTall",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst128AnSpTslRed",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst128AnSpMtSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst128AnSpTslGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst128AnSpTslIvyGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst128AnSpTslIvySl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
    "sku": "GBRndFrst128AnSpTslWht",
    "status": "none",
    "kitParts": null,
@@ -7530,14 +7516,28 @@
   },
   {
    "family": "Round",
-   "sku": "GBRndFrst128AnSpTslLvn",
+   "sku": "GBRndFrst128AnSpTslIvyGl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Round",
-   "sku": "LBRnd128LtnMtSl",
+   "sku": "GBRndFrst128AnSpTslGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst128AnSpTslIvySl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst128AnSpTslLvn",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7551,14 +7551,14 @@
   },
   {
    "family": "Round",
-   "sku": "LBRnd128LtnCu",
+   "sku": "LBRnd128LtnMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Round",
-   "sku": "LBRnd128LtnClOvrCap",
+   "sku": "LBRnd128LtnCu",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7593,6 +7593,13 @@
   },
   {
    "family": "Round",
+   "sku": "LBRnd128LtnClOvrCap",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
    "sku": "GBRnd128SpryCu",
    "status": "none",
    "kitParts": null,
@@ -7607,13 +7614,6 @@
   },
   {
    "family": "Round",
-   "sku": "GBRnd128RdcrIvyLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
    "sku": "GBRnd128RdcrShnGl",
    "status": "none",
    "kitParts": null,
@@ -7621,21 +7621,7 @@
   },
   {
    "family": "Round",
-   "sku": "GBRnd128RdcrShnBlkTall",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRnd128RdcrShnSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRnd128RdcrBrwnLthr",
+   "sku": "GBRnd128RdcrIvyLthr",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7649,7 +7635,28 @@
   },
   {
    "family": "Round",
+   "sku": "GBRnd128RdcrBrwnLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRnd128RdcrShnSl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
    "sku": "GBRnd128RdcrMtSlTall",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRnd128RdcrShnBlkTall",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7677,20 +7684,6 @@
   },
   {
    "family": "Round",
-   "sku": "GBRndFrst128RdcrBlkLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst128RdcrShnSl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
    "sku": "GBRnd128RdcrPnkLthr",
    "status": "none",
    "kitParts": null,
@@ -7699,6 +7692,20 @@
   {
    "family": "Round",
    "sku": "GBRndFrst78AnSpGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst128RdcrBlkLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst128RdcrShnSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7726,21 +7733,7 @@
   },
   {
    "family": "Round",
-   "sku": "GBRndFrst78AnSpPnk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
    "sku": "GBRndFrst128RdcrBrwnLthr",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst128RdcrMtSlTall",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7754,14 +7747,21 @@
   },
   {
    "family": "Round",
-   "sku": "GBRndFrst78AnSpMtSl",
+   "sku": "GBRndFrst78AnSpPnk",
    "status": "none",
    "kitParts": null,
    "local": null
   },
   {
    "family": "Round",
-   "sku": "GBRndFrst78AnSpWht",
+   "sku": "GBRndFrst128RdcrMtSlTall",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst78AnSpMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7775,7 +7775,7 @@
   },
   {
    "family": "Round",
-   "sku": "GBRndFrst78AnSpTslGl",
+   "sku": "GBRndFrst78AnSpWht",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7790,6 +7790,13 @@
   {
    "family": "Round",
    "sku": "GBRndFrst78AnSpTslIvyGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst78AnSpTslGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7845,13 +7852,6 @@
   },
   {
    "family": "Round",
-   "sku": "GBRndFrst78AnSpTslWht",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
    "sku": "GBRndFrst78AnSpTslMtSl",
    "status": "none",
    "kitParts": null,
@@ -7859,7 +7859,7 @@
   },
   {
    "family": "Round",
-   "sku": "GBRnd128SpryShnGl",
+   "sku": "GBRndFrst78AnSpTslWht",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7887,7 +7887,7 @@
   },
   {
    "family": "Round",
-   "sku": "GBRnd128AnSpTslBlk",
+   "sku": "GBRnd128SpryShnGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7908,28 +7908,14 @@
   },
   {
    "family": "Round",
+   "sku": "GBRnd128AnSpTslBlk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
    "sku": "GBRndFrst128AnSpBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst128AnSpTslBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRnd128AnSpBlk",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRnd128AnSpGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7943,7 +7929,21 @@
   },
   {
    "family": "Round",
-   "sku": "GBRnd128AnSpMtSl",
+   "sku": "GBRnd128AnSpBlk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRndFrst128AnSpTslBlk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRnd128AnSpGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7957,21 +7957,14 @@
   },
   {
    "family": "Round",
-   "sku": "GBRnd128AnSpTslIvyGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRnd128AnSpTslIvySl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
    "sku": "GBRnd128AnSpWht",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRnd128AnSpMtSl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7985,7 +7978,7 @@
   },
   {
    "family": "Round",
-   "sku": "GBRnd128AnSpTslPnk",
+   "sku": "GBRnd128AnSpTslIvyGl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -7993,6 +7986,27 @@
   {
    "family": "Round",
    "sku": "GBRnd128AnSpTslGl",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRnd128AnSpTslPnk",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRnd128AnSpTslRed",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
+   "sku": "GBRnd128AnSpTslIvySl",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -8007,20 +8021,6 @@
   {
    "family": "Round",
    "sku": "GBRndFrst78RdcrShnBlkTall",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRndFrst128AnSpGl",
-   "status": "none",
-   "kitParts": null,
-   "local": null
-  },
-  {
-   "family": "Round",
-   "sku": "GBRnd128AnSpTslRed",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -8048,6 +8048,13 @@
   },
   {
    "family": "Round",
+   "sku": "GBRndFrst78RdcrLBrwnLthr",
+   "status": "none",
+   "kitParts": null,
+   "local": null
+  },
+  {
+   "family": "Round",
    "sku": "GBRndFrst128AnSpIvySl",
    "status": "none",
    "kitParts": null,
@@ -8055,7 +8062,7 @@
   },
   {
    "family": "Round",
-   "sku": "GBRndFrst78RdcrLBrwnLthr",
+   "sku": "GBRndFrst128AnSpPnk",
    "status": "none",
    "kitParts": null,
    "local": null
@@ -8069,10 +8076,70 @@
   },
   {
    "family": "Round",
-   "sku": "GBRndFrst128AnSpPnk",
+   "sku": "GBRndFrst128AnSpGl",
    "status": "none",
    "kitParts": null,
    "local": null
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100RdcrShnGl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100RdcrLBrwnLthr",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp50AnSpTslRed",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp50AnSpTslWht",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100RdcrShnBlkTall",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100RdcrBrwnLthr",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
   },
   {
    "family": "Empire",
@@ -8087,99 +8154,9 @@
   },
   {
    "family": "Empire",
-   "sku": "GBEmp100RdcrShnGl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp50AnSpTslWht",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
    "sku": "GBEmp50AnSpTslMtSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp50AnSpTslRed",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp100RdcrShnBlkTall",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp100RdcrLBrwnLthr",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp100RdcrBrwnLthr",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp50DrpGl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp100RdcrShnSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp100RdcrMtSlTall",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8188,8 +8165,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp100RdcrMtSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8197,9 +8174,9 @@
   },
   {
    "family": "Empire",
-   "sku": "GBEmp100RdcrWht",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBEmp50DrpGl",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8208,8 +8185,38 @@
   {
    "family": "Empire",
    "sku": "GBEmp100RdcrPnkLthr",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100RdcrMtSlTall",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100RdcrWht",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100RdcrShnSl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8218,8 +8225,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp100RdcrIvyLthr",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8228,28 +8235,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50RdcrBlkLthr",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp100RdcrBlkLthr",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp50AnSpTslBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8258,8 +8245,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50AnSpBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8267,9 +8254,9 @@
   },
   {
    "family": "Empire",
-   "sku": "GBEmp100AnSpBlk",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBEmp100RdcrBlkLthr",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8277,29 +8264,9 @@
   },
   {
    "family": "Empire",
-   "sku": "GBEmp100AnSpTslBlk",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp50RdcrShnSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp50RdcrIvyLthr",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBEmp50AnSpTslBlk",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8308,8 +8275,48 @@
   {
    "family": "Empire",
    "sku": "GBEmp50RdcrShnGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100AnSpTslBlk",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100AnSpBlk",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp50RdcrShnSl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp50RdcrIvyLthr",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8318,8 +8325,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50RdcrBrwnLthr",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8328,18 +8335,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50RdcrLBrwnLthr",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp50RdcrMtSlTall",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8348,8 +8345,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50RdcrPnkLthr",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8358,8 +8355,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50RdcrShnBlkTall",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8367,19 +8364,9 @@
   },
   {
    "family": "Empire",
-   "sku": "GBEmp50RdcrMtSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp100AnSpPnk",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBEmp50RdcrMtSlTall",
+   "status": "kit:full",
+   "kitParts": "body+cap",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8388,8 +8375,28 @@
   {
    "family": "Empire",
    "sku": "GBEmp50RdcrWht",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp50RdcrMtSl",
+   "status": "kit:full",
+   "kitParts": "body+cap",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100AnSpPnk",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8398,28 +8405,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp100AnSpMtSl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp100AnSpWht",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp100AnSpIvySl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8428,8 +8415,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp100AnSpGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8437,9 +8424,19 @@
   },
   {
    "family": "Empire",
-   "sku": "GBEmp100AnSpTslIvySl",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBEmp100AnSpWht",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100AnSpIvySl",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8448,8 +8445,18 @@
   {
    "family": "Empire",
    "sku": "GBEmp100AnSpTslWht",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp100AnSpTslIvySl",
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8458,8 +8465,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp100AnSpTslMtSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8478,9 +8485,9 @@
   },
   {
    "family": "Empire",
-   "sku": "GBEmp100AnSpTslLvn",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBEmp100AnSpTslIvyGl",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8488,9 +8495,9 @@
   },
   {
    "family": "Empire",
-   "sku": "GBEmp100AnSpTslIvyGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "sku": "GBEmp100AnSpTslLvn",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8509,16 +8516,6 @@
   },
   {
    "family": "Empire",
-   "sku": "GBEmp50DrpCu",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
    "sku": "GBEmp100AnSpTslRed",
    "status": "local:held",
    "kitParts": null,
@@ -8530,9 +8527,19 @@
   },
   {
    "family": "Empire",
+   "sku": "GBEmp50DrpCu",
+   "status": "kit:full",
+   "kitParts": "body+fitment",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
    "sku": "GBEmp50AnSpGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8552,18 +8559,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50AnSpIvySl",
-   "status": "local:ready",
-   "kitParts": null,
-   "local": {
-    "batch": "dist/paper-doll/empire-2026-09-16",
-    "status": "candidate"
-   }
-  },
-  {
-   "family": "Empire",
-   "sku": "GBEmp50AnSpWht",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8572,8 +8569,18 @@
   {
    "family": "Empire",
    "sku": "GBEmp50AnSpMtSl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
+   "local": {
+    "batch": "dist/paper-doll/empire-2026-09-16",
+    "status": "candidate"
+   }
+  },
+  {
+   "family": "Empire",
+   "sku": "GBEmp50AnSpWht",
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8582,8 +8589,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50AnSpTslGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8592,8 +8599,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50AnSpTslIvyGl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8602,8 +8609,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50AnSpTslLvn",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8612,8 +8619,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50AnSpTslPnk",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+sprayer+diptube",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"
@@ -8622,8 +8629,8 @@
   {
    "family": "Empire",
    "sku": "GBEmp50AnSpTslIvySl",
-   "status": "local:ready",
-   "kitParts": null,
+   "status": "kit:full",
+   "kitParts": "body+diptube+sprayer",
    "local": {
     "batch": "dist/paper-doll/empire-2026-09-16",
     "status": "candidate"

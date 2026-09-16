@@ -6,7 +6,12 @@ set -u
 slug="$1"; name="$2"; reviewer="${3:-Jordan Richter, chat 2026-09-16 ('the kit is built, so that is how it is going to be… just the white background needs to be removed'); layer roles by geometry: Claude Fable 5.1}"
 B="dist/paper-doll/${slug}-2026-09-16"; PY=/opt/homebrew/bin/python3
 echo "=== $name ($B)"
-$PY scripts/paperdoll/solve_plate_registration.py --batch "$B" --from-batch dist/paper-doll/boston-master --fine > "$B/solve.log" 2>&1
+if [ -n "${WAIT_PID:-}" ]; then
+  # a solver already running for this batch (started by an earlier chain): wait for it
+  while kill -0 "$WAIT_PID" 2>/dev/null; do sleep 15; done
+else
+  $PY scripts/paperdoll/solve_plate_registration.py --batch "$B" --from-batch dist/paper-doll/boston-master --fine > "$B/solve.log" 2>&1
+fi
 echo "solver: $(grep -c '^solved' "$B/solve.log") solved, $(grep -c '^FAILED' "$B/solve.log") failed"
 $PY scripts/paperdoll/family_part_map.py --batch "$B" --reviewer "$reviewer" 2>&1 | tail -2
 rm -rf "$B/kits"
