@@ -12,7 +12,7 @@ visible second body (the amber body left under the cobalt one in the cobalt
 60 ml droppers) is excluded with its twin named; the plate parity gate proves
 it contributed nothing.
 
-    python3 scripts/paperdoll/boston_part_map.py  →  dist/paper-doll/boston-master/part-map.json
+    python3 scripts/paperdoll/boston_part_map.py [--batch BATCH] [--snapshot products.json]  →  BATCH/part-map.json
 """
 import json, hashlib, sys
 from collections import Counter
@@ -23,9 +23,12 @@ from build_master_kits import layer_inventory
 from family_batch import MASTER
 from matte import white_ground_fraction
 
-BATCH = Path('dist/paper-doll/boston-master')
+import argparse
+_ap = argparse.ArgumentParser(); _ap.add_argument('--batch', type=Path, default=Path('dist/paper-doll/boston-master')); _ap.add_argument('--snapshot', type=Path, default=None); _args = _ap.parse_args()
+BATCH = _args.batch
 plates = json.load(open(BATCH / 'plates/manifest.json'))['rows']
-snapshot = {p['websiteSku']: p for p in json.load(open(BATCH / 'input/convex-snapshot.json'))['products']}
+_snap = json.load(open(_args.snapshot or (BATCH / 'input/convex-snapshot.json')))
+snapshot = {p['websiteSku']: p for p in (_snap['products'] if isinstance(_snap, dict) and 'products' in _snap else _snap)}
 REVIEWER = "Jordan Richter, chat 2026-09-16 ('the kit is built, so that's how it's going to be… just the white background needs to be removed'); layer roles by geometry: Claude Fable 5.1"
 
 inventories = {}

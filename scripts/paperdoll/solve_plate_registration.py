@@ -30,7 +30,14 @@ for row in manifest['rows']:
     if args.sku and row['websiteSku'] not in args.sku: continue
     fam_dir = args.batch / 'plates' / row['familyId']; fam_dir.mkdir(parents=True, exist_ok=True)
     reg_name = f"_registration-{row['body']}.json"; src_reg = args.from_batch / 'plates' / row['familyId'] / reg_name; dst_reg = fam_dir / reg_name
-    if not dst_reg.exists(): shutil.copy(src_reg, dst_reg)
+    if not dst_reg.exists():
+        if src_reg.exists(): shutil.copy(src_reg, dst_reg)
+        else:
+            # no rendering batch ever kept a registration for this body: start one; the
+            # baseline is the plate's own ink bottom (the foot), everything else is solved
+            plate0 = Image.open(args.batch / 'plates' / row['plate']['key']).convert('RGB')
+            json.dump({'familyId': row['familyId'], 'body': row['body'], 'reference': None, 'template': None, 'sessions': [], 'plates': {},
+                       'scale': 1.0, 'baseOut': int(ink_bbox(plate0)[3]), 'note': 'created by solve_plate_registration.py from the published plate'}, open(dst_reg, 'w'), indent=1)
     reg = json.load(open(dst_reg)); key = f"{row['websiteSku']}.front-on"
     if row.get('registrationSource') != 'solved-from-plate': continue
     psd = PSDImage.open(MASTER / row['plate']['sourceRelPath'])
