@@ -3,15 +3,14 @@
  * serif for every `font-serif` / `.font-display` / `.font-cormorant` utility in this subtree, while
  * the rest of the site resolves those to the brand face (see globals.css).
  *
- * The editorial faces are mounted here — not on the root layout — so catalog,
- * PDP, cart, and the homepage do not download unused Garamond/Cormorant files.
+ * The faces stay registered on the root html node so `--font-editorial` can
+ * resolve, but they are not preloaded (see fonts.ts). Commerce pages therefore
+ * do not fetch unused Journal files.
  */
-import { cormorant, ebGaramond } from "../fonts";
-
 export default function BlogLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
-    return <div className={`editorial ${cormorant.variable} ${ebGaramond.variable}`}>{children}</div>;
+    return <div className="editorial">{children}</div>;
 }

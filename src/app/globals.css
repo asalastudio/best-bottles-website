@@ -138,7 +138,7 @@
 }
 
 .editorial {
-  --font-serif: var(--font-editorial);
+  --font-serif: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
 }
 .editorial .font-display {
   font-family: var(--font-editorial);

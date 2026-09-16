@@ -1233,6 +1233,7 @@ function LineItemMobileCard({
                             className="object-contain"
                             sizes="112px"
                             unoptimized
+                            priority={index === 0}
                         />
                     ) : (
                         <span className="flex h-full items-center justify-center">

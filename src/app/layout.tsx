@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { brandFace } from "./fonts";
+import { brandFace, cormorant, ebGaramond } from "./fonts";
 import "./globals.css";
 import { cookies } from "next/headers";
 import AppProviders from "@/components/AppProviders";
@@ -92,7 +92,7 @@ export default async function RootLayout({
   const initialMarketCode = (await cookies()).get(REGION_COOKIE)?.value ?? null;
 
   return (
-    <html lang="en" className={brandFace.variable}>
+    <html lang="en" className={`${brandFace.variable} ${cormorant.variable} ${ebGaramond.variable}`}>
       <body className="antialiased selection:bg-muted-gold/20 selection:text-obsidian">
         <script
           type="application/ld+json"

@@ -10,18 +10,18 @@ describe("site health invariants", () => {
         expect(layout).toContain('viewportFit: "cover"');
     });
 
-    it("keeps editorial serif files off the commerce root layout", () => {
+    it("registers editorial faces without preloading them on every commerce page", () => {
         const layout = read("src/app/layout.tsx");
         const blog = read("src/app/blog/layout.tsx");
         const fonts = read("src/app/fonts.ts");
+        const css = read("src/app/globals.css");
         expect(layout).toContain("brandFace.variable");
-        expect(layout).not.toContain("cormorant.variable");
-        expect(layout).not.toContain("ebGaramond.variable");
-        expect(blog).toContain("cormorant.variable");
-        expect(blog).toContain("ebGaramond.variable");
+        expect(layout).toContain("cormorant.variable");
+        expect(layout).toContain("ebGaramond.variable");
         expect(blog).toContain("editorial");
         expect(fonts).toContain('display: "swap"');
         expect(fonts).toContain("preload: false");
+        expect(css).toMatch(/\.editorial\s*\{[^}]*--font-serif:\s*var\(--font-eb-garamond\)/);
     });
 
     it("mounts Sanity Live only while Draft Mode is on", () => {
