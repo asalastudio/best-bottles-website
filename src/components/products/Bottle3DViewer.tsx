@@ -63,7 +63,7 @@ type MatSpec = {
 
 /* --------------------------------------------------------------- closure */
 
-function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
+function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat, solidBody,
                    finish = "17-415", capMoulding = "short" }: {
   mode: ClosureMode; neckY: number; capMat: string; ballMat: string;
   /** neck finish — selects the closure GLB set (17-415 | 18-415) */
@@ -73,6 +73,12 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   rollerVariant: "metal" | "plastic";
   /** spray/pump collar+actuator colour (SKU-derived: Blk/Gl/MattSl/ShSl/Tur/Rd) */
   trimMat: string;
+  /** true = the glass is a SOLID mesh, so there is no cavity for an interior
+   *  part to sit in. A dip tube modelled inside solid glass is refracted
+   *  through the whole body and arrives as a bent orange streak — it is not a
+   *  shading bug, the tube is geometrically embedded in glass. Interior parts
+   *  are dropped rather than drawn wrong. */
+  solidBody?: boolean;
 }) {
   const housingSteel = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb");
   const housingPlastic = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_PLASTIC.glb");
@@ -170,6 +176,13 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   // materials are memoized per registry name and SHARED across every mesh
   // and clone that wears them — 20+ swappable parts per bottle makes
   // per-render reconstruction real cost (audit item C)
+  // A material cache, deliberately a useMemo'd Map.
+  //
+  // useRef reads better for mutable storage and was tried first — it trades
+  // one rule for another: react-hooks/refs forbids reading `.current` during
+  // render, and build() is called from render, so the single immutability
+  // error became 23 refs errors. The memo is the shape that fits; only the
+  // write below needs an exemption.
   const matCache = useMemo(() => new Map<string, THREE.MeshPhysicalMaterial>(), []);
   const build = useCallback((gltf: { scene: THREE.Object3D }, name: string) => {
     const scene = gltf.scene.clone(true);
@@ -257,7 +270,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       g.push(bulb);
       // the works inside the bottle: the proven pump body + dip tube
       g.push(build(pumpBody, "PART_ACTUATOR_PP"));
-      const at = build(dipTube, "PART_DIPTUBE_PP");
+      const at = build(dipTube, "PART_DIPTUBE_PP");   // roller: sits in the neck, not the body
       at.traverse((n) => {
         const mesh = n as THREE.Mesh;
         if (mesh.isMesh)
@@ -308,25 +321,41 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       g.push(build(pumpBody, "PART_ACTUATOR_PP"));
       // DIP TUBE on every sprayer/pump — scaled from its nominal length
       // to reach near the bottle base (neckY = rim height in body space)
-      const tube = build(dipTube, "PART_DIPTUBE_PP");
-      tube.traverse((o) => {
-        const mesh = o as THREE.Mesh;
-        if (mesh.isMesh)
-          mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
-      });
-      const nominal = fin === "18415" ? 0.08 : 0.062;
-      tube.scale.y = Math.max(0.3, (neckY - 0.006) / nominal);
-      g.push(tube);
+      if (!solidBody) {
+        const tube = build(dipTube, "PART_DIPTUBE_PP");
+        tube.traverse((o) => {
+          const mesh = o as THREE.Mesh;
+          if (mesh.isMesh)
+            mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
+        });
+        const nominal = fin === "18415" ? 0.08 : 0.062;
+        tube.scale.y = Math.max(0.3, (neckY - 0.006) / nominal);
+        g.push(tube);
+      }
       if (mode === "pump" || mode === "pumpCapped")
         g.push(build(spout, fin === "18415" ? trimMat : "PART_ACTUATOR_PP"));
       if (mode === "sprayerCapped" || mode === "pumpCapped")
         // 18-415 overcaps ship as a KIT in the trim colour (the tall cap
         // beside the bottle in the legacy listings); 17-415's is clear
-        g.push(build(overcap, fin === "18415" ? trimMat : "PART_OVERCAP_CLEAR"));
+        // 17-415's overcap ships CLEAR in the catalogue, and that is what this
+        // was. Jordan, twice, on the render: "this cap is still not white...
+        // it needs to be a solid white, and it's not." The part is FLUTED
+        // (measured: 0.16 mm radius variation around the barrel), so a
+        // transmissive material shows every rib as a bright/dark pair and the
+        // cap reads as a bundle of lines rather than a cap. Opaque white PP
+        // shades those same ribs as a soft gradient instead.
+        // OPAQUE WHITE PP, and this is the settled answer. Frosted
+        // (transmission 0.62) was tried to let the actuator's step read
+        // through, and it brought the flute lines back with it — Jordan:
+        // "we've lost the nice white cap... we have the lines again."
+        // The step is not worth the lines. PART_OVERCAP_FROSTED is kept in
+        // materials.json with its range documented, unused, in case the
+        // trade is ever wanted the other way round.
+        g.push(build(overcap, fin === "18415" ? trimMat : "PART_ACTUATOR_PP"));
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, glassMatcap, anspCollar, anspBulb, anspTassel, nozzle, tubeMatcap, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, glassMatcap, anspCollar, anspBulb, anspTassel, nozzle, tubeMatcap, fin, neckY, solidBody,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 
@@ -420,7 +449,7 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
       <primitive object={scene} />
       <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat}
                rollerVariant={rollerVariant} trimMat={trimMat} finish={finish}
-               capMoulding={capMoulding} />
+               capMoulding={capMoulding} solidBody={preset.solidBody} />
       {glass && !usePlain ? (
         <mesh geometry={glass.geometry} position={glass.position}
               rotation={glass.rotation} scale={glass.scale}>
@@ -428,7 +457,7 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
             transmission={preset.transmission} thickness={thickness}
             thicknessMap={preset.thicknessBake === false ? null : thicknessTex}
             roughnessMap={preset.frostMask ? frostTex : null}
-            backside backsideThickness={thickness}
+            backside backsideThickness={preset.backsideThickness ?? thickness}
             // backside at 256 aliased the thread helix into a crawling
             // shimmer during auto-rotate ("weird movement in the neck",
             // Jordan) — quality knobs, not look values
@@ -513,7 +542,15 @@ export default function Bottle3DViewer({
   // gentle showcase motion until the customer takes over
   const [touched, setTouched] = useState(false);
   const onHeight = useCallback((v: number) => setH(v), []);
-  const url = `/models/bodies-thickness/${bodyId}.glb`;
+  // SOLID vs HOLLOW is a look decision, so it lives in the preset.
+  // A hollow body has a real inner surface, and once the glass actually
+  // transmits you SEE it — Jordan: "another layer of the bottle inside the
+  // bottle... customers are going to think this bottle is smaller than it
+  // is." That last part is why this is not a taste call: the inner wall
+  // misreports the product's capacity.
+  const url = preset.solidBody
+    ? `/models/bodies/${bodyId}.glb`
+    : `/models/bodies-thickness/${bodyId}.glb`;
 
   return (
     <div className={className}

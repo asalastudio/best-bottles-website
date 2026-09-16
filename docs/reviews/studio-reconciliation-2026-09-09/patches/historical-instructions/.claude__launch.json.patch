@@ -1,0 +1,31 @@
+diff --git a/.claude/launch.json b/.claude/launch.json
+index 1b311bba..f8c2f7ac 100644
+--- a/.claude/launch.json
++++ b/.claude/launch.json
+@@ -4,9 +4,25 @@
+     {
+       "name": "next-dev",
+       "runtimeExecutable": "npm",
+-      "runtimeArgs": ["run", "dev"],
++      "runtimeArgs": [
++        "run",
++        "dev"
++      ],
+       "port": 3000,
+       "autoPort": true
++    },
++    {
++      "name": "next-dev-3100",
++      "runtimeExecutable": "npm",
++      "runtimeArgs": [
++        "run",
++        "dev",
++        "--",
++        "--port",
++        "3100"
++      ],
++      "port": 3100,
++      "autoPort": false
+     }
+   ]
+ }
