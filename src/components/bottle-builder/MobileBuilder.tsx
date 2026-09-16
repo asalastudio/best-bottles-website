@@ -4,6 +4,7 @@ import { fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitmen
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, DotsThree, Minus, Plus, SlidersHorizontal, X, ArrowsOutSimple } from "@/components/icons";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 import { bareGlassPreview, builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderSelection } from "@/lib/bottle-builder/model";
 import { checkoutMinimum } from "@/lib/checkout";
 import BuilderImage from "./BuilderImage";
@@ -162,7 +163,7 @@ export default function MobileBuilder(p: Props) {
     function closePreview() { setPreviewZoom(1); }
     const clearFilters = () => { p.onFilter("size", ""); p.onFilter("neck", ""); p.onFilter("application", ""); };
     const previewImage = (expandedView = false) => preview && <BuilderImage config={preview} parts={parts} stage={previewStage} expanded={expandedView} scale={/Vintage|Tassel/.test(fitment ?? "") ? 1 : 1.18} showCover={p.showCover} bodyReference={bodyReference}
-        label={`${body?.capacityMl} ml ${stage < 2 ? preview.color : color} ${body?.profileLabel}${stage >= 2 && fitment ? ` with ${fitment}` : " bottle"}${stage >= 3 && closure ? `, ${closure}` : ""}`} />;
+        label={`${body?.capacityMl} ml ${stage < 2 ? preview.color : color} ${body?.profileLabel}${stage >= 2 && fitment ? ` with ${displayApplicatorName(fitment)}` : " bottle"}${stage >= 3 && closure ? `, ${closure}` : ""}`} />;
 
     return <div ref={root} className={styles.mobile} data-mobile-builder data-stage={stage} data-keyboard={keyboardOpen} data-large-text={largeText} data-confirm={Boolean(p.lastAdded)} aria-busy={busy}
         style={{ "--action-height": `${showBar ? barHeight : 0}px` } as CSSProperties}>
@@ -191,7 +192,7 @@ export default function MobileBuilder(p: Props) {
             </div>
         </div>
         {stage > 0 && body && stage < 4 && <div className={styles.selectedBottle}>
-            <div><h2>{body.capacityMl} ml {body.profileLabel}{color ? ` · ${color}` : ""}</h2><p>{fitment && stage > 1 ? `${fitment} · ` : ""}{body.neck}</p></div>
+            <div><h2>{body.capacityMl} ml {body.profileLabel}{color ? ` · ${color}` : ""}</h2><p>{fitment && stage > 1 ? `${displayApplicatorName(fitment)} · ` : ""}{body.neck}</p></div>
             <button onClick={() => go(0)} disabled={busy} aria-label="Edit bottle">Edit</button>
         </div>}
         {stage === 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{titles[stage]}</h1>}
@@ -219,8 +220,8 @@ export default function MobileBuilder(p: Props) {
                 {stage === 1 && <div className={styles.glassGrid}>{p.current.colors.map(c => { const example = body!.configurations.find(item => item.color === c)!; return <Choice key={c} name={`${id}-glass`} value={c} selected={color === c} label={c} onSelect={() => choose({ color: c })}>
                     <div className={styles.glassThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
                 </Choice>; })}</div>}
-                {stage === 2 && <div className={styles.fitmentGrid}>{p.current.fitments.map(f => { return <Choice key={f} name={`${id}-fitment`} value={f} selected={fitment === f} label={f} onSelect={() => choose({ fitment: f })}>
-                    <div className={styles.componentThumb}><FitmentIllustration fitment={f} /></div><strong>{f}</strong>{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}
+                {stage === 2 && <div className={styles.fitmentGrid}>{p.current.fitments.map(f => { return <Choice key={f} name={`${id}-fitment`} value={f} selected={fitment === f} label={displayApplicatorName(f)} onSelect={() => choose({ fitment: f })}>
+                    <div className={styles.componentThumb}><FitmentIllustration fitment={f} /></div><strong>{displayApplicatorName(f)}</strong>{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}
                 </Choice>; })}</div>}
                 {stage === 3 && <div className={styles.finishGrid}>{p.current.fitted.map(c => <Choice key={c.id} name={`${id}-finish`} value={c.closure} selected={closure === c.closure} label={c.closure} onSelect={() => choose({ closure: c.closure })}>
                     <div className={styles.finishThumb}><BuilderFinishImage config={c} /></div><strong>{shortFinishLabel(c.closure)}</strong>
@@ -232,7 +233,7 @@ export default function MobileBuilder(p: Props) {
             {stage === 3 && p.hasIncludedCover && <p className={styles.included}>Matching overcap included: <strong>{closure}</strong>. Supplied with this {fitment?.includes("Pump") ? "pump" : "sprayer"}; it cannot be mixed and matched.</p>}
         </>}
         {stage === 4 && <section className={styles.review} aria-label="Review and quantity">
-            <dl className={styles.summary}>{[["Bottle", `${body?.capacityMl} ml ${body?.profileLabel}`, 0], ["Glass", color, 1], ["Fitment", fitment, 2], [finishLabel, closure, 3]].map(([label, value, to]) => <div key={label}>
+            <dl className={styles.summary}>{[["Bottle", `${body?.capacityMl} ml ${body?.profileLabel}`, 0], ["Glass", color, 1], ["Fitment", fitment ? displayApplicatorName(fitment) : fitment, 2], [finishLabel, closure, 3]].map(([label, value, to]) => <div key={label}>
                 <dt>{label}</dt><dd>{value}{to === 0 && <small>{body?.neck} neck</small>}</dd><dd className={styles.summaryEdit}><button aria-label={`Edit ${label?.toString().toLowerCase()}`} disabled={busy} onClick={() => go(Number(to))}>Edit</button></dd>
             </div>)}</dl>
             <p className={styles.included}>{fitmentContents(fitment)}</p>
@@ -259,7 +260,7 @@ export default function MobileBuilder(p: Props) {
         <dialog ref={filters} className={styles.sheet} aria-labelledby={`${id}-filters`} onCancel={closeFilters} onClose={() => { setFilterOpen(false); filterTrigger.current?.focus(); }}>
             <div className={styles.dialogHeading}><h2 id={`${id}-filters`}>Filters</h2><button type="button" className={styles.closePreview} aria-label="Close filters" onClick={closeFilters}><X size={20} /></button></div>
             <div className={styles.filterBody}>
-                {([['size', 'Capacity', [...new Set(p.bodies.map(b => b.capacityMl))].sort((a,b) => a-b).map(n => [String(n), `${n} ml`])], ['neck', 'Neck', [...new Set(p.bodies.map(b => b.neck))].map(n => [n,n])], ['application', 'Application', [...new Set(p.bodies.flatMap(b => b.configurations.map(c => c.fitment)))].map(n => [n,n])]] as ["size" | "neck" | "application", string, string[][]][]).map(([key,label,values]) => <label className={styles.filterField} key={key}>{label}<select aria-label={label} value={p[key]} onChange={e => p.onFilter(key,e.target.value)}><option value="">All {label.toLowerCase()}{key === "size" ? "s" : " options"}</option>{values.map(([value,text]) => <option value={value} key={value}>{text}</option>)}</select></label>)}
+                {([['size', 'Capacity', [...new Set(p.bodies.map(b => b.capacityMl))].sort((a,b) => a-b).map(n => [String(n), `${n} ml`])], ['neck', 'Neck', [...new Set(p.bodies.map(b => b.neck))].map(n => [n,n])], ['application', 'Application', [...new Set(p.bodies.flatMap(b => b.configurations.map(c => c.fitment)))].map(n => [n, displayApplicatorName(n)])]] as ["size" | "neck" | "application", string, string[][]][]).map(([key,label,values]) => <label className={styles.filterField} key={key}>{label}<select aria-label={label} value={p[key]} onChange={e => p.onFilter(key,e.target.value)}><option value="">All {label.toLowerCase()}{key === "size" ? "s" : " options"}</option>{values.map(([value,text]) => <option value={value} key={value}>{text}</option>)}</select></label>)}
                 <button type="button" className={styles.filterClear} onClick={clearFilters}>Clear filters</button>
             </div>
             <div className={styles.sheetActions}><button type="button" className={styles.primary} onClick={closeFilters}>Show {visible.length} {visible.length === 1 ? "bottle" : "bottles"}</button></div>

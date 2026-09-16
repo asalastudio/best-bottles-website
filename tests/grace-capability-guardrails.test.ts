@@ -96,6 +96,7 @@ describe("applicator vocabularies must not be confused across tools", () => {
         expect(items?.enum).toContain("antiquespray-tassel");
         // Customer-facing labels must never be valid here.
         expect(items?.enum).not.toContain("Vintage Bulb Sprayer with Tassel");
+        expect(items?.enum).not.toContain("Vintage Style Bulb Spray with Tassel");
     });
 });
 

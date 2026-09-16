@@ -1,3 +1,5 @@
+import { displayApplicatorName } from "@/lib/catalogFilters";
+
 /** Mechanisms and caps are separate choices; a cap-only bottle has no roller. */
 export const fitmentChoiceHints: Record<string, string> = {
     "Screw Cap": "Cap only. No roller.",
@@ -10,5 +12,5 @@ export function fitmentContents(fitment: string | null) {
     if (fitment === "Screw Cap") return "Includes your bottle and selected screw cap. No roller is included.";
     if (fitment === "Metal Roller") return "Includes your bottle, metal roller, and selected roller cap.";
     if (fitment === "Plastic Roller") return "Includes your bottle, plastic roller, and selected roller cap.";
-    return `Your bottle, ${fitment?.toLowerCase()}, and selected finish are included in one complete combination.`;
+    return `Your bottle, ${fitment ? displayApplicatorName(fitment).toLowerCase() : "selected fitment"}, and selected finish are included in one complete combination.`;
 }

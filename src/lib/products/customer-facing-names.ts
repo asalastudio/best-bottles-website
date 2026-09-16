@@ -1,6 +1,7 @@
 import { normalizeImportedCapColor } from "./cap-finish-evidence";
 import { decoratedCapFinish } from "./decorated-cap-finish";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
+import { displayApplicatorName } from "@/lib/catalogFilters";
 
 export type CustomerFacingNameConfidence = "high" | "medium" | "fallback";
 
@@ -176,10 +177,10 @@ function productEvidence(variant?: CustomerFacingNameVariantInput | null, group?
 
 function productTypeFromEvidence(evidence: string): { label: string; source: string } | null {
     if (/\b(ast|tassel)\b/i.test(evidence) || /ansptsl|tassel/.test(evidence)) {
-        return { label: "Vintage Bulb Spray Bottle with Tassel", source: "tassel sprayer evidence" };
+        return { label: "Vintage Style Bulb Spray Bottle with Tassel", source: "tassel sprayer evidence" };
     }
     if (/\b(asp)\b/i.test(evidence) || /ansp|vintage|antique|bulb/.test(evidence)) {
-        return { label: "Vintage Bulb Spray Bottle", source: "vintage bulb sprayer evidence" };
+        return { label: "Vintage Style Bulb Spray Bottle", source: "vintage style bulb sprayer evidence" };
     }
     if (/\b(spr)\b/i.test(evidence) || /spry|perfume spray|spray pump|fine mist|sprayer/.test(evidence)) {
         return { label: "Perfume Spray Bottle", source: "spray evidence" };
@@ -308,6 +309,7 @@ function buildFallback(args: CustomerFacingNameArgs): CustomerFacingProductName 
     if (isTallNineMlCylinder(args.group, args.variant) && !/\btall cylinder\b/i.test(fallback)) {
         fallback = fallback.replace(/\bCylinder\b/i, "Tall Cylinder");
     }
+    fallback = displayApplicatorName(fallback);
     return {
         displayName: fallback,
         shortName: fallback,
@@ -327,7 +329,7 @@ export function getCustomerFacingProductName(args: CustomerFacingNameArgs): Cust
     const resolvedType = productTypeFromEvidence(evidence);
     const productType = resolvedType?.label ?? "Bottle";
     const finish = finishSuffix(productType, resolveFinish(args.variant), args.variant);
-    const displayName = `${baseName} ${productType}${finish ? ` - ${finish}` : ""}`.replace(/\s+/g, " ").trim();
+    const displayName = displayApplicatorName(`${baseName} ${productType}${finish ? ` - ${finish}` : ""}`.replace(/\s+/g, " ").trim());
     const variantLabel = finish ?? (resolvedType ? productType : null);
     const confidence: CustomerFacingNameConfidence = args.variant && resolvedType ? "high" : resolvedType ? "medium" : "fallback";
 
