@@ -29,7 +29,7 @@ export default async function PortalDraftDetail({
     const submitted = draft.status === "submitted";
 
     return (
-        <div className="px-6 py-6 max-w-[900px]">
+        <div className="mx-auto max-w-[900px] px-4 py-4 lg:px-6 lg:py-6">
             <Link
                 href="/portal/drafts"
                 className="inline-block font-sans text-[12px] text-neutral-400 hover:text-neutral-700 mb-3 transition-colors"

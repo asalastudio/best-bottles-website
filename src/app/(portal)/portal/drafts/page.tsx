@@ -35,7 +35,7 @@ export default async function PortalDrafts() {
     const { drafts } = await getPortalDraftsData();
 
     return (
-        <div className="px-6 py-6 max-w-[1200px]">
+        <div className="mx-auto max-w-[1200px] px-4 py-4 lg:px-6 lg:py-6">
             <PageHeader
                 eyebrow="Purchasing"
                 title="Orders"
@@ -47,7 +47,7 @@ export default async function PortalDrafts() {
             />
 
             <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
-                <div className={`${colClass} px-5 py-3 bg-neutral-50 border-b border-neutral-200`}>
+                <div data-portal-table-head className={`${colClass} px-5 py-3 bg-neutral-50 border-b border-neutral-200`}>
                     {["Name", "Items", "Total", "Last Edited", "Status", ""].map((h) => (
                         <p key={h} className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide">
                             {h}
@@ -65,19 +65,20 @@ export default async function PortalDrafts() {
                     drafts.map((draft, i) => (
                         <div
                             key={draft._id}
+                            data-portal-table-row
                             className={`${colClass} px-5 py-3.5 hover:bg-neutral-50 transition-colors ${
                                 i < drafts.length - 1 ? "border-b border-neutral-100" : ""
                             }`}
                         >
-                            <span className="font-sans text-[13px] font-medium text-neutral-900">{draft.name}</span>
-                            <span className="font-sans text-[13px] text-neutral-500">{draft.lineItemCount}</span>
-                            <span className="font-sans text-[13px] font-medium text-neutral-900">{formatCurrency(draft.totalAmount)}</span>
-                            <span className="font-sans text-[13px] text-neutral-500">{formatDate(draft.updatedAt)}</span>
-                            <PortalTag variant={statusVariant(draft.status)}>{statusLabel(draft.status)}</PortalTag>
-                            <div className="flex gap-1.5 justify-end">
+                            <span data-label="Name" className="font-sans text-[13px] font-medium text-neutral-900">{draft.name}</span>
+                            <span data-label="Items" className="font-sans text-[13px] text-neutral-500">{draft.lineItemCount}</span>
+                            <span data-label="Total" className="font-sans text-[13px] font-medium text-neutral-900">{formatCurrency(draft.totalAmount)}</span>
+                            <span data-label="Last edited" className="font-sans text-[13px] text-neutral-500">{formatDate(draft.updatedAt)}</span>
+                            <div data-label="Status"><PortalTag variant={statusVariant(draft.status)}>{statusLabel(draft.status)}</PortalTag></div>
+                            <div data-actions className="flex gap-1.5 justify-end">
                                 <Link
                                     href={`/portal/drafts/${draft._id}`}
-                                    className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors"
+                                    className="inline-flex h-11 min-h-11 items-center justify-center px-3 text-[13px] font-sans font-medium rounded-md bg-neutral-900 text-white hover:bg-neutral-800 transition-colors lg:h-8 lg:min-h-8"
                                 >
                                     {draft.status === "submitted" ? "View" : "Open"}
                                 </Link>

@@ -25,7 +25,7 @@ export default async function PortalGraceSessionDetail({
     if (!session) notFound();
 
     return (
-        <div className="px-6 py-6 max-w-[900px]">
+        <div className="mx-auto max-w-[900px] px-4 py-4 lg:px-6 lg:py-6">
             <Link
                 href="/portal/sessions"
                 className="inline-block font-sans text-[12px] font-medium text-neutral-400 hover:text-neutral-600 transition-colors mb-4"
