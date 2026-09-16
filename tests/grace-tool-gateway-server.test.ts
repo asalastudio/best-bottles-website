@@ -8,6 +8,8 @@ import {
     executePublicGraceToolCall,
     parsePublicGraceToolCall,
 } from "../src/lib/grace/publicToolCallServer";
+import { getGraceRefineState } from "../src/lib/grace/refineState";
+import { EMPTY_FILTERS } from "../src/lib/catalogFilters";
 
 describe("provider-neutral Grace tool executor", () => {
     it("exports an injectable server executor", () => {
@@ -31,6 +33,59 @@ describe("provider-neutral Grace tool executor", () => {
             toolName: "searchCatalog",
             parameters: { searchTerm: "amber 9ml", familyLimit: "Cylinder" },
         });
+    });
+
+    it("accepts the live CatalogFilters refineState on searchCatalog", () => {
+        const refineState = getGraceRefineState(new URLSearchParams());
+        expect(refineState.filters).toEqual(expect.objectContaining({
+            rollerMaterials: [],
+            shopCollection: null,
+        }));
+        const parsed = parsePublicGraceToolCall({
+            tool_name: "searchCatalog",
+            parameters: {
+                searchTerm: "amber 9ml roll-on",
+                categoryLimit: null,
+                familyLimit: null,
+                applicatorFilter: null,
+                refineState,
+            },
+        });
+        expect(parsed.refineState).toEqual(refineState);
+        expect(parsed.gatewayParameters).toEqual(expect.objectContaining({ refineState }));
+    });
+
+    it("accepts shop collection and roller material facets inherited from the catalog URL", () => {
+        const refineState = getGraceRefineState(new URLSearchParams("shop=roll-on-bottles&roller=metal"));
+        const parsed = parsePublicGraceToolCall({
+            tool_name: "searchCatalog",
+            parameters: {
+                searchTerm: "cylinder",
+                categoryLimit: null,
+                familyLimit: "Cylinder",
+                applicatorFilter: null,
+                refineState,
+            },
+        });
+        expect(parsed.refineState?.filters.shopCollection).toBe("roll-on-bottles");
+        expect(parsed.refineState?.filters.rollerMaterials).toEqual(["metal"]);
+    });
+
+    it("still rejects unknown refine facets and invalid roller or shop values", () => {
+        const empty = getGraceRefineState(new URLSearchParams());
+        const searchCatalog = (filters: Record<string, unknown>) => parsePublicGraceToolCall({
+            tool_name: "searchCatalog",
+            parameters: {
+                searchTerm: "amber",
+                categoryLimit: null,
+                familyLimit: null,
+                applicatorFilter: null,
+                refineState: { ...empty, filters },
+            },
+        });
+        expect(() => searchCatalog({ ...EMPTY_FILTERS, mysteryFacet: [] })).toThrow("undeclared fields");
+        expect(() => searchCatalog({ ...EMPTY_FILTERS, rollerMaterials: ["glass"] })).toThrow("rollerMaterials is invalid");
+        expect(() => searchCatalog({ ...EMPTY_FILTERS, shopCollection: "not-a-shop" })).toThrow("shopCollection is invalid");
     });
 
     it("rejects undeclared public registry arguments before executing a tool", () => {

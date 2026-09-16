@@ -14,7 +14,7 @@ function build(env: Record<string, string>) {
         });
         let commands = "";
         try { commands = readFileSync(log, "utf8"); } catch { /* No command should run on rejection. */ }
-        return { status: result.status, commands };
+        return { status: result.status, commands, stderr: result.stderr };
     } finally { rmSync(dir, { recursive: true, force: true }); }
 }
 
@@ -24,10 +24,12 @@ it("deploys opted-in previews with their backend before releasing the frontend",
     expect(result.commands).toContain("convex deploy --cmd-url-env-var-name NEXT_PUBLIC_CONVEX_URL --cmd npx next build --webpack");
 });
 
-it.each(["", "prod:example|test", "dev:example|test"])("refuses an opted-in preview without a preview-scoped key (%s)", (key) => {
+it.each(["", "prod:example|test", "dev:example|test"])("builds the frontend only when preview deploy lacks a preview-scoped key (%s)", (key) => {
     const result = build({ VERCEL_ENV: "preview", BB_CONVEX_PREVIEW_DEPLOY: "true", CONVEX_DEPLOY_KEY: key });
-    expect(result.status).not.toBe(0);
-    expect(result.commands).toBe("");
+    expect(result.status).toBe(0);
+    expect(result.commands).toBe("next build --webpack\n");
+    expect(result.stderr).toContain("Building the frontend only");
+    expect(result.commands).not.toContain("convex deploy");
 });
 
 it("preserves existing preview and production build behavior outside the opt-in", () => {
