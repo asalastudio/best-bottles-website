@@ -66,6 +66,8 @@ describe("Spanish locale foundation", () => {
         expect(es.catalog.familyIntro.startsWith("Los frascos")).toBe(true);
         expect(es.footer.fitmentGuide).toBe("Guía de compatibilidad");
         expect(es.footer.packagingInsights).toBe("Artículos de empaque");
+        expect(es.home.packagingInsights).toBe("Artículos de empaque");
+        expect(es.home.viewAllArticles).toBe("Ver todos los artículos");
         expect(en.nav.askGrace).toBe("Ask Grace");
         expect(en.catalog.masterTitle).toBe("Master Catalog");
     });

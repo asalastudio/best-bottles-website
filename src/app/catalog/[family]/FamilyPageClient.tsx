@@ -392,8 +392,10 @@ export default function FamilyPageClient({
     }, []);
 
     const heroImageUrl = editorial?.familyHeroImageUrl || heroFallback;
-    const heroAlt = editorial?.familyHeroAlt || `${family} bottle and compatible closure`;
-    const story = editorial?.familyStory || defaultFamilyStory(family);
+    const heroAlt = editorial?.familyHeroAlt || `${familyLabel} bottle and compatible closure`;
+    const story = locale === "es"
+        ? t("familyIntro", { family: familyLabel })
+        : (editorial?.familyStory || defaultFamilyStory(family));
 
     return (
         <>
@@ -473,7 +475,7 @@ export default function FamilyPageClient({
                             className="mt-8"
                         />
                         <p className="mt-5 border-l-2 border-muted-gold pl-4 text-sm font-medium text-obsidian" aria-label="Current bottle specification">
-                            {refinementSummary(family, filters)}
+                            {refinementSummary(familyLabel, filters)}
                         </p>
                         {requestError ? <p className="mt-3 text-sm text-red-800" role="status">{requestError}</p> : null}
                         <button type="button" onClick={openGraceFromFinder} className="mt-4 text-sm font-semibold text-obsidian underline underline-offset-4">
