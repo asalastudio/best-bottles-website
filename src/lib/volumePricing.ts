@@ -2,13 +2,13 @@
  * Volume-tier pricing policy.
  *
  * The catalog carries the complete published `priceTiers` ladder plus legacy
- * webPrice1pc / webPrice10pc / webPrice12pc columns. Shopify's cart-permalink
- * checkout, however, charges the flat variant price — it has no knowledge of
- * our quantity breaks.
+ * webPrice1pc / webPrice10pc / webPrice12pc columns. Shopify checkout
+ * (Storefront Cart or cart permalink) charges the flat variant price — it
+ * has no knowledge of our quantity breaks.
  *
  * Verified against production on 2026-07-29:
  *   PKG-BOX-WHT-4X4X4 — PDP advertised $0.23/ea at 10+ ("save 34%")
- *   /cart/53343691407652:10 → Shopify checkout total $3.50 ($0.35/ea)
+ *   qty 10 of PKG-BOX-WHT-4X4X4 → Shopify checkout total $3.50 ($0.35/ea)
  *
  * 2,252 of 2,330 SKUs render a discount ladder, so shipping this as-is means
  * quoting a price the checkout does not honor. Until Shopify volume rules

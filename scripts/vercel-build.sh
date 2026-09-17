@@ -3,6 +3,12 @@
 # Reject non-preview keys so this path can never deploy to a shared backend.
 # The existing main-branch Production path continues to deploy Convex.
 set -e
+# Vercel's default container is 8 GB. Webpack already OOM-killed a preview
+# worker here on 2026-09-14; keep the heap under the ceiling.
+case "${NODE_OPTIONS:-}" in
+  *max-old-space-size*) ;;
+  *) export NODE_OPTIONS="${NODE_OPTIONS:+$NODE_OPTIONS }--max-old-space-size=6144" ;;
+esac
 if [ "$VERCEL_ENV" = "preview" ] && [ "$BB_CONVEX_PREVIEW_DEPLOY" = "true" ]; then
   case "${CONVEX_DEPLOY_KEY:-}" in
     preview:*\|*)

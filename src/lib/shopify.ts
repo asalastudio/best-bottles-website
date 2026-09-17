@@ -1,15 +1,16 @@
 /**
  * Shopify Commerce Adapter
  *
- * Single module for all Shopify Admin API access. Nothing else in the
- * codebase should call Shopify directly — everything goes through here.
+ * Single module for all Shopify Admin and Storefront API access. Nothing else
+ * in the codebase should call Shopify directly — everything goes through here.
  *
  * Capabilities:
  * - SKU → variant resolution (checkout flow)
  * - Product + variant reads by handle, GID, or SKU
  * - Metafield reads for packaging attributes
  * - Inventory level reads
- * - Checkout URL generation
+ * - Storefront Cart checkout (Plus headless handoff)
+ * - Permalink checkout URL fallback
  */
 
 const API_VERSION = "2025-01";
@@ -27,6 +28,172 @@ export interface CheckoutLineItem {
     /** Numeric Shopify variant ID (not the GID) */
     variantId: string;
     quantity: number;
+    /** Catalog SKU, written onto Storefront Cart lines when present. */
+    sku?: string;
+}
+
+export function variantMerchandiseId(variantId: string): string {
+    const id = numericId(variantId);
+    return `gid://shopify/ProductVariant/${id}`;
+}
+
+export function getStorefrontAccessToken(): string | null {
+    const token = process.env.SHOPIFY_STOREFRONT_TOKEN?.trim();
+    return token ? token : null;
+}
+
+export interface StorefrontCartCheckout {
+    cartId: string;
+    checkoutUrl: string;
+}
+
+interface StorefrontGqlResult<T> {
+    data?: T;
+    errors?: Array<{ message: string }>;
+}
+
+interface CartCreatePayload {
+    cartCreate: {
+        cart: {
+            id: string;
+            checkoutUrl: string;
+        } | null;
+        userErrors: Array<{
+            field?: string[] | null;
+            message: string;
+        }>;
+    };
+}
+
+async function storefrontGraphQL<T>(
+    query: string,
+    variables?: Record<string, unknown>,
+): Promise<T> {
+    const domain = getShopifyDomain();
+    const token = getStorefrontAccessToken();
+    if (!domain) {
+        throw new Error(
+            "NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN is not set — cannot call the Shopify Storefront API.",
+        );
+    }
+    if (!token) {
+        throw new Error("SHOPIFY_STOREFRONT_TOKEN is not set — cannot create a Storefront cart.");
+    }
+
+    const res = await fetch(
+        `https://${domain}/api/${API_VERSION}/graphql.json`,
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-Shopify-Storefront-Access-Token": token,
+            },
+            body: JSON.stringify({ query, variables }),
+        },
+    );
+
+    if (!res.ok) {
+        const text = await res.text();
+        throw new Error(`Shopify Storefront API ${res.status}: ${text}`);
+    }
+
+    const json = (await res.json()) as StorefrontGqlResult<T>;
+    if (json.errors?.length) {
+        throw new Error(
+            `Shopify Storefront GQL: ${json.errors.map((error) => error.message).join(", ")}`,
+        );
+    }
+    if (!json.data) {
+        throw new Error("Shopify Storefront GQL: empty data payload");
+    }
+    return json.data;
+}
+
+/**
+ * Plus / headless checkout handoff. Creates a real Shopify Cart and returns
+ * its hosted checkout URL. Returns null when the Storefront token is missing
+ * or Shopify refuses the cart so callers can fall back to a permalink.
+ */
+export async function createStorefrontCartCheckout(
+    items: CheckoutLineItem[],
+): Promise<StorefrontCartCheckout | null> {
+    const token = getStorefrontAccessToken();
+    const domain = getShopifyDomain();
+    const lines = items.filter((item) => {
+        const variantId = normalizeShopifyVariantId(item.variantId);
+        return Boolean(variantId)
+            && Number.isSafeInteger(item.quantity)
+            && item.quantity > 0;
+    });
+    if (!token || !domain || lines.length === 0) return null;
+
+    try {
+        const data = await storefrontGraphQL<CartCreatePayload>(
+            `mutation CartCreate($input: CartInput!) {
+                cartCreate(input: $input) {
+                    cart { id checkoutUrl }
+                    userErrors { field message }
+                }
+            }`,
+            {
+                input: {
+                    lines: lines.map((item) => {
+                        const sku = item.sku?.trim();
+                        return {
+                            merchandiseId: variantMerchandiseId(item.variantId),
+                            quantity: item.quantity,
+                            ...(sku
+                                ? { attributes: [{ key: "sku", value: sku }] }
+                                : {}),
+                        };
+                    }),
+                    attributes: [
+                        { key: "channel", value: "headless" },
+                        { key: "source", value: "bestbottles.com" },
+                    ],
+                },
+            },
+        );
+
+        const userErrors = data.cartCreate.userErrors;
+        if (userErrors.length > 0) {
+            console.error(
+                "[Shopify] cartCreate userErrors:",
+                userErrors.map((error) => error.message).join(", "),
+            );
+            return null;
+        }
+
+        const cart = data.cartCreate.cart;
+        if (!cart?.id || !cart.checkoutUrl) return null;
+        return { cartId: cart.id, checkoutUrl: cart.checkoutUrl };
+    } catch (err) {
+        console.error("[Shopify] Storefront cartCreate failed:", err);
+        return null;
+    }
+}
+
+export type AnonymousCheckoutMode = "storefront" | "anonymous";
+
+export async function resolveAnonymousCheckoutUrl(
+    items: CheckoutLineItem[],
+): Promise<{
+    checkoutUrl: string;
+    checkoutMode: AnonymousCheckoutMode;
+    cartId?: string;
+}> {
+    const storefront = await createStorefrontCartCheckout(items);
+    if (storefront) {
+        return {
+            checkoutUrl: storefront.checkoutUrl,
+            checkoutMode: "storefront",
+            cartId: storefront.cartId,
+        };
+    }
+    return {
+        checkoutUrl: buildCheckoutUrl(items),
+        checkoutMode: "anonymous",
+    };
 }
 
 export function buildCheckoutUrl(items: CheckoutLineItem[]): string {
