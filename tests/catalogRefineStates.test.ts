@@ -85,7 +85,7 @@ describe("catalog Refine states", () => {
     });
 
     it("keeps master history commits and emits canonical Cylinder finder URLs", () => {
-        expect(master).toContain("router.push(`${pathname}${qs ? `?${qs}` : \"\"}`");
+        expect(master).toContain('router.push(`${path}${qs ? `?${qs}` : ""}`');
         expect(familyFinderHref("Cylinder", {
             application: "rollon",
             capacities: ["9 ml"],

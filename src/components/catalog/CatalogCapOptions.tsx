@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { ArrowRight, X } from "@/components/icons";
 import { productCardVariantHref, type ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
 import { catalogCapPhotoFrame } from "@/lib/products/catalog-cap-photos";
@@ -84,15 +84,15 @@ export default function CatalogCapOptions({ title, href, variants, photo, onImag
             </div>
             <div className="grid grid-cols-4 gap-2">{variants.map((variant) => {
                 const url = photo(variant);
-                return <Link key={variant.id} href={productCardVariantHref(href, variant)} prefetch={false}
+                return <LocaleLink key={variant.id} href={productCardVariantHref(href, variant)} prefetch={false}
                     aria-label={`View ${title} with ${variant.label}`}
                     className="flex min-h-20 min-w-0 flex-col items-center gap-2 rounded-sm border border-transparent p-1.5 text-center hover:border-champagne hover:bg-bone/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-obsidian">
                     {url ? <CapPhoto url={url} size={48} onError={() => onImageError(url)} />
                         : <span className="flex h-12 items-center text-[9px] text-slate">Photo unavailable</span>}
                     <span className="text-[11px] leading-tight text-obsidian">{variant.label}</span>
-                </Link>;
+                </LocaleLink>;
             })}</div>
-            <Link href={href} className="mt-4 flex min-h-11 items-center justify-between border-t border-champagne pt-3 text-[10px] font-semibold uppercase tracking-wider">View full configuration <ArrowRight className="h-4 w-4" /></Link>
+            <LocaleLink href={href} className="mt-4 flex min-h-11 items-center justify-between border-t border-champagne pt-3 text-[10px] font-semibold uppercase tracking-wider">View full configuration <ArrowRight className="h-4 w-4" /></LocaleLink>
         </div>
     </>;
 }

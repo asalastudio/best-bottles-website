@@ -1,7 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import FocusedProductCard from "@/components/catalog/FocusedProductCard";
 import type { GuidedFinderFamily, GuidedFinderProduct } from "@/lib/products/guided-finder";
 
@@ -121,12 +121,12 @@ export default function FocusedFinderResults({
                                     <p className="mt-2 max-w-xl text-sm leading-relaxed text-slate">
                                         No catalog items fit this combination. Return to the full catalog to choose a different starting point.
                                     </p>
-                                    <Link
+                                    <LocaleLink
                                         href="/catalog"
                                         className="mt-5 inline-flex min-h-11 items-center border border-obsidian px-4 text-sm font-semibold text-obsidian focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
                                     >
                                         View all catalog products
-                                    </Link>
+                                    </LocaleLink>
                                 </>
                             )}
                         </div>

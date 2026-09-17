@@ -301,7 +301,7 @@ describe("Build Your Bottle route contract", () => {
     it("keeps the same navigation destinations with the new customer-facing name", () => {
         const navigation = navbar.slice(navbar.indexOf("const NAV_LINKS"), navbar.indexOf("const SEARCH_SUGGESTIONS"));
         expect(navigation.match(/label: "Build Your Bottle", href: "\/matrix"/g)).toHaveLength(2);
-        expect(footer.match(/\["Build Your Bottle", "\/matrix"\]/g)).toHaveLength(1);
+        expect(footer.match(/\["buildYourBottle", "\/matrix"\]/g)).toHaveLength(1);
     });
 });
 

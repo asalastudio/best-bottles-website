@@ -1,6 +1,7 @@
 "use client";
 
 import { useRegion } from "@/components/RegionProvider";
+import { useCopy } from "@/i18n/useCopy";
 
 /**
  * ConfiguratorPdp — the guided configurator hero (design handoff
@@ -219,6 +220,7 @@ export default function ConfiguratorPdp({
   volumePricing?: ReactNode;
 }) {
     const { formatPrice } = useRegion();
+    const graceCopy = useCopy("grace");
   const isBottle = (productPresentation?.kind ?? "bottle") === "bottle";
   const fam = isBottle ? familyForSlugOrDerived(currentSlug) : null;
   const slugGlass: GlassPresetId = fam ? glassFromSlug(fam, currentSlug) : "clear";
@@ -975,10 +977,10 @@ export default function ConfiguratorPdp({
       {onAskGrace && (
         <p className="mt-6 px-4 flex items-center gap-2 text-sm text-slate">
           <ChatCircle className="h-4 w-4" />
-          Need help choosing?{" "}
+          {graceCopy("needHelpChoosing")}{" "}
           <button type="button" onClick={onAskGrace}
                   className="text-gold-dim underline underline-offset-2">
-            Ask Grace
+            {graceCopy("ask")}
           </button>
         </p>
       )}

@@ -22,6 +22,8 @@ import type { HomepageData } from "@/sanity/lib/queries";
 import { APPLICATOR_NAV } from "@/lib/catalogFilters";
 import type { ApplicatorNavValue } from "@/lib/catalogFilters";
 import { applicationFinderHref } from "@/lib/products/focused-shopping";
+import LocaleLink from "@/components/LocaleLink";
+import { useAppLocale, useCopy } from "@/i18n/useCopy";
 import {
     HOME_ACCESSORY_STORY,
     HOME_APPLICATION_LINKS,
@@ -818,6 +820,8 @@ function SocialProof() {
 }
 
 function EducationPreview({ educationPreview: edu }: { educationPreview?: HomepageData["educationPreview"] }) {
+    const locale = useAppLocale();
+    const t = useCopy("home");
     const articles = edu?.featuredArticles?.length
         ? edu.featuredArticles.map((a) => ({
             title: a.title,
@@ -828,8 +832,8 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
         }))
         : DEFAULT_ARTICLES;
 
-    const sectionTitle = edu?.sectionTitle ?? "Packaging Insights";
-    const sectionEyebrow = edu?.sectionEyebrow ?? "From the Lab";
+    const sectionTitle = locale === "es" ? t("packagingInsights") : (edu?.sectionTitle ?? t("packagingInsights"));
+    const sectionEyebrow = locale === "es" ? t("fromTheLab") : (edu?.sectionEyebrow ?? t("fromTheLab"));
     const viewAllHref = edu?.viewAllHref ?? "/blog";
 
     return (
@@ -841,15 +845,15 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
                         <h2 className="font-brand-display text-[20px] leading-tight tracking-[0.065em] text-obsidian lg:text-[22px]">{sectionTitle}</h2>
                     </FadeUp>
                     <FadeUp delay={0.12}>
-                        <Link href={viewAllHref} className="flex items-center text-xs font-semibold uppercase tracking-[0.16em] text-muted-gold transition-colors hover:text-obsidian">
-                            View All Articles
-                        </Link>
+                        <LocaleLink href={viewAllHref} className="flex items-center text-xs font-semibold uppercase tracking-[0.16em] text-muted-gold transition-colors hover:text-obsidian">
+                            {t("viewAllArticles")}
+                        </LocaleLink>
                     </FadeUp>
                 </div>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-5">
                     {articles.map((article, i) => (
                         <FadeUp key={article.title} delay={i * 0.07}>
-                            <Link href={article.slug} className="group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold">
+                            <LocaleLink href={article.slug} className="group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold">
                                 <div className="relative mb-4 aspect-[16/10] overflow-hidden bg-travertine">
                                     <Image
                                         src={article.img}
@@ -863,9 +867,9 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
                                 <h3 className="text-balance font-display text-[22px] leading-[1.05] text-obsidian transition-colors group-hover:text-muted-gold">{article.title}</h3>
                                 <p className="mt-3 text-xs leading-relaxed text-slate">{article.excerpt}</p>
                                 <span className="mt-4 flex items-center text-[11px] font-semibold uppercase tracking-[0.13em] text-obsidian transition-colors group-hover:text-muted-gold">
-                                    Read More
+                                    {t("readMore")}
                                 </span>
-                            </Link>
+                            </LocaleLink>
                         </FadeUp>
                     ))}
                 </div>

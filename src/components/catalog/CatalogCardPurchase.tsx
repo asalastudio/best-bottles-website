@@ -17,7 +17,7 @@
  */
 
 import Image from "next/image";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { useEffect, useId, useRef, useState, type KeyboardEvent, type MouseEvent } from "react";
 import { Check, Minus, Plus, X, ShoppingCart } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
@@ -199,9 +199,9 @@ export default function CatalogCardPurchase({
                         ? <>From {formatPrice(groupStartingPrice)}<span className="text-sm font-normal text-slate">/ea</span></>
                         : "Request pricing"}
                 </p>
-                <Link href={href} className={`mt-2 inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-wider text-obsidian underline-offset-4 hover:underline sm:min-h-9 ${FOCUS_RING}`}>
+                <LocaleLink href={href} className={`mt-2 inline-flex min-h-11 items-center text-xs font-semibold uppercase tracking-wider text-obsidian underline-offset-4 hover:underline sm:min-h-9 ${FOCUS_RING}`}>
                     View options
-                </Link>
+                </LocaleLink>
             </div>
         );
     }
@@ -304,9 +304,9 @@ export default function CatalogCardPurchase({
             {added != null ? <><Check className="h-3.5 w-3.5" aria-hidden />Added</> : "Add to cart"}
         </button>
     ) : (
-        <Link href={quoteHref} data-testid={scope === "card" ? "catalog-card-quote" : "catalog-card-dialog-quote"} className={SECONDARY_BUTTON}>
+        <LocaleLink href={quoteHref} data-testid={scope === "card" ? "catalog-card-quote" : "catalog-card-dialog-quote"} className={SECONDARY_BUTTON}>
             Request quote
-        </Link>
+        </LocaleLink>
     );
 
     return (
@@ -351,9 +351,9 @@ export default function CatalogCardPurchase({
                         {added != null ? <Check className="h-4 w-4" aria-hidden /> : <ShoppingCart className="h-4 w-4" aria-hidden />}
                     </button>
                 ) : (
-                    <Link href={quoteHref} data-testid="catalog-card-quote-compact" className={`flex h-11 min-w-11 items-center px-2 text-[10px] font-bold uppercase tracking-wider text-obsidian underline ${FOCUS_RING}`}>
+                    <LocaleLink href={quoteHref} data-testid="catalog-card-quote-compact" className={`flex h-11 min-w-11 items-center px-2 text-[10px] font-bold uppercase tracking-wider text-obsidian underline ${FOCUS_RING}`}>
                         Quote
-                    </Link>
+                    </LocaleLink>
                 )}
             </div>
 

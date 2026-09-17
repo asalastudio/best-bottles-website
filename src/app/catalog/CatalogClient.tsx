@@ -6,8 +6,8 @@ import { BUILDER_COLLECTION_FITMENTS } from "@/lib/bottle-builder/collection-con
 import { getShopCollection, SHOP_COLLECTIONS } from "@/lib/shopCollections";
 
 import { useState, useEffect, useMemo, useCallback, useRef, type ReactNode } from "react";
-import Link from "next/link";
 import Image from "next/image";
+import LocaleLink from "@/components/LocaleLink";
 import { useRouter, usePathname } from "next/navigation";
 import {
     MagnifyingGlass as Search, X, Package, CaretDown as ChevronDown, CaretUp as ChevronUp,
@@ -64,6 +64,9 @@ import { catalogGroupSkuLabel, mergeCatalogSearchPages, resolveCatalogGroupSku }
 import { MASTER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { analytics } from "@/lib/analytics";
 import { familyFinderHref } from "@/lib/products/focused-shopping";
+import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
+import { localizeHref, stripLocalePrefix } from "@/i18n/paths";
+import { useAppLocale, useCopy } from "@/i18n/useCopy";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -328,10 +331,10 @@ function ProductGroupCard({
                 family={group.family}
                 slug={group.slug}
             />
-            <Link href={href} className="flex flex-1 flex-col px-3 pb-3 pt-3 sm:px-5 lg:px-4 lg:pb-5 lg:pt-4">
+            <LocaleLink href={href} className="flex flex-1 flex-col px-3 pb-3 pt-3 sm:px-5 lg:px-4 lg:pb-5 lg:pt-4">
                 <h4 className="text-[15px] font-medium leading-tight text-obsidian max-lg:line-clamp-2 lg:text-lg lg:leading-snug">{customerDisplayName}</h4>
                 <p data-testid="catalog-card-specs" className="mt-1 truncate text-[11px] leading-snug text-slate lg:mt-2 lg:text-xs lg:leading-relaxed lg:whitespace-normal">{cardSpecs}</p>
-            </Link>
+            </LocaleLink>
             <CatalogCardPurchase
                 productId={group.slug}
                 title={customerDisplayName}
@@ -538,6 +541,8 @@ function FilterSidebarContent({
     onClearAll: () => void;
     mobileOptimized?: boolean;
 }) {
+    const t = useCopy("catalog");
+    const locale = useAppLocale();
     const isComponentCategory = filters.category ? COMPONENT_CATEGORIES.has(filters.category) : false;
     const surface = MASTER_CATALOG_SURFACE;
     const truncateAfter = surface.truncateAfter;
@@ -631,7 +636,7 @@ function FilterSidebarContent({
     }, [facets]);
 
     const rollerMaterialSection = facets && (facets.rollerMaterials.metal > 0 || facets.rollerMaterials.plastic > 0) ? (
-        <RefineSection title="Roller Material" defaultOpen={openByDefault("rollerMaterials")} hasActiveFilters={filters.rollerMaterials.length > 0}>
+        <RefineSection title={t("rollerMaterial")} defaultOpen={openByDefault("rollerMaterials")} hasActiveFilters={filters.rollerMaterials.length > 0}>
             <div className="space-y-0.5">
                 {(["metal", "plastic"] as const).map((material) => (
                     <CheckboxItem
@@ -661,7 +666,7 @@ function FilterSidebarContent({
     };
 
     const applicatorSection = Object.keys(facets?.applicators ?? {}).length > 0 ? (
-        <RefineSection title="Dispenser" defaultOpen={openByDefault("applicators")} hasActiveFilters={filters.applicators.length > 0}>
+        <RefineSection title={t("dispenser")} defaultOpen={openByDefault("applicators")} hasActiveFilters={filters.applicators.length > 0}>
             <div className="space-y-0.5">
                 {APPLICATOR_BUCKETS.filter((b) => (facets?.applicators?.[b.value] ?? 0) > 0 || filters.applicators.includes(b.value)).map((bucket) => (
                     <CheckboxItem
@@ -678,7 +683,7 @@ function FilterSidebarContent({
 
     const familySection = sortedFamilies.length > 0 ? (
         <RefineSection
-            title="Design Families"
+            title={t("designFamilies")}
             defaultOpen={openByDefault("families")}
             hasActiveFilters={filters.families.length > 0}
         >
@@ -690,7 +695,7 @@ function FilterSidebarContent({
                 isSelected={([fam]) => filters.families.includes(fam)}
                 renderItem={([fam, count]) => (
                     <CheckboxItem
-                        label={fam}
+                        label={localizeFamilyName(locale, fam)}
                         count={count}
                         checked={filters.families.includes(fam)}
                         onChange={() => toggleArrayFilter("families", fam)}
@@ -701,8 +706,8 @@ function FilterSidebarContent({
     ) : null;
 
     const capacitySection = capacityRanges.length > 0 ? (
-        <RefineSection title="Capacity" defaultOpen={openByDefault("capacities")} hasActiveFilters={filters.capacities.length > 0}>
-            <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate/70">Size ranges</p>
+        <RefineSection title={t("capacity")} defaultOpen={openByDefault("capacities")} hasActiveFilters={filters.capacities.length > 0}>
+            <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate/70">{t("sizeRanges")}</p>
             <div className="space-y-0.5">
                 {capacityRanges.map((range) => (
                     <CheckboxItem
@@ -716,7 +721,7 @@ function FilterSidebarContent({
                 ))}
             </div>
             <div className="mt-3 border-t border-champagne/40 pt-3">
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate/70">Exact capacity</p>
+                <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate/70">{t("exactCapacity")}</p>
                 <TruncatedFacetList
                     label="capacities"
                     items={sortedCapacities}
@@ -737,7 +742,7 @@ function FilterSidebarContent({
     ) : null;
 
     const colorSection = sortedColors.length > 0 ? (
-        <RefineSection title="Glass Color" defaultOpen={openByDefault("colors")} hasActiveFilters={filters.colors.length > 0}>
+        <RefineSection title={t("glassColor")} defaultOpen={openByDefault("colors")} hasActiveFilters={filters.colors.length > 0}>
             <TruncatedFacetList
                 label="colors"
                 items={sortedColors}
@@ -758,7 +763,7 @@ function FilterSidebarContent({
     ) : null;
 
     const categorySection = sidebarCategories.length > 0 ? (
-        <RefineSection title="Product type" defaultOpen={openByDefault("category")} hasActiveFilters={!!(filters.category || filters.collection)}>
+        <RefineSection title={t("productType")} defaultOpen={openByDefault("category")} hasActiveFilters={!!(filters.category || filters.collection)}>
             <div className="space-y-0.5">
                 {sidebarCategories.map((group) => {
                     const isSelected = filters.category === group.category && !filters.collection;
@@ -832,7 +837,7 @@ function FilterSidebarContent({
     ) : null;
 
     const componentTypeSection = isComponentCategory && sortedComponentTypes.length > 0 ? (
-        <RefineSection title="Component Type" defaultOpen={openByDefault("componentType")} hasActiveFilters={!!filters.componentType}>
+        <RefineSection title={t("componentType")} defaultOpen={openByDefault("componentType")} hasActiveFilters={!!filters.componentType}>
             <div className="space-y-0.5">
                 {sortedComponentTypes.map(([type, count]) => (
                     <button
@@ -848,7 +853,7 @@ function FilterSidebarContent({
     ) : null;
 
     const neckThreadSection = sortedThreads.length > 0 ? (
-        <RefineSection title="Neck Thread Size" defaultOpen={openByDefault("neckThreadSizes")} hasActiveFilters={filters.neckThreadSizes.length > 0}>
+        <RefineSection title={t("neckThread")} defaultOpen={openByDefault("neckThreadSizes")} hasActiveFilters={filters.neckThreadSizes.length > 0}>
             <TruncatedFacetList
                 label="threads"
                 items={sortedThreads}
@@ -868,7 +873,7 @@ function FilterSidebarContent({
     ) : null;
 
     const priceSection = facets && facets.priceRange.min < facets.priceRange.max ? (
-        <RefineSection title="Price Range" defaultOpen={openByDefault("price")} hasActiveFilters={filters.priceMin !== null || filters.priceMax !== null}>
+        <RefineSection title={t("priceRange")} defaultOpen={openByDefault("price")} hasActiveFilters={filters.priceMin !== null || filters.priceMax !== null}>
             <PriceRangeSlider
                 min={facets.priceRange.min}
                 max={facets.priceRange.max}
@@ -896,7 +901,7 @@ function FilterSidebarContent({
     const orderedSections = surface.visibleFacets.map((facet) => sectionsByFacet[facet]);
 
     const shopCollectionSection = mobileOptimized ? (
-        <RefineSection title="Collection" defaultOpen={Boolean(filters.shopCollection)} hasActiveFilters={Boolean(filters.shopCollection)}>
+        <RefineSection title={t("collection")} defaultOpen={Boolean(filters.shopCollection)} hasActiveFilters={Boolean(filters.shopCollection)}>
             <div className="space-y-0.5">
                 <button
                     type="button"
@@ -904,7 +909,7 @@ function FilterSidebarContent({
                     aria-pressed={!filters.shopCollection}
                     className={`flex min-h-11 w-full items-center py-2 text-left text-[13px] transition-colors ${!filters.shopCollection ? "font-semibold text-muted-gold" : "text-obsidian/70 hover:text-muted-gold"}`}
                 >
-                    All collections
+                    {t("allCollections")}
                 </button>
                 {SHOP_COLLECTIONS.map((collection) => (
                     <button
@@ -914,7 +919,7 @@ function FilterSidebarContent({
                         aria-pressed={filters.shopCollection === collection.key}
                         className={`flex min-h-11 w-full items-center py-2 text-left text-[13px] transition-colors ${filters.shopCollection === collection.key ? "font-semibold text-muted-gold" : "text-obsidian/70 hover:text-muted-gold"}`}
                     >
-                        {collection.title}
+                        {localizeCollectionName(locale, collection.key, collection.title)}
                     </button>
                 ))}
             </div>
@@ -924,7 +929,7 @@ function FilterSidebarContent({
     return (
         <>
             {!mobileOptimized && (
-                <h3 className="font-serif text-xl text-obsidian border-b border-champagne pb-3 mb-6">Browse</h3>
+                <h3 className="font-serif text-xl text-obsidian border-b border-champagne pb-3 mb-6">{t("browse")}</h3>
             )}
             {shopCollectionSection}
 
@@ -932,7 +937,7 @@ function FilterSidebarContent({
                 onClick={onClearAll}
                 className={`block min-h-11 text-left text-sm transition-colors w-full mb-6 py-2 border-b border-champagne/30 ${filtersAreEmpty(filters) ? "text-muted-gold font-semibold" : "text-obsidian hover:text-muted-gold"}`}
             >
-                All Products ({totalCount.toLocaleString()})
+                {t("allProducts", { count: totalCount.toLocaleString() })}
             </button>
 
             {orderedSections.map((section, index) => section ? (
@@ -1044,7 +1049,7 @@ function LineItemRow({
         >
             {/* Image + Name */}
             <td className="py-3 px-4">
-                <Link href={href} className="flex items-center gap-4">
+                <LocaleLink href={href} className="flex items-center gap-4">
                     <div
                         className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative"
                         data-bb-image-audit="catalog-line-item"
@@ -1082,7 +1087,7 @@ function LineItemRow({
                             <p className="text-[10px] text-slate">{group.family}</p>
                         )}
                     </div>
-                </Link>
+                </LocaleLink>
             </td>
 
             {/* Capacity */}
@@ -1153,13 +1158,13 @@ function LineItemRow({
                             <Plus className="w-3 h-3 text-slate" />
                         </button>
                     </div>
-                    <Link
+                    <LocaleLink
                         href={href}
                         className="px-3 py-1.5 bg-obsidian text-white text-[10px] uppercase font-bold tracking-wider rounded hover:bg-muted-gold transition-colors flex items-center gap-1"
                     >
                         <ShoppingCart className="w-3 h-3" />
                         View
-                    </Link>
+                    </LocaleLink>
                 </div>
             </td>
         </motion.tr>
@@ -1215,7 +1220,7 @@ function LineItemMobileCard({
             className="bg-white border border-champagne/40 overflow-hidden"
         >
             <div className="flex items-stretch gap-3 p-3">
-                <Link
+                <LocaleLink
                     href={href}
                     className="relative block h-[112px] w-[112px] shrink-0 overflow-hidden bg-[#f0ebe3]"
                     aria-label={`View ${customerDisplayName}`}
@@ -1240,14 +1245,14 @@ function LineItemMobileCard({
                             <Package className="h-8 w-8 text-champagne" strokeWidth={1} />
                         </span>
                     )}
-                </Link>
+                </LocaleLink>
 
                 <div className="flex min-w-0 flex-1 flex-col">
-                    <Link href={href} className="min-w-0">
+                    <LocaleLink href={href} className="min-w-0">
                         <p className="line-clamp-2 whitespace-normal break-words text-[15px] font-medium leading-tight text-obsidian hover:text-muted-gold">
                             {customerDisplayName}
                         </p>
-                    </Link>
+                    </LocaleLink>
                     {cardSpecs && (
                         <p className="mt-1 truncate text-[12px] leading-snug text-slate">{cardSpecs}</p>
                     )}
@@ -1263,13 +1268,13 @@ function LineItemMobileCard({
                                 : `cap option${group.variantCount === 1 ? "" : "s"}`}
                         </p>
                         <div className="flex items-center gap-1">
-                            <Link
+                            <LocaleLink
                                 href={href}
                                 className="flex h-11 w-11 items-center justify-center bg-obsidian text-white"
                                 aria-label={`View ${customerDisplayName}`}
                             >
                                 <ShoppingCart className="h-4 w-4" aria-hidden />
-                            </Link>
+                            </LocaleLink>
                             <button
                                 onClick={() => setExpanded(!expanded)}
                                 className="flex h-11 w-11 items-center justify-center rounded-lg hover:bg-travertine transition-colors"
@@ -1345,13 +1350,13 @@ function LineItemMobileCard({
                                 </div>
 
                                 {/* View/Add Button */}
-                                <Link
+                                <LocaleLink
                                     href={href}
                                     className="flex-1 py-2.5 bg-obsidian text-white text-xs uppercase font-bold tracking-wider text-center rounded-lg hover:bg-muted-gold transition-colors flex items-center justify-center gap-1.5"
                                 >
                                     <ShoppingCart className="w-3.5 h-3.5" />
                                     View & Configure
-                                </Link>
+                                </LocaleLink>
                             </div>
                         </div>
                     </motion.div>
@@ -1507,6 +1512,22 @@ export default function CatalogClient({
 }) {
     const router = useRouter();
     const pathname = usePathname();
+    const locale = useAppLocale();
+    const t = useCopy("catalog");
+    const sortLabel = (value: SortValue) => {
+        switch (value) {
+            case "featured": return t("sortFeatured");
+            case "best-match": return t("sortBestMatch");
+            case "price-asc": return t("sortPriceAsc");
+            case "price-desc": return t("sortPriceDesc");
+            case "name-asc": return t("sortNameAsc");
+            case "name-desc": return t("sortNameDesc");
+            case "capacity-asc": return t("sortCapacityAsc");
+            case "capacity-desc": return t("sortCapacityDesc");
+            case "variants-desc": return t("sortVariantsDesc");
+            default: return value;
+        }
+    };
     const searchParams = useMemo(() => new URLSearchParams(initialSearchParams), [initialSearchParams]);
     const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
     const { open: openGrace } = useGrace();
@@ -1557,9 +1578,10 @@ export default function CatalogClient({
         (f: CatalogFilters, s: SortValue, v: ViewMode) => {
             const params = filtersToParams(f, s, v);
             const qs = params.toString();
-            router.push(`${pathname}${qs ? `?${qs}` : ""}`, { scroll: false });
+            const path = localizeHref(locale, stripLocalePrefix(pathname));
+            router.push(`${path}${qs ? `?${qs}` : ""}`, { scroll: false });
         },
-        [router, pathname],
+        [router, pathname, locale],
     );
 
     // Persist accordion state
@@ -1653,11 +1675,15 @@ export default function CatalogClient({
                 row.variants.find((variant) => variant.websiteSku === skuMap.get(group._id) || variant.graceSku === skuMap.get(group._id)) ??
                 row.variants[0] ??
                 null;
-            const customerDisplayName = getCustomerFacingProductName({
-                group,
-                variant: representativeVariant,
-                fallbackName: group.displayName,
-            }).displayName;
+            const customerDisplayName = localizeMerchandisingName(locale, {
+                displayName: getCustomerFacingProductName({
+                    group,
+                    variant: representativeVariant,
+                    fallbackName: group.displayName,
+                }).displayName,
+                family: group.family,
+                slug: group.slug,
+            });
             next.set(
                 row.groupId,
                 getCatalogCardVariantPreviews(row.variants, {
@@ -1673,7 +1699,7 @@ export default function CatalogClient({
         }
 
         return next;
-    }, [variantPreviewRows, visibleProducts, visualApplicatorParam, skuMap, catalogHeroMap, filters.search, filters.rollerMaterials]);
+    }, [variantPreviewRows, visibleProducts, visualApplicatorParam, skuMap, catalogHeroMap, filters.search, filters.rollerMaterials, locale]);
     const catalogThumbnailMap = useMemo(() => {
         const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
         const next = new Map<string, string>();
@@ -1703,21 +1729,29 @@ export default function CatalogClient({
                 row.variants.find((variant) => variant.websiteSku === skuMap.get(group._id) || variant.graceSku === skuMap.get(group._id)) ??
                 row.variants[0] ??
                 null;
-            next.set(row.groupId, getCustomerFacingProductName({
-                group,
-                variant: representativeVariant,
-                fallbackName: group.displayName,
-            }).displayName);
+            next.set(row.groupId, localizeMerchandisingName(locale, {
+                displayName: getCustomerFacingProductName({
+                    group,
+                    variant: representativeVariant,
+                    fallbackName: group.displayName,
+                }).displayName,
+                family: group.family,
+                slug: group.slug,
+            }));
         }
 
         for (const group of visibleProducts) {
             if (!next.has(group._id)) {
-                next.set(group._id, getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName);
+                next.set(group._id, localizeMerchandisingName(locale, {
+                    displayName: getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName,
+                    family: group.family,
+                    slug: group.slug,
+                }));
             }
         }
 
         return next;
-    }, [variantPreviewRows, visibleProducts, skuMap]);
+    }, [variantPreviewRows, visibleProducts, skuMap, locale]);
     const hasMore = activeResult.nextCursor != null;
     const isLoading = isFetchingCatalog && activeResult.items.length === 0;
     const searchRecoverySuggestions = useMemo(
@@ -1875,7 +1909,9 @@ export default function CatalogClient({
 
     const chips = buildAppliedFilterChips(filters).map((chip) => ({
         facet: chip.facet,
-        label: chip.label,
+        label: chip.facet === "shopCollection"
+            ? `${t("collection")}: ${localizeCollectionName(locale, chip.value, getShopCollection(chip.value)?.title)}`
+            : chip.label,
         onRemove: () => {
             if (chip.facet === "search") setSearchInput("");
             handleFilterChange(removeCatalogFilterChip(filters, chip));
@@ -1883,7 +1919,7 @@ export default function CatalogClient({
     }));
     const facetChips = chips.filter((chip) => chip.facet !== "search");
     const facetFilterCount = activeFilterCount({ ...filters, search: "" });
-    const compactChipLabel = (label: string) => label.replace(/^(Collection|Category|Dispenser|Roller|Family|Glass|Capacity|Neck|Component|Search|Price):\s*/i, "");
+    const compactChipLabel = (label: string) => label.replace(/^(Collection|Colección|Category|Dispenser|Roller|Family|Glass|Capacity|Neck|Component|Search|Price):\s*/i, "");
     const activeConstraintSummary = buildAppliedFilterChips(filters)
         .map((chip) => chip.label)
         .join(" · ");
@@ -1938,7 +1974,7 @@ export default function CatalogClient({
         <main className="min-h-screen bg-warm-white pt-[82px] lg:pt-[120px]">
             <Navbar variant="catalog" initialSearchValue={filters.search || undefined} hideSearch />
             <div className="hidden lg:block">
-                <Breadcrumbs steps={[{ label: "Catalog" }]} />
+                <Breadcrumbs steps={[{ label: t("breadcrumb") }]} />
             </div>
 
             <div className="max-w-[1720px] mx-auto px-4 sm:px-6 py-4 sm:py-8 max-lg:pt-4 max-lg:pb-3">
@@ -1947,20 +1983,19 @@ export default function CatalogClient({
                 <div className="mb-4 sm:mb-12 border-b border-champagne/50 pb-4 sm:pb-8 flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-6 max-lg:mb-3 max-lg:border-0 max-lg:pb-0">
                     <div>
                         <h1 className="page-heading font-medium leading-none text-obsidian mb-1 sm:mb-2 lg:font-serif lg:text-4xl lg:leading-[1.1] xl:text-5xl">
-                            <span className="lg:hidden">Catalog</span>
-                            <span className="hidden lg:inline">Master Catalog</span>
+                            <span className="lg:hidden">{t("title")}</span>
+                            <span className="hidden lg:inline">{t("masterTitle")}</span>
                         </h1>
                         <p className="text-slate text-[15px] sm:text-sm max-w-xl" aria-live="polite">
-                            {isLoading ? "Loading catalog..." : (
+                            {isLoading ? t("loading") : (
                                 <>
                                     <span className="lg:hidden">
                                         {filters.search
-                                            ? `${totalCount.toLocaleString()} result${totalCount === 1 ? "" : "s"} for “${filters.search}”`
-                                            : `${totalCount.toLocaleString()} product${totalCount === 1 ? "" : "s"}`}
+                                            ? t(totalCount === 1 ? "resultsFor" : "resultsForPlural", { count: totalCount.toLocaleString(), query: filters.search })
+                                            : t(totalCount === 1 ? "productCount" : "productCountPlural", { count: totalCount.toLocaleString() })}
                                     </span>
                                     <span className="hidden lg:inline">
-                                        {`${totalCount.toLocaleString()} product${totalCount === 1 ? "" : "s"} currently visible.`}
-                                        {" "}Need help? Talk with Grace, your AI Bottling Specialist.
+                                        {t("visibleHelp", { count: totalCount.toLocaleString() })}
                                     </span>
                                 </>
                             )}
@@ -1978,13 +2013,13 @@ export default function CatalogClient({
                                 enterKeyHint="search"
                                 value={searchInput}
                                 onChange={(e) => handleSearchInput(e.target.value)}
-                                placeholder="Search products, SKUs, families..."
+                                placeholder={t("searchPlaceholder")}
                                 className="bg-transparent text-base lg:text-sm focus:outline-none w-full placeholder-slate/60 text-obsidian [&::-webkit-search-cancel-button]:hidden [&::-webkit-search-decoration]:hidden"
-                                aria-label="Search products"
+                                aria-label={t("searchProducts")}
                                 data-testid="catalog-search-input"
                             />
                             {searchInput && (
-                                <button onClick={() => handleSearchInput("")} className="flex h-11 w-11 shrink-0 items-center justify-center" aria-label="Clear search">
+                                <button onClick={() => handleSearchInput("")} className="flex h-11 w-11 shrink-0 items-center justify-center" aria-label={t("clearSearch")}>
                                     <X className="w-4 h-4 text-slate hover:text-obsidian transition-colors" />
                                 </button>
                             )}
@@ -2002,7 +2037,7 @@ export default function CatalogClient({
                             className="mb-3 sm:mb-6 hidden lg:flex flex-wrap items-center gap-2"
                             aria-label="Active catalog filters"
                         >
-                            <span className="text-xs uppercase tracking-wider font-semibold text-slate">Active Filters:</span>
+                            <span className="text-xs uppercase tracking-wider font-semibold text-slate">{t("activeFilters")}</span>
                             {chips.map((chip, i) => (
                                 <span
                                     key={`${chip.label}-${i}`}
@@ -2024,7 +2059,7 @@ export default function CatalogClient({
                                     onClick={handleClearAll}
                                     className="text-xs text-slate hover:text-obsidian transition-colors underline underline-offset-2"
                                 >
-                                    Clear all
+                                    {t("clearAll")}
                                 </button>
                             )}
                         </motion.div>
@@ -2039,7 +2074,7 @@ export default function CatalogClient({
                         data-testid="catalog-mobile-filter-button"
                     >
                         <SlidersHorizontal className="w-4 h-4" />
-                        Filters
+                        {t("filters")}
                         {facetFilterCount > 0 && (
                             <span className="w-5 h-5 rounded-full bg-muted-gold text-white text-[10px] flex items-center justify-center font-bold">
                                 {facetFilterCount}
@@ -2055,7 +2090,7 @@ export default function CatalogClient({
                             className="h-11 w-full appearance-none bg-white border border-champagne rounded-lg px-2.5 text-sm text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none"
                         >
                             {SORT_OPTIONS.filter((opt) => opt.value !== "best-match" || filters.search).map((opt) => (
-                                <option key={opt.value} value={opt.value}>{opt.label}</option>
+                                <option key={opt.value} value={opt.value}>{sortLabel(opt.value)}</option>
                             ))}
                         </select>
                         <ArrowUpDown className="absolute right-2.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-slate pointer-events-none" />
@@ -2093,7 +2128,7 @@ export default function CatalogClient({
                             >
                                 <div className="flex shrink-0 items-center justify-between px-5 py-4 border-b border-champagne/50 bg-warm-white">
                                     <div className="flex items-center gap-2">
-                                        <h3 className="font-serif text-lg text-obsidian font-medium">Filters</h3>
+                                        <h3 className="font-serif text-lg text-obsidian font-medium">{t("filters")}</h3>
                                         {facetFilterCount > 0 && (
                                             <span className="w-5 h-5 rounded-full bg-muted-gold text-white text-[10px] flex items-center justify-center font-bold">
                                                 {facetFilterCount}
@@ -2131,7 +2166,7 @@ export default function CatalogClient({
                                                 onClick={handleClearFacets}
                                                 className="min-h-11 flex-1 border border-champagne px-3 text-xs font-semibold uppercase tracking-wider text-obsidian"
                                             >
-                                                Clear all
+                                                {t("clearAll")}
                                             </button>
                                         )}
                                         <button
@@ -2172,38 +2207,38 @@ export default function CatalogClient({
                         {selectedFamilyLabel && !filters.shopCollection && CATALOG_FAMILIES.includes(selectedFamilyLabel) && (
                             <div className="mb-4 flex flex-col gap-3 border border-muted-gold/40 bg-muted-gold/10 p-4 sm:flex-row sm:items-center sm:justify-between">
                                 <div>
-                                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Family finder</p>
-                                    <p className="mt-1 text-sm text-obsidian">Looking for the {selectedFamilyLabel} family page with application cards and exact products?</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">{t("familyFinder")}</p>
+                                    <p className="mt-1 text-sm text-obsidian">{t("familyFinderBody", { family: localizeFamilyName(locale, selectedFamilyLabel) })}</p>
                                 </div>
-                                <Link
-                                    href={familyFinderHref(selectedFamilyLabel)}
+                                <LocaleLink
+                                    href={localizeHref(locale, familyFinderHref(selectedFamilyLabel))}
                                     className="inline-flex min-h-11 shrink-0 items-center justify-center bg-obsidian px-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-white hover:bg-muted-gold hover:text-obsidian"
                                 >
-                                    {`Open the ${selectedFamilyLabel} family page`}
-                                </Link>
+                                    {t("openFamilyPage", { family: localizeFamilyName(locale, selectedFamilyLabel) })}
+                                </LocaleLink>
                             </div>
                         )}
 
                         <div className="mb-5 hidden lg:flex flex-wrap items-center gap-3">
-                            <label className="text-sm" htmlFor="shop-collection">Shop by collection</label>
+                            <label className="text-sm" htmlFor="shop-collection">{t("shopByCollection")}</label>
                             <select id="shop-collection" value={filters.shopCollection ?? ""}
                                 onChange={event => handleFilterChange({ shopCollection: event.target.value || null })}
                                 className="min-h-11 max-w-full rounded border border-champagne bg-white px-3 text-sm">
-                                <option value="">All collections</option>
-                                {SHOP_COLLECTIONS.map(collection => <option key={collection.key} value={collection.key}>{collection.title}</option>)}
+                                <option value="">{t("allCollections")}</option>
+                                {SHOP_COLLECTIONS.map(collection => <option key={collection.key} value={collection.key}>{localizeCollectionName(locale, collection.key, collection.title)}</option>)}
                             </select>
                         </div>
-                        {filters.shopCollection && <p className="mb-4 hidden text-sm text-slate lg:block">{getShopCollection(filters.shopCollection)?.subtitle}</p>}
-                        {filters.shopCollection && BUILDER_COLLECTION_FITMENTS[filters.shopCollection] && <Link className="mb-4 hidden min-h-11 items-center border border-champagne px-4 text-sm lg:inline-flex" href={`/matrix?shop=${filters.shopCollection}${filters.families.length === 1 ? `&family=${encodeURIComponent(filters.families[0])}` : ''}`}>Build from this collection →</Link>}
+                        {filters.shopCollection && <p className="mb-4 hidden text-sm text-slate lg:block">{localizeCollectionSubtitle(locale, filters.shopCollection, getShopCollection(filters.shopCollection)?.subtitle)}</p>}
+                        {filters.shopCollection && BUILDER_COLLECTION_FITMENTS[filters.shopCollection] && <LocaleLink className="mb-4 hidden min-h-11 items-center border border-champagne px-4 text-sm lg:inline-flex" href={`/matrix?shop=${filters.shopCollection}${filters.families.length === 1 ? `&family=${encodeURIComponent(filters.families[0])}` : ''}`}>{t("buildFromCollection")}</LocaleLink>}
                         {filters.shopCollection === "accessories-packaging" && <div className="mb-5 hidden flex-wrap gap-4 text-sm lg:flex">
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Component",families:[]})}>Loose components & caps</button>
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Accessory",families:["Tool"]})}>Funnels & tools</button>
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Bag"]})}>Bags</button>
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Box"]})}>Boxes</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Component",families:[]})}>{t("looseComponents")}</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Accessory",families:["Tool"]})}>{t("funnelsTools")}</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Bag"]})}>{t("bags")}</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Box"]})}>{t("boxes")}</button>
                         </div>}
                         {filters.shopCollection === "glass-spray-bottles" && <div className="mb-5 hidden flex-wrap gap-3 text-sm lg:flex">
-                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["antiquespray","antiquespray-tassel"]})}>Vintage Style Bulb Spray Bottles</button>
-                            <Link className="underline" href="/catalog?category=Component&componentType=Sprayer">Loose sprayer components</Link>
+                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["antiquespray","antiquespray-tassel"]})}>{t("vintageBulbSpray")}</button>
+                            <LocaleLink className="underline" href="/catalog?category=Component&componentType=Sprayer">{t("looseSprayers")}</LocaleLink>
                         </div>}
                         {/* Family banner — shown when a single design family is filtered */}
                         {filters.families.length === 1 && !filters.search && (
@@ -2216,10 +2251,10 @@ export default function CatalogClient({
                                 <div className="min-w-0">
                                     <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-0.5 sm:mb-1">
                                         {filters.search
-                                            ? "Search Results"
+                                            ? t("searchResults")
                                             : filters.applicators.length > 0 && filters.families.length === 1
-                                                ? filters.families[0]
-                                                : "Catalog"}
+                                                ? localizeFamilyName(locale, filters.families[0] ?? "")
+                                                : t("title")}
                                     </p>
                                     <h2 className="font-serif text-lg sm:text-3xl font-medium text-obsidian truncate">
                                         {filters.search
@@ -2229,8 +2264,8 @@ export default function CatalogClient({
                                                 : filters.applicators.length > 1
                                                     ? `${filters.applicators.map((a) => APPLICATOR_BUCKETS.find((b) => b.value === a)?.label ?? a).join(" & ")} Bottles`
                                                     : filters.families.length === 1
-                                                        ? filters.families[0]
-                                                        : getShopCollection(filters.shopCollection)?.title || filters.collection || filters.category || "All Products"}
+                                                        ? localizeFamilyName(locale, filters.families[0] ?? "")
+                                                        : localizeCollectionName(locale, filters.shopCollection, getShopCollection(filters.shopCollection)?.title) || filters.collection || filters.category || t("allProductsHeading")}
                                     </h2>
                                 </div>
                                 <div className="flex items-center gap-2 sm:gap-3 shrink-0">
@@ -2246,7 +2281,7 @@ export default function CatalogClient({
                                             className="appearance-none bg-white border border-champagne rounded-lg px-3 py-1.5 text-xs text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none cursor-pointer"
                                         >
                                             {SORT_OPTIONS.filter((opt) => opt.value !== "best-match" || filters.search).map((opt) => (
-                                                <option key={opt.value} value={opt.value}>{opt.label}</option>
+                                                <option key={opt.value} value={opt.value}>{sortLabel(opt.value)}</option>
                                             ))}
                                         </select>
                                         <ArrowUpDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-slate pointer-events-none" />
@@ -2345,12 +2380,12 @@ export default function CatalogClient({
                         {!isLoading && totalCount === 0 && (
                             <div className="flex flex-col items-center justify-center py-24 text-center" data-testid="catalog-empty-state">
                                 <Package className="w-16 h-16 text-champagne mb-6" strokeWidth={1} />
-                                <h3 className="font-serif text-2xl text-obsidian mb-3">No products found</h3>
+                                <h3 className="font-serif text-2xl text-obsidian mb-3">{t("noProducts")}</h3>
                                 <p className="text-slate text-sm max-w-md mb-4">
                                     {emptyCombinationMessage ??
                                     (filters.search
-                                        ? `No products match "${filters.search}".`
-                                        : "No products match your current filters.")}
+                                        ? t("noMatchSearch", { query: filters.search })
+                                        : t("noMatchFilters"))}
                                 </p>
                                 {chips.length > 0 && (
                                     <p className="text-slate text-xs mb-6">
@@ -2384,14 +2419,14 @@ export default function CatalogClient({
                                         onClick={handleClearAll}
                                         className="px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors rounded-sm"
                                     >
-                                        Reset Filters
+                                        {t("resetFilters")}
                                     </button>
                                     <button
                                         onClick={() => openGrace()}
                                         className="px-6 py-3 border border-muted-gold text-muted-gold uppercase text-xs font-bold tracking-wider hover:bg-muted-gold hover:text-white transition-colors rounded-sm flex items-center gap-2"
                                     >
                                         <MessageCircle className="w-3.5 h-3.5" />
-                                        Talk with Grace
+                                        {t("talkWithGrace")}
                                     </button>
                                 </div>
                             </div>
@@ -2408,8 +2443,8 @@ export default function CatalogClient({
                                 >
                                     <div className="flex items-center gap-2">
                                         <Sparkles className="w-4 h-4 text-muted-gold shrink-0" />
-                                        <p className="text-sm text-muted-gold font-semibold">Grace found these for you</p>
-                                        <span className="text-xs text-slate">— refine with the filters, or ask Grace to narrow it further.</span>
+                                        <p className="text-sm text-muted-gold font-semibold">{t("graceFoundThese")}</p>
+                                        <span className="text-xs text-slate">{t("graceRefineHint")}</span>
                                     </div>
                                     <button
                                         onClick={() => setGraceBannerDismissed(true)}
@@ -2481,7 +2516,7 @@ export default function CatalogClient({
                         {hasMore && (
                             <div className="flex flex-col items-center py-12 mt-8 border-t border-champagne/40">
                                 <p className="text-xs text-slate mb-4">
-                                    Showing {visibleProducts.length} of {totalCount} products
+                                    {t("showingOf", { shown: visibleProducts.length, total: totalCount })}
                                 </p>
                                 <button
                                     type="button"
@@ -2490,7 +2525,7 @@ export default function CatalogClient({
                                     disabled={isLoadingMore || isFetchingCatalog}
                                     className="min-h-11 px-8 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors rounded-sm disabled:cursor-wait disabled:opacity-70"
                                 >
-                                    {isLoadingMore ? "Loading…" : "Load More"}
+                                    {isLoadingMore ? t("loadingMore") : t("loadMore")}
                                 </button>
                             </div>
                         )}
@@ -2499,7 +2534,7 @@ export default function CatalogClient({
                         {!isLoading && totalCount > 0 && !hasMore && totalCount > PAGE_SIZE && (
                             <div className="flex justify-center py-12 mt-8 border-t border-champagne/40">
                                 <p className="text-xs text-slate">
-                                    Showing all {totalCount} products
+                                    {t("showingAll", { total: totalCount })}
                                 </p>
                             </div>
                         )}

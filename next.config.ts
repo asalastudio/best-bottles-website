@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 // The /config subpath is the supported import for build-time wiring; importing
 // withSentryConfig from the package root is deprecated and breaks in v11.
 import { withSentryConfig } from "@sentry/nextjs/config";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const projectRoot = process.cwd();
 
@@ -198,7 +201,7 @@ const nextConfig: NextConfig = {
 const sentrySourceMapsEnabled = Boolean(process.env.SENTRY_AUTH_TOKEN)
     && process.env.VERCEL_ENV !== "preview";
 
-export default withSentryConfig(nextConfig, {
+export default withSentryConfig(withNextIntl(nextConfig), {
     org: process.env.SENTRY_ORG,
     project: process.env.SENTRY_PROJECT,
     authToken: process.env.SENTRY_AUTH_TOKEN,

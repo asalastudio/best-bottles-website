@@ -31,8 +31,8 @@ describe("portal mobile shell", () => {
         expect(css).toContain(".drawer");
         expect(css).toContain("@media (min-width: 1024px)");
         expect(css).toContain("width: 220px");
-        expect(tabs).toContain('pathname.startsWith("/portal")');
-        expect(tabs).toContain('pathname.startsWith("/lab/portal-shell")');
+        expect(tabs).toContain('route.startsWith("/portal")');
+        expect(tabs).toContain('route.startsWith("/lab/portal-shell")');
         expect(globals).toContain("body:has([data-portal-shell]) [data-mobile-tab-bar]");
         expect(globals).toContain("[data-portal-table-row]");
     });

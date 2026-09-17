@@ -97,7 +97,7 @@ describe("family-first homepage merchandising", () => {
         expect(home.indexOf("<ShoppingHeader")).toBeLessThan(home.indexOf("<CollectionShopping"));
         expect(header).toContain('role="search"');
         expect(header).toContain('name="search"');
-        expect(header).toContain('action="/catalog"');
+        expect(header).toContain("localizeHref(locale, '/catalog')");
         const html = renderToStaticMarkup(createElement(CollectionShopping, { data: null }));
         expect(html.indexOf('id="family-heading"')).toBeGreaterThan(-1);
         expect(html.indexOf('id="family-heading"')).toBeLessThan(html.indexOf('id="collections-heading"'));
