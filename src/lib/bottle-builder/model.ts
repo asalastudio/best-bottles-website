@@ -30,6 +30,8 @@ export type BuilderConfiguration = {
     closure: string;
     kit: BuilderKit | null;
     previewKit?: BuilderKit;
+    /** Sibling kit used for cap-split previews; kept when kits are stripped from first paint. */
+    previewKitSku?: string;
     photoUrl: string | null;
     bodyImage: { url: string; width: number; height: number } | null;
     finishComponent: { websiteSku: string; imageUrl: string | null; name: string };

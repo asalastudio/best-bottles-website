@@ -4,6 +4,7 @@ import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import { builderBodyIdentity, resolveBuilderConfigurations, type BuilderKit, groupBuilderBodies, isBuilderCandidate, type CatalogRow } from "./model";
 import { resolveListedComponents, unavailableVintageFinishes, type ActiveComponent } from "./components";
+import { slimBuilderBodies } from "./payload";
 
 const client = () => new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
@@ -13,8 +14,14 @@ const cachedKit = unstable_cache(async (websiteSku: string, graceSku: string) =>
     client().query(api.productKits.forSku, { websiteSku, graceSku }), ["bottle-builder-kit-v1"], { revalidate: 300 });
 
 // Raw matrix rows repeat compatibility lists and can exceed Next's 2 MB cache
-// entry limit. Cache only the small family summary and individual image kits.
+// entry limit. Cache the slim family workspace and individual image kits.
 const familyRows = (family: string) => client().query(api.matrix.getFamilyRows, { family });
+
+export const loadBuilderFamily = unstable_cache(async (family: string) => {
+    const data = await familyRows(family);
+    if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
+    return slimBuilderBodies(await loadBuilderBodies(data.rows));
+}, ["bottle-builder-family-slim-v1"], { revalidate: 300 });
 
 export const loadBuilderFamilies = unstable_cache(async () => {
     const families = await client().query(api.matrix.listFamilies, {});
@@ -23,20 +30,28 @@ export const loadBuilderFamilies = unstable_cache(async () => {
     await Promise.all(Array.from({ length: Math.min(4, families.length) }, async () => {
         while (cursor < families.length) {
             const index = cursor++;
-            const data = await familyRows(families[index].family);
-            if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${data.family}`);
-            const bodies = await loadBuilderBodies(data.rows);
+            const name = families[index].family;
+            const bodies = await loadBuilderFamily(name);
             // A single bottle with an orderable compatible finish is enough.
-            available[index] = bodies.length ? { family: data.family, groups: bodies.length } : null;
+            available[index] = bodies.length ? { family: name, groups: bodies.length } : null;
         }
     }));
     return available.filter(family => family !== null);
-}, ["bottle-builder-families-bare-v3"], { revalidate: 300 });
+}, ["bottle-builder-families-bare-v4"], { revalidate: 300 });
 
-export async function loadBuilderFamily(family: string) {
-    const data = await familyRows(family);
-    if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
-    return loadBuilderBodies(data.rows);
+export async function loadBuilderBodyKits(family: string, bodyId: string) {
+    if (!family || family.length > 100 || !bodyId || bodyId.length > 200) return {};
+    const body = (await loadBuilderFamily(family)).find(item => item.id === bodyId);
+    if (!body) return {};
+    const kits: Record<string, BuilderKit | null> = {};
+    let cursor = 0;
+    await Promise.all(Array.from({ length: Math.min(24, body.configurations.length) }, async () => {
+        while (cursor < body.configurations.length) {
+            const config = body.configurations[cursor++];
+            kits[config.id] = await cachedKit(config.id, config.product.graceSku);
+        }
+    }));
+    return kits;
 }
 
 /** The published plate per candidate SKU: the exact master front on the plate
@@ -63,15 +78,14 @@ export async function loadBuilderBodies(rows: CatalogRow[]) {
     const candidates = resolved.filter(isBuilderCandidate);
     const configurations = new Array<BuilderKit | null>(candidates.length);
     let cursor = 0;
-    await Promise.all(Array.from({ length: Math.min(24, candidates.length) }, async () => {
+    const kitsReady = Promise.all(Array.from({ length: Math.min(24, candidates.length) }, async () => {
         while (cursor < candidates.length) {
             const index = cursor++;
             const row = candidates[index];
-            const kit = await cachedKit(row.websiteSku!, row.graceSku!);
-            configurations[index] = kit;
+            configurations[index] = await cachedKit(row.websiteSku!, row.graceSku!);
         }
     }));
-    const plateUrls = await loadPlateUrls(convex, candidates);
+    const [plateUrls] = await Promise.all([loadPlateUrls(convex, candidates), kitsReady]);
     const bodies = groupBuilderBodies(resolveBuilderConfigurations(candidates, configurations, plateUrls).filter(config => config !== null));
     for (const row of rows) {
         const unavailable = unavailableVintageFinishes(row, activeBySku);
