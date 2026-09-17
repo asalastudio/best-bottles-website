@@ -10,6 +10,7 @@ import { api } from "../../../convex/_generated/api";
 import { ChatCircle, Package, ShoppingBag } from "@/components/icons";
 import { isCheckoutReady } from "@/lib/checkout";
 import { APPLICATOR_NAV, catalogHref } from "@/lib/catalogFilters";
+import { useCopy } from "@/i18n/useCopy";
 import { uniqueSameApplicationSizes, type FocusedPdpRelations, type ProductGroupRelation } from "@/lib/products/pdp-relations";
 
 export interface PdpCompatibilityComponent {
@@ -273,6 +274,7 @@ export function PdpCompatibleComponentList({
     onAskGrace: () => void;
     onAddComponent: (component: PdpCompatibilityComponent) => void;
 }) {
+    const graceCopy = useCopy("grace");
     const groupedComponents = groupCompatibleComponents(compatibility);
     if (groupedComponents.length === 0) {
         return (
@@ -280,7 +282,7 @@ export function PdpCompatibleComponentList({
                 <p className="text-sm leading-relaxed text-amber-900">Compatibility is unmapped for this SKU. Do not assume a component fits until the neck and fitment are verified.</p>
                 <button type="button" onClick={onAskGrace} className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-sm border border-amber-700 px-3 py-2 text-xs font-bold uppercase tracking-wider text-amber-900 hover:bg-amber-100">
                     <ChatCircle className="h-4 w-4" />
-                    Ask Grace about fitment
+                    {graceCopy("askAboutFitment")}
                 </button>
             </div>
         );

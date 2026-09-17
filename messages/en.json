@@ -186,7 +186,41 @@
     "bags": "Bags",
     "boxes": "Boxes",
     "vintageBulbSpray": "Vintage Style Bulb Spray Bottles",
-    "looseSprayers": "Loose sprayer components"
+    "looseSprayers": "Loose sprayer components",
+    "talkWithGrace": "Talk with Grace",
+    "askGraceForHelp": "Ask Grace for help",
+    "askGraceForHelpChoosing": "Ask Grace for help choosing",
+    "graceFoundThese": "Grace found these for you",
+    "graceRefineHint": "— refine with the filters, or ask Grace to narrow it further."
+  },
+  "grace": {
+    "name": "Grace",
+    "askAnything": "Ask Grace anything…",
+    "listening": "Listening…",
+    "talkWith": "Talk with Grace",
+    "openAria": "Open Grace AI",
+    "openTitle": "Ask Grace — AI bottling concierge",
+    "chatAria": "Grace AI chat",
+    "endVoiceAria": "End voice conversation with Grace",
+    "endVoiceTitle": "End voice conversation",
+    "conversationInProgress": "Grace conversation in progress",
+    "askAria": "Ask Grace AI",
+    "tooltipPdp": "Ask Grace about fit for this bottle.",
+    "tooltipGeneral": "Need fitment help? Talk with Grace — your bottle & closure expert.",
+    "dismiss": "Dismiss",
+    "ask": "Ask Grace",
+    "askAboutFitment": "Ask Grace about fitment",
+    "askAboutFitAndBulk": "Ask Grace about fit and bulk pricing",
+    "unpurchasableBody": "We could not find a purchasable configuration for this product. Grace can help you find the right bottle.",
+    "needHelpChoosing": "Need help choosing?"
+  },
+  "familiesDirectory": {
+    "breadcrumb": "Home / Bottle families",
+    "title": "Bottle Families",
+    "intro": "Start with a shape. Then explore its available sizes, glass finishes and dispensers. Looking for a specific dispenser?",
+    "shopByCollection": "Shop by collection.",
+    "seoTitle": "Bottle Families | Best Bottles",
+    "seoDescription": "Explore the shapes of Best Bottles, including Cylinder, Elegant, Circle, Diva, Grace, Empire and Round."
   },
   "meta": {
     "homeDescription": "2,300+ premium glass bottles, sprayers, and packaging components from Nemat International. 20+ years of expertise. Low MOQs, volume pricing, and dedicated support for scaling brands."

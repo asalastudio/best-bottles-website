@@ -60,16 +60,40 @@ describe("Spanish locale foundation", () => {
         expect(es.nav.browseFullCatalog).toBe("Ver el catálogo completo");
         expect(es.nav.journal).toBe("Journal");
         expect(es.nav.journal).not.toBe("Diario");
+        expect(es.nav.askGrace).toBe("Preguntar a Gracia");
+        expect(es.tabs.grace).toBe("Gracia");
+        expect(es.grace.name).toBe("Gracia");
         expect(es.catalog.loadMore).toBe("Cargar más");
         expect(es.catalog.description).toContain("tarros");
         expect(es.catalog.visibleHelp).toContain("especialista en frascos");
+        expect(es.catalog.visibleHelp).toContain("Gracia");
         expect(es.catalog.familyIntro.startsWith("Los frascos")).toBe(true);
         expect(es.footer.fitmentGuide).toBe("Guía de compatibilidad");
         expect(es.footer.packagingInsights).toBe("Artículos de empaque");
         expect(es.home.packagingInsights).toBe("Artículos de empaque");
         expect(es.home.viewAllArticles).toBe("Ver todos los artículos");
         expect(en.nav.askGrace).toBe("Ask Grace");
+        expect(en.grace.name).toBe("Grace");
         expect(en.catalog.masterTitle).toBe("Master Catalog");
+    });
+
+    it("does not use the English agent name Grace in Spanish chrome copy", () => {
+        const offenders: string[] = [];
+        const walk = (value: unknown, path: string) => {
+            if (typeof value === "string") {
+                if (/\bGrace\b/.test(value) && path !== "familiesDirectory.seoDescription") {
+                    offenders.push(`${path}: ${value}`);
+                }
+                return;
+            }
+            if (value && typeof value === "object" && !Array.isArray(value)) {
+                for (const [key, child] of Object.entries(value as Record<string, unknown>)) {
+                    walk(child, path ? `${path}.${key}` : key);
+                }
+            }
+        };
+        walk(es, "");
+        expect(offenders).toEqual([]);
     });
 
     it("overlays Cylinder merchandising copy without translating SKUs or neck threads", () => {

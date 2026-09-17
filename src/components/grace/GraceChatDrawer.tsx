@@ -16,6 +16,7 @@ import {
 } from "@phosphor-icons/react";
 import VoiceWaveGlyph from "@/components/grace-workspace/VoiceWaveGlyph";
 import { useGrace } from "@/components/useGrace";
+import { useCopy } from "@/i18n/useCopy";
 import { useIsAuthenticated } from "@/lib/useIsAuthenticated";
 import { useGraceImageUpload } from "@/lib/useGraceImageUpload";
 import GraceChatMessage, { StreamingMessage, ThinkingIndicator } from "./GraceChatMessage";
@@ -78,6 +79,7 @@ export default function GraceChatDrawer() {
         voiceEnabled,
         pageContext,
     } = useGrace();
+    const t = useCopy("grace");
 
     // Adaptive top-bar microcopy — anonymous flow.
     // PDP: "Empire Round 50ml" · Catalog with filter: "Catalog · Cylinder" ·
@@ -208,7 +210,7 @@ export default function GraceChatDrawer() {
                             overflow: "hidden",
                         }}
                         role="complementary"
-                        aria-label="Grace AI chat"
+                        aria-label={t("chatAria")}
                     >
                         {/* ── Top bar ─────────────────────────────────── */}
                         <div
@@ -325,7 +327,7 @@ export default function GraceChatDrawer() {
                                     onChange={(e) => setInput(e.target.value)}
                                     onKeyDown={handleKeyDown}
                                     placeholder={
-                                        voiceEnabled ? "Listening…" : "Ask Grace anything…"
+                                        voiceEnabled ? t("listening") : t("askAnything")
                                     }
                                     rows={2}
                                     className="w-full bg-transparent text-[14px] text-obsidian placeholder:text-slate/60 outline-none font-sans resize-none px-3.5 pt-3 pb-2 leading-relaxed"
@@ -357,8 +359,8 @@ export default function GraceChatDrawer() {
                                         type="button"
                                         onClick={toggleVoice}
                                         aria-pressed={voiceEnabled}
-                                        aria-label={voiceEnabled ? "End voice conversation with Grace" : "Talk with Grace"}
-                                        title={voiceEnabled ? "End voice conversation" : "Talk with Grace"}
+                                        aria-label={voiceEnabled ? t("endVoiceAria") : t("talkWith")}
+                                        title={voiceEnabled ? t("endVoiceTitle") : t("talkWith")}
                                         className="w-9 h-8 rounded-[3px] flex items-center justify-center cursor-pointer transition-colors"
                                         style={{
                                             background: voiceEnabled

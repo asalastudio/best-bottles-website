@@ -479,7 +479,7 @@ export default function FamilyPageClient({
                         </p>
                         {requestError ? <p className="mt-3 text-sm text-red-800" role="status">{requestError}</p> : null}
                         <button type="button" onClick={openGraceFromFinder} className="mt-4 text-sm font-semibold text-obsidian underline underline-offset-4">
-                            Ask Grace for help choosing
+                            {t("askGraceForHelpChoosing")}
                         </button>
                     </div>
                 </section>

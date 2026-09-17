@@ -42,6 +42,7 @@ export default function MobileTabBar() {
     const isProductPage = route.startsWith("/products/");
     const tabs = TABS;
     const t = useCopy("tabs");
+    const grace = useCopy("grace");
 
     // Routes that own the entire viewport — tab bar would compete for space.
     const hideTabBar =
@@ -98,7 +99,7 @@ export default function MobileTabBar() {
             className="fixed bottom-0 inset-x-0 z-50 xl:hidden bg-bone/95 backdrop-blur-md border-t border-champagne/60"
             style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
             role="tablist"
-            aria-label="Main navigation"
+            aria-label={t("mainNav")}
         >
             <div className="flex items-center justify-around h-14">
                 {tabs.map((tab) => {
@@ -147,11 +148,11 @@ export default function MobileTabBar() {
                                         >
                                             <div className="bg-obsidian text-bone text-xs rounded-xl shadow-xl px-3 py-2.5 pr-7 relative">
                                                 <p className="leading-snug">
-                                                    {isProductPage ? "Ask Grace about fit for this bottle." : "Need fitment help? Talk with Grace — your bottle & closure expert."}
+                                                    {isProductPage ? grace("tooltipPdp") : grace("tooltipGeneral")}
                                                 </p>
                                                 <button
                                                     onClick={(e) => { e.stopPropagation(); dismissGraceTooltip(); }}
-                                                    aria-label="Dismiss"
+                                                    aria-label={grace("dismiss")}
                                                     className="absolute top-1.5 right-1.5 p-0.5 rounded hover:bg-white/10 transition-colors"
                                                 >
                                                     <X size={12} />
@@ -164,7 +165,7 @@ export default function MobileTabBar() {
                                 <button
                                     role="tab"
                                     aria-selected={false}
-                                    aria-label={isGrace ? "Ask Grace AI" : tab.label}
+                                    aria-label={isGrace ? grace("askAria") : tab.label}
                                     onClick={() => handleAction()}
                                     className="group w-full flex items-center justify-center h-full min-w-[44px] cursor-pointer"
                                 >

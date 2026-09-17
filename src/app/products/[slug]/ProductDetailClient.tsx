@@ -22,6 +22,7 @@ import Navbar from "@/components/Navbar";
 import Breadcrumbs, { type BreadcrumbStep } from "@/components/Breadcrumbs";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
+import { useCopy } from "@/i18n/useCopy";
 import { APPLICATOR_BUCKETS, APPLICATOR_NAV, displayApplicatorName, type ApplicatorNavValue } from "@/lib/catalogFilters";
 import { buildCapOptionPhotoKeys } from "@/lib/products/closure-swatch-keys";
 import { reconcilePdpEditorialDescriptions } from "@/lib/products/pdp-editorial-description";
@@ -1124,6 +1125,7 @@ export default function ProductDetailClient({
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const { openPanel: openGracePanel } = useGrace();
+    const graceCopy = useCopy("grace");
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
     const activeSlug = legacyRouteOverride ?? slug;
     const applicatorParam = searchParams.get("applicator");
@@ -2011,10 +2013,10 @@ export default function ProductDetailClient({
                 <Navbar hideMobileSearch />
                 <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px] max-w-[1440px] mx-auto px-4 sm:px-6 py-32 text-center">
                     <h1 className="font-serif text-4xl text-obsidian mb-4">Product currently unavailable</h1>
-                    <p className="text-slate mb-8 text-sm">We could not find a purchasable configuration for this product. Grace can help you find the right bottle.</p>
+                    <p className="text-slate mb-8 text-sm">{graceCopy("unpurchasableBody")}</p>
                     <div className="flex flex-wrap justify-center gap-3">
                         <button type="button" onClick={() => openGraceFromPdp()} className="inline-flex items-center px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors">
-                            Ask Grace
+                            {graceCopy("ask")}
                         </button>
                         <Link href="/catalog" className="inline-flex items-center px-6 py-3 border border-obsidian text-obsidian uppercase text-xs font-bold tracking-wider hover:bg-obsidian hover:text-white transition-colors">
                             Browse Catalog

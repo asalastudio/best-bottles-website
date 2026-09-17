@@ -2426,7 +2426,7 @@ export default function CatalogClient({
                                         className="px-6 py-3 border border-muted-gold text-muted-gold uppercase text-xs font-bold tracking-wider hover:bg-muted-gold hover:text-white transition-colors rounded-sm flex items-center gap-2"
                                     >
                                         <MessageCircle className="w-3.5 h-3.5" />
-                                        Talk with Grace
+                                        {t("talkWithGrace")}
                                     </button>
                                 </div>
                             </div>
@@ -2443,8 +2443,8 @@ export default function CatalogClient({
                                 >
                                     <div className="flex items-center gap-2">
                                         <Sparkles className="w-4 h-4 text-muted-gold shrink-0" />
-                                        <p className="text-sm text-muted-gold font-semibold">Grace found these for you</p>
-                                        <span className="text-xs text-slate">— refine with the filters, or ask Grace to narrow it further.</span>
+                                        <p className="text-sm text-muted-gold font-semibold">{t("graceFoundThese")}</p>
+                                        <span className="text-xs text-slate">{t("graceRefineHint")}</span>
                                     </div>
                                     <button
                                         onClick={() => setGraceBannerDismissed(true)}

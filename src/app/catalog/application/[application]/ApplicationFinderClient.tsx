@@ -23,6 +23,7 @@ import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
 import { applicationCatalogSurface } from "@/lib/catalogSurface";
 import { analytics } from "@/lib/analytics";
 import { useGrace } from "@/components/useGrace";
+import { useCopy } from "@/i18n/useCopy";
 import {
     buildGuidedFinderFamilies,
     conflictingRefinement,
@@ -137,6 +138,7 @@ export default function ApplicationFinderClient({
     const lastIncomingRoute = useRef(finderUrl(pathname, search));
     const trackedEntryRoutes = useRef(new Set<string>());
     const { openPanel: openGracePanel } = useGrace();
+    const t = useCopy("catalog");
 
     const families = useMemo(() => buildGuidedFinderFamilies(activeResult), [activeResult]);
     const exactFinderUrl = finderUrl(activePathname, activeSearch);
@@ -441,7 +443,7 @@ export default function ApplicationFinderClient({
                             {refinementSummary(activeApplication, filters)}
                         </p>
                         <button type="button" onClick={openGraceFromFinder} className="mt-4 text-sm font-semibold text-obsidian underline underline-offset-4">
-                            Ask Grace for help choosing
+                            {t("askGraceForHelpChoosing")}
                         </button>
                         {requestError ? (
                             <p className="mt-3 text-sm text-red-800" role="status">{requestError}</p>
