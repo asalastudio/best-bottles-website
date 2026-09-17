@@ -163,7 +163,7 @@ export function isBuilderCandidate(row: CatalogRow): boolean {
  * bottle only for the body stage; retain the exact kit for fitment and completion. */
 export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, preview?: BuilderConfiguration): BuilderConfiguration | null {
     if (!isBuilderCandidate(row) || !kit || kit.conflicts.length
-        || (kit.sku !== row.websiteSku && kit.sku !== row.graceSku)) return null;
+        || ![kit.sku, kit.websiteSku, kit.graceSku].some((id) => id && (id === row.websiteSku || id === row.graceSku))) return null;
     const app = row.applicator?.trim();
     const capOnly = app === "Cap/Closure" || ((!app || app === "N/A") && /\bcap\b/i.test(row.itemName ?? ""));
     const assemblySplit = kit.completeness === "capSplit" && !capOnly && Boolean(app && app !== "N/A")
