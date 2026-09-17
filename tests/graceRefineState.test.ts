@@ -19,7 +19,7 @@ describe("Grace Refine state", () => {
 
     it("exposes exact capacities in the canonical Refine UI", () => {
         const source = readFileSync("src/app/catalog/CatalogClient.tsx", "utf8");
-        expect(source).toContain("Exact capacity");
+        expect(source).toContain('t("exactCapacity")');
         expect(source).toContain("toggleArrayFilter(\"capacities\", capacity.label)");
     });
 
