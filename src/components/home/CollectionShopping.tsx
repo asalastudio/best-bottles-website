@@ -11,7 +11,7 @@ import { SHOP_COLLECTIONS, featuredCollectionCards, shopCollectionHref } from '@
 import { ImmersiveHeroArt } from './ImmersiveHeroArt';
 import EmpireFitmentHero from './EmpireFitmentHero';
 import LocaleLink from '@/components/LocaleLink';
-import { localizeFamilyName } from '@/i18n/catalogCopy';
+import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName } from '@/i18n/catalogCopy';
 import { useAppLocale, useCopy } from '@/i18n/useCopy';
 import styles from './CollectionShopping.module.css';
 
@@ -27,10 +27,14 @@ export function CollectionGrid({ cards, all = false }: { cards?: HomepageData['c
     const configured = featuredCollectionCards(cards);
     const entries = all ? SHOP_COLLECTIONS.map(c => ({ ...c, ...configured.find(card => card.key === c.key) })) : configured;
     const t = useCopy('home');
-    return <div className={all ? undefined : styles.collectionRailWrap}><div ref={rail} id={all ? undefined : "collection-carousel"} onScroll={updateEdges} className={all ? styles.grid : styles.collectionRail}>{entries.map(c => <LocaleLink key={c.key} href={shopCollectionHref(c.key)} className={styles.collection}>
-        <img className={['roll-on-bottles', 'perfume-atomizers', 'dropper-bottles', 'sample-vials'].includes(c.key) ? styles.collectionScene : undefined} src={cmsImage('image' in c ? c.image : undefined, 800, 600) ?? (BONE_COLLECTION_ART.has(c.key) ? asset(`collection-${c.key}-bone-v3`) : asset(`source-${c.key}`))} alt={c.title} width={800} height={600} loading="lazy"/>
-        <div className={styles.collectionCopy}><h3>{c.title}</h3><p>{c.subtitle}</p></div>
-    </LocaleLink>)}</div>{!all && <div className={styles.edgeControls}><button aria-label={t("previousCollection")} aria-controls="collection-carousel" disabled={edges.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label={t("nextCollection")} aria-controls="collection-carousel" disabled={edges.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div>}</div>;
+    const locale = useAppLocale();
+    return <div className={all ? undefined : styles.collectionRailWrap}><div ref={rail} id={all ? undefined : "collection-carousel"} onScroll={updateEdges} className={all ? styles.grid : styles.collectionRail}>{entries.map(c => {
+        const title = localizeCollectionName(locale, c.key, c.title);
+        const subtitle = localizeCollectionSubtitle(locale, c.key, c.subtitle);
+        return <LocaleLink key={c.key} href={shopCollectionHref(c.key)} className={styles.collection}>
+        <img className={['roll-on-bottles', 'perfume-atomizers', 'dropper-bottles', 'sample-vials'].includes(c.key) ? styles.collectionScene : undefined} src={cmsImage('image' in c ? c.image : undefined, 800, 600) ?? (BONE_COLLECTION_ART.has(c.key) ? asset(`collection-${c.key}-bone-v3`) : asset(`source-${c.key}`))} alt={title} width={800} height={600} loading="lazy"/>
+        <div className={styles.collectionCopy}><h3>{title}</h3><p>{subtitle}</p></div>
+    </LocaleLink>;})}</div>{!all && <div className={styles.edgeControls}><button aria-label={t("previousCollection")} aria-controls="collection-carousel" disabled={edges.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label={t("nextCollection")} aria-controls="collection-carousel" disabled={edges.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div>}</div>;
 }
 export function FamilyCarousel({ cards }: { cards?: HomepageData['designFamilyCards'] }) {
     const rail = useRef<HTMLDivElement>(null);

@@ -14,7 +14,7 @@ import { CaretDown, List, MagnifyingGlass, ShoppingBag, User, X } from '@/compon
 import { FAMILY_ART, familySketchSrc } from '@/lib/homepageFamilyArt';
 import { familyFinderHref } from '@/lib/products/focused-shopping';
 import { SHOP_COLLECTIONS, shopCollectionHref } from '@/lib/shopCollections';
-import { localizeFamilyName } from '@/i18n/catalogCopy';
+import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName } from '@/i18n/catalogCopy';
 import { localizeHref } from '@/i18n/paths';
 import { useAppLocale, useCopy } from '@/i18n/useCopy';
 import styles from './CollectionShopping.module.css';
@@ -100,16 +100,16 @@ export default function ShoppingHeader() {
                 </form>
                 <div className={styles.megaSearchBody}>
                     <div><h3>{t('bottleFamilies')}</h3><div className={styles.megaSearchFamilies}>{Object.entries(FAMILY_ART).map(([family, image]) => <LocaleLink href={familyFinderHref(family)} onClick={closeNavigation} key={family}><Image src={familySketchSrc(family) ?? `/assets/homepage/${image}.webp`} alt="" width={400} height={300}/><span>{localizeFamilyName(locale, family)}</span></LocaleLink>)}</div></div>
-                    <div><h3>{t('collections')}</h3><div className={styles.megaSearchCollections}>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}><strong>{collection.title}</strong><span>{collection.subtitle}</span></LocaleLink>)}</div></div>
+                    <div><h3>{t('collections')}</h3><div className={styles.megaSearchCollections}>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}><strong>{localizeCollectionName(locale, collection.key, collection.title)}</strong><span>{localizeCollectionSubtitle(locale, collection.key, collection.subtitle)}</span></LocaleLink>)}</div></div>
                 </div>
             </div>}
             {activeMega === 'collections' && <div className={styles.megaMenu} id="collections-mega-menu">
                 <div className={styles.megaHeading}><div><span>{t('beginApplication')}</span><h2>{t('collections')}</h2></div><LocaleLink href="/collections" onClick={closeNavigation}>{t('viewAll')}</LocaleLink></div>
-                <div className={styles.megaCollectionGrid}>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}><strong>{collection.title}</strong><span>{collection.subtitle}</span></LocaleLink>)}</div>
+                <div className={styles.megaCollectionGrid}>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}><strong>{localizeCollectionName(locale, collection.key, collection.title)}</strong><span>{localizeCollectionSubtitle(locale, collection.key, collection.subtitle)}</span></LocaleLink>)}</div>
             </div>}
             {menu && <nav id="shopping-menu" className={styles.menu} aria-label={t('mobileNav')}>
                 <details><summary>{t('bottleFamilies')}</summary><LocaleLink href="/bottle-families" onClick={closeNavigation}>{t('viewAll')}</LocaleLink>{Object.keys(FAMILY_ART).map(family => <LocaleLink key={family} href={familyFinderHref(family)} onClick={closeNavigation}>{localizeFamilyName(locale, family)}</LocaleLink>)}</details>
-                <details><summary>{t('collections')}</summary><LocaleLink href="/collections" onClick={closeNavigation}>{t('viewAll')}</LocaleLink>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}>{collection.title}</LocaleLink>)}</details>
+                <details><summary>{t('collections')}</summary><LocaleLink href="/collections" onClick={closeNavigation}>{t('viewAll')}</LocaleLink>{SHOP_COLLECTIONS.map(collection => <LocaleLink key={collection.key} href={shopCollectionHref(collection.key)} onClick={closeNavigation}>{localizeCollectionName(locale, collection.key, collection.title)}</LocaleLink>)}</details>
                 <LocaleLink href="/catalog" onClick={closeNavigation}>{t('fullCatalog')}</LocaleLink><LocaleLink href="/matrix" onClick={closeNavigation}>{t('buildYourBottle')}</LocaleLink><LocaleLink href="/blog" onClick={closeNavigation}>{t('journal')}</LocaleLink><LocaleLink href="/sign-in?redirect_url=%2Fportal" onClick={closeNavigation}>{t('clientPortal')}</LocaleLink>
                 <LanguageSwitcher className={styles.regionMobile}/>
                 <RegionSelector inline className={styles.regionMobile}/>

@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import en from "../messages/en.json";
 import es from "../messages/es.json";
-import { localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
+import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
 import { localizeHref, stripLocalePrefix, switchLocaleHref } from "@/i18n/paths";
 import { localeAfterProxyPass, resolveLocale } from "@/i18n/resolveLocale";
 import { isEnglishOnlyPath } from "@/i18n/config";
@@ -57,7 +57,15 @@ describe("Spanish locale foundation", () => {
     it("keeps English and Spanish dictionaries aligned", () => {
         expect(keysOf(es).sort()).toEqual(keysOf(en).sort());
         expect(es.nav.fullCatalog).toBe("Catálogo completo");
+        expect(es.nav.browseFullCatalog).toBe("Ver el catálogo completo");
+        expect(es.nav.journal).toBe("Journal");
+        expect(es.nav.journal).not.toBe("Diario");
         expect(es.catalog.loadMore).toBe("Cargar más");
+        expect(es.catalog.description).toContain("tarros");
+        expect(es.catalog.visibleHelp).toContain("especialista en frascos");
+        expect(es.catalog.familyIntro.startsWith("Los frascos")).toBe(true);
+        expect(es.footer.fitmentGuide).toBe("Guía de compatibilidad");
+        expect(es.footer.packagingInsights).toBe("Artículos de empaque");
         expect(en.nav.askGrace).toBe("Ask Grace");
         expect(en.catalog.masterTitle).toBe("Master Catalog");
     });
@@ -81,5 +89,22 @@ describe("Spanish locale foundation", () => {
             family: "Cylinder",
             slug: "cylinder-9ml-clear-17-415-rollon",
         })).toContain("17-415");
+        expect(localizeMerchandisingName("es", {
+            displayName: "50 ml Clear Cylinder Reducer Bottle",
+            family: "Cylinder",
+            slug: "cylinder-50ml-clear-18-415-reducer",
+        })).toBe("Cilindro 50 ml transparente — reductor de orificio 18-415");
+    });
+
+    it("overlays shop collection titles by key so English CMS copy does not leak on /es", () => {
+        expect(localizeCollectionName("es", "cream-jars", "Cream Jars")).toBe("Tarros para crema");
+        expect(localizeCollectionName("en", "cream-jars", "Cream Jars")).toBe("Cream Jars");
+        expect(localizeCollectionName("es", "roll-on-bottles", "Roll-On Bottles")).toBe("Frascos roll-on");
+        expect(localizeCollectionSubtitle("es", "accessories-packaging", "Loose components, tools, bags and boxes.")).toBe(
+            "Componentes sueltos, herramientas, bolsas y cajas.",
+        );
+        expect(localizeCollectionSubtitle("en", "accessories-packaging", "Loose components, tools, bags and boxes.")).toBe(
+            "Loose components, tools, bags and boxes.",
+        );
     });
 });

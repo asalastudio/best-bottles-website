@@ -64,7 +64,7 @@ import { catalogGroupSkuLabel, mergeCatalogSearchPages, resolveCatalogGroupSku }
 import { MASTER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { analytics } from "@/lib/analytics";
 import { familyFinderHref } from "@/lib/products/focused-shopping";
-import { localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
+import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
 import { localizeHref, stripLocalePrefix } from "@/i18n/paths";
 import { useAppLocale, useCopy } from "@/i18n/useCopy";
 
@@ -919,7 +919,7 @@ function FilterSidebarContent({
                         aria-pressed={filters.shopCollection === collection.key}
                         className={`flex min-h-11 w-full items-center py-2 text-left text-[13px] transition-colors ${filters.shopCollection === collection.key ? "font-semibold text-muted-gold" : "text-obsidian/70 hover:text-muted-gold"}`}
                     >
-                        {collection.title}
+                        {localizeCollectionName(locale, collection.key, collection.title)}
                     </button>
                 ))}
             </div>
@@ -1909,7 +1909,9 @@ export default function CatalogClient({
 
     const chips = buildAppliedFilterChips(filters).map((chip) => ({
         facet: chip.facet,
-        label: chip.label,
+        label: chip.facet === "shopCollection"
+            ? `${t("collection")}: ${localizeCollectionName(locale, chip.value, getShopCollection(chip.value)?.title)}`
+            : chip.label,
         onRemove: () => {
             if (chip.facet === "search") setSearchInput("");
             handleFilterChange(removeCatalogFilterChip(filters, chip));
@@ -1917,7 +1919,7 @@ export default function CatalogClient({
     }));
     const facetChips = chips.filter((chip) => chip.facet !== "search");
     const facetFilterCount = activeFilterCount({ ...filters, search: "" });
-    const compactChipLabel = (label: string) => label.replace(/^(Collection|Category|Dispenser|Roller|Family|Glass|Capacity|Neck|Component|Search|Price):\s*/i, "");
+    const compactChipLabel = (label: string) => label.replace(/^(Collection|Colección|Category|Dispenser|Roller|Family|Glass|Capacity|Neck|Component|Search|Price):\s*/i, "");
     const activeConstraintSummary = buildAppliedFilterChips(filters)
         .map((chip) => chip.label)
         .join(" · ");
@@ -2223,20 +2225,20 @@ export default function CatalogClient({
                                 onChange={event => handleFilterChange({ shopCollection: event.target.value || null })}
                                 className="min-h-11 max-w-full rounded border border-champagne bg-white px-3 text-sm">
                                 <option value="">{t("allCollections")}</option>
-                                {SHOP_COLLECTIONS.map(collection => <option key={collection.key} value={collection.key}>{collection.title}</option>)}
+                                {SHOP_COLLECTIONS.map(collection => <option key={collection.key} value={collection.key}>{localizeCollectionName(locale, collection.key, collection.title)}</option>)}
                             </select>
                         </div>
-                        {filters.shopCollection && <p className="mb-4 hidden text-sm text-slate lg:block">{getShopCollection(filters.shopCollection)?.subtitle}</p>}
+                        {filters.shopCollection && <p className="mb-4 hidden text-sm text-slate lg:block">{localizeCollectionSubtitle(locale, filters.shopCollection, getShopCollection(filters.shopCollection)?.subtitle)}</p>}
                         {filters.shopCollection && BUILDER_COLLECTION_FITMENTS[filters.shopCollection] && <LocaleLink className="mb-4 hidden min-h-11 items-center border border-champagne px-4 text-sm lg:inline-flex" href={`/matrix?shop=${filters.shopCollection}${filters.families.length === 1 ? `&family=${encodeURIComponent(filters.families[0])}` : ''}`}>{t("buildFromCollection")}</LocaleLink>}
                         {filters.shopCollection === "accessories-packaging" && <div className="mb-5 hidden flex-wrap gap-4 text-sm lg:flex">
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Component",families:[]})}>Loose components & caps</button>
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Accessory",families:["Tool"]})}>Funnels & tools</button>
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Bag"]})}>Bags</button>
-                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Box"]})}>Boxes</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Component",families:[]})}>{t("looseComponents")}</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Accessory",families:["Tool"]})}>{t("funnelsTools")}</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Bag"]})}>{t("bags")}</button>
+                            <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Box"]})}>{t("boxes")}</button>
                         </div>}
                         {filters.shopCollection === "glass-spray-bottles" && <div className="mb-5 hidden flex-wrap gap-3 text-sm lg:flex">
-                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["antiquespray","antiquespray-tassel"]})}>Vintage Style Bulb Spray Bottles</button>
-                            <LocaleLink className="underline" href="/catalog?category=Component&componentType=Sprayer">Loose sprayer components</LocaleLink>
+                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["antiquespray","antiquespray-tassel"]})}>{t("vintageBulbSpray")}</button>
+                            <LocaleLink className="underline" href="/catalog?category=Component&componentType=Sprayer">{t("looseSprayers")}</LocaleLink>
                         </div>}
                         {/* Family banner — shown when a single design family is filtered */}
                         {filters.families.length === 1 && !filters.search && (
@@ -2263,7 +2265,7 @@ export default function CatalogClient({
                                                     ? `${filters.applicators.map((a) => APPLICATOR_BUCKETS.find((b) => b.value === a)?.label ?? a).join(" & ")} Bottles`
                                                     : filters.families.length === 1
                                                         ? localizeFamilyName(locale, filters.families[0] ?? "")
-                                                        : getShopCollection(filters.shopCollection)?.title || filters.collection || filters.category || t("allProductsHeading")}
+                                                        : localizeCollectionName(locale, filters.shopCollection, getShopCollection(filters.shopCollection)?.title) || filters.collection || filters.category || t("allProductsHeading")}
                                     </h2>
                                 </div>
                                 <div className="flex items-center gap-2 sm:gap-3 shrink-0">

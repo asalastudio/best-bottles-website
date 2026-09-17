@@ -699,7 +699,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideSearc
                                 onClick={() => setMobileMenuOpen(false)}
                                 className="w-full inline-flex items-center justify-center gap-2 py-3 bg-obsidian text-white text-xs uppercase tracking-wider font-bold"
                             >
-                                Browse {t("fullCatalog")}
+                                {t("browseFullCatalog")}
                                 <ArrowRight size={14} />
                             </LocaleLink>
                         </div>

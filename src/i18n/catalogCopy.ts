@@ -13,13 +13,83 @@ export const GROUP_DISPLAY_ES: Record<string, string> = {
     "cylinder-9ml-clear-13-415": "Cilindro 9 ml transparente 13-415",
     "cylinder-30ml-clear-18-415-finemist": "Cilindro 30 ml transparente — spray de niebla fina 18-415",
     "cylinder-50ml-clear-18-415-perfumespray": "Cilindro 50 ml transparente — spray de perfume 18-415",
-    "cylinder-50ml-clear-18-415-reducer": "Cilindro 50 ml transparente — reductor 18-415",
+    "cylinder-50ml-clear-18-415-reducer": "Cilindro 50 ml transparente — reductor de orificio 18-415",
     "cylinder-100ml-clear-18-415-perfumespray": "Cilindro 100 ml transparente — spray de perfume 18-415",
+};
+
+/** Shop-collection merchandising overlay. Keyed by collection id so Sanity English titles still localize on /es. */
+export const COLLECTION_DISPLAY_ES: Record<string, { title: string; subtitle: string }> = {
+    "roll-on-bottles": {
+        title: "Frascos roll-on",
+        subtitle: "Una aplicación precisa y personal.",
+    },
+    "perfume-atomizers": {
+        title: "Atomizadores de perfume",
+        subtitle: "Fragancia recargable, lista para viajar.",
+    },
+    "glass-spray-bottles": {
+        title: "Frascos spray de vidrio",
+        subtitle: "Niebla fina, perfume y sprays vintage de pera.",
+    },
+    "dropper-bottles": {
+        title: "Frascos gotero",
+        subtitle: "Una gota medida para aceites y sueros.",
+    },
+    "sample-vials": {
+        title: "Viales de muestra",
+        subtitle: "Formatos pequeños para primeras impresiones.",
+    },
+    "lotion-pump-bottles": {
+        title: "Frascos con bomba para loción",
+        subtitle: "Dosificación para lociones y tratamientos.",
+    },
+    "splash-on-bottles": {
+        title: "Frascos splash-on",
+        subtitle: "Frascos de fragancia con reductores de orificio.",
+    },
+    "decorative-bottles": {
+        title: "Frascos decorativos",
+        subtitle: "Corazones, lágrimas y formas distintivas.",
+    },
+    "apothecary-bottles": {
+        title: "Frascos tipo boticario",
+        subtitle: "Aplicadores y tapones de vidrio tradicionales.",
+    },
+    "cream-jars": {
+        title: "Tarros para crema",
+        subtitle: "Bocas anchas para cremas y bálsamos.",
+    },
+    "accessories-packaging": {
+        title: "Accesorios y empaque",
+        subtitle: "Componentes sueltos, herramientas, bolsas y cajas.",
+    },
 };
 
 export function localizeFamilyName(locale: AppLocale, family: string): string {
     if (locale !== "es") return family;
     return FAMILY_DISPLAY_ES[family] ?? family;
+}
+
+export function localizeCollectionName(
+    locale: AppLocale,
+    key: string | null | undefined,
+    fallback?: string | null,
+): string {
+    if (!key) return fallback ?? "";
+    const overlay = locale === "es" ? COLLECTION_DISPLAY_ES[key] : undefined;
+    if (overlay) return overlay.title;
+    return fallback ?? key;
+}
+
+export function localizeCollectionSubtitle(
+    locale: AppLocale,
+    key: string | null | undefined,
+    fallback?: string | null,
+): string {
+    if (!key) return fallback ?? "";
+    const overlay = locale === "es" ? COLLECTION_DISPLAY_ES[key] : undefined;
+    if (overlay) return overlay.subtitle;
+    return fallback ?? "";
 }
 
 export function localizeMerchandisingName(
