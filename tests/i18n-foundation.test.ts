@@ -1,0 +1,82 @@
+import { describe, expect, it } from "vitest";
+import en from "../messages/en.json";
+import es from "../messages/es.json";
+import { localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
+import { localizeHref, stripLocalePrefix, switchLocaleHref } from "@/i18n/paths";
+import { resolveLocale } from "@/i18n/resolveLocale";
+import { isEnglishOnlyPath } from "@/i18n/config";
+
+function keysOf(value: unknown, prefix = ""): string[] {
+    if (!value || typeof value !== "object" || Array.isArray(value)) return prefix ? [prefix] : [];
+    return Object.entries(value as Record<string, unknown>).flatMap(([key, child]) =>
+        keysOf(child, prefix ? `${prefix}.${key}` : key),
+    );
+}
+
+describe("Spanish locale foundation", () => {
+    it("keeps English unprefixed and Spanish on /es", () => {
+        expect(localizeHref("en", "/catalog")).toBe("/catalog");
+        expect(localizeHref("es", "/catalog")).toBe("/es/catalog");
+        expect(localizeHref("es", "/")).toBe("/es");
+        expect(localizeHref("es", "/catalog?search=9ml")).toBe("/es/catalog?search=9ml");
+        expect(localizeHref("es", "/products/cylinder-9ml-clear-17-415-rollon")).toBe("/es/products/cylinder-9ml-clear-17-415-rollon");
+        expect(localizeHref("es", "/sign-in?redirect_url=%2Fportal")).toBe("/sign-in?redirect_url=%2Fportal");
+        expect(stripLocalePrefix("/es/catalog")).toBe("/catalog");
+        expect(stripLocalePrefix("/es")).toBe("/");
+        expect(switchLocaleHref("es", "/catalog", "search=cylinder")).toBe("/es/catalog?search=cylinder");
+        expect(switchLocaleHref("en", "/es/catalog", "search=cylinder")).toBe("/catalog?search=cylinder");
+    });
+
+    it("rewrites public /es routes and redirects internal ones back to English", () => {
+        expect(resolveLocale("/catalog")).toEqual({ kind: "next", locale: "en", pathname: "/catalog" });
+        expect(resolveLocale("/es")).toEqual({ kind: "rewrite", locale: "es", pathname: "/es", rewritePath: "/" });
+        expect(resolveLocale("/es/catalog")).toEqual({
+            kind: "rewrite",
+            locale: "es",
+            pathname: "/es/catalog",
+            rewritePath: "/catalog",
+        });
+        expect(resolveLocale("/es/portal/orders")).toEqual({
+            kind: "redirect",
+            locale: "en",
+            pathname: "/es/portal/orders",
+            redirectPath: "/portal/orders",
+        });
+        expect(isEnglishOnlyPath("/team/products")).toBe(true);
+        expect(isEnglishOnlyPath("/catalog")).toBe(false);
+    });
+
+    it("does not treat /esfoo as a locale prefix", () => {
+        expect(resolveLocale("/estate")).toEqual({ kind: "next", locale: "en", pathname: "/estate" });
+        expect(stripLocalePrefix("/estate")).toBe("/estate");
+    });
+
+    it("keeps English and Spanish dictionaries aligned", () => {
+        expect(keysOf(es).sort()).toEqual(keysOf(en).sort());
+        expect(es.nav.fullCatalog).toBe("Catálogo completo");
+        expect(es.catalog.loadMore).toBe("Cargar más");
+        expect(en.nav.askGrace).toBe("Ask Grace");
+        expect(en.catalog.masterTitle).toBe("Master Catalog");
+    });
+
+    it("overlays Cylinder merchandising copy without translating SKUs or neck threads", () => {
+        expect(localizeFamilyName("es", "Cylinder")).toBe("Cilindro");
+        expect(localizeFamilyName("en", "Cylinder")).toBe("Cylinder");
+        expect(localizeFamilyName("es", "Boston Round")).toBe("Boston Round");
+        expect(localizeMerchandisingName("es", {
+            displayName: "9 ml Clear Cylinder Roll-On Bottle",
+            family: "Cylinder",
+            slug: "cylinder-9ml-clear-17-415-rollon",
+        })).toBe("Cilindro 9 ml transparente — roll-on 17-415");
+        expect(localizeMerchandisingName("es", {
+            displayName: "9 ml Clear Cylinder Roll-On Bottle",
+            family: "Cylinder",
+            slug: "unknown-slug",
+        })).toContain("Cilindro");
+        expect(localizeMerchandisingName("es", {
+            displayName: "9 ml Clear Cylinder Roll-On Bottle",
+            family: "Cylinder",
+            slug: "cylinder-9ml-clear-17-415-rollon",
+        })).toContain("17-415");
+    });
+});

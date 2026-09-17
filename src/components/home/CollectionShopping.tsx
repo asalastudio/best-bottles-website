@@ -2,7 +2,6 @@
 /* Editorial images here are collection navigation, never SKU plates. */
 /* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef, useState, useSyncExternalStore } from 'react';
-import Link from 'next/link';
 import type { HomepageData } from '@/sanity/lib/queries';
 import { editorialImageUrl } from '@/sanity/lib/image';
 import { FAMILY_ART, familyCardSources } from '@/lib/homepageFamilyArt';
@@ -11,6 +10,9 @@ import { familyFinderHref } from '@/lib/products/focused-shopping';
 import { SHOP_COLLECTIONS, featuredCollectionCards, shopCollectionHref } from '@/lib/shopCollections';
 import { ImmersiveHeroArt } from './ImmersiveHeroArt';
 import EmpireFitmentHero from './EmpireFitmentHero';
+import LocaleLink from '@/components/LocaleLink';
+import { localizeFamilyName } from '@/i18n/catalogCopy';
+import { useAppLocale, useCopy } from '@/i18n/useCopy';
 import styles from './CollectionShopping.module.css';
 
 const asset = (name: string) => `/assets/homepage/${name}.webp`;
@@ -24,10 +26,11 @@ export function CollectionGrid({ cards, all = false }: { cards?: HomepageData['c
     const move = (direction: number) => { const el=rail.current; if(el)el.scrollBy({left:direction*((el.firstElementChild?.getBoundingClientRect().width??600)+parseFloat(getComputedStyle(el).columnGap)),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}); };
     const configured = featuredCollectionCards(cards);
     const entries = all ? SHOP_COLLECTIONS.map(c => ({ ...c, ...configured.find(card => card.key === c.key) })) : configured;
-    return <div className={all ? undefined : styles.collectionRailWrap}><div ref={rail} id={all ? undefined : "collection-carousel"} onScroll={updateEdges} className={all ? styles.grid : styles.collectionRail}>{entries.map(c => <Link key={c.key} href={shopCollectionHref(c.key)} className={styles.collection}>
+    const t = useCopy('home');
+    return <div className={all ? undefined : styles.collectionRailWrap}><div ref={rail} id={all ? undefined : "collection-carousel"} onScroll={updateEdges} className={all ? styles.grid : styles.collectionRail}>{entries.map(c => <LocaleLink key={c.key} href={shopCollectionHref(c.key)} className={styles.collection}>
         <img className={['roll-on-bottles', 'perfume-atomizers', 'dropper-bottles', 'sample-vials'].includes(c.key) ? styles.collectionScene : undefined} src={cmsImage('image' in c ? c.image : undefined, 800, 600) ?? (BONE_COLLECTION_ART.has(c.key) ? asset(`collection-${c.key}-bone-v3`) : asset(`source-${c.key}`))} alt={c.title} width={800} height={600} loading="lazy"/>
         <div className={styles.collectionCopy}><h3>{c.title}</h3><p>{c.subtitle}</p></div>
-    </Link>)}</div>{!all && <div className={styles.edgeControls}><button aria-label="Previous collection" aria-controls="collection-carousel" disabled={edges.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label="Next collection" aria-controls="collection-carousel" disabled={edges.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div>}</div>;
+    </LocaleLink>)}</div>{!all && <div className={styles.edgeControls}><button aria-label={t("previousCollection")} aria-controls="collection-carousel" disabled={edges.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label={t("nextCollection")} aria-controls="collection-carousel" disabled={edges.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div>}</div>;
 }
 export function FamilyCarousel({ cards }: { cards?: HomepageData['designFamilyCards'] }) {
     const rail = useRef<HTMLDivElement>(null);
@@ -36,20 +39,23 @@ export function FamilyCarousel({ cards }: { cards?: HomepageData['designFamilyCa
     const update = () => { const el=rail.current; if(el) {const step=(el.firstElementChild?.getBoundingClientRect().width??280)+(window.innerWidth<=640?14:20);setPosition({start:el.scrollLeft<2,end:el.scrollLeft+el.clientWidth>=el.scrollWidth-2,index:Math.min(entries.length,Math.round(el.scrollLeft/step)+1)});} };
     useEffect(() => { const el=rail.current; if(!el)return;const observer=new ResizeObserver(update);observer.observe(el);return()=>observer.disconnect(); }, [entries.length]); // eslint-disable-line react-hooks/exhaustive-deps
     function move(direction:number){rail.current?.scrollBy({left:direction*((rail.current.firstElementChild?.getBoundingClientRect().width??280)+(window.innerWidth<=640?14:20)),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}
-    return <section className={`${styles.section} ${styles.families}`} aria-labelledby="family-heading"><div className={styles.heading}><h2 id="family-heading"><span className={styles.headingDesktop}>Bottle Families</span><span className={styles.headingMobile}>Popular Families</span></h2><Link href="/bottle-families">View all<span className={styles.viewAllArrow} aria-hidden="true"> →</span></Link></div>
-        <div className={styles.railWrap}><div ref={rail} id="family-carousel" className={styles.rail} onScroll={update} aria-label="Bottle families">
+    const locale = useAppLocale();
+    const t = useCopy('home');
+    return <section className={`${styles.section} ${styles.families}`} aria-labelledby="family-heading"><div className={styles.heading}><h2 id="family-heading"><span className={styles.headingDesktop}>{t("bottleFamilies")}</span><span className={styles.headingMobile}>{t("popularFamilies")}</span></h2><LocaleLink href="/bottle-families">{t("viewAll")}<span className={styles.viewAllArrow} aria-hidden="true"> →</span></LocaleLink></div>
+        <div className={styles.railWrap}><div ref={rail} id="family-carousel" className={styles.rail} onScroll={update} aria-label={t("familyRail")}>
             {entries.map(c => {
                 const art = familyCardSources(c.family, cmsImage(c.image, 800));
-                return <Link href={familyFinderHref(c.family)} className={styles.family} key={c.family}>
+                const familyLabel = localizeFamilyName(locale, c.family);
+                return <LocaleLink href={familyFinderHref(c.family)} className={styles.family} key={c.family}>
                     {art && <picture>
                         {art.desktop !== art.mobile && <source media="(min-width:641px)" srcSet={art.desktop}/>}
-                        <img src={art.mobile} alt={`${c.family} bottle family`} width={800} height={1000} loading="lazy"/>
+                        <img src={art.mobile} alt={`${familyLabel} bottle family`} width={800} height={1000} loading="lazy"/>
                     </picture>}
-                    <span className={styles.familyTitle}>{c.title || c.family}</span>
-                </Link>;
+                    <span className={styles.familyTitle}>{c.title ? localizeFamilyName(locale, c.title) : familyLabel}</span>
+                </LocaleLink>;
             })}
         </div>
-        <div className={styles.edgeControls}><button aria-label="Previous bottle family" aria-controls="family-carousel" disabled={position.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label="Next bottle family" aria-controls="family-carousel" disabled={position.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div></div><div className={styles.railControls} aria-live="polite">{position.index} / {entries.length}</div>
+        <div className={styles.edgeControls}><button aria-label={t("previousFamily")} aria-controls="family-carousel" disabled={position.start} onClick={()=>move(-1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="M14 4 4 14l10 10"/></svg></button><button aria-label={t("nextFamily")} aria-controls="family-carousel" disabled={position.end} onClick={()=>move(1)}><svg viewBox="0 0 20 28" aria-hidden="true"><path d="m6 4 10 10L6 24"/></svg></button></div></div><div className={styles.railControls} aria-live="polite">{position.index} / {entries.length}</div>
     </section>;
 }
 /** Stage-percent anchor on the v7 niche still (3584×1024): the underside of the sill at its left end, where the tag hangs. */
@@ -76,15 +82,16 @@ export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSl
         preference.addEventListener('change',sync);
         return()=>preference.removeEventListener('change',sync);
     }, [slide]);
-    return <section className={styles.hero} data-scene={!slide ? (fitmentHero ? "empire-niche" : "empire-water") : undefined} aria-label="Featured bottles">
+    const t = useCopy('home');
+    return <section className={styles.hero} data-scene={!slide ? (fitmentHero ? "empire-niche" : "empire-water") : undefined} aria-label={t("featuredBottles")}>
         {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (fitmentHero ? <EmpireFitmentHero hotspots={heroHotspots}/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage style bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
         <div className={styles.heroCopy}>
-            <h1>{slide?.headline || <><span>Beautifully</span><span>Contained.</span></>}</h1>
-            <p className={styles.heroLead}>{slide?.subheadline || 'Distinctive glass with endless possibilities.'}</p>
-            {!slide?.subheadline && <p className={styles.heroLeadMobile}>Glass packaging for fragrance &amp; beauty brands.</p>}
+            <h1>{slide?.headline || <><span>{t("headlineA")}</span><span>{t("headlineB")}</span></>}</h1>
+            <p className={styles.heroLead}>{slide?.subheadline || t("lead")}</p>
+            {!slide?.subheadline && <p className={styles.heroLeadMobile}>{t("leadMobile")}</p>}
             <div className={styles.buttons}>
-                <Link className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || 'Shop bottles'}</Link>
-                <Link className={styles.secondary} href="/matrix"><span className={styles.secondaryDesktop}>Build your bottle</span><span className={styles.secondaryMobile}>Build Your Bottle</span></Link>
+                <LocaleLink className={styles.primary} href={slide?.ctaHref || '/catalog'}>{slide?.ctaText || t("shopBottles")}</LocaleLink>
+                <LocaleLink className={styles.secondary} href="/matrix"><span className={styles.secondaryDesktop}>{t("buildYourBottle")}</span><span className={styles.secondaryMobile}>{t("buildYourBottleTitle")}</span></LocaleLink>
             </div>
         </div>
         {(slides?.length??0)>1 && <div className={styles.heroControls}>{slides!.map((_,i)=><button key={i} aria-label={`Show hero ${i+1}`} aria-pressed={index===i} onClick={()=>setIndex(i)}>{i+1}</button>)}</div>}
@@ -92,9 +99,10 @@ export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSl
 }
 export default function CollectionShopping({data}:{data:HomepageData|null}){
     const build=data?.buildYourBottle;
+    const t = useCopy('home');
     return <div className={styles.page}>
         <ShoppingHero slides={data?.useEditorialArtwork ? data.heroSlides : undefined} hotspots={data?.heroHotspots}/><FamilyCarousel cards={data?.useEditorialArtwork ? data.designFamilyCards : undefined}/>
-        <section className={styles.section} aria-labelledby="collections-heading"><div className={styles.heading}><h2 id="collections-heading">Collections</h2><Link href="/collections">View all</Link></div><p className={styles.intro}>Know how you want to dispense? Start here, then find the shape and finish that fit.</p><CollectionGrid cards={data?.collectionCards}/></section>
-        <section className={styles.section} id="build-your-bottle"><div className={styles.build}><div className={styles.buildCopy}><h2>{build?.heading || 'Build your bottle.'}</h2><p>{build?.description || 'Start with a shape you love.\nFind the finishing touches that fit.'}</p><Link className={styles.primary} href={build?.destination === '/collections' ? '/collections' : '/matrix'}>{build?.buttonLabel || 'Build your bottle'}</Link></div><img src={asset('build-your-bottle-bone-v3')} alt="Colored-pencil study of a bare glass bottle, compatible spray assembly, clear cap and finished bottle" width={1000} height={600} loading="lazy"/></div></section>
+        <section className={styles.section} aria-labelledby="collections-heading"><div className={styles.heading}><h2 id="collections-heading">{t("collections")}</h2><LocaleLink href="/collections">{t("viewAll")}</LocaleLink></div><p className={styles.intro}>{t("collectionsIntro")}</p><CollectionGrid cards={data?.collectionCards}/></section>
+        <section className={styles.section} id="build-your-bottle"><div className={styles.build}><div className={styles.buildCopy}><h2>{build?.heading || t("buildHeading")}</h2><p>{build?.description || t("buildDescription")}</p><LocaleLink className={styles.primary} href={build?.destination === '/collections' ? '/collections' : '/matrix'}>{build?.buttonLabel || t("buildYourBottle")}</LocaleLink></div><img src={asset('build-your-bottle-bone-v3')} alt="Colored-pencil study of a bare glass bottle, compatible spray assembly, clear cap and finished bottle" width={1000} height={600} loading="lazy"/></div></section>
     </div>;
 }

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { Package } from "@/components/icons";
 import {
     getProductCardPreviewAccessibleLabel,
@@ -267,7 +267,7 @@ export default function ProductCardImagePreview({
                 data-bb-shopify-variant-id={resolvedPhoto.shopifyVariantId ?? undefined}
                 data-bb-studio-hero={isStudioHero ? "true" : undefined}
             >
-                <Link
+                <LocaleLink
                     href={productHref}
                     onClick={onOpen}
                     className="absolute inset-0 z-10"

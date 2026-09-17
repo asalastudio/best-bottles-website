@@ -1,8 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import MobileFamilyCatalog from "@/components/catalog/MobileFamilyCatalog";
 import mobileStyles from "@/components/catalog/MobileFamilyCatalog.module.css";
@@ -32,6 +30,10 @@ import { buildGuidedFinderFamilies, conflictingRefinement } from "@/lib/products
 import { buildCylinderApplicationOptions } from "@/lib/products/cylinder-family-page";
 import { familyFinderPath, familyToSlug, parseBrowseContext } from "@/lib/products/focused-shopping";
 import type { ProductFamilyPageContent } from "@/sanity/lib/queries";
+import LocaleLink from "@/components/LocaleLink";
+import { localizeFamilyName } from "@/i18n/catalogCopy";
+import { localizeHref } from "@/i18n/paths";
+import { useAppLocale, useCopy } from "@/i18n/useCopy";
 
 type Props = {
     family: string;
@@ -143,6 +145,10 @@ export default function FamilyPageClient({
     editorial,
 }: Props) {
     const router = useRouter();
+    const locale = useAppLocale();
+    const t = useCopy("catalog");
+    const nav = useCopy("nav");
+    const familyLabel = localizeFamilyName(locale, family);
     const surface = useMemo(() => familyCatalogSurface(family), [family]);
     const pathname = familyFinderPath(family);
     const incomingState = useMemo(() => urlBackedState(family, search), [family, search]);
@@ -237,7 +243,7 @@ export default function FamilyPageClient({
         setActiveSearch(input.search);
         setFilters(input.filters);
         setSort(input.sort);
-        const nextRoute = finderUrl(family, input.search);
+        const nextRoute = localizeHref(locale, finderUrl(family, input.search));
         if (input.focusResults) pendingFocusRoute.current = nextRoute;
         router.replace(nextRoute, { scroll: false });
 
@@ -274,7 +280,7 @@ export default function FamilyPageClient({
         } finally {
             if (!controller.signal.aborted) setIsUpdating(false);
         }
-    }, [family, router, surface]);
+    }, [family, locale, router, surface]);
 
     const navigateWithFilters = useCallback((nextFilters: CatalogFilters, focusResults = false, tracking?: {
         refinement?: {
@@ -401,7 +407,7 @@ export default function FamilyPageClient({
                     hero={heroImageUrl} heroAlt={heroAlt} onHelp={openGraceFromFinder}
                 />
                 <div className={mobileStyles.desktop} data-desktop-family-catalog>
-                <Breadcrumbs steps={[{ label: "Catalog", href: "/catalog" }, { label: family }]} />
+                <Breadcrumbs steps={[{ label: t("breadcrumb"), href: "/catalog" }, { label: familyLabel }]} />
                 {/* The family is already chosen by the time anyone is here, so
                     the page opens with what they do not yet know: which sizes
                     this shape is made in, and which dispensing styles. The
@@ -411,10 +417,10 @@ export default function FamilyPageClient({
                     <div className="flex flex-wrap items-end justify-between gap-4 border-b border-champagne/70 pb-5">
                         <div className="min-w-0">
                             <p className="text-xs font-medium text-muted-gold">
-                                {editorial?.familyPageEyebrow || "Bottle family"}
+                                {editorial?.familyPageEyebrow || t("bottleFamily")}
                             </p>
                             <h1 className="mt-1.5 font-serif text-4xl font-medium leading-none sm:text-5xl">
-                                {family}
+                                {familyLabel}
                             </h1>
                             <p className="mt-3 max-w-2xl text-sm leading-6 text-slate">{story}</p>
                         </div>
@@ -423,21 +429,21 @@ export default function FamilyPageClient({
                                 href={`#${finderAnchor}`}
                                 className="inline-flex min-h-11 items-center justify-center bg-obsidian px-5 text-sm font-semibold text-bone focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
                             >
-                                Find {family} products
+                                {t("findFamilyProducts", { family: familyLabel })}
                             </a>
-                            <Link
+                            <LocaleLink
                                 href={`/matrix?family=${encodeURIComponent(family)}&from=finder`}
                                 className="inline-flex min-h-11 items-center justify-center border border-obsidian px-5 text-sm font-semibold text-obsidian focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
                             >
-                                Build Your Bottle
-                            </Link>
+                                {nav("buildYourBottleTitle")}
+                            </LocaleLink>
                         </div>
                     </div>
 
                     {capacityOptions.length > 0 ? (
                         <div className="mt-6">
                             <h2 className="mb-2.5 text-xs font-medium uppercase tracking-[0.16em] text-slate">
-                                Sizes
+                                {t("familySizes")}
                             </h2>
                             <FocusedSizeCards
                                 sizes={capacityOptions.map((option) => ({

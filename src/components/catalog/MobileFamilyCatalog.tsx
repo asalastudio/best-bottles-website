@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { SlidersHorizontal, X } from "@/components/icons";
 import FocusedProductCard from "./FocusedProductCard";
 import {
@@ -126,11 +126,11 @@ export default function MobileFamilyCatalog(p: Props) {
           <SlidersHorizontal size={19} /> Filters
           {chips.length ? ` (${chips.length})` : ""}
         </button>
-        <Link
+        <LocaleLink
           href={`/matrix?family=${encodeURIComponent(p.family)}&from=finder`}
         >
           Build Your Bottle
-        </Link>
+        </LocaleLink>
       </div>
       {chips.length > 0 && (
         <div className={styles.chips} aria-label="Active filters">

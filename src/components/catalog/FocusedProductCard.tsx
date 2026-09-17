@@ -1,4 +1,4 @@
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import CatalogCardPurchase from "@/components/catalog/CatalogCardPurchase";
 import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
@@ -82,7 +82,7 @@ export default function FocusedProductCard({ product, finderUrl, onOpen }: Focus
                 family={product.family}
                 slug={product.slug}
             />
-            <Link href={productHref} onClick={() => onOpen?.(product)} className="flex flex-1 flex-col px-4 pb-5 pt-4 focus-visible:outline-none">
+            <LocaleLink href={productHref} onClick={() => onOpen?.(product)} className="flex flex-1 flex-col px-4 pb-5 pt-4 focus-visible:outline-none">
                 <h3 className="font-serif text-xl font-medium leading-tight text-obsidian">{productTitle}</h3>
                 <p className="mt-2 text-xs leading-relaxed text-slate">{detailLine(product)}</p>
                 <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 border-t border-champagne/55 pt-3 text-xs">
@@ -100,7 +100,7 @@ export default function FocusedProductCard({ product, finderUrl, onOpen }: Focus
                 {product.startingUnitPrice == null ? (
                     <p className="mt-auto pt-5 text-sm font-semibold text-obsidian">Request pricing</p>
                 ) : null}
-            </Link>
+            </LocaleLink>
             {/* Same component, same resolver and the same tier ladder as the
                 main catalogue grid. A buyer who arrives through Bottle Families
                 was getting a strictly worse version of the same product. */}

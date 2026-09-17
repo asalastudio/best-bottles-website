@@ -8,8 +8,11 @@ import { familyCatalogSurface } from "@/lib/catalogSurface";
 import { HOME_FAMILY_MOSAIC } from "@/lib/homepageMerchandising";
 import { familyFromSlug, familyToSlug } from "@/lib/products/focused-shopping";
 import { getProductFamilyPageContent } from "@/sanity/lib/queries";
-import { SITE_URL } from "@/lib/seo";
 import FamilyPageClient from "./FamilyPageClient";
+import { getLocale } from "next-intl/server";
+import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
+import { localizeFamilyName } from "@/i18n/catalogCopy";
+import { buildHreflangAlternates } from "@/i18n/metadata";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -38,10 +41,18 @@ export async function generateMetadata({
     const family = familyFromSlug((await params).family);
     if (!family) return {};
     const slug = familyToSlug(family);
+    const localeValue = await getLocale();
+    const locale: AppLocale = isLocale(localeValue) ? localeValue : defaultLocale;
+    const familyLabel = localizeFamilyName(locale, family);
+    const path = locale === "es" ? `/es/catalog/${slug}` : `/catalog/${slug}`;
     return {
-        title: { absolute: `${family} Bottle Family — Build or Browse | Best Bottles` },
-        description: `Find wholesale ${family} bottles by application and capacity, then open an exact product page for specifications and ordering.`,
-        alternates: { canonical: `${SITE_URL}/catalog/${slug}` },
+        title: { absolute: locale === "es"
+            ? `Familia ${familyLabel} — Arma o explora | Best Bottles`
+            : `${family} Bottle Family — Build or Browse | Best Bottles` },
+        description: locale === "es"
+            ? `Encuentra frascos ${familyLabel} al por mayor por aplicación y capacidad, luego abre la ficha exacta para especificaciones y pedidos.`
+            : `Find wholesale ${family} bottles by application and capacity, then open an exact product page for specifications and ordering.`,
+        alternates: buildHreflangAlternates(path),
     };
 }
 

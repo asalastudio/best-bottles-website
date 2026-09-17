@@ -9,6 +9,7 @@ import {
     type RollerMaterial,
     type SortValue,
 } from "@/lib/catalogFilters";
+import { stripLocalePrefix } from "@/i18n/paths";
 
 export const APPLICATION_ROUTE_SLUGS = {
     "roll-on": "rollon",
@@ -40,14 +41,14 @@ function applicationForBuckets(buckets: readonly string[]): ApplicatorNavValue |
 }
 
 function applicationForRoute(pathname: string): ApplicatorNavValue | undefined {
-    const route = pathname.replace(/\/+$/, "");
+    const route = stripLocalePrefix(pathname).replace(/\/+$/, "");
     const match = route.match(/^\/catalog\/application\/([^/]+)$/);
     if (!match) return undefined;
     return APPLICATION_ROUTE_SLUGS[match[1] as keyof typeof APPLICATION_ROUTE_SLUGS];
 }
 
 function isApplicationRoute(pathname: string): boolean {
-    return /^\/catalog\/application\/[^/]+$/.test(pathname);
+    return /^\/catalog\/application\/[^/]+$/.test(stripLocalePrefix(pathname));
 }
 
 export function familyToSlug(family: string): string {
@@ -71,14 +72,14 @@ export function familyFinderPath(family: string): string {
 }
 
 function familyForRoute(pathname: string): string | undefined {
-    const route = pathname.replace(/\/+$/, "");
+    const route = stripLocalePrefix(pathname).replace(/\/+$/, "");
     const match = route.match(/^\/catalog\/([^/]+)$/);
     if (!match || match[1] === "application") return undefined;
     return familyFromSlug(match[1]);
 }
 
 export function parseBrowseContext(pathname: string, params: URLSearchParams): BrowseContext {
-    const route = pathname.replace(/\/+$/, "");
+    const route = stripLocalePrefix(pathname).replace(/\/+$/, "");
     const { filters, sort } = paramsToFilters(params);
     const routeApplication = applicationForRoute(route);
     const family = familyForRoute(route) ?? (filters.families.length === 1 && CATALOG_FAMILIES.includes(filters.families[0]) ? filters.families[0] : undefined);

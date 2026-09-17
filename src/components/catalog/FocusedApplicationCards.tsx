@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import type { ApplicatorNavValue } from "@/lib/catalogFilters";
 
 export type FocusedApplicationOption = {
@@ -61,14 +61,14 @@ export default function FocusedApplicationCards({
                 {applications.map((option) => {
                     const active = option.value === activeApplication;
                     return option.href ? (
-                        <Link
+                        <LocaleLink
                             key={option.value}
                             href={option.href}
                             aria-current={active ? "page" : undefined}
                             className={applicationClassName(active)}
                         >
                             <ApplicationContent option={option} active={active} />
-                        </Link>
+                        </LocaleLink>
                     ) : (
                         <button
                             key={option.value}

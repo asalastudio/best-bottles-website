@@ -9,7 +9,7 @@ describe("responsive shell contract", () => {
 
         // Compact shell below 1280px: menu button, no desktop nav row, no region selector.
         expect(navbar).toContain('className="xl:hidden p-2');
-        expect(navbar).toContain('className="hidden xl:flex xl:justify-self-start"');
+        expect(navbar).toContain('className="hidden xl:flex xl:justify-self-start');
         expect(navbar).toContain('className="hidden xl:flex h-[40px]');
         // Expanded header from 1280px: three-column row (region · centred wordmark · utilities),
         // nav on its own row with spacing that opens up at 1536px, compact search field until then.

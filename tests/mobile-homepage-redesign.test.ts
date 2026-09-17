@@ -20,15 +20,17 @@ describe("mobile homepage redesign", () => {
         const header = read("src/components/home/ShoppingHeader.tsx");
         expect(header).toContain("ShoppingBag");
         expect(header).toContain("open-cart-drawer");
-        expect(header).toContain('placeholder="Search bottles, closures, sizes..."');
-        expect(header).toContain('action="/catalog"');
+        expect(header).toContain('role="search"');
+        expect(header).toContain('name="search"');
+        expect(read("messages/en.json")).toContain("Search bottles, closures, sizes...");
     });
 
     it("hides Ask Grace from the mobile masthead without removing Grace", () => {
         const header = read("src/components/home/ShoppingHeader.tsx");
         const css = read("src/components/home/CollectionShopping.module.css");
         const tabs = read("src/components/mobile/MobileTabBar.tsx");
-        expect(header).toContain("Ask Grace");
+        expect(header).toContain("t('askGrace')");
+        expect(read("messages/en.json")).toContain("Ask Grace");
         expect(css).toContain(".grace,.searchTrigger,.portal{display:none}");
         expect(tabs).toContain('{ key: "grace", label: "Grace"');
         expect(tabs).toContain("openPanel");

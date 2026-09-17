@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { House, GridFour, Wrench, User, X, Microphone } from "@/components/icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useGrace } from "@/components/useGrace";
 import { analytics } from "@/lib/analytics";
+import { stripLocalePrefix } from "@/i18n/paths";
+import { useCopy } from "@/i18n/useCopy";
 
 const GRACE_TAB_ONBOARDING_KEY = "grace-tab-onboarding-seen";
 
@@ -15,7 +17,7 @@ const GRACE_TAB_ONBOARDING_KEY = "grace-tab-onboarding-seen";
 type IconWeight = "thin" | "light" | "regular" | "bold" | "fill" | "duotone";
 
 interface Tab {
-    key: string;
+    key: "home" | "catalog" | "build" | "grace" | "account";
     label: string;
     icon: React.ComponentType<{ className?: string; size?: number; weight?: IconWeight }>;
     href?: string;
@@ -34,18 +36,20 @@ const TABS: Tab[] = [
 
 export default function MobileTabBar() {
     const pathname = usePathname();
+    const route = stripLocalePrefix(pathname);
     const { openPanel } = useGrace();
     const [showGraceTooltip, setShowGraceTooltip] = useState(false);
-    const isProductPage = pathname.startsWith("/products/");
+    const isProductPage = route.startsWith("/products/");
     const tabs = TABS;
+    const t = useCopy("tabs");
 
     // Routes that own the entire viewport — tab bar would compete for space.
     const hideTabBar =
-        pathname.startsWith("/grace-workspace") ||
-        pathname.startsWith("/executive") ||
-        pathname.startsWith("/team") ||
-        pathname.startsWith("/portal") ||
-        pathname.startsWith("/lab/portal-shell");
+        route.startsWith("/grace-workspace") ||
+        route.startsWith("/executive") ||
+        route.startsWith("/team") ||
+        route.startsWith("/portal") ||
+        route.startsWith("/lab/portal-shell");
 
     useEffect(() => {
         try {
@@ -82,8 +86,8 @@ export default function MobileTabBar() {
 
     function isActive(tab: Tab): boolean {
         if (!tab.href) return false;
-        if (tab.href === "/") return pathname === "/";
-        return pathname.startsWith(tab.href);
+        if (tab.href === "/") return route === "/" || route === "";
+        return route.startsWith(tab.href);
     }
 
     if (hideTabBar) return null;
@@ -123,7 +127,7 @@ export default function MobileTabBar() {
                                 className={`text-[8px] leading-tight font-bold uppercase tracking-tight transition-colors duration-150 text-center ${tab.key === "grace" ? "text-obsidian" : (active ? "text-muted-gold" : "text-slate")}`}
                                 style={{ maxWidth: "60px" }}
                             >
-                                {tab.label}
+                                {t(tab.key)}
                             </span>
                         </span>
                     );
@@ -171,7 +175,7 @@ export default function MobileTabBar() {
                     }
 
                     return (
-                        <Link
+                        <LocaleLink
                             key={tab.key}
                             href={tab.href!}
                             role="tab"
@@ -181,7 +185,7 @@ export default function MobileTabBar() {
                             className="group flex-1 flex items-center justify-center h-full min-w-[44px]"
                         >
                             {inner}
-                        </Link>
+                        </LocaleLink>
                     );
                 })}
             </div>

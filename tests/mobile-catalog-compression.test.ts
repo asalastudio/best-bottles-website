@@ -14,11 +14,12 @@ describe("mobile catalog compression", () => {
     it("hides the mobile breadcrumb and compact title without dropping desktop catalog chrome", () => {
         const catalog = read("src/app/catalog/CatalogClient.tsx");
         expect(catalog).toContain("hidden lg:block");
-        expect(catalog).toContain("<span className=\"lg:hidden\">Catalog</span>");
+        expect(catalog).toContain('t("title")');
         expect(catalog).toContain("page-heading");
-        expect(catalog).toContain("Master Catalog");
-        expect(catalog).toContain("Need help? Talk with Grace");
+        expect(catalog).toContain('t("masterTitle")');
+        expect(catalog).toContain('t("visibleHelp"');
         expect(catalog).toContain("hidden lg:inline");
+        expect(read("messages/en.json")).toContain("Master Catalog");
     });
 
     it("keeps search in the field and excludes it from mobile filter chips and the filter badge", () => {
@@ -26,7 +27,7 @@ describe("mobile catalog compression", () => {
         expect(catalog).toContain('data-testid="catalog-search-input"');
         expect(catalog).toContain('chips.filter((chip) => chip.facet !== "search")');
         expect(catalog).toContain('activeFilterCount({ ...filters, search: "" })');
-        expect(catalog).toContain("title=\"Collection\"");
+        expect(catalog).toContain('title={t("collection")}');
         expect(catalog).not.toContain("mobileQuickRefinements");
     });
 
