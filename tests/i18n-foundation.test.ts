@@ -3,7 +3,7 @@ import en from "../messages/en.json";
 import es from "../messages/es.json";
 import { localizeFamilyName, localizeMerchandisingName } from "@/i18n/catalogCopy";
 import { localizeHref, stripLocalePrefix, switchLocaleHref } from "@/i18n/paths";
-import { resolveLocale } from "@/i18n/resolveLocale";
+import { localeAfterProxyPass, resolveLocale } from "@/i18n/resolveLocale";
 import { isEnglishOnlyPath } from "@/i18n/config";
 
 function keysOf(value: unknown, prefix = ""): string[] {
@@ -44,6 +44,9 @@ describe("Spanish locale foundation", () => {
         });
         expect(isEnglishOnlyPath("/team/products")).toBe(true);
         expect(isEnglishOnlyPath("/catalog")).toBe(false);
+        expect(localeAfterProxyPass("/es/catalog", null)).toBe("es");
+        expect(localeAfterProxyPass("/catalog", "es")).toBe("es");
+        expect(localeAfterProxyPass("/catalog", null)).toBe("en");
     });
 
     it("does not treat /esfoo as a locale prefix", () => {

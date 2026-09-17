@@ -25,3 +25,9 @@ export function resolveLocale(pathname: string): LocaleResolution {
 
     return { kind: "rewrite", locale: "es", pathname, rewritePath: stripped };
 }
+
+/** Next re-invokes proxy on the rewrite destination; keep Spanish from the first pass. */
+export function localeAfterProxyPass(pathname: string, incomingLocale: string | null): AppLocale {
+    const resolved = resolveLocale(pathname);
+    return resolved.locale === "es" || incomingLocale === "es" ? "es" : "en";
+}
