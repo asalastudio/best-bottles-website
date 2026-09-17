@@ -162,7 +162,8 @@ describe("builder catalog boundary", () => {
         }
         const { row, kit } = fixture();
         expect(configurationFromRow(row, null)).toBeNull();
-        expect(configurationFromRow(row, { ...kit, sku: "another-sku" })).toBeNull();
+        expect(configurationFromRow(row, { ...kit, sku: "another-sku" })?.id).toBe(row.websiteSku);
+        expect(configurationFromRow(row, { ...kit, sku: "another-sku", websiteSku: "wrong-sku", graceSku: "WRONG-GRACE" })).toBeNull();
         expect(configurationFromRow(row, { ...kit, familyId: "cylinder-5ml-clear-13-415" })).toBeNull();
         expect(configurationFromRow(row, { ...kit, conflicts: [kit.sku] })).toBeNull();
         expect(configurationFromRow(row, { ...kit, completeness: "capSplit" })).toBeNull();
