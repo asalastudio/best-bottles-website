@@ -219,7 +219,8 @@ export const integrity = query({
                 issues.push({ sku: kit.sku, issue: finding.issue, detail: finding.detail });
             }
             if (kit.websiteSku) {
-                const products = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", kit.websiteSku)).collect();
+                const websiteSku = kit.websiteSku;
+                const products = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", websiteSku)).collect();
                 if (products.length === 0) {
                     issues.push({ sku: kit.sku, issue: "kit_orphan_websiteSku", detail: kit.websiteSku });
                 } else if (kit.graceSku && !products.some((product) => product.graceSku === kit.graceSku)) {

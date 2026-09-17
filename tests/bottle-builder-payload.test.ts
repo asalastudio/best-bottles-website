@@ -5,7 +5,7 @@ import { chooserPreloadUrls } from "@/lib/bottle-builder/mobile-request";
 import type { BuilderBody, BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/model";
 
 const kit = (sku: string, extra: Partial<BuilderKit> = {}): BuilderKit => ({
-    sku, familyId: "cylinder-9ml-clear-17-415", completeness: "full", conflicts: [],
+    sku, websiteSku: sku, graceSku: null, familyId: "cylinder-9ml-clear-17-415", completeness: "full", conflicts: [],
     canvas: { width: 1000, height: 1100 },
     anchors: { axisX: 500, neckAxisX: 500, seatY: 300, baselineY: 1000, pxPerMm: null },
     plateSha256: "plate", three: { bodyId: "cylinder-9ml", glass: "clear", finish: "17-415", closureAssemblyKind: null, capMaterialId: null, trimMaterialId: null, rollerVariant: "metal" },
