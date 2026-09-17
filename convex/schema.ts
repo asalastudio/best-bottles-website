@@ -280,6 +280,7 @@ export default defineSchema({
         .index("by_graceSku", ["graceSku"])           // Grace internal lookup
         .index("by_category", ["category"])
         .index("by_family", ["family"])
+        .index("by_collection", ["bottleCollection"])   // getCatalogProducts collection filter
         .index("by_neckThreadSize", ["neckThreadSize"])
         .index("by_productGroupId", ["productGroupId"]) // Used by getProductGroup to avoid full table scan
         .index("by_shopifyVariantId", ["shopifyVariantId"]) // Webhook sync: inventory updates
