@@ -1,6 +1,6 @@
 ---
 name: bestbottles-bottle-scale
-description: Best Bottles bottle measurements and hero sizing, end to end. The source-of-truth glass heights (production Convex, grouped into glass bodies), the review sheet sent to Jordan's boss and reconciling his answers into proposed Convex corrections, the universal scale card (bare glass mm to % of the 10:11 product card, tags S20-S200), the locked Cylinder sizes and their 2026-09-16 amendment, and the photoreal Sunburst hero pipeline that applies them. Use for "bottle heights", "measurements", "source of truth", "how many bottles/bodies", "scale card", "tag this bottle", "how big should this bottle be on the card", "send for review", "reconcile corrections", "resize heroes", "next family's heroes", "sunburst render", "matte silver looks wrong".
+description: Best Bottles bottle measurements and hero sizing, end to end. The source-of-truth glass heights (production Convex, grouped into glass bodies), the review sheet prepared for Jordan's boss and reconciling his answers into proposed Convex corrections, the universal scale card (bare glass mm to % of the 10:11 product card, tags S20-S200), the locked Cylinder sizes and their 2026-09-16 amendment, and the photoreal Sunburst hero pipeline that applies them. Use for "bottle heights", "measurements", "source of truth", "how many bottles/bodies", "scale card", "tag this bottle", "how big should this bottle be on the card", "send for review", "reconcile corrections", "resize heroes", "next family's heroes", "sunburst render", "matte silver looks wrong".
 ---
 
 # Best Bottles: bottle scale, measurements and hero sizing
@@ -14,7 +14,7 @@ are in `references/decisions.md`.
 | Item | State | Where |
 |---|---|---|
 | Measurements snapshot: 2,269 live SKUs → 108 glass bodies (97 if frosted/swirl twins count once), 27 families | Pulled from production Convex | `docs/reviews/bottle-measurements-2026-09-16/` |
-| 19 glasses with measurement problems | Sent to Jordan's boss to check, awaiting his reply | `…/Best Bottles bottle heights - please check (sent 2026-09-16).xlsx` |
+| 19 glasses with measurement problems | Review copy prepared for Jordan's boss; Jordan emails it (confirm it went out before waiting on a reply) | `…/Best Bottles bottle heights - please check (sent 2026-09-16).xlsx` |
 | Universal scale card v1 | **Proposal, not approved** | `…/scale-card/`, control points in `references/approved-sizes-2026-09-16.json` |
 | Cylinder hero sizes | **Locked** 2026-09-07, **amended** 2026-09-16 (four bodies), both on main | `docs/reviews/cylinder-family-final-manifest-2026-09-07.json` + `docs/reviews/sunburst-heroes-release-5/lock-amendment-2026-09-16.json` |
 | Boston Round 15/30/60 ml | **Locked** 2026-09-12, full-glass % | `data/asset-ledger/bottle-standards.json` |
@@ -60,7 +60,8 @@ python3 .claude/skills/bestbottles-bottle-scale/scripts/build_measurements_workb
 python3 .claude/skills/bestbottles-bottle-scale/scripts/build_review_copy.py "$SNAP"
 ```
 Tabs: Start here, Issues to fix (red), All bottles, SKU detail. The reviewer types only in yellow cells. Keep the file
-as sent, renamed `… (sent YYYY-MM-DD).xlsx`, in the snapshot.
+as handed over, renamed `… (sent YYYY-MM-DD).xlsx`, in the snapshot (the 2026-09-16 copy was named that when it was
+prepared for emailing).
 
 **D. Reconcile a returned review**
 ```bash
@@ -77,7 +78,7 @@ python3 .claude/skills/bestbottles-bottle-scale/scripts/card_example.py "$SNAP"
 ```
 While the card is a proposal it changes nothing on the site. If Jordan approves it, commit the curve and tags as the
 repo standard, then resize families to it. That amends the Cylinder lock and the Boston standards (rule 1), so it
-needs his explicit yes.
+needs Jordan's explicit yes.
 
 **F. Photoreal heroes for a family**: see `scripts/hero-pipeline/README.md`.
 

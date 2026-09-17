@@ -4,7 +4,7 @@ Newest first. Quotes are Jordan's words.
 
 ## 2026-09-16
 
-**Measurements review sent to Jordan's boss.** Production Convex snapshot, 2,269 live container SKUs grouped into
+**Measurements review prepared for Jordan's boss.** Jordan planned to email it with a drafted note; whether it went out is not recorded here. Production Convex snapshot, 2,269 live container SKUs grouped into
 108 glass bodies. 19 glasses flagged: 15 with SKUs that disagree, 3 impossible heights (Cylinder 30 ml tube
 GBSpry1ozGl 50.8 × 42 mm; Apothecary 118 ml at 52.2 mm; Lotion Bottle 3 ml at 118 mm) and 1 with blank SKUs (25 ml
 Cylinder, 30 of 45). Review copy built so every glass has one place to answer, with the issues on a red tab:
