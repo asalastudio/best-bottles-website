@@ -290,7 +290,7 @@ function ProductGroupCard({
     const liveCard = resolveLiveCatalogCardHero({
         heroImageUrl: group.heroImageUrl,
         staticHero: catalogHero ?? null,
-        variants: variantSources ?? [],
+        variants: (variantSources?.length ? variantSources : variantPreviews) ?? [],
     });
     const displayHero = liveCard.catalogHero;
     const picturedPreview = liveCard.picturedWebsiteSku
