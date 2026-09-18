@@ -74,7 +74,7 @@ export type CatalogCategoryValue = (typeof CATALOG_CATEGORY_VALUES)[number];
 /** Sidebar order for the Categories facet; categories present in data but absent here render last. */
 export const CATEGORY_ORDER: readonly string[] = CATALOG_CATEGORY_VALUES;
 
-/** Categories whose groups are bottles/jars — sorted first under "By Design Family". */
+/** Categories whose groups are bottles/jars — shown first under Featured. */
 export const BOTTLE_CATEGORIES: ReadonlySet<string> = new Set([
     "Glass Bottle", "Glass Jar", "Cream Jar", "Aluminum Bottle", "Plastic Bottle", "Roll-On Bottle", "Lotion Bottle",
 ]);
@@ -85,7 +85,7 @@ export const COMPONENT_CATEGORIES: ReadonlySet<string> = new Set([
     "Packaging", "Packaging Supply", "Tool", "Gift Box", "Gift Bag",
 ]);
 
-/** Bottle design families in "By Design Family" order. Families absent here sort last. */
+/** Bottle design families in merchandising order. Featured interleaves these so the first screen mixes families. */
 export const FAMILY_ORDER: readonly string[] = [
     "Cylinder", "Elegant", "Circle", "Sleek", "Diva", "Empire", "Boston Round",
     "Slim", "Diamond", "Royal", "Round", "Square", "Rectangle", "Flair",
@@ -473,7 +473,7 @@ export function normalizeRollerMaterials(values: readonly string[]): RollerMater
 }
 
 export const SORT_OPTIONS = [
-    { value: "featured", label: "By Design Family" },
+    { value: "featured", label: "Featured" },
     { value: "best-match", label: "Best Match" },
     { value: "price-asc", label: "Price: Low to High" },
     { value: "price-desc", label: "Price: High to Low" },
@@ -485,6 +485,79 @@ export const SORT_OPTIONS = [
 ] as const;
 
 export type SortValue = (typeof SORT_OPTIONS)[number]["value"];
+
+/** Shopper-facing sort menu. Family/collection stay filters; Most Variants stays URL-compatible only. */
+export function catalogSortMenuOptions(hasSearch: boolean): Array<(typeof SORT_OPTIONS)[number]> {
+    return SORT_OPTIONS.filter((option) => {
+        if (option.value === "variants-desc") return false;
+        if (option.value === "best-match") return hasSearch;
+        return true;
+    });
+}
+
+export interface FeaturedSortable {
+    family: string | null;
+    category: string;
+    capacityMl?: number | null;
+    displayName?: string | null;
+    slug?: string | null;
+}
+
+function compareFeaturedWithinFamily(a: FeaturedSortable, b: FeaturedSortable): number {
+    const capacityDelta = (a.capacityMl ?? 99999) - (b.capacityMl ?? 99999);
+    if (capacityDelta !== 0) return capacityDelta;
+    const nameDelta = (a.displayName ?? "").localeCompare(b.displayName ?? "");
+    if (nameDelta !== 0) return nameDelta;
+    return (a.slug ?? "").localeCompare(b.slug ?? "");
+}
+
+/** Diversity-based Featured: one product from each family before repeating, bottles before components. */
+export function sortCatalogFeatured<T extends FeaturedSortable>(items: readonly T[]): T[] {
+    const bottles: T[] = [];
+    const components: T[] = [];
+    for (const item of items) {
+        if (BOTTLE_CATEGORIES.has(item.category)) bottles.push(item);
+        else components.push(item);
+    }
+
+    const queues = new Map<string, T[]>();
+    for (const item of bottles) {
+        const key = item.family ?? "";
+        const queue = queues.get(key);
+        if (queue) queue.push(item);
+        else queues.set(key, [item]);
+    }
+    for (const queue of queues.values()) {
+        queue.sort(compareFeaturedWithinFamily);
+    }
+
+    const familyKeys = [
+        ...FAMILY_ORDER.filter((family) => queues.has(family)),
+        ...[...queues.keys()].filter((family) => !FAMILY_ORDER.includes(family)).sort((a, b) => a.localeCompare(b)),
+    ];
+
+    const interleaved: T[] = [];
+    let remaining = bottles.length;
+    while (remaining > 0) {
+        let progressed = false;
+        for (const key of familyKeys) {
+            const next = queues.get(key)?.shift();
+            if (!next) continue;
+            interleaved.push(next);
+            remaining -= 1;
+            progressed = true;
+        }
+        if (!progressed) break;
+    }
+
+    components.sort((a, b) => {
+        const familyDelta = (a.family ?? "").localeCompare(b.family ?? "");
+        if (familyDelta !== 0) return familyDelta;
+        return compareFeaturedWithinFamily(a, b);
+    });
+
+    return [...interleaved, ...components];
+}
 
 export const VIEW_MODES = ["visual", "line"] as const;
 export type ViewMode = (typeof VIEW_MODES)[number];

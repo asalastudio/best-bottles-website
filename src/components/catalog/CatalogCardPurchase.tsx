@@ -29,6 +29,7 @@ import {
     catalogCardStartingPrice,
     catalogCardTiers,
     catalogTierLabel,
+    catalogVariantSoldOut,
     describeCatalogTier,
     isCatalogVariantPurchasable,
     parseCatalogQuantity,
@@ -100,7 +101,7 @@ export default function CatalogCardPurchase({
     }, []);
 
     const tiers = catalogCardTiers(variant);
-    const purchasable = isCatalogVariantPurchasable(variant);
+    const soldOut = Boolean(variant && catalogVariantSoldOut(variant));
     const { qty, error } = parseCatalogQuantity(qtyText);
     const activeTier = activeCatalogTier(tiers, qty);
     const activeIndex = activeTier ? tiers.indexOf(activeTier) : -1;
@@ -216,7 +217,6 @@ export default function CatalogCardPurchase({
         : nextTier && unitsToNext > 0 && unitsToNext <= 11
             ? `Add ${unitsToNext} more to unlock ${formatPrice(nextTier.unitPrice)}/ea · save ${nextTier.savePct}%.`
             : "Save more at higher quantities.";
-    const quoteHref = `/request-quote?products=${encodeURIComponent(`${title} (SKU: ${variant.graceSku})`)}&quantities=${encodeURIComponent(`${qty ?? 1} units`)}`;
 
     // Render helpers (not nested components) so the card and dialog share one
     // quantity without remounting inputs on every keystroke.
@@ -292,7 +292,7 @@ export default function CatalogCardPurchase({
         </div>
     );
 
-    const renderAddButton = (scope: Scope) => purchasable ? (
+    const renderAddButton = (scope: Scope) => (
         <button
             type="button"
             data-testid={scope === "card" ? "catalog-card-add" : "catalog-card-dialog-add"}
@@ -303,17 +303,20 @@ export default function CatalogCardPurchase({
         >
             {added != null ? <><Check className="h-3.5 w-3.5" aria-hidden />Added</> : "Add to cart"}
         </button>
-    ) : (
-        <LocaleLink href={quoteHref} data-testid={scope === "card" ? "catalog-card-quote" : "catalog-card-dialog-quote"} className={SECONDARY_BUTTON}>
-            Request quote
-        </LocaleLink>
     );
+
+    const stockNote = soldOut ? (
+        <p className="mt-1 text-[11px] leading-snug text-slate" data-testid="catalog-card-stock">
+            <span className="font-semibold text-obsidian">Out of stock</span>
+            {" — we'll confirm delivery after you add this."}
+        </p>
+    ) : null;
 
     return (
         <div
             className="border-t border-champagne/55 px-3 pb-3 pt-3 sm:px-5 lg:px-4 lg:pb-4 lg:pt-3"
             data-testid="catalog-card-purchase"
-            data-state={purchasable ? "purchasable" : "quote"}
+            data-state={soldOut ? "sold-out" : "purchasable"}
         >
             <p className="text-[15px] font-medium leading-tight text-obsidian lg:text-lg lg:font-semibold" data-testid="catalog-card-price">
                 From {formatPrice(startingPrice ?? variant.webPrice1pc)}
@@ -324,6 +327,7 @@ export default function CatalogCardPurchase({
                     Adds <span className="text-obsidian">{variant.optionLabel}</span>
                 </p>
             )}
+            {stockNote}
 
             <div className={`mt-2 flex items-center gap-2 lg:hidden ${tiers.length > 0 ? "" : "justify-end"}`}>
                 {tiers.length > 0 && (
@@ -339,22 +343,16 @@ export default function CatalogCardPurchase({
                         View tier pricing
                     </button>
                 )}
-                {purchasable ? (
-                    <button
-                        type="button"
-                        data-testid="catalog-card-add-compact"
-                        onClick={handleAdd}
-                        disabled={qty == null}
-                        className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-obsidian text-white ${FOCUS_RING}`}
-                        aria-label={`Add ${qty ?? 1} ${title} to cart`.replace(/\s+/g, " ")}
-                    >
-                        {added != null ? <Check className="h-4 w-4" aria-hidden /> : <ShoppingCart className="h-4 w-4" aria-hidden />}
-                    </button>
-                ) : (
-                    <LocaleLink href={quoteHref} data-testid="catalog-card-quote-compact" className={`flex h-11 min-w-11 items-center px-2 text-[10px] font-bold uppercase tracking-wider text-obsidian underline ${FOCUS_RING}`}>
-                        Quote
-                    </LocaleLink>
-                )}
+                <button
+                    type="button"
+                    data-testid="catalog-card-add-compact"
+                    onClick={handleAdd}
+                    disabled={qty == null}
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-obsidian text-white ${FOCUS_RING}`}
+                    aria-label={`Add ${qty ?? 1} ${title} to cart`.replace(/\s+/g, " ")}
+                >
+                    {added != null ? <Check className="h-4 w-4" aria-hidden /> : <ShoppingCart className="h-4 w-4" aria-hidden />}
+                </button>
             </div>
 
             {/* Quantity → rate → tier pricing → add, top-down on every desktop width. */}

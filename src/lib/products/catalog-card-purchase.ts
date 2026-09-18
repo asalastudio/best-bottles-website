@@ -10,7 +10,6 @@
  */
 
 import type { CartItem } from "@/components/CartProvider";
-import { isCheckoutReady } from "@/lib/checkout";
 import {
     activeVolumeTierIndex,
     buildDisplayVolumeTiers,
@@ -95,15 +94,15 @@ export function catalogVariantInStock(variant: Pick<CatalogPurchaseVariant, "sto
     return variant.stockStatus === "In Stock" || variant.stockStatus === "Available to order";
 }
 
-/** Mirrors the PDP add-to-cart gate: in stock, Shopify-sellable, and priced. */
+/** Explicit out-of-stock on the list item. Unknown or empty status is not sold-out. */
+export function catalogVariantSoldOut(variant: Pick<CatalogPurchaseVariant, "stockStatus">): boolean {
+    if (!variant.stockStatus) return false;
+    return !catalogVariantInStock(variant);
+}
+
+/** Catalog cards sell any priced assembly. Stock and Shopify draft status do not swap the CTA to a quote. */
 export function isCatalogVariantPurchasable(variant: CatalogPurchaseVariant | null | undefined): variant is CatalogPurchaseVariant {
-    if (!variant || variant.webPrice1pc == null || variant.webPrice1pc <= 0) return false;
-    if (!catalogVariantInStock(variant)) return false;
-    return isCheckoutReady({
-        graceSku: variant.graceSku,
-        shopifyVariantId: variant.shopifyVariantId ?? null,
-        shopifySellable: variant.shopifySellable ?? undefined,
-    });
+    return Boolean(variant && variant.webPrice1pc != null && variant.webPrice1pc > 0);
 }
 
 /** The published ladder as closed display rows; empty when the row has no breaks. */

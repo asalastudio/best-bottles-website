@@ -27,7 +27,7 @@ import { catalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import {
-    SORT_OPTIONS,
+    catalogSortMenuOptions,
     APPLICATOR_BUCKETS,
     CATALOG_FAMILIES,
     CAPACITY_RANGES,
@@ -2093,13 +2093,15 @@ export default function CatalogClient({
                     </button>
 
                     <div className="relative min-w-0 flex-1">
+                        <label htmlFor="catalog-sort-mobile" className="sr-only">{t("sortBy")}</label>
                         <select
+                            id="catalog-sort-mobile"
                             value={sortBy}
                             onChange={(e) => handleSortChange(e.target.value as SortValue)}
                             aria-label="Sort catalog results"
                             className="h-11 w-full appearance-none bg-white border border-champagne rounded-lg px-2.5 text-sm text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none"
                         >
-                            {SORT_OPTIONS.filter((opt) => opt.value !== "best-match" || filters.search).map((opt) => (
+                            {catalogSortMenuOptions(Boolean(filters.search)).map((opt) => (
                                 <option key={opt.value} value={opt.value}>{sortLabel(opt.value)}</option>
                             ))}
                         </select>
@@ -2283,18 +2285,24 @@ export default function CatalogClient({
                                     <ViewToggle value={viewMode} onChange={handleViewChange} />
 
                                     {/* Desktop Sort */}
-                                    <div className="relative hidden lg:block">
-                                        <select
-                                            value={sortBy}
-                                            onChange={(e) => handleSortChange(e.target.value as SortValue)}
-                                            aria-label="Sort visible catalog results"
-                                            className="appearance-none bg-white border border-champagne rounded-lg px-3 py-1.5 text-xs text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none cursor-pointer"
-                                        >
-                                            {SORT_OPTIONS.filter((opt) => opt.value !== "best-match" || filters.search).map((opt) => (
-                                                <option key={opt.value} value={opt.value}>{sortLabel(opt.value)}</option>
-                                            ))}
-                                        </select>
-                                        <ArrowUpDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-slate pointer-events-none" />
+                                    <div className="hidden lg:flex items-center gap-2">
+                                        <label htmlFor="catalog-sort" className="text-xs font-semibold text-slate uppercase tracking-wider whitespace-nowrap">
+                                            {t("sortBy")}
+                                        </label>
+                                        <div className="relative">
+                                            <select
+                                                id="catalog-sort"
+                                                value={sortBy}
+                                                onChange={(e) => handleSortChange(e.target.value as SortValue)}
+                                                aria-label="Sort visible catalog results"
+                                                className="appearance-none bg-white border border-champagne rounded-lg px-3 py-1.5 text-xs text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none cursor-pointer"
+                                            >
+                                                {catalogSortMenuOptions(Boolean(filters.search)).map((opt) => (
+                                                    <option key={opt.value} value={opt.value}>{sortLabel(opt.value)}</option>
+                                                ))}
+                                            </select>
+                                            <ArrowUpDown className="absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 text-slate pointer-events-none" />
+                                        </div>
                                     </div>
 
                                     <span

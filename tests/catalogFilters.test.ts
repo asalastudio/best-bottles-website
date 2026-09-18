@@ -13,6 +13,8 @@ import {
     APPLICATOR_NAV,
     EMPTY_FILTERS,
     SORT_OPTIONS,
+    catalogSortMenuOptions,
+    sortCatalogFeatured,
     activeFilterCount,
     applicatorBucketMatchesProductValues,
     applicatorNavHref,
@@ -721,5 +723,50 @@ describe("capacity range tokens", () => {
         expect(url.searchParams.get("category")).toBe("Glass Bottle");
         expect(url.searchParams.get("capacities")).toBe("miniature");
         expect(paramsToFilters(url.searchParams).filters.capacities).toEqual(["miniature"]);
+    });
+});
+
+describe("featured catalog sort", () => {
+    it("labels the default sort Featured, not By Design Family", () => {
+        expect(SORT_OPTIONS[0]).toEqual({ value: "featured", label: "Featured" });
+        expect(SORT_OPTIONS.some((option) => option.label === "By Design Family")).toBe(false);
+    });
+
+    it("keeps family and collection out of the shopper sort menu", () => {
+        const browse = catalogSortMenuOptions(false);
+        const search = catalogSortMenuOptions(true);
+        expect(browse.map((option) => option.value)).toEqual([
+            "featured",
+            "price-asc",
+            "price-desc",
+            "name-asc",
+            "name-desc",
+            "capacity-asc",
+            "capacity-desc",
+        ]);
+        expect(search.map((option) => option.value)).toContain("best-match");
+        expect(browse.some((option) => /family|collection/i.test(option.label))).toBe(false);
+        expect(browse.some((option) => option.value === "variants-desc")).toBe(false);
+    });
+
+    it("mixes design families on the first screen instead of clustering them", () => {
+        const sorted = sortCatalogFeatured([
+            { family: "Cylinder", category: "Glass Bottle", capacityMl: 30, displayName: "Cylinder 30" },
+            { family: "Cylinder", category: "Glass Bottle", capacityMl: 5, displayName: "Cylinder 5" },
+            { family: "Cylinder", category: "Glass Bottle", capacityMl: 9, displayName: "Cylinder 9" },
+            { family: "Boston Round", category: "Glass Bottle", capacityMl: 15, displayName: "Boston 15" },
+            { family: "Elegant", category: "Glass Bottle", capacityMl: 50, displayName: "Elegant 50" },
+            { family: "Circle", category: "Glass Bottle", capacityMl: 10, displayName: "Circle 10" },
+            { family: "Cap/Closure", category: "Component", capacityMl: null, displayName: "Cap" },
+        ]);
+
+        expect(sorted.slice(0, 4).map((item) => item.family)).toEqual([
+            "Cylinder",
+            "Elegant",
+            "Circle",
+            "Boston Round",
+        ]);
+        expect(sorted[4]?.displayName).toBe("Cylinder 9");
+        expect(sorted.at(-1)?.category).toBe("Component");
     });
 });
