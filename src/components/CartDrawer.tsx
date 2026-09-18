@@ -8,9 +8,7 @@ import { X, ShoppingBag, Plus, Minus, Trash, ArrowRight, WarningCircle } from "@
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
-import { checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
-
-const FREE_SHIPPING_THRESHOLD = 99;
+import { ORDER_MINIMUM, checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 
 interface CartDrawerProps {
     isOpen: boolean;
@@ -93,8 +91,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     const subtotal = items.reduce((sum, item) => sum + (item.unitPrice ?? 0) * item.quantity, 0);
     const minimum = checkoutMinimum(items);
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
-    const progressPercent = Math.min((subtotal / FREE_SHIPPING_THRESHOLD) * 100, 100);
-    const amountToFreeShipping = Math.max(FREE_SHIPPING_THRESHOLD - subtotal, 0);
+    const progressPercent = Math.min((minimum.subtotal / ORDER_MINIMUM) * 100, 100);
     return (
         <AnimatePresence>
             {isOpen && (
@@ -176,9 +173,9 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         {items.length > 0 && (
                             <div className="relative px-6 py-3 shrink-0 bg-white/40 border-b border-champagne/30">
                                 <p className="font-sans text-[12px] text-obsidian font-medium mb-2">
-                                    {amountToFreeShipping === 0
-                                        ? "You've unlocked Free Shipping!"
-                                        : `${formatPrice(amountToFreeShipping)} away from Free Shipping`}
+                                    {minimum.met
+                                        ? "You've reached the $50 order minimum."
+                                        : `${formatPrice(minimum.remaining)} away from the $50 order minimum`}
                                 </p>
                                 <div className="h-1.5 w-full bg-champagne/30 rounded-full overflow-hidden">
                                     <motion.div

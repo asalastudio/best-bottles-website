@@ -245,16 +245,30 @@ describe("tier pricing dialog on the catalog card", () => {
         expect($("catalog-card-add")).not.toBeNull();
     });
 
-    it("routes unsellable assemblies to a quote and unpriced groups to the product page", () => {
+    it("keeps Add to cart when Shopify will not checkout, and never offers a quote CTA", () => {
         card({ shopifySellable: false });
-        expect(el.querySelector('[data-testid="catalog-card-add"]')).toBeNull();
-        const quote = $("catalog-card-quote") as HTMLAnchorElement;
-        expect(quote.getAttribute("href")).toContain("/request-quote?products=");
-        expect(quote.getAttribute("href")).toContain(encodeURIComponent("SKU: CYL5-ROLL-BLK"));
-        expect($("catalog-card-tier-toggle")).not.toBeNull();
-        expect($("catalog-card-dialog-quote")).not.toBeNull();
-        act(() => root.unmount()); el.remove();
+        expect(el.querySelector('[data-testid="catalog-card-quote"]')).toBeNull();
+        expect(el.querySelector('[data-testid="catalog-card-quote-compact"]')).toBeNull();
+        expect(el.querySelector('[data-testid="catalog-card-dialog-quote"]')).toBeNull();
+        expect($("catalog-card-add").textContent).toBe("Add to cart");
+        expect($("catalog-card-purchase").dataset.state).toBe("purchasable");
+        click($("catalog-card-add"));
+        expect(addItems).toHaveBeenCalledTimes(1);
+    });
 
+    it("marks sold-out cards and still lets the customer add for later delivery", () => {
+        card({ stockStatus: "Out of Stock" });
+        expect($("catalog-card-purchase").dataset.state).toBe("sold-out");
+        expect($("catalog-card-stock").textContent).toMatch(/Out of stock/i);
+        expect($("catalog-card-stock").textContent).toMatch(/confirm delivery/i);
+        expect(el.querySelector('[data-testid="catalog-card-quote"]')).toBeNull();
+        expect($("catalog-card-add").textContent).toBe("Add to cart");
+        click($("catalog-card-add"));
+        expect(addItems).toHaveBeenCalledTimes(1);
+        expect(addItems.mock.calls[0][0][0]).toMatchObject({ graceSku: "CYL5-ROLL-BLK", quantity: 1 });
+    });
+
+    it("routes unpriced groups to the product page", () => {
         card({ webPrice1pc: null });
         expect($("catalog-card-purchase").dataset.state).toBe("unpriced");
         expect($("catalog-card-price").textContent).toBe("From $0.53/ea");

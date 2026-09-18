@@ -5,6 +5,7 @@ import {
     catalogCardStartingPrice,
     catalogCardTiers,
     catalogTierLabel,
+    catalogVariantSoldOut,
     describeCatalogTier,
     isCatalogVariantPurchasable,
     parseCatalogQuantity,
@@ -70,18 +71,29 @@ describe("resolveCatalogCardPurchaseVariant", () => {
     });
 });
 
-describe("isCatalogVariantPurchasable mirrors the PDP add-to-cart gate", () => {
+describe("isCatalogVariantPurchasable is the catalog Add to cart gate", () => {
     const variant = resolveCatalogCardPurchaseVariant([black], { productTitle: "x" })!;
 
-    it("needs stock, a Shopify-sellable variant, and a 1-unit price", () => {
+    it("needs a 1-unit price only — sold-out and Shopify-draft rows still add", () => {
         expect(isCatalogVariantPurchasable(variant)).toBe(true);
         expect(isCatalogVariantPurchasable({ ...variant, stockStatus: "Available to order" })).toBe(true);
-        expect(isCatalogVariantPurchasable({ ...variant, stockStatus: "Out of Stock" })).toBe(false);
-        expect(isCatalogVariantPurchasable({ ...variant, stockStatus: null })).toBe(false);
-        expect(isCatalogVariantPurchasable({ ...variant, shopifySellable: false })).toBe(false);
-        expect(isCatalogVariantPurchasable({ ...variant, shopifyVariantId: null, shopifySellable: null })).toBe(false);
+        expect(isCatalogVariantPurchasable({ ...variant, stockStatus: "Out of Stock" })).toBe(true);
+        expect(isCatalogVariantPurchasable({ ...variant, stockStatus: null })).toBe(true);
+        expect(isCatalogVariantPurchasable({ ...variant, shopifySellable: false })).toBe(true);
+        expect(isCatalogVariantPurchasable({ ...variant, shopifyVariantId: null, shopifySellable: null })).toBe(true);
         expect(isCatalogVariantPurchasable({ ...variant, webPrice1pc: null })).toBe(false);
+        expect(isCatalogVariantPurchasable({ ...variant, webPrice1pc: 0 })).toBe(false);
         expect(isCatalogVariantPurchasable(null)).toBe(false);
+    });
+});
+
+describe("catalogVariantSoldOut", () => {
+    it("is true only when stock status is an explicit out-of-stock value", () => {
+        expect(catalogVariantSoldOut({ stockStatus: "Out of Stock" })).toBe(true);
+        expect(catalogVariantSoldOut({ stockStatus: "Sold Out" })).toBe(true);
+        expect(catalogVariantSoldOut({ stockStatus: "In Stock" })).toBe(false);
+        expect(catalogVariantSoldOut({ stockStatus: "Available to order" })).toBe(false);
+        expect(catalogVariantSoldOut({ stockStatus: null })).toBe(false);
     });
 });
 

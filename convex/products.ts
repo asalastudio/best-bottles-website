@@ -13,14 +13,13 @@ import { buildFamilyPageData } from "../src/lib/products/family-page-data";
 import { buildFocusedPdpRelations } from "../src/lib/products/pdp-relations";
 import {
     APPLICATOR_BUCKETS,
-    BOTTLE_CATEGORIES,
     COMPONENT_CATEGORIES,
-    FAMILY_ORDER,
     canonicalGlassColor,
     catalogSearchMatches,
     catalogSearchResultTieBreak,
     catalogSearchScore,
     classifyComponentType as classifyCatalogComponentType,
+    sortCatalogFeatured,
     normalizeRollerMaterials,
     parseCapacityLabelMl as parseCapacityMl,
     rollerMaterialMatchesProductValues,
@@ -924,7 +923,7 @@ export const searchCatalog = query({
                 : { min: 0, max: 0 },
         };
 
-        const sorted = [...result];
+        let sorted = [...result];
         const sort = args.sort;
         if (sort === "best-match" && filters.search) {
             sorted.sort((a, b) => {
@@ -958,20 +957,7 @@ export const searchCatalog = query({
         } else if (sort === "capacity-desc") {
             sorted.sort((a, b) => (b.capacityMl ?? -Infinity) - (a.capacityMl ?? -Infinity));
         } else {
-            const familyIdx = (family: string | null) => {
-                if (!family) return FAMILY_ORDER.length;
-                const index = FAMILY_ORDER.indexOf(family);
-                return index >= 0 ? index : FAMILY_ORDER.length;
-            };
-            sorted.sort((a, b) => {
-                const categoryA = BOTTLE_CATEGORIES.has(a.category) ? 0 : 1;
-                const categoryB = BOTTLE_CATEGORIES.has(b.category) ? 0 : 1;
-                if (categoryA !== categoryB) return categoryA - categoryB;
-                const familyA = familyIdx(a.family);
-                const familyB = familyIdx(b.family);
-                if (familyA !== familyB) return familyA - familyB;
-                return (a.capacityMl ?? 99999) - (b.capacityMl ?? 99999);
-            });
+            sorted = sortCatalogFeatured(sorted);
         }
 
         const offset = Math.max(0, Number(args.cursor ?? 0) || 0);
