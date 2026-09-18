@@ -58,7 +58,7 @@ describe("guided finder result model", () => {
         expect(families).toEqual([{
             family: "Elegant",
             exactProducts: [expect.objectContaining({
-                imageUrl: "https://cdn.shopify.com/elegant-roller.png",
+                imageUrl: "https://cdn.shopify.com/elegant-group.png",
                 displayName: "50 ml Clear Elegant Roll-On Bottle - Shiny Gold Cap",
                 family: "Elegant",
                 capacity: "50 ml",
