@@ -182,6 +182,7 @@ Best-Bottles-Orphan-urls/
 
 # paper-doll pipeline output (published to object storage, never committed)
 dist/
+data/paper-doll/**/*.assembled.webp
 
 # point-in-time copies of the Convex catalogue — the deployment is the source of
 # truth, not a JSON dump in git. Regenerate with:

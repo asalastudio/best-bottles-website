@@ -1,0 +1,147 @@
+{
+  "sku": "GBSpry3mlClBlk",
+  "websiteSku": "GBSpry3mlClBlk",
+  "graceSku": "GB-SPR-CLR-3ML-BLK",
+  "familyId": "cylinder-3.3ml-clear-12mm",
+  "status": "review",
+  "publishable": false,
+  "plateSha256": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "parts": [
+    {
+      "assembled": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bounds": {
+        "bottom": 1061.0,
+        "left": 375.0,
+        "right": 623.0,
+        "top": 533.0
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0.0,
+      "exploded": {
+        "dx": 0.0,
+        "dy": 0.0
+      },
+      "image": {
+        "bytes": 14832.0,
+        "height": 1100.0,
+        "key": "kits/cylinder-master/d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac.body.webp",
+        "sha256": "d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/d17c757fa3ba1206e17122b17a1e86e8eaffa9893fe0ea860d08dd2d4a2df6ac.body.webp",
+        "width": 1000.0
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "body",
+      "variantKey": null,
+      "zOrder": 0
+    },
+    {
+      "assembled": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bounds": {
+        "bottom": 1019.0,
+        "left": 373.0,
+        "right": 622.0,
+        "top": 108.0
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 1.0,
+      "exploded": {
+        "dx": 0.0,
+        "dy": -510.0
+      },
+      "image": {
+        "bytes": 14360.0,
+        "height": 1100.0,
+        "key": "kits/cylinder-master/88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6.sprayer.webp",
+        "sha256": "88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/88f04ffec8df1ebc2fc85fa862ea7b18a70951a7a892db6e86a029ae8e27a1f6.sprayer.webp",
+        "width": 1000.0
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "sprayer",
+      "variantKey": null,
+      "zOrder": 1
+    },
+    {
+      "assembled": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bounds": {
+        "bottom": 283.0,
+        "left": 407.0,
+        "right": 592.0,
+        "top": 42.0
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 2.0,
+      "exploded": {
+        "dx": 0.0,
+        "dy": -217.0
+      },
+      "image": {
+        "bytes": 6252.0,
+        "height": 1100.0,
+        "key": "kits/cylinder-master/bdde5d7113aa97666ffdde8ef314455fca5ea25d215ecd276ffad9904bf25635.overcap.webp",
+        "sha256": "bdde5d7113aa97666ffdde8ef314455fca5ea25d215ecd276ffad9904bf25635",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/bdde5d7113aa97666ffdde8ef314455fca5ea25d215ecd276ffad9904bf25635.overcap.webp",
+        "width": 1000.0
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "overcap",
+      "variantKey": null,
+      "zOrder": 2
+    }
+  ],
+  "completeness": "full",
+  "three": null,
+  "source": {
+    "library": "published-sibling-reuse",
+    "path": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-3.3ml-clear-12mm/GBSpry3mlClBlk/24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa.front-on-1000x1100.webp",
+    "releaseVersion": "24aeb2a1bc11fc779ead887d0e21de2f6bc24797265a95c9bac8901038f1beaa"
+  },
+  "gates": {
+    "parity": {
+      "ok": false,
+      "visualReviewBand": false,
+      "mean": 56.9565,
+      "tailOver40": 0.383125
+    }
+  },
+  "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 533.0,
+    "baselineY": 1061.0,
+    "pxPerMm": null
+  },
+  "builder": {
+    "name": "build_sibling_reuse_kits.py",
+    "version": "1.0.0",
+    "builtAt": 1789710958398
+  },
+  "donors": {
+    "bodyDonor": "GBSpry3mlClWht",
+    "closureDonor": "GBCyl9SpryBlk",
+    "closureSlots": [
+      "overcap"
+    ]
+  },
+  "notes": [
+    "Reuses already published photographic parts. No new pixels were created.",
+    "Body/fitment from GBSpry3mlClWht; closure from GBCyl9SpryBlk."
+  ],
+  "reason": "assembled parity failed {'ok': False, 'visualReviewBand': False, 'mean': 56.9565, 'tailOver40': 0.383125}"
+}

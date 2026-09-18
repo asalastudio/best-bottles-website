@@ -1,0 +1,146 @@
+{
+  "sku": "GBCylSwrl9RollShBlk",
+  "websiteSku": "GBCylSwrl9RollShBlk",
+  "graceSku": "GB-CYL-CLR-9ML-ROL-SBLK-01",
+  "familyId": "cylinder-9ml-swirl-17-415",
+  "status": "candidate",
+  "publishable": false,
+  "plateSha256": "9e71a03c727b8ae2e348506d1b52427f2488d905c34758963888f1f0c3f14a5c",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "parts": [
+    {
+      "assembled": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bounds": {
+        "bottom": 1060.0,
+        "left": 394.0,
+        "right": 607.0,
+        "top": 283.0
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0.0,
+      "exploded": {
+        "dx": 0.0,
+        "dy": 0.0
+      },
+      "image": {
+        "bytes": 36554.0,
+        "height": 1100.0,
+        "key": "kits/cylinder-master/507ef2760658697ff525d0e527e6ac0cde6fd5a77f2b91fb9baa27baedb8b7b2.body.webp",
+        "sha256": "507ef2760658697ff525d0e527e6ac0cde6fd5a77f2b91fb9baa27baedb8b7b2",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/507ef2760658697ff525d0e527e6ac0cde6fd5a77f2b91fb9baa27baedb8b7b2.body.webp",
+        "width": 1000.0
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "body",
+      "variantKey": null,
+      "zOrder": 0
+    },
+    {
+      "assembled": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bounds": {
+        "bottom": 306.0,
+        "left": 429.0,
+        "right": 562.0,
+        "top": 188.0
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 2.0,
+      "exploded": {
+        "dx": 0.0,
+        "dy": -353.0
+      },
+      "image": {
+        "bytes": 5804.0,
+        "height": 1100.0,
+        "key": "kits/cylinder-master/21d2c5c30e853aac9bfdbaf43da488d6c68fc22de39cafcf5d65f00620a70d8b.roller.webp",
+        "sha256": "21d2c5c30e853aac9bfdbaf43da488d6c68fc22de39cafcf5d65f00620a70d8b",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/21d2c5c30e853aac9bfdbaf43da488d6c68fc22de39cafcf5d65f00620a70d8b.roller.webp",
+        "width": 1000.0
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": 1
+    },
+    {
+      "assembled": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bounds": {
+        "bottom": 433.0,
+        "left": 404.0,
+        "right": 600.0,
+        "top": 155.0
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 2.0,
+      "exploded": {
+        "dx": 0.0,
+        "dy": -457.0
+      },
+      "image": {
+        "bytes": 7236.0,
+        "height": 1100.0,
+        "key": "kits/cylinder-master/7622a38345e07e77251bf6fd1f217ca9b8b3520dd8669b9da6d4f214169b6b6a.cap.webp",
+        "sha256": "7622a38345e07e77251bf6fd1f217ca9b8b3520dd8669b9da6d4f214169b6b6a",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/7622a38345e07e77251bf6fd1f217ca9b8b3520dd8669b9da6d4f214169b6b6a.cap.webp",
+        "width": 1000.0
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "cap",
+      "variantKey": null,
+      "zOrder": 2
+    }
+  ],
+  "completeness": "full",
+  "three": null,
+  "source": {
+    "library": "published-sibling-reuse",
+    "path": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-swirl-17-415/GBCylSwrl9RollShBlk/9e71a03c727b8ae2e348506d1b52427f2488d905c34758963888f1f0c3f14a5c.front-on-1000x1100.webp",
+    "releaseVersion": "9e71a03c727b8ae2e348506d1b52427f2488d905c34758963888f1f0c3f14a5c"
+  },
+  "gates": {
+    "parity": {
+      "ok": false,
+      "visualReviewBand": true,
+      "mean": 6.0402,
+      "tailOver40": 0.021878
+    }
+  },
+  "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 283.0,
+    "baselineY": 1060.0,
+    "pxPerMm": null
+  },
+  "builder": {
+    "name": "build_sibling_reuse_kits.py",
+    "version": "1.0.0",
+    "builtAt": 1789710956672
+  },
+  "donors": {
+    "bodyDonor": "GBCylSwrl9RollSlDot",
+    "closureDonor": "GBCylSwrl9MtlRollShBlk",
+    "closureSlots": [
+      "cap"
+    ]
+  },
+  "notes": [
+    "Reuses already published photographic parts. No new pixels were created.",
+    "Body/fitment from GBCylSwrl9RollSlDot; closure from GBCylSwrl9MtlRollShBlk."
+  ]
+}
