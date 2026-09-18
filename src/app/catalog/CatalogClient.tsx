@@ -19,7 +19,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RefineSection from "@/components/catalog/RefineSection";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
-import { getCatalogHero, getCatalogHeroProductHref, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { getCatalogHero, getCatalogHeroProductHref, resolveLiveCatalogCardHero, type CatalogHero } from "@/lib/products/catalog-heroes";
 import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
 import CatalogCardPurchase from "@/components/catalog/CatalogCardPurchase";
 import { resolveCatalogCardPurchaseVariant } from "@/lib/products/catalog-card-purchase";
@@ -287,11 +287,21 @@ function ProductGroupCard({
     catalogHero?: CatalogHero | null;
 }) {
     const selected = matchSearch ? variantPreviews?.[0] : null;
-    const href = catalogHero
-        ? getCatalogHeroProductHref(catalogHero, productGroupHref(group, applicatorParam))
-        : productCardVariantHref(productGroupHref(group, applicatorParam), selected);
+    const liveCard = resolveLiveCatalogCardHero({
+        heroImageUrl: group.heroImageUrl,
+        staticHero: catalogHero ?? null,
+        variants: variantSources ?? [],
+    });
+    const displayHero = liveCard.catalogHero;
+    const picturedPreview = liveCard.picturedWebsiteSku
+        ? { id: liveCard.picturedWebsiteSku, label: liveCard.picturedWebsiteSku, websiteSku: liveCard.picturedWebsiteSku }
+        : selected;
+    const href = displayHero
+        ? getCatalogHeroProductHref(displayHero, productGroupHref(group, applicatorParam))
+        : productCardVariantHref(productGroupHref(group, applicatorParam), picturedPreview);
     const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const defaultImageUrl =
+        liveCard.imageUrl ??
         usableProductImageUrl(group.heroImageUrl) ??
         thumbnailUrl ??
         getFirstPreviewImageUrl(variantPreviews) ??
@@ -299,11 +309,11 @@ function ProductGroupCard({
     const cardSpecs = [
         group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity?.replace(/\s*\([^)]*\)/g, ""),
         group.neckThreadSize,
-        catalogHero?.bottleColor ?? group.color,
+        displayHero?.bottleColor ?? group.color,
     ].filter(Boolean).join(" · ");
     // The card sells exactly the assembly it pictures (hero SKU, else the
     // search-ranked or primary SKU) so quick add and the PDP link agree.
-    const picturedSku = catalogHero?.websiteSku ?? selected?.websiteSku ?? selected?.graceSku ?? null;
+    const picturedSku = liveCard.picturedWebsiteSku ?? selected?.websiteSku ?? selected?.graceSku ?? null;
     const primarySku = primaryWebsiteSku ?? primaryGraceSku ?? null;
     const purchaseVariant = useMemo(
         () => resolveCatalogCardPurchaseVariant(variantSources, { picturedSku, primarySku, productTitle: customerDisplayName }),
@@ -321,7 +331,7 @@ function ProductGroupCard({
         >
             <CatalogCardPreview
                 title={customerDisplayName}
-                catalogHero={catalogHero}
+                catalogHero={displayHero}
                 imageUrl={defaultImageUrl}
                 heroHoverImageUrl={group.heroHoverImageUrl}
                 href={href}
@@ -348,7 +358,7 @@ function ProductGroupCard({
                     category: group.category,
                     neckThreadSize: group.neckThreadSize,
                 }}
-                imageUrl={catalogHero?.url ?? defaultImageUrl}
+                imageUrl={defaultImageUrl}
             />
         </motion.article>
     );
