@@ -7,7 +7,7 @@ import { isCheckoutReady } from "@/lib/checkout";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getCatalogCardVariantPreviews, getProductCardVariantPreviews, type ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
 import type { BrowseContext } from "@/lib/products/focused-shopping";
-import { getCatalogHero, getCatalogHeroProductHref, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { getCatalogHero, getCatalogHeroProductHref, resolveLiveCatalogCardHero, type CatalogHero } from "@/lib/products/catalog-heroes";
 
 type GuidedFinderAvailability = "in-stock" | "confirm-availability";
 
@@ -135,14 +135,20 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
 
     for (const group of result.items) {
         const variants = rowsByGroupId.get(group._id)?.variants ?? [];
-        const catalogHero = getCatalogHero(group.slug, variants);
-        const variant = variants.find((candidate) => candidate.websiteSku === catalogHero?.websiteSku) ?? variants[0] ?? null;
+        const staticHero = getCatalogHero(group.slug, variants);
+        const liveCard = resolveLiveCatalogCardHero({
+            heroImageUrl: group.heroImageUrl,
+            staticHero,
+            variants,
+        });
+        const catalogHero = liveCard.catalogHero;
+        const variant = variants.find((candidate) => candidate.websiteSku === liveCard.picturedWebsiteSku) ?? variants[0] ?? null;
         const displayName = getCustomerFacingProductName({ group, variant, fallbackName: group.displayName }).displayName;
         const family = group.family ?? group.category;
         const variantPreviews = getCatalogCardVariantPreviews(variants, {
-            primarySku: catalogHero?.websiteSku ?? primarySkuFor(group._id) ?? undefined,
+            primarySku: liveCard.picturedWebsiteSku ?? primarySkuFor(group._id) ?? undefined,
             productTitle: displayName,
-            defaultImageUrl: group.heroImageUrl,
+            defaultImageUrl: liveCard.imageUrl ?? group.heroImageUrl,
             groupColor: group.color,
             productHref: `/products/${group.slug}`,
         });
@@ -150,7 +156,7 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
             id: variant?.id ?? group._id,
             groupId: group._id,
             displayName,
-            imageUrl: imageFor(group, variant, displayName),
+            imageUrl: liveCard.imageUrl ?? imageFor(group, variant, displayName),
             catalogHero,
             family,
             capacity: capacityLabel(group.capacityMl, group.capacity),
@@ -170,7 +176,9 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
                 shopifyVariantId: variant.shopifyVariantId,
                 shopifySellable: variant.shopifySellable,
             }) : false,
-            href: getCatalogHeroProductHref(catalogHero, `/products/${group.slug}`),
+            href: catalogHero
+                ? getCatalogHeroProductHref(catalogHero, `/products/${group.slug}`)
+                : `/products/${group.slug}${liveCard.picturedWebsiteSku ? `?sku=${encodeURIComponent(liveCard.picturedWebsiteSku)}` : ""}`,
             variantPreviews,
             // Components (caps, sprayers sold alone) have no cap chooser of
             // their own — the thing being chosen IS the product.
@@ -179,7 +187,7 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
                 : catalogCapKind(group.applicatorTypes ?? [], variantPreviews),
             slug: group.slug,
             purchase: resolveCatalogCardPurchaseVariant(variants, {
-                picturedSku: catalogHero?.websiteSku ?? variant?.websiteSku ?? variant?.graceSku ?? null,
+                picturedSku: liveCard.picturedWebsiteSku ?? variant?.websiteSku ?? variant?.graceSku ?? null,
                 primarySku: primarySkuFor(group._id),
                 productTitle: displayName,
             }),
