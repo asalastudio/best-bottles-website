@@ -1,0 +1,51 @@
+{
+  "generatedAt": "2026-09-18T06:15:00Z",
+  "convexUrl": "https://precise-raccoon-123.convex.cloud",
+  "kitable": 2242,
+  "platedKitable": 1259,
+  "kitsIndexed": 420,
+  "kitIntegrityIssues": 0,
+  "note": "Every indexed kit is Cylinder. productKits.integrity reports no stale Boston/Rectangle/Tulip rows.",
+  "waves": {
+    "bostonRoundRectangleTulip": {
+      "platedWithoutKit": 209,
+      "families": {
+        "Boston Round": {"platedWithoutKit": 90, "withCapOff": 52},
+        "Rectangle": {"platedWithoutKit": 60, "withCapOff": 58},
+        "Tulip": {"platedWithoutKit": 59, "withCapOff": 59}
+      }
+    },
+    "elegantCircleSleek": {
+      "platedWithoutKit": 325,
+      "families": {
+        "Elegant": {"platedWithoutKit": 117, "withCapOff": 117},
+        "Circle": {"platedWithoutKit": 103, "withCapOff": 103},
+        "Sleek": {"platedWithoutKit": 105, "withCapOff": 105}
+      }
+    }
+  },
+  "capOffLayoutSample": {
+    "sampled": 12,
+    "registered": 0,
+    "exploded": 12,
+    "rule": "widthGain > 80 or centroidX delta > 40 classifies as exploded beside-layout",
+    "rows": [
+      {"family": "Boston Round", "sku": "GBBstn1ozMtlRollonMattSl", "widthGain": 314},
+      {"family": "Boston Round", "sku": "GBBstn1ozMtlRollonShnSl", "widthGain": 316},
+      {"family": "Rectangle", "sku": "GBRect10SpryBlkMatt", "widthGain": 337},
+      {"family": "Rectangle", "sku": "GBTallRect10SpryBlkMatt", "widthGain": 212},
+      {"family": "Tulip", "sku": "GBTulipAmb5SpryBlkMatt", "widthGain": 312},
+      {"family": "Tulip", "sku": "GBTulipAmb5WhtSht", "widthGain": 300}
+    ]
+  },
+  "blockedBecause": [
+    "No published kits exist in these families, so sibling-part reuse cannot start.",
+    "Published cap-off plates are exploded beside-layouts, so pair-difference against the assembled plate fails the parity gate.",
+    "Master PSDs live on Jordan's machine and are not present in this environment.",
+    "Boston Round has a 25-SKU reviewed kit release (2026-09-12) with local part bytes under dist/paper-doll/boston-kit-release-2026-09-12, which is gitignored and absent here."
+  ],
+  "nextSources": [
+    "Mount BB-PSD-Files-Master and rebuild from reviewed layer recipes.",
+    "Restore dist/paper-doll/boston-kit-release-2026-09-12 and re-check current plate hashes before indexing the approved 25."
+  ]
+}
