@@ -93,7 +93,10 @@ describe("catalogVariantSoldOut", () => {
         expect(catalogVariantSoldOut({ stockStatus: "Sold Out" })).toBe(true);
         expect(catalogVariantSoldOut({ stockStatus: "In Stock" })).toBe(false);
         expect(catalogVariantSoldOut({ stockStatus: "Available to order" })).toBe(false);
+        expect(catalogVariantSoldOut({ stockStatus: "Discontinued" })).toBe(false);
+        expect(catalogVariantSoldOut({ stockStatus: "Lead time applies" })).toBe(false);
         expect(catalogVariantSoldOut({ stockStatus: null })).toBe(false);
+        expect(catalogVariantSoldOut({ stockStatus: "" })).toBe(false);
     });
 });
 
@@ -160,10 +163,30 @@ describe("buildCatalogCartItem", () => {
             webPrice1pc: 0.92,
             priceTiers: ladder,
             checkoutEligible: true,
+            stockStatus: "In Stock",
             shopifyVariantId: "gid://shopify/ProductVariant/1",
             productGroupSlug: "cylinder-5ml-clear-roll-on",
             capColor: "Black",
             neckThreadSize: "13-415",
+        });
+    });
+
+    it("keeps sold-out assemblies addable but quote-only so checkout cannot drop them", () => {
+        const variant = resolveCatalogCardPurchaseVariant([{ ...black, stockStatus: "Out of Stock" }], { productTitle: "x" })!;
+        const item = buildCatalogCartItem(variant, 1, {
+            title: "5 ml Clear Cylinder Roll-On Bottle",
+            productGroupSlug: "cylinder-5ml-clear-roll-on",
+            family: "Cylinder",
+            capacity: "5 ml",
+            color: "Clear",
+            category: "Bottle",
+            neckThreadSize: "13-415",
+        });
+        expect(item).toMatchObject({
+            graceSku: "CYL5-ROLL-BLK",
+            checkoutEligible: false,
+            stockStatus: "Out of Stock",
+            shopifyVariantId: "gid://shopify/ProductVariant/1",
         });
     });
 });

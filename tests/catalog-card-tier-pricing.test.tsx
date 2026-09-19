@@ -265,7 +265,12 @@ describe("tier pricing dialog on the catalog card", () => {
         expect($("catalog-card-add").textContent).toBe("Add to cart");
         click($("catalog-card-add"));
         expect(addItems).toHaveBeenCalledTimes(1);
-        expect(addItems.mock.calls[0][0][0]).toMatchObject({ graceSku: "CYL5-ROLL-BLK", quantity: 1 });
+        expect(addItems.mock.calls[0][0][0]).toMatchObject({
+            graceSku: "CYL5-ROLL-BLK",
+            quantity: 1,
+            checkoutEligible: false,
+            stockStatus: "Out of Stock",
+        });
     });
 
     it("routes unpriced groups to the product page", () => {

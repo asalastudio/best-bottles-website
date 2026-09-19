@@ -76,7 +76,8 @@ export const CATEGORY_ORDER: readonly string[] = CATALOG_CATEGORY_VALUES;
 
 /** Categories whose groups are bottles/jars — shown first under Featured. */
 export const BOTTLE_CATEGORIES: ReadonlySet<string> = new Set([
-    "Glass Bottle", "Glass Jar", "Cream Jar", "Aluminum Bottle", "Plastic Bottle", "Roll-On Bottle", "Lotion Bottle",
+    "Glass Bottle", "Glass Jar", "Cream Jar", "Aluminum Bottle", "Plastic Bottle",
+    "Metal Atomizer", "Roll-On Bottle", "Lotion Bottle",
 ]);
 
 /** Categories that are components/packaging — excluded from the Design Families facet. */

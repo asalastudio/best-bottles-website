@@ -26,6 +26,12 @@ describe("cart-wide minimum", () => {
     });
     it("does not count quote-only, unavailable, or invalid lines", () => {
         expect(checkoutMinimum([{ ...line("A", 50), shopifySellable: false }, { ...line("B", 100), shopifyVariantId: null }, line("C", NaN), line("D", 100, -1)]).subtotal).toBe(0);
+        expect(checkoutMinimum([{ ...line("SOLD", 50), stockStatus: "Out of Stock" }])).toEqual({
+            subtotal: 0,
+            remaining: 50,
+            met: false,
+        });
+        expect(checkoutMinimum([{ ...line("QUOTE", 50), checkoutEligible: false }]).met).toBe(false);
     });
 });
 describe("checkout server minimum", () => {

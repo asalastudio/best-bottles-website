@@ -89,8 +89,8 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     }, [isOpen]);
 
     const subtotal = items.reduce((sum, item) => sum + (item.unitPrice ?? 0) * item.quantity, 0);
-    const minimum = checkoutMinimum(items);
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
+    const minimum = checkoutMinimum(checkoutReadyItems);
     const progressPercent = Math.min((minimum.subtotal / ORDER_MINIMUM) * 100, 100);
     return (
         <AnimatePresence>

@@ -10,6 +10,7 @@
  */
 
 import type { CartItem } from "@/components/CartProvider";
+import { isSoldOutStockStatus } from "@/lib/checkout";
 import {
     activeVolumeTierIndex,
     buildDisplayVolumeTiers,
@@ -94,10 +95,9 @@ export function catalogVariantInStock(variant: Pick<CatalogPurchaseVariant, "sto
     return variant.stockStatus === "In Stock" || variant.stockStatus === "Available to order";
 }
 
-/** Explicit out-of-stock on the list item. Unknown or empty status is not sold-out. */
+/** Explicit out-of-stock on the list item. Unknown or lead-time statuses are not sold-out. */
 export function catalogVariantSoldOut(variant: Pick<CatalogPurchaseVariant, "stockStatus">): boolean {
-    if (!variant.stockStatus) return false;
-    return !catalogVariantInStock(variant);
+    return isSoldOutStockStatus(variant.stockStatus);
 }
 
 /** Catalog cards sell any priced assembly. Stock and Shopify draft status do not swap the CTA to a quote. */
@@ -176,12 +176,14 @@ export type CatalogCartContext = {
 
 /** Same line-item shape the PDP sends, so the cart's tier nudge and checkout split behave identically. */
 export function buildCatalogCartItem(variant: CatalogPurchaseVariant, quantity: number, context: CatalogCartContext): CartItem {
+    const soldOut = catalogVariantSoldOut(variant);
     return {
         graceSku: variant.graceSku,
         itemName: context.title,
         quantity,
         unitPrice: variant.webPrice1pc,
-        checkoutEligible: true,
+        checkoutEligible: !soldOut,
+        stockStatus: variant.stockStatus,
         shopifyVariantId: variant.shopifyVariantId,
         shopifySellable: variant.shopifySellable ?? undefined,
         websiteSku: variant.websiteSku,

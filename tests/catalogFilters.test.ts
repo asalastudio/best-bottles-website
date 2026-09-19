@@ -729,7 +729,7 @@ describe("capacity range tokens", () => {
 describe("featured catalog sort", () => {
     it("labels the default sort Featured, not By Design Family", () => {
         expect(SORT_OPTIONS[0]).toEqual({ value: "featured", label: "Featured" });
-        expect(SORT_OPTIONS.some((option) => option.label === "By Design Family")).toBe(false);
+        expect(SORT_OPTIONS.map((option): string => option.label)).not.toContain("By Design Family");
     });
 
     it("keeps family and collection out of the shopper sort menu", () => {
@@ -768,5 +768,20 @@ describe("featured catalog sort", () => {
         ]);
         expect(sorted[4]?.displayName).toBe("Cylinder 9");
         expect(sorted.at(-1)?.category).toBe("Component");
+    });
+
+    it("interleaves Metal Atomizer with bottle families instead of parking it with components", () => {
+        const sorted = sortCatalogFeatured([
+            { family: "Cylinder", category: "Glass Bottle", capacityMl: 5, displayName: "Cylinder 5" },
+            { family: "Cylinder", category: "Glass Bottle", capacityMl: 30, displayName: "Cylinder 30" },
+            { family: "Atomizer", category: "Metal Atomizer", capacityMl: 5, displayName: "Metal Atomizer 5" },
+            { family: "Cap/Closure", category: "Component", capacityMl: null, displayName: "Cap" },
+        ]);
+        expect(sorted.map((item) => item.displayName)).toEqual([
+            "Cylinder 5",
+            "Metal Atomizer 5",
+            "Cylinder 30",
+            "Cap",
+        ]);
     });
 });

@@ -2294,7 +2294,7 @@ export default function CatalogClient({
                                                 id="catalog-sort"
                                                 value={sortBy}
                                                 onChange={(e) => handleSortChange(e.target.value as SortValue)}
-                                                aria-label="Sort visible catalog results"
+                                                aria-label="Sort by visible catalog results"
                                                 className="appearance-none bg-white border border-champagne rounded-lg px-3 py-1.5 text-xs text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none cursor-pointer"
                                             >
                                                 {catalogSortMenuOptions(Boolean(filters.search)).map((opt) => (
