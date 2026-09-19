@@ -1,12 +1,4 @@
 {
-  "GBCylAmb9MtlRollBlkDot": {
-    "sha256": "fb2d3fc81c000ac4d954754500ce1eb35a2d0aeee212d1cd149dd0723023437d",
-    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylAmb9MtlRollBlkDot.png",
-    "card": "madison-cylinder-shoulder-lock-2026-09-18",
-    "family": "Cylinder",
-    "approvedAt": "2026-09-19T00:19:10.244Z",
-    "lockedAt": "2026-09-19T00:19:10.244Z"
-  },
   "GBCyl50MtlRollBlk": {
     "sha256": "6c0720231863db520f41f40b55560e6ec5f5f9b85e38f5943107dffaa25f3c23",
     "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCyl50MtlRollBlk.png",
@@ -15,6 +7,70 @@
     "approvedAt": "2026-09-19T00:19:10.244Z",
     "lockedAt": "2026-09-19T00:19:10.244Z"
   },
+  "GBCyl5MtlRollBlkDot": {
+    "sha256": "8251a0ed0f795a0c1c3f24a55653c7fcdd322d4f7a5eab8d9efc084cf86faefd",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCyl5MtlRollBlkDot.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "GBCyl5SprySlMatt": {
+    "sha256": "8047788195b4bfa1be6b21b4c8132b22f1e28a5519796db7092b0c6b50cabaf4",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCyl5SprySlMatt.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "GBCyl9MtlRollBlkDot": {
+    "sha256": "cb58e7801b7b99ecc4ef3435ad15220c18a3155421d73e092a4a026667f99bd0",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCyl9MtlRollBlkDot.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "GBCyl9SpryGl": {
+    "sha256": "47104e5a4bd133b5759dd74f03da5520ec8d1778dbfbca8ca949a05f96998e4b",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCyl9SpryGl.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "GBCylAmb9MtlRollBlkDot": {
+    "sha256": "fb2d3fc81c000ac4d954754500ce1eb35a2d0aeee212d1cd149dd0723023437d",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylAmb9MtlRollBlkDot.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T00:19:10.244Z",
+    "lockedAt": "2026-09-19T00:19:10.244Z"
+  },
+  "GBCylAmb9SpryMattSl": {
+    "sha256": "e9db7f7774693ae670b8fc3cf7e580820b869ba55a05f535899c0a8504b004e3",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylAmb9SpryMattSl.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "GBCylBlu5MtlRollBlkDot": {
+    "sha256": "51afa03846c9fcc92996b174bc412953b86a47ff5b3a76d522b3b3c8453a60c3",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylBlu5MtlRollBlkDot.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "GBCylBlu5SpryGlMatt": {
+    "sha256": "66e394377db7cb7d8e19571d0fb2129248890176ea2e5b0bf4a119f0b1fdbbf1",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylBlu5SpryGlMatt.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
   "GBCylBlu9MtlRollBlkDot": {
     "sha256": "b0b930f7c8999367ed0b48ca0f108ef3f7d34c1c60846b3cc81f03c70bc4658b",
     "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylBlu9MtlRollBlkDot.png",
@@ -22,5 +78,61 @@
     "family": "Cylinder",
     "approvedAt": "2026-09-19T00:19:10.244Z",
     "lockedAt": "2026-09-19T00:19:10.244Z"
+  },
+  "GBCylBlu9SpryMattSl": {
+    "sha256": "46c259b79a95187979fd62fa05512d1f4984cc920fb7a956fca4cdc0f93623f3",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylBlu9SpryMattSl.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "GBCylSwrl9SpryMattSl": {
+    "sha256": "b3bb294155683b4b4c2f466ccce941189ef518a69cbb22dad1045c02fb2f4223",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylSwrl9SpryMattSl.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "GBTallCyl9SpryGlMatt": {
+    "sha256": "e7b9c81373fc328f6c1c7b21435f617730766bffc854da124c72bd9d49d32046",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBTallCyl9SpryGlMatt.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "LBCyl9LtnGl": {
+    "sha256": "c769559f923641b4332bb6b7193718b067bd4b0d687376990d6cb5ba5b57cae7",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/LBCyl9LtnGl.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "LBCylAmb9LtnMtSl": {
+    "sha256": "107252b720394b4680120f4b3faf8aee819a762bc1876c9b03f6d3f0dca50fa8",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/LBCylAmb9LtnMtSl.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "LBCylBlu9LtnMattSl": {
+    "sha256": "2cb9fab219f44e670887a71eb53b0ef9b4be045f7da78da34211c30ca773e21a",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/LBCylBlu9LtnMattSl.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "LBCylSwrl9LtnMtSl": {
+    "sha256": "35ebf93e35f09a2eb5d78bf21642322018646e900993aab626d3db3eab916280",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/LBCylSwrl9LtnMtSl.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T03:37:56.445Z",
+    "lockedAt": "2026-09-19T03:37:56.445Z"
   }
 }

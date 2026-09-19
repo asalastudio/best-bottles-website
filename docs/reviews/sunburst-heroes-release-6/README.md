@@ -1,7 +1,12 @@
 # Sunburst release 6 — Cylinder heroes rendered by Madison Studio
 
-Approved by Jordan 2026-09-18 (visual sign-off on per-body contact sheets, locked by image hash).
-22 heroes approved; 3 indexed here. Staging preview only until merged.
+36 Madison renders across two passes on 2026-09-18; 17 indexed here, one per product group,
+locked by image hash. Staging preview only until merged.
+
+Sign-off, stated plainly: Jordan approved the first pass (22 heroes) by visual sign-off on
+per-body contact sheets. The second pass (14 heroes, the registered variants) was indexed on
+Jordan's instruction for the staging demo, with contact sheets sent alongside; their visual
+review happens on this preview, before merge.
 
 ## What this is
 
@@ -27,34 +32,54 @@ one it cannot verify:
    clear collared bottles, and the same glass renders at the same size across roll-on,
    sprayer and pump.
 
-## Why only 3 of the 22 are indexed
+## Why 17 of the 36 are indexed
 
-The registry holds one hero per product group, tied to a specific variant. Madison's run
-rendered the black-closure variant of each group; for 19 groups the registered hero is a
-different closure colour (for example the 9 ml clear fine-mist card is the gold sprayer,
-`GBCyl9SpryGl`). Indexing a black-closure photo onto a gold-closure row would show the
-wrong product, so those 19 are held in `approved-lock-all-22.json` and not indexed.
-`approved-lock.json` is the 3 whose rendered SKU is the registered hero SKU:
+The registry holds one hero per product group, tied to a specific variant. Madison's first
+pass rendered the black-closure variant of each group; for 19 groups the registered hero is
+a different closure colour (the 9 ml clear fine-mist card is the gold sprayer,
+`GBCyl9SpryGl`). Indexing a black-closure photo onto a gold-closure row would show the wrong
+product, so those were not indexed. The second pass rendered the registered variant itself
+for the 14 groups Madison could reach. Indexed = 3 first-pass heroes whose SKU is the
+registered one + 14 second-pass heroes:
 
-| websiteSku | group |
-|---|---|
-| GBCylAmb9MtlRollBlkDot | cylinder-9ml-amber-17-415-rollon |
-| GBCylBlu9MtlRollBlkDot | cylinder-9ml-cobalt-blue-17-415-rollon |
-| GBCyl50MtlRollBlk | cylinder-50ml-clear-16mm-rollon |
+| websiteSku | group | graceSku |
+|---|---|---|
+| GBCyl50MtlRollBlk | cylinder-50ml-clear-16mm-rollon | GB-CYL-BLK-50ML-MRL-BLK |
+| GBCyl5SprySlMatt | cylinder-5ml-clear-13-415-finemist | GB-CYL-CLR-5ML-SPR-MSLV |
+| GBCyl5MtlRollBlkDot | cylinder-5ml-clear-13-415-rollon | GB-CYL-CLR-5ML-MRL-BKDT |
+| GBCylBlu5SpryGlMatt | cylinder-5ml-cobalt-blue-13-415-finemist | GB-CYL-BLU-5ML-SPR-MGLD |
+| GBCylBlu5MtlRollBlkDot | cylinder-5ml-cobalt-blue-13-415-rollon | GB-CYL-BLU-5ML-MRL-BKDT |
+| GBCylAmb9SpryMattSl | cylinder-9ml-amber-17-415-finemist | GB-CYL-AMB-9ML-SPR-MSLV |
+| LBCylAmb9LtnMtSl | cylinder-9ml-amber-17-415-lotionpump | LB-CYL-AMB-9ML-LPM-MSLV |
+| GBCylAmb9MtlRollBlkDot | cylinder-9ml-amber-17-415-rollon | GB-CYL-AMB-9ML-MRL-BKDT |
+| GBTallCyl9SpryGlMatt | cylinder-9ml-clear-13-415-finemist | GB-CYL-CLR-9ML-SPR-MGLD |
+| GBCyl9SpryGl | cylinder-9ml-clear-17-415-finemist | GB-CYL-CLR-9ML-T-22 |
+| LBCyl9LtnGl | cylinder-9ml-clear-17-415-lotionpump | LB-CYL-CLR-9ML-T-02 |
+| GBCyl9MtlRollBlkDot | cylinder-9ml-clear-17-415-rollon | GB-CYL-CLR-9ML-T-02 |
+| GBCylBlu9SpryMattSl | cylinder-9ml-cobalt-blue-17-415-finemist | GB-CYL-BLU-9ML-SPR-MSLV |
+| LBCylBlu9LtnMattSl | cylinder-9ml-cobalt-blue-17-415-lotionpump | LB-CYL-BLU-9ML-LPM-MSLV |
+| GBCylBlu9MtlRollBlkDot | cylinder-9ml-cobalt-blue-17-415-rollon | GB-CYL-BLU-9ML-MRL-BKDT |
+| GBCylSwrl9SpryMattSl | cylinder-9ml-swirl-17-415-finemist | GB-CYL-CLR-9ML-SPR-MSLV-01 |
+| LBCylSwrl9LtnMtSl | cylinder-9ml-swirl-17-415-lotionpump | LB-CYL-CLR-9ML-LPM-MSLV |
 
-Follow-up: render the registered hero variant for the remaining groups. Madison can do 14
-today; 3 are blocked on 360 × 480 references (100 ml matte-gold sprayer, 50 ml matte-gold
-sprayer, 50 ml matte-silver reducer).
+Not reached: 100 ml matte-gold sprayer, 50 ml matte-gold sprayer and 50 ml matte-silver
+reducer are blocked in Madison on 360 x 480 references; two more registered variants did
+not resolve to a Madison job. The six frosted groups and the white 9 ml roll-on were left
+out of both passes: Madison's shoulder detector cannot yet find frosted glass on bone, so
+those renders would block rather than ship. All of these keep their release-5 heroes.
+`approved-lock-all-36.json` holds every render from both passes, including the 19
+black-closure heroes that have no slot here.
 
 ## Files
 
-- `approved-lock.json` — the 3 indexed heroes (sku → sha256 + source file).
-- `approved-lock-all-22.json` — everything Jordan approved in this pass.
+- `approved-lock.json` — the 17 indexed heroes (sku → sha256 + source file).
+- `approved-lock-all-36.json` — every Madison render from both passes.
 - `madison-provenance.json` — per hero: Madison image id and URL, grace SKU, group, hash,
   and the registry URL it replaces.
 - `registry-rollback.json` — written by `scripts/publish-sunburst-heroes.mjs release-6`;
   restore each `from` to undo.
 
-Indexed with `node scripts/publish-sunburst-heroes.mjs release-6` (repointed 3, skipped 0).
+Indexed with `node scripts/publish-sunburst-heroes.mjs release-6` in a single run from
+`origin/main`'s registry (repointed 17, skipped 0), so the rollback holds every true original.
 `tests/catalog-approved-heroes.test.ts`: 396 passed. Touches no Shopify, Convex or hosted
 media.
