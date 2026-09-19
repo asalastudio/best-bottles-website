@@ -1,0 +1,20 @@
+{
+ "schemaVersion": 1,
+ "release": "apothecary-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/apothecary",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Apothecary kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 0,
+  "approved": 0,
+  "setAside": 0,
+  "notExtracted": 5
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/apothecary-kits.jpg",
+ "reviewSheetSha256": "e348c7c4a2e70616775de7ef7fb332211da0965afea5cb241873f04281a4161f",
+ "rows": [],
+ "setAside": [],
+ "approvalSha256": "79350c2932756e45ad4ba38ff6d1f5bc07fdf0412850cdde3b30e61361263ec9"
+}

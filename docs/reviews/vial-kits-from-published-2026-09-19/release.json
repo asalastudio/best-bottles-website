@@ -1,0 +1,81 @@
+{
+ "schemaVersion": 1,
+ "release": "vial-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/vial",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Vial kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 15,
+  "approved": 15,
+  "setAside": 0,
+  "notExtracted": 7
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/vial-kits.jpg",
+ "reviewSheetSha256": "c978e13f6d2c83635b8aa1771b18abf0135b6428f35d0ee574df0eb85e282f29",
+ "rows": [
+  {
+   "sku": "GB09BlackCapApp",
+   "plateSha256": "bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1"
+  },
+  {
+   "sku": "GB09BlackCapSht",
+   "plateSha256": "4897b6e25d86ad355084858973dc7408eb265fc8a3243d8db6c5d74b6cc8d16f"
+  },
+  {
+   "sku": "GBV1DrmBlkDropper",
+   "plateSha256": "dcfbfacb47fe85ad6b72208079bf71a3137c6e7a6d8c1c98541cfa86881fc820"
+  },
+  {
+   "sku": "GBVAmb1DrmBlackCapSht",
+   "plateSha256": "e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5"
+  },
+  {
+   "sku": "GBVAmb1DrmWhtCapSht",
+   "plateSha256": "65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2"
+  },
+  {
+   "sku": "GBVAmb2BlackCap",
+   "plateSha256": "dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102"
+  },
+  {
+   "sku": "GBVAmb2WhtCap",
+   "plateSha256": "94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0"
+  },
+  {
+   "sku": "GBVBlu1DrmBlackCapSht",
+   "plateSha256": "0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a"
+  },
+  {
+   "sku": "GBVBlu1DrmBlkDropper",
+   "plateSha256": "565d7bb8f3316ccb3001215e8cfbe50b626f346d28d1e56abe5067a6d64d36e9"
+  },
+  {
+   "sku": "GBVBlu1DrmWhtCapSht",
+   "plateSha256": "8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde"
+  },
+  {
+   "sku": "GBVGr1DrmBlackCapSht",
+   "plateSha256": "e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df"
+  },
+  {
+   "sku": "GBVGr1DrmBlkDropper",
+   "plateSha256": "59f7b8e86e65c77b5a43c78dc21d81d88b4933fe8bf8f310387cccb1dda555fc"
+  },
+  {
+   "sku": "GBVGr1DrmWhtCapSht",
+   "plateSha256": "3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d"
+  },
+  {
+   "sku": "GBVialClr2mlBlackCap",
+   "plateSha256": "2c2522ffc06da3eb084ba920364e1735d4a78db63e359a97369b6b631cf79820"
+  },
+  {
+   "sku": "GBVialClr2mlWhtCap",
+   "plateSha256": "94967ea010feb494787f7f1eea51590060e5c20fbcfc9ddb32798c72ce5e3abe"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "2f2d8ceafed0b0ded116ba29b16920a608dfb040162c1b84540802df89fbc58f"
+}

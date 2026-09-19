@@ -1,0 +1,25 @@
+{
+ "schemaVersion": 1,
+ "release": "teardrop-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/teardrop",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Teardrop kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 1,
+  "approved": 1,
+  "setAside": 0,
+  "notExtracted": 2
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/teardrop-kits.jpg",
+ "reviewSheetSha256": "df59cb5b39973096b96638f4af5aa0e299d8284a764a92ad26aca0a43e0e587c",
+ "rows": [
+  {
+   "sku": "GBTRDPClear",
+   "plateSha256": "d0c2b7136acaec8742664f8b0c5cc7aa168ad0fb0a7d93718a89e9f6ff3781fe"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "b06e2dee7ba744235396a0a1f03b802973a1148e7dae260124dec9ef386fc6d0"
+}

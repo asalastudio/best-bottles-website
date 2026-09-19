@@ -1,0 +1,29 @@
+{
+ "schemaVersion": 1,
+ "release": "atomizer-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/atomizer",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Atomizer kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 2,
+  "approved": 2,
+  "setAside": 0,
+  "notExtracted": 12
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/atomizer-kits.jpg",
+ "reviewSheetSha256": "7ba4a6ac26739f8dbccda7addbbb08b22feb75850ac9b8691bd4f58c7695ba81",
+ "rows": [
+  {
+   "sku": "GBAtom10Blk",
+   "plateSha256": "a2d38a2811ed3a24f2e68084190371f0bb641eb4eaf86a31544d094d2e0238e5"
+  },
+  {
+   "sku": "GBAtom5Sl",
+   "plateSha256": "d0f0b547002723458f59fce5c08e9c161e30bd7f6ffc98f329abe2700a57a01c"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "8f1574b78f3e4a9dbbe269e2912bdc498aea94c8fb3732ba846ae0ac39f7d9ab"
+}

@@ -1,0 +1,253 @@
+{
+ "schemaVersion": 1,
+ "release": "circle-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/circle",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Circle kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 58,
+  "approved": 58,
+  "setAside": 0,
+  "notExtracted": 38
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/circle-kits.jpg",
+ "reviewSheetSha256": "d51339c3a4204ac04809a04ea336ca18ae5b67d9a175083fa895918938ac327b",
+ "rows": [
+  {
+   "sku": "GBCrclFrst50RdcrIvyLthr",
+   "plateSha256": "616048d07db56ba715cfb82cf8ac66c12f94328f05bf2b28d3b47e3e68282749"
+  },
+  {
+   "sku": "GBCrcl100SpryMtGl",
+   "plateSha256": "3f58d9a2f17a18ce7c02bce04ec6448afe1264f38651a01a623c675300c419ee"
+  },
+  {
+   "sku": "GBCrcl100SpryMtSl",
+   "plateSha256": "3292126c8959a2537c75a7cf355a9d75d847fc1003a4a89c40e7a5ebd8cb6766"
+  },
+  {
+   "sku": "GBCrcl100SpryShnBlk",
+   "plateSha256": "0473f69fbb3ceeddc3ddafc294c483cb6a39d5582721a73daa5d4e7eed549409"
+  },
+  {
+   "sku": "GBCrcl100SpryShnGl",
+   "plateSha256": "f43efff70dca0070af12d043254326857829ac8c236a7843e8c2032cfb39dff2"
+  },
+  {
+   "sku": "GBCrcl100SpryShnSl",
+   "plateSha256": "e019ef7295584c6d6a33ad9f250801c7559758741ee3c42d4e222d906f191a7a"
+  },
+  {
+   "sku": "GBCrcl15BlkSht",
+   "plateSha256": "f309df0001382b6f55885860da04ffe21bc7f0a4aeafe5928b5f8b723a3d09d9"
+  },
+  {
+   "sku": "GBCrcl15Gl",
+   "plateSha256": "403dcb7e596f2920db7f0ea8668bd693f9ac368f20b9d561dd29f608c2673ef6"
+  },
+  {
+   "sku": "GBCrcl15MtlRollBlkSh",
+   "plateSha256": "1ccb43cee88cd84e7a02b35bb4aa9d81b15e50e24a74d7551e5851dfb40abb69"
+  },
+  {
+   "sku": "GBCrcl15MtlRollCuMatt",
+   "plateSha256": "28094d26a7d795943b8fd1cf0e928336f6ce58d8d88193693826451416de810b"
+  },
+  {
+   "sku": "GBCrcl15MtlRollGlMatt",
+   "plateSha256": "154f5bcb1e88bf5a1c4706ae579fa6d9f6f41c94fb1257613d38a5b8d228b3ea"
+  },
+  {
+   "sku": "GBCrcl15MtlRollGlSh",
+   "plateSha256": "245ae600ae47b39f6f23041a23083bd3c0d2829144b2f83be7e303bad610d826"
+  },
+  {
+   "sku": "GBCrcl15MtlRollPinkDot",
+   "plateSha256": "f9890cd21d6ec35cb2dd5fb521f9d8589f72ffb3d1719d4e71a8f386ddf2f1ed"
+  },
+  {
+   "sku": "GBCrcl15MtlRollSlDot",
+   "plateSha256": "4aeca3008ae7c1fa879583409c3e9607102c1bc730f36e72f7542a2a76c29816"
+  },
+  {
+   "sku": "GBCrcl15MtlRollSlMatt",
+   "plateSha256": "22710511f5c0fde03ad7f083f895a5232c513a2510a9dbb4a2339bc11b890ffe"
+  },
+  {
+   "sku": "GBCrcl15MtlRollSlSh",
+   "plateSha256": "ab74c6559200345b8347fa6acbb0efdcdd6b846274e9284483bd6012e3f9b495"
+  },
+  {
+   "sku": "GBCrcl15RollBlkSh",
+   "plateSha256": "1ccb43cee88cd84e7a02b35bb4aa9d81b15e50e24a74d7551e5851dfb40abb69"
+  },
+  {
+   "sku": "GBCrcl15RollCuMatt",
+   "plateSha256": "28094d26a7d795943b8fd1cf0e928336f6ce58d8d88193693826451416de810b"
+  },
+  {
+   "sku": "GBCrcl15RollGlMatt",
+   "plateSha256": "154f5bcb1e88bf5a1c4706ae579fa6d9f6f41c94fb1257613d38a5b8d228b3ea"
+  },
+  {
+   "sku": "GBCrcl15RollGlSh",
+   "plateSha256": "245ae600ae47b39f6f23041a23083bd3c0d2829144b2f83be7e303bad610d826"
+  },
+  {
+   "sku": "GBCrcl15RollPinkDot",
+   "plateSha256": "f9890cd21d6ec35cb2dd5fb521f9d8589f72ffb3d1719d4e71a8f386ddf2f1ed"
+  },
+  {
+   "sku": "GBCrcl15RollSlDot",
+   "plateSha256": "4aeca3008ae7c1fa879583409c3e9607102c1bc730f36e72f7542a2a76c29816"
+  },
+  {
+   "sku": "GBCrcl15RollSlMatt",
+   "plateSha256": "22710511f5c0fde03ad7f083f895a5232c513a2510a9dbb4a2339bc11b890ffe"
+  },
+  {
+   "sku": "GBCrcl15RollSlSh",
+   "plateSha256": "ab74c6559200345b8347fa6acbb0efdcdd6b846274e9284483bd6012e3f9b495"
+  },
+  {
+   "sku": "GBCrcl15Sl",
+   "plateSha256": "28239df653f650136b5e1c24d4a60cf5de631f9e50354d19e475d890e90e3d4f"
+  },
+  {
+   "sku": "GBCrcl15SpryBlkSh",
+   "plateSha256": "9771eba44f8f1f43926fbda0835ce63a8e3582b5ef1f42fc13f7f63c49da25d3"
+  },
+  {
+   "sku": "GBCrcl15SpryBluMatt",
+   "plateSha256": "5c1d642370e290bdf4ac466e8a713e865e9608d56b29c0b52d6d728576cfcd98"
+  },
+  {
+   "sku": "GBCrcl15SpryCuMatt",
+   "plateSha256": "662ccfeb987bac98c59148fd65b3d4ea54f4a44ffb9b9c6f453f7e03479b58e8"
+  },
+  {
+   "sku": "GBCrcl15SpryGlMatt",
+   "plateSha256": "90725f2a99fd684f94741359b01d7db6fd9d8319afaae65744dfa8c5f80b072b"
+  },
+  {
+   "sku": "GBCrcl15SpryGlSh",
+   "plateSha256": "e35e61ce81a6ad7f63f8c8af5875e867b0e38c2180942c1522aadcb7a1a06729"
+  },
+  {
+   "sku": "GBCrcl15SprySlMatt",
+   "plateSha256": "fbfde0b5133216433fc01d7813522a6ef7ef8f90e85a04bc034b5bd05afb01f0"
+  },
+  {
+   "sku": "GBCrcl15SprySlSh",
+   "plateSha256": "f03c23278e51d094a8e770d509228b42a71896acb1add0396ae0d3e056737a03"
+  },
+  {
+   "sku": "GBCrcl15WhtSht",
+   "plateSha256": "105a599e3e841217247dd0ad53901056bac14f60433456ee4f800d2b936c6f4f"
+  },
+  {
+   "sku": "GBCrcl30SlCap",
+   "plateSha256": "19f910d982b47f8e26623922312a495bddf079b19c04058018dadb60f21a089c"
+  },
+  {
+   "sku": "GBCrcl50SpryCu",
+   "plateSha256": "6bfc2eb75dba0b137391d1662547070ecae1e763b49c8dbaa5aa3c30be684da0"
+  },
+  {
+   "sku": "GBCrcl50SpryMtGl",
+   "plateSha256": "51027e56f524bd0e67c48eef3deb48ac3fa3b5f7b9623332ec6e76664f4de3c0"
+  },
+  {
+   "sku": "GBCrcl50SpryMtSl",
+   "plateSha256": "a3d1becf5a382aaac4c5d6c0b1ef18ac7907a4893c25704b5adc9de55a25ac39"
+  },
+  {
+   "sku": "GBCrcl50SpryShnBlk",
+   "plateSha256": "a0eade499edcbda0c56f972f7ecdf49ec67dc3fcd2a3f1d1a0cf60f9e14b7271"
+  },
+  {
+   "sku": "GBCrcl50SpryShnGl",
+   "plateSha256": "67a768af9665f038d5e3f52f56670bcdd8ef71c483ecf4eade8f0a30e2fdc2c9"
+  },
+  {
+   "sku": "GBCrcl50SpryShnSl",
+   "plateSha256": "620000e143644ea1e6cd4de85556de4af942c2e97e2f211160f0045413c087dc"
+  },
+  {
+   "sku": "LBCrcl100LtnClOvrCap",
+   "plateSha256": "d8c48f7438c428eee2c38d9d2b157226c51443ba6d54ef8662e15ca193abdade"
+  },
+  {
+   "sku": "LBCrcl100LtnMtGl",
+   "plateSha256": "303251d4528d11a5d496de043b9407acd29f018dfd7290cf6c8dfb1a8e570b51"
+  },
+  {
+   "sku": "LBCrcl100LtnMtSl",
+   "plateSha256": "02c06d21eca66b646d7621d178cc3d1388b982265b7de219285d1402acf32ac7"
+  },
+  {
+   "sku": "LBCrcl100LtnShnBlk",
+   "plateSha256": "1a22b72b5f9374fd5dd746c83dda642eb3532a69a15e397a76672130b65ee327"
+  },
+  {
+   "sku": "LBCrcl100LtnShnGl",
+   "plateSha256": "36b5073a44cc1f9edbf39af7c79f29d01539afbbd0ad103fa8245f3e009d5d52"
+  },
+  {
+   "sku": "LBCrcl100LtnShnSl",
+   "plateSha256": "557aa9e58a501bae4015240522a2cdfc8cdc44ae49da92fcef7ee1e206d30ee7"
+  },
+  {
+   "sku": "LBCrcl50LtnClOvrCap",
+   "plateSha256": "9a004fb670fff1a3d070f004bcb95453ea5ba46b4c31340a877bd26c22364d55"
+  },
+  {
+   "sku": "LBCrcl50LtnCu",
+   "plateSha256": "6bfc2eb75dba0b137391d1662547070ecae1e763b49c8dbaa5aa3c30be684da0"
+  },
+  {
+   "sku": "LBCrcl50LtnMtGl",
+   "plateSha256": "922c1b544693da6af51617c0aba445c635891b1ec7f6933d3294227746538428"
+  },
+  {
+   "sku": "LBCrcl50LtnMtSl",
+   "plateSha256": "42bc37deda47200d9c9925d811cf18de65d646131f17f1de94a10ee2a535b470"
+  },
+  {
+   "sku": "LBCrcl50LtnShnBlk",
+   "plateSha256": "13fa7e806d605fc47ccb2a5841c3af9722ad391df2d16755652ef1f8f57dca9b"
+  },
+  {
+   "sku": "LBCrcl50LtnShnGl",
+   "plateSha256": "c00ecea1ea76df5c3a301d931d338db9bedf9ff5d372964bb5373a2c331ce207"
+  },
+  {
+   "sku": "LBCrcl50LtnShnSl",
+   "plateSha256": "c7914dd6b3fa43c9544cf49e869eddc7177acf8a808e9048962f3f2d87fae8bf"
+  },
+  {
+   "sku": "LBCrclFrst100LtnClOvrCap",
+   "plateSha256": "81f6006c6633552dfd04f6fc3439583cd98063b7e97fe2250e1c1462cc540cc5"
+  },
+  {
+   "sku": "LBCrclFrst100LtnMtSl",
+   "plateSha256": "91bc7beb7101b1f5c81c3f6c94b118aa7928408ec601fe73328298e1df9ddbbf"
+  },
+  {
+   "sku": "LBCrclFrst100LtnShnBlk",
+   "plateSha256": "4baec44dd49066c1751bf99eb12b61c7948671d800b52617aae53daed53a1ffb"
+  },
+  {
+   "sku": "LBCrclFrst100LtnShnGl",
+   "plateSha256": "8bc3051fe930592a82956efb3ec2c5987475cff792ed0bf863997b428f3fd641"
+  },
+  {
+   "sku": "LBCrclFrst100LtnShnSl",
+   "plateSha256": "5532e9924b3339698b7de1fc0113219995ff5dad81c6199f2ce51406dec76dfd"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "ae6907df4ea9230ffaaaaac9351edafa8d8ba52bc1ac6edadbca9ac27ada9c22"
+}
