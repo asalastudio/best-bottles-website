@@ -1,0 +1,5 @@
+{
+ "supersededBy": "docs/reviews/round-plates-2026-09-18-reissued/approved-lock.json",
+ "why": "the manifest this lock cites was rewritten by a later render of the same family; the approved plates were re-verified byte-identical and reissued against a committed copy",
+ "at": "2026-09-19T06:29:51.575Z"
+}

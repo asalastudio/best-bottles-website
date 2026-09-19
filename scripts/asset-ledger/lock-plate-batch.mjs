@@ -106,6 +106,12 @@ const dir = path.join(ROOT, outRel);
 mkdirSync(dir, { recursive: true });
 const file = path.join(dir, "approved-lock.json");
 if (existsSync(file)) throw new Error("a lock already exists for this release; locks are immutable");
+// Keep the approved manifest beside the lock. Binding evidence to a file in the
+// build directory breaks the moment that family is rendered again, even when
+// every approved plate comes out byte-identical, which is what happened to the
+// Round lock after the hanging-closure fix.
+writeFileSync(path.join(dir, "prepared-manifest.json"), manifestBytes);
+lock.preparedManifest = { file: `${outRel}/prepared-manifest.json`, sha256: lock.approvalFileSha256, copiedFrom: manifestRel };
 writeFileSync(file, JSON.stringify(lock, null, 1) + "\n");
 console.log(`locked ${rows.length} plates -> ${path.relative(ROOT, file)}`);
 console.log(`  excluded because production already carries them: ${lock.scope.alreadyLiveAndExcluded}`);

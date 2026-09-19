@@ -1,0 +1,47 @@
+{
+ "schemaVersion": 1,
+ "release": "Teardrop plates 2026-09-18",
+ "approvedAt": "2026-09-19T06:28:30.075Z",
+ "actor": "Jordan · approved in chat (\"I approve the 32\"), from the legacy and small-family contact sheets",
+ "approvalId": "ec753e3e-5bf0-4e48-a914-cd44d8fc670d",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/tail-new-plates.jpg",
+ "reviewPacketSha256": "76c43d55ae87e79021806638f279590452fd6cc9951bcf9a0f6f5c12b095f05c",
+ "approvalFile": "dist/paper-doll/teardrop-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "5237045c73e2136f030ca9b99ea2361f527009cf0e6d5376d793337e2d26c8be",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "GBTRDPClear",
+   "graceSku": "GB-TRD-CLR-9ML",
+   "familyId": "teardrop-9ml-clear-ground",
+   "closure": "Glass Stopper",
+   "plate": {
+    "key": "teardrop-9ml-clear-ground/GBTRDPClear.front-on.webp",
+    "storeKey": "plates/teardrop-9ml-clear-ground/GBTRDPClear/d0c2b7136acaec8742664f8b0c5cc7aa168ad0fb0a7d93718a89e9f6ff3781fe.front-on-1000x1100.webp",
+    "sha256": "d0c2b7136acaec8742664f8b0c5cc7aa168ad0fb0a7d93718a89e9f6ff3781fe",
+    "bytes": 21370,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "61aedfe4bec7c7521fd3ecbdc671167239441032b898cf23815bf3c830e68b44",
+    "bytes": 1656
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "17. Additional Bottles/GBTRDPClear..psd",
+    "sha256": "72beb73c3889836e480cf6e089516f46a38418bdf6156687a9231650452e6f77"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 3,
+  "alreadyLiveAndExcluded": 2
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}
