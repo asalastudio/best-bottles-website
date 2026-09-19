@@ -140,16 +140,24 @@ def alpha_gate(rgba: np.ndarray) -> tuple[bool, dict]:
     total = a.size
     transparent = float((a == 0).sum()) / total
     semi = int(((a > 0) & (a < 255)).sum())
-    ys, xs = np.where(a > 0)
+    # A part whose ink touches its own crop edge was cut, not cut out. That is a
+    # claim about the picture, so ask it of the picture: composite the part onto
+    # the white page it will be shown on and find where it actually darkens it.
+    # Asking `alpha > 0` instead asks about the near-invisible halo these studio
+    # photographs carry, which runs to the frame on parts whose ink stops forty
+    # pixels inside it — 64 of 66 rows held by this test were of that kind.
+    alpha = a.astype(np.float32) / 255.0
+    on_white = rgba[:, :, :3].astype(np.float32) * alpha[:, :, None] + 255.0 * (1.0 - alpha[:, :, None])
+    ink = on_white.min(axis=2) < 245
+    ys, xs = np.where(ink)
     if len(xs) == 0:
         return False, {"reason": "empty part"}
-    # a part whose ink touches its own crop edge was cut, not cut out
-    box = (xs.min(), ys.min(), xs.max(), ys.max())
+    box = (int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max()))
     h, w = a.shape
     touching = box[0] <= 1 or box[1] <= 1 or box[2] >= w - 2 or box[3] >= h - 2
     ok = transparent >= 0.05 and semi >= 50 and not touching
     return ok, {"transparentFraction": round(transparent, 4), "semiTransparentPixels": semi,
-                "touchesOwnEdge": bool(touching)}
+                "touchesOwnEdge": bool(touching), "inkBox": box}
 
 
 def main():
