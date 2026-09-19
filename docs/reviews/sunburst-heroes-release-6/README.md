@@ -78,6 +78,12 @@ references (100 ml and 50 ml matte-gold sprayers, 50 ml matte-silver reducer), a
 did not resolve to a Madison job. `approved-lock-all-39.json` holds every render from all
 passes, including the 19 black-closure heroes that have no slot here.
 
+Naming note: Madison lists a group slugged `cylinder-9ml-white-17-415-rollon`. There is no
+white glass in the catalog. Jordan confirmed 2026-09-18 that it is swirl glass with a white
+cap (website SKUs `GBCylSwrl9MtlRollWht`, `GBCylSwrl9RollWht`); the slug and the Convex
+colour "White" carry the cap colour by mistake. It has no registry row, so nothing here
+depends on it.
+
 ## Files
 
 - `approved-lock.json` — the 20 indexed heroes (sku → sha256 + source file).
