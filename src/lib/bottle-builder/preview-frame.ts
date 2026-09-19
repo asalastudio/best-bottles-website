@@ -11,7 +11,11 @@ export function previewFrame(anchors: { axisX: number; seatY: number; baselineY:
     const bottom = Math.max(...bounds.map(b => b.bottom));
     const size = Math.max(right - left, bottom - top);
     if (thumbnail) {
-        const edge = size * 1.22;
+        // Scale < 1 adds padding so a 5 ml tile stays smaller than 100 ml.
+        // Scale > 1 is ignored: the bottle already fills the square, and a CSS
+        // zoom from the baseline clipped the neck on 50/100 ml Cylinder.
+        const fit = Math.min(1, Math.max(0.2, scale));
+        const edge = size * 1.22 / fit;
         return { x: (left + right - edge) / 2, y: (top + bottom - edge) / 2, width: edge, height: edge };
     }
     const pad = size * .06;

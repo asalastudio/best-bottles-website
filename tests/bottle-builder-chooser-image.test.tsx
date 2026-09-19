@@ -99,3 +99,23 @@ it("still draws the tile once the selected bottle's full kit replaces the stand-
     expect(text).not.toContain("Image unavailable");
     expect(html).toContain("https://blob.example/cylinder-master/body.webp");
 });
+
+it("does not CSS-zoom a 100 ml thumbnail, which clipped the neck after the crop", () => {
+    const [slim] = slimBuilderBodies([cylinder50]);
+    const tile = clearBodyPreview(slim!);
+    const el = document.createElement("div");
+    const root = createRoot(el);
+    vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
+    try {
+        act(() => root.render(<BuilderImage config={tile} parts={previewParts(tile, "body")} label="100 ml Cylinder bottle" scale={1.24} thumbnail placeholder />));
+        const html = el.innerHTML;
+        expect(html).toContain("data-chooser-img");
+        expect(html).not.toContain("scale(1.24)");
+        expect(html).not.toContain("scale(1.3392)");
+        const img = el.querySelector("img") as HTMLImageElement;
+        expect(parseFloat(img.style.top)).toBeLessThanOrEqual(0);
+    } finally {
+        act(() => root.unmount());
+        vi.unstubAllGlobals();
+    }
+});
