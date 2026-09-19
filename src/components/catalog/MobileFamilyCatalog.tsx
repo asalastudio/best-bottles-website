@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Link from "next/link";
+import LocaleLink from "@/components/LocaleLink";
 import { SlidersHorizontal, X } from "@/components/icons";
 import FocusedProductCard from "./FocusedProductCard";
 import {
@@ -14,6 +14,8 @@ import type {
   GuidedFinderFamily,
   GuidedFinderProduct,
 } from "@/lib/products/guided-finder";
+import { localizeFamilyName } from "@/i18n/catalogCopy";
+import { useCopy } from "@/i18n/useCopy";
 import styles from "./MobileFamilyCatalog.module.css";
 
 type Props = {
@@ -34,6 +36,7 @@ type Props = {
 };
 
 export default function MobileFamilyCatalog(p: Props) {
+  const t = useCopy("catalog");
   const dialog = useRef<HTMLDialogElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
   const [draft, setDraft] = useState(p.filters);
@@ -126,11 +129,11 @@ export default function MobileFamilyCatalog(p: Props) {
           <SlidersHorizontal size={19} /> Filters
           {chips.length ? ` (${chips.length})` : ""}
         </button>
-        <Link
+        <LocaleLink
           href={`/matrix?family=${encodeURIComponent(p.family)}&from=finder`}
         >
           Build Your Bottle
-        </Link>
+        </LocaleLink>
       </div>
       {chips.length > 0 && (
         <div className={styles.chips} aria-label="Active filters">
@@ -175,7 +178,7 @@ export default function MobileFamilyCatalog(p: Props) {
           <h2>No matching products</h2>
           <p>Try fewer filters to see more {p.family} bottles.</p>
           <button onClick={() => p.onFilters(clear)}>Clear filters</button>
-          <button onClick={p.onHelp}>Ask Grace for help</button>
+          <button onClick={p.onHelp}>{t("askGraceForHelp")}</button>
         </div>
       )}
       <details className={styles.about}>
@@ -184,7 +187,7 @@ export default function MobileFamilyCatalog(p: Props) {
         {/* Existing editorial photography is retained below the listings. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={p.hero} alt={p.heroAlt} loading="lazy" />
-        <button onClick={p.onHelp}>Ask Grace for help choosing</button>
+        <button onClick={p.onHelp}>{t("askGraceForHelpChoosing")}</button>
       </details>
       <dialog
         ref={dialog}

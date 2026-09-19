@@ -10,10 +10,10 @@ import { ensurePortalShopifyCustomer, getPortalViewer } from "./server";
  * Wholesale checkout: a Shopify draft order carrying the account's customer.
  *
  * Returns null whenever a wholesale checkout is not possible — signed out, no
- * portal account, missing scope, Shopify down. The caller then falls back to the
- * anonymous cart permalink, so the worst outcome is a buyer paying tax they
- * could have avoided. NOTHING here may block a purchase; that is the rule the
- * whole feature is built on.
+ * portal account, missing scope, Shopify down. The caller then falls back to
+ * a Storefront Cart (or a permalink if the Cart API is unavailable), so the
+ * worst outcome is a buyer paying tax they could have avoided. NOTHING here
+ * may block a purchase; that is the rule the whole feature is built on.
  */
 export async function resolveWholesaleCheckoutUrl(
     items: CheckoutLineItem[],

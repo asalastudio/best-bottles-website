@@ -1,22 +1,31 @@
 import type { Metadata } from "next";
+import { getLocale } from "next-intl/server";
 import CatalogClient, { type CatalogSearchResult } from "./CatalogClient";
 import Footer from "@/components/Footer";
 import { api } from "../../../convex/_generated/api";
 import { paramsToFilters } from "@/lib/catalogFilters";
 import { getCatalogConvexClient, searchCatalogServer } from "@/lib/catalogServer";
-import { SITE_URL } from "@/lib/seo";
+import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
+import { buildHreflangAlternates } from "@/i18n/metadata";
+import enMessages from "../../../messages/en.json";
+import esMessages from "../../../messages/es.json";
 
 const PAGE_SIZE = 24;
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export const metadata: Metadata = {
-    title: { absolute: "Catalog — Wholesale Glass Bottles & Packaging | Best Bottles" },
-    description:
-        "Browse wholesale glass bottles, jars, sprayers, droppers, roll-ons, and packaging components by family, capacity, color, applicator, and neck finish.",
-    alternates: { canonical: `${SITE_URL}/catalog` },
-};
+export async function generateMetadata(): Promise<Metadata> {
+    const localeValue = await getLocale();
+    const locale: AppLocale = isLocale(localeValue) ? localeValue : defaultLocale;
+    const copy = locale === "es" ? esMessages.catalog : enMessages.catalog;
+    const path = locale === "es" ? "/es/catalog" : "/catalog";
+    return {
+        title: { absolute: copy.seoTitle },
+        description: copy.description,
+        alternates: buildHreflangAlternates(path),
+    };
+}
 
 function toURLSearchParams(input: Record<string, string | string[] | undefined>): URLSearchParams {
     const params = new URLSearchParams();

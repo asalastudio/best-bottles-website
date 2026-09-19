@@ -9,7 +9,7 @@ describe("Sentry is wired into every runtime", () => {
         const source = read("next.config.ts");
         // The /config subpath, not the package root — the root import is deprecated.
         expect(source).toContain('import { withSentryConfig } from "@sentry/nextjs/config"');
-        expect(source).toContain("export default withSentryConfig(nextConfig, {");
+        expect(source).toContain("export default withSentryConfig(withNextIntl(nextConfig), {");
         expect(source).toContain('tunnelRoute: "/monitoring-tunnel"');
         expect(read("src/proxy.ts")).toContain("monitoring-tunnel");
     });

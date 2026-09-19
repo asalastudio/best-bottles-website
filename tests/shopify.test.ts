@@ -8,9 +8,13 @@
 import { describe, expect, it, vi, beforeEach, afterAll } from "vitest";
 import {
     buildCheckoutUrl,
+    createStorefrontCartCheckout,
     getShopifyDomain,
+    getStorefrontAccessToken,
     normalizeShopifyVariantId,
+    resolveAnonymousCheckoutUrl,
     resolveCheckoutVariantsByIds,
+    variantMerchandiseId,
     type CheckoutLineItem,
 } from "../src/lib/shopify";
 
@@ -208,5 +212,178 @@ describe("UX: checkout flow scenarios", () => {
         const items: CheckoutLineItem[] = [{ variantId: "50001", quantity: 1 }];
         const url = buildCheckoutUrl(items);
         expect(url).toMatch(/\/cart\/50001:1$/);
+    });
+});
+
+describe("variantMerchandiseId", () => {
+    it("turns numeric IDs and GIDs into Storefront merchandise IDs", () => {
+        expect(variantMerchandiseId("49876543210987")).toBe(
+            "gid://shopify/ProductVariant/49876543210987",
+        );
+        expect(variantMerchandiseId("gid://shopify/ProductVariant/49876543210987")).toBe(
+            "gid://shopify/ProductVariant/49876543210987",
+        );
+    });
+});
+
+describe("createStorefrontCartCheckout", () => {
+    const originalFetch = global.fetch;
+    const originalEnv = process.env;
+
+    beforeEach(() => {
+        process.env = {
+            ...originalEnv,
+            NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN: "best-bottles.myshopify.com",
+            SHOPIFY_STOREFRONT_TOKEN: "storefront-token",
+        };
+    });
+
+    afterAll(() => {
+        global.fetch = originalFetch;
+        process.env = originalEnv;
+    });
+
+    it("returns null without calling Shopify when the Storefront token is missing", async () => {
+        delete process.env.SHOPIFY_STOREFRONT_TOKEN;
+        global.fetch = vi.fn() as typeof fetch;
+
+        expect(getStorefrontAccessToken()).toBeNull();
+        await expect(createStorefrontCartCheckout([
+            { variantId: "12345", quantity: 2, sku: "GB-CYL-CLR-9ML" },
+        ])).resolves.toBeNull();
+        expect(global.fetch).not.toHaveBeenCalled();
+    });
+
+    it("creates a Storefront Cart with merchandise GIDs and SKU attributes", async () => {
+        global.fetch = vi.fn().mockResolvedValue(
+            new Response(JSON.stringify({
+                data: {
+                    cartCreate: {
+                        cart: {
+                            id: "gid://shopify/Cart/abc",
+                            checkoutUrl: "https://best-bottles.myshopify.com/cart/c/abc",
+                        },
+                        userErrors: [],
+                    },
+                },
+            }), {
+                status: 200,
+                headers: { "Content-Type": "application/json" },
+            }),
+        ) as typeof fetch;
+
+        const result = await createStorefrontCartCheckout([
+            { variantId: "12345", quantity: 12, sku: "GB-CYL-CLR-9ML" },
+        ]);
+
+        expect(result).toEqual({
+            cartId: "gid://shopify/Cart/abc",
+            checkoutUrl: "https://best-bottles.myshopify.com/cart/c/abc",
+        });
+
+        const [, init] = (global.fetch as unknown as ReturnType<typeof vi.fn>).mock.calls[0] as [
+            string,
+            { headers: Record<string, string>; body: string },
+        ];
+        expect(init.headers["X-Shopify-Storefront-Access-Token"]).toBe("storefront-token");
+        const body = JSON.parse(init.body) as {
+            variables: {
+                input: {
+                    lines: Array<{
+                        merchandiseId: string;
+                        quantity: number;
+                        attributes?: Array<{ key: string; value: string }>;
+                    }>;
+                    attributes: Array<{ key: string; value: string }>;
+                };
+            };
+        };
+        expect(body.variables.input.lines).toEqual([{
+            merchandiseId: "gid://shopify/ProductVariant/12345",
+            quantity: 12,
+            attributes: [{ key: "sku", value: "GB-CYL-CLR-9ML" }],
+        }]);
+        expect(body.variables.input.attributes).toEqual([
+            { key: "channel", value: "headless" },
+            { key: "source", value: "bestbottles.com" },
+        ]);
+    });
+
+    it("returns null when Shopify reports cartCreate userErrors", async () => {
+        global.fetch = vi.fn().mockResolvedValue(
+            new Response(JSON.stringify({
+                data: {
+                    cartCreate: {
+                        cart: null,
+                        userErrors: [{ message: "Merchandise does not exist" }],
+                    },
+                },
+            }), {
+                status: 200,
+                headers: { "Content-Type": "application/json" },
+            }),
+        ) as typeof fetch;
+
+        await expect(createStorefrontCartCheckout([
+            { variantId: "999", quantity: 1 },
+        ])).resolves.toBeNull();
+    });
+});
+
+describe("resolveAnonymousCheckoutUrl", () => {
+    const originalFetch = global.fetch;
+    const originalEnv = process.env;
+
+    beforeEach(() => {
+        process.env = {
+            ...originalEnv,
+            NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN: "best-bottles.myshopify.com",
+        };
+    });
+
+    afterAll(() => {
+        global.fetch = originalFetch;
+        process.env = originalEnv;
+    });
+
+    it("uses the Storefront checkout URL when cartCreate succeeds", async () => {
+        process.env.SHOPIFY_STOREFRONT_TOKEN = "storefront-token";
+        global.fetch = vi.fn().mockResolvedValue(
+            new Response(JSON.stringify({
+                data: {
+                    cartCreate: {
+                        cart: {
+                            id: "gid://shopify/Cart/xyz",
+                            checkoutUrl: "https://best-bottles.myshopify.com/checkouts/cn/xyz",
+                        },
+                        userErrors: [],
+                    },
+                },
+            }), {
+                status: 200,
+                headers: { "Content-Type": "application/json" },
+            }),
+        ) as typeof fetch;
+
+        await expect(resolveAnonymousCheckoutUrl([
+            { variantId: "12345", quantity: 1 },
+        ])).resolves.toEqual({
+            checkoutUrl: "https://best-bottles.myshopify.com/checkouts/cn/xyz",
+            checkoutMode: "storefront",
+            cartId: "gid://shopify/Cart/xyz",
+        });
+    });
+
+    it("falls back to a cart permalink when the Storefront token is missing", async () => {
+        delete process.env.SHOPIFY_STOREFRONT_TOKEN;
+        global.fetch = vi.fn() as typeof fetch;
+
+        await expect(resolveAnonymousCheckoutUrl([
+            { variantId: "12345", quantity: 3 },
+        ])).resolves.toEqual({
+            checkoutUrl: "https://best-bottles.myshopify.com/cart/12345:3",
+            checkoutMode: "anonymous",
+        });
+        expect(global.fetch).not.toHaveBeenCalled();
     });
 });

@@ -1,10 +1,10 @@
 /**
  * Shopify customer identity — the Shopify half of the Clerk-org ↔ Shopify bridge.
  *
- * Why this exists: Shopify applies tax exemption to a CUSTOMER RECORD. The cart
- * permalink `buildCheckoutUrl` produces is anonymous, so an approved resale
- * certificate has nowhere to land. Before any approval flow can matter, a portal
- * account needs a Shopify customer to be approved *onto*.
+ * Why this exists: Shopify applies tax exemption to a CUSTOMER RECORD. The
+ * Storefront Cart and permalink checkouts are both anonymous, so an approved
+ * resale certificate has nowhere to land. Before any approval flow can matter,
+ * a portal account needs a Shopify customer to be approved *onto*.
  *
  * One Shopify customer per Clerk ORGANIZATION, not per user: the resale
  * certificate belongs to the business, and `shopifyCustomerId` already lives on

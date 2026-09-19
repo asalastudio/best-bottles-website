@@ -1,8 +1,8 @@
 import { checkoutMinimum, checkoutMinimumMessage } from "@/lib/checkout";
 import { NextRequest } from "next/server";
 import {
-    buildCheckoutUrl,
     normalizeShopifyVariantId,
+    resolveAnonymousCheckoutUrl,
     resolveCheckoutVariantsByIds,
     resolveVariantsBySkus,
 } from "@/lib/shopify";
@@ -83,6 +83,7 @@ export async function POST(req: NextRequest) {
             return [{
                 variantId: state.variantId,
                 quantity: item.quantity,
+                sku: item.sku,
             }];
         });
 
@@ -105,6 +106,7 @@ export async function POST(req: NextRequest) {
             .map((v) => ({
                 variantId: v.variantId,
                 quantity: skuToQuantity[v.sku] ?? 1,
+                sku: v.sku,
             }));
         const checkoutItems = [...directCheckoutItems, ...resolvedCheckoutItems];
 
@@ -120,13 +122,19 @@ export async function POST(req: NextRequest) {
 
         // A signed-in wholesale account checks out through a draft order so the
         // Shopify CUSTOMER is attached and an approved resale certificate can
-        // actually remove tax. Everyone else keeps the anonymous permalink.
+        // actually remove tax. Everyone else uses a Storefront Cart (Plus
+        // headless checkout) and only falls back to a permalink if the Cart
+        // API is unavailable.
         const wholesale =
             checkoutItems.length > 0 ? await resolveWholesaleCheckoutUrl(checkoutItems) : null;
+        const storefront = !wholesale?.checkoutUrl && checkoutItems.length > 0
+            ? await resolveAnonymousCheckoutUrl(checkoutItems)
+            : null;
 
-        const checkoutUrl = wholesale?.checkoutUrl
-            ?? (checkoutItems.length > 0 ? buildCheckoutUrl(checkoutItems) : null);
-        const checkoutMode = wholesale?.checkoutUrl ? "wholesale" : "anonymous";
+        const checkoutUrl = wholesale?.checkoutUrl ?? storefront?.checkoutUrl ?? null;
+        const checkoutMode = wholesale?.checkoutUrl
+            ? "wholesale"
+            : (storefront?.checkoutMode ?? "anonymous");
         const unmatchedSkus = [
             ...fallbackSkus.filter((s) => !variants.some((v) => v.sku === s)),
         ];

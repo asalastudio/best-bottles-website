@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-16",
+  "basis": "docs/reviews/cylinder-family-final-manifest-2026-09-07.json",
+  "reason": "Bottle-to-bottle check against Jordan's true-scale lineup (5 ml 53, 9 ml 70, 28 ml 81, 50 ml roller 98, 9 ml Slim 106, 25 ml 83, 50 ml 117, 100 ml 154 mm). The 2026-09-07 lock kept each group's legacy framing and so drew the 9 ml Slim above the 50 ml Cylinder, the 50 ml roller level with it, and the 28 ml above the 25 ml. Jordan, 2026-09-16: the 9 ml Slim should be taller than the 50 ml roller and similar in height to the 50 ml Cylinder.",
+  "rule": "Shoulder targets for the four bodies moved onto the lock's own progression through its consistent anchors (5, 9, 50 Cylinder, 100 ml): shoulderPercent = 3.965 x mm^0.560. Everything else unchanged.",
+  "bodies": [
+    {
+      "group": "28-standard",
+      "label": "28 ml Jumbo Roller",
+      "mm": 81,
+      "lockedShoulderPercent": 50.5,
+      "shoulderPercent": 46.5
+    },
+    {
+      "group": "25-standard",
+      "label": "25 ml Cylinder",
+      "mm": 83,
+      "lockedShoulderPercent": 46.5,
+      "shoulderPercent": 47.2
+    },
+    {
+      "group": "50-standard",
+      "label": "50 ml roller (16 mm neck, 98 mm)",
+      "mm": 98,
+      "lockedShoulderPercent": 56.0,
+      "shoulderPercent": 51.8,
+      "skus": [
+        "GBCyl50MtlRollBlk"
+      ]
+    },
+    {
+      "group": "9-tall",
+      "label": "9 ml Slim (Tall Cylinder)",
+      "mm": 106,
+      "lockedShoulderPercent": 62.5,
+      "shoulderPercent": 54.1
+    }
+  ]
+}

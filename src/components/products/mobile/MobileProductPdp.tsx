@@ -28,6 +28,7 @@ import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { focusedProductPresentation } from "@/lib/products/focused-product-presentation";
+import { useCopy } from "@/i18n/useCopy";
 import {
     buildMobileConfigRows,
     confirmLabelFor,
@@ -146,6 +147,7 @@ function slugFromHref(href: string): string {
 
 export default function MobileProductPdp(props: MobileProductPdpProps) {
     const { formatPrice } = useRegion();
+    const graceCopy = useCopy("grace");
     const formatEach = (price: number | null | undefined): string => (price == null ? "Price on request" : formatPrice(price));
     const {
         slug, group, variants, selectedVariant, platesBySku, selectedKitQuery, skuImageFallbacks, displayName, inStock, canAddToCart,
@@ -615,7 +617,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                             <Microphone className="h-4 w-4" />
                         </span>
                         <span className="min-w-0 flex-1">
-                            <span className="block text-sm font-medium text-obsidian">Ask Grace about fit and bulk pricing</span>
+                            <span className="block text-sm font-medium text-obsidian">{graceCopy("askAboutFitAndBulk")}</span>
                             <span className="block text-xs leading-snug text-slate">
                                 {neckSize ? `${neckSize} closures` : "Compatible closures"} · case quantities · quotes
                             </span>

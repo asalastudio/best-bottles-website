@@ -9,6 +9,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, SlidersHorizontal, ShoppingBag } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
+import { useBuilderKits } from "@/components/bottle-builder/useBuilderKits";
 import FamilyLoadingStatus from "@/components/bottle-builder/FamilyLoadingStatus";
 import bodyHeightMedia from "@/lib/bottle-builder/body-heights.generated.json";
 import MobileBuilder from "@/components/bottle-builder/MobileBuilder";
@@ -67,7 +68,7 @@ function chooserScale(body: BuilderBody, all: BuilderBody[] = [body]) {
     return 1;
 }
 
-export default function MatrixClient({ families: initialFamilies, openFamily, bodies, preferMobile = false }: {
+export default function MatrixClient({ families: initialFamilies, openFamily, bodies: initialBodies, preferMobile = false }: {
     families: { family: string; groups: number }[];
     openFamily: string;
     bodies: BuilderBody[];
@@ -81,6 +82,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const searchParams = useSearchParams();
     const { items, addItems, isCartHydrated } = useCart();
     const [selection, setSelection] = useState<BuilderSelection>(emptySelection);
+    const bodies = useBuilderKits(openFamily, initialBodies, selection.bodyId);
     const [step, setStep] = useState(0);
     const [mobileStage, setMobileStage] = useState(0);
     const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot(preferMobile));

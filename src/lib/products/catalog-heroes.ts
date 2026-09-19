@@ -36,3 +36,51 @@ export function getCatalogHeroProductHref(hero: CatalogHero | null | undefined, 
     url.searchParams.set("sku", hero.websiteSku);
     return `${url.pathname}${url.search}${url.hash}`;
 }
+
+export function isShopifyCdnCatalogUrl(value: string | null | undefined): boolean {
+    const url = value?.trim();
+    if (!url) return false;
+    try {
+        const parsed = new URL(url);
+        return parsed.protocol === "https:" && parsed.hostname === "cdn.shopify.com";
+    } catch {
+        return url.includes("cdn.shopify.com/");
+    }
+}
+
+function imageKey(value: string | null | undefined): string {
+    return value?.trim().split("?")[0] ?? "";
+}
+
+/**
+ * A Madison-published Shopify CDN group hero replaces the baked bone-review
+ * plate. Image and pictured SKU stay the same assembly so the card and PDP agree.
+ */
+export function resolveLiveCatalogCardHero(input: {
+    heroImageUrl?: string | null;
+    staticHero?: CatalogHero | null;
+    variants?: readonly { websiteSku?: string | null; imageUrl?: string | null }[];
+}): {
+    catalogHero: CatalogHero | null;
+    imageUrl: string | null;
+    picturedWebsiteSku: string | null;
+} {
+    const heroImageUrl = input.heroImageUrl?.trim() || null;
+    if (isShopifyCdnCatalogUrl(heroImageUrl)) {
+        const pictured = input.variants?.find((variant) =>
+            imageKey(variant.imageUrl) === imageKey(heroImageUrl),
+        );
+        return {
+            catalogHero: null,
+            imageUrl: heroImageUrl,
+            picturedWebsiteSku: pictured?.websiteSku?.trim() || null,
+        };
+    }
+
+    const staticHero = input.staticHero ?? null;
+    return {
+        catalogHero: staticHero,
+        imageUrl: staticHero?.url ?? heroImageUrl,
+        picturedWebsiteSku: staticHero?.websiteSku ?? null,
+    };
+}

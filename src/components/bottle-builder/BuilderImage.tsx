@@ -25,7 +25,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     priority?: boolean;
 }) {
     const titleId = useId();
-    const kit = stage === "body" ? config.previewKit ?? config.kit : config.kit;
+    const kit = stage === "body" ? config.previewKit ?? config.kit ?? config.chooserKit : config.kit;
     const exposed = (exposedSprayers as Record<string, { url: string }>)[config.id];
     const fallbackUrl = !kit ? (stage === "complete" && config.photoUrl ? (!showCover && exposed ? exposed.url : config.photoUrl) : config.bodyImage?.url) : undefined;
     const registration = kit && !thumbnail ? registerVintagePreview(config, parts, bodyReference) : null;

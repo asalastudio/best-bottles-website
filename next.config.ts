@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 // The /config subpath is the supported import for build-time wiring; importing
 // withSentryConfig from the package root is deprecated and breaks in v11.
 import { withSentryConfig } from "@sentry/nextjs/config";
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const projectRoot = process.cwd();
 
@@ -192,18 +195,21 @@ const nextConfig: NextConfig = {
 
 // ── Sentry ─────────────────────────────────────────────────────────────────
 // The SDK itself is a no-op until NEXT_PUBLIC_SENTRY_DSN is set (see
-// src/instrumentation*.ts). withSentryConfig only adds build-time work — and
-// only uploads source maps when SENTRY_AUTH_TOKEN is present, so local and
-// preview builds stay exactly as fast as before.
-export default withSentryConfig(nextConfig, {
+// src/instrumentation*.ts). The Vercel integration sets SENTRY_AUTH_TOKEN on
+// every environment, including Preview. Source-map upload + widenClientFileUpload
+// are production-only so Preview webpack stays inside the 8 GB container.
+const sentrySourceMapsEnabled = Boolean(process.env.SENTRY_AUTH_TOKEN)
+    && process.env.VERCEL_ENV !== "preview";
+
+export default withSentryConfig(withNextIntl(nextConfig), {
     org: process.env.SENTRY_ORG,
     project: process.env.SENTRY_PROJECT,
     authToken: process.env.SENTRY_AUTH_TOKEN,
     silent: !process.env.CI,
     telemetry: false,
-    widenClientFileUpload: true,
+    widenClientFileUpload: sentrySourceMapsEnabled,
     sourcemaps: {
-        disable: !process.env.SENTRY_AUTH_TOKEN,
+        disable: !sentrySourceMapsEnabled,
         deleteSourcemapsAfterUpload: true,
     },
     // Route browser events through our own origin so ad blockers cannot hide

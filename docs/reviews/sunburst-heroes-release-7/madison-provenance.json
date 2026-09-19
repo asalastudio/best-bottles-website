@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-09-19T05:35:50.806Z",
+  "provider": "openai-image-2.5-sunburst",
+  "scaleContract": "shoulder-lock-2026-09-07",
+  "rows": [
+    {
+      "websiteSku": "GBMtlRoll28Blk",
+      "graceSku": "GB-CYL-CLR-28ML-MRL-01",
+      "groupSlug": "cylinder-28ml-clear-16mm-rollon",
+      "sha256": "3c55f180f835e8a9d239e10930f467dc607fe38b1d66ccc3974aabfce18a4e07"
+    },
+    {
+      "websiteSku": "GBCylSwrl9MtlRollBlkDot",
+      "graceSku": "GB-CYL-CLR-9ML-MRL-BKDT-01",
+      "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "sha256": "46d03e9815ae19dc13026eb1fa578c9dd2d7945c75a17fb972d893c0a9888b5f"
+    },
+    {
+      "websiteSku": "GBTallCylFrst9SpryGlMatt",
+      "graceSku": "GB-CYL-FRS-9ML-05",
+      "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
+      "sha256": "c0c2d412b1bf3a8a224beb5db708061979606bbf7ecab2469f5c09983292449e"
+    }
+  ]
+}

@@ -1,0 +1,489 @@
+{
+  "writtenAt": "2026-09-19T04:11:16.421Z",
+  "registry": "src/lib/products/catalog-heroes.json",
+  "manifest": "docs/reviews/catalog-complete-hero-release-2026-09-07.json",
+  "note": "Restore each `from` (url, manifest sha256, framing) to undo the Sunburst release 1 repoint.",
+  "rows": [
+    {
+      "websiteSku": "GBCyl50MtlRollBlk",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCyl50MtlRollBlk.98fc2d434ae0.png",
+        "manifestSha256": "98fc2d434ae018c189ca1decdc71494a29d4d63ada45dcd93387d33a54f20a2b",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCyl50MtlRollBlk.6c0720231863.png",
+        "sha256": "6c0720231863db520f41f40b55560e6ec5f5f9b85e38f5943107dffaa25f3c23",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T00:19:10.244Z"
+    },
+    {
+      "websiteSku": "GBCyl5MtlRollBlkDot",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCyl5MtlRollBlkDot.43c5466f3133.png",
+        "manifestSha256": "43c5466f313383f599473da648fa3b25869353b7de012f5aef9056fffc8781f9",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCyl5MtlRollBlkDot.8251a0ed0f79.png",
+        "sha256": "8251a0ed0f795a0c1c3f24a55653c7fcdd322d4f7a5eab8d9efc084cf86faefd",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "GBCyl5SprySlMatt",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCyl5SprySlMatt.a067cd68f4d5.png",
+        "manifestSha256": "a067cd68f4d50fac9a29f4a7ed839bc050530ec443c74f354bf361fa9e723947",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCyl5SprySlMatt.8047788195b4.png",
+        "sha256": "8047788195b4bfa1be6b21b4c8132b22f1e28a5519796db7092b0c6b50cabaf4",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "GBCyl9MtlRollBlkDot",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCyl9MtlRollBlkDot.6b4baefd407e.png",
+        "manifestSha256": "6b4baefd407e3d001e6f821f72584c0d996b855cf423cb0cacd8f5a7d8540b42",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCyl9MtlRollBlkDot.cb58e7801b7b.png",
+        "sha256": "cb58e7801b7b99ecc4ef3435ad15220c18a3155421d73e092a4a026667f99bd0",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "GBCyl9SpryGl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCyl9SpryGl.962edd3d8ddf.png",
+        "manifestSha256": "962edd3d8ddf9b9aa23b1db31985349ae3e0fc166ed8c56b6227e3538c9f26a7",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCyl9SpryGl.47104e5a4bd1.png",
+        "sha256": "47104e5a4bd133b5759dd74f03da5520ec8d1778dbfbca8ca949a05f96998e4b",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "GBCylAmb9MtlRollBlkDot",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylAmb9MtlRollBlkDot.31fb6ef65e95.png",
+        "manifestSha256": "31fb6ef65e9580ddf6e5eead488ff92b9d5a223c0f3d4e4b93a6adfae44baafa",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylAmb9MtlRollBlkDot.fb2d3fc81c00.png",
+        "sha256": "fb2d3fc81c000ac4d954754500ce1eb35a2d0aeee212d1cd149dd0723023437d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T00:19:10.244Z"
+    },
+    {
+      "websiteSku": "GBCylAmb9SpryMattSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylAmb9SpryMattSl.d91df8882a7d.png",
+        "manifestSha256": "d91df8882a7d27191a18f0d3ba5e1b0c6708ec394f44a7b47e9db3981b56fc56",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylAmb9SpryMattSl.e9db7f777469.png",
+        "sha256": "e9db7f7774693ae670b8fc3cf7e580820b869ba55a05f535899c0a8504b004e3",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "GBCylBlu5MtlRollBlkDot",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylBlu5MtlRollBlkDot.1c81a5c87e4b.png",
+        "manifestSha256": "1c81a5c87e4b5015173334f803908182fb8124f1fba969b0e345a754a084fbfd",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylBlu5MtlRollBlkDot.51afa03846c9.png",
+        "sha256": "51afa03846c9fcc92996b174bc412953b86a47ff5b3a76d522b3b3c8453a60c3",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "GBCylBlu5SpryGlMatt",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylBlu5SpryGlMatt.0b12dca26124.png",
+        "manifestSha256": "0b12dca26124fad9c3e82280de2498c00aab18a7fd2a97b57c625388d4fcdeea",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylBlu5SpryGlMatt.66e394377db7.png",
+        "sha256": "66e394377db7cb7d8e19571d0fb2129248890176ea2e5b0bf4a119f0b1fdbbf1",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "GBCylBlu9MtlRollBlkDot",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylBlu9MtlRollBlkDot.526fc1cddb1e.png",
+        "manifestSha256": "526fc1cddb1e1a499c394f64518c23927d5313007331af3d8ab31cc58ea4adb2",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylBlu9MtlRollBlkDot.b0b930f7c899.png",
+        "sha256": "b0b930f7c8999367ed0b48ca0f108ef3f7d34c1c60846b3cc81f03c70bc4658b",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T00:19:10.244Z"
+    },
+    {
+      "websiteSku": "GBCylBlu9SpryMattSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylBlu9SpryMattSl.9bb845a44ab9.png",
+        "manifestSha256": "9bb845a44ab92a78db867a34d23bfff622a58b3916c905c2b2c46d55c056b3be",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylBlu9SpryMattSl.46c259b79a95.png",
+        "sha256": "46c259b79a95187979fd62fa05512d1f4984cc920fb7a956fca4cdc0f93623f3",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollBlkDot",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylFrst9MtlRollBlkDot.adf3825cd872.png",
+        "manifestSha256": "adf3825cd872b86468712a0d72523ca33a0abaa29fdd4cde124b396a50dd4877",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylFrst9MtlRollBlkDot.01a8172c9a5c.png",
+        "sha256": "01a8172c9a5c00b695731d6e70a454967b03ee6e9011bcc8636e11308edf6072",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T04:11:14.446Z"
+    },
+    {
+      "websiteSku": "GBCylFrst9SpryMattSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylFrst9SpryMattSl.d763a5f0868e.png",
+        "manifestSha256": "d763a5f0868e6de33d3178fb35887dcd7dea56950d95770f71a7976d654f5976",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylFrst9SpryMattSl.518be8013731.png",
+        "sha256": "518be8013731dc49b216a893eb67ac5e1fb7e73f032bdd7903bd8e75c16ad190",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T04:11:14.446Z"
+    },
+    {
+      "websiteSku": "GBCylSwrl9SpryMattSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylSwrl9SpryMattSl.6e1b56a26b68.png",
+        "manifestSha256": "6e1b56a26b6862369d727b05cdbb52fae1be15e1107537d8733d63c1a3d5ee41",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylSwrl9SpryMattSl.b3bb29415568.png",
+        "sha256": "b3bb294155683b4b4c2f466ccce941189ef518a69cbb22dad1045c02fb2f4223",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "GBTallCyl9SpryGlMatt",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBTallCyl9SpryGlMatt.0dc7aa85686c.png",
+        "manifestSha256": "0dc7aa85686c443f51c8cb31ade4bb4119317bf29a6b5daecd8398f79716afe9",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBTallCyl9SpryGlMatt.e7b9c81373fc.png",
+        "sha256": "e7b9c81373fc328f6c1c7b21435f617730766bffc854da124c72bd9d49d32046",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "LBCyl9LtnGl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/LBCyl9LtnGl.fa208b7e87a8.png",
+        "manifestSha256": "fa208b7e87a8a257365c131544c9255e52e6953592cdb17691d539b4cb04cd2a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBCyl9LtnGl.c769559f9236.png",
+        "sha256": "c769559f923641b4332bb6b7193718b067bd4b0d687376990d6cb5ba5b57cae7",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "LBCylAmb9LtnMtSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/LBCylAmb9LtnMtSl.8c7a4aff08fb.png",
+        "manifestSha256": "8c7a4aff08fb32d65e3af1690728398fa00c736f02c315de1b53f31e4a264e6d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBCylAmb9LtnMtSl.107252b72039.png",
+        "sha256": "107252b720394b4680120f4b3faf8aee819a762bc1876c9b03f6d3f0dca50fa8",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "LBCylBlu9LtnMattSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/LBCylBlu9LtnMattSl.cf288458fdc2.png",
+        "manifestSha256": "cf288458fdc23c5edabb59f653d401157174434bbdf5f47f58bd6a2b7ea19d54",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBCylBlu9LtnMattSl.2cb9fab219f4.png",
+        "sha256": "2cb9fab219f44e670887a71eb53b0ef9b4be045f7da78da34211c30ca773e21a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "LBCylFrst9LtnMtSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/LBCylFrst9LtnMtSl.93c5568f6725.png",
+        "manifestSha256": "93c5568f6725a8ac4c5790ea8cb1fc5d9cabf27f2396844576ba198127204c39",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBCylFrst9LtnMtSl.0ac172e064b8.png",
+        "sha256": "0ac172e064b80dd565eb7f4ac1ed6069eebd572087e2685fbfd381dfa29f06d0",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T04:11:14.446Z"
+    },
+    {
+      "websiteSku": "LBCylSwrl9LtnMtSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/LBCylSwrl9LtnMtSl.c241a70036e0.png",
+        "manifestSha256": "c241a70036e0281f76896ea043c01d5b52e76d0c434d2abf864be93c2812b43a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBCylSwrl9LtnMtSl.35ebf93e35f0.png",
+        "sha256": "35ebf93e35f09a2eb5d78bf21642322018646e900993aab626d3db3eab916280",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T03:37:56.445Z"
+    }
+  ],
+  "skipped": []
+}

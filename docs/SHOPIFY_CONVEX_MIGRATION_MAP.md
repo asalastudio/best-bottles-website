@@ -217,7 +217,7 @@ Products reference this via: `product.metafields.custom.bottle_family_ref` (type
 
 | File | Action | What Changes |
 |---|---|---|
-| `src/lib/shopify.ts` | **Expand** | Add: `getProductByHandle`, `getVariantBySku`, `getProductMetafields`, `getInventoryLevel`, `createCheckoutUrl` (Storefront API cart). Consolidate all Shopify access here. |
+| `src/lib/shopify.ts` | **Expand** | Add: `getProductByHandle`, `getVariantBySku`, `getProductMetafields`, `getInventoryLevel`, `createStorefrontCartCheckout` / `resolveAnonymousCheckoutUrl` (Storefront API cart). Consolidate all Shopify access here. |
 | `src/lib/shopify-webhooks.ts` | **Create** | Webhook signature verification + event routing. Handles `products/create`, `products/update`, `products/delete`, `inventory_levels/update`. |
 | `src/app/api/shopify/webhooks/route.ts` | **Create** | Next.js API route that receives Shopify webhooks and calls Convex sync mutations. |
 | `src/app/api/shopify/resolve-variants/route.ts` | **Keep** | Already works. Minor update: use expanded adapter instead of raw `adminGraphQL`. |

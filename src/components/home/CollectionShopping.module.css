@@ -132,7 +132,7 @@
 .megaFamilyGrid a{font-family:var(--font-brand);font-size:12px;letter-spacing:.03em}
 .megaCollectionGrid strong{font-family:var(--font-brand);font-size:13px;font-weight:500;letter-spacing:.02em}
 .region{display:none}
-@media(min-width:641px){.region{display:block}}
+@media(min-width:641px){.region{display:flex;align-items:center;gap:4px}}
 .regionMobile{padding-top:6px;border-top:1px solid #e8e2d9}
 /* Pencil tiles: true 4:3 boxes, image fills the box (paper is the background), no letterboxing. */
 .megaFamilyGrid a{grid-template-rows:auto auto}
