@@ -1,0 +1,152 @@
+{
+  "generatedAt": "2026-09-18T06:00:00Z",
+  "convexUrl": "https://precise-raccoon-123.convex.cloud",
+  "builder": "build_sibling_reuse_kits.py",
+  "rule": "Reuse already published photographic parts from the same glass family. No new pixels.",
+  "gates": {
+    "strict": "mean <= 6 and tailOver40 <= 0.01",
+    "visualReviewBand": "mean <= 12 and tailOver40 <= 0.08"
+  },
+  "counts": {
+    "leftovers": 13,
+    "strictPublishable": 3,
+    "visualReviewBand": 8,
+    "held": 2,
+    "indexed": 0
+  },
+  "publishBlocked": "BEST_BOTTLES_CONVEX_WRITE_TOKEN is not present. Parts already live on Vercel Blob; indexing needs only the Convex write token.",
+  "rows": [
+    {
+      "websiteSku": "GBCyl9RollBlkDot",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "status": "visual-review",
+      "publishable": false,
+      "mean": 6.1298,
+      "tailOver40": 0.02869,
+      "bodyDonor": "GBCyl9RollShBlk",
+      "closureDonor": "GBCyl9MtlRollBlkDot"
+    },
+    {
+      "websiteSku": "GBCyl9RollPnkDot",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "status": "visual-review",
+      "publishable": false,
+      "mean": 8.7312,
+      "tailOver40": 0.065521,
+      "bodyDonor": "GBCyl9RollWht",
+      "closureDonor": "GBCyl9MtlRollPnkDot"
+    },
+    {
+      "websiteSku": "GBCyl9SpryShSl",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "status": "hold",
+      "publishable": false,
+      "mean": 44.8342,
+      "tailOver40": 0.295953,
+      "bodyDonor": "GBCyl9SpryBlk",
+      "closureDonor": "GBCylBlu9SpryShSl",
+      "reason": "Shiny-silver overcap from the cobalt-blue sibling does not transfer onto clear glass. No same-scale clear Cylinder shiny-silver spray overcap is already indexed."
+    },
+    {
+      "websiteSku": "GBCylBlu9RollPnkDot",
+      "familyId": "cylinder-9ml-cobalt-blue-17-415",
+      "status": "strict",
+      "publishable": true,
+      "mean": 2.2543,
+      "tailOver40": 0.002726,
+      "bodyDonor": "GBCylBlu9RollWht",
+      "closureDonor": "GBCylBlu9MtlRollPnkDot"
+    },
+    {
+      "websiteSku": "GBCylBlu9RollSlDot",
+      "familyId": "cylinder-9ml-cobalt-blue-17-415",
+      "status": "visual-review",
+      "publishable": false,
+      "mean": 6.0599,
+      "tailOver40": 0.050399,
+      "bodyDonor": "GBCylBlu9RollShnSl",
+      "closureDonor": "GBCylBlu9MtlRollSlDot"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollMattCu",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "status": "strict",
+      "publishable": true,
+      "mean": 2.126,
+      "tailOver40": 0.002004,
+      "bodyDonor": "GBCylSwrl9RollPnkDot",
+      "closureDonor": "GBCylSwrl9MtlRollMattCu"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollMattGl",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "status": "visual-review",
+      "publishable": false,
+      "mean": 5.3487,
+      "tailOver40": 0.016363,
+      "bodyDonor": "GBCylSwrl9RollPnkDot",
+      "closureDonor": "GBCylSwrl9MtlRollMattGl"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollMattSl",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "status": "visual-review",
+      "publishable": false,
+      "mean": 11.5097,
+      "tailOver40": 0.068815,
+      "bodyDonor": "GBCylSwrl9RollPnkDot",
+      "closureDonor": "GBCylSwrl9MtlRollMattSl"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollShBlk",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "status": "visual-review",
+      "publishable": false,
+      "mean": 6.0402,
+      "tailOver40": 0.021878,
+      "bodyDonor": "GBCylSwrl9RollSlDot",
+      "closureDonor": "GBCylSwrl9MtlRollShBlk"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollShnGl",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "status": "visual-review",
+      "publishable": false,
+      "mean": 5.5239,
+      "tailOver40": 0.017787,
+      "bodyDonor": "GBCylSwrl9RollSlDot",
+      "closureDonor": "GBCylSwrl9MtlRollShnGl"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollShnSl",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "status": "visual-review",
+      "publishable": false,
+      "mean": 6.2044,
+      "tailOver40": 0.035312,
+      "bodyDonor": "GBCylSwrl9RollSlDot",
+      "closureDonor": "GBCylSwrl9MtlRollShnSl"
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollWht",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "status": "strict",
+      "publishable": true,
+      "mean": 2.0948,
+      "tailOver40": 0.002863,
+      "bodyDonor": "GBCylSwrl9RollBlkDot",
+      "closureDonor": "GBCylSwrl9MtlRollWht"
+    },
+    {
+      "websiteSku": "GBSpry3mlClBlk",
+      "familyId": "cylinder-3.3ml-clear-12mm",
+      "status": "hold",
+      "publishable": false,
+      "mean": 56.9565,
+      "tailOver40": 0.383125,
+      "bodyDonor": "GBSpry3mlClWht",
+      "closureDonor": "GBCyl9SpryBlk",
+      "reason": "No same-scale 3.3 ml black overcap is already indexed. The 9 ml black spray overcap is the wrong size."
+    }
+  ]
+}
