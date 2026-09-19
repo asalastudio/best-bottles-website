@@ -26,7 +26,11 @@ export function slimBuilderBodies(bodies: BuilderBody[]): BuilderBody[] {
                 return {
                     ...config,
                     previewKitSku: config.previewKit?.sku ?? config.previewKitSku,
-                    chooserKit: !config.bodyImage && firstOfColor ? chooserBodyKit(config) : undefined,
+                    // Idempotent on purpose. The family loader slims what it caches and the
+                    // page slims what it renders, so this runs twice on the same bodies. The
+                    // second pass finds `kit: null` and has nothing to cut a body from — it
+                    // must keep the layer the first pass kept, not overwrite it with nothing.
+                    chooserKit: !config.bodyImage && firstOfColor ? chooserBodyKit(config) ?? config.chooserKit : undefined,
                     kit: null,
                     previewKit: undefined,
                 };

@@ -53,6 +53,20 @@ describe("builder first-paint payload", () => {
         expect(chooserPreloadUrls(slim)).toEqual(["https://example.com/Cylinder9MetalBlack-chooser.webp"]);
     });
 
+    it("survives being slimmed twice, which is what production does", () => {
+        // loadBuilderFamily slims what it caches; the /matrix page slims what it
+        // renders. The second pass sees `kit: null`, and before this fix it replaced
+        // the bare-glass layer with undefined — so every Cylinder tile read
+        // "Image unavailable" on the live site while a single pass tested green.
+        const clear = config("Cylinder50SprayBlack", { bodyImage: null });
+        const once = slimBuilderBodies([body([clear])]);
+        const twice = slimBuilderBodies(once);
+        expect(once[0]!.configurations[0]!.chooserKit?.parts.map(part => part.slot)).toEqual(["body"]);
+        expect(twice[0]!.configurations[0]!.chooserKit).toEqual(once[0]!.configurations[0]!.chooserKit);
+        expect(previewParts(clearBodyPreview(twice[0]!), "body").map(part => part.slot)).toEqual(["body"]);
+        expect(JSON.stringify(twice)).toBe(JSON.stringify(once));
+    });
+
     it("keeps one bare-glass layer per colour when a family has no reviewed body image", () => {
         // Cylinder ships no reviewed 50 ml body webp, so before this the chooser
         // tile had a null kit and a null bodyImage and drew "Image unavailable".
