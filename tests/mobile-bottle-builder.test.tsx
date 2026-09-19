@@ -113,6 +113,7 @@ describe('mobile presentation over shared configuration',()=>{
   expect(css).toContain("justify-items: end");
   expect(css).toContain("slateSweep");
   expect(css).toContain("[data-slate]");
+  expect(css).not.toContain('[data-loaded="true"]) :is(img, svg) { opacity: 0');
   expect(css).not.toContain("top: 12px; right: 12px");
   choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');
   expect(container.textContent).not.toContain('Clear selected');

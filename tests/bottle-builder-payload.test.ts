@@ -131,6 +131,7 @@ describe("Build Your Bottle first-paint contract", () => {
         const page = readFileSync("src/app/matrix/page.tsx", "utf8");
         const server = readFileSync("src/lib/bottle-builder/server.ts", "utf8");
         const client = readFileSync("src/components/matrix/MatrixClient.tsx", "utf8");
+        const mobile = readFileSync("src/components/bottle-builder/MobileBuilder.tsx", "utf8");
         expect(server).toMatch(/loadBuilderFamily\s*=\s*unstable_cache/);
         expect(server).toContain("slimBuilderBodies");
         expect(server).toContain("chooserSourceRows");
@@ -138,8 +139,16 @@ describe("Build Your Bottle first-paint contract", () => {
         const familiesFn = server.slice(server.indexOf("export const loadBuilderFamilies"), server.indexOf("async function loadKitsForRows"));
         expect(familiesFn).not.toContain("loadBuilderFamily(");
         expect(page).toContain("slimBuilderBodies");
-        expect(page).toContain("chooserPreloadUrls(bodies, 6)");
+        expect(page).toContain("chooserPreloadUrls(bodies, CHOOSER_PRIORITY_TILES)");
+        expect(page).toContain('fetchPriority="high"');
         expect(client).toContain("useBuilderKits");
         expect(client).toContain("thumbnail placeholder");
+        expect(client).toContain("priority={index < CHOOSER_PRIORITY_TILES}");
+        expect(mobile).toContain("priority={index < CHOOSER_PRIORITY_TILES}");
+        const image = readFileSync("src/components/bottle-builder/BuilderImage.tsx", "utf8");
+        expect(image).toContain("data-chooser-img");
+        expect(image).not.toContain("IntersectionObserver");
+        expect(image).not.toContain('fetchPriority: "low"');
+        expect(image).not.toContain('fetchPriority="low"');
     });
 });

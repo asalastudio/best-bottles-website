@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useId, useRef, useState, type ReactNode } from "react";
+import { useId, useState, type CSSProperties, type ReactNode } from "react";
 import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import type { BuilderConfiguration, BuilderPart } from "@/lib/bottle-builder/model";
 import { registerVintagePreview } from "@/lib/bottle-builder/preview-registration";
-import { previewFrame } from "@/lib/bottle-builder/preview-frame";
+import { layerCropStyle, previewFrame } from "@/lib/bottle-builder/preview-frame";
 
 /** These are the existing alpha layers on their registered canvas, never
  * independently resized parts. Only the viewport changes for thumbnails. */
@@ -19,7 +19,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     bodyReference?: BuilderConfiguration;
     /** Relative chooser size; preserves all layer registration and the baseline. */
     scale?: number;
-    /** Slate shimmer until the layer paints — chooser tiles. */
+    /** Slate sits behind the layer until it paints — chooser tiles. */
     placeholder?: boolean;
     /** First-viewport cards start immediately instead of waiting on lazy decode. */
     priority?: boolean;
@@ -50,19 +50,6 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     const [loadState, setLoadState] = useState({ key: urlKey, count: 0 });
     if (loadState.key !== urlKey) setLoadState({ key: urlKey, count: 0 });
     const markLoaded = () => setLoadState(state => state.key === urlKey ? { key: urlKey, count: state.count + 1 } : state);
-    const hostRef = useRef<SVGSVGElement>(null);
-    const canLazy = typeof IntersectionObserver !== "undefined";
-    const [inView, setInView] = useState(priority || !thumbnail || !canLazy);
-    useEffect(() => {
-        if (priority || !thumbnail || inView || !canLazy) return;
-        const node = hostRef.current;
-        if (!node) return;
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry?.isIntersecting) setInView(true);
-        }, { rootMargin: "240px" });
-        observer.observe(node);
-        return () => observer.disconnect();
-    }, [priority, thumbnail, inView, canLazy]);
     const ready = !placeholder || urls.length === 0 || loadState.count >= urls.length || Boolean(failedUrl);
 
     const wrap = (node: ReactNode) => placeholder
@@ -72,20 +59,43 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         </span>
         : node;
 
+    const imgProps = {
+        loading: (priority ? "eager" : "lazy") as "eager" | "lazy",
+        decoding: "async" as const,
+        onLoad: markLoaded,
+        // Never fetchPriority=low: mobile Chrome then starves tiles 8–12.
+        ...(priority ? { fetchPriority: "high" as const } : {}),
+    };
+
     if (!kit) {
         if (!fallbackUrl || failedUrl === fallbackUrl) return <span role="img" aria-label={label}>Image unavailable</span>;
         // Reviewed original body layer until a complete finish is selected.
         // eslint-disable-next-line @next/next/no-img-element
-        return wrap(<img src={fallbackUrl} alt={label} loading={priority ? "eager" : "lazy"} fetchPriority={priority ? "high" : "low"} decoding="async" data-builder-layer={stage === "complete" ? "assembly" : "body"}
-            onLoad={markLoaded} onError={() => setFailedUrl(fallbackUrl)} style={{ width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", objectFit: "contain", objectPosition: "center", mixBlendMode: config.color === "Clear" && stage !== "complete" ? "multiply" : undefined, transform: expanded ? undefined : `scale(${scale * .88})`, transformOrigin: expanded ? "center center" : "bottom center" }} />);
+        return wrap(<img src={fallbackUrl} alt={label} {...imgProps} data-builder-layer={stage === "complete" ? "assembly" : "body"}
+            onError={() => setFailedUrl(fallbackUrl)} style={{ width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", objectFit: "contain", objectPosition: "center", mixBlendMode: config.color === "Clear" && stage !== "complete" ? "multiply" : undefined, transform: expanded ? undefined : `scale(${scale * .88})`, transformOrigin: expanded ? "center center" : "bottom center" }} />);
     }
     const failed = layers.some(({ part }) => part.image.url === failedUrl);
     if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
     const { x, y, width, height } = previewFrame(registration?.anchors ?? kit.anchors,
         layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
-    return wrap(<svg ref={hostRef} role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" preserveAspectRatio="xMidYMid meet" style={{ display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: expanded ? "visible" : "hidden" }}>
+    // A single registered body layer is the chooser tile. <img> fetches in
+    // parallel with preload/priority; SVG <image href> waits on hydrate and
+    // does not honor loading or fetchPriority — Cylinder tiles sat blank.
+    if (layers.length === 1) {
+        const [{ part }] = layers;
+        const crop = layerCropStyle(part.image, { x, y, width, height });
+        const blend: CSSProperties["mixBlendMode"] = (config.color === "Clear" && ["body", "diptube"].includes(part.slot)) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined;
+        return wrap(<span data-chooser-img style={{ position: "relative", display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: "hidden" }}>
+            <span style={{ position: "absolute", inset: 0, transform: expanded ? undefined : `scale(${thumbnail ? scale : scale * .88})`, transformOrigin: "bottom center" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={part.image.url} alt={label} {...imgProps} data-builder-layer={part.slot}
+                    onError={() => setFailedUrl(part.image.url)} style={{ ...crop, mixBlendMode: blend }} />
+            </span>
+        </span>);
+    }
+    return wrap(<svg role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" preserveAspectRatio="xMidYMid meet" style={{ display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: expanded ? "visible" : "hidden" }}>
         <title id={titleId}>{label}</title>
-        {layers.map(({ part, transform }) => <image key={part.slot} href={inView ? part.image.url : undefined} width={part.image.width} height={part.image.height} transform={transform}
+        {layers.map(({ part, transform }) => <image key={part.slot} href={part.image.url} width={part.image.width} height={part.image.height} transform={transform}
             x="0" y="0" style={{ mixBlendMode: (config.color === "Clear" && ["body", "diptube"].includes(part.slot)) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
             onLoad={markLoaded} onError={() => setFailedUrl(part.image.url)} data-builder-layer={part.slot} />)}
     </svg>);
