@@ -2,10 +2,13 @@
  "schemaVersion": 1,
  "release": "slim-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/slim",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:22.523Z",
  "shipPhrase": "ship Slim kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 99,
   "approved": 99,
@@ -413,5 +416,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "deb853f30e247b327bcd677af492c46a770b11bd2b137a0b6f8fec8bd1a85a87"
+ "approvalSha256": "0a70556dc165d32a939965768a985972e1b6780f0d5a044b883b48195a9ae0f3"
 }

@@ -2,10 +2,12 @@
  "schemaVersion": 1,
  "release": "round-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/round",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:19.010Z",
  "shipPhrase": "ship Round kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 41,
   "approved": 41,
@@ -181,5 +183,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "5f12db0c63a75d1e72dc0c97b1f7a3b5bb685b270a92722d0fbfcbc59425ce50"
+ "approvalSha256": "cd78e23dfd826ef60b559a3a1df6ea6465998537cc3f5a229884ded3664babab"
 }

@@ -2,10 +2,13 @@
  "schemaVersion": 1,
  "release": "teardrop-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/teardrop",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:23.446Z",
  "shipPhrase": "ship Teardrop kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 1,
   "approved": 1,
@@ -21,5 +24,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "b06e2dee7ba744235396a0a1f03b802973a1148e7dae260124dec9ef386fc6d0"
+ "approvalSha256": "1f3924b1837579199c21dc551dac5b94eaca46d052661a265260679f123b5eaa"
 }

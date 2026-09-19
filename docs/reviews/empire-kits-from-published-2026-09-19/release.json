@@ -2,10 +2,13 @@
  "schemaVersion": 1,
  "release": "empire-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/empire",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:16.491Z",
  "shipPhrase": "ship Empire kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 26,
   "approved": 26,
@@ -121,5 +124,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "3d2b2394ce3a62aeeae6cc02f62c8a278520f517aaf344736e480543933a939e"
+ "approvalSha256": "9228c0f33be373a028d2be61ed4c333299d5581f1ba2cade2b26a476764538d9"
 }

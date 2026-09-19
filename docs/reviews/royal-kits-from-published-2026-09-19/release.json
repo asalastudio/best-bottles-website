@@ -2,10 +2,13 @@
  "schemaVersion": 1,
  "release": "royal-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/royal",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:19.628Z",
  "shipPhrase": "ship Royal kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 26,
   "approved": 26,
@@ -121,5 +124,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "aa792737b78e06b658ad0e86e1bebaa91a7008448928b6caa5796f156c0f2a4b"
+ "approvalSha256": "901b7567e78d822ce54681768e2d4baac82e488f886055a51cfa0f47065410ba"
 }
