@@ -87,6 +87,22 @@
     "approvedAt": "2026-09-19T03:37:56.445Z",
     "lockedAt": "2026-09-19T03:37:56.445Z"
   },
+  "GBCylFrst9MtlRollBlkDot": {
+    "sha256": "01a8172c9a5c00b695731d6e70a454967b03ee6e9011bcc8636e11308edf6072",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylFrst9MtlRollBlkDot.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T04:11:14.446Z",
+    "lockedAt": "2026-09-19T04:11:14.446Z"
+  },
+  "GBCylFrst9SpryMattSl": {
+    "sha256": "518be8013731dc49b216a893eb67ac5e1fb7e73f032bdd7903bd8e75c16ad190",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylFrst9SpryMattSl.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T04:11:14.446Z",
+    "lockedAt": "2026-09-19T04:11:14.446Z"
+  },
   "GBCylSwrl9SpryMattSl": {
     "sha256": "b3bb294155683b4b4c2f466ccce941189ef518a69cbb22dad1045c02fb2f4223",
     "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/GBCylSwrl9SpryMattSl.png",
@@ -126,6 +142,14 @@
     "family": "Cylinder",
     "approvedAt": "2026-09-19T03:37:56.445Z",
     "lockedAt": "2026-09-19T03:37:56.445Z"
+  },
+  "LBCylFrst9LtnMtSl": {
+    "sha256": "0ac172e064b80dd565eb7f4ac1ed6069eebd572087e2685fbfd381dfa29f06d0",
+    "file": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Madison-Studio-madison-app/1e268205-1613-4c44-8af6-d0873a9d79f0/scratchpad/run26/deliverables/LBCylFrst9LtnMtSl.png",
+    "card": "madison-cylinder-shoulder-lock-2026-09-18",
+    "family": "Cylinder",
+    "approvedAt": "2026-09-19T04:11:14.446Z",
+    "lockedAt": "2026-09-19T04:11:14.446Z"
   },
   "LBCylSwrl9LtnMtSl": {
     "sha256": "35ebf93e35f09a2eb5d78bf21642322018646e900993aab626d3db3eab916280",

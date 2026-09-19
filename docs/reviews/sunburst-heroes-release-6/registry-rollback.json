@@ -1,5 +1,5 @@
 {
-  "writtenAt": "2026-09-19T03:37:57.941Z",
+  "writtenAt": "2026-09-19T04:11:16.421Z",
   "registry": "src/lib/products/catalog-heroes.json",
   "manifest": "docs/reviews/catalog-complete-hero-release-2026-09-07.json",
   "note": "Restore each `from` (url, manifest sha256, framing) to undo the Sunburst release 1 repoint.",
@@ -269,6 +269,54 @@
       "approvedAt": "2026-09-19T03:37:56.445Z"
     },
     {
+      "websiteSku": "GBCylFrst9MtlRollBlkDot",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylFrst9MtlRollBlkDot.adf3825cd872.png",
+        "manifestSha256": "adf3825cd872b86468712a0d72523ca33a0abaa29fdd4cde124b396a50dd4877",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylFrst9MtlRollBlkDot.01a8172c9a5c.png",
+        "sha256": "01a8172c9a5c00b695731d6e70a454967b03ee6e9011bcc8636e11308edf6072",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T04:11:14.446Z"
+    },
+    {
+      "websiteSku": "GBCylFrst9SpryMattSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCylFrst9SpryMattSl.d763a5f0868e.png",
+        "manifestSha256": "d763a5f0868e6de33d3178fb35887dcd7dea56950d95770f71a7976d654f5976",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCylFrst9SpryMattSl.518be8013731.png",
+        "sha256": "518be8013731dc49b216a893eb67ac5e1fb7e73f032bdd7903bd8e75c16ad190",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T04:11:14.446Z"
+    },
+    {
       "websiteSku": "GBCylSwrl9SpryMattSl",
       "family": "Cylinder",
       "from": {
@@ -387,6 +435,30 @@
       },
       "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
       "approvedAt": "2026-09-19T03:37:56.445Z"
+    },
+    {
+      "websiteSku": "LBCylFrst9LtnMtSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/LBCylFrst9LtnMtSl.93c5568f6725.png",
+        "manifestSha256": "93c5568f6725a8ac4c5790ea8cb1fc5d9cabf27f2396844576ba198127204c39",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBCylFrst9LtnMtSl.0ac172e064b8.png",
+        "sha256": "0ac172e064b80dd565eb7f4ac1ed6069eebd572087e2685fbfd381dfa29f06d0",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-19T04:11:14.446Z"
     },
     {
       "websiteSku": "LBCylSwrl9LtnMtSl",

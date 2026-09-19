@@ -1,10 +1,11 @@
 {
-  "generatedAt": "2026-09-19T03:37:56.445Z",
+  "generatedAt": "2026-09-19T04:11:14.446Z",
   "provider": "openai-image-2.5-sunburst",
   "scaleContract": "shoulder-lock-2026-09-07",
   "madisonRuns": [
     "2026-09-19T00-04-30-828Z",
-    "2026-09-19T03-32-03-307Z"
+    "2026-09-19T03-32-03-307Z",
+    "2026-09-19T04-06-17-545Z"
   ],
   "rows": [
     {
@@ -402,6 +403,39 @@
       "indexed": true,
       "replaces": "/images/catalog/bone-review/LBCyl9LtnGl.fa208b7e87a8.png",
       "madisonImageUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/family-batch/cylinder-2026-09-19T03-32-03-307Z/rigged/LB-CYL-CLR-9ML-T-02__rigged.png"
+    },
+    {
+      "websiteSku": "GBCylFrst9MtlRollBlkDot",
+      "graceSku": "GB-CYL-FRS-9ML-MRL-BKDT",
+      "groupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "madisonRun": "2026-09-19T04-06-17-545Z",
+      "madisonImageId": "bd819c04-ad6a-4265-a13b-20007db2cd39",
+      "sha256": "01a8172c9a5c00b695731d6e70a454967b03ee6e9011bcc8636e11308edf6072",
+      "indexed": true,
+      "replaces": "/images/catalog/bone-review/GBCylFrst9MtlRollBlkDot.adf3825cd872.png",
+      "madisonImageUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/family-batch/cylinder-2026-09-19T04-06-17-545Z/rigged/GB-CYL-FRS-9ML-MRL-BKDT__rigged.png"
+    },
+    {
+      "websiteSku": "GBCylFrst9SpryMattSl",
+      "graceSku": "GB-CYL-FRS-9ML-SPR-MSLV",
+      "groupSlug": "cylinder-9ml-frosted-17-415-finemist",
+      "madisonRun": "2026-09-19T04-06-17-545Z",
+      "madisonImageId": "165aa837-6b60-4a3c-90e2-d37bb8c14018",
+      "sha256": "518be8013731dc49b216a893eb67ac5e1fb7e73f032bdd7903bd8e75c16ad190",
+      "indexed": true,
+      "replaces": "/images/catalog/bone-review/GBCylFrst9SpryMattSl.d763a5f0868e.png",
+      "madisonImageUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/family-batch/cylinder-2026-09-19T04-06-17-545Z/rigged/GB-CYL-FRS-9ML-SPR-MSLV__rigged.png"
+    },
+    {
+      "websiteSku": "LBCylFrst9LtnMtSl",
+      "graceSku": "LB-CYL-FRS-9ML-LPM-MSLV",
+      "groupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+      "madisonRun": "2026-09-19T04-06-17-545Z",
+      "madisonImageId": "d93c0bef-7d2c-411c-9386-46c0df3464db",
+      "sha256": "0ac172e064b80dd565eb7f4ac1ed6069eebd572087e2685fbfd381dfa29f06d0",
+      "indexed": true,
+      "replaces": "/images/catalog/bone-review/LBCylFrst9LtnMtSl.93c5568f6725.png",
+      "madisonImageUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/family-batch/cylinder-2026-09-19T04-06-17-545Z/rigged/LB-CYL-FRS-9ML-LPM-MSLV__rigged.png"
     }
   ]
 }
