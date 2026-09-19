@@ -27,10 +27,6 @@
     animation: pass 32s linear infinite;
 }
 
-.bar:hover .line {
-    animation-play-state: paused;
-}
-
 @keyframes pass {
     from { transform: translateX(0); }
     to { transform: translateX(calc(-100% - 100vw)); }

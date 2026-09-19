@@ -45,7 +45,7 @@
   },
   "announcement": {
     "label": "Announcement",
-    "freeShipping": "Free shipping on all domestic orders above $99."
+    "message": "$50 minimum per order. Need fitment help? Talk with Grace."
   },
   "footer": {
     "shop": "Shop",
@@ -53,7 +53,6 @@
     "bottleFamilies": "Bottle Families",
     "cylinder": "Cylinder",
     "closuresApplicators": "Closures & Applicators",
-    "requestQuote": "Request a Quote",
     "resources": "Resources",
     "fitmentGuide": "Fitment Guide",
     "buildYourBottle": "Build Your Bottle",
@@ -65,8 +64,8 @@
     "ourStory": "Our Story",
     "contact": "Contact",
     "wholesaleInquiry": "Wholesale Inquiry",
-    "freeShipping": "Free Shipping Over $99",
-    "freeShippingDetail": "Across eligible U.S. orders",
+    "orderMinimum": "$50 Order Minimum",
+    "orderMinimumDetail": "Per cart at checkout",
     "fitmentVerified": "Fitment Verified",
     "fitmentVerifiedDetail": "Compatibility checked",
     "packagingGuidance": "Packaging Guidance",
@@ -164,7 +163,8 @@
     "dispenser": "Dispenser",
     "rollerMaterial": "Roller Material",
     "collection": "Collection",
-    "sortFeatured": "By Design Family",
+    "sortBy": "Sort by",
+    "sortFeatured": "Featured",
     "sortBestMatch": "Best Match",
     "sortPriceAsc": "Price: Low to High",
     "sortPriceDesc": "Price: High to Low",

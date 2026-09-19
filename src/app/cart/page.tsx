@@ -23,8 +23,8 @@ export default function CartPage() {
     } = useCart();
 
     const subtotal = items.reduce((sum, item) => sum + (item.unitPrice ?? 0) * item.quantity, 0);
-    const minimum = checkoutMinimum(items);
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
+    const minimum = checkoutMinimum(checkoutReadyItems);
 
     return (
         <main className="min-h-screen bg-bone">

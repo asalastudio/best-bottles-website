@@ -56,9 +56,10 @@ describe("Shopify sellability gate", () => {
         const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems([
             { graceSku: "OK", shopifyVariantId: "gid://1", shopifySellable: true },
             { graceSku: "DRAFT", shopifyVariantId: "gid://2", shopifySellable: false },
+            { graceSku: "SOLD", shopifyVariantId: "gid://3", shopifySellable: true, stockStatus: "Out of Stock" },
         ]);
         expect(checkoutReadyItems.map((i) => i.graceSku)).toEqual(["OK"]);
-        expect(quoteOnlyItems.map((i) => i.graceSku)).toEqual(["DRAFT"]);
+        expect(quoteOnlyItems.map((i) => i.graceSku)).toEqual(["DRAFT", "SOLD"]);
     });
 });
 

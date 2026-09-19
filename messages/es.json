@@ -45,7 +45,7 @@
   },
   "announcement": {
     "label": "Anuncio",
-    "freeShipping": "Envío gratis en pedidos nacionales de más de $99."
+    "message": "Pedido mínimo de $50. ¿Necesitas ayuda con el cierre? Habla con Gracia."
   },
   "footer": {
     "shop": "Tienda",
@@ -53,7 +53,6 @@
     "bottleFamilies": "Familias de frascos",
     "cylinder": "Cilindro",
     "closuresApplicators": "Cierres y aplicadores",
-    "requestQuote": "Solicitar cotización",
     "resources": "Recursos",
     "fitmentGuide": "Guía de compatibilidad",
     "buildYourBottle": "Arma tu frasco",
@@ -65,8 +64,8 @@
     "ourStory": "Nuestra historia",
     "contact": "Contacto",
     "wholesaleInquiry": "Consulta mayorista",
-    "freeShipping": "Envío gratis en pedidos de más de $99",
-    "freeShippingDetail": "En pedidos elegibles de EE. UU.",
+    "orderMinimum": "Pedido mínimo de $50",
+    "orderMinimumDetail": "Por carrito al pagar",
     "fitmentVerified": "Compatibilidad verificada",
     "fitmentVerifiedDetail": "Compatibilidad comprobada",
     "packagingGuidance": "Asesoría de empaque",
@@ -164,7 +163,8 @@
     "dispenser": "Dispensador",
     "rollerMaterial": "Material del roll-on",
     "collection": "Colección",
-    "sortFeatured": "Por familia de diseño",
+    "sortBy": "Ordenar por",
+    "sortFeatured": "Destacados",
     "sortBestMatch": "Mejor coincidencia",
     "sortPriceAsc": "Precio: menor a mayor",
     "sortPriceDesc": "Precio: mayor a menor",

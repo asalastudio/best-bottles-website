@@ -25,7 +25,6 @@ const FOOTER_GROUPS = [
             ["bottleFamilies", "/catalog?sort=featured"],
             ["cylinder", "/catalog/cylinder"],
             ["closuresApplicators", "/catalog?category=Component"],
-            ["requestQuote", "/request-quote"],
         ],
     },
     {
@@ -50,7 +49,7 @@ const FOOTER_GROUPS = [
 ] as const;
 
 const SERVICE_ITEMS = [
-    { titleKey: "freeShipping", detailKey: "freeShippingDetail", icon: Truck },
+    { titleKey: "orderMinimum", detailKey: "orderMinimumDetail", icon: Truck },
     { titleKey: "fitmentVerified", detailKey: "fitmentVerifiedDetail", icon: ShieldCheck },
     { titleKey: "packagingGuidance", detailKey: "packagingGuidanceDetail", icon: ChatCircle },
 ] as const;

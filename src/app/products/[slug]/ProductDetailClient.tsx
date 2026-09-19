@@ -807,7 +807,7 @@ function TrustStack({ variant, inStock }: { variant: ProductVariant | null | und
                 )}
                 <div className="flex items-center gap-2.5 text-obsidian">
                     <Truck className="w-4 h-4 text-slate shrink-0" strokeWidth={1.5} />
-                    <span>Free shipping on orders over <span className="font-semibold">$99</span></span>
+                    <span>$50 minimum per order</span>
                 </div>
             </div>
         </div>
@@ -3167,7 +3167,7 @@ export default function ProductDetailClient({
                                     </div>
                                     <div className="rounded-sm border border-champagne/50 bg-white p-3">
                                         <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Shipping</p>
-                                        <p className="mt-1 font-semibold text-obsidian">Free over $99</p>
+                                        <p className="mt-1 font-semibold text-obsidian">$50 order minimum</p>
                                     </div>
                                 </div>
                             </div>

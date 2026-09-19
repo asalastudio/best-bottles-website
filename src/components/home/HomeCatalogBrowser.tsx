@@ -96,6 +96,6 @@ export default function HomeCatalogBrowser({data,designFamilyCards}:{data:HomeBr
    </div>
   </section>
   <Link href="/matrix" className={styles.builder}>Build your bottle<CaretRight size={22}/></Link>
-  <p className={styles.terms}>$50 minimum per cart at checkout. Free shipping on orders above $99. <Link href="/shipping-returns">Shipping details</Link></p>
+  <p className={styles.terms}>$50 minimum per cart at checkout. Need fitment help? Talk with Grace. <Link href="/shipping-returns">Shipping details</Link></p>
  </div>;
 }

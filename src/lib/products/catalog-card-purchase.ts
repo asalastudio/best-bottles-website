@@ -10,7 +10,7 @@
  */
 
 import type { CartItem } from "@/components/CartProvider";
-import { isCheckoutReady } from "@/lib/checkout";
+import { isSoldOutStockStatus } from "@/lib/checkout";
 import {
     activeVolumeTierIndex,
     buildDisplayVolumeTiers,
@@ -95,15 +95,22 @@ export function catalogVariantInStock(variant: Pick<CatalogPurchaseVariant, "sto
     return variant.stockStatus === "In Stock" || variant.stockStatus === "Available to order";
 }
 
-/** Mirrors the PDP add-to-cart gate: in stock, Shopify-sellable, and priced. */
+/** Explicit out-of-stock on the list item. Unknown or lead-time statuses are not sold-out. */
+export function catalogVariantSoldOut(variant: Pick<CatalogPurchaseVariant, "stockStatus">): boolean {
+    return isSoldOutStockStatus(variant.stockStatus);
+}
+
+/** Sold-out or Shopify-draft rows stay visible but cannot be ordered. */
+export function catalogVariantOrderBlocked(
+    variant: Pick<CatalogPurchaseVariant, "stockStatus" | "shopifySellable"> | null | undefined,
+): boolean {
+    if (!variant) return false;
+    return catalogVariantSoldOut(variant) || variant.shopifySellable === false;
+}
+
+/** Catalog cards sell priced, orderable assemblies. Sold-out and Shopify-unavailable do not become a quote CTA. */
 export function isCatalogVariantPurchasable(variant: CatalogPurchaseVariant | null | undefined): variant is CatalogPurchaseVariant {
-    if (!variant || variant.webPrice1pc == null || variant.webPrice1pc <= 0) return false;
-    if (!catalogVariantInStock(variant)) return false;
-    return isCheckoutReady({
-        graceSku: variant.graceSku,
-        shopifyVariantId: variant.shopifyVariantId ?? null,
-        shopifySellable: variant.shopifySellable ?? undefined,
-    });
+    return Boolean(variant && variant.webPrice1pc != null && variant.webPrice1pc > 0 && !catalogVariantOrderBlocked(variant));
 }
 
 /** The published ladder as closed display rows; empty when the row has no breaks. */
@@ -182,7 +189,8 @@ export function buildCatalogCartItem(variant: CatalogPurchaseVariant, quantity: 
         itemName: context.title,
         quantity,
         unitPrice: variant.webPrice1pc,
-        checkoutEligible: true,
+        checkoutEligible: isCatalogVariantPurchasable(variant),
+        stockStatus: variant.stockStatus,
         shopifyVariantId: variant.shopifyVariantId,
         shopifySellable: variant.shopifySellable ?? undefined,
         websiteSku: variant.websiteSku,

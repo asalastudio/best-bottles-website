@@ -113,6 +113,6 @@ describe("June 15 launch readiness guardrails", () => {
         expect(footer).toContain('aria-label={t("emailLabel")}');
         expect(catalog).toContain('aria-label={`Filter by ${label}`}');
         expect(catalog).toContain('aria-label="Sort catalog results"');
-        expect(catalog).toContain('aria-label="Sort visible catalog results"');
+        expect(catalog).toContain('aria-label="Sort by visible catalog results"');
     });
 });

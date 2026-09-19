@@ -192,12 +192,12 @@ export default function MobileProductDetails({
             id: "shipping",
             label: "Shipping & Fulfillment",
             icon: Truck,
-            summary: "Free shipping over $99",
+            summary: "$50 order minimum",
             content: (
                 <dl>
                     <DetailRow label="Availability" value={variant.stockStatus ?? "Confirm availability"} />
                     <DetailRow label="Case quantity" value={caseQty ? `${caseQty.toLocaleString("en-US")} units/case` : "Confirm before ordering"} />
-                    <DetailRow label="Shipping" value="Free over $99" />
+                    <DetailRow label="Order minimum" value="$50 per cart at checkout" />
                     <DetailRow label="Checkout price" value="1-unit rate; quantity breaks confirmed on quote" />
                 </dl>
             ),
