@@ -493,7 +493,15 @@ def build_registered(fid, body, skus, out_dir: Path, log, anchor=None):
         # canvas by 352 px and behead the bulb on most of them. Pinning the baseline
         # is what stops the bottle jumping when a customer switches finish.
         registration["frameFrom"] = anchor["body"]
-        max_w, uy0, uy1 = band_of(shots)
+        # Judge the fit on the assembled cap-on views, the ones a customer sees,
+        # for the same reason the baseline clamp below does. An uncapped view
+        # stands the overcap BESIDE the bottle, so it is far wider than the
+        # assembled shot; letting it set the width shrank whole groups against
+        # their siblings — Round 78 fell to 0.478 where its plain groups sat at
+        # 0.74, and Empire 100 with it, while Slim, whose tassel group has no
+        # uncapped view, was untouched.
+        framing = [sh for sh in shots if sh in assembled] or shots
+        max_w, uy0, uy1 = band_of(framing)
         uh = uy1 - uy0
         scale = min(anchor["scale"], (OUT_W - 2 * PAD) / max_w, (OUT_H - 2 * PAD) / uh)
         if scale < anchor["scale"]:
