@@ -30,7 +30,7 @@ function fixture(overrides: Partial<CatalogRow> = {}, slots = ["body", "roller",
             productGroupSlug: "caps", shopifyVariantId: "gid://shopify/ProductVariant/2", shopifySellable: true }] };
     }
     const kit = {
-        sku: row.websiteSku!, familyId: `cylinder-${row.capacityMl}ml-${row.color!.toLowerCase().replaceAll(" ", "-")}-${row.neckThreadSize}`,
+        sku: row.websiteSku!, websiteSku: row.websiteSku!, graceSku: row.graceSku ?? null, familyId: `cylinder-${row.capacityMl}ml-${row.color!.toLowerCase().replaceAll(" ", "-")}-${row.neckThreadSize}`,
         completeness: "full", conflicts: [], canvas: { width: 1000, height: 1100 },
         anchors: { axisX: 500, neckAxisX: 500, seatY: 300, baselineY: 1000, pxPerMm: null }, plateSha256: "same-plate", three: null,
         parts: slots.map((slot, i) => ({ slot, variantKey: slot, zOrder: i, explodeIndex: i, assembled: { x: 0, y: 0 },
@@ -162,7 +162,8 @@ describe("builder catalog boundary", () => {
         }
         const { row, kit } = fixture();
         expect(configurationFromRow(row, null)).toBeNull();
-        expect(configurationFromRow(row, { ...kit, sku: "another-sku" })).toBeNull();
+        expect(configurationFromRow(row, { ...kit, sku: "another-sku" })?.id).toBe(row.websiteSku);
+        expect(configurationFromRow(row, { ...kit, sku: "another-sku", websiteSku: "wrong-sku", graceSku: "WRONG-GRACE" })).toBeNull();
         expect(configurationFromRow(row, { ...kit, familyId: "cylinder-5ml-clear-13-415" })).toBeNull();
         expect(configurationFromRow(row, { ...kit, conflicts: [kit.sku] })).toBeNull();
         expect(configurationFromRow(row, { ...kit, completeness: "capSplit" })).toBeNull();

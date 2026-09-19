@@ -1,6 +1,9 @@
 import { mutation, query } from "./_generated/server";
+import type { QueryCtx } from "./_generated/server";
 import { v } from "convex/values";
+import type { Doc } from "./_generated/dataModel";
 import { verifyWriteToken } from "./writeToken";
+import { kitStageStructureIssues } from "./lib/kitStageValidation";
 
 /**
  * Component kits — per-part alpha layers with anchors, registered pixel-for-
@@ -74,6 +77,8 @@ const kitRowV = v.object({
 
 const kitViewV = v.object({
     sku: v.string(),
+    websiteSku: v.union(v.string(), v.null()),
+    graceSku: v.union(v.string(), v.null()),
     familyId: v.string(),
     plateSha256: v.string(),
     canvas: v.object({ width: v.number(), height: v.number() }),
@@ -83,6 +88,27 @@ const kitViewV = v.object({
     three: threeV,
     conflicts: v.array(v.string()),
 });
+
+async function resolvePlateRow(ctx: QueryCtx, kit: Doc<"productKits">): Promise<Doc<"productPlates"> | null> {
+    const collectNewest = (rows: Doc<"productPlates">[]) =>
+        rows.length === 0 ? null : rows.sort((a, b) => b.importedAt - a.importedAt)[0];
+
+    const bySku = await ctx.db.query("productPlates").withIndex("by_sku", (q) => q.eq("sku", kit.sku)).collect();
+    const canonical = collectNewest(bySku);
+    if (canonical) return canonical;
+
+    if (kit.websiteSku) {
+        const byWebsite = await ctx.db.query("productPlates").withIndex("by_websiteSku", (q) => q.eq("websiteSku", kit.websiteSku)).collect();
+        const match = collectNewest(byWebsite.filter((row) => row.sku === kit.sku || row.websiteSku === kit.websiteSku));
+        if (match) return match;
+    }
+    if (kit.graceSku) {
+        const byGrace = await ctx.db.query("productPlates").withIndex("by_graceSku", (q) => q.eq("graceSku", kit.graceSku)).collect();
+        const match = collectNewest(byGrace.filter((row) => row.sku === kit.sku || row.graceSku === kit.graceSku));
+        if (match) return match;
+    }
+    return null;
+}
 
 /**
  * One kit for one SKU, fetched by the stage on interaction. Exact website SKU first,
@@ -101,13 +127,16 @@ export const forSku = query({
         // An exact website SKU is stronger evidence than an old Grace alias.
         const exact = args.websiteSku ? unique.filter((row) => row.websiteSku === args.websiteSku) : [];
         const newest = (exact.length ? exact : unique).sort((a, b) => b.importedAt - a.importedAt)[0];
-        const plates = await ctx.db.query("productPlates").withIndex("by_sku", (q) => q.eq("sku", newest.sku)).collect();
-        const plate = plates.length === 1 ? plates[0] : null;
+        const plate = await resolvePlateRow(ctx, newest);
         // Publication can replace a plate before its kit. During that interval
         // return the photograph rather than layering stale, misregistered parts.
         if (!plate || plate.front.sha256 !== newest.plateSha256) return null;
+        const structureIssues = kitStageStructureIssues(newest);
+        if (structureIssues.length > 0) return null;
         return {
             sku: newest.sku,
+            websiteSku: newest.websiteSku,
+            graceSku: newest.graceSku,
             familyId: newest.familyId,
             plateSha256: newest.plateSha256,
             canvas: newest.canvas,
@@ -180,13 +209,24 @@ export const integrity = query({
         for (const kit of page.page) {
             const sameSku = await ctx.db.query("productKits").withIndex("by_sku", (q) => q.eq("sku", kit.sku)).collect();
             if (sameSku.length > 1) issues.push({ sku: kit.sku, issue: "duplicate_index_rows", detail: `${sameSku.length} rows` });
-            const plates = await ctx.db.query("productPlates").withIndex("by_sku", (q) => q.eq("sku", kit.sku)).collect();
-            if (plates.length === 0) {
+            const plate = await resolvePlateRow(ctx, kit);
+            if (!plate) {
                 issues.push({ sku: kit.sku, issue: "kit_without_plate", detail: "" });
-            } else if (!plates.some((plate) => plate.front.sha256 === kit.plateSha256)) {
-                issues.push({ sku: kit.sku, issue: "kit_stale_plate", detail: `kit ${kit.plateSha256.slice(0, 12)} vs plate ${plates[0].front.sha256.slice(0, 12)}` });
+            } else if (plate.front.sha256 !== kit.plateSha256) {
+                issues.push({ sku: kit.sku, issue: "kit_stale_plate", detail: `kit ${kit.plateSha256.slice(0, 12)} vs plate ${plate.front.sha256.slice(0, 12)}` });
             }
-            if (!kit.parts.some((part) => part.slot === "body")) issues.push({ sku: kit.sku, issue: "kit_without_body", detail: "" });
+            for (const finding of kitStageStructureIssues(kit)) {
+                issues.push({ sku: kit.sku, issue: finding.issue, detail: finding.detail });
+            }
+            if (kit.websiteSku) {
+                const websiteSku = kit.websiteSku;
+                const products = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", websiteSku)).collect();
+                if (products.length === 0) {
+                    issues.push({ sku: kit.sku, issue: "kit_orphan_websiteSku", detail: kit.websiteSku });
+                } else if (kit.graceSku && !products.some((product) => product.graceSku === kit.graceSku)) {
+                    issues.push({ sku: kit.sku, issue: "kit_grace_sku_mismatch", detail: `${kit.graceSku} vs ${products.map((p) => p.graceSku).join(",")}` });
+                }
+            }
         }
         return { isDone: page.isDone, continueCursor: page.continueCursor, checked: page.page.length, issues };
     },

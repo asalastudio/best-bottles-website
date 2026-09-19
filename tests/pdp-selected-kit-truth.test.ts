@@ -16,4 +16,9 @@ describe("selected-SKU kit truth", () => {
         expect(resolveSelectedSkuKit(selected, kit("WEB-B"))?.parts).toHaveLength(1);
         expect(resolveSelectedSkuKit(selected, kit("GRACE-B"))?.parts).toHaveLength(1);
     });
+
+    it("accepts a kit keyed by websiteSku when the customer selection carries only the matching grace SKU", () => {
+        const selected = { websiteSku: null, graceSku: "GRACE-B" };
+        expect(resolveSelectedSkuKit(selected, { sku: "WEB-B", websiteSku: "WEB-B", graceSku: "GRACE-B", parts: [{ slot: "cap" }] })?.parts).toHaveLength(1);
+    });
 });

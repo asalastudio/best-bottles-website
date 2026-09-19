@@ -7,7 +7,7 @@ import type { BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/mode
 import { slimBuilderBodies } from "@/lib/bottle-builder/payload";
 
 const kit = {
-    sku: "Cylinder9MetalBlack", familyId: "cylinder-9ml-clear-17-415", completeness: "full", conflicts: [],
+    sku: "Cylinder9MetalBlack", websiteSku: "Cylinder9MetalBlack", graceSku: null, familyId: "cylinder-9ml-clear-17-415", completeness: "full", conflicts: [],
     canvas: { width: 10, height: 10 }, anchors: { axisX: 5, neckAxisX: 5, seatY: 1, baselineY: 9, pxPerMm: null },
     plateSha256: "p", three: null, parts: [],
 } as BuilderKit;
