@@ -150,5 +150,6 @@ describe("Build Your Bottle first-paint contract", () => {
         expect(image).not.toContain("IntersectionObserver");
         expect(image).not.toContain('fetchPriority: "low"');
         expect(image).not.toContain('fetchPriority="low"');
+        expect(image).toContain("!expanded && !thumbnail");
     });
 });
