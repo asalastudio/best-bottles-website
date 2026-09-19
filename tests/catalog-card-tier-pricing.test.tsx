@@ -245,32 +245,31 @@ describe("tier pricing dialog on the catalog card", () => {
         expect($("catalog-card-add")).not.toBeNull();
     });
 
-    it("keeps Add to cart when Shopify will not checkout, and never offers a quote CTA", () => {
+    it("disables Add to cart when Shopify will not checkout, and never offers a quote CTA", () => {
         card({ shopifySellable: false });
         expect(el.querySelector('[data-testid="catalog-card-quote"]')).toBeNull();
         expect(el.querySelector('[data-testid="catalog-card-quote-compact"]')).toBeNull();
         expect(el.querySelector('[data-testid="catalog-card-dialog-quote"]')).toBeNull();
-        expect($("catalog-card-add").textContent).toBe("Add to cart");
-        expect($("catalog-card-purchase").dataset.state).toBe("purchasable");
+        expect($("catalog-card-purchase").dataset.state).toBe("unavailable");
+        expect($("catalog-card-add").textContent).toBe("Unavailable");
+        expect(($("catalog-card-add") as HTMLButtonElement).disabled).toBe(true);
+        expect($("catalog-card-stock").textContent).toMatch(/Unavailable/i);
         click($("catalog-card-add"));
-        expect(addItems).toHaveBeenCalledTimes(1);
+        expect(addItems).not.toHaveBeenCalled();
     });
 
-    it("marks sold-out cards and still lets the customer add for later delivery", () => {
+    it("marks sold-out cards and blocks add to cart", () => {
         card({ stockStatus: "Out of Stock" });
         expect($("catalog-card-purchase").dataset.state).toBe("sold-out");
         expect($("catalog-card-stock").textContent).toMatch(/Out of stock/i);
-        expect($("catalog-card-stock").textContent).toMatch(/confirm delivery/i);
+        expect($("catalog-card-stock").textContent).not.toMatch(/confirm delivery/i);
         expect(el.querySelector('[data-testid="catalog-card-quote"]')).toBeNull();
-        expect($("catalog-card-add").textContent).toBe("Add to cart");
+        expect($("catalog-card-add").textContent).toBe("Out of stock");
+        expect(($("catalog-card-add") as HTMLButtonElement).disabled).toBe(true);
+        expect(($("catalog-card-add-compact") as HTMLButtonElement).disabled).toBe(true);
         click($("catalog-card-add"));
-        expect(addItems).toHaveBeenCalledTimes(1);
-        expect(addItems.mock.calls[0][0][0]).toMatchObject({
-            graceSku: "CYL5-ROLL-BLK",
-            quantity: 1,
-            checkoutEligible: false,
-            stockStatus: "Out of Stock",
-        });
+        click($("catalog-card-add-compact"));
+        expect(addItems).not.toHaveBeenCalled();
     });
 
     it("routes unpriced groups to the product page", () => {

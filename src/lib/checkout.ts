@@ -8,7 +8,7 @@ export type CheckoutCandidate = {
      * even though a variant ID exists. `undefined` means "not yet synced".
      */
     shopifySellable?: boolean | null;
-    /** Catalog stock label. Explicit sold-out values stay addable but are quote-only. */
+    /** Catalog stock label. Sold-out lines must not be added; leftover cart rows stay quote-only. */
     stockStatus?: string | null;
 };
 
@@ -23,8 +23,8 @@ export function isCheckoutReady(item: CheckoutCandidate): boolean {
     // checkout, so route these to the quote path instead of a dead end.
     if (item.shopifySellable === false) return false;
     if (isSoldOutStockStatus(item.stockStatus)) return false;
-    // Catalog sold-out / quote-only adds set this false even when a variant
-    // ID is present. Do not let the stored ID send those lines to Shopify.
+    // Leftover sold-out / quote-only cart rows set this false even when a
+    // variant ID is present. Do not let the stored ID send those to Shopify.
     if (item.checkoutEligible === false) return false;
     if (item.shopifyVariantId) return true;
     return item.checkoutEligible === true;

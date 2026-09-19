@@ -5,6 +5,7 @@ import {
     catalogCardStartingPrice,
     catalogCardTiers,
     catalogTierLabel,
+    catalogVariantOrderBlocked,
     catalogVariantSoldOut,
     describeCatalogTier,
     isCatalogVariantPurchasable,
@@ -74,16 +75,20 @@ describe("resolveCatalogCardPurchaseVariant", () => {
 describe("isCatalogVariantPurchasable is the catalog Add to cart gate", () => {
     const variant = resolveCatalogCardPurchaseVariant([black], { productTitle: "x" })!;
 
-    it("needs a 1-unit price only — sold-out and Shopify-draft rows still add", () => {
+    it("needs a priced, orderable assembly — sold-out and Shopify-unavailable cannot add", () => {
         expect(isCatalogVariantPurchasable(variant)).toBe(true);
         expect(isCatalogVariantPurchasable({ ...variant, stockStatus: "Available to order" })).toBe(true);
-        expect(isCatalogVariantPurchasable({ ...variant, stockStatus: "Out of Stock" })).toBe(true);
         expect(isCatalogVariantPurchasable({ ...variant, stockStatus: null })).toBe(true);
-        expect(isCatalogVariantPurchasable({ ...variant, shopifySellable: false })).toBe(true);
         expect(isCatalogVariantPurchasable({ ...variant, shopifyVariantId: null, shopifySellable: null })).toBe(true);
+        expect(isCatalogVariantPurchasable({ ...variant, stockStatus: "Out of Stock" })).toBe(false);
+        expect(isCatalogVariantPurchasable({ ...variant, stockStatus: "Sold Out" })).toBe(false);
+        expect(isCatalogVariantPurchasable({ ...variant, shopifySellable: false })).toBe(false);
         expect(isCatalogVariantPurchasable({ ...variant, webPrice1pc: null })).toBe(false);
         expect(isCatalogVariantPurchasable({ ...variant, webPrice1pc: 0 })).toBe(false);
         expect(isCatalogVariantPurchasable(null)).toBe(false);
+        expect(catalogVariantOrderBlocked({ ...variant, stockStatus: "Out of Stock" })).toBe(true);
+        expect(catalogVariantOrderBlocked({ ...variant, shopifySellable: false })).toBe(true);
+        expect(catalogVariantOrderBlocked(variant)).toBe(false);
     });
 });
 
@@ -171,9 +176,12 @@ describe("buildCatalogCartItem", () => {
         });
     });
 
-    it("keeps sold-out assemblies addable but quote-only so checkout cannot drop them", () => {
-        const variant = resolveCatalogCardPurchaseVariant([{ ...black, stockStatus: "Out of Stock" }], { productTitle: "x" })!;
-        const item = buildCatalogCartItem(variant, 1, {
+    it("does not mark a sold-out or Shopify-unavailable assembly checkout-eligible", () => {
+        const soldOut = resolveCatalogCardPurchaseVariant([{ ...black, stockStatus: "Out of Stock" }], { productTitle: "x" })!;
+        const draft = resolveCatalogCardPurchaseVariant([{ ...black, shopifySellable: false }], { productTitle: "x" })!;
+        expect(isCatalogVariantPurchasable(soldOut)).toBe(false);
+        expect(isCatalogVariantPurchasable(draft)).toBe(false);
+        expect(buildCatalogCartItem(soldOut, 1, {
             title: "5 ml Clear Cylinder Roll-On Bottle",
             productGroupSlug: "cylinder-5ml-clear-roll-on",
             family: "Cylinder",
@@ -181,12 +189,10 @@ describe("buildCatalogCartItem", () => {
             color: "Clear",
             category: "Bottle",
             neckThreadSize: "13-415",
-        });
-        expect(item).toMatchObject({
+        })).toMatchObject({
             graceSku: "CYL5-ROLL-BLK",
             checkoutEligible: false,
             stockStatus: "Out of Stock",
-            shopifyVariantId: "gid://shopify/ProductVariant/1",
         });
     });
 });

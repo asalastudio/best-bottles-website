@@ -29,6 +29,7 @@ import {
     catalogCardStartingPrice,
     catalogCardTiers,
     catalogTierLabel,
+    catalogVariantOrderBlocked,
     catalogVariantSoldOut,
     describeCatalogTier,
     isCatalogVariantPurchasable,
@@ -102,6 +103,8 @@ export default function CatalogCardPurchase({
 
     const tiers = catalogCardTiers(variant);
     const soldOut = Boolean(variant && catalogVariantSoldOut(variant));
+    const orderBlocked = Boolean(variant && catalogVariantOrderBlocked(variant));
+    const canAdd = isCatalogVariantPurchasable(variant);
     const { qty, error } = parseCatalogQuantity(qtyText);
     const activeTier = activeCatalogTier(tiers, qty);
     const activeIndex = activeTier ? tiers.indexOf(activeTier) : -1;
@@ -164,8 +167,12 @@ export default function CatalogCardPurchase({
 
     const handleAdd = () => {
         track(() => analytics.catalogQuickAdd({ stage: "clicked", ...eventBase }));
-        if (!isCatalogVariantPurchasable(variant) || qty == null) {
-            track(() => analytics.catalogQuickAdd({ stage: "error", ...eventBase, error: error ?? "not-purchasable" }));
+        if (!canAdd || qty == null) {
+            track(() => analytics.catalogQuickAdd({
+                stage: "error",
+                ...eventBase,
+                error: soldOut ? "sold-out" : orderBlocked ? "unavailable" : error ?? "not-purchasable",
+            }));
             return;
         }
         // Only the cart mutation is inside the try: telemetry after it must not
@@ -229,7 +236,7 @@ export default function CatalogCardPurchase({
                     type="button"
                     className={STEP_BUTTON}
                     onClick={() => commitQuantity((qty ?? 1) - 1, "stepper")}
-                    disabled={qty != null && qty <= 1}
+                    disabled={orderBlocked || (qty != null && qty <= 1)}
                     aria-label="Decrease quantity"
                 >
                     <Minus className="h-3.5 w-3.5" aria-hidden />
@@ -242,6 +249,7 @@ export default function CatalogCardPurchase({
                     pattern="[0-9]*"
                     autoComplete="off"
                     value={qtyText}
+                    disabled={orderBlocked}
                     onChange={(event) => setQtyText(event.target.value)}
                     onFocus={(event) => event.currentTarget.select()}
                     onBlur={() => { if (qty != null) commitQuantity(qty, "input"); }}
@@ -258,6 +266,7 @@ export default function CatalogCardPurchase({
                     type="button"
                     className={STEP_BUTTON}
                     onClick={() => commitQuantity((qty ?? 0) + 1, "stepper")}
+                    disabled={orderBlocked}
                     aria-label="Increase quantity"
                 >
                     <Plus className="h-3.5 w-3.5" aria-hidden />
@@ -292,23 +301,34 @@ export default function CatalogCardPurchase({
         </div>
     );
 
+    const addLabel = soldOut ? "Out of stock" : orderBlocked ? "Unavailable" : "Add to cart";
+    const addAriaLabel = soldOut
+        ? `Out of stock: ${title}`
+        : orderBlocked
+            ? `${title} unavailable for checkout`
+            : `Add ${qty ?? ""} ${title} to cart`.replace(/\s+/g, " ");
+
     const renderAddButton = (scope: Scope) => (
         <button
             type="button"
             data-testid={scope === "card" ? "catalog-card-add" : "catalog-card-dialog-add"}
             onClick={handleAdd}
-            disabled={qty == null}
+            disabled={!canAdd || qty == null}
             className={PRIMARY_BUTTON}
-            aria-label={`Add ${qty ?? ""} ${title} to cart`.replace(/\s+/g, " ")}
+            aria-label={addAriaLabel}
         >
-            {added != null ? <><Check className="h-3.5 w-3.5" aria-hidden />Added</> : "Add to cart"}
+            {added != null && canAdd ? <><Check className="h-3.5 w-3.5" aria-hidden />Added</> : addLabel}
         </button>
     );
 
     const stockNote = soldOut ? (
         <p className="mt-1 text-[11px] leading-snug text-slate" data-testid="catalog-card-stock">
             <span className="font-semibold text-obsidian">Out of stock</span>
-            {" — we'll confirm delivery after you add this."}
+        </p>
+    ) : orderBlocked ? (
+        <p className="mt-1 text-[11px] leading-snug text-slate" data-testid="catalog-card-stock">
+            <span className="font-semibold text-obsidian">Unavailable</span>
+            {" for online checkout."}
         </p>
     ) : null;
 
@@ -316,7 +336,7 @@ export default function CatalogCardPurchase({
         <div
             className="border-t border-champagne/55 px-3 pb-3 pt-3 sm:px-5 lg:px-4 lg:pb-4 lg:pt-3"
             data-testid="catalog-card-purchase"
-            data-state={soldOut ? "sold-out" : "purchasable"}
+            data-state={soldOut ? "sold-out" : orderBlocked ? "unavailable" : "purchasable"}
         >
             <p className="text-[15px] font-medium leading-tight text-obsidian lg:text-lg lg:font-semibold" data-testid="catalog-card-price">
                 From {formatPrice(startingPrice ?? variant.webPrice1pc)}
@@ -347,9 +367,9 @@ export default function CatalogCardPurchase({
                     type="button"
                     data-testid="catalog-card-add-compact"
                     onClick={handleAdd}
-                    disabled={qty == null}
+                    disabled={!canAdd || qty == null}
                     className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-obsidian text-white ${FOCUS_RING}`}
-                    aria-label={`Add ${qty ?? 1} ${title} to cart`.replace(/\s+/g, " ")}
+                    aria-label={addAriaLabel}
                 >
                     {added != null ? <Check className="h-4 w-4" aria-hidden /> : <ShoppingCart className="h-4 w-4" aria-hidden />}
                 </button>

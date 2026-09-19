@@ -100,9 +100,17 @@ export function catalogVariantSoldOut(variant: Pick<CatalogPurchaseVariant, "sto
     return isSoldOutStockStatus(variant.stockStatus);
 }
 
-/** Catalog cards sell any priced assembly. Stock and Shopify draft status do not swap the CTA to a quote. */
+/** Sold-out or Shopify-draft rows stay visible but cannot be ordered. */
+export function catalogVariantOrderBlocked(
+    variant: Pick<CatalogPurchaseVariant, "stockStatus" | "shopifySellable"> | null | undefined,
+): boolean {
+    if (!variant) return false;
+    return catalogVariantSoldOut(variant) || variant.shopifySellable === false;
+}
+
+/** Catalog cards sell priced, orderable assemblies. Sold-out and Shopify-unavailable do not become a quote CTA. */
 export function isCatalogVariantPurchasable(variant: CatalogPurchaseVariant | null | undefined): variant is CatalogPurchaseVariant {
-    return Boolean(variant && variant.webPrice1pc != null && variant.webPrice1pc > 0);
+    return Boolean(variant && variant.webPrice1pc != null && variant.webPrice1pc > 0 && !catalogVariantOrderBlocked(variant));
 }
 
 /** The published ladder as closed display rows; empty when the row has no breaks. */
@@ -176,13 +184,12 @@ export type CatalogCartContext = {
 
 /** Same line-item shape the PDP sends, so the cart's tier nudge and checkout split behave identically. */
 export function buildCatalogCartItem(variant: CatalogPurchaseVariant, quantity: number, context: CatalogCartContext): CartItem {
-    const soldOut = catalogVariantSoldOut(variant);
     return {
         graceSku: variant.graceSku,
         itemName: context.title,
         quantity,
         unitPrice: variant.webPrice1pc,
-        checkoutEligible: !soldOut,
+        checkoutEligible: isCatalogVariantPurchasable(variant),
         stockStatus: variant.stockStatus,
         shopifyVariantId: variant.shopifyVariantId,
         shopifySellable: variant.shopifySellable ?? undefined,
