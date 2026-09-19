@@ -1,0 +1,80 @@
+{
+ "schemaVersion": 1,
+ "release": "Elegant alias plates 2026-09-18",
+ "approvedAt": "2026-09-19T07:12:19.370Z",
+ "actor": "Jordan · confirmed each file is the same product from the name-confirmation sheet (\"Yes, those are clean matches\")",
+ "approvalId": "db27a5da-9960-41a5-8235-b00441943b50",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/name-confirmations.jpg",
+ "reviewPacketSha256": "79ff3adfca213b0614f33369470c5bf248772771ef76008f78538b883cb48a28",
+ "approvalFile": "dist/paper-doll/elegant-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "fe36128d82e5872a66f8feb22a7e6af854436e06aa4fa6aac1c5f8464d55059f",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "GBElgFrst15BlkShSht",
+   "graceSku": "GB-ELG-FRS-15ML-CAP-SBLK",
+   "familyId": "elegant-15ml-frosted-13-415",
+   "closure": "N/A",
+   "plate": {
+    "key": "elegant-15ml-frosted-13-415/GBElgFrst15BlkShSht.front-on.webp",
+    "storeKey": "plates/elegant-15ml-frosted-13-415/GBElgFrst15BlkShSht/7a0d0eb02d807b4f45e76f691662fa5582d7d06ee8bd973ed2d078c2d9241f37.front-on-1000x1100.webp",
+    "sha256": "7a0d0eb02d807b4f45e76f691662fa5582d7d06ee8bd973ed2d078c2d9241f37",
+    "bytes": 8362,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "ad8916c9850caa45df00edeae7d5e5339db0d835dadb931149d88a2d9740d1ce",
+    "bytes": 1558
+   },
+   "capOff": {
+    "sha256": "79ae1336614216a799c1ddc1e8b5fd7b6d1f6493e5230e933f33db81541424cd"
+   },
+   "source": {
+    "library": "master",
+    "path": "5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/1. GBElgFrst15BlkSht.psd",
+    "sha256": "c2625029b3c88dc750f643041004cc02d33537e59edff2d3aec256a384e19789"
+   }
+  },
+  {
+   "sku": "GBElg30SpryShnSl",
+   "graceSku": "GB-ELG-CLR-30ML-SPR-SSLV",
+   "familyId": "elegant-30ml-clear-15-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "elegant-30ml-clear-15-415/GBElg30SpryShnSl.front-on.webp",
+    "storeKey": "plates/elegant-30ml-clear-15-415/GBElg30SpryShnSl/28d9d0704ed80fe101209d9000f179eec183c308cdfcb8350c0ce8a66d1bb308.front-on-1000x1100.webp",
+    "sha256": "28d9d0704ed80fe101209d9000f179eec183c308cdfcb8350c0ce8a66d1bb308",
+    "bytes": 12800,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "f558acd5c1602f2b9ea2d687b83b8762ddc033febb9fb165064d20d1b9329a5f",
+    "bytes": 1070
+   },
+   "capOff": {
+    "sha256": "f71deae72b31b40b691c937d6736e5caa097bff10efa09641bfa46fed04333ea"
+   },
+   "source": {
+    "library": "master",
+    "path": "4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/3. GBElg30SpryShSl.psd",
+    "sha256": "0506132a6b49b7eefe52421c1f36bf53e28cf9ff92e002f579fbb6f96d25a20b"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 237,
+  "alreadyLiveAndExcluded": 235
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase.",
+ "preparedManifest": {
+  "file": "docs/reviews/elegant-alias-plates-2026-09-18/prepared-manifest.json",
+  "sha256": "fe36128d82e5872a66f8feb22a7e6af854436e06aa4fa6aac1c5f8464d55059f",
+  "copiedFrom": "dist/paper-doll/elegant-plates-2026-09-18/plates/manifest.json"
+ }
+}

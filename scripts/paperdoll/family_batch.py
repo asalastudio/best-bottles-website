@@ -218,7 +218,8 @@ def prepare(catalog: Path, out: Path, family: str):
                 source_hold = policy.get("frontSourceHolds", {}).get(row["websiteSku"], {})
                 if source_hold.get("sourceSha256") == src["sha256"]:
                     raise ValueError("visual source hold: " + source_hold["reason"])
-                validate_front_source(src, row["websiteSku"])
+                validate_front_source(src, row["websiteSku"],
+                                      also_named=[row.get("stemSpelling")] if row.get("matchKind") == "alias" else ())
                 if sha256_of(str(src["path"])) != src["sha256"]:
                     raise ValueError("source hash changed during preparation")
             except (OSError, ValueError, RuntimeError) as error:

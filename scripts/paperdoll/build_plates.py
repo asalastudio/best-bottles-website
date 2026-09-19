@@ -167,8 +167,13 @@ def source_of(entry: dict, state: str):
     return {"library": "master", "relPath": rec["chosenPath"], "path": source_path, "sha256": rec["chosen"], "stateEvidence": rec["stateEvidence"]}
 
 
-def validate_front_source(src: dict, website_sku: str):
-    """Refuse the two source-selection defects that previously reached production."""
+def validate_front_source(src: dict, website_sku: str, also_named=()):
+    """Refuse the two source-selection defects that previously reached production.
+
+    `also_named` carries the spellings the alias map vouches for. That map is the
+    one rewrite allowed at match time and only Jordan promotes into it, so a file
+    named `GBVial1DrmBlackCapSht` is acceptable evidence for `GBV1DrmBlackCapSht`
+    once that pair is in the map — but for nothing else."""
     rel_path = src["relPath"]
     # Shared parent folders can say "Capped & Uncapped". The nearest
     # unambiguous folder decides the state; an explicitly capped child is valid.
@@ -184,9 +189,13 @@ def validate_front_source(src: dict, website_sku: str):
     if folder_state in {"off", "ambiguous"}:
         raise RuntimeError(f"uncapped PSD cannot be the front source for {website_sku}")
     source_sku = re.sub(r"^\s*\d+[.-]?\s*", "", Path(rel_path).stem).rstrip(".").strip()
+    # a Finder duplicate is still the same product: "X copy.psd", "X copy 2.psd"
+    source_sku = re.sub(r"\s+copy(\s+\d+)?$", "", source_sku, flags=re.I).strip()
     sku_key = lambda value: re.sub(r"[^a-z0-9]", "", value.lower())  # noqa: E731
-    if sku_key(source_sku) != sku_key(website_sku):
-        raise RuntimeError(f"front source basename {source_sku!r} does not match website SKU {website_sku!r}")
+    accepted = {website_sku, *(n for n in also_named if n)}
+    if all(sku_key(source_sku) != sku_key(name) for name in accepted):
+        raise RuntimeError(f"front source basename {source_sku!r} matches no accepted name for {website_sku!r} "
+                           f"(accepted: {', '.join(sorted(accepted))})")
 
 
 def plan_groups(selection, xref, args):
@@ -219,7 +228,8 @@ def plan_groups(selection, xref, args):
             if off is not None:
                 raise RuntimeError(f"only an uncapped source exists for {rec['websiteSku']}; refusing to use it as the front")
             continue
-        validate_front_source(on, rec["websiteSku"])
+        validate_front_source(on, rec["websiteSku"],
+                              also_named=[rec.get("stemSpelling")] if rec.get("matchKind") == "alias" else ())
         if "applicator" not in rec:
             raise RuntimeError(f"applicator_metadata_hold:{rec['websiteSku']}: refresh catalog metadata before rendering")
         closure = rec["applicator"]

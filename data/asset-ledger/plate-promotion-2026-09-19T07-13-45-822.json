@@ -1,0 +1,54 @@
+{
+ "generatedAt": "2026-09-19T07:13:45.822Z",
+ "from": "https://helpful-elephant-638.convex.cloud",
+ "to": "https://precise-raccoon-123.convex.cloud",
+ "applied": true,
+ "counts": {
+  "devRows": 2286,
+  "prodRowsBefore": 2275,
+  "absentOnProd": 11,
+  "orphansRefused": 3,
+  "duplicateProductHeld": 0,
+  "imageNotServed": 0,
+  "eligible": 8,
+  "familiesCreated": 1
+ },
+ "byFamily": {
+  "Cream Jar 40ml Amber 48 400": 1,
+  "Cream Jar 60ml Frosted 58mm": 1,
+  "Elegant 30ml Clear 15 415": 1,
+  "Elegant 15ml Frosted 13 415": 1,
+  "Tulip 6ml Clear 13 415": 1,
+  "Vial 4ml Clear 13 425": 2,
+  "Vial 4ml Amber 13 425": 1
+ },
+ "bySourceLibrary": {
+  "master": 8
+ },
+ "capOffPresent": 7,
+ "eligibleSkus": [
+  "CreamJarAmb40Blkcap",
+  "CreamJarFrstdPlsBlkPls2oz",
+  "GBElg30SpryShnSl",
+  "GBElgFrst15BlkShSht",
+  "GBTulip6BlkShSht",
+  "GBV1DrmBlackCapSht",
+  "GBV1DrmWhtCapSht",
+  "GBVAmb1DrmBlkDrpr"
+ ],
+ "heldByName": [],
+ "orphans": [
+  "GBDivaFrst46DrpCu",
+  "GBDivaFrst46DrpGl",
+  "GBDivaFrst46DrpSl"
+ ],
+ "duplicated": [],
+ "broken": [],
+ "outcomes": {
+  "inserted": 8,
+  "updated": 0,
+  "unchanged": 0,
+  "error": 0
+ },
+ "errors": []
+}

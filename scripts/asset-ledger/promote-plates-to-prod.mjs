@@ -193,9 +193,13 @@ async function main() {
         broken,
     };
 
+    // One file per run. A shared filename let a later, smaller promotion overwrite
+    // the receipt for an earlier, larger one, which is evidence we cannot recreate.
+    const stamp = report.generatedAt.replace(/[:.]/g, "-").replace("Z", "");
     if (!apply) {
-        writeFileSync("data/asset-ledger/plate-promotion-plan-2026-09-18.json", JSON.stringify(report, null, 1) + "\n");
-        console.log(`\nDRY RUN. Plan written to data/asset-ledger/plate-promotion-plan-2026-09-18.json`);
+        const planFile = `data/asset-ledger/plate-promotion-plan-${stamp}.json`;
+        writeFileSync(planFile, JSON.stringify(report, null, 1) + "\n");
+        console.log(`\nDRY RUN. Plan written to ${planFile}`);
         console.log(`To write: --apply --ship "${SHIP_PHRASE}"`);
         return;
     }
@@ -218,8 +222,9 @@ async function main() {
     if (errors.length) console.log("errors:", JSON.stringify(errors.slice(0, 10)));
     report.outcomes = outcomes;
     report.errors = errors;
-    writeFileSync("data/asset-ledger/plate-promotion-2026-09-18.json", JSON.stringify(report, null, 1) + "\n");
-    console.log("receipt: data/asset-ledger/plate-promotion-2026-09-18.json");
+    const receiptFile = `data/asset-ledger/plate-promotion-${stamp}.json`;
+    writeFileSync(receiptFile, JSON.stringify(report, null, 1) + "\n");
+    console.log(`receipt: ${receiptFile}`);
 }
 
 main().catch((error) => { console.error(error); process.exit(1); });
