@@ -42,14 +42,21 @@ const cylinder50: BuilderBody = {
     } as BuilderConfiguration],
 };
 
-function renderTile(body: BuilderBody) {
+function renderTile(body: BuilderBody, extra: { thumbnail?: boolean; placeholder?: boolean; priority?: boolean } = {}) {
     const tile = clearBodyPreview(body);
     const el = document.createElement("div");
     const root = createRoot(el);
     vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
     try {
-        act(() => root.render(<BuilderImage config={tile} parts={previewParts(tile, "body")} label="50 ml Cylinder bottle" scale={1.06} />));
-        return { html: el.innerHTML, text: el.textContent ?? "" };
+        act(() => root.render(<BuilderImage config={tile} parts={previewParts(tile, "body")} label="50 ml Cylinder bottle" scale={1.06} {...extra} />));
+        const img = el.querySelector("img");
+        return {
+            html: el.innerHTML,
+            text: el.textContent ?? "",
+            src: img?.getAttribute("src") ?? "",
+            loading: img?.getAttribute("loading") ?? "",
+            fetchPriority: img?.getAttribute("fetchpriority") ?? img?.getAttribute("fetchPriority") ?? "",
+        };
     } finally {
         act(() => root.unmount());
         vi.unstubAllGlobals();
@@ -61,11 +68,30 @@ it("draws the Cylinder chooser tile from the first-paint payload, not 'Image una
     const { html, text } = renderTile(slim!);
     expect(text).not.toContain("Image unavailable");
     expect(html).toContain("https://blob.example/cylinder-master/body.webp");
-    // Bare glass only: the cap belongs to a later step, and the tile never
-    // ships the second resolution or the mask.
+    // A real <img> so preload/priority apply and the layer is not an SVG href
+    // that waits on hydrate. Bare glass only: no cap, 2x, or mask.
+    expect(html).toContain("data-chooser-img");
+    expect(html).toContain("<img");
+    expect(html).not.toContain("href=\"https://blob.example/cylinder-master/body.webp\"");
     expect(html).not.toContain("cylinder-master/cap.webp");
     expect(html).not.toContain("body@2x.webp");
     expect(html).not.toContain("body.mask.webp");
+});
+
+it("starts the first-viewport Cylinder tile immediately, not after a lazy threshold", () => {
+    const [slim] = slimBuilderBodies([cylinder50]);
+    const tile = renderTile(slim!, { thumbnail: true, placeholder: true, priority: true });
+    expect(tile.src).toBe("https://blob.example/cylinder-master/body.webp");
+    expect(tile.loading).toBe("eager");
+    expect(tile.fetchPriority).toBe("high");
+});
+
+it("does not mark later tiles fetchPriority=low, which starves tiles 8–12 on mobile", () => {
+    const [slim] = slimBuilderBodies([cylinder50]);
+    const tile = renderTile(slim!, { thumbnail: true, placeholder: true, priority: false });
+    expect(tile.src).toBe("https://blob.example/cylinder-master/body.webp");
+    expect(tile.loading).toBe("lazy");
+    expect(tile.fetchPriority).toBe("");
 });
 
 it("still draws the tile once the selected bottle's full kit replaces the stand-in", () => {

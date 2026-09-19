@@ -3,9 +3,10 @@ import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import tallRollers from "@/lib/bottle-builder/rollers.generated.json";
 import cobaltRollers from "@/lib/bottle-builder/rollers-cobalt.generated.json";
 import {
-    builderCartItem, builderOrder, catalogConfigurationFromRow, clearBodyPreview, compatibleFinishComponent, configurationFromRow, deriveBuilder, emptySelection,
+    builderCartItem, builderOrder, catalogConfigurationFromRow, chooserSourceRows, clearBodyPreview, compatibleFinishComponent, configurationFromRow, deriveBuilder, emptySelection,
     groupBuilderBodies, resolveBuilderConfigurations, previewParts, reconcileSelection, selectBuilderBody, type BuilderConfiguration, type BuilderKit, type CatalogRow,
 } from "@/lib/bottle-builder/model";
+import { slimBuilderBodies } from "@/lib/bottle-builder/payload";
 
 const restoredRollers = { ...tallRollers, ...cobaltRollers };
 
@@ -199,6 +200,29 @@ describe("builder catalog boundary", () => {
             expect(resolveBuilderConfigurations([other.row, split.row], [other.kit, split.kit])[1]).toBeNull();
         }
         expect(resolveBuilderConfigurations([donor.row, { ...split.row, components: {} }], [donor.kit, split.kit])[1]).toBeNull();
+    });
+    it("does not request a chooser kit when a reviewed body image already exists", () => {
+        const { row } = fixture({ family: "Circle", capacityMl: 15, neckThreadSize: "13-415", websiteSku: "GBCrcl15RollBlkSh", productGroupSlug: "circle-15ml-clear-rollon" });
+        expect(chooserSourceRows([row])).toEqual([]);
+    });
+    it("lists Cylinder sibling finishes from one chooser kit without fetching every SKU", () => {
+        const source = fixture({ websiteSku: "Cylinder50SprayBlack", graceSku: "GB-CYL-50-BLK", capacityMl: 50, neckThreadSize: "18-415", productGroupSlug: "cylinder-50ml-clear-18-415-spray" });
+        const sibling = fixture({ websiteSku: "Cylinder50SprayGold", graceSku: "GB-CYL-50-GLD", capacityMl: 50, neckThreadSize: "18-415", capColor: "Gold", productGroupSlug: "cylinder-50ml-clear-18-415-spray" });
+        expect(catalogConfigurationFromRow(sibling.row)).toBeNull();
+        expect(chooserSourceRows([source.row, sibling.row]).map(row => row.websiteSku)).toEqual(["Cylinder50SprayBlack"]);
+        const resolved = resolveBuilderConfigurations(
+            [source.row, sibling.row],
+            [source.kit, null],
+            [null, null],
+            [null, source.kit],
+        );
+        expect(resolved[0]?.id).toBe("Cylinder50SprayBlack");
+        expect(resolved[1]?.id).toBe("Cylinder50SprayGold");
+        const slim = slimBuilderBodies(groupBuilderBodies(resolved.filter((config): config is BuilderConfiguration => config !== null)));
+        expect(slim[0]!.configurations).toHaveLength(2);
+        expect(slim[0]!.configurations.every(config => config.kit === null)).toBe(true);
+        expect(slim[0]!.configurations[0]!.chooserKit?.parts[0]!.image.url).toContain("Cylinder50SprayBlack-body.webp");
+        expect(previewParts(clearBodyPreview(slim[0]!), "body").map(part => part.slot)).toEqual(["body"]);
     });
     it("collapses SKU assemblies and colors into bottle bodies while keeping necks distinct", () => {
         const bodies = groupBuilderBodies([configuration(), configuration({ websiteSku: "Amber", graceSku: "AMBER", color: "Amber" }), configuration({ websiteSku: "TALL", graceSku: "TALL", neckThreadSize: "13-415" })]);

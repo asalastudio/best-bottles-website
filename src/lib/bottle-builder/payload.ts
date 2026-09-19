@@ -3,12 +3,26 @@ import type { BuilderBody, BuilderConfiguration, BuilderKit } from "./model";
 /** The chooser paints before any kit loads. Where a reviewed body image exists
  * it is used; a family whose bare bodies live only in its kits (Cylinder) would
  * otherwise have nothing to draw, so keep that one registered bare-glass layer.
- * No sibling parts, no second resolution, no mask: this is not a kit catalog. */
+ * No sibling parts, no second resolution, no mask, no kit catalog metadata. */
+export function bareChooserKit(kit: BuilderKit): BuilderKit | undefined {
+    const body = kit.parts.find(part => part.slot === "body");
+    if (!body) return undefined;
+    return {
+        sku: kit.sku,
+        familyId: kit.familyId,
+        completeness: kit.completeness,
+        conflicts: [],
+        canvas: kit.canvas,
+        anchors: kit.anchors,
+        plateSha256: "",
+        three: null,
+        parts: [{ ...body, image2x: null, mask: null }],
+    };
+}
+
 function chooserBodyKit(config: BuilderConfiguration): BuilderKit | undefined {
-    const kit = config.previewKit ?? config.kit;
-    const body = kit?.parts.find(part => part.slot === "body");
-    if (!kit || !body) return undefined;
-    return { ...kit, parts: [{ ...body, image2x: null, mask: null }] };
+    const kit = config.previewKit ?? config.kit ?? config.chooserKit;
+    return kit ? bareChooserKit(kit) : undefined;
 }
 
 /** First paint only needs chooser identities and reviewed body images.

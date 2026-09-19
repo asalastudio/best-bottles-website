@@ -1,5 +1,5 @@
 import { expect, it } from "vitest";
-import { chooserPreloadUrls, preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
+import { CHOOSER_PRIORITY_TILES, chooserPreloadUrls, preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
 import type { BuilderBody, BuilderConfiguration } from "@/lib/bottle-builder/model";
 
 const headers = (entries: Record<string, string>) => ({ get: (name: string) => entries[name] ?? entries[name.toLowerCase()] ?? null });
@@ -23,4 +23,6 @@ it("preloads the first unique chooser body images", () => {
         id, family: "Cylinder", capacityMl: 9, neck: "13-415", profileLabel: "Cylinder", configurations: [config(id, url)],
     } as BuilderBody);
     expect(chooserPreloadUrls([body("a", "/a.webp"), body("b", "/b.webp"), body("c", "/a.webp"), body("d", "/d.webp")], 2)).toEqual(["/a.webp", "/b.webp"]);
+    expect(CHOOSER_PRIORITY_TILES).toBe(12);
+    expect(chooserPreloadUrls(Array.from({ length: 16 }, (_, i) => body(String(i), `/${i}.webp`)))).toHaveLength(12);
 });

@@ -26,3 +26,20 @@ export function previewFrame(anchors: { axisX: number; seatY: number; baselineY:
     return { x, y, width: Math.max(anchors.axisX + bodyHeight * .55 / scale, right + pad) - x,
         height: Math.max(anchors.baselineY + bodyHeight * .10 / scale, bottom + pad) - y };
 }
+
+/** CSS crop that matches an SVG viewBox over a registered full-canvas layer.
+ * Chooser tiles use this so a real <img> can fetch with preload/priority. */
+export function layerCropStyle(image: { width: number; height: number }, frame: { x: number; y: number; width: number; height: number }) {
+    if (!(frame.width > 0 && frame.height > 0 && image.width > 0 && image.height > 0)) {
+        return { position: "absolute" as const, inset: 0, width: "100%", height: "100%", objectFit: "contain" as const };
+    }
+    return {
+        position: "absolute" as const,
+        left: `${(-frame.x / frame.width) * 100}%`,
+        top: `${(-frame.y / frame.height) * 100}%`,
+        width: `${(image.width / frame.width) * 100}%`,
+        height: `${(image.height / frame.height) * 100}%`,
+        maxWidth: "none",
+        maxHeight: "none",
+    };
+}

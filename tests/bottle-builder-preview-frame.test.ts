@@ -1,5 +1,5 @@
 import { expect, it } from "vitest";
-import { previewFrame } from "@/lib/bottle-builder/preview-frame";
+import { layerCropStyle, previewFrame } from "@/lib/bottle-builder/preview-frame";
 
 const anchors = { axisX: 500, seatY: 306, baselineY: 1051 };
 const bounds = [{ left: 380, right: 625, top: 306, bottom: 1051 },
@@ -35,4 +35,13 @@ it("keeps thumbnail padding and normal bottle baseline conventions", () => {
     const frame = previewFrame(anchors, [bounds[0]], { thumbnail: true });
     expect(frame.width).toBe(frame.height);
     expect(frame.width).toBeCloseTo((1051 - 306) * 1.22);
+});
+
+it("crops a registered canvas layer to the same viewBox a chooser SVG would use", () => {
+    const frame = { x: 100, y: 200, width: 400, height: 500 };
+    const style = layerCropStyle({ width: 1000, height: 1100 }, frame);
+    expect(parseFloat(style.left as string)).toBeCloseTo(-25);
+    expect(parseFloat(style.top as string)).toBeCloseTo(-40);
+    expect(parseFloat(style.width as string)).toBeCloseTo(250);
+    expect(parseFloat(style.height as string)).toBeCloseTo(220);
 });
