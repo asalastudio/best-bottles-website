@@ -43,6 +43,15 @@ function isShopifyCdnUrl(value: string | null | undefined) {
     }
 }
 
+function isExactShopifyCdnUrl(value: string) {
+    try {
+        const url = new URL(value);
+        return url.protocol === "https:" && url.hostname === "cdn.shopify.com";
+    } catch {
+        return false;
+    }
+}
+
 const productGroupRelationV = v.object({
     slug: v.string(),
     displayName: v.string(),
@@ -364,6 +373,58 @@ export const lookupSku = query({
     },
 });
 
+/**
+ * Indexed product lookup used by Madison's Shopify publisher for exact website
+ * SKU resolution and post-write image readback.
+ */
+export const getByWebsiteSku = query({
+    args: { websiteSku: v.string() },
+    returns: v.union(
+        v.object({
+            websiteSku: v.string(),
+            graceSku: v.string(),
+            category: v.string(),
+            family: v.union(v.string(), v.null()),
+            color: v.union(v.string(), v.null()),
+            applicator: v.union(v.string(), v.null()),
+            capStyle: v.union(v.string(), v.null()),
+            capColor: v.union(v.string(), v.null()),
+            trimColor: v.union(v.string(), v.null()),
+            itemName: v.string(),
+            imageUrl: v.union(v.string(), v.null()),
+            imageUrlCapOff: v.union(v.string(), v.null()),
+            productGroupId: v.union(v.id("productGroups"), v.null()),
+        }),
+        v.null(),
+    ),
+    handler: async (ctx, args) => {
+        const websiteSku = args.websiteSku.trim();
+        if (!websiteSku) return null;
+
+        const product = await ctx.db
+            .query("products")
+            .withIndex("by_websiteSku", (q) => q.eq("websiteSku", websiteSku))
+            .unique();
+        if (!product) return null;
+
+        return {
+            websiteSku: product.websiteSku,
+            graceSku: product.graceSku,
+            category: product.category,
+            family: product.family,
+            color: product.color,
+            applicator: product.applicator,
+            capStyle: product.capStyle,
+            capColor: product.capColor,
+            trimColor: product.trimColor,
+            itemName: product.itemName,
+            imageUrl: product.imageUrl ?? null,
+            imageUrlCapOff: product.imageUrlCapOff ?? null,
+            productGroupId: product.productGroupId ?? null,
+        };
+    },
+});
+
 // Find products by their family (e.g. "Boston Round")
 export const getByFamily = query({
     args: { family: v.string() },
@@ -637,8 +698,7 @@ export const getCatalogProducts = query({
         if (args.collection) {
             return await ctx.db
                 .query("products")
-                .withIndex("by_category")
-                .filter((q) => q.eq(q.field("bottleCollection"), args.collection))
+                .withIndex("by_collection", (q) => q.eq("bottleCollection", args.collection!))
                 .take(limit);
         }
 
@@ -1712,6 +1772,93 @@ export const updateProductGroupHeroImage = internalMutation({
 function verifyProductImageWriteToken(writeToken: string) {
     verifyWriteToken(writeToken);
 }
+
+/**
+ * Explicitly assigns a Shopify-published SKU image as a product-group hero.
+ *
+ * Madison calls this only after its exact approved SKU job has published to
+ * Shopify and `setVariantImages` has cached the returned CDN URL on that SKU.
+ * Requiring the exact Grace + website SKU pair and matching products.imageUrl
+ * prevents a group hero from being pointed at another SKU's or an arbitrary
+ * Shopify image.
+ */
+export const setProductGroupHeroFromApprovedSku = mutation({
+    args: {
+        writeToken: v.string(),
+        productGroupSlug: v.string(),
+        websiteSku: v.string(),
+        graceSku: v.string(),
+        heroImageUrl: v.string(),
+    },
+    returns: v.object({
+        success: v.literal(true),
+        changed: v.boolean(),
+        productGroupId: v.id("productGroups"),
+        productGroupSlug: v.string(),
+        websiteSku: v.string(),
+        graceSku: v.string(),
+        heroImageUrl: v.string(),
+    }),
+    handler: async (ctx, args) => {
+        verifyProductImageWriteToken(args.writeToken);
+
+        const productGroupSlug = args.productGroupSlug.trim();
+        const websiteSku = args.websiteSku.trim();
+        const graceSku = args.graceSku.trim();
+        const heroImageUrl = args.heroImageUrl.trim();
+
+        if (!productGroupSlug) throw new Error("product_group_slug_required");
+        if (!websiteSku) throw new Error("website_sku_required");
+        if (!graceSku) throw new Error("grace_sku_required");
+        if (!isExactShopifyCdnUrl(heroImageUrl)) {
+            throw new Error("shopify_cdn_hero_image_url_required");
+        }
+
+        const [groups, products] = await Promise.all([
+            ctx.db
+                .query("productGroups")
+                .withIndex("by_slug", (q) => q.eq("slug", productGroupSlug))
+                .take(2),
+            ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", graceSku))
+                .take(2),
+        ]);
+
+        if (groups.length === 0) throw new Error("product_group_not_found");
+        if (groups.length > 1) throw new Error("product_group_slug_not_unique");
+        if (products.length === 0) throw new Error("approved_sku_not_found");
+        if (products.length > 1) throw new Error("approved_grace_sku_not_unique");
+
+        const group = groups[0];
+        const product = products[0];
+        if (!group || !product) throw new Error("catalog_identity_resolution_failed");
+        if (product.websiteSku !== websiteSku) {
+            throw new Error("approved_sku_identifiers_mismatch");
+        }
+        if (product.productGroupId !== group._id) {
+            throw new Error("approved_sku_not_in_product_group");
+        }
+        if (product.imageUrl !== heroImageUrl) {
+            throw new Error("approved_sku_shopify_image_not_synced");
+        }
+
+        const changed = group.heroImageUrl !== heroImageUrl;
+        if (changed) {
+            await ctx.db.patch(group._id, { heroImageUrl });
+        }
+
+        return {
+            success: true as const,
+            changed,
+            productGroupId: group._id,
+            productGroupSlug: group.slug,
+            websiteSku: product.websiteSku,
+            graceSku: product.graceSku,
+            heroImageUrl,
+        };
+    },
+});
 
 /**
  * Designates the customer-facing representative SKU for a product group.
