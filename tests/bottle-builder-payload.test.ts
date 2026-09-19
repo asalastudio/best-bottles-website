@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { attachBuilderKits, slimBuilderBodies } from "@/lib/bottle-builder/payload";
 import { chooserPreloadUrls } from "@/lib/bottle-builder/mobile-request";
-import type { BuilderBody, BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/model";
+import { bareGlassPreview, clearBodyPreview, previewParts, type BuilderBody, type BuilderConfiguration, type BuilderKit } from "@/lib/bottle-builder/model";
 
 const kit = (sku: string, extra: Partial<BuilderKit> = {}): BuilderKit => ({
     sku, familyId: "cylinder-9ml-clear-17-415", completeness: "full", conflicts: [],
@@ -51,6 +51,48 @@ describe("builder first-paint payload", () => {
             .toEqual(full[0]!.configurations.map(item => [item.id, item.color, item.fitment, item.closure, item.product.webPrice1pc, item.bodyImage?.url]));
         expect(slim[0]!.configurations[1]!.previewKitSku).toBe("Cylinder9MetalGold");
         expect(chooserPreloadUrls(slim)).toEqual(["https://example.com/Cylinder9MetalBlack-chooser.webp"]);
+    });
+
+    it("keeps one bare-glass layer per colour when a family has no reviewed body image", () => {
+        // Cylinder ships no reviewed 50 ml body webp, so before this the chooser
+        // tile had a null kit and a null bodyImage and drew "Image unavailable".
+        const clear = config("Cylinder50SprayBlack", { bodyImage: null });
+        const slim = slimBuilderBodies([body([
+            clear,
+            config("Cylinder50SprayGold", { closure: "Gold", bodyImage: null }),
+            config("Cylinder50SprayFrost", { color: "Frosted", bodyImage: null }),
+        ])]);
+        const [first, second, frosted] = slim[0]!.configurations;
+        expect(first!.kit).toBeNull();
+        expect(first!.chooserKit?.parts.map(part => part.slot)).toEqual(["body"]);
+        expect(first!.chooserKit?.parts[0]!.image.url).toBe("https://example.com/Cylinder50SprayBlack-body.webp");
+        // Only the first configuration of each colour is ever drawn by the chooser.
+        expect(second!.chooserKit).toBeUndefined();
+        expect(frosted!.chooserKit?.parts.map(part => part.slot)).toEqual(["body"]);
+        // Still not a kit catalog: no sibling layers, no 2x, no mask.
+        expect(JSON.stringify(slim)).not.toContain("-body@2x.webp");
+        expect(JSON.stringify(slim)).not.toContain("-mask.webp");
+        expect(previewParts(clearBodyPreview(slim[0]!), "body").map(part => part.slot)).toEqual(["body"]);
+        expect(chooserPreloadUrls(slim)).toEqual(["https://example.com/Cylinder50SprayBlack-body.webp"]);
+    });
+
+    it("prefers the reviewed body image and never layers a borrowed kit over it", () => {
+        const slim = slimBuilderBodies([body([config("Cylinder9MetalBlack")])]);
+        expect(slim[0]!.configurations[0]!.chooserKit).toBeUndefined();
+        const tile = clearBodyPreview(slim[0]!);
+        expect(tile.bodyImage?.url).toBe("https://example.com/Cylinder9MetalBlack-chooser.webp");
+        expect(previewParts(tile, "body")).toEqual([]);
+    });
+
+    it("draws a clear tile from the reviewed clear image, not a coloured body layer", () => {
+        const amber = config("Cylinder9Amber", { color: "Amber", bodyImage: null });
+        const slim = slimBuilderBodies([body([amber])]);
+        expect(slim[0]!.configurations[0]!.chooserKit).toBeDefined();
+        // clearBodyPreview finds no reviewed Clear image for this fixture body and
+        // keeps the amber configuration, borrowed layer and all.
+        expect(clearBodyPreview(slim[0]!).color).toBe("Amber");
+        // A configuration carrying a reviewed image drops the borrowed layer.
+        expect(bareGlassPreview({ ...slim[0]!.configurations[0]!, bodyImage: { url: "https://example.com/reviewed.webp", width: 400, height: 520 } }).chooserKit).toBeUndefined();
     });
 
     it("restores only the selected bottle's kits without changing compatible choices", () => {

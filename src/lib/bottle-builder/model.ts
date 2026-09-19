@@ -32,6 +32,10 @@ export type BuilderConfiguration = {
     previewKit?: BuilderKit;
     /** Sibling kit used for cap-split previews; kept when kits are stripped from first paint. */
     previewKitSku?: string;
+    /** Only the registered bare-glass layer, kept when kits are stripped from
+     * first paint so a family with no reviewed body image still draws a chooser
+     * tile. The selected bottle's real kit replaces it as soon as it loads. */
+    chooserKit?: BuilderKit;
     photoUrl: string | null;
     bodyImage: { url: string; width: number; height: number } | null;
     finishComponent: { websiteSku: string; imageUrl: string | null; name: string };
@@ -120,7 +124,7 @@ export function clearBodyPreview(body: BuilderBody): BuilderConfiguration {
     const profile = body.id.split("|")[0].replace(new RegExp(`-${body.capacityMl}ml$`), "");
     const image = media[`${profile}|${body.capacityMl}|Clear|${body.neck}`] ?? media[`${body.family}|${body.capacityMl}|Clear|${body.neck}`];
     if (!image) return first;
-    return { ...first, color: "Clear", bodyImage: image, kit: null, previewKit: undefined };
+    return { ...first, color: "Clear", bodyImage: image, kit: null, previewKit: undefined, chooserKit: undefined };
 }
 
 /** Glass swatches show the same bare glass at the same size. A configuration
@@ -128,7 +132,7 @@ export function clearBodyPreview(body: BuilderBody): BuilderConfiguration {
  * frame while its kit-less siblings render the body layer, so one colour
  * came out small beside the others (Boston Round 15 ml, 2026-09-14). */
 export function bareGlassPreview(config: BuilderConfiguration): BuilderConfiguration {
-    return config.bodyImage ? { ...config, kit: null, previewKit: undefined } : config;
+    return config.bodyImage ? { ...config, kit: null, previewKit: undefined, chooserKit: undefined } : config;
 }
 
 export function reviewedFitmentImage(config: BuilderConfiguration) {
@@ -350,7 +354,7 @@ export function selectBuilderBody(bodies: BuilderBody[], state: BuilderSelection
 }
 
 export function previewParts(config: BuilderConfiguration, stage: "body" | "fitment" | "complete"): BuilderPart[] {
-    const parts = [...((stage === "body" ? config.previewKit ?? config.kit : config.kit)?.parts ?? [])];
+    const parts = [...((stage === "body" ? config.previewKit ?? config.kit ?? config.chooserKit : config.kit)?.parts ?? [])];
     const restored = ({ ...rollerMedia, ...cobaltRollerMedia } as Record<string, { bodySha256: string; part: BuilderPart }>)[config.id];
     // Exact source registration only. Never put a roller on a changed body asset,
     // a different fitment, or the bare-bottle stage.
