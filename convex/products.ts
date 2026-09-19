@@ -404,7 +404,7 @@ export const getByWebsiteSku = query({
         const product = await ctx.db
             .query("products")
             .withIndex("by_websiteSku", (q) => q.eq("websiteSku", websiteSku))
-            .first();
+            .unique();
         if (!product) return null;
 
         return {
