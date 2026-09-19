@@ -64,8 +64,9 @@ registered one + 14 second-pass heroes:
 
 Not reached: 100 ml matte-gold sprayer, 50 ml matte-gold sprayer and 50 ml matte-silver
 reducer are blocked in Madison on 360 x 480 references; two more registered variants did
-not resolve to a Madison job. The six frosted groups and the white 9 ml roll-on were left
-out of both passes: Madison's shoulder detector cannot yet find frosted glass on bone, so
+not resolve to a Madison job. The seven frosted groups were left out of both passes (one
+of them is slugged `cylinder-9ml-white-17-415-rollon`; there is no white glass, that slug is
+a misnomer for frosted): Madison's shoulder detector cannot yet find frosted glass on bone, so
 those renders would block rather than ship. All of these keep their release-5 heroes.
 `approved-lock-all-36.json` holds every render from both passes, including the 19
 black-closure heroes that have no slot here.
