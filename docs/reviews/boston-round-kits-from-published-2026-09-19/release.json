@@ -1,0 +1,37 @@
+{
+ "schemaVersion": 1,
+ "release": "boston-round-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/boston-round",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Boston Round kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 4,
+  "approved": 4,
+  "setAside": 0,
+  "notExtracted": 11
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/boston-round-kits.jpg",
+ "reviewSheetSha256": "1bdabd17a6653250f78ca8f8a34258130ac791350cd78ae12d3db0c66be9477d",
+ "rows": [
+  {
+   "sku": "GBBstnAmb1ozRollonGl",
+   "plateSha256": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176"
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonGl",
+   "plateSha256": "b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466"
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonGl",
+   "plateSha256": "f2b188b4ae452d26cc3f4f470435cee868f3742312ffead2bcbc5f9b33cdcaa6"
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonGl",
+   "plateSha256": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "4e5bd0e85d0489fc449225610def2fe38dff94fade330b95eb9c15b178985c61"
+}

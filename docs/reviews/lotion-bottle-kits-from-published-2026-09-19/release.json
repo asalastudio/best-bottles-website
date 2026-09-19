@@ -1,0 +1,20 @@
+{
+ "schemaVersion": 1,
+ "release": "lotion-bottle-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/lotion-bottle",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Lotion Bottle kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 0,
+  "approved": 0,
+  "setAside": 0,
+  "notExtracted": 2
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/lotion-bottle-kits.jpg",
+ "reviewSheetSha256": "a6bf394bce0673f1750d86f13e87a4252caf2dde981a8f907ad1287345c0daea",
+ "rows": [],
+ "setAside": [],
+ "approvalSha256": "00e3e391286b10abdbc1bdfa8d7b8d0399fdae50688b714f90805d981a8bef18"
+}

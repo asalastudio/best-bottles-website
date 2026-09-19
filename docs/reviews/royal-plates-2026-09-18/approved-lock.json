@@ -1,0 +1,47 @@
+{
+ "schemaVersion": 1,
+ "release": "Royal plates 2026-09-18",
+ "approvedAt": "2026-09-19T06:28:29.441Z",
+ "actor": "Jordan · approved in chat (\"I approve the 32\"), from the legacy and small-family contact sheets",
+ "approvalId": "7da1ad01-d200-4efb-b3d0-e4361a65c85c",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/tail-new-plates.jpg",
+ "reviewPacketSha256": "76c43d55ae87e79021806638f279590452fd6cc9951bcf9a0f6f5c12b095f05c",
+ "approvalFile": "dist/paper-doll/royal-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "fcfa69985f5c0890f72835b8784e276561a1e30411b8047f60d5b60276444afc",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "GBRoyal13RollBlkDot",
+   "graceSku": "GB-RYL-CLR-13ML-ROL-BKDT",
+   "familyId": "royal-13ml-clear-13-415",
+   "closure": "Plastic Roller Ball",
+   "plate": {
+    "key": "royal-13ml-clear-13-415/GBRoyal13RollBlkDot.front-on.webp",
+    "storeKey": "plates/royal-13ml-clear-13-415/GBRoyal13RollBlkDot/8285b24cd62b0b0eb33d9e006746d0c6f61c935f2d70e4654a6bc072c64f4d3c.front-on-1000x1100.webp",
+    "sha256": "8285b24cd62b0b0eb33d9e006746d0c6f61c935f2d70e4654a6bc072c64f4d3c",
+    "bytes": 21542,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "43b0db267b585a9ce538f142893ee6fa758a6caf09c01d931b3434081b525e42",
+    "bytes": 2646
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "5.  13-415 Bottles/10. Royal 13ml/1. Royal 13ml (Unapped) PSD /27. GBRoyal13RollBlkDot.psd",
+    "sha256": "1734887868631b5df66297b01a53363133d07d6bea27d3a82f661edbf5fedae5"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 23,
+  "alreadyLiveAndExcluded": 22
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}

@@ -1,0 +1,137 @@
+{
+ "schemaVersion": 1,
+ "release": "rectangle-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/rectangle",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Rectangle kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 29,
+  "approved": 29,
+  "setAside": 0,
+  "notExtracted": 32
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/rectangle-kits.jpg",
+ "reviewSheetSha256": "14443d03a827b385d751c4dc854b93c661c2e747f38b40516c43f0b121b40d18",
+ "rows": [
+  {
+   "sku": "GBRect10BlkSht",
+   "plateSha256": "8cec16ff320b5855ff413aa145676f9b04fcd8591c91a0e91fb768ca34dc3d93"
+  },
+  {
+   "sku": "GBRect10Gl",
+   "plateSha256": "642138378c1620c561e368db810011ba4299a63ef8e23680183059e12c20213c"
+  },
+  {
+   "sku": "GBRect10MtlRollBlkDot",
+   "plateSha256": "65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a"
+  },
+  {
+   "sku": "GBRect10MtlRollBlkSh",
+   "plateSha256": "c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7"
+  },
+  {
+   "sku": "GBRect10MtlRollCuMatt",
+   "plateSha256": "2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc"
+  },
+  {
+   "sku": "GBRect10MtlRollGlMatt",
+   "plateSha256": "ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd"
+  },
+  {
+   "sku": "GBRect10MtlRollGlSh",
+   "plateSha256": "5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed"
+  },
+  {
+   "sku": "GBRect10MtlRollPinkDot",
+   "plateSha256": "6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925"
+  },
+  {
+   "sku": "GBRect10MtlRollSlDot",
+   "plateSha256": "ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b"
+  },
+  {
+   "sku": "GBRect10MtlRollSlMatt",
+   "plateSha256": "eb27d1ff01d6afe38a1b33ff41864ef5bfb798e2a837940753c112d6d1c73d0f"
+  },
+  {
+   "sku": "GBRect10MtlRollSlSh",
+   "plateSha256": "25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85"
+  },
+  {
+   "sku": "GBRect10RollBlkDot",
+   "plateSha256": "65c81c71ade611986aefa946a2965b9307b712f303786c86659a4ff6b693542a"
+  },
+  {
+   "sku": "GBRect10RollBlkSh",
+   "plateSha256": "c25cb5c303a31d0f1ed135d8c42a1e247fe1cf14dc7d606878900f83519cd1b7"
+  },
+  {
+   "sku": "GBRect10RollCuMatt",
+   "plateSha256": "2743b60d87735fae10b3f2aba96cc5ff3722bf42f4b1fbf077457850a5e813fc"
+  },
+  {
+   "sku": "GBRect10RollGlMatt",
+   "plateSha256": "ebce6da51f789cede8738ef1159ad1376538645e241db49ac278d1f1be6099bd"
+  },
+  {
+   "sku": "GBRect10RollGlSh",
+   "plateSha256": "5d016b6d8393d53e7ad98003a7983866a9085ce9cf7f3706c4cd00ca7819f5ed"
+  },
+  {
+   "sku": "GBRect10RollPinkDot",
+   "plateSha256": "6bc45e1f2c356e30b2029057dbc2ff474d9e31406ccb492d18b366ff624cb925"
+  },
+  {
+   "sku": "GBRect10RollSlDot",
+   "plateSha256": "ea3d757ae72c8413ad2aeeeda55197b28be2e7e50145d564bd9942a24e3f5b8b"
+  },
+  {
+   "sku": "GBRect10RollSlMatt",
+   "plateSha256": "eb27d1ff01d6afe38a1b33ff41864ef5bfb798e2a837940753c112d6d1c73d0f"
+  },
+  {
+   "sku": "GBRect10RollSlSh",
+   "plateSha256": "25232613469f072823392fa0e09bb9ae0ad0efe151b53c936d22463dfa787d85"
+  },
+  {
+   "sku": "GBRect10Sl",
+   "plateSha256": "eae85bd7b4c18b508b59fed30cf5f1edb5ceabfaf1952ec956f5e9ab5d6dca6d"
+  },
+  {
+   "sku": "GBRect10SpryBlkMatt",
+   "plateSha256": "77a9baa81893521b1a5835f587465635e1d0feb41918e532c06329c5bfa81874"
+  },
+  {
+   "sku": "GBRect10SpryBlkSh",
+   "plateSha256": "ea9893a73461f1a2226066944234a807e75ade92bdb9518a8272d49ec3db112c"
+  },
+  {
+   "sku": "GBRect10SpryBluMatt",
+   "plateSha256": "f6a696250a91c00bf0fcba4f32b2df11cca6d17e826624d8e131aebedb6ecc59"
+  },
+  {
+   "sku": "GBRect10SpryGlMatt",
+   "plateSha256": "f09f360987bdb40dbb89e89cdce59f5bdfe6ec6d41e2d79acd73a2fc6a4920b4"
+  },
+  {
+   "sku": "GBRect10SpryGlSh",
+   "plateSha256": "892736bf9740966e56bb988863f72d0d438cded0c6a88f0b9ea8d0adc4569f76"
+  },
+  {
+   "sku": "GBRect10SprySlMatt",
+   "plateSha256": "6a2ec9c35a5b21db82af7d07ec85cc36ea70fca250c7e68a3d6f888b0756197a"
+  },
+  {
+   "sku": "GBRect10SprySlSh",
+   "plateSha256": "9b455d8de02ab2506e71c1094947c3b2e9c3c0e5c395fd46b0fd768d6cda8322"
+  },
+  {
+   "sku": "GBRect10WhtSht",
+   "plateSha256": "9880fb1596fc2acb3629851ea13918f003b2b18880b6252138314fef47ae38bb"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "01df0f301751f500591712b187e80aac6296caf7f7f1660e87f932eb6f1dd81c"
+}

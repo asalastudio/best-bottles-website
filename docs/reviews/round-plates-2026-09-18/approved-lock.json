@@ -1,0 +1,847 @@
+{
+ "schemaVersion": 1,
+ "release": "Round plates 2026-09-18",
+ "approvedAt": "2026-09-19T04:58:58.701Z",
+ "actor": "Jordan · approved the Round contact sheet in chat (\"these all look fantastic\"); the 7 lotion bottles carry front-source pins he chose over a library-wide rule, the 2 at 78 ml by picking the capped option B",
+ "approvalId": "a8970e63-54ad-4a5c-a233-19d0ef524560",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/round-new-plates.jpg",
+ "reviewPacketSha256": "fb42d3e4a2f77fe7f427a4296c685f53f39cf48c2bc0be9be1ec73905648347e",
+ "approvalFile": "dist/paper-doll/round-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "47c121cd0f728793256f0c35d1f82fcaeba4a3184c19583f7be46baf741e8b7f",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "GBRndFrst128SpryCu",
+   "graceSku": "GB-RND-FRS-128ML-SPR-CPR",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/GBRndFrst128SpryCu.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/GBRndFrst128SpryCu/d1903f061738bdab19641d28f92e546e4be20202dad5191d34af8e27fa8ec064.front-on-1000x1100.webp",
+    "sha256": "d1903f061738bdab19641d28f92e546e4be20202dad5191d34af8e27fa8ec064",
+    "bytes": 9120,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "bbfb0370fc5c7a52e94f290e487c76391b3984ce9bb88bec31827bd1c98e7bcb",
+    "bytes": 956
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/57. GBRndFrst128SpryCu.psd",
+    "sha256": "6b50684e373d4c12a672eab9746b56f228d6301b7ed19c56a51a66bd706ce0f9"
+   }
+  },
+  {
+   "sku": "GBRndFrst128SpryMtGl",
+   "graceSku": "GB-RND-FRS-128ML-SPR-MGLD",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/GBRndFrst128SpryMtGl.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/GBRndFrst128SpryMtGl/048dfd25f61c72262fd7eaee5fbbab607afc7fd9440ca6faf389933051868e6b.front-on-1000x1100.webp",
+    "sha256": "048dfd25f61c72262fd7eaee5fbbab607afc7fd9440ca6faf389933051868e6b",
+    "bytes": 8456,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "328742bd943f77d46b954a731578b3d74f6fd4f1090c6c1c68e26b4848c8fcef",
+    "bytes": 892
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/11. GBRndFrst128SpryMtGl.psd",
+    "sha256": "e649abd1001fccb728eecb559cd29924fb14ec8b357b26919ee157008b617110"
+   }
+  },
+  {
+   "sku": "GBRndFrst128SpryMtSl",
+   "graceSku": "GB-RND-FRS-128ML-SPR-MSLV",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/GBRndFrst128SpryMtSl.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/GBRndFrst128SpryMtSl/8a5f3e4af3813c3b9d5a099999dff397328f294c6569539adca5aa9ee18b14dd.front-on-1000x1100.webp",
+    "sha256": "8a5f3e4af3813c3b9d5a099999dff397328f294c6569539adca5aa9ee18b14dd",
+    "bytes": 7036,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "0153429a9105ab73a10706449f03c4fb78365b529b60e0d9b5ec5c79c1d343bb",
+    "bytes": 788
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/23. GBRndFrst128SpryMtSl.psd",
+    "sha256": "fa80b03b4ac15257a9aa81f0afe12b2d63b7229da0c74cf6a38aaabea88772bf"
+   }
+  },
+  {
+   "sku": "GBRndFrst128SpryShnBlk",
+   "graceSku": "GB-RND-FRS-128ML-SPR-SBLK",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/GBRndFrst128SpryShnBlk.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/GBRndFrst128SpryShnBlk/f51d94ac5f13c428fd6ab8ea57c030f6f0956e5536f78ccd57c0a84c48dc35e3.front-on-1000x1100.webp",
+    "sha256": "f51d94ac5f13c428fd6ab8ea57c030f6f0956e5536f78ccd57c0a84c48dc35e3",
+    "bytes": 8398,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "2535fb216d872e34fadf4ccabbc45c6a7305b7a3f891b60196ff1a77cb2f65fe",
+    "bytes": 830
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/21. GBRndFrst128SpryShnBlk.psd",
+    "sha256": "a4dd15d80d602ca39b459fca1c4f2abc0e7989850d8de239c08632d100c71879"
+   }
+  },
+  {
+   "sku": "GBRndFrst128SpryShnGl",
+   "graceSku": "GB-RND-FRS-128ML-SPR-SGLD",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/GBRndFrst128SpryShnGl.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/GBRndFrst128SpryShnGl/d253930ce139ca65e2f99c133e9e9c38ffd5c4ac1efd0eefc35f36475547703d.front-on-1000x1100.webp",
+    "sha256": "d253930ce139ca65e2f99c133e9e9c38ffd5c4ac1efd0eefc35f36475547703d",
+    "bytes": 10432,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "5dae64073d1fc0374c7a7ec3dd011dcd61407d21eaf4c7405f32387387d81ec0",
+    "bytes": 1156
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/17. GBRndFrst128SpryShnGl.psd",
+    "sha256": "cf569f69c70fcff88f150beec2e8e948a2471ac435ae52f0e282f9abe1088eea"
+   }
+  },
+  {
+   "sku": "LBRndFrst128LtnCu",
+   "graceSku": "LB-RND-FRS-128ML-LPM-CPR",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/LBRndFrst128LtnCu.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/LBRndFrst128LtnCu/aea01886d030d59e26bc38e8c120f6d95ea3d336a7412145edc1ebd4b5260464.front-on-1000x1100.webp",
+    "sha256": "aea01886d030d59e26bc38e8c120f6d95ea3d336a7412145edc1ebd4b5260464",
+    "bytes": 9052,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "7512889c33dddafbde2df4e410d5c5d27f2bd996179e51da50f7acf1c8a7da17",
+    "bytes": 944
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/58. LBRndFrst128LtnCu.psd",
+    "sha256": "91c21b06d27218902db6f3aae77cd798d5faa9e2e4aab264d1e92dd721382598"
+   }
+  },
+  {
+   "sku": "LBRndFrst128LtnMtGl",
+   "graceSku": "LB-RND-FRS-128ML-LPM-MGLD",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/LBRndFrst128LtnMtGl.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/LBRndFrst128LtnMtGl/e27e041435f6c7ce5fecccbf4b39eb0bf6c840388c7bca98a0b6a9f068a4e040.front-on-1000x1100.webp",
+    "sha256": "e27e041435f6c7ce5fecccbf4b39eb0bf6c840388c7bca98a0b6a9f068a4e040",
+    "bytes": 8356,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "cf4df949481c202e18382875224734039dd9f161ef418c146349744aa463e2a9",
+    "bytes": 912
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/12. LBRndFrst128LtnMtGl.psd",
+    "sha256": "de0545ca278e292041a59efd074a7357535b02ed922c7333a100a0d031882fea"
+   }
+  },
+  {
+   "sku": "LBRndFrst128LtnMtSl",
+   "graceSku": "LB-RND-FRS-128ML-LPM-MSLV",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/LBRndFrst128LtnMtSl.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/LBRndFrst128LtnMtSl/dd2493215abffbb9082286a827ed31af6fb8af75a33b697735097ba26755c81b.front-on-1000x1100.webp",
+    "sha256": "dd2493215abffbb9082286a827ed31af6fb8af75a33b697735097ba26755c81b",
+    "bytes": 7068,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "ca700f43a7381d11c6eb44adf7916d5bec4a6e4ac1eeb1a12c0c4c7be8af3c8d",
+    "bytes": 780
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/26. LBRndFrst128LtnMtSl.psd",
+    "sha256": "432b045d9c1e5f2932c42176d000bae398ce50460f1fa5c79eb77fce71d75a35"
+   }
+  },
+  {
+   "sku": "LBRndFrst128LtnShnBlk",
+   "graceSku": "LB-RND-FRS-128ML-LPM-SBLK",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/LBRndFrst128LtnShnBlk.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/LBRndFrst128LtnShnBlk/9259d819fce4f31b3d5fa93cb44d03312834678c722024b93b013be90d69640a.front-on-1000x1100.webp",
+    "sha256": "9259d819fce4f31b3d5fa93cb44d03312834678c722024b93b013be90d69640a",
+    "bytes": 8498,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "4130cbbba5a62b95244e07ddd1ba115eb369e17048100ba7f02c9b1f428ae0ad",
+    "bytes": 846
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/22. LBRndFrst128LtnShnBlk.psd",
+    "sha256": "35c0252dde45a656bb5b69cd2f2e04dd347c7f3e8fbfad1657e3c51b0437350a"
+   }
+  },
+  {
+   "sku": "LBRndFrst128LtnShnGl",
+   "graceSku": "LB-RND-FRS-128ML-LPM-SGLD",
+   "familyId": "round-128ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-128ml-frosted-18-415/LBRndFrst128LtnShnGl.front-on.webp",
+    "storeKey": "plates/round-128ml-frosted-18-415/LBRndFrst128LtnShnGl/9982fa253f803dbcdf4ddfd61d91f86641278907dcee88fb9c7e302f935ecc65.front-on-1000x1100.webp",
+    "sha256": "9982fa253f803dbcdf4ddfd61d91f86641278907dcee88fb9c7e302f935ecc65",
+    "bytes": 10836,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "a6d4e8e6ec011982e1c1c4b2897c1550e3e838991fafcd0e122547e1fa989a7c",
+    "bytes": 1172
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /10. Round Frosted 128ml/1. Round Frst 128ml PSD/18. LBRndFrst128LtnShnGl.psd",
+    "sha256": "0ed4ebb8aa2fa3a2669290c1f60166ee254934e52766a0b8710ab24bebf27491"
+   }
+  },
+  {
+   "sku": "LBRnd78LtnClOvrCap",
+   "graceSku": "LB-RND-CLR-78ML-LPM-COCP",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/LBRnd78LtnClOvrCap.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/LBRnd78LtnClOvrCap/4ff8444ee930ad766801019a5331bd809bbdf2bb3dc467bb7c734f6f27054f40.front-on-1000x1100.webp",
+    "sha256": "4ff8444ee930ad766801019a5331bd809bbdf2bb3dc467bb7c734f6f27054f40",
+    "bytes": 15516,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "a8ff0897e6c86a99520dc9e8275de6021b7e2aec1286176fb1ba04ce1e028fb6",
+    "bytes": 1692
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/28. LBRnd78LtnClOvrCap.psd",
+    "sha256": "61abe83cf587e7c8469fd88b8bac2da502915a2e88ef09080fbfc2e4353c8b51"
+   }
+  },
+  {
+   "sku": "LBRnd78LtnMtGl",
+   "graceSku": "LB-RND-CLR-78ML-LPM-MGLD",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/LBRnd78LtnMtGl.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/LBRnd78LtnMtGl/4e3daeb03fa06bd54d455e0e90d6a0c9f2bdb2771a66d3f2b3453b08998c67ba.front-on-1000x1100.webp",
+    "sha256": "4e3daeb03fa06bd54d455e0e90d6a0c9f2bdb2771a66d3f2b3453b08998c67ba",
+    "bytes": 13770,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "ad413654454a632bc4fb1224f42d80ede24095fd5622a6ba63bde238b5950d0b",
+    "bytes": 1584
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/12. LBRnd78LtnMtGl.psd",
+    "sha256": "d893ef7d7e216674b47610aaf353506fbfe070bfd32f0384b845e29378e1bdec"
+   }
+  },
+  {
+   "sku": "LBRnd78LtnMtSl",
+   "graceSku": "LB-RND-CLR-78ML-LPM-MSLV",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/LBRnd78LtnMtSl.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/LBRnd78LtnMtSl/2a828eae74ad055b7db09bd7ab6b0d282c6ac5fe6a89dd9964cd48840a4770c5.front-on-1000x1100.webp",
+    "sha256": "2a828eae74ad055b7db09bd7ab6b0d282c6ac5fe6a89dd9964cd48840a4770c5",
+    "bytes": 12058,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "13ad60267afb5439ede0380bba44751630c00e5559f13e74f3c030744e9f0f47",
+    "bytes": 1464
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/26. LBRnd78LtnMtSl.psd",
+    "sha256": "808fefe6a3d15368f8dc78aac0f25a920ffaf9d175c3858099e4b604dc6209a1"
+   }
+  },
+  {
+   "sku": "LBRnd78LtnShnBlk",
+   "graceSku": "LB-RND-CLR-78ML-LPM-SBLK",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/LBRnd78LtnShnBlk.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/LBRnd78LtnShnBlk/49dbd827a2d9aee5ddea0a251c91af6cc9e1a933b430ee9f87952718e0642304.front-on-1000x1100.webp",
+    "sha256": "49dbd827a2d9aee5ddea0a251c91af6cc9e1a933b430ee9f87952718e0642304",
+    "bytes": 13600,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "55876d147918e5b1cef2a52b62f1c2dde419cefed880732b7d4cf98b67890a38",
+    "bytes": 1562
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/22. LBRnd78LtnShnBlk.psd",
+    "sha256": "f018f893d068bac1c8d980e4ae81ac4aa8d7bbc479689c48b2a75ef46aff72b2"
+   }
+  },
+  {
+   "sku": "LBRnd78LtnShnGl",
+   "graceSku": "LB-RND-CLR-78ML-LPM-SGLD",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/LBRnd78LtnShnGl.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/LBRnd78LtnShnGl/6c26939fb6b58657f210c1cb8d95e61996db1867c265a94dd3d496ccccfaf0da.front-on-1000x1100.webp",
+    "sha256": "6c26939fb6b58657f210c1cb8d95e61996db1867c265a94dd3d496ccccfaf0da",
+    "bytes": 16056,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "678c4d475e1ea0409c977a0d418225562a39cc75a880409177523c5f77719d3b",
+    "bytes": 1890
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/18. LBRnd78LtnShnGl.psd",
+    "sha256": "7d7c33e6256716c2c2dfcf51c4b6ef299574c50572c905c338495faf7658b103"
+   }
+  },
+  {
+   "sku": "LBRnd78LtnShnSl",
+   "graceSku": "LB-RND-CLR-78ML-LPM-SSLV",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/LBRnd78LtnShnSl.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/LBRnd78LtnShnSl/1c9e88a98084b0f130934d5a40d10757e0066ac44e85cd16be5d74242657b979.front-on-1000x1100.webp",
+    "sha256": "1c9e88a98084b0f130934d5a40d10757e0066ac44e85cd16be5d74242657b979",
+    "bytes": 15010,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "aa9e0238bec4e02dfbd90cf876c81fdca40c335c8493f45a596e880c32bc9375",
+    "bytes": 1642
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/32. LBRnd78LtnShnSl.psd",
+    "sha256": "d250e01e302a550757cb44dab2d560b0ec4b7d9a6e50b9769096cb6a5142299a"
+   }
+  },
+  {
+   "sku": "GBRnd78SpryMtGl",
+   "graceSku": "GB-RND-CLR-78ML-SPR-MGLD",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/GBRnd78SpryMtGl.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/GBRnd78SpryMtGl/6cc6803ce7e66aa12fcc10d9c7ab1c2cc4d502e019e540d0ea5dbd0d8fc11618.front-on-1000x1100.webp",
+    "sha256": "6cc6803ce7e66aa12fcc10d9c7ab1c2cc4d502e019e540d0ea5dbd0d8fc11618",
+    "bytes": 12532,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "2377bec56c82283e071ddef6ed32a059058ef36fd458b65b5e69aee4d7866c8e",
+    "bytes": 1460
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/11. GBRnd78SpryMtGl.psd",
+    "sha256": "f9376e9237be26cdfa47bae42559efebf3066b643c62a43de491e146e0499ea6"
+   }
+  },
+  {
+   "sku": "GBRnd78SpryMtSl",
+   "graceSku": "GB-RND-CLR-78ML-SPR-MSLV",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/GBRnd78SpryMtSl.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/GBRnd78SpryMtSl/dce323f54254b0c00b4f231c784d863528eaa45ea7bd9c42a081113eedb21df7.front-on-1000x1100.webp",
+    "sha256": "dce323f54254b0c00b4f231c784d863528eaa45ea7bd9c42a081113eedb21df7",
+    "bytes": 11098,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "cb4f34bc3654c2d181bcb669bd795800b06a93f05dac9dcc8d5cb028e926174c",
+    "bytes": 1334
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/24. GBRnd78SpryMtSl.psd",
+    "sha256": "160f2663116d3895cb09334b73a18c1955558c14cb402f88377c54c54b8d75e3"
+   }
+  },
+  {
+   "sku": "GBRnd78SpryShnBlk",
+   "graceSku": "GB-RND-CLR-78ML-SPR-SBLK",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/GBRnd78SpryShnBlk.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/GBRnd78SpryShnBlk/dbf12cede9b9b4cfc7afdc243addb0743fbdd313916b9e3269fb33ebda6093a4.front-on-1000x1100.webp",
+    "sha256": "dbf12cede9b9b4cfc7afdc243addb0743fbdd313916b9e3269fb33ebda6093a4",
+    "bytes": 12886,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "5e9a8993da011316da68bcdcb73c1d2c59a7dc3e8b8eafd02386803e07d1505e",
+    "bytes": 1392
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/21. GBRnd78SpryShnBlk.psd",
+    "sha256": "afcba63430cffdb092b70aee321ec4a5cc000630eba97ab8d07bb15f90674a96"
+   }
+  },
+  {
+   "sku": "GBRnd78SpryShnGl",
+   "graceSku": "GB-RND-CLR-78ML-SPR-SGLD",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/GBRnd78SpryShnGl.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/GBRnd78SpryShnGl/f5534f33e3f92adfe0466f11e0b532b35ba537c2c20a3e7902cf5675399265c3.front-on-1000x1100.webp",
+    "sha256": "f5534f33e3f92adfe0466f11e0b532b35ba537c2c20a3e7902cf5675399265c3",
+    "bytes": 15518,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "4ec1c42779cdfeff4f1f8509d72ba28115b233e71d7e4d3455fa615e65878743",
+    "bytes": 1748
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/17. GBRnd78SpryShnGl.psd",
+    "sha256": "64c61a4db6f210e61e7010a677b21d6ec1599ac4112008b255cecf7f4c54f673"
+   }
+  },
+  {
+   "sku": "GBRnd78SpryShnSl",
+   "graceSku": "GB-RND-CLR-78ML-SPR-SSLV",
+   "familyId": "round-78ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-clear-18-415/GBRnd78SpryShnSl.front-on.webp",
+    "storeKey": "plates/round-78ml-clear-18-415/GBRnd78SpryShnSl/a6e59c874fcb7ef9f0c362eec803cc0c7b5008dc7689676d0e810ec4b7f75668.front-on-1000x1100.webp",
+    "sha256": "a6e59c874fcb7ef9f0c362eec803cc0c7b5008dc7689676d0e810ec4b7f75668",
+    "bytes": 13804,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "5a6b2ab089044b2831b068cd2ed0de84ae1b88a33f23dfc5a7733705c8016249",
+    "bytes": 1494
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/30. GBRnd78SpryShnSl.psd",
+    "sha256": "14feb1b135f5c9b482cb14190280c39ca0d1ac6ef1d59a12b518e0bbc78748b5"
+   }
+  },
+  {
+   "sku": "LBRndFrst78LtnClOvrCap",
+   "graceSku": "LB-RND-FRS-78ML-T",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/LBRndFrst78LtnClOvrCap.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/LBRndFrst78LtnClOvrCap/daaa730f0b4a812bad744f6ad83b92fbcc349767909db86c84b4c32ec87c240f.front-on-1000x1100.webp",
+    "sha256": "daaa730f0b4a812bad744f6ad83b92fbcc349767909db86c84b4c32ec87c240f",
+    "bytes": 9698,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "06259941532905425b824233fe786b26f0a71a4a51dfd5e6c3014c8dc4efaad2",
+    "bytes": 992
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/28. LBRndFrst78LtnClOvrCap.psd",
+    "sha256": "1aa0a34fa2420de0f981afcdb04eda5d427946fdcaca87df3171c3380809d7cb"
+   }
+  },
+  {
+   "sku": "LBRndFrst78LtnCu",
+   "graceSku": "LB-RND-FRS-78ML-01",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/LBRndFrst78LtnCu.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/LBRndFrst78LtnCu/87ddf6a6806d4058f57e8595cff73a7fda5952bbfed3756837ff6c9e2d233060.front-on-1000x1100.webp",
+    "sha256": "87ddf6a6806d4058f57e8595cff73a7fda5952bbfed3756837ff6c9e2d233060",
+    "bytes": 9682,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "cd89c8c2f59f826d65fd5de05d5fcdb8f5bfe3241e94a45c91c4a783f40ca563",
+    "bytes": 940
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/56. LBRndFrst78LtnCu.psd",
+    "sha256": "15229093adefc960fe5bd590454e16ae11f6d0b2826fbb451556d894ff3bf772"
+   }
+  },
+  {
+   "sku": "LBRndFrst78LtnMtGl",
+   "graceSku": "LB-RND-FRS-78ML-02",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/LBRndFrst78LtnMtGl.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/LBRndFrst78LtnMtGl/8ea09c969e26f3481a22ef1106c6c8c7eb788d0b24ec73aa6ffe38f351d98fb2.front-on-1000x1100.webp",
+    "sha256": "8ea09c969e26f3481a22ef1106c6c8c7eb788d0b24ec73aa6ffe38f351d98fb2",
+    "bytes": 7894,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "21918c5b5c32bdc45a7e94a50f07549b106f0ce9442944bc42e2c2a666ba4017",
+    "bytes": 898
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/12. LBRndFrst78LtnMtGl.psd",
+    "sha256": "73bca9d68e36169f8210c8b702adc12753ec0ccccc9d264a01b6cdba1b52bed8"
+   }
+  },
+  {
+   "sku": "LBRndFrst78LtnMtSl",
+   "graceSku": "LB-RND-FRS-78ML-03",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/LBRndFrst78LtnMtSl.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/LBRndFrst78LtnMtSl/dd811f1215f5edcaa6057da7df27369ebcdc198ae3adc136ca47f651ac24ff39.front-on-1000x1100.webp",
+    "sha256": "dd811f1215f5edcaa6057da7df27369ebcdc198ae3adc136ca47f651ac24ff39",
+    "bytes": 7224,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "c3c4cc7def4443fa1cc2b1529810b1ccc7a964d7bd49d968f2fc5296fdcc0d7c",
+    "bytes": 816
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/26. LBRndFrst78LtnMtSl.psd",
+    "sha256": "b27f32f412e171a752487778b791d72de6e73ae479e43d4221faa2e32827385f"
+   }
+  },
+  {
+   "sku": "LBRndFrst78LtnShnBlk",
+   "graceSku": "LB-RND-FRS-78ML-04",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/LBRndFrst78LtnShnBlk.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/LBRndFrst78LtnShnBlk/bb891fd5bb90f435530693e2197709cc5527d11a845de3a98234663d4c257ac8.front-on-1000x1100.webp",
+    "sha256": "bb891fd5bb90f435530693e2197709cc5527d11a845de3a98234663d4c257ac8",
+    "bytes": 7922,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "2a4eb5054595cb43c2c6359f5919c642a0d58ad6eac28a95588e417a9bf9dddd",
+    "bytes": 898
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/22. LBRndFrst78LtnShnBlk.psd",
+    "sha256": "08c5f090abbb3a7546ab476fc3ae2740ca37587391d4b8d87314c6e212abcb79"
+   }
+  },
+  {
+   "sku": "LBRndFrst78LtnShnGl",
+   "graceSku": "LB-RND-FRS-78ML-05",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/LBRndFrst78LtnShnGl.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/LBRndFrst78LtnShnGl/e89034b5c8c69a015782cd8cc110e899c435260b8217851625d87ec9bb6e6715.front-on-1000x1100.webp",
+    "sha256": "e89034b5c8c69a015782cd8cc110e899c435260b8217851625d87ec9bb6e6715",
+    "bytes": 10006,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "84299e3cb246953d4bc4f8b99da4098e8bb02d878a4d3cabd76b50f419167d5b",
+    "bytes": 1144
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/18. LBRndFrst78LtnShnGl.psd",
+    "sha256": "668297fa3ca82255a91bda67bd005e62af4ec8bcaf37952bbf02910aff694775"
+   }
+  },
+  {
+   "sku": "LBRndFrst78LtnShnSl",
+   "graceSku": "LB-RND-FRS-78ML-06",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/LBRndFrst78LtnShnSl.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/LBRndFrst78LtnShnSl/7e9088937cba8caea3da20ca71583a1f6ee9a0474df59e77e9ec3f45b28364a6.front-on-1000x1100.webp",
+    "sha256": "7e9088937cba8caea3da20ca71583a1f6ee9a0474df59e77e9ec3f45b28364a6",
+    "bytes": 8504,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "1b709ffbbb2c3e4852290828bd04b36ea72636053d9eb5746f2df9de656014d4",
+    "bytes": 904
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/32. LBRndFrst78LtnShnSl.psd",
+    "sha256": "2526e4f42a7ebbd2bb6bc38c1b361dcd2e62ec18dfb3d50c6af9b37c548d17b2"
+   }
+  },
+  {
+   "sku": "GBRndFrst78SpryCu",
+   "graceSku": "GB-RND-FRS-78ML-SPR-CPR",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/GBRndFrst78SpryCu.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/GBRndFrst78SpryCu/4da07dbe6a903e5b9e5097e0d66f8b87dab5d1dc31a7e8e61713ef8b6bef4353.front-on-1000x1100.webp",
+    "sha256": "4da07dbe6a903e5b9e5097e0d66f8b87dab5d1dc31a7e8e61713ef8b6bef4353",
+    "bytes": 9042,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "3e88d11f1326a064e65aad954f8368fbb553d4678d8fc43737eaa0cba37fcf6c",
+    "bytes": 944
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/54. GBRndFrst78SpryCu.psd",
+    "sha256": "0100581a8f069c2d9a6cde0e3732f3a619a539b2a258a33660e57b9a95b2b84c"
+   }
+  },
+  {
+   "sku": "GBRndFrst78SpryMtGl",
+   "graceSku": "GB-RND-FRS-78ML-SPR-MGLD",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/GBRndFrst78SpryMtGl.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/GBRndFrst78SpryMtGl/222d4744cd8f7ee1989e4df6a11b72f08069508f4be6e1b94ef78f9dbb200db3.front-on-1000x1100.webp",
+    "sha256": "222d4744cd8f7ee1989e4df6a11b72f08069508f4be6e1b94ef78f9dbb200db3",
+    "bytes": 8548,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "05348da23b7670791e098c3832c67f80ce868f16188a0474827dfc783df19414",
+    "bytes": 940
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/11. GBRndFrst78SpryMtGl.psd",
+    "sha256": "3098d4cc52aa945612e2e40353e53ecd0ad690738bb448e823344d978cba8539"
+   }
+  },
+  {
+   "sku": "GBRndFrst78SpryMtSl",
+   "graceSku": "GB-RND-FRS-78ML-SPR-MSLV",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/GBRndFrst78SpryMtSl.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/GBRndFrst78SpryMtSl/64031e644c6354160f768caafa57596bb9bcae1e0c0e265f455927fbeea5e787.front-on-1000x1100.webp",
+    "sha256": "64031e644c6354160f768caafa57596bb9bcae1e0c0e265f455927fbeea5e787",
+    "bytes": 7144,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "d3c08cc458e161ffa5a48f55f5fd4ccfc9dd72c8df504d05dafb29826f0f50ec",
+    "bytes": 818
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/24. GBRndFrst78SpryMtSl.psd",
+    "sha256": "b0a7976df663c7aecea424e87444b88d7c0b763049fb4ed5a87ed5524f4e265e"
+   }
+  },
+  {
+   "sku": "GBRndFrst78SpryShnBlk",
+   "graceSku": "GB-RND-FRS-78ML-SPR-SBLK",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/GBRndFrst78SpryShnBlk.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/GBRndFrst78SpryShnBlk/c3035d48e74197cba5089ab30f9f43f00404cc83c2d8e3f665d22592f5dd4714.front-on-1000x1100.webp",
+    "sha256": "c3035d48e74197cba5089ab30f9f43f00404cc83c2d8e3f665d22592f5dd4714",
+    "bytes": 8498,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "46b3af346c1f8e84b3b688f98f351014248e99068add75ac361fc409b219d8fb",
+    "bytes": 890
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/21. GBRndFrst78SpryShnBlk.psd",
+    "sha256": "9cd4f401870790016706312ecaeb68cdbba7cc211a5a13560815c855b8ddd4e9"
+   }
+  },
+  {
+   "sku": "GBRndFrst78SpryShnGl",
+   "graceSku": "GB-RND-FRS-78ML-SPR-SGLD",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/GBRndFrst78SpryShnGl.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/GBRndFrst78SpryShnGl/0c8030c9747c17751c860085b6525323f8f484ade667b37c51c6a2afa8172f28.front-on-1000x1100.webp",
+    "sha256": "0c8030c9747c17751c860085b6525323f8f484ade667b37c51c6a2afa8172f28",
+    "bytes": 10784,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "b22448dfaad01a0984516f1054724571a0a854b4c33484f63284d97ede2522d4",
+    "bytes": 1144
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/17. GBRndFrst78SpryShnGl.psd",
+    "sha256": "3201c11a861a22f146498148e7bcc993192a0af59a866f57c1b8b2cc5fee6acd"
+   }
+  },
+  {
+   "sku": "GBRndFrst78SpryShnSl",
+   "graceSku": "GB-RND-FRS-78ML-SPR-SSLV",
+   "familyId": "round-78ml-frosted-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "round-78ml-frosted-18-415/GBRndFrst78SpryShnSl.front-on.webp",
+    "storeKey": "plates/round-78ml-frosted-18-415/GBRndFrst78SpryShnSl/756b9b03bd568afd65039faf8e9ff5467e95c3995617abbf38835a1e5c1d1d10.front-on-1000x1100.webp",
+    "sha256": "756b9b03bd568afd65039faf8e9ff5467e95c3995617abbf38835a1e5c1d1d10",
+    "bytes": 9202,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "fa2de5b886c3975deb0a1e33c56835fa57c763ebb116c4c182743553db36c6e8",
+    "bytes": 884
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/30. GBRndFrst78SpryShnSl.psd",
+    "sha256": "c66cb2c58daca4ed13b02891c5ba69532f03fcd929ac30a6d31d5acd4626aa83"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 173,
+  "alreadyLiveAndExcluded": 139
+ },
+ "frontSourcePins": [
+  "LBRndFrst128LtnMtSl",
+  "LBRndFrst128LtnMtGl",
+  "LBRndFrst128LtnCu",
+  "LBRndFrst128LtnShnGl",
+  "LBRndFrst128LtnShnBlk",
+  "LBRndFrst78LtnMtSl",
+  "LBRndFrst78LtnCu"
+ ],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}

@@ -123,13 +123,17 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const visibleBodies = useMemo(() => bodies.filter(b => (!size || b.capacityMl === Number(size))
         && (!neck || b.neck === neck) && (!application || b.configurations.some(c => c.fitment === application))), [bodies, size, neck, application]);
     const preview = configuration ?? current.fitted[0] ?? current.colored[0] ?? body?.configurations[0];
+    // one fixed body per bottle and glass: the first full kit (vintage first, its body is the reference for the bulb sprayers)
+    // reducer photographs carry the insert inside the neck, so a reducer body is the last choice of reference
     const bodyReference = current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full")
+        ?? current.colored.find(c => c.kit?.completeness === "full" && c.fitment !== "Reducer") ?? current.colored.find(c => c.kit?.completeness === "full")
         ?? current.colored[0] ?? body?.configurations[0];
     const hasIncludedCover = Boolean(configuration && /Sprayer|Pump/.test(configuration.fitment)
         && ((configuration.id in hasIncludedCovers) || (configuration.kit?.parts.some(p => p.slot === "overcap")
         && configuration.kit?.parts.some(p => !["body", "overcap", "diptube"].includes(p.slot)))));
     const previewStage = step === 0 ? "body" : configuration ? "complete" : fitment ? "fitment" : "body";
-    const displayParts = preview ? previewParts(preview, previewStage).filter(p => !(hasIncludedCover && !showCover && p.slot === "overcap")) : [];
+    // the overcap is never dropped from the preview: worn when showCover, standing on the ground beside the bottle otherwise (BuilderImage)
+    const displayParts = preview ? previewParts(preview, previewStage) : [];
     const completed = [Boolean(body && color), Boolean(fitment), Boolean(configuration), false];
     const canContinue = step === 0 ? Boolean(body && color) : step === 1 ? Boolean(fitment) : Boolean(configuration);
     const fitmentReady = step === 0 && canContinue && !pending;
@@ -169,6 +173,8 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         setShowCover(false);
         setSelection(next); setLastAdded(null); setError("");
         requestAnimationFrame(() => {
+            // several glasses: bring the colour choice into view; one glass: the
+            // action bar is sticky, so the shopper's eye stays on the preview
             glassHeading.current?.focus({ preventScroll: true });
             glassHeading.current?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "nearest" });
         });
@@ -267,11 +273,12 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                     </Option>)}
                 </div>}
                 {step === 0 && !visibleBodies.length && <div className={styles.empty}><h3>No bottles for these choices.</h3><p>Try another size or bottle family.</p><button className={styles.secondary} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button><Link href={catalogHref}>Explore the full catalog <ArrowRight size={15} /></Link></div>}
-                {step === 0 && body && <div className={styles.glassSection}><h3 ref={glassHeading} tabIndex={-1}>Choose your glass</h3><div className={current.colors.length === 1 ? styles.singleGlass : styles.colorGrid}>
+                {step === 0 && body && current.colors.length > 1 && <div className={styles.glassSection}><h3 ref={glassHeading} tabIndex={-1}>Choose your glass color</h3><div className={styles.colorGrid}>
                     {current.colors.map(c => { const example = body!.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => update({ color: c, fitment: null, closure: null })}>
-                        {current.colors.length > 1 && <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} /></div>}<strong>{c}{current.colors.length === 1 ? " glass" : ""}</strong>
+                        <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} /></div><strong>{c}</strong>
                     </Option>; })}
-                </div><div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>Your bottle is ready. Select <strong>Choose Fitment</strong> to continue.</span></>}</div></div>}
+                </div></div>}
+                {step === 0 && body && <div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>{current.colors.length === 1 ? <>{color} glass, the only glass for this bottle. Select <strong>Choose Fitment</strong> to continue.</> : <>Your bottle is ready. Select <strong>Choose Fitment</strong> to continue.</>}</span></>}</div>}
                 {(step === 1 || step === 2) && <>
                     <div className={styles.compatibilityContext}><ShieldCheck size={18} /><span><strong>{body?.capacityMl} ml {body?.family} · {color}</strong><span>Neck: {body?.neck} · Compatible components below</span></span></div>
                     {step === 1 ? <div className={styles.fitmentGrid}>{current.fitments.map(f => {
@@ -313,7 +320,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
             </section>
             <section className={styles.preview} aria-label="Live bottle preview" data-preview-stage={previewStage} data-expanded={previewExpanded}>
                 <div className={styles.previewHeader}><span>YOUR BOTTLE, TAKING SHAPE</span><span className={styles.liveDot}>{preview ? "Your bottle preview" : "Live preview"}</span></div>
-                {preview ? <div id={previewId} className={styles.previewImage}><BuilderImage config={preview} parts={displayParts} stage={previewStage} showCover={showCover} bodyReference={bodyReference}
+                {preview ? <div id={previewId} className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}><BuilderImage config={preview} parts={displayParts} stage={previewStage} showCover={showCover} bodyReference={bodyReference}
                     label={body ? `${preview.capacityMl} ml ${preview.color} ${preview.family}${fitment ? ` with ${displayApplicatorName(fitment)}` : preview.kit ? " bottle body" : " bottle"}${closure ? `, ${closure}` : ""}` : "Bottle body preview — choose a bottle to begin"} /></div>
                     : <div className={styles.previewEmpty}><ShoppingBag size={32} weight="light" /><p>Your bottle starts here.</p></div>}
                 <div className={styles.previewCaption} aria-live="polite">{body ? <><h2>{body.capacityMl} ml {body.profileLabel}</h2><p>{color ?? "Choose your glass"}{fitment ? ` · ${displayApplicatorName(fitment)}` : ""}</p>{preview && !preview.kit && fitment && !configuration && <p>Your selected fitment is shown in the options. Choose your {finishLabel.toLowerCase()} to see the complete bottle.</p>}</> : <><h2>A bottle. Your possibilities.</h2><p>Choose a bottle to start building.</p></>}</div>

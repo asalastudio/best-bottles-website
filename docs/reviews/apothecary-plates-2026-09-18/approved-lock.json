@@ -1,0 +1,47 @@
+{
+ "schemaVersion": 1,
+ "release": "Apothecary plates 2026-09-18",
+ "approvedAt": "2026-09-19T06:28:28.918Z",
+ "actor": "Jordan · approved in chat (\"I approve the 32\"), from the legacy and small-family contact sheets",
+ "approvalId": "ef0b6338-d36b-4490-af83-de667bb5f748",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/tail-new-plates.jpg",
+ "reviewPacketSha256": "76c43d55ae87e79021806638f279590452fd6cc9951bcf9a0f6f5c12b095f05c",
+ "approvalFile": "dist/paper-doll/apothecary-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "39ce5b914879b1c865a1c2b501f12fc01544a0e59a035cbd00b56055c7d93324",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "GBPearClear4ozStpr",
+   "graceSku": "GB-DEC-CLR-118ML",
+   "familyId": "apothecary-118ml-clear-ground",
+   "closure": null,
+   "plate": {
+    "key": "apothecary-118ml-clear-ground/GBPearClear4ozStpr.front-on.webp",
+    "storeKey": "plates/apothecary-118ml-clear-ground/GBPearClear4ozStpr/1db3a2615c0c59316db3d652b782bcb645f0c9d9f6cff8bb357c0251dcaf6914.front-on-1000x1100.webp",
+    "sha256": "1db3a2615c0c59316db3d652b782bcb645f0c9d9f6cff8bb357c0251dcaf6914",
+    "bytes": 19722,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "2f0a36bdeddd894da753f0fd5e548946e9dce388c343abed213098c633b7e51a",
+    "bytes": 2018
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "10. Apothecary/4. 4oz Pear Apoth/GBPearClear4ozStpr.psd",
+    "sha256": "96a85b9e001879bae80e4102bb399a04dca631b9f8063b1b043ad954159ce550"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 5,
+  "alreadyLiveAndExcluded": 4
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}

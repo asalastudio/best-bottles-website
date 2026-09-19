@@ -1,0 +1,4606 @@
+{
+ "rows": [
+  {
+   "websiteSku": "GBCyl5WhtSht",
+   "graceSku": "GB-CYL-WHT-5ML-WHT-S",
+   "twinWebsiteSku": "GBCyl5BlkSht",
+   "groupSlug": "cylinder-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "White",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short white cap",
+   "itemDescription": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short white cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, Small sized bottle for decants, promotion, samples and travel accessory. Price each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.31,
+     "totalPrice": 0.31
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.29,
+     "totalPrice": 3.53
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.28,
+     "totalPrice": 40.18
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.26,
+     "totalPrice": 227.66
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.24,
+     "totalPrice": 1044.58
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-white-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCyl5WhtSht.gif",
+   "masterGraceSku": "GB-CYL-WHT-5ML-WHT-S"
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollWht",
+   "graceSku": "GB-CYL-WHT-9ML-MRL-WHT",
+   "twinWebsiteSku": "GBCylSwrl9RollBlkDot",
+   "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+   "color": "Swirl",
+   "capColor": "White",
+   "capStyle": null,
+   "itemName": "Cylinder swirl design 9ml,1/3 oz glass bottle with metal roller ball plug and white cap",
+   "itemDescription": "Cylinder swirl design 9ml,1/3 oz glass bottle with metal roller ball plug and white cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.76,
+     "totalPrice": 0.76
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.72,
+     "totalPrice": 8.66
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.68,
+     "totalPrice": 98.5
+    },
+    {
+     "minQty": 684,
+     "unitPrice": 0.65,
+     "totalPrice": 441.86
+    },
+    {
+     "minQty": 3420,
+     "unitPrice": 0.59,
+     "totalPrice": 2027.38
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-swirl-glass-bottle-metal-roller-ball-white-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCylSwrl9MtlRollWht.gif",
+   "masterGraceSku": "GB-CYL-WHT-9ML-MRL-WHT"
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollWht",
+   "graceSku": "GB-CYL-WHT-9ML-ROL-WHT",
+   "twinWebsiteSku": "GBCylSwrl9RollBlkDot",
+   "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+   "color": "Swirl",
+   "capColor": "White",
+   "capStyle": null,
+   "itemName": "Cylinder swirl design 9ml,1/3 oz glass bottle with plastic roller ball plug and white cap",
+   "itemDescription": "Cylinder swirl design 9ml,1/3 oz glass bottle with plastic roller ball plug and white cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.67,
+     "totalPrice": 0.67
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.64,
+     "totalPrice": 7.64
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.6,
+     "totalPrice": 86.83
+    },
+    {
+     "minQty": 684,
+     "unitPrice": 0.57,
+     "totalPrice": 389.54
+    },
+    {
+     "minQty": 3420,
+     "unitPrice": 0.52,
+     "totalPrice": 1787.29
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-swirl-glass-bottle-plastic-roller-ball-white-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCylSwrl9RollWht.gif",
+   "masterGraceSku": "GB-CYL-WHT-9ML-ROL-WHT"
+  },
+  {
+   "websiteSku": "GBTallCyl9WhtSht",
+   "graceSku": "GB-CYL-WHT-9ML-WHT-S",
+   "twinWebsiteSku": "GBTallCyl9BlkSht",
+   "groupSlug": "cylinder-9ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "White",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short white cap",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short white cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, slender bottle with attractive heavy base. Price each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.67,
+     "totalPrice": 0.67
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.64,
+     "totalPrice": 7.64
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.6,
+     "totalPrice": 86.83
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.57,
+     "totalPrice": 164.02
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.52,
+     "totalPrice": 752.54
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-white-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCyl9WhtSht.gif",
+   "masterGraceSku": "GB-CYL-WHT-9ML-WHT-S"
+  },
+  {
+   "websiteSku": "CP13-415CuSht",
+   "graceSku": "CMP-CLS-MTCP-S-13-415",
+   "twinWebsiteSku": "CP13-415WhtSht",
+   "groupSlug": "cap-closure-13-415",
+   "color": null,
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Short matte copper or closure for glass bottle with foam liner. Thread size 13-415",
+   "itemDescription": "Short matte copper or closure for glass bottle with foam liner. Thread size 13-415",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.28,
+     "totalPrice": 0.28
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.27,
+     "totalPrice": 3.19
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.25,
+     "totalPrice": 36.29
+    },
+    {
+     "minQty": 3168,
+     "unitPrice": 0.24,
+     "totalPrice": 753.98
+    },
+    {
+     "minQty": 15840,
+     "unitPrice": 0.22,
+     "totalPrice": 3459.46
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-copper-Color-13-415",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/CP13-415CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCP-S-13-415"
+  },
+  {
+   "websiteSku": "CP13-415GlMattSht",
+   "graceSku": "CMP-CLS-MTGD-S-13-415",
+   "twinWebsiteSku": "CP13-415WhtSht",
+   "groupSlug": "cap-closure-13-415",
+   "color": null,
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415",
+   "itemDescription": "Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.28,
+     "totalPrice": 0.28
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.27,
+     "totalPrice": 3.19
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.25,
+     "totalPrice": 36.29
+    },
+    {
+     "minQty": 3168,
+     "unitPrice": 0.24,
+     "totalPrice": 753.98
+    },
+    {
+     "minQty": 15840,
+     "unitPrice": 0.22,
+     "totalPrice": 3459.46
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-gold-Color-13-415",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/CP13-415GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTGD-S-13-415"
+  },
+  {
+   "websiteSku": "CP13-415SlMattSht",
+   "graceSku": "CMP-CLS-MTSL-S-13-415",
+   "twinWebsiteSku": "CP13-415WhtSht",
+   "groupSlug": "cap-closure-13-415",
+   "color": null,
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Short matte silver or closure for glass bottle with foam liner. Thread size 13-415",
+   "itemDescription": "Short matte silver or closure for glass bottle with foam liner. Thread size 13-415",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.28,
+     "totalPrice": 0.28
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.27,
+     "totalPrice": 3.19
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.25,
+     "totalPrice": 36.29
+    },
+    {
+     "minQty": 3168,
+     "unitPrice": 0.24,
+     "totalPrice": 753.98
+    },
+    {
+     "minQty": 15840,
+     "unitPrice": 0.22,
+     "totalPrice": 3459.46
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-silver-Color-13-415",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/CP13-415SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTSL-S-13-415"
+  },
+  {
+   "websiteSku": "CP13-415GlSht",
+   "graceSku": "CMP-CLS-SHGD-S-13-415",
+   "twinWebsiteSku": "CP13-415WhtSht",
+   "groupSlug": "cap-closure-13-415",
+   "color": null,
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Short shiny gold or closure for glass bottle with foam liner. Thread size 13-415",
+   "itemDescription": "Short shiny gold or closure for glass bottle with foam liner. Thread size 13-415",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.28,
+     "totalPrice": 0.28
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.27,
+     "totalPrice": 3.19
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.25,
+     "totalPrice": 36.29
+    },
+    {
+     "minQty": 3168,
+     "unitPrice": 0.24,
+     "totalPrice": 753.98
+    },
+    {
+     "minQty": 15840,
+     "unitPrice": 0.22,
+     "totalPrice": 3459.46
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-gold-Color-13-415",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/CP13-415GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHGD-S-13-415"
+  },
+  {
+   "websiteSku": "CP13-415SlSht",
+   "graceSku": "CMP-CLS-SHSL-S-13-415-02",
+   "twinWebsiteSku": "CP13-415WhtSht",
+   "groupSlug": "cap-closure-13-415",
+   "color": null,
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Short shiny silver or closure for glass bottle with foam liner. Thread size 13-415",
+   "itemDescription": "Short shiny silver or closure for glass bottle with foam liner. Thread size 13-415",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.28,
+     "totalPrice": 0.28
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.27,
+     "totalPrice": 3.19
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.25,
+     "totalPrice": 36.29
+    },
+    {
+     "minQty": 3168,
+     "unitPrice": 0.24,
+     "totalPrice": 753.98
+    },
+    {
+     "minQty": 15840,
+     "unitPrice": 0.22,
+     "totalPrice": 3459.46
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-silver-Color-13-415",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/CP13-415SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHSL-S-13-415-02"
+  },
+  {
+   "websiteSku": "GBBstnBlu2ozMtlRollonShnBlk",
+   "graceSku": "GB-BSR-BLU-60ML-MRL-SBLK",
+   "twinWebsiteSku": "GBBstnBlu2ozMtlRollonMattBlk",
+   "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+   "color": "Cobalt Blue",
+   "capColor": "Shiny Black",
+   "capStyle": null,
+   "itemName": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and shiny black cap",
+   "itemDescription": "Boston round design 60ml, 2oz Cobalt blue glass bottle with metal roller ball plug and shiny black cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable bottle with large, 12mm diameter metal-roller ball.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 1.1,
+     "totalPrice": 1.1
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 1.05,
+     "totalPrice": 12.54
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.99,
+     "totalPrice": 142.56
+    },
+    {
+     "minQty": 240,
+     "unitPrice": 0.94,
+     "totalPrice": 224.4
+    },
+    {
+     "minQty": 1200,
+     "unitPrice": 0.86,
+     "totalPrice": 1029.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/boston-round-2-oz-cobalt-blue-glass-bottle-metal-roller-ball-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBBstnBlu2ozMtlRollonShnBlk.gif",
+   "masterGraceSku": "GB-ROB-SHBKBL-60ML-RBL"
+  },
+  {
+   "websiteSku": "GBCrcl15CuSht",
+   "graceSku": "GB-CIR-CLR-15ML-MCPR-S",
+   "twinWebsiteSku": "GBCrcl15WhtSht",
+   "groupSlug": "circle-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Circle design 15ml, 1/2oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Circle design 15ml, 1/2oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 315,
+     "unitPrice": 0.51,
+     "totalPrice": 160.65
+    },
+    {
+     "minQty": 1575,
+     "unitPrice": 0.47,
+     "totalPrice": 737.1
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCrcl15CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-02"
+  },
+  {
+   "websiteSku": "GBCrcl15GlMattSht",
+   "graceSku": "GB-CIR-CLR-15ML-MGLD-S",
+   "twinWebsiteSku": "GBCrcl15WhtSht",
+   "groupSlug": "circle-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Circle design 15ml, 1/2oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Circle design 15ml, 1/2oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 315,
+     "unitPrice": 0.51,
+     "totalPrice": 160.65
+    },
+    {
+     "minQty": 1575,
+     "unitPrice": 0.47,
+     "totalPrice": 737.1
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCrcl15GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-02"
+  },
+  {
+   "websiteSku": "GBCrcl15SlMattSht",
+   "graceSku": "GB-CIR-CLR-15ML-MSLV-S",
+   "twinWebsiteSku": "GBCrcl15WhtSht",
+   "groupSlug": "circle-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Circle design 15ml, 1/2oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Circle design 15ml, 1/2oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 315,
+     "unitPrice": 0.51,
+     "totalPrice": 160.65
+    },
+    {
+     "minQty": 1575,
+     "unitPrice": 0.47,
+     "totalPrice": 737.1
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCrcl15SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-02"
+  },
+  {
+   "websiteSku": "GBCrcl15BlkShSht",
+   "graceSku": "GB-CIR-CLR-15ML-SBLK-S",
+   "twinWebsiteSku": "GBCrcl15WhtSht",
+   "groupSlug": "circle-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Circle design 15ml, 1/2oz Clear glass bottle with short shiny black cap.",
+   "itemDescription": "Circle design 15ml, 1/2oz Clear glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 315,
+     "unitPrice": 0.51,
+     "totalPrice": 160.65
+    },
+    {
+     "minQty": 1575,
+     "unitPrice": 0.47,
+     "totalPrice": 737.1
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCrcl15BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCL-S-02"
+  },
+  {
+   "websiteSku": "GBCrcl15GlSht",
+   "graceSku": "GB-CIR-CLR-15ML-SGLD-S",
+   "twinWebsiteSku": "GBCrcl15WhtSht",
+   "groupSlug": "circle-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Circle design 15ml, 1/2oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Circle design 15ml, 1/2oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 315,
+     "unitPrice": 0.51,
+     "totalPrice": 160.65
+    },
+    {
+     "minQty": 1575,
+     "unitPrice": 0.47,
+     "totalPrice": 737.1
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCrcl15GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-02"
+  },
+  {
+   "websiteSku": "GBCrcl15SlSht",
+   "graceSku": "GB-CIR-CLR-15ML-SSLV-S",
+   "twinWebsiteSku": "GBCrcl15WhtSht",
+   "groupSlug": "circle-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Circle design 15ml, 1/2oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Circle design 15ml, 1/2oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 315,
+     "unitPrice": 0.51,
+     "totalPrice": 160.65
+    },
+    {
+     "minQty": 1575,
+     "unitPrice": 0.47,
+     "totalPrice": 737.1
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCrcl15SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLSL-S-02"
+  },
+  {
+   "websiteSku": "GBCylBlu5CuSht",
+   "graceSku": "GB-CYL-BLU-5ML-MCPR-S",
+   "twinWebsiteSku": "GBCylBlu5WhtSht",
+   "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+   "color": "Cobalt Blue",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5ml, 1/6oz Blue glass bottle with short matte copper cap.",
+   "itemDescription": "Cylinder design 5ml, 1/6oz Blue glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.5,
+     "totalPrice": 0.5
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.48,
+     "totalPrice": 5.7
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.45,
+     "totalPrice": 64.8
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.43,
+     "totalPrice": 367.2
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.39,
+     "totalPrice": 1684.8
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCylBlu5CuSht.gif",
+   "masterGraceSku": "GB-CYL-MTBLCP-5ML-S"
+  },
+  {
+   "websiteSku": "GBCylBlu5GlMattSht",
+   "graceSku": "GB-CYL-BLU-5ML-MGLD-S",
+   "twinWebsiteSku": "GBCylBlu5WhtSht",
+   "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+   "color": "Cobalt Blue",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5ml, 1/6oz Blue glass bottle with short matte gold cap.",
+   "itemDescription": "Cylinder design 5ml, 1/6oz Blue glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.5,
+     "totalPrice": 0.5
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.48,
+     "totalPrice": 5.7
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.45,
+     "totalPrice": 64.8
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.43,
+     "totalPrice": 367.2
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.39,
+     "totalPrice": 1684.8
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCylBlu5GlMattSht.gif",
+   "masterGraceSku": "GB-CYL-MTBLGD-5ML-S"
+  },
+  {
+   "websiteSku": "GBCylBlu5SlMattSht",
+   "graceSku": "GB-CYL-BLU-5ML-MSLV-S",
+   "twinWebsiteSku": "GBCylBlu5WhtSht",
+   "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+   "color": "Cobalt Blue",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5ml, 1/6oz Blue glass bottle with short matte silver cap.",
+   "itemDescription": "Cylinder design 5ml, 1/6oz Blue glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.5,
+     "totalPrice": 0.5
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.48,
+     "totalPrice": 5.7
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.45,
+     "totalPrice": 64.8
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.43,
+     "totalPrice": 367.2
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.39,
+     "totalPrice": 1684.8
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCylBlu5SlMattSht.gif",
+   "masterGraceSku": "GB-CYL-MTBLSL-5ML-S"
+  },
+  {
+   "websiteSku": "GBCylBlu5GlSht",
+   "graceSku": "GB-CYL-BLU-5ML-SGLD-S",
+   "twinWebsiteSku": "GBCylBlu5WhtSht",
+   "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+   "color": "Cobalt Blue",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5ml, 1/6oz Blue glass bottle with short shiny gold cap.",
+   "itemDescription": "Cylinder design 5ml, 1/6oz Blue glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.5,
+     "totalPrice": 0.5
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.48,
+     "totalPrice": 5.7
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.45,
+     "totalPrice": 64.8
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.43,
+     "totalPrice": 367.2
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.39,
+     "totalPrice": 1684.8
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCylBlu5GlSht.gif",
+   "masterGraceSku": "GB-CYL-SHBLGD-5ML-S"
+  },
+  {
+   "websiteSku": "GBCylBlu5SlSht",
+   "graceSku": "GB-CYL-BLU-5ML-SSLV-S",
+   "twinWebsiteSku": "GBCylBlu5WhtSht",
+   "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+   "color": "Cobalt Blue",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5ml, 1/6oz Blue glass bottle with short shiny silver cap.",
+   "itemDescription": "Cylinder design 5ml, 1/6oz Blue glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.5,
+     "totalPrice": 0.5
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.48,
+     "totalPrice": 5.7
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.45,
+     "totalPrice": 64.8
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.43,
+     "totalPrice": 367.2
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.39,
+     "totalPrice": 1684.8
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCylBlu5SlSht.gif",
+   "masterGraceSku": "GB-CYL-SHBLSL-5ML-S"
+  },
+  {
+   "websiteSku": "GBCyl5CuSht",
+   "graceSku": "GB-CYL-CLR-5ML-MCPR-S",
+   "twinWebsiteSku": "GBCyl5BlkSht",
+   "groupSlug": "cylinder-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.47,
+     "totalPrice": 0.47
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.45,
+     "totalPrice": 5.36
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.42,
+     "totalPrice": 60.91
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.4,
+     "totalPrice": 345.17
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.37,
+     "totalPrice": 1583.71
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCyl5CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-03"
+  },
+  {
+   "websiteSku": "GBCyl5GlMattSht",
+   "graceSku": "GB-CYL-CLR-5ML-MGLD-S",
+   "twinWebsiteSku": "GBCyl5BlkSht",
+   "groupSlug": "cylinder-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.47,
+     "totalPrice": 0.47
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.45,
+     "totalPrice": 5.36
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.42,
+     "totalPrice": 60.91
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.4,
+     "totalPrice": 345.17
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.37,
+     "totalPrice": 1583.71
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCyl5GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-03"
+  },
+  {
+   "websiteSku": "GBCyl5SlMattSht",
+   "graceSku": "GB-CYL-CLR-5ML-MSLV-S",
+   "twinWebsiteSku": "GBCyl5BlkSht",
+   "groupSlug": "cylinder-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.47,
+     "totalPrice": 0.47
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.45,
+     "totalPrice": 5.36
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.42,
+     "totalPrice": 60.91
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.4,
+     "totalPrice": 345.17
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.37,
+     "totalPrice": 1583.71
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCyl5SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-03"
+  },
+  {
+   "websiteSku": "GBCyl5BlkShSht",
+   "graceSku": "GB-CYL-CLR-5ML-SBLK-S",
+   "twinWebsiteSku": "GBCyl5BlkSht",
+   "groupSlug": "cylinder-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short shiny black cap.",
+   "itemDescription": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.47,
+     "totalPrice": 0.47
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.45,
+     "totalPrice": 5.36
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.42,
+     "totalPrice": 60.91
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.4,
+     "totalPrice": 345.17
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.37,
+     "totalPrice": 1583.71
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCyl5BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCL-S-03"
+  },
+  {
+   "websiteSku": "GBCyl5GlSht",
+   "graceSku": "GB-CYL-CLR-5ML-SGLD-S",
+   "twinWebsiteSku": "GBCyl5BlkSht",
+   "groupSlug": "cylinder-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.47,
+     "totalPrice": 0.47
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.45,
+     "totalPrice": 5.36
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.42,
+     "totalPrice": 60.91
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.4,
+     "totalPrice": 345.17
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.37,
+     "totalPrice": 1583.71
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCyl5GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-03"
+  },
+  {
+   "websiteSku": "GBCyl5SlSht",
+   "graceSku": "GB-CYL-CLR-5ML-SSLV-S",
+   "twinWebsiteSku": "GBCyl5BlkSht",
+   "groupSlug": "cylinder-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.47,
+     "totalPrice": 0.47
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.45,
+     "totalPrice": 5.36
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.42,
+     "totalPrice": 60.91
+    },
+    {
+     "minQty": 864,
+     "unitPrice": 0.4,
+     "totalPrice": 345.17
+    },
+    {
+     "minQty": 4320,
+     "unitPrice": 0.37,
+     "totalPrice": 1583.71
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBCyl5SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLSL-S-03"
+  },
+  {
+   "websiteSku": "GBElgFrst15SpryGlMatt",
+   "graceSku": "GB-ELG-FRS-15ML-SPR-MGLD",
+   "twinWebsiteSku": "GBElgFrst15SpryBlkMatt",
+   "groupSlug": "elegant-15ml-frosted-13-415-finemist",
+   "color": "Frosted",
+   "capColor": "Matte Gold",
+   "capStyle": null,
+   "itemName": "Elegant design 15ml, 1/2oz frosted glass bottle with matte gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+   "itemDescription": "Elegant design 15ml, 1/2oz frosted glass bottle with matte gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 1.17,
+     "totalPrice": 1.17
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 1.11,
+     "totalPrice": 13.34
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 1.05,
+     "totalPrice": 151.63
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.99,
+     "totalPrice": 286.42
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.91,
+     "totalPrice": 1314.14
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-frosted-glass-bottle-matte-gold-spray",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElgFrst15SpryGlMatt.gif",
+   "masterGraceSku": "CMP-SPR-FRMTGD-02"
+  },
+  {
+   "websiteSku": "GBElgFrst15CuSht",
+   "graceSku": "GB-ELG-FRS-15ML-MCPR-S",
+   "twinWebsiteSku": "GBElgFrst15WhtSht",
+   "groupSlug": "elegant-15ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz frosted glass bottle with short matte copper cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz frosted glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.8,
+     "totalPrice": 0.8
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.76,
+     "totalPrice": 9.12
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.72,
+     "totalPrice": 103.68
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.68,
+     "totalPrice": 190.4
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.62,
+     "totalPrice": 873.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-frosted-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElgFrst15CuSht.gif",
+   "masterGraceSku": "CMP-CLS-FRMTCP-S"
+  },
+  {
+   "websiteSku": "GBElgFrst15GlMattSht",
+   "graceSku": "GB-ELG-FRS-15ML-MGLD-S",
+   "twinWebsiteSku": "GBElgFrst15WhtSht",
+   "groupSlug": "elegant-15ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz frosted glass bottle with short matte gold cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz frosted glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.8,
+     "totalPrice": 0.8
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.76,
+     "totalPrice": 9.12
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.72,
+     "totalPrice": 103.68
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.68,
+     "totalPrice": 190.4
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.62,
+     "totalPrice": 873.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-frosted-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElgFrst15GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-FRMTGD-S-01"
+  },
+  {
+   "websiteSku": "GBElgFrst15SlMattSht",
+   "graceSku": "GB-ELG-FRS-15ML-MSLV-S",
+   "twinWebsiteSku": "GBElgFrst15WhtSht",
+   "groupSlug": "elegant-15ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz frosted glass bottle with short matte silver cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz frosted glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.8,
+     "totalPrice": 0.8
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.76,
+     "totalPrice": 9.12
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.72,
+     "totalPrice": 103.68
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.68,
+     "totalPrice": 190.4
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.62,
+     "totalPrice": 873.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-frosted-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElgFrst15SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-FRMTSL-S-01"
+  },
+  {
+   "websiteSku": "GBElgFrst15GlSht",
+   "graceSku": "GB-ELG-FRS-15ML-SGLD-S",
+   "twinWebsiteSku": "GBElgFrst15WhtSht",
+   "groupSlug": "elegant-15ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz frosted glass bottle with short shiny gold cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz frosted glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.8,
+     "totalPrice": 0.8
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.76,
+     "totalPrice": 9.12
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.72,
+     "totalPrice": 103.68
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.68,
+     "totalPrice": 190.4
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.62,
+     "totalPrice": 873.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-frosted-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElgFrst15GlSht.gif",
+   "masterGraceSku": null
+  },
+  {
+   "websiteSku": "GBElgFrst15SlSht",
+   "graceSku": "GB-ELG-FRS-15ML-SSLV-S",
+   "twinWebsiteSku": "GBElgFrst15WhtSht",
+   "groupSlug": "elegant-15ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz frosted glass bottle with short shiny silver cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz frosted glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.8,
+     "totalPrice": 0.8
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.76,
+     "totalPrice": 9.12
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.72,
+     "totalPrice": 103.68
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.68,
+     "totalPrice": 190.4
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.62,
+     "totalPrice": 873.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-frosted-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElgFrst15SlSht.gif",
+   "masterGraceSku": "CMP-CLS-FRSHSL-S-01"
+  },
+  {
+   "websiteSku": "GBElg15MinarSl",
+   "graceSku": "GB-ELG-CLR-15ML-MNR-SSLV",
+   "twinWebsiteSku": "GBElg15MinarCu",
+   "groupSlug": "elegant-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Minaret",
+   "itemName": "Clear glass square shaped bottle with shiny silver minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, square design 15ml. Price Each",
+   "itemDescription": "Clear glass square shaped bottle with shiny silver minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, square design 15ml. Price Each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.88,
+     "totalPrice": 0.88
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.84,
+     "totalPrice": 10.03
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.79,
+     "totalPrice": 114.05
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.75,
+     "totalPrice": 209.44
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.69,
+     "totalPrice": 960.96
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-glass-bottle-shiny-silver-minaret-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElg15MinarSl.gif",
+   "masterGraceSku": "CMP-CLS-CLSL-01"
+  },
+  {
+   "websiteSku": "GBElg15CuSht",
+   "graceSku": "GB-ELG-CLR-15ML-MCPR-S",
+   "twinWebsiteSku": "GBElg15WhtSht",
+   "groupSlug": "elegant-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.51,
+     "totalPrice": 142.8
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.47,
+     "totalPrice": 655.2
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElg15CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-04"
+  },
+  {
+   "websiteSku": "GBElg15GlMattSht",
+   "graceSku": "GB-ELG-CLR-15ML-MGLD-S",
+   "twinWebsiteSku": "GBElg15WhtSht",
+   "groupSlug": "elegant-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.51,
+     "totalPrice": 142.8
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.47,
+     "totalPrice": 655.2
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElg15GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-04"
+  },
+  {
+   "websiteSku": "GBElg15SlMattSht",
+   "graceSku": "GB-ELG-CLR-15ML-MSLV-S",
+   "twinWebsiteSku": "GBElg15WhtSht",
+   "groupSlug": "elegant-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.51,
+     "totalPrice": 142.8
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.47,
+     "totalPrice": 655.2
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElg15SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-04"
+  },
+  {
+   "websiteSku": "GBElg15BlkShSht",
+   "graceSku": "GB-ELG-CLR-15ML-SBLK-S",
+   "twinWebsiteSku": "GBElg15WhtSht",
+   "groupSlug": "elegant-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz Clear glass bottle with short shiny black cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz Clear glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.51,
+     "totalPrice": 142.8
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.47,
+     "totalPrice": 655.2
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-glass-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElg15BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCL-S-04"
+  },
+  {
+   "websiteSku": "GBElg15GlSht",
+   "graceSku": "GB-ELG-CLR-15ML-SGLD-S",
+   "twinWebsiteSku": "GBElg15WhtSht",
+   "groupSlug": "elegant-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.51,
+     "totalPrice": 142.8
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.47,
+     "totalPrice": 655.2
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElg15GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-04"
+  },
+  {
+   "websiteSku": "GBElg15SlSht",
+   "graceSku": "GB-ELG-CLR-15ML-SSLV-S",
+   "twinWebsiteSku": "GBElg15WhtSht",
+   "groupSlug": "elegant-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Elegant design 15ml, 1/2oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Elegant design 15ml, 1/2oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.51,
+     "totalPrice": 142.8
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.47,
+     "totalPrice": 655.2
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElg15SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLSL-S-04"
+  },
+  {
+   "websiteSku": "GBElgFrst15MinarCu",
+   "graceSku": "GB-ELG-FRS-15ML-MNR-MCPR",
+   "twinWebsiteSku": "GBElgFrst15RollSlDot",
+   "groupSlug": "elegant-15ml-frosted-13-415-rollon",
+   "color": "Frosted",
+   "capColor": "Matte Copper",
+   "capStyle": "Minaret",
+   "itemName": "Frosted glass square shaped bottle with copper minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Frosted glass, square design 15ml. Price Each",
+   "itemDescription": "Frosted glass square shaped bottle with copper minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Frosted glass, square design 15ml. Price Each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.88,
+     "totalPrice": 0.88
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.84,
+     "totalPrice": 10.03
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.79,
+     "totalPrice": 114.05
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.75,
+     "totalPrice": 209.44
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.69,
+     "totalPrice": 960.96
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-frosted-design-15-ml-glass-bottle-matte-copper-minaret-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElgFrst15MinarCu.gif",
+   "masterGraceSku": "CMP-CLS-FRCLCP"
+  },
+  {
+   "websiteSku": "GBElgFrst15MinarSl",
+   "graceSku": "GB-ELG-FRS-15ML-MNR-SSLV",
+   "twinWebsiteSku": "GBElgFrst15RollSlDot",
+   "groupSlug": "elegant-15ml-frosted-13-415-rollon",
+   "color": "Frosted",
+   "capColor": "Shiny Silver",
+   "capStyle": "Minaret",
+   "itemName": "Frosted glass square shaped bottle with shiny silver minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Frosted glass, square design 15ml. Price Each",
+   "itemDescription": "Frosted glass square shaped bottle with shiny silver minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Frosted glass, square design 15ml. Price Each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.88,
+     "totalPrice": 0.88
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.84,
+     "totalPrice": 10.03
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.79,
+     "totalPrice": 114.05
+    },
+    {
+     "minQty": 280,
+     "unitPrice": 0.75,
+     "totalPrice": 209.44
+    },
+    {
+     "minQty": 1400,
+     "unitPrice": 0.69,
+     "totalPrice": 960.96
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/elegant-frosted-design-15-ml-glass-bottle-shiny-silver-minaret-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBElgFrst15MinarSl.gif",
+   "masterGraceSku": null
+  },
+  {
+   "websiteSku": "GBFlair15MinarCu",
+   "graceSku": "GB-FLR-CLR-15ML-MNR-MCPR",
+   "twinWebsiteSku": "GBFlair15RollSlDot",
+   "groupSlug": "flair-15ml-clear-13-415-rollon",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Minaret",
+   "itemName": "Clear glass fancy shaped bottle with copper minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, fancy design 15ml. Price Each",
+   "itemDescription": "Clear glass fancy shaped bottle with copper minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, fancy design 15ml. Price Each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.65,
+     "totalPrice": 0.65
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.62,
+     "totalPrice": 7.41
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.59,
+     "totalPrice": 84.24
+    },
+    {
+     "minQty": 300,
+     "unitPrice": 0.55,
+     "totalPrice": 165.75
+    },
+    {
+     "minQty": 1500,
+     "unitPrice": 0.51,
+     "totalPrice": 760.5
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/flair-design-15-ml-glass-bottle-shiny-copper-minaret-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBFlair15MinarCu.gif",
+   "masterGraceSku": "CMP-CLS-CLCP-02"
+  },
+  {
+   "websiteSku": "GBFlair15MinarSl",
+   "graceSku": "GB-FLR-CLR-15ML-MNR-SSLV",
+   "twinWebsiteSku": "GBFlair15RollSlDot",
+   "groupSlug": "flair-15ml-clear-13-415-rollon",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Minaret",
+   "itemName": "Clear glass fancy shaped bottle with shiny silver minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, fancy design 13ml. Price Each",
+   "itemDescription": "Clear glass fancy shaped bottle with shiny silver minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, fancy design 13ml. Price Each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.65,
+     "totalPrice": 0.65
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.62,
+     "totalPrice": 7.41
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.59,
+     "totalPrice": 84.24
+    },
+    {
+     "minQty": 300,
+     "unitPrice": 0.55,
+     "totalPrice": 165.75
+    },
+    {
+     "minQty": 1500,
+     "unitPrice": 0.51,
+     "totalPrice": 760.5
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/flair-design-15-ml-glass-bottle-shiny-silver-minaret-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBFlair15MinarSl.gif",
+   "masterGraceSku": "CMP-CLS-CLSL-02"
+  },
+  {
+   "websiteSku": "GBFlair15CuSht",
+   "graceSku": "GB-FLR-CLR-15ML-MCPR-S",
+   "twinWebsiteSku": "GBFlair15BlkSht",
+   "groupSlug": "flair-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Flair design 15ml, 1/2oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 300,
+     "unitPrice": 0.51,
+     "totalPrice": 153.0
+    },
+    {
+     "minQty": 1500,
+     "unitPrice": 0.47,
+     "totalPrice": 702.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/flair-design-15-ml-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBFlair15CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-05"
+  },
+  {
+   "websiteSku": "GBFlair15GlMattSht",
+   "graceSku": "GB-FLR-CLR-15ML-MGLD-S",
+   "twinWebsiteSku": "GBFlair15BlkSht",
+   "groupSlug": "flair-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Flair design 15ml, 1/2oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 300,
+     "unitPrice": 0.51,
+     "totalPrice": 153.0
+    },
+    {
+     "minQty": 1500,
+     "unitPrice": 0.47,
+     "totalPrice": 702.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/flair-design-15-ml-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBFlair15GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-05"
+  },
+  {
+   "websiteSku": "GBFlair15SlMattSht",
+   "graceSku": "GB-FLR-CLR-15ML-MSLV-S",
+   "twinWebsiteSku": "GBFlair15BlkSht",
+   "groupSlug": "flair-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Flair design 15ml, 1/2oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 300,
+     "unitPrice": 0.51,
+     "totalPrice": 153.0
+    },
+    {
+     "minQty": 1500,
+     "unitPrice": 0.47,
+     "totalPrice": 702.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/flair-design-15-ml-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBFlair15SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-05"
+  },
+  {
+   "websiteSku": "GBFlair15BlkShSht",
+   "graceSku": "GB-FLR-CLR-15ML-SBLK-S",
+   "twinWebsiteSku": "GBFlair15BlkSht",
+   "groupSlug": "flair-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with short shiny black cap.",
+   "itemDescription": "Flair design 15ml, 1/2oz Clear glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 300,
+     "unitPrice": 0.51,
+     "totalPrice": 153.0
+    },
+    {
+     "minQty": 1500,
+     "unitPrice": 0.47,
+     "totalPrice": 702.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/flair-design-15-ml-glass-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBFlair15BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCL-S-05"
+  },
+  {
+   "websiteSku": "GBFlair15GlSht",
+   "graceSku": "GB-FLR-CLR-15ML-SGLD-S",
+   "twinWebsiteSku": "GBFlair15BlkSht",
+   "groupSlug": "flair-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Flair design 15ml, 1/2oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 300,
+     "unitPrice": 0.51,
+     "totalPrice": 153.0
+    },
+    {
+     "minQty": 1500,
+     "unitPrice": 0.47,
+     "totalPrice": 702.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/flair-design-15-ml-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBFlair15GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-05"
+  },
+  {
+   "websiteSku": "GBFlair15SlSht",
+   "graceSku": "GB-FLR-CLR-15ML-SSLV-S",
+   "twinWebsiteSku": "GBFlair15BlkSht",
+   "groupSlug": "flair-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Flair design 15ml, 1/2oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Flair design 15ml, 1/2oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 300,
+     "unitPrice": 0.51,
+     "totalPrice": 153.0
+    },
+    {
+     "minQty": 1500,
+     "unitPrice": 0.47,
+     "totalPrice": 702.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/flair-design-15-ml-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBFlair15SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLSL-S-05"
+  },
+  {
+   "websiteSku": "GBRect10CuSht",
+   "graceSku": "GB-RCT-CLR-10ML-MCPR-S",
+   "twinWebsiteSku": "GBRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 507,
+     "unitPrice": 0.51,
+     "totalPrice": 258.57
+    },
+    {
+     "minQty": 2535,
+     "unitPrice": 0.47,
+     "totalPrice": 1186.38
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/footed-rectangular-design-10-ml-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRect10CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-06"
+  },
+  {
+   "websiteSku": "GBRect10GlMattSht",
+   "graceSku": "GB-RCT-CLR-10ML-MGLD-S",
+   "twinWebsiteSku": "GBRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 507,
+     "unitPrice": 0.51,
+     "totalPrice": 258.57
+    },
+    {
+     "minQty": 2535,
+     "unitPrice": 0.47,
+     "totalPrice": 1186.38
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/footed-rectangular-design-10-ml-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRect10GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-06"
+  },
+  {
+   "websiteSku": "GBRect10SlMattSht",
+   "graceSku": "GB-RCT-CLR-10ML-MSLV-S",
+   "twinWebsiteSku": "GBRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 507,
+     "unitPrice": 0.51,
+     "totalPrice": 258.57
+    },
+    {
+     "minQty": 2535,
+     "unitPrice": 0.47,
+     "totalPrice": 1186.38
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/footed-rectangular-design-10-ml-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRect10SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-06"
+  },
+  {
+   "websiteSku": "GBRect10BlkShSht",
+   "graceSku": "GB-RCT-CLR-10ML-SBLK-S",
+   "twinWebsiteSku": "GBRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short shiny black cap.",
+   "itemDescription": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 507,
+     "unitPrice": 0.51,
+     "totalPrice": 258.57
+    },
+    {
+     "minQty": 2535,
+     "unitPrice": 0.47,
+     "totalPrice": 1186.38
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/footed-rectangular-design-10-ml-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRect10BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCL-S-06"
+  },
+  {
+   "websiteSku": "GBRect10GlSht",
+   "graceSku": "GB-RCT-CLR-10ML-SGLD-S",
+   "twinWebsiteSku": "GBRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 507,
+     "unitPrice": 0.51,
+     "totalPrice": 258.57
+    },
+    {
+     "minQty": 2535,
+     "unitPrice": 0.47,
+     "totalPrice": 1186.38
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/footed-rectangular-design-10-ml-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRect10GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-06"
+  },
+  {
+   "websiteSku": "GBRect10SlSht",
+   "graceSku": "GB-RCT-CLR-10ML-SSLV-S",
+   "twinWebsiteSku": "GBRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Footed rectangular design 10ml, 1/3oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 507,
+     "unitPrice": 0.51,
+     "totalPrice": 258.57
+    },
+    {
+     "minQty": 2535,
+     "unitPrice": 0.47,
+     "totalPrice": 1186.38
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/footed-rectangular-design-10-ml-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRect10SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLSL-S-06"
+  },
+  {
+   "websiteSku": "GBRect10MinarCu",
+   "graceSku": "GB-RCT-CLR-10ML-MNR-MCPR",
+   "twinWebsiteSku": "GBRect10SpryBlkMatt",
+   "groupSlug": "rectangle-10ml-clear-13-415-finemist",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Minaret",
+   "itemName": "Item Capacity: 10 ml (0.34 oz)",
+   "itemDescription": "Item Capacity: 10 ml (0.34 oz)",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.88,
+     "totalPrice": 0.88
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.84,
+     "totalPrice": 10.03
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.79,
+     "totalPrice": 114.05
+    },
+    {
+     "minQty": 507,
+     "unitPrice": 0.75,
+     "totalPrice": 379.24
+    },
+    {
+     "minQty": 2535,
+     "unitPrice": 0.69,
+     "totalPrice": 1740.02
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/footed-rectangular-design-10-ml-glass-bottle-matte-copper-minaret-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRect10MinarCu.gif",
+   "masterGraceSku": "CMP-CLS-CLCP-03"
+  },
+  {
+   "websiteSku": "GBRect10MinarSl",
+   "graceSku": "GB-RCT-CLR-10ML-MNR-SSLV",
+   "twinWebsiteSku": "GBRect10SpryBlkMatt",
+   "groupSlug": "rectangle-10ml-clear-13-415-finemist",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Minaret",
+   "itemName": "Footed Clear rectangular square shaped bottle with shiny silver minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, rectangular design 10ml. Price Each",
+   "itemDescription": "Footed Clear rectangular square shaped bottle with shiny silver minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, rectangular design 10ml. Price Each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.88,
+     "totalPrice": 0.88
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.84,
+     "totalPrice": 10.03
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.79,
+     "totalPrice": 114.05
+    },
+    {
+     "minQty": 507,
+     "unitPrice": 0.75,
+     "totalPrice": 379.24
+    },
+    {
+     "minQty": 2535,
+     "unitPrice": 0.69,
+     "totalPrice": 1740.02
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/footed-rectangular-design-10-ml-glass-bottle-shiny-silver-minaret-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRect10MinarSl.gif",
+   "masterGraceSku": "CMP-CLS-CLSL-03"
+  },
+  {
+   "websiteSku": "GBRoyal13MinarCu",
+   "graceSku": "GB-RYL-CLR-13ML-MNR-MCPR",
+   "twinWebsiteSku": "GBRoyal13RollSlDot",
+   "groupSlug": "royal-13ml-clear-13-415-rollon",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Minaret",
+   "itemName": "Clear glass fancy shaped bottle with copper minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, design 13ml. Price Each",
+   "itemDescription": "Clear glass fancy shaped bottle with copper minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, design 13ml. Price Each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.9,
+     "totalPrice": 0.9
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.86,
+     "totalPrice": 10.26
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.81,
+     "totalPrice": 116.64
+    },
+    {
+     "minQty": 312,
+     "unitPrice": 0.77,
+     "totalPrice": 238.68
+    },
+    {
+     "minQty": 1560,
+     "unitPrice": 0.7,
+     "totalPrice": 1095.12
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/royal-design-13-ml-glass-bottle-matte-copper-minaret-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRoyal13MinarCu.gif",
+   "masterGraceSku": "CMP-CLS-CLCP-04"
+  },
+  {
+   "websiteSku": "GBRoyal13MinarSl",
+   "graceSku": "GB-RYL-CLR-13ML-MNR-SSLV",
+   "twinWebsiteSku": "GBRoyal13RollSlDot",
+   "groupSlug": "royal-13ml-clear-13-415-rollon",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Minaret",
+   "itemName": "Clear glass fancy shaped bottle with shiny silver minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, design 13ml. Price Each",
+   "itemDescription": "Clear glass fancy shaped bottle with shiny silver minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, design 13ml. Price Each",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.9,
+     "totalPrice": 0.9
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.86,
+     "totalPrice": 10.26
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.81,
+     "totalPrice": 116.64
+    },
+    {
+     "minQty": 312,
+     "unitPrice": 0.77,
+     "totalPrice": 238.68
+    },
+    {
+     "minQty": 1560,
+     "unitPrice": 0.7,
+     "totalPrice": 1095.12
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/royal-design-13-ml-glass-bottle-shiny-silver-minaret-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRoyal13MinarSl.gif",
+   "masterGraceSku": "CMP-CLS-CLSL-04"
+  },
+  {
+   "websiteSku": "GBRoyal13CuSht",
+   "graceSku": "GB-RYL-CLR-13ML-MCPR-S",
+   "twinWebsiteSku": "GBRoyal13WhtSht",
+   "groupSlug": "royal-13ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Royal design 13ml, 1/2oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 312,
+     "unitPrice": 0.51,
+     "totalPrice": 159.12
+    },
+    {
+     "minQty": 1560,
+     "unitPrice": 0.47,
+     "totalPrice": 730.08
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/royal-design-13-ml-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRoyal13CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-07"
+  },
+  {
+   "websiteSku": "GBRoyal13GlMattSht",
+   "graceSku": "GB-RYL-CLR-13ML-MGLD-S",
+   "twinWebsiteSku": "GBRoyal13WhtSht",
+   "groupSlug": "royal-13ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Royal design 13ml, 1/2oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 312,
+     "unitPrice": 0.51,
+     "totalPrice": 159.12
+    },
+    {
+     "minQty": 1560,
+     "unitPrice": 0.47,
+     "totalPrice": 730.08
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/royal-design-13-ml-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRoyal13GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-07"
+  },
+  {
+   "websiteSku": "GBRoyal13SlMattSht",
+   "graceSku": "GB-RYL-CLR-13ML-MSLV-S",
+   "twinWebsiteSku": "GBRoyal13WhtSht",
+   "groupSlug": "royal-13ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Royal design 13ml, 1/2oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 312,
+     "unitPrice": 0.51,
+     "totalPrice": 159.12
+    },
+    {
+     "minQty": 1560,
+     "unitPrice": 0.47,
+     "totalPrice": 730.08
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/royal-design-13-ml-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRoyal13SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-07"
+  },
+  {
+   "websiteSku": "GBRoyal13BlkShSht",
+   "graceSku": "GB-RYL-CLR-13ML-SBLK-S",
+   "twinWebsiteSku": "GBRoyal13WhtSht",
+   "groupSlug": "royal-13ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with short shiny black cap.",
+   "itemDescription": "Royal design 13ml, 1/2oz Clear glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 312,
+     "unitPrice": 0.51,
+     "totalPrice": 159.12
+    },
+    {
+     "minQty": 1560,
+     "unitPrice": 0.47,
+     "totalPrice": 730.08
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/royal-design-13-ml-glass-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRoyal13BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCL-S-07"
+  },
+  {
+   "websiteSku": "GBRoyal13GlSht",
+   "graceSku": "GB-RYL-CLR-13ML-SGLD-S",
+   "twinWebsiteSku": "GBRoyal13WhtSht",
+   "groupSlug": "royal-13ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Royal design 13ml, 1/2oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 312,
+     "unitPrice": 0.51,
+     "totalPrice": 159.12
+    },
+    {
+     "minQty": 1560,
+     "unitPrice": 0.47,
+     "totalPrice": 730.08
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/royal-design-13-ml-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRoyal13GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-07"
+  },
+  {
+   "websiteSku": "GBRoyal13SlSht",
+   "graceSku": "GB-RYL-CLR-13ML-SSLV-S",
+   "twinWebsiteSku": "GBRoyal13WhtSht",
+   "groupSlug": "royal-13ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Royal design 13ml, 1/2oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Royal design 13ml, 1/2oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 312,
+     "unitPrice": 0.51,
+     "totalPrice": 159.12
+    },
+    {
+     "minQty": 1560,
+     "unitPrice": 0.47,
+     "totalPrice": 730.08
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/royal-design-13-ml-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBRoyal13SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLSL-S-07"
+  },
+  {
+   "websiteSku": "GBSleek5CuSht",
+   "graceSku": "GB-SLK-CLR-5ML-MCPR-S",
+   "twinWebsiteSku": "GBSleek5WhtSht",
+   "groupSlug": "sleek-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Sleek design 5ml, 1/6oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Sleek design 5ml, 1/6oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.58,
+     "totalPrice": 0.58
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.55,
+     "totalPrice": 6.61
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.52,
+     "totalPrice": 75.17
+    },
+    {
+     "minQty": 704,
+     "unitPrice": 0.49,
+     "totalPrice": 347.07
+    },
+    {
+     "minQty": 3520,
+     "unitPrice": 0.45,
+     "totalPrice": 1592.45
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-5-ml-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek5CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-08"
+  },
+  {
+   "websiteSku": "GBSleek5GlMattSht",
+   "graceSku": "GB-SLK-CLR-5ML-MGLD-S",
+   "twinWebsiteSku": "GBSleek5WhtSht",
+   "groupSlug": "sleek-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Sleek design 5ml, 1/6oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Sleek design 5ml, 1/6oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.58,
+     "totalPrice": 0.58
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.55,
+     "totalPrice": 6.61
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.52,
+     "totalPrice": 75.17
+    },
+    {
+     "minQty": 704,
+     "unitPrice": 0.49,
+     "totalPrice": 347.07
+    },
+    {
+     "minQty": 3520,
+     "unitPrice": 0.45,
+     "totalPrice": 1592.45
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-5-ml-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek5GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-08"
+  },
+  {
+   "websiteSku": "GBSleek5SlMattSht",
+   "graceSku": "GB-SLK-CLR-5ML-MSLV-S",
+   "twinWebsiteSku": "GBSleek5WhtSht",
+   "groupSlug": "sleek-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Sleek design 5ml, 1/6oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Sleek design 5ml, 1/6oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.58,
+     "totalPrice": 0.58
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.55,
+     "totalPrice": 6.61
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.52,
+     "totalPrice": 75.17
+    },
+    {
+     "minQty": 704,
+     "unitPrice": 0.49,
+     "totalPrice": 347.07
+    },
+    {
+     "minQty": 3520,
+     "unitPrice": 0.45,
+     "totalPrice": 1592.45
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-5-ml-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek5SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-08"
+  },
+  {
+   "websiteSku": "GBSleek5BlkShSht",
+   "graceSku": "GB-SLK-CLR-5ML-SBLK-S",
+   "twinWebsiteSku": "GBSleek5WhtSht",
+   "groupSlug": "sleek-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Sleek design 5ml, 1/6oz Clear glass bottle with short shiny black cap.",
+   "itemDescription": "Sleek design 5ml, 1/6oz Clear glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.58,
+     "totalPrice": 0.58
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.55,
+     "totalPrice": 6.61
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.52,
+     "totalPrice": 75.17
+    },
+    {
+     "minQty": 704,
+     "unitPrice": 0.49,
+     "totalPrice": 347.07
+    },
+    {
+     "minQty": 3520,
+     "unitPrice": 0.45,
+     "totalPrice": 1592.45
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-5-ml-glass-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek5BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCL-S-08"
+  },
+  {
+   "websiteSku": "GBSleek5GlSht",
+   "graceSku": "GB-SLK-CLR-5ML-SGLD-S",
+   "twinWebsiteSku": "GBSleek5WhtSht",
+   "groupSlug": "sleek-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Sleek design 5ml, 1/6oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Sleek design 5ml, 1/6oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.58,
+     "totalPrice": 0.58
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.55,
+     "totalPrice": 6.61
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.52,
+     "totalPrice": 75.17
+    },
+    {
+     "minQty": 704,
+     "unitPrice": 0.49,
+     "totalPrice": 347.07
+    },
+    {
+     "minQty": 3520,
+     "unitPrice": 0.45,
+     "totalPrice": 1592.45
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-5-ml-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek5GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-08"
+  },
+  {
+   "websiteSku": "GBSleek5SlSht",
+   "graceSku": "GB-SLK-CLR-5ML-SSLV-S",
+   "twinWebsiteSku": "GBSleek5WhtSht",
+   "groupSlug": "sleek-5ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Sleek design 5ml, 1/6oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Sleek design 5ml, 1/6oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.58,
+     "totalPrice": 0.58
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.55,
+     "totalPrice": 6.61
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.52,
+     "totalPrice": 75.17
+    },
+    {
+     "minQty": 704,
+     "unitPrice": 0.49,
+     "totalPrice": 347.07
+    },
+    {
+     "minQty": 3520,
+     "unitPrice": 0.45,
+     "totalPrice": 1592.45
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-5-ml-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek5SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLSL-S-08"
+  },
+  {
+   "websiteSku": "GBSleek8CuSht",
+   "graceSku": "GB-SLK-CLR-8ML-MCPR-S",
+   "twinWebsiteSku": "GBSleek8WhtSht",
+   "groupSlug": "sleek-8ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Sleek design 8ml, 1/3oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Sleek design 8ml, 1/3oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 600,
+     "unitPrice": 0.51,
+     "totalPrice": 306.0
+    },
+    {
+     "minQty": 3000,
+     "unitPrice": 0.47,
+     "totalPrice": 1404.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-8-ml-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek8CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-09"
+  },
+  {
+   "websiteSku": "GBSleek8GlMattSht",
+   "graceSku": "GB-SLK-CLR-8ML-MGLD-S",
+   "twinWebsiteSku": "GBSleek8WhtSht",
+   "groupSlug": "sleek-8ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Sleek design 8ml, 1/3oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Sleek design 8ml, 1/3oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 600,
+     "unitPrice": 0.51,
+     "totalPrice": 306.0
+    },
+    {
+     "minQty": 3000,
+     "unitPrice": 0.47,
+     "totalPrice": 1404.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-8-ml-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek8GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-09"
+  },
+  {
+   "websiteSku": "GBSleek8SlMattSht",
+   "graceSku": "GB-SLK-CLR-8ML-MSLV-S",
+   "twinWebsiteSku": "GBSleek8WhtSht",
+   "groupSlug": "sleek-8ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Sleek design 8ml, 1/3oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Sleek design 8ml, 1/3oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 600,
+     "unitPrice": 0.51,
+     "totalPrice": 306.0
+    },
+    {
+     "minQty": 3000,
+     "unitPrice": 0.47,
+     "totalPrice": 1404.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-8-ml-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek8SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-09"
+  },
+  {
+   "websiteSku": "GBSleek8BlkShSht",
+   "graceSku": "GB-SLK-CLR-8ML-SBLK-S",
+   "twinWebsiteSku": "GBSleek8WhtSht",
+   "groupSlug": "sleek-8ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Sleek design 8ml, 1/3oz Clear glass bottle with short shiny black cap.",
+   "itemDescription": "Sleek design 8ml, 1/3oz Clear glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 600,
+     "unitPrice": 0.51,
+     "totalPrice": 306.0
+    },
+    {
+     "minQty": 3000,
+     "unitPrice": 0.47,
+     "totalPrice": 1404.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-8-ml-glass-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek8BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCL-S-09"
+  },
+  {
+   "websiteSku": "GBSleek8GlSht",
+   "graceSku": "GB-SLK-CLR-8ML-SGLD-S",
+   "twinWebsiteSku": "GBSleek8WhtSht",
+   "groupSlug": "sleek-8ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Sleek design 8ml, 1/3oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Sleek design 8ml, 1/3oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 600,
+     "unitPrice": 0.51,
+     "totalPrice": 306.0
+    },
+    {
+     "minQty": 3000,
+     "unitPrice": 0.47,
+     "totalPrice": 1404.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-8-ml-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek8GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-09"
+  },
+  {
+   "websiteSku": "GBSleek8SlSht",
+   "graceSku": "GB-SLK-CLR-8ML-SSLV-S",
+   "twinWebsiteSku": "GBSleek8WhtSht",
+   "groupSlug": "sleek-8ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Sleek design 8ml, 1/3oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Sleek design 8ml, 1/3oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 600,
+     "unitPrice": 0.51,
+     "totalPrice": 306.0
+    },
+    {
+     "minQty": 3000,
+     "unitPrice": 0.47,
+     "totalPrice": 1404.0
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/sleek-design-8-ml-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSleek8SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLSL-S-09"
+  },
+  {
+   "websiteSku": "GBSqr15GlSht",
+   "graceSku": "GB-SQR-CLR-15ML-SGLD-S",
+   "twinWebsiteSku": "GBSqr15BlkSht",
+   "groupSlug": "square-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Square design 15ml, 1/2oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Square design 15ml, 1/2oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 420,
+     "unitPrice": 0.51,
+     "totalPrice": 214.2
+    },
+    {
+     "minQty": 2100,
+     "unitPrice": 0.47,
+     "totalPrice": 982.8
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/square-design-15-ml-glass-bottle--short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSqr15GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-10"
+  },
+  {
+   "websiteSku": "GBSqr15CuSht",
+   "graceSku": "GB-SQR-CLR-15ML-MCPR-S",
+   "twinWebsiteSku": "GBSqr15BlkSht",
+   "groupSlug": "square-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Square design 15ml, 1/2oz Clear glass bottle with matte copper cap.",
+   "itemDescription": "Square design 15ml, 1/2oz Clear glass bottle with matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 420,
+     "unitPrice": 0.51,
+     "totalPrice": 214.2
+    },
+    {
+     "minQty": 2100,
+     "unitPrice": 0.47,
+     "totalPrice": 982.8
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/square-design-15-ml-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSqr15CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-10"
+  },
+  {
+   "websiteSku": "GBSqr15GlMattSht",
+   "graceSku": "GB-SQR-CLR-15ML-MGLD-S",
+   "twinWebsiteSku": "GBSqr15BlkSht",
+   "groupSlug": "square-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Square design 15ml, 1/2oz Clear glass bottle with matte gold cap.",
+   "itemDescription": "Square design 15ml, 1/2oz Clear glass bottle with matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 420,
+     "unitPrice": 0.51,
+     "totalPrice": 214.2
+    },
+    {
+     "minQty": 2100,
+     "unitPrice": 0.47,
+     "totalPrice": 982.8
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/square-design-15-ml-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSqr15GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-10"
+  },
+  {
+   "websiteSku": "GBSqr15SlMattSht",
+   "graceSku": "GB-SQR-CLR-15ML-MSLV-S",
+   "twinWebsiteSku": "GBSqr15BlkSht",
+   "groupSlug": "square-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Square design 15ml, 1/2oz Clear glass bottle with matte silver cap.",
+   "itemDescription": "Square design 15ml, 1/2oz Clear glass bottle with matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 420,
+     "unitPrice": 0.51,
+     "totalPrice": 214.2
+    },
+    {
+     "minQty": 2100,
+     "unitPrice": 0.47,
+     "totalPrice": 982.8
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/square-design-15-ml-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSqr15SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-10"
+  },
+  {
+   "websiteSku": "GBSqr15BlkShSht",
+   "graceSku": "GB-SQR-CLR-15ML-SBLK-S",
+   "twinWebsiteSku": "GBSqr15BlkSht",
+   "groupSlug": "square-15ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Square design 15ml, 1/2oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Square design 15ml, 1/2oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 420,
+     "unitPrice": 0.51,
+     "totalPrice": 214.2
+    },
+    {
+     "minQty": 2100,
+     "unitPrice": 0.47,
+     "totalPrice": 982.8
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/square-design-15-ml-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBSqr15BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCLSL-S"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9CuSht",
+   "graceSku": "GB-CYL-FRS-9ML-MCPR-S",
+   "twinWebsiteSku": "GBTallCylFrst9WhtSht",
+   "groupSlug": "cylinder-9ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short matte silver cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCylFrst9CuSht.gif",
+   "masterGraceSku": "CMP-CLS-FRMTSL-S-02"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9GlMattSht",
+   "graceSku": "GB-CYL-FRS-9ML-MGLD-S",
+   "twinWebsiteSku": "GBTallCylFrst9WhtSht",
+   "groupSlug": "cylinder-9ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short matte gold cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCylFrst9GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-FRMTGD-S-02"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SlMattSht",
+   "graceSku": "GB-CYL-FRS-9ML-MSLV-S",
+   "twinWebsiteSku": "GBTallCylFrst9WhtSht",
+   "groupSlug": "cylinder-9ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short matte silver cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCylFrst9SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-FRMTSL-S-03"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9BlkShSht",
+   "graceSku": "GB-CYL-FRS-9ML-SBLK-S",
+   "twinWebsiteSku": "GBTallCylFrst9WhtSht",
+   "groupSlug": "cylinder-9ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short shiny black cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCylFrst9BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-FRSHBK-S"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9GlSht",
+   "graceSku": "GB-CYL-FRS-9ML-SGLD-S",
+   "twinWebsiteSku": "GBTallCylFrst9WhtSht",
+   "groupSlug": "cylinder-9ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short shiny gold cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCylFrst9GlSht.gif",
+   "masterGraceSku": "CMP-CLS-FRSHGD-S"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SlSht",
+   "graceSku": "GB-CYL-FRS-9ML-SSLV-S",
+   "twinWebsiteSku": "GBTallCylFrst9WhtSht",
+   "groupSlug": "cylinder-9ml-frosted-13-415",
+   "color": "Frosted",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short shiny silver cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz frosted glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCylFrst9SlSht.gif",
+   "masterGraceSku": "CMP-CLS-FRSHSL-S-02"
+  },
+  {
+   "websiteSku": "GBTallCyl9CuSht",
+   "graceSku": "GB-CYL-CLR-9ML-MCPR-S",
+   "twinWebsiteSku": "GBTallCyl9BlkSht",
+   "groupSlug": "cylinder-9ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCyl9CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-11"
+  },
+  {
+   "websiteSku": "GBTallCyl9SlMattSht",
+   "graceSku": "GB-CYL-CLR-9ML-MSLV-S",
+   "twinWebsiteSku": "GBTallCyl9BlkSht",
+   "groupSlug": "cylinder-9ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCyl9SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-11"
+  },
+  {
+   "websiteSku": "GBTallCyl9BlkShSht",
+   "graceSku": "GB-CYL-CLR-9ML-SBLK-S",
+   "twinWebsiteSku": "GBTallCyl9BlkSht",
+   "groupSlug": "cylinder-9ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short shiny black cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCyl9BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCL-S-10"
+  },
+  {
+   "websiteSku": "GBTallCyl9GlSht",
+   "graceSku": "GB-CYL-CLR-9ML-SGLD-S",
+   "twinWebsiteSku": "GBTallCyl9BlkSht",
+   "groupSlug": "cylinder-9ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCyl9GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-11"
+  },
+  {
+   "websiteSku": "GBTallCyl9SlSht",
+   "graceSku": "GB-CYL-CLR-9ML-SSLV-S",
+   "twinWebsiteSku": "GBTallCyl9BlkSht",
+   "groupSlug": "cylinder-9ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCyl9SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLSL-S-11"
+  },
+  {
+   "websiteSku": "GBTallCyl9GlMattSht",
+   "graceSku": "GB-CYL-CLR-9ML-MGLD-S",
+   "twinWebsiteSku": "GBTallCyl9BlkSht",
+   "groupSlug": "cylinder-9ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Tall cylinder design 9ml, 1/3oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-short--bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallCyl9GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-11"
+  },
+  {
+   "websiteSku": "GBTallRect10CuSht",
+   "graceSku": "GB-RCT-CLR-10ML-MCPR-S-02",
+   "twinWebsiteSku": "GBTallRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-rectangular-design-10-ml-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallRect10CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLCP-S-12"
+  },
+  {
+   "websiteSku": "GBTallRect10GlMattSht",
+   "graceSku": "GB-RCT-CLR-10ML-MGLD-S-02",
+   "twinWebsiteSku": "GBTallRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-rectangular-design-10-ml-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallRect10GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLGD-S-12"
+  },
+  {
+   "websiteSku": "GBTallRect10SlMattSht",
+   "graceSku": "GB-RCT-CLR-10ML-MSLV-S-02",
+   "twinWebsiteSku": "GBTallRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-rectangular-design-10-ml-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallRect10SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTCLSL-S-12"
+  },
+  {
+   "websiteSku": "GBTallRect10BlkShSht",
+   "graceSku": "GB-RCT-CLR-10ML-SBLK-S-02",
+   "twinWebsiteSku": "GBTallRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short shiny black cap.",
+   "itemDescription": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-rectangular-design-10-ml-glass-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallRect10BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHBKCL-S-11"
+  },
+  {
+   "websiteSku": "GBTallRect10GlSht",
+   "graceSku": "GB-RCT-CLR-10ML-SGLD-S-02",
+   "twinWebsiteSku": "GBTallRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-rectangular-design-10-ml-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallRect10GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLGD-S-12"
+  },
+  {
+   "websiteSku": "GBTallRect10SlSht",
+   "graceSku": "GB-RCT-CLR-10ML-SSLV-S-02",
+   "twinWebsiteSku": "GBTallRect10WhtSht",
+   "groupSlug": "rectangle-10ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Tall rectangular design 10ml, 1/3oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.83,
+     "totalPrice": 0.83
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.79,
+     "totalPrice": 9.46
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.75,
+     "totalPrice": 107.57
+    },
+    {
+     "minQty": 288,
+     "unitPrice": 0.71,
+     "totalPrice": 203.18
+    },
+    {
+     "minQty": 1440,
+     "unitPrice": 0.65,
+     "totalPrice": 932.26
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tall-rectangular-design-10-ml-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTallRect10SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHCLSL-S-12"
+  },
+  {
+   "websiteSku": "GBTulipAmb5CuSht",
+   "graceSku": "GB-TLP-AMB-5ML-MCPR-S",
+   "twinWebsiteSku": "GBTulipAmb5WhtSht",
+   "groupSlug": "tulip-5ml-amber-13-415",
+   "color": "Amber",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Tulip design 5ml, 1/6 oz Amber glass bottle with short matte copper cap.",
+   "itemDescription": "Tulip design 5ml, 1/6 oz Amber glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 840,
+     "unitPrice": 0.51,
+     "totalPrice": 428.4
+    },
+    {
+     "minQty": 4200,
+     "unitPrice": 0.47,
+     "totalPrice": 1965.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-5-ml-amber-glass-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulipAmb5CuSht.gif",
+   "masterGraceSku": "CMP-CLS-MTAMCP-S"
+  },
+  {
+   "websiteSku": "GBTulipAmb5GlMattSht",
+   "graceSku": "GB-TLP-AMB-5ML-MGLD-S",
+   "twinWebsiteSku": "GBTulipAmb5WhtSht",
+   "groupSlug": "tulip-5ml-amber-13-415",
+   "color": "Amber",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Tulip design 5ml, 1/6 oz Amber glass bottle with short matte gold cap.",
+   "itemDescription": "Tulip design 5ml, 1/6 oz Amber glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 840,
+     "unitPrice": 0.51,
+     "totalPrice": 428.4
+    },
+    {
+     "minQty": 4200,
+     "unitPrice": 0.47,
+     "totalPrice": 1965.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-5-ml-amber-glass-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulipAmb5GlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTAMGD-S"
+  },
+  {
+   "websiteSku": "GBTulipAmb5SlMattSht",
+   "graceSku": "GB-TLP-AMB-5ML-MSLV-S",
+   "twinWebsiteSku": "GBTulipAmb5WhtSht",
+   "groupSlug": "tulip-5ml-amber-13-415",
+   "color": "Amber",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Tulip design 5ml, 1/6 oz Amber glass bottle with short matte silver cap.",
+   "itemDescription": "Tulip design 5ml, 1/6 oz Amber glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 840,
+     "unitPrice": 0.51,
+     "totalPrice": 428.4
+    },
+    {
+     "minQty": 4200,
+     "unitPrice": 0.47,
+     "totalPrice": 1965.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-5-ml-amber-glass-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulipAmb5SlMattSht.gif",
+   "masterGraceSku": "CMP-CLS-MTAMSL-S"
+  },
+  {
+   "websiteSku": "GBTulipAmb5BlkShSht",
+   "graceSku": "GB-TLP-AMB-5ML-SBLK-S",
+   "twinWebsiteSku": "GBTulipAmb5WhtSht",
+   "groupSlug": "tulip-5ml-amber-13-415",
+   "color": "Amber",
+   "capColor": "Shiny Black",
+   "capStyle": "Short",
+   "itemName": "Tulip design 5ml, 1/6 oz Amber glass bottle with short shiny black cap.",
+   "itemDescription": "Tulip design 5ml, 1/6 oz Amber glass bottle with short shiny black cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 840,
+     "unitPrice": 0.51,
+     "totalPrice": 428.4
+    },
+    {
+     "minQty": 4200,
+     "unitPrice": 0.47,
+     "totalPrice": 1965.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-5-ml-amber-glass-bottle-short-shiny-black-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulipAmb5BlkShSht.gif",
+   "masterGraceSku": "CMP-CLS-SHAMBK-S"
+  },
+  {
+   "websiteSku": "GBTulipAmb5GlSht",
+   "graceSku": "GB-TLP-AMB-5ML-SGLD-S",
+   "twinWebsiteSku": "GBTulipAmb5WhtSht",
+   "groupSlug": "tulip-5ml-amber-13-415",
+   "color": "Amber",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Tulip design 5ml, 1/6 oz Amber glass bottle with short shiny gold cap.",
+   "itemDescription": "Tulip design 5ml, 1/6 oz Amber glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 840,
+     "unitPrice": 0.51,
+     "totalPrice": 428.4
+    },
+    {
+     "minQty": 4200,
+     "unitPrice": 0.47,
+     "totalPrice": 1965.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-5-ml-amber-glass-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulipAmb5GlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHAMGD-S"
+  },
+  {
+   "websiteSku": "GBTulipAmb5SlSht",
+   "graceSku": "GB-TLP-AMB-5ML-SSLV-S",
+   "twinWebsiteSku": "GBTulipAmb5WhtSht",
+   "groupSlug": "tulip-5ml-amber-13-415",
+   "color": "Amber",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Tulip design 5ml, 1/6 oz Amber glass bottle with short shiny silver cap.",
+   "itemDescription": "Tulip design 5ml, 1/6 oz Amber glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.6,
+     "totalPrice": 0.6
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.57,
+     "totalPrice": 6.84
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.54,
+     "totalPrice": 77.76
+    },
+    {
+     "minQty": 840,
+     "unitPrice": 0.51,
+     "totalPrice": 428.4
+    },
+    {
+     "minQty": 4200,
+     "unitPrice": 0.47,
+     "totalPrice": 1965.6
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-5-ml-amber-glass-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulipAmb5SlSht.gif",
+   "masterGraceSku": "CMP-CLS-SHAMSL-S"
+  },
+  {
+   "websiteSku": "GBTulip6CuSht",
+   "graceSku": "GB-TLP-CLR-6ML-MCPS",
+   "twinWebsiteSku": "GBTulip6WhtSht",
+   "groupSlug": "tulip-6ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Copper",
+   "capStyle": "Short",
+   "itemName": "Tulip design 6ml, 1/5oz Clear glass bottle with short matte copper cap.",
+   "itemDescription": "Tulip design 6ml, 1/5oz Clear glass bottle with short matte copper cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.59,
+     "totalPrice": 0.59
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.56,
+     "totalPrice": 6.73
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.53,
+     "totalPrice": 76.46
+    },
+    {
+     "minQty": 845,
+     "unitPrice": 0.5,
+     "totalPrice": 423.77
+    },
+    {
+     "minQty": 4225,
+     "unitPrice": 0.46,
+     "totalPrice": 1944.35
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-6ml-bottle-short-matte-copper-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulip6CuSht.gif",
+   "masterGraceSku": "GB-TLP-CLR-6ML-MCPS"
+  },
+  {
+   "websiteSku": "GBTulip6GlMattSht",
+   "graceSku": "GB-TLP-CLR-6ML-MGDS",
+   "twinWebsiteSku": "GBTulip6WhtSht",
+   "groupSlug": "tulip-6ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Gold",
+   "capStyle": "Short",
+   "itemName": "Tulip design 6ml, 1/5oz Clear glass bottle with short matte gold cap.",
+   "itemDescription": "Tulip design 6ml, 1/5oz Clear glass bottle with short matte gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.59,
+     "totalPrice": 0.59
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.56,
+     "totalPrice": 6.73
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.53,
+     "totalPrice": 76.46
+    },
+    {
+     "minQty": 845,
+     "unitPrice": 0.5,
+     "totalPrice": 423.77
+    },
+    {
+     "minQty": 4225,
+     "unitPrice": 0.46,
+     "totalPrice": 1944.35
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-6ml-bottle-short-matte-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulip6GlMattSht.gif",
+   "masterGraceSku": "GB-TLP-CLR-6ML-MGDS"
+  },
+  {
+   "websiteSku": "GBTulip6SlMattSht",
+   "graceSku": "GB-TLP-CLR-6ML-MSVS",
+   "twinWebsiteSku": "GBTulip6WhtSht",
+   "groupSlug": "tulip-6ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Matte Silver",
+   "capStyle": "Short",
+   "itemName": "Tulip design 6ml, 1/5oz Clear glass bottle with short matte silver cap.",
+   "itemDescription": "Tulip design 6ml, 1/5oz Clear glass bottle with short matte silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.59,
+     "totalPrice": 0.59
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.56,
+     "totalPrice": 6.73
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.53,
+     "totalPrice": 76.46
+    },
+    {
+     "minQty": 845,
+     "unitPrice": 0.5,
+     "totalPrice": 423.77
+    },
+    {
+     "minQty": 4225,
+     "unitPrice": 0.46,
+     "totalPrice": 1944.35
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-6ml-bottle-short-matte-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulip6SlMattSht.gif",
+   "masterGraceSku": "GB-TLP-CLR-6ML-MSVS"
+  },
+  {
+   "websiteSku": "GBTulip6GlSht",
+   "graceSku": "GB-TLP-CLR-6ML-SGDS",
+   "twinWebsiteSku": "GBTulip6WhtSht",
+   "groupSlug": "tulip-6ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Gold",
+   "capStyle": "Short",
+   "itemName": "Tulip design 6ml, 1/5oz Clear glass bottle with short shiny gold cap.",
+   "itemDescription": "Tulip design 6ml, 1/5oz Clear glass bottle with short shiny gold cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.59,
+     "totalPrice": 0.59
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.56,
+     "totalPrice": 6.73
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.53,
+     "totalPrice": 76.46
+    },
+    {
+     "minQty": 845,
+     "unitPrice": 0.5,
+     "totalPrice": 423.77
+    },
+    {
+     "minQty": 4225,
+     "unitPrice": 0.46,
+     "totalPrice": 1944.35
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-6ml-bottle-short-shiny-gold-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulip6GlSht.gif",
+   "masterGraceSku": "GB-TLP-CLR-6ML-SGDS"
+  },
+  {
+   "websiteSku": "GBTulip6SlSht",
+   "graceSku": "GB-TLP-CLR-6ML-SSVS",
+   "twinWebsiteSku": "GBTulip6WhtSht",
+   "groupSlug": "tulip-6ml-clear-13-415",
+   "color": "Clear",
+   "capColor": "Shiny Silver",
+   "capStyle": "Short",
+   "itemName": "Tulip design 6ml, 1/5oz Clear glass bottle with short shiny silver cap.",
+   "itemDescription": "Tulip design 6ml, 1/5oz Clear glass bottle with short shiny silver cap.",
+   "priceTiers": [
+    {
+     "minQty": 1,
+     "unitPrice": 0.59,
+     "totalPrice": 0.59
+    },
+    {
+     "minQty": 12,
+     "unitPrice": 0.56,
+     "totalPrice": 6.73
+    },
+    {
+     "minQty": 144,
+     "unitPrice": 0.53,
+     "totalPrice": 76.46
+    },
+    {
+     "minQty": 845,
+     "unitPrice": 0.5,
+     "totalPrice": 423.77
+    },
+    {
+     "minQty": 4225,
+     "unitPrice": 0.46,
+     "totalPrice": 1944.35
+    }
+   ],
+   "legacyUrl": "https://www.bestbottles.com/product/tulip-design-6ml-bottle-short-shiny-silver-cap",
+   "legacyCapOnImage": "https://www.bestbottles.com/images/store/capped/GBTulip6SlSht.gif",
+   "masterGraceSku": "GB-TLP-CLR-6ML-SSVS"
+  }
+ ],
+ "problems": [
+  [
+   "GBElgFrst15GlSht",
+   "grace SKU not in master; twin grace GB-ELG-FRS-15ML-WHT-S"
+  ],
+  [
+   "GBElgFrst15MinarSl",
+   "grace SKU not in master; twin grace GB-ELG-FRS-15ML-RBL-SLV-01"
+  ]
+ ]
+}

@@ -1,0 +1,794 @@
+{
+ "ranAt": "2026-09-02T15:59:03-0700",
+ "results": [
+  {
+   "websiteSku": "GBCyl5WhtSht",
+   "graceSku": "GB-CYL-WHT-5ML-WHT-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCylSwrl9MtlRollWht",
+   "graceSku": "GB-CYL-WHT-9ML-MRL-WHT",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCylSwrl9RollWht",
+   "graceSku": "GB-CYL-WHT-9ML-ROL-WHT",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCyl9WhtSht",
+   "graceSku": "GB-CYL-WHT-9ML-WHT-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "CP13-415CuSht",
+   "graceSku": "CMP-CLS-MTCP-S-13-415",
+   "status": "success",
+   "created": true,
+   "detail": "created",
+   "colorPassed": ""
+  },
+  {
+   "websiteSku": "CP13-415GlMattSht",
+   "graceSku": "CMP-CLS-MTGD-S-13-415",
+   "status": "success",
+   "created": true,
+   "detail": "created",
+   "colorPassed": ""
+  },
+  {
+   "websiteSku": "CP13-415SlMattSht",
+   "graceSku": "CMP-CLS-MTSL-S-13-415",
+   "status": "success",
+   "created": true,
+   "detail": "created",
+   "colorPassed": ""
+  },
+  {
+   "websiteSku": "CP13-415GlSht",
+   "graceSku": "CMP-CLS-SHGD-S-13-415",
+   "status": "success",
+   "created": true,
+   "detail": "created",
+   "colorPassed": ""
+  },
+  {
+   "websiteSku": "CP13-415SlSht",
+   "graceSku": "CMP-CLS-SHSL-S-13-415-02",
+   "status": "success",
+   "created": true,
+   "detail": "created",
+   "colorPassed": ""
+  },
+  {
+   "websiteSku": "GBBstnBlu2ozMtlRollonShnBlk",
+   "graceSku": "GB-BSR-BLU-60ML-MRL-SBLK",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCrcl15CuSht",
+   "graceSku": "GB-CIR-CLR-15ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCrcl15GlMattSht",
+   "graceSku": "GB-CIR-CLR-15ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCrcl15SlMattSht",
+   "graceSku": "GB-CIR-CLR-15ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCrcl15BlkShSht",
+   "graceSku": "GB-CIR-CLR-15ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCrcl15GlSht",
+   "graceSku": "GB-CIR-CLR-15ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCrcl15SlSht",
+   "graceSku": "GB-CIR-CLR-15ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCylBlu5CuSht",
+   "graceSku": "GB-CYL-BLU-5ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCylBlu5GlMattSht",
+   "graceSku": "GB-CYL-BLU-5ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCylBlu5SlMattSht",
+   "graceSku": "GB-CYL-BLU-5ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCylBlu5GlSht",
+   "graceSku": "GB-CYL-BLU-5ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCylBlu5SlSht",
+   "graceSku": "GB-CYL-BLU-5ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCyl5CuSht",
+   "graceSku": "GB-CYL-CLR-5ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCyl5GlMattSht",
+   "graceSku": "GB-CYL-CLR-5ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCyl5SlMattSht",
+   "graceSku": "GB-CYL-CLR-5ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCyl5BlkShSht",
+   "graceSku": "GB-CYL-CLR-5ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCyl5GlSht",
+   "graceSku": "GB-CYL-CLR-5ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBCyl5SlSht",
+   "graceSku": "GB-CYL-CLR-5ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElgFrst15SpryGlMatt",
+   "graceSku": "GB-ELG-FRS-15ML-SPR-MGLD",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElgFrst15CuSht",
+   "graceSku": "GB-ELG-FRS-15ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElgFrst15GlMattSht",
+   "graceSku": "GB-ELG-FRS-15ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElgFrst15SlMattSht",
+   "graceSku": "GB-ELG-FRS-15ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElgFrst15GlSht",
+   "graceSku": "GB-ELG-FRS-15ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElgFrst15SlSht",
+   "graceSku": "GB-ELG-FRS-15ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElg15MinarSl",
+   "graceSku": "GB-ELG-CLR-15ML-MNR-SSLV",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElg15CuSht",
+   "graceSku": "GB-ELG-CLR-15ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElg15GlMattSht",
+   "graceSku": "GB-ELG-CLR-15ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElg15SlMattSht",
+   "graceSku": "GB-ELG-CLR-15ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElg15BlkShSht",
+   "graceSku": "GB-ELG-CLR-15ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElg15GlSht",
+   "graceSku": "GB-ELG-CLR-15ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElg15SlSht",
+   "graceSku": "GB-ELG-CLR-15ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElgFrst15MinarCu",
+   "graceSku": "GB-ELG-FRS-15ML-MNR-MCPR",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBElgFrst15MinarSl",
+   "graceSku": "GB-ELG-FRS-15ML-MNR-SSLV",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBFlair15MinarCu",
+   "graceSku": "GB-FLR-CLR-15ML-MNR-MCPR",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBFlair15MinarSl",
+   "graceSku": "GB-FLR-CLR-15ML-MNR-SSLV",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBFlair15CuSht",
+   "graceSku": "GB-FLR-CLR-15ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBFlair15GlMattSht",
+   "graceSku": "GB-FLR-CLR-15ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBFlair15SlMattSht",
+   "graceSku": "GB-FLR-CLR-15ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBFlair15BlkShSht",
+   "graceSku": "GB-FLR-CLR-15ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBFlair15GlSht",
+   "graceSku": "GB-FLR-CLR-15ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBFlair15SlSht",
+   "graceSku": "GB-FLR-CLR-15ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRect10CuSht",
+   "graceSku": "GB-RCT-CLR-10ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRect10GlMattSht",
+   "graceSku": "GB-RCT-CLR-10ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRect10SlMattSht",
+   "graceSku": "GB-RCT-CLR-10ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRect10BlkShSht",
+   "graceSku": "GB-RCT-CLR-10ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRect10GlSht",
+   "graceSku": "GB-RCT-CLR-10ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRect10SlSht",
+   "graceSku": "GB-RCT-CLR-10ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRect10MinarCu",
+   "graceSku": "GB-RCT-CLR-10ML-MNR-MCPR",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRect10MinarSl",
+   "graceSku": "GB-RCT-CLR-10ML-MNR-SSLV",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRoyal13MinarCu",
+   "graceSku": "GB-RYL-CLR-13ML-MNR-MCPR",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRoyal13MinarSl",
+   "graceSku": "GB-RYL-CLR-13ML-MNR-SSLV",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRoyal13CuSht",
+   "graceSku": "GB-RYL-CLR-13ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRoyal13GlMattSht",
+   "graceSku": "GB-RYL-CLR-13ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRoyal13SlMattSht",
+   "graceSku": "GB-RYL-CLR-13ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRoyal13BlkShSht",
+   "graceSku": "GB-RYL-CLR-13ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRoyal13GlSht",
+   "graceSku": "GB-RYL-CLR-13ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBRoyal13SlSht",
+   "graceSku": "GB-RYL-CLR-13ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek5CuSht",
+   "graceSku": "GB-SLK-CLR-5ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek5GlMattSht",
+   "graceSku": "GB-SLK-CLR-5ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek5SlMattSht",
+   "graceSku": "GB-SLK-CLR-5ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek5BlkShSht",
+   "graceSku": "GB-SLK-CLR-5ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek5GlSht",
+   "graceSku": "GB-SLK-CLR-5ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek5SlSht",
+   "graceSku": "GB-SLK-CLR-5ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek8CuSht",
+   "graceSku": "GB-SLK-CLR-8ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek8GlMattSht",
+   "graceSku": "GB-SLK-CLR-8ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek8SlMattSht",
+   "graceSku": "GB-SLK-CLR-8ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek8BlkShSht",
+   "graceSku": "GB-SLK-CLR-8ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek8GlSht",
+   "graceSku": "GB-SLK-CLR-8ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSleek8SlSht",
+   "graceSku": "GB-SLK-CLR-8ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSqr15GlSht",
+   "graceSku": "GB-SQR-CLR-15ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSqr15CuSht",
+   "graceSku": "GB-SQR-CLR-15ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSqr15GlMattSht",
+   "graceSku": "GB-SQR-CLR-15ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSqr15SlMattSht",
+   "graceSku": "GB-SQR-CLR-15ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBSqr15BlkShSht",
+   "graceSku": "GB-SQR-CLR-15ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9CuSht",
+   "graceSku": "GB-CYL-FRS-9ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9GlMattSht",
+   "graceSku": "GB-CYL-FRS-9ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SlMattSht",
+   "graceSku": "GB-CYL-FRS-9ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9BlkShSht",
+   "graceSku": "GB-CYL-FRS-9ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9GlSht",
+   "graceSku": "GB-CYL-FRS-9ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCylFrst9SlSht",
+   "graceSku": "GB-CYL-FRS-9ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCyl9CuSht",
+   "graceSku": "GB-CYL-CLR-9ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCyl9SlMattSht",
+   "graceSku": "GB-CYL-CLR-9ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCyl9BlkShSht",
+   "graceSku": "GB-CYL-CLR-9ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCyl9GlSht",
+   "graceSku": "GB-CYL-CLR-9ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCyl9SlSht",
+   "graceSku": "GB-CYL-CLR-9ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallCyl9GlMattSht",
+   "graceSku": "GB-CYL-CLR-9ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallRect10CuSht",
+   "graceSku": "GB-RCT-CLR-10ML-MCPR-S-02",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallRect10GlMattSht",
+   "graceSku": "GB-RCT-CLR-10ML-MGLD-S-02",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallRect10SlMattSht",
+   "graceSku": "GB-RCT-CLR-10ML-MSLV-S-02",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallRect10BlkShSht",
+   "graceSku": "GB-RCT-CLR-10ML-SBLK-S-02",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallRect10GlSht",
+   "graceSku": "GB-RCT-CLR-10ML-SGLD-S-02",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTallRect10SlSht",
+   "graceSku": "GB-RCT-CLR-10ML-SSLV-S-02",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulipAmb5CuSht",
+   "graceSku": "GB-TLP-AMB-5ML-MCPR-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulipAmb5GlMattSht",
+   "graceSku": "GB-TLP-AMB-5ML-MGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulipAmb5SlMattSht",
+   "graceSku": "GB-TLP-AMB-5ML-MSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulipAmb5BlkShSht",
+   "graceSku": "GB-TLP-AMB-5ML-SBLK-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulipAmb5GlSht",
+   "graceSku": "GB-TLP-AMB-5ML-SGLD-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulipAmb5SlSht",
+   "graceSku": "GB-TLP-AMB-5ML-SSLV-S",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulip6CuSht",
+   "graceSku": "GB-TLP-CLR-6ML-MCPS",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulip6GlMattSht",
+   "graceSku": "GB-TLP-CLR-6ML-MGDS",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulip6SlMattSht",
+   "graceSku": "GB-TLP-CLR-6ML-MSVS",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulip6GlSht",
+   "graceSku": "GB-TLP-CLR-6ML-SGDS",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  },
+  {
+   "websiteSku": "GBTulip6SlSht",
+   "graceSku": "GB-TLP-CLR-6ML-SSVS",
+   "status": "success",
+   "created": true,
+   "detail": "created"
+  }
+ ]
+}

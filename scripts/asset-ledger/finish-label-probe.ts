@@ -1,0 +1,2 @@
+import { getFinishFromWebsiteSku } from "../../src/lib/paper-doll/tokens.generated";
+for (const s of ["CP18-415AnSpRed","CP18-415AnSpLvn","CP18-415AnSpTslIvyGl","CP18-415AnSpIvyGl","CP18-415AnSpBlk","Drp18-400WhtGlTrim","Drp18-400Blk","Drp18-400Wht","CP13-415BlkShSht","GBBell10BlkShSht","CP13-415WhtSht","LBCyl50LtnMtSlClOvrCap","Ltn18-415MtSl","CPRoll20-400ShnGl","CPRoll20-400MattGl","GBBstn1ozMtlRollonGl","GBRnd78AnSpRed","GBCyl50RdcrShnBlk","CP18-415RdcrShnBlk","GBCyl50RdcrShnBlkTall"]) console.log(s.padEnd(26), JSON.stringify(getFinishFromWebsiteSku(s)));

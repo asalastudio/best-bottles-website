@@ -29,7 +29,21 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     const exposed = (exposedSprayers as Record<string, { url: string }>)[config.id];
     const fallbackUrl = !kit ? (stage === "complete" && config.photoUrl ? (!showCover && exposed ? exposed.url : config.photoUrl) : config.bodyImage?.url) : undefined;
     const registration = kit && !thumbnail ? registerVintagePreview(config, parts, bodyReference) : null;
-    const layers = kit ? registration?.layers ?? parts.map(part => ({ part, bounds: part.bounds, transform: undefined })) : [];
+    let layers = kit ? registration?.layers ?? parts.map(part => ({ part, bounds: part.bounds, transform: undefined })) : [];
+    // A pump or sprayer is shown working, its overcap standing on the ground
+    // beside the bottle so the shopper sees what comes with it (Jordan,
+    // 2026-09-16). Display only: the assembled registration is untouched.
+    if (kit && !thumbnail && !showCover && stage !== "body" && layers.some(l => l.part.slot === "overcap") && layers.some(l => !["body", "overcap", "diptube"].includes(l.part.slot))) {
+        const body = layers.find(l => l.part.slot === "body");
+        const baseline = registration?.anchors.baselineY ?? kit.anchors.baselineY;
+        layers = layers.map(l => {
+            if (l.part.slot !== "overcap" || !body) return l;
+            const gap = Math.max(18, (body.bounds.right - body.bounds.left) * .08);
+            const dx = body.bounds.right + gap - l.bounds.left, dy = baseline - l.bounds.bottom;
+            return { ...l, bounds: { left: l.bounds.left + dx, right: l.bounds.right + dx, top: l.bounds.top + dy, bottom: l.bounds.bottom + dy },
+                transform: `translate(${dx} ${dy})${l.transform ? ` ${l.transform}` : ""}` };
+        });
+    }
     const urls = kit ? layers.map(({ part }) => part.image.url) : fallbackUrl ? [fallbackUrl] : [];
     const [failedUrl, setFailedUrl] = useState<string | null>(null);
     const urlKey = urls.join("|");

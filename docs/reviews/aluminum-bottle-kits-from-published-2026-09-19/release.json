@@ -1,0 +1,20 @@
+{
+ "schemaVersion": 1,
+ "release": "aluminum-bottle-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/aluminum-bottle",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Aluminum Bottle kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 0,
+  "approved": 0,
+  "setAside": 0,
+  "notExtracted": 5
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/aluminum-bottle-kits.jpg",
+ "reviewSheetSha256": "9c01c545aaded26ac88a0b2bb24220801d840c001064d3da874f3c0bafeb18a2",
+ "rows": [],
+ "setAside": [],
+ "approvalSha256": "87a4b79367977cdc6734b34bf5bffd78666de970ce1eeef84e09830fd036bf4c"
+}

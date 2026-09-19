@@ -1,0 +1,186 @@
+{
+ "release": "boston-round-master-kits-2026-09-16",
+ "ship": "ship Boston Round kit release 2026-09-16",
+ "approvedBy": "Jordan Richter — approved the kit contact sheet in chat 2026-09-16 ('looks good' / 'These all look fantastic'); authorised publication 2026-09-19 ('process all the kits… push them to production')",
+ "approvedAt": "2026-09-19T07:28:34.424Z",
+ "reviewSheet": "/reviews/builder-bodies-2026-09-14/boston-kits-2026-09-16.jpg",
+ "skus": {
+  "GBBstnBlu2ozMtlRollonGl": "0f6f2a5c094212425fe2345870ae3c01918105e435d6d0e89f429cc492af1c2d",
+  "GBBstnBlu2ozMtlRollonMattBlk": "f1ba080a58803122ec1425385e57e3a04cd169c02f359c4a2af3c3087f10b586",
+  "GBBstnBlu2ozMtlRollonMattGl": "d83a9e836595654e7bf688084ea51ba1fdc60a3aa6c0d7452c8692977d73ddda",
+  "GBBstnBlu2ozMtlRollonMattSl": "beab00f3d22f82be79f68a42b3623890b557e197830192d788b9ef4cd542fd06",
+  "GBBstnBlu2ozMtlRollonShnSl": "be80293d74890bba010de8184596facd8f5b8751508c55f71b47409e2e40f50f",
+  "GBBstnBlu2ozRollonGl": "adf9e5d9f1d207eaaee94cf4054d555f97a8c05666dd545f02e29ce3cf482384",
+  "GBBstnBlu2ozRollonMattBlk": "f3dfded19723ede66e77bb85f82fad314e3e20495a03c217e89ce8e2787321c6",
+  "GBBstnBlu2ozRollonMattGl": "34c5143261d9b04e268979902c6256edff60db466a6b4aadd108123d43d41186",
+  "GBBstnBlu2ozRollonMattSl": "84a9aa4e8eb1b7ac5ebe86698b59cb55ccc5517c0321f227157f665bf72d22fc",
+  "GBBstnBlu2ozRollonShnBlk": "4214684baa019c36b5d7311aaa213eff2ef19f3773a8418bab2d973822cfd78c",
+  "GBBstnBlu2ozRollonShnSl": "a4e518ad8379df7282ed905b967987728a44e01122ac5464cce54f42d8c8544d",
+  "GBBstnAmb1ozMtlRollonMattBlk": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+  "GBBstnAmb1ozMtlRollonMattGl": "a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d",
+  "GBBstnAmb1ozMtlRollonMattSl": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+  "GBBstnAmb1ozMtlRollonShnBlk": "6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db",
+  "GBBstnAmb1ozRollonMattBlk": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+  "GBBstnAmb1ozRollonMattGl": "ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81",
+  "GBBstnAmb1ozRollonMattSl": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+  "GBBstnAmb1ozRollonShnBlk": "184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17",
+  "GBBstnAmb2ozMtlRollonGl": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d",
+  "GBBstnAmb2ozMtlRollonMattBlk": "2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608",
+  "GBBstnAmb2ozMtlRollonMattGl": "c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490",
+  "GBBstnAmb2ozRollonMattGl": "ed9c53ac7231e87523a714f6540623a4f5b15d4ee2b210ff2657082e1db1f8d3",
+  "GBBstn1ozMtlRollonBlk": "3d22572a0804b0b8862a65d67468b6ccb36d7c765b0d36d26d832f908146726c",
+  "GBBstn1ozMtlRollonShnSl": "a8f0f09c4926ac026b2859500fd3342e4c60c9c90d9482e21995edcad79a8b94",
+  "GBBstnAmb15mlBlkDropper": "8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13",
+  "GBBstnAmb15mlBlkDropperGlTrim": "d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f",
+  "GBBstnAmb15mlBlkDropperSlTrim": "08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6",
+  "GBBstnAmb15mlWhtDropper": "b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f",
+  "GBBstnAmb15mlWhtDropperGlTrim": "05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8",
+  "GBBstnAmb15mlWhtDropperSlTrim": "a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8",
+  "GBBstn1ozBlkDrp": "12d5b95f4de0b2ef36e34ef927a56b10dc0a096d68809f1ee021a7fd3690dec7",
+  "GBBstn1ozBlkDrpShnGlTrim": "45fcd642194824b4a5b06a87f0be48b160e25f31d332df5e2a5a4f30449af77c",
+  "GBBstn1ozWhtDrp": "6d0f3e7dcc95ff4b8d15a232f1d1daf717ffd946cf861105109499fe205a4017",
+  "GBBstn1ozWhtDrpShnGlTrim": "d1d70f934e8327f8d0967cd41ad7ddec21c1fb6ad35a9c1edbe3b68955cc9c13",
+  "GBBstn1ozWhtDrpShnSlTrim": "52537eca5cabfd43163cc9d2b4965357198d80c0218989450c293b57ac84916a",
+  "GBBstnBlu1ozWhtDropper": "0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d",
+  "GBBstnBlu1ozWhtDropperShnGlTrim": "d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1",
+  "GBBstnBlu1ozWhtDropperShnSlTrim": "83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46",
+  "GBBstnBlu2ozWhtDropper": "ed37984df5fa1fbc4dc141fcbe570765c68ba6efa9773fd5d492247e4d4d1ce5",
+  "GBBstnBlu2ozWhtDropperShnGlTrim": "fd08d80563c735587794f50b05966159fb4f1fb46f35b8ec1af315c56301c3a0",
+  "GBBstnBlu2ozWhtDropperShnSlTrim": "2cac833430ce93b2ffeb756bc45662ceb8fbe71181a0461c127199be89e9c9fd",
+  "GBBstnAmb1ozWhtDropper": "f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2",
+  "GBBstnAmb1ozWhtDropperShnGlTrim": "670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03",
+  "GBBstnBlu1ozBlkDropper": "a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d",
+  "GBBstnBlu1ozBlkDropperShnGlTrim": "9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea",
+  "GBBstnAmb2ozWhtDropperShnGlTrim": "2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6",
+  "GBBstnAmb2ozWhtDropperShnSlTrim": "bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079",
+  "GBBstnBlu2ozBlkDropper": "a018ae15d225c01c4215f34822690a2093972ea9b2d88e1f923f337a5794f632",
+  "GBBstnBlu2ozBlkDropperShnGlTrim": "7aa2489da1ed54c9df7d4432bb41851785d76a627ee57d093e8502b6f0d4d6ec",
+  "GBBstnBlu15mlBlkDropperSlTrim": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c",
+  "GBBstnAmb1ozBlkDropper": "a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4",
+  "GBBstnAmb2ozBlkDropperShnGlTrim": "e232d5aab5ca083a917f13c204b2d9332eb7760b48e9bd55cb4ade52099cb8e3"
+ },
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "setAside": [
+  {
+   "sku": "GBBstnAmb1ozMtlRollonGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "9be7c2b1ee158ec85c61382679be654f9664b42672720d029af46019d768fc1d",
+   "currentPlate": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176"
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "fe0d86ec7dd51a6c6079d113d3879dab56f15493f033c3d2d270dfe49dd1acee",
+   "currentPlate": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec"
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonMattSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "acc2e36c3f4a65710bf14f448bb6ef741105e2ca8bb4a1f723a6649aa3b51eac",
+   "currentPlate": "4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d"
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "097ba5812fc7c489abb2cba80c3c6c81bf9a2976330aef735eb96c7ed50ffb5e",
+   "currentPlate": "2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1"
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonShnBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "5180f59e88271b954adefca18a2800dac850ea4bf4dbea557fb8c07c09190476",
+   "currentPlate": "acaa98c4d94ab9bc55aeafd439557ca787f729d21146e23f6b0c6fbc659567f5"
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonMattBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "4d6a124492e706bb5ac125cc5878657b30d408e05f06a6faac0ef920cbb76d61",
+   "currentPlate": "a3b8781417158f64b072594afd3c9a4369b7d29032e880664695dac3c525befd"
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonMattGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "2b7b878aeccf671fc969db6487739f54bc5427ba2e6251031c8a09f571f9a6ea",
+   "currentPlate": "cd7dd82f079d9e0b65461daf0d53cffef70cae7edf8f86fccff3477f9e5556cc"
+  },
+  {
+   "sku": "GBBstn1ozMtlRollonMattSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "5281a79a8bb61fe83fcd82fa1da127db364656b27cbf86f6a020abdeef9ff93c",
+   "currentPlate": "88ff100cfbe3481e6190c3dfe0451897b7a72b17237692a2b814621288b9ad7a"
+  },
+  {
+   "sku": "GBBstn1ozBlkCapSht",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "f6c79efe149e59031cfdf39405346e6fe2c1b278843fcf79a7056c126f650c8e",
+   "currentPlate": "85d25d540709059c89bddb9ab2e820ad7cc895e52579abc9bc8924ead0f1d267"
+  },
+  {
+   "sku": "GBBstn15BlkCapSht",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "cf53147c7cedde10e6154507dd6bb559fe0850111513ab481af9d09cd884d3c8",
+   "currentPlate": "cb11490cbe2104d37535b896d8d685f9958eddd92041e62254a27e8554de4236"
+  },
+  {
+   "sku": "GBBstn15BlkDrp",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "9c65426d4ff1542ff37cf78d045cc2cf62df94e88a26329bc6d4cb23764ee79c",
+   "currentPlate": "d24d28e35799cdfe3d069726b5015fe2f97be109bd6892ee0068f4ccca663235"
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "f98a9eead00110061c6f932e12e4f8c4e2ae86b546ed6fbab751661e1dbd481e",
+   "currentPlate": "b07a4f5def35b97f28e5a5ba6ae3ede6207e742abfc510635cb04cb90b296466"
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonMattGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "839514778eae32f72a03d372211af2d48058b10e435d3cc7c1db95cd0ff3249b",
+   "currentPlate": "4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef"
+  },
+  {
+   "sku": "GBBstnAmb15mlBlkCapSht",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "dc175053dba5da16972af4a76f3824484491dba8acd8287dc153637df1004168",
+   "currentPlate": "cb5fd6a6964f6ab8543ef4e99a0b9c8f4cd094cae711d565e363f6eb6a6da053"
+  },
+  {
+   "sku": "GBBstnBlu15BlkCapSht",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "35e1222c65215c3f779c9083e6da16a45235778f2cde4c9d7c3b66be61480484",
+   "currentPlate": "a369622563f186545615ef06f2e3905096bd03ca03489f441254c542060bf96c"
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkCapSht",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "298187ee36407e3777d4af0196833b08eb97d99051dcb2380bcf84b6fd207e44",
+   "currentPlate": "5d84d04e2772063de96644e8669d73370d213d91b3ca1162a8e75215239f1ed3"
+  },
+  {
+   "sku": "GBBstnBlu1ozBlkCapSht",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "7435f80070f18100a23ab7e2abe22ded67f38ba351fb781e76d0441268e634c4",
+   "currentPlate": "7471b44e7761178f216b68416dc4741302f0b783208946f3300ff6d025dd2817"
+  },
+  {
+   "sku": "GBBstn2ozRollonMattGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "2b3a4ce3bda89464e4afdc97a2a39296da62eefb69f4438afc68e538e5e7397d",
+   "currentPlate": "c8acff47d12a22b5be9eb6d245a53ee1f3ac2237a82857b1d334b9863763ce3c"
+  },
+  {
+   "sku": "GBBstn2ozBlkCapSht",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "8a8a2489ea3d689d70eb9a18e1e69750656df041702fc9110a3a7257e956518c",
+   "currentPlate": "ada43cc85a767d0851e1fefc4f91daa838deec4ac48cc21a29a1a0b080e4f7b5"
+  },
+  {
+   "sku": "GBBstnBlu2ozBlkCapSht",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "8ff6ae87db0d32bacf254ca34f68b9cc71a7953300db6f14ef830efa98311dfb",
+   "currentPlate": "47b2e424baf5745545d39cdd6388f00dc48d13a2ec9e3982c0a75eeda84ffb18"
+  }
+ ],
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
+}

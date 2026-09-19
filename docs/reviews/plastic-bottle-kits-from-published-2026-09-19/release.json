@@ -1,0 +1,20 @@
+{
+ "schemaVersion": 1,
+ "release": "plastic-bottle-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/plastic-bottle",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Plastic Bottle kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 0,
+  "approved": 0,
+  "setAside": 0,
+  "notExtracted": 2
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/plastic-bottle-kits.jpg",
+ "reviewSheetSha256": "c3bba5932cd118fb1c45d76b5c9c178cf8daab95ef3b9a72b9cf829935b61ed2",
+ "rows": [],
+ "setAside": [],
+ "approvalSha256": "e3208c5a9046e55e43b6783490f03cea03eeafd23ff224edb1ab7226d9dc5d1d"
+}

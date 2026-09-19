@@ -1176,17 +1176,19 @@
     {
       "body": "Empire|50|Clear|18-415",
       "status": "reviewed",
-      "source": "jordan-approved generated edit",
-      "path": "data/paper-doll/neck-cleanup/empire-50-clear-18-415-input.png",
-      "editJob": "e12bef5a-7232-4aef-a3b9-93005362739f",
-      "cutoutJob": "2ac49acd-76c0-4ec8-b232-ccca26912bad",
-      "model": "gpt_image_2_5 (Higgsfield) quality high 1k",
-      "evidence": "2026-09-14 Jordan: 'the actual reducer should not be inside the bottle\u2026 either by using GPT 2.5 to recreate these bodies' \u2014 pilot on Diva 30 approved ('looks great'). Edit removes the plastic insert from the neck of the master body layer; shape, size and position kept (bbox within 3 px on sides and foot).",
+      "source": "jordan-approved",
+      "path": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/39. GBEmp50AnSpBlk.psd",
+      "sourceSha256": "5f21e1dd171143a092bbc514d75d7a564f79aac1b46d945ae7fa0ede428144e1",
+      "layerIndex": 1,
+      "layerName": "Layer 38",
+      "retouchIslandsDropped": 0,
+      "whiteGroundPixelsDropped": 0,
+      "evidence": "2026-09-16 Jordan: 'the Empire already has the reducer inside it\u2026 needs to be a bare glass bottle at that stage\u2026 the regular Empire head-on shot.' The head-on body layer of the bulb-sprayer master GBEmp50AnSpBlk.psd (the sprayer is its own layer above; the glass beneath has an empty neck) replaces the GPT-edited body.",
       "asset": {
         "url": "/images/bottle-builder/bodies/empire-50-clear-18-415.webp",
-        "width": 496,
-        "height": 1160,
-        "sha256": "2ac9aa2af087d43508e1a9b5249580203869117cea2e30cda080c55b1755efb8"
+        "width": 503,
+        "height": 1200,
+        "sha256": "ff43e75e3336ec1031551b0917e3e3572737d05a536a0bad309637a5d856c6c1"
       }
     },
     {

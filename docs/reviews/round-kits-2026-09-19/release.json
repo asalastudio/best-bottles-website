@@ -1,0 +1,471 @@
+{
+ "schemaVersion": 1,
+ "release": "round-master-kits-2026-09-16",
+ "batch": "dist/paper-doll/round-2026-09-16",
+ "approvedBy": "Jordan Richter — approved the kit contact sheet in chat 2026-09-16 ('looks good' / 'These all look fantastic'); authorised publication 2026-09-19 ('process all the kits… push them to production')",
+ "approvedAt": "2026-09-19T07:28:32.009Z",
+ "shipPhrase": "ship Round kit release 2026-09-16",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 109,
+  "approved": 104,
+  "setAside": 5,
+  "notExtracted": 31
+ },
+ "reviewSheet": "/reviews/builder-bodies-2026-09-14/round-kits-2026-09-16.jpg",
+ "reviewSheetSha256": "7ba60713045dc4f99140f2b1b2e90a624067c6af7f8fd61c12f47282d280dc89",
+ "rows": [
+  {
+   "sku": "GBRnd78AnSpTslBlk",
+   "plateSha256": "9f8e07cda38afa22452c06d6d893cb15f2a6a3104d8508f9ab46a45e7dd5f248"
+  },
+  {
+   "sku": "GBRnd78AnSpTslIvyGl",
+   "plateSha256": "7f9f0246ac06040b3b19bc522010a921f570476377bb75af173b3c1a7a5e3ca2"
+  },
+  {
+   "sku": "GBRnd78AnSpTslRed",
+   "plateSha256": "c4e8d8997a0f17b73b0f5ddffb050370c581e6c7dbe50352c6f87e548e58ba5a"
+  },
+  {
+   "sku": "GBRnd78AnSpTslGl",
+   "plateSha256": "fdcc8cacb4559045799ca1fab56ad7ac55bd6e0270778daed843c0795e10bd90"
+  },
+  {
+   "sku": "GBRnd78AnSpTslIvySl",
+   "plateSha256": "5a1ecf84994cf3bd7ae3f4d4168c175df2ef6dad9b11e46c8e1748ddfdbec49f"
+  },
+  {
+   "sku": "LBRnd78LtnCu",
+   "plateSha256": "5d8b07e06b5cd02db9eecaeb0bfc6dc3e6cde4a95e3823e1eee383e82400a4ee"
+  },
+  {
+   "sku": "GBRnd78AnSpTslWht",
+   "plateSha256": "1faeb0f570f0537f17ce8037551d7379da5cf3a660e1e737292228a70aba8924"
+  },
+  {
+   "sku": "GBRnd78AnSpBlk",
+   "plateSha256": "fe3365f999540d46f766997ab0370e041a69199d48cbe1a6e00a6f39a97dd4c1"
+  },
+  {
+   "sku": "GBRnd78AnSpGl",
+   "plateSha256": "62ccbaa8875a1e36e0fbe93a855e705d0edecc1102330ae57a41cc4a7c7379d0"
+  },
+  {
+   "sku": "GBRnd78AnSpIvyGl",
+   "plateSha256": "518f9121b94255a38c3180568bec66287aa4b768fe9efc8b2e1cc6a8b0f291f1"
+  },
+  {
+   "sku": "GBRnd78AnSpIvySl",
+   "plateSha256": "b97e27fa81354f36479b80d7c4658f2e2661dfc9045b35c08353ab46e87d2814"
+  },
+  {
+   "sku": "GBRnd78AnSpLvn",
+   "plateSha256": "ed63460f081a27900b969e9298ccb056e7892c7ed654cebc3ca8400a9a8e5c54"
+  },
+  {
+   "sku": "GBRnd78AnSpMtSl",
+   "plateSha256": "65bc040617ea5b991f627a0646964d85cc00a26c25d3dee45f572ccc56ba1d0b"
+  },
+  {
+   "sku": "GBRnd78AnSpPnk",
+   "plateSha256": "38ffea28bdf820199cd70cf49de99736bd1d7415132eb3c696ffe20426b5ee75"
+  },
+  {
+   "sku": "GBRnd78AnSpRed",
+   "plateSha256": "61dd331e6d61f327366a0a90c6885d6a4ed2bf2363e901ba6fe57023cf9d0fe4"
+  },
+  {
+   "sku": "GBRnd78AnSpWht",
+   "plateSha256": "e005909cefb66046ae75c5f2c62aaeb5b5269375c7c410173431224d68844450"
+  },
+  {
+   "sku": "GBRnd78RdcrBlkLthr",
+   "plateSha256": "609f333c91eb32327a49b8829941c65e4a700ffb60ac1d0d64a0af85afbc5746"
+  },
+  {
+   "sku": "GBRnd78RdcrBrwnLthr",
+   "plateSha256": "298115266673b88e079ca2ee05c50d6b5f73d5e0add33756a4b831b9362a8d9f"
+  },
+  {
+   "sku": "GBRnd78RdcrIvyLthr",
+   "plateSha256": "0cb4e48598b883b7b8940583799d63e8bcc24b8b58f657808cb8759f47919a51"
+  },
+  {
+   "sku": "GBRnd78RdcrLBrwnLthr",
+   "plateSha256": "18225d6b4a8d39b2f159db4589ff7f4fb08ae34dd8082ae0a5d14120ce012c12"
+  },
+  {
+   "sku": "GBRnd78RdcrMtSl",
+   "plateSha256": "79825bcfd07304c0900e772856b86961ec51bba6c2d84089d6370f161055657a"
+  },
+  {
+   "sku": "GBRnd78RdcrMtSlTall",
+   "plateSha256": "ce543bf90a1081c0e03d2512420bcdba6cd4a67c53964c58e842039d7c968a4c"
+  },
+  {
+   "sku": "GBRnd78RdcrPnkLthr",
+   "plateSha256": "8c11f06283027786f8b08f3c34cd6a7833da81f7d2604339664640f0ba04a5ca"
+  },
+  {
+   "sku": "GBRnd78RdcrShnBlk",
+   "plateSha256": "4894fd5c8d3a4699994c96d9788dd4a777db46c133e768a7c1c641aa86c78cc5"
+  },
+  {
+   "sku": "GBRnd78RdcrShnBlkTall",
+   "plateSha256": "4aa0134ecd05a8b06dc571288c322c31e30fc75939f619e50f4c67e93b4c64f2"
+  },
+  {
+   "sku": "GBRnd78RdcrShnGl",
+   "plateSha256": "8390c05f9626a13c35d9f7a1bd68428b1baea98297857bae72324afd924a5871"
+  },
+  {
+   "sku": "GBRnd78RdcrShnSl",
+   "plateSha256": "7776085a4494773240efd98e819e917d8b336df2bba27a0d7c16e0a42d2eabad"
+  },
+  {
+   "sku": "GBRnd78RdcrWht",
+   "plateSha256": "d7432221984e1c77b868585c6e58d2cd2bab46a9b0e7f754eed988ab5babc84a"
+  },
+  {
+   "sku": "GBRndFrst78AnSpTslIvyGl",
+   "plateSha256": "7784f0e4c86545486d689e4c89d15e018e3ef6b60cd6eedd63029b05ae9a4528"
+  },
+  {
+   "sku": "GBRndFrst78AnSpTslIvySl",
+   "plateSha256": "ec6126248ae9dde90080662d2129d497d0b1031c2f1b9c03cc736bafc9436840"
+  },
+  {
+   "sku": "GBRndFrst78AnSpTslGl",
+   "plateSha256": "d4b8bbd2a53b3a9b6403a3efcd23c2090cebd6cd5bfabae046fa352988a4b2fa"
+  },
+  {
+   "sku": "GBRndFrst78AnSpTslWht",
+   "plateSha256": "79bb837c98a0583a0dea0f79206540314f6656620b4841bd5a61fc4f5d0541cd"
+  },
+  {
+   "sku": "GBRndFrst78AnSpTslMtSl",
+   "plateSha256": "169f26d03f1f38542b83a84ee3e9754bfd4a094370ab6c55019edc59bbe55d1d"
+  },
+  {
+   "sku": "GBRndFrst78AnSpBlk",
+   "plateSha256": "fdb923337a1530e7c5df80ab0af6a273eeb79ab3500777843c3212645c4383cb"
+  },
+  {
+   "sku": "GBRndFrst78AnSpGl",
+   "plateSha256": "373459a9cf5d884657b531a19b60e6122c6a7ecd66c2cc62b1d245cd58f91d53"
+  },
+  {
+   "sku": "GBRndFrst78AnSpIvyGl",
+   "plateSha256": "f046c61d60ee66aa687e3b3cc164a6077b4580e2afafe2444d3e14db1b5629d0"
+  },
+  {
+   "sku": "GBRndFrst78AnSpIvySl",
+   "plateSha256": "133f97f1a9e0124457ec2b3ce5cbe0b3391e409b7fa5af8c05cda64841401742"
+  },
+  {
+   "sku": "GBRndFrst78AnSpLvn",
+   "plateSha256": "56ccee818f1d31e6d0f93500cfad45553cd18ab6cc28325d0f2dc1359fa19bf1"
+  },
+  {
+   "sku": "GBRndFrst78AnSpMtSl",
+   "plateSha256": "08f9a4970d84b8d948cb5f69062688d2f2b94df1f072e5036f6111448889381e"
+  },
+  {
+   "sku": "GBRndFrst78AnSpPnk",
+   "plateSha256": "57176efe2ddc9775bb6c8e7e4e7a5d1c6db431108958a172005fc3ee7550f888"
+  },
+  {
+   "sku": "GBRndFrst78AnSpRed",
+   "plateSha256": "866ba20026389a9403f92944e85787d062e0ee6193a482032e385600f544c288"
+  },
+  {
+   "sku": "GBRndFrst78AnSpWht",
+   "plateSha256": "d60a21e31f2d3228183e13a241bb076ec43ae0e5dbe1e4a821f297becfd6f306"
+  },
+  {
+   "sku": "GBRndFrst78RdcrBlkLthr",
+   "plateSha256": "f0be37c78734f8406d7da54fe8502090ee04dc8e777cbfb193ab2a758fbb9d5f"
+  },
+  {
+   "sku": "GBRndFrst78RdcrBrwnLthr",
+   "plateSha256": "0b021f321cdb996809f349545a6329cfa8e21046849aa79fd59ac6477f329ae0"
+  },
+  {
+   "sku": "GBRndFrst78RdcrIvyLthr",
+   "plateSha256": "a4d82b192b2f3e364bb25b9633c204b0c122e210b1d7106edfd0f64a5a6f7eff"
+  },
+  {
+   "sku": "GBRndFrst78RdcrLBrwnLthr",
+   "plateSha256": "c70bd070f2f29771458081bb67b40e0f92c5379ebc417de733b4171b9787681e"
+  },
+  {
+   "sku": "GBRndFrst78RdcrMtSl",
+   "plateSha256": "6ed43d3b010502c8e34fe2327ac188abc1e0019b84e21d9fd7807f3218ea8c64"
+  },
+  {
+   "sku": "GBRndFrst78RdcrMtSlTall",
+   "plateSha256": "816a87913fddd4d63d6a3e52ddea0b8ee863f8589f30ebcae3b60468d8835873"
+  },
+  {
+   "sku": "GBRndFrst78RdcrPnkLthr",
+   "plateSha256": "9a3a99761f3652274ab2ad6ba64f74b038ac5a3f92065891c7360987f701fad2"
+  },
+  {
+   "sku": "GBRndFrst78RdcrShnBlk",
+   "plateSha256": "98570bd919273df2ac8f1804e69347566b52b5ff0e888c2e957271e9b4aafd3b"
+  },
+  {
+   "sku": "GBRndFrst78RdcrShnBlkTall",
+   "plateSha256": "ef9644d79cd0217dcbe4b8cdb07ccc6a80111fb7ef86c8f86780f2f722327b81"
+  },
+  {
+   "sku": "GBRndFrst78RdcrShnGl",
+   "plateSha256": "58c0e389c5ea0fca4e32dc356e8190e3ca3b9cb3bfe2508ac38713fa6583a186"
+  },
+  {
+   "sku": "GBRndFrst78RdcrShnSl",
+   "plateSha256": "35687647789f0ba3eecc5c2b1bf1b0c5f459153f428ca2e663ee8060336a6c76"
+  },
+  {
+   "sku": "GBRndFrst78RdcrWht",
+   "plateSha256": "8473166d36e990165ea6f89feabe2c811e3364032c3c6f160577cedb7af7f383"
+  },
+  {
+   "sku": "LBRnd128LtnShnBlk",
+   "plateSha256": "0970a3a5a1577a549b5949ee639d34f945faf07c45c8f929928187cc0afb9ca7"
+  },
+  {
+   "sku": "LBRnd128LtnShnGl",
+   "plateSha256": "a586b19a00aa946525c6df2733e6583650d9de5901f0dc21144d5af0ad48beb8"
+  },
+  {
+   "sku": "LBRnd128LtnCu",
+   "plateSha256": "c5071e0e59d7fe7a94bab74e67bf0ec1253790dea2966382e873f5389fd096a5"
+  },
+  {
+   "sku": "LBRnd128LtnShnSl",
+   "plateSha256": "a8e1331f1d25371d9e708bd842a1da74464f4157ff244fa97095227a41831d45"
+  },
+  {
+   "sku": "LBRnd128LtnMtSl",
+   "plateSha256": "384e008990165022e0a5d8bab3e4254c32ad086392c37375587ff2c9ca913761"
+  },
+  {
+   "sku": "LBRnd128LtnMtGl",
+   "plateSha256": "62718a7dcaeebba97f74da9abf17e4904cc9e325365439f9dfbf9789b11bc052"
+  },
+  {
+   "sku": "GBRnd128AnSpBlk",
+   "plateSha256": "b9e0c20bfa149f2676925aa5aae2e3ca4eed3cdc455100446e8f7ebae4f22cad"
+  },
+  {
+   "sku": "GBRnd128AnSpGl",
+   "plateSha256": "999c89f76d01c8c324fcc819b3f06f93f4cebb23a8a9c3a828a56af924c90e66"
+  },
+  {
+   "sku": "GBRnd128AnSpIvyGl",
+   "plateSha256": "b322a6b7114e9bffe2bb641ebf1399822b3ff0e044b2b6a12f2c567ba51c859a"
+  },
+  {
+   "sku": "GBRnd128AnSpIvySl",
+   "plateSha256": "66f4ff3eb1950026836c5750344ecefcb5f596f8358cf87197c8c35c9c5878b4"
+  },
+  {
+   "sku": "GBRnd128AnSpLvn",
+   "plateSha256": "efe5ef3b74f6c13ffd6c29d80502e2e2dcd2c10bed4ef05b6cde891ffb6b68ae"
+  },
+  {
+   "sku": "GBRnd128AnSpPnk",
+   "plateSha256": "8c115d8f9fb1d452d6dc6ee045ea9e1f6ad6a3cb5b4b3ff63fe193a078f7ee36"
+  },
+  {
+   "sku": "GBRnd128AnSpRed",
+   "plateSha256": "f306830187b13010696ce7383a7d097beb538a0d9790369107cb26cb6f53fe6f"
+  },
+  {
+   "sku": "GBRnd128AnSpTslIvyGl",
+   "plateSha256": "2c4140c413c2dcef1fe11f4b763d3d597078183e03d4a17c77700f0a44088935"
+  },
+  {
+   "sku": "GBRnd128AnSpTslMtSl",
+   "plateSha256": "973854610194340c8e3fed9246780147b6547f05cc977aead3f6f5d65a91d902"
+  },
+  {
+   "sku": "GBRnd128AnSpWht",
+   "plateSha256": "c4462839626b054e0c0669afa2843265367a777078750305ce5703656df9fc46"
+  },
+  {
+   "sku": "GBRnd128DrpCu",
+   "plateSha256": "ed974f34a41e855cc8ebc6c126bd92080731817f6d911b8a5e5170ed26d60c80"
+  },
+  {
+   "sku": "GBRnd128DrpGl",
+   "plateSha256": "68b8d8476b36ada7865f9204b4f2763fd4a80a3208cffe965cae608525bb7924"
+  },
+  {
+   "sku": "GBRnd128RdcrBrwnLthr",
+   "plateSha256": "a0f7573136544e078f7fe8dd1b4c53d2c954881b8685cea33776bcf7929171ea"
+  },
+  {
+   "sku": "GBRnd128RdcrIvyLthr",
+   "plateSha256": "1195d177b782974e31fe7565a4a8e3b888e100582e37108f6fa68b29856fef7e"
+  },
+  {
+   "sku": "GBRnd128RdcrLBrwnLthr",
+   "plateSha256": "776749b5db206731c407d4f618cf398c762d7c1b1993c4fbd6c976cdc39a76b2"
+  },
+  {
+   "sku": "GBRnd128RdcrMtSl",
+   "plateSha256": "0a5db6eca976abf93cfc802c88ac99c064fe0e59b17319bf6522ed0b428c76db"
+  },
+  {
+   "sku": "GBRnd128RdcrMtSlTall",
+   "plateSha256": "ca799e51a6db40123a24ac6685bafb5e5d36130308797103b7b8afb025744d34"
+  },
+  {
+   "sku": "GBRnd128RdcrPnkLthr",
+   "plateSha256": "540a81fbc77d24ca988ed3e6bd9a1946c1803c8ae2b0e30a98f72022533349bf"
+  },
+  {
+   "sku": "GBRnd128RdcrShnBlk",
+   "plateSha256": "cf652a3bfb320397573637780aa1eb5b15d4c7c1f296a2a4363616e5205c9487"
+  },
+  {
+   "sku": "GBRnd128RdcrShnSl",
+   "plateSha256": "93c615430e57a23501a068380a8f25effbc219c6f89a17d44cb9bb0b19f20cef"
+  },
+  {
+   "sku": "GBRnd128RdcrWht",
+   "plateSha256": "83e655892e5ca8f2f6813fb9e8a249f9465865efc5f3803bbf8e791097cbc4dd"
+  },
+  {
+   "sku": "GBRndFrst128AnSpBlk",
+   "plateSha256": "f6af15d37bfb79b8b91cbaf3dc3f96493847873c47bc3142ca1c06abf741604d"
+  },
+  {
+   "sku": "GBRndFrst128AnSpGl",
+   "plateSha256": "3ed69b9874a8ee91daf55ba2d5cf37a9b557d6980a47afa43ce265f8f19b1b72"
+  },
+  {
+   "sku": "GBRndFrst128AnSpIvyGl",
+   "plateSha256": "9cbed0378c832845e1b03e8f2950be54df09a7174badc8daa4c9a85809371b26"
+  },
+  {
+   "sku": "GBRndFrst128AnSpIvySl",
+   "plateSha256": "6caae37454777bd395d130f26d4478f6179e6f19657e5ba0a66cffc3fda2316b"
+  },
+  {
+   "sku": "GBRndFrst128AnSpMtSl",
+   "plateSha256": "14acfecfca6223350f3dbc958b08daea4e99e728d69f1f44b5ed392fbaea42fc"
+  },
+  {
+   "sku": "GBRndFrst128AnSpPnk",
+   "plateSha256": "d19ba9fc7bdb30264621c107af7045948fac2cd7a62de8622aa4e7ba4b6f7eb1"
+  },
+  {
+   "sku": "GBRndFrst128AnSpRed",
+   "plateSha256": "a68c4bb85c6857b086e18a13062bceb78bed43868ce5ccddd5e3e24b03651a28"
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslIvyGl",
+   "plateSha256": "81fd3cff3e34670e6d525cffcd2f90ef34292d4dbd266b9ead6e83cf55b62746"
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslIvySl",
+   "plateSha256": "d1030362eef4589c3b36f761d2ff77ede58c3da83b16ff12766ebd287902453a"
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslMtSl",
+   "plateSha256": "005950bbed8e1e96287d97b3c832d566c1133a106f7760a4db932d60b8155253"
+  },
+  {
+   "sku": "GBRndFrst128AnSpTslWht",
+   "plateSha256": "ae8bf9ea59994941555c44afcfa86d342d03c7b4094809d36d3493f911ee96e3"
+  },
+  {
+   "sku": "GBRndFrst128AnSpWht",
+   "plateSha256": "ba4d87efec749442b253262b7c091e270794df4ba5f845ea20448a8995460fe2"
+  },
+  {
+   "sku": "GBRndFrst128RdcrBlkLthr",
+   "plateSha256": "36b7366c34441beaa657ffdf4f89e0b64586749b86a38e1e5ea3a46da54c49c2"
+  },
+  {
+   "sku": "GBRndFrst128RdcrBrwnLthr",
+   "plateSha256": "d2447f81199b26bf7ac34df1dd9ff7eefdcb18253c32be6f51717b9706db28f6"
+  },
+  {
+   "sku": "GBRndFrst128RdcrIvyLthr",
+   "plateSha256": "c21ef4709f46f3fbd7164da116e71bf3e66bf3e0773bd65a8c8cd06c5f5cbee7"
+  },
+  {
+   "sku": "GBRndFrst128RdcrLBrwnLthr",
+   "plateSha256": "eb5cf9ecd2a8290a295f78bfa6e2fbb34c7488df9b04ab66f420dba9bb2fb2f4"
+  },
+  {
+   "sku": "GBRndFrst128RdcrMtSl",
+   "plateSha256": "6f16011b98ff3b47b6772a470ffd7fbf2fa3ed4dee18fe893b2c28340586a33d"
+  },
+  {
+   "sku": "GBRndFrst128RdcrMtSlTall",
+   "plateSha256": "83aa8813bce108a03d00e03e3162db03f24cbc9f85f776d8d400ff966c74bf42"
+  },
+  {
+   "sku": "GBRndFrst128RdcrPnkLthr",
+   "plateSha256": "db8587c972754887b00d1261a1505649cfbe2fa73f25fed1ff2321858c58eb35"
+  },
+  {
+   "sku": "GBRndFrst128RdcrShnBlk",
+   "plateSha256": "6d6bb101adc111e688af9a03052487baaf3f3f161ac5c8ae163541b2e2cd90a4"
+  },
+  {
+   "sku": "GBRndFrst128RdcrShnBlkTall",
+   "plateSha256": "85efea492b71a4cc7837e5672b8a3301c567ca456d6faee52fcc01f7b0353f7a"
+  },
+  {
+   "sku": "GBRndFrst128RdcrShnGl",
+   "plateSha256": "3e208b82ff5f089b78a684988b35e01cbadfce3934975cd6237d7ad9fedbab9b"
+  },
+  {
+   "sku": "GBRndFrst128RdcrWht",
+   "plateSha256": "89f94ed97c74e1bf81d29e4898b5de8968becfb41cc429e837c356d75b225a55"
+  }
+ ],
+ "setAside": [
+  {
+   "sku": "GBRnd128SpryMtGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "06cdec2bba04863d64477a6c1d5f5c0eb3722a4891c5f07011593c5d272793f1",
+   "currentPlate": "083a2e9ec760cf687e7032b41bd276257573b499172063bbcfc9f422c2d85ddf"
+  },
+  {
+   "sku": "GBRnd128SpryShnGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "ec4ae112321f64f994141861ced39e4f09aab4c860612fa3e24cdce25fab958d",
+   "currentPlate": "6da39b2ce72244ca8a1632d1ae60140bf123cdfc6d23457ce675c3615ed69a09"
+  },
+  {
+   "sku": "GBRnd128SpryMtSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "fcf3ac0577923e9c41e9507305ccf680839155831d65050fb8f37914a283b7d3",
+   "currentPlate": "4f05b354875ee5586045f8d024918dcad8a24e81db45ed8e4171b2fae151af5b"
+  },
+  {
+   "sku": "GBRnd128SpryShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "ee8122cd080cc8f5b8faca3eadb9747a55e7d74a0591226b8f21a749d9265962",
+   "currentPlate": "e58a939da99ab091924de8211c0e10d0db38c9a1a897884b8f12f61c8ffe5246"
+  },
+  {
+   "sku": "GBRnd128SpryCu",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "99c0241dad42c6ff5a56e5ef93b3d996080f6cb6f1fd393395fb00cdc848f7af",
+   "currentPlate": "45010f74793118c1234d00d6b19772747dcf2e1e485d00320131d2ea29d44b54"
+  }
+ ],
+ "approvalSha256": "3076593fde36f741ce4b382189a36c04789d909b322954befcecd2ce3a92d31f"
+}

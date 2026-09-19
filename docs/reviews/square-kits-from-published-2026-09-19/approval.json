@@ -1,0 +1,24 @@
+{
+ "release": "square-kits-2026-09-19",
+ "ship": "ship Square kit release 2026-09-19",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-19T10:17:03.334Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/square-kits.jpg",
+ "skus": {
+  "GBSqr15BlkSht": "e4b42d3dcbff134519ae69f0e74a79d5417854a2dd40a980398d40533dd46bdf",
+  "GBSqr15Sl": "2dc06d8400fc0d5841a623180f8ab64ce3f990b4d2de9f606d197769d1cc295c",
+  "GBSqr15SpryBlkSh": "fefb31c6267fde6bac74ab60eef15d1c7d9602a6200109537da80075dd9188f5",
+  "GBSqr15SpryBluMatt": "6fd3d09faa183029dd1fe83a2e063f4029d603a45108617b3bf2b9ea0ab3a0c9",
+  "GBSqr15SpryCuMatt": "a1a04dac48c7f0c029902224109ba8aaa8254d0f19a12731048ef663ebc46135",
+  "GBSqr15SpryGlMatt": "159cf06fa3c4ef2ef921c47244a7ce054d0e0a6e8b7f6e3117eea2407c1dccf1",
+  "GBSqr15SpryGlSh": "598161b67d404d2e4d2a0f7360318c63f8b3add128b6955aca76b5f3f806b690",
+  "GBSqr15SprySlMatt": "aa3bd325d7f65ee144b73042eae3eaabc655a458a8b297a480f319b010f1df01",
+  "GBSqr15SprySlSh": "23fbda4a04b07d11be252c1f8ba8b18372982413164e91b3f3728a8b86365c82",
+  "GBSqr15WhtSht": "f1c0d18e3a74c902d3a03d47dd1b98b391614b56a11f8f11587751db6791ecaa"
+ },
+ "setAside": [],
+ "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+}

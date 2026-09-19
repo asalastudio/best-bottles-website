@@ -1,0 +1,506 @@
+[
+ {
+  "body": "Circle|50|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /4. Circle Glass 50ml/2. Circle 50ml (18-415) Sideviews/2. GBCrcl50.psd",
+    "layer": 2,
+    "layerName": "Layer 6",
+    "size": [
+     790,
+     1282
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /4. Circle Glass 50ml/2. Circle 50ml (18-415) Sideviews/3. GBCrcl50.psd",
+    "layer": 2,
+    "layerName": "Layer 6",
+    "size": [
+     790,
+     1282
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /4. Circle Glass 50ml/2. Circle 50ml (18-415) Sideviews/1. GBCrcl50.psd",
+    "layer": 1,
+    "layerName": "Layer 6",
+    "size": [
+     406,
+     1225
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Circle|50|Frosted|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/2. Circle 50ml (18-415) Sideviews/2. GBCrcl50.psd",
+    "layer": 2,
+    "layerName": "Layer 6",
+    "size": [
+     790,
+     1282
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/2. Circle 50ml (18-415) Sideviews/3. GBCrcl50.psd",
+    "layer": 2,
+    "layerName": "Layer 6",
+    "size": [
+     790,
+     1282
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/2. Circle 50ml (18-415) Sideviews/1. GBCrcl50.psd",
+    "layer": 1,
+    "layerName": "Layer 6",
+    "size": [
+     406,
+     1225
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Circle|100|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/2. Circle 100ml (18415) Sideviews/Circle 100ml.psd",
+    "layer": 4,
+    "layerName": "\\",
+    "size": [
+     1046,
+     1263
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/2. Circle 100ml (18415) Sideviews/1. GBCrcl100.psd",
+    "layer": 1,
+    "layerName": "Layer 15",
+    "size": [
+     862,
+     1634
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/2. Circle 100ml (18415) Sideviews/2. GBCrcl100.psd",
+    "layer": 1,
+    "layerName": "Layer 16",
+    "size": [
+     496,
+     1643
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Circle|100|Frosted|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/2. Circle Frosted 100ml (18-415) Sideviews/Circle Frst 100ml.psd",
+    "layer": 17,
+    "layerName": "Layer 1",
+    "size": [
+     1050,
+     1263
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/2. Circle Frosted 100ml (18-415) Sideviews/3. GBCrclFrst100.psd",
+    "layer": 1,
+    "layerName": "Layer 4",
+    "size": [
+     618,
+     1304
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/2. Circle Frosted 100ml (18-415) Sideviews/Circle 100ml frst.psd",
+    "layer": 1,
+    "layerName": "Layer 4",
+    "size": [
+     618,
+     1304
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Circle|30|Clear|15-415",
+  "error": "folder missing: 15-415 Bottles/2. Circle Clear 30ml - Uncapped/Side Views"
+ },
+ {
+  "body": "Diva|30|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /23. Diva Clear 30ml/2. Diva 30ml (18-415) Sideviews/Diva 30ml. copy.psd",
+    "layer": 1,
+    "layerName": "Layer 5",
+    "size": [
+     592,
+     1126
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /23. Diva Clear 30ml/2. Diva 30ml (18-415) Sideviews/Diva.psd",
+    "layer": 1,
+    "layerName": "Layer 5",
+    "size": [
+     592,
+     1126
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Diva|46|Frosted|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /26. Diva 46ml frosted/2. Diva Frst 46 (18415) Sideviews/Diva frost 46ml copy.psd",
+    "layer": 3,
+    "layerName": "Layer 4",
+    "size": [
+     632,
+     982
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /26. Diva 46ml frosted/2. Diva Frst 46 (18415) Sideviews/Diva frost 46ml.psd",
+    "layer": 1,
+    "layerName": "Layer 6",
+    "size": [
+     710,
+     1106
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Diva|100|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /27. Diva (clear) 100ml/2. Diva 100ml (18415) Sideviews/Diva 100ml....psd",
+    "layer": 1,
+    "layerName": "Layer 3",
+    "size": [
+     997,
+     1562
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Elegant|60|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /17. Elegant 60ml/2. Elegant 60ml (18-415) Sideviews/1. GBElg60.psd",
+    "layer": 1,
+    "layerName": "Layer 3",
+    "size": [
+     766,
+     1229
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /17. Elegant 60ml/2. Elegant 60ml (18-415) Sideviews/Elegant 60ml.psd",
+    "layer": 1,
+    "layerName": "Layer 2",
+    "size": [
+     871,
+     1404
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /17. Elegant 60ml/2. Elegant 60ml (18-415) Sideviews/3. GBElg60.psd",
+    "layer": 2,
+    "layerName": "Layer 6",
+    "size": [
+     658,
+     1216
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Elegant|60|Frosted|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /19. Elegant Frosted 60ml/2. Elegant Frst 60ml (18-415) Sideviews/2GBElgFrst60Side.psd",
+    "layer": 1,
+    "layerName": "Layer 5",
+    "size": [
+     439,
+     1218
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Elegant|100|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /18. Elegant 100ml/2. Elegant 100ml (18-415) Sideviews/2GBElg100Side.psd",
+    "layer": 2,
+    "layerName": "Layer 2",
+    "size": [
+     430,
+     1532
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Elegant|100|Frosted|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /20. Elegant Frosted 100ml/2.Elegant Frst 100ml (18-415) Sideviews/1.psd",
+    "layer": 1,
+    "layerName": "Layer 4",
+    "size": [
+     870,
+     1523
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /20. Elegant Frosted 100ml/2.Elegant Frst 100ml (18-415) Sideviews/1 copy 19.psd",
+    "layer": 1,
+    "layerName": "Layer 9",
+    "size": [
+     683,
+     1674
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /20. Elegant Frosted 100ml/2.Elegant Frst 100ml (18-415) Sideviews/2 copy 16.psd",
+    "layer": 1,
+    "layerName": "Layer 9",
+    "size": [
+     458,
+     1580
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Empire|50|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /21. Empire 50ml/2. Empire 50ml (18-415) Sideviews/3. GBEmp50.psd",
+    "layer": 1,
+    "layerName": "Layer 4",
+    "size": [
+     1002,
+     1454
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /21. Empire 50ml/2. Empire 50ml (18-415) Sideviews/6 copy 3.psd",
+    "layer": 1,
+    "layerName": "Layer 5",
+    "size": [
+     728,
+     1300
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /21. Empire 50ml/2. Empire 50ml (18-415) Sideviews/8.psd",
+    "layer": 1,
+    "layerName": "Layer 3",
+    "size": [
+     624,
+     1302
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Empire|100|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /22. Empire Bottle 100ml/2. Empire 100ml (18415) Sideviews/7 copy 3.psd",
+    "layer": 1,
+    "layerName": "Layer 4",
+    "size": [
+     1002,
+     1454
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /22. Empire Bottle 100ml/2. Empire 100ml (18415) Sideviews/4 copy 17.psd",
+    "layer": 1,
+    "layerName": "Layer 5",
+    "size": [
+     812,
+     1472
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /22. Empire Bottle 100ml/2. Empire 100ml (18415) Sideviews/5 copy 4.psd",
+    "layer": 1,
+    "layerName": "Layer 6",
+    "size": [
+     810,
+     1482
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Round|128|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /7. Round (clear) 128ml /2. Round 128ml (18-415) Sideviews/Round 128ml ..psd",
+    "layer": 1,
+    "layerName": "Layer 4",
+    "size": [
+     871,
+     1044
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /7. Round (clear) 128ml /2. Round 128ml (18-415) Sideviews/Round 128ml...psd",
+    "layer": 1,
+    "layerName": "Layer 4",
+    "size": [
+     877,
+     1052
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /7. Round (clear) 128ml /2. Round 128ml (18-415) Sideviews/Round 100ml...psd",
+    "layer": 1,
+    "layerName": "Layer 7",
+    "size": [
+     1017,
+     1220
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Round|128|Frosted|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /10. Round Frosted 128ml/2. Round Frosted 128ml (18-415) Sideviews/Round frst 100ml.psd",
+    "layer": 1,
+    "layerName": "Layer 5",
+    "size": [
+     1005,
+     1159
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Round|78|Frosted|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /8. Round 78ml Frosted/2. Round Frosted 78ml (18-415) Sideviews/Rnd frst.psd",
+    "layer": 1,
+    "layerName": "Layer 1",
+    "size": [
+     1710,
+     1972
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Round|78|Clear|18-415",
+  "candidates": []
+ },
+ {
+  "body": "Sleek|30|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /11. Sleek 30ml /2. Sleek 30ml(18-415) Sideviews/Sleek 30ml...psd",
+    "layer": 1,
+    "layerName": "Layer 4",
+    "size": [
+     621,
+     1303
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Sleek|50|Clear|18-415",
+  "candidates": []
+ },
+ {
+  "body": "Sleek|100|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /13. Sleek 100ml/2. Sleek 100ml (18-415) Sideviews/Sleek100ml....psd",
+    "layer": 2,
+    "layerName": "Layer 3",
+    "size": [
+     578,
+     1674
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /13. Sleek 100ml/2. Sleek 100ml (18-415) Sideviews/Sleek 100ml...psd",
+    "layer": 2,
+    "layerName": "Layer 5",
+    "size": [
+     538,
+     2097
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Slim|50|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /15. Slim 50ml/2. Slim 50ml (18-415) Sideviews/Slim 50ml .psd",
+    "layer": 3,
+    "layerName": "Layer 6",
+    "size": [
+     546,
+     1629
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Grace|55|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /29. Grace 55 ml/2. Grace 55ml (18415) Sideviews/grace 50ml..psd",
+    "layer": 2,
+    "layerName": "Layer 5",
+    "size": [
+     399,
+     1570
+    ]
+   }
+  ]
+ },
+ {
+  "body": "Diamond|60|Clear|18-415",
+  "candidates": [
+   {
+    "path": "2.  18-415 Bottles /28. Diamond 60ml/2. Diamond 60ml (18415) Sideviews/Dmnd 2oz.psd",
+    "layer": 3,
+    "layerName": "Layer 8",
+    "size": [
+     694,
+     1163
+    ]
+   },
+   {
+    "path": "2.  18-415 Bottles /28. Diamond 60ml/2. Diamond 60ml (18415) Sideviews/3 copy 4.psd",
+    "layer": 9,
+    "layerName": "Layer 5",
+    "size": [
+     613,
+     1272
+    ]
+   }
+  ]
+ }
+]

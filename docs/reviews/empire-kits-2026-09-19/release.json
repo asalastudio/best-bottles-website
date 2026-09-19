@@ -1,0 +1,275 @@
+{
+ "schemaVersion": 1,
+ "release": "empire-master-kits-2026-09-16",
+ "batch": "dist/paper-doll/empire-2026-09-16",
+ "approvedBy": "Jordan Richter — approved the kit contact sheet in chat 2026-09-16 ('looks good' / 'These all look fantastic'); authorised publication 2026-09-19 ('process all the kits… push them to production')",
+ "approvedAt": "2026-09-19T07:28:32.907Z",
+ "shipPhrase": "ship Empire kit release 2026-09-16",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 60,
+  "approved": 55,
+  "setAside": 5,
+  "notExtracted": 5
+ },
+ "reviewSheet": "/reviews/builder-bodies-2026-09-14/empire-kits-2026-09-16.jpg",
+ "reviewSheetSha256": "feae9b0f2dfabbf337d8311a652f6c5320b0f5d24fc2a356cbdce23827e4dcca",
+ "rows": [
+  {
+   "sku": "GBEmp50AnSpIvyGl",
+   "plateSha256": "047840844c131355f604cc831f5efb6ace4a361be51b943a6d50ec6f04dea334"
+  },
+  {
+   "sku": "GBEmp50AnSpRed",
+   "plateSha256": "7135c7ff163a4eaaffeac4190136d0c4188341135486dca492a8dfc09ffe767e"
+  },
+  {
+   "sku": "GBEmp50AnSpTslMtSl",
+   "plateSha256": "7eed9858ac6c60aff26ffb3f993b807bf524475c7f68c61282ebafbaa8b952c5"
+  },
+  {
+   "sku": "GBEmp50AnSpBlk",
+   "plateSha256": "251d1602df5272a8660bcb5f201a53a1f9aa904698041af4232ac9bb33104cdc"
+  },
+  {
+   "sku": "GBEmp50AnSpTslIvyGl",
+   "plateSha256": "09b4a9f61eb4223b805e2bcb2f618a38d18b4711cc512f15dacd2ffe214952ef"
+  },
+  {
+   "sku": "GBEmp50AnSpGl",
+   "plateSha256": "8e156f3afacda7a23f7ee99e6d682cedf754d561556c00712212097ab6798877"
+  },
+  {
+   "sku": "GBEmp50AnSpMtSl",
+   "plateSha256": "b6d15a561a4674f7a02f105156a9a1ccee6932011d87d65d65265bbc0f56cbf4"
+  },
+  {
+   "sku": "GBEmp50AnSpTslLvn",
+   "plateSha256": "36b3953cb92fc03b0b349d6e85730b568acfb393a3cddcaa14e09a41d1800615"
+  },
+  {
+   "sku": "GBEmp50AnSpLvn",
+   "plateSha256": "420c206d66500e589c0d33fcb46096da5b80fd1837694c9453845c4826ef0f38"
+  },
+  {
+   "sku": "GBEmp50AnSpTslRed",
+   "plateSha256": "6b2edfe1564e97661129080c3c4849a316980604c9f965afcf92da0080dab08b"
+  },
+  {
+   "sku": "GBEmp50AnSpTslBlk",
+   "plateSha256": "b89a4efa4350ab59e8c89c3133ba927d9b6556da933d5c5858278789206c1707"
+  },
+  {
+   "sku": "GBEmp50AnSpIvySl",
+   "plateSha256": "f9b939df739b5c0b23e03d1f038246a7cbaa7e7e69e34b79b8eee586d485e457"
+  },
+  {
+   "sku": "GBEmp50AnSpTslWht",
+   "plateSha256": "7850d54790c41335c051b083953135a6d6d9933137a05442ea9f8b797f95cd3d"
+  },
+  {
+   "sku": "GBEmp50AnSpWht",
+   "plateSha256": "0477109e718478905d0daabd70371b834079237e6591e21c5cd8909f04c72d04"
+  },
+  {
+   "sku": "GBEmp50DrpCu",
+   "plateSha256": "20fbef0e062a3904b9d7d5596576de3bb0cc3e25804d6fffd2524fb314fd39a8"
+  },
+  {
+   "sku": "GBEmp50DrpGl",
+   "plateSha256": "a8e75d240a1632a7107edf835b18cbd8e0b5f4e45624017372468338e61bb513"
+  },
+  {
+   "sku": "GBEmp50RdcrBlkLthr",
+   "plateSha256": "7daf0fbba37e0c903409cf21ce0ee76bfaa5eb50f88bc24a41d33b17c283697e"
+  },
+  {
+   "sku": "GBEmp50RdcrBrwnLthr",
+   "plateSha256": "e3bb1de69197f38398b0be39d0b8ea19b3b091e1ce08e208a84767c432ff5c0f"
+  },
+  {
+   "sku": "GBEmp50RdcrIvyLthr",
+   "plateSha256": "4623ca05e35a322fbeede0482188d34b165701733ba7ec6a1c4bf4b9f499e857"
+  },
+  {
+   "sku": "GBEmp50RdcrLBrwnLthr",
+   "plateSha256": "8222d7125c7e7836d6dfd6fff0af479c41835c9c0592f47a15fa4233a41f07f6"
+  },
+  {
+   "sku": "GBEmp50RdcrMtSl",
+   "plateSha256": "49bbfd85b3644968a263a805761cc14a0359d7193c87a43347265769c05434d3"
+  },
+  {
+   "sku": "GBEmp50RdcrMtSlTall",
+   "plateSha256": "e7c9d9a3d834c480c35300b14015c56702f29278144beba630dac3a9478e9f51"
+  },
+  {
+   "sku": "GBEmp50RdcrPnkLthr",
+   "plateSha256": "0d00d993fcb48a2b991f4f85e7eda655bf17100c13a30b557a438411b5169ac9"
+  },
+  {
+   "sku": "GBEmp50RdcrShnBlk",
+   "plateSha256": "55f42291a7f8cdbd75b236d069e6900bd6540a76a99db87e0a39a327fd533f91"
+  },
+  {
+   "sku": "GBEmp50RdcrShnBlkTall",
+   "plateSha256": "8d7a59aab431f6e8e6f427313eae0bf51166c11f4e68a90e73b1111fab798344"
+  },
+  {
+   "sku": "GBEmp50RdcrShnGl",
+   "plateSha256": "699dab15e97c8fb1ca6f25639d8d90b9e919984d40fa0a04938c55463081832d"
+  },
+  {
+   "sku": "GBEmp50RdcrShnSl",
+   "plateSha256": "3f05e73431b8e420b435e10c73b80ab593275c1bf58608f69c8306da19e3a72a"
+  },
+  {
+   "sku": "GBEmp50RdcrWht",
+   "plateSha256": "73de43e1fb867e39436b8399ee3c9eedbd3d8f915e19c8fb5d9b5b60862c1837"
+  },
+  {
+   "sku": "GBEmp100AnSpTslIvySl",
+   "plateSha256": "2575abf6e6b09039a96130e39d1e0e51ef8210b66577e01228d71cd37d617724"
+  },
+  {
+   "sku": "GBEmp100AnSpTslLvn",
+   "plateSha256": "0910aa35d4e13943c669cd03a897582575ab1bd7a5df67787bec91b252335b81"
+  },
+  {
+   "sku": "GBEmp100AnSpTslIvyGl",
+   "plateSha256": "1eed7e5913db2e365d3cfc5e9b2e3ffcdf92c15e0f0796654a18fb2e1d1a8d03"
+  },
+  {
+   "sku": "GBEmp100AnSpTslBlk",
+   "plateSha256": "33421ff7210f12ff4ccc23592b0a92c330c3f8a635f0392dfb5ca80ff9134b86"
+  },
+  {
+   "sku": "GBEmp100AnSpTslMtSl",
+   "plateSha256": "cb1a2270a5fb2ba1289bfd3f7e8c31b18fed7b1ad61f39091c182e72432e23da"
+  },
+  {
+   "sku": "GBEmp100AnSpTslWht",
+   "plateSha256": "3872d6054c7b1aba1cfdab2f71d7b2e007436d39ba435a0d6c3a55df5392e651"
+  },
+  {
+   "sku": "GBEmp100AnSpBlk",
+   "plateSha256": "e0bbc002288d8830c4fc4b7b79f1afe6f0b565315b5e5979cb963f87298c6e79"
+  },
+  {
+   "sku": "GBEmp100AnSpGl",
+   "plateSha256": "3d452c665f4aba169d3e62e34874b6f725aa0c4f11451b913883ba454506a287"
+  },
+  {
+   "sku": "GBEmp100AnSpIvyGl",
+   "plateSha256": "c991f930bfe2a07b46d110db041d86eabcc7e394e9f01b8c75c0ed5e1eee736c"
+  },
+  {
+   "sku": "GBEmp100AnSpIvySl",
+   "plateSha256": "a0e8e1935d29c4097b24321cf932eba78e25913a6fb81032153520498349a80f"
+  },
+  {
+   "sku": "GBEmp100AnSpLvn",
+   "plateSha256": "803c41bf3cb22f0de7e721499ec88836170a7a1618ff57365365134e1499636c"
+  },
+  {
+   "sku": "GBEmp100AnSpMtSl",
+   "plateSha256": "56c23bd23f4ac06b2df38c259512c0929784a7b09715da05331b00dc3dfeb782"
+  },
+  {
+   "sku": "GBEmp100AnSpPnk",
+   "plateSha256": "105f89a9afd1bb0e7386760300199910a3132cd83786b1275943e3695952c91e"
+  },
+  {
+   "sku": "GBEmp100AnSpRed",
+   "plateSha256": "ecf61cd470c1c6dd63eebca5441c0f7747a1d051ce3f963a69bac66f6a88a3aa"
+  },
+  {
+   "sku": "GBEmp100AnSpWht",
+   "plateSha256": "4973bd2d9cc36dfbb53ccc47858c05e6a90f6a5ff0e97be3f7d6fe03c5d7b739"
+  },
+  {
+   "sku": "GBEmp100RdcrBlkLthr",
+   "plateSha256": "bf476e0d7ae3bdd00e84925a64ef230cfbd8cc43af8436bbb3f4a87cf439ba85"
+  },
+  {
+   "sku": "GBEmp100RdcrBrwnLthr",
+   "plateSha256": "814f591ec76a3bd64e60d5b8ea479fb2c6b211e2ca39f65d9489e32e5edd33fc"
+  },
+  {
+   "sku": "GBEmp100RdcrIvyLthr",
+   "plateSha256": "c01568d81d2a7a27548c979f553d92811574fd4c4319f6f409290dd3ffc43cb0"
+  },
+  {
+   "sku": "GBEmp100RdcrLBrwnLthr",
+   "plateSha256": "c36f4ea3040fa1818d3bb321b152fb5225f7b895811571d430daec8a4e62ad74"
+  },
+  {
+   "sku": "GBEmp100RdcrMtSl",
+   "plateSha256": "2bfeebec0c6b936ac0742c0e276d1a5b8d7c9ae338aa56171eafb5e5bce7b511"
+  },
+  {
+   "sku": "GBEmp100RdcrMtSlTall",
+   "plateSha256": "0726b0ed3549c56088bfb55f141e6e0b7cba4fa343804e032263b4cd1cd7f270"
+  },
+  {
+   "sku": "GBEmp100RdcrPnkLthr",
+   "plateSha256": "fd8f2b5a293bb9d722836efe87485aebf5904ec3220cea69f666df8b3b020a0e"
+  },
+  {
+   "sku": "GBEmp100RdcrShnBlk",
+   "plateSha256": "a37d8bf59242bda196578d909e17e11a5eab12eb19975cddbb9497afae403a20"
+  },
+  {
+   "sku": "GBEmp100RdcrShnBlkTall",
+   "plateSha256": "776ec5a782ed1f694e3573a82490b7d1ad445c5c7ac635f966612c8379d39fc1"
+  },
+  {
+   "sku": "GBEmp100RdcrShnGl",
+   "plateSha256": "c040f0936810041cd4423e8e3cc609ee7f778ae185cf1e3e98d39e3d332f7db2"
+  },
+  {
+   "sku": "GBEmp100RdcrShnSl",
+   "plateSha256": "7b2e86ef31413a97c5f6f010bdc1d3f190a3b7cb035fb3bca8ce377e74fc794b"
+  },
+  {
+   "sku": "GBEmp100RdcrWht",
+   "plateSha256": "46c7a62e33f2aef56e1587c64d4d39c2ea0e39409f37df317479757a3304a9d0"
+  }
+ ],
+ "setAside": [
+  {
+   "sku": "LBEmp50WhtClOvrCp",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "97b9782c555a2cc6106ac5c907d82399b7f1f6d263ad4abb92536966d8591720",
+   "currentPlate": "b358eaa017e484b875c3ec7809fa72d40ab06954282c8c898a96724b488c5ae7"
+  },
+  {
+   "sku": "GBEmp50AnSpTslGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "1497e071536ae1236f5785b1656f752894f1a641d2e56946e8356f66ca9d3b0c",
+   "currentPlate": "fbff546c6d38c1fa13ca5ec8f618ad82a77b01a12d7785e8763282d490199ef7"
+  },
+  {
+   "sku": "GBEmp50AnSpTslIvySl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "1557b8ec67e0307ccfd20255220956c2dc69acfb7e1349922acd248f6303913e",
+   "currentPlate": "48dd8b19351a514d225b45184048f99008688ee2631f5dfea9149d3b40aa3323"
+  },
+  {
+   "sku": "GBEmp50AnSpTslPnk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "db7ceb41503e73cedeb745ccfd37c33a652c90a4383ef0e619d99c9442ecd99c",
+   "currentPlate": "dd489cbe441c996115aa0e09684286c9da82c1413d62f3eb0f92e44ae6eaa773"
+  },
+  {
+   "sku": "LBEmp100WhtClOvrCp",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "3bfaf2a0a1437a80538601387125c47b200d7d99d468afed43e4b9faac29fa4c",
+   "currentPlate": "87c148d8267d8cfc13264d85e5832625fce52f68b21c29d39edcc5da9283c806"
+  }
+ ],
+ "approvalSha256": "46d51e27b5873fe31c43a78190203dfa370538bf948b0dd050e8696315045ef1"
+}

@@ -1,0 +1,47 @@
+{
+ "schemaVersion": 1,
+ "release": "Rectangle plates 2026-09-18",
+ "approvedAt": "2026-09-19T06:28:28.207Z",
+ "actor": "Jordan · approved in chat (\"I approve the 32\"), from the legacy and small-family contact sheets",
+ "approvalId": "82462ea2-4431-4543-9873-83892b026a98",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/tail-new-plates.jpg",
+ "reviewPacketSha256": "76c43d55ae87e79021806638f279590452fd6cc9951bcf9a0f6f5c12b095f05c",
+ "approvalFile": "dist/paper-doll/rectangle-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "8c565d667188bece39a9525aeafc91b6ec6b2750c628cdfbaa7bdbc778a9fc56",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "GBSQSTBlue",
+   "graceSku": "GB-RCT-CLR-9ML-T-01",
+   "familyId": "rectangle-9ml-clear-ground",
+   "closure": "Glass Stopper",
+   "plate": {
+    "key": "rectangle-9ml-clear-ground/GBSQSTBlue.front-on.webp",
+    "storeKey": "plates/rectangle-9ml-clear-ground/GBSQSTBlue/56dcc52a8153d153c194720852532bb6fab0d68aa3cedfe14bc121f0753e65b1.front-on-1000x1100.webp",
+    "sha256": "56dcc52a8153d153c194720852532bb6fab0d68aa3cedfe14bc121f0753e65b1",
+    "bytes": 30306,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "39557d95fa594bb3b8d6682c269c1b40c1ccc12c8ca4e720b1b6b5e43d562008",
+    "bytes": 3534
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "17. Additional Bottles/GBSQSTBlue...psd",
+    "sha256": "150a90e702f1653818f362c42e3a38493b6427399e4d74aa05f8bdc20423ac41"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 51,
+  "alreadyLiveAndExcluded": 50
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}

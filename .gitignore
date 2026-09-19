@@ -210,3 +210,4 @@ public/assets/cards/*.png
 public/assets/hero/**/*.png
 public/assets/hero/*.png
 public/assets/hero/frames/_mask.png
+public/local-kits/

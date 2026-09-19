@@ -178,9 +178,10 @@ export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, pr
     if (kit.completeness !== "full" && !(capOnly && kit.completeness === "capSplit") && !assemblySplit) return null;
     const body = kit.parts.find(part => part.slot === "body");
     if (!body || !kit.parts.some(part => part.slot !== "body")) return null;
-    if (body.derivation !== "psd-layer" && body.derivation !== "madison") return null;
+    // background-matte: the master photograph with its white studio ground stripped (Boston amber/cobalt, 2026-09-16)
+    if (!["psd-layer", "madison", "background-matte"].includes(body.derivation)) return null;
     if (!kit.parts.every(part => part.image.width === kit.canvas.width && part.image.height === kit.canvas.height
-        && part.image.url.startsWith("https://") && part.assembled.x === 0 && part.assembled.y === 0
+        && (part.image.url.startsWith("https://") || part.image.url.startsWith("/local-kits/")) && part.assembled.x === 0 && part.assembled.y === 0
         && part.bounds.right > part.bounds.left && part.bounds.bottom > part.bounds.top)) return null;
     if (!(kit.anchors.baselineY > kit.anchors.seatY && kit.anchors.seatY >= 0
         && kit.anchors.baselineY <= kit.canvas.height)) return null;
@@ -340,6 +341,10 @@ export function reconcileSelection(bodies: BuilderBody[], state: BuilderSelectio
     let derived = deriveBuilder(bodies, next);
     if (!derived.body) return { ...emptySelection(), quantity: state.quantity };
     next.color = derived.color;
+    // One glass only (clear-only bottles): there is nothing to choose, so the
+    // glass is taken as read and the shopper goes straight to the fitment
+    // (Jordan, 2026-09-16: "if there's just single-color glass, is it necessary?").
+    if (!next.color && derived.colors.length === 1) next.color = derived.colors[0];
     derived = deriveBuilder(bodies, next);
     next.fitment = derived.fitment;
     next.closure = deriveBuilder(bodies, next).closure;

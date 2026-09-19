@@ -141,3 +141,6 @@
 .selectedBottle > div, .summary :is(dt,dd), .totals :is(dt,dd) { min-width: 0; overflow-wrap: anywhere; }
 /* Keep the entire approved drawing inside its thumbnail, including roller plugs. */
 .componentThumb svg { width: auto !important; height: 100% !important; min-height: 0; }
+
+/* whole-plate preview (no kit yet): white stage behind the plate canvas */
+.previewImage.plateStage { background: #fff; border-radius: 4px; }

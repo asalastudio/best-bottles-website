@@ -1,0 +1,25 @@
+{
+ "schemaVersion": 1,
+ "release": "decorative-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/decorative",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Decorative kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 1,
+  "approved": 1,
+  "setAside": 0,
+  "notExtracted": 11
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/decorative-kits.jpg",
+ "reviewSheetSha256": "3311dcc2c5591e13c49e7c61f8cb50fb923c3da6c1c0a7e1568b0674fc7612d7",
+ "rows": [
+  {
+   "sku": "GBHeartFrst4KeyGld",
+   "plateSha256": "d6a4d180cb8ac89383b28a0c280825e3ccbba83cee8a87ad96a0ec1cae027aa4"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "b91c178cb67dda29f6f390770bf1079c13a3c9658c563d3177eb98b2d04b163f"
+}
