@@ -20,7 +20,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from family_batch import MASTER
 from build_master_kits import parity
 
-ap = argparse.ArgumentParser(); ap.add_argument('--batch', type=Path, required=True); ap.add_argument('--from-batch', type=Path, required=True); ap.add_argument('--sku', action='append'); ap.add_argument('--fine', action='store_true'); args = ap.parse_args()
+ap = argparse.ArgumentParser(); ap.add_argument('--batch', type=Path, required=True); ap.add_argument('--from-batch', type=Path, required=True); ap.add_argument('--sku', action='append'); ap.add_argument('--fine', action='store_true')
+# The coarse sweep asks a cheap question — roughly where does the composite sit —
+# and asking it at full canvas resolution costs 63 ms an evaluation for an answer
+# the refinement passes then improve anyway. --coarse-scale runs that sweep on a
+# downscaled render. Every gate, and every pass after the sweep, stays at full
+# resolution, so nothing is accepted on the strength of the smaller image.
+ap.add_argument('--coarse-scale', type=int, default=1)
+args = ap.parse_args()
 manifest = json.load(open(args.batch / 'plates/manifest.json'))
 def ink_bbox(rgb):
     m = np.asarray(rgb.convert('RGB')).min(axis=2) < 245
@@ -56,6 +63,20 @@ for row in manifest['rows']:
         # the transform samples outside the composite as transparent; the plate is white there
         canvas = Image.new('RGBA', (1000, 1100), 'white'); canvas.alpha_composite(placed); return canvas
     plate_arr = np.asarray(plate).astype(np.int16)
+    K = max(1, args.coarse_scale)
+    sw, sh = 1000 // K, 1100 // K
+    small_plate_arr = np.asarray(plate.resize((sw, sh), Image.Resampling.BILINEAR)).astype(np.int16)
+    def cost_coarse(scale, ox, oy):
+        # canvas_px = comp_px * scale + o, so on a canvas K times smaller the same
+        # placement is comp_px * (scale / K) + o / K
+        s2 = scale / K
+        placed = flat.transform((sw, sh), Image.Transform.AFFINE,
+                                (1 / s2, 0, -(ox / K) / s2, 0, 1 / s2, -(oy / K) / s2),
+                                resample=Image.Resampling.BILINEAR)
+        canvas = Image.new('RGBA', (sw, sh), 'white'); canvas.alpha_composite(placed)
+        a = np.asarray(canvas.convert('RGB')).astype(np.int16)
+        ink = (a.min(axis=2) < 245) | (small_plate_arr.min(axis=2) < 245)
+        return float(np.abs(a - small_plate_arr)[ink].mean()) if ink.any() else 1e9
     def cost(scale, ox, oy):
         a = np.asarray(place(scale, ox, oy).convert('RGB')).astype(np.int16); ink = (a.min(axis=2) < 245) | (plate_arr.min(axis=2) < 245)
         return float(np.abs(a - plate_arr)[ink].mean()) if ink.any() else 1e9
@@ -63,13 +84,16 @@ for row in manifest['rows']:
     if not pg['ok']:
         # clear glass leaves faint ink: the box estimate is only a start. Refine
         # by search on the parity cost, scale ±2 %, offsets ±10 px, then ±1 px.
-        best = (cost(scale, ox, oy), scale, ox, oy)
+        sweep = cost_coarse if K > 1 else cost
+        best = (sweep(scale, ox, oy), scale, ox, oy)
         for sc in np.linspace(scale * 0.98, scale * 1.02, 9):
             for dx in range(-10, 11, 5):
                 for dy in range(-10, 11, 5):
-                    c = cost(sc, ox + dx, oy + dy)
+                    c = sweep(sc, ox + dx, oy + dy)
                     if c < best[0]: best = (c, sc, ox + dx, oy + dy)
         _, scale, ox, oy = best
+        # the sweep's score is not comparable with the full-resolution one
+        best = (cost(scale, ox, oy), scale, ox, oy)
         for sc in np.linspace(scale * 0.995, scale * 1.005, 5):
             for dx in range(-3, 4):
                 for dy in range(-3, 4):
