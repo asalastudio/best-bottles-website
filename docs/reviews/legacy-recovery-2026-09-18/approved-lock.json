@@ -1,0 +1,298 @@
+{
+ "schemaVersion": 1,
+ "release": "Legacy source recovery 2026-09-18",
+ "approvedAt": "2026-09-19T04:04:47.222Z",
+ "actor": "Jordan · chat approval after reviewing the contact sheet (\"great lock them in\")",
+ "approvalId": "932ffe5b-4867-4bd5-a390-74a7dbce571d",
+ "reviewPacketSha256": "8a7da01d4aba91666fe8145fd461612bbd1e667d90e62e36e278e09f1369f44d",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/legacy-recovery-contact-sheet.jpg",
+ "approvalFile": "data/paper-doll/legacy-recovery-2026-09-18/manifest.json",
+ "approvalFileSha256": "8abb65e9a13293e4b51c94ab187af6e0c75befbc696f0928fd39364d7618ae0e",
+ "visualApproved": true,
+ "legacySourcesAccepted": true,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "Alu100mlSprayBlack",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/Alu100mlSprayBlack.gif",
+   "sha256": "73e729a87bff407525d3b5e461fb07954186ae0d4113731a965602804d3a1f79",
+   "bytes": 13814,
+   "pixels": {
+    "width": 360,
+    "height": 480
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/Alu100mlSprayBlack.gif",
+   "pageUrl": "https://www.bestbottles.com/product/Cylinder-shaped-matte-aluminum-100ml-bottle-black-sprayer",
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "Alu500",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/Alu500.gif",
+   "sha256": "89d78e71c6ac78ef74c4aba31fa158639aefa74082367f03b3c0e546569ac915",
+   "bytes": 28994,
+   "pixels": {
+    "width": 360,
+    "height": 480
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/Alu500.gif",
+   "pageUrl": "https://www.bestbottles.com/product/Aluminum-Bottle-Can-white-cap-500ml",
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "CJAmb30BlkCap",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/CJAmb30BlkCap.gif",
+   "sha256": "54c0df57f96ec800efabde5621645f5f00403f14e7cfe242a2eef56679caef7e",
+   "bytes": 30789,
+   "pixels": {
+    "width": 360,
+    "height": 480
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/CJAmb30BlkCap.gif",
+   "pageUrl": "https://www.bestbottles.com/product/cream-jar-style-30-ml-amber-glass-bottle-black-cap",
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GB1mlVWht",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GB1mlVWht.gif",
+   "sha256": "d017ff829c2d982e91b50500c6c77ad2917a2ff0a891378bf9f1a32c2a3d959e",
+   "bytes": 55394,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GB1mlVWht.gif",
+   "pageUrl": "https://www.bestbottles.com/product/Vial-style-1-ml-glass-bottle-white-applicator",
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBBell10BlkShSht",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBBell10BlkShSht.gif",
+   "sha256": "4221a9b3cf027458679d23548310cb0fc862286690dfde710389f1c587485fbc",
+   "bytes": 75565,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBell10BlkShSht.gif",
+   "pageUrl": null,
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBBell10MtlRollBlkDot",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBBell10MtlRollBlkDot.gif",
+   "sha256": "58b2f7ce6161caa0f483b154795ee363b9d61a104e14a131c3b22dc90ab3261f",
+   "bytes": 72753,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBell10MtlRollBlkDot.gif",
+   "pageUrl": null,
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBBell10RollBlkDot",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBBell10RollBlkDot.gif",
+   "sha256": "26d8385cdbbb1c082f0e10cd6a802180d753ffe2216576b8ad77648c07296fbe",
+   "bytes": 72104,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBell10RollBlkDot.gif",
+   "pageUrl": null,
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBBell10SpryBlkSh",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBBell10SpryBlkSh.gif",
+   "sha256": "8e2f666af7b0627c95711b63994ffa2974c811948ef676df0536bf5f2dc75c1e",
+   "bytes": 60676,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBBell10SpryBlkSh.gif",
+   "pageUrl": null,
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBElg15MinarCu",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBElg15MinarCu.gif",
+   "sha256": "7afe10f88b3e095be8c36fb7683acdf3991d7da4c0c2fee95883e8093da6637c",
+   "bytes": 175767,
+   "pixels": {
+    "width": 648,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBElg15MinarCu.gif",
+   "pageUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-glass-bottle-matte-copper-minaret-cap",
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBPillar9BlkShSht",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBPillar9BlkShSht.gif",
+   "sha256": "b1bf33b3bf5ba1a00fa217d6e5f3a0910f34c01f99f40055b6803167342eb254",
+   "bytes": 39079,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9BlkShSht.gif",
+   "pageUrl": null,
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBPillar9MtlRollBlkdot",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBPillar9MtlRollBlkdot.gif",
+   "sha256": "db7b5bdc96c984852497de9ea4e2d67ef77419cf6665797736cc9161e998a739",
+   "bytes": 39712,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9MtlRollBlkdot.gif",
+   "pageUrl": null,
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBPillar9RollBlkDot",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBPillar9RollBlkDot.gif",
+   "sha256": "7bd31ad9431cd6d386210e3f4f0f1f270bd24b2d99c8279d0eec708216bc3a73",
+   "bytes": 38912,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9RollBlkDot.gif",
+   "pageUrl": null,
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBPillar9SpryBlkMatt",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBPillar9SpryBlkMatt.gif",
+   "sha256": "2df525cd4dc9de648dbc72ef8b0805f5cc87b0e3d2e25e767a068557190fdde5",
+   "bytes": 42568,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBPillar9SpryBlkMatt.gif",
+   "pageUrl": null,
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBRndFrst128SpryShnSl",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBRndFrst128SpryShnSl.gif",
+   "sha256": "d753be95dbdad340808ce96f1ea44e444d3d2b7dbc2b281554aec9f2e75a984d",
+   "bytes": 20876,
+   "pixels": {
+    "width": 360,
+    "height": 480
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRndFrst128SpryShnSl.gif",
+   "pageUrl": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-shiny-silver-spray-and-cap",
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBVBlu1o9BlackCapSht",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBVBlu1o9BlackCapSht.gif",
+   "sha256": "4ed61c67863bb6be86842dd3c5104139e8a4a77439d214a68a7cfaf6f4ad5691",
+   "bytes": 88620,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBVBlu1o9BlackCapSht.gif",
+   "pageUrl": null,
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBVGreen2o4BlackCapSht",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBVGreen2o4BlackCapSht.gif",
+   "sha256": "4001d6be79dc7c055d4a2a55d1cfb9e2b82c4b555c5262874a6fe5b3b4b78322",
+   "bytes": 86431,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBVGreen2o4BlackCapSht.gif",
+   "pageUrl": "https://www.bestbottles.com/product/Vial-design-5-8-dram-green-glass-black-short-cap",
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "GBVGreen2o4WhtCapSht",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/GBVGreen2o4WhtCapSht.gif",
+   "sha256": "f0fbc19723181f7e152038c17a2edc576298c8c1a7abf5b2c7302d6b9aa1034b",
+   "bytes": 79088,
+   "pixels": {
+    "width": 600,
+    "height": 800
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBVGreen2o4WhtCapSht.gif",
+   "pageUrl": "https://www.bestbottles.com/product/Vial-design-5-8-dram-green-glass-white-short-cap",
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "LBRndFrst128LtnClOvrCap",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/LBRndFrst128LtnClOvrCap.gif",
+   "sha256": "0d9cd3fe8b00da0f4de722e401de58ab027d5ff97f6380ccf1c77748c488aaa8",
+   "bytes": 18386,
+   "pixels": {
+    "width": 360,
+    "height": 480
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/LBRndFrst128LtnClOvrCap.gif",
+   "pageUrl": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-clear-over-the-cap-lotion-pump-matte-silver-collar-cap",
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "LBRndFrst128LtnShnSl",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/LBRndFrst128LtnShnSl.gif",
+   "sha256": "b589039388fbe83af637bb31e255f2550c563128c7f0551f43b9a099a35cb025",
+   "bytes": 16833,
+   "pixels": {
+    "width": 360,
+    "height": 480
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/LBRndFrst128LtnShnSl.gif",
+   "pageUrl": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-shiny-silver-lotion-pump-and-cap",
+   "belowPlateCanvas": true
+  },
+  {
+   "sku": "PB1ozSprySl",
+   "file": "data/paper-doll/legacy-recovery-2026-09-18/PB1ozSprySl.gif",
+   "sha256": "2543693be53cb72ce7a393426436afe9f3375a69b0b385f6d72221f92512397c",
+   "bytes": 29408,
+   "pixels": {
+    "width": 350,
+    "height": 450
+   },
+   "sourceUrl": "https://www.bestbottles.com/images/store/enlarged_pics/PB1ozSprySl.gif",
+   "pageUrl": "https://www.bestbottles.com/product/Plastic-bottle-container-clear-Silver-sprayer-1oz",
+   "belowPlateCanvas": true
+  }
+ ],
+ "caveats": {
+  "everyRowIsBelowThePlateCanvas": "all 20 are smaller than 1000x1100, so each becomes a legacy-source plate",
+  "softSources": [
+   "Alu100mlSprayBlack",
+   "Alu500",
+   "CJAmb30BlkCap",
+   "GBRndFrst128SpryShnSl",
+   "LBRndFrst128LtnClOvrCap",
+   "LBRndFrst128LtnShnSl",
+   "PB1ozSprySl"
+  ],
+  "greenBackdrop": [
+   "Alu100mlSprayBlack",
+   "Alu500"
+  ],
+  "catalogueQuestions": [
+   "legacy calls the Pillar bottles 9 ml while their URLs say 5 ml",
+   "Bell sells as 10 ml but the PSD libraries only hold Bell 12 ml"
+  ]
+ },
+ "note": "Approves the recovered SOURCE images by exact bytes, after Jordan reviewed the contact sheet. These 20 bottles have no artwork in the master, BBUAT or original Photoshop libraries under any spelling; bestbottles.com is the client's own site and the lane's completeness authority. Building these into plates, and publishing them, are separate steps that need their own lock and release-specific ship phrase."
+}
