@@ -44,7 +44,7 @@ async function Builder({ familyParam, collection }: { familyParam?: string; coll
     const preferMobile = preferMobileRequest(await headers());
     const entry = await loadBuilderEntry(familyParam, { family: loadBuilderFamily, families: loadBuilderFamilies });
     const bodies = slimBuilderBodies(builderCollectionBodies(entry.bodies, collection));
-    const preloads = preferMobile ? chooserPreloadUrls(bodies) : [];
+    const preloads = chooserPreloadUrls(bodies, 6);
     return <>
         {preloads.map(href => <link key={href} rel="preload" as="image" href={href} />)}
         <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}`} {...entry} bodies={bodies} preferMobile={preferMobile} />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState, type ReactNode } from "react";
+import { useEffect, useId, useRef, useState, type ReactNode } from "react";
 import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import type { BuilderConfiguration, BuilderPart } from "@/lib/bottle-builder/model";
 import { registerVintagePreview } from "@/lib/bottle-builder/preview-registration";
@@ -19,7 +19,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     bodyReference?: BuilderConfiguration;
     /** Relative chooser size; preserves all layer registration and the baseline. */
     scale?: number;
-    /** Slate shimmer until the layer paints — mobile chooser only. */
+    /** Slate shimmer until the layer paints — chooser tiles. */
     placeholder?: boolean;
     /** First-viewport cards start immediately instead of waiting on lazy decode. */
     priority?: boolean;
@@ -50,6 +50,19 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     const [loadState, setLoadState] = useState({ key: urlKey, count: 0 });
     if (loadState.key !== urlKey) setLoadState({ key: urlKey, count: 0 });
     const markLoaded = () => setLoadState(state => state.key === urlKey ? { key: urlKey, count: state.count + 1 } : state);
+    const hostRef = useRef<SVGSVGElement>(null);
+    const canLazy = typeof IntersectionObserver !== "undefined";
+    const [inView, setInView] = useState(priority || !thumbnail || !canLazy);
+    useEffect(() => {
+        if (priority || !thumbnail || inView || !canLazy) return;
+        const node = hostRef.current;
+        if (!node) return;
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry?.isIntersecting) setInView(true);
+        }, { rootMargin: "240px" });
+        observer.observe(node);
+        return () => observer.disconnect();
+    }, [priority, thumbnail, inView, canLazy]);
     const ready = !placeholder || urls.length === 0 || loadState.count >= urls.length || Boolean(failedUrl);
 
     const wrap = (node: ReactNode) => placeholder
@@ -70,9 +83,9 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
     const { x, y, width, height } = previewFrame(registration?.anchors ?? kit.anchors,
         layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
-    return wrap(<svg role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" preserveAspectRatio="xMidYMid meet" style={{ display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: expanded ? "visible" : "hidden" }}>
+    return wrap(<svg ref={hostRef} role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" preserveAspectRatio="xMidYMid meet" style={{ display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: expanded ? "visible" : "hidden" }}>
         <title id={titleId}>{label}</title>
-        {layers.map(({ part, transform }) => <image key={part.slot} href={part.image.url} width={part.image.width} height={part.image.height} transform={transform}
+        {layers.map(({ part, transform }) => <image key={part.slot} href={inView ? part.image.url : undefined} width={part.image.width} height={part.image.height} transform={transform}
             x="0" y="0" style={{ mixBlendMode: (config.color === "Clear" && ["body", "diptube"].includes(part.slot)) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
             onLoad={markLoaded} onError={() => setFailedUrl(part.image.url)} data-builder-layer={part.slot} />)}
     </svg>);

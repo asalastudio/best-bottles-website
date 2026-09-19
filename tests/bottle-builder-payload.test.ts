@@ -80,6 +80,9 @@ describe("builder first-paint payload", () => {
         expect(first!.kit).toBeNull();
         expect(first!.chooserKit?.parts.map(part => part.slot)).toEqual(["body"]);
         expect(first!.chooserKit?.parts[0]!.image.url).toBe("https://example.com/Cylinder50SprayBlack-body.webp");
+        expect(first!.chooserKit?.three).toBeNull();
+        expect(first!.chooserKit?.plateSha256).toBe("");
+        expect(first!.chooserKit?.conflicts).toEqual([]);
         // Only the first configuration of each colour is ever drawn by the chooser.
         expect(second!.chooserKit).toBeUndefined();
         expect(frosted!.chooserKit?.parts.map(part => part.slot)).toEqual(["body"]);
@@ -130,7 +133,13 @@ describe("Build Your Bottle first-paint contract", () => {
         const client = readFileSync("src/components/matrix/MatrixClient.tsx", "utf8");
         expect(server).toMatch(/loadBuilderFamily\s*=\s*unstable_cache/);
         expect(server).toContain("slimBuilderBodies");
+        expect(server).toContain("chooserSourceRows");
+        expect(server).toContain("productKits.forSkus");
+        const familiesFn = server.slice(server.indexOf("export const loadBuilderFamilies"), server.indexOf("async function loadKitsForRows"));
+        expect(familiesFn).not.toContain("loadBuilderFamily(");
         expect(page).toContain("slimBuilderBodies");
+        expect(page).toContain("chooserPreloadUrls(bodies, 6)");
         expect(client).toContain("useBuilderKits");
+        expect(client).toContain("thumbnail placeholder");
     });
 });

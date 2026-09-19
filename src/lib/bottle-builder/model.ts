@@ -283,13 +283,41 @@ export function builderBodyIdentity(row: CatalogRow) {
     return { bodyId: `${profile}|${neck}|${row.category}${distinctShape ? `|${distinctShape}` : ""}`, profileLabel };
 }
 
+/** First-paint chooser only needs one published kit per bottle × glass. */
+export function chooserGroupKey(row: CatalogRow): string {
+    return `${builderBodyIdentity(row).bodyId}|${row.color}`;
+}
+
+/** SKUs whose kits supply the bare-glass tile when no reviewed body image exists. */
+export function chooserSourceRows(rows: CatalogRow[]): CatalogRow[] {
+    const seen = new Set<string>();
+    const picked: CatalogRow[] = [];
+    for (const row of rows) {
+        if (reviewedBodyImage(row)) continue;
+        const key = chooserGroupKey(row);
+        if (seen.has(key)) continue;
+        seen.add(key);
+        picked.push(row);
+    }
+    return picked;
+}
+
 /** Reuse only a validated identical bare bottle/glass for the bottle-selection preview.
- * The selected SKU keeps its own complete assembly; canvases are never mixed. */
-export function resolveBuilderConfigurations(rows: CatalogRow[], kits: (BuilderKit | null)[], plateUrls: (string | null)[] = []) {
+ * The selected SKU keeps its own complete assembly; canvases are never mixed.
+ * `listingProofs` lets first paint list sibling finishes from one chooser kit
+ * without fetching every SKU's layers — the selected bottle's kits still load
+ * after the customer chooses. */
+export function resolveBuilderConfigurations(
+    rows: CatalogRow[],
+    kits: (BuilderKit | null)[],
+    plateUrls: (string | null)[] = [],
+    listingProofs: (BuilderKit | null)[] = [],
+) {
     const full = rows.map((row, i) => configurationFromRow(row, kits[i]));
     return rows.map((row, i) => full[i] ?? full.reduce<BuilderConfiguration | null>((found, preview) =>
         found ?? (preview ? configurationFromRow(row, kits[i], preview) : null), null)
-        ?? catalogConfigurationFromRow(row, null, plateUrls[i] ?? null));
+        ?? catalogConfigurationFromRow(row, null, plateUrls[i] ?? null)
+        ?? (listingProofs[i] ? catalogConfigurationFromRow(row, listingProofs[i], plateUrls[i] ?? null) : null));
 }
 
 const titleCase = (value: string) => value.trim().toLowerCase().replace(/\b[a-z]/g, c => c.toUpperCase());

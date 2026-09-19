@@ -267,15 +267,15 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                     <h2 tabIndex={-1} ref={optionHeading}>{titles[step]}</h2><p>{subtitles[step]}</p></div>
                 <fieldset aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
                 {step === 0 && <div className={styles.bottleGrid}>
-                    {visibleBodies.map(b => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)}>
-                        <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} /></div>
+                    {visibleBodies.map((b, index) => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)}>
+                        <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} thumbnail placeholder priority={index < 4} /></div>
                         <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <small>{b.profileLabel}</small>}<span className={styles.neckBadge}>Neck: {b.neck}</span>
                     </Option>)}
                 </div>}
                 {step === 0 && !visibleBodies.length && <div className={styles.empty}><h3>No bottles for these choices.</h3><p>Try another size or bottle family.</p><button className={styles.secondary} onClick={() => { setSize(""); setNeck(""); setApplication(""); }}>Clear filters</button><Link href={catalogHref}>Explore the full catalog <ArrowRight size={15} /></Link></div>}
                 {step === 0 && body && current.colors.length > 1 && <div className={styles.glassSection}><h3 ref={glassHeading} tabIndex={-1}>Choose your glass color</h3><div className={styles.colorGrid}>
                     {current.colors.map(c => { const example = body!.configurations.find(config => config.color === c)!; return <Option key={c} label={c} selected={color === c} onClick={() => update({ color: c, fitment: null, closure: null })}>
-                        <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} /></div><strong>{c}</strong>
+                        <div className={styles.colorThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
                     </Option>; })}
                 </div></div>}
                 {step === 0 && body && <div className={styles.nextStepHint} role="status">{fitmentReady && <><CheckCircle size={17} /><span>{current.colors.length === 1 ? <>{color} glass, the only glass for this bottle. Select <strong>Choose Fitment</strong> to continue.</> : <>Your bottle is ready. Select <strong>Choose Fitment</strong> to continue.</>}</span></>}</div>}
