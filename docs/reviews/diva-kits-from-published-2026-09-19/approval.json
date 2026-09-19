@@ -1,10 +1,10 @@
 {
  "release": "diva-kits-2026-09-19",
  "ship": "ship Diva kit release 2026-09-19",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:15.008Z",
  "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
- "preparedAt": "2026-09-19T10:16:59.660Z",
+ "preparedAt": "2026-09-19T12:37:15.008Z",
  "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
  "reviewSheet": "/reviews/kit-completion-2026-09-19/diva-kits.jpg",
  "skus": {
@@ -33,5 +33,5 @@
   "LBDiva46LtnShnSl": "0d049f4880de469c21fd15e1aef11ef3c3c7b901b94d6c1013784cb223a3606f"
  },
  "setAside": [],
- "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
 }

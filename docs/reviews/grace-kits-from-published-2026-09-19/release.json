@@ -2,10 +2,13 @@
  "schemaVersion": 1,
  "release": "grace-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/grace",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:17.632Z",
  "shipPhrase": "ship Grace kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 35,
   "approved": 35,
@@ -157,5 +160,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "8a55beb67efdea86d0b024f89691842eac41b9b332ca3de9df136d2bd6c71a6c"
+ "approvalSha256": "3125c7ccb0e46824ebb5d492ff51ce6c2e1c201b06389a8159d7ddf59cf51c3a"
 }

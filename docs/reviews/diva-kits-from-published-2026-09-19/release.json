@@ -2,10 +2,12 @@
  "schemaVersion": 1,
  "release": "diva-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/diva",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:15.008Z",
  "shipPhrase": "ship Diva kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 23,
   "approved": 23,
@@ -109,5 +111,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "65c8e211951a57ad76817c7db5f2025d55efcd905900c33752394535f2ed6eaa"
+ "approvalSha256": "064aed28075ae157004d123359d5299c0811d52132f73ed132308e4103bd3dd5"
 }

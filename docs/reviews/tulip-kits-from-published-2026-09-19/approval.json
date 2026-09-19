@@ -1,10 +1,10 @@
 {
  "release": "tulip-kits-2026-09-19",
  "ship": "ship Tulip kit release 2026-09-19",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:23.934Z",
  "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
- "preparedAt": "2026-09-19T10:17:03.904Z",
+ "preparedAt": "2026-09-19T12:37:23.934Z",
  "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
  "reviewSheet": "/reviews/kit-completion-2026-09-19/tulip-kits.jpg",
  "skus": {
@@ -37,5 +37,5 @@
   "GBTulipAmb5WhtSht": "62e7da7b19b019b8bb06badad6c29cd7595e9db1c6167bc76a031b19afe0efa1"
  },
  "setAside": [],
- "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
 }

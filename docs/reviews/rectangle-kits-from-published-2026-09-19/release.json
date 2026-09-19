@@ -2,10 +2,13 @@
  "schemaVersion": 1,
  "release": "rectangle-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/rectangle",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:18.335Z",
  "shipPhrase": "ship Rectangle kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 29,
   "approved": 29,
@@ -133,5 +136,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "01df0f301751f500591712b187e80aac6296caf7f7f1660e87f932eb6f1dd81c"
+ "approvalSha256": "9231320948cebea156e8bd9bfba427f9ddb4cac707fa6b3323bbb69daf91ba61"
 }
