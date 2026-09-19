@@ -1,0 +1,156 @@
+{
+  "finding": "Circle kit renders are not dimensionally anchored: rendered body width per millimetre spans 5.27-12.32, and a 15 ml bottle renders wider than a 100 ml one.",
+  "status": "diagnosed, not applied",
+  "blockedBy": "Applying these scales requires re-rendering the Circle plates first. The kit builder validates each reassembled kit against the published plate, so a kit-only scale change fails the parity gate by construction.",
+  "targetPxPerMm": 6.0902,
+  "reference": "circle-100ml-clear-18-415",
+  "referenceRationale": "Best-registered file in the family (worstResidual 1.31 across 44 shots) and the largest bottle, so anchoring here keeps canvas fit unchanged.",
+  "millimetreSource": "data/paper-doll/body-dims.csv, major_axis_mm, high or verified confidence with 30-86 live samples per body",
+  "rebuildEvidence": {
+    "builder": "build_paired_psd_kits.py",
+    "result": {
+      "review": 28,
+      "candidate": 13
+    },
+    "interpretation": "All 13 rows left at ratio 1.000 passed parity; all 28 rows with a changed scale failed it, with parity means of 24-123 against a gate of 6/255.",
+    "note": "The rebuild ran against a scratchpad copy and a synthesised published-plate index, because no live plate index covering Circle exists in the artifacts. Originals were not modified."
+  },
+  "rows": [
+    {
+      "registration": ".handoff-artifacts/bestbottles-media-recovery-2026-09-07/Circle/plates/circle-100ml-clear-18-415/_registration-Crcl100.json",
+      "familyId": "circle-100ml-clear-18-415",
+      "body": "Crcl100",
+      "majorAxisMm": 89.0,
+      "renderedBodyPxNow": 542.0,
+      "pxPerMmNow": 6.09,
+      "renderedBodyPxCorrected": 542.0,
+      "scaleNow": 0.437470280551593,
+      "scaleCorrected": 0.43747,
+      "ratio": 1.0,
+      "registrationWorstResidual": 1.31,
+      "rebuildParity": {
+        "passed": 13,
+        "failed": 0
+      }
+    },
+    {
+      "registration": ".handoff-artifacts/bestbottles-media-recovery-2026-09-07/Circle/plates/circle-100ml-frosted-18-415/_registration-CrclFrst100.json",
+      "familyId": "circle-100ml-frosted-18-415",
+      "body": "CrclFrst100",
+      "majorAxisMm": 89.0,
+      "renderedBodyPxNow": 468.1,
+      "pxPerMmNow": 5.259,
+      "renderedBodyPxCorrected": 542.0,
+      "scaleNow": 0.6158599382080329,
+      "scaleCorrected": 0.713174,
+      "ratio": 1.158,
+      "registrationWorstResidual": 11.29,
+      "rebuildParity": {
+        "passed": 0,
+        "failed": 9
+      }
+    },
+    {
+      "registration": ".handoff-artifacts/bestbottles-media-recovery-2026-09-07/Circle/plates/circle-15ml-clear-13-415/_registration-Crcl15.json",
+      "familyId": "circle-15ml-clear-13-415",
+      "body": "Crcl15",
+      "majorAxisMm": 50.0,
+      "renderedBodyPxNow": 615.2,
+      "pxPerMmNow": 12.303,
+      "renderedBodyPxCorrected": 304.5,
+      "scaleNow": 1.0515463917525774,
+      "scaleCorrected": 0.520528,
+      "ratio": 0.495,
+      "registrationWorstResidual": 1.85,
+      "rebuildParity": {
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    {
+      "registration": ".handoff-artifacts/bestbottles-media-recovery-2026-09-07/Circle/plates/circle-30ml-clear-15-415/_registration-Crcl30.json",
+      "familyId": "circle-30ml-clear-15-415",
+      "body": "Crcl30",
+      "majorAxisMm": 60.0,
+      "renderedBodyPxNow": 592.1,
+      "pxPerMmNow": 9.868,
+      "renderedBodyPxCorrected": 365.4,
+      "scaleNow": 0.8374384236453202,
+      "scaleCorrected": 0.516847,
+      "ratio": 0.6172,
+      "registrationWorstResidual": 0.1,
+      "rebuildParity": {
+        "passed": 0,
+        "failed": 5
+      }
+    },
+    {
+      "registration": ".handoff-artifacts/bestbottles-media-recovery-2026-09-07/Circle/plates/circle-30ml-clear-15-415/_registration-Crcl30Gl.json",
+      "familyId": "circle-30ml-clear-15-415",
+      "body": "Crcl30Gl",
+      "majorAxisMm": 60.0,
+      "renderedBodyPxNow": 642.5,
+      "pxPerMmNow": 10.708,
+      "renderedBodyPxCorrected": 365.4,
+      "scaleNow": 0.9099901088031652,
+      "scaleCorrected": 0.517579,
+      "ratio": 0.5688,
+      "registrationWorstResidual": 0.0,
+      "rebuildParity": {
+        "passed": 0,
+        "failed": 1
+      }
+    },
+    {
+      "registration": ".handoff-artifacts/bestbottles-media-recovery-2026-09-07/Circle/plates/circle-30ml-clear-15-415/_registration-Crcl30Sl.json",
+      "familyId": "circle-30ml-clear-15-415",
+      "body": "Crcl30Sl",
+      "majorAxisMm": 60.0,
+      "renderedBodyPxNow": 643.7,
+      "pxPerMmNow": 10.729,
+      "renderedBodyPxCorrected": 365.4,
+      "scaleNow": 0.9117938553022795,
+      "scaleCorrected": 0.517579,
+      "ratio": 0.5676,
+      "registrationWorstResidual": 0.0,
+      "rebuildParity": {
+        "passed": 0,
+        "failed": 1
+      }
+    },
+    {
+      "registration": ".handoff-artifacts/bestbottles-media-recovery-2026-09-07/Circle/plates/circle-50ml-clear-18-415/_registration-Crcl50.json",
+      "familyId": "circle-50ml-clear-18-415",
+      "body": "Crcl50",
+      "majorAxisMm": 72.0,
+      "renderedBodyPxNow": 387.0,
+      "pxPerMmNow": 5.376,
+      "renderedBodyPxCorrected": 438.5,
+      "scaleNow": 0.3870424905342869,
+      "scaleCorrected": 0.438493,
+      "ratio": 1.1329,
+      "registrationWorstResidual": 5.14,
+      "rebuildParity": {
+        "passed": 0,
+        "failed": 12
+      }
+    },
+    {
+      "registration": ".handoff-artifacts/bestbottles-media-recovery-2026-09-07/Circle/plates/circle-50ml-frosted-18-415/_registration-CrclFrst50.json",
+      "familyId": "circle-50ml-frosted-18-415",
+      "body": "CrclFrst50",
+      "majorAxisMm": 72.0,
+      "renderedBodyPxNow": 646.3,
+      "pxPerMmNow": 8.977,
+      "renderedBodyPxCorrected": 438.5,
+      "scaleNow": 0.3873684210526316,
+      "scaleCorrected": 0.262807,
+      "ratio": 0.6784,
+      "registrationWorstResidual": 11.74,
+      "rebuildParity": {
+        "passed": 0,
+        "failed": 0
+      }
+    }
+  ]
+}

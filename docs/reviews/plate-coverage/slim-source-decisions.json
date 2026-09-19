@@ -1,0 +1,1617 @@
+{
+  "family": "Slim",
+  "products": 123,
+  "platesRendered": 19,
+  "blocked": 104,
+  "blockedByCompetingPhotographs": 37,
+  "blockedByUnapprovedSource": 67,
+  "blockedWithNoPsdAtAll": 0,
+  "rows": [
+    {
+      "websiteSku": "LBSlm100LtnCu",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/57. LBSlm100LtnCu.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/58. LBSlm100LtnCu.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/58. LBSlm100LtnCu.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm30SpryShnBlk",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/19. GBSlm30SpryShnBlk.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/21. GBSlm30SpryShnBlk.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/21. GBSlm30SpryShnBlk.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm30SpryMtSl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/23. GBSlm30SpryMtSl.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/24. GBSlm30SpryMtSl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/24. GBSlm30SpryMtSl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm30SpryShnSl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/29. GBSlm30SpryShnSl.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/30. GBSlm30SpryShnSl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/30. GBSlm30SpryShnSl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm50AnSpPnk",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/34. GBSlm50AnSpPnk.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30SpryShnGl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/15. GBSlm30SpryShnGl.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/17. GBSlm30SpryShnGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/17. GBSlm30SpryShnGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm50AnSpGl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/37. GBSlm50AnSpGl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30SpryMtGl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/11. GBSlm30SpryMtGl.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/13. GBSlm30SpryMtGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/11. GBSlm30SpryMtGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm50AnSpLvn",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/33. GBSlm50AnSpLvn.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50AnSpIvyGl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/38. GBSlm50AnSpIvyGl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50AnSpRed",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/41. GBSlm50AnSpRed.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50AnSpMtSl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/35. GBSlm50AnSpMtSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50AnSpWht",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/40. GBSlm50AnSpWht.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50AnSpIvySl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/36. GBSlm50AnSpIvySl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslGl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/50. GBSlm50AnSpTslGl.psd",
+        "21. Tassels/Updated Tassels/50. GBSlm50AnSpTslGl.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslIvyGl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/43. GBSlm50AnSpTslIvyGl.psd",
+        "21. Tassels/Updated Tassels/43. GBSlm50AnSpTslIvyGl.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslLvn",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/42. GBSlm50AnSpTslLvn.psd",
+        "21. Tassels/Updated Tassels/42. GBSlm50AnSpTslLvn.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslPnk",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/46. GBSlm50AnSpTslPnk.psd",
+        "21. Tassels/Updated Tassels/46. GBSlm50AnSpTslPnk.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslIvySl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/44. GBSlm50AnSpTslIvySl.psd",
+        "21. Tassels/Updated Tassels/44. GBSlm50AnSpTslIvySl.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslRed",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/47. GBSlm50AnSpTslRed.psd",
+        "21. Tassels/Updated Tassels/47. GBSlm50AnSpTslRed.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslWht",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/45. GBSlm50AnSpTslWht.psd",
+        "21. Tassels/Updated Tassels/45. GBSlm50AnSpTslWht.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslMtSl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/49. GBSlm50AnSpTslMtSl.psd",
+        "21. Tassels/Updated Tassels/49. GBSlm50AnSpTslMtSl.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm50SpryShnGl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/15. GBSlm50SpryShnGl.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/17. GBSlm50SpryShnGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/17. GBSlm50SpryShnGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm50SpryShnSl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/29. GBSlm50SpryShnSl.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/30. GBSlm50SpryShnSl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/30. GBSlm50SpryShnSl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm50SpryMtSl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/23. GBSlm50SpryMtSl.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/24. GBSlm50SpryMtSl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/24. GBSlm50SpryMtSl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm50SpryShnBlk",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/19. GBSlm50SpryShnBlk.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/21. GBSlm50SpryShnBlk.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/21. GBSlm50SpryShnBlk.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm50SpryMtGl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/11. GBSlm50SpryMtGl.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/13. GBSlm50SpryMtGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/11. GBSlm50SpryMtGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm30DrpSl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/42. GBSlm30DrpSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30SpryCu",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/47. GBSlm30SpryCu.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/48. GBSlm30SpryCu.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/48. GBSlm30SpryCu.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm30DrpGl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/43. GBSlm30DrpGl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50SpryCu",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/53. GBSlm50SpryCu.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/54. GBSlm50SpryCu.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/54. GBSlm50SpryCu.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm100SpryCu",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/55. GBSlm100SpryCu.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/56. GBSlm100SpryCu.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/56. GBSlm100SpryCu.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm30RdcrBlkLthr",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/4. GBSlm30RdcrBlkLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrIvyLthr",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/54. GBSlm100RdcrIvyLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrPnkLthr",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/53. GBSlm100RdcrPnkLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrShnGl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/1. GBSlm100RdcrShnGl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrShnBlkTall",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/2. GBSlm100RdcrShnBlkTall.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30AnSpBlk",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/39. GBSlm30AnSpBlk.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrShnBlk",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/3. GBSlm100RdcrShnBlk.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrBlkLthr",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/4. GBSlm50RdcrBlkLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrBrwnLthr",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/5. GBSlm100RdcrBrwnLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrLBrwnLthr",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/6. GBSlm100RdcrLBrwnLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrShnSl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/7. GBSlm100RdcrShnSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrMtSlTall",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/8. GBSlm100RdcrMtSlTall.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrMtSl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/9. GBSlm100RdcrMtSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrWht",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/10. GBSlm100RdcrWht.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100RdcrBlkLthr",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/4. GBSlm100RdcrBlkLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50AnSpBlk",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/39. GBSlm50AnSpBlk.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslBlk",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/48. GBSlm50AnSpTslBlk.psd",
+        "21. Tassels/Updated Tassels/48. GBSlm50AnSpTslBlk.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm100SpryShnSl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/29. GBSlm100SpryShnSl.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/30. GBSlm100SpryShnSl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/30. GBSlm100SpryShnSl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm100SpryShnGl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/15. GBSlm100SpryShnGl.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/17. GBSlm100SpryShnGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/17. GBSlm100SpryShnGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm100SpryMtSl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/23. GBSlm100SpryMtSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100SpryMtGl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/11. GBSlm100SpryMtGl.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/13. GBSlm100SpryMtGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/11. GBSlm100SpryMtGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm100SpryShnBlk",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/19. GBSlm100SpryShnBlk.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/21. GBSlm100SpryShnBlk.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/21. GBSlm100SpryShnBlk.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm30RdcrShnGl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/1. GBSlm30RdcrShnGl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30RdcrShnBlkTall",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/2. GBSlm30RdcrShnBlkTall.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30RdcrShnBlk",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/3. GBSlm30RdcrShnBlk.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30RdcrBrwnLthr",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/5. GBSlm30RdcrBrwnLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30RdcrLBrwnLthr",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/6. GBSlm30RdcrLBrwnLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30RdcrShnSl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/7. GBSlm30RdcrShnSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30RdcrMtSlTall",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/8. GBSlm30RdcrMtSlTall.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpBlk",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/39. GBSlm100AnSpBlk.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30RdcrMtSl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/9. GBSlm30RdcrMtSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslBlk",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/48. GBSlm100AnSpTslBlk.psd",
+        "21. Tassels/Updated Tassels/48. GBSlm100AnSpTslBlk.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm30RdcrWht",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/10. GBSlm30RdcrWht.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30RdcrPnkLthr",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/45. GBSlm30RdcrPnkLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30RdcrIvyLthr",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/46. GBSlm30RdcrIvyLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "LBSlm30LtnShnBlk",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/20. LBSlm30LtnShnBlk.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/22. LBSlm30LtnShnBlk.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/22. LBSlm30LtnShnBlk.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm30LtnShnGl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/16. LBSlm30LtnShnGl.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/18. LBSlm30LtnShnGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/18. LBSlm30LtnShnGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm30LtnMtSl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/25. LBSlm30LtnMtSl.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/26. LBSlm30LtnMtSl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/26. LBSlm30LtnMtSl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm30LtnMtGl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/12. LBSlm30LtnMtGl.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/14. LBSlm30LtnMtGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/12. LBSlm30LtnMtGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm30LtnShnSl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/31. LBSlm30LtnShnSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "LBSlm30LtnCu",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/49. LBSlm30LtnCu.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/50. LBSlm30LtnCu.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/50. LBSlm30LtnCu.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm30AnSpLvn",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/33. GBSlm30AnSpLvn.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30AnSpPnk",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/34. GBSlm30AnSpPnk.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30AnSpMtSl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/35. GBSlm30AnSpMtSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30AnSpIvySl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/36. GBSlm30AnSpIvySl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30AnSpGl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/37. GBSlm30AnSpGl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30AnSpIvyGl",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/38. GBSlm30AnSpIvyGl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30AnSpWht",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/40. GBSlm30AnSpWht.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30AnSpRed",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/41. GBSlm30AnSpRed.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "LBSlm50LtnShnBlk",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/20. LBSlm50LtnShnBlk.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/22. LBSlm50LtnShnBlk.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/22. LBSlm50LtnShnBlk.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm50LtnShnGl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/16. LBSlm50LtnShnGl.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/18. LBSlm50LtnShnGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/18. LBSlm50LtnShnGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm50LtnShnSl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/31. LBSlm50LtnShnSl.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/32. LBSlm50LtnShnSl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/32. LBSlm50LtnShnSl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm50LtnMtGl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/12. LBSlm50LtnMtGl.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/14. LBSlm50LtnMtGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/12. LBSlm50LtnMtGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm50LtnMtSl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/25. LBSlm50LtnMtSl.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/26. LBSlm50LtnMtSl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/26. LBSlm50LtnMtSl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm50LtnCu",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/55. LBSlm50LtnCu.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/56. LBSlm50LtnCu.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/56. LBSlm50LtnCu.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "GBSlm50RdcrIvyLthr",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/52. GBSlm50RdcrIvyLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrPnkLthr",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/51. GBSlm50RdcrPnkLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrShnGl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/1. GBSlm50RdcrShnGl..psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrShnBlkTall",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/2. GBSlm50RdcrShnBlkTall.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrShnBlk",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/3. GBSlm50RdcrShnBlk.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrBrwnLthr",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/5. GBSlm50RdcrBrwnLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrLBrwnLthr",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/6. GBSlm50RdcrLBrwnLthr.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrShnSl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/7. GBSlm50RdcrShnSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrMtSlTall",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/8. GBSlm50RdcrMtSlTall.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrMtSl",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/9. GBSlm50RdcrMtSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm50RdcrWht",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/10. GBSlm50RdcrWht.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm30DrpCu",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/44. GBSlm30DrpCu.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpPnk",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/34. GBSlm100AnSpPnk.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpIvyGl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/38. GBSlm100AnSpIvyGl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpLvn",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/33. GBSlm100AnSpLvn.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpGl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/37. GBSlm100AnSpGl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpIvySl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/36. GBSlm100AnSpIvySl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpRed",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/41. GBSlm100AnSpRed.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpMtSl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/35. GBSlm100AnSpMtSl.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpWht",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "source_preflight:no approved capped/front source"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/40. GBSlm100AnSpWht.psd"
+      ],
+      "candidateCount": 1
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslPnk",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/46. GBSlm100AnSpTslPnk.psd",
+        "21. Tassels/Updated Tassels/46. GBSlm100AnSpTslPnk.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslGl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/50. GBSlm100AnSpTslGl.psd",
+        "21. Tassels/Updated Tassels/50. GBSlm100AnSpTslGl.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslIvyGl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/43. GBSlm100AnSpTslIvyGl.psd",
+        "21. Tassels/Updated Tassels/43. GBSlm100AnSpTslIvyGl.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslIvySl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/44. GBSlm100AnSpTslIvySl.psd",
+        "21. Tassels/Updated Tassels/44. GBSlm100AnSpTslIvySl.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslLvn",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/42. GBSlm100AnSpTslLvn.psd",
+        "21. Tassels/Updated Tassels/42. GBSlm100AnSpTslLvn.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslRed",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/47. GBSlm100AnSpTslRed.psd",
+        "21. Tassels/Updated Tassels/47. GBSlm100AnSpTslRed.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslWht",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/45. GBSlm100AnSpTslWht.psd",
+        "21. Tassels/Updated Tassels/45. GBSlm100AnSpTslWht.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslMtSl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": true,
+      "blockReasons": [],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/49. GBSlm100AnSpTslMtSl.psd",
+        "21. Tassels/Updated Tassels/49. GBSlm100AnSpTslMtSl.psd"
+      ],
+      "candidateCount": 2
+    },
+    {
+      "websiteSku": "LBSlm30LtnClOvrCap",
+      "familyId": "slim-30ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/27. LBSlm30LtnClOvrCap.psd",
+        "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/28. LBSlm30LtnClOvrCap.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/14.  30 Slim, Ltn & Spry, capped/28. LBSlm30LtnClOvrCap.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm50LtnClOvrCap",
+      "familyId": "slim-50ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/27. LBSlm50LtnClOvrCap.psd",
+        "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/28. LBSlm50LtnClOvrCap.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/15.  50 Slim, Ltn & Spry, capped/28. LBSlm50LtnClOvrCap.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm100LtnShnSl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/31. LBSlm100LtnShnSl.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/32. LBSlm100LtnShnSl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/32. LBSlm100LtnShnSl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm100LtnShnGl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/16. LBSlm100LtnShnGl.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/18. LBSlm100LtnShnGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/18. LBSlm100LtnShnGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm100LtnShnBlk",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/20. LBSlm100LtnShnBlk.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/22. LBSlm100LtnShnBlk.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/22. LBSlm100LtnShnBlk.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm100LtnMtGl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/12. LBSlm100LtnMtGl.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/14. LBSlm100LtnMtGl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/12. LBSlm100LtnMtGl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm100LtnMtSl",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/25. LBSlm100LtnMtSl.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/26. LBSlm100LtnMtSl.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/26. LBSlm100LtnMtSl.psd"
+      ],
+      "candidateCount": 3
+    },
+    {
+      "websiteSku": "LBSlm100MtSlClOvrCap",
+      "familyId": "slim-100ml-clear-18-415",
+      "publishable": false,
+      "blockReasons": [
+        "SAME_STEM_DIFFERENT_PHOTOGRAPH"
+      ],
+      "candidateSources": [
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/27. LBSlm100MtSlClOvrCap.psd",
+        "2.  18-415 Bottles /16. Slim 100ml/1. Slim 100 PSD/28. LBSlm100MtSlClOvrCap.psd",
+        "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/16.  100 Slim, Ltn & Spry, capped/28. LBSlm100MtSlClOvrCap.psd"
+      ],
+      "candidateCount": 3
+    }
+  ],
+  "competingSourceAnalysis": {
+    "stemsWithCompetingFiles": 55,
+    "allFilesAreDistinct": true,
+    "note": "No two competing files are byte-identical, so none can be deduplicated away.",
+    "patternA": {
+      "stems": 37,
+      "shape": "Two role=front files at different ordinals in the family folder, plus one role=capped capState=on file in '31. Capped & Uncapped'.",
+      "reading": "The capped file is the unambiguous capped front the plate needs. The ambiguity is only between the two unlabelled family-folder files.",
+      "skus": [
+        "gbslm100sprycu",
+        "gbslm100sprymtgl",
+        "gbslm100spryshnblk",
+        "gbslm100spryshngl",
+        "gbslm100spryshnsl",
+        "gbslm30sprycu",
+        "gbslm30sprymtgl",
+        "gbslm30sprymtsl",
+        "gbslm30spryshnblk",
+        "gbslm30spryshngl",
+        "gbslm30spryshnsl",
+        "gbslm50sprycu",
+        "gbslm50sprymtgl",
+        "gbslm50sprymtsl",
+        "gbslm50spryshnblk",
+        "gbslm50spryshngl",
+        "gbslm50spryshnsl",
+        "lbslm100ltncu",
+        "lbslm100ltnmtgl",
+        "lbslm100ltnmtsl",
+        "lbslm100ltnshnblk",
+        "lbslm100ltnshngl",
+        "lbslm100ltnshnsl",
+        "lbslm100mtslclovrcap",
+        "lbslm30ltnclovrcap",
+        "lbslm30ltncu",
+        "lbslm30ltnmtgl",
+        "lbslm30ltnmtsl",
+        "lbslm30ltnshnblk",
+        "lbslm30ltnshngl",
+        "lbslm50ltnclovrcap",
+        "lbslm50ltncu",
+        "lbslm50ltnmtgl",
+        "lbslm50ltnmtsl",
+        "lbslm50ltnshnblk",
+        "lbslm50ltnshngl",
+        "lbslm50ltnshnsl"
+      ]
+    },
+    "patternB": {
+      "stems": 18,
+      "shape": "One role=front file in the family folder, plus one file in '21. Tassels/Updated Tassels' classified role=component.",
+      "reading": "Rendered, both files are complete bottle-plus-tassel assemblies, so the component label on the Updated Tassels file looks wrong. Worth confirming before either is chosen as the front.",
+      "skus": [
+        "gbslm100ansptslblk",
+        "gbslm100ansptslgl",
+        "gbslm100ansptslivygl",
+        "gbslm100ansptslivysl",
+        "gbslm100ansptsllvn",
+        "gbslm100ansptslmtsl",
+        "gbslm100ansptslpnk",
+        "gbslm100ansptslred",
+        "gbslm100ansptslwht",
+        "gbslm50ansptslblk",
+        "gbslm50ansptslgl",
+        "gbslm50ansptslivygl",
+        "gbslm50ansptslivysl",
+        "gbslm50ansptsllvn",
+        "gbslm50ansptslmtsl",
+        "gbslm50ansptslpnk",
+        "gbslm50ansptslred",
+        "gbslm50ansptslwht"
+      ]
+    }
+  },
+  "conclusion": "Every Slim gap is a source-classification decision, not a missing asset: 215 PSDs cover all 123 products and no blocked row lacks a PSD. Resolving the two patterns above is what unblocks the family, not new photography.",
+  "decisionSheets": "55 side-by-side renders were produced during this investigation; they are previews, not committed assets."
+}
