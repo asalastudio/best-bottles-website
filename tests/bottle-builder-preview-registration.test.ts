@@ -29,6 +29,16 @@ describe('vintage bottle registration', () => {
             expect(JSON.stringify(source)).toBe(before);
         }
     });
+    it('reports the ground from the selected kit, not from the reference kit\'s own anchor', () => {
+        // Empire 100 ml, 2026-09-20: the fixed body came from a kit recording baselineY 979 while its
+        // glass ends at 1060. A sidecar overcap stood on 979 floated 80 px above the ground.
+        const reference = config('bare', 400, 200, 800);
+        reference.kit!.anchors.baselineY = 919;                 // wrong by 81 px; bounds.bottom is 1000
+        const source = config('sprayer', 516);                  // own baseline = own glass bottom (980)
+        const result = registerVintagePreview(source, source.kit!.parts, reference)!;
+        expect(result.anchors.baselineY).toBe(919);
+        expect(result.groundY).toBeCloseTo(reference.kit!.parts[0].bounds.bottom);
+    });
     it('does not borrow glass across physical bottles, glass types or unseparated kits', () => {
         const source = config('black', 516);
         const reference = config('bare', 400);

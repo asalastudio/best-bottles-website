@@ -38,7 +38,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     // 2026-09-16). Display only: the assembled registration is untouched.
     if (kit && !thumbnail && !showCover && stage !== "body" && layers.some(l => l.part.slot === "overcap") && layers.some(l => !["body", "overcap", "diptube"].includes(l.part.slot))) {
         const body = layers.find(l => l.part.slot === "body");
-        const baseline = registration?.anchors.baselineY ?? kit.anchors.baselineY;
+        const baseline = registration?.groundY ?? kit.anchors.baselineY;
         layers = layers.map(l => {
             if (l.part.slot !== "overcap" || !body) return l;
             const gap = Math.max(18, (body.bounds.right - body.bounds.left) * .08);

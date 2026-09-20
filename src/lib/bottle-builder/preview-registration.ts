@@ -82,6 +82,11 @@ export function registerVintagePreview(
     const y = target.bottom - source.bottom * scale;
     return {
         anchors: { ...referenceKit.anchors, axisX: (target.left + target.right) / 2 },
+        // Where the glass stands, read from the SELECTED kit and carried through the
+        // same registration as its parts. The reference kit's own baselineY is not
+        // trustworthy for this: the 2026-09-16 Empire kits all record 979 while their
+        // glass ends at 1060, which stood a sidecar overcap 80 px above the ground.
+        groundY: config.kit.anchors.baselineY * scale + y,
         layers: parts.map(part => part.slot === "body"
             ? { part: fixedBody, bounds: fixedBody.bounds, transform: undefined }
             : { part, bounds: { left: part.bounds.left * scale + x, top: part.bounds.top * scale + y,
