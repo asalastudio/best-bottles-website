@@ -1,0 +1,56 @@
+{
+ "Empire|100|Clear|18-415": {
+  "part": {
+   "slot": "body",
+   "zOrder": 0,
+   "bounds": {
+    "left": 437,
+    "top": 255,
+    "right": 822,
+    "bottom": 1077
+   },
+   "image": {
+    "url": "/images/bottle-builder/bodies/canonical/empire-100-clear-18-415.69f01c29b071.webp",
+    "width": 1000,
+    "height": 1100,
+    "sha256": "69f01c29b071fed79476ce06aa1ae38245fb154686027c660421f3c3a5e1c10f"
+   }
+  },
+  "anchors": {
+   "axisX": 500,
+   "neckAxisX": 500,
+   "seatY": 937,
+   "baselineY": 979,
+   "pxPerMm": null
+  },
+  "groundY": 1060,
+  "registeredTo": {
+   "sku": "GBEmp100AnSpBlk",
+   "bodyBounds": {
+    "left": 437,
+    "top": 244,
+    "right": 822,
+    "bottom": 1077
+   },
+   "bodySha256": "78ec1da96b4b0b9a0ba8ce7376f88ed9114328e482fb73339ba3194ee7dee501"
+  },
+  "source": {
+   "retouchedPsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BBUAT-Upload-Files/1. PSD Uncapped /2.  18-415 Bottles /22. Empire Bottle 100ml/1. Empire 100ml PSD/No_Reducer/1. GBEmp100RdcrShnGl.psd",
+   "retouchedSha256": "fe2a70f51a1b490a40c5de7c2b44c6d79787b8cc7179a7f081daeb665e6eda32",
+   "masterPsd": "2.  18-415 Bottles /22. Empire Bottle 100ml/1. Empire 100ml PSD/1. GBEmp100RdcrShnGl.psd",
+   "masterSha256": "e354bf8bc6864c8f25625c2f6a535dff8f49a573db3c9112cf1ed39c5b19b2e5",
+   "glassLayerIdenticalToMaster": true,
+   "eraserLayers": [
+    "Remove tool edits"
+   ],
+   "glassPixelsErased": 3829,
+   "note": "Retouched file lives in BBUAT-Upload-Files; file it under BB-PSD-Files-Master to make it master truth."
+  },
+  "gate": {
+   "transparentFraction": 0.7672,
+   "semiTransparentPixels": 9511,
+   "touchesOwnEdge": false
+  },
+  "status": "candidate \u2014 awaiting Jordan's approval"
+ }
+}

@@ -1,4 +1,16 @@
 import type { BuilderConfiguration, BuilderPart } from "./model";
+import canonicalBodies from "./canonical-bodies.generated.json";
+
+type CanonicalBody = { part: Pick<BuilderPart, "slot" | "zOrder" | "bounds"> & { image: { url: string; width: number; height: number; sha256: string } };
+    anchors: { axisX: number; seatY: number; baselineY: number }; groundY: number };
+
+/** One fixed bare-glass body for a physical bottle, when one has been made. Every Empire master
+ * photographs the glass with the orifice reducer in its neck, so every kit body shows a plug in
+ * an "empty" bottle; Jordan's retouched glass (2026-09-20) replaces it for the 100 ml. It stands
+ * exactly where the builder's reference body stood, so fitments register as they did. Display only. */
+export function canonicalBody(config: Pick<BuilderConfiguration, "family" | "capacityMl" | "color" | "neck">): CanonicalBody | null {
+    return (canonicalBodies as Record<string, CanonicalBody>)[`${config.family}|${config.capacityMl}|${config.color}|${config.neck}`] ?? null;
+}
 
 type Bounds = { left: number; top: number; right: number; bottom: number };
 export type PreviewLayer = { part: BuilderPart; bounds: Bounds; transform?: string };
@@ -61,6 +73,26 @@ export function registerVintagePreview(
     parts: BuilderPart[],
     reference?: BuilderConfiguration,
 ) {
+    const canonical = canonicalBody(config);
+    if (canonical) {
+        const own = parts.find(part => part.slot === "body");
+        if (!own || (config.kit ?? config.previewKit ?? config.chooserKit)?.completeness !== "full") return null;
+        const fixed = canonical.part as BuilderPart;
+        const width = own.bounds.right - own.bounds.left;
+        if (width <= 0) return null;
+        const scale = (fixed.bounds.right - fixed.bounds.left) / width;
+        const x = (fixed.bounds.left + fixed.bounds.right - (own.bounds.left + own.bounds.right) * scale) / 2;
+        const y = fixed.bounds.bottom - own.bounds.bottom * scale;
+        return {
+            anchors: { ...canonical.anchors, axisX: (fixed.bounds.left + fixed.bounds.right) / 2 },
+            groundY: canonical.groundY,                      // measured on the glass itself
+            layers: parts.map(part => part.slot === "body"
+                ? { part: fixed, bounds: fixed.bounds, transform: undefined }
+                : { part, bounds: { left: part.bounds.left * scale + x, top: part.bounds.top * scale + y,
+                    right: part.bounds.right * scale + x, bottom: part.bounds.bottom * scale + y },
+                    transform: `translate(${x} ${y}) scale(${scale})` }),
+        };
+    }
     const referenceKit = reference?.previewKit ?? reference?.kit;
     if (!reference || config.id === reference.id
         || config.bodyId !== reference.bodyId || config.family !== reference.family

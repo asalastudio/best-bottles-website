@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { neckSeatY, registerVintagePreview, seatPreviewLayers } from '@/lib/bottle-builder/preview-registration';
+import { canonicalBody, neckSeatY, registerVintagePreview, seatPreviewLayers } from '@/lib/bottle-builder/preview-registration';
 import type { BuilderConfiguration, BuilderKit, BuilderPart } from '@/lib/bottle-builder/model';
 
 function config(id: string, left: number, top = 235, height = 745): BuilderConfiguration {
@@ -38,6 +38,23 @@ describe('vintage bottle registration', () => {
         const result = registerVintagePreview(source, source.kit!.parts, reference)!;
         expect(result.anchors.baselineY).toBe(919);
         expect(result.groundY).toBeCloseTo(reference.kit!.parts[0].bounds.bottom);
+    });
+    it('holds the one fixed body for a bottle that has one, even for the reference itself and with no reference', () => {
+        // Empire 100 ml, 2026-09-20: every kit body carries the orifice reducer in its neck.
+        const fixed = canonicalBody({ family: 'Empire', capacityMl: 100, color: 'Clear', neck: '18-415' })!;
+        expect(fixed.part.image.url).toMatch(/^\/images\/bottle-builder\/bodies\/canonical\/empire-100-clear-18-415\.[0-9a-f]{12}\.webp$/);
+        expect(fixed.part.bounds.top).toBeGreaterThan(fixed.anchors.seatY - 700);
+        const source = { ...config('pump', 324, 247, 830), family: 'Empire', capacityMl: 100 } as BuilderConfiguration;
+        const result = registerVintagePreview(source, source.kit!.parts)!;
+        expect(result.layers[0].part).toBe(fixed.part);
+        expect(result.layers[0].transform).toBeUndefined();
+        expect(result.groundY).toBe(fixed.groundY);
+        const [x, y, scale] = result.layers[1].transform!.match(/-?\d+(?:\.\d+)?(?:e[+-]?\d+)?/g)!.map(Number);
+        const own = source.kit!.parts[0].bounds;
+        expect((own.left + own.right) / 2 * scale + x).toBeCloseTo((fixed.part.bounds.left + fixed.part.bounds.right) / 2);
+        expect(own.bottom * scale + y).toBeCloseTo(fixed.part.bounds.bottom);
+        // a bottle without one is untouched
+        expect(canonicalBody({ family: 'Cylinder', capacityMl: 50, color: 'Clear', neck: '18-415' })).toBeNull();
     });
     it('does not borrow glass across physical bottles, glass types or unseparated kits', () => {
         const source = config('black', 516);
