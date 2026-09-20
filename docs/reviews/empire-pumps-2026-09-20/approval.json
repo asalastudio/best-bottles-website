@@ -1,10 +1,10 @@
 {
  "release": "empire-pumps-2026-09-20",
  "ship": "ship Empire exposed pumps 2026-09-20",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter · in chat 2026-09-20: \"looks good now  ship Empire exposed pumps 2026-09-20\"",
+ "approvedAt": "2026-09-20T16:52:32.286Z",
  "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
- "preparedAt": "2026-09-20T06:18:26.851Z",
+ "preparedAt": "2026-09-20T16:52:32.290Z",
  "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
  "reviewSheet": "public/reviews/builder-review-2026-09-19/empire50-pump-kits-before-after.jpg + empire100-pump-kits-before-after.jpg",
  "skus": {
@@ -22,5 +22,5 @@
   "GBEmp50SpryShnSl": "54d63addf5d68072c43aae8de2dadfba1f0261bf3103c199233ac6826ca5d7b5"
  },
  "setAside": [],
- "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
 }

@@ -2,10 +2,12 @@
  "schemaVersion": 1,
  "release": "empire-pumps-2026-09-20",
  "batch": "dist/paper-doll/empire-pumps-2026-09-20",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter · in chat 2026-09-20: \"looks good now  ship Empire exposed pumps 2026-09-20\"",
+ "approvedAt": "2026-09-20T16:52:32.286Z",
  "shipPhrase": "ship Empire exposed pumps 2026-09-20",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 12,
   "approved": 12,
@@ -65,5 +67,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "44385395955242e13b86331aa6022156d8ee596069e371f45fcfd295e77ebba1"
+ "approvalSha256": "8c8d0534429ffa88d40fc0a4f8cccf544fad0a5248333b7a7ff334a600fa99bb"
 }

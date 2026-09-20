@@ -481,7 +481,7 @@ Tell him, briefly: you have read the handoff; you will first prove the oversized
 the Empire 50 ml with a sheet and numbers; nothing will be published; and you'll show him before wiring it into
 the local builder. Then do exactly that.
 
-## 0e. Empire sprayer kits rebuilt with exposed pumps — PREPARED, not published (2026-09-20)
+## 0e. Empire sprayer kits rebuilt with exposed pumps — PUBLISHED to prod 2026-09-20 (Jordan's ship phrase; 12 rows updated, forSku verified)
 
 Eleven of the twelve Empire perfume-sprayer kits had no pump part at all: the capped PSD shows only the
 cover, so the extractor filed the cover as `sprayer` (and, at 50 ml, the dip tube as `overcap`).
