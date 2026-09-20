@@ -261,7 +261,10 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const viewMode = coerceMobileViewMode(picker.viewMode, viewCaps);
 
     const plateUrlFor = (view: ProductViewMode): string | null => {
-        const wanted = view === "capOff" && shownPlate?.imageCapOff ? shownPlate.imageCapOff : shownPlate?.image ?? null;
+        const kitCapOff = view === "capOff" && kitHasRemovableCap(shownKit);
+        const wanted = !kitCapOff && view === "capOff" && shownPlate?.imageCapOff
+            ? shownPlate.imageCapOff
+            : shownPlate?.image ?? null;
         return wanted && !brokenPlates.has(wanted) ? wanted : null;
     };
     const decodedPlate = useDecodedPlate(plateUrlFor(viewMode), markPlateBroken);
@@ -531,7 +534,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             <MobileProductHero
                 ref={heroRef}
                 plateUrl={decodedPlate.url}
-                kitParts={pilot ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
+                kitParts={pilot || (viewMode === "capOff" && kitPartsWithCap) ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
                 fallbackImageUrl={decodedPlate.url ? null : fallbackImageUrl}
                 alt={`${displayName}${previewingLabel ? ` — previewing ${previewingLabel}` : ""}`}
                 backHref={backHref}
@@ -542,6 +545,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 overlay={null}
                 family={group.family}
                 capacityMl={group.capacityMl ?? capacityMlFromSlug(slug)}
+                color={group.color}
                 view={viewMode === "capOff" ? "capOff" : "assembled"}
             />
 
@@ -673,13 +677,14 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 viewModes={viewModes}
                 onViewModeChange={changeViewerView}
                 plateUrl={viewerPlate.url}
-                kitParts={pilot ? viewerKitParts : viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
+                kitParts={pilot || (viewerMode === "capOff" && viewerKitParts) ? viewerKitParts : viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
                 fallbackImageUrl={viewerPlate.url ? null : fallbackImageUrl}
                 alt={displayName}
                 onPlateError={markPlateBroken}
                 onRestoreFocus={restoreViewerFocus}
                 family={group.family}
                 capacityMl={group.capacityMl ?? capacityMlFromSlug(slug)}
+                color={group.color}
             />
 
             {/* ── the picker ───────────────────────────────────────────────── */}

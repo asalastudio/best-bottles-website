@@ -37,11 +37,12 @@ type MobileProductHeroProps = {
     overlay?: ReactNode;
     family?: string | null;
     capacityMl?: number | null;
+    color?: string | null;
     view?: "assembled" | "capOff";
 };
 
 const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(function MobileProductHero(
-    { plateUrl, kitParts, fallbackImageUrl, alt, backHref, cartCount, onOpenCart, onPlateError, onViewLarger, overlay, family, capacityMl, view },
+    { plateUrl, kitParts, fallbackImageUrl, alt, backHref, cartCount, onOpenCart, onPlateError, onViewLarger, overlay, family, capacityMl, color, view },
     ref,
 ) {
     // Match the empty server badge before showing a restored cart during hydration.
@@ -101,7 +102,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                 style={{ aspectRatio: "10 / 11", width: "min(100%, calc(42svh * 10 / 11))" }}
             >
                 {hasStack ? (
-                    <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} family={family} capacityMl={capacityMl} view={view} />
+                    <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} family={family} capacityMl={capacityMl} color={color} view={view} />
                 ) : fallbackImageUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={fallbackImageUrl} alt={alt} className="absolute inset-0 h-full w-full object-contain object-center" />

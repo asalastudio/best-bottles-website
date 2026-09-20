@@ -1,39 +1,30 @@
 /**
- * PDP stage framing — capacity scale + fit-to-canvas for plates and kits.
+ * PDP stage framing — capacity standard + fit-to-canvas for plates and kits.
  *
- * Published Circle 15 ml plates occupy the same ~61% mid-body width as Circle
- * 30 ml on the 1000×1100 canvas (audit 2026-09-20). CAP OFF kit/plate layouts
- * place a full-size bottle plus a detached cap and clip the 10:11 stage.
+ * Circle (and the inversion families) lock mid-body width and glass height in
+ * `data/asset-ledger/pdp-capacity-standards.json`, the PDP counterpart of
+ * Boston Round's hero `bottle-standards.json`. Paint-time scale enforces the
+ * lock on published plates until those plates are re-exported.
  *
- * Circle 15 ml hero framing was approved at scale 0.775 vs 30 ml at 1.0
- * (`docs/reviews/circle-family-final-manifest-2026-09-06.json`). Apply that
- * scale at paint time so 15 ml is clearly smaller and both CAP ON and CAP OFF
- * keep safe margins. Kit part bounds, when present, also shrink-to-fit.
- *
- * Baking the scale into pixels still needs a plate republish. Until a Circle
- * glass standard is locked in `data/asset-ledger/bottle-standards.json`:
- *
- *   python3 scripts/paperdoll/family_batch.py --family circle --catalog SNAPSHOT --out BATCH --stage plates
- *   python3 scripts/paperdoll/build_master_kits.py --batch BATCH
- *
- * Target: 15 ml mid-body width materially below 30 ml; fillH ≤ 88%; any
- * margin ≥ 4% on the 10:11 stage.
+ * CAP OFF never grows the bottle past the locked glass size. A beside-cap
+ * composition may shrink further to keep a 4% margin.
  */
 
-type PartBounds = { bounds: { left: number; top: number; right: number; bottom: number } };
+import {
+    PDP_CAP_OFF_FIT_SCALE,
+    PDP_MAX_FILL_RATIO,
+    PDP_SAFE_MARGIN_RATIO,
+    PDP_STANDARD_CANVAS,
+    pdpPublishedPlateScale,
+} from "./pdp-capacity-standards";
 
-export const PDP_PLATE_CANVAS = { width: 1000, height: 1100 } as const;
-/** Audit gate: fail publish if fillH > 88% or any margin < 4%. */
-export const PDP_SAFE_MARGIN_RATIO = 0.04;
-export const PDP_MAX_FILL_RATIO = 0.88;
-
-/**
- * Approved Circle 15 ml hero scale (Jordan, 2026-09-06). Other Circle
- * capacities stay at 1 and rely on fit-to-stage when the composition overflows.
- */
-const CIRCLE_CAPACITY_SCALE: Record<number, number> = {
-    15: 0.775,
+type PartBounds = {
+    bounds: { left: number; top: number; right: number; bottom: number };
+    exploded?: { dx: number; dy: number };
 };
+
+export const PDP_PLATE_CANVAS = PDP_STANDARD_CANVAS;
+export { PDP_SAFE_MARGIN_RATIO, PDP_MAX_FILL_RATIO };
 
 export type PdpStageView = "assembled" | "capOff" | "exploded";
 
@@ -47,18 +38,29 @@ export type PdpStageFrame = {
 export function pdpCapacityScale(
     family: string | null | undefined,
     capacityMl: number | null | undefined,
+    color?: string | null,
 ): number {
-    if ((family ?? "").trim().toLowerCase() !== "circle") return 1;
-    if (capacityMl == null || !Number.isFinite(capacityMl)) return 1;
-    return CIRCLE_CAPACITY_SCALE[capacityMl] ?? 1;
+    return pdpPublishedPlateScale(family, capacityMl, color);
 }
 
-function unionBounds(parts: readonly PartBounds[]) {
+function shiftedBounds(part: PartBounds, useExploded: boolean) {
+    const dx = useExploded ? (part.exploded?.dx ?? 0) : 0;
+    const dy = useExploded ? (part.exploded?.dy ?? 0) : 0;
     return {
-        left: Math.min(...parts.map((part) => part.bounds.left)),
-        right: Math.max(...parts.map((part) => part.bounds.right)),
-        top: Math.min(...parts.map((part) => part.bounds.top)),
-        bottom: Math.max(...parts.map((part) => part.bounds.bottom)),
+        left: part.bounds.left + dx,
+        right: part.bounds.right + dx,
+        top: part.bounds.top + dy,
+        bottom: part.bounds.bottom + dy,
+    };
+}
+
+function unionBounds(parts: readonly PartBounds[], useExploded: boolean) {
+    const boxes = parts.map((part) => shiftedBounds(part, useExploded));
+    return {
+        left: Math.min(...boxes.map((box) => box.left)),
+        right: Math.max(...boxes.map((box) => box.right)),
+        top: Math.min(...boxes.map((box) => box.top)),
+        bottom: Math.max(...boxes.map((box) => box.bottom)),
     };
 }
 
@@ -92,10 +94,15 @@ function centerFrame(
 /**
  * Transform that keeps the bottle inside the 10:11 stage.
  * Exploded view is handled separately by `explodedKitFrame`.
+ *
+ * Scale is min(locked glass size, fit-to-margin). CAP OFF may apply an extra
+ * fit factor when the detached cap is baked into a plate (no kit bounds).
+ * The bottle never grows past the capacity lock.
  */
 export function pdpStageFrame(input: {
     family?: string | null;
     capacityMl?: number | null;
+    color?: string | null;
     view: Exclude<PdpStageView, "exploded">;
     parts?: readonly PartBounds[] | null;
     width?: number;
@@ -103,21 +110,20 @@ export function pdpStageFrame(input: {
 }): PdpStageFrame {
     const width = input.width ?? PDP_PLATE_CANVAS.width;
     const height = input.height ?? PDP_PLATE_CANVAS.height;
-    const capacityScale = pdpCapacityScale(input.family, input.capacityMl);
+    const capacityScale = pdpCapacityScale(input.family, input.capacityMl, input.color);
     let scale = capacityScale;
-    // Circle 15 ml CAP OFF plates include a beside-cap on an already-large
-    // bake. Other families keep scale 1 unless kit bounds overflow.
-    if (input.view === "capOff" && capacityScale < 1 && !input.parts?.length) {
-        scale = capacityScale * 0.92;
+    const detachCap = input.view === "capOff";
+
+    if (detachCap && !input.parts?.length) {
+        // Baked CAP OFF plates include a beside-cap on an already-large bottle.
+        // Shrink the composition; never raise the bottle above the glass lock.
+        scale = Math.min(scale, capacityScale * PDP_CAP_OFF_FIT_SCALE);
     }
 
     const canvasBounds = { left: 0, top: 0, right: width, bottom: height };
     if (input.parts?.length) {
-        const bounds = unionBounds(input.parts);
+        const bounds = unionBounds(input.parts, detachCap);
         scale = Math.min(scale, fitScale(bounds, width, height));
-        if (input.view === "capOff" && capacityScale < 1) {
-            scale = Math.min(scale, capacityScale * 0.92);
-        }
         return centerFrame(bounds, scale, width, height);
     }
 

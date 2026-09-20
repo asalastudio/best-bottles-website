@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "policy": "PDP 1000×1100 occupancy. Size the glass, never the assembly — same rule as Boston Round hero locks. A capacity's mid-body width must be materially smaller than the next capacity in the same family. CAP OFF may shrink the whole composition to keep a 4% margin, but must never grow the bottle past the locked capacity scale. Paint-time scale is the temporary enforcement on published plates; republished plates bake these targets and then publishedPlateScale returns to 1.",
+  "canvas": { "width": 1000, "height": 1100 },
+  "gates": {
+    "maxFillRatio": 0.88,
+    "safeMarginRatio": 0.04,
+    "minCapacityMidWGapPercent": 6
+  },
+  "identityEvidence": "Circle 15 ml hero framing scale 0.775 was approved 2026-09-06 (circle-family-final-manifest). Scale-card glass mm: 15=60×50, 30=74×60, 50=87×72, 100=105×89. Audit 2026-09-20: Circle 15 ml mean midW 59.8% > 30 ml 56.3% on the shared canvas. Jordan 2026-09-20: enforce a Circle width/height standard like Boston so 15 ml reads smaller than 30 ml; re-export Cap plates with real margins; CAP OFF must not force the bottle oversized.",
+  "families": {
+    "circle": {
+      "glassMm": {
+        "15": { "height": 60, "width": 50 },
+        "30": { "height": 74, "width": 60 },
+        "50": { "height": 87, "width": 72 },
+        "100": { "height": 105, "width": 89 }
+      },
+      "capacities": {
+        "15": {
+          "publishedPlateScale": 0.775,
+          "midBodyWidthPercent": 46.3,
+          "glassHeightPercent": 68.1,
+          "source": "Approved Circle 15 ml hero scale 0.775 applied to audit mean midW 59.8% / fillH 87.9%"
+        },
+        "30": {
+          "publishedPlateScale": 0.954,
+          "midBodyWidthPercent": 53.7,
+          "glassHeightPercent": 87.4,
+          "source": "Audit mean fillH 91.6% / GBCrcl30GlCap 92.18% brought under the 88% gate; midW 56.3% × 0.954"
+        },
+        "50": {
+          "publishedPlateScale": 0.948,
+          "midBodyWidthPercent": 60.7,
+          "glassHeightPercent": 88.0,
+          "source": "Audit ~64% midW / ~92.8% fillH; overflow gate 0.88/0.928"
+        },
+        "100": {
+          "publishedPlateScale": 0.948,
+          "midBodyWidthPercent": 68.3,
+          "glassHeightPercent": 88.0,
+          "source": "Audit ~72% midW / ~92.8% fillH; overflow gate 0.88/0.928"
+        }
+      }
+    },
+    "slim": {
+      "capacities": {
+        "50": {
+          "publishedPlateScale": 0.4,
+          "midBodyWidthPercent": 31.2,
+          "source": "Audit Slim 50 ml midW 78.1% ≫ 100 ml 33.7%. Shrink 50 so it reads smaller than 100."
+        }
+      }
+    },
+    "sleek": {
+      "capacities": {
+        "5": {
+          "publishedPlateScale": 0.64,
+          "midBodyWidthPercent": 18.5,
+          "source": "Audit Sleek 5 ml midW 28.9% > 8 ml 21.7%"
+        },
+        "30": {
+          "publishedPlateScale": 0.63,
+          "midBodyWidthPercent": 15.8,
+          "source": "Audit Sleek 30 ml midW 25.1% > 50 ml 18.6%"
+        }
+      }
+    },
+    "empire": {
+      "capacities": {
+        "50": {
+          "publishedPlateScale": 0.88,
+          "midBodyWidthPercent": 39.1,
+          "source": "Audit Empire 50 ml midW 44.4% ≈ 100 ml 44.3%"
+        }
+      }
+    },
+    "elegant": {
+      "capacities": {
+        "60": {
+          "colors": {
+            "frosted": {
+              "publishedPlateScale": 0.8,
+              "midBodyWidthPercent": 44.3,
+              "source": "Audit Elegant 60 ml frosted midW 55.4% > 100 ml clear 50.1%"
+            }
+          }
+        }
+      }
+    }
+  },
+  "overflowFamilies": [
+    "elegant",
+    "empire",
+    "diva",
+    "round",
+    "sleek",
+    "vial",
+    "aluminum-bottle",
+    "aluminum",
+    "decorative",
+    "grace",
+    "royal",
+    "tulip",
+    "rectangle"
+  ],
+  "overflowPublishedPlateScale": 0.95,
+  "capOffFitScale": 0.92
+}

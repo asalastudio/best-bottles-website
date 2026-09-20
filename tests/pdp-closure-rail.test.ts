@@ -60,6 +60,9 @@ describe("focused intent selection", () => {
     it("scales Circle plates and CAP OFF kits on the 10:11 stage", () => {
         expect(configurator).toContain("pdpStageFrame(");
         expect(configurator).toContain("data-pdp-stage-frame");
+        expect(configurator).toContain("withDetachedCapOffsets(");
+        expect(read("src/lib/products/pdp-capacity-standards.ts")).toContain("pdp-capacity-standards.json");
+        expect(read("data/asset-ledger/pdp-capacity-standards.json")).toContain("\"15\"");
     });
 });
 
