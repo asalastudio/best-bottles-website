@@ -45,7 +45,7 @@ def draw(kits: Path, row: dict, cover_on: bool) -> Image.Image:
 
 
 def main():
-    ap = argparse.ArgumentParser(); ap.add_argument("--batch", type=Path, required=True); args = ap.parse_args()
+    ap = argparse.ArgumentParser(); ap.add_argument("--batch", type=Path, required=True); ap.add_argument("--name", default="pump-kits"); args = ap.parse_args()
     new_kits = ROOT / args.batch / "kits"
     rows = sorted(json.loads((new_kits / "manifest.json").read_text())["rows"], key=lambda r: (r["familyId"], r["sku"]))
     box, cw = (250, 0, 1000, 1100), 250
@@ -67,7 +67,7 @@ def main():
             d.text((x, y + 62 + ch), "parts after:  " + ", ".join(f"{p['slot']} {p['bounds']['right']-p['bounds']['left']}x{p['bounds']['bottom']-p['bounds']['top']}" for p in row["parts"] if p["slot"] != "body")
                    + f"   parity {row['gates']['parity']['mean']:.2f}", fill="#060")
             d.text((x, y + 76 + ch), pv["pump"] + (f" (x{pv['scale']})" if "scale" in pv else ""), fill="#777")
-        out = ROOT / f"public/reviews/builder-review-2026-09-19/empire{size[:-2]}-pump-kits-before-after.jpg"
+        out = ROOT / f"public/reviews/builder-review-2026-09-19/empire{size[:-2]}-{args.name}-before-after.jpg"
         sheet.save(out, quality=90); print(out.relative_to(ROOT), sheet.size)
 
 

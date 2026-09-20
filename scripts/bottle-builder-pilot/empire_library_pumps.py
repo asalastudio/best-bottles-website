@@ -97,7 +97,8 @@ def twin_of(capped_path: Path, sku: str) -> Path:
     twins = {}
     for q in _INDEX.get(sku.lower(), []):
         layers = fg_layers(PSDImage.open(q)); qb = max(layers, key=area)
-        if (qb.width, qb.height) != (body.width, body.height) or not any(beside(l, qb) for l in layers if l is not qb):
+        # the same glass re-saved can differ by a pixel (LBEmp50LtnMtSl: 531x1268 vs 531x1269)
+        if abs(qb.width - body.width) > 2 or abs(qb.height - body.height) > 2 or not any(beside(l, qb) for l in layers if l is not qb):
             continue
         # the same photograph filed in two folders is one twin: key it by its layer geometry
         twins[tuple(sorted((l.left - qb.left, l.top - qb.top, l.width, l.height) for l in layers))] = q

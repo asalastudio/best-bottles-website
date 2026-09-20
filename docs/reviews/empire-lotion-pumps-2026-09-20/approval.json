@@ -1,0 +1,26 @@
+{
+ "release": "empire-lotion-pumps-2026-09-20",
+ "ship": "ship Empire exposed lotion pumps 2026-09-20",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-20T17:03:50.449Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "public/reviews/builder-review-2026-09-19/empire50-lotion-pump-kits-before-after.jpg + empire100-lotion-pump-kits-before-after.jpg",
+ "skus": {
+  "LBEmp100LtnCu": "6c3dee210bd4c028b3e73b1683401298c486f8ddc9c6c144d6fdcb5e1de1a344",
+  "LBEmp100LtnMtGl": "3a0d43e5b79c7c8ff345aa19976248abcd753a3bc1781eb62b3752cd967692fc",
+  "LBEmp100LtnMtSl": "ff0fd01aa91e7d27f3addb84dd0a71d84605ef8904441580a7a25dfa60b273ae",
+  "LBEmp100LtnShnBlk": "4535e5c6bd72f2c758c022bec1c12cb62b12618cc83da88587b0d903a53e4a2c",
+  "LBEmp100LtnShnGl": "5f54c88be524f3134eab4b4d2da3191491119cb5879323728f424e74c8142923",
+  "LBEmp100LtnShnSl": "db68e2455d6cb6e93c1a8ac5a90f83ddf1d4a698ed5ab8fcd7265b48a5d942d6",
+  "LBEmp50LtnCu": "272f112a4a2213acfcb51bb95bace98671b94ea9159d7f9d3a37c42cfc677ca9",
+  "LBEmp50LtnMtGl": "ee57cc850ff0ce8c05cb2a4911ff0b5a44ddf073a3e56ae97b445818a300ec75",
+  "LBEmp50LtnMtSl": "930ac23798b40601ce07c4854f9679800747b152aad6afc4774113c9a0b28c77",
+  "LBEmp50LtnShnBlk": "901523e6ee03867a7f32a1098d212cb0f094e6d2a225b46162f64b082f154771",
+  "LBEmp50LtnShnGl": "92bfde12e8a982ff757393f8853f36fefcae692154d6a524c68d6c59371a988f",
+  "LBEmp50LtnShnSl": "a3e8ecff333f96e9b79e622f415ef218bf56e8b855079d929b8c795d0058873a"
+ },
+ "setAside": [],
+ "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+}

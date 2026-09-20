@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Give the twelve Empire perfume-sprayer kits the pump they were cut without.
+"""Give the Empire perfume-sprayer and lotion-pump kits the pump they were cut without.
 
 The capped master PSDs show a bottle wearing its overcap, so the kit extractor found a
 glass, a dip tube and ONE piece of hardware — the overcap — and called it `sprayer`. At
@@ -24,7 +24,14 @@ the reassembled kit must still equal the published plate: every row is re-gated 
 alpha and on parity. Copper's overcap carries a retoucher's white shards; the white-keyed
 matte is run on that one finish only. Output is a NEW batch; nothing here publishes.
 
+Lotion pumps (2026-09-20, Jordan: "the same thing we did just for the spray pumps") are the same
+defect under another name: the cover was filed as `pump`. The library's 8. 18-415 Lotion supplies
+the exposed pump. The two clear-overcap SKUs are left alone: their one photograph is the pump SEEN
+THROUGH its clear cover, the library's Ltn18-415MtSlCl is not isolated from its white ground, and a
+white-keyed matte must never touch clear plastic — there is no honest way to split them.
+
     python3 scripts/paperdoll/build_empire_pump_kits.py --out dist/paper-doll/empire-pumps-2026-09-20
+    python3 scripts/paperdoll/build_empire_pump_kits.py --applicator "Lotion Pump" --out dist/paper-doll/empire-lotion-pumps-2026-09-20
 """
 from __future__ import annotations
 import argparse, hashlib, json, shutil, sys
@@ -39,8 +46,15 @@ sys.path.insert(0, str(HERE)); sys.path.insert(0, str(ROOT / "scripts/bottle-bui
 from build_master_kits import parity, place_exploded  # noqa: E402
 from build_cyl9_kits import alpha_gate, save_part  # noqa: E402
 from strip_retouch_patch import strip_retouch_patch  # noqa: E402
-from empire_library_pumps import (BATCHES, CANVAS, FINISHES, LIBRARY, MASTER, beside, collar,  # noqa: E402
+from empire_library_pumps import (BATCHES, CANVAS, FINISHES, MASTER, beside, collar,  # noqa: E402
                                   fg_layers, kit_for, largest_component, to_canvas, twin_of)
+
+
+# catalogue applicator -> the kit slot its mechanism lives in, and where the library keeps it
+KINDS = {
+    "Perfume Spray Pump": {"slot": "sprayer", "dir": MASTER / "20. Caps" / "7. 18-415 Sprayers ", "file": "*Spry18-415{finish}.psd"},
+    "Lotion Pump": {"slot": "pump", "dir": MASTER / "20. Caps" / "8. 18-415 Lotion", "file": "*Ltn18-415{finish}.psd"},
+}
 
 
 def bounds_of(rgba: np.ndarray) -> dict:
@@ -59,7 +73,7 @@ def roles(parts: list[dict]) -> dict:
     return {"diptube": tube[0], "overcap": hardware[0], "pump": hardware[1] if len(hardware) == 2 else None}
 
 
-def library_pump(sku: str, row: dict, reg, finish: str):
+def library_pump(sku: str, row: dict, reg, lib_path: Path):
     capped_path = MASTER / row["sourcePath"]
     if hashlib.sha256(capped_path.read_bytes()).hexdigest() != row["sourceSha256"]:
         raise ValueError(f"{sku}: master PSD changed since the kit was cut")
@@ -72,7 +86,6 @@ def library_pump(sku: str, row: dict, reg, finish: str):
     pump = min((l for l in others if l is not overcap and l.top < tb.top and l.width > 0.25 * tb.width), key=lambda l: l.top)
     footprint = to_canvas(pump.composite().convert("RGBA"), pump.left + cb.left - tb.left, pump.top + cb.top - tb.top, reg)
     target = collar(np.asarray(footprint)[:, :, 3])
-    lib_path = next(LIBRARY.glob(f"*Spry18-415{finish}.psd"))
     lib = largest_component(fg_layers(PSDImage.open(lib_path))[0].composite().convert("RGBA"))
     k = target["width"] / collar(np.asarray(lib)[:, :, 3])["width"]
     small = lib.resize((max(1, round(lib.width * k)), max(1, round(lib.height * k))), Image.Resampling.LANCZOS)  # one resample from native
@@ -87,6 +100,7 @@ def library_pump(sku: str, row: dict, reg, finish: str):
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--out", type=Path, required=True)
+    ap.add_argument("--applicator", default="Perfume Spray Pump", choices=sorted(KINDS))
     args = ap.parse_args()
     out = ROOT / args.out if not args.out.is_absolute() else args.out
     kits = out / "kits"
@@ -113,18 +127,24 @@ def main():
         shutil.copy(batch / "kits" / part["image"], kits / "parts" / name)
         return dict(part, slot=slot, image=f"parts/{name}", storeKey=f"kits/master-parts/{name}")
 
-    rows_out, report = [], []
+    kind = KINDS[args.applicator]; slot = kind["slot"]
+    rows_out, report, left_alone = [], [], []
     for batch in BATCHES:
         for listed in json.loads((batch / "kits/manifest.json").read_text())["rows"]:
-            if listed.get("applicator") != "Perfume Spray Pump" or listed["status"] != "candidate":
+            if listed.get("applicator") != args.applicator or listed["status"] != "candidate":
                 continue
             sku = listed["sku"]
-            found_batch, row, reg = kit_for(sku)
+            try:
+                found_batch, row, reg = kit_for(sku)
+            except KeyError:
+                continue                               # a candidate nobody approved is not a live kit
             if found_batch != batch or any(r["sku"] == sku for r in rows_out):
                 continue
             finish = next((f for f in sorted(FINISHES, key=len, reverse=True) if sku.endswith(f)), None)
-            if finish is None or not list(LIBRARY.glob(f"*Spry18-415{finish}.psd")):
-                raise ValueError(f"{sku}: no library pump for this SKU")
+            lib = sorted(kind["dir"].glob(kind["file"].format(finish=finish))) if finish else []
+            if len(lib) != 1:
+                left_alone.append((sku, "no isolated library pump for this finish"))
+                continue
             was = roles(row["parts"])
             body = relabel(batch, next(p for p in row["parts"] if p["slot"] == "body"), "body")
             tube = dict(relabel(batch, was["diptube"], "diptube"), zOrder=1, explodeIndex=1)
@@ -132,12 +152,12 @@ def main():
             provenance = {"labelsBefore": {p["slot"]: [p["bounds"]["right"] - p["bounds"]["left"], p["bounds"]["bottom"] - p["bounds"]["top"]]
                                            for p in row["parts"] if p["slot"] != "body"}}
             if was["pump"] is not None:
-                pump = dict(relabel(batch, was["pump"], "sprayer"), zOrder=2, explodeIndex=2)
+                pump = dict(relabel(batch, was["pump"], slot), zOrder=2, explodeIndex=2)
                 provenance["pump"] = "kept: this SKU's own photographed pump, already in its capped PSD"
             else:
-                img, how = library_pump(sku, row, reg, finish)
-                pump = dict(was["overcap"], slot="sprayer", variantKey=None, zOrder=2, explodeIndex=2, derivation="psd-layer",
-                            sourceLayerIndices=[], whiteGroundPixelsDropped=0, **store(np.asarray(img), sku, "sprayer"))
+                img, how = library_pump(sku, row, reg, lib[0])
+                pump = dict(was["overcap"], slot=slot, variantKey=None, zOrder=2, explodeIndex=2, derivation="psd-layer",
+                            sourceLayerIndices=[], whiteGroundPixelsDropped=0, **store(np.asarray(img), sku, slot))
                 provenance.update(pump="master component library, seated on the uncapped twin's pump footprint", **how)
 
             cap_src = Image.open(batch / "kits" / was["overcap"]["image"]).convert("RGBA")
@@ -181,7 +201,9 @@ def main():
     print(f"{'sku':20s} {'pump':16s} {'cap patch px':>12s} {'pump px outside cover':>22s} {'parity':>7s} {'(before)':>9s}")
     for r in sorted(report):
         print(f"{r[0]:20s} {r[1]:16s} {r[2]:12d} {r[3]:22d} {r[4]:7.3f} {r[5]:9.3f}")
-    print(f"\n{len(rows_out)} kits rebuilt -> {kits.relative_to(ROOT)}")
+    for sku, why in left_alone:
+        print(f"{sku:20s} LEFT ALONE: {why}")
+    print(f"\n{len(rows_out)} kits rebuilt -> {kits}")
 
 
 if __name__ == "__main__":
