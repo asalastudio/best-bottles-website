@@ -139,6 +139,37 @@ Things to respect when cutting from the library:
 
 ---
 
+## 0d. DONE as a review sheet: library pumps on the Empire 50 and 100 ml (nothing published)
+
+Jordan: "yes cut the pumps now." Script: `scripts/bottle-builder-pilot/empire_library_pumps.py`
+(numbers in `dist/paper-doll/empire-library-pumps.json`). Sheets, TODAY vs LIBRARY PUMP + overcap sidecar, all six
+finishes: `public/reviews/builder-review-2026-09-19/empire50-library-pumps.jpg`, `…/empire100-library-pumps.jpg`.
+
+How it is built — reuse this pattern:
+- **ART from the library** (`20. Caps/7. 18-415 Sprayers/Spry18-415<finish>.psd`): the one foreground layer, read
+  from the LAYER (three extend 1–14 px above their canvas, so never crop to the canvas), keeping only the pump's own
+  connected shape (Copper has stray white fragments beside it).
+- **POSITION from the SKU's uncapped twin PSD**, not guessed: the twin's pump layer → capped PSD coordinates via the
+  identical body layer → builder canvas via the kit's own plate registration. The library pump is scaled to that
+  collar width and stood on that bottom-centre. Library scale is 0.75–0.90, i.e. always a downscale.
+- **Independent check:** the library pump's top lands within **1–9 px** of the SKU's own photographed pump for ten
+  of twelve; the two Coppers are +12 / +14 px (the library's Copper photograph is slightly shorter in proportion).
+- **SIDECAR:** the twin's own overcap layer, stood on the baseline beside the glass. Copper's overcap carried a
+  retoucher's white shards (~19k px) — stripped with `strip_retouch_patch`, **named for Copper only**; never run it
+  on the silver overcaps, whose highlights are genuinely white.
+- **Identify the twin by what it shows** — identical body layer size and a part standing beside the glass. NOT by
+  folder (kits were cut from `31. Capped & Uncapped…/Capped/`, the twins are in the family folder), NOT by file
+  number, NOT by layer count (Copper's capped file already contains its pump), and dedupe by layer geometry
+  (one twin is filed in two places).
+- Clear glass is multiplied onto `#eeebe5`. Every pump clears the canvas top (y = 74–93).
+
+Not done: turning these into published kit parts (`sprayer` + `overcap`, correct labels). That replaces parts on
+LIVE kits → it needs this sheet approved and a ship phrase. The same pattern should extend to the other 18-415
+families (Elegant, Diva, Circle 50/100, Sleek, Round, Grace…) and, with their own library folders, to 15-415,
+17-415 and 13-415.
+
+---
+
 ## 1. Where things are
 
 | | |

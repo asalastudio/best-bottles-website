@@ -26,6 +26,8 @@ from psd_tools import PSDImage
 from scipy import ndimage
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT / "scripts/paperdoll"))
+from strip_retouch_patch import strip_retouch_patch  # noqa: E402
 MASTER = Path("/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master")
 LIBRARY = MASTER / "20. Caps" / "7. 18-415 Sprayers "
 BATCHES = [ROOT / "dist/paper-doll/empire-2026-09-16", ROOT / "dist/paper-doll/kits-from-published-2026-09-19/families/empire"]
@@ -149,6 +151,12 @@ def build(sku: str, finish: str):
     ys, xs = np.nonzero(solid)
     baseline, right = int(ys.max()), int(xs.max())
     cap_img = overcap.composite().convert("RGBA")
+    patch_px = 0
+    if finish == "Cu":
+        # Copper's overcap layer carries a retoucher's white shards at its top corners. The matte is
+        # white-keyed, so it is named here for the one finish that needs it and is NEVER run on the
+        # silver overcaps, whose highlights are genuinely white and reach the cap's own edge.
+        cap_img, patch_px = strip_retouch_patch(cap_img)
     s = reg[0]
     cap_small = cap_img.resize((max(1, round(cap_img.width * s)), max(1, round(cap_img.height * s))), Image.Resampling.LANCZOS)
     sidecar = Image.new("RGBA", CANVAS, (255, 255, 255, 0))
@@ -166,7 +174,8 @@ def build(sku: str, finish: str):
         return out.convert("RGB")
 
     today = stage([Image.open(batch / "kits" / p["image"]).convert("RGBA") for p in sorted(row["parts"], key=lambda p: p["zOrder"]) if p["slot"] != "body"])
-    agree = {"scale": round(k, 4), "libraryPx": list(lib.size), "collarTarget": target,
+    pump_rows = np.nonzero(np.asarray(lib_pump)[:, :, 3] >= 128)[0]
+    agree = {"pumpTopOnCanvas": int(pump_rows.min()), "overcapPatchPxRemoved": patch_px, "scale": round(k, 4), "libraryPx": list(lib.size), "collarTarget": target,
              "heightDiffPx": int(np.nonzero(np.asarray(lib_pump)[:, :, 3] >= 128)[0].min() - np.nonzero(np.asarray(twin_pump)[:, :, 3] >= 128)[0].min())}
     return {"sku": sku, "finish": finish, "twin": twin_path.name, "capped": capped_path.name, "fit": agree,
             "today": today, "library": stage([tube_img, lib_pump, sidecar]), "twinRender": stage([tube_img, twin_pump, sidecar])}
@@ -185,7 +194,7 @@ def main():
             except Exception as e:
                 print(f"{sku:22s} SKIPPED: {type(e).__name__}: {e}")
     # sheet: per size, a row of finishes; each cell = today | library pump + sidecar
-    crop_for = {50: (230, 120, 990, 1100), 100: (230, 20, 990, 1100)}
+    crop_for = {50: (230, 0, 990, 1100), 100: (230, 0, 990, 1100)}
     CW = 300
     for size in (50, 100):
         cells = [r for s, r in results if s == size]
