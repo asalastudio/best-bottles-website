@@ -3,7 +3,7 @@
 import { useId, useState, type CSSProperties, type ReactNode } from "react";
 import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import type { BuilderConfiguration, BuilderPart } from "@/lib/bottle-builder/model";
-import { registerVintagePreview, seatPreviewLayers } from "@/lib/bottle-builder/preview-registration";
+import { canonicalBody, registerVintagePreview, seatPreviewLayers } from "@/lib/bottle-builder/preview-registration";
 import { layerCropStyle, previewFrame } from "@/lib/bottle-builder/preview-frame";
 
 /** These are the existing alpha layers on their registered canvas, never
@@ -28,7 +28,8 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     const kit = stage === "body" ? config.previewKit ?? config.kit ?? config.chooserKit : config.kit;
     const exposed = (exposedSprayers as Record<string, { url: string }>)[config.id];
     const fallbackUrl = !kit ? (stage === "complete" && config.photoUrl ? (!showCover && exposed ? exposed.url : config.photoUrl) : config.bodyImage?.url) : undefined;
-    const registration = kit && !thumbnail ? registerVintagePreview(config, parts, bodyReference) : null;
+    // a bottle with one fixed body shows that body everywhere, chooser tiles included
+    const registration = kit && (!thumbnail || canonicalBody(config)) ? registerVintagePreview(config, parts, bodyReference) : null;
     let layers = kit ? registration?.layers ?? parts.map(part => ({ part, bounds: part.bounds, transform: undefined })) : [];
     if (kit && !thumbnail && stage !== "body") {
         layers = seatPreviewLayers(layers, registration?.anchors ?? kit.anchors);
@@ -38,7 +39,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     // 2026-09-16). Display only: the assembled registration is untouched.
     if (kit && !thumbnail && !showCover && stage !== "body" && layers.some(l => l.part.slot === "overcap") && layers.some(l => !["body", "overcap", "diptube"].includes(l.part.slot))) {
         const body = layers.find(l => l.part.slot === "body");
-        const baseline = registration?.anchors.baselineY ?? kit.anchors.baselineY;
+        const baseline = registration?.groundY ?? kit.anchors.baselineY;
         layers = layers.map(l => {
             if (l.part.slot !== "overcap" || !body) return l;
             const gap = Math.max(18, (body.bounds.right - body.bounds.left) * .08);

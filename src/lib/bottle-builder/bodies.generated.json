@@ -174,16 +174,16 @@
     "sha256": "9f4016415eaedf231db093f5eb6c44d3e9df7aae5d4b03a9a9988e61fa4ddd64"
   },
   "Empire|100|Clear|18-415": {
-    "url": "/images/bottle-builder/bodies/empire-100-clear-18-415.webp",
-    "width": 556,
+    "url": "/images/bottle-builder/bodies/empire-100-clear-18-415-no-reducer.bebda5f64d88.webp",
+    "width": 562,
     "height": 1200,
-    "sha256": "c5b78badc0906acefd6e9bb3599359da2d329871e743fe9f0db90e028f8a1c2a"
+    "sha256": "bebda5f64d88387e472b54c2a58d85541b8132def66ea4a849af746d952bc205"
   },
   "Empire|50|Clear|18-415": {
-    "url": "/images/bottle-builder/bodies/empire-50-clear-18-415.webp",
+    "url": "/images/bottle-builder/bodies/empire-50-clear-18-415-no-reducer.90d7a4ffe36f.webp",
     "width": 503,
     "height": 1200,
-    "sha256": "ff43e75e3336ec1031551b0917e3e3572737d05a536a0bad309637a5d856c6c1"
+    "sha256": "90d7a4ffe36fb2d428157a7a70b7c02b59b3ad90851d26bd4bb4fdb0b6b37e66"
   },
   "Round|128|Clear|18-415": {
     "url": "/images/bottle-builder/bodies/round-128-clear-18-415.webp",

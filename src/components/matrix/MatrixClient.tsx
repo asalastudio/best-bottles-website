@@ -287,7 +287,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                         const unavailableCount = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === f).length ?? 0;
                         const count = availableCount + unavailableCount;
                         return <Option key={f} label={displayApplicatorName(f)} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); goTo(2); }}>
-                            <div className={styles.componentThumb}><FitmentIllustration fitment={f} /></div>
+                            <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div>
                             <strong>{displayApplicatorName(f)}</strong><small>{count} {/Roller/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
                         </Option>;
                     })}</div> : <>

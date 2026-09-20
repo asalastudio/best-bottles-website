@@ -1,0 +1,6293 @@
+{
+ "root": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+ "rows": [
+  {
+   "library": "20. Caps",
+   "folder": "1. 20-400 Roll on caps",
+   "file": "1. 20-400 Roll on caps /Roll on caps/20. CPRoll20-400TallMattSl.psd",
+   "stem": "CPRoll20-400TallMattSl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    293,
+    432
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "1. 20-400 Roll on caps",
+   "file": "1. 20-400 Roll on caps /Roll on caps/21. CPRoll20-400TallMattGl.psd",
+   "stem": "CPRoll20-400TallMattGl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    310,
+    460
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "1. 20-400 Roll on caps",
+   "file": "1. 20-400 Roll on caps /Roll on caps/22. CPRoll20-400TallShnGl.psd",
+   "stem": "CPRoll20-400TallShnGl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    304,
+    458
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "1. 20-400 Roll on caps",
+   "file": "1. 20-400 Roll on caps /Roll on caps/23. CPRoll20-400TallShnBlk.psd",
+   "stem": "CPRoll20-400TallShnBlk",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    365,
+    483
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "1. 20-400 Roll on caps",
+   "file": "1. 20-400 Roll on caps /Roll on caps/25. CPRoll20-400TallMattBlk.psd",
+   "stem": "CPRoll20-400TallMattBlk",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    294,
+    469
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "1. 20-400 Roll on caps",
+   "file": "1. 20-400 Roll on caps /Roll on caps/26. CPRoll20-400TallShnSl.psd",
+   "stem": "CPRoll20-400TallShnSl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    300,
+    437
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "10. 18-415 Ansp Tsl",
+   "file": "10. 18-415 Ansp Tsl/35. AnspTsl18-415Lvn.psd",
+   "stem": "AnspTsl18-415Lvn",
+   "canvas": [
+    6000,
+    4000
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    3158,
+    3343
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "10. 18-415 Ansp Tsl",
+   "file": "10. 18-415 Ansp Tsl/36. AnspTsl18-415IvyGl.psd",
+   "stem": "AnspTsl18-415IvyGl",
+   "canvas": [
+    6000,
+    4000
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    3158,
+    3321
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "10. 18-415 Ansp Tsl",
+   "file": "10. 18-415 Ansp Tsl/37. AnspTsl18-415IvySl.psd",
+   "stem": "AnspTsl18-415IvySl",
+   "canvas": [
+    6000,
+    4000
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    3164,
+    3317
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "10. 18-415 Ansp Tsl",
+   "file": "10. 18-415 Ansp Tsl/38. AnspTsl18-415Wht.psd",
+   "stem": "AnspTsl18-415Wht",
+   "canvas": [
+    6000,
+    4000
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    3166,
+    3319
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "10. 18-415 Ansp Tsl",
+   "file": "10. 18-415 Ansp Tsl/39. AnspTsl18-415Pnk.psd",
+   "stem": "AnspTsl18-415Pnk",
+   "canvas": [
+    6000,
+    4000
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    3156,
+    3322
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "10. 18-415 Ansp Tsl",
+   "file": "10. 18-415 Ansp Tsl/40. AnspTsl18-415Red.psd",
+   "stem": "AnspTsl18-415Red",
+   "canvas": [
+    6000,
+    4000
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    3438,
+    3496
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "10. 18-415 Ansp Tsl",
+   "file": "10. 18-415 Ansp Tsl/41. AnspTsl18-415Blk.psd",
+   "stem": "AnspTsl18-415Blk",
+   "canvas": [
+    6000,
+    4000
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    3438,
+    3496
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "10. 18-415 Ansp Tsl",
+   "file": "10. 18-415 Ansp Tsl/42. AnspTsl18-415MtS.psd",
+   "stem": "AnspTsl18-415MtS",
+   "canvas": [
+    6000,
+    4000
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    3438,
+    3533
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "10. 18-415 Ansp Tsl",
+   "file": "10. 18-415 Ansp Tsl/43. AnspTsl18-415Gl.psd",
+   "stem": "AnspTsl18-415Gl",
+   "canvas": [
+    6000,
+    4000
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    3147,
+    3319
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "12. 17-415 Roll on",
+   "file": "12. 17-415 Roll on/1. CpRoll17-415MattSl.psd",
+   "stem": "CpRoll17-415MattSl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    295,
+    426
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "12. 17-415 Roll on",
+   "file": "12. 17-415 Roll on/10. CpRoll17-415White.psd",
+   "stem": "CpRoll17-415White",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    300,
+    436
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "12. 17-415 Roll on",
+   "file": "12. 17-415 Roll on/2. CpRoll17-415BlkDot.psd",
+   "stem": "CpRoll17-415BlkDot",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    304,
+    419
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "12. 17-415 Roll on",
+   "file": "12. 17-415 Roll on/3. CpRoll17-415SlDot.psd",
+   "stem": "CpRoll17-415SlDot",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    295,
+    423
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "12. 17-415 Roll on",
+   "file": "12. 17-415 Roll on/4. CpRoll17-415PnkDot.psd",
+   "stem": "CpRoll17-415PnkDot",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    294,
+    421
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "12. 17-415 Roll on",
+   "file": "12. 17-415 Roll on/5. CpRoll17-415MattGl.psd",
+   "stem": "CpRoll17-415MattGl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    292,
+    420
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "12. 17-415 Roll on",
+   "file": "12. 17-415 Roll on/6. CpRoll17-415ShnGl.psd",
+   "stem": "CpRoll17-415ShnGl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    295,
+    428
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "12. 17-415 Roll on",
+   "file": "12. 17-415 Roll on/7. CpRoll17-415ShnSl.psd",
+   "stem": "CpRoll17-415ShnSl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    292,
+    426
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "12. 17-415 Roll on",
+   "file": "12. 17-415 Roll on/8. CpRoll17-415Cu.psd",
+   "stem": "CpRoll17-415Cu",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    295,
+    427
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "12. 17-415 Roll on",
+   "file": "12. 17-415 Roll on/9. CpRoll17-415ShnBlk.psd",
+   "stem": "CpRoll17-415ShnBlk",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    300,
+    429
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "13. 17-415 Spray",
+   "file": "13. 17-415 Spray/11. Spry17-415Gl.psd",
+   "stem": "Spry17-415Gl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    293,
+    248
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "13. 17-415 Spray",
+   "file": "13. 17-415 Spray/12. Spry17-415MattSl.psd",
+   "stem": "Spry17-415MattSl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    297,
+    248
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "13. 17-415 Spray",
+   "file": "13. 17-415 Spray/13. Spry17-415Blk.psd",
+   "stem": "Spry17-415Blk",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    289,
+    245
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "13. 17-415 Spray",
+   "file": "13. 17-415 Spray/14. Spry17-415ShnSl.psd",
+   "stem": "Spry17-415ShnSl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    300,
+    254
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "13. 17-415 Spray",
+   "file": "13. 17-415 Spray/15. Spry17-415Red.psd",
+   "stem": "Spry17-415Red",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    296,
+    259
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "13. 17-415 Spray",
+   "file": "13. 17-415 Spray/16. Spry17-415Tur.psd",
+   "stem": "Spry17-415Tur",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    316,
+    269
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "14. 17-415 Lotion",
+   "file": "14. 17-415 Lotion /17. Ltn17-415MattSl.psd",
+   "stem": "Ltn17-415MattSl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    297,
+    248
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "14. 17-415 Lotion",
+   "file": "14. 17-415 Lotion /18. Ltn17-415Gl.psd",
+   "stem": "Ltn17-415Gl",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    293,
+    248
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "14. 17-415 Lotion",
+   "file": "14. 17-415 Lotion /19. Ltn17-415Blk.psd",
+   "stem": "Ltn17-415Blk",
+   "canvas": [
+    552,
+    736
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    289,
+    245
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "15. 15-415 Caps",
+   "file": "15. 15-415 Caps/6. CP15-415ShnSl.psd",
+   "stem": "CP15-415ShnSl",
+   "canvas": [
+    488,
+    588
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    235,
+    385
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "15. 15-415 Caps",
+   "file": "15. 15-415 Caps/7. CP15-415ShnGl.psd",
+   "stem": "CP15-415ShnGl",
+   "canvas": [
+    488,
+    588
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    215,
+    433
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "16. 15-415 Sprayer",
+   "file": "16. 15-415 Sprayer/1. Spry15-415Blk.psd",
+   "stem": "Spry15-415Blk",
+   "canvas": [
+    488,
+    588
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    216,
+    432
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "16. 15-415 Sprayer",
+   "file": "16. 15-415 Sprayer/2. Spry15-415ShnGl.psd",
+   "stem": "Spry15-415ShnGl",
+   "canvas": [
+    488,
+    588
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    215,
+    433
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "16. 15-415 Sprayer",
+   "file": "16. 15-415 Sprayer/3. Spry15-415ShnSl.psd",
+   "stem": "Spry15-415ShnSl",
+   "canvas": [
+    488,
+    588
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    209,
+    427
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "16. 15-415 Sprayer",
+   "file": "16. 15-415 Sprayer/4. Spry15-415MattSl.psd",
+   "stem": "Spry15-415MattSl",
+   "canvas": [
+    488,
+    588
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    213,
+    425
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "16. 15-415 Sprayer",
+   "file": "16. 15-415 Sprayer/5. Spry15-415MattGl.psd",
+   "stem": "Spry15-415MattGl",
+   "canvas": [
+    488,
+    588
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    233,
+    449
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "17. 13-415 Caps",
+   "file": "17. 13-415 Caps /1. CP13-415BlkSht.psd",
+   "stem": "CP13-415BlkSht",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    624,
+    407
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "17. 13-415 Caps",
+   "file": "17. 13-415 Caps /2. CP13-415WhtSht.psd",
+   "stem": "CP13-415WhtSht",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    615,
+    372
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "17. 13-415 Caps",
+   "file": "17. 13-415 Caps /3. CP13-415Sl.psd",
+   "stem": "CP13-415Sl",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    458,
+    690
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "17. 13-415 Caps",
+   "file": "17. 13-415 Caps /4. CP13-415Gl.psd",
+   "stem": "CP13-415Gl",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    458,
+    690
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "18. 13-415 Sprayers",
+   "file": "18. 13-415 Sprayers/1. Spry13-415BlkMt.psd",
+   "stem": "Spry13-415BlkMt",
+   "canvas": [
+    570,
+    1060
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    512,
+    1037
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "18. 13-415 Sprayers",
+   "file": "18. 13-415 Sprayers/2. Spry13-415CuMt.psd",
+   "stem": "Spry13-415CuMt",
+   "canvas": [
+    570,
+    1060
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    550,
+    1022
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "18. 13-415 Sprayers",
+   "file": "18. 13-415 Sprayers/3. Spry13-415BlkSh.psd",
+   "stem": "Spry13-415BlkSh",
+   "canvas": [
+    658,
+    1218
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    572,
+    1073
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "18. 13-415 Sprayers",
+   "file": "18. 13-415 Sprayers/4. Spry13-415BluMt.psd",
+   "stem": "Spry13-415BluMt",
+   "canvas": [
+    570,
+    1060
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    516,
+    981
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "18. 13-415 Sprayers",
+   "file": "18. 13-415 Sprayers/5. Spry13-415GlSh.psd",
+   "stem": "Spry13-415GlSh",
+   "canvas": [
+    570,
+    1060
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    1060
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "18. 13-415 Sprayers",
+   "file": "18. 13-415 Sprayers/6. Spry13-415GlMt.psd",
+   "stem": "Spry13-415GlMt",
+   "canvas": [
+    570,
+    1060
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    518,
+    990
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "18. 13-415 Sprayers",
+   "file": "18. 13-415 Sprayers/7. Spry13-415SlMt.psd",
+   "stem": "Spry13-415SlMt",
+   "canvas": [
+    578,
+    1046
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    550,
+    1016
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "18. 13-415 Sprayers",
+   "file": "18. 13-415 Sprayers/8 Spry13-415SlSh.psd",
+   "stem": "Spry13-415SlSh",
+   "canvas": [
+    570,
+    1060
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    1060
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "19. 13-415 Roll on",
+   "file": "19. 13-415 Roll on/1. CPRoll13-415BlackDot.psd",
+   "stem": "CPRoll13-415BlackDot",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    205,
+    288
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "19. 13-415 Roll on",
+   "file": "19. 13-415 Roll on/2. CPRoll13-415SlDot.psd",
+   "stem": "CPRoll13-415SlDot",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 9,
+   "hiddenLayers": 8,
+   "largestLayer": [
+    206,
+    303
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "19. 13-415 Roll on",
+   "file": "19. 13-415 Roll on/3. CPRoll13-415SlMt.psd",
+   "stem": "CPRoll13-415SlMt",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 8,
+   "hiddenLayers": 7,
+   "largestLayer": [
+    206,
+    303
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "19. 13-415 Roll on",
+   "file": "19. 13-415 Roll on/4. CPRoll13-415PinkDot.psd",
+   "stem": "CPRoll13-415PinkDot",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 6,
+   "largestLayer": [
+    206,
+    303
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "19. 13-415 Roll on",
+   "file": "19. 13-415 Roll on/5. CPRoll13-415GlMt.psd",
+   "stem": "CPRoll13-415GlMt",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 5,
+   "largestLayer": [
+    206,
+    303
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "19. 13-415 Roll on",
+   "file": "19. 13-415 Roll on/6. CPRoll13-415SlSh.psd",
+   "stem": "CPRoll13-415SlSh",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 5,
+   "hiddenLayers": 4,
+   "largestLayer": [
+    206,
+    303
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "19. 13-415 Roll on",
+   "file": "19. 13-415 Roll on/7. CPRoll13-415Cu.psd",
+   "stem": "CPRoll13-415Cu",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 2,
+   "largestLayer": [
+    206,
+    303
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "19. 13-415 Roll on",
+   "file": "19. 13-415 Roll on/8. CPRoll13-415GlSh.psd",
+   "stem": "CPRoll13-415GlSh",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    206,
+    303
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "19. 13-415 Roll on",
+   "file": "19. 13-415 Roll on/9. CPRoll13-415BlkSh.psd",
+   "stem": "CPRoll13-415BlkSh",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    208,
+    295
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "2. 20-400  Cap",
+   "file": "2. 20-400  Cap/27. CP20-4002ozShortBlk.psd",
+   "stem": "CP20-4002ozShortBlk",
+   "canvas": [
+    413,
+    342
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    292,
+    145
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "2. 20-400  Cap",
+   "file": "2. 20-400  Cap/28. CP20-4001ozShortBlk.psd",
+   "stem": "CP20-4001ozShortBlk",
+   "canvas": [
+    413,
+    342
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    292,
+    145
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "20.  8-245 Caps",
+   "file": "20.  8-245 Caps/1. CP8-425ShortBlack .psd",
+   "stem": "CP8-425ShortBlack",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    624,
+    407
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "20.  8-245 Caps",
+   "file": "20.  8-245 Caps/2. CP8-425ShortWhite.psd",
+   "stem": "CP8-425ShortWhite",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    615,
+    372
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "20.  8-245 Caps",
+   "file": "20.  8-245 Caps/3. CP8-425TallShnSl.psd",
+   "stem": "CP8-425TallShnSl",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    292,
+    430
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "20.  8-245 Caps",
+   "file": "20.  8-245 Caps/4. CP8-425TallShnGl.psd",
+   "stem": "CP8-425TallShnGl",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    295,
+    433
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "20.  8-245 Caps",
+   "file": "20.  8-245 Caps/5. CP8-425TallBlack.psd",
+   "stem": "CP8-425TallBlack",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    316,
+    453
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "21. Hearts 8-245 Caps",
+   "file": "21. Hearts 8-245 Caps/1. CP8-425BluTslShortSilverCap.psd",
+   "stem": "CP8-425BluTslShortSilverCap",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    598,
+    138
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "21. Hearts 8-245 Caps",
+   "file": "21. Hearts 8-245 Caps/1. CP8-425ShortBlack .psd",
+   "stem": "CP8-425ShortBlack",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    624,
+    407
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "21. Hearts 8-245 Caps",
+   "file": "21. Hearts 8-245 Caps/2. CP8-425GlChainShortShnGlCap.psd",
+   "stem": "CP8-425GlChainShortShnGlCap",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 2,
+   "largestLayer": [
+    620,
+    144
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "21. Hearts 8-245 Caps",
+   "file": "21. Hearts 8-245 Caps/3. CP8-425SlChainShortShnSlCap.psd",
+   "stem": "CP8-425SlChainShortShnSlCap",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 3,
+   "largestLayer": [
+    620,
+    144
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "21. Hearts 8-245 Caps",
+   "file": "21. Hearts 8-245 Caps/4. CP8-425RedTslShortShnGlCap.psd",
+   "stem": "CP8-425RedTslShortShnGlCap",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    460,
+    152
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "22. Vials Wand",
+   "file": "22. Vials Wand/VialWandBlk.psd",
+   "stem": "VialWandBlk",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 2,
+   "largestLayer": [
+    624,
+    407
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "22. Vials Wand",
+   "file": "22. Vials Wand/VialWandClr.psd",
+   "stem": "VialWandClr",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    624,
+    407
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "23. 18-415 Reducer",
+   "file": "23. 18-415 Reducer/18-415Reducer.psd",
+   "stem": "415Reducer",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    624,
+    407
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "24. 13-415 Roll on",
+   "file": "24. 13-415 Roll on/2. 13-415PlsticRollon.psd",
+   "stem": "13-415PlsticRollon",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    336,
+    303
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "25. 13-415  Metal Roll on",
+   "file": "25. 13-415  Metal Roll on/1. 13-415MtlRollon.psd",
+   "stem": "13-415MtlRollon",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    336,
+    303
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "26. 18-400 Cap",
+   "file": "26. 18-400 Cap/1. CP18-400ShortBlk.psd",
+   "stem": "CP18-400ShortBlk",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    624,
+    407
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "27. 18-400 Cap with Wand",
+   "file": "27. 18-400 Cap with Wand/2. CP18-400AppBlk.psd",
+   "stem": "CP18-400AppBlk",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    177,
+    303
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "28. 14.3 Cap",
+   "file": "28. 14.3 Cap/1. CP14mmAppShnSlBlueDot.psd",
+   "stem": "CP14mmAppShnSlBlueDot",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    262,
+    301
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "28. 14.3 Cap",
+   "file": "28. 14.3 Cap/2. CP14mmAppShnGlRedDot.psd",
+   "stem": "CP14mmAppShnGlRedDot",
+   "canvas": [
+    674,
+    978
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    262,
+    299
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "29. 18-415 Droppers",
+   "file": "29. 18-415 Droppers/Drp18-415Cu.psd",
+   "stem": "Drp18-415Cu",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    739,
+    2968
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "29. 18-415 Droppers",
+   "file": "29. 18-415 Droppers/Drp18-415Gl.psd",
+   "stem": "Drp18-415Gl",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    738,
+    2969
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "29. 18-415 Droppers",
+   "file": "29. 18-415 Droppers/Drp18-415Sl.psd",
+   "stem": "Drp18-415Sl",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    739,
+    2969
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/10. DRP20-4001ozlShnGlTrimWhiteBulb.psd",
+   "stem": "DRP20-4001ozlShnGlTrimWhiteBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    753,
+    978
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/11. DRP20-4001ozShnGlTrimBlkBulb.psd",
+   "stem": "DRP20-4001ozShnGlTrimBlkBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    710,
+    938
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/12. DRP20-4001ozlShnSlTrimWhiteBulb.psd",
+   "stem": "DRP20-4001ozlShnSlTrimWhiteBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    915,
+    1123
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/13. DRP20-4002ozWhiteBulb.psd",
+   "stem": "DRP20-4002ozWhiteBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    666,
+    881
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/14. DRP20-4002ozBlckBulb.psd",
+   "stem": "DRP20-4002ozBlckBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    779,
+    1028
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/15. DRP20-4002ozShnSlTrimBlkBulb.psd",
+   "stem": "DRP20-4002ozShnSlTrimBlkBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1014,
+    1155
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/16. DRP20-4002ozlShnGlTrimWhiteBulb.psd",
+   "stem": "DRP20-4002ozlShnGlTrimWhiteBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    753,
+    978
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/17. DRP20-4002ozShnGlTrimBlkBulb.psd",
+   "stem": "DRP20-4002ozShnGlTrimBlkBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    710,
+    938
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/18. DRP20-4002ozlShnSlTrimWhiteBulb.psd",
+   "stem": "DRP20-4002ozlShnSlTrimWhiteBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    915,
+    1123
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/7.  DRP20-4001ozWhiteBulb.psd",
+   "stem": "DRP20-4001ozWhiteBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    666,
+    881
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/8. DRP20-4001ozBlckBulb.psd",
+   "stem": "DRP20-4001ozBlckBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    779,
+    1028
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "3. 20-400 Droppers",
+   "file": "3. 20-400 Droppers/9. DRP20-4001ozShnSlTrimBlkBulb.psd",
+   "stem": "DRP20-4001ozShnSlTrimBlkBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1014,
+    1155
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "4. 18-400 Droppers",
+   "file": "4. 18-400 Droppers/1. DRP18-40015mlWhiteBulb.psd",
+   "stem": "DRP18-40015mlWhiteBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    666,
+    881
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "4. 18-400 Droppers",
+   "file": "4. 18-400 Droppers/2. DRP18-40015mlBlckBulb.psd",
+   "stem": "DRP18-40015mlBlckBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    779,
+    1028
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "4. 18-400 Droppers",
+   "file": "4. 18-400 Droppers/3. DRP18-40015mlShnSlTrimBlkBulb.psd",
+   "stem": "DRP18-40015mlShnSlTrimBlkBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1014,
+    1155
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "4. 18-400 Droppers",
+   "file": "4. 18-400 Droppers/4. DRP18-40015mlShnGlTrimWhiteBulb.psd",
+   "stem": "DRP18-40015mlShnGlTrimWhiteBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    753,
+    978
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "4. 18-400 Droppers",
+   "file": "4. 18-400 Droppers/5. DRP18-40015mlShnGlTrimBlkBulb.psd",
+   "stem": "DRP18-40015mlShnGlTrimBlkBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    710,
+    938
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "4. 18-400 Droppers",
+   "file": "4. 18-400 Droppers/6. DRP18-40015mlShnSlTrimWhiteBulb.psd",
+   "stem": "DRP18-40015mlShnSlTrimWhiteBulb",
+   "canvas": [
+    1521,
+    3072
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    915,
+    1123
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "5. 18-400 Cap",
+   "file": "5. 18-400 Cap/27. CP20-4002ozShortBlk.psd",
+   "stem": "CP20-4002ozShortBlk",
+   "canvas": [
+    413,
+    342
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    292,
+    145
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/1. CP18-415ShnGl.psd",
+   "stem": "CP18-415ShnGl",
+   "canvas": [
+    245,
+    245
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    690,
+    882
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/10. CP18-415Wh.psd",
+   "stem": "CP18-415Wh",
+   "canvas": [
+    245,
+    245
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    690,
+    882
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/2. CP18-415ShnBlkTall.psd",
+   "stem": "CP18-415ShnBlkTall",
+   "canvas": [
+    245,
+    245
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    690,
+    882
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/3. CP18-415ShnBlk.psd",
+   "stem": "CP18-415ShnBlk",
+   "canvas": [
+    245,
+    245
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    690,
+    882
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/4. CP18-415BlkLthr.psd",
+   "stem": "CP18-415BlkLthr",
+   "canvas": [
+    245,
+    245
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    690,
+    882
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/44. CP18-415LIvyLthr.psd",
+   "stem": "CP18-415LIvyLthr",
+   "canvas": [
+    802,
+    914
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    792,
+    858
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/45. CP18-415LPnkLthr.psd",
+   "stem": "CP18-415LPnkLthr",
+   "canvas": [
+    802,
+    914
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    796,
+    863
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/5. CP18-415BrwnLthr.psd",
+   "stem": "CP18-415BrwnLthr",
+   "canvas": [
+    245,
+    245
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    690,
+    882
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/6. CP18-415LBrwnLthr.psd",
+   "stem": "CP18-415LBrwnLthr",
+   "canvas": [
+    245,
+    245
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    690,
+    882
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/7. CP18-415ShnSl.psd",
+   "stem": "CP18-415ShnSl",
+   "canvas": [
+    245,
+    245
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    690,
+    882
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/8. CP18-415MtSlTall.psd",
+   "stem": "CP18-415MtSlTall",
+   "canvas": [
+    245,
+    245
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    690,
+    882
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "6. 18-415 Caps",
+   "file": "6. 18-415 Caps/9. CP18-415MtSl.psd",
+   "stem": "CP18-415MtSl",
+   "canvas": [
+    245,
+    245
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    690,
+    882
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "7. 18-415 Sprayers",
+   "file": "7. 18-415 Sprayers /11. Spry18-415MtGl.psd",
+   "stem": "Spry18-415MtGl",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    220,
+    394
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "7. 18-415 Sprayers",
+   "file": "7. 18-415 Sprayers /12. Spry18-415ShnGl.psd",
+   "stem": "Spry18-415ShnGl",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    230,
+    396
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "7. 18-415 Sprayers",
+   "file": "7. 18-415 Sprayers /13. Spry18-415ShnBlk.psd",
+   "stem": "Spry18-415ShnBlk",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    220,
+    400
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "7. 18-415 Sprayers",
+   "file": "7. 18-415 Sprayers /14. Spry18-415MtSl.psd",
+   "stem": "Spry18-415MtSl",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    214,
+    389
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "7. 18-415 Sprayers",
+   "file": "7. 18-415 Sprayers /15. Spry18-415Cu.psd",
+   "stem": "Spry18-415Cu",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    217,
+    409
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "7. 18-415 Sprayers",
+   "file": "7. 18-415 Sprayers /15. Spry18-415ShnSl.psd",
+   "stem": "Spry18-415ShnSl",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    214,
+    394
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "8. 18-415 Lotion",
+   "file": "8. 18-415 Lotion/16. Ltn18-415Cu.psd",
+   "stem": "Ltn18-415Cu",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    216,
+    407
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "8. 18-415 Lotion",
+   "file": "8. 18-415 Lotion/16. Ltn18-415MtGl.psd",
+   "stem": "Ltn18-415MtGl",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    224,
+    402
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "8. 18-415 Lotion",
+   "file": "8. 18-415 Lotion/16. Ltn18-415MtSl.psd",
+   "stem": "Ltn18-415MtSl",
+   "canvas": [
+    578,
+    1044
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    540,
+    983
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "8. 18-415 Lotion",
+   "file": "8. 18-415 Lotion/17. Ltn18-415ShnGl.psd",
+   "stem": "Ltn18-415ShnGl",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    227,
+    399
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "8. 18-415 Lotion",
+   "file": "8. 18-415 Lotion/18. Ltn18-415ShnBlk.psd",
+   "stem": "Ltn18-415ShnBlk",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    221,
+    400
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "8. 18-415 Lotion",
+   "file": "8. 18-415 Lotion/20. Ltn18-415MtSlCl.psd",
+   "stem": "Ltn18-415MtSlCl",
+   "canvas": [
+    565,
+    996
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    570,
+    997
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "8. 18-415 Lotion",
+   "file": "8. 18-415 Lotion/21. Ltn18-415ShnSl.psd",
+   "stem": "Ltn18-415ShnSl",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    219,
+    395
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "8. 18-415 Lotion",
+   "file": "8. 18-415 Lotion/22. Ltn18-415SqClr.psd",
+   "stem": "Ltn18-415SqClr",
+   "canvas": [
+    400,
+    400
+   ],
+   "foregroundLayers": 1,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    257,
+    393
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "9. 18-415 Ansp",
+   "file": "9. 18-415 Ansp /23. Ansp18-415Lvn.psd",
+   "stem": "Ansp18-415Lvn",
+   "canvas": [
+    2550,
+    3300
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1579,
+    1078
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "9. 18-415 Ansp",
+   "file": "9. 18-415 Ansp /24. Ansp18-415Pnk.psd",
+   "stem": "Ansp18-415Pnk",
+   "canvas": [
+    2550,
+    3300
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1580,
+    1067
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "9. 18-415 Ansp",
+   "file": "9. 18-415 Ansp /25. Ansp18-415MtSl.psd",
+   "stem": "Ansp18-415MtSl",
+   "canvas": [
+    2550,
+    3300
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1582,
+    1050
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "9. 18-415 Ansp",
+   "file": "9. 18-415 Ansp /26. Ansp18-415IvySl.psd",
+   "stem": "Ansp18-415IvySl",
+   "canvas": [
+    2550,
+    3300
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1581,
+    1057
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "9. 18-415 Ansp",
+   "file": "9. 18-415 Ansp /27. Ansp18-415Gl.psd",
+   "stem": "Ansp18-415Gl",
+   "canvas": [
+    2550,
+    3300
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1584,
+    1064
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "9. 18-415 Ansp",
+   "file": "9. 18-415 Ansp /28. Ansp18-415IvyGl.psd",
+   "stem": "Ansp18-415IvyGl",
+   "canvas": [
+    2550,
+    3300
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1587,
+    1063
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "9. 18-415 Ansp",
+   "file": "9. 18-415 Ansp /29. Ansp18-415Blk.psd",
+   "stem": "Ansp18-415Blk",
+   "canvas": [
+    2550,
+    3300
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1607,
+    1075
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "9. 18-415 Ansp",
+   "file": "9. 18-415 Ansp /30. Ansp18-415Wht.psd",
+   "stem": "Ansp18-415Wht",
+   "canvas": [
+    2550,
+    3300
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1610,
+    1071
+   ]
+  },
+  {
+   "library": "20. Caps",
+   "folder": "9. 18-415 Ansp",
+   "file": "9. 18-415 Ansp /31. Ansp18-415Red.psd",
+   "stem": "Ansp18-415Red",
+   "canvas": [
+    2550,
+    3300
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1590,
+    1068
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBCrcl100AnSpTslLvn.psd",
+   "stem": "GBCrcl100AnSpTslLvn",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1266,
+    1606
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBCrcl50AnSpTslLvn.psd",
+   "stem": "GBCrcl50AnSpTslLvn",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1906,
+    2010
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBCrclFrst100AnSpTslLvn.psd",
+   "stem": "GBCrclFrst100AnSpTslLvn",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    828,
+    842
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBDiva100AnSpTslLvn.psd",
+   "stem": "GBDiva100AnSpTslLvn",
+   "canvas": [
+    2067,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1266,
+    1606
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBDiva46AnSpTslLvn.psd",
+   "stem": "GBDiva46AnSpTslLvn",
+   "canvas": [
+    1791,
+    1791
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBDivaFrst30AnSpTslLvn.psd",
+   "stem": "GBDivaFrst30AnSpTslLvn",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1810,
+    1915
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBDivaFrst46AnSpTslLvn.psd",
+   "stem": "GBDivaFrst46AnSpTslLvn",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBElgFrst100AnSpTslLvn.psd",
+   "stem": "GBElgFrst100AnSpTslLvn",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1900,
+    2017
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBElgFrst60AnSpTslLvn.psd",
+   "stem": "GBElgFrst60AnSpTslLvn",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1174,
+    1428
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBGrce55AnSpTslLvn.psd",
+   "stem": "GBGrce55AnSpTslLvn",
+   "canvas": [
+    1791,
+    2100
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1361,
+    1726
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBRnd128AnSpTslLvn.psd",
+   "stem": "GBRnd128AnSpTslLvn",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1290,
+    1435
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBSlk100AnSpTslLvn.psd",
+   "stem": "GBSlk100AnSpTslLvn",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/42. GBSlk30AnSpTslLvn.psd",
+   "stem": "GBSlk30AnSpTslLvn",
+   "canvas": [
+    1800,
+    1800
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1578,
+    1663
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/43. GBCrcl100AnSpTslIvyGl.psd",
+   "stem": "GBCrcl100AnSpTslIvyGl",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1339,
+    1599
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/43. GBCrcl50AnSpTslIvyGl.psd",
+   "stem": "GBCrcl50AnSpTslIvyGl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1797,
+    1898
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/43. GBDiva100AnSpTslIvyGl.psd",
+   "stem": "GBDiva100AnSpTslIvyGl",
+   "canvas": [
+    2067,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1346,
+    1601
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/43. GBDiva30AnSpTslLvn.psd",
+   "stem": "GBDiva30AnSpTslLvn",
+   "canvas": [
+    2275,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1810,
+    1915
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/43. GBDiva46AnSpTslIvyGl.psd",
+   "stem": "GBDiva46AnSpTslIvyGl",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/43. GBGrce55AnSpTslIvyGl.psd",
+   "stem": "GBGrce55AnSpTslIvyGl",
+   "canvas": [
+    1791,
+    2100
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1336,
+    1644
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/43. GBRnd128AnSpTslIvyGl.psd",
+   "stem": "GBRnd128AnSpTslIvyGl",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1251,
+    1414
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/43. GBSlk100AnSpTslIvyGl.psd",
+   "stem": "GBSlk100AnSpTslIvyGl",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/43. GBSlk30AnSpTslIvyGl.psd",
+   "stem": "GBSlk30AnSpTslIvyGl",
+   "canvas": [
+    1800,
+    1800
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1528,
+    1613
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/44. GBCrcl100AnSpTslIvySl.psd",
+   "stem": "GBCrcl100AnSpTslIvySl",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 8,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1339,
+    1599
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/44. GBCrcl50AnSpTslIvySl.psd",
+   "stem": "GBCrcl50AnSpTslIvySl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1837,
+    1916
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/44. GBDiva100AnSpTslIvySl.psd",
+   "stem": "GBDiva100AnSpTslIvySl",
+   "canvas": [
+    2067,
+    2100
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1346,
+    1601
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/44. GBDiva30AnSpTslIvyGl.psd",
+   "stem": "GBDiva30AnSpTslIvyGl",
+   "canvas": [
+    2275,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1823,
+    1925
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/44. GBDiva46AnSpTslIvySl.psd",
+   "stem": "GBDiva46AnSpTslIvySl",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/44. GBGrce55AnSpTslIvySl.psd",
+   "stem": "GBGrce55AnSpTslIvySl",
+   "canvas": [
+    1791,
+    2100
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1336,
+    1644
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/44. GBRnd128AnSpTslIvySl.psd",
+   "stem": "GBRnd128AnSpTslIvySl",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1244,
+    1426
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/44. GBSlk100AnSpTslIvySl.psd",
+   "stem": "GBSlk100AnSpTslIvySl",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 10,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/44. GBSlk30AnSpTslIvySl.psd",
+   "stem": "GBSlk30AnSpTslIvySl",
+   "canvas": [
+    1800,
+    1800
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1557,
+    1636
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBCrcl100AnSpTslWht.psd",
+   "stem": "GBCrcl100AnSpTslWht",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 8,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1522,
+    1713
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBCrcl50AnSpTslWht.psd",
+   "stem": "GBCrcl50AnSpTslWht",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1837,
+    1937
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBCrclFrst100AnSpTslWht.psd",
+   "stem": "GBCrclFrst100AnSpTslWht",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    789,
+    830
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBDiva100AnSpTslWht.psd",
+   "stem": "GBDiva100AnSpTslWht",
+   "canvas": [
+    2067,
+    2100
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1509,
+    1700
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBDiva30AnSpTslWht.psd",
+   "stem": "GBDiva30AnSpTslWht",
+   "canvas": [
+    2275,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1851,
+    1948
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBDiva46AnSpTslWht.psd",
+   "stem": "GBDiva46AnSpTslWht",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBDivaFrst30AnSpTslWht.psd",
+   "stem": "GBDivaFrst30AnSpTslWht",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1851,
+    1948
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBDivaFrst46AnSpTslWht.psd",
+   "stem": "GBDivaFrst46AnSpTslWht",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBElgFrst100AnSpTslWht.psd",
+   "stem": "GBElgFrst100AnSpTslWht",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1851,
+    1948
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBElgFrst60AnSpTslWht.psd",
+   "stem": "GBElgFrst60AnSpTslWht",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 5,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1307,
+    1472
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBGrce55AnSpTslWht.psd",
+   "stem": "GBGrce55AnSpTslWht",
+   "canvas": [
+    1791,
+    2100
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1526,
+    1725
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBRnd128AnSpTslWht.psd",
+   "stem": "GBRnd128AnSpTslWht",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    1390,
+    1526
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBSlk100AnSpTslWht.psd",
+   "stem": "GBSlk100AnSpTslWht",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1237,
+    1612
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/45. GBSlk30AnSpTslWht.psd",
+   "stem": "GBSlk30AnSpTslWht",
+   "canvas": [
+    1800,
+    1800
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1556,
+    1640
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBCrcl100AnSpTslPnk.psd",
+   "stem": "GBCrcl100AnSpTslPnk",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1296,
+    1614
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBCrcl50AnSpTslPnk.psd",
+   "stem": "GBCrcl50AnSpTslPnk",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1815,
+    1931
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBCrclFrst100AnSpTslPnk.psd",
+   "stem": "GBCrclFrst100AnSpTslPnk",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    760,
+    801
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBDiva100AnSpTslPnk.psd",
+   "stem": "GBDiva100AnSpTslPnk",
+   "canvas": [
+    2067,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1268,
+    1601
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBDiva30AnSpTslPnk.psd",
+   "stem": "GBDiva30AnSpTslPnk",
+   "canvas": [
+    2275,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1824,
+    1920
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBDiva46AnSpTslPnk.psd",
+   "stem": "GBDiva46AnSpTslPnk",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBDivaFrst30AnSpTslPnk.psd",
+   "stem": "GBDivaFrst30AnSpTslPnk",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1824,
+    1920
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBDivaFrst46AnSpTslPnk.psd",
+   "stem": "GBDivaFrst46AnSpTslPnk",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBElgFrst100AnSpTslPnk.psd",
+   "stem": "GBElgFrst100AnSpTslPnk",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    1998,
+    2021
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBElgFrst60AnSpTslPnk.psd",
+   "stem": "GBElgFrst60AnSpTslPnk",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1094,
+    1381
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBGrce55AnSpTslPnk.psd",
+   "stem": "GBGrce55AnSpTslPnk",
+   "canvas": [
+    1791,
+    2100
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1311,
+    1664
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBRnd128AnSpTslPnk.psd",
+   "stem": "GBRnd128AnSpTslPnk",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1143,
+    1384
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBSlk100AnSpTslPnk.psd",
+   "stem": "GBSlk100AnSpTslPnk",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/46. GBSlk30AnSpTslPnk.psd",
+   "stem": "GBSlk30AnSpTslPnk",
+   "canvas": [
+    1800,
+    1800
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1529,
+    1627
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBCrcl100AnSpTslRed.psd",
+   "stem": "GBCrcl100AnSpTslRed",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1336,
+    1578
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBCrcl50AnSpTslRed.psd",
+   "stem": "GBCrcl50AnSpTslRed",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2034,
+    2081
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBCrclFrst100AnSpTslRed.psd",
+   "stem": "GBCrclFrst100AnSpTslRed",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    830,
+    842
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBDiva100AnSpTslRed.psd",
+   "stem": "GBDiva100AnSpTslRed",
+   "canvas": [
+    2067,
+    2100
+   ],
+   "foregroundLayers": 5,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1278,
+    1581
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBDiva30AnSpTslRed.psd",
+   "stem": "GBDiva30AnSpTslRed",
+   "canvas": [
+    2275,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1949,
+    1981
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBDiva46AnSpTslRed.psd",
+   "stem": "GBDiva46AnSpTslRed",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBDivaFrst30AnSpTslRed.psd",
+   "stem": "GBDivaFrst30AnSpTslRed",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1949,
+    1981
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBDivaFrst46AnSpTslRed.psd",
+   "stem": "GBDivaFrst46AnSpTslRed",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBElgFrst100AnSpTslRed.psd",
+   "stem": "GBElgFrst100AnSpTslRed",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    1998,
+    2021
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBElgFrst60AnSpTslRed.psd",
+   "stem": "GBElgFrst60AnSpTslRed",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 5,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1135,
+    1404
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBGrce55AnSpTslRed.psd",
+   "stem": "GBGrce55AnSpTslRed",
+   "canvas": [
+    1791,
+    2100
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1281,
+    1615
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBRnd128AnSpTslRed.psd",
+   "stem": "GBRnd128AnSpTslRed",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1233,
+    1412
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBSlk100AnSpTslRed.psd",
+   "stem": "GBSlk100AnSpTslRed",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/47. GBSlk30AnSpTslRed.psd",
+   "stem": "GBSlk30AnSpTslRed",
+   "canvas": [
+    1800,
+    1800
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1693,
+    1724
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBCrcl100AnSpTslBlk.psd",
+   "stem": "GBCrcl100AnSpTslBlk",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 8,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1474,
+    1682
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBCrcl50AnSpTslBlk.psd",
+   "stem": "GBCrcl50AnSpTslBlk",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1977,
+    2023
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBCrclFrst100AnSpTslBlk.psd",
+   "stem": "GBCrclFrst100AnSpTslBlk",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    844,
+    843
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBDiva100AnSpTslBlk.psd",
+   "stem": "GBDiva100AnSpTslBlk",
+   "canvas": [
+    2067,
+    2100
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1460,
+    1620
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBDiva30AnSpTslBlk.psd",
+   "stem": "GBDiva30AnSpTslBlk",
+   "canvas": [
+    2275,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1926,
+    1959
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBDiva46AnSpTslBlk.psd",
+   "stem": "GBDiva46AnSpTslBlk",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBDivaFrst30AnSpTslBlk.psd",
+   "stem": "GBDivaFrst30AnSpTslBlk",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1926,
+    1959
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBDivaFrst46AnSpTslBlk.psd",
+   "stem": "GBDivaFrst46AnSpTslBlk",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBElgFrst100AnSpTslBlk.psd",
+   "stem": "GBElgFrst100AnSpTslBlk",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1947,
+    1988
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBElgFrst60AnSpTslBlk.psd",
+   "stem": "GBElgFrst60AnSpTslBlk",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1244,
+    1384
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBGrce55AnSpTslBlk.psd",
+   "stem": "GBGrce55AnSpTslBlk",
+   "canvas": [
+    1791,
+    2100
+   ],
+   "foregroundLayers": 5,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1342,
+    1588
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBRnd128AnSpTslBlk.psd",
+   "stem": "GBRnd128AnSpTslBlk",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 8,
+   "hiddenLayers": 3,
+   "largestLayer": [
+    1505,
+    1615
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBSlk100AnSpTslBlk.psd",
+   "stem": "GBSlk100AnSpTslBlk",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1791,
+    1660
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/48. GBSlk30AnSpTslBlk.psd",
+   "stem": "GBSlk30AnSpTslBlk",
+   "canvas": [
+    1800,
+    1800
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1700,
+    1740
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/49. GBCrcl100AnSpTslMtSl.psd",
+   "stem": "GBCrcl100AnSpTslMtSl",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 5,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1365,
+    1663
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/49. GBCrcl50AnSpTslMtSl.psd",
+   "stem": "GBCrcl50AnSpTslMtSl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1851,
+    1883
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/49. GBDiva30AnSpTslMtSl.psd",
+   "stem": "GBDiva30AnSpTslMtSl",
+   "canvas": [
+    2275,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1875,
+    1902
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/49. GBDiva46AnSpTslMtSl.psd",
+   "stem": "GBDiva46AnSpTslMtSl",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/49. GBGrce55AnSpTslMtSl.psd",
+   "stem": "GBGrce55AnSpTslMtSl",
+   "canvas": [
+    1791,
+    2100
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1344,
+    1596
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/49. GBRnd128AnSpTslMtSl.psd",
+   "stem": "GBRnd128AnSpTslMtSl",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 5,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    1505,
+    1615
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/49. GBSlk100AnSpTslMtSl.psd",
+   "stem": "GBSlk100AnSpTslMtSl",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    804,
+    2166
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/49. GBSlk30AnSpTslMtSl.psd",
+   "stem": "GBSlk30AnSpTslMtSl",
+   "canvas": [
+    1800,
+    1800
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1625,
+    1653
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBCrcl100AnSpTslGl.psd",
+   "stem": "GBCrcl100AnSpTslGl",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1289,
+    1606
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBCrcl50AnSpTslGl.psd",
+   "stem": "GBCrcl50AnSpTslGl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1751,
+    1890
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBCrclFrst100AnSpTslGl.psd",
+   "stem": "GBCrclFrst100AnSpTslGl",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    844,
+    843
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBDiva100AnSpTslGl.psd",
+   "stem": "GBDiva100AnSpTslGl",
+   "canvas": [
+    2067,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1378,
+    1629
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBDiva30AnSpTslGl.psd",
+   "stem": "GBDiva30AnSpTslGl",
+   "canvas": [
+    2275,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1836,
+    1951
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBDiva46AnSpTslGl.psd",
+   "stem": "GBDiva46AnSpTslGl",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBDivaFrst30AnSpTslGl.psd",
+   "stem": "GBDivaFrst30AnSpTslGl",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1836,
+    1951
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBDivaFrst46AnSpTslGl.psd",
+   "stem": "GBDivaFrst46AnSpTslGl",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    2275,
+    2450
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBElgFrst100AnSpTslGl.psd",
+   "stem": "GBElgFrst100AnSpTslGl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1836,
+    1951
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBElgFrst60AnSpTslGl.psd",
+   "stem": "GBElgFrst60AnSpTslGl",
+   "canvas": [
+    1750,
+    1750
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1155,
+    1365
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBGrce55AnSpTslGl.psd",
+   "stem": "GBGrce55AnSpTslGl",
+   "canvas": [
+    1791,
+    2100
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1327,
+    1586
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBRnd128AnSpTslGl.psd",
+   "stem": "GBRnd128AnSpTslGl",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 5,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    1505,
+    1615
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBSlk100AnSpTslGl.psd",
+   "stem": "GBSlk100AnSpTslGl",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/50. GBSlk30AnSpTslGl.psd",
+   "stem": "GBSlk30AnSpTslGl",
+   "canvas": [
+    1800,
+    1800
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1508,
+    1597
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Original Tassels",
+   "file": "Original Tassels/51. GBDiva30AnSpTslIvySl.psd",
+   "stem": "GBDiva30AnSpTslIvySl",
+   "canvas": [
+    2275,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1837,
+    1925
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBCrcl100AnSpTslLvn.psd",
+   "stem": "GBCrcl100AnSpTslLvn",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1242,
+    1461
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBCrcl50AnSpTslLvn.psd",
+   "stem": "GBCrcl50AnSpTslLvn",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1344,
+    1612
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBCrclFrst100AnSpTslLvn.psd",
+   "stem": "GBCrclFrst100AnSpTslLvn",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    828,
+    842
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBCrclFrst50AnSpTslLvn.psd",
+   "stem": "GBCrclFrst50AnSpTslLvn",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1344,
+    1612
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBCyl100AnSpTslLvn..psd",
+   "stem": "GBCyl100AnSpTslLvn.",
+   "canvas": [
+    1152,
+    1152
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    200,
+    966
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBCyl30AnSpTslLvn.psd",
+   "stem": "GBCyl30AnSpTslLvn",
+   "canvas": [
+    2275,
+    1750
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1305,
+    1490
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBCyl50AnSpTslLvn.psd",
+   "stem": "GBCyl50AnSpTslLvn",
+   "canvas": [
+    2800,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1339,
+    1815
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBElg100AnSpTslLvn.psd",
+   "stem": "GBElg100AnSpTslLvn",
+   "canvas": [
+    2450,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1434,
+    1910
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBElgFrst100AnSpTslLvn.psd",
+   "stem": "GBElgFrst100AnSpTslLvn",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1434,
+    1910
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBEmp100AnSpTslLvn.psd",
+   "stem": "GBEmp100AnSpTslLvn",
+   "canvas": [
+    2450,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1438,
+    1856
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBRnd78AnSpTslLvn.psd",
+   "stem": "GBRnd78AnSpTslLvn",
+   "canvas": [
+    1654,
+    1400
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1018,
+    1232
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBRndFrst78AnSpTslLvn.psd",
+   "stem": "GBRndFrst78AnSpTslLvn",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1093,
+    1238
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBSlk100AnSpTslLvn.psd",
+   "stem": "GBSlk100AnSpTslLvn",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBSlk50AnSpTslLvn.psd",
+   "stem": "GBSlk50AnSpTslLvn",
+   "canvas": [
+    1725,
+    1950
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    588,
+    1822
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBSlm100AnSpTslLvn.psd",
+   "stem": "GBSlm100AnSpTslLvn",
+   "canvas": [
+    2275,
+    2625
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    444,
+    2138
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/42. GBSlm50AnSpTslLvn.psd",
+   "stem": "GBSlm50AnSpTslLvn",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1340,
+    1921
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBCrcl100AnSpTslIvyGl.psd",
+   "stem": "GBCrcl100AnSpTslIvyGl",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1242,
+    1461
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBCrcl50AnSpTslIvyGl.psd",
+   "stem": "GBCrcl50AnSpTslIvyGl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1344,
+    1650
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBCrclFrst100AnSpTslIvyGl.psd",
+   "stem": "GBCrclFrst100AnSpTslIvyGl",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    844,
+    843
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBCrclFrst50AnSpTslIvyGl.psd",
+   "stem": "GBCrclFrst50AnSpTslIvyGl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1344,
+    1650
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBCyl100AnSpTslIvyGl.psd",
+   "stem": "GBCyl100AnSpTslIvyGl",
+   "canvas": [
+    1152,
+    1152
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    758,
+    802
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBCyl30AnSpTslIvyGl.psd",
+   "stem": "GBCyl30AnSpTslIvyGl",
+   "canvas": [
+    2275,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1282,
+    1502
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBCyl50AnSpTslIvyGl.psd",
+   "stem": "GBCyl50AnSpTslIvyGl",
+   "canvas": [
+    2800,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1347,
+    1828
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBElg100AnSpTslIvyGl.psd",
+   "stem": "GBElg100AnSpTslIvyGl",
+   "canvas": [
+    2450,
+    2013
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1376,
+    1849
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBElgFrst100AnSpTslIvyGl.psd",
+   "stem": "GBElgFrst100AnSpTslIvyGl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1376,
+    1849
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBEmp100AnSpTslIvyGl.psd",
+   "stem": "GBEmp100AnSpTslIvyGl",
+   "canvas": [
+    2450,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1365,
+    1817
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBRnd78AnSpTslIvyGl.psd",
+   "stem": "GBRnd78AnSpTslIvyGl",
+   "canvas": [
+    1654,
+    1400
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 2,
+   "largestLayer": [
+    1026,
+    1172
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBRndFrst78AnSpTslIvyGl.psd",
+   "stem": "GBRndFrst78AnSpTslIvyGl",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    848,
+    1233
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBSlk100AnSpTslIvyGl.psd",
+   "stem": "GBSlk100AnSpTslIvyGl",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBSlk50AnSpTslIvyGl.psd",
+   "stem": "GBSlk50AnSpTslIvyGl",
+   "canvas": [
+    1725,
+    1950
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    588,
+    1822
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBSlm100AnSpTslIvyGl.psd",
+   "stem": "GBSlm100AnSpTslIvyGl",
+   "canvas": [
+    2275,
+    2625
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    444,
+    2138
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/43. GBSlm50AnSpTslIvyGl.psd",
+   "stem": "GBSlm50AnSpTslIvyGl",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1399,
+    1860
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBCrcl100AnSpTslIvySl.psd",
+   "stem": "GBCrcl100AnSpTslIvySl",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 8,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1242,
+    1461
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBCrcl50AnSpTslIvySl.psd",
+   "stem": "GBCrcl50AnSpTslIvySl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1374,
+    1646
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBCrclFrst100AnSpTslIvySl.psd",
+   "stem": "GBCrclFrst100AnSpTslIvySl",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    844,
+    843
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBCrclFrst50AnSpTslIvySl.psd",
+   "stem": "GBCrclFrst50AnSpTslIvySl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1374,
+    1646
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBCyl100AnSpTslIvySl.psd",
+   "stem": "GBCyl100AnSpTslIvySl",
+   "canvas": [
+    1152,
+    1152
+   ],
+   "foregroundLayers": 11,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    758,
+    802
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBCyl30AnSpTslIvySl.psd",
+   "stem": "GBCyl30AnSpTslIvySl",
+   "canvas": [
+    2275,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1310,
+    1513
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBCyl50AnSpTslIvySl.psd",
+   "stem": "GBCyl50AnSpTslIvySl",
+   "canvas": [
+    2800,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1494,
+    1834
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBElg100AnSpTslIvySl.psd",
+   "stem": "GBElg100AnSpTslIvySl",
+   "canvas": [
+    2450,
+    2013
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1395,
+    1842
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBElgFrst100AnSpTslIvySl.psd",
+   "stem": "GBElgFrst100AnSpTslIvySl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1395,
+    1842
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBEmp100AnSpTslIvySl.psd",
+   "stem": "GBEmp100AnSpTslIvySl",
+   "canvas": [
+    2450,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1378,
+    1823
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBRnd78AnSpTslIvySl.psd",
+   "stem": "GBRnd78AnSpTslIvySl",
+   "canvas": [
+    1654,
+    1400
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1026,
+    1172
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBRndFrst78AnSpTslIvySl.psd",
+   "stem": "GBRndFrst78AnSpTslIvySl",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    828,
+    1226
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBSlk100AnSpTslIvySl.psd",
+   "stem": "GBSlk100AnSpTslIvySl",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 10,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBSlk50AnSpTslIvySl.psd",
+   "stem": "GBSlk50AnSpTslIvySl",
+   "canvas": [
+    1725,
+    1950
+   ],
+   "foregroundLayers": 10,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    588,
+    1822
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBSlm100AnSpTslIvySl.psd",
+   "stem": "GBSlm100AnSpTslIvySl",
+   "canvas": [
+    2275,
+    2625
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    444,
+    2138
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/44. GBSlm50AnSpTslIvySl.psd",
+   "stem": "GBSlm50AnSpTslIvySl",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1398,
+    1727
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBCrcl100AnSpTslWht.psd",
+   "stem": "GBCrcl100AnSpTslWht",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 8,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1237,
+    1688
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBCrcl50AnSpTslWht.psd",
+   "stem": "GBCrcl50AnSpTslWht",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1391,
+    1633
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBCrclFrst100AnSpTslWht.psd",
+   "stem": "GBCrclFrst100AnSpTslWht",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    616,
+    782
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBCrclFrst50AnSpTslWht.psd",
+   "stem": "GBCrclFrst50AnSpTslWht",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1391,
+    1633
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBCyl100AnSpTslWht.psd",
+   "stem": "GBCyl100AnSpTslWht",
+   "canvas": [
+    1152,
+    1152
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    772,
+    808
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBCyl30AnSpTslWht.psd",
+   "stem": "GBCyl30AnSpTslWht",
+   "canvas": [
+    2275,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1281,
+    1491
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBCyl50AnSpTslWht.psd",
+   "stem": "GBCyl50AnSpTslWht",
+   "canvas": [
+    2800,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1453,
+    1841
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBElg100AnSpTslWht.psd",
+   "stem": "GBElg100AnSpTslWht",
+   "canvas": [
+    2450,
+    2013
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1403,
+    1848
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBElgFrst100AnSpTslWht.psd",
+   "stem": "GBElgFrst100AnSpTslWht",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1403,
+    1848
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBEmp100AnSpTslWht.psd",
+   "stem": "GBEmp100AnSpTslWht",
+   "canvas": [
+    2450,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1424,
+    1855
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBRnd78AnSpTslWht.psd",
+   "stem": "GBRnd78AnSpTslWht",
+   "canvas": [
+    1654,
+    1400
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1032,
+    1306
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBRndFrst78AnSpTslWht.psd",
+   "stem": "GBRndFrst78AnSpTslWht",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1032,
+    1306
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBSlk100AnSpTslWht.psd",
+   "stem": "GBSlk100AnSpTslWht",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1237,
+    1612
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBSlk50AnSpTslWht.psd",
+   "stem": "GBSlk50AnSpTslWht",
+   "canvas": [
+    1725,
+    1950
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1041,
+    1356
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBSlm100AnSpTslWht.psd",
+   "stem": "GBSlm100AnSpTslWht",
+   "canvas": [
+    2275,
+    2625
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1237,
+    1612
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/45. GBSlm50AnSpTslWht.psd",
+   "stem": "GBSlm50AnSpTslWht",
+   "canvas": [
+    2538,
+    2275
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1470,
+    1884
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBCrcl100AnSpTslPnk.psd",
+   "stem": "GBCrcl100AnSpTslPnk",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1242,
+    1461
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBCrcl50AnSpTslPnk.psd",
+   "stem": "GBCrcl50AnSpTslPnk",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1301,
+    1609
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBCrclFrst100AnSpTslPnk.psd",
+   "stem": "GBCrclFrst100AnSpTslPnk",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    588,
+    759
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBCrclFrst50AnSpTslPnk.psd",
+   "stem": "GBCrclFrst50AnSpTslPnk",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1301,
+    1609
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBCyl100AnSpTslPnk.psd",
+   "stem": "GBCyl100AnSpTslPnk",
+   "canvas": [
+    1152,
+    1152
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    770,
+    818
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBCyl30AnSpTslPnk.psd",
+   "stem": "GBCyl30AnSpTslPnk",
+   "canvas": [
+    2275,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1397,
+    1556
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBCyl50AnSpTslPnk.psd",
+   "stem": "GBCyl50AnSpTslPnk",
+   "canvas": [
+    2800,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1471,
+    1829
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBElg100AnSpTslPnk.psd",
+   "stem": "GBElg100AnSpTslPnk",
+   "canvas": [
+    2450,
+    2013
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1367,
+    1826
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBElgFrst100AnSpTslPnk.psd",
+   "stem": "GBElgFrst100AnSpTslPnk",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    1998,
+    2021
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBEmp100AnSpTslPnk.psd",
+   "stem": "GBEmp100AnSpTslPnk",
+   "canvas": [
+    2450,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1411,
+    1830
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBRnd78AnSpTslPnk.psd",
+   "stem": "GBRnd78AnSpTslPnk",
+   "canvas": [
+    1654,
+    1400
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 2,
+   "largestLayer": [
+    1026,
+    1172
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBRndFrst78AnSpTslPnk.psd",
+   "stem": "GBRndFrst78AnSpTslPnk",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    871,
+    1287
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBSlk100AnSpTslPnk.psd",
+   "stem": "GBSlk100AnSpTslPnk",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBSlk50AnSpTslPnk.psd",
+   "stem": "GBSlk50AnSpTslPnk",
+   "canvas": [
+    1725,
+    1950
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    588,
+    1822
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBSlm100AnSpTslPnk.psd",
+   "stem": "GBSlm100AnSpTslPnk",
+   "canvas": [
+    2275,
+    2625
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    444,
+    2138
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/46. GBSlm50AnSpTslPnk.psd",
+   "stem": "GBSlm50AnSpTslPnk",
+   "canvas": [
+    2538,
+    2275
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1476,
+    1858
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBCrcl100AnSpTslRed.psd",
+   "stem": "GBCrcl100AnSpTslRed",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1242,
+    1461
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBCrcl50AnSpTslRed.psd",
+   "stem": "GBCrcl50AnSpTslRed",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1459,
+    1618
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBCrclFrst100AnSpTslRed.psd",
+   "stem": "GBCrclFrst100AnSpTslRed",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    628,
+    749
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBCrclFrst50AnSpTslRed.psd",
+   "stem": "GBCrclFrst50AnSpTslRed",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1459,
+    1618
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBCyl100AnSpTslRed.psd",
+   "stem": "GBCyl100AnSpTslRed",
+   "canvas": [
+    1152,
+    1152
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    200,
+    966
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBCyl30AnSpTslMtSl.psd",
+   "stem": "GBCyl30AnSpTslMtSl",
+   "canvas": [
+    2275,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1280,
+    1635
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBCyl50AnSpTslRed.psd",
+   "stem": "GBCyl50AnSpTslRed",
+   "canvas": [
+    2800,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1485,
+    1761
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBElg100AnSpTslRed.psd",
+   "stem": "GBElg100AnSpTslRed",
+   "canvas": [
+    2800,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1524,
+    1871
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBElgFrst100AnSpTslRed.psd",
+   "stem": "GBElgFrst100AnSpTslRed",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    1824,
+    1920
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBEmp100AnSpTslRed.psd",
+   "stem": "GBEmp100AnSpTslRed",
+   "canvas": [
+    2538,
+    2188
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1531,
+    1853
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBRnd78AnSpTslRed.psd",
+   "stem": "GBRnd78AnSpTslRed",
+   "canvas": [
+    1654,
+    1400
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1026,
+    1172
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBRndFrst78AnSpTslRed.psd",
+   "stem": "GBRndFrst78AnSpTslRed",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    957,
+    1220
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBSlk100AnSpTslRed.psd",
+   "stem": "GBSlk100AnSpTslRed",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBSlk50AnSpTslRed.psd",
+   "stem": "GBSlk50AnSpTslRed",
+   "canvas": [
+    1875,
+    2035
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    588,
+    1822
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBSlm100AnSpTslRed.psd",
+   "stem": "GBSlm100AnSpTslRed",
+   "canvas": [
+    2275,
+    2625
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    444,
+    2138
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/47. GBSlm50AnSpTslRed.psd",
+   "stem": "GBSlm50AnSpTslRed",
+   "canvas": [
+    2538,
+    2275
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1578,
+    1835
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBCrcl100AnSpTslBlk.psd",
+   "stem": "GBCrcl100AnSpTslBlk",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 8,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1267,
+    1641
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBCrcl50AnSpTslBlk.psd",
+   "stem": "GBCrcl50AnSpTslBlk",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1418,
+    1641
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBCrclFrst100AnSpTslBlk.psd",
+   "stem": "GBCrclFrst100AnSpTslBlk",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    660,
+    776
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBCrclFrst50AnSpTslBlk.psd",
+   "stem": "GBCrclFrst50AnSpTslBlk",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1418,
+    1641
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBCyl100AnSpTslBlk.psd",
+   "stem": "GBCyl100AnSpTslBlk",
+   "canvas": [
+    1152,
+    1152
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    635,
+    684
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBCyl30AnSpTslRed.psd",
+   "stem": "GBCyl30AnSpTslRed",
+   "canvas": [
+    2275,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1283,
+    1556
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBCyl50AnSpTslBlk.psd",
+   "stem": "GBCyl50AnSpTslBlk",
+   "canvas": [
+    2800,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1413,
+    1806
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBElg100AnSpTslBlk.psd",
+   "stem": "GBElg100AnSpTslBlk",
+   "canvas": [
+    2800,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1495,
+    1810
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBElgFrst100AnSpTslBlk.psd",
+   "stem": "GBElgFrst100AnSpTslBlk",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1495,
+    1810
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBEmp100AnSpTslBlk.psd",
+   "stem": "GBEmp100AnSpTslBlk",
+   "canvas": [
+    2538,
+    2188
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1483,
+    1831
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBRnd78AnSpTslBlk.psd",
+   "stem": "GBRnd78AnSpTslBlk",
+   "canvas": [
+    1654,
+    1400
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1026,
+    1172
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBRndFrst78AnSpTslBlk.psd",
+   "stem": "GBRndFrst78AnSpTslBlk",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    893,
+    1194
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBSlk100AnSpTslBlk.psd",
+   "stem": "GBSlk100AnSpTslBlk",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1356,
+    1544
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBSlk50AnSpTslBlk.psd",
+   "stem": "GBSlk50AnSpTslBlk",
+   "canvas": [
+    1875,
+    2035
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1008,
+    1148
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBSlm100AnSpTslBlk.psd",
+   "stem": "GBSlm100AnSpTslBlk",
+   "canvas": [
+    2275,
+    2625
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1356,
+    1544
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/48. GBSlm50AnSpTslBlk.psd",
+   "stem": "GBSlm50AnSpTslBlk",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1340,
+    1921
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBCrcl100AnSpTslMtSl.psd",
+   "stem": "GBCrcl100AnSpTslMtSl",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 5,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1170,
+    1649
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBCrcl50AnSpTslMtSl.psd",
+   "stem": "GBCrcl50AnSpTslMtSl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1363,
+    1600
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBCrclFrst100AnSpTslMtSl.psd",
+   "stem": "GBCrclFrst100AnSpTslMtSl",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    844,
+    843
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBCrclFrst50AnSpTslMtSl.psd",
+   "stem": "GBCrclFrst50AnSpTslMtSl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1363,
+    1600
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBCyl100AnSpTslMtSl.psd",
+   "stem": "GBCyl100AnSpTslMtSl",
+   "canvas": [
+    1152,
+    1152
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    824,
+    848
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBCyl30AnSpTslBlk.psd",
+   "stem": "GBCyl30AnSpTslBlk",
+   "canvas": [
+    2275,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1248,
+    1587
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBCyl50AnSpTslMtSl.psd",
+   "stem": "GBCyl50AnSpTslMtSl",
+   "canvas": [
+    2800,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1333,
+    1759
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBElg100AnSpTslMtSl.psd",
+   "stem": "GBElg100AnSpTslMtSl",
+   "canvas": [
+    2800,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1477,
+    1754
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBElgFrst100AnSpTslMtSl.psd",
+   "stem": "GBElgFrst100AnSpTslMtSl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1477,
+    1754
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBEmp100AnSpTslMtSl.psd",
+   "stem": "GBEmp100AnSpTslMtSl",
+   "canvas": [
+    2538,
+    2188
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1431,
+    1810
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBRnd78AnSpTslMtSl.psd",
+   "stem": "GBRnd78AnSpTslMtSl",
+   "canvas": [
+    1654,
+    1400
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1026,
+    1172
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBRndFrst78AnSpTslMtSl.psd",
+   "stem": "GBRndFrst78AnSpTslMtSl",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    926,
+    1229
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBSlk100AnSpTslMtSl.psd",
+   "stem": "GBSlk100AnSpTslMtSl",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    804,
+    2166
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBSlk50AnSpTslMtSl.psd",
+   "stem": "GBSlk50AnSpTslMtSl",
+   "canvas": [
+    1875,
+    2035
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    695,
+    1871
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBSlm100AnSpTslMtSl.psd",
+   "stem": "GBSlm100AnSpTslMtSl",
+   "canvas": [
+    2275,
+    2625
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    804,
+    2166
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/49. GBSlm50AnSpTslMtSl.psd",
+   "stem": "GBSlm50AnSpTslMtSl",
+   "canvas": [
+    2450,
+    2275
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1073,
+    1832
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBCrcl100AnSpTslGl.psd",
+   "stem": "GBCrcl100AnSpTslGl",
+   "canvas": [
+    2136,
+    1925
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1242,
+    1461
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBCrcl50AnSpTslGl.psd",
+   "stem": "GBCrcl50AnSpTslGl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1336,
+    1575
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBCrclFrst100AnSpTslGl.psd",
+   "stem": "GBCrclFrst100AnSpTslGl",
+   "canvas": [
+    1008,
+    864
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    844,
+    843
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBCyl100AnSpTslGl.psd",
+   "stem": "GBCyl100AnSpTslGl",
+   "canvas": [
+    1152,
+    1152
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    768,
+    815
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBCyl30AnSpTslGl.psd",
+   "stem": "GBCyl30AnSpTslGl",
+   "canvas": [
+    2275,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1265,
+    1525
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBCyl50AnSpTslGl.psd",
+   "stem": "GBCyl50AnSpTslGl",
+   "canvas": [
+    2800,
+    2100
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1310,
+    1748
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBElg100AnSpTslGl.psd",
+   "stem": "GBElg100AnSpTslGl",
+   "canvas": [
+    2800,
+    2450
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1448,
+    1856
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBElgFrst100AnSpTslGl.psd",
+   "stem": "GBElgFrst100AnSpTslGl",
+   "canvas": [
+    2450,
+    2450
+   ],
+   "foregroundLayers": 2,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1448,
+    1856
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBEmp100AnSpTslGl.psd",
+   "stem": "GBEmp100AnSpTslGl",
+   "canvas": [
+    2538,
+    2188
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    1404,
+    1858
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBRnd78AnSpTslGl.psd",
+   "stem": "GBRnd78AnSpTslGl",
+   "canvas": [
+    1654,
+    1400
+   ],
+   "foregroundLayers": 5,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    1026,
+    1172
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBRndFrst78AnSpTslGl.psd",
+   "stem": "GBRndFrst78AnSpTslGl",
+   "canvas": [
+    2100,
+    1680
+   ],
+   "foregroundLayers": 3,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    786,
+    1215
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBSlk100AnSpTslGl.psd",
+   "stem": "GBSlk100AnSpTslGl",
+   "canvas": [
+    2450,
+    2625
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    568,
+    2087
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBSlk50AnSpTslGl.psd",
+   "stem": "GBSlk50AnSpTslGl",
+   "canvas": [
+    1875,
+    2035
+   ],
+   "foregroundLayers": 6,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    588,
+    1822
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBSlm100AnSpTslGl.psd",
+   "stem": "GBSlm100AnSpTslGl",
+   "canvas": [
+    2275,
+    2625
+   ],
+   "foregroundLayers": 7,
+   "hiddenLayers": 0,
+   "largestLayer": [
+    444,
+    2138
+   ]
+  },
+  {
+   "library": "21. Tassels",
+   "folder": "Updated Tassels",
+   "file": "Updated Tassels/50. GBSlm50AnSpTslGl.psd",
+   "stem": "GBSlm50AnSpTslGl",
+   "canvas": [
+    2538,
+    2275
+   ],
+   "foregroundLayers": 4,
+   "hiddenLayers": 1,
+   "largestLayer": [
+    1762,
+    1880
+   ]
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "schemaVersion": 1,
+ "release": "empire-pumps-2026-09-20",
+ "batch": "dist/paper-doll/empire-pumps-2026-09-20",
+ "approvedBy": "Jordan Richter · in chat 2026-09-20: \"looks good now  ship Empire exposed pumps 2026-09-20\"",
+ "approvedAt": "2026-09-20T16:52:32.286Z",
+ "shipPhrase": "ship Empire exposed pumps 2026-09-20",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 12,
+  "approved": 12,
+  "setAside": 0,
+  "notExtracted": 0
+ },
+ "reviewSheet": "public/reviews/builder-review-2026-09-19/empire50-pump-kits-before-after.jpg + empire100-pump-kits-before-after.jpg",
+ "reviewSheetSha256": null,
+ "rows": [
+  {
+   "sku": "GBEmp100SpryCu",
+   "plateSha256": "aa7171806c0ee3aa17262b81f8c888531b72f0f8b238b38e311b89694a67af7c"
+  },
+  {
+   "sku": "GBEmp100SpryMtGl",
+   "plateSha256": "b4da3bcd5e0536655921406d05af7a66a91170bc0e6befef7565058cad5f4fd5"
+  },
+  {
+   "sku": "GBEmp100SpryMtSl",
+   "plateSha256": "bd19fed351825361ff194940fc08e89aeadeac7f3ed056443354f5832f296cf2"
+  },
+  {
+   "sku": "GBEmp100SpryShnBlk",
+   "plateSha256": "29d65773f4d81a27bc806146558b69e1899dd7696b7216cdded645e8a7d54dc0"
+  },
+  {
+   "sku": "GBEmp100SpryShnGl",
+   "plateSha256": "2770295f0415833567388e08f10d0ebcef7d2ded2ace5bc0c7f66a2d1e2abb9a"
+  },
+  {
+   "sku": "GBEmp100SpryShnSl",
+   "plateSha256": "b84b62f2d6c7149531e7c5c4ade4de28d430ae899765096b97db0ae67060a55b"
+  },
+  {
+   "sku": "GBEmp50SpryCu",
+   "plateSha256": "385070db40284d964fca82246c573eaf0a43a76f3e53b79e05f3f3aff547aa93"
+  },
+  {
+   "sku": "GBEmp50SpryMtGl",
+   "plateSha256": "7079bd317b9ca4f8c46f7fabb2661ceed72c370a5a459234dc4836d6197c2f3e"
+  },
+  {
+   "sku": "GBEmp50SpryMtSl",
+   "plateSha256": "2b0d0a1e1226a62db94043193fd4bef284ccb0588abd6dff7cd7b7ab89ae745f"
+  },
+  {
+   "sku": "GBEmp50SpryShnBlk",
+   "plateSha256": "cf05d9f456d8a86e4525e463ecf7ba4963202b9f3922b90cc9596532b5c4c98b"
+  },
+  {
+   "sku": "GBEmp50SpryShnGl",
+   "plateSha256": "ea56df690042583773f99b549dc28b6b8ce28a5a951f13ad8581dcfa24cd5773"
+  },
+  {
+   "sku": "GBEmp50SpryShnSl",
+   "plateSha256": "54d63addf5d68072c43aae8de2dadfba1f0261bf3103c199233ac6826ca5d7b5"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "8c8d0534429ffa88d40fc0a4f8cccf544fad0a5248333b7a7ff334a600fa99bb"
+}
