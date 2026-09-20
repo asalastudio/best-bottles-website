@@ -6,6 +6,7 @@ import { createStaffProductFromDraft, requireStaffViewerOrLocalPreview } from "@
 import { getPortalConvex, getPortalConvexWriteToken } from "@/lib/portal/convexClient";
 import { api } from "../../../../convex/_generated/api";
 import type { Id } from "../../../../convex/_generated/dataModel";
+import { loadGroupForEdit, retryPricePush, revertChange, saveGroup, saveProduct, type GroupPatch, type ProductPatch } from "@/lib/team/productEditStaff";
 
 export type CreateProductState = {
     error: string | null;
@@ -84,4 +85,38 @@ export async function resolveProductImageUrlAction(storageId: string): Promise<s
     });
     if (!url) throw new Error("That upload finished, but we couldn't get a usable image URL.");
     return url;
+}
+
+// ─── Edit products (docs/specs/team-hub-product-editor.md) ──────────────────
+// Each action re-checks the staff sign-in inside productEditStaff; a client can call these directly.
+
+
+function refusal(error: unknown) {
+    if (isStaffAccessError(error)) return { ok: false as const, error: "You don't have permission to edit products." };
+    const message = error instanceof Error ? error.message : "";
+    // Convex hides the reason from a production client; a missing function and a thrown error look the same.
+    if (/Server Error|Could not find public function/.test(message)) {
+        return { ok: false as const, error: "The product editor could not reach its database functions. If this is new, the Convex deploy has not happened yet. Nothing was changed." };
+    }
+    return { ok: false as const, error: message || "That didn't save. Nothing was changed." };
+}
+
+export async function loadGroupForEditAction(slug: string) {
+    try { return { ok: true as const, view: await loadGroupForEdit(slug) }; } catch (error) { return refusal(error); }
+}
+
+export async function saveProductAction(args: { productId: string; shopifyProductId: string | null; expect: ProductPatch; patch: ProductPatch }) {
+    try { return await saveProduct(args); } catch (error) { return refusal(error); }
+}
+
+export async function saveGroupAction(args: { groupId: string; expect: GroupPatch; patch: GroupPatch }) {
+    try { return await saveGroup(args); } catch (error) { return refusal(error); }
+}
+
+export async function revertChangeAction(args: { changeId: string; shopifyProductId: string | null }) {
+    try { return await revertChange(args); } catch (error) { return refusal(error); }
+}
+
+export async function retryPricePushAction(args: { changeId: string; shopifyProductId: string | null; shopifyVariantId: string | null; price: number }) {
+    try { return { ok: true as const, push: await retryPricePush(args) }; } catch (error) { return refusal(error); }
 }

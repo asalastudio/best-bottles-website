@@ -14,6 +14,7 @@ import type * as backfillPhysicalSpecs from "../backfillPhysicalSpecs.js";
 import type * as backfillShopifyIds from "../backfillShopifyIds.js";
 import type * as backfillTrimColor from "../backfillTrimColor.js";
 import type * as backfillTrimColorFromDescription from "../backfillTrimColorFromDescription.js";
+import type * as catalogRestore from "../catalogRestore.js";
 import type * as catalogSync from "../catalogSync.js";
 import type * as componentUtils from "../componentUtils.js";
 import type * as crons from "../crons.js";
@@ -64,6 +65,8 @@ import type * as repairCylinderPilot from "../repairCylinderPilot.js";
 import type * as resaleCertificates from "../resaleCertificates.js";
 import type * as seedProducts from "../seedProducts.js";
 import type * as shopifySync from "../shopifySync.js";
+import type * as staffProductEditRules from "../staffProductEditRules.js";
+import type * as staffProductEdits from "../staffProductEdits.js";
 import type * as staffProducts from "../staffProducts.js";
 import type * as writeToken from "../writeToken.js";
 
@@ -80,6 +83,7 @@ declare const fullApi: ApiFromModules<{
   backfillShopifyIds: typeof backfillShopifyIds;
   backfillTrimColor: typeof backfillTrimColor;
   backfillTrimColorFromDescription: typeof backfillTrimColorFromDescription;
+  catalogRestore: typeof catalogRestore;
   catalogSync: typeof catalogSync;
   componentUtils: typeof componentUtils;
   crons: typeof crons;
@@ -130,6 +134,8 @@ declare const fullApi: ApiFromModules<{
   resaleCertificates: typeof resaleCertificates;
   seedProducts: typeof seedProducts;
   shopifySync: typeof shopifySync;
+  staffProductEditRules: typeof staffProductEditRules;
+  staffProductEdits: typeof staffProductEdits;
   staffProducts: typeof staffProducts;
   writeToken: typeof writeToken;
 }>;

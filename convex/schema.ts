@@ -1127,4 +1127,28 @@ export default defineSchema({
         buildId: v.string(),
     })
         .index("by_familyId", ["familyId"]),
+
+    /**
+     * Every Team Hub edit to a catalogue row: who, when, the value before and after.
+     * One entry per field, so a single field can be reverted without touching the rest.
+     * Values are JSON strings: a name, a status and a five-rung price ladder share one column.
+     */
+    catalogChangeLog: defineTable({
+        targetType: v.union(v.literal("product"), v.literal("group")),
+        targetId: v.string(),                       // products / productGroups _id
+        label: v.string(),                          // website SKU or group slug, for reading the log
+        field: v.string(),
+        before: v.string(),
+        after: v.string(),
+        actorId: v.string(),
+        actorEmail: v.union(v.string(), v.null()),
+        at: v.number(),
+        source: v.string(),                         // "team-hub" | "team-hub-revert"
+        revertOf: v.optional(v.id("catalogChangeLog")),
+        revertedBy: v.optional(v.id("catalogChangeLog")),
+        /** Set when the edit changed the 1-piece price, which Shopify must charge too. */
+        shopifyPush: v.optional(v.object({ status: v.union(v.literal("ok"), v.literal("failed"), v.literal("off")), detail: v.union(v.string(), v.null()), at: v.number() })),
+    })
+        .index("by_target", ["targetType", "targetId", "at"])
+        .index("by_at", ["at"]),
 });

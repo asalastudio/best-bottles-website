@@ -68,6 +68,14 @@ export function buildTeamHubTools({ shopifyAdminHref, madisonStudioHref }: TeamH
             quick: true,
         },
         {
+            name: "Edit Products",
+            href: "/team/products",
+            description: "Find a product and change what customers see — names, descriptions, the price ladder and stock. Every change is recorded and can be reverted.",
+            badge: "Catalog",
+            section: "catalog",
+            quick: true,
+        },
+        {
             name: "Create Products",
             href: "/team/products/new",
             description: "Add a catalog product using the live PDP fields, then sync to Shopify and the paper-doll ledger when the family supports it.",
