@@ -1,10 +1,10 @@
 {
  "release": "empire-setaside-kits-2026-09-20",
  "ship": "ship Empire set-aside kits 2026-09-20",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter · in chat 2026-09-20: \"ship the lotion pumps and the set aside kits\"",
+ "approvedAt": "2026-09-20T18:29:35.395Z",
  "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
- "preparedAt": "2026-09-20T18:11:08.073Z",
+ "preparedAt": "2026-09-20T18:29:35.395Z",
  "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
  "reviewSheet": "public/reviews/builder-review-2026-09-19/empire-setaside-kits-2026-09-20.jpg",
  "skus": {
@@ -14,5 +14,5 @@
   "LBEmp100WhtClOvrCp": "87c148d8267d8cfc13264d85e5832625fce52f68b21c29d39edcc5da9283c806"
  },
  "setAside": [],
- "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
 }

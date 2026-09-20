@@ -1,0 +1,17 @@
+{
+ "note": "Per-SKU waivers of the plate parity gate (mean <= 6/255, tail>40 <= 1 %). The gate itself is unchanged for every other SKU. A waiver is Jordan's ruling, quoted, and still has a ceiling: a SKU beyond it fails as before.",
+ "ceiling": {
+  "mean": 8.0,
+  "tailOver40": 0.03
+ },
+ "grantedBy": "Jordan Richter, in chat 2026-09-20: \"Okay, relax the gate for those six SKUs. We're fine.\"",
+ "why": "Saturated / mirror finishes whose published plates sit ~0.1 % off uniform scale; best placement lands just outside the gate (mean 5.7-6.9, tail 0.5-2.4 %). Without a kit the builder falls back to the white product photograph.",
+ "skus": [
+  "GBEmp50AnSpPnk",
+  "GBEmp50AnSpTslPnk",
+  "GBEmp100AnSpTslGl",
+  "GBEmp100AnSpTslPnk",
+  "GBEmp100AnSpTslRed",
+  "GBEmp50DrpSl"
+ ]
+}
