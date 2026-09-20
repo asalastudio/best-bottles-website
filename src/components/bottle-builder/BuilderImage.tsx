@@ -98,12 +98,17 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         // The outer span measures the tile; the inner one is the largest box of the
         // frame's ratio that fits inside it, centred — "meet", in both directions.
         const ratio = width / height;
-        return wrap(<span data-chooser-img style={{ containerType: "size", display: "grid", placeItems: "center", width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", overflow: "hidden" }}>
+        // The multiply that makes clear glass take the stage colour lives HERE, on the
+        // outermost wrapper. mix-blend-mode blends an element with the backdrop of its
+        // nearest stacking context, and both the zoom wrapper (transform) and this size
+        // container create one — so a multiply on the <img> blended against nothing and
+        // every clear bottle drew as an opaque white block.
+        return wrap(<span data-chooser-img style={{ containerType: "size", display: "grid", placeItems: "center", width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", overflow: "hidden", mixBlendMode: blend }}>
             <span data-chooser-frame style={{ position: "relative", display: "block", overflow: "hidden", width: `min(100cqw, calc(100cqh * ${ratio}))`, height: `min(100cqh, calc(100cqw / ${ratio}))` }}>
             <span style={{ position: "absolute", inset: 0, transform: zoom ? `scale(${zoom})` : undefined, transformOrigin: "bottom center" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={part.image.url} alt={label} {...imgProps} data-builder-layer={part.slot}
-                    onError={() => setFailedUrl(part.image.url)} style={{ ...crop, mixBlendMode: blend }} />
+                    onError={() => setFailedUrl(part.image.url)} style={crop} />
             </span>
             </span>
         </span>);

@@ -158,3 +158,21 @@ it("letterboxes the cropped tile, so a wide tile cannot stretch a tall bottle", 
     expect(widthRatio(stage)).not.toBeCloseTo(1, 2);
     expect(heightRatio(stage)).toBeCloseTo(widthRatio(stage), 6);
 });
+
+it("multiplies clear glass from the outermost wrapper, where there is a backdrop to multiply with", () => {
+    // mix-blend-mode blends with the backdrop of the nearest stacking context. The
+    // zoom wrapper (transform) and the size container each create one, so a multiply
+    // on the <img> blended against nothing: every clear bottle in the builder drew
+    // as an opaque white block on the bone stage instead of taking its colour.
+    const [slim] = slimBuilderBodies([cylinder50]);
+    for (const extra of [{ thumbnail: true, placeholder: true }, {}]) {
+        const el = document.createElement("div");
+        el.innerHTML = renderTile(slim!, extra).html;
+        const outer = el.querySelector<HTMLElement>("[data-chooser-img]")!;
+        const img = outer.querySelector<HTMLElement>("img")!;
+        expect(outer.style.mixBlendMode).toBe("multiply");
+        expect(img.style.mixBlendMode).toBe("");
+        // nothing between the wrapper and the stage may carry the blend instead
+        for (let node = img.parentElement; node && node !== outer; node = node.parentElement) expect(node.style.mixBlendMode).toBe("");
+    }
+});
