@@ -101,7 +101,14 @@ try {
   for (let i = 0; i < groupEntries.length; i += 50) add("groups", await P.mutation(anyApi.catalogRestore.restoreGroupFields, { writeToken, dryRun, entries: groupEntries.slice(i, i + 50) }));
   for (let i = 0; i < shellRows.length; i += 100) add("shellRows", await P.mutation(anyApi.catalogRestore.removeWebhookShellRows, { writeToken, dryRun, rows: shellRows.slice(i, i + 100) }));
 } catch (e) {
-  if (/Could not find public function|catalogRestore/.test(String(e))) { console.error("\nProduction does not have convex/catalogRestore.ts yet. Deploy convex/ to prod, then re-run."); process.exit(2); }
+  // A production deployment redacts every error to "Server Error", so a missing function and a real
+  // fault look identical from here. Say the likely cause and how to tell them apart; write nothing.
+  if (/Could not find public function|catalogRestore|Server Error/.test(String(e))) {
+    console.error(`\nProduction refused the restore call (${String(e.message ?? e).slice(0, 80)}).`);
+    console.error("Most likely convex/catalogRestore.ts is not deployed there yet: merge the webhook-fix PR, deploy convex/ to prod, then re-run.");
+    console.error("If it IS deployed, the real message is in the Convex dashboard logs for that Request ID. Nothing was written.");
+    process.exit(2);
+  }
   throw e;
 }
 writeFileSync(resolve(dir, `restore-result-${APPLY ? "apply" : "server-dry-run"}.json`), JSON.stringify(totals, null, 1));
