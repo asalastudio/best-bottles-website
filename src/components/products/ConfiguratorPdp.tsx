@@ -35,7 +35,9 @@ import { useQuery } from "convex/react";
 import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
-import { explodedKitFrame, orderExplodedOvercap } from "@/lib/products/kit-frame";
+import { explodedKitFrame, orderExplodedOvercap, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
+import { capacityMlFromSlug, parseProductSlug } from "@/lib/products/group-variant-intent";
+import { pdpStageFrame, pdpStageTransformCss } from "@/lib/products/pdp-stage-frame";
 
 import { useGLTF } from "@react-three/drei";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
@@ -52,9 +54,6 @@ import {
 import type { PdpAnalyticsDimension } from "@/lib/products/pdp-analytics";
 import { decodeImage } from "@/lib/paper-doll/decode-image";
 import { viewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
-
-/** kit slots that come off when the customer lifts the cap; everything else is fitted */
-const REMOVABLE_SLOTS = new Set(["cap", "overcap"]);
 
 /**
  * Fitment swatches are photographs, not colour dots, wherever the closure has
@@ -269,7 +268,7 @@ export default function ConfiguratorPdp({
   const targetParts = useMemo(() => {
     if (!kit?.parts?.length) return null;
     const parts = orderExplodedOvercap([...kit.parts].sort((a, b) => a.zOrder - b.zOrder));
-    return pilot || assembledOnly || withCap ? parts : parts.filter((p) => !REMOVABLE_SLOTS.has(p.slot));
+    return pilot || assembledOnly || withCap ? parts : withDetachedCapOffsets(parts);
   }, [kit, withCap, assembledOnly, pilot]);
   // What is actually on screen: a fully decoded set owned by the current kit.
   // The synchronous SKU gate below prevents an old state value from painting
@@ -380,7 +379,7 @@ export default function ConfiguratorPdp({
     none: "capped", roller: "rollerCapped", reducer: "reducerCapped",
     sprayer: "sprayerCapped", pump: "pumpCapped",
   };
-  const kitHasCap = Boolean(kit?.parts?.some((p) => REMOVABLE_SLOTS.has(p.slot)));
+  const kitHasCap = Boolean(kit?.parts?.some((p) => REMOVABLE_KIT_SLOTS.has(p.slot)));
 
   // photographed fitment swatches for this closure at this neck (see COMPONENT_FAMILY)
   const componentFamilyId = neckSize && COMPONENT_FAMILY[activeBase]
@@ -425,10 +424,25 @@ export default function ConfiguratorPdp({
 
   /* ---------------------------------------------------------- the stage */
   // the plate for the selected SKU; cap-off plate when the cap is lifted
-  const wantedPlate = (!assembledOnly && !withCap && plateImageCapOff) ? plateImageCapOff : plateImage;
+  const capOff = !assembledOnly && !withCap;
+  // Exact recovered CAP OFF photographs stay on stage. Kit parking is only
+  // for colourways that have no cap-off raster — Circle Cap, and anyone else
+  // still waiting on a beside-cap plate.
+  const preferKitCapOff = capOff && kitReady && !plateImageCapOff;
+  const wantedPlate = (capOff && plateImageCapOff) ? plateImageCapOff : plateImage;
   const plate = wantedPlate && !brokenPlates.has(wantedPlate) ? wantedPlate : null;
-  // Prefer exact assembled photographs; retain layers for exploded or missing states.
-  const showKitLayers = kitReady && (Boolean(pilot) || exploded || !plate || (!assembledOnly && !withCap && !plateImageCapOff));
+  const showKitLayers = kitReady && (Boolean(pilot) || exploded || preferKitCapOff || !plate);
+  const slugParts = parseProductSlug(currentSlug);
+  const capacityMl = slugParts?.capacityMl ?? capacityMlFromSlug(currentSlug);
+  const stageTransform = exploded
+    ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})`
+    : pdpStageTransformCss(pdpStageFrame({
+        family: catalogFamily,
+        capacityMl,
+        color: slugParts?.color,
+        view: capOff ? "capOff" : "assembled",
+        parts: showKitLayers ? kitParts : null,
+      }));
   // A photo-only family (no approved geometry) never shows 3D; otherwise the
   // customer opens it. A plate outranks the catalogue photo: it is the exact
   // configuration, the photo is the group's hero.
@@ -453,6 +467,12 @@ export default function ConfiguratorPdp({
         </div>
       ) : showPlate ? (
         <div className="relative h-full w-full bg-white" data-paper-doll={showKitLayers ? "kit" : "plate"}>
+          {/* Capacity standard + CAP OFF fit from pdp-capacity-standards.json.
+              Circle 15 ml glass is locked smaller than 30 ml; a detached cap
+              may shrink the composition but never grow the bottle. */}
+          <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
+               style={{ transformOrigin: "0 0", transform: stageTransform }}
+               data-pdp-stage-frame="">
           {/* The flat plate: first paint, and what stays if the kit never arrives.
               Once the stack is up the plate is dropped entirely — leaving it
               mounted made every colourway change refetch a plate nobody sees. */}
@@ -466,8 +486,6 @@ export default function ConfiguratorPdp({
           {/* the kit, stacked in z-order. Every part was written on the plate's
               own canvas, so they need no positioning here -- they line up by
               construction, which is what keeps the bottle still. */}
-          <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
-               style={{ transformOrigin: "0 0", transform: exploded ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})` : "none" }}>
           {showKitLayers && kitParts?.map((part) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={part.slot} src={part.image.url}
@@ -477,7 +495,7 @@ export default function ConfiguratorPdp({
                    zIndex: part.zOrder,
                    // offsets are plate pixels on a 1000x1100 canvas; the image IS the
                    // canvas here, so a percentage of its own box is the same distance
-                   transform: exploded
+                   transform: exploded || (capOff && REMOVABLE_KIT_SLOTS.has(part.slot))
                      ? `translate(${(part.exploded.dx / 10).toFixed(2)}%, ${(part.exploded.dy / 11).toFixed(2)}%)`
                      : "translate(0, 0)",
                  }}

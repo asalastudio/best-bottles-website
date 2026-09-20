@@ -53,6 +53,7 @@ import { bostonClosurePhoto } from "@/lib/products/boston-closure-photos";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { filterVariantsForGroupIntent } from "@/lib/products/group-variant-intent";
 import { isCheckoutReady } from "@/lib/checkout";
 import {
     VOLUME_TIERS_HONORED_AT_CHECKOUT,
@@ -1177,8 +1178,9 @@ export default function ProductDetailClient({
     }), [resolvePresentedVariantOption]);
     const variants = useMemo(() => {
         const rawVariants = (data?.variants as ProductVariant[] | undefined) ?? [];
-        return filterVariantsForProductGroup(data?.group, rawVariants).map(normalizeImportedCapColor);
-    }, [data?.group, data?.variants]);
+        const integrity = filterVariantsForProductGroup(data?.group, rawVariants).map(normalizeImportedCapColor);
+        return filterVariantsForGroupIntent(activeSlug, integrity);
+    }, [activeSlug, data?.group, data?.variants]);
     const isRollonGroup = /roll-?on/.test(activeSlug);
     const variantFromUrl = useMemo(
         () => selectedVariantParam
@@ -1757,7 +1759,10 @@ export default function ProductDetailClient({
                 const targetSlug = decodeURIComponent(target.pathname.slice("/products/".length));
                 const sibling = await convex.query(api.products.getProductGroup, { slug: targetSlug });
                 if (request !== glassNavigationRequest.current) return;
-                const candidates = filterVariantsForProductGroup(sibling?.group, (sibling?.variants ?? []) as ProductVariant[]).map(normalizeImportedCapColor);
+                const candidates = filterVariantsForGroupIntent(
+                    targetSlug,
+                    filterVariantsForProductGroup(sibling?.group, (sibling?.variants ?? []) as ProductVariant[]).map(normalizeImportedCapColor),
+                );
                 const resolved = resolveGlassSiblingVariant(candidates, {
                     applicator: selectedVariant.applicator,
                     capOption: resolvePresentedVariantOption(selectedVariant).swatchName,

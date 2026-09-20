@@ -1,4 +1,9 @@
-type PartBounds = { bounds: { left: number; top: number; right: number; bottom: number }; exploded: { dx: number; dy: number } };
+type PartBounds = { bounds: { left: number; top: number; right: number; bottom: number }; exploded: { dx: number; dy: number }; slot?: string };
+
+export const REMOVABLE_KIT_SLOTS: ReadonlySet<string> = new Set(["cap", "overcap"]);
+
+const DETACHED_CAP_GAP_PX = 24;
+const RECORDED_OFFSET_EPSILON = 8;
 
 /** Legacy kits sorted by photographed bounds can put an overcap below its pump.
  * Reorder only that closure stack, preserving its envelope and all other parts.
@@ -37,4 +42,39 @@ export function explodedKitFrame(parts: readonly PartBounds[], width = 1000, hei
     const scale = Math.min(1, (width - 48) / Math.max(1, right - left), (height - 48) / Math.max(1, bottom - top));
     return { scale, x: ((width - (right - left) * scale) / 2 - left * scale) / width * 100,
         y: ((height - (bottom - top) * scale) / 2 - top * scale) / height * 100 };
+}
+
+/**
+ * CAP OFF layout: keep the removable cap in the stack, parked beside the
+ * bottle. Recorded exploded offsets win when they already move the cap;
+ * otherwise park it to the right of the body. The bottle bounds are unchanged
+ * — the detached cap must not force the glass larger.
+ */
+export function detachedCapOffset<T extends PartBounds>(
+    part: T,
+    body: { left: number; right: number; top: number; bottom: number } | null,
+): { dx: number; dy: number } {
+    const recorded = part.exploded;
+    if (Math.abs(recorded.dx) > RECORDED_OFFSET_EPSILON || Math.abs(recorded.dy) > RECORDED_OFFSET_EPSILON) {
+        return recorded;
+    }
+    if (!body) return recorded;
+    const dx = body.right + DETACHED_CAP_GAP_PX - part.bounds.left;
+    return { dx, dy: 0 };
+}
+
+export function withDetachedCapOffsets<T extends PartBounds>(parts: readonly T[]): T[] {
+    const body = parts.find((part) => part.slot === "body")?.bounds
+        ?? (parts.length
+            ? {
+                left: Math.min(...parts.map((part) => part.bounds.left)),
+                right: Math.max(...parts.map((part) => part.bounds.right)),
+                top: Math.min(...parts.map((part) => part.bounds.top)),
+                bottom: Math.max(...parts.map((part) => part.bounds.bottom)),
+            }
+            : null);
+    return parts.map((part) => {
+        if (!part.slot || !REMOVABLE_KIT_SLOTS.has(part.slot)) return part;
+        return { ...part, exploded: detachedCapOffset(part, body) };
+    });
 }

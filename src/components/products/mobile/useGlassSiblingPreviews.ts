@@ -14,6 +14,7 @@ import { api } from "../../../../convex/_generated/api";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import { filterVariantsForProductGroup } from "@/lib/productVariantIntegrity";
+import { filterVariantsForGroupIntent } from "@/lib/products/group-variant-intent";
 import { resolveGlassSiblingVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 
 export type GlassSiblingPreview = {
@@ -46,7 +47,10 @@ export function useGlassSiblingPreviews(params: {
             const result = groupResults[slug];
             if (result === undefined) { out[slug] = { variant: null, pending: enabled }; continue; }
             if (result === null || result instanceof Error) { out[slug] = { variant: null, pending: false }; continue; }
-            const variants = filterVariantsForProductGroup(result.group, result.variants).map(normalizeImportedCapColor);
+            const variants = filterVariantsForGroupIntent(
+                slug,
+                filterVariantsForProductGroup(result.group, result.variants).map(normalizeImportedCapColor),
+            );
             out[slug] = { variant: resolveGlassSiblingVariant(variants, selection, deps), pending: false };
         }
         return out;
