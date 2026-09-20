@@ -226,13 +226,25 @@ describe("sidebar hierarchy (Baymard product-list research)", () => {
 });
 
 describe("Shopify carries the same vocabulary", () => {
-    it("the push script emits prefixed tags and the webhook sync reads them back", () => {
+    it("the push script emits prefixed tags, and the webhook never writes vocabulary back", () => {
         const push = read("scripts/push_convex_to_shopify.mjs");
         for (const prefix of ["family:", "category:", "glass:", "collection:", "capacity:", "neck:", "applicator:"]) {
             expect(push).toContain("`" + prefix);
         }
+        // The vocabulary flows ONE way: Convex -> Shopify. The webhook used to read the tags back into
+        // productGroups (and, before that, overwrote `category` with Shopify's productType). Since
+        // 2026-09-20 it writes only Shopify ids, sellability and availability, so a Shopify admin edit
+        // cannot change a family, category, colour, capacity or neck. Behaviour is tested in
+        // tests/shopify-sync-catalogue-truth.test.ts; this pins the source so it cannot creep back.
         const sync = read("convex/shopifySync.ts");
-        expect(sync).toContain("parsePrefixedTags(");
-        expect(sync).not.toContain('category: args.productType || "Glass Bottle",\n            variantCount');
+        // the handler BODY: the args validator above it legitimately names the fields Shopify sends
+        const start = sync.indexOf("handler: async", sync.indexOf("export const syncProduct"));
+        const handler = sync.slice(start, sync.indexOf("export const syncProductDelete"));
+        expect(start).toBeGreaterThan(0);
+        for (const field of ["category:", "family:", "color:", "bottleCollection:", "capacity:", "neckThreadSize:", "displayName:", "itemName:", "webPrice1pc:", "heroImageUrl:", "groupDescription:", "productGroupId:"]) {
+            expect(handler, `syncProduct must not write ${field}`).not.toMatch(new RegExp(`^\\s*(\\.\\.\\.\\(.*)?${field.replace(":", "")}\\s*:`, "m"));
+        }
+        expect(handler).not.toContain('ctx.db.insert("products"');
+        expect(handler).not.toContain('ctx.db.insert("productGroups"');
     });
 });
