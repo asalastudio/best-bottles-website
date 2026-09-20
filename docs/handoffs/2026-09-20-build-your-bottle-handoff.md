@@ -26,6 +26,32 @@ clicked through Empire 50 ml and said so.
 
 ---
 
+## 0a. The quality bar — Jordan's words, 2026-09-20
+
+Jordan, looking at the LIVE builder (100 ml Empire · Clear · Vintage Style Bulb Sprayer · White, Shiny Silver
+Collar): **"This quality is looking very good. We need to follow a similar quality for all the fitments."**
+Reference image: `docs/handoffs/assets-2026-09-20/quality-bar-empire100-bulb-sprayer-white.webp`.
+
+That screenshot is the target for every fitment. It looks right for three specific reasons — reproduce these,
+don't guess at "quality":
+
+1. **The glass reads as glass.** The clear body is multiplied onto the stage (#208, live since 04:50Z). Before
+   that fix the same bottle was an opaque white slab.
+2. **The top is seated exactly.** This kit's stored body `bounds` are the actual glass, so
+   `registerVintagePreview` has a true box to place the top against. (None of the Empire kits are among the 185
+   whose bounds are wrong.)
+3. **Body and top come from photographs at the same scale.** `MatrixClient` picks a Vintage Bulb Sprayer kit
+   first as the body reference for bulb sprayers.
+
+Where other fitments fall short today: tops seated off-centre (185 kits with wrong body bounds — Round 78,
+Sleek 60, Boston 37); the bottle changing size between fitments (every fitment photographed at its own scale —
+see `empire50-component-pilot.jpg`); white retouch marks exposed once the cap is off (Boston roller fixed; the
+Empire copper spray pump still carries a white scribble above the cap); roller kits with no roller part; 64 kits
+the builder rejects for `seatY`. One body + components seated on measured landmarks gives every fitment the
+three conditions above by construction — that is the point of the task in §0.
+
+---
+
 ## 1. Where things are
 
 | | |
