@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T03:02:21.129Z",
+  "generatedAt": "2026-09-20T03:09:56.625Z",
   "provider": "openai-image-2.5-sunburst",
   "scaleContract": "shoulder-lock-2026-09-07",
   "referenceRoute": "flattened-psd",
@@ -8,6 +8,7 @@
       "websiteSku": "GBCyl100SpryMtGl",
       "graceSku": "GB-CYL-CLR-100ML-SPR-MGLD",
       "groupSlug": "cylinder-100ml-clear-18-415-perfumespray",
+      "family": "Cylinder",
       "sha256": "d229ea80191458f41dd84ca4b55806f9dcd2c023c624402d66be82ec9740f7ae",
       "referenceRoute": "flattened-psd"
     },
@@ -15,6 +16,7 @@
       "websiteSku": "GBCyl50RdcrMtSl",
       "graceSku": "GB-CYL-CLR-50ML-RDC-MSLV",
       "groupSlug": "cylinder-50ml-clear-18-415-reducer",
+      "family": "Cylinder",
       "sha256": "7ab926311e4450c3c0ff4f5df1c2a863c492053678bbf6b0dbb4f16fc895fac6",
       "referenceRoute": "flattened-psd"
     },
@@ -22,6 +24,7 @@
       "websiteSku": "GBCyl50SpryMtGl",
       "graceSku": "GB-CYL-CLR-50ML-SPR-MGLD",
       "groupSlug": "cylinder-50ml-clear-18-415-perfumespray",
+      "family": "Cylinder",
       "sha256": "9382a0ae9d398fc52941233c3297945ea2f6b82420cdce6dc7641fd0a4142135",
       "referenceRoute": "flattened-psd"
     },
@@ -29,6 +32,7 @@
       "websiteSku": "GBTallCyl9MtlRollBlkDot",
       "graceSku": "GB-CYL-CLR-9ML-MRL-BKDT-02",
       "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "family": "Cylinder",
       "sha256": "52046eb24c034937df430accd27f5c28d86856d20e11cbe6b420ec722d0c1352",
       "referenceRoute": "flattened-psd"
     },
@@ -36,6 +40,7 @@
       "websiteSku": "LBCyl100LtnMtGl",
       "graceSku": "LB-CYL-CLR-100ML-LPM-MGLD",
       "groupSlug": "cylinder-100ml-clear-18-415-lotionpump",
+      "family": "Cylinder",
       "sha256": "dc478e401485e6aa8b91e08f46b0c912092a9b1b237541aab842c1e540582474",
       "referenceRoute": "flattened-psd"
     },
@@ -43,6 +48,7 @@
       "websiteSku": "LBCyl25LtnMtGl",
       "graceSku": "LB-CYL-CLR-25ML-LPM-MGLD",
       "groupSlug": "cylinder-25ml-clear-18-415-lotionpump",
+      "family": "Cylinder",
       "sha256": "9debc8949bdf8066b83dae0e2d5ad9b3f7fb251f7462bef4fd037a30c5187c1b",
       "referenceRoute": "flattened-psd"
     },
@@ -50,7 +56,96 @@
       "websiteSku": "LBCyl50LtnMtGl",
       "graceSku": "LB-CYL-CLR-50ML-LPM-MGLD",
       "groupSlug": "cylinder-50ml-clear-18-415-lotionpump",
+      "family": "Cylinder",
       "sha256": "43c79ce57bdbefa0d2634e1a0fbff2a0cc15949a333d21ff6b5fb90d43fab198",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBCyl100RdcrMtSl",
+      "graceSku": "GB-CYL-CLR-100ML-RDC-MSLV",
+      "groupSlug": "cylinder-100ml-clear-18-415-reducer",
+      "family": "Cylinder",
+      "sha256": "69bb9ee2fea029ccc50ec72406483b6c2128da8435a94d7b70042e83e0101c17",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "LBSlm30LtnMtGl",
+      "graceSku": "LB-SLM-CLR-30ML-LPM-MGLD",
+      "groupSlug": "slim-30ml-clear-18-415-lotionpump",
+      "family": "Slim",
+      "sha256": "b3930f478f764134bfdff84374f2dfd6eef391e223fa342451fd8d57cf707a01",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBSlm30SpryMtGl",
+      "graceSku": "GB-SLM-CLR-30ML-SPR-MGLD",
+      "groupSlug": "slim-30ml-clear-18-415-perfumespray",
+      "family": "Slim",
+      "sha256": "ca579aa1c2d5b23fdae6c7f775905be5c34f1a859610634b74d4673bd071ea68",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBSlm30RdcrShnGl",
+      "graceSku": "GB-SLM-CLR-30ML-RDC-SGLD",
+      "groupSlug": "slim-30ml-clear-18-415-reducer",
+      "family": "Slim",
+      "sha256": "c0496d1464b76085953d1d4862c1001c66bf453c1b901dcab10a7637725c2095",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBSlm30DrpCu",
+      "graceSku": "GB-SLM-CLR-30ML-DRP-CPR",
+      "groupSlug": "slim-30ml-clear-18-415-dropper",
+      "family": "Slim",
+      "sha256": "4e3bfb652ee402500e41db4d58ed3c03759303f5932a5eadf9181e9f6b271c63",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "LBSlm50LtnMtGl",
+      "graceSku": "LB-SLM-CLR-50ML-LPM-MGLD",
+      "groupSlug": "slim-50ml-clear-18-415-lotionpump",
+      "family": "Slim",
+      "sha256": "0886230965adc4b40b8572565ddc1b9cc0487ec53bf4ace05ffa3bd1e227383c",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBSlm50SpryMtGl",
+      "graceSku": "GB-SLM-CLR-50ML-SPR-MGLD",
+      "groupSlug": "slim-50ml-clear-18-415-perfumespray",
+      "family": "Slim",
+      "sha256": "e43a195e1ebf6980aef1e8575253122ae3262f5922bb4b83feca4200d0817177",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBSlm50RdcrShnGl",
+      "graceSku": "GB-SLM-CLR-50ML-RDC-SGLD",
+      "groupSlug": "slim-50ml-clear-18-415-reducer",
+      "family": "Slim",
+      "sha256": "6e604323df19d0a340a1204c9bdd13a886ccb6fc741b2705c75f69a1b5ccded0",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBSlm100SpryMtGl",
+      "graceSku": "GB-SLM-CLR-100ML-SPR-MGLD",
+      "groupSlug": "slim-100ml-clear-18-415-perfumespray",
+      "family": "Slim",
+      "sha256": "7c7926c351c881f9210415ec33a13a8c2c94fbf1cc4bf50b85d75ec9e0d50579",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "GBSlm100RdcrShnGl",
+      "graceSku": "GB-SLM-CLR-100ML-RDC-SGLD",
+      "groupSlug": "slim-100ml-clear-18-415-reducer",
+      "family": "Slim",
+      "sha256": "4ac6bfb081130759c2e6ceaeb0736f165c8ed270a4436aaefca05d7a9bb37112",
+      "referenceRoute": "flattened-psd"
+    },
+    {
+      "websiteSku": "LBSlm100LtnMtGl",
+      "graceSku": "LB-SLM-CLR-100ML-LPM-MGLD",
+      "groupSlug": "slim-100ml-clear-18-415-lotionpump",
+      "family": "Slim",
+      "sha256": "81d480036eaac17748f9f55822b7649614f6f70425fbf08e2e1b5075dc0ec6d6",
       "referenceRoute": "flattened-psd"
     }
   ]

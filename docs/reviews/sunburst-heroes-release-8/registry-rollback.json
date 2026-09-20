@@ -1,9 +1,33 @@
 {
-  "writtenAt": "2026-09-20T03:02:35.252Z",
+  "writtenAt": "2026-09-20T03:09:58.469Z",
   "registry": "src/lib/products/catalog-heroes.json",
   "manifest": "docs/reviews/catalog-complete-hero-release-2026-09-07.json",
   "note": "Restore each `from` (url, manifest sha256, framing) to undo the Sunburst release 1 repoint.",
   "rows": [
+    {
+      "websiteSku": "GBCyl100RdcrMtSl",
+      "family": "Cylinder",
+      "from": {
+        "url": "/images/catalog/bone-review/GBCyl100RdcrMtSl.b0f64b705b70.png",
+        "manifestSha256": "b0f64b705b70cc4c148c061f01c088042e632dd1ef1d1f6bb08eef48bd33867e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBCyl100RdcrMtSl.69bb9ee2fea0.png",
+        "sha256": "69bb9ee2fea029ccc50ec72406483b6c2128da8435a94d7b70042e83e0101c17",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
     {
       "websiteSku": "GBCyl100SpryMtGl",
       "family": "Cylinder",
@@ -26,7 +50,7 @@
         }
       },
       "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
-      "approvedAt": "2026-09-20T03:02:21.129Z"
+      "approvedAt": "2026-09-20T03:09:56.625Z"
     },
     {
       "websiteSku": "GBCyl50RdcrMtSl",
@@ -50,7 +74,7 @@
         }
       },
       "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
-      "approvedAt": "2026-09-20T03:02:21.129Z"
+      "approvedAt": "2026-09-20T03:09:56.625Z"
     },
     {
       "websiteSku": "GBCyl50SpryMtGl",
@@ -74,7 +98,175 @@
         }
       },
       "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
-      "approvedAt": "2026-09-20T03:02:21.129Z"
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
+    {
+      "websiteSku": "GBSlm100RdcrShnGl",
+      "family": "Slim",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlm100RdcrShnGl.52d3627059cd.png",
+        "manifestSha256": "52d3627059cd652b8b01e95358263c0d91db3ae7282f39902b5ed18ee695e9b1",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlm100RdcrShnGl.4ac6bfb08113.png",
+        "sha256": "4ac6bfb081130759c2e6ceaeb0736f165c8ed270a4436aaefca05d7a9bb37112",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-slim-shoulder-lock-2026-09-19",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
+    {
+      "websiteSku": "GBSlm100SpryMtGl",
+      "family": "Slim",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlm100SpryMtGl.21a8a30dd591.png",
+        "manifestSha256": "21a8a30dd5914839793aa7184cd82afc1904fd1ee293ea7c12f5d3a7acbddf13",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlm100SpryMtGl.7c7926c351c8.png",
+        "sha256": "7c7926c351c881f9210415ec33a13a8c2c94fbf1cc4bf50b85d75ec9e0d50579",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-slim-shoulder-lock-2026-09-19",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
+    {
+      "websiteSku": "GBSlm30DrpCu",
+      "family": "Slim",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlm30DrpCu.35214193ea74.png",
+        "manifestSha256": "35214193ea74f9f4653103d02ec89396c445b70fa2fdc46404473c76626fb111",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlm30DrpCu.4e3bfb652ee4.png",
+        "sha256": "4e3bfb652ee402500e41db4d58ed3c03759303f5932a5eadf9181e9f6b271c63",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-slim-shoulder-lock-2026-09-19",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
+    {
+      "websiteSku": "GBSlm30RdcrShnGl",
+      "family": "Slim",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlm30RdcrShnGl.d501b452834d.png",
+        "manifestSha256": "d501b452834d721e42a81816d9ed7a6da08d6b265db52ecc58efe26df945be84",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlm30RdcrShnGl.c0496d1464b7.png",
+        "sha256": "c0496d1464b76085953d1d4862c1001c66bf453c1b901dcab10a7637725c2095",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-slim-shoulder-lock-2026-09-19",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
+    {
+      "websiteSku": "GBSlm30SpryMtGl",
+      "family": "Slim",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlm30SpryMtGl.81d65c16cd06.png",
+        "manifestSha256": "81d65c16cd06a769965c9c629a85627c6139a522fbac14f91389e72958cab237",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlm30SpryMtGl.ca579aa1c2d5.png",
+        "sha256": "ca579aa1c2d5b23fdae6c7f775905be5c34f1a859610634b74d4673bd071ea68",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-slim-shoulder-lock-2026-09-19",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
+    {
+      "websiteSku": "GBSlm50RdcrShnGl",
+      "family": "Slim",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlm50RdcrShnGl.aca7b5058e45.png",
+        "manifestSha256": "aca7b5058e4559c16097fe952c6997e03727d9917f72e8e4484fdee381f8d6d6",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlm50RdcrShnGl.6e604323df19.png",
+        "sha256": "6e604323df19d0a340a1204c9bdd13a886ccb6fc741b2705c75f69a1b5ccded0",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-slim-shoulder-lock-2026-09-19",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
+    {
+      "websiteSku": "GBSlm50SpryMtGl",
+      "family": "Slim",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlm50SpryMtGl.18da1937c994.png",
+        "manifestSha256": "18da1937c99482f9edf6ee7a3536869989e145943cb07c3a7e7da731aa4e5351",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlm50SpryMtGl.e43a195e1ebf.png",
+        "sha256": "e43a195e1ebf6980aef1e8575253122ae3262f5922bb4b83feca4200d0817177",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-slim-shoulder-lock-2026-09-19",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
     },
     {
       "websiteSku": "GBTallCyl9MtlRollBlkDot",
@@ -98,7 +290,7 @@
         }
       },
       "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
-      "approvedAt": "2026-09-20T03:02:21.129Z"
+      "approvedAt": "2026-09-20T03:09:56.625Z"
     },
     {
       "websiteSku": "LBCyl100LtnMtGl",
@@ -122,7 +314,7 @@
         }
       },
       "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
-      "approvedAt": "2026-09-20T03:02:21.129Z"
+      "approvedAt": "2026-09-20T03:09:56.625Z"
     },
     {
       "websiteSku": "LBCyl25LtnMtGl",
@@ -146,7 +338,7 @@
         }
       },
       "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
-      "approvedAt": "2026-09-20T03:02:21.129Z"
+      "approvedAt": "2026-09-20T03:09:56.625Z"
     },
     {
       "websiteSku": "LBCyl50LtnMtGl",
@@ -170,7 +362,79 @@
         }
       },
       "approvedOn": "madison-cylinder-shoulder-lock-2026-09-18",
-      "approvedAt": "2026-09-20T03:02:21.129Z"
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
+    {
+      "websiteSku": "LBSlm100LtnMtGl",
+      "family": "Slim",
+      "from": {
+        "url": "/images/catalog/bone-review/LBSlm100LtnMtGl.511093c4de7b.png",
+        "manifestSha256": "511093c4de7b721286bbe8106e70ed4546ef69e0849bfb1d74d13d1957837be5",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBSlm100LtnMtGl.81d480036eaa.png",
+        "sha256": "81d480036eaac17748f9f55822b7649614f6f70425fbf08e2e1b5075dc0ec6d6",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-slim-shoulder-lock-2026-09-19",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
+    {
+      "websiteSku": "LBSlm30LtnMtGl",
+      "family": "Slim",
+      "from": {
+        "url": "/images/catalog/bone-review/LBSlm30LtnMtGl.f81d8b9a9fc3.png",
+        "manifestSha256": "f81d8b9a9fc3c0b0adbec62d6067af5cc6503f86a6b6e09b2788313ddf672db1",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBSlm30LtnMtGl.b3930f478f76.png",
+        "sha256": "b3930f478f764134bfdff84374f2dfd6eef391e223fa342451fd8d57cf707a01",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-slim-shoulder-lock-2026-09-19",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
+    },
+    {
+      "websiteSku": "LBSlm50LtnMtGl",
+      "family": "Slim",
+      "from": {
+        "url": "/images/catalog/bone-review/LBSlm50LtnMtGl.699f3d4ef36b.png",
+        "manifestSha256": "699f3d4ef36bc1a26663285d9a6a94104dc425e5ddf62466fd59f24bc81c2c7d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/LBSlm50LtnMtGl.0886230965ad.png",
+        "sha256": "0886230965adc4b40b8572565ddc1b9cc0487ec53bf4ace05ffa3bd1e227383c",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-slim-shoulder-lock-2026-09-19",
+      "approvedAt": "2026-09-20T03:09:56.625Z"
     }
   ],
   "skipped": []
