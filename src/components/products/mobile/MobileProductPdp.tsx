@@ -261,8 +261,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const viewMode = coerceMobileViewMode(picker.viewMode, viewCaps);
 
     const plateUrlFor = (view: ProductViewMode): string | null => {
-        const kitCapOff = view === "capOff" && kitHasRemovableCap(shownKit);
-        const wanted = !kitCapOff && view === "capOff" && shownPlate?.imageCapOff
+        const wanted = view === "capOff" && shownPlate?.imageCapOff
             ? shownPlate.imageCapOff
             : shownPlate?.image ?? null;
         return wanted && !brokenPlates.has(wanted) ? wanted : null;
@@ -534,7 +533,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             <MobileProductHero
                 ref={heroRef}
                 plateUrl={decodedPlate.url}
-                kitParts={pilot || (viewMode === "capOff" && kitPartsWithCap) ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
+                kitParts={pilot ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
                 fallbackImageUrl={decodedPlate.url ? null : fallbackImageUrl}
                 alt={`${displayName}${previewingLabel ? ` — previewing ${previewingLabel}` : ""}`}
                 backHref={backHref}
@@ -677,7 +676,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 viewModes={viewModes}
                 onViewModeChange={changeViewerView}
                 plateUrl={viewerPlate.url}
-                kitParts={pilot || (viewerMode === "capOff" && viewerKitParts) ? viewerKitParts : viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
+                kitParts={pilot ? viewerKitParts : viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
                 fallbackImageUrl={viewerPlate.url ? null : fallbackImageUrl}
                 alt={displayName}
                 onPlateError={markPlateBroken}

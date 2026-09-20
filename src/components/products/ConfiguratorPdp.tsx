@@ -425,12 +425,12 @@ export default function ConfiguratorPdp({
   /* ---------------------------------------------------------- the stage */
   // the plate for the selected SKU; cap-off plate when the cap is lifted
   const capOff = !assembledOnly && !withCap;
-  // When a kit can park the cap beside the bottle, do not use a baked CAP OFF
-  // plate that already scaled the glass up to fill around the detached cap.
-  const preferKitCapOff = capOff && kitReady;
-  const wantedPlate = (!preferKitCapOff && capOff && plateImageCapOff) ? plateImageCapOff : plateImage;
+  // Exact recovered CAP OFF photographs stay on stage. Kit parking is only
+  // for colourways that have no cap-off raster — Circle Cap, and anyone else
+  // still waiting on a beside-cap plate.
+  const preferKitCapOff = capOff && kitReady && !plateImageCapOff;
+  const wantedPlate = (capOff && plateImageCapOff) ? plateImageCapOff : plateImage;
   const plate = wantedPlate && !brokenPlates.has(wantedPlate) ? wantedPlate : null;
-  // Prefer exact assembled photographs; retain layers for exploded, kit CAP OFF, or missing states.
   const showKitLayers = kitReady && (Boolean(pilot) || exploded || preferKitCapOff || !plate);
   const slugParts = parseProductSlug(currentSlug);
   const capacityMl = slugParts?.capacityMl ?? capacityMlFromSlug(currentSlug);
