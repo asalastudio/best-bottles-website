@@ -7,12 +7,18 @@ export type PdpCapacityTarget = {
     source?: string;
 };
 
-type CapacityEntry = PdpCapacityTarget & {
+/** Capacity row may be a family-wide lock, a color map, or both. */
+type CapacityEntry = {
+    publishedPlateScale?: number;
+    midBodyWidthPercent?: number;
+    glassHeightPercent?: number;
+    source?: string;
     colors?: Record<string, PdpCapacityTarget>;
 };
 
 type FamilyEntry = {
     capacities?: Record<string, CapacityEntry>;
+    glassMm?: Record<string, { height: number; width: number }>;
 };
 
 const DOCUMENT = standards;
@@ -43,7 +49,14 @@ export function pdpCapacityTarget(
     if (!entry) return null;
     const colorKey = (color ?? "").trim().toLowerCase();
     if (colorKey && entry.colors?.[colorKey]) return entry.colors[colorKey];
-    if (entry.publishedPlateScale) return entry;
+    if (entry.publishedPlateScale) {
+        return {
+            publishedPlateScale: entry.publishedPlateScale,
+            midBodyWidthPercent: entry.midBodyWidthPercent,
+            glassHeightPercent: entry.glassHeightPercent,
+            source: entry.source,
+        };
+    }
     return null;
 }
 
