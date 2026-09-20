@@ -52,6 +52,49 @@ three conditions above by construction — that is the point of the task in §0.
 
 ---
 
+## 0b. Pumps must be shown EXPOSED, overcaps as sidecars — and the sources already exist
+
+Jordan, 2026-09-20, on the Perfume Sprayer finish tiles (100 ml Empire): **"These need to have the actual pumps
+exposed, not the overcaps. The overcaps are going to be the sidecars."** Then: "how do we get all the fitments
+there like the bulbs".
+
+What is wrong today (verified on prod kits, picture: `public/reviews/builder-review-2026-09-19/empire-sprayer-parts-mislabelled.jpg`):
+- `BuilderFinishImage` draws the kit's mechanism part for a Sprayer/Pump tile. Only **Copper** shows a pump,
+  because only Copper's kit has a real `sprayer` AND an `overcap`.
+- For Matte Gold / Matte Silver / Shiny Black / Shiny Gold / Shiny Silver at 100 ml, the part LABELLED `sprayer`
+  **is the overcap cylinder** — there is no pump in that kit. At 50 ml the part labelled `overcap` is actually
+  the **dip tube** and `sprayer` is the overcap. `family_part_map.py` assigns roles by geometry and got these wrong.
+- Scale of it, across the 358 published Perfume Spray Pump / Fine Mist Sprayer / Lotion Pump kits:
+  **91** have mechanism + overcap (right), **222 have only ONE top part** (pump hidden or mislabelled), 45 have no
+  top. By family: Elegant 59, Diva 46, Circle 27, Empire 17, Sleek 15, Round 12, Square/Rectangle/Tulip/Slim 7,
+  Grace/Flair/Royal 6.
+
+Why, and the fix — **the photographer already shot what Jordan wants**
+(picture: `public/reviews/builder-review-2026-09-19/empire100-capped-vs-uncapped-twins.jpg`):
+- The master library holds **two PSDs per pump SKU**. BBUAT's folders name them: e.g. `11. GBEmp100SpryMtGl.psd`
+  = **Capped**, `13. GBEmp100SpryMtGl.psd` = **Uncapped**. The uncapped twin has: background, the SAME body layer
+  (697×1504), the dip tube, **the exposed pump in the right finish**, and the SAME overcap layer (332×589) standing
+  beside the bottle. Kits were cut from the capped twin (correct for the plate), so the pump never made it in.
+- **All 222 affected kits have a second PSD of the same name in the master.**
+- The tool already exists: **`scripts/paperdoll/build_paired_psd_kits.py`** — "The capped PSD remains the plate
+  and geometry authority. Layers from the uncapped PSD may supply an exposed fitment only after the identical
+  body layer establishes the translation back into the capped composition… registered to the currently published
+  plate hash… reassemble within the parity gate. This script never publishes."
+  Args: `--batch --published-plates --catalog --recipes --output`. Read it and its two commits
+  (`80ac2a5b`, `39a9b92f`) before running; it needs a recipes file.
+- Once a kit has `sprayer` + `overcap`, the display is already handled: `BuilderImage` stands the overcap on the
+  ground beside the bottle (Jordan's 2026-09-16 rule) and the finish tile draws the pump.
+- This is the same "SAME_STEM_DIFFERENT_PHOTOGRAPH" twin pair the plate lane had to pin. Identify the twin by
+  content (the uncapped one has one more layer, its body shifted left, the overcap low and to the right), never
+  by the numeric filename prefix.
+- Noticed: Copper's overcap part carries white retouch scribbles at its top corners (visible on bone). Same class
+  as the Boston roller patch; `strip_retouch_patch.py` is the tool — it is safe on copper, NOT on white parts.
+
+Any re-cut kit replaces parts on LIVE kits → before/after sheet for Jordan, then a ship phrase. For the component
+pilot in §0, take the pump and overcap from the uncapped twin in the first place.
+
+---
+
 ## 1. Where things are
 
 | | |
