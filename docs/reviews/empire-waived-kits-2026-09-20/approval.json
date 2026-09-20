@@ -1,0 +1,19 @@
+{
+ "release": "empire-waived-kits-2026-09-20",
+ "ship": "ship Empire waived kits 2026-09-20",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-20T18:41:41.188Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "public/reviews/builder-review-2026-09-19/empire-waived-kits-2026-09-20.jpg",
+ "skus": {
+  "GBEmp50AnSpPnk": "a0cb7abaa5015c9d25125f80da96a29fff2905857e10dbd9781fbb38ddeb91c7",
+  "GBEmp50AnSpTslPnk": "dd489cbe441c996115aa0e09684286c9da82c1413d62f3eb0f92e44ae6eaa773",
+  "GBEmp100AnSpTslGl": "6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb",
+  "GBEmp100AnSpTslPnk": "e649562a277b08057b83bad90f7753b7d802a864d432426e6678fda2cbf42b31",
+  "GBEmp100AnSpTslRed": "5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d"
+ },
+ "setAside": [],
+ "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+}
