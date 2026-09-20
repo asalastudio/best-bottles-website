@@ -37,6 +37,12 @@ BODIES = [{
     # the body the builder holds fixed today (MatrixClient bodyReference: first full Vintage Bulb Sprayer kit)
     "referenceBatch": ROOT / "dist/paper-doll/empire-2026-09-16", "referenceSku": "GBEmp100AnSpBlk",
     "slug": "empire-100-clear-18-415",
+}, {
+    "key": "Empire|50|Clear|18-415",
+    "retouched": Path("/Users/jordanrichter/Projects/Clients/Nemat-International/BBUAT-Upload-Files/1. PSD Uncapped /2.  18-415 Bottles /22. Empire Bottle 100ml/1. Empire 100ml PSD/No_Reducer/1. GBEmp50RdcrShnGl...psd"),
+    "master": MASTER / "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/1. GBEmp50RdcrShnGl...psd",
+    "referenceBatch": ROOT / "dist/paper-doll/empire-2026-09-16", "referenceSku": "GBEmp50AnSpBlk",
+    "slug": "empire-50-clear-18-415",
 }]
 
 
@@ -56,11 +62,22 @@ def main():
     for spec in BODIES:
         psd = PSDImage.open(spec["retouched"]); layers = pixel_layers(psd)
         glass = max(layers, key=lambda l: l.width * l.height)
-        patches = [l for l in layers if l is not glass]
+        # erasers are the retoucher's cover layers that lie ON the glass. The 50 ml file also moves the
+        # cap to a corner and covers it; those layers never touch the glass and are not ours to use.
+        overlaps = lambda l: l.left < glass.right and l.right > glass.left and l.top < glass.bottom and l.bottom > glass.top
+        patches = [l for l in layers if l is not glass and l.name.lower().startswith("remove tool edits") and overlaps(l)]
+        if not patches:
+            raise ValueError(f"{spec['key']}: no retouch layer over the glass")
         master_glass = max(pixel_layers(PSDImage.open(spec["master"])), key=lambda l: l.width * l.height)
         g = np.asarray(glass.composite().convert("RGBA")).copy()
-        if not np.array_equal(g, np.asarray(master_glass.composite().convert("RGBA"))):
-            raise ValueError(f"{spec['key']}: the retouched file's glass is not the master's glass layer")
+        mgl = np.asarray(master_glass.composite().convert("RGBA"))
+        if mgl.shape != g.shape:
+            raise ValueError(f"{spec['key']}: the retouched glass is not the size of the master's glass layer")
+        # same photograph? identical for the 100 ml; the 50 ml glass was re-saved with its edge lines merged in
+        identical = bool(np.array_equal(g, mgl))
+        mean_diff = float(np.abs(g.astype(int) - mgl.astype(int)).mean())
+        if mean_diff > 5:
+            raise ValueError(f"{spec['key']}: glass differs from the master's by {mean_diff:.2f}/255 on average — not the same photograph")
         erased = 0
         for patch in patches:
             pa = np.zeros(g.shape[:2], float)
@@ -77,32 +94,77 @@ def main():
         ref = next(r for r in manifest["rows"] if r["sku"] == spec["referenceSku"])
         ref_body = next(p for p in ref["parts"] if p["slot"] == "body")
         rb = ref_body["bounds"]
-        # width of the glass is measured below the neck in both, so the erased dome cannot move it
-        k = (rb["right"] - rb["left"]) / native.width
-        small = native.resize((round(native.width * k), round(native.height * k)), Image.Resampling.LANCZOS)
+        # Align on the SOLID glass, not the alpha box: the two photographs carry different soft halos
+        # (the 50 ml box alignment stood 2.5 px off). Width and centre are read across the middle of
+        # the body, the bottom where the solid glass ends — none of which the erased dome can move.
+        ref_alpha_img = np.asarray(Image.open(spec["referenceBatch"] / "kits" / ref_body["image"]).convert("RGBA"))[:, :, 3]
+        def solid(alpha):
+            s = alpha >= 128; rows = s.sum(1); wide = np.nonzero(rows > 0.5 * rows.max())[0]
+            cols = np.nonzero(s[(wide.min() + wide.max()) // 2])[0]
+            return {"width": int(cols.max() - cols.min() + 1), "cx": (cols.max() + cols.min() + 1) / 2, "bottom": int(wide.max()) + 1}
+        want, have = solid(ref_alpha_img), solid(np.asarray(native)[:, :, 3])
+        # The solid measures give the starting placement; the placement KEPT is the one that best covers
+        # the reference glass below the neck (scale within 1 %, position within 4 px). Measured, not judged.
+        ref_solid = ref_alpha_img >= 128
+        below = slice(rb["top"] + int(0.25 * (rb["bottom"] - rb["top"])), rb["bottom"])
+        best = None
+        for k in np.arange(0.99, 1.0101, 0.002) * (want["width"] / have["width"]):
+            small = native.resize((round(native.width * k), round(native.height * k)), Image.Resampling.LANCZOS)
+            placed = solid(np.asarray(small)[:, :, 3]); mask = np.asarray(small)[:, :, 3] >= 128
+            for dx in range(-4, 5):
+                for dy in range(-4, 5):
+                    x, y = round(want["cx"] - placed["cx"]) + dx, want["bottom"] - placed["bottom"] + dy
+                    trial = np.zeros(ref_solid.shape, bool)
+                    trial[max(0, y): y + mask.shape[0], x: x + mask.shape[1]] = mask[max(0, -y):, :]
+                    score = (trial[below] & ref_solid[below]).sum() / max(1, (trial[below] | ref_solid[below]).sum())
+                    if best is None or score > best[0]:
+                        best = (float(score), float(k), x, y)
+        _, k, x, y = best
+        small = native.resize((round(native.width * k), round(native.height * k)), Image.Resampling.LANCZOS)   # one resample from native
         canvas = Image.new("RGBA", CANVAS, (255, 255, 255, 0))
-        canvas.alpha_composite(small, (round((rb["left"] + rb["right"]) / 2 - small.width / 2), rb["bottom"] - small.height))
+        canvas.alpha_composite(small, (x, y))
         rgba = np.asarray(canvas)
+        # placement proof: below the neck the new glass must cover the reference body it replaces
+        ref_alpha = ref_alpha_img >= 128
+        new_alpha = rgba[:, :, 3] >= 128
+        iou = float((ref_alpha[below] & new_alpha[below]).sum() / max(1, (ref_alpha[below] | new_alpha[below]).sum()))
+        if iou < 0.995:
+            raise ValueError(f"{spec['key']}: new glass does not stand where the reference body stands (IoU below the neck {iou:.4f})")
         ok, gate = alpha_gate(rgba)
         if not ok:
             raise ValueError(f"{spec['key']}: alpha gate failed: {gate}")
         tmp = out_dir / f"{spec['slug']}.tmp.webp"; saved = save_part(rgba, str(tmp))
         name = f"{spec['slug']}.{saved['sha256'][:12]}.webp"; tmp.replace(out_dir / name)
         ys, xs = np.nonzero(rgba[:, :, 3] > 0)
-        bounds = {"left": int(xs.min()), "top": int(ys.min()), "right": int(xs.max()) + 1, "bottom": int(ys.max()) + 1}
+        ink = {"left": int(xs.min()), "top": int(ys.min()), "right": int(xs.max()) + 1, "bottom": int(ys.max()) + 1}
+        # Fitments register box-to-box. They were registered to the REFERENCE body's box, so that box
+        # stays the registration box and every top lands exactly where it lands today; the new glass
+        # stands inside it on the solid outline. Only the top is the new glass's own (the dome is gone).
+        bounds = dict(rb, top=ink["top"])
         registry[spec["key"]] = {
             "part": {"slot": "body", "zOrder": 0, "bounds": bounds,
                      "image": {"url": f"/images/bottle-builder/bodies/canonical/{name}", "width": CANVAS[0], "height": CANVAS[1], "sha256": saved["sha256"]}},
             # verbatim from the reference kit, so fitment seating is numerically what it is today
-            "anchors": ref["anchors"], "groundY": solid_bottom(rgba[:, :, 3]),
+            "inkBounds": ink, "anchors": ref["anchors"], "groundY": solid_bottom(rgba[:, :, 3]),
             "registeredTo": {"sku": spec["referenceSku"], "bodyBounds": rb, "bodySha256": Path(ref_body["image"]).name.split(".")[0]},
             "source": {"retouchedPsd": str(spec["retouched"]), "retouchedSha256": hashlib.sha256(spec["retouched"].read_bytes()).hexdigest(),
                        "masterPsd": str(spec["master"].relative_to(MASTER)), "masterSha256": hashlib.sha256(spec["master"].read_bytes()).hexdigest(),
-                       "glassLayerIdenticalToMaster": True, "eraserLayers": [l.name for l in patches], "glassPixelsErased": erased,
+                       "glassLayerIdenticalToMaster": identical, "glassMeanAbsDiffVsMaster": round(mean_diff, 3), "iouWithReferenceBelowNeck": round(iou, 4), "eraserLayers": [l.name for l in patches], "glassPixelsErased": erased,
                        "note": "Retouched file lives in BBUAT-Upload-Files; file it under BB-PSD-Files-Master to make it master truth."},
             "gate": gate, "status": "candidate — awaiting Jordan's approval",
         }
-        print(spec["key"], "->", name, "bounds", bounds, "ref", rb, "erased px", erased, "groundY", registry[spec["key"]]["groundY"])
+        # The chooser draws a kit-less tile from bodies.generated.json (a tight crop, 1200 px tall).
+        # Same glass, same eraser, cropped from native — so no tile anywhere still shows the reducer.
+        tile = native.resize((round(native.width * 1200 / native.height), 1200), Image.Resampling.LANCZOS)
+        tile_tmp = ROOT / "public/images/bottle-builder/bodies" / f"{spec['slug']}.tmp.webp"
+        tile_saved = save_part(np.asarray(tile), str(tile_tmp))
+        tile_name = f"{spec['slug']}-no-reducer.{tile_saved['sha256'][:12]}.webp"; tile_tmp.replace(tile_tmp.with_name(tile_name))
+        reviewed_path = ROOT / "src/lib/bottle-builder/bodies.generated.json"
+        reviewed = json.loads(reviewed_path.read_text())
+        reviewed[spec["key"]] = {"url": f"/images/bottle-builder/bodies/{tile_name}", "width": tile.width, "height": tile.height, "sha256": tile_saved["sha256"]}
+        reviewed_path.write_text(json.dumps(reviewed, indent=2) + "\n")
+        registry[spec["key"]]["chooserTile"] = reviewed[spec["key"]]
+        print(spec["key"], "->", name, "bounds", bounds, "ref", rb, "identical to master glass", identical, f"(mean diff {mean_diff:.2f})", "IoU", round(iou, 4), "erased px", erased, "groundY", registry[spec["key"]]["groundY"])
     registry_path.write_text(json.dumps(registry, indent=1) + "\n")
 
 

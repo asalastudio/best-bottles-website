@@ -5,16 +5,22 @@
    "zOrder": 0,
    "bounds": {
     "left": 437,
-    "top": 255,
+    "top": 256,
     "right": 822,
     "bottom": 1077
    },
    "image": {
-    "url": "/images/bottle-builder/bodies/canonical/empire-100-clear-18-415.69f01c29b071.webp",
+    "url": "/images/bottle-builder/bodies/canonical/empire-100-clear-18-415.0fa3e32c129e.webp",
     "width": 1000,
     "height": 1100,
-    "sha256": "69f01c29b071fed79476ce06aa1ae38245fb154686027c660421f3c3a5e1c10f"
+    "sha256": "0fa3e32c129e9843113119ea15a6450c34eb2901303bc8dfa8ff27ac22cba331"
    }
+  },
+  "inkBounds": {
+   "left": 437,
+   "top": 256,
+   "right": 822,
+   "bottom": 1077
   },
   "anchors": {
    "axisX": 500,
@@ -40,6 +46,8 @@
    "masterPsd": "2.  18-415 Bottles /22. Empire Bottle 100ml/1. Empire 100ml PSD/1. GBEmp100RdcrShnGl.psd",
    "masterSha256": "e354bf8bc6864c8f25625c2f6a535dff8f49a573db3c9112cf1ed39c5b19b2e5",
    "glassLayerIdenticalToMaster": true,
+   "glassMeanAbsDiffVsMaster": 0.0,
+   "iouWithReferenceBelowNeck": 0.9984,
    "eraserLayers": [
     "Remove tool edits"
    ],
@@ -47,10 +55,84 @@
    "note": "Retouched file lives in BBUAT-Upload-Files; file it under BB-PSD-Files-Master to make it master truth."
   },
   "gate": {
-   "transparentFraction": 0.7672,
-   "semiTransparentPixels": 9511,
+   "transparentFraction": 0.7675,
+   "semiTransparentPixels": 9541,
    "touchesOwnEdge": false
   },
-  "status": "candidate \u2014 awaiting Jordan's approval"
+  "status": "candidate \u2014 awaiting Jordan's approval",
+  "chooserTile": {
+   "url": "/images/bottle-builder/bodies/empire-100-clear-18-415-no-reducer.bebda5f64d88.webp",
+   "width": 562,
+   "height": 1200,
+   "sha256": "bebda5f64d88387e472b54c2a58d85541b8132def66ea4a849af746d952bc205"
+  }
+ },
+ "Empire|50|Clear|18-415": {
+  "part": {
+   "slot": "body",
+   "zOrder": 0,
+   "bounds": {
+    "left": 494,
+    "top": 295,
+    "right": 815,
+    "bottom": 1062
+   },
+   "image": {
+    "url": "/images/bottle-builder/bodies/canonical/empire-50-clear-18-415.293bf49bf2bf.webp",
+    "width": 1000,
+    "height": 1100,
+    "sha256": "293bf49bf2bff15f45dae5b997c57cece0e2ddbdf0c712b022ded5e3b2bc8e6a"
+   }
+  },
+  "inkBounds": {
+   "left": 491,
+   "top": 295,
+   "right": 813,
+   "bottom": 1064
+  },
+  "anchors": {
+   "axisX": 500,
+   "neckAxisX": 500,
+   "seatY": 899,
+   "baselineY": 1061,
+   "pxPerMm": null
+  },
+  "groundY": 1059,
+  "registeredTo": {
+   "sku": "GBEmp50AnSpBlk",
+   "bodyBounds": {
+    "left": 494,
+    "top": 298,
+    "right": 815,
+    "bottom": 1062
+   },
+   "bodySha256": "9a10ea8fe57eb13373326642952c5ef5bb98a00cf3d7027a1b0d6151a27cc7d2"
+  },
+  "source": {
+   "retouchedPsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BBUAT-Upload-Files/1. PSD Uncapped /2.  18-415 Bottles /22. Empire Bottle 100ml/1. Empire 100ml PSD/No_Reducer/1. GBEmp50RdcrShnGl...psd",
+   "retouchedSha256": "8cac7c000e56c56f2ff3d5fbb3a9878e9d9921a661f135b2b37dfc5499eb9047",
+   "masterPsd": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/1. GBEmp50RdcrShnGl...psd",
+   "masterSha256": "ba0fb357caf9026ed675c452252d4d3ab437996f0708a47081e9331814a43805",
+   "glassLayerIdenticalToMaster": false,
+   "glassMeanAbsDiffVsMaster": 1.819,
+   "iouWithReferenceBelowNeck": 0.997,
+   "eraserLayers": [
+    "Remove tool edits"
+   ],
+   "glassPixelsErased": 4458,
+   "note": "Retouched file lives in BBUAT-Upload-Files; file it under BB-PSD-Files-Master to make it master truth."
+  },
+  "gate": {
+   "transparentFraction": 0.8075,
+   "semiTransparentPixels": 8925,
+   "touchesOwnEdge": false
+  },
+  "status": "candidate \u2014 awaiting Jordan's approval",
+  "chooserTile": {
+   "url": "/images/bottle-builder/bodies/empire-50-clear-18-415-no-reducer.90d7a4ffe36f.webp",
+   "width": 503,
+   "height": 1200,
+   "sha256": "90d7a4ffe36fb2d428157a7a70b7c02b59b3ad90851d26bd4bb4fdb0b6b37e66"
+  }
  }
 }

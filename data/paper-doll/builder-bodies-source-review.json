@@ -1171,6 +1171,19 @@
         "width": 556,
         "height": 1200,
         "sha256": "c5b78badc0906acefd6e9bb3599359da2d329871e743fe9f0db90e028f8a1c2a"
+      },
+      "supersededBy": {
+        "date": "2026-09-20",
+        "why": "Jordan supplied the glass with the orifice reducer retouched out; the earlier body still showed the insert in the neck.",
+        "builder": "scripts/paperdoll/build_canonical_builder_body.py",
+        "registry": "src/lib/bottle-builder/canonical-bodies.generated.json",
+        "asset": {
+          "url": "/images/bottle-builder/bodies/empire-100-clear-18-415-no-reducer.bebda5f64d88.webp",
+          "width": 562,
+          "height": 1200,
+          "sha256": "bebda5f64d88387e472b54c2a58d85541b8132def66ea4a849af746d952bc205"
+        },
+        "warning": "build_builder_bodies.py rewrites bodies.generated.json; re-run build_canonical_builder_body.py after it."
       }
     },
     {
@@ -1189,6 +1202,19 @@
         "width": 503,
         "height": 1200,
         "sha256": "ff43e75e3336ec1031551b0917e3e3572737d05a536a0bad309637a5d856c6c1"
+      },
+      "supersededBy": {
+        "date": "2026-09-20",
+        "why": "Jordan supplied the glass with the orifice reducer retouched out; the earlier body still showed the insert in the neck.",
+        "builder": "scripts/paperdoll/build_canonical_builder_body.py",
+        "registry": "src/lib/bottle-builder/canonical-bodies.generated.json",
+        "asset": {
+          "url": "/images/bottle-builder/bodies/empire-50-clear-18-415-no-reducer.90d7a4ffe36f.webp",
+          "width": 503,
+          "height": 1200,
+          "sha256": "90d7a4ffe36fb2d428157a7a70b7c02b59b3ad90851d26bd4bb4fdb0b6b37e66"
+        },
+        "warning": "build_builder_bodies.py rewrites bodies.generated.json; re-run build_canonical_builder_body.py after it."
       }
     },
     {
