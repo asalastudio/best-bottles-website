@@ -174,6 +174,12 @@ describe("builder catalog boundary", () => {
         const { row, kit } = fixture({ applicator: "Cap/Closure", itemName: "9 ml clear Cylinder bottle with black cap" }, ["body", "cap"]);
         expect(configurationFromRow(row, { ...kit, completeness: "capSplit" })?.fitment).toBe("Screw Cap");
     });
+    it("offers a reducer, whose kit is a bottle and its style cap, but still refuses any other fitment with no mechanism", () => {
+        const reducer = fixture({ applicator: "Reducer", itemName: "9 ml clear Cylinder bottle with reducer and black cap" }, ["body", "cap"]);
+        expect(configurationFromRow(reducer.row, reducer.kit)?.fitment).toBe("Reducer");
+        const sprayer = fixture({ applicator: "Perfume Spray Pump" }, ["body", "cap"]);
+        expect(configurationFromRow(sprayer.row, sprayer.kit)).toBeNull();
+    });
     it("uses the matching separated roller preview without replacing a split assembly's SKU or layers", () => {
         const donor = fixture();
         const split = fixture({ websiteSku: "OtherMetalBlack", graceSku: "OTHER" }, ["body", "cap"]);

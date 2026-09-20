@@ -1,0 +1,33 @@
+{
+ "schemaVersion": 1,
+ "release": "empire-droppers-2026-09-20",
+ "batch": "dist/paper-doll/empire-droppers-2026-09-20",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Empire droppers 2026-09-20",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 3,
+  "approved": 3,
+  "setAside": 0,
+  "notExtracted": 0
+ },
+ "reviewSheet": "public/reviews/builder-review-2026-09-19/empire50-droppers-before-after.jpg",
+ "reviewSheetSha256": "cdfc93ee3d59b6339c51f898f41e4c50415ec04b27594caa1c56c035a3427507",
+ "rows": [
+  {
+   "sku": "GBEmp50DrpCu",
+   "plateSha256": "20fbef0e062a3904b9d7d5596576de3bb0cc3e25804d6fffd2524fb314fd39a8"
+  },
+  {
+   "sku": "GBEmp50DrpGl",
+   "plateSha256": "a8e75d240a1632a7107edf835b18cbd8e0b5f4e45624017372468338e61bb513"
+  },
+  {
+   "sku": "GBEmp50DrpSl",
+   "plateSha256": "5c962fde1824ae9a84affc63644c283889bdb142557aa2b464e2e51eb261686a"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "cbc95cee387788df6eb9920578f9db871e80145d5b34edee6fa4d1ad2892bcbe"
+}

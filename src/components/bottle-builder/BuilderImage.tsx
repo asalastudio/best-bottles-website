@@ -6,6 +6,13 @@ import type { BuilderConfiguration, BuilderPart } from "@/lib/bottle-builder/mod
 import { canonicalBody, registerVintagePreview, seatPreviewLayers } from "@/lib/bottle-builder/preview-registration";
 import { layerCropStyle, previewFrame } from "@/lib/bottle-builder/preview-frame";
 
+/** Clear glass and the clear dip tube take the stage colour. A dropper's GLASS pipette hangs inside
+ * the bottle, so it blends into whatever glass it is in — drawn opaque it read as a white stick
+ * (Jordan, 2026-09-20). */
+function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart) {
+    return part.slot === "pipette" || (config.color === "Clear" && (part.slot === "body" || part.slot === "diptube"));
+}
+
 /** These are the existing alpha layers on their registered canvas, never
  * independently resized parts. Only the viewport changes for thumbnails. */
 export default function BuilderImage({ config, parts, label, thumbnail = false, expanded = false, scale = 1, stage = "body", showCover = false, bodyReference, placeholder = false, priority = false }: {
@@ -88,7 +95,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     if (layers.length === 1) {
         const [{ part }] = layers;
         const crop = layerCropStyle(part.image, { x, y, width, height });
-        const blend: CSSProperties["mixBlendMode"] = (config.color === "Clear" && ["body", "diptube"].includes(part.slot)) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined;
+        const blend: CSSProperties["mixBlendMode"] = blendsIntoGlass(config, part) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined;
         // Thumbnail size lives in the crop (previewFrame), not a CSS zoom.
         // Zooming a tight crop from the baseline cut the 100 ml Cylinder neck.
         const zoom = !expanded && !thumbnail ? scale * .88 : undefined;
@@ -117,7 +124,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     return wrap(<svg role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" preserveAspectRatio="xMidYMid meet" style={{ display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: expanded ? "visible" : "hidden" }}>
         <title id={titleId}>{label}</title>
         {layers.map(({ part, transform }) => <image key={part.slot} href={part.image.url} width={part.image.width} height={part.image.height} transform={transform}
-            x="0" y="0" style={{ mixBlendMode: (config.color === "Clear" && ["body", "diptube"].includes(part.slot)) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
+            x="0" y="0" style={{ mixBlendMode: blendsIntoGlass(config, part) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
             onLoad={markLoaded} onError={() => setFailedUrl(part.image.url)} data-builder-layer={part.slot} />)}
     </svg>);
 }

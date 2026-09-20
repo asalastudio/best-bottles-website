@@ -1,0 +1,17 @@
+{
+ "release": "empire-droppers-2026-09-20",
+ "ship": "ship Empire droppers 2026-09-20",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-20T18:41:42.126Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "public/reviews/builder-review-2026-09-19/empire50-droppers-before-after.jpg",
+ "skus": {
+  "GBEmp50DrpCu": "20fbef0e062a3904b9d7d5596576de3bb0cc3e25804d6fffd2524fb314fd39a8",
+  "GBEmp50DrpGl": "a8e75d240a1632a7107edf835b18cbd8e0b5f4e45624017372468338e61bb513",
+  "GBEmp50DrpSl": "5c962fde1824ae9a84affc63644c283889bdb142557aa2b464e2e51eb261686a"
+ },
+ "setAside": [],
+ "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+}

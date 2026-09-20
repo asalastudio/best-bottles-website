@@ -526,3 +526,22 @@ Ten Empire SKUs served NO kit, so the builder showed the product photograph (whi
   mechanism and drops the configuration. Slot `reducer` exists in the schema; library has `20. Caps/23. 18-415 Reducer/18-415Reducer.psd`.
 - **Droppers:** the kit is `body + fitment` with bulb, collar and GLASS pipette fused in one opaque part, so the pipette reads as a white
   stick inside clear glass. Slot `pipette` exists; splitting at the collar and multiplying the pipette like `diptube` is the fix.
+
+## 0h. Later still on 2026-09-20
+
+- **Published on Jordan's word ("ship the lotion pumps and the set aside kits")**: `empire-lotion-pumps-2026-09-20` (12 rows updated) and
+  `empire-setaside-kits-2026-09-20` (4 rows inserted). Read back from prod, 16/16 correct.
+- **Parity waiver** (`data/paper-doll/parity-waivers.json`, Jordan: "relax the gate for those six SKUs"): per-SKU, quoted, with a ceiling;
+  wired into `parity()` and the placement solver. It only mattered to the PLACEMENT solve: the five tassel/bulb kits cut afterwards pass the
+  STANDARD kit gate (mean 4.1–4.4). → `dist/paper-doll/empire-waived-2026-09-20`, 5 kits PENDING, `ship Empire waived kits 2026-09-20`.
+- **Lesson:** under the waiver `GBEmp50DrpSl` cut with a GOLD collar against a SILVER plate. Its PSD turns a gold photograph silver with a
+  'Black & White 1' adjustment, which psd-tools does not render. A waived row is never published unseen. `split_dropper_pipette.py` now applies
+  that adjustment with the weights READ FROM THE PSD (40/60/40/60/20/80) → parity 2.17 under the standard gate.
+- **Droppers**: one fused opaque part → `fitment` (bulb + collar) + `pipette` (the glass tube; the collar's feathered fringe stays with the
+  collar). `BuilderImage` multiplies `pipette` into the glass. → `dist/paper-doll/empire-droppers-2026-09-20`, 3 kits PENDING,
+  `ship Empire droppers 2026-09-20`. Until PR #209 is on main the live builder draws the pipette opaque, exactly as it does today.
+- **Reducer is not offered — two causes.** (1) `model.ts` dropped any kit with no mechanism layer; a reducer kit is a bottle + its style cap
+  (fixed, tested). (2) **All 24 Empire reducer SKUs are `shopifySellable: false` on prod** (variant, price and stock are present), and the
+  builder hides what cannot be checked out. That is a Shopify/catalogue decision, not imagery: `npx tsx scripts/debug/builder-fitment-dropouts.ts Empire Reducer`.
+  The 24 style-cap kits (12 per size: 5 leathers, Mt/Shn silver, Shn black, Shn gold, white, two Tall) are already published.
+- Original-Photoshop-Sources `29. 18-415 Droppers` and `23. 18-415 Reducer` are byte-identical to the master library's copies.
