@@ -2,10 +2,12 @@
  "schemaVersion": 1,
  "release": "empire-setaside-kits-2026-09-20",
  "batch": "dist/paper-doll/empire-setaside-2026-09-20",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter · in chat 2026-09-20: \"ship the lotion pumps and the set aside kits\"",
+ "approvedAt": "2026-09-20T18:29:35.395Z",
  "shipPhrase": "ship Empire set-aside kits 2026-09-20",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 4,
   "approved": 4,
@@ -33,5 +35,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "69eaebb0bf08e5679252527f668468b36203f6c544a2a54e132f1ded8a41b8b5"
+ "approvalSha256": "a32c568270b35b6156a42a9c0886f15b7b60ad0c9fac3860ff4cb97e19f120d1"
 }

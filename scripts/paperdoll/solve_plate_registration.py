@@ -80,7 +80,7 @@ for row in manifest['rows']:
     def cost(scale, ox, oy):
         a = np.asarray(place(scale, ox, oy).convert('RGB')).astype(np.int16); ink = (a.min(axis=2) < 245) | (plate_arr.min(axis=2) < 245)
         return float(np.abs(a - plate_arr)[ink].mean()) if ink.any() else 1e9
-    pg = parity(place(scale, ox, oy), plate)
+    pg = parity(place(scale, ox, oy), plate, row['websiteSku'])
     if not pg['ok']:
         # clear glass leaves faint ink: the box estimate is only a start. Refine
         # by search on the parity cost, scale ±2 %, offsets ±10 px, then ±1 px.
@@ -100,7 +100,7 @@ for row in manifest['rows']:
                     c = cost(sc, ox + dx, oy + dy)
                     if c < best[0]: best = (c, sc, ox + dx, oy + dy)
         _, scale, ox, oy = best
-        pg = parity(place(scale, ox, oy), plate)
+        pg = parity(place(scale, ox, oy), plate, row['websiteSku'])
     if not pg['ok'] and args.fine:
         # sub-pixel pass for plates that sit just outside the gate
         best = (cost(scale, ox, oy), scale, ox, oy)
@@ -110,7 +110,7 @@ for row in manifest['rows']:
                     c = cost(sc, ox + dx, oy + dy)
                     if c < best[0]: best = (c, sc, ox + dx, oy + dy)
         _, scale, ox, oy = best
-        pg = parity(place(scale, ox, oy), plate)
+        pg = parity(place(scale, ox, oy), plate, row['websiteSku'])
     if not pg['ok']:
         failed.append({'sku': row['websiteSku'], 'sx': round(sx, 4), 'sy': round(sy, 4), 'parity': pg}); continue
     session = {'index': len(reg['sessions']), 'reference': f"solved from the published plate {row['plate']['sha256'][:12]} (2026-09-16)", 'shots': 1,
