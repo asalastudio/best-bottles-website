@@ -1,0 +1,18 @@
+{
+ "release": "empire-setaside-kits-2026-09-20",
+ "ship": "ship Empire set-aside kits 2026-09-20",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-20T18:11:08.073Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "public/reviews/builder-review-2026-09-19/empire-setaside-kits-2026-09-20.jpg",
+ "skus": {
+  "GBEmp50AnSpTslGl": "fbff546c6d38c1fa13ca5ec8f618ad82a77b01a12d7785e8763282d490199ef7",
+  "GBEmp50AnSpTslIvySl": "48dd8b19351a514d225b45184048f99008688ee2631f5dfea9149d3b40aa3323",
+  "LBEmp50WhtClOvrCp": "b358eaa017e484b875c3ec7809fa72d40ab06954282c8c898a96724b488c5ae7",
+  "LBEmp100WhtClOvrCp": "87c148d8267d8cfc13264d85e5832625fce52f68b21c29d39edcc5da9283c806"
+ },
+ "setAside": [],
+ "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+}
