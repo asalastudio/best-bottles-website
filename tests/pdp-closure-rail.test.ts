@@ -51,6 +51,16 @@ describe("focused intent selection", () => {
         expect(configurator).not.toContain("const ranked");
         expect(configurator).not.toContain("const commit =");
     });
+
+    it("filters variants to the slug's applicator kind before building the finish rail", () => {
+        expect(pdp).toContain("filterVariantsForGroupIntent(");
+        expect(pdp).toContain("filterVariantsForGroupIntent(activeSlug, integrity)");
+    });
+
+    it("scales Circle plates and CAP OFF kits on the 10:11 stage", () => {
+        expect(configurator).toContain("pdpStageFrame(");
+        expect(configurator).toContain("data-pdp-stage-frame");
+    });
 });
 
 describe("guided PDP simplification", () => {

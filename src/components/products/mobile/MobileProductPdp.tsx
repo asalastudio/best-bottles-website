@@ -47,6 +47,7 @@ import {
 } from "@/lib/products/mobile-pdp-view-modes";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { closureBaseFromSlug, useClosureThumbnails } from "@/lib/products/use-closure-thumbnails";
+import { capacityMlFromSlug } from "@/lib/products/group-variant-intent";
 import { useViewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import {
@@ -86,6 +87,7 @@ export type MobileProductPdpProps = {
     group: {
         family?: string | null;
         capacity?: string | null;
+        capacityMl?: number | null;
         color?: string | null;
         category?: string | null;
         neckThreadSize?: string | null;
@@ -538,6 +540,9 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 onPlateError={markPlateBroken}
                 onViewLarger={openViewer}
                 overlay={null}
+                family={group.family}
+                capacityMl={group.capacityMl ?? capacityMlFromSlug(slug)}
+                view={viewMode === "capOff" ? "capOff" : "assembled"}
             />
 
             {/* Configure sits under the bottle, before the title, so first-time
@@ -673,6 +678,8 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 alt={displayName}
                 onPlateError={markPlateBroken}
                 onRestoreFocus={restoreViewerFocus}
+                family={group.family}
+                capacityMl={group.capacityMl ?? capacityMlFromSlug(slug)}
             />
 
             {/* ── the picker ───────────────────────────────────────────────── */}

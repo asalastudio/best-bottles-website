@@ -36,6 +36,8 @@ import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
 import { explodedKitFrame, orderExplodedOvercap } from "@/lib/products/kit-frame";
+import { capacityMlFromSlug } from "@/lib/products/group-variant-intent";
+import { pdpStageFrame, pdpStageTransformCss } from "@/lib/products/pdp-stage-frame";
 
 import { useGLTF } from "@react-three/drei";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
@@ -429,6 +431,15 @@ export default function ConfiguratorPdp({
   const plate = wantedPlate && !brokenPlates.has(wantedPlate) ? wantedPlate : null;
   // Prefer exact assembled photographs; retain layers for exploded or missing states.
   const showKitLayers = kitReady && (Boolean(pilot) || exploded || !plate || (!assembledOnly && !withCap && !plateImageCapOff));
+  const capacityMl = capacityMlFromSlug(currentSlug);
+  const stageTransform = exploded
+    ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})`
+    : pdpStageTransformCss(pdpStageFrame({
+        family: catalogFamily,
+        capacityMl,
+        view: !assembledOnly && !withCap ? "capOff" : "assembled",
+        parts: showKitLayers ? kitParts : null,
+      }));
   // A photo-only family (no approved geometry) never shows 3D; otherwise the
   // customer opens it. A plate outranks the catalogue photo: it is the exact
   // configuration, the photo is the group's hero.
@@ -453,6 +464,12 @@ export default function ConfiguratorPdp({
         </div>
       ) : showPlate ? (
         <div className="relative h-full w-full bg-white" data-paper-doll={showKitLayers ? "kit" : "plate"}>
+          {/* Capacity + CAP OFF fit: Circle 15 ml plates bake at ~30 ml mass.
+              Scale the whole stack (plate or kit) so 15 ml is smaller and the
+              beside-cap composition stays inside the 10:11 stage. */}
+          <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
+               style={{ transformOrigin: "0 0", transform: stageTransform }}
+               data-pdp-stage-frame="">
           {/* The flat plate: first paint, and what stays if the kit never arrives.
               Once the stack is up the plate is dropped entirely — leaving it
               mounted made every colourway change refetch a plate nobody sees. */}
@@ -466,8 +483,6 @@ export default function ConfiguratorPdp({
           {/* the kit, stacked in z-order. Every part was written on the plate's
               own canvas, so they need no positioning here -- they line up by
               construction, which is what keeps the bottle still. */}
-          <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
-               style={{ transformOrigin: "0 0", transform: exploded ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})` : "none" }}>
           {showKitLayers && kitParts?.map((part) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={part.slot} src={part.image.url}

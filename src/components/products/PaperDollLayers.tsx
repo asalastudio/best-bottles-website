@@ -15,6 +15,7 @@ import type { FunctionReturnType } from "convex/server";
 import type { api } from "../../../convex/_generated/api";
 import { decodeImage } from "@/lib/paper-doll/decode-image";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
+import { pdpStageFrame, pdpStageTransformCss, type PdpStageView } from "@/lib/products/pdp-stage-frame";
 
 export type KitQueryResult = FunctionReturnType<typeof api.productKits.forSku> | undefined;
 export type KitView = NonNullable<FunctionReturnType<typeof api.productKits.forSku>>;
@@ -91,12 +92,22 @@ type PaperDollLayersProps = {
     alt: string;
     onPlateError?: (url: string) => void;
     className?: string;
+    family?: string | null;
+    capacityMl?: number | null;
+    view?: Exclude<PdpStageView, "exploded">;
 };
 
-export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError, className }: PaperDollLayersProps) {
+export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError, className, family, capacityMl, view = "assembled" }: PaperDollLayersProps) {
     const stacked = Boolean(kitParts?.length);
+    const stageTransform = pdpStageTransformCss(pdpStageFrame({
+        family,
+        capacityMl,
+        view,
+        parts: stacked ? kitParts : null,
+    }));
     return (
         <div className={`relative h-full w-full bg-white ${className ?? ""}`} data-paper-doll={stacked ? "kit" : "plate"}>
+            <div className="absolute inset-0" style={{ transformOrigin: "0 0", transform: stageTransform }} data-pdp-stage-frame="">
             {!stacked && plateUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
@@ -123,6 +134,7 @@ export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError,
                     className="absolute inset-0 h-full w-full object-contain"
                 />
             ))}
+            </div>
         </div>
     );
 }
