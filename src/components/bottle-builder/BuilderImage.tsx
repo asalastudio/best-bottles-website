@@ -88,11 +88,20 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         // Thumbnail size lives in the crop (previewFrame), not a CSS zoom.
         // Zooming a tight crop from the baseline cut the 100 ml Cylinder neck.
         const zoom = !expanded && !thumbnail ? scale * .88 : undefined;
-        return wrap(<span data-chooser-img style={{ position: "relative", display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: "hidden" }}>
+        // layerCropStyle places the layer in percentages of its box, which matches the
+        // SVG viewBox only while that box has the frame's own aspect ratio. The SVG
+        // this replaced letterboxed (preserveAspectRatio "meet"); CSS has no such
+        // default, so a square frame in a wide tile drew every Cylinder 2.4x too wide.
+        // The outer span measures the tile; the inner one is the largest box of the
+        // frame's ratio that fits inside it, centred — "meet", in both directions.
+        const ratio = width / height;
+        return wrap(<span data-chooser-img style={{ containerType: "size", display: "grid", placeItems: "center", width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", overflow: "hidden" }}>
+            <span data-chooser-frame style={{ position: "relative", display: "block", overflow: "hidden", width: `min(100cqw, calc(100cqh * ${ratio}))`, height: `min(100cqh, calc(100cqw / ${ratio}))` }}>
             <span style={{ position: "absolute", inset: 0, transform: zoom ? `scale(${zoom})` : undefined, transformOrigin: "bottom center" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={part.image.url} alt={label} {...imgProps} data-builder-layer={part.slot}
                     onError={() => setFailedUrl(part.image.url)} style={{ ...crop, mixBlendMode: blend }} />
+            </span>
             </span>
         </span>);
     }
