@@ -2,10 +2,12 @@
  "schemaVersion": 1,
  "release": "boston-round-rollers-2026-09-20",
  "batch": "dist/paper-doll/boston-rollers-2026-09-20",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — saw the cap-off before/after sheet and gave the ship phrase in chat 2026-09-20: 'ship Boston Round corrected rollers 2026-09-20'",
+ "approvedAt": "2026-09-20T03:10:28.945Z",
  "shipPhrase": "ship Boston Round corrected rollers 2026-09-20",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 13,
   "approved": 13,
@@ -69,5 +71,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "ad2e29883409217c32f131469348e59f507f0185b247944efdb3fde71f692bbb"
+ "approvalSha256": "e473f296fd5ebb8ca9b8f5c867d4f10811bb2c93806d21a57392ba9cb3dcb39e"
 }

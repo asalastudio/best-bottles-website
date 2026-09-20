@@ -1,10 +1,10 @@
 {
  "release": "boston-round-rollers-2026-09-20",
  "ship": "ship Boston Round corrected rollers 2026-09-20",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — saw the cap-off before/after sheet and gave the ship phrase in chat 2026-09-20: 'ship Boston Round corrected rollers 2026-09-20'",
+ "approvedAt": "2026-09-20T03:10:28.945Z",
  "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
- "preparedAt": "2026-09-20T03:09:03.432Z",
+ "preparedAt": "2026-09-20T03:10:28.945Z",
  "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
  "reviewSheet": "/reviews/builder-review-2026-09-19/boston-roller-set-before-after.jpg",
  "skus": {
@@ -23,5 +23,5 @@
   "GBBstnAmb1ozRollonGl": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176"
  },
  "setAside": [],
- "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
 }
