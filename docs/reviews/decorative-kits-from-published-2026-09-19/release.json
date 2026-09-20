@@ -2,10 +2,13 @@
  "schemaVersion": 1,
  "release": "decorative-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/decorative",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:13.597Z",
  "shipPhrase": "ship Decorative kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 1,
   "approved": 1,
@@ -21,5 +24,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "b91c178cb67dda29f6f390770bf1079c13a3c9658c563d3177eb98b2d04b163f"
+ "approvalSha256": "f5efcb8efb09047f37af6a558eafee44dc220e79f7e5d08705554f102034dbe2"
 }

@@ -2,10 +2,13 @@
  "schemaVersion": 1,
  "release": "square-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/square",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:22.939Z",
  "shipPhrase": "ship Square kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 10,
   "approved": 10,
@@ -57,5 +60,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "32cf1cb9752c62328655d27862d74870573120c6a405f130b7e535dc1c4c7a30"
+ "approvalSha256": "052906bb711efa16b4a355928ef29b24d2b5dce627e4d068e4a5f29b154583c8"
 }

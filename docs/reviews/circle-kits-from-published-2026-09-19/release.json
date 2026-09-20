@@ -2,10 +2,12 @@
  "schemaVersion": 1,
  "release": "circle-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/circle",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:12.619Z",
  "shipPhrase": "ship Circle kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 58,
   "approved": 58,
@@ -249,5 +251,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "ae6907df4ea9230ffaaaaac9351edafa8d8ba52bc1ac6edadbca9ac27ada9c22"
+ "approvalSha256": "021ba3c14c493d25898df6d0f3491d669e15e66a15c06c270b6548fab0187adf"
 }

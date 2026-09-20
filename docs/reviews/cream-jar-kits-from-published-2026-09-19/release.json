@@ -2,10 +2,13 @@
  "schemaVersion": 1,
  "release": "cream-jar-kits-2026-09-19",
  "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/cream-jar",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:13.233Z",
  "shipPhrase": "ship Cream Jar kit release 2026-09-19",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 13,
   "approved": 13,
@@ -69,5 +72,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "bdb7e4dbb58ab1265aa9523ef14a00d25a7c27524ee475601e11222fec9ec428"
+ "approvalSha256": "bc245335b95488be6128e8865f2034cd6da6972a6ee7fae3d7630c02456dcf98"
 }
