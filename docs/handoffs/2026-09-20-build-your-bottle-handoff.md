@@ -95,6 +95,50 @@ pilot in §0, take the pump and overcap from the uncapped twin in the first plac
 
 ---
 
+## 0c. SOURCE RULE — build components from the master COMPONENT LIBRARY first
+
+Jordan, 2026-09-20: **"you should be using this: `BB-PSD-Files-Master/20. Caps`"**, **"and tassels:
+`BB-PSD-Files-Master/21. Tassels`"**, and **"we should be building what we need from here if the layers and
+images supply it."** This supersedes §0b's order of preference: **component library first; the uncapped twin
+bottle PSDs only where the library does not supply the part.**
+
+`/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/20. Caps` — 140 PSDs, one per
+component per finish, **foldered by neck finish and type**. This is the component library the builder needs;
+it was already photographed. Full inventory: **`data/paper-doll/component-library-inventory.json`**
+(sample: `public/reviews/builder-review-2026-09-19/component-library-sample.jpg`).
+
+| neck | what the library holds |
+|---|---|
+| 18-415 | Sprayers ×6 (Cu, MtGl, MtSl, ShnBlk, ShnGl, ShnSl — **pump exposed, single clean layer**), Lotion ×8, Caps ×12 (incl. leather), **Ansp ×9** (bulb sprayer + its dip tube, 2550×3300), **Ansp Tsl ×9** (6000×4000), Droppers ×3, Reducer ×1, Diva rings |
+| 20-400 | Roll-on caps ×6 (tall), short caps ×2, Droppers ×12 — **no bare roller** (so the Boston roller fix from the bottle PSDs stands) |
+| 18-400 | Droppers ×6, caps, cap-with-wand |
+| 17-415 | Roll-on caps ×10, Spray ×6 (**6 hidden layers — review**), Lotion ×3 |
+| 15-415 | Sprayers ×5, caps ×2 |
+| 13-415 | Sprayers ×8, caps ×4, roll-on caps ×9 (**33 hidden layers — review**), and **`13-415PlsticRollon` + `13-415MtlRollon`: the bare plastic and metal ROLLERS** — the part missing from ~90 roller kits (Flair, Rectangle, Royal, Sleek 8 ml, Tulip are all 13-415) |
+| 8-425, 14 mm, vials | caps, heart caps with tassel/chain, vial wands |
+
+`21. Tassels` — 253 per-SKU tassel-bottle PSDs in `Original Tassels` (110) and `Updated Tassels` (143). Ask Jordan
+which set is authoritative before using either; do not assume "Updated" wins.
+
+Coverage against the catalogue (category Component, prod, 2026-09-20): **109 of 153 component products have a
+library PSD of the exact same name.** Many of the 44 others are the same part spelled differently —
+`CP13-415SpryCuMt` (catalogue) ↔ `Spry13-415CuMt` (library), `CP18-415AnSpPnk` ↔ `Ansp18-415Pnk`,
+`CP18-415AnSpTslGl` ↔ `AnspTsl18-415Gl`. **Those pairs need Jordan's confirmation** — only he promotes a name
+pair (same rule as `data/paper-doll/alias-map.json`); prepare a confirmation sheet, don't assume. Genuinely absent:
+press-fit caps, 22-400, 24-400, 13-425.
+
+Things to respect when cutting from the library:
+- Small canvases: 18-415 sprayers are 400×400 (pump ≈ 220×394 px). On the 1000×1100 builder canvas the Empire pump
+  is ≈ 165×311 px, so this is a DOWNscale — fine. Check each before upscaling anything.
+- Some layers run to the canvas edge (`Spry18-415ShnBlk` sits at y = −1, 400 tall): check for a cut top.
+- Hidden layers exist (13-415 roll-on 33, 17-415 spray 6, reducer 1…). Hidden in Photoshop = excluded, and the PSD
+  needs a look before use.
+- Drop the full-canvas Background layer; composite the rest with adjustment layers applied, as the extractor does.
+- Each component still needs a **seat datum** measured on solid alpha (where it meets the neck), and it must be
+  LOOKED at on the stage colour `#eeebe5` — these were never QA'd cap-off either.
+
+---
+
 ## 1. Where things are
 
 | | |
