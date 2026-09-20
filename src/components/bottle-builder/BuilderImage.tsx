@@ -85,8 +85,11 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         const [{ part }] = layers;
         const crop = layerCropStyle(part.image, { x, y, width, height });
         const blend: CSSProperties["mixBlendMode"] = (config.color === "Clear" && ["body", "diptube"].includes(part.slot)) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined;
+        // Thumbnail size lives in the crop (previewFrame), not a CSS zoom.
+        // Zooming a tight crop from the baseline cut the 100 ml Cylinder neck.
+        const zoom = !expanded && !thumbnail ? scale * .88 : undefined;
         return wrap(<span data-chooser-img style={{ position: "relative", display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: "hidden" }}>
-            <span style={{ position: "absolute", inset: 0, transform: expanded ? undefined : `scale(${thumbnail ? scale : scale * .88})`, transformOrigin: "bottom center" }}>
+            <span style={{ position: "absolute", inset: 0, transform: zoom ? `scale(${zoom})` : undefined, transformOrigin: "bottom center" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={part.image.url} alt={label} {...imgProps} data-builder-layer={part.slot}
                     onError={() => setFailedUrl(part.image.url)} style={{ ...crop, mixBlendMode: blend }} />
