@@ -140,6 +140,8 @@ export async function POST(req: NextRequest) {
                     handle: product.handle,
                     productType: product.product_type,
                     status: product.status,
+                    // absent is not "unpublished": only a field Shopify actually sent is passed on
+                    ...(product.published_at !== undefined ? { publishedAt: product.published_at } : {}),
                     bodyHtml: product.body_html ?? "",
                     vendor: product.vendor,
                     tags: product.tags,
@@ -159,6 +161,8 @@ export async function POST(req: NextRequest) {
                             null,
                         inventoryItemId: v.inventory_item_id,
                         inventoryQuantity: v.inventory_quantity,
+                        ...(v.inventory_policy !== undefined ? { inventoryPolicy: v.inventory_policy } : {}),
+                        ...(v.inventory_management !== undefined ? { inventoryManagement: v.inventory_management } : {}),
                         option1: v.option1,
                         option2: v.option2,
                         option3: v.option3,
@@ -177,7 +181,7 @@ export async function POST(req: NextRequest) {
                     shopifyProductId: deleted.id,
                 });
                 console.log(
-                    `[Shopify Webhook] products/delete: removed ${deleted.id}`,
+                    `[Shopify Webhook] products/delete: unlinked ${deleted.id} (catalogue rows kept)`,
                 );
                 break;
             }

@@ -91,6 +91,10 @@ export interface WebhookProductVariant {
     image_id: number | null;
     inventory_item_id: number;
     inventory_quantity: number;
+    /** "deny" | "continue": whether Shopify keeps selling at zero. */
+    inventory_policy?: string | null;
+    /** "shopify" when inventory is tracked, null when it is not. */
+    inventory_management?: string | null;
     option1: string | null;
     option2: string | null;
     option3: string | null;
@@ -102,6 +106,7 @@ export interface WebhookProduct {
     handle: string;
     product_type: string;
     status: string;
+    published_at?: string | null;
     body_html: string | null;
     vendor: string;
     tags: string;

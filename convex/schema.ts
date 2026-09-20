@@ -249,6 +249,10 @@ export default defineSchema({
         shopifyVariantId: v.optional(v.union(v.string(), v.null())),        // Shopify variant GID
         shopifyInventoryItemId: v.optional(v.union(v.string(), v.null())),  // Shopify inventory item GID
         shopifyUpdatedAt: v.optional(v.number()),                           // Last webhook sync timestamp
+        /** From the product webhook, so an inventory-level webhook can tell a real stock-out from an
+         * untracked or oversellable variant sitting at zero. Undefined = no product webhook seen yet. */
+        shopifyInventoryTracked: v.optional(v.union(v.boolean(), v.null())),
+        shopifyInventoryPolicy: v.optional(v.union(v.string(), v.null())),
         /**
          * Whether Shopify will actually SELL this variant right now.
          *
