@@ -1,0 +1,128 @@
+{
+  "byCoarseFamily": {
+    "Atomizer": {
+      "full": 2,
+      "kits": 2
+    },
+    "Boston Round": {
+      "full": 87,
+      "kits": 87
+    },
+    "Circle": {
+      "full": 167,
+      "kits": 167
+    },
+    "Cylinder": {
+      "full": 274,
+      "kits": 420,
+      "capSplit": 146
+    },
+    "Cream Jar": {
+      "full": 13,
+      "kits": 13
+    },
+    "Decorative": {
+      "full": 1,
+      "kits": 1
+    },
+    "Diamond": {
+      "full": 29,
+      "kits": 29
+    },
+    "Diva": {
+      "full": 152,
+      "kits": 152
+    },
+    "Elegant": {
+      "full": 232,
+      "kits": 232
+    },
+    "Empire": {
+      "full": 85,
+      "kits": 85
+    },
+    "Flair": {
+      "full": 29,
+      "kits": 29
+    },
+    "Grace": {
+      "full": 35,
+      "kits": 35
+    },
+    "Rectangle": {
+      "full": 29,
+      "kits": 29
+    },
+    "Round": {
+      "full": 145,
+      "kits": 145
+    },
+    "Royal": {
+      "full": 26,
+      "kits": 26
+    },
+    "Sleek": {
+      "full": 124,
+      "kits": 124
+    },
+    "Slim": {
+      "full": 99,
+      "kits": 99
+    },
+    "Vial": {
+      "full": 15,
+      "kits": 15
+    },
+    "Square": {
+      "full": 10,
+      "kits": 10
+    },
+    "Teardrop": {
+      "full": 1,
+      "kits": 1
+    },
+    "Tulip": {
+      "full": 27,
+      "kits": 27
+    }
+  },
+  "noKitPlatesByCoarse": {
+    "Cylinder": 16,
+    "Elegant": 22,
+    "Diva": 20,
+    "Empire": 6,
+    "Circle": 38,
+    "Slim": 24,
+    "Round": 33,
+    "Sleek": 60,
+    "Grace": 8,
+    "Diamond": 14,
+    "Flair": 1,
+    "Rectangle": 32,
+    "Tulip": 33,
+    "Royal": 4,
+    "Boston Round": 36,
+    "Square": 19,
+    "Vial": 11,
+    "Cream Jar": 4,
+    "Atomizer": 21,
+    "Decorative": 11,
+    "Teardrop": 2,
+    "Aluminum Bottle": 7,
+    "Apothecary": 5,
+    "Bell": 4,
+    "Cap": 14,
+    "Dropper": 21,
+    "Lotion Bottle": 9,
+    "Pillar": 4,
+    "Plastic Bottle": 3,
+    "Roll": 34,
+    "Sprayer": 39
+  },
+  "totals": {
+    "kits": 1728,
+    "full": 1582,
+    "capSplit": 146,
+    "no_kit": 415
+  }
+}
