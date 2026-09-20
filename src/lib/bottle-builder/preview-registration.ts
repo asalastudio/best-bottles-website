@@ -1,5 +1,56 @@
 import type { BuilderConfiguration, BuilderPart } from "./model";
 
+type Bounds = { left: number; top: number; right: number; bottom: number };
+export type PreviewLayer = { part: BuilderPart; bounds: Bounds; transform?: string };
+
+const FITTED_SLOTS = new Set(["sprayer", "pump", "overcap"]);
+/** Vintage bulb/hose and tassel tops are wider than the glass; leave them. */
+const MAX_FITTED_WIDTH_RATIO = 1.25;
+/** Shoulder-seated fused ferrules sit in this band below seatY. */
+const NECK_ZONE_RATIO = 0.28;
+/** seatY is body.bounds.top (soft halo). 8% reaches the first threads so the
+ * ferrule covers the lip instead of floating or sitting on the shoulder. */
+const SEAT_INSET_RATIO = 0.08;
+
+export function neckSeatY(anchors: { seatY: number; baselineY: number }) {
+    const bodyHeight = Math.max(0, anchors.baselineY - anchors.seatY);
+    return anchors.seatY + bodyHeight * SEAT_INSET_RATIO;
+}
+
+function translateLayer(layer: PreviewLayer, dx: number, dy: number): PreviewLayer {
+    if (dx === 0 && dy === 0) return layer;
+    return {
+        ...layer,
+        bounds: {
+            left: layer.bounds.left + dx,
+            right: layer.bounds.right + dx,
+            top: layer.bounds.top + dy,
+            bottom: layer.bounds.bottom + dy,
+        },
+        transform: `translate(${dx} ${dy})${layer.transform ? ` ${layer.transform}` : ""}`,
+    };
+}
+
+/** Lift a fused sprayer/pump/overcap whose bottom sits on the shoulder so it
+ * registers to the neck finish. 9 ml kits already seat the actuator on seatY
+ * and keep a separate collar — those are left alone. Display only. */
+export function seatPreviewLayers(layers: PreviewLayer[], anchors: { seatY: number; baselineY: number }): PreviewLayer[] {
+    const body = layers.find(layer => layer.part.slot === "body");
+    if (!body) return layers;
+    const bodyWidth = body.bounds.right - body.bounds.left;
+    const bodyHeight = Math.max(0, anchors.baselineY - anchors.seatY);
+    if (bodyWidth <= 0 || bodyHeight <= 0) return layers;
+    const seat = neckSeatY(anchors);
+    const neckFloor = anchors.seatY + bodyHeight * NECK_ZONE_RATIO;
+    return layers.map(layer => {
+        if (!FITTED_SLOTS.has(layer.part.slot)) return layer;
+        const width = layer.bounds.right - layer.bounds.left;
+        if (width > bodyWidth * MAX_FITTED_WIDTH_RATIO) return layer;
+        if (layer.bounds.bottom <= seat || layer.bounds.bottom > neckFloor) return layer;
+        return translateLayer(layer, 0, seat - layer.bounds.bottom);
+    });
+}
+
 /** A finish changes the top, not the glass or the camera. Keep the selected
  * bottle's bare layer and register the exact top assembly uniformly using its
  * photographed body center and baseline. This affects display only.
