@@ -1,0 +1,26 @@
+{
+ "release": "empire-pumps-2026-09-20",
+ "ship": "ship Empire exposed pumps 2026-09-20",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-20T06:18:26.851Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "public/reviews/builder-review-2026-09-19/empire50-pump-kits-before-after.jpg + empire100-pump-kits-before-after.jpg",
+ "skus": {
+  "GBEmp100SpryCu": "aa7171806c0ee3aa17262b81f8c888531b72f0f8b238b38e311b89694a67af7c",
+  "GBEmp100SpryMtGl": "b4da3bcd5e0536655921406d05af7a66a91170bc0e6befef7565058cad5f4fd5",
+  "GBEmp100SpryMtSl": "bd19fed351825361ff194940fc08e89aeadeac7f3ed056443354f5832f296cf2",
+  "GBEmp100SpryShnBlk": "29d65773f4d81a27bc806146558b69e1899dd7696b7216cdded645e8a7d54dc0",
+  "GBEmp100SpryShnGl": "2770295f0415833567388e08f10d0ebcef7d2ded2ace5bc0c7f66a2d1e2abb9a",
+  "GBEmp100SpryShnSl": "b84b62f2d6c7149531e7c5c4ade4de28d430ae899765096b97db0ae67060a55b",
+  "GBEmp50SpryCu": "385070db40284d964fca82246c573eaf0a43a76f3e53b79e05f3f3aff547aa93",
+  "GBEmp50SpryMtGl": "7079bd317b9ca4f8c46f7fabb2661ceed72c370a5a459234dc4836d6197c2f3e",
+  "GBEmp50SpryMtSl": "2b0d0a1e1226a62db94043193fd4bef284ccb0588abd6dff7cd7b7ab89ae745f",
+  "GBEmp50SpryShnBlk": "cf05d9f456d8a86e4525e463ecf7ba4963202b9f3922b90cc9596532b5c4c98b",
+  "GBEmp50SpryShnGl": "ea56df690042583773f99b549dc28b6b8ce28a5a951f13ad8581dcfa24cd5773",
+  "GBEmp50SpryShnSl": "54d63addf5d68072c43aae8de2dadfba1f0261bf3103c199233ac6826ca5d7b5"
+ },
+ "setAside": [],
+ "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+}

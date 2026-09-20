@@ -480,3 +480,20 @@ published plates) → `reuse_solved_registration.py` → `solve_plate_registrati
 Tell him, briefly: you have read the handoff; you will first prove the oversized-and-clipped Sunburst body on
 the Empire 50 ml with a sheet and numbers; nothing will be published; and you'll show him before wiring it into
 the local builder. Then do exactly that.
+
+## 0e. Empire sprayer kits rebuilt with exposed pumps — PREPARED, not published (2026-09-20)
+
+Eleven of the twelve Empire perfume-sprayer kits had no pump part at all: the capped PSD shows only the
+cover, so the extractor filed the cover as `sprayer` (and, at 50 ml, the dip tube as `overcap`).
+`scripts/paperdoll/build_empire_pump_kits.py` reads roles from geometry, adds the library pump
+(`20. Caps/7. 18-415 Sprayers`) seated on the uncapped twin's pump footprint as `sprayer`, and files the
+cover as `overcap` in its assembled position, so `BuilderImage.tsx`'s existing sidecar rule takes over.
+`GBEmp100SpryCu` keeps its own photographed pump. Copper's cover loses the retoucher's white shards
+(white-keyed matte on that one finish only). All twelve pass alpha and parity against the live plates.
+
+- Batch: `dist/paper-doll/empire-pumps-2026-09-20/kits` (approval PENDING — Jordan)
+- Sheets: `public/reviews/builder-review-2026-09-19/empire{50,100}-pump-kits-before-after.jpg`
+  (`scripts/paperdoll/empire_pump_kits_sheet.py`)
+- Record: `docs/reviews/empire-pumps-2026-09-20/`
+- Prod dry-run clean: 12 plate hashes verified, 48 part objects. Ship phrase: `ship Empire exposed pumps 2026-09-20`
+- Known, accepted: 4 kits have a 1–2 px pump sliver at the cover's anti-aliased edge (22–286 px); parity unaffected.
