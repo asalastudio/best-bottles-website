@@ -1,0 +1,41 @@
+{
+ "schemaVersion": 1,
+ "release": "empire-waived-kits-2026-09-20",
+ "batch": "dist/paper-doll/empire-waived-2026-09-20",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Empire waived kits 2026-09-20",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 5,
+  "approved": 5,
+  "setAside": 0,
+  "notExtracted": 1
+ },
+ "reviewSheet": "public/reviews/builder-review-2026-09-19/empire-waived-kits-2026-09-20.jpg",
+ "reviewSheetSha256": "0ab864699de3ab95202aa12cc638d3c431cf38f926d06ecf111ff0e3aa895f72",
+ "rows": [
+  {
+   "sku": "GBEmp50AnSpPnk",
+   "plateSha256": "a0cb7abaa5015c9d25125f80da96a29fff2905857e10dbd9781fbb38ddeb91c7"
+  },
+  {
+   "sku": "GBEmp50AnSpTslPnk",
+   "plateSha256": "dd489cbe441c996115aa0e09684286c9da82c1413d62f3eb0f92e44ae6eaa773"
+  },
+  {
+   "sku": "GBEmp100AnSpTslGl",
+   "plateSha256": "6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb"
+  },
+  {
+   "sku": "GBEmp100AnSpTslPnk",
+   "plateSha256": "e649562a277b08057b83bad90f7753b7d802a864d432426e6678fda2cbf42b31"
+  },
+  {
+   "sku": "GBEmp100AnSpTslRed",
+   "plateSha256": "5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "20c5cbd4aacd2651bacabb422e6ed41e7d5aea3c9940c58f695eebe8c34a46fb"
+}

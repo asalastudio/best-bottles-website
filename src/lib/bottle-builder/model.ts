@@ -195,7 +195,11 @@ export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, pr
         : app === "Plastic Roller Ball" ? "Plastic Roller" : app === "Perfume Spray Pump" ? "Perfume Sprayer" : app;
     if (!fitment || fitment === "N/A") return null;
     const mechanism = kit.parts.filter(part => part.slot !== "body" && !isClosurePart(part));
-    if (!capOnly && !assemblySplit && mechanism.length === 0) return null;
+    // An orifice reducer is pressed into the neck and photographed inside the glass: its kit is a bottle
+    // and the style cap that goes on it, with no separate mechanism layer. That is a complete reducer
+    // assembly, not a missing part — without this the Reducer fitment was never offered (Empire, 2026-09-20).
+    const reducerWithCap = fitment === "Reducer" && kit.completeness === "full" && kit.parts.some(isClosurePart);
+    if (!capOnly && !assemblySplit && !reducerWithCap && mechanism.length === 0) return null;
     const config = catalogConfigurationFromRow(row, kit);
     if (assemblySplit) {
         if (!config || config.bodyId !== preview!.bodyId) return null;

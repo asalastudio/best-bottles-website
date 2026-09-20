@@ -2,10 +2,12 @@
  "schemaVersion": 1,
  "release": "empire-lotion-pumps-2026-09-20",
  "batch": "dist/paper-doll/empire-lotion-pumps-2026-09-20",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter · in chat 2026-09-20: \"ship the lotion pumps and the set aside kits\"",
+ "approvedAt": "2026-09-20T18:29:08.220Z",
  "shipPhrase": "ship Empire exposed lotion pumps 2026-09-20",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 12,
   "approved": 12,
@@ -65,5 +67,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "458f2f465e23793aef5b1a6c0b5e8aef832a685df2cb7e8e0ea9b33b0c52e140"
+ "approvalSha256": "f81cee0ce2281a21d7df02fed2605be0e5f1bcdcfd6dafe2bce4d8f12dc24eea"
 }

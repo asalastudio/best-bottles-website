@@ -512,3 +512,36 @@ cover as `overcap` in its assembled position, so `BuilderImage.tsx`'s existing s
   reproduce from the master PSD (parity mean 6.2–6.9 vs 6, tail 1.0–2.4 % vs 1 %, sx≠sy), so the builder falls back to the
   product photograph (white box, opaque tube). `--fine` re-solve changed nothing. Fix = re-render those three plates from the
   current PSDs, then cut kits. Not done: a plate release is Jordan's call. Also `GBEmp100AnSpTslIvySl` has seatY 980 ≥ baselineY 979.
+
+## 0g. Empire kit audit, 2026-09-20 (scripts/debug/empire_builder_kit_audit.py, read-only against prod)
+
+Ten Empire SKUs served NO kit, so the builder showed the product photograph (white box, opaque tube):
+- **Set aside and never re-cut (my gap):** `GBEmp50AnSpTslGl`, `GBEmp50AnSpTslIvySl`, `GBEmp50AnSpTslPnk`, `LBEmp50WhtClOvrCp`,
+  `LBEmp100WhtClOvrCp`. Their plates were re-rendered after the 09-16 kits were cut; they were in neither later batch. Re-cut from the
+  live plates → `dist/paper-doll/empire-setaside-2026-09-20` (4 kits PENDING, ship phrase `ship Empire set-aside kits 2026-09-20`).
+  Pink fails placement parity by a hair (mean 6.02 vs 6.0).
+- **Placement never solved (parity just over the gate):** `GBEmp100AnSpTslGl/Pnk/Red`, `GBEmp50AnSpPnk`, `GBEmp50AnSpTslPnk`, `GBEmp50DrpSl`.
+  All saturated or mirror finishes; sx≠sy by ~0.1 %. Needs either re-rendered plates or Jordan's ruling on the gate. Gate NOT loosened.
+- **Reducer is not offered as a fitment:** reducer kits are `body + cap` with the insert baked into the body, so `model.ts` finds no
+  mechanism and drops the configuration. Slot `reducer` exists in the schema; library has `20. Caps/23. 18-415 Reducer/18-415Reducer.psd`.
+- **Droppers:** the kit is `body + fitment` with bulb, collar and GLASS pipette fused in one opaque part, so the pipette reads as a white
+  stick inside clear glass. Slot `pipette` exists; splitting at the collar and multiplying the pipette like `diptube` is the fix.
+
+## 0h. Later still on 2026-09-20
+
+- **Published on Jordan's word ("ship the lotion pumps and the set aside kits")**: `empire-lotion-pumps-2026-09-20` (12 rows updated) and
+  `empire-setaside-kits-2026-09-20` (4 rows inserted). Read back from prod, 16/16 correct.
+- **Parity waiver** (`data/paper-doll/parity-waivers.json`, Jordan: "relax the gate for those six SKUs"): per-SKU, quoted, with a ceiling;
+  wired into `parity()` and the placement solver. It only mattered to the PLACEMENT solve: the five tassel/bulb kits cut afterwards pass the
+  STANDARD kit gate (mean 4.1–4.4). → `dist/paper-doll/empire-waived-2026-09-20`, 5 kits PENDING, `ship Empire waived kits 2026-09-20`.
+- **Lesson:** under the waiver `GBEmp50DrpSl` cut with a GOLD collar against a SILVER plate. Its PSD turns a gold photograph silver with a
+  'Black & White 1' adjustment, which psd-tools does not render. A waived row is never published unseen. `split_dropper_pipette.py` now applies
+  that adjustment with the weights READ FROM THE PSD (40/60/40/60/20/80) → parity 2.17 under the standard gate.
+- **Droppers**: one fused opaque part → `fitment` (bulb + collar) + `pipette` (the glass tube; the collar's feathered fringe stays with the
+  collar). `BuilderImage` multiplies `pipette` into the glass. → `dist/paper-doll/empire-droppers-2026-09-20`, 3 kits PENDING,
+  `ship Empire droppers 2026-09-20`. Until PR #209 is on main the live builder draws the pipette opaque, exactly as it does today.
+- **Reducer is not offered — two causes.** (1) `model.ts` dropped any kit with no mechanism layer; a reducer kit is a bottle + its style cap
+  (fixed, tested). (2) **All 24 Empire reducer SKUs are `shopifySellable: false` on prod** (variant, price and stock are present), and the
+  builder hides what cannot be checked out. That is a Shopify/catalogue decision, not imagery: `npx tsx scripts/debug/builder-fitment-dropouts.ts Empire Reducer`.
+  The 24 style-cap kits (12 per size: 5 leathers, Mt/Shn silver, Shn black, Shn gold, white, two Tall) are already published.
+- Original-Photoshop-Sources `29. 18-415 Droppers` and `23. 18-415 Reducer` are byte-identical to the master library's copies.

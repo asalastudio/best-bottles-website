@@ -101,13 +101,26 @@ def automatic_cap_map(product,foreground,off_psd):
         raise ValueError('cap layer not independently confirmed in uncapped source')
     return {'body':[body['index']],'cap':[cap['index']]}
 
-def parity(composite,plate):
+_WAIVERS=None
+def parity_waiver(sku):
+    """Jordan's per-SKU rulings (data/paper-doll/parity-waivers.json). Never a change to the gate itself."""
+    global _WAIVERS
+    if _WAIVERS is None:
+        f=Path(__file__).resolve().parents[2]/'data/paper-doll/parity-waivers.json'
+        _WAIVERS=json.loads(f.read_text()) if f.exists() else {'skus':[]}
+    return _WAIVERS if sku and sku in _WAIVERS['skus'] else None
+
+def parity(composite,plate,sku=None):
     a=np.asarray(composite.convert('RGB')).astype(np.int16);b=np.asarray(plate.convert('RGB')).astype(np.int16)
     ink=(a.min(axis=2)<245)|(b.min(axis=2)<245)
     if not ink.any(): return {'ok':False,'reason':'empty composite'}
     diff=np.abs(a-b).max(axis=2)[ink]
     mean=float(np.abs(a-b)[ink].mean());tail=float((diff>40).mean())
-    return {'ok':mean<=6 and tail<=.01,'mean':round(mean,4),'tailOver40':round(tail,6)}
+    result={'ok':mean<=6 and tail<=.01,'mean':round(mean,4),'tailOver40':round(tail,6)}
+    waiver=None if result['ok'] else parity_waiver(sku)
+    if waiver and mean<=waiver['ceiling']['mean'] and tail<=waiver['ceiling']['tailOver40']:
+        result.update(ok=True,waived={'gate':'mean<=6 and tail<=0.01','ceiling':waiver['ceiling'],'grantedBy':waiver['grantedBy']})
+    return result
 
 def place_exploded(parts):
     """Separate the photographed parts without cropping or hiding overlap."""
@@ -251,7 +264,7 @@ def main():
                   'bounds':{'left':bbox[0],'top':bbox[1],'right':bbox[2],'bottom':bbox[3]},'assembled':{'x':0,'y':0},
                   'exploded':{'dx':0,'dy':0},'derivation':derivation,'sourceLayerIndices':ids,'whiteGroundPixelsDropped':ground_px})
             place_exploded(part_rows)
-            pg=parity(composite,Image.open(plate_path))
+            pg=parity(composite,Image.open(plate_path),sku)
             if not pg['ok']:raise ValueError(f'plate parity failed: {pg}')
             sku_dir=output/row['familyId']/sku;sku_dir.mkdir(parents=True,exist_ok=True);composite.convert('RGB').save(sku_dir/'assembled.webp',quality=90)
             exploded=render_exploded(part_rows,output)
