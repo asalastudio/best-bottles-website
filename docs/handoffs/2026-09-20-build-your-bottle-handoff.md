@@ -73,8 +73,12 @@ Most relevant memory files: `project_builder_architecture_findings_2026_09_20.md
 | #200 | merged | release records for the 621 + two read-only diagnostic tools |
 | #201, #202 | merged (another agent) | mobile blank tiles; 100 ml necks — introduced the CSS-cropped `<img>` tile |
 | #204 | merged | tiles stretched ~2.4× (CSS crop had no letterboxing) |
-| **#206** | **OPEN, CI green** | Boston rollers — **already published to prod**; PR carries the script, record and sheets. Safe to merge. |
-| **#208** | **OPEN, `verify` green, Vercel was pending** | clear glass drew as a white block. Re-check Vercel, then ask Jordan before merging. |
+| #206 | merged 2026-09-20 04:41Z (`847a1b4b`) | Boston rollers — published to prod on Jordan's ship phrase; script, record and sheets now on main |
+| #208 | merged 2026-09-20 04:42Z (`8faaf5a6`) | clear glass drew as a white block — the multiply now lives on the outermost wrapper |
+
+No PRs of mine are open. `main` is at `8faaf5a6` or later. **This pilot branch predates those two merges** —
+rebase or merge `origin/main` into it before you build (expect no conflicts: it only adds files under
+`scripts/bottle-builder-pilot/`, `docs/handoffs/` and `public/reviews/`, plus #208's own change it was based on).
 
 Jordan merges, or tells you to. Do not merge on your own initiative.
 
@@ -240,8 +244,7 @@ its own data path (suggestion in §9).
 - **Parity cannot judge anything under the cap.** If the work is cap-off, it has to be LOOKED at, on the stage colour.
 - "0 Image unavailable" is **not** proof a tile is right. I shipped stretched bottles that way. Look at it.
 - **Never run a white-keyed matte on white plastic** (`strip_retouch_patch.py` is for the steel-ball photo only;
-  note that file and `build_boston_roller_set.py` exist **only on the unmerged #206 branch**
-  `claude/builder-roller-preview-2026-09-19` until Jordan merges it),
+  that file and `build_boston_roller_set.py` reached main with #206 — merge `origin/main` to get them here),
   and never on clear/frosted glass (`matte.py` says so itself).
 - **Do not "fix" `alpha_gate`.** Its comment says "ink", its code tests `alpha > 0`, and the code is right — I
   changed it and reverted (4f4f4552 → cb814f47). White ground is invisible on white.
@@ -283,7 +286,6 @@ its own data path (suggestion in §9).
 
 ## 10. Open items Jordan knows about (not yours unless he says)
 
-- Merge #206 (already live) and #208 (clear glass) — his call.
 - Review the 10–11 families that auto-enrolled in the builder; decide on an allowlist.
 - `seatY` convention (64 kits refused) and roller kits with no roller part (~90) — need a before/after + decision.
 - 185 kits with body `bounds` that aren't the glass — a metadata correction would be a production write.
