@@ -512,3 +512,17 @@ cover as `overcap` in its assembled position, so `BuilderImage.tsx`'s existing s
   reproduce from the master PSD (parity mean 6.2–6.9 vs 6, tail 1.0–2.4 % vs 1 %, sx≠sy), so the builder falls back to the
   product photograph (white box, opaque tube). `--fine` re-solve changed nothing. Fix = re-render those three plates from the
   current PSDs, then cut kits. Not done: a plate release is Jordan's call. Also `GBEmp100AnSpTslIvySl` has seatY 980 ≥ baselineY 979.
+
+## 0g. Empire kit audit, 2026-09-20 (scripts/debug/empire_builder_kit_audit.py, read-only against prod)
+
+Ten Empire SKUs served NO kit, so the builder showed the product photograph (white box, opaque tube):
+- **Set aside and never re-cut (my gap):** `GBEmp50AnSpTslGl`, `GBEmp50AnSpTslIvySl`, `GBEmp50AnSpTslPnk`, `LBEmp50WhtClOvrCp`,
+  `LBEmp100WhtClOvrCp`. Their plates were re-rendered after the 09-16 kits were cut; they were in neither later batch. Re-cut from the
+  live plates → `dist/paper-doll/empire-setaside-2026-09-20` (4 kits PENDING, ship phrase `ship Empire set-aside kits 2026-09-20`).
+  Pink fails placement parity by a hair (mean 6.02 vs 6.0).
+- **Placement never solved (parity just over the gate):** `GBEmp100AnSpTslGl/Pnk/Red`, `GBEmp50AnSpPnk`, `GBEmp50AnSpTslPnk`, `GBEmp50DrpSl`.
+  All saturated or mirror finishes; sx≠sy by ~0.1 %. Needs either re-rendered plates or Jordan's ruling on the gate. Gate NOT loosened.
+- **Reducer is not offered as a fitment:** reducer kits are `body + cap` with the insert baked into the body, so `model.ts` finds no
+  mechanism and drops the configuration. Slot `reducer` exists in the schema; library has `20. Caps/23. 18-415 Reducer/18-415Reducer.psd`.
+- **Droppers:** the kit is `body + fitment` with bulb, collar and GLASS pipette fused in one opaque part, so the pipette reads as a white
+  stick inside clear glass. Slot `pipette` exists; splitting at the collar and multiplying the pipette like `diptube` is the fix.

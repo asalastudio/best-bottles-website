@@ -1,0 +1,37 @@
+{
+ "schemaVersion": 1,
+ "release": "empire-setaside-kits-2026-09-20",
+ "batch": "dist/paper-doll/empire-setaside-2026-09-20",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Empire set-aside kits 2026-09-20",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 4,
+  "approved": 4,
+  "setAside": 0,
+  "notExtracted": 1
+ },
+ "reviewSheet": "public/reviews/builder-review-2026-09-19/empire-setaside-kits-2026-09-20.jpg",
+ "reviewSheetSha256": "3e4d502432d23df4bcb857db17d5a5dc751f59063d776281f3938c0e7246bca8",
+ "rows": [
+  {
+   "sku": "GBEmp50AnSpTslGl",
+   "plateSha256": "fbff546c6d38c1fa13ca5ec8f618ad82a77b01a12d7785e8763282d490199ef7"
+  },
+  {
+   "sku": "GBEmp50AnSpTslIvySl",
+   "plateSha256": "48dd8b19351a514d225b45184048f99008688ee2631f5dfea9149d3b40aa3323"
+  },
+  {
+   "sku": "LBEmp50WhtClOvrCp",
+   "plateSha256": "b358eaa017e484b875c3ec7809fa72d40ab06954282c8c898a96724b488c5ae7"
+  },
+  {
+   "sku": "LBEmp100WhtClOvrCp",
+   "plateSha256": "87c148d8267d8cfc13264d85e5832625fce52f68b21c29d39edcc5da9283c806"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "69eaebb0bf08e5679252527f668468b36203f6c544a2a54e132f1ded8a41b8b5"
+}
