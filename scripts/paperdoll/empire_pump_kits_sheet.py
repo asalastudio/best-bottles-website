@@ -3,7 +3,7 @@
 
 BuilderImage.tsx: with the cover off, a kit that has BOTH an `overcap` part and a mechanism
 stands the overcap on the baseline beside the glass (gap = max(18, 8 % of body width)).
-Clear glass multiplies into the stage colour. This sheet applies exactly that rule to the
+Clear glass AND a part in the `diptube` slot multiply into the stage colour. This sheet applies exactly that rule to the
 kit as published today and to the rebuilt kit, so the difference shown is the kit's.
 
     python3 scripts/paperdoll/empire_pump_kits_sheet.py --batch dist/paper-doll/empire-pumps-2026-09-20
@@ -30,6 +30,12 @@ def draw(kits: Path, row: dict, cover_on: bool) -> Image.Image:
         if p["slot"] == "body":
             continue
         im = Image.open(kits / p["image"]).convert("RGBA")
+        if p["slot"] == "diptube":
+            # BuilderImage.tsx multiplies `diptube` on clear glass exactly as it does the body. A tube
+            # filed under any other slot name is drawn opaque — which is what the 50 ml kits did.
+            white = Image.new("RGB", CANVAS, "white"); white.paste(im, (0, 0), im)
+            out = ImageChops.multiply(out.convert("RGB"), white).convert("RGBA")
+            continue
         if p["slot"] == "overcap" and sidecar:
             b, bb = p["bounds"], body["bounds"]
             gap = max(18, (bb["right"] - bb["left"]) * .08)
