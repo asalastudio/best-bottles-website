@@ -9,8 +9,14 @@ const cells: Record<string, number> = {
     "Lotion Pump": 4, "Vintage Bulb Sprayer": 5, "Antique Bulb Sprayer": 5,
     "Vintage Bulb Sprayer with Tassel": 6, "Dropper": 7,
 };
-export default function FitmentIllustration({ fitment }: { fitment: string }) {
+export default function FitmentIllustration({ fitment, neck }: { fitment: string; neck?: string }) {
     const cell = cells[fitment];
+    // The sheet's sprayer (cell 0) is drawn after a 13-415 pump, which has three steps. The 18-415
+    // perfume sprayer has two — a narrow actuator on one collar — so it has its own drawing
+    // (2026-09-20), pencil after the library photograph; see data/paper-doll/fitment-illustration-sources.json.
+    // eslint-disable-next-line @next/next/no-img-element
+    if (fitment === "Perfume Sprayer" && neck === "18-415") return <img src="/images/bottle-builder/fitment-pencil-perfume-sprayer-18-415.png" alt="Perfume Sprayer mechanism illustration"
+        loading="lazy" style={{ width: 96, maxWidth: "100%", height: 118, maxHeight: "100%", objectFit: "contain", objectPosition: "center bottom", mixBlendMode: "multiply" }} />;
     // The orifice reducer is drawn on its own sheet (2026-09-14): pencil after the
     // reducer photograph, proportions locked to it; see data/paper-doll/fitment-illustration-sources.json.
     // eslint-disable-next-line @next/next/no-img-element

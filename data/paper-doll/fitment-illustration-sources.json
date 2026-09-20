@@ -1,163 +1,214 @@
 [
-  {
-    "cell": 0,
-    "source": "20. Caps/18. 13-415 Sprayers/3. Spry13-415BlkSh.psd",
-    "sourceSha256": "ce50f51841b5ba993d2ff93572e033ce11966f6f813450ee515c670d7a2d2444",
-    "layers": [
-      1
-    ],
-    "url": "/images/bottle-builder/mechanism-references/0.png"
+ {
+  "cell": 0,
+  "source": "20. Caps/18. 13-415 Sprayers/3. Spry13-415BlkSh.psd",
+  "sourceSha256": "ce50f51841b5ba993d2ff93572e033ce11966f6f813450ee515c670d7a2d2444",
+  "layers": [
+   1
+  ],
+  "url": "/images/bottle-builder/mechanism-references/0.png"
+ },
+ {
+  "cell": 1,
+  "source": "20. Caps/25. 13-415  Metal Roll on/1. 13-415MtlRollon.psd",
+  "sourceSha256": "8f3726f82f270a5daae3a114f0abd52266f2c67a6edb351ffbc31c73427771db",
+  "layers": [
+   1,
+   2
+  ],
+  "url": "/images/bottle-builder/mechanism-references/1.png"
+ },
+ {
+  "cell": 2,
+  "source": "20. Caps/24. 13-415 Roll on/2. 13-415PlsticRollon.psd",
+  "sourceSha256": "904964edb67b8b97994ffffccfa0003d336de86694c8102d11d96f0e303326eb",
+  "layers": [
+   1,
+   2
+  ],
+  "url": "/images/bottle-builder/mechanism-references/2.png"
+ },
+ {
+  "cell": 3,
+  "source": "20. Caps/17. 13-415 Caps /3. CP13-415Sl.psd",
+  "sourceSha256": "41e2d88ec967b9df7136231679a9ae05683084b2ada9d43454744c42a5dcf9ed",
+  "layers": [
+   1,
+   2
+  ],
+  "url": "/images/bottle-builder/mechanism-references/3.png"
+ },
+ {
+  "cell": 4,
+  "source": "20. Caps/8. 18-415 Lotion/21. Ltn18-415ShnSl.psd",
+  "sourceSha256": "8ac632f6ac78b0f4e26071a500a1865c6c2e1751966f75e15ba6c095ab608abf",
+  "layers": [
+   1
+  ],
+  "url": "/images/bottle-builder/mechanism-references/4.png"
+ },
+ {
+  "cell": 5,
+  "source": "20. Caps/9. 18-415 Ansp /29. Ansp18-415Blk.psd",
+  "sourceSha256": "472208622aeda6f1c0767437d652e1b0b48c3ec8cffbcf3dd2f588cb2a32d012",
+  "layers": [
+   2
+  ],
+  "url": "/images/bottle-builder/mechanism-references/5.png"
+ },
+ {
+  "cell": 6,
+  "source": "20. Caps/10. 18-415 Ansp Tsl/41. AnspTsl18-415Blk.psd",
+  "sourceSha256": "b855f6b543c5e8188d8e5b86d9c233f7d1ea068c49490b9c1adc07f26aa1dc99",
+  "layers": [
+   2
+  ],
+  "url": "/images/bottle-builder/mechanism-references/6.png"
+ },
+ {
+  "cell": 7,
+  "source": "20. Caps/29. 18-415 Droppers/Drp18-415Sl.psd",
+  "sourceSha256": "79622c36f8cc5e2e7e2680250bf6a118dd306dcad8648a06bb5a0496d71656b8",
+  "layers": [
+   1,
+   2
+  ],
+  "url": "/images/bottle-builder/mechanism-references/7.png"
+ },
+ {
+  "cell": "reducer",
+  "fitment": "Reducer",
+  "url": "/images/bottle-builder/fitment-pencil-reducer.png",
+  "sha256": "9a26fa0a0dc74e70209580707658c48af4da4d41c710da47b4fb8664ac353771",
+  "generatedWith": "Higgsfield gpt_image_2_5, quality high, 1k, job 02f84d05-c13d-425e-af1c-a72c354fe2b5 (2026-09-14)",
+  "references": [
+   {
+    "role": "geometry",
+    "media": "2cea011d-ef2d-47e2-b854-c243c87f8965",
+    "file": "data/paper-doll/reducer-illustration/reducer-reference-2026-09-14.png"
+   },
+   {
+    "role": "style",
+    "media": "8a0e4c62-2650-43ea-acb6-4e9aa3c14425",
+    "file": "public/images/bottle-builder/fitment-pencil-approved.png"
+   }
+  ],
+  "jordanExample": {
+   "note": "2026-09-14 Jordan pasted a photograph of the reducer in chat ('this is the correct design\u2026 do not change any geometry'); the pasted bytes never reached the filesystem, so the drawing is locked to the earlier photograph of the same part and its proportions were dictated in the prompt. Replace the geometry reference with Jordan's file when it is saved under data/paper-doll/reducer-illustration/."
   },
-  {
-    "cell": 1,
-    "source": "20. Caps/25. 13-415  Metal Roll on/1. 13-415MtlRollon.psd",
-    "sourceSha256": "8f3726f82f270a5daae3a114f0abd52266f2c67a6edb351ffbc31c73427771db",
-    "layers": [
-      1,
-      2
-    ],
-    "url": "/images/bottle-builder/mechanism-references/1.png"
-  },
-  {
-    "cell": 2,
-    "source": "20. Caps/24. 13-415 Roll on/2. 13-415PlsticRollon.psd",
-    "sourceSha256": "904964edb67b8b97994ffffccfa0003d336de86694c8102d11d96f0e303326eb",
-    "layers": [
-      1,
-      2
-    ],
-    "url": "/images/bottle-builder/mechanism-references/2.png"
-  },
-  {
-    "cell": 3,
-    "source": "20. Caps/17. 13-415 Caps /3. CP13-415Sl.psd",
-    "sourceSha256": "41e2d88ec967b9df7136231679a9ae05683084b2ada9d43454744c42a5dcf9ed",
-    "layers": [
-      1,
-      2
-    ],
-    "url": "/images/bottle-builder/mechanism-references/3.png"
-  },
-  {
-    "cell": 4,
-    "source": "20. Caps/8. 18-415 Lotion/21. Ltn18-415ShnSl.psd",
-    "sourceSha256": "8ac632f6ac78b0f4e26071a500a1865c6c2e1751966f75e15ba6c095ab608abf",
-    "layers": [
-      1
-    ],
-    "url": "/images/bottle-builder/mechanism-references/4.png"
-  },
-  {
-    "cell": 5,
-    "source": "20. Caps/9. 18-415 Ansp /29. Ansp18-415Blk.psd",
-    "sourceSha256": "472208622aeda6f1c0767437d652e1b0b48c3ec8cffbcf3dd2f588cb2a32d012",
-    "layers": [
-      2
-    ],
-    "url": "/images/bottle-builder/mechanism-references/5.png"
-  },
-  {
-    "cell": 6,
-    "source": "20. Caps/10. 18-415 Ansp Tsl/41. AnspTsl18-415Blk.psd",
-    "sourceSha256": "b855f6b543c5e8188d8e5b86d9c233f7d1ea068c49490b9c1adc07f26aa1dc99",
-    "layers": [
-      2
-    ],
-    "url": "/images/bottle-builder/mechanism-references/6.png"
-  },
-  {
-    "cell": 7,
-    "source": "20. Caps/29. 18-415 Droppers/Drp18-415Sl.psd",
-    "sourceSha256": "79622c36f8cc5e2e7e2680250bf6a118dd306dcad8648a06bb5a0496d71656b8",
-    "layers": [
-      1,
-      2
-    ],
-    "url": "/images/bottle-builder/mechanism-references/7.png"
-  },
-  {
-    "cell": "reducer",
-    "fitment": "Reducer",
-    "url": "/images/bottle-builder/fitment-pencil-reducer.png",
-    "sha256": "9a26fa0a0dc74e70209580707658c48af4da4d41c710da47b4fb8664ac353771",
-    "generatedWith": "Higgsfield gpt_image_2_5, quality high, 1k, job 02f84d05-c13d-425e-af1c-a72c354fe2b5 (2026-09-14)",
-    "references": [
-      {
-        "role": "geometry",
-        "media": "2cea011d-ef2d-47e2-b854-c243c87f8965",
-        "file": "data/paper-doll/reducer-illustration/reducer-reference-2026-09-14.png"
-      },
-      {
-        "role": "style",
-        "media": "8a0e4c62-2650-43ea-acb6-4e9aa3c14425",
-        "file": "public/images/bottle-builder/fitment-pencil-approved.png"
-      }
-    ],
-    "jordanExample": {
-      "note": "2026-09-14 Jordan pasted a photograph of the reducer in chat ('this is the correct design\u2026 do not change any geometry'); the pasted bytes never reached the filesystem, so the drawing is locked to the earlier photograph of the same part and its proportions were dictated in the prompt. Replace the geometry reference with Jordan's file when it is saved under data/paper-doll/reducer-illustration/."
+  "silhouetteQa": {
+   "referenceHeightOverWidth": 1.123,
+   "drawingHeightOverWidth": 1.202,
+   "heightRatioDrawingOverReference": 1.07,
+   "widthFractionByBand": [
+    {
+     "band": "top disc",
+     "reference": 0.643,
+     "drawing": 0.684
     },
-    "silhouetteQa": {
-      "referenceHeightOverWidth": 1.123,
-      "drawingHeightOverWidth": 1.202,
-      "heightRatioDrawingOverReference": 1.07,
-      "widthFractionByBand": [
-        {
-          "band": "top disc",
-          "reference": 0.643,
-          "drawing": 0.684
-        },
-        {
-          "band": "flange",
-          "reference": 0.992,
-          "drawing": 0.997
-        },
-        {
-          "band": "body upper",
-          "reference": 0.879,
-          "drawing": 0.867
-        },
-        {
-          "band": "body lower",
-          "reference": 0.873,
-          "drawing": 0.863
-        },
-        {
-          "band": "chamfer",
-          "reference": 0.816,
-          "drawing": 0.83
-        },
-        {
-          "band": "foot",
-          "reference": 0.686,
-          "drawing": 0.693
-        }
-      ],
-      "meanAbsWidthDiff": 0.016,
-      "maxAbsWidthDiff": 0.18
+    {
+     "band": "flange",
+     "reference": 0.992,
+     "drawing": 0.997
     },
-    "status": "candidate \u2014 awaiting Jordan's approval on /reviews/builder-bodies-2026-09-14/reducer-illustration.jpg",
-    "rejected": [
-      {
-        "jobs": [
-          "7cb45ffe-2764-4ab3-b3f3-cb2515d4afde",
-          "1c481420-2999-4293-acae-744ac046f55d"
-        ],
-        "why": "orifice hole invented, no ribs"
-      },
-      {
-        "jobs": [
-          "6bbbcb47-f8d1-40b3-a0d0-9ffb112e75d7",
-          "8818feca-000e-4831-a5cf-70f558b5e4de"
-        ],
-        "why": "flange too wide (body 0.69\u20130.77 of flange), too tall; geometry reference was a mis-extracted screenshot"
-      },
-      {
-        "jobs": [
-          "97742064-586a-4cd8-b7dd-98b9d341610c",
-          "27a48d5d-4be1-49ac-b89a-7f209a90f9c5"
-        ],
-        "why": "e: 21% too tall; g: close second (ratio 1.089)"
-      }
+    {
+     "band": "body upper",
+     "reference": 0.879,
+     "drawing": 0.867
+    },
+    {
+     "band": "body lower",
+     "reference": 0.873,
+     "drawing": 0.863
+    },
+    {
+     "band": "chamfer",
+     "reference": 0.816,
+     "drawing": 0.83
+    },
+    {
+     "band": "foot",
+     "reference": 0.686,
+     "drawing": 0.693
+    }
+   ],
+   "meanAbsWidthDiff": 0.016,
+   "maxAbsWidthDiff": 0.18
+  },
+  "status": "candidate \u2014 awaiting Jordan's approval on /reviews/builder-bodies-2026-09-14/reducer-illustration.jpg",
+  "rejected": [
+   {
+    "jobs": [
+     "7cb45ffe-2764-4ab3-b3f3-cb2515d4afde",
+     "1c481420-2999-4293-acae-744ac046f55d"
+    ],
+    "why": "orifice hole invented, no ribs"
+   },
+   {
+    "jobs": [
+     "6bbbcb47-f8d1-40b3-a0d0-9ffb112e75d7",
+     "8818feca-000e-4831-a5cf-70f558b5e4de"
+    ],
+    "why": "flange too wide (body 0.69\u20130.77 of flange), too tall; geometry reference was a mis-extracted screenshot"
+   },
+   {
+    "jobs": [
+     "97742064-586a-4cd8-b7dd-98b9d341610c",
+     "27a48d5d-4be1-49ac-b89a-7f209a90f9c5"
+    ],
+    "why": "e: 21% too tall; g: close second (ratio 1.089)"
+   }
+  ]
+ },
+ {
+  "cell": "perfume-sprayer-18-415",
+  "fitment": "Perfume Sprayer",
+  "neck": "18-415",
+  "url": "/images/bottle-builder/fitment-pencil-perfume-sprayer-18-415.png",
+  "sha256": "7e3edc69cd7b44744749af81d42e88fa32a8a7a203506a821d9e54350e6a4468",
+  "generatedWith": "OpenAI gpt-image-2.5-sunburst, /v1/images/edits, quality high, 1024x1024, n=3 (2026-09-20); scripts/bottle-builder-pilot/draw_perfume_sprayer_sketch.py",
+  "references": [
+   {
+    "role": "geometry",
+    "file": "data/paper-doll/perfume-sprayer-illustration/geometry-reference-Spry18-415ShnSl.png",
+    "source": "20. Caps/7. 18-415 Sprayers /15. Spry18-415ShnSl.psd",
+    "sourceSha256": "0ff415ae9c35b60578aea35f30ec72183241f289a2877084a0aeed7921b6cc84"
+   },
+   {
+    "role": "style",
+    "file": "data/paper-doll/perfume-sprayer-illustration/style-reference-lotion-cell.png",
+    "source": "public/images/bottle-builder/fitment-pencil-approved.png cell 4"
+   }
+  ],
+  "why": "Jordan 2026-09-20: 'The geometry needs to be corrected.' Cell 0 was drawn after a 13-415 sprayer (three steps); the 18-415 pump has two.",
+  "silhouetteQa": {
+   "referenceHeightOverWidth": 1.809,
+   "drawingHeightOverWidth": 1.815,
+   "widthFractionByBand": {
+    "head": [
+     0.672,
+     0.674
+    ],
+    "shoulder": [
+     0.876,
+     0.878
+    ],
+    "collar upper": [
+     1.0,
+     1.0
+    ],
+    "collar lower": [
+     1.0,
+     0.999
     ]
-  }
+   },
+   "stepAt": [
+    0.335,
+    0.336
+   ],
+   "maxAbsWidthDiff": 0.002,
+   "chosen": "candidate-2 of 3; all three passed"
+  },
+  "status": "candidate \u2014 awaiting Jordan's approval"
+ }
 ]
