@@ -119,3 +119,42 @@ it("does not CSS-zoom a 100 ml thumbnail, which clipped the neck after the crop"
         vi.unstubAllGlobals();
     }
 });
+
+it("letterboxes the cropped tile, so a wide tile cannot stretch a tall bottle", () => {
+    // layerCropStyle places the layer in percentages of its box. That equals the
+    // SVG viewBox it replaced only while the box has the frame's aspect ratio. In
+    // the live chooser the tile is ~2.4:1 and the thumbnail frame is square, so
+    // every Cylinder drew as a squat jar: a 1000x1100 layer painted at 226x94.
+    // jsdom cannot lay anything out, so this pins the structure that fixes it:
+    // a size container measuring the tile, and inside it a box sized from the
+    // container's own units at the frame's ratio ("meet", in both directions).
+    const [slim] = slimBuilderBodies([cylinder50]);
+    const frameStyle = (html: string) => /data-chooser-frame(?:="[^"]*")? style="([^"]*)"/.exec(html)?.[1] ?? "";
+    // width:  min(100cqw, calc(100cqh * R))  — or, folded by a CSS parser, min(100cqw, {100R}cqh)
+    // height: min(100cqh, calc(100cqw / R))  — or min(100cqh, {100/R}cqw)
+    const widthRatio = (style: string) => {
+        const w = /width:\s*min\(100cqw,\s*([^;]+)\);/.exec(style)?.[1] ?? "";
+        const calc = /100cqh \* ([0-9.]+)/.exec(w); if (calc) return Number(calc[1]);
+        return Number(/([0-9.]+)cqh/.exec(w)?.[1]) / 100;
+    };
+    const heightRatio = (style: string) => {
+        const h = /height:\s*min\(100cqh,\s*([^;]+)\);/.exec(style)?.[1] ?? "";
+        const calc = /100cqw \/ ([0-9.]+)/.exec(h); if (calc) return Number(calc[1]);
+        return 100 / Number(/([0-9.]+)cqw/.exec(h)?.[1]);
+    };
+
+    const thumb = renderTile(slim!, { thumbnail: true, placeholder: true }).html;
+    expect(thumb).toMatch(/data-chooser-img[^>]*container-type:\s*size/);
+    expect(thumb.indexOf("data-chooser-frame")).toBeGreaterThan(thumb.indexOf("data-chooser-img"));
+    expect(thumb.indexOf("<img")).toBeGreaterThan(thumb.indexOf("data-chooser-frame"));
+    // a thumbnail frame is square, whatever shape the tile is
+    expect(widthRatio(frameStyle(thumb))).toBeCloseTo(1, 6);
+    expect(heightRatio(frameStyle(thumb))).toBeCloseTo(1, 6);
+
+    // and it is the frame's real ratio that is used: the full-size stage is not
+    // square, and width and height must agree on what that ratio is
+    const stage = frameStyle(renderTile(slim!).html);
+    expect(widthRatio(stage)).toBeGreaterThan(0);
+    expect(widthRatio(stage)).not.toBeCloseTo(1, 2);
+    expect(heightRatio(stage)).toBeCloseTo(widthRatio(stage), 6);
+});
