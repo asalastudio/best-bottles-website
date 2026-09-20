@@ -497,3 +497,18 @@ cover as `overcap` in its assembled position, so `BuilderImage.tsx`'s existing s
 - Record: `docs/reviews/empire-pumps-2026-09-20/`
 - Prod dry-run clean: 12 plate hashes verified, 48 part objects. Ship phrase: `ship Empire exposed pumps 2026-09-20`
 - Known, accepted: 4 kits have a 1–2 px pump sliver at the cover's anti-aliased edge (22–286 px); parity unaffected.
+
+## 0f. Later on 2026-09-20
+
+- **Sidecar overcap floated 80 px** (Empire 100 ml): `BuilderImage.tsx` stood it on the REFERENCE kit's `baselineY`; every
+  2026-09-16 Empire kit records 979 while the glass ends at 1060. `registerVintagePreview` now returns `groundY` from the
+  selected kit carried through the registration. Test added. On branch, not yet on main.
+- **Empire lotion pumps**: same defect as the sprayers (cover filed as `pump`). `build_empire_pump_kits.py --applicator "Lotion Pump"`
+  → `dist/paper-doll/empire-lotion-pumps-2026-09-20` (12 kits, PENDING; ship phrase `ship Empire exposed lotion pumps 2026-09-20`).
+  The two ClOvrCap SKUs are left alone: one photograph of a pump seen through a clear cover, no isolated library part.
+- **Perfume Sprayer fitment sketch**: 18-415 gets its own drawing (`fitment-pencil-perfume-sprayer-18-415.png`), neck-aware in
+  `FitmentIllustration.tsx`; 13-415 etc. keep sheet cell 0, which is correct for them. Candidate, awaiting Jordan.
+- **Tassel bulb sprayers, Empire 100 ml**: 6 of 9 have kits. `GBEmp100AnSpTslGl/Pnk/Red` have NONE — their published plates do not
+  reproduce from the master PSD (parity mean 6.2–6.9 vs 6, tail 1.0–2.4 % vs 1 %, sx≠sy), so the builder falls back to the
+  product photograph (white box, opaque tube). `--fine` re-solve changed nothing. Fix = re-render those three plates from the
+  current PSDs, then cut kits. Not done: a plate release is Jordan's call. Also `GBEmp100AnSpTslIvySl` has seatY 980 ≥ baselineY 979.
