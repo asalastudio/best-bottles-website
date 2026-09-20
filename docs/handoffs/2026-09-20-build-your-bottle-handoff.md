@@ -117,8 +117,8 @@ it was already photographed. Full inventory: **`data/paper-doll/component-librar
 | 13-415 | Sprayers ×8, caps ×4, roll-on caps ×9 (**33 hidden layers — review**), and **`13-415PlsticRollon` + `13-415MtlRollon`: the bare plastic and metal ROLLERS** — the part missing from ~90 roller kits (Flair, Rectangle, Royal, Sleek 8 ml, Tulip are all 13-415) |
 | 8-425, 14 mm, vials | caps, heart caps with tassel/chain, vial wands |
 
-`21. Tassels` — 253 per-SKU tassel-bottle PSDs in `Original Tassels` (110) and `Updated Tassels` (143). Ask Jordan
-which set is authoritative before using either; do not assume "Updated" wins.
+`21. Tassels` — 253 per-SKU tassel-bottle PSDs in `Original Tassels` (110) and `Updated Tassels` (143).
+**Jordan, 2026-09-20: "use Updated Tassels."** `Updated Tassels` is authoritative; do not use `Original Tassels`.
 
 Coverage against the catalogue (category Component, prod, 2026-09-20): **109 of 153 component products have a
 library PSD of the exact same name.** Many of the 44 others are the same part spelled differently —
