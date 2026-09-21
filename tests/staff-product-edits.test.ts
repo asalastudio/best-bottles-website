@@ -82,6 +82,21 @@ describe("Team Hub product edits", () => {
         expect(await t.mutation(fn("revertChange"), { writeToken: token, changeId: second.changes[0].logId, actor })).toMatchObject({ ok: false, conflicts: [{ field: "stockStatus" }] });
     });
 
+    it("moves the group's From price when a SKU's price is saved, and back when it is reverted", async () => {
+        const t = convexTest(schema, modules);
+        const groupId = await t.run(ctx => ctx.db.insert("productGroups", { slug: "empire-100ml-clear-18-415-reducer", displayName: "Empire 100 ml Reducer", family: "Empire", category: "Glass Bottle",
+            capacity: "100 ml", capacityMl: 100, color: "Clear", bottleCollection: null, neckThreadSize: "18-415", variantCount: 2, priceRangeMin: 2.47, priceRangeMax: 2.9 } as never));
+        const cheap = await t.run(ctx => ctx.db.insert("products", { ...product, productGroupId: groupId } as never));
+        await t.run(ctx => ctx.db.insert("products", { ...product, websiteSku: "OTHER", graceSku: "OTHER", webPrice1pc: 2.9, priceTiers: [{ minQty: 1, unitPrice: 2.9, totalPrice: 2.9 }], productGroupId: groupId } as never));
+        const range = async () => { const g = await t.run(ctx => ctx.db.get(groupId)); return [g?.priceRangeMin, g?.priceRangeMax]; };
+        const saved = await t.mutation(fn("updateProduct"), { writeToken: token, productId: cheap, actor, expect: { priceTiers: ladder }, patch: { priceTiers: [{ minQty: 1, unitPrice: 3.25 }] } });
+        expect(await range()).toEqual([2.9, 3.25]);                      // the cheapest SKU became the dearest
+        await t.mutation(fn("revertChange"), { writeToken: token, changeId: saved.changes[0].logId, actor });
+        expect(await range()).toEqual([2.47, 2.9]);
+        await t.mutation(fn("updateProduct"), { writeToken: token, productId: cheap, actor, expect: {}, patch: { stockStatus: "Out of Stock" } });
+        expect(await range()).toEqual([2.47, 2.9]);                      // a non-price edit leaves it alone
+    });
+
     it("sets, trims and clears a group's custom name, never touches displayName, and returns the sheet's edit view", async () => {
         const t = convexTest(schema, modules);
         const groupId = await t.run(ctx => ctx.db.insert("productGroups", { slug: "empire-100ml-clear-18-415-reducer", displayName: "Empire 100 ml Reducer", family: "Empire", category: "Glass Bottle",
