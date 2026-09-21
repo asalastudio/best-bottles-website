@@ -6,8 +6,10 @@
  * here on purpose: a wrong neck breaks compatibility across the catalogue, the builder and Grace.
  */
 export const STOCK_STATUSES = ["In Stock", "Out of Stock", "Available to order", "Discontinued"] as const;
-export const PRODUCT_EDIT_FIELDS = ["itemName", "itemDescription", "stockStatus", "caseQuantity", "priceTiers"] as const;
-export const GROUP_EDIT_FIELDS = ["displayName", "groupDescription"] as const;
+// itemName is deliberately absent: it is a legacy description sentence the storefront only falls back to.
+export const PRODUCT_EDIT_FIELDS = ["itemDescription", "stockStatus", "caseQuantity", "priceTiers"] as const;
+// customName, not displayName: see the note on productGroups.customName in schema.ts.
+export const GROUP_EDIT_FIELDS = ["customName", "groupDescription"] as const;
 export type ProductEditField = (typeof PRODUCT_EDIT_FIELDS)[number];
 export type GroupEditField = (typeof GROUP_EDIT_FIELDS)[number];
 export type PriceTier = { minQty: number; unitPrice: number; totalPrice: number };
@@ -36,8 +38,6 @@ export function validatePriceRungs(rungs: PriceRung[]): string | null {
 
 export function validateProductPatch(patch: Partial<Record<ProductEditField, unknown>>): string | null {
     for (const field of Object.keys(patch)) if (!(PRODUCT_EDIT_FIELDS as readonly string[]).includes(field)) return `"${field}" cannot be edited here.`;
-    if ("itemName" in patch && !(typeof patch.itemName === "string" && patch.itemName.trim().length >= 3)) return "The item name cannot be blank.";
-    if ("itemName" in patch && (patch.itemName as string).length > 600) return "The item name is too long (600 characters at most).";
     if ("itemDescription" in patch && patch.itemDescription !== null && (typeof patch.itemDescription !== "string" || patch.itemDescription.length > 4000)) return "The description is too long (4,000 characters at most).";
     if ("stockStatus" in patch && !(STOCK_STATUSES as readonly unknown[]).includes(patch.stockStatus)) return `Stock status must be one of: ${STOCK_STATUSES.join(", ")}.`;
     if ("caseQuantity" in patch && patch.caseQuantity !== null && !(Number.isInteger(patch.caseQuantity) && (patch.caseQuantity as number) > 0)) return "Case quantity must be a whole number above zero.";
@@ -47,8 +47,11 @@ export function validateProductPatch(patch: Partial<Record<ProductEditField, unk
 
 export function validateGroupPatch(patch: Partial<Record<GroupEditField, unknown>>): string | null {
     for (const field of Object.keys(patch)) if (!(GROUP_EDIT_FIELDS as readonly string[]).includes(field)) return `"${field}" cannot be edited here.`;
-    if ("displayName" in patch && !(typeof patch.displayName === "string" && patch.displayName.trim().length >= 3)) return "The display name cannot be blank.";
-    if ("displayName" in patch && (patch.displayName as string).length > 200) return "The display name is too long (200 characters at most).";
+    if ("customName" in patch && patch.customName !== null) {
+        const name = patch.customName;
+        if (typeof name !== "string" || name.trim().length < 3) return "A custom name needs at least three characters. Clear the field to go back to the generated name.";
+        if (name.length > 120) return "The custom name is too long (120 characters at most).";
+    }
     if ("groupDescription" in patch && patch.groupDescription !== null && (typeof patch.groupDescription !== "string" || patch.groupDescription.length > 6000)) return "The description is too long (6,000 characters at most).";
     return null;
 }

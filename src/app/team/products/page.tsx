@@ -56,7 +56,7 @@ export default async function TeamProductsPage({ searchParams }: { searchParams?
                         <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted-gold"><Link href="/team" className="hover:underline">Team Hub</Link></p>
                         <h1 className="font-serif text-4xl leading-tight text-obsidian sm:text-5xl">Products</h1>
                         <p className="mt-3 text-sm leading-6 text-slate">
-                            Find a product, open its SKUs, and change what customers see: names, descriptions, prices and stock. Every change is recorded and can be reverted.
+                            Find a product, open its SKUs, and change what customers see: descriptions, prices and stock, and a custom name where the generated one is wrong. Every change is recorded and can be reverted.
                         </p>
                     </div>
                     <Link href="/team/products/new" className="border border-obsidian px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.14em] text-obsidian hover:bg-obsidian hover:text-bone">New product</Link>

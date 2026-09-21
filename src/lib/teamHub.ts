@@ -70,7 +70,7 @@ export function buildTeamHubTools({ shopifyAdminHref, madisonStudioHref }: TeamH
         {
             name: "Edit Products",
             href: "/team/products",
-            description: "Find a product and change what customers see — names, descriptions, the price ladder and stock. Every change is recorded and can be reverted.",
+            description: "Find a product and change what customers see — descriptions, the price ladder and stock, and a custom name where the generated one is wrong. Every change is recorded and can be reverted.",
             badge: "Catalog",
             section: "catalog",
             quick: true,

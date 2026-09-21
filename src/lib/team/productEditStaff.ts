@@ -13,8 +13,8 @@ async function staff() {
     return { convex: getPortalConvex(), writeToken: getPortalConvexWriteToken(), actor: { id: viewer.clerkUserId, email: viewer.emailAddresses[0] ?? null } };
 }
 
-export type ProductPatch = { itemName?: string; itemDescription?: string | null; stockStatus?: string; caseQuantity?: number | null; priceTiers?: PriceRung[] };
-export type GroupPatch = { displayName?: string; groupDescription?: string | null };
+export type ProductPatch = { itemDescription?: string | null; stockStatus?: string; caseQuantity?: number | null; priceTiers?: PriceRung[] };
+export type GroupPatch = { customName?: string | null; groupDescription?: string | null };
 
 export async function loadGroupForEdit(slug: string) {
     const { convex, writeToken } = await staff();

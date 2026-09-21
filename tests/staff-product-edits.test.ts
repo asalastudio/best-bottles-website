@@ -26,16 +26,16 @@ describe("Team Hub product edits", () => {
     beforeEach(() => { process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN = token; });
     afterEach(() => { process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN = saved; });
 
-    it("saves a name and a price ladder, keeps the mirrored price columns in step, and logs one entry per field", async () => {
+    it("saves a description and a price ladder, keeps the mirrored price columns in step, and logs one entry per field", async () => {
         const t = convexTest(schema, modules);
         const id = await t.run(ctx => ctx.db.insert("products", product as never));
         const result = await t.mutation(fn("updateProduct"), { writeToken: token, productId: id, actor,
-            expect: { itemName: product.itemName, priceTiers: ladder },
-            patch: { itemName: "  Empire 100 ml reducer bottle, shiny gold cap  ", priceTiers: [{ minQty: 1, unitPrice: 2.6 }, { minQty: 12, unitPrice: 2.4 }, { minQty: 144, unitPrice: 2.105 }] } });
+            expect: { itemDescription: null, priceTiers: ladder },
+            patch: { itemDescription: "A tall square bottle with a reducer.", priceTiers: [{ minQty: 1, unitPrice: 2.6 }, { minQty: 12, unitPrice: 2.4 }, { minQty: 144, unitPrice: 2.105 }] } });
         expect(result).toMatchObject({ ok: true, priceChanged: { before: 2.47, after: 2.6 }, shopifyVariantId: product.shopifyVariantId });
-        expect(result.changes.map((c: { field: string }) => c.field)).toEqual(["itemName", "priceTiers"]);
+        expect(result.changes.map((c: { field: string }) => c.field)).toEqual(["itemDescription", "priceTiers"]);
         expect(await t.run(ctx => ctx.db.get(id))).toMatchObject({
-            itemName: "Empire 100 ml reducer bottle, shiny gold cap", webPrice1pc: 2.6, webPrice12pc: 2.4, webPrice10pc: null,
+            itemDescription: "A tall square bottle with a reducer.", itemName: product.itemName, webPrice1pc: 2.6, webPrice12pc: 2.4, webPrice10pc: null,
             priceTiers: [{ minQty: 1, unitPrice: 2.6, totalPrice: 2.6 }, { minQty: 12, unitPrice: 2.4, totalPrice: 28.8 }, { minQty: 144, unitPrice: 2.11, totalPrice: 303.12 }],
             family: "Empire", neckThreadSize: "18-415", websiteSku: product.websiteSku,
         });
@@ -60,7 +60,7 @@ describe("Team Hub product edits", () => {
         const save = (patch: Record<string, unknown>) => t.mutation(fn("updateProduct"), { writeToken: token, productId: id, actor, expect: {}, patch });
         await expect(save({ neckThreadSize: "13-415" })).rejects.toThrow();            // not in the validator at all
         await expect(save({ websiteSku: "X" })).rejects.toThrow();
-        expect(await save({ itemName: "  " })).toMatchObject({ ok: false, error: "The item name cannot be blank." });
+        await expect(save({ itemName: "A legacy sentence staff can no longer overwrite" })).rejects.toThrow();   // a fallback, not a name
         expect(await save({ stockStatus: "Maybe" })).toMatchObject({ ok: false });
         expect(await save({ priceTiers: [{ minQty: 1, unitPrice: 2 }, { minQty: 12, unitPrice: 2.5 }] })).toMatchObject({ ok: false, error: expect.stringContaining("cannot be higher") });
         await expect(t.mutation(fn("updateProduct"), { writeToken: "nope", productId: id, actor, expect: {}, patch: {} })).rejects.toThrow("unauthorized");
@@ -82,14 +82,23 @@ describe("Team Hub product edits", () => {
         expect(await t.mutation(fn("revertChange"), { writeToken: token, changeId: second.changes[0].logId, actor })).toMatchObject({ ok: false, conflicts: [{ field: "stockStatus" }] });
     });
 
-    it("edits a group's display name and description, and returns the sheet's edit view", async () => {
+    it("sets, trims and clears a group's custom name, never touches displayName, and returns the sheet's edit view", async () => {
         const t = convexTest(schema, modules);
         const groupId = await t.run(ctx => ctx.db.insert("productGroups", { slug: "empire-100ml-clear-18-415-reducer", displayName: "Empire 100 ml Reducer", family: "Empire", category: "Glass Bottle",
             capacity: "100 ml", capacityMl: 100, color: "Clear", bottleCollection: null, neckThreadSize: "18-415", variantCount: 1, priceRangeMin: 2.47, priceRangeMax: 2.47 } as never));
         await t.run(ctx => ctx.db.insert("products", { ...product, productGroupId: groupId } as never));
         expect(await t.mutation(fn("updateGroup"), { writeToken: token, groupId, actor, expect: { groupDescription: null }, patch: { groupDescription: "A tall square bottle with a reducer." } })).toMatchObject({ ok: true });
+        const group = () => t.run(ctx => ctx.db.get(groupId));
+        const rename = (expect: string | null, customName: string | null) => t.mutation(fn("updateGroup"), { writeToken: token, groupId, actor, expect: { customName: expect }, patch: { customName } });
+        expect(await rename(null, "  Empire Tower, 100 ml  ")).toMatchObject({ ok: true });
+        expect(await group()).toMatchObject({ customName: "Empire Tower, 100 ml", displayName: "Empire 100 ml Reducer" });
+        expect(await rename(null, "Another")).toMatchObject({ ok: false, conflicts: [{ field: "customName", current: "Empire Tower, 100 ml" }] });
+        expect(await rename("Empire Tower, 100 ml", "ab")).toMatchObject({ ok: false, error: expect.stringContaining("at least three characters") });
+        expect(await rename("Empire Tower, 100 ml", null)).toMatchObject({ ok: true });
+        expect((await group())?.customName).toBeNull();
+        await expect(t.mutation(fn("updateGroup"), { writeToken: token, groupId, actor, expect: {}, patch: { displayName: "X" } as never })).rejects.toThrow();
         const view = await t.query(q("getGroupForEdit"), { writeToken: token, slug: "empire-100ml-clear-18-415-reducer" });
-        expect(view?.group).toMatchObject({ displayName: "Empire 100 ml Reducer", groupDescription: "A tall square bottle with a reducer." });
+        expect(view?.group).toMatchObject({ customName: null, groupDescription: "A tall square bottle with a reducer.", naming: { displayName: "Empire 100 ml Reducer", family: "Empire" } });
         expect(view?.variants[0]).toMatchObject({ websiteSku: product.websiteSku, priceTiers: ladder, caseQuantity: 144 });
         expect(view?.variants[0]).not.toHaveProperty("neckThreadSize");
     });

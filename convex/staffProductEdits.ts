@@ -22,14 +22,13 @@ import {
 const actorV = v.object({ id: v.string(), email: v.union(v.string(), v.null()) });
 const rungV = v.object({ minQty: v.number(), unitPrice: v.number() });
 const productPatchV = v.object({
-    itemName: v.optional(v.string()),
     itemDescription: v.optional(v.union(v.string(), v.null())),
     stockStatus: v.optional(v.string()),
     caseQuantity: v.optional(v.union(v.number(), v.null())),
     priceTiers: v.optional(v.array(rungV)),
 });
 const groupPatchV = v.object({
-    displayName: v.optional(v.string()),
+    customName: v.optional(v.union(v.string(), v.null())),
     groupDescription: v.optional(v.union(v.string(), v.null())),
 });
 
@@ -69,7 +68,7 @@ async function applyProductPatch(ctx: MutationCtx, productId: Id<"products">, ex
             const tiers = tiersFromRungs(patch.priceTiers as PriceRung[]);
             Object.assign(write, { priceTiers: tiers, ...priceColumnsFromTiers(tiers) });
             if (row.webPrice1pc !== tiers[0].unitPrice) priceChanged = { before: (row.webPrice1pc as number | null) ?? null, after: tiers[0].unitPrice };
-        } else write[field] = field === "itemName" ? (patch.itemName as string).trim() : patch[field];
+        } else write[field] = patch[field];
         changes.push({ field, logId: await log(ctx, { targetType: "product", targetId: String(productId), label: String(row.websiteSku ?? row.graceSku), field,
             before: currentOf(row, field), after: field === "priceTiers" ? patch.priceTiers : write[field], actor, source, revertOf }) });
     }
@@ -88,7 +87,8 @@ async function applyGroupPatch(ctx: MutationCtx, groupId: Id<"productGroups">, e
     const write: Row = {}; const changes: { field: string; logId: Id<"catalogChangeLog"> }[] = [];
     for (const field of GROUP_EDIT_FIELDS) {
         if (!(field in patch) || sameValue(row[field] ?? null, patch[field])) continue;
-        write[field] = field === "displayName" ? (patch.displayName as string).trim() : patch[field];
+        // a cleared custom name is stored as null, so "no override" has exactly one spelling
+        write[field] = field === "customName" ? ((patch.customName as string | null)?.trim() || null) : patch[field];
         changes.push({ field, logId: await log(ctx, { targetType: "group", targetId: String(groupId), label: String(row.slug), field, before: row[field] ?? null, after: write[field], actor, source, revertOf }) });
     }
     if (Object.keys(write).length) await ctx.db.patch(groupId, write as never);
@@ -104,11 +104,15 @@ export const getGroupForEdit = query({
         if (!group) return null;
         const variants = await ctx.db.query("products").withIndex("by_productGroupId", q => q.eq("productGroupId", group._id)).collect();
         return {
-            group: { id: group._id, slug: group.slug, displayName: group.displayName, groupDescription: group.groupDescription ?? null, shopifyProductId: group.shopifyProductId ?? null },
+            group: { id: group._id, slug: group.slug, customName: group.customName ?? null, groupDescription: group.groupDescription ?? null, shopifyProductId: group.shopifyProductId ?? null,
+                // read-only: what the name composer needs, so the editor can show the name customers see
+                naming: { slug: group.slug, displayName: group.displayName, family: group.family ?? null, capacity: group.capacity ?? null, capacityMl: group.capacityMl ?? null,
+                    color: group.color ?? null, category: group.category ?? null, neckThreadSize: group.neckThreadSize ?? null, applicatorTypes: group.applicatorTypes ?? null } },
             variants: variants.sort((a, b) => (a.websiteSku ?? "").localeCompare(b.websiteSku ?? "")).map(p => ({
                 id: p._id, websiteSku: p.websiteSku, graceSku: p.graceSku, itemName: p.itemName, itemDescription: p.itemDescription ?? null,
                 stockStatus: p.stockStatus ?? null, caseQuantity: p.caseQuantity ?? null, priceTiers: rungsOf(p as unknown as Row),
-                capColor: p.capColor ?? null, applicator: p.applicator ?? null, shopifyVariantId: p.shopifyVariantId ?? null, shopifySellable: p.shopifySellable ?? null,
+                capColor: p.capColor ?? null, applicator: p.applicator ?? null, capStyle: p.capStyle ?? null, trimColor: p.trimColor ?? null,
+                family: p.family ?? null, capacity: p.capacity ?? null, capacityMl: p.capacityMl ?? null, color: p.color ?? null, category: p.category ?? null, shopifyVariantId: p.shopifyVariantId ?? null, shopifySellable: p.shopifySellable ?? null,
             })),
         };
     },
