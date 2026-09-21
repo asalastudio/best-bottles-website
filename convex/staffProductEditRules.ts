@@ -15,11 +15,47 @@ export type GroupEditField = (typeof GROUP_EDIT_FIELDS)[number];
 export type PriceTier = { minQty: number; unitPrice: number; totalPrice: number };
 export type PriceRung = { minQty: number; unitPrice: number };
 
-const cents = (value: number) => Math.round(value * 100) / 100;
+const cents = (value: number) => Math.round(value * 100 + 1e-9) / 100;
 
-/** Staff enter a quantity and a price each; the pack total the storefront prints is derived. */
-export function tiersFromRungs(rungs: PriceRung[]): PriceTier[] {
-    return rungs.map(rung => ({ minQty: rung.minQty, unitPrice: cents(rung.unitPrice), totalPrice: cents(rung.unitPrice * rung.minQty) }));
+/**
+ * Best Bottles' volume discounts, measured on the live catalogue 2026-09-20: 2,468 of 2,470 ladders
+ * are exactly this, to the cent. The discount applies to the PACK: total = qty x 1-piece x (1 - d),
+ * rounded to cents, and the price each is that total / qty, rounded. So 12 x $3.47 is $41.64 but the
+ * pack is $41.61 — the total is the truth and must never be rebuilt from the rounded price each.
+ */
+export const LADDER_DISCOUNTS = [0, 0.05, 0.10, 0.15, 0.22] as const;
+
+export function standardRung(basePrice: number, minQty: number, index: number): PriceTier {
+    const totalPrice = cents(minQty * basePrice * (1 - LADDER_DISCOUNTS[index]));
+    return { minQty, totalPrice, unitPrice: index === 0 ? cents(basePrice) : cents(totalPrice / minQty) };
+}
+
+/** The standard ladder for a 1-piece price, keeping the SKU's own quantity breaks. */
+export function standardLadder(basePrice: number, breaks: number[]): PriceRung[] {
+    return breaks.slice(0, LADDER_DISCOUNTS.length).map((minQty, index) => { const rung = standardRung(basePrice, minQty, index); return { minQty: rung.minQty, unitPrice: rung.unitPrice }; });
+}
+
+/** Does this ladder follow the standard discounts? (Two live SKUs do not: they are hand-priced.) */
+export function isStandardLadder(rungs: PriceRung[]): boolean {
+    return rungs.length === LADDER_DISCOUNTS.length && rungs[0].minQty === 1
+        && rungs.every((rung, index) => standardRung(rungs[0].unitPrice, rung.minQty, index).unitPrice === cents(rung.unitPrice));
+}
+
+/**
+ * Staff enter a quantity and a price each; the pack total is derived. Two guarantees:
+ *   - a rung the editor did NOT change keeps its stored pack total, to the cent. (A price each can sit on
+ *     the schedule by rounding alone — GBSpry3mlClBlk at $0.37 — while its totals were set by hand.)
+ *   - a rung that WAS changed takes the schedule's total when the whole ladder follows the schedule, and
+ *     price each x quantity when it is hand-priced.
+ */
+export function tiersFromRungs(rungs: PriceRung[], stored: PriceTier[] = []): PriceTier[] {
+    const standard = isStandardLadder(rungs);
+    return rungs.map((rung, index) => {
+        const kept = stored.find(tier => tier.minQty === rung.minQty && cents(tier.unitPrice) === cents(rung.unitPrice));
+        if (kept) return { minQty: kept.minQty, unitPrice: kept.unitPrice, totalPrice: kept.totalPrice };
+        return standard ? standardRung(rungs[0].unitPrice, rung.minQty, index)
+            : { minQty: rung.minQty, unitPrice: cents(rung.unitPrice), totalPrice: cents(rung.unitPrice * rung.minQty) };
+    });
 }
 
 export function validatePriceRungs(rungs: PriceRung[]): string | null {

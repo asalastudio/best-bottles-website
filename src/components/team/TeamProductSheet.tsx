@@ -4,7 +4,7 @@ import { Fragment, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import type { CatalogLineItem } from "@/lib/products/catalog-line-items";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
-import { STOCK_STATUSES, validateGroupPatch, validateProductPatch, type PriceRung } from "../../../convex/staffProductEditRules";
+import { LADDER_DISCOUNTS, STOCK_STATUSES, isStandardLadder, standardLadder, validateGroupPatch, validateProductPatch, type PriceRung } from "../../../convex/staffProductEditRules";
 import { loadGroupForEditAction, retryPricePushAction, revertChangeAction, saveGroupAction, saveProductAction } from "@/app/team/products/actions";
 
 type View = NonNullable<Extract<Awaited<ReturnType<typeof loadGroupForEditAction>>, { ok: true }>["view"]>;
@@ -43,6 +43,16 @@ function VariantEditor({ variant, customerName, shopifyProductId, onSaved }: { v
     const [stock, setStock] = useState(variant.stockStatus ?? "");
     const [caseQty, setCaseQty] = useState(variant.caseQuantity == null ? "" : String(variant.caseQuantity));
     const [rungs, setRungs] = useState(variant.priceTiers.map(r => ({ minQty: String(r.minQty), unitPrice: String(r.unitPrice) })));
+    // Best Bottles' ladders follow one schedule (5 / 10 / 15 / 22 % off the pack). While this is on, the
+    // 1-piece price drives the other rungs; it starts on exactly when the SKU already follows the schedule.
+    const [auto, setAuto] = useState(() => isStandardLadder(variant.priceTiers));
+    type Rung = { minQty: string; unitPrice: string };
+    const recalculated = (rows: Rung[]): Rung[] => {
+        const base = Number(rows[0]?.unitPrice); const breaks = rows.map(r => Number(r.minQty));
+        if (!(base > 0) || rows.length !== LADDER_DISCOUNTS.length || breaks.some(q => !Number.isInteger(q) || q < 1)) return rows;
+        return standardLadder(base, breaks).map((r, i) => ({ minQty: rows[i].minQty, unitPrice: i === 0 ? rows[0].unitPrice : String(r.unitPrice) }));
+    };
+    const editRung = (index: number, change: Partial<Rung>) => setRungs(rows => { const next = rows.map((r, i) => i === index ? { ...r, ...change } : r); return auto ? recalculated(next) : next; });
     const [error, setError] = useState<string | null>(null);
     const [pending, start] = useTransition();
 
@@ -100,15 +110,23 @@ function VariantEditor({ variant, customerName, shopifyProductId, onSaved }: { v
                         {rungs.map((rung, index) => (
                             <div key={index} className="grid grid-cols-[5.5rem_auto_7rem_3.5rem] items-center gap-2">
                                 <input aria-label={`Rung ${index + 1} quantity`} className={`${input} text-right tabular-nums`} inputMode="numeric" value={rung.minQty} disabled={index === 0}
-                                    onChange={e => setRungs(rs => rs.map((r, i) => i === index ? { ...r, minQty: e.target.value } : r))} />
+                                    onChange={e => editRung(index, { minQty: e.target.value })} />
                                 <span className="whitespace-nowrap text-[12px] text-slate">or more, each $</span>
-                                <input aria-label={`Rung ${index + 1} price each`} className={`${input} text-right tabular-nums`} inputMode="decimal" value={rung.unitPrice}
-                                    onChange={e => setRungs(rs => rs.map((r, i) => i === index ? { ...r, unitPrice: e.target.value } : r))} />
-                                {index > 0 ? <button type="button" className="text-left text-[12px] text-slate underline" onClick={() => setRungs(rs => rs.filter((_, i) => i !== index))}>remove</button> : <span />}
+                                <input aria-label={`Rung ${index + 1} price each`} className={`${input} text-right tabular-nums ${auto && index > 0 ? "bg-linen text-slate" : ""}`} inputMode="decimal" value={rung.unitPrice}
+                                    readOnly={auto && index > 0} title={auto && index > 0 ? `${Math.round(LADDER_DISCOUNTS[index] * 100)} % off the pack, from the 1-piece price` : undefined}
+                                    onChange={e => editRung(index, { unitPrice: e.target.value })} />
+                                {auto ? <span className="text-[12px] tabular-nums text-slate">{index > 0 ? `−${Math.round(LADDER_DISCOUNTS[index] * 100)}%` : ""}</span>
+                                    : index > 0 ? <button type="button" className="text-left text-[12px] text-slate underline" onClick={() => setRungs(rs => rs.filter((_, i) => i !== index))}>remove</button> : <span />}
                             </div>
                         ))}
                     </div>
-                    {rungs.length < 5 ? <button type="button" className="mt-2 text-[12px] font-semibold text-obsidian underline" onClick={() => setRungs(rs => [...rs, { minQty: "", unitPrice: "" }])}>Add a quantity break</button> : null}
+                    {!auto && rungs.length < 5 ? <button type="button" className="mt-2 text-[12px] font-semibold text-obsidian underline" onClick={() => setRungs(rs => [...rs, { minQty: "", unitPrice: "" }])}>Add a quantity break</button> : null}
+                    <label className="mt-3 flex items-start gap-2 text-[12.5px] text-obsidian">
+                        <input type="checkbox" className="mt-0.5" checked={auto} disabled={rungs.length !== LADDER_DISCOUNTS.length}
+                            onChange={e => { setAuto(e.target.checked); if (e.target.checked) setRungs(rows => recalculated(rows)); }} />
+                        <span>Standard volume discounts: 5 / 10 / 15 / 22 % off the pack. Change the 1-piece price and the rest follow.
+                            {!isStandardLadder(variant.priceTiers) ? <span className="block text-slate">This SKU is hand-priced today; ticking this replaces its discounts with the standard ones.</span> : null}</span>
+                    </label>
                 </div>
             </div>
             {error ? <p role="alert" className="mt-3 border border-red-300 bg-red-50 px-3 py-2 text-[13px] text-red-800">{error}</p> : null}

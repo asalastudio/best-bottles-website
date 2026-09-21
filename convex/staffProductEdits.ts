@@ -5,7 +5,7 @@ import { v } from "convex/values";
 import { verifyWriteToken } from "./writeToken";
 import {
     GROUP_EDIT_FIELDS, PRODUCT_EDIT_FIELDS, priceColumnsFromTiers, sameValue, tiersFromRungs,
-    validateGroupPatch, validateProductPatch, type GroupEditField, type PriceRung, type ProductEditField,
+    validateGroupPatch, validateProductPatch, type GroupEditField, type PriceRung, type PriceTier, type ProductEditField,
 } from "./staffProductEditRules";
 
 /**
@@ -51,6 +51,16 @@ async function log(ctx: MutationCtx, entry: { targetType: "product" | "group"; t
     });
 }
 
+/** productGroups.priceRangeMin/Max are a cache of the variants' 1-piece prices. Derived, so not logged. */
+async function refreshGroupPriceRange(ctx: MutationCtx, groupId: Id<"productGroups">) {
+    const variants = await ctx.db.query("products").withIndex("by_productGroupId", q => q.eq("productGroupId", groupId)).collect();
+    const prices = variants.map(v => v.webPrice1pc).filter((p): p is number => typeof p === "number" && p > 0);
+    if (prices.length === 0) return;
+    const group = await ctx.db.get(groupId);
+    const min = Math.min(...prices), max = Math.max(...prices);
+    if (group && (group.priceRangeMin !== min || group.priceRangeMax !== max)) await ctx.db.patch(groupId, { priceRangeMin: min, priceRangeMax: max });
+}
+
 /** Writes one validated patch. Shared by save and revert so both obey the same three rules. */
 async function applyProductPatch(ctx: MutationCtx, productId: Id<"products">, expect: Row, patch: Row, actor: { id: string; email: string | null }, source: string, revertOf?: Id<"catalogChangeLog">) {
     const row = await ctx.db.get(productId) as Row | null;
@@ -65,7 +75,7 @@ async function applyProductPatch(ctx: MutationCtx, productId: Id<"products">, ex
     for (const field of PRODUCT_EDIT_FIELDS) {
         if (!(field in patch) || sameValue(currentOf(row, field), patch[field])) continue;
         if (field === "priceTiers") {
-            const tiers = tiersFromRungs(patch.priceTiers as PriceRung[]);
+            const tiers = tiersFromRungs(patch.priceTiers as PriceRung[], (row.priceTiers as PriceTier[] | undefined) ?? []);
             Object.assign(write, { priceTiers: tiers, ...priceColumnsFromTiers(tiers) });
             if (row.webPrice1pc !== tiers[0].unitPrice) priceChanged = { before: (row.webPrice1pc as number | null) ?? null, after: tiers[0].unitPrice };
         } else write[field] = patch[field];
@@ -73,6 +83,9 @@ async function applyProductPatch(ctx: MutationCtx, productId: Id<"products">, ex
             before: currentOf(row, field), after: field === "priceTiers" ? patch.priceTiers : write[field], actor, source, revertOf }) });
     }
     if (Object.keys(write).length) await ctx.db.patch(productId, write as never);
+    // The catalogue card and the line-item sheets print "From $X" from the GROUP's stored price range,
+    // which only bulk rebuilds refreshed. A price saved here must move it, or the card keeps the old price.
+    if (priceChanged && row.productGroupId) await refreshGroupPriceRange(ctx, row.productGroupId as Id<"productGroups">);
     return { ok: true as const, changes, priceChanged, priceLogId: changes.find(c => c.field === "priceTiers")?.logId ?? null,
         shopifyVariantId: (row.shopifyVariantId as string | null | undefined) ?? null, productGroupId: (row.productGroupId as string | undefined) ?? null };
 }
