@@ -36,6 +36,13 @@ export default defineSchema({
     productGroups: defineTable({
         slug: v.string(),                                    // e.g. "cylinder-9ml-clear" — stable URL key
         displayName: v.string(),                             // e.g. "Cylinder 9ml Clear" — for search
+        /**
+         * A name a staff member typed in the Team Hub to REPLACE the generated one. Empty for almost
+         * every product: customer-facing names are composed from attributes (capacity, colour, family,
+         * product type) so 2,480 SKUs read as one catalogue. `displayName` is NOT this: it holds
+         * imported legacy text and is only a fallback; making it win would re-title the shop overnight.
+         */
+        customName: v.optional(v.union(v.string(), v.null())),
         family: v.string(),
         capacity: v.union(v.string(), v.null()),             // human-readable e.g. "9 ml"
         capacityMl: v.union(v.number(), v.null()),

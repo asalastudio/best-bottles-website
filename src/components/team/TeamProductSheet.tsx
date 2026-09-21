@@ -3,6 +3,7 @@
 import { Fragment, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import type { CatalogLineItem } from "@/lib/products/catalog-line-items";
+import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { STOCK_STATUSES, validateGroupPatch, validateProductPatch, type PriceRung } from "../../../convex/staffProductEditRules";
 import { loadGroupForEditAction, retryPricePushAction, revertChangeAction, saveGroupAction, saveProductAction } from "@/app/team/products/actions";
 
@@ -17,8 +18,8 @@ const head = "px-3 py-2.5 text-left text-[11px] font-semibold uppercase tracking
 const input = "w-full border border-champagne bg-white px-2.5 py-2 text-[13px] text-obsidian outline-none focus:border-obsidian";
 const label = "mb-1 block text-[11px] font-semibold uppercase tracking-[0.12em] text-slate";
 
-const FIELD_NAMES: Record<string, string> = { itemName: "Item name", itemDescription: "Item description", stockStatus: "Stock status", caseQuantity: "Case quantity",
-    priceTiers: "Price ladder", displayName: "Display name", groupDescription: "Product description" };
+const FIELD_NAMES: Record<string, string> = { itemDescription: "Item description", stockStatus: "Stock status", caseQuantity: "Case quantity",
+    priceTiers: "Price ladder", customName: "Custom name", groupDescription: "Product description", itemName: "Item name", displayName: "Display name" };
 function readable(field: string, json: string) {
     const value = JSON.parse(json);
     if (value === null || value === "") return "—";
@@ -37,8 +38,7 @@ function Thumb({ item }: { item: CatalogLineItem }) {
 }
 
 /** One SKU: the fields staff may change, validated with the same rules the server applies. */
-function VariantEditor({ variant, shopifyProductId, onSaved }: { variant: Variant; shopifyProductId: string | null; onSaved: (notice: Notice) => void }) {
-    const [name, setName] = useState(variant.itemName);
+function VariantEditor({ variant, customerName, shopifyProductId, onSaved }: { variant: Variant; customerName: string; shopifyProductId: string | null; onSaved: (notice: Notice) => void }) {
     const [description, setDescription] = useState(variant.itemDescription ?? "");
     const [stock, setStock] = useState(variant.stockStatus ?? "");
     const [caseQty, setCaseQty] = useState(variant.caseQuantity == null ? "" : String(variant.caseQuantity));
@@ -48,7 +48,6 @@ function VariantEditor({ variant, shopifyProductId, onSaved }: { variant: Varian
 
     const parsedRungs: PriceRung[] = rungs.map(r => ({ minQty: Number(r.minQty), unitPrice: Number(r.unitPrice) }));
     const patch = {
-        ...(name.trim() !== variant.itemName ? { itemName: name } : {}),
         ...((description.trim() || null) !== variant.itemDescription ? { itemDescription: description.trim() || null } : {}),
         ...(stock !== (variant.stockStatus ?? "") ? { stockStatus: stock } : {}),
         ...((caseQty.trim() === "" ? null : Number(caseQty)) !== variant.caseQuantity ? { caseQuantity: caseQty.trim() === "" ? null : Number(caseQty) } : {}),
@@ -60,7 +59,7 @@ function VariantEditor({ variant, shopifyProductId, onSaved }: { variant: Varian
         const invalid = validateProductPatch(patch);
         if (invalid) { setError(invalid); return; }
         setError(null);
-        const expect = { itemName: variant.itemName, itemDescription: variant.itemDescription, ...(variant.stockStatus ? { stockStatus: variant.stockStatus } : {}), caseQuantity: variant.caseQuantity, priceTiers: variant.priceTiers };
+        const expect = { itemDescription: variant.itemDescription, ...(variant.stockStatus ? { stockStatus: variant.stockStatus } : {}), caseQuantity: variant.caseQuantity, priceTiers: variant.priceTiers };
         start(async () => {
             const result = await saveProductAction({ productId: String(variant.id), shopifyProductId, expect, patch });
             if (!result.ok) {
@@ -82,9 +81,9 @@ function VariantEditor({ variant, shopifyProductId, onSaved }: { variant: Varian
                 <span className="text-[12px] text-slate">{[variant.applicator, variant.capColor].filter(Boolean).join(" · ")}</span>
                 {variant.shopifySellable === false ? <span className="bg-linen px-2 py-0.5 text-[11px] text-slate">not sellable in Shopify</span> : null}
             </div>
+            <p className="mb-3 text-[12.5px] text-slate">Customers see: <span className="text-obsidian" data-customer-name>{customerName}</span></p>
             <div className="grid gap-4 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
                 <div className="space-y-3">
-                    <div><label className={label}>Item name</label><textarea className={input} rows={2} value={name} onChange={e => setName(e.target.value)} /></div>
                     <div><label className={label}>Item description</label><textarea className={input} rows={3} value={description} onChange={e => setDescription(e.target.value)} placeholder="Shown on the product page" /></div>
                     <div className="grid grid-cols-2 gap-3">
                         <div><label className={label}>Stock status</label>
@@ -99,13 +98,13 @@ function VariantEditor({ variant, shopifyProductId, onSaved }: { variant: Varian
                     <span className={label}>Price ladder</span>
                     <div className="space-y-1.5">
                         {rungs.map((rung, index) => (
-                            <div key={index} className="flex items-center gap-2">
-                                <input aria-label={`Rung ${index + 1} quantity`} className={`${input} w-20 text-right tabular-nums`} inputMode="numeric" value={rung.minQty} disabled={index === 0}
+                            <div key={index} className="grid grid-cols-[5.5rem_auto_7rem_3.5rem] items-center gap-2">
+                                <input aria-label={`Rung ${index + 1} quantity`} className={`${input} text-right tabular-nums`} inputMode="numeric" value={rung.minQty} disabled={index === 0}
                                     onChange={e => setRungs(rs => rs.map((r, i) => i === index ? { ...r, minQty: e.target.value } : r))} />
-                                <span className="text-[12px] text-slate">or more, each</span>
-                                <input aria-label={`Rung ${index + 1} price each`} className={`${input} w-28 text-right tabular-nums`} inputMode="decimal" value={rung.unitPrice}
+                                <span className="whitespace-nowrap text-[12px] text-slate">or more, each $</span>
+                                <input aria-label={`Rung ${index + 1} price each`} className={`${input} text-right tabular-nums`} inputMode="decimal" value={rung.unitPrice}
                                     onChange={e => setRungs(rs => rs.map((r, i) => i === index ? { ...r, unitPrice: e.target.value } : r))} />
-                                {index > 0 ? <button type="button" className="text-[12px] text-slate underline" onClick={() => setRungs(rs => rs.filter((_, i) => i !== index))}>remove</button> : null}
+                                {index > 0 ? <button type="button" className="text-left text-[12px] text-slate underline" onClick={() => setRungs(rs => rs.filter((_, i) => i !== index))}>remove</button> : <span />}
                             </div>
                         ))}
                     </div>
@@ -122,26 +121,32 @@ function VariantEditor({ variant, shopifyProductId, onSaved }: { variant: Varian
 }
 
 function GroupEditor({ view, onSaved }: { view: View; onSaved: (notice: Notice) => void }) {
-    const [displayName, setDisplayName] = useState(view.group.displayName);
+    const [customName, setCustomName] = useState(view.group.customName ?? "");
     const [description, setDescription] = useState(view.group.groupDescription ?? "");
     const [error, setError] = useState<string | null>(null);
     const [pending, start] = useTransition();
-    const patch = { ...(displayName.trim() !== view.group.displayName ? { displayName } : {}), ...((description.trim() || null) !== view.group.groupDescription ? { groupDescription: description.trim() || null } : {}) };
+    const patch = { ...((customName.trim() || null) !== view.group.customName ? { customName: customName.trim() || null } : {}), ...((description.trim() || null) !== view.group.groupDescription ? { groupDescription: description.trim() || null } : {}) };
     const dirty = Object.keys(patch).length > 0;
+    // the name as it is generated today, i.e. with no override: shown so staff know what they would be replacing
+    const generated = getCustomerFacingProductName({ group: { ...view.group.naming, customName: null }, fallbackName: view.group.naming.displayName }).displayName;
     function save() {
         const invalid = validateGroupPatch(patch);
         if (invalid) { setError(invalid); return; }
         setError(null);
         start(async () => {
-            const result = await saveGroupAction({ groupId: String(view.group.id), expect: { displayName: view.group.displayName, groupDescription: view.group.groupDescription }, patch });
-            if (!result.ok) { setError(result.error); return; }
+            const result = await saveGroupAction({ groupId: String(view.group.id), expect: { customName: view.group.customName, groupDescription: view.group.groupDescription }, patch });
+            if (!result.ok) { setError(result.error ?? "That didn't save."); return; }
             onSaved({ kind: "ok", text: `${view.group.slug} saved.` });
         });
     }
     return (
         <div className="bg-linen/60 px-4 py-4">
             <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
-                <div><label className={label}>Display name</label><input className={input} value={displayName} onChange={e => setDisplayName(e.target.value)} /></div>
+                <div>
+                    <label className={label}>Custom name (optional)</label>
+                    <input className={input} value={customName} onChange={e => setCustomName(e.target.value)} placeholder={generated} />
+                    <p className="mt-1 text-[12px] text-slate">{view.group.customName ? <>Replaces the generated name: <span className="text-obsidian">{generated}</span>. Clear it to go back.</> : <>Leave empty to keep the generated name: <span className="text-obsidian">{generated}</span>. Each SKU&rsquo;s finish is still added after it.</>}</p>
+                </div>
                 <div><label className={label}>Product description (all SKUs)</label><textarea className={input} rows={2} value={description} onChange={e => setDescription(e.target.value)} placeholder="Shown on the product page" /></div>
             </div>
             {error ? <p role="alert" className="mt-3 border border-red-300 bg-red-50 px-3 py-2 text-[13px] text-red-800">{error}</p> : null}
@@ -238,11 +243,15 @@ export default function TeamProductSheet({ items, totalCount, search, pricePush,
                                     <tr><td colSpan={7} className="border-t border-champagne/60 bg-bone p-0">
                                         {loading && !view ? <p className="px-4 py-4 text-[13px] text-slate">Loading SKUs…</p> : null}
                                         {loadError ? <p role="alert" className="px-4 py-4 text-[13px] text-red-800">{loadError}</p> : null}
-                                        {view && view.group.slug === item.slug ? (
+                                        {/* The site deploys on merge and Convex deploys separately. Until the backend catches up it
+                                            returns the older edit view, with no naming data: say so rather than crash. */}
+                                        {view && view.group.slug === item.slug && !view.group.naming ? <p role="alert" className="px-4 py-4 text-[13px] text-amber-900">The editor was updated and its database functions have not been deployed yet. Nothing is wrong with this product; try again after the Convex deploy.</p> : null}
+                                        {view && view.group.slug === item.slug && view.group.naming ? (
                                             // keyed by the newest history entry, so a save or revert remounts the editors with fresh values
                                             <div key={`${view.history[0]?.id ?? "none"}`}>
                                                 <GroupEditor view={view} onSaved={afterChange(item.slug)} />
-                                                {view.variants.map(variant => <VariantEditor key={String(variant.id)} variant={variant} shopifyProductId={view.group.shopifyProductId} onSaved={afterChange(item.slug)} />)}
+                                                {view.variants.map(variant => <VariantEditor key={String(variant.id)} variant={variant} shopifyProductId={view.group.shopifyProductId} onSaved={afterChange(item.slug)}
+                                                    customerName={getCustomerFacingProductName({ group: { ...view.group.naming, customName: view.group.customName }, variant, fallbackName: view.group.naming.displayName }).displayName} />)}
                                                 <History view={view} onChanged={afterChange(item.slug)} />
                                             </div>) : null}
                                     </td></tr>) : null}
