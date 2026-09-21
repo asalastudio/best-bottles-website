@@ -5,7 +5,7 @@ import { v } from "convex/values";
 import { verifyWriteToken } from "./writeToken";
 import {
     GROUP_EDIT_FIELDS, PRODUCT_EDIT_FIELDS, priceColumnsFromTiers, sameValue, tiersFromRungs,
-    validateGroupPatch, validateProductPatch, type GroupEditField, type PriceRung, type ProductEditField,
+    validateGroupPatch, validateProductPatch, type GroupEditField, type PriceRung, type PriceTier, type ProductEditField,
 } from "./staffProductEditRules";
 
 /**
@@ -75,7 +75,7 @@ async function applyProductPatch(ctx: MutationCtx, productId: Id<"products">, ex
     for (const field of PRODUCT_EDIT_FIELDS) {
         if (!(field in patch) || sameValue(currentOf(row, field), patch[field])) continue;
         if (field === "priceTiers") {
-            const tiers = tiersFromRungs(patch.priceTiers as PriceRung[]);
+            const tiers = tiersFromRungs(patch.priceTiers as PriceRung[], (row.priceTiers as PriceTier[] | undefined) ?? []);
             Object.assign(write, { priceTiers: tiers, ...priceColumnsFromTiers(tiers) });
             if (row.webPrice1pc !== tiers[0].unitPrice) priceChanged = { before: (row.webPrice1pc as number | null) ?? null, after: tiers[0].unitPrice };
         } else write[field] = patch[field];

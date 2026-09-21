@@ -29,7 +29,7 @@ Click a product line to open its SKUs. Each SKU has:
 | Field | Notes |
 |---|---|
 | Item description | Shown on the product page when the product has no description of its own. |
-| Price ladder | Up to five quantity breaks: quantity, price each. The 1-piece price is the first rung. Saving a new 1-piece price also updates Shopify, so checkout charges what the page shows. |
+| Price ladder | **Change the 1-piece price and the other four rungs recalculate** on Best Bottles' standard volume discounts: 5 %, 10 %, 15 % and 22 % off the pack at the 2nd to 5th quantity break. (Measured on the live catalogue: 2,468 of 2,470 SKUs follow exactly this, to the cent.) Untick *Standard volume discounts* to price a SKU by hand. Saving a new 1-piece price also updates Shopify, so checkout charges what the page shows. |
 | Stock status | In Stock · Out of Stock · Available to order · Discontinued. |
 | Case quantity | Whole number. |
 
@@ -54,8 +54,13 @@ Grace's product cards name a single SKU without its product, so they keep the ge
 
 The description is shown on the mobile product page and on the classic desktop layout. The **desktop guided layout** (the three-column page) has no place for it yet; where it should sit is a design decision, not made here.
 
+## Two SKUs to look at together
+
+`GBSpry3mlClBlk` (3.3 ml sample) and `Alu500` do not follow the standard discounts. `Alu500`'s ladder goes **up** at a higher quantity ($3.10 each at 96, $3.29 each at 144) — almost certainly a data error.
+
 ## Questions for the team
 
 1. Is one role enough, or should price changes be limited to certain people?
 2. Which of these do you change most often? (Decides what v2 adds first: measurements, photos, bulk price changes, CSV import.)
 3. Are there fields you edit today that are not on this list?
+4. Are 5 / 10 / 15 / 22 % the discounts you intend for every product? They are what the catalogue holds today.
