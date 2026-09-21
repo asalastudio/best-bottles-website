@@ -1,0 +1,465 @@
+{
+  "writtenAt": "2026-09-20T19:39:45.540Z",
+  "registry": "src/lib/products/catalog-heroes.json",
+  "manifest": "docs/reviews/catalog-complete-hero-release-2026-09-07.json",
+  "note": "Restore each `from` (url, manifest sha256, framing) to undo the Sunburst release 1 repoint.",
+  "rows": [
+    {
+      "websiteSku": "GBBstn15BlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstn15BlkCapSht.871d96733ee5.png",
+        "manifestSha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstn15BlkCapSht.2950e8ed333d.png",
+        "sha256": "2950e8ed333dd90d112dda13955f5a43e79d48e2655bf2f174cc58bf6bb0bf3d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstn1ozBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.d1ca21c8a1dd.png",
+        "manifestSha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.bee6983f3c20.png",
+        "sha256": "bee6983f3c20fbf9798b6ff6b1a1efb9501c1e63c013b15f1886bf320333b07a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstn1ozBlkDrpShnGlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstn1ozBlkDrpShnGlTrim.79bb5e58e363.png",
+        "manifestSha256": "79bb5e58e3630bd2ecccefe8d68c17bd7077129c1c854f933b64267219adefeb",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstn1ozBlkDrpShnGlTrim.9fb60b03f9c2.png",
+        "sha256": "9fb60b03f9c268486af45ebcb66442fe302cdefbecaadc84dc9ef01c4a197a2e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstn1ozMtlRollonMattGl",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstn1ozMtlRollonMattGl.b33035d30ec2.png",
+        "manifestSha256": "b33035d30ec2b2540378481cd172836ae442c412aeaf499533935ec968341d5c",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstn1ozMtlRollonMattGl.465eb5f70474.png",
+        "sha256": "465eb5f70474fd3154b3122d3c3aef9bf70b4ca861f62444623cc5a785d3aebe",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstn2ozRollonMattGl",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstn2ozRollonMattGl.4727d62681e8.png",
+        "manifestSha256": "4727d62681e859f8b1b3a9bc2176104deeb4dc6170c8798e55e325690d8467fc",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstn2ozRollonMattGl.9646a007f4e1.png",
+        "sha256": "9646a007f4e1f15fa5e89eda0d3dc7ece0d02dafeb2818fc907b076df893a290",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb15mlBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb15mlBlkCapSht.7f3b89f726c9.png",
+        "manifestSha256": "7f3b89f726c9bfa9c6010fdae80aa64aca18d5d6e7341d4af73fea87ffc7fb4b",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb15mlBlkCapSht.74ef9f8c19bd.png",
+        "sha256": "74ef9f8c19bd16f5e693fda7444dc60a0072ad11cad4eafcb23cf61e1f8770de",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb1ozBlkCapSht.862068a58da1.png",
+        "manifestSha256": "862068a58da1641185d127450dcd5496e19cca80f47f6d9f79f53cf96aba421e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb1ozBlkCapSht.d78eb5c51d51.png",
+        "sha256": "d78eb5c51d51bf772107e4a43223cc53931693279a2b03bfb4eea4b21d197c13",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozMtlRollonMattSl",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb1ozMtlRollonMattSl.c8abdf0ac6d2.png",
+        "manifestSha256": "c8abdf0ac6d2471ae3e259798caeb96b64fdd00f2b62e619c14d86fa0412a4f8",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb1ozMtlRollonMattSl.7ba7fe260cc5.png",
+        "sha256": "7ba7fe260cc52ecb67e7f61863eec2a76ef9a6aeca59588f46178bc9f276e618",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkCapSht.1ed776afb876.png",
+        "manifestSha256": "1ed776afb876d9efcc3ac0c9cef518802dc518d3a3b21d696e2db8e7295689ea",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkCapSht.907029bd6e73.png",
+        "sha256": "907029bd6e73c9e16901efa15e9f858f41094efc2c13e11a8141cb2c33abd6a5",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkDropperShnGlTrim.b8fb228d863e.png",
+        "manifestSha256": "b8fb228d863ee858ce20e6e5b5a31ed38550b9574a6e4e13004b55c2527073b5",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkDropperShnGlTrim.1713a8a88ff6.png",
+        "sha256": "1713a8a88ff6726a2404ef434fc7603a215f7278f2bcc9dfe2a463fd3b1cf90a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozMtlRollonMattGl",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozMtlRollonMattGl.45ed3646a6be.png",
+        "manifestSha256": "45ed3646a6bea88e4f5b7088a0dd413cc77221829655743ec0e473a45cefa87a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnAmb2ozMtlRollonMattGl.a19a8ca83fa3.png",
+        "sha256": "a19a8ca83fa39012edc481e465514f017cc0e3a3eddd265458938fe1fe3097b0",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu15BlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu15BlkCapSht.a79ca8c075a4.png",
+        "manifestSha256": "a79ca8c075a42407e25fde99196e8762e7634573ff10406d9c869b4e1e23f202",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu15BlkCapSht.3796b5354ac1.png",
+        "sha256": "3796b5354ac156244bd51dd4d69dabe1433bd7281bbf3c3b45baea4452a1ac85",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu15mlBlkDropperSlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu15mlBlkDropperSlTrim.b70a912a72ea.png",
+        "manifestSha256": "b70a912a72eab5190d1398d83b28b33136d03c8ad1041fe82ab0b263d9ddf139",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu15mlBlkDropperSlTrim.11b77d8853ad.png",
+        "sha256": "11b77d8853adee726eee6dcab103e9227b5843428b034e921ef51cc512ae87f7",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkCapSht.8b395c7b718d.png",
+        "manifestSha256": "8b395c7b718dfa095cb2a39d981f1d525c2e38745c7712167e13d49389a7e42a",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkCapSht.b161834b0d15.png",
+        "sha256": "b161834b0d150d0818f7bdd55d8d125a1a019020e9db27908c324b10a034a17c",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkDropperShnGlTrim.036590a86c6e.png",
+        "manifestSha256": "036590a86c6e4929a61628aa6f3bb72fced37e2a3f5ec1722ab7a4ca9fedda77",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkDropperShnGlTrim.0c9474732e41.png",
+        "sha256": "0c9474732e4103687d6a343ac96365d6f0d8e2b02079d7525f67602100acb317",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozMtlRollonMattSl",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu1ozMtlRollonMattSl.679b1224b48f.png",
+        "manifestSha256": "679b1224b48f482565bdf69b6d09fe3205e9e5f735fa311d130a6adf5b02886d",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu1ozMtlRollonMattSl.7ec0ad44ff0e.png",
+        "sha256": "7ec0ad44ff0e3a06d085ee04924d45d5cb4f0ac6767f47dd9eb85868cc56f5df",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozBlkCapSht",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkCapSht.289623853ece.png",
+        "manifestSha256": "289623853ece3f8a30aaebd41cef8c7f309912a91c02b78c13a12a69380ecc02",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkCapSht.b9bc619220d0.png",
+        "sha256": "b9bc619220d0d830932b8a03bf632f8559f7a2940db537d58b8159e4a1394a9e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkDropperShnGlTrim.650b424ffa6e.png",
+        "manifestSha256": "650b424ffa6e448dedb5f0be7b14d5eb48a735ad6c71264f1fe4f76dae971bd7",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkDropperShnGlTrim.c10dd92aebcf.png",
+        "sha256": "c10dd92aebcf789125ce68aa5ecc33c091bcf0e7c734f7b91259dc72b280493f",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozMtlRollonMattSl",
+      "family": "Boston Round",
+      "from": {
+        "url": "/images/catalog/bone-review/GBBstnBlu2ozMtlRollonMattSl.23530986302f.png",
+        "manifestSha256": "23530986302fbba3adcc405e4ddd41e55f00a4858b87c68807baa761e4aca399",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBBstnBlu2ozMtlRollonMattSl.f9c91fcd1aeb.png",
+        "sha256": "f9c91fcd1aeb7e182903fc4008ac88e2c183bc3aa7db77ca960ecff305af9d33",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-boston-round-shoulder-lock-2026-09-20",
+      "approvedAt": "2026-09-20T19:39:07.516Z"
+    }
+  ],
+  "skipped": []
+}

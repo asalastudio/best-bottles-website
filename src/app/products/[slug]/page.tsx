@@ -21,6 +21,7 @@ import { getCustomerFacingProductName } from "@/lib/products/customer-facing-nam
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { resolveProductPageRedirectTarget } from "@/lib/products/pdp-redirect";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { filterVariantsForGroupIntent } from "@/lib/products/group-variant-intent";
 import type { PdpBlock } from "@/components/PdpBlocks";
 import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
 import { headers } from "next/headers";
@@ -58,7 +59,7 @@ async function getProductData(slug: string): Promise<ProductGroupPayload | null>
     if (!data) return null;
     return {
         ...data,
-        variants: filterVariantsForProductGroup(data.group, data.variants),
+        variants: filterVariantsForGroupIntent(slug, filterVariantsForProductGroup(data.group, data.variants)),
     };
 }
 
