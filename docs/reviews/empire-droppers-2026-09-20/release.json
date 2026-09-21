@@ -2,10 +2,12 @@
  "schemaVersion": 1,
  "release": "empire-droppers-2026-09-20",
  "batch": "dist/paper-doll/empire-droppers-2026-09-20",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter · in chat 2026-09-20: \"ship Empire waived kits 2026-09-20 and ship Empire droppers 2026-09-20\"",
+ "approvedAt": "2026-09-21T00:19:09.535Z",
  "shipPhrase": "ship Empire droppers 2026-09-20",
- "published": [],
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
  "counts": {
   "extractedCandidates": 3,
   "approved": 3,
@@ -29,5 +31,5 @@
   }
  ],
  "setAside": [],
- "approvalSha256": "cbc95cee387788df6eb9920578f9db871e80145d5b34edee6fa4d1ad2892bcbe"
+ "approvalSha256": "d131080ae0ba8f5bf5534276e7efbe81eaa55170934e3e015335f52c9f873b66"
 }

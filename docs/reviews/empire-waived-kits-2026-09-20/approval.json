@@ -1,10 +1,10 @@
 {
  "release": "empire-waived-kits-2026-09-20",
  "ship": "ship Empire waived kits 2026-09-20",
- "approvedBy": "PENDING — Jordan Richter",
- "approvedAt": null,
+ "approvedBy": "Jordan Richter · in chat 2026-09-20: \"ship Empire waived kits 2026-09-20 and ship Empire droppers 2026-09-20\"",
+ "approvedAt": "2026-09-21T00:18:58.250Z",
  "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
- "preparedAt": "2026-09-20T18:41:41.188Z",
+ "preparedAt": "2026-09-21T00:18:58.256Z",
  "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
  "reviewSheet": "public/reviews/builder-review-2026-09-19/empire-waived-kits-2026-09-20.jpg",
  "skus": {
@@ -15,5 +15,5 @@
   "GBEmp100AnSpTslRed": "5d2944d3f2d0381dc22fc97721a5898d024d7f2c9e4b995226a07035f9979f2d"
  },
  "setAside": [],
- "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
 }
