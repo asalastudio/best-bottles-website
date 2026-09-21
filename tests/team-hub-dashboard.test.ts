@@ -69,6 +69,7 @@ describe("Team Hub dashboard catalog", () => {
         expect(internal).toEqual([
             "/team/resale-certificates",
             "/team/portal-accounts",
+            "/team/products",
             "/team/products/new",
             "/team/asset-ledger",
             "/studio",
