@@ -172,7 +172,7 @@ describe("Cylinder family-first server route", () => {
     it("fixes Cylinder in the route and honors canonical application refinements on first render", async () => {
         const element = await FamilyLandingPage({
             params: Promise.resolve({ family: "cylinder" }),
-            searchParams: Promise.resolve({ applicators: "rollon", capacities: "9 ml", roller: "metal" }),
+            searchParams: Promise.resolve({ applicators: "rollon", capacities: "9 ml", roller: "metal", guide: "1" }),
         });
         const html = renderToStaticMarkup(element);
 
@@ -202,6 +202,7 @@ describe("Cylinder family-first server route", () => {
                     capacities: "9 ml",
                     threads: "17-415",
                     sort: "price-asc",
+                    guide: "1",
                 }),
             });
             const html = renderToStaticMarkup(element);
@@ -213,7 +214,7 @@ describe("Cylinder family-first server route", () => {
                 : null;
 
             expect(returnPath).toBe(
-                "/catalog/cylinder?applicators=rollon&roller=metal&colors=Amber&capacities=9+ml&threads=17-415&sort=price-asc",
+                "/catalog/cylinder?applicators=rollon&roller=metal&colors=Amber&capacities=9+ml&threads=17-415&sort=price-asc&guide=1",
             );
             expect(returnPath).not.toContain("family");
             expect(mocks.serverSearch).toHaveBeenCalledWith(expect.objectContaining({
@@ -294,7 +295,7 @@ describe("Cylinder family-first client", () => {
         await act(async () => buttonWithText(container, "Roll-On").click());
 
         expect(mocks.routerReplace).toHaveBeenLastCalledWith(
-            "/catalog/cylinder?applicators=rollon&roller=metal&capacities=9+ml",
+            "/catalog/cylinder?applicators=rollon&roller=metal&capacities=9+ml&guide=1",
             { scroll: false },
         );
         expect(container.querySelector('a[href^="/products/cylinder-9ml-spray"]')).not.toBeNull();
@@ -348,7 +349,7 @@ describe("Cylinder family-first client", () => {
             root.render(createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
                 baseCatalog: allCylinderResult,
                 initialResult: rollOnResult,
-                search: "?applicators=rollon",
+                search: "?applicators=rollon&guide=1",
                 editorial: null,
             }));
         });

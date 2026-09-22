@@ -682,14 +682,17 @@ export function filtersToParams(f: CatalogFilters, sort: SortValue, view: ViewMo
     if (f.priceMin !== null) p.set("priceMin", String(f.priceMin));
     if (f.priceMax !== null) p.set("priceMax", String(f.priceMax));
     if (f.search) p.set("search", f.search);
-    if (sort !== "featured") p.set("sort", sort);
+    // Every sort is written explicitly. An omitted sort parses as capacity-asc.
+    p.set("sort", sort);
     if (view !== "visual") p.set("view", view);
     return p;
 }
 
+export const GLASS_BOTTLE_BROWSE_HREF = "/catalog?category=Glass+Bottle&sort=capacity-asc";
+
 export function catalogHref(
     partial: Partial<CatalogFilters> = {},
-    sort: SortValue = "featured",
+    sort: SortValue = "capacity-asc",
 ): string {
     const qs = filtersToParams({ ...EMPTY_FILTERS, ...partial }, sort).toString();
     return qs ? `/catalog?${qs}` : "/catalog";
@@ -738,7 +741,79 @@ export function paramsToFilters(sp: URLSearchParams): { filters: CatalogFilters;
             priceMax: getNonNegativeNumberParam(sp, "priceMax"),
             search,
         },
-        sort: sortParam || (search ? "best-match" : "featured"),
+        sort: sortParam || (search ? "best-match" : "capacity-asc"),
         view,
     };
+}
+
+function hasNarrowingParam(sp: URLSearchParams): boolean {
+    return CATALOG_FACET_PARAM_KEYS.some((key) => sp.getAll(key).some((value) => value.trim() !== ""));
+}
+
+/**
+ * Bare /catalog (Shop Bottles, tab bar, Full catalog) becomes a shareable
+ * glass-bottle list ordered smallest capacity first. Search, an explicit
+ * sort, any facet, and scope=all stay put so All products and header search
+ * are not bounced back into that department.
+ */
+export function catalogBrowseRedirect(sp: URLSearchParams): string | null {
+    if (sp.get("scope") === "all") return null;
+    if ((sp.get("search") || "").trim()) return null;
+    if (sp.get("sort")?.trim()) return null;
+    if (hasNarrowingParam(sp)) return null;
+
+    const params = new URLSearchParams();
+    params.set("category", "Glass Bottle");
+    params.set("sort", "capacity-asc");
+    if (sp.get("view") === "line") params.set("view", "line");
+    const limit = sp.get("limit")?.trim();
+    if (limit) params.set("limit", limit);
+    if (sp.get("grace") === "1") params.set("grace", "1");
+    return `/catalog?${params.toString()}`;
+}
+
+export function catalogCategoryScopeLabel(category: string): string {
+    return category === "Glass Bottle" ? "Glass bottles" : category;
+}
+
+export function catalogResultScopeTitle(filters: CatalogFilters): string {
+    if (filters.search) return `"${filters.search}"`;
+    if (filters.applicators.length === 1) {
+        const label = APPLICATOR_BUCKETS.find((bucket) => bucket.value === filters.applicators[0])?.label ?? filters.applicators[0];
+        return `${label} Bottles`;
+    }
+    if (filters.applicators.length > 1) {
+        return `${filters.applicators.map((value) => APPLICATOR_BUCKETS.find((bucket) => bucket.value === value)?.label ?? value).join(" & ")} Bottles`;
+    }
+    if (filters.families.length === 1) return filters.families[0] ?? "All products";
+    const shopTitle = getShopCollection(filters.shopCollection)?.title;
+    if (shopTitle) return shopTitle;
+    if (filters.collection) return filters.collection;
+    if (filters.category) return catalogCategoryScopeLabel(filters.category);
+    return "All products";
+}
+
+export function catalogBreadcrumbSteps(filters: CatalogFilters): Array<{ label: string; href?: string }> {
+    const steps: Array<{ label: string; href?: string }> = [];
+    if (filters.category) {
+        const params = new URLSearchParams();
+        params.set("category", filters.category);
+        params.set("sort", "capacity-asc");
+        steps.push({
+            label: catalogCategoryScopeLabel(filters.category),
+            href: `/catalog?${params.toString()}`,
+        });
+    }
+    const shopTitle = getShopCollection(filters.shopCollection)?.title;
+    if (shopTitle) steps.push({ label: shopTitle });
+    if (filters.families.length === 1 && filters.families[0]) {
+        steps.push({ label: filters.families[0] });
+    } else if (!filters.category && !shopTitle && filters.applicators.length === 1) {
+        const label = APPLICATOR_BUCKETS.find((bucket) => bucket.value === filters.applicators[0])?.label ?? filters.applicators[0];
+        steps.push({ label: `${label} Bottles` });
+    }
+    if (steps.length === 0) steps.push({ label: "All products" });
+    const last = steps[steps.length - 1];
+    if (last) steps[steps.length - 1] = { label: last.label };
+    return steps;
 }

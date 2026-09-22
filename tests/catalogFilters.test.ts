@@ -214,7 +214,7 @@ describe("activeFilterCount", () => {
 // ─── filtersToParams / paramsToFilters round-trip ───────────────────────────
 
 describe("URL round-trip serialization", () => {
-    it("round-trips empty filters with default sort", () => {
+    it("round-trips an explicit featured sort", () => {
         const params = filtersToParams(EMPTY_FILTERS, "featured");
         const result = paramsToFilters(params);
         expect(result.filters).toEqual(EMPTY_FILTERS);
@@ -258,15 +258,15 @@ describe("URL round-trip serialization", () => {
         expect(result.view).toBe("visual");
     });
 
-    it("defaults sort to featured when not specified", () => {
+    it("defaults sort to capacity ascending when not specified", () => {
         const params = new URLSearchParams();
         const result = paramsToFilters(params);
-        expect(result.sort).toBe("featured");
+        expect(result.sort).toBe("capacity-asc");
     });
 
-    it("omits sort=featured from URL (it's the default)", () => {
+    it("writes sort=featured because capacity order is the browse default", () => {
         const params = filtersToParams(EMPTY_FILTERS, "featured");
-        expect(params.get("sort")).toBeNull();
+        expect(params.get("sort")).toBe("featured");
     });
 
     it("includes sort when not featured", () => {
@@ -345,7 +345,7 @@ describe("paramsToFilters edge cases", () => {
     it("handles completely empty URL", () => {
         const result = paramsToFilters(new URLSearchParams());
         expect(result.filters).toEqual(EMPTY_FILTERS);
-        expect(result.sort).toBe("featured");
+        expect(result.sort).toBe("capacity-asc");
     });
 
     it("defaults direct search URLs to best-match sorting", () => {

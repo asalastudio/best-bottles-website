@@ -1,6 +1,7 @@
 import {
     APPLICATOR_NAV,
     CATALOG_FAMILIES,
+    EMPTY_FILTERS,
     filtersToParams,
     normalizeCapacityFilterValue,
     paramsToFilters,
@@ -120,30 +121,58 @@ export function browseContextToFilters(context: BrowseContext): Partial<CatalogF
     };
 }
 
-export function applicationFinderHref(application: ApplicatorNavValue): string {
+export function applicationGuidePath(application: ApplicatorNavValue): string {
     const slug = Object.entries(APPLICATION_ROUTE_SLUGS).find(([, value]) => value === application)?.[0];
     return slug ? `/catalog/application/${slug}` : "/catalog";
 }
 
+export function applicationFinderHref(application: ApplicatorNavValue): string {
+    const nav = APPLICATOR_NAV.find((candidate) => candidate.value === application);
+    if (!nav) return "/catalog";
+    const query = filtersToParams({
+        ...EMPTY_FILTERS,
+        applicators: [...nav.buckets],
+    }, "capacity-asc").toString();
+    return `/catalog?${query}`;
+}
+
+export function familyGuideHref(family: string): string {
+    return `${familyFinderPath(family)}?guide=1`;
+}
+
 export function familyFinderHref(family: string, context: Partial<BrowseContext> = {}): string {
     const filters = browseContextToFilters({ ...context, entryMode: "family", family });
-    const hasLanding = isFamilyLandingFamily(family);
-    if (hasLanding) delete filters.families;
     const query = filtersToParams({
-        category: null,
-        collection: null,
-        applicators: [],
-        rollerMaterials: [],
-        families: [],
-        colors: [],
-        capacities: [],
-        neckThreadSizes: [],
-        componentType: null,
-        priceMin: null,
-        priceMax: null,
-        search: "",
+        ...EMPTY_FILTERS,
         ...filters,
-    }, context.sort ?? "featured").toString();
-    const pathname = hasLanding ? familyFinderPath(family) : "/catalog";
-    return `${pathname}${query ? `?${query}` : ""}`;
+        category: "Glass Bottle",
+        families: [family],
+    }, context.sort ?? "capacity-asc").toString();
+    return `/catalog?${query}`;
+}
+
+export function familyLandingRedirect(family: string, sp: URLSearchParams): string | null {
+    if (sp.get("guide") === "1") return null;
+    const parsed = paramsToFilters(sp);
+    const context = parseBrowseContext(familyFinderPath(family), sp);
+    const href = familyFinderHref(family, {
+        ...context,
+        sort: sp.has("sort") ? parsed.sort : (parsed.filters.search ? "best-match" : "capacity-asc"),
+    });
+    if (!parsed.filters.search) return href;
+    const params = new URLSearchParams(href.split("?")[1] ?? "");
+    params.set("search", parsed.filters.search);
+    return `/catalog?${params.toString()}`;
+}
+
+export function applicationLandingRedirect(pathname: string, sp: URLSearchParams): string | null {
+    if (sp.get("guide") === "1") return null;
+    const context = parseBrowseContext(pathname, sp);
+    if (context.entryMode !== "application" || !context.application) return null;
+    const parsed = paramsToFilters(sp);
+    const query = filtersToParams({
+        ...parsed.filters,
+        ...browseContextToFilters(context),
+    }, sp.has("sort") ? parsed.sort : (parsed.filters.search ? "best-match" : "capacity-asc")).toString();
+    return `/catalog?${query}`;
 }

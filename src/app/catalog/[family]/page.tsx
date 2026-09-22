@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Footer from "@/components/Footer";
 import { searchCatalogServer } from "@/lib/catalogServer";
 import { paramsToFilters } from "@/lib/catalogFilters";
 import { buildCatalogSearchArgs } from "@/lib/catalogSearchClient";
 import { familyCatalogSurface } from "@/lib/catalogSurface";
 import { HOME_FAMILY_MOSAIC } from "@/lib/homepageMerchandising";
-import { familyFromSlug, familyToSlug } from "@/lib/products/focused-shopping";
+import { familyFromSlug, familyLandingRedirect, familyToSlug } from "@/lib/products/focused-shopping";
 import { getProductFamilyPageContent } from "@/sanity/lib/queries";
 import FamilyPageClient from "./FamilyPageClient";
 import { getLocale } from "next-intl/server";
 import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
 import { localizeFamilyName } from "@/i18n/catalogCopy";
 import { buildHreflangAlternates } from "@/i18n/metadata";
+import { localizeHref } from "@/i18n/paths";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -67,8 +68,15 @@ export default async function FamilyLandingPage({
     const family = familyFromSlug(routeSlug);
     if (!family) notFound();
 
-    const surface = familyCatalogSurface(family);
     const urlSearchParams = toURLSearchParams(resolvedSearchParams);
+    const landingRedirect = familyLandingRedirect(family, urlSearchParams);
+    if (landingRedirect) {
+        const localeValue = await getLocale();
+        const locale: AppLocale = isLocale(localeValue) ? localeValue : defaultLocale;
+        redirect(localizeHref(locale, landingRedirect));
+    }
+
+    const surface = familyCatalogSurface(family);
     urlSearchParams.delete("family");
     urlSearchParams.delete("families");
     const parsedState = paramsToFilters(urlSearchParams);
