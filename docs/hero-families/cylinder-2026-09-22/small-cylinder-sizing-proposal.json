@@ -1,5 +1,5 @@
 {
-  "status": "user-directed-28-percent-adjustment-proof-ready",
+  "status": "sizing-approved-material-render-pending",
   "canvas": {
     "width": 2080,
     "height": 2288
@@ -201,8 +201,21 @@
     "interpretation": "Increase shoulder span by 3 percentage points, from 25% to 28%. Apply one uniform transform to the whole assembly.",
     "date": "2026-09-22",
     "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
-    "proofVisualReview": "pending",
+    "proofVisualReview": "approved",
     "excludes": "Material generation, final output approval, publication"
   },
-  "visualProgressionRule": "Whole-assembly height increases from 3.3 to 4 to 5 mL; no body stretching."
+  "visualProgressionRule": "Whole-assembly height increases from 3.3 to 4 to 5 mL; no body stretching.",
+  "sizingApproval": {
+    "scope": "relative sizing only",
+    "userFeedback": "Lock that that’s good",
+    "date": "2026-09-22",
+    "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
+    "shoulderSpansPct": {
+      "3.3ml": 28,
+      "4ml": 32.5,
+      "5ml": 36.5
+    },
+    "baselinePct": 91,
+    "excludes": "Material generation, final rendered output approval, publication"
+  }
 }

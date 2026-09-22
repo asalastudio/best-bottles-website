@@ -203,7 +203,7 @@
         "shoulderPct": 28,
         "bodyAspect": 2.134765625,
         "status": "locked",
-        "lockVersion": "small-cylinder-user-adjustment-2026-09-22-v3",
+        "lockVersion": "small-cylinder-final-size-approved-2026-09-22",
         "baselinePct": 91,
         "shoulderYFromTopPct": 63,
         "landmark": "closure-seat"
@@ -239,8 +239,21 @@
         "interpretation": "Increase shoulder span by 3 percentage points, from 25% to 28%. Apply one uniform transform to the whole assembly.",
         "date": "2026-09-22",
         "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
-        "proofVisualReview": "pending",
+        "proofVisualReview": "approved",
         "excludes": "Material generation, final output approval, publication"
+      },
+      "sizingApproval": {
+        "scope": "relative sizing only",
+        "userFeedback": "Lock that that’s good",
+        "date": "2026-09-22",
+        "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
+        "shoulderSpansPct": {
+          "3.3ml": 28,
+          "4ml": 32.5,
+          "5ml": 36.5
+        },
+        "baselinePct": 91,
+        "excludes": "Material generation, final rendered output approval, publication"
       }
     },
     "cylinder:4-sample": {
@@ -250,7 +263,7 @@
         "shoulderPct": 32.5,
         "bodyAspect": 2.7137014314928427,
         "status": "locked",
-        "lockVersion": "small-cylinder-size-approved-2026-09-22",
+        "lockVersion": "small-cylinder-final-size-approved-2026-09-22",
         "baselinePct": 91,
         "shoulderYFromTopPct": 58.5,
         "landmark": "closure-seat"
@@ -275,10 +288,16 @@
       },
       "sizingApproval": {
         "scope": "relative sizing only",
-        "userFeedback": "That’s better",
+        "userFeedback": "Lock that that’s good",
         "date": "2026-09-22",
-        "proofSha256": "22165464d78eb00fc2d9ff3f47bb3675b15849752e4ec718563b18df8007252e",
-        "excludes": "Material generation, final output approval, publication"
+        "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
+        "shoulderSpansPct": {
+          "3.3ml": 28,
+          "4ml": 32.5,
+          "5ml": 36.5
+        },
+        "baselinePct": 91,
+        "excludes": "Material generation, final rendered output approval, publication"
       }
     }
   },
