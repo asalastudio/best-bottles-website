@@ -7427,5 +7427,157 @@
       "translateXPercent": 0,
       "translateYPercent": 0
     }
+  },
+  {
+    "groupSlug": "bell-10ml-clear-13-415-rollon",
+    "websiteSku": "GBBell10RollBlkDot",
+    "graceSku": "GB-BEL-CLR-10ML-ROL-BLDOT",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343699304740",
+    "family": "Bell",
+    "capacityMl": 10,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBBell10RollBlkDot.2551a792cd98.png",
+    "alt": "10 ml Clear Bell Roll-On Bottle \u2014 Empty \u00b7 cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+    "websiteSku": "GBBstn1ozRollonShBlk",
+    "graceSku": "GB-BSR-CLR-30ML-RBL-SBLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343614697764",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBBstn1ozRollonShBlk.2a923f5d21f8.png",
+    "alt": "30 ml Clear Boston Round Roll-On Bottle \u2014 Empty \u00b7 cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+    "websiteSku": "GBBstn2ozMtlRollGl",
+    "graceSku": "GB-BSR-CLR-60ML-MRL-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343621415204",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBBstn2ozMtlRollGl.cb4a33cbfcf3.png",
+    "alt": "60 ml Clear Boston Round Roll-On Bottle \u2014 Empty \u00b7 cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+    "websiteSku": "GBBstnAmb1ozRollonMattGl",
+    "graceSku": "GB-BSR-AMB-30ML-RON-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343617024292",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Amber",
+    "url": "/images/catalog/bone-review/GBBstnAmb1ozRollonMattGl.1265d93107af.png",
+    "alt": "30 ml Amber Boston Round Roll-On Bottle \u2014 Empty \u00b7 cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+    "websiteSku": "GBBstnAmb2ozRollonMattGl",
+    "graceSku": "GB-BSR-AMB-60ML-RON-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343625675044",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Amber",
+    "url": "/images/catalog/bone-review/GBBstnAmb2ozRollonMattGl.5b727e39ed91.png",
+    "alt": "60 ml Amber Boston Round Roll-On Bottle \u2014 Empty \u00b7 cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+    "websiteSku": "GBBstnBlu1ozRollonMattBlk",
+    "graceSku": "GB-BSR-BLU-30ML-RON-MBLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343620202788",
+    "family": "Boston Round",
+    "capacityMl": 30,
+    "bottleColor": "Cobalt Blue",
+    "url": "/images/catalog/bone-review/GBBstnBlu1ozRollonMattBlk.538c7caa02ec.png",
+    "alt": "30 ml Cobalt Blue Boston Round Roll-On Bottle \u2014 Empty \u00b7 cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+    "websiteSku": "GBBstnBlu2ozRollonMattGl",
+    "graceSku": "GB-BSR-BLU-60ML-RON-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343627706660",
+    "family": "Boston Round",
+    "capacityMl": 60,
+    "bottleColor": "Cobalt Blue",
+    "url": "/images/catalog/bone-review/GBBstnBlu2ozRollonMattGl.4752f301b07b.png",
+    "alt": "60 ml Cobalt Blue Boston Round Roll-On Bottle \u2014 Empty \u00b7 cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "circle-15ml-clear-13-415-rollon",
+    "websiteSku": "GBCrcl15RollBlkSh",
+    "graceSku": "GB-CIR-CLR-15ML-ROL-SBLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343610667300",
+    "family": "Circle",
+    "capacityMl": 15,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl15RollBlkSh.2c830a1e23cd.png",
+    "alt": "15 ml Clear Circle Roll-On Bottle \u2014 Empty \u00b7 cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty \u00b7 cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
   }
 ]

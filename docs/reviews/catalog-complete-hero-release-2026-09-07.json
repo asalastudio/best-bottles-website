@@ -5,7 +5,7 @@
   "additionalJarClosurePackaging": 57,
   "replacementSetTotal": 391,
   "retainedAlternateSkus": 0,
-  "registryTotal": 391,
+  "registryTotal": 399,
   "missingSourceProductRecords": 25,
   "baselinePercent": 91,
   "background": "#F5F3EF",
@@ -4307,6 +4307,94 @@
       "groupSlug": "vintage-bulb-sprayer",
       "url": "/images/catalog/bone-review/AntqSprBulbLavender.0af70b666c7c.png",
       "sha256": "0af70b666c7c6d57080856e0700770c760cccbd82a1bd01ee163af9cc5e154ab",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBell10RollBlkDot",
+      "groupSlug": "bell-10ml-clear-13-415-rollon",
+      "url": "/images/catalog/bone-review/GBBell10RollBlkDot.2551a792cd98.png",
+      "sha256": "2551a792cd982de9fb9f68af5bf2149cfd1d777312e124dc185eac324b34a21e",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstn1ozRollonShBlk",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstn1ozRollonShBlk.2a923f5d21f8.png",
+      "sha256": "2a923f5d21f818efa63b1d46d1c8bde10fbdbe79cca0bc18b890481c0aa55244",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstn2ozMtlRollGl",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstn2ozMtlRollGl.cb4a33cbfcf3.png",
+      "sha256": "cb4a33cbfcf38f4c9a659c09cd570cd1ba9c93923cf0db192bf1d10c30c57784",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozRollonMattGl",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstnAmb1ozRollonMattGl.1265d93107af.png",
+      "sha256": "1265d93107afd5b09c3c347726d83cf11d17b5430b068a6b9615ad81dc7e243d",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozRollonMattGl",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstnAmb2ozRollonMattGl.5b727e39ed91.png",
+      "sha256": "5b727e39ed91c9b84bb50b110f0774725b25d0d02323db23a223e47f732ae1c4",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozRollonMattBlk",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstnBlu1ozRollonMattBlk.538c7caa02ec.png",
+      "sha256": "538c7caa02ec82a0e8b331664979d10178da2bed6e1f5f1993ab38fdffc3d75f",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozRollonMattGl",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstnBlu2ozRollonMattGl.4752f301b07b.png",
+      "sha256": "4752f301b07b2a9befb4d45c9da7d785400e7ead2ada66cf9717a76ab34e85e5",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBCrcl15RollBlkSh",
+      "groupSlug": "circle-15ml-clear-13-415-rollon",
+      "url": "/images/catalog/bone-review/GBCrcl15RollBlkSh.2c830a1e23cd.png",
+      "sha256": "2c830a1e23cd99f63edf9c3fd5cbcaf23f0c2d647ee31e3ade5a5f5dcb2c5bc1",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
