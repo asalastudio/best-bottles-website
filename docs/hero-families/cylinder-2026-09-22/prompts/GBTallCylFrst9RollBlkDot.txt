@@ -1,0 +1,19 @@
+Use case: precise-object-edit
+Asset: Best Bottles premium ecommerce hero.
+Create one elite studio product photograph of this exact 9 mL Slim Cylinder assembly.
+
+INPUT ROLES
+Image 1 is the exact product photograph uniformly framed to the approved size. Preserve its silhouette, complete geometry, proportions, camera angle and component positions. Image 2 is the exact original master PSD composite for geometry and hardware verification only, not framing. Image 3 is the approved FROSTED GLASS MATERIAL reference only. Do not borrow its bottle shape, neck, threads, cap, scale, layout or background.
+
+EXACT PRODUCT
+Tall cylinder design 9ml, 1/3oz frosted glass bottle with plastic roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, slender bottle with attractive heavy base.
+Applicator: Plastic Roller Ball; hardware finish: Black with Dots. Preserve the seated PLASTIC roller ball, translucent milky-white plastic, and its existing holder. No metal ball. Detached original caps stay beside the bottle at their exact original relative size and spacing. Preserve the number and arrangement of decorative dots on roller caps.
+
+MATERIAL
+Satin acid-etched FROSTED glass across the entire bottle body: soft diffuse translucency, fine surface texture, broad gentle highlight gradients and dimensional shoulder/base modeling. Preserve original neck finish and seated hardware. Match Image 3 material only, never its shape or multi-bottle arrangement. Keep the vessel empty. No opaque white paint, plastic look or clear-glass body.
+
+LOCKED GEOMETRY AND FRAMING
+Portrait 10:11, delivery target 2080 x 2288. Glass contact foot at 91% from top; actual body shoulder/closure seat at 28.5% from top, so shoulder-to-foot span is 62.5%. Body centered at 50% width. Preserve Image 1 layout exactly. For rollers the top of the threaded neck or ball is NOT the shoulder: retain the whole neck and roller above the shoulder. No stretching, component resizing, cap/roller substitution or extra parts. Preserve existing source proportions, including small differences in photographic perspective.
+
+PHOTOGRAPHY
+Premium realistic restrained product photography on seamless matte bone #F5F3EF with no horizon. Large soft key above camera-left, gentle front fill, restrained negative fill describing cylindrical curvature. Controlled graduated highlights and crisp natural material detail; satin metal stays satin. Tight grounded contact shadow at each resting foot, compact soft cast shadow toward right and slightly behind. No floating, mirror floor, props, labels, text, guide lines, watermarks, blown-out bloom or heavy black outline. Improve material realism and lighting while keeping exact product geometry and locked scale.

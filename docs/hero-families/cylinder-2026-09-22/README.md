@@ -1,5 +1,27 @@
 # Cylinder staging pilot — September 22, 2026
 
+Current checkpoint: **59 delivery exports across all 49 in-scope glass Cylinder groups (3.3–100 mL)**. The visible catalog contains 58 images across 48 groups; the existing hidden 5.5 mL duplicate remains hidden. Generation coverage is complete for this scope. The three larger plastic-bottle groups are excluded, not missing glass renders.
+
+The final extension adds **six 25 mL assemblies, one 30 mL gold sprayer, and eight 9 mL Slim assemblies**. Jordan approved and froze their current appearance: “Perfect let’s lock those and commit.” [Approval record](final-batches-visual-approval.json) binds each of these 15 exports and the displayed guided sheets to exact SHA-256 hashes. All earlier 44 exports remain byte-for-byte unchanged. This checkpoint changes the frontend pilot only; it does not publish new production heroes, plates, or kits.
+
+- **25 mL:** vintage bulb, tassel bulb, dropper, matte-gold fine mist, matte-gold lotion pump, and reducer. Bulb/tassel remain a single assembly; dropper/reducer remain attached. Spray/lotion have detached cap sidecars. [Renders](family25-30-generated-review-sheet.jpg) · [shoulder/base guides](family25-30-generated-guided-sheet.jpg).
+- **30 mL:** gold sprayer with attached gold base and detached gold cap, using Jordan’s exact gold photograph. The visible bottom of the attached gold base is the approved contact anchor because the glass foot is obscured.
+- **9 mL Slim:** clear and frosted, each with short cap, fine mist, metal roller, and plastic roller. All caps are sidecars; roller inserts remain seated. Exact metal/plastic SKU mappings remain distinct. [Renders](family9-slim-generated-review-sheet.jpg) · [shoulder/base guides](family9-slim-generated-guided-sheet.jpg).
+- Delivery: **2080 × 2288**, **91% base**; shoulder spans measured upward from the base are **46.5% for 25 mL**, **46% for 30 mL**, and **62.5% for 9 mL Slim**. Complete photographs use one uniform scale/translation. Native generated images are approximately 1196 × 1315; delivery dimensions do not imply native 2080-pixel detail.
+- Material references, exact geometry sources, input hashes, prompts, measurements, transforms, and final hashes are recorded in the manifest. The 30 mL photograph and Slim legacy short-cap sources are labeled as source exceptions, never as PSDs. The 25 mL lotion actuator follows its exact source composite.
+- The clear Slim short cap has a recorded 18.9% relative height-to-width difference from its source. The current bytes are visually accepted as-is; the finding remains in technical QA. No corrective image was generated. Historical sheet captions saying “pending” remain preserved with the reviewed sheet bytes; this approval record supersedes those captions.
+- Exact bone exposure and generated geometry technical clearance remain open. Visual acceptance does not erase those findings or authorize production publication. [25/30 QA](family25-30-qa.json) · [Slim QA](family9-slim-qa.json).
+- Before/after ledger recounts are unchanged: 436 complete plates, 396 live kits, and 52 indexed hero rows. The 15 newly prepared frontend candidates are separate from backend indexing. [25/30 recount](family25-30-ledger-recount.json) · [Slim recount](family9-slim-ledger-recount.json).
+
+At this checkpoint the requested shared staging alias still serves the **44-image** deployment `best-bottles-website-rli7996jl-asala.vercel.app` (commit `76585efa`). The final 15 are integrated on the Cylinder branch; committing or pushing this change does not prove the alias has changed. Deployment and alias verification remain the next release step. PR: https://github.com/asalastudio/best-bottles-website/pull/225.
+
+Validation for this final extension: **445 focused tests and TypeScript pass**. The focused pilot test also verifies standard and Slim clear/frosted metal-vs-plastic selection. All 59 PNG hashes and dimensions pass; all 44 prior manifest rows are unchanged. The [local browser audit](final-local-browser-verification.json) passes all **58 visible images** in both `/catalog` and `/catalog/cylinder` at 1440 px and 390 px, including decoded images, exact group/SKU links, plastic filters and 10:11 frames. Local review: http://localhost:3050/catalog/cylinder (HTTP 200 verified across 32 filtered views).
+
+## Earlier checkpoints and runbooks
+
+The following notes are historical; counts and pending-generation statements below describe earlier checkpoints. The current scope and approval records above take precedence.
+
+
 44 delivery exports cover 36 registered Cylinder groups: twenty standard 9 mL assemblies, eight 28/50 mL assemblies, five 100 mL assemblies, and eleven new 3.3/4/5 mL assemblies. **43 images across 35 groups are eligible for visible catalog cards.** One new matte-black sprayer remains in an intentionally hidden legacy 5.5 mL duplicate group; its image is preserved for review without changing that catalog policy. Eight images are additional exact roller variants. The 49-group glass inventory includes that hidden group; thirteen groups plus two additional roller variants still need images (15 total).
 
 ## Small Cylinder batch

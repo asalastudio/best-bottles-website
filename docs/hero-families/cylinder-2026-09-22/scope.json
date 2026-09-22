@@ -1,118 +1,40 @@
 {
   "baseCommit": "e9e99682ebeeb3ffc718f914608c60e4f2a8603e",
   "currentRegistryCylinderCount": 52,
-  "candidateCount": 44,
-  "coveredGroups": 36,
+  "candidateCount": 59,
+  "coveredGroups": 49,
   "remainingRegisteredHeroes": [
-    {
-      "sku": "GBTallCyl9GlMattSht",
-      "groupSlug": "cylinder-9ml-clear-13-415",
-      "capacityMl": 9,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBTallCyl9SpryGlMatt",
-      "groupSlug": "cylinder-9ml-clear-13-415-finemist",
-      "capacityMl": 9,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBTallCyl9MtlRollBlkDot",
-      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
-      "capacityMl": 9,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBTallCylFrst9GlMattSht",
-      "groupSlug": "cylinder-9ml-frosted-13-415",
-      "capacityMl": 9,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBTallCylFrst9SpryGlMatt",
-      "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
-      "capacityMl": 9,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBTallCylFrst9MtlRollBlkDot",
-      "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
-      "capacityMl": 9,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBcyl25AnSpIvyGl",
-      "groupSlug": "cylinder-25ml-clear-18-415-antique",
-      "capacityMl": 25,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBcyl25AnSpTslIvyGl",
-      "groupSlug": "cylinder-25ml-clear-18-415-antiquetassel",
-      "capacityMl": 25,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBCyl25DrpGl",
-      "groupSlug": "cylinder-25ml-clear-18-415-dropper",
-      "capacityMl": 25,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBcyl25SpryMtGl",
-      "groupSlug": "cylinder-25ml-clear-18-415-finemist",
-      "capacityMl": 25,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "LBCyl25LtnMtGl",
-      "groupSlug": "cylinder-25ml-clear-18-415-lotionpump",
-      "capacityMl": 25,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBCyl25RdcrShnGl",
-      "groupSlug": "cylinder-25ml-clear-18-415-reducer",
-      "capacityMl": 25,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBSpry1ozGl",
-      "groupSlug": "cylinder-30ml-clear-18-415-finemist",
-      "capacityMl": 30,
-      "action": "audit-existing-before-generation"
-    },
     {
       "sku": "PbClear4ozFlpWh",
       "groupSlug": "cylinder-118ml-clear",
       "capacityMl": 114,
-      "action": "audit-existing-before-generation"
+      "action": "outside-approved-glass-pilot"
     },
     {
       "sku": "PbClear8ozFlpWh",
       "groupSlug": "cylinder-227ml-clear",
       "capacityMl": 227,
-      "action": "audit-existing-before-generation"
+      "action": "outside-approved-glass-pilot"
     },
     {
       "sku": "PbNat16ozFlpWh",
       "groupSlug": "cylinder-454ml-clear",
       "capacityMl": 454,
-      "action": "audit-existing-before-generation"
+      "action": "outside-approved-glass-pilot"
     }
   ],
   "glassPilot": {
     "scopeGroups": 49,
-    "coveredGroups": 36,
-    "visibleCoveredGroups": 35,
-    "remainingGroups": 13,
-    "remainingExtraRollerVariants": 2,
-    "remainingImages": 15,
+    "coveredGroups": 49,
+    "visibleCoveredGroups": 48,
+    "remainingGroups": 0,
+    "remainingExtraRollerVariants": 0,
+    "remainingImages": 0,
     "scopeLabel": "All glass Cylinder groups from 3.3 through 100 mL, including one hidden legacy duplicate group"
   },
   "scopeDecision": "Jordan explicitly included 3.3 mL and 4 mL on September 22; only three larger plastic groups remain outside this glass pilot.",
-  "visibleCandidateCount": 43,
-  "visibleCoveredGroups": 35,
+  "visibleCandidateCount": 58,
+  "visibleCoveredGroups": 48,
   "hiddenGroupCandidates": [
     {
       "sku": "GBCyl5SpryBlkMatt",

@@ -834,5 +834,290 @@
       "translateXPercent": 0,
       "translateYPercent": 0
     }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-antique",
+    "websiteSku": "GBcyl25AnSpIvyGl",
+    "graceSku": "GBcyl25AnSpIvyGl",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56204037587236",
+    "family": "Cylinder",
+    "capacityMl": 25,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25AnSpIvyGl.bfadd47f97fe.png",
+    "alt": "25 mL Clear Cylinder Vintage Bulb Sprayer",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · original assembled applicator",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-antiquetassel",
+    "websiteSku": "GBcyl25AnSpTslIvyGl",
+    "graceSku": "GBcyl25AnSpTslIvyGl",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56204038013220",
+    "family": "Cylinder",
+    "capacityMl": 25,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25AnSpTslIvyGl.ab184134a30b.png",
+    "alt": "25 mL Clear Cylinder Vintage Bulb Sprayer with Tassel",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · original assembled applicator",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-dropper",
+    "websiteSku": "GBCyl25DrpGl",
+    "graceSku": "GBCyl25DrpGl",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56204038144292",
+    "family": "Cylinder",
+    "capacityMl": 25,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl25DrpGl.5476f7c122f9.png",
+    "alt": "25 mL Clear Cylinder Dropper",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · original assembled applicator",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-finemist",
+    "websiteSku": "GBcyl25SpryMtGl",
+    "graceSku": "GBcyl25SpryMtGl",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56204039946532",
+    "family": "Cylinder",
+    "capacityMl": 25,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25SpryMtGl.511d21e7dee0.png",
+    "alt": "25 mL Clear Cylinder Fine Mist Sprayer",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-lotionpump",
+    "websiteSku": "LBCyl25LtnMtGl",
+    "graceSku": "LB-CYL-CLR-25ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343674532132",
+    "family": "Cylinder",
+    "capacityMl": 25,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl25LtnMtGl.d5caeec0df28.png",
+    "alt": "25 mL Clear Cylinder Lotion Pump",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-reducer",
+    "websiteSku": "GBCyl25RdcrShnGl",
+    "graceSku": "GBCyl25RdcrShnGl",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56204038897956",
+    "family": "Cylinder",
+    "capacityMl": 25,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl25RdcrShnGl.95b60b0cd9cd.png",
+    "alt": "25 mL Clear Cylinder Reducer",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · original assembled applicator",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-30ml-clear-18-415-finemist",
+    "websiteSku": "GBSpry1ozGl",
+    "graceSku": "GB-SPR-CLR-30ML-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343638454564",
+    "family": "Cylinder",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBSpry1ozGl.aec2bd4a4e74.png",
+    "alt": "30 mL Clear Cylinder Gold Fine Mist Sprayer with Gold Base and Detached Gold Cap",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-clear-13-415",
+    "websiteSku": "GBTallCyl9GlMattSht",
+    "graceSku": "GB-CYL-CLR-9ML-MGLD-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56194668757284",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9GlMattSht.de9a058d232e.png",
+    "alt": "9 mL Clear Cylinder Bottle with Short Matte Gold Cap",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-clear-13-415-finemist",
+    "websiteSku": "GBTallCyl9SpryGlMatt",
+    "graceSku": "GB-CYL-CLR-9ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343626887460",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9SpryGlMatt.3753db48a2b7.png",
+    "alt": "9 mL Clear Cylinder Fine Mist Sprayer",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+    "websiteSku": "GBTallCyl9MtlRollBlkDot",
+    "graceSku": "GB-CYL-CLR-9ML-MRL-BKDT-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343682330916",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9MtlRollBlkDot.1b0eaaec38d3.png",
+    "alt": "9 mL Clear Cylinder Metal Roller Ball",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+    "websiteSku": "GBTallCyl9RollBlkDot",
+    "graceSku": "GB-CYL-CLR-9ML-ROL-BKDT-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343682298148",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "bottleColor": "Clear",
+    "alt": "9 mL Clear Cylinder Plastic Roller Ball",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    },
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9RollBlkDot.f4e02e5fa3da.png"
+  },
+  {
+    "groupSlug": "cylinder-9ml-frosted-13-415",
+    "websiteSku": "GBTallCylFrst9GlMattSht",
+    "graceSku": "GB-CYL-FRS-9ML-MGLD-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56194669740324",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9GlMattSht.2f451bcac06a.png",
+    "alt": "9 mL Frosted Cylinder Bottle with Short Matte Gold Cap",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
+    "websiteSku": "GBTallCylFrst9SpryGlMatt",
+    "graceSku": "GB-CYL-FRS-9ML-05",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343627149604",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9SpryGlMatt.17dd48cae7ff.png",
+    "alt": "9 mL Frosted Cylinder Fine Mist Sprayer",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+    "websiteSku": "GBTallCylFrst9MtlRollBlkDot",
+    "graceSku": "GB-CYL-FRS-9ML-T-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343683248420",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9MtlRollBlkDot.4ef0013dc760.png",
+    "alt": "9 mL Frosted Cylinder Metal Roller Ball",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+    "websiteSku": "GBTallCylFrst9RollBlkDot",
+    "graceSku": "GB-CYL-FRS-9ML-T-11",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343683215652",
+    "family": "Cylinder",
+    "capacityMl": 9,
+    "bottleColor": "Frosted",
+    "alt": "9 mL Frosted Cylinder Plastic Roller Ball",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator or neck with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    },
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9RollBlkDot.35762581bc84.png"
   }
 ]

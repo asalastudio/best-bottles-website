@@ -9,8 +9,8 @@ const enable = () => vi.stubEnv('NEXT_PUBLIC_CATALOG_HERO_PILOT', 'cylinder-2026
 afterEach(() => vi.unstubAllEnvs());
 describe('Cylinder staging pilot', () => {
  it('preserves every exact export and identity framing', () => {
-  expect(rows).toHaveLength(44);
-  expect(new Set(rows.map(r => r.groupSlug)).size).toBe(36);
+  expect(rows).toHaveLength(59);
+  expect(new Set(rows.map(r => r.groupSlug)).size).toBe(49);
   for (const row of rows) {
    const source = manifest.rows.find(r => r.sku === row.websiteSku)!;
    const bytes = readFileSync(`public${row.url}`);
@@ -24,9 +24,9 @@ describe('Cylinder staging pilot', () => {
  it('leaves production and unrelated families on the existing registry', () => {
   vi.stubEnv('NEXT_PUBLIC_CATALOG_HERO_PILOT', '');
   expect(getProductHero('GBCyl9MtlRollBlkDot')?.url).toContain('/bone-review/');
-  const before = getProductHero('GBCyl25DrpGl');
+  const before = getProductHero('PbClear4ozFlpWh');
   enable();
-  expect(getProductHero('GBCyl25DrpGl')).toEqual(before);
+  expect(getProductHero('PbClear4ozFlpWh')).toEqual(before);
  });
  it('selects only exact group and filtered SKU matches for all candidates', () => {
   enable();
@@ -48,9 +48,14 @@ describe('Cylinder staging pilot', () => {
  });
  it('retains the metal roller representative and supports a plastic-only filter', () => {
   enable();
-  const group='cylinder-9ml-clear-17-415-rollon';
-  const plastic={websiteSku:'GBCyl9RollBlkDot',ballMaterial:'Plastic'},metal={websiteSku:'GBCyl9MtlRollBlkDot',ballMaterial:'Metal'};
+  for (const [group,plasticSku,metalSku] of [
+   ['cylinder-9ml-clear-17-415-rollon','GBCyl9RollBlkDot','GBCyl9MtlRollBlkDot'],
+   ['cylinder-9ml-clear-13-415-rollon','GBTallCyl9RollBlkDot','GBTallCyl9MtlRollBlkDot'],
+   ['cylinder-9ml-frosted-13-415-rollon','GBTallCylFrst9RollBlkDot','GBTallCylFrst9MtlRollBlkDot'],
+  ]) {
+  const plastic={websiteSku:plasticSku,ballMaterial:'Plastic'},metal={websiteSku:metalSku,ballMaterial:'Metal'};
   expect(getCatalogHero(group,[plastic,metal])?.websiteSku).toBe(metal.websiteSku);
   expect(getCatalogHero(group,filterCatalogCardVariants([metal,plastic],['plastic']))?.websiteSku).toBe(plastic.websiteSku);
+  }
  });
 });

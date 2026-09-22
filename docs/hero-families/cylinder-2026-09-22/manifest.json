@@ -7,7 +7,7 @@
     "backgroundTarget": "#F5F3EF"
   },
   "sourceImagesPreserved": true,
-  "newApiCalls": 11,
+  "newApiCalls": 15,
   "rows": [
     {
       "sku": "GBCyl9RollBlkDot",
@@ -149,7 +149,7 @@
         "alt": "9 ml Clear Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -235,7 +235,7 @@
         "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -321,7 +321,7 @@
         "alt": "9 ml Clear Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -475,7 +475,7 @@
         "alt": "9 ml Amber Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -561,7 +561,7 @@
         "alt": "9 ml Amber Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -647,7 +647,7 @@
         "alt": "9 ml Amber Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -801,7 +801,7 @@
         "alt": "9 ml Cobalt Blue Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -887,7 +887,7 @@
         "alt": "9 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -973,7 +973,7 @@
         "alt": "9 ml Cobalt Blue Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1127,7 +1127,7 @@
         "alt": "9 ml Frosted Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1213,7 +1213,7 @@
         "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1299,7 +1299,7 @@
         "alt": "9 ml Frosted Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1453,7 +1453,7 @@
         "alt": "9 ml Swirl Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1549,7 +1549,7 @@
         "alt": "9 ml Swirl Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1635,7 +1635,7 @@
         "alt": "9 ml Swirl Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1740,7 +1740,7 @@
         "alt": "28 ml Clear Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1845,7 +1845,7 @@
         "alt": "50 ml Clear Cylinder Vintage Style Bulb Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1950,7 +1950,7 @@
         "alt": "50 ml Clear Cylinder Vintage Style Bulb Spray Bottle with Tassel",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2055,7 +2055,7 @@
         "alt": "50 ml Clear Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2160,7 +2160,7 @@
         "alt": "50 ml Clear Cylinder Reducer Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2352,7 +2352,7 @@
         "alt": "50 ml Clear Cylinder Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2457,7 +2457,7 @@
         "alt": "50 ml Clear Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2604,7 +2604,7 @@
         "alt": "100 ml Clear Cylinder Vintage Style Bulb Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2734,7 +2734,7 @@
         "alt": "100 ml Clear Cylinder Vintage Style Bulb Spray Bottle with Tassel",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2864,7 +2864,7 @@
         "alt": "100 ml Clear Cylinder Reducer Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2994,7 +2994,7 @@
         "alt": "100 ml Clear Cylinder Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -3124,7 +3124,7 @@
         "alt": "100 ml Clear Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -3268,7 +3268,7 @@
         "alt": "3.3 ml Clear Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -3404,7 +3404,7 @@
         "alt": "4 ml Clear Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -3557,7 +3557,7 @@
         "alt": "5 ml Clear Cylinder Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -3693,7 +3693,7 @@
         "alt": "5 ml Clear Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -3829,7 +3829,7 @@
         "alt": "5 ml Clear Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -3964,7 +3964,7 @@
         "alt": "5 ml Clear Cylinder Plastic Roller Ball Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -4117,7 +4117,7 @@
         "alt": "5 ml Cobalt Blue Cylinder Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -4253,7 +4253,7 @@
         "alt": "5 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -4389,7 +4389,7 @@
         "alt": "5 ml Cobalt Blue Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -4524,7 +4524,7 @@
         "alt": "5 ml Cobalt Blue Cylinder Plastic Roller Ball Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -4661,7 +4661,7 @@
         "alt": "5.5 ml Clear Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -4678,15 +4678,2059 @@
         "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
         "excludes": "Technical clearance, exact bone exposure and production publication"
       }
+    },
+    {
+      "sku": "GBcyl25AnSpIvyGl",
+      "source": "local-review-archive/family25-30/GBcyl25AnSpIvyGl-generated.png",
+      "sourceSha256": "3aa24ce75faca3f0dcbaa0a3af1458179f3f77c3961031bfca10276249ccbe45",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBcyl25AnSpIvyGl-2080x2288.png",
+      "outputSha256": "bfadd47f97fe59970d95fd6c10523a6790424754bc5ba3f19d9449b66cc0823f",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7215533980582525,
+        "x": 12.23262135922323,
+        "y": 19.65902912621368,
+        "rawFootY": 1198,
+        "rawShoulderY": 580,
+        "rawBodyCenterX": 597,
+        "uncertaintyPx": 6.88621359223301
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 597,
+        "shoulderY": 580,
+        "footY": 1198,
+        "bodyWidthPx": 285,
+        "shoulderSpanPct": 46.996,
+        "footPct": 91.103,
+        "bodyAspect": 2.1684,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "shoulderYTargetPx": 1018.16,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family25-30/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /38. GBCyl30AnSpIvyGl.psd",
+        "sha256": "2295cca165f1527b2f1f5536b56e3e1b0f4bed49c5dd26df5d0aee17f2551443"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBcyl25AnSpIvyGl-lock-preview.png",
+          "sha256": "ca56576bb33e5f9665a08ba45f6b941603a96a54689b502115325a4e18e26c1b"
+        },
+        {
+          "file": "GBcyl25AnSpIvyGl-source.png",
+          "sha256": "ea316b16170371b2b2bb4e7017f68619d5becfa65ace3e004f10e2ced0e834a3"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "bef4bdf36b42c80c645fe3fbd5ace2262def093fd76528a498e9e959f47098d2",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247,
+          245,
+          242
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.1684,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "bfadd47f97fe59970d95fd6c10523a6790424754bc5ba3f19d9449b66cc0823f",
+        "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-25ml-clear-18-415-antique",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-25ml-clear-18-415-antique",
+        "websiteSku": "GBcyl25AnSpIvyGl",
+        "graceSku": "GBcyl25AnSpIvyGl",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56204037587236",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBcyl25AnSpIvyGl.741d3b8f1532.png",
+        "alt": "25 mL Clear Cylinder Vintage Style Bulb Sprayer Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25AnSpIvyGl.bfadd47f97fe.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /38. GBCyl30AnSpIvyGl.psd"
+      ],
+      "masterSha256": "2295cca165f1527b2f1f5536b56e3e1b0f4bed49c5dd26df5d0aee17f2551443"
+    },
+    {
+      "sku": "GBcyl25AnSpTslIvyGl",
+      "source": "local-review-archive/family25-30/GBcyl25AnSpTslIvyGl-generated.png",
+      "sourceSha256": "151d07a404d2a351e01614d1982b699aa310f2c5f50cdfc2a6b58491e8cce29c",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBcyl25AnSpTslIvyGl-2080x2288.png",
+      "outputSha256": "ab184134a30ba22d8de1fa58acc86c48054e848ea5e73de8c16817293c4f2cb9",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7215533980582525,
+        "x": 12.77281553398052,
+        "y": 12.77281553398052,
+        "rawFootY": 1202,
+        "rawShoulderY": 584,
+        "rawBodyCenterX": 790,
+        "uncertaintyPx": 6.88621359223301
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 790,
+        "shoulderY": 584,
+        "footY": 1202,
+        "bodyWidthPx": 284,
+        "shoulderSpanPct": 46.996,
+        "footPct": 91.407,
+        "bodyAspect": 2.1761,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "shoulderYTargetPx": 1018.16,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family25-30/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/21. Tassels/Updated Tassels/43. GBCyl30AnSpTslIvyGl.psd",
+        "sha256": "3af7ffcf8836100df58e332d00a2dfb31719fa411d3b41abde822c321c192ca0"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBcyl25AnSpTslIvyGl-lock-preview.png",
+          "sha256": "92f387953abee6d7960ea5d8bf7391b8a9a6cc250c7cdecf4dd40bd7c211a934"
+        },
+        {
+          "file": "GBcyl25AnSpTslIvyGl-source.png",
+          "sha256": "e0a3d52ba86132a366e2aad18b79412ae42253631476a23a9da5e0ff9f00baab"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "75b8a14f4380e796fa20cb522c871eef95dfa685129373dfdf51a958afaaf88a",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246,
+          244,
+          240
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.1761,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "ab184134a30ba22d8de1fa58acc86c48054e848ea5e73de8c16817293c4f2cb9",
+        "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-25ml-clear-18-415-antiquetassel",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-25ml-clear-18-415-antiquetassel",
+        "websiteSku": "GBcyl25AnSpTslIvyGl",
+        "graceSku": "GBcyl25AnSpTslIvyGl",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56204038013220",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBcyl25AnSpTslIvyGl.4431e641ccf8.png",
+        "alt": "25 mL Clear Cylinder Vintage Style Bulb Sprayer with Tassel Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25AnSpTslIvyGl.ab184134a30b.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/21. Tassels/Updated Tassels/43. GBCyl30AnSpTslIvyGl.psd"
+      ],
+      "masterSha256": "3af7ffcf8836100df58e332d00a2dfb31719fa411d3b41abde822c321c192ca0"
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "source": "local-review-archive/family25-30/GBCyl25DrpGl-generated.png",
+      "sourceSha256": "a043bab21244776fd4b5bab981adf8e9c2de4cccee94d55cf3689ad820bfebe3",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl25DrpGl-2080x2288.png",
+      "outputSha256": "5476f7c122f9b50158c2f7fa7825f74158a18f4215c92edb3ffba5feca9ec467",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.732768729641694,
+        "x": 3.8042996742669857,
+        "y": 6.223061889250403,
+        "rawFootY": 1198,
+        "rawShoulderY": 584,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 6.931074918566776
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 584,
+        "footY": 1198,
+        "bodyWidthPx": 285,
+        "shoulderSpanPct": 46.692,
+        "footPct": 91.103,
+        "bodyAspect": 2.1544,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "shoulderYTargetPx": 1018.16,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family25-30/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /55. GBCyl30DrpGl.psd",
+        "sha256": "28abed59508957a6e3063d18fe0d6032087494da9fb522cf301142fab50f3b1d"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCyl25DrpGl-lock-preview.png",
+          "sha256": "c81dd1c53e65368c12591680c375a2eceaf7e3bc0b4a9ce5662705a581a54fcf"
+        },
+        {
+          "file": "GBCyl25DrpGl-source.png",
+          "sha256": "6417ca1f4159e50ab8948a3b1dcb7143e3d6b3ed56bea3b4ad30300ff1285412"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "4fea0ed1b218a4ced37566b339949404dfc0a63acf7b0f3169a51505fe8f6807",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          245,
+          243,
+          239
+        ],
+        "exactBoneCleared": true,
+        "nativeTransparency": true,
+        "method": "Native generated alpha composited over locked bone canvas; original alpha and product pixels preserved."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.1544,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "5476f7c122f9b50158c2f7fa7825f74158a18f4215c92edb3ffba5feca9ec467",
+        "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-25ml-clear-18-415-dropper",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-25ml-clear-18-415-dropper",
+        "websiteSku": "GBCyl25DrpGl",
+        "graceSku": "GBCyl25DrpGl",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56204038144292",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl25DrpGl.e5ce145fc486.png",
+        "alt": "25 mL Clear Cylinder Dropper Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl25DrpGl.5476f7c122f9.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /55. GBCyl30DrpGl.psd"
+      ],
+      "masterSha256": "28abed59508957a6e3063d18fe0d6032087494da9fb522cf301142fab50f3b1d"
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "source": "local-review-archive/family25-30/GBcyl25SpryMtGl-generated.png",
+      "sourceSha256": "1da3c1127cbdf756dd02fe8db4b9f60294cfd6b16337f2167fd33e743636cc45",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBcyl25SpryMtGl-2080x2288.png",
+      "outputSha256": "511d21e7dee08a7a6f0107495f909f14f9914a6de1e4f0134572574299a0de71",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7243435980551054,
+        "x": 7.118184764991838,
+        "y": 14.592025931928674,
+        "rawFootY": 1199,
+        "rawShoulderY": 582,
+        "rawBodyCenterX": 599,
+        "uncertaintyPx": 6.897374392220422
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 599,
+        "shoulderY": 582,
+        "footY": 1199,
+        "bodyWidthPx": 284,
+        "shoulderSpanPct": 46.92,
+        "footPct": 91.179,
+        "bodyAspect": 2.1725,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "shoulderYTargetPx": 1018.16,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family25-30/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /13. GBCyl30SpryMtGl.psd",
+        "sha256": "a8c64929c3651d54563f20b880e678d8773541b8c3f6b5415411727cbcd36540"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBcyl25SpryMtGl-lock-preview.png",
+          "sha256": "b5667289f51827f481a27fd0617154c5b150862d4806e0104d87cdc0301c5f3f"
+        },
+        {
+          "file": "GBcyl25SpryMtGl-source.png",
+          "sha256": "c85031ebc13d9b77346e4bb074689db5abbfbef4c5b94d479829ea115cc74d9d"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "50bd8b7a2cd21721d81a9521956cfe641b7e5c2ff17d244182cd1e8d778def30",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          248,
+          246,
+          243
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.1725,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "511d21e7dee08a7a6f0107495f909f14f9914a6de1e4f0134572574299a0de71",
+        "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-25ml-clear-18-415-finemist",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-25ml-clear-18-415-finemist",
+        "websiteSku": "GBcyl25SpryMtGl",
+        "graceSku": "GBcyl25SpryMtGl",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56204039946532",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBcyl25SpryMtGl.efe374659d7a.png",
+        "alt": "25 mL Clear Cylinder Fine Mist Sprayer Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25SpryMtGl.511d21e7dee0.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /13. GBCyl30SpryMtGl.psd"
+      ],
+      "masterSha256": "a8c64929c3651d54563f20b880e678d8773541b8c3f6b5415411727cbcd36540"
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "source": "local-review-archive/family25-30/LBCyl25LtnMtGl-generated.png",
+      "sourceSha256": "65069139f3b84734c04582b6c0eec40aaa9a4df736093e1d46b93fbd544eb7e4",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/LBCyl25LtnMtGl-2080x2288.png",
+      "outputSha256": "d5caeec0df284c3b78b27ce7c1f61c3cddfbb55f2ad16a8399f072a299638ec5",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7215533980582525,
+        "x": 12.23262135922323,
+        "y": 17.937475728155277,
+        "rawFootY": 1199,
+        "rawShoulderY": 581,
+        "rawBodyCenterX": 597,
+        "uncertaintyPx": 6.88621359223301
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 597,
+        "shoulderY": 581,
+        "footY": 1199,
+        "bodyWidthPx": 278,
+        "shoulderSpanPct": 46.996,
+        "footPct": 91.179,
+        "bodyAspect": 2.223,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "shoulderYTargetPx": 1018.16,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family25-30/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+        "sha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5"
+      },
+      "generationInputHashes": [
+        {
+          "file": "LBCyl25LtnMtGl-lock-preview.png",
+          "sha256": "3cf143e51afbced357a3c6302fe93c493149e09d3ee217fd4262c5fbe0b0f897"
+        },
+        {
+          "file": "LBCyl25LtnMtGl-source.png",
+          "sha256": "542e9a035ab15a908a74e5ea759e60e5e6425ab6c722bcba58f327d4d795c559"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "ae43ce6f12e17d55056058a9b3e8db19cab093bd37af1f6b1b58a2f98f4ce8ea",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          248,
+          245,
+          242
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.223,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "d5caeec0df284c3b78b27ce7c1f61c3cddfbb55f2ad16a8399f072a299638ec5",
+        "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-25ml-clear-18-415-lotionpump",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-25ml-clear-18-415-lotionpump",
+        "websiteSku": "LBCyl25LtnMtGl",
+        "graceSku": "LB-CYL-CLR-25ML-LPM-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343674532132",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/LBCyl25LtnMtGl.9debc8949bdf.png",
+        "alt": "25 ml Clear Cylinder Lotion Pump Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl25LtnMtGl.d5caeec0df28.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd"
+      ],
+      "masterSha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5"
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "source": "local-review-archive/family25-30/GBCyl25RdcrShnGl-generated.png",
+      "sourceSha256": "7b4f0acd04c9ff4500a67a6a39bbc0a42ce40e70502ecc109c05afca3e943867",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl25RdcrShnGl-2080x2288.png",
+      "outputSha256": "95b60b0cd9cd0532c4a3833bcc8a7904e5118f2ff922b47f17662db4e101b60f",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7104823151125403,
+        "x": 17.131575562700846,
+        "y": 29.50122186495173,
+        "rawFootY": 1200,
+        "rawShoulderY": 578,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 6.841929260450161
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 578,
+        "footY": 1200,
+        "bodyWidthPx": 288,
+        "shoulderSpanPct": 47.3,
+        "footPct": 91.255,
+        "bodyAspect": 2.1597,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "shoulderYTargetPx": 1018.16,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family25-30/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /1. GBCyl30RdcrShnGl.psd",
+        "sha256": "00e3540017067199590550801c0044372a66304d257ffde333277b48a9961bf8"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCyl25RdcrShnGl-lock-preview.png",
+          "sha256": "140c9b6188cb38086e8c6c96e5d69b3c475bb3bb6d592fb1c19f77524c04000f"
+        },
+        {
+          "file": "GBCyl25RdcrShnGl-source.png",
+          "sha256": "cbcf6875c05278c1a7b48125d31c3dcc8706bb25a3081cdc76ef558334731824"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "5f7012107766f08d2c019ea68990a05e5c56f58763115ef2defd07ae945340bd",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          245,
+          243,
+          239
+        ],
+        "exactBoneCleared": true,
+        "nativeTransparency": true,
+        "method": "Native generated alpha composited over locked bone canvas; original alpha and product pixels preserved."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.1597,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "95b60b0cd9cd0532c4a3833bcc8a7904e5118f2ff922b47f17662db4e101b60f",
+        "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-25ml-clear-18-415-reducer",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-25ml-clear-18-415-reducer",
+        "websiteSku": "GBCyl25RdcrShnGl",
+        "graceSku": "GBCyl25RdcrShnGl",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56204038897956",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl25RdcrShnGl.ea141628e613.png",
+        "alt": "25 mL Clear Cylinder Reducer Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl25RdcrShnGl.95b60b0cd9cd.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /1. GBCyl30RdcrShnGl.psd"
+      ],
+      "masterSha256": "00e3540017067199590550801c0044372a66304d257ffde333277b48a9961bf8"
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "source": "local-review-archive/family25-30/GBSpry1ozGl-generated.png",
+      "sourceSha256": "3935227346ffb206e39e15a022ca78def51c110373d79508ee39243a6028bd95",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBSpry1ozGl-2080x2288.png",
+      "outputSha256": "aec2bd4a4e743236b08d82c83132db65ae36593e0f23809da2eadf39f625102e",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:30-standard",
+        "label": "Cylinder 30 ml",
+        "shoulderPct": 46,
+        "bodyAspect": 2.65,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 45,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7868930390492361,
+        "x": -28.562037351443223,
+        "y": -28.24067911714792,
+        "rawFootY": 1181,
+        "rawShoulderY": 592,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 7.1475721561969445
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 592,
+        "footY": 1181,
+        "bodyWidthPx": 216,
+        "shoulderSpanPct": 44.791,
+        "footPct": 89.81,
+        "bodyAspect": 2.7269,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "shoulderYTargetPx": 1029.6,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family25-30/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "user-approved-exact-gold-product-photo",
+        "path": "local-review-archive/1-Photo-2.jpg",
+        "sha256": "fe0dae5a737504a175708ef2a5bf9f33df681873e61a00ee9743fac345ba400b"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBSpry1ozGl-lock-preview.png",
+          "sha256": "84deaca8308c402ef21cf28151b98297393b51b83225b9865bf4381e8ee887f0"
+        },
+        {
+          "file": "GBSpry1ozGl-source.jpg",
+          "sha256": "fe0dae5a737504a175708ef2a5bf9f33df681873e61a00ee9743fac345ba400b"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "75eaf9a410a29bb3e51807e7354a9625528f21d8a92bc43de4789a1b847dbd07",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          249,
+          247,
+          243
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.7269,
+        "lockBodyAspect": 2.65,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "aec2bd4a4e743236b08d82c83132db65ae36593e0f23809da2eadf39f625102e",
+        "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-30ml-clear-18-415-finemist",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-30ml-clear-18-415-finemist",
+        "websiteSku": "GBSpry1ozGl",
+        "graceSku": "GB-SPR-CLR-30ML-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343638454564",
+        "family": "Cylinder",
+        "capacityMl": 30,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBSpry1ozGl.a74ebd3e6235.png",
+        "alt": "30 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBSpry1ozGl.aec2bd4a4e74.png",
+      "baselineException": "User-approved attached gold base contact bottom is the anchor because the glass foot is obscured."
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "source": "local-review-archive/family9-slim/GBTallCyl9GlMattSht-generated.png",
+      "sourceSha256": "24ab871191f290864e7653a1be0e664186bedcba8edb2441c7c84c718c0bbbd5",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBTallCyl9GlMattSht-2080x2288.png",
+      "outputSha256": "de9a058d232e6fe82d2030f68fa6b0c965974c03092cca40cf12633f3858d9a6",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7146282973621103,
+        "x": 24.94004796163074,
+        "y": 27.955299760191792,
+        "rawFootY": 1198,
+        "rawShoulderY": 364,
+        "rawBodyCenterX": 592,
+        "uncertaintyPx": 6.858513189448441
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 592,
+        "shoulderY": 364,
+        "footY": 1198,
+        "bodyWidthPx": 160,
+        "shoulderSpanPct": 63.422,
+        "footPct": 91.103,
+        "bodyAspect": 5.2125,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "shoulderYTargetPx": 652.08,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9-slim/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "approved-exact-legacy-plate",
+        "path": "public/images/plate-contact-sheets/8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe.webp",
+        "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+        "originalSourceUrl": "https://www.bestbottles.com/images/store/GBTallCyl9GlMattSht.png",
+        "sourceAcceptance": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+        "approval": {
+          "status": "approved",
+          "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+          "binding": "1ec486f840b7999ce248720a8c86b0527e07aa08dc40a4353ca10f8eb69f1502",
+          "scope": "Jordan exact final Cylinder paired-image approval",
+          "updatedAt": "2026-09-13T15:09:47.734Z",
+          "views": [
+            {
+              "sha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe",
+              "role": "on"
+            },
+            {
+              "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+              "role": "off"
+            }
+          ]
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBTallCyl9GlMattSht-sized.png",
+          "sha256": "685da6edcebf8ed942e1a0c539f6022b5c621afcec96bc2601d518702ab64300"
+        },
+        {
+          "file": "GBTallCyl9GlMattSht-source.png",
+          "sha256": "d20ef003968a49b0d6ed8c2731bb9fd7b391bec04b0ff06f59e75fbf9b46f9ab"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        },
+        {
+          "file": "GBTallCyl9GlMattSht-verified-bare-glass.webp",
+          "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78"
+        }
+      ],
+      "promptSha256": "ac7acfed9632019f88d91e9b68cc17804958ad27a48cb9364ac659ce44e264b9",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          252,
+          249,
+          246
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.2125,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "de9a058d232e6fe82d2030f68fa6b0c965974c03092cca40cf12633f3858d9a6",
+        "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-9ml-clear-13-415",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-clear-13-415",
+        "websiteSku": "GBTallCyl9GlMattSht",
+        "graceSku": "GB-CYL-CLR-9ML-MGLD-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194668757284",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBTallCyl9GlMattSht.e40685c2d5b4.png",
+        "alt": "9 ml Clear Cylinder Bottle with Cap",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9GlMattSht.de9a058d232e.png",
+      "additionalGeometryReference": {
+        "file": "GBTallCyl9GlMattSht-verified-bare-glass.webp",
+        "sha256": "ef3364b253b89bc8773d9f15c06bb8fdfa8cf2cf337e05ef43b272a273827b78",
+        "role": "Approved exact cap-off plate proving hidden neck geometry; cap from exact cap-on image is moved to sidecar",
+        "approvalSource": "data/asset-ledger/family-plate-decisions/cylinder.json, approved 2026-09-13T15:44:12.856Z"
+      },
+      "capProportionQA": {
+        "sourceGoldBounds": [
+          435,
+          166,
+          561,
+          302
+        ],
+        "generatedGoldBounds": [
+          718,
+          1016,
+          855,
+          1192
+        ],
+        "sourceHeightToWidth": 1.078740157480315,
+        "generatedHeightToWidth": 1.2826086956521738,
+        "relativeHeightErrorPct": 18.9,
+        "status": "Current bytes visually accepted and frozen on 2026-09-22; measured proportion finding retained. No corrective API edit executed."
+      },
+      "technicalHold": "short sidecar cap too tall"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "source": "local-review-archive/family9-slim/GBTallCyl9SpryGlMatt-generated.png",
+      "sourceSha256": "39267a6d6597c95e42b48f45b4b3d64963cd7ad4b1d8d4346c4d605d6e0d3198",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBTallCyl9SpryGlMatt-2080x2288.png",
+      "outputSha256": "3753db48a2b7c96b5f08138e8fac1f922dc933cd4b26473aa223c445fd24e869",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7291414752116083,
+        "x": 5.973397823458299,
+        "y": 5.381088270858527,
+        "rawFootY": 1201,
+        "rawShoulderY": 374,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 6.916565900846433
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 374,
+        "footY": 1201,
+        "bodyWidthPx": 166,
+        "shoulderSpanPct": 62.89,
+        "footPct": 91.331,
+        "bodyAspect": 4.9819,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "shoulderYTargetPx": 652.08,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9-slim/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/7. GBTallCyl9SpryGlMatt.psd",
+        "sha256": "06e9a7985d76cd119ac2c18fc074a2aa6c21913281778446752d3cd36887e1f5"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBTallCyl9SpryGlMatt-sized.png",
+          "sha256": "9594f4ab7d35ef2a78463a2dc27d65c962828c8010694adab41a42a02241cd60"
+        },
+        {
+          "file": "GBTallCyl9SpryGlMatt-source.png",
+          "sha256": "e69657586f89e2e290cd0f0ff06bfa8aa4a04b487c658cfbe8f9c8f0b53909da"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "f0b4bccbe80b609a79c94213917abf4b553d6e078f7ba7d7ec04232aaf7b8490",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          254,
+          251,
+          247
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 4.9819,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "3753db48a2b7c96b5f08138e8fac1f922dc933cd4b26473aa223c445fd24e869",
+        "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-9ml-clear-13-415-finemist",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-clear-13-415-finemist",
+        "websiteSku": "GBTallCyl9SpryGlMatt",
+        "graceSku": "GB-CYL-CLR-9ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343626887460",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBTallCyl9SpryGlMatt.e7b9c81373fc.png",
+        "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9SpryGlMatt.3753db48a2b7.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/7. GBTallCyl9SpryGlMatt.psd"
+      ],
+      "masterSha256": "06e9a7985d76cd119ac2c18fc074a2aa6c21913281778446752d3cd36887e1f5"
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "source": "local-review-archive/family9-slim/GBTallCyl9MtlRollBlkDot-generated.png",
+      "sourceSha256": "9ba49db8cfa8565705aad1dc2bf670deda90e8ad237cabbfffdbd2af257172f8",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBTallCyl9MtlRollBlkDot-2080x2288.png",
+      "outputSha256": "1b0eaaec38d33ce04be95cc63fd152979a5fdb387145e6bbf28ec6de4604ea46",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7333333333333334,
+        "x": 3.466666666666697,
+        "y": 3.8133333333330484,
+        "rawFootY": 1199,
+        "rawShoulderY": 374,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 6.933333333333334
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 374,
+        "footY": 1199,
+        "bodyWidthPx": 166,
+        "shoulderSpanPct": 62.738,
+        "footPct": 91.179,
+        "bodyAspect": 4.9699,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "shoulderYTargetPx": 652.08,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9-slim/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/26. GBTallCyl9MtlRollBlkDot.psd",
+        "sha256": "c3907748833354c4f820ecb0c47aabb6e03521d89c151a81191998507c67ff28"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBTallCyl9MtlRollBlkDot-sized.png",
+          "sha256": "fc45217bc0c749e3a38feb25c759e800e12454143efb6cd768ba3990c1297e49"
+        },
+        {
+          "file": "GBTallCyl9MtlRollBlkDot-source.png",
+          "sha256": "94be3130466132b7ccabea032d10a1225f86cd405ed6481ea0fc58efb6dbac13"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "41d2cf58214ec80fc0d4b26a1764d32c88c64a232ee2f7598854bcac21068606",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          248,
+          245
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 4.9699,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "1b0eaaec38d33ce04be95cc63fd152979a5fdb387145e6bbf28ec6de4604ea46",
+        "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+        "websiteSku": "GBTallCyl9MtlRollBlkDot",
+        "graceSku": "GB-CYL-CLR-9ML-MRL-BKDT-02",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343682330916",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBTallCyl9MtlRollBlkDot.52046eb24c03.png",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9MtlRollBlkDot.1b0eaaec38d3.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/26. GBTallCyl9MtlRollBlkDot.psd"
+      ],
+      "masterSha256": "c3907748833354c4f820ecb0c47aabb6e03521d89c151a81191998507c67ff28"
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "source": "local-review-archive/family9-slim/GBTallCyl9RollBlkDot-generated.png",
+      "sourceSha256": "b431ab883895b97e818254fe05ba8c3f4494336442134e99be08551627a148bc",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBTallCyl9RollBlkDot-2080x2288.png",
+      "outputSha256": "f4e02e5fa3daa2ca3806d2cad17ab1ecf511b6f4c484aa0533bf932dc0feeb49",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7333333333333334,
+        "x": 3.466666666666697,
+        "y": 3.8133333333330484,
+        "rawFootY": 1199,
+        "rawShoulderY": 374,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 6.933333333333334
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 374,
+        "footY": 1199,
+        "bodyWidthPx": 164,
+        "shoulderSpanPct": 62.738,
+        "footPct": 91.179,
+        "bodyAspect": 5.0305,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "shoulderYTargetPx": 652.08,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9-slim/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/27. GBTallCyl9RollBlkDot.psd",
+        "sha256": "fbcae3a6c0f238b634856b778cfe00d148550c809ab1c19b7056b2bb8b26dbe7"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBTallCyl9RollBlkDot-sized.png",
+          "sha256": "a701016785c8224c4cedaa95c6d1aa0332a206479b65ed4fbf348237f6bea750"
+        },
+        {
+          "file": "GBTallCyl9RollBlkDot-source.png",
+          "sha256": "1095bf211b18c70d4f364266d71c70c869dd3ce655c1204a0763483ebf3f7aab"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "1bea8907329843322895e23b1d63999108c1adff31cc9000c3f79708797a70d4",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          252,
+          249,
+          246
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.0305,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "f4e02e5fa3daa2ca3806d2cad17ab1ecf511b6f4c484aa0533bf932dc0feeb49",
+        "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+        "websiteSku": "GBTallCyl9RollBlkDot",
+        "graceSku": "GB-CYL-CLR-9ML-ROL-BKDT-02",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343682298148",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Clear",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9RollBlkDot.f4e02e5fa3da.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/27. GBTallCyl9RollBlkDot.psd"
+      ],
+      "masterSha256": "fbcae3a6c0f238b634856b778cfe00d148550c809ab1c19b7056b2bb8b26dbe7"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "source": "local-review-archive/family9-slim/GBTallCylFrst9GlMattSht-generated.png",
+      "sourceSha256": "3bc42c92f5a448b84c9620a36278568fc6006c98d6f964a84c1c95548fb99403",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBTallCylFrst9GlMattSht-2080x2288.png",
+      "outputSha256": "2f451bcac06a1b42ac3dd23b0ec78ce3b7f68e518b9fc1ec05869cbfb21e3f57",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7964824120603016,
+        "x": -28.9070351758794,
+        "y": -44.9551758793973,
+        "rawFootY": 1184,
+        "rawShoulderY": 388,
+        "rawBodyCenterX": 595,
+        "uncertaintyPx": 7.185929648241206
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 595,
+        "shoulderY": 388,
+        "footY": 1184,
+        "bodyWidthPx": 156,
+        "shoulderSpanPct": 60.532,
+        "footPct": 90.038,
+        "bodyAspect": 5.1026,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "shoulderYTargetPx": 652.08,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9-slim/reference-frosted.jpg",
+      "materialReferenceSha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+      "geometrySource": {
+        "kind": "approved-exact-legacy-plate",
+        "path": "public/images/plate-contact-sheets/731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693.webp",
+        "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+        "originalSourceUrl": "https://www.bestbottles.com/images/store/GBTallCylFrst9GlMattSht.png",
+        "sourceAcceptance": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+        "approval": {
+          "status": "approved",
+          "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+          "binding": "4ec860fb6b9f4015b92a5ab5d78dc10cac33106b031a53fca267bc7ae684f53b",
+          "scope": "Jordan exact final Cylinder paired-image approval",
+          "updatedAt": "2026-09-13T15:09:47.734Z",
+          "views": [
+            {
+              "sha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693",
+              "role": "on"
+            },
+            {
+              "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+              "role": "off"
+            }
+          ]
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBTallCylFrst9GlMattSht-sized.png",
+          "sha256": "a3cc16207a93948d9f8c72f1d7c50483bde362ee66759dba1c6a4e988fa75d69"
+        },
+        {
+          "file": "GBTallCylFrst9GlMattSht-source.png",
+          "sha256": "a332cdc582fb10b485af3ac441acacce37f249140b4e3928e635281e46d87f14"
+        },
+        {
+          "file": "reference-frosted.jpg",
+          "sha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413"
+        },
+        {
+          "file": "GBTallCylFrst9GlMattSht-verified-bare-glass.webp",
+          "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a"
+        }
+      ],
+      "promptSha256": "1cd0e15da729cab1333ffd83686a660288d8eab89b678a7ef20b4845f9ad429d",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247,
+          245,
+          241
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.1026,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "2f451bcac06a1b42ac3dd23b0ec78ce3b7f68e518b9fc1ec05869cbfb21e3f57",
+        "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-9ml-frosted-13-415",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-frosted-13-415",
+        "websiteSku": "GBTallCylFrst9GlMattSht",
+        "graceSku": "GB-CYL-FRS-9ML-MGLD-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194669740324",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Frosted",
+        "url": "/images/catalog/bone-review/GBTallCylFrst9GlMattSht.338c72fe6e2a.png",
+        "alt": "9 ml Frosted Cylinder Bottle with Cap",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9GlMattSht.2f451bcac06a.png",
+      "additionalGeometryReference": {
+        "file": "GBTallCylFrst9GlMattSht-verified-bare-glass.webp",
+        "sha256": "d06ca856f1e294528efa1cfc3e111da10f6e63234950f88cdc8ee5f51d5e295a",
+        "role": "Approved exact cap-off plate proving hidden neck geometry; cap from exact cap-on image is moved to sidecar",
+        "approvalSource": "data/asset-ledger/family-plate-decisions/cylinder.json, approved 2026-09-13T15:44:12.856Z"
+      }
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlMatt",
+      "source": "local-review-archive/family9-slim/GBTallCylFrst9SpryGlMatt-generated.png",
+      "sourceSha256": "5533e36edfce2be980046784893ca1a8ea1c7d5474d4ea73324cae45e5e9c58a",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBTallCylFrst9SpryGlMatt-2080x2288.png",
+      "outputSha256": "17dd48cae7ff29bb7766968fda8db664bc650f722b5932642a0ac38657940314",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7312348668280872,
+        "x": 11.646489104116199,
+        "y": 4.598159806295371,
+        "rawFootY": 1200,
+        "rawShoulderY": 374,
+        "rawBodyCenterX": 594,
+        "uncertaintyPx": 6.924939467312349
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 594,
+        "shoulderY": 374,
+        "footY": 1200,
+        "bodyWidthPx": 153,
+        "shoulderSpanPct": 62.814,
+        "footPct": 91.255,
+        "bodyAspect": 5.3987,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "shoulderYTargetPx": 652.08,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9-slim/reference-frosted.jpg",
+      "materialReferenceSha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/7. GBTallCylFrst9SpryGlMatt.psd",
+        "sha256": "08bccbafb320aeaf8e5ff63d1e98d2407c4b3b1c7eab217f76144e1aff4f156a"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBTallCylFrst9SpryGlMatt-sized.png",
+          "sha256": "7e089eb262f0e30ddc9e04e294785f608690cf35314df43f8e60efc8fd55fc3f"
+        },
+        {
+          "file": "GBTallCylFrst9SpryGlMatt-source.png",
+          "sha256": "69699d7cc3b8710dcd68922955ab6b8e9e029a98f5b15b84bd53d6b572e66561"
+        },
+        {
+          "file": "reference-frosted.jpg",
+          "sha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413"
+        }
+      ],
+      "promptSha256": "6a144b57a57b76bde6f9dc1b801235e65ce74c1fb121a365f2c35d3ddb342eca",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          243,
+          238,
+          232
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.3987,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "17dd48cae7ff29bb7766968fda8db664bc650f722b5932642a0ac38657940314",
+        "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
+        "websiteSku": "GBTallCylFrst9SpryGlMatt",
+        "graceSku": "GB-CYL-FRS-9ML-05",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343627149604",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Frosted",
+        "url": "/images/catalog/bone-review/GBTallCylFrst9SpryGlMatt.c0c2d412b1bf.png",
+        "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9SpryGlMatt.17dd48cae7ff.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/7. GBTallCylFrst9SpryGlMatt.psd"
+      ],
+      "masterSha256": "08bccbafb320aeaf8e5ff63d1e98d2407c4b3b1c7eab217f76144e1aff4f156a"
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "source": "local-review-archive/family9-slim/GBTallCylFrst9MtlRollBlkDot-generated.png",
+      "sourceSha256": "6340a477ccd855017e2981e60258064f656c252650bf4c866cc281b5c19950c0",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBTallCylFrst9MtlRollBlkDot-2080x2288.png",
+      "outputSha256": "4ef0013dc760e5b7cfe223f25e04a0efad1b825be20946c193a0753a30b7d3cc",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7312348668280872,
+        "x": 11.646489104116199,
+        "y": 4.598159806295371,
+        "rawFootY": 1200,
+        "rawShoulderY": 374,
+        "rawBodyCenterX": 594,
+        "uncertaintyPx": 6.924939467312349
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 594,
+        "shoulderY": 374,
+        "footY": 1200,
+        "bodyWidthPx": 154,
+        "shoulderSpanPct": 62.814,
+        "footPct": 91.255,
+        "bodyAspect": 5.3636,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "shoulderYTargetPx": 652.08,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9-slim/reference-frosted.jpg",
+      "materialReferenceSha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/26. GBTallCylFrst9MtlRollBlkDot.psd",
+        "sha256": "97770771eb7a2e57aedef67f0ef298b94c31d41c5fa7bc28be97bdeedf17668d"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBTallCylFrst9MtlRollBlkDot-sized.png",
+          "sha256": "69f1bcea1c44f0c496ed8e0a10c37a8e9c564c2bb2b65599278499c05da0cc64"
+        },
+        {
+          "file": "GBTallCylFrst9MtlRollBlkDot-source.png",
+          "sha256": "a18f32cd15dd248adfcef2935f60aba7b5da75fdc0b566faf72bddc4625ca960"
+        },
+        {
+          "file": "reference-frosted.jpg",
+          "sha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413"
+        }
+      ],
+      "promptSha256": "d5ecf0cefdb8b64c1efb68c8a635d1e1eebd91bbc7fbcbf02724a97892942e73",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246,
+          242,
+          238
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.3636,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "4ef0013dc760e5b7cfe223f25e04a0efad1b825be20946c193a0753a30b7d3cc",
+        "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+        "websiteSku": "GBTallCylFrst9MtlRollBlkDot",
+        "graceSku": "GB-CYL-FRS-9ML-T-02",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343683248420",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Frosted",
+        "url": "/images/catalog/bone-review/GBTallCylFrst9MtlRollBlkDot.1abfa72c9d06.png",
+        "alt": "9 ml Frosted Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9MtlRollBlkDot.4ef0013dc760.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/26. GBTallCylFrst9MtlRollBlkDot.psd"
+      ],
+      "masterSha256": "97770771eb7a2e57aedef67f0ef298b94c31d41c5fa7bc28be97bdeedf17668d"
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "source": "local-review-archive/family9-slim/GBTallCylFrst9RollBlkDot-generated.png",
+      "sourceSha256": "2c1d670b32beced87e7e09c2a51e8306437cceffce328dab21bcb2a461924121",
+      "sourceSize": [
+        1195,
+        1316
+      ],
+      "output": "exports/GBTallCylFrst9RollBlkDot-2080x2288.png",
+      "outputSha256": "35762581bc8415e7e8eb28fbd319dc77a6f5ecbabd56ae1a0f819728e17fa647",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "Uniform full-raster scale and translation; border-median padding; no component, shadow or product pixel retouch.",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "outputAlignment": {
+        "scale": 1.7354368932038835,
+        "x": 9.150485436893177,
+        "y": -0.44427184466030667,
+        "rawFootY": 1200,
+        "rawShoulderY": 376,
+        "rawBodyCenterX": 594,
+        "uncertaintyPx": 6.941747572815534
+      },
+      "sourceMeasuredOutput": {
+        "width": 1195,
+        "height": 1316,
+        "bodyCenterX": 594,
+        "shoulderY": 376,
+        "footY": 1200,
+        "bodyWidthPx": 154,
+        "shoulderSpanPct": 62.614,
+        "footPct": 91.185,
+        "bodyAspect": 5.3506,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "shoulderYTargetPx": 652.08,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9-slim/reference-frosted.jpg",
+      "materialReferenceSha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/27. GBTallCylFrst9RollBlkDot.psd",
+        "sha256": "917a92a0ac0d86724886381bcf7587d27d6fb127b5387c7235be498816d026f2"
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBTallCylFrst9RollBlkDot-sized.png",
+          "sha256": "a269c14ac3b0e4ad71da07ecf974b2adb0ef1e8bb096db620de2f737d74e6a1a"
+        },
+        {
+          "file": "GBTallCylFrst9RollBlkDot-source.png",
+          "sha256": "f5b982595d4d0e6c197ca796245adc9f64dfd4a49000a2ff503497392a692667"
+        },
+        {
+          "file": "reference-frosted.jpg",
+          "sha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413"
+        }
+      ],
+      "promptSha256": "fa7ec3152c691bf6f3fed4b5a8819343e3a231547ec04f26911de84326da72ae",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          244,
+          240,
+          235
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.3506,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "visualStatus": "User approved current delivery export",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+        "userFeedback": "Perfect let’s lock those and commit",
+        "date": "2026-09-22",
+        "outputSha256": "35762581bc8415e7e8eb28fbd319dc77a6f5ecbabd56ae1a0f819728e17fa647",
+        "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      },
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+        "websiteSku": "GBTallCylFrst9RollBlkDot",
+        "graceSku": "GB-CYL-FRS-9ML-T-11",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343683215652",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Frosted",
+        "alt": "9 ml Frosted Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9RollBlkDot.35762581bc84.png",
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/27. GBTallCylFrst9RollBlkDot.psd"
+      ],
+      "masterSha256": "917a92a0ac0d86724886381bcf7587d27d6fb127b5387c7235be498816d026f2"
     }
   ],
   "counts": {
-    "exports": 44,
-    "visibleCatalogImages": 43,
-    "preparedGroups": 36,
-    "visibleCatalogGroups": 35,
+    "exports": 59,
+    "visibleCatalogImages": 58,
+    "preparedGroups": 49,
+    "visibleCatalogGroups": 48,
     "hiddenDuplicateGroupImages": 1,
     "native2080Renders": 0
   },
-  "apiCallNote": "Eleven explicitly authorized small Cylinder edits; prior 33 exports preserved without regeneration."
+  "apiCallNote": "Final extension: seven 25/30 mL edits and eight 9 mL Slim edits completed; prior 44 export bytes preserved. No successful corrective edit."
 }

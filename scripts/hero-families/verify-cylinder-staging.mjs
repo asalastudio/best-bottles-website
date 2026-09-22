@@ -17,7 +17,7 @@ try {
   page.on('pageerror',e=>report.errors.push(e.message));
   for(const route of ['/catalog','/catalog/cylinder']) {
   const seen=new Set();
-  for(const query of ['family=Cylinder&capacities=3.3%20ml,4%20ml,5%20ml','family=Cylinder&capacities=5%20ml&roller=plastic','family=Cylinder&capacities=9%20ml','family=Cylinder&capacities=28%20ml,50%20ml','family=Cylinder&capacities=100%20ml','family=Cylinder&capacities=9%20ml&roller=plastic','family=Cylinder&capacities=50%20ml&roller=plastic']) {
+  for(const query of ['family=Cylinder&capacities=3.3%20ml,4%20ml,5%20ml','family=Cylinder&capacities=5%20ml&roller=plastic','family=Cylinder&capacities=9%20ml','family=Cylinder&capacities=25%20ml,30%20ml','family=Cylinder&capacities=28%20ml,50%20ml','family=Cylinder&capacities=100%20ml','family=Cylinder&capacities=9%20ml&roller=plastic','family=Cylinder&capacities=50%20ml&roller=plastic']) {
    const response=await page.goto(`${base}${route}?${query}`,{waitUntil:'networkidle2',timeout:90000});
    assert.equal(response.status(),200);
    await page.waitForSelector('img[data-bb-image-audit="catalog-card"]',{timeout:45000});

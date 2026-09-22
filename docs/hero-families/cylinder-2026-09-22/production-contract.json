@@ -1,5 +1,5 @@
 {
-  "version": "cylinder-production-canvas-2026-09-22-v4",
+  "version": "cylinder-production-canvas-2026-09-22-v5",
   "scopeStatus": "49 glass hero groups from 3.3 through 100 mL; 3.3 mL and 4 mL explicitly included by Jordan on September 22",
   "canvas": {
     "width": 2080,
@@ -195,7 +195,9 @@
         "GBTallCyl9SpryGlMatt",
         "GBTallCylFrst9GlMattSht",
         "GBTallCylFrst9MtlRollBlkDot",
-        "GBTallCylFrst9SpryGlMatt"
+        "GBTallCylFrst9SpryGlMatt",
+        "GBTallCyl9RollBlkDot",
+        "GBTallCylFrst9RollBlkDot"
       ]
     },
     "cylinder:3.3-sample": {
@@ -304,7 +306,7 @@
     }
   },
   "materialReferences": "Hashed per output in manifest.json. References control optical material only; new clear sample bottles use the same approved clear reference.",
-  "geometryAuthority": "Verified exact-SKU BB-PSD-Files-Master complete assembly; accepted exact legacy capped plates for GBCyl5GlMattSht and GBCylBlu5SlMattSht retain their documented source exception. Uniform transform only.",
+  "geometryAuthority": "Exact-SKU master PSD assemblies with documented accepted legacy short-cap plate exceptions for 5 mL and 9 mL Slim. Slim exposed necks also use verified approved cap-off plates. 30 mL gold sprayer uses the user-approved exact gold product photograph. Source authority controls identity; generated geometry remains subject to recorded QA. Exports apply uniform whole-raster transforms only.",
   "generationPolicy": {
     "noAutoSizeForUnverifiedFinalRender": true,
     "verifyActualResponseDimensions": true,
@@ -322,5 +324,12 @@
     "Approve final export hashes",
     "Authorize publication separately"
   ],
-  "largerPlasticScope": "3 larger plastic entries excluded from the proposed 47. Do not assign a 500 mL target to a 454 mL SKU without identity evidence."
+  "largerPlasticScope": "3 larger plastic entries excluded from the proposed 47. Do not assign a 500 mL target to a 454 mL SKU without identity evidence.",
+  "baselineExceptions": [
+    {
+      "sku": "GBSpry1ozGl",
+      "anchor": "Attached gold base contact bottom; glass foot obscured",
+      "approval": "User approved gold source and shoulder-lock preview"
+    }
+  ]
 }
