@@ -7,7 +7,7 @@
     "backgroundTarget": "#F5F3EF"
   },
   "sourceImagesPreserved": true,
-  "newApiCalls": 5,
+  "newApiCalls": 11,
   "rows": [
     {
       "sku": "GBCyl9RollBlkDot",
@@ -149,7 +149,7 @@
         "alt": "9 ml Clear Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -235,7 +235,7 @@
         "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -321,7 +321,7 @@
         "alt": "9 ml Clear Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -475,7 +475,7 @@
         "alt": "9 ml Amber Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -561,7 +561,7 @@
         "alt": "9 ml Amber Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -647,7 +647,7 @@
         "alt": "9 ml Amber Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -801,7 +801,7 @@
         "alt": "9 ml Cobalt Blue Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -887,7 +887,7 @@
         "alt": "9 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -973,7 +973,7 @@
         "alt": "9 ml Cobalt Blue Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1127,7 +1127,7 @@
         "alt": "9 ml Frosted Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1213,7 +1213,7 @@
         "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1299,7 +1299,7 @@
         "alt": "9 ml Frosted Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1453,7 +1453,7 @@
         "alt": "9 ml Swirl Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1549,7 +1549,7 @@
         "alt": "9 ml Swirl Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1635,7 +1635,7 @@
         "alt": "9 ml Swirl Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1740,7 +1740,7 @@
         "alt": "28 ml Clear Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1845,7 +1845,7 @@
         "alt": "50 ml Clear Cylinder Vintage Style Bulb Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1950,7 +1950,7 @@
         "alt": "50 ml Clear Cylinder Vintage Style Bulb Spray Bottle with Tassel",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2055,7 +2055,7 @@
         "alt": "50 ml Clear Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2160,7 +2160,7 @@
         "alt": "50 ml Clear Cylinder Reducer Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2352,7 +2352,7 @@
         "alt": "50 ml Clear Cylinder Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2457,7 +2457,7 @@
         "alt": "50 ml Clear Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2604,7 +2604,7 @@
         "alt": "100 ml Clear Cylinder Vintage Style Bulb Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2734,7 +2734,7 @@
         "alt": "100 ml Clear Cylinder Vintage Style Bulb Spray Bottle with Tassel",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2864,7 +2864,7 @@
         "alt": "100 ml Clear Cylinder Reducer Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2994,7 +2994,7 @@
         "alt": "100 ml Clear Cylinder Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -3124,7 +3124,7 @@
         "alt": "100 ml Clear Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty · original assembly",
+        "presentation": "Empty \u00b7 original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -3149,11 +3149,1544 @@
         "generatedVsMasterAspectDeviationPct": 0.24380205781480146,
         "sourceVarianceNote": "Bulb and tassel master composites are narrower relative to their body height than the other three masters. Exact source proportions preserved; no anisotropic correction."
       }
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "source": "local-review-archive/family3-4-5/GBSpry3mlClBlk-generated.png",
+      "sourceSha256": "d3295ec40b654a7d3365e022890a4c0621982f639767b526d53b8656e3336b2b",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBSpry3mlClBlk-2080x2288.png",
+      "outputSha256": "5e55db395cfa2949adbf40222234652368014b5276de2cd737a9048462df9a7b",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1198,
+        "rawShoulderY": 828,
+        "rawBodyCenterX": 598,
+        "scale": 1.7314594594594594,
+        "x": 4.587243243243165,
+        "y": 7.791567567567654,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 28,
+        "uncertaintyPx": 8.657297297297298
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 828,
+        "footY": 1198,
+        "bodyWidthPx": 174,
+        "shoulderSpanPct": 28.137,
+        "footPct": 91.103,
+        "bodyAspect": 2.1264,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:3.3-sample",
+        "label": "Cylinder 3.3 ml sample",
+        "shoulderPct": 28,
+        "bodyAspect": 2.134765625,
+        "status": "locked",
+        "lockVersion": "small-cylinder-final-size-approved-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 63,
+        "landmark": "closure-seat"
+      },
+      "shoulderYTargetPx": 1441.44,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/17. Additional Bottles/GBSpry3mlClBlk.psd",
+        "sha256": "f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06"
+      },
+      "masterSource": [
+        "BB-PSD-Files-Master/17. Additional Bottles/GBSpry3mlClBlk.psd"
+      ],
+      "masterSha256": "f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06",
+      "generationInputHashes": [
+        {
+          "file": "GBSpry3mlClBlk-sized.png",
+          "sha256": "c5247f96837c243e2a81f3c9ca8caf7620e111ad7a21d917b704a60a666254e7"
+        },
+        {
+          "file": "GBSpry3mlClBlk-source.png",
+          "sha256": "bd0d7284a97d054380179cfd199a3e9875a8fe423bcda29405d0a2e51d233b62"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "505e8e7709e90b7dbc9cf85413275a7af4527ab82312ea20c0d1d7d0d03c54ad",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          248,
+          244
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.134765625,
+        "generatedBodyAspect": 2.1264367816091956,
+        "relativeBodyAspectChangePct": -0.39,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.134765625,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
+        "websiteSku": "GBSpry3mlClBlk",
+        "graceSku": "GB-SPR-CLR-3ML-BLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343618236708",
+        "family": "Cylinder",
+        "capacityMl": 3.3,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBSpry3mlClBlk.77deedfc5f4b.png",
+        "alt": "3.3 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBSpry3mlClBlk.5e55db395cfa.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "5e55db395cfa2949adbf40222234652368014b5276de2cd737a9048462df9a7b",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "source": "local-review-archive/family3-4-5/GBSpry4mlClBlk-generated.png",
+      "sourceSha256": "f99424980902dc179f73cfa41ab112423a58beb31ddcb5a0327f86e47edf3b9b",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBSpry4mlClBlk-2080x2288.png",
+      "outputSha256": "152036f08d2aec1f5d771613a77d19b20bd4d89061e590cd8f656c3a91c8b921",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1199,
+        "rawShoulderY": 766,
+        "rawBodyCenterX": 598,
+        "scale": 1.7173210161662817,
+        "x": 13.042032332563622,
+        "y": 23.012101616628115,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 32.5,
+        "uncertaintyPx": 8.586605080831408
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 766,
+        "footY": 1199,
+        "bodyWidthPx": 154,
+        "shoulderSpanPct": 32.928,
+        "footPct": 91.179,
+        "bodyAspect": 2.8117,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:4-sample",
+        "label": "Cylinder 4 ml sample",
+        "shoulderPct": 32.5,
+        "bodyAspect": 2.7137014314928427,
+        "status": "locked",
+        "lockVersion": "small-cylinder-final-size-approved-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 58.5,
+        "landmark": "closure-seat"
+      },
+      "shoulderYTargetPx": 1338.48,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/17. Additional Bottles/GBSpry4mlClBlk..psd",
+        "sha256": "87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626"
+      },
+      "masterSource": [
+        "BB-PSD-Files-Master/17. Additional Bottles/GBSpry4mlClBlk..psd"
+      ],
+      "masterSha256": "87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626",
+      "generationInputHashes": [
+        {
+          "file": "GBSpry4mlClBlk-sized.png",
+          "sha256": "5be228d765bfc7a8af2cbb0554c6e7df16b8ef3805102ec0f780eaf78fca7536"
+        },
+        {
+          "file": "GBSpry4mlClBlk-source.png",
+          "sha256": "b8fe078d36a1b4da437f971d58609d61df9e3bca0a4e676abdc1da8ef2e00232"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "f70fc4e417ed306a80bc4c9b715e8459c1db5ff461f09fd0a71ca38dfab67f46",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          253,
+          250,
+          246
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.7137014314928427,
+        "generatedBodyAspect": 2.811688311688312,
+        "relativeBodyAspectChangePct": 3.61,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.7137014314928427,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-4ml-clear-12mm-finemist",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-4ml-clear-12mm-finemist",
+        "websiteSku": "GBSpry4mlClBlk",
+        "graceSku": "GB-SPR-CLR-4ML-BLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343618335012",
+        "family": "Cylinder",
+        "capacityMl": 4,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBSpry4mlClBlk.671b25bd39e3.png",
+        "alt": "4 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBSpry4mlClBlk.152036f08d2a.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "152036f08d2aec1f5d771613a77d19b20bd4d89061e590cd8f656c3a91c8b921",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "source": "local-review-archive/family3-4-5/GBCyl5GlMattSht-generated.png",
+      "sourceSha256": "bf41ee0681ae7ebab863b9ca04af056c3703e8125c1d675d6a7926b34cec1d99",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl5GlMattSht-2080x2288.png",
+      "outputSha256": "637c8aa197bc4d9c9b68d29493a763637edfefc6dd642282169c5946b22549dc",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1139,
+        "rawShoulderY": 553,
+        "rawBodyCenterX": 598,
+        "scale": 1.4251194539249148,
+        "x": 187.778566552901,
+        "y": 458.8689419795219,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 36.5,
+        "uncertaintyPx": 7.125597269624574
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 553,
+        "footY": 1139,
+        "bodyWidthPx": 236,
+        "shoulderSpanPct": 44.563,
+        "footPct": 86.616,
+        "bodyAspect": 2.4831,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "approved-exact-legacy-plate",
+        "path": "approved-legacy-plate/b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce.webp",
+        "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+        "originalSourceUrl": "https://www.bestbottles.com/images/store/GBCyl5GlMattSht.png",
+        "sourceAcceptance": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+        "approval": {
+          "status": "approved",
+          "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+          "binding": "4b3299fb8312f17bc3c04ea5bb05fb2641d9f61234a69a1d80ad8d8dde4a10ba",
+          "scope": "Jordan exact final Cylinder paired-image approval",
+          "updatedAt": "2026-09-13T15:09:47.734Z",
+          "views": [
+            {
+              "sha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce",
+              "role": "on"
+            },
+            {
+              "sha256": "b06d462343f58b393ae33391d186a7245da3b4c4b01bdd04f2f0a92c3c6566f5",
+              "role": "off"
+            }
+          ]
+        }
+      },
+      "masterSource": [],
+      "masterSha256": null,
+      "generationInputHashes": [
+        {
+          "file": "GBCyl5GlMattSht-sized.png",
+          "sha256": "9f6f86d558cd53ab96933067f930ca45460c3a6ec904209f3a84ab1fe071e344"
+        },
+        {
+          "file": "GBCyl5GlMattSht-source.png",
+          "sha256": "5a20043c036276d1d2d10cacb77672f9434774ad3d05a5943a158b20ee9bd992"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "eb48471910f1c520ee927ab5e9521e71a7e3c9eb6de304b959f0bb3de1c15ffd",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          248,
+          244
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.3442622950819674,
+        "generatedBodyAspect": 2.483050847457627,
+        "relativeBodyAspectChangePct": 5.92,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.3442622950819674,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-5ml-clear-13-415",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-5ml-clear-13-415",
+        "websiteSku": "GBCyl5GlMattSht",
+        "graceSku": "GB-CYL-CLR-5ML-MGLD-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194667675940",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl5GlMattSht.5df70b4e77e8.png",
+        "alt": "5 ml Clear Cylinder Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5GlMattSht.637c8aa197bc.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "637c8aa197bc4d9c9b68d29493a763637edfefc6dd642282169c5946b22549dc",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "source": "local-review-archive/family3-4-5/GBCyl5SprySlMatt-generated.png",
+      "sourceSha256": "213926a2d6f5c40db8b4b01ea6c6954d30428b930a100857c2954cb5255b75ce",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl5SprySlMatt-2080x2288.png",
+      "outputSha256": "82f24320a8a166bc069a109bee49e6d9cc209e5a403e12ee583be9995c322d1a",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1166,
+        "rawShoulderY": 683,
+        "rawBodyCenterX": 597,
+        "scale": 1.7290269151138717,
+        "x": 7.770931677018552,
+        "y": 66.03461697722537,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 36.5,
+        "uncertaintyPx": 8.645134575569358
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 597,
+        "shoulderY": 683,
+        "footY": 1166,
+        "bodyWidthPx": 198,
+        "shoulderSpanPct": 36.73,
+        "footPct": 88.669,
+        "bodyAspect": 2.4394,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /8. GBCyl5SprySlMatt.psd",
+        "sha256": "fe9067d2e39818ba2567209513c49128e1010c4af9bda61ec7e6bf20e0e3719b"
+      },
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /8. GBCyl5SprySlMatt.psd"
+      ],
+      "masterSha256": "fe9067d2e39818ba2567209513c49128e1010c4af9bda61ec7e6bf20e0e3719b",
+      "generationInputHashes": [
+        {
+          "file": "GBCyl5SprySlMatt-sized.png",
+          "sha256": "1bcd4837a307d9729b7b8efb91d0a61daab2a7107b5f5e19d371cc699ee1c211"
+        },
+        {
+          "file": "GBCyl5SprySlMatt-source.png",
+          "sha256": "c2c334a6db5699ad5d9da2d454183a8f1b0bd45cd38b16bfda47f7ac96c4216b"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "82a3a6b5a007a1cf5ecf1fc5c3b2a00f1648bd6d2c680a66db43f4ef74394f15",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          252,
+          249,
+          245
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.442786069651741,
+        "generatedBodyAspect": 2.4393939393939394,
+        "relativeBodyAspectChangePct": -0.14,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.442786069651741,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-5ml-clear-13-415-finemist",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-5ml-clear-13-415-finemist",
+        "websiteSku": "GBCyl5SprySlMatt",
+        "graceSku": "GB-CYL-CLR-5ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343619842340",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl5SprySlMatt.8047788195b4.png",
+        "alt": "5 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5SprySlMatt.82f24320a8a1.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "82f24320a8a166bc069a109bee49e6d9cc209e5a403e12ee583be9995c322d1a",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "source": "local-review-archive/family3-4-5/GBCyl5MtlRollBlkDot-generated.png",
+      "sourceSha256": "704b8269031d353ad8fff4ab241761c7524b127d5613c80246024a8330019f6e",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl5MtlRollBlkDot-2080x2288.png",
+      "outputSha256": "6e766dc20b0072a7356a2ba6b13f5b93bb8c5aaf83a71cb46bb12a3302171f8c",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1198,
+        "rawShoulderY": 716,
+        "rawBodyCenterX": 596,
+        "scale": 1.7326141078838175,
+        "x": 7.361991701244733,
+        "y": 6.408298755186479,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 36.5,
+        "uncertaintyPx": 8.663070539419088
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 596,
+        "shoulderY": 716,
+        "footY": 1198,
+        "bodyWidthPx": 198,
+        "shoulderSpanPct": 36.654,
+        "footPct": 91.103,
+        "bodyAspect": 2.4343,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /26. GBCyl5MtlRollBlkDot.psd",
+        "sha256": "277c285af7732254ece5f341e9bd2c21b3cbc110c15604447489394431545143"
+      },
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /26. GBCyl5MtlRollBlkDot.psd"
+      ],
+      "masterSha256": "277c285af7732254ece5f341e9bd2c21b3cbc110c15604447489394431545143",
+      "generationInputHashes": [
+        {
+          "file": "GBCyl5MtlRollBlkDot-sized.png",
+          "sha256": "df171d26b66f68121c1c5efc1224e2f162ac08598ffaef2c1a5021974ed3957b"
+        },
+        {
+          "file": "GBCyl5MtlRollBlkDot-source.png",
+          "sha256": "6af4fb7eb73de67b6a174fc2971cb3424882f1e4fae1a15f9f7ace44749d2155"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "e6fb6647d5587f6ba1e87e7b19a838a27b0dd1ab7fba1e95a7d9a4f9a30a6bb0",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          250.5,
+          248,
+          244
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.4554455445544554,
+        "generatedBodyAspect": 2.4343434343434343,
+        "relativeBodyAspectChangePct": -0.86,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.4554455445544554,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-5ml-clear-13-415-rollon",
+        "websiteSku": "GBCyl5MtlRollBlkDot",
+        "graceSku": "GB-CYL-CLR-5ML-MRL-BKDT",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343649464612",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl5MtlRollBlkDot.8251a0ed0f79.png",
+        "alt": "5 ml Clear Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5MtlRollBlkDot.6e766dc20b00.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "6e766dc20b0072a7356a2ba6b13f5b93bb8c5aaf83a71cb46bb12a3302171f8c",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "source": "local-review-archive/family3-4-5/GBCyl5RollBlkDot-generated.png",
+      "sourceSha256": "232d99db87b5140a70654d7ec40f4893e8e0dfcdbd0a51dacf7ea63c739ee96b",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl5RollBlkDot-2080x2288.png",
+      "outputSha256": "5e3219bdb0d864b9b7e48ee8648573c49178f62b80d3bae70aebc7fb5e8e5e0f",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1198,
+        "rawShoulderY": 716,
+        "rawBodyCenterX": 596,
+        "scale": 1.7326141078838175,
+        "x": 7.361991701244733,
+        "y": 6.408298755186479,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 36.5,
+        "uncertaintyPx": 8.663070539419088
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 596,
+        "shoulderY": 716,
+        "footY": 1198,
+        "bodyWidthPx": 198,
+        "shoulderSpanPct": 36.654,
+        "footPct": 91.103,
+        "bodyAspect": 2.4343,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /27. GBCyl5RollBlkDot.psd",
+        "sha256": "ac56b2b88950ca785440dce63e7bbe55a6b323ff067c22c4c385751c060cce3f"
+      },
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /27. GBCyl5RollBlkDot.psd"
+      ],
+      "masterSha256": "ac56b2b88950ca785440dce63e7bbe55a6b323ff067c22c4c385751c060cce3f",
+      "generationInputHashes": [
+        {
+          "file": "GBCyl5RollBlkDot-sized.png",
+          "sha256": "11ded18d1b043af878ccc31d2ea825ada06043d8e3bfbaa6cc4c61125e83e2cb"
+        },
+        {
+          "file": "GBCyl5RollBlkDot-source.png",
+          "sha256": "9e3897b77d94b9b8bcce65ae78e746030224db8de4383e874163628a7aee48d3"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "caa3c26a160eba944a2bf77e9b6d59e222e6ad77998a55a91cfab8a36ce4c303",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          253,
+          251,
+          247
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.4554455445544554,
+        "generatedBodyAspect": 2.4343434343434343,
+        "relativeBodyAspectChangePct": -0.86,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.4554455445544554,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-5ml-clear-13-415-rollon",
+        "websiteSku": "GBCyl5RollBlkDot",
+        "graceSku": "GB-CYL-CLR-5ML-ROL-BKDT",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343649169700",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Clear",
+        "alt": "5 ml Clear Cylinder Plastic Roller Ball Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5RollBlkDot.5e3219bdb0d8.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "5e3219bdb0d864b9b7e48ee8648573c49178f62b80d3bae70aebc7fb5e8e5e0f",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "source": "local-review-archive/family3-4-5/GBCylBlu5SlMattSht-generated.png",
+      "sourceSha256": "283b40eed35d9c192556591ef76a2cba108fe5276be2842af0c21fe7b79e1f84",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylBlu5SlMattSht-2080x2288.png",
+      "outputSha256": "164b75e4e50100659376f17ae6592f7159fbbfab4240b7ecea200c0825b11469",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1197,
+        "rawShoulderY": 716,
+        "rawBodyCenterX": 597,
+        "scale": 1.7362162162162162,
+        "x": 3.4789189189189074,
+        "y": 3.8291891891890373,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 36.5,
+        "uncertaintyPx": 8.681081081081082
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 597,
+        "shoulderY": 716,
+        "footY": 1197,
+        "bodyWidthPx": 200,
+        "shoulderSpanPct": 36.578,
+        "footPct": 91.027,
+        "bodyAspect": 2.405,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-cobalt.jpg",
+      "materialReferenceSha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33",
+      "geometrySource": {
+        "kind": "approved-exact-legacy-plate",
+        "path": "approved-legacy-plate/5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980.webp",
+        "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+        "originalSourceUrl": "https://www.bestbottles.com/images/store/GBCylBlu5SlMattSht.png",
+        "sourceAcceptance": "Jordan explicitly accepted the retained exact original legacy front and, for plastic bottles, the original-resolution legacy cap-off image. No master lineage is claimed.",
+        "approval": {
+          "status": "approved",
+          "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+          "binding": "4172c6fa0386a42fbc3331e6f76e890b65de56a628f81b0dea6dde4599b9b288",
+          "scope": "Jordan exact final Cylinder paired-image approval",
+          "updatedAt": "2026-09-13T15:09:47.734Z",
+          "views": [
+            {
+              "sha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980",
+              "role": "on"
+            },
+            {
+              "sha256": "51aa581ec4a33b12d0eb7d5394086d6e2416941faa5f343c4292848b7810c53f",
+              "role": "off"
+            }
+          ]
+        }
+      },
+      "masterSource": [],
+      "masterSha256": null,
+      "generationInputHashes": [
+        {
+          "file": "GBCylBlu5SlMattSht-sized.png",
+          "sha256": "3bfdbd41d5e927dcef317d701bd105b0db1624b894cefee32a1feb737147b1e4"
+        },
+        {
+          "file": "GBCylBlu5SlMattSht-source.png",
+          "sha256": "3778d3a95b200056405708314082a382de0d1bbe22580b67af3f25e97e936c6d"
+        },
+        {
+          "file": "reference-cobalt.jpg",
+          "sha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33"
+        }
+      ],
+      "promptSha256": "f1c9728f5c9b26a1e13cf22c8c947401353f049ac4b758b6867ffd067cb4c8a6",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          250,
+          248,
+          244
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.402542372881356,
+        "generatedBodyAspect": 2.405,
+        "relativeBodyAspectChangePct": 0.1,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.402542372881356,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+        "websiteSku": "GBCylBlu5SlMattSht",
+        "graceSku": "GB-CYL-BLU-5ML-MSLV-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194668101924",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Cobalt Blue",
+        "url": "/images/catalog/bone-review/GBCylBlu5SlMattSht.ad34d9dad5bc.png",
+        "alt": "5 ml Cobalt Blue Cylinder Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5SlMattSht.164b75e4e501.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "164b75e4e50100659376f17ae6592f7159fbbfab4240b7ecea200c0825b11469",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "source": "local-review-archive/family3-4-5/GBCylBlu5SpryGlMatt-generated.png",
+      "sourceSha256": "5bf2de08ef6483a0d0e61596e0f10eefc17083676292b45641257f9e8261e491",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylBlu5SpryGlMatt-2080x2288.png",
+      "outputSha256": "69235ce9bde8543eae1b735e8a8200160dd3c19a9e7fc6e538791643bbf12a6b",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1196,
+        "rawShoulderY": 714,
+        "rawBodyCenterX": 597,
+        "scale": 1.7326141078838175,
+        "x": 5.629377593360914,
+        "y": 9.873526970954117,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 36.5,
+        "uncertaintyPx": 8.663070539419088
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 597,
+        "shoulderY": 714,
+        "footY": 1196,
+        "bodyWidthPx": 198,
+        "shoulderSpanPct": 36.654,
+        "footPct": 90.951,
+        "bodyAspect": 2.4343,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-cobalt.jpg",
+      "materialReferenceSha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/7. GBCylBlu5SpryGlMatt.psd",
+        "sha256": "daa5938e3bbf5a7334adec52d048bc574558e30aa78788205bbf43f3e6d1be57"
+      },
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/7. GBCylBlu5SpryGlMatt.psd"
+      ],
+      "masterSha256": "daa5938e3bbf5a7334adec52d048bc574558e30aa78788205bbf43f3e6d1be57",
+      "generationInputHashes": [
+        {
+          "file": "GBCylBlu5SpryGlMatt-sized.png",
+          "sha256": "bfc17eb6e12c023b1116decbe900f0fa773d746c451d6e64e70cdca3c854ac44"
+        },
+        {
+          "file": "GBCylBlu5SpryGlMatt-source.png",
+          "sha256": "207aca9a36a6680fda59989c174b8d5f1c9d1d9f9644204987cd6ed5be91f4b9"
+        },
+        {
+          "file": "reference-cobalt.jpg",
+          "sha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33"
+        }
+      ],
+      "promptSha256": "9ec1364db291bec7ce817bc97651d74d2222aafc6bf27149d725c34fcb03835c",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          249,
+          246
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.4328358208955225,
+        "generatedBodyAspect": 2.4343434343434343,
+        "relativeBodyAspectChangePct": 0.06,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.4328358208955225,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+        "websiteSku": "GBCylBlu5SpryGlMatt",
+        "graceSku": "GB-CYL-BLU-5ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343670239524",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Cobalt Blue",
+        "url": "/images/catalog/bone-review/GBCylBlu5SpryGlMatt.66e394377db7.png",
+        "alt": "5 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5SpryGlMatt.69235ce9bde8.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "69235ce9bde8543eae1b735e8a8200160dd3c19a9e7fc6e538791643bbf12a6b",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "source": "local-review-archive/family3-4-5/GBCylBlu5MtlRollBlkDot-generated.png",
+      "sourceSha256": "1176ca9bc9366bdc5dad5c165e895ca36a9515e35360ff98bf173c8336ad140f",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylBlu5MtlRollBlkDot-2080x2288.png",
+      "outputSha256": "6fe305eca91fcdbff3e88a3f23090c2ae98cd31c0c869fd1b4268ac6c759d834",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1197,
+        "rawShoulderY": 716,
+        "rawBodyCenterX": 598,
+        "scale": 1.7362162162162162,
+        "x": 1.7427027027026725,
+        "y": 3.8291891891890373,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 36.5,
+        "uncertaintyPx": 8.681081081081082
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 716,
+        "footY": 1197,
+        "bodyWidthPx": 200,
+        "shoulderSpanPct": 36.578,
+        "footPct": 91.027,
+        "bodyAspect": 2.405,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-cobalt.jpg",
+      "materialReferenceSha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/26. GBCylBlu5MtlRollBlkDot.psd",
+        "sha256": "450c3ca150957258acca6eed1fdc7df62427a52d5e39a7f3b1cedccc5fd4c309"
+      },
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/26. GBCylBlu5MtlRollBlkDot.psd"
+      ],
+      "masterSha256": "450c3ca150957258acca6eed1fdc7df62427a52d5e39a7f3b1cedccc5fd4c309",
+      "generationInputHashes": [
+        {
+          "file": "GBCylBlu5MtlRollBlkDot-sized.png",
+          "sha256": "48c63b5edd8674bc2de60b1f37a05b7d9336daf4e8c9c21898f6fd2d9454bb80"
+        },
+        {
+          "file": "GBCylBlu5MtlRollBlkDot-source.png",
+          "sha256": "4375f8a4c21efe99c7946bf1022506f4117a05eefe12146302eccdb4b350e643"
+        },
+        {
+          "file": "reference-cobalt.jpg",
+          "sha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33"
+        }
+      ],
+      "promptSha256": "bf89be2241a108c310aa181db8f7fb7c1b8907623c192d9b25a61cb6293c81cc",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247,
+          245,
+          241
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.427860696517413,
+        "generatedBodyAspect": 2.405,
+        "relativeBodyAspectChangePct": -0.94,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.427860696517413,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "websiteSku": "GBCylBlu5MtlRollBlkDot",
+        "graceSku": "GB-CYL-BLU-5ML-MRL-BKDT",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343663423780",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Cobalt Blue",
+        "url": "/images/catalog/bone-review/GBCylBlu5MtlRollBlkDot.51afa03846c9.png",
+        "alt": "5 ml Cobalt Blue Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5MtlRollBlkDot.6fe305eca91f.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "6fe305eca91fcdbff3e88a3f23090c2ae98cd31c0c869fd1b4268ac6c759d834",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "source": "local-review-archive/family3-4-5/GBCylBlu5RollBlkDot-generated.png",
+      "sourceSha256": "b77681cf0f9950860ea054101eccc573d95c6d88c2b66220e3bb9407ddf6b901",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylBlu5RollBlkDot-2080x2288.png",
+      "outputSha256": "e3f6c4057c083c15bfd992d1f48939db28c5c5da3a96705eae77c3704419816c",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1197,
+        "rawShoulderY": 716,
+        "rawBodyCenterX": 597,
+        "scale": 1.7362162162162162,
+        "x": 3.4789189189189074,
+        "y": 3.8291891891890373,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 36.5,
+        "uncertaintyPx": 8.681081081081082
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 597,
+        "shoulderY": 716,
+        "footY": 1197,
+        "bodyWidthPx": 202,
+        "shoulderSpanPct": 36.578,
+        "footPct": 91.027,
+        "bodyAspect": 2.3812,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-cobalt.jpg",
+      "materialReferenceSha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/27. GBCylBlu5RollBlkDot.psd",
+        "sha256": "48d61d4a2f06f9b1844490331dc24b3d612934dcb58dce0ca25fb9d86898b290"
+      },
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/27. GBCylBlu5RollBlkDot.psd"
+      ],
+      "masterSha256": "48d61d4a2f06f9b1844490331dc24b3d612934dcb58dce0ca25fb9d86898b290",
+      "generationInputHashes": [
+        {
+          "file": "GBCylBlu5RollBlkDot-sized.png",
+          "sha256": "19a7c3946b12f83f2ee1e17162a125073d67274c43db22afa7e67a42f9c05aa0"
+        },
+        {
+          "file": "GBCylBlu5RollBlkDot-source.png",
+          "sha256": "7e59f275e2b5de0a31d876bf839c4b824bf3df1a8d7abaf8624cfe842d1e3084"
+        },
+        {
+          "file": "reference-cobalt.jpg",
+          "sha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33"
+        }
+      ],
+      "promptSha256": "13ff4ed432b0e0555119d17058fed944e8b595973e082ad435cdd9e37d79cdcd",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          250,
+          246
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.427860696517413,
+        "generatedBodyAspect": 2.381188118811881,
+        "relativeBodyAspectChangePct": -1.92,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.427860696517413,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+      "catalogVisibility": {
+        "visible": true
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "websiteSku": "GBCylBlu5RollBlkDot",
+        "graceSku": "GB-CYL-BLU-5ML-ROL-BKDT",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343663128868",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Cobalt Blue",
+        "alt": "5 ml Cobalt Blue Cylinder Plastic Roller Ball Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5RollBlkDot.e3f6c4057c08.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "e3f6c4057c083c15bfd992d1f48939db28c5c5da3a96705eae77c3704419816c",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "source": "local-review-archive/family3-4-5/GBCyl5SpryBlkMatt-generated.png",
+      "sourceSha256": "c84ddac18c1aa71eb32c988c1ffabe45fe47ebfbab57f27b327037dd96a02b41",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl5SpryBlkMatt-2080x2288.png",
+      "outputSha256": "9f39c38b64784a8d55b7497ba56f2ab56a57d21d4958f6a55697fbc1886477a4",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow.",
+        "rawFootY": 1198,
+        "rawShoulderY": 714,
+        "rawBodyCenterX": 596,
+        "scale": 1.7254545454545456,
+        "x": 11.629090909090792,
+        "y": 14.985454545454104,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 36.5,
+        "uncertaintyPx": 8.627272727272729
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 596,
+        "shoulderY": 714,
+        "footY": 1198,
+        "bodyWidthPx": 196,
+        "shoulderSpanPct": 36.806,
+        "footPct": 91.103,
+        "bodyAspect": 2.4694,
+        "uncertaintyPx": 5,
+        "method": "Full-resolution visual glass-shoulder/closure-seat and foot inspection, informed by contrast proposals; excludes neck, hardware and shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1246.96,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family3-4-5/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "geometrySource": {
+        "kind": "master-psd",
+        "path": "BB-PSD-Files-Master/5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /3. GBCyl5SpryBlkMatt.psd",
+        "sha256": "42790c99b1fdd37b53144773e98b11b94744b9ecceb5b92f8c4d768234a6fe15"
+      },
+      "masterSource": [
+        "BB-PSD-Files-Master/5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /3. GBCyl5SpryBlkMatt.psd"
+      ],
+      "masterSha256": "42790c99b1fdd37b53144773e98b11b94744b9ecceb5b92f8c4d768234a6fe15",
+      "generationInputHashes": [
+        {
+          "file": "GBCyl5SpryBlkMatt-sized.png",
+          "sha256": "061778974f32bd28edf3be17ed422a94184b982ed1bb9eeec40c2f24f0d617e9"
+        },
+        {
+          "file": "GBCyl5SpryBlkMatt-source.png",
+          "sha256": "b123c4b773c08e5abdfe3b63e5ab46c37d2f3ffd771c4ae84534bda932fa0859"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "731c774be2ae9ddc651d66479035c75809d5a9e761b383defa7619b18089218c",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          253,
+          250,
+          246
+        ],
+        "exactBoneCleared": false
+      },
+      "geometryQA": {
+        "sourceBodyAspect": 2.4405940594059405,
+        "generatedBodyAspect": 2.4693877551020407,
+        "relativeBodyAspectChangePct": 1.18,
+        "finalGeometryApproval": false
+      },
+      "masterBodyAspect": 2.4405940594059405,
+      "visualStatus": "User approved current delivery export",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-5.5ml-clear-13-415-finemist",
+      "catalogVisibility": {
+        "visible": false,
+        "reason": "Existing duplicate 5.5 ml group intentionally hidden by catalog-listing-visibility.ts. Preserve identity and keep new hero for review; no automatic group migration."
+      },
+      "priorHero": {
+        "groupSlug": "cylinder-5.5ml-clear-13-415-finemist",
+        "websiteSku": "GBCyl5SpryBlkMatt",
+        "graceSku": "GB-CYL-CLR-5ML-SPR-MBLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343619809572",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl5SpryBlkMatt.822be776652d.png",
+        "alt": "5.5 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5SpryBlkMatt.9f39c38b6478.png",
+      "visualApproval": {
+        "status": "approved",
+        "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+        "userFeedback": "Everything looks good",
+        "date": "2026-09-22",
+        "outputSha256": "9f39c38b64784a8d55b7497ba56f2ab56a57d21d4958f6a55697fbc1886477a4",
+        "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+        "excludes": "Technical clearance, exact bone exposure and production publication"
+      }
     }
   ],
   "counts": {
-    "exports": 28,
+    "exports": 44,
+    "visibleCatalogImages": 43,
+    "preparedGroups": 36,
+    "visibleCatalogGroups": 35,
+    "hiddenDuplicateGroupImages": 1,
     "native2080Renders": 0
   },
-  "apiCallNote": "Five new authorized 100 mL edits. Earlier 28 exports are preserved without regeneration."
+  "apiCallNote": "Eleven explicitly authorized small Cylinder edits; prior 33 exports preserved without regeneration."
 }

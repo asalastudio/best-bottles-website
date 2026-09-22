@@ -110,7 +110,9 @@
         "GBCyl5SprySlMatt",
         "GBCylBlu5MtlRollBlkDot",
         "GBCylBlu5SlMattSht",
-        "GBCylBlu5SpryGlMatt"
+        "GBCylBlu5SpryGlMatt",
+        "GBCyl5RollBlkDot",
+        "GBCylBlu5RollBlkDot"
       ]
     },
     "cylinder:9-standard": {
@@ -302,7 +304,7 @@
     }
   },
   "materialReferences": "Hashed per output in manifest.json. References control optical material only; new clear sample bottles use the same approved clear reference.",
-  "geometryAuthority": "Verified exact-SKU BB-PSD-Files-Master complete assembly; uniform transform only.",
+  "geometryAuthority": "Verified exact-SKU BB-PSD-Files-Master complete assembly; accepted exact legacy capped plates for GBCyl5GlMattSht and GBCylBlu5SlMattSht retain their documented source exception. Uniform transform only.",
   "generationPolicy": {
     "noAutoSizeForUnverifiedFinalRender": true,
     "verifyActualResponseDimensions": true,

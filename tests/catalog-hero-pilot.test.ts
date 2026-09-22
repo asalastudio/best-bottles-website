@@ -9,8 +9,8 @@ const enable = () => vi.stubEnv('NEXT_PUBLIC_CATALOG_HERO_PILOT', 'cylinder-2026
 afterEach(() => vi.unstubAllEnvs());
 describe('Cylinder staging pilot', () => {
  it('preserves every exact export and identity framing', () => {
-  expect(rows).toHaveLength(33);
-  expect(new Set(rows.map(r => r.groupSlug)).size).toBe(27);
+  expect(rows).toHaveLength(44);
+  expect(new Set(rows.map(r => r.groupSlug)).size).toBe(36);
   for (const row of rows) {
    const source = manifest.rows.find(r => r.sku === row.websiteSku)!;
    const bytes = readFileSync(`public${row.url}`);
@@ -24,9 +24,9 @@ describe('Cylinder staging pilot', () => {
  it('leaves production and unrelated families on the existing registry', () => {
   vi.stubEnv('NEXT_PUBLIC_CATALOG_HERO_PILOT', '');
   expect(getProductHero('GBCyl9MtlRollBlkDot')?.url).toContain('/bone-review/');
-  const before = getProductHero('GBCyl5SprySlMatt');
+  const before = getProductHero('GBCyl25DrpGl');
   enable();
-  expect(getProductHero('GBCyl5SprySlMatt')).toEqual(before);
+  expect(getProductHero('GBCyl25DrpGl')).toEqual(before);
  });
  it('selects only exact group and filtered SKU matches for all candidates', () => {
   enable();

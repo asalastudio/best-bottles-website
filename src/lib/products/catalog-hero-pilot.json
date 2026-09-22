@@ -625,5 +625,214 @@
       "translateXPercent": 0,
       "translateYPercent": 0
     }
+  },
+  {
+    "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
+    "websiteSku": "GBSpry3mlClBlk",
+    "graceSku": "GB-SPR-CLR-3ML-BLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343618236708",
+    "family": "Cylinder",
+    "capacityMl": 3.3,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBSpry3mlClBlk.5e55db395cfa.png",
+    "alt": "3.3 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-4ml-clear-12mm-finemist",
+    "websiteSku": "GBSpry4mlClBlk",
+    "graceSku": "GB-SPR-CLR-4ML-BLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343618335012",
+    "family": "Cylinder",
+    "capacityMl": 4,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBSpry4mlClBlk.152036f08d2a.png",
+    "alt": "4 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-clear-13-415",
+    "websiteSku": "GBCyl5GlMattSht",
+    "graceSku": "GB-CYL-CLR-5ML-MGLD-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56194667675940",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5GlMattSht.637c8aa197bc.png",
+    "alt": "5 ml Clear Cylinder Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · original cap-on assembly",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-clear-13-415-finemist",
+    "websiteSku": "GBCyl5SprySlMatt",
+    "graceSku": "GB-CYL-CLR-5ML-SPR-MSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343619842340",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5SprySlMatt.82f24320a8a1.png",
+    "alt": "5 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-clear-13-415-rollon",
+    "websiteSku": "GBCyl5MtlRollBlkDot",
+    "graceSku": "GB-CYL-CLR-5ML-MRL-BKDT",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343649464612",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5MtlRollBlkDot.6e766dc20b00.png",
+    "alt": "5 ml Clear Cylinder Roll-On Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-clear-13-415-rollon",
+    "websiteSku": "GBCyl5RollBlkDot",
+    "graceSku": "GB-CYL-CLR-5ML-ROL-BKDT",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343649169700",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "bottleColor": "Clear",
+    "alt": "5 ml Clear Cylinder Plastic Roller Ball Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    },
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5RollBlkDot.5e3219bdb0d8.png"
+  },
+  {
+    "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+    "websiteSku": "GBCylBlu5SlMattSht",
+    "graceSku": "GB-CYL-BLU-5ML-MSLV-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56194668101924",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "bottleColor": "Cobalt Blue",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5SlMattSht.164b75e4e501.png",
+    "alt": "5 ml Cobalt Blue Cylinder Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · original cap-on assembly",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+    "websiteSku": "GBCylBlu5SpryGlMatt",
+    "graceSku": "GB-CYL-BLU-5ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343670239524",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "bottleColor": "Cobalt Blue",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5SpryGlMatt.69235ce9bde8.png",
+    "alt": "5 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "websiteSku": "GBCylBlu5MtlRollBlkDot",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-BKDT",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343663423780",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "bottleColor": "Cobalt Blue",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5MtlRollBlkDot.6fe305eca91f.png",
+    "alt": "5 ml Cobalt Blue Cylinder Roll-On Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "websiteSku": "GBCylBlu5RollBlkDot",
+    "graceSku": "GB-CYL-BLU-5ML-ROL-BKDT",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343663128868",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "bottleColor": "Cobalt Blue",
+    "alt": "5 ml Cobalt Blue Cylinder Plastic Roller Ball Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    },
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5RollBlkDot.e3f6c4057c08.png"
+  },
+  {
+    "groupSlug": "cylinder-5.5ml-clear-13-415-finemist",
+    "websiteSku": "GBCyl5SpryBlkMatt",
+    "graceSku": "GB-CYL-CLR-5ML-SPR-MBLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343619809572",
+    "family": "Cylinder",
+    "capacityMl": 5,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5SpryBlkMatt.9f39c38b6478.png",
+    "alt": "5.5 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 2080,
+    "height": 2288,
+    "presentation": "Empty · exposed applicator with original detached cap",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
   }
 ]

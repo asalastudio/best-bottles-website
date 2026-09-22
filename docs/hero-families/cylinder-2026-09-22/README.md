@@ -1,10 +1,23 @@
 # Cylinder staging pilot — September 22, 2026
 
-33 delivery exports cover 27 existing Cylinder catalog groups: twenty standard 9 mL assemblies, eight 28/50 mL assemblies, and five new 100 mL assemblies. Six are additional exact roller variants within those groups. This is a partial family pilot, not completion of the 49 glass heroes in the 3.3–100 mL scope. `scope.json` records the remaining registered heroes separately, including out-of-scope sizes/materials.
+44 delivery exports cover 36 registered Cylinder groups: twenty standard 9 mL assemblies, eight 28/50 mL assemblies, five 100 mL assemblies, and eleven new 3.3/4/5 mL assemblies. **43 images across 35 groups are eligible for visible catalog cards.** One new matte-black sprayer remains in an intentionally hidden legacy 5.5 mL duplicate group; its image is preserved for review without changing that catalog policy. Eight images are additional exact roller variants. The 49-group glass inventory includes that hidden group; thirteen groups plus two additional roller variants still need images (15 total).
+
+## Small Cylinder batch
+
+- Eleven explicitly authorized `gpt-image-2.5-sunburst` edits use the approved clear/cobalt material photographs. Nine source inputs are exact master PSD composites; the clear matte-gold short-cap and cobalt matte-silver short-cap inputs are previously accepted exact legacy plates. Their source exception and approved input hashes remain explicit in the manifest.
+- 2080 × 2288 delivery, glass foot at 91%; shoulder-to-foot spans **28% (3.3 mL), 32.5% (4 mL), 36.5% (all matching 5 mL bodies)**. Pumps, roller balls and threaded necks do not set glass-body scale. Raw model framing is measured and corrected with one uniform transform of the complete photograph.
+- Metal and plastic roller variants retain separate exact SKU mappings. All previous 33 exported files remain unchanged. No Convex, Shopify or production hero-registry mutation is part of this batch.
+- `GBCyl5SpryBlkMatt` is still cataloged at 5.5 mL in `cylinder-5.5ml-clear-13-415-finemist`. The existing visibility rule intentionally hides that duplicate group. Its new image uses the agreed small-body lock, but is not counted as a visible catalog addition. Reconcile that identity separately before making the card visible.
+- [Complete batch sheet](small-cylinder-sheet.png), [shoulder/base guides](small-cylinder-guided-sheet.png), and [before/after](small-cylinder-before-after.png). The before column uses prior registry imagery, or the framed exact source for the two newly added plastic-roller variants.
+- Reproduce the exports with `node scripts/hero-families/export-cylinder-small.mjs /path/to/family3-4-5`. Original composites, raw responses, material references, prompts and measurements remain in the preserved batch archive. Prompt text is also committed under `prompts/`.
+- Jordan approved the displayed small-bottle sheet: “Everything looks good.” `small-cylinder-visual-approval.json` binds this new visual approval to all eleven final PNG hashes and the reviewed sheet hash. Exact bone exposure and technical geometry clearance remain separate; production publication is not authorized by that visual feedback. All eleven native responses are 1196 × 1315, uniformly exported to the locked delivery canvas.
+- Alias-only rollback target before this extension: `https://best-bottles-website-aqum1pvu5-asala.vercel.app` (verified 33-image pilot at commit 8055ad4b).
+
+The local audit passes all **43 visible exact images** on both `/catalog` and `/catalog/cylinder` at desktop and mobile sizes, including the plastic roller filter. All 44 original PNG files pass hash/dimension checks, 445 focused tests pass, and TypeScript passes. `small-cylinder-qa.json` preserves measured raw geometry differences (up to 5.92% in the clear short-cap body aspect), landmark uncertainty, target coordinates and background medians. The guided sheet was visually approved; these records do not claim pixel-identical generated geometry or exact bone exposure.
 
 ## Locked delivery contract
 
-- Lossless source delivery files: **2080 × 2288**, 10:11. These are uniformly resized from approximately 1196 × 1315 generated images, not native 2080-detail renders. The initial 28 assets were reused; this extension used five explicitly authorized Sunburst API edits.
+- Lossless source delivery files: **2080 × 2288**, 10:11. These are uniformly resized from approximately 1196 × 1315 generated images, not native 2080-detail renders. The earlier 33 assets were preserved; the current small-bottle extension used eleven explicitly authorized Sunburst API edits.
 - Glass contact foot target: **91%**, y = **2082.08 px**, excluding the shadow.
 - Shoulder spans, measured upward from the glass foot: standard 9 mL **43.5%**; 28 mL roller **50.5%**; 50 mL roller **53%**; 50 mL 18-415 **56%**. 100 mL is the **67.5%** calibration endpoint and its five new images are included.
 - One body lock across finishes/applicators of the same body. Different bodies at the same capacity retain separate locks.
