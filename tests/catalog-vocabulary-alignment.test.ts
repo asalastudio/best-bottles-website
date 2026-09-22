@@ -130,7 +130,11 @@ describe("glass colour vocabulary", () => {
         expect(canonicalGlassColor("Frost")).toBe("Frosted");
         expect(canonicalGlassColor("brown")).toBe("Amber");
         expect(canonicalGlassColor("Clear")).toBe("Clear");
-        expect(canonicalGlassColor("Lavender")).toBe("Lavender");
+        expect(canonicalGlassColor("Lavender")).toBeNull();
+        expect(canonicalGlassColor("Black")).toBeNull();
+        expect(canonicalGlassColor("White")).toBeNull();
+        expect(canonicalGlassColor("Gold")).toBeNull();
+        expect(canonicalGlassColor("Silver")).toBeNull();
         expect(canonicalGlassColor(null)).toBeNull();
     });
 

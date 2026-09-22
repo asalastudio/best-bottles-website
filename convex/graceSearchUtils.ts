@@ -125,14 +125,9 @@ export function detectCatalogColor(term: string): string | null {
     return detectCanonicalGlassColor(term);
 }
 
+/** Glass-colour tokens only — pink/black/gold/dots are finishes, not glass. */
 export function detectRequestedColorToken(term: string): string | null {
-    const t = term.toLowerCase();
-    const colorTokens = [
-        "pink", "red", "green", "purple", "lavender",
-        "white", "black", "blue", "cobalt blue",
-        "clear", "amber", "frosted", "swirl",
-    ];
-    return colorTokens.find((token) => t.includes(token)) ?? null;
+    return detectCanonicalGlassColor(term);
 }
 
 export function isVerified9mlCylinderRollOnColor(color: string | null | undefined): boolean {

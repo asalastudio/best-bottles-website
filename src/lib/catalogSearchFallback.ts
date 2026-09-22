@@ -1,6 +1,7 @@
 import { matchesShopCollection } from "./shopCollections";
 import {
     APPLICATOR_BUCKETS,
+    BOTTLE_CATEGORIES,
     COMPONENT_CATEGORIES,
     type CatalogFilters,
     type RollerMaterial,
@@ -183,8 +184,15 @@ export function buildCatalogSearchResult(input: {
             rows = rows.filter((group) => group.family != null && set.has(group.family));
         }
         if (!skipKeys.has("colors") && filters.colors.length > 0) {
-            const set = new Set(filters.colors.map((color) => canonicalGlassColor(color)));
-            rows = rows.filter((group) => set.has(canonicalGlassColor(group.color)));
+            const set = new Set(
+                filters.colors
+                    .map((color) => canonicalGlassColor(color))
+                    .filter((color): color is string => Boolean(color)),
+            );
+            rows = rows.filter((group) => {
+                const color = canonicalGlassColor(group.color);
+                return color != null && set.has(color);
+            });
         }
         if (!skipKeys.has("capacities") && filters.capacities.length > 0) {
             rows = rows.filter((group) => capacitySelectionMatches(group.capacityMl, filters.capacities));
@@ -237,7 +245,10 @@ export function buildCatalogSearchResult(input: {
         applicators,
         rollerMaterials,
         families: countBy(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
-        colors: countBy(colorFacetBase, (group) => canonicalGlassColor(group.color)),
+        colors: countBy(
+            colorFacetBase.filter((group) => BOTTLE_CATEGORIES.has(group.category)),
+            (group) => canonicalGlassColor(group.color),
+        ),
         capacities,
         neckThreadSizes: countBy(threadFacetBase, (group) => group.neckThreadSize),
         componentTypes: countBy(result, (group) => classifyComponentType(group.displayName, group.family)),

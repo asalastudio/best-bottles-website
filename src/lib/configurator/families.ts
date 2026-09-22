@@ -314,8 +314,9 @@ export function colourTokenFromSlug(slug: string): string | null {
 
 /** The closure token a sibling slug must carry for this family, read from
  *  the current slug. Tokens are not always one word (Diva's tassel page is
- *  "...-antiquespray-tassel"), so the last word only identifies the BASE;
- *  the registry writes the full token back. */
+ *  "...-antiquespray-tassel" — product-group slug token, not the refine bucket
+ *  slug `vintagestyle-tassel`), so the last word only identifies the BASE;
+ *  the registry writes the full product slug token back. */
 export function closureTokenFromSlug(f: ConfiguratorFamily, slug: string): string {
   const last = slug.split("-").pop() ?? "";
   const base = f.closureFromSlug[last];

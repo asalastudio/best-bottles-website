@@ -2249,7 +2249,7 @@ export default function CatalogClient({
                             <button className="underline min-h-11" onClick={()=>handleFilterChange({category:"Packaging",families:["Gift Box"]})}>{t("boxes")}</button>
                         </div>}
                         {filters.shopCollection === "glass-spray-bottles" && <div className="mb-5 hidden flex-wrap gap-3 text-sm lg:flex">
-                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["antiquespray","antiquespray-tassel"]})}>{t("vintageBulbSpray")}</button>
+                            <button className="underline min-h-11" onClick={() => handleFilterChange({applicators:["vintagestyle","vintagestyle-tassel"]})}>{t("vintageBulbSpray")}</button>
                             <LocaleLink className="underline" href="/catalog?category=Component&componentType=Sprayer">{t("looseSprayers")}</LocaleLink>
                         </div>}
                         {/* Family banner — shown when a single design family is filtered */}

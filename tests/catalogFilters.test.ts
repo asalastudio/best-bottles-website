@@ -9,6 +9,11 @@ import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import {
+    canonicalGlassColor,
+    detectCanonicalGlassColor,
+    detectAtomizerFinish,
+    detectCapFinish,
+    displayCapFinishLabel,
     APPLICATOR_BUCKETS,
     APPLICATOR_NAV,
     EMPTY_FILTERS,
@@ -550,21 +555,21 @@ describe("applicatorBucketMatchesProductValues", () => {
     });
 
     it("matches vintage bulb spray variants", () => {
-        expect(applicatorBucketMatchesProductValues("antiquespray", ["Vintage Bulb Sprayer"])).toBe(true);
-        expect(applicatorBucketMatchesProductValues("antiquespray", ["Antique Bulb Sprayer"])).toBe(true);
+        expect(applicatorBucketMatchesProductValues("vintagestyle", ["Vintage Bulb Sprayer"])).toBe(true);
+        expect(applicatorBucketMatchesProductValues("vintagestyle", ["Antique Bulb Sprayer"])).toBe(true);
     });
 
     it("matches vintage bulb spray with tassel separately", () => {
-        expect(applicatorBucketMatchesProductValues("antiquespray-tassel", ["Vintage Bulb Sprayer with Tassel"])).toBe(true);
+        expect(applicatorBucketMatchesProductValues("vintagestyle-tassel", ["Vintage Bulb Sprayer with Tassel"])).toBe(true);
         // Tassel variant should NOT match the non-tassel bucket
-        expect(applicatorBucketMatchesProductValues("antiquespray", ["Vintage Bulb Sprayer with Tassel"])).toBe(false);
+        expect(applicatorBucketMatchesProductValues("vintagestyle", ["Vintage Bulb Sprayer with Tassel"])).toBe(false);
     });
 
     it("shows vintage style labels without changing stored applicator values", () => {
-        const plain = APPLICATOR_BUCKETS.find((bucket) => bucket.value === "antiquespray")!;
-        const tassel = APPLICATOR_BUCKETS.find((bucket) => bucket.value === "antiquespray-tassel")!;
-        expect(plain.label).toBe("Vintage Style Bulb Spray");
-        expect(tassel.label).toBe("Vintage Style Bulb Spray with Tassel");
+        const plain = APPLICATOR_BUCKETS.find((bucket) => bucket.value === "vintagestyle")!;
+        const tassel = APPLICATOR_BUCKETS.find((bucket) => bucket.value === "vintagestyle-tassel")!;
+        expect(plain.label).toBe("Vintage Style Bulb Sprayer");
+        expect(tassel.label).toBe("Vintage Style Bulb Sprayer with Tassel");
         expect(plain.productValues).toContain("Vintage Bulb Sprayer");
         expect(tassel.productValues).toContain("Vintage Bulb Sprayer with Tassel");
         expect(plain.productValues).not.toContain("Vintage Style Bulb Sprayer");
@@ -576,16 +581,23 @@ describe("applicatorBucketMatchesProductValues", () => {
         expect(displayApplicatorName("Fine Mist Sprayer")).toBe("Fine Mist Sprayer");
     });
 
+    it("maps prior antiquespray bucket slugs to vintagestyle", () => {
+        expect(normalizeApplicatorBuckets(["antiquespray", "antiquespray-tassel"])).toEqual([
+            "vintagestyle",
+            "vintagestyle-tassel",
+        ]);
+    });
+
     it("maps vintage style and legacy vintage bulb labels to the same buckets", () => {
         expect(normalizeApplicatorBuckets([
             "Vintage Bulb Spray",
             "Vintage Style Bulb Spray",
             "Vintage Style Bulb Sprayer",
-        ])).toEqual(["antiquespray"]);
+        ])).toEqual(["vintagestyle"]);
         expect(normalizeApplicatorBuckets([
             "Vintage Bulb Spray with Tassel",
             "Vintage Style Bulb Spray with Tassel",
-        ])).toEqual(["antiquespray-tassel"]);
+        ])).toEqual(["vintagestyle-tassel"]);
     });
 });
 
@@ -783,5 +795,27 @@ describe("featured catalog sort", () => {
             "Cylinder 30",
             "Cap",
         ]);
+    });
+});
+
+
+describe("atomizer and cap finish taxonomies", () => {
+    it("detects atomizer body finishes without treating them as glass", () => {
+        expect(detectAtomizerFinish("pink with dots atomizer")).toBe("Pink with Dots");
+        expect(detectAtomizerFinish("silver with star patterns")).toBe("Silver with Star Patterns");
+        expect(canonicalGlassColor("Pink with Dots")).toBeNull();
+        expect(detectCanonicalGlassColor("pink with dots atomizer")).toBeNull();
+    });
+
+    it("detects cap finishes with Cap labels", () => {
+        expect(detectCapFinish("shiny gold cap")).toBe("Shiny Gold");
+        expect(displayCapFinishLabel("Shiny Gold")).toBe("Shiny Gold Cap");
+        expect(detectCapFinish("black with dots on the cap")).toBe("Black with Dots");
+        expect(detectCanonicalGlassColor("matte black cap on clear bottle")).toBe("Clear");
+    });
+
+    it("keeps bare green/blue as glass when no finish context", () => {
+        expect(detectCanonicalGlassColor("green glass bottle")).toBe("Green");
+        expect(detectCanonicalGlassColor("cobalt blue 30ml")).toBe("Cobalt Blue");
     });
 });

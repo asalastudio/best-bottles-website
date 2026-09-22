@@ -17,12 +17,12 @@ const GROUPS_PATH = resolve(ROOT, "data", "product_groups_by_family.json");
 const DESCRIPTIONS_DIR = resolve(ROOT, "data", "descriptions");
 
 const KNOWN_BUCKETS = new Set([
-    "rollon", "finemist", "perfumespray", "antiquespray", "antiquespray-tassel",
+    "rollon", "finemist", "perfumespray", "vintagestyle", "vintagestyle-tassel",
     "dropper", "lotionpump", "reducer", "glasswand", "glassapplicator", "capclosure"
 ]);
 
 function getApplicatorFromSlug(slug) {
-    if (slug.endsWith("-antiquespray-tassel")) return "antiquespray-tassel";
+    if (slug.endsWith("-antiquespray-tassel")) return "vintagestyle-tassel";
     const last = slug.split("-").pop();
     return KNOWN_BUCKETS.has(last) ? last : null;
 }
