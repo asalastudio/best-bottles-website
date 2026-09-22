@@ -53,6 +53,7 @@ import { bostonClosurePhoto } from "@/lib/products/boston-closure-photos";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { shouldHideAssembledPdpLowerStack } from "@/lib/products/assembled-pdp";
 import { filterVariantsForGroupIntent } from "@/lib/products/group-variant-intent";
 import { isCheckoutReady } from "@/lib/checkout";
 import {
@@ -1520,6 +1521,15 @@ export default function ProductDetailClient({
         )),
     }), [group?.heroImageUrl, groupHasPlates, hasApproved3d, selectedKit, variants]);
     const isFocusedPurchasePdp = focusedPdpCapabilities.canRenderFocusedShell;
+    const hideAssembledLowerStack = shouldHideAssembledPdpLowerStack({
+        category: group?.category,
+        family: group?.family,
+        assemblyType: selectedVariant?.assemblyType,
+        applicator: selectedVariant?.applicator ?? activeApplicator,
+        itemName: selectedVariant?.itemName ?? group?.displayName,
+        websiteSku: selectedVariant?.websiteSku,
+        graceSku: selectedVariant?.graceSku,
+    });
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
 
@@ -3100,7 +3110,9 @@ export default function ProductDetailClient({
                 </section>
 
                 {/* Below md the mobile PDP folds these into compact disclosures
-                    under the configurator; desktop keeps the full sections. */}
+                    under the configurator; desktop keeps the full sections.
+                    Assembled bottle PDPs hide this stack until the SKS-style redesign (ASA-193). */}
+                {hideAssembledLowerStack ? null : (
                 <div className={isFocusedPurchasePdp ? "hidden md:block" : undefined} data-testid="pdp-desktop-secondary">
                 <PdpDiscoverySections
                     family={group.family}
@@ -3180,11 +3192,12 @@ export default function ProductDetailClient({
                     </section>
                 )}
                 </div>
+                )}
 
                 {/* ── Sanity Editorial Zone (feature strip, gallery, FAQ, rich desc) ── */}
-                <PdpEditorialZone blocks={resolvedPdpBlocks} />
+                {hideAssembledLowerStack ? null : <PdpEditorialZone blocks={resolvedPdpBlocks} />}
 
-                <PdpDiscoveryMatrixLink family={group.family} />
+                {hideAssembledLowerStack ? null : <PdpDiscoveryMatrixLink family={group.family} />}
 
                 {/* Footer spacer */}
                 <div className="h-32 bg-linen border-t border-champagne/30"></div>
