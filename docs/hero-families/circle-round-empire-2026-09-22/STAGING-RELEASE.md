@@ -20,6 +20,6 @@ Rollback: the pre-release alias target was verified as https://best-bottles-webs
 
 ## Validation
 
-418 focused tests pass, including exact approved bytes, canvas dimensions, unchanged Cylinder behavior, filtered SKU identity, Shopify precedence and original production registry guards. TypeScript passes. Live catalog, deployment and public-byte results are recorded separately as they complete.
+418 focused tests pass, including exact approved bytes, canvas dimensions, unchanged Cylinder behavior, filtered SKU identity, Shopify precedence and original production registry guards. TypeScript passes. The local catalog audit passes all 60 exact heroes across 36 filtered views: both catalog routes, desktop and mobile, decoded images, SKU links, plastic-roller selection, identity framing and no page errors. Deployment and public-byte results are recorded separately as they complete.
 
 The two Empire white lotion-pump images retain their existing clear overcaps. No component or cap state was changed during reuse. Older pending labels in preserved review packets are historical; complete-family-approval.json is the current visual approval. Visual acceptance does not imply pixel-identical generated geometry or a new native resolution for reused source files.
