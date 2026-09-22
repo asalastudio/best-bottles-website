@@ -1,0 +1,225 @@
+{
+  "writtenAt": "2026-09-22T05:53:56.685Z",
+  "registry": "src/lib/products/catalog-heroes.json",
+  "manifest": "docs/reviews/catalog-complete-hero-release-2026-09-07.json",
+  "note": "Restore each `from` (url, manifest sha256, framing) to undo the Sunburst release 1 repoint.",
+  "rows": [
+    {
+      "websiteSku": "GBSleek5Gl",
+      "family": "Sleek",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSleek5Gl.7b7e5db93dab.png",
+        "manifestSha256": "7b7e5db93dab259b262fd7d12138054d6c090bc6200a7898b00dae9f4b373129",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSleek5Gl.e717e8a7f7ef.png",
+        "sha256": "e717e8a7f7efcae461367eb6cf74d8b01b97333b01ae26591380a6b67077959e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-sleek-shoulder-lock-2026-09-21",
+      "approvedAt": "2026-09-22T05:53:24.359Z"
+    },
+    {
+      "websiteSku": "GBSleek5SpryGlMatt",
+      "family": "Sleek",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSleek5SpryGlMatt.61cfd3fdca87.png",
+        "manifestSha256": "61cfd3fdca878e5cd1fcfe55b43c44c61e25d927790b18421aebe5752f761158",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSleek5SpryGlMatt.54c31977c243.png",
+        "sha256": "54c31977c243632658734de13532d5368ec18782109bbb725132c90314fdff70",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-sleek-shoulder-lock-2026-09-21",
+      "approvedAt": "2026-09-22T05:53:24.359Z"
+    },
+    {
+      "websiteSku": "GBSleek8Gl",
+      "family": "Sleek",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSleek8Gl.9e528ccef400.png",
+        "manifestSha256": "9e528ccef4005547ec36e78a051728cc4883424149f74b3e1728e48a39ddef0b",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSleek8Gl.fc86f1468682.png",
+        "sha256": "fc86f1468682685ad9ece1f7a624372092debefe4cdc832d1deb1dbd706a40fa",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-sleek-shoulder-lock-2026-09-21",
+      "approvedAt": "2026-09-22T05:53:24.359Z"
+    },
+    {
+      "websiteSku": "GBSleek8MtlRollGlMatt",
+      "family": "Sleek",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSleek8MtlRollGlMatt.109110dfe04d.png",
+        "manifestSha256": "109110dfe04d8c103c7d2a15df13aa5273de2f48953accbe4f2bfe0a84b51f97",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSleek8MtlRollGlMatt.c0905bf7e802.png",
+        "sha256": "c0905bf7e80252df92d8f8253233781b9d5ccaa74799c01109c7938e91d2ff36",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-sleek-shoulder-lock-2026-09-21",
+      "approvedAt": "2026-09-22T05:53:24.359Z"
+    },
+    {
+      "websiteSku": "GBSleek8SpryGlMatt",
+      "family": "Sleek",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSleek8SpryGlMatt.96a28be20a77.png",
+        "manifestSha256": "96a28be20a77fb109e2e53d1b32f5635aeda8797fe0350db3503723c1f5cf25b",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSleek8SpryGlMatt.8e5aa43acc58.png",
+        "sha256": "8e5aa43acc5884300cdd06b7e39b9d5efbb03a25dcbf98ddb7f68cc66ab88395",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-sleek-shoulder-lock-2026-09-21",
+      "approvedAt": "2026-09-22T05:53:24.359Z"
+    },
+    {
+      "websiteSku": "GBSlk100SpryMtGl",
+      "family": "Sleek",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlk100SpryMtGl.4a4e8818b61a.png",
+        "manifestSha256": "4a4e8818b61ab057d54a4845e57e140ca3f101f4421089b5272c3a6c9ef3898e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlk100SpryMtGl.d49491c9200b.png",
+        "sha256": "d49491c9200b7c1471620a802a94662069a6a137692a990b697a05985044b23e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-sleek-shoulder-lock-2026-09-21",
+      "approvedAt": "2026-09-22T05:53:24.359Z"
+    },
+    {
+      "websiteSku": "GBSlk30RdcrShnGl",
+      "family": "Sleek",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlk30RdcrShnGl.afcc119d9ce7.png",
+        "manifestSha256": "afcc119d9ce7002eff13dcbb5932ee24154baab6ec95bc1fc044c7dfdec2a8b1",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlk30RdcrShnGl.9044a60ec4a4.png",
+        "sha256": "9044a60ec4a4d296bd6b4267058c61713757245aa991d400d845c5d23dc21e1e",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-sleek-shoulder-lock-2026-09-21",
+      "approvedAt": "2026-09-22T05:53:24.359Z"
+    },
+    {
+      "websiteSku": "GBSlk30SpryMtGl",
+      "family": "Sleek",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlk30SpryMtGl.db15705b506d.png",
+        "manifestSha256": "db15705b506d39c4f42cdba39e745f38082635a00b3469fbfce4b8469e63f430",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlk30SpryMtGl.daa34888af73.png",
+        "sha256": "daa34888af73fc66a0abfbbb7408a194d64a4916bf63f34af049f771550b0846",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-sleek-shoulder-lock-2026-09-21",
+      "approvedAt": "2026-09-22T05:53:24.359Z"
+    },
+    {
+      "websiteSku": "GBSlk50RdcrShnGl",
+      "family": "Sleek",
+      "from": {
+        "url": "/images/catalog/bone-review/GBSlk50RdcrShnGl.e9addddaa5a0.png",
+        "manifestSha256": "e9addddaa5a04a45dff1b316c95c84e95285bb4910a2a03959d4130ceb810b52",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": -0.02564102564102882
+        }
+      },
+      "to": {
+        "url": "/images/catalog/bone-review/GBSlk50RdcrShnGl.298be3899ae8.png",
+        "sha256": "298be3899ae8798a19f41e9b4eaf040f61c67cee304c642ec06103a6394dfa70",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "approvedOn": "madison-sleek-shoulder-lock-2026-09-21",
+      "approvedAt": "2026-09-22T05:53:24.359Z"
+    }
+  ],
+  "skipped": []
+}
