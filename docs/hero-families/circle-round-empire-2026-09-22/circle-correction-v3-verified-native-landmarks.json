@@ -1,0 +1,82 @@
+[
+  {
+    "sku": "GBCrclFrst50RdcrIvyLthr",
+    "family": "Circle",
+    "capacityMl": 50,
+    "centerX": 1040,
+    "closureSeatY": 847,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2080,
+        -12.77
+      ],
+      [
+        2081,
+        -12.12
+      ],
+      [
+        2079,
+        -9.83
+      ],
+      [
+        2082,
+        -7.24
+      ],
+      [
+        2078,
+        -6.97
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "artworkBounds": [
+      443,
+      311,
+      1677,
+      2112
+    ],
+    "glassFootY": 2080,
+    "uncertaintyPx": 4
+  },
+  {
+    "sku": "GBCrclFrst50AnSpGl",
+    "family": "Circle",
+    "capacityMl": 50,
+    "centerX": 1195,
+    "closureSeatY": 847,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2081,
+        -5.54
+      ],
+      [
+        2082,
+        -4.62
+      ],
+      [
+        2080,
+        -3.86
+      ],
+      [
+        2072,
+        -3.43
+      ],
+      [
+        2073,
+        -3.34
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "artworkBounds": [
+      242,
+      94,
+      1918,
+      2110
+    ],
+    "glassFootY": 2081,
+    "uncertaintyPx": 4
+  }
+]

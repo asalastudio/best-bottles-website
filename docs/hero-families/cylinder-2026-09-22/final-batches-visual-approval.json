@@ -1,0 +1,158 @@
+{
+  "date": "2026-09-22",
+  "userFeedback": "Perfect let’s lock those and commit",
+  "count": 15,
+  "rows": [
+    {
+      "sku": "GBcyl25AnSpIvyGl",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "bfadd47f97fe59970d95fd6c10523a6790424754bc5ba3f19d9449b66cc0823f",
+      "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBcyl25AnSpTslIvyGl",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "ab184134a30ba22d8de1fa58acc86c48054e848ea5e73de8c16817293c4f2cb9",
+      "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "5476f7c122f9b50158c2f7fa7825f74158a18f4215c92edb3ffba5feca9ec467",
+      "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "511d21e7dee08a7a6f0107495f909f14f9914a6de1e4f0134572574299a0de71",
+      "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "d5caeec0df284c3b78b27ce7c1f61c3cddfbb55f2ad16a8399f072a299638ec5",
+      "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "95b60b0cd9cd0532c4a3833bcc8a7904e5118f2ff922b47f17662db4e101b60f",
+      "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "aec2bd4a4e743236b08d82c83132db65ae36593e0f23809da2eadf39f625102e",
+      "reviewSheetSha256": "2449e667c57b8cd48b01b86ffce82027331dba0b87dd75a0ce1b168702063af3",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "de9a058d232e6fe82d2030f68fa6b0c965974c03092cca40cf12633f3858d9a6",
+      "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "3753db48a2b7c96b5f08138e8fac1f922dc933cd4b26473aa223c445fd24e869",
+      "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "1b0eaaec38d33ce04be95cc63fd152979a5fdb387145e6bbf28ec6de4604ea46",
+      "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "f4e02e5fa3daa2ca3806d2cad17ab1ecf511b6f4c484aa0533bf932dc0feeb49",
+      "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "2f451bcac06a1b42ac3dd23b0ec78ce3b7f68e518b9fc1ec05869cbfb21e3f57",
+      "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlMatt",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "17dd48cae7ff29bb7766968fda8db664bc650f722b5932642a0ac38657940314",
+      "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "4ef0013dc760e5b7cfe223f25e04a0efad1b825be20946c193a0753a30b7d3cc",
+      "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "status": "approved",
+      "scope": "Visual appearance of current delivery export; exact bytes frozen as shown",
+      "userFeedback": "Perfect let’s lock those and commit",
+      "date": "2026-09-22",
+      "outputSha256": "35762581bc8415e7e8eb28fbd319dc77a6f5ecbabd56ae1a0f819728e17fa647",
+      "reviewSheetSha256": "c85d6dfd5bc14911e254dd8743ed74b04da5a2e8da1b02253df07b3f9d8c982a",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    }
+  ],
+  "note": "Reviewed sheet bytes remain unchanged, including their historical pending-review captions. This approval supersedes those captions. Clear Slim short-cap measured proportion finding remains recorded; current bytes accepted as-is, no correction executed."
+}

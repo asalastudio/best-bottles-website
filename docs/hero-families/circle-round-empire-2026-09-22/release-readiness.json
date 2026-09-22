@@ -1,0 +1,395 @@
+{
+  "checkedAt": "2026-09-22T21:36:53.632838+00:00",
+  "scope": "Current 60-image Circle/Round/Empire hero inventory; plate/kit scope and broader catalog excluded",
+  "familySummary": {
+    "Circle": {
+      "totalHeroRows": 28,
+      "states": {
+        "measurement-pending": 11,
+        "sizing-candidate": 5,
+        "composition-repair-required": 1,
+        "approved-final": 11
+      }
+    },
+    "Round": {
+      "totalHeroRows": 21,
+      "states": {
+        "measurement-pending": 7,
+        "sizing-candidate": 3,
+        "approved-final": 1,
+        "aligned-final-awaiting-review": 9,
+        "composition-repair-required": 1
+      }
+    },
+    "Empire": {
+      "totalHeroRows": 11,
+      "states": {
+        "measurement-pending": 5,
+        "sizing-candidate": 6
+      }
+    }
+  },
+  "allFamiliesReleaseReady": false,
+  "rows": [
+    {
+      "sku": "GBCrcl15Gl",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "family": "Circle",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl15MtlRollGlMatt",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl30GlCap",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl30SpryMattGl",
+      "family": "Circle",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl50AnSpGl",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "family": "Circle",
+      "state": "composition-repair-required",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl50DrpGl",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "LBCrcl50LtnMtGl",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "family": "Circle",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl50RdcrShnGl",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/circle-corrections-v3/aligned/GBCrclFrst50RdcrIvyLthr-2080x2288.png"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpGl",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/circle-corrections-v3/aligned/GBCrclFrst50AnSpGl-2080x2288.png"
+    },
+    {
+      "sku": "GBCrclFrst50DrpGl",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBCrclFrst50DrpGl-2080x2288.png"
+    },
+    {
+      "sku": "LBCrclFrst50LtnMtGl",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/LBCrclFrst50LtnMtGl-2080x2288.png"
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBCrclFrst50SpryMtGl-2080x2288.png"
+    },
+    {
+      "sku": "GBCrclFrst50RdcrShnGl",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBCrclFrst50RdcrShnGl-2080x2288.png"
+    },
+    {
+      "sku": "GBCrcl100AnSpGl",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl100AnSpTslGl",
+      "family": "Circle",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "LBCrcl100LtnMtGl",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl100SpryMtGl",
+      "family": "Circle",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrcl100RdcrShnGl",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBCrclFrst100AnSpGl",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBCrclFrst100AnSpGl-2080x2288.png"
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBCrclFrst100AnSpTslIvyGl-2080x2288.png"
+    },
+    {
+      "sku": "LBCrclFrst100LtnMtGl",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/LBCrclFrst100LtnMtGl-2080x2288.png"
+    },
+    {
+      "sku": "GBCrclFrst100SpryMtGl",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBCrclFrst100SpryMtGl-2080x2288.png"
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnGl",
+      "family": "Circle",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBCrclFrst100RdcrShnGl-2080x2288.png"
+    },
+    {
+      "sku": "GBEmp50AnSpGl",
+      "family": "Empire",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBEmp50AnSpTslGl",
+      "family": "Empire",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBEmp50DrpGl",
+      "family": "Empire",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "family": "Empire",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "family": "Empire",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBEmp50RdcrShnGl",
+      "family": "Empire",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBEmp100AnSpGl",
+      "family": "Empire",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBEmp100AnSpTslGl",
+      "family": "Empire",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "family": "Empire",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "family": "Empire",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBEmp100RdcrShnGl",
+      "family": "Empire",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBRnd78AnSpGl",
+      "family": "Round",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBRnd78AnSpTslGl",
+      "family": "Round",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "LBRnd78LtnCu",
+      "family": "Round",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBRnd78SpryCu",
+      "family": "Round",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBRnd78RdcrShnGl",
+      "family": "Round",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBRndFrst78AnSpGl",
+      "family": "Round",
+      "state": "approved-final",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/aligned/GBRndFrst78AnSpGl-2080x2288.png"
+    },
+    {
+      "sku": "GBRndFrst78AnSpTslGl",
+      "family": "Round",
+      "state": "aligned-final-awaiting-review",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBRndFrst78AnSpTslGl-2080x2288.png"
+    },
+    {
+      "sku": "LBRndFrst78LtnMtGl",
+      "family": "Round",
+      "state": "aligned-final-awaiting-review",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/LBRndFrst78LtnMtGl-2080x2288.png"
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "family": "Round",
+      "state": "aligned-final-awaiting-review",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBRndFrst78SpryMtGl-2080x2288.png"
+    },
+    {
+      "sku": "GBRndFrst78RdcrShnGl",
+      "family": "Round",
+      "state": "aligned-final-awaiting-review",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBRndFrst78RdcrShnGl-2080x2288.png"
+    },
+    {
+      "sku": "GBRnd128AnSpGl",
+      "family": "Round",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBRnd128AnSpTslIvyGl",
+      "family": "Round",
+      "state": "composition-repair-required",
+      "finalPath": null
+    },
+    {
+      "sku": "GBRnd128DrpGl",
+      "family": "Round",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "LBRnd128LtnMtGl",
+      "family": "Round",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBRnd128SpryMtGl",
+      "family": "Round",
+      "state": "sizing-candidate",
+      "finalPath": null
+    },
+    {
+      "sku": "GBRnd128RdcrShnGl",
+      "family": "Round",
+      "state": "measurement-pending",
+      "finalPath": null
+    },
+    {
+      "sku": "GBRndFrst128AnSpGl",
+      "family": "Round",
+      "state": "aligned-final-awaiting-review",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBRndFrst128AnSpGl-2080x2288.png"
+    },
+    {
+      "sku": "GBRndFrst128DrpGl",
+      "family": "Round",
+      "state": "aligned-final-awaiting-review",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBRndFrst128DrpGl-2080x2288.png"
+    },
+    {
+      "sku": "LBRndFrst128LtnMtGl",
+      "family": "Round",
+      "state": "aligned-final-awaiting-review",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/LBRndFrst128LtnMtGl-2080x2288.png"
+    },
+    {
+      "sku": "GBRndFrst128SpryMtGl",
+      "family": "Round",
+      "state": "aligned-final-awaiting-review",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBRndFrst128SpryMtGl-2080x2288.png"
+    },
+    {
+      "sku": "GBRndFrst128RdcrShnGl",
+      "family": "Round",
+      "state": "aligned-final-awaiting-review",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBRndFrst128RdcrShnGl-2080x2288.png"
+    },
+    {
+      "sku": "GBCrcl15RollBlkSh",
+      "family": "Circle",
+      "state": "measurement-pending",
+      "finalPath": null
+    }
+  ]
+}

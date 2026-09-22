@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "results": [
+    {
+      "family": "circle",
+      "width": 390,
+      "httpStatus": 200,
+      "errors": [],
+      "images": 11,
+      "allDecoded": true,
+      "overflow": false
+    },
+    {
+      "family": "round",
+      "width": 390,
+      "httpStatus": 200,
+      "errors": [],
+      "images": 10,
+      "allDecoded": true,
+      "overflow": false
+    },
+    {
+      "family": "circle",
+      "width": 1440,
+      "httpStatus": 200,
+      "errors": [],
+      "images": 11,
+      "allDecoded": true,
+      "overflow": false
+    },
+    {
+      "family": "round",
+      "width": 1440,
+      "httpStatus": 200,
+      "errors": [],
+      "images": 10,
+      "allDecoded": true,
+      "overflow": false
+    }
+  ]
+}

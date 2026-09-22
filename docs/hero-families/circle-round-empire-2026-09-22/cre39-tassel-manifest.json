@@ -1,0 +1,88 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "requestedSize": [
+    2080,
+    2288
+  ],
+  "quality": "high",
+  "authorization": "User requested completion of the 39 existing images including the two tassel composition fixes; existing Sunburst API workflow continued.",
+  "rows": [
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBCrcl50AnSpTslIvyGl",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "itemName": "Circle design 50 ml, 1.7oz  clear glass bottle  with Ivory vintage style bulb sprayer with tassel and shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance t",
+        "groupSlug": "circle-50ml-clear-18-415-antiquespray-tassel"
+      },
+      "target": {
+        "shoulderPct": 54,
+        "baselinePct": 91,
+        "landmark": "closure-seat"
+      },
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/43. GBCrcl50AnSpTslIvyGl.psd",
+      "masterSha256": "4828cf120312b43acbdb515d87e00be48f56920182f553350c30fc72cf2c6271",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/inputs/GBCrcl50AnSpTslIvyGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/tassel-corrections/GBCrcl50AnSpTslIvyGl-native-2080x2288.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/tassel-corrections/circle-fringe-v2/GBCrcl50AnSpTslIvyGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/tassel-corrections/circle-fringe-v2/GBCrcl50AnSpTslIvyGl-native-2080x2288.png",
+      "presentation": "connected bulb, hose and tassel; no sidecar",
+      "correctionScope": "Compact the existing attached flexible assembly to fit the fixed body size",
+      "inputSha256": {
+        "framedInput": "0758cab5775c85440afe7b6c869651cc4ebd6fe058e422ea9ba8054262e44ca0",
+        "masterComposite": "f6e9da087f4aebf273b6e0880fd57092d3ce0b9db83f533122d115ff6b44bad9",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "16ecc730d68e165d6470786a67e2ec0f82b4abdf09e1e60ee07e53766e9f31ab",
+        "maskFile": "0f5657862b09786cae6cdfd18d9d07fe53e59488c93ff5bfbb3232ff6ce2e13b"
+      },
+      "maskFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/tassel-corrections/circle-fringe-v2/fringe-mask.png"
+    },
+    {
+      "sku": "GBRnd128AnSpTslIvyGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "catalog": {
+        "sku": "GBRnd128AnSpTslIvyGl",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "itemName": "Round design 128 ml, 4.33oz  clear glass bottle  with Ivory vintage style bulb sprayer with tassel and shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance",
+        "groupSlug": "round-128ml-clear-18-415-antiquespray-tassel"
+      },
+      "target": {
+        "shoulderPct": 54,
+        "baselinePct": 91,
+        "landmark": "closure-seat"
+      },
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/43. GBRnd128AnSpTslIvyGl.psd",
+      "masterSha256": "b1cda130b592c7c1740fbd88971f19904cc49c7c6a1d1747756206878f64da0b",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/inputs/GBRnd128AnSpTslIvyGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpTslIvyGl.premium-aligned-v4.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/tassel-corrections/GBRnd128AnSpTslIvyGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/tassel-corrections/GBRnd128AnSpTslIvyGl-native-2080x2288.png",
+      "presentation": "connected bulb, hose and tassel; no sidecar",
+      "correctionScope": "Compact the existing attached flexible assembly to fit the fixed body size",
+      "inputSha256": {
+        "masterComposite": "3c1f073e743bb825b11e94a0fb740d4db89f52e6af7d4f831ce9ad26d774eab1",
+        "framedInput": "be1038c43fe3a434106bd29cc5c3a98fcf1f3266ea54daf5e6f4b36bbaaf44d9",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "b8de5730c44c46ac0f9ae1bf9a91634f6125f364cc9596c8c9c40e6112ac76f3"
+      }
+    }
+  ],
+  "uploadAuthorization": {
+    "userResponse": "Send it",
+    "context": "In response to the pending explicit request to send the Circle 50 mL and Round 128 mL ivory-tassel images, their exact master PSD composites, and approved clear material reference to OpenAI Sunburst API for both composition fixes.",
+    "scope": "These two prepared image edits only; no publication."
+  },
+  "successfulApiCalls": 3,
+  "state": "two-corrections-generated-awaiting-final-registration"
+}

@@ -1,0 +1,782 @@
+{
+  "rows": [
+    {
+      "sku": "GBCrcl15Gl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4586,
+      "glassFootY": 2082.08,
+      "datumY": 1061.06,
+      "targetSpanPct": 44.625,
+      "landmarkUncertaintyPx": 7.292999999999999,
+      "visibleArtworkBounds": [
+        338,
+        814,
+        1918,
+        2092
+      ],
+      "fitPass": true,
+      "pixelHash": "f85d45e29333b0f440896d9df0da5eba81e24510e69551134a39ebfa1dd63a1a"
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.523910447761194,
+      "glassFootY": 2082.08,
+      "datumY": 1061.0599999999997,
+      "targetSpanPct": 44.625,
+      "landmarkUncertaintyPx": 7.61955223880597,
+      "visibleArtworkBounds": [
+        268,
+        499,
+        1950,
+        2091
+      ],
+      "fitPass": true,
+      "pixelHash": "f2dde5199378fabb6d4ee04ff27fd6b36db91fc18bb4d45d8aff9404a9210f03"
+    },
+    {
+      "sku": "GBCrcl15MtlRollGlMatt",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.499295154185022,
+      "glassFootY": 2082.08,
+      "datumY": 1061.06,
+      "targetSpanPct": 44.625,
+      "landmarkUncertaintyPx": 7.49647577092511,
+      "visibleArtworkBounds": [
+        263,
+        650,
+        1899,
+        2101
+      ],
+      "fitPass": true,
+      "pixelHash": "c2f83051ea3190b7abb0d5b1afc1ea4f4abfb5cd0981261a58bc311c37a7238f"
+    },
+    {
+      "sku": "GBCrcl30GlCap",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.3476056338028168,
+      "glassFootY": 2082.08,
+      "datumY": 1029.6,
+      "targetSpanPct": 46,
+      "landmarkUncertaintyPx": 6.738028169014084,
+      "visibleArtworkBounds": [
+        321,
+        787,
+        1830,
+        2101
+      ],
+      "fitPass": true,
+      "pixelHash": "7ac83374d256e9df90d498739930aecd27163c1183c0eca7d0427ced2aecd92a"
+    },
+    {
+      "sku": "GBCrcl30SpryMattGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.3704166666666666,
+      "glassFootY": 2082.08,
+      "datumY": 1029.6,
+      "targetSpanPct": 46,
+      "landmarkUncertaintyPx": 6.852083333333333,
+      "visibleArtworkBounds": [
+        331,
+        412,
+        1858,
+        2111
+      ],
+      "fitPass": true,
+      "pixelHash": "1d0022c51c9d222a3ee550c51ab74420f797c0461cc38eddae9369cf6a9153a3"
+    },
+    {
+      "sku": "GBCrcl50AnSpGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4638862559241705,
+      "glassFootY": 2082.08,
+      "datumY": 846.56,
+      "targetSpanPct": 54,
+      "landmarkUncertaintyPx": 7.3194312796208525,
+      "visibleArtworkBounds": [
+        230,
+        101,
+        1825,
+        2106
+      ],
+      "fitPass": true,
+      "pixelHash": "2c0ef5604292f7836ed202911b728b2e13459711ba429bb659575dff0dd292e6"
+    },
+    {
+      "sku": "GBCrcl50DrpGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4778947368421052,
+      "glassFootY": 2082.08,
+      "datumY": 846.5600000000002,
+      "targetSpanPct": 54,
+      "landmarkUncertaintyPx": 7.389473684210525,
+      "visibleArtworkBounds": [
+        394,
+        152,
+        1700,
+        2114
+      ],
+      "fitPass": true,
+      "pixelHash": "8a9da5b0d6c8820ebe7d4c2e8e48d15dc053c6f36f3fd869d6aa25458afc0246"
+    },
+    {
+      "sku": "LBCrcl50LtnMtGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4708571428571429,
+      "glassFootY": 2082.08,
+      "datumY": 846.5599999999998,
+      "targetSpanPct": 54,
+      "landmarkUncertaintyPx": 7.354285714285714,
+      "visibleArtworkBounds": [
+        190,
+        171,
+        1994,
+        2116
+      ],
+      "fitPass": true,
+      "pixelHash": "0d65f37b7203165390add470d2497747dd2f8708c8fc8592d1ad845ad4a55bd2"
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4656227758007117,
+      "glassFootY": 2082.08,
+      "datumY": 846.56,
+      "targetSpanPct": 54,
+      "landmarkUncertaintyPx": 7.328113879003558,
+      "visibleArtworkBounds": [
+        197,
+        177,
+        1960,
+        2119
+      ],
+      "fitPass": true,
+      "pixelHash": "9b911e5dbbe5de4ad96a9e678a70b94550d7522a81ab92dd4c147d2115253a98"
+    },
+    {
+      "sku": "GBCrcl50RdcrShnGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4569811320754718,
+      "glassFootY": 2082.08,
+      "datumY": 846.5599999999996,
+      "targetSpanPct": 54,
+      "landmarkUncertaintyPx": 7.284905660377358,
+      "visibleArtworkBounds": [
+        405,
+        511,
+        1676,
+        2111
+      ],
+      "fitPass": true,
+      "pixelHash": "c00fce84ada75991eaf1f14352a839a585391d0140e21c1403f93d465fe10338"
+    },
+    {
+      "sku": "GBCrcl100AnSpGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4027906976744187,
+      "glassFootY": 2082.08,
+      "datumY": 755.0399999999998,
+      "targetSpanPct": 58,
+      "landmarkUncertaintyPx": 7.013953488372094,
+      "visibleArtworkBounds": [
+        283,
+        129,
+        1765,
+        2125
+      ],
+      "fitPass": true,
+      "pixelHash": "8228b5f240a363e7c4cab0abfce0ef67b0a742549eb68c7a3574c8000cea2a5c"
+    },
+    {
+      "sku": "GBCrcl100AnSpTslGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.3954153522607782,
+      "glassFootY": 2082.08,
+      "datumY": 755.0399999999998,
+      "targetSpanPct": 58,
+      "landmarkUncertaintyPx": 6.977076761303891,
+      "visibleArtworkBounds": [
+        32,
+        196,
+        2022,
+        2124
+      ],
+      "fitPass": true,
+      "pixelHash": "b41e9e6bd0276c400ca292616efccc9acaea6918b98cf2ee0be8adf7ecf4b7eb"
+    },
+    {
+      "sku": "LBCrcl100LtnMtGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4042751322751323,
+      "glassFootY": 2082.08,
+      "datumY": 755.04,
+      "targetSpanPct": 58,
+      "landmarkUncertaintyPx": 7.021375661375662,
+      "visibleArtworkBounds": [
+        187,
+        182,
+        1950,
+        2116
+      ],
+      "fitPass": true,
+      "pixelHash": "5daeea49fca6b05c703d0cbc5d1ed9f254760cd36bba266c768887a846e13b12"
+    },
+    {
+      "sku": "GBCrcl100SpryMtGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4102444208289053,
+      "glassFootY": 2082.08,
+      "datumY": 755.0400000000002,
+      "targetSpanPct": 58,
+      "landmarkUncertaintyPx": 7.051222104144527,
+      "visibleArtworkBounds": [
+        163,
+        180,
+        1985,
+        2112
+      ],
+      "fitPass": true,
+      "pixelHash": "692f630844310cf5eac343e9d18b3fb017374e4a27cbabd9962c44ef7b4b9d27"
+    },
+    {
+      "sku": "GBCrcl100RdcrShnGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4147547974413646,
+      "glassFootY": 2082.08,
+      "datumY": 755.0399999999997,
+      "targetSpanPct": 58,
+      "landmarkUncertaintyPx": 7.073773987206823,
+      "visibleArtworkBounds": [
+        368,
+        462,
+        1713,
+        2120
+      ],
+      "fitPass": true,
+      "pixelHash": "9ad6a5ebcbec5750fb37c0bad82a9a0a351c355054232a35e266a5ceca21d9c4"
+    },
+    {
+      "sku": "GBEmp50AnSpGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4193548387096775,
+      "glassFootY": 2082.08,
+      "datumY": 938.0799999999997,
+      "targetSpanPct": 50,
+      "landmarkUncertaintyPx": 7.096774193548388,
+      "visibleArtworkBounds": [
+        452,
+        261,
+        1594,
+        2100
+      ],
+      "fitPass": true,
+      "pixelHash": "47976f3762f013b643c352ea7249f3ec301abba9b2e1a98ba11c2aefd5ab651d"
+    },
+    {
+      "sku": "GBEmp50AnSpTslGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4193548387096775,
+      "glassFootY": 2082.08,
+      "datumY": 938.0799999999997,
+      "targetSpanPct": 50,
+      "landmarkUncertaintyPx": 7.096774193548388,
+      "visibleArtworkBounds": [
+        172,
+        308,
+        1839,
+        2100
+      ],
+      "fitPass": true,
+      "pixelHash": "5da975f6b3e3c049b0134e35a47a5a24e7d45704a5ce5989d581ad69f9e69ef6"
+    },
+    {
+      "sku": "GBEmp50DrpGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4088669950738917,
+      "glassFootY": 2082.08,
+      "datumY": 938.0800000000002,
+      "targetSpanPct": 50,
+      "landmarkUncertaintyPx": 7.044334975369458,
+      "visibleArtworkBounds": [
+        742,
+        328,
+        1333,
+        2100
+      ],
+      "fitPass": true,
+      "pixelHash": "479bc352e212822f196899b963c928329ad4c5d3af3c822355e87cab3517f43a"
+    },
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4193548387096775,
+      "glassFootY": 2082.08,
+      "datumY": 938.0799999999997,
+      "targetSpanPct": 50,
+      "landmarkUncertaintyPx": 7.096774193548388,
+      "visibleArtworkBounds": [
+        740,
+        156,
+        1336,
+        2100
+      ],
+      "fitPass": true,
+      "pixelHash": "d2f246e11a4518180cf7084871c476db4c9b2e6b915bb168ade6674604c0cdaa"
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4211180124223604,
+      "glassFootY": 2082.08,
+      "datumY": 938.0800000000002,
+      "targetSpanPct": 50,
+      "landmarkUncertaintyPx": 7.105590062111801,
+      "visibleArtworkBounds": [
+        539,
+        325,
+        1571,
+        2101
+      ],
+      "fitPass": true,
+      "pixelHash": "9264e12b3511499eba7aeba6f198834a977e39cea3e46ba2a56548132adc4f1e"
+    },
+    {
+      "sku": "GBEmp50RdcrShnGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4193548387096775,
+      "glassFootY": 2082.08,
+      "datumY": 938.0799999999997,
+      "targetSpanPct": 50,
+      "landmarkUncertaintyPx": 7.096774193548388,
+      "visibleArtworkBounds": [
+        742,
+        626,
+        1339,
+        2100
+      ],
+      "fitPass": true,
+      "pixelHash": "9b733457ba68d1efcfb65cc077fbc0373d6f92ecde15a0f50644ee007c3c0663"
+    },
+    {
+      "sku": "GBEmp100AnSpGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.3358811040339704,
+      "glassFootY": 2082.08,
+      "datumY": 823.68,
+      "targetSpanPct": 55,
+      "landmarkUncertaintyPx": 6.679405520169852,
+      "visibleArtworkBounds": [
+        477,
+        221,
+        1551,
+        2128
+      ],
+      "fitPass": true,
+      "pixelHash": "ffb7e66dad0c57e715b2e448c7930854c9e62d7d909bac578be4d32070949555"
+    },
+    {
+      "sku": "GBEmp100AnSpTslGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.3387234042553193,
+      "glassFootY": 2082.08,
+      "datumY": 823.6799999999997,
+      "targetSpanPct": 55,
+      "landmarkUncertaintyPx": 6.693617021276596,
+      "visibleArtworkBounds": [
+        208,
+        290,
+        1817,
+        2179
+      ],
+      "fitPass": true,
+      "pixelHash": "28d209243142a5aca5b75d0dfe90beeeb6b2bb8a5a6b6bd14fc5b6fa81f7777a"
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.3387234042553193,
+      "glassFootY": 2082.08,
+      "datumY": 823.6799999999997,
+      "targetSpanPct": 55,
+      "landmarkUncertaintyPx": 6.693617021276596,
+      "visibleArtworkBounds": [
+        691,
+        124,
+        1341,
+        2128
+      ],
+      "fitPass": true,
+      "pixelHash": "55d28f545f4e3d2a65d42c2f38e375220846c6dce98fc09b97e480aef0d35050"
+    },
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.3401490947816828,
+      "glassFootY": 2082.08,
+      "datumY": 823.68,
+      "targetSpanPct": 55,
+      "landmarkUncertaintyPx": 6.700745473908414,
+      "visibleArtworkBounds": [
+        520,
+        277,
+        1565,
+        2128
+      ],
+      "fitPass": true,
+      "pixelHash": "0daab91fabce80d8af82cdb8a7f2ab27ab9534381b703b28cb27d942c5293e74"
+    },
+    {
+      "sku": "GBEmp100RdcrShnGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.3401490947816828,
+      "glassFootY": 2082.08,
+      "datumY": 823.68,
+      "targetSpanPct": 55,
+      "landmarkUncertaintyPx": 6.700745473908414,
+      "visibleArtworkBounds": [
+        690,
+        544,
+        1340,
+        2128
+      ],
+      "fitPass": true,
+      "pixelHash": "564ff58cf28bb1dde3a622a8aae8ebcc70990330c01df9336ef3de882b66b463"
+    },
+    {
+      "sku": "GBRnd78AnSpGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.5274547983310154,
+      "glassFootY": 2082.08,
+      "datumY": 983.8399999999997,
+      "targetSpanPct": 48,
+      "landmarkUncertaintyPx": 7.637273991655077,
+      "visibleArtworkBounds": [
+        206,
+        219,
+        1737,
+        2095
+      ],
+      "fitPass": true,
+      "pixelHash": "8e40a4048bbdfd8114ffa78e5cba39351c9fa7278c2695764777cf967a72986a"
+    },
+    {
+      "sku": "GBRnd78AnSpTslGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.5555807365439094,
+      "glassFootY": 2082.08,
+      "datumY": 983.8399999999997,
+      "targetSpanPct": 48,
+      "landmarkUncertaintyPx": 7.777903682719547,
+      "visibleArtworkBounds": [
+        32,
+        243,
+        1986,
+        2166
+      ],
+      "fitPass": true,
+      "pixelHash": "f370c30412cb284df12ee86fff43d60c25ea71d47129407a4b750de7a1b0b476"
+    },
+    {
+      "sku": "LBRnd78LtnCu",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.5381512605042016,
+      "glassFootY": 2082.08,
+      "datumY": 983.8400000000001,
+      "targetSpanPct": 48,
+      "landmarkUncertaintyPx": 7.690756302521008,
+      "visibleArtworkBounds": [
+        290,
+        217,
+        1956,
+        2100
+      ],
+      "fitPass": true,
+      "pixelHash": "126a7866e19ff986be2d1998685668671605bf8c101911bc18a43bd0ebed92b1"
+    },
+    {
+      "sku": "GBRnd78SpryCu",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.5381512605042016,
+      "glassFootY": 2082.08,
+      "datumY": 983.8399999999999,
+      "targetSpanPct": 48,
+      "landmarkUncertaintyPx": 7.690756302521008,
+      "visibleArtworkBounds": [
+        280,
+        223,
+        1942,
+        2096
+      ],
+      "fitPass": true,
+      "pixelHash": "2da76c836a2cb15d45d876338dd2e19dbbfda8b67f230078629e09040b308aeb"
+    },
+    {
+      "sku": "GBRnd78RdcrShnGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.5622190611664295,
+      "glassFootY": 2082.08,
+      "datumY": 983.8399999999999,
+      "targetSpanPct": 48,
+      "landmarkUncertaintyPx": 7.811095305832147,
+      "visibleArtworkBounds": [
+        458,
+        634,
+        1605,
+        2106
+      ],
+      "fitPass": true,
+      "pixelHash": "54b95288d65aa71dbaf11a804a88cbb93cb1b44b3545be4550fd2b55d4818cee"
+    },
+    {
+      "sku": "GBRnd128AnSpGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4796646706586827,
+      "glassFootY": 2082.08,
+      "datumY": 846.5599999999997,
+      "targetSpanPct": 54,
+      "landmarkUncertaintyPx": 7.398323353293414,
+      "visibleArtworkBounds": [
+        229,
+        59,
+        1841,
+        2098
+      ],
+      "fitPass": true,
+      "pixelHash": "5f06c621264099601febe52298d042176b3b7be41e43503b7c052318288d28d6"
+    },
+    {
+      "sku": "GBRnd128DrpGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4796646706586827,
+      "glassFootY": 2082.08,
+      "datumY": 846.5599999999997,
+      "targetSpanPct": 54,
+      "landmarkUncertaintyPx": 7.398323353293414,
+      "visibleArtworkBounds": [
+        396,
+        100,
+        1684,
+        2097
+      ],
+      "fitPass": true,
+      "pixelHash": "d73735b18ebbed862d775ae0eea02624053dc198bd579ff8b234fc0aee90511a"
+    },
+    {
+      "sku": "LBRnd128LtnMtGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4814388489208632,
+      "glassFootY": 2082.08,
+      "datumY": 846.56,
+      "targetSpanPct": 54,
+      "landmarkUncertaintyPx": 7.407194244604316,
+      "visibleArtworkBounds": [
+        273,
+        190,
+        1957,
+        2101
+      ],
+      "fitPass": true,
+      "pixelHash": "03526c3eb1fd5427bedb2d25cfcdfcb82542f6c64270341036afc43a7edc03cb"
+    },
+    {
+      "sku": "GBRnd128SpryMtGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4814388489208632,
+      "glassFootY": 2082.08,
+      "datumY": 846.5600000000002,
+      "targetSpanPct": 54,
+      "landmarkUncertaintyPx": 7.407194244604316,
+      "visibleArtworkBounds": [
+        228,
+        256,
+        1938,
+        2096
+      ],
+      "fitPass": true,
+      "pixelHash": "3b739a7147e45c9d7a807c82a2cecfb31d28b40a119bbd8e50a1c1f5beebef3f"
+    },
+    {
+      "sku": "GBRnd128RdcrShnGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4778947368421052,
+      "glassFootY": 2082.08,
+      "datumY": 846.56,
+      "targetSpanPct": 54,
+      "landmarkUncertaintyPx": 7.389473684210525,
+      "visibleArtworkBounds": [
+        400,
+        472,
+        1670,
+        2095
+      ],
+      "fitPass": true,
+      "pixelHash": "f8b8a66ea40c232d51e4eabfceef06c6b3c321b02508c57ef9f2e9983c8c2c9a"
+    },
+    {
+      "sku": "GBCrcl15RollBlkSh",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "sourceUnchanged": true,
+      "bodyUniformScale": 1.4905401459854015,
+      "glassFootY": 2082.08,
+      "datumY": 1061.0600000000002,
+      "targetSpanPct": 44.625,
+      "landmarkUncertaintyPx": 7.452700729927008,
+      "visibleArtworkBounds": [
+        236,
+        633,
+        1876,
+        2104
+      ],
+      "fitPass": true,
+      "pixelHash": "153c7917b071369b1a940890716e56ba78769ba8d28b1f1ad5aa2f12f347306c"
+    }
+  ],
+  "notes": "Landmark coordinates derive from visually verified source crops; visual identification uncertainty is explicitly recorded. Output foreground margins are independently detected. No stretching or selective component/shadow edits."
+}

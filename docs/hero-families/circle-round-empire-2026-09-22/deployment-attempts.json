@@ -1,0 +1,37 @@
+{
+  "attempts": [
+    {
+      "id": "dpl_F91Y1jbSPg9GCCzkEvUgFC5sbhWC",
+      "url": "https://best-bottles-website-l5toyr1lw-asala.vercel.app",
+      "state": "ERROR",
+      "stage": "Vercel deployment-file download before compilation",
+      "stagingAliasChanged": false
+    },
+    {
+      "id": "dpl_Ags687rFmnPPwDtbDT2NArHbSWzM",
+      "url": "https://best-bottles-website-ri5i2zbnu-asala.vercel.app",
+      "state": "READY",
+      "source": "Git 3ae111d8",
+      "note": "Healthy build created before branch family flag was set. Verified Circle HTML lacks new hero paths; not selected for staging.",
+      "stagingAliasChanged": false
+    },
+    {
+      "id": "dpl_GigdHQpyoRxF1zaPnZpPxN2EMcWY",
+      "url": "https://best-bottles-website-8wa4fqmf7-asala.vercel.app",
+      "state": "ERROR",
+      "stage": "Webpack module resolution in CLI-uploaded deployment",
+      "missingInputs": [
+        "data/asset-ledger/boston-kit-intake.json",
+        "data/asset-ledger/boston-kit-release.json",
+        "data/asset-ledger/pdp-capacity-standards.json"
+      ],
+      "note": "Inputs exist and are tracked locally. Git-sourced build includes them and passes. Retry uses successful Git deployment with current branch-scoped configuration.",
+      "stagingAliasChanged": false
+    }
+  ],
+  "branchPreviewConfiguration": {
+    "branch": "codex/circle-round-empire-scale-2026-09-22",
+    "NEXT_PUBLIC_CATALOG_HERO_PILOT": "families-2026-09-22",
+    "BB_CONVEX_PREVIEW_DEPLOY": "false"
+  }
+}

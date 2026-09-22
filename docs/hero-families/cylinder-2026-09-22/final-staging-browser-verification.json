@@ -1,0 +1,2783 @@
+{
+  "url": "https://best-bottles-website.vercel.app",
+  "checkedAt": "2026-09-22T19:40:44.109Z",
+  "views": [
+    {
+      "mobile": false,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=3.3%20ml,4%20ml,5%20ml",
+      "cards": [
+        {
+          "sku": "GBSpry3mlClBlk",
+          "group": "cylinder-3.3ml-clear-12mm-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry3mlClBlk.5e55db395cfa.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-3.3ml-clear-12mm-finemist?sku=GBSpry3mlClBlk"
+        },
+        {
+          "sku": "GBSpry4mlClBlk",
+          "group": "cylinder-4ml-clear-12mm-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry4mlClBlk.152036f08d2a.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-4ml-clear-12mm-finemist?sku=GBSpry4mlClBlk"
+        },
+        {
+          "sku": "GBCyl5GlMattSht",
+          "group": "cylinder-5ml-clear-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5GlMattSht.637c8aa197bc.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-5ml-clear-13-415?sku=GBCyl5GlMattSht"
+        },
+        {
+          "sku": "GBCyl5SprySlMatt",
+          "group": "cylinder-5ml-clear-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5SprySlMatt.82f24320a8a1.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-finemist?sku=GBCyl5SprySlMatt"
+        },
+        {
+          "sku": "GBCyl5MtlRollBlkDot",
+          "group": "cylinder-5ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5MtlRollBlkDot.6e766dc20b00.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5MtlRollBlkDot"
+        },
+        {
+          "sku": "GBCylBlu5SlMattSht",
+          "group": "cylinder-5ml-cobalt-blue-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5SlMattSht.164b75e4e501.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415?sku=GBCylBlu5SlMattSht"
+        },
+        {
+          "sku": "GBCylBlu5SpryGlMatt",
+          "group": "cylinder-5ml-cobalt-blue-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5SpryGlMatt.69235ce9bde8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-finemist?sku=GBCylBlu5SpryGlMatt"
+        },
+        {
+          "sku": "GBCylBlu5MtlRollBlkDot",
+          "group": "cylinder-5ml-cobalt-blue-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5MtlRollBlkDot.6fe305eca91f.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5MtlRollBlkDot"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=5%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCyl5RollBlkDot",
+          "group": "cylinder-5ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5RollBlkDot.5e3219bdb0d8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5RollBlkDot"
+        },
+        {
+          "sku": "GBCylBlu5RollBlkDot",
+          "group": "cylinder-5ml-cobalt-blue-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5RollBlkDot.e3f6c4057c08.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5RollBlkDot"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=9%20ml",
+      "cards": [
+        {
+          "sku": "GBCylAmb9SpryMattSl",
+          "group": "cylinder-9ml-amber-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9SpryMattSl.297ea26b8a91.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryMattSl"
+        },
+        {
+          "sku": "LBCylAmb9LtnMtSl",
+          "group": "cylinder-9ml-amber-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylAmb9LtnMtSl.f80deb49076c.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-lotionpump?sku=LBCylAmb9LtnMtSl"
+        },
+        {
+          "sku": "GBCylAmb9MtlRollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9MtlRollBlkDot.b8ff3a73f388.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBTallCyl9GlMattSht",
+          "group": "cylinder-9ml-clear-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9GlMattSht.de9a058d232e.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-clear-13-415?sku=GBTallCyl9GlMattSht"
+        },
+        {
+          "sku": "GBTallCyl9SpryGlMatt",
+          "group": "cylinder-9ml-clear-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9SpryGlMatt.3753db48a2b7.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-finemist?sku=GBTallCyl9SpryGlMatt"
+        },
+        {
+          "sku": "GBCyl9SpryGl",
+          "group": "cylinder-9ml-clear-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9SpryGl.3531f92e7360.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryGl"
+        },
+        {
+          "sku": "LBCyl9LtnGl",
+          "group": "cylinder-9ml-clear-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl9LtnGl.ca2699daa0ba.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-lotionpump?sku=LBCyl9LtnGl"
+        },
+        {
+          "sku": "GBTallCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9MtlRollBlkDot.1b0eaaec38d3.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9MtlRollBlkDot.963eed913d43.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBCylBlu9SpryMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9SpryMattSl.4befc61f1a00.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryMattSl"
+        },
+        {
+          "sku": "LBCylBlu9LtnMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylBlu9LtnMattSl.d0ec317eb616.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-lotionpump?sku=LBCylBlu9LtnMattSl"
+        },
+        {
+          "sku": "GBCylBlu9MtlRollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9MtlRollBlkDot.844e9d33753f.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBTallCylFrst9GlMattSht",
+          "group": "cylinder-9ml-frosted-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9GlMattSht.2f451bcac06a.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415?sku=GBTallCylFrst9GlMattSht"
+        },
+        {
+          "sku": "GBTallCylFrst9SpryGlMatt",
+          "group": "cylinder-9ml-frosted-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9SpryGlMatt.17dd48cae7ff.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-finemist?sku=GBTallCylFrst9SpryGlMatt"
+        },
+        {
+          "sku": "GBCylFrst9SpryMattSl",
+          "group": "cylinder-9ml-frosted-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9SpryMattSl.d5b42efe1820.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryMattSl"
+        },
+        {
+          "sku": "LBCylFrst9LtnMtSl",
+          "group": "cylinder-9ml-frosted-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylFrst9LtnMtSl.619922894add.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-lotionpump?sku=LBCylFrst9LtnMtSl"
+        },
+        {
+          "sku": "GBTallCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9MtlRollBlkDot.4ef0013dc760.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9MtlRollBlkDot.08fa7b4cd8f0.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBCylSwrl9SpryMattSl",
+          "group": "cylinder-9ml-swirl-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9SpryMattSl.70ebfb3a4550.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryMattSl"
+        },
+        {
+          "sku": "LBCylSwrl9LtnMtSl",
+          "group": "cylinder-9ml-swirl-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylSwrl9LtnMtSl.e7f6c9af7f11.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-lotionpump?sku=LBCylSwrl9LtnMtSl"
+        },
+        {
+          "sku": "GBCylSwrl9MtlRollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9MtlRollBlkDot.cb173e3c3110.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9MtlRollBlkDot"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=25%20ml,30%20ml",
+      "cards": [
+        {
+          "sku": "GBCyl25DrpGl",
+          "group": "cylinder-25ml-clear-18-415-dropper",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl25DrpGl.5476f7c122f9.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-dropper?sku=GBCyl25DrpGl"
+        },
+        {
+          "sku": "GBcyl25SpryMtGl",
+          "group": "cylinder-25ml-clear-18-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25SpryMtGl.511d21e7dee0.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-finemist?sku=GBcyl25SpryMtGl"
+        },
+        {
+          "sku": "LBCyl25LtnMtGl",
+          "group": "cylinder-25ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl25LtnMtGl.d5caeec0df28.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-lotionpump?sku=LBCyl25LtnMtGl"
+        },
+        {
+          "sku": "GBCyl25RdcrShnGl",
+          "group": "cylinder-25ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl25RdcrShnGl.95b60b0cd9cd.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-reducer?sku=GBCyl25RdcrShnGl"
+        },
+        {
+          "sku": "GBcyl25AnSpIvyGl",
+          "group": "cylinder-25ml-clear-18-415-antique",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25AnSpIvyGl.bfadd47f97fe.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-antique?sku=GBcyl25AnSpIvyGl"
+        },
+        {
+          "sku": "GBcyl25AnSpTslIvyGl",
+          "group": "cylinder-25ml-clear-18-415-antiquetassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25AnSpTslIvyGl.ab184134a30b.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-antiquetassel?sku=GBcyl25AnSpTslIvyGl"
+        },
+        {
+          "sku": "GBSpry1ozGl",
+          "group": "cylinder-30ml-clear-18-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry1ozGl.aec2bd4a4e74.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-30ml-clear-18-415-finemist?sku=GBSpry1ozGl"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=28%20ml,50%20ml",
+      "cards": [
+        {
+          "sku": "GBMtlRoll28Blk",
+          "group": "cylinder-28ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBMtlRoll28Blk.724c06a6edfa.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-28ml-clear-16mm-rollon?sku=GBMtlRoll28Blk"
+        },
+        {
+          "sku": "GBCyl50SpryMtGl",
+          "group": "cylinder-50ml-clear-18-415-perfumespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50SpryMtGl.88aa74a09984.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-perfumespray?sku=GBCyl50SpryMtGl"
+        },
+        {
+          "sku": "LBCyl50LtnMtGl",
+          "group": "cylinder-50ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl50LtnMtGl.147afe555981.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-lotionpump?sku=LBCyl50LtnMtGl"
+        },
+        {
+          "sku": "GBCyl50RdcrMtSl",
+          "group": "cylinder-50ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RdcrMtSl.3ee8e1930780.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-reducer?sku=GBCyl50RdcrMtSl"
+        },
+        {
+          "sku": "GBCyl50MtlRollBlk",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50MtlRollBlk.748d3f4631ca.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50MtlRollBlk"
+        },
+        {
+          "sku": "GBCyl50AnSpMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpMtSl.d9f827180268.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray?sku=GBCyl50AnSpMtSl"
+        },
+        {
+          "sku": "GBCyl50AnSpTslMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpTslMtSl.42c6d85c1a49.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray-tassel?sku=GBCyl50AnSpTslMtSl"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=100%20ml",
+      "cards": [
+        {
+          "sku": "GBCyl100SpryMtGl",
+          "group": "cylinder-100ml-clear-18-415-perfumespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100SpryMtGl.c238fe44a86e.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-perfumespray?sku=GBCyl100SpryMtGl"
+        },
+        {
+          "sku": "LBCyl100LtnMtGl",
+          "group": "cylinder-100ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl100LtnMtGl.8ef2159eee21.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-lotionpump?sku=LBCyl100LtnMtGl"
+        },
+        {
+          "sku": "GBCyl100RdcrMtSl",
+          "group": "cylinder-100ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100RdcrMtSl.e5aec2df54e9.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-reducer?sku=GBCyl100RdcrMtSl"
+        },
+        {
+          "sku": "GBCyl100AnSpMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpMtSl.4c0ef81c3113.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray?sku=GBCyl100AnSpMtSl"
+        },
+        {
+          "sku": "GBCyl100AnSpTslMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpTslMtSl.7c088c6921a3.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray-tassel?sku=GBCyl100AnSpTslMtSl"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=9%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCylAmb9RollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9RollBlkDot.f28dd0c27078.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9RollBlkDot"
+        },
+        {
+          "sku": "GBTallCyl9RollBlkDot",
+          "group": "cylinder-9ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9RollBlkDot.f4e02e5fa3da.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9RollBlkDot"
+        },
+        {
+          "sku": "GBCyl9RollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9RollBlkDot.52b866cf8bfd.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9RollBlkDot"
+        },
+        {
+          "sku": "GBCylBlu9RollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9RollBlkDot.4f9631b0ceb8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9RollBlkDot"
+        },
+        {
+          "sku": "GBTallCylFrst9RollBlkDot",
+          "group": "cylinder-9ml-frosted-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9RollBlkDot.35762581bc84.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9RollBlkDot"
+        },
+        {
+          "sku": "GBCylFrst9RollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9RollBlkDot.d9051dc36960.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9RollBlkDot"
+        },
+        {
+          "sku": "GBCylSwrl9RollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9RollBlkDot.26dda713bfb7.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9RollBlkDot"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=50%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCyl50RollWht",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RollWht.b558aef1c1f8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50RollWht"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=3.3%20ml,4%20ml,5%20ml",
+      "cards": [
+        {
+          "sku": "GBSpry3mlClBlk",
+          "group": "cylinder-3.3ml-clear-12mm-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry3mlClBlk.5e55db395cfa.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-3.3ml-clear-12mm-finemist?sku=GBSpry3mlClBlk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBSpry4mlClBlk",
+          "group": "cylinder-4ml-clear-12mm-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry4mlClBlk.152036f08d2a.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-4ml-clear-12mm-finemist?sku=GBSpry4mlClBlk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCyl5GlMattSht",
+          "group": "cylinder-5ml-clear-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5GlMattSht.637c8aa197bc.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-5ml-clear-13-415?sku=GBCyl5GlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCyl5SprySlMatt",
+          "group": "cylinder-5ml-clear-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5SprySlMatt.82f24320a8a1.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-finemist?sku=GBCyl5SprySlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCyl5MtlRollBlkDot",
+          "group": "cylinder-5ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5MtlRollBlkDot.6e766dc20b00.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCylBlu5SlMattSht",
+          "group": "cylinder-5ml-cobalt-blue-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5SlMattSht.164b75e4e501.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415?sku=GBCylBlu5SlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCylBlu5SpryGlMatt",
+          "group": "cylinder-5ml-cobalt-blue-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5SpryGlMatt.69235ce9bde8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-finemist?sku=GBCylBlu5SpryGlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCylBlu5MtlRollBlkDot",
+          "group": "cylinder-5ml-cobalt-blue-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5MtlRollBlkDot.6fe305eca91f.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=5%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCyl5RollBlkDot",
+          "group": "cylinder-5ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5RollBlkDot.5e3219bdb0d8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D5%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylBlu5RollBlkDot",
+          "group": "cylinder-5ml-cobalt-blue-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5RollBlkDot.e3f6c4057c08.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D5%2Bml%26roller%3Dplastic"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=9%20ml",
+      "cards": [
+        {
+          "sku": "LBCylAmb9LtnMtSl",
+          "group": "cylinder-9ml-amber-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylAmb9LtnMtSl.f80deb49076c.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-lotionpump?sku=LBCylAmb9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylAmb9SpryMattSl",
+          "group": "cylinder-9ml-amber-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9SpryMattSl.297ea26b8a91.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylAmb9MtlRollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9MtlRollBlkDot.b8ff3a73f388.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCyl9LtnGl",
+          "group": "cylinder-9ml-clear-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl9LtnGl.ca2699daa0ba.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-lotionpump?sku=LBCyl9LtnGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCyl9SpryGl",
+          "group": "cylinder-9ml-clear-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9SpryGl.3531f92e7360.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9MtlRollBlkDot.963eed913d43.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9GlMattSht",
+          "group": "cylinder-9ml-clear-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9GlMattSht.de9a058d232e.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-13-415?sku=GBTallCyl9GlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9SpryGlMatt",
+          "group": "cylinder-9ml-clear-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9SpryGlMatt.3753db48a2b7.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-finemist?sku=GBTallCyl9SpryGlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9MtlRollBlkDot.1b0eaaec38d3.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylBlu9LtnMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylBlu9LtnMattSl.d0ec317eb616.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-lotionpump?sku=LBCylBlu9LtnMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylBlu9SpryMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9SpryMattSl.4befc61f1a00.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylBlu9MtlRollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9MtlRollBlkDot.844e9d33753f.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylFrst9LtnMtSl",
+          "group": "cylinder-9ml-frosted-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylFrst9LtnMtSl.619922894add.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-lotionpump?sku=LBCylFrst9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylFrst9SpryMattSl",
+          "group": "cylinder-9ml-frosted-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9SpryMattSl.d5b42efe1820.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9MtlRollBlkDot.08fa7b4cd8f0.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9GlMattSht",
+          "group": "cylinder-9ml-frosted-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9GlMattSht.2f451bcac06a.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415?sku=GBTallCylFrst9GlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9SpryGlMatt",
+          "group": "cylinder-9ml-frosted-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9SpryGlMatt.17dd48cae7ff.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-finemist?sku=GBTallCylFrst9SpryGlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9MtlRollBlkDot.4ef0013dc760.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylSwrl9LtnMtSl",
+          "group": "cylinder-9ml-swirl-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylSwrl9LtnMtSl.e7f6c9af7f11.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-lotionpump?sku=LBCylSwrl9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylSwrl9SpryMattSl",
+          "group": "cylinder-9ml-swirl-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9SpryMattSl.70ebfb3a4550.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylSwrl9MtlRollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9MtlRollBlkDot.cb173e3c3110.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=25%20ml,30%20ml",
+      "cards": [
+        {
+          "sku": "GBCyl25DrpGl",
+          "group": "cylinder-25ml-clear-18-415-dropper",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl25DrpGl.5476f7c122f9.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-dropper?sku=GBCyl25DrpGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "LBCyl25LtnMtGl",
+          "group": "cylinder-25ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl25LtnMtGl.d5caeec0df28.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-lotionpump?sku=LBCyl25LtnMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "GBcyl25SpryMtGl",
+          "group": "cylinder-25ml-clear-18-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25SpryMtGl.511d21e7dee0.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-finemist?sku=GBcyl25SpryMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "GBCyl25RdcrShnGl",
+          "group": "cylinder-25ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl25RdcrShnGl.95b60b0cd9cd.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-reducer?sku=GBCyl25RdcrShnGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "GBcyl25AnSpIvyGl",
+          "group": "cylinder-25ml-clear-18-415-antique",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25AnSpIvyGl.bfadd47f97fe.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-antique?sku=GBcyl25AnSpIvyGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "GBcyl25AnSpTslIvyGl",
+          "group": "cylinder-25ml-clear-18-415-antiquetassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25AnSpTslIvyGl.ab184134a30b.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-antiquetassel?sku=GBcyl25AnSpTslIvyGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "GBSpry1ozGl",
+          "group": "cylinder-30ml-clear-18-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry1ozGl.aec2bd4a4e74.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-30ml-clear-18-415-finemist?sku=GBSpry1ozGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=28%20ml,50%20ml",
+      "cards": [
+        {
+          "sku": "GBMtlRoll28Blk",
+          "group": "cylinder-28ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBMtlRoll28Blk.724c06a6edfa.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-28ml-clear-16mm-rollon?sku=GBMtlRoll28Blk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "LBCyl50LtnMtGl",
+          "group": "cylinder-50ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl50LtnMtGl.147afe555981.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-lotionpump?sku=LBCyl50LtnMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50SpryMtGl",
+          "group": "cylinder-50ml-clear-18-415-perfumespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50SpryMtGl.88aa74a09984.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-perfumespray?sku=GBCyl50SpryMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50RdcrMtSl",
+          "group": "cylinder-50ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RdcrMtSl.3ee8e1930780.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-reducer?sku=GBCyl50RdcrMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50MtlRollBlk",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50MtlRollBlk.748d3f4631ca.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50MtlRollBlk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50AnSpMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpMtSl.d9f827180268.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray?sku=GBCyl50AnSpMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50AnSpTslMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpTslMtSl.42c6d85c1a49.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray-tassel?sku=GBCyl50AnSpTslMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=100%20ml",
+      "cards": [
+        {
+          "sku": "LBCyl100LtnMtGl",
+          "group": "cylinder-100ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl100LtnMtGl.8ef2159eee21.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-lotionpump?sku=LBCyl100LtnMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100SpryMtGl",
+          "group": "cylinder-100ml-clear-18-415-perfumespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100SpryMtGl.c238fe44a86e.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-perfumespray?sku=GBCyl100SpryMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100RdcrMtSl",
+          "group": "cylinder-100ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100RdcrMtSl.e5aec2df54e9.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-reducer?sku=GBCyl100RdcrMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100AnSpMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpMtSl.4c0ef81c3113.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray?sku=GBCyl100AnSpMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100AnSpTslMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpTslMtSl.7c088c6921a3.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray-tassel?sku=GBCyl100AnSpTslMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=9%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCylAmb9RollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9RollBlkDot.f28dd0c27078.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCyl9RollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9RollBlkDot.52b866cf8bfd.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBTallCyl9RollBlkDot",
+          "group": "cylinder-9ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9RollBlkDot.f4e02e5fa3da.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylBlu9RollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9RollBlkDot.4f9631b0ceb8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylFrst9RollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9RollBlkDot.d9051dc36960.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBTallCylFrst9RollBlkDot",
+          "group": "cylinder-9ml-frosted-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9RollBlkDot.35762581bc84.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylSwrl9RollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9RollBlkDot.26dda713bfb7.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=50%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCyl50RollWht",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RollWht.b558aef1c1f8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50RollWht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D50%2Bml%26roller%3Dplastic"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=3.3%20ml,4%20ml,5%20ml",
+      "cards": [
+        {
+          "sku": "GBSpry3mlClBlk",
+          "group": "cylinder-3.3ml-clear-12mm-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry3mlClBlk.5e55db395cfa.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-3.3ml-clear-12mm-finemist?sku=GBSpry3mlClBlk"
+        },
+        {
+          "sku": "GBSpry4mlClBlk",
+          "group": "cylinder-4ml-clear-12mm-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry4mlClBlk.152036f08d2a.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-4ml-clear-12mm-finemist?sku=GBSpry4mlClBlk"
+        },
+        {
+          "sku": "GBCyl5GlMattSht",
+          "group": "cylinder-5ml-clear-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5GlMattSht.637c8aa197bc.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-5ml-clear-13-415?sku=GBCyl5GlMattSht"
+        },
+        {
+          "sku": "GBCyl5SprySlMatt",
+          "group": "cylinder-5ml-clear-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5SprySlMatt.82f24320a8a1.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-finemist?sku=GBCyl5SprySlMatt"
+        },
+        {
+          "sku": "GBCyl5MtlRollBlkDot",
+          "group": "cylinder-5ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5MtlRollBlkDot.6e766dc20b00.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5MtlRollBlkDot"
+        },
+        {
+          "sku": "GBCylBlu5SlMattSht",
+          "group": "cylinder-5ml-cobalt-blue-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5SlMattSht.164b75e4e501.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415?sku=GBCylBlu5SlMattSht"
+        },
+        {
+          "sku": "GBCylBlu5SpryGlMatt",
+          "group": "cylinder-5ml-cobalt-blue-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5SpryGlMatt.69235ce9bde8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-finemist?sku=GBCylBlu5SpryGlMatt"
+        },
+        {
+          "sku": "GBCylBlu5MtlRollBlkDot",
+          "group": "cylinder-5ml-cobalt-blue-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5MtlRollBlkDot.6fe305eca91f.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5MtlRollBlkDot"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=5%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCyl5RollBlkDot",
+          "group": "cylinder-5ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5RollBlkDot.5e3219bdb0d8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5RollBlkDot"
+        },
+        {
+          "sku": "GBCylBlu5RollBlkDot",
+          "group": "cylinder-5ml-cobalt-blue-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5RollBlkDot.e3f6c4057c08.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5RollBlkDot"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=9%20ml",
+      "cards": [
+        {
+          "sku": "GBCylAmb9SpryMattSl",
+          "group": "cylinder-9ml-amber-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9SpryMattSl.297ea26b8a91.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryMattSl"
+        },
+        {
+          "sku": "LBCylAmb9LtnMtSl",
+          "group": "cylinder-9ml-amber-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylAmb9LtnMtSl.f80deb49076c.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-lotionpump?sku=LBCylAmb9LtnMtSl"
+        },
+        {
+          "sku": "GBCylAmb9MtlRollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9MtlRollBlkDot.b8ff3a73f388.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBTallCyl9GlMattSht",
+          "group": "cylinder-9ml-clear-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9GlMattSht.de9a058d232e.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-clear-13-415?sku=GBTallCyl9GlMattSht"
+        },
+        {
+          "sku": "GBTallCyl9SpryGlMatt",
+          "group": "cylinder-9ml-clear-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9SpryGlMatt.3753db48a2b7.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-finemist?sku=GBTallCyl9SpryGlMatt"
+        },
+        {
+          "sku": "GBCyl9SpryGl",
+          "group": "cylinder-9ml-clear-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9SpryGl.3531f92e7360.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryGl"
+        },
+        {
+          "sku": "LBCyl9LtnGl",
+          "group": "cylinder-9ml-clear-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl9LtnGl.ca2699daa0ba.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-lotionpump?sku=LBCyl9LtnGl"
+        },
+        {
+          "sku": "GBTallCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9MtlRollBlkDot.1b0eaaec38d3.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9MtlRollBlkDot.963eed913d43.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBCylBlu9SpryMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9SpryMattSl.4befc61f1a00.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryMattSl"
+        },
+        {
+          "sku": "LBCylBlu9LtnMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylBlu9LtnMattSl.d0ec317eb616.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-lotionpump?sku=LBCylBlu9LtnMattSl"
+        },
+        {
+          "sku": "GBCylBlu9MtlRollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9MtlRollBlkDot.844e9d33753f.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBTallCylFrst9GlMattSht",
+          "group": "cylinder-9ml-frosted-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9GlMattSht.2f451bcac06a.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415?sku=GBTallCylFrst9GlMattSht"
+        },
+        {
+          "sku": "GBTallCylFrst9SpryGlMatt",
+          "group": "cylinder-9ml-frosted-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9SpryGlMatt.17dd48cae7ff.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-finemist?sku=GBTallCylFrst9SpryGlMatt"
+        },
+        {
+          "sku": "GBCylFrst9SpryMattSl",
+          "group": "cylinder-9ml-frosted-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9SpryMattSl.d5b42efe1820.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryMattSl"
+        },
+        {
+          "sku": "LBCylFrst9LtnMtSl",
+          "group": "cylinder-9ml-frosted-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylFrst9LtnMtSl.619922894add.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-lotionpump?sku=LBCylFrst9LtnMtSl"
+        },
+        {
+          "sku": "GBTallCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9MtlRollBlkDot.4ef0013dc760.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9MtlRollBlkDot.08fa7b4cd8f0.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9MtlRollBlkDot"
+        },
+        {
+          "sku": "GBCylSwrl9SpryMattSl",
+          "group": "cylinder-9ml-swirl-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9SpryMattSl.70ebfb3a4550.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryMattSl"
+        },
+        {
+          "sku": "LBCylSwrl9LtnMtSl",
+          "group": "cylinder-9ml-swirl-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylSwrl9LtnMtSl.e7f6c9af7f11.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-lotionpump?sku=LBCylSwrl9LtnMtSl"
+        },
+        {
+          "sku": "GBCylSwrl9MtlRollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9MtlRollBlkDot.cb173e3c3110.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9MtlRollBlkDot"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=25%20ml,30%20ml",
+      "cards": [
+        {
+          "sku": "GBCyl25DrpGl",
+          "group": "cylinder-25ml-clear-18-415-dropper",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl25DrpGl.5476f7c122f9.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-dropper?sku=GBCyl25DrpGl"
+        },
+        {
+          "sku": "GBcyl25SpryMtGl",
+          "group": "cylinder-25ml-clear-18-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25SpryMtGl.511d21e7dee0.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-finemist?sku=GBcyl25SpryMtGl"
+        },
+        {
+          "sku": "LBCyl25LtnMtGl",
+          "group": "cylinder-25ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl25LtnMtGl.d5caeec0df28.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-lotionpump?sku=LBCyl25LtnMtGl"
+        },
+        {
+          "sku": "GBCyl25RdcrShnGl",
+          "group": "cylinder-25ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl25RdcrShnGl.95b60b0cd9cd.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-reducer?sku=GBCyl25RdcrShnGl"
+        },
+        {
+          "sku": "GBcyl25AnSpIvyGl",
+          "group": "cylinder-25ml-clear-18-415-antique",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25AnSpIvyGl.bfadd47f97fe.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-antique?sku=GBcyl25AnSpIvyGl"
+        },
+        {
+          "sku": "GBcyl25AnSpTslIvyGl",
+          "group": "cylinder-25ml-clear-18-415-antiquetassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25AnSpTslIvyGl.ab184134a30b.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-antiquetassel?sku=GBcyl25AnSpTslIvyGl"
+        },
+        {
+          "sku": "GBSpry1ozGl",
+          "group": "cylinder-30ml-clear-18-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry1ozGl.aec2bd4a4e74.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-30ml-clear-18-415-finemist?sku=GBSpry1ozGl"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=28%20ml,50%20ml",
+      "cards": [
+        {
+          "sku": "GBMtlRoll28Blk",
+          "group": "cylinder-28ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBMtlRoll28Blk.724c06a6edfa.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-28ml-clear-16mm-rollon?sku=GBMtlRoll28Blk"
+        },
+        {
+          "sku": "GBCyl50SpryMtGl",
+          "group": "cylinder-50ml-clear-18-415-perfumespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50SpryMtGl.88aa74a09984.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-perfumespray?sku=GBCyl50SpryMtGl"
+        },
+        {
+          "sku": "LBCyl50LtnMtGl",
+          "group": "cylinder-50ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl50LtnMtGl.147afe555981.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-lotionpump?sku=LBCyl50LtnMtGl"
+        },
+        {
+          "sku": "GBCyl50RdcrMtSl",
+          "group": "cylinder-50ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RdcrMtSl.3ee8e1930780.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-reducer?sku=GBCyl50RdcrMtSl"
+        },
+        {
+          "sku": "GBCyl50MtlRollBlk",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50MtlRollBlk.748d3f4631ca.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50MtlRollBlk"
+        },
+        {
+          "sku": "GBCyl50AnSpMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpMtSl.d9f827180268.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray?sku=GBCyl50AnSpMtSl"
+        },
+        {
+          "sku": "GBCyl50AnSpTslMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpTslMtSl.42c6d85c1a49.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray-tassel?sku=GBCyl50AnSpTslMtSl"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=100%20ml",
+      "cards": [
+        {
+          "sku": "GBCyl100SpryMtGl",
+          "group": "cylinder-100ml-clear-18-415-perfumespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100SpryMtGl.c238fe44a86e.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-perfumespray?sku=GBCyl100SpryMtGl"
+        },
+        {
+          "sku": "LBCyl100LtnMtGl",
+          "group": "cylinder-100ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl100LtnMtGl.8ef2159eee21.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-lotionpump?sku=LBCyl100LtnMtGl"
+        },
+        {
+          "sku": "GBCyl100RdcrMtSl",
+          "group": "cylinder-100ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100RdcrMtSl.e5aec2df54e9.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-reducer?sku=GBCyl100RdcrMtSl"
+        },
+        {
+          "sku": "GBCyl100AnSpMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpMtSl.4c0ef81c3113.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray?sku=GBCyl100AnSpMtSl"
+        },
+        {
+          "sku": "GBCyl100AnSpTslMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpTslMtSl.7c088c6921a3.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray-tassel?sku=GBCyl100AnSpTslMtSl"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=9%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCylAmb9RollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9RollBlkDot.f28dd0c27078.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9RollBlkDot"
+        },
+        {
+          "sku": "GBTallCyl9RollBlkDot",
+          "group": "cylinder-9ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9RollBlkDot.f4e02e5fa3da.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9RollBlkDot"
+        },
+        {
+          "sku": "GBCyl9RollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9RollBlkDot.52b866cf8bfd.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9RollBlkDot"
+        },
+        {
+          "sku": "GBCylBlu9RollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9RollBlkDot.4f9631b0ceb8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9RollBlkDot"
+        },
+        {
+          "sku": "GBTallCylFrst9RollBlkDot",
+          "group": "cylinder-9ml-frosted-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9RollBlkDot.35762581bc84.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9RollBlkDot"
+        },
+        {
+          "sku": "GBCylFrst9RollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9RollBlkDot.d9051dc36960.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9RollBlkDot"
+        },
+        {
+          "sku": "GBCylSwrl9RollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9RollBlkDot.26dda713bfb7.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9RollBlkDot"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=50%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCyl50RollWht",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RollWht.b558aef1c1f8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50RollWht"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=3.3%20ml,4%20ml,5%20ml",
+      "cards": [
+        {
+          "sku": "GBSpry3mlClBlk",
+          "group": "cylinder-3.3ml-clear-12mm-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry3mlClBlk.5e55db395cfa.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-3.3ml-clear-12mm-finemist?sku=GBSpry3mlClBlk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBSpry4mlClBlk",
+          "group": "cylinder-4ml-clear-12mm-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry4mlClBlk.152036f08d2a.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-4ml-clear-12mm-finemist?sku=GBSpry4mlClBlk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCyl5GlMattSht",
+          "group": "cylinder-5ml-clear-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5GlMattSht.637c8aa197bc.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-5ml-clear-13-415?sku=GBCyl5GlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCyl5SprySlMatt",
+          "group": "cylinder-5ml-clear-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5SprySlMatt.82f24320a8a1.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-finemist?sku=GBCyl5SprySlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCyl5MtlRollBlkDot",
+          "group": "cylinder-5ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5MtlRollBlkDot.6e766dc20b00.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCylBlu5SlMattSht",
+          "group": "cylinder-5ml-cobalt-blue-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5SlMattSht.164b75e4e501.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415?sku=GBCylBlu5SlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCylBlu5SpryGlMatt",
+          "group": "cylinder-5ml-cobalt-blue-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5SpryGlMatt.69235ce9bde8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-finemist?sku=GBCylBlu5SpryGlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        },
+        {
+          "sku": "GBCylBlu5MtlRollBlkDot",
+          "group": "cylinder-5ml-cobalt-blue-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5MtlRollBlkDot.6fe305eca91f.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D3.3%2Bml%252C4%2Bml%252C5%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=5%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCyl5RollBlkDot",
+          "group": "cylinder-5ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl5RollBlkDot.5e3219bdb0d8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-5ml-clear-13-415-rollon?sku=GBCyl5RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D5%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylBlu5RollBlkDot",
+          "group": "cylinder-5ml-cobalt-blue-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu5RollBlkDot.e3f6c4057c08.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-5ml-cobalt-blue-13-415-rollon?sku=GBCylBlu5RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D5%2Bml%26roller%3Dplastic"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=9%20ml",
+      "cards": [
+        {
+          "sku": "LBCylAmb9LtnMtSl",
+          "group": "cylinder-9ml-amber-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylAmb9LtnMtSl.f80deb49076c.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-lotionpump?sku=LBCylAmb9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylAmb9SpryMattSl",
+          "group": "cylinder-9ml-amber-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9SpryMattSl.297ea26b8a91.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylAmb9MtlRollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9MtlRollBlkDot.b8ff3a73f388.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCyl9LtnGl",
+          "group": "cylinder-9ml-clear-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl9LtnGl.ca2699daa0ba.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-lotionpump?sku=LBCyl9LtnGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCyl9SpryGl",
+          "group": "cylinder-9ml-clear-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9SpryGl.3531f92e7360.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9MtlRollBlkDot.963eed913d43.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9GlMattSht",
+          "group": "cylinder-9ml-clear-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9GlMattSht.de9a058d232e.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-13-415?sku=GBTallCyl9GlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9SpryGlMatt",
+          "group": "cylinder-9ml-clear-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9SpryGlMatt.3753db48a2b7.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-finemist?sku=GBTallCyl9SpryGlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9MtlRollBlkDot.1b0eaaec38d3.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylBlu9LtnMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylBlu9LtnMattSl.d0ec317eb616.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-lotionpump?sku=LBCylBlu9LtnMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylBlu9SpryMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9SpryMattSl.4befc61f1a00.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylBlu9MtlRollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9MtlRollBlkDot.844e9d33753f.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylFrst9LtnMtSl",
+          "group": "cylinder-9ml-frosted-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylFrst9LtnMtSl.619922894add.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-lotionpump?sku=LBCylFrst9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylFrst9SpryMattSl",
+          "group": "cylinder-9ml-frosted-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9SpryMattSl.d5b42efe1820.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9MtlRollBlkDot.08fa7b4cd8f0.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9GlMattSht",
+          "group": "cylinder-9ml-frosted-13-415",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9GlMattSht.2f451bcac06a.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415?sku=GBTallCylFrst9GlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9SpryGlMatt",
+          "group": "cylinder-9ml-frosted-13-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9SpryGlMatt.17dd48cae7ff.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-finemist?sku=GBTallCylFrst9SpryGlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9MtlRollBlkDot.4ef0013dc760.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylSwrl9LtnMtSl",
+          "group": "cylinder-9ml-swirl-17-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylSwrl9LtnMtSl.e7f6c9af7f11.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-lotionpump?sku=LBCylSwrl9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylSwrl9SpryMattSl",
+          "group": "cylinder-9ml-swirl-17-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9SpryMattSl.70ebfb3a4550.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylSwrl9MtlRollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9MtlRollBlkDot.cb173e3c3110.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=25%20ml,30%20ml",
+      "cards": [
+        {
+          "sku": "GBCyl25DrpGl",
+          "group": "cylinder-25ml-clear-18-415-dropper",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl25DrpGl.5476f7c122f9.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-dropper?sku=GBCyl25DrpGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "LBCyl25LtnMtGl",
+          "group": "cylinder-25ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl25LtnMtGl.d5caeec0df28.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-lotionpump?sku=LBCyl25LtnMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "GBcyl25SpryMtGl",
+          "group": "cylinder-25ml-clear-18-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25SpryMtGl.511d21e7dee0.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-finemist?sku=GBcyl25SpryMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "GBCyl25RdcrShnGl",
+          "group": "cylinder-25ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl25RdcrShnGl.95b60b0cd9cd.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-reducer?sku=GBCyl25RdcrShnGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "GBcyl25AnSpIvyGl",
+          "group": "cylinder-25ml-clear-18-415-antique",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25AnSpIvyGl.bfadd47f97fe.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-antique?sku=GBcyl25AnSpIvyGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "GBcyl25AnSpTslIvyGl",
+          "group": "cylinder-25ml-clear-18-415-antiquetassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBcyl25AnSpTslIvyGl.ab184134a30b.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-25ml-clear-18-415-antiquetassel?sku=GBcyl25AnSpTslIvyGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        },
+        {
+          "sku": "GBSpry1ozGl",
+          "group": "cylinder-30ml-clear-18-415-finemist",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBSpry1ozGl.aec2bd4a4e74.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-30ml-clear-18-415-finemist?sku=GBSpry1ozGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D25%2Bml%252C30%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=28%20ml,50%20ml",
+      "cards": [
+        {
+          "sku": "GBMtlRoll28Blk",
+          "group": "cylinder-28ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBMtlRoll28Blk.724c06a6edfa.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-28ml-clear-16mm-rollon?sku=GBMtlRoll28Blk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "LBCyl50LtnMtGl",
+          "group": "cylinder-50ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl50LtnMtGl.147afe555981.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-lotionpump?sku=LBCyl50LtnMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50SpryMtGl",
+          "group": "cylinder-50ml-clear-18-415-perfumespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50SpryMtGl.88aa74a09984.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-perfumespray?sku=GBCyl50SpryMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50RdcrMtSl",
+          "group": "cylinder-50ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RdcrMtSl.3ee8e1930780.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-reducer?sku=GBCyl50RdcrMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50MtlRollBlk",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50MtlRollBlk.748d3f4631ca.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50MtlRollBlk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50AnSpMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpMtSl.d9f827180268.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray?sku=GBCyl50AnSpMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50AnSpTslMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpTslMtSl.42c6d85c1a49.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray-tassel?sku=GBCyl50AnSpTslMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=100%20ml",
+      "cards": [
+        {
+          "sku": "LBCyl100LtnMtGl",
+          "group": "cylinder-100ml-clear-18-415-lotionpump",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl100LtnMtGl.8ef2159eee21.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-lotionpump?sku=LBCyl100LtnMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100SpryMtGl",
+          "group": "cylinder-100ml-clear-18-415-perfumespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100SpryMtGl.c238fe44a86e.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-perfumespray?sku=GBCyl100SpryMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100RdcrMtSl",
+          "group": "cylinder-100ml-clear-18-415-reducer",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100RdcrMtSl.e5aec2df54e9.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-reducer?sku=GBCyl100RdcrMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100AnSpMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpMtSl.4c0ef81c3113.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray?sku=GBCyl100AnSpMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100AnSpTslMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpTslMtSl.7c088c6921a3.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray-tassel?sku=GBCyl100AnSpTslMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=9%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCylAmb9RollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9RollBlkDot.f28dd0c27078.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCyl9RollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9RollBlkDot.52b866cf8bfd.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBTallCyl9RollBlkDot",
+          "group": "cylinder-9ml-clear-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCyl9RollBlkDot.f4e02e5fa3da.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylBlu9RollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9RollBlkDot.4f9631b0ceb8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylFrst9RollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9RollBlkDot.d9051dc36960.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBTallCylFrst9RollBlkDot",
+          "group": "cylinder-9ml-frosted-13-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBTallCylFrst9RollBlkDot.35762581bc84.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylSwrl9RollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9RollBlkDot.26dda713bfb7.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=50%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCyl50RollWht",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "https://best-bottles-website.vercel.app/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RollWht.b558aef1c1f8.png&w=3840&q=75&dpl=dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50RollWht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D50%2Bml%26roller%3Dplastic"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

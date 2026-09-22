@@ -1,0 +1,49 @@
+{
+  "before": {
+    "rawCatalogRecords": 443,
+    "completePlates": 436,
+    "plateStates": {
+      "plated-no-capoff-by-design": 93,
+      "none": 7,
+      "plated": 316,
+      "plated-approved-legacy-source": 27
+    },
+    "heroStates": {
+      "none": 381,
+      "indexed": 52,
+      "pending": 10
+    },
+    "kitStates": {
+      "live": 396,
+      "no-plate": 7,
+      "stale": 24,
+      "held": 13,
+      "not-applicable": 3
+    }
+  },
+  "after": {
+    "rawCatalogRecords": 443,
+    "completePlates": 436,
+    "plateStates": {
+      "plated-no-capoff-by-design": 93,
+      "none": 7,
+      "plated": 316,
+      "plated-approved-legacy-source": 27
+    },
+    "heroStates": {
+      "none": 381,
+      "indexed": 52,
+      "pending": 10
+    },
+    "kitStates": {
+      "live": 396,
+      "no-plate": 7,
+      "stale": 24,
+      "held": 13,
+      "not-applicable": 3
+    }
+  },
+  "newPreparedImages": 8,
+  "newPreparedGroups": 6,
+  "newIndexedOrPublishedGroups": 0
+}

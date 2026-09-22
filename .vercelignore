@@ -21,3 +21,6 @@ Best-Bottles-Orphan-urls/
 # Test/report outputs
 coverage/
 dist/
+
+# Preserved generation sources and local review artifacts are not storefront assets.
+output/

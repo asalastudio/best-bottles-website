@@ -1,0 +1,133 @@
+{
+  "beforeRefresh": {
+    "Circle": {
+      "rawCatalogRecords": 209,
+      "plateStates": {
+        "plated-no-capoff-by-design": 116,
+        "none": 4,
+        "plated": 87,
+        "plated-wrong-size": 2
+      },
+      "heroStates": {
+        "none": 181,
+        "indexed": 27,
+        "approved-not-indexed": 1
+      },
+      "kitStates": {
+        "held": 104,
+        "approved-not-published": 5,
+        "candidate": 77,
+        "no-plate": 4,
+        "stale": 1,
+        "changes_requested": 5,
+        "none": 13
+      }
+    },
+    "Round": {
+      "rawCatalogRecords": 186,
+      "plateStates": {
+        "plated-legacy-source": 106,
+        "plated-wrong-size": 2,
+        "none": 45,
+        "plated": 14,
+        "plated-cap-on-only": 1,
+        "plated-no-capoff-by-design": 18
+      },
+      "heroStates": {
+        "none": 165,
+        "indexed": 21
+      },
+      "kitStates": {
+        "held": 109,
+        "no-plate": 45,
+        "approved-not-published": 31,
+        "stale": 1
+      }
+    },
+    "Empire": {
+      "rawCatalogRecords": 95,
+      "plateStates": {
+        "plated-legacy-source": 38,
+        "plated-no-capoff-by-design": 25,
+        "none": 30,
+        "plated": 2
+      },
+      "heroStates": {
+        "none": 84,
+        "indexed": 11
+      },
+      "kitStates": {
+        "held": 38,
+        "candidate": 21,
+        "no-plate": 30,
+        "changes_requested": 6
+      }
+    }
+  },
+  "currentReadOnlySnapshot": {
+    "Circle": {
+      "rawCatalogRecords": 209,
+      "plateStates": {
+        "plated-no-capoff-by-design": 116,
+        "none": 4,
+        "plated": 87,
+        "plated-wrong-size": 2
+      },
+      "heroStates": {
+        "none": 181,
+        "indexed": 28
+      },
+      "kitStates": {
+        "live": 109,
+        "approved-not-published": 4,
+        "candidate": 57,
+        "no-plate": 4,
+        "stale": 1,
+        "held": 21,
+        "none": 13
+      }
+    },
+    "Round": {
+      "rawCatalogRecords": 186,
+      "plateStates": {
+        "plated-no-capoff-by-design": 125,
+        "none": 8,
+        "plated": 14,
+        "plated-cap-on-only": 34,
+        "plated-legacy-source": 3,
+        "plated-wrong-size": 2
+      },
+      "heroStates": {
+        "none": 165,
+        "indexed": 21
+      },
+      "kitStates": {
+        "live": 104,
+        "held": 22,
+        "no-plate": 8,
+        "stale": 7,
+        "approved-not-published": 8,
+        "none": 37
+      }
+    },
+    "Empire": {
+      "rawCatalogRecords": 95,
+      "plateStates": {
+        "plated-no-capoff-by-design": 63,
+        "none": 4,
+        "plated-cap-on-only": 26,
+        "plated": 2
+      },
+      "heroStates": {
+        "none": 84,
+        "indexed": 11
+      },
+      "kitStates": {
+        "live": 86,
+        "candidate": 4,
+        "no-plate": 4,
+        "held": 1
+      }
+    }
+  }
+}

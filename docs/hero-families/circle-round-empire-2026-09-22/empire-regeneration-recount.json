@@ -1,0 +1,165 @@
+{
+  "beforeGeneratedAt": "2026-09-22T22:52:35.766Z",
+  "afterGeneratedAt": "2026-09-22T23:00:11.595Z",
+  "before": {
+    "Empire": {
+      "catalogRows": 95,
+      "plate": {
+        "plated-no-capoff-by-design": 63,
+        "none": 4,
+        "plated-cap-on-only": 26,
+        "plated": 2
+      },
+      "kit": {
+        "live": 86,
+        "candidate": 4,
+        "no-plate": 4,
+        "held": 1
+      },
+      "groups": 11,
+      "completeSunburstGroups": 0
+    },
+    "Circle": {
+      "catalogRows": 209,
+      "plate": {
+        "plated-no-capoff-by-design": 116,
+        "none": 4,
+        "plated": 87,
+        "plated-wrong-size": 2
+      },
+      "kit": {
+        "live": 109,
+        "approved-not-published": 4,
+        "candidate": 57,
+        "no-plate": 4,
+        "stale": 1,
+        "held": 21,
+        "none": 13
+      },
+      "groups": 27,
+      "completeSunburstGroups": 27
+    },
+    "Round": {
+      "catalogRows": 186,
+      "plate": {
+        "plated-no-capoff-by-design": 125,
+        "none": 8,
+        "plated": 14,
+        "plated-cap-on-only": 34,
+        "plated-legacy-source": 3,
+        "plated-wrong-size": 2
+      },
+      "kit": {
+        "live": 104,
+        "held": 22,
+        "no-plate": 8,
+        "stale": 7,
+        "approved-not-published": 8,
+        "none": 37
+      },
+      "groups": 21,
+      "completeSunburstGroups": 0
+    },
+    "Cylinder": {
+      "catalogRows": 443,
+      "plate": {
+        "plated-no-capoff-by-design": 93,
+        "none": 7,
+        "plated": 316,
+        "plated-approved-legacy-source": 27
+      },
+      "kit": {
+        "live": 396,
+        "no-plate": 7,
+        "stale": 24,
+        "held": 13,
+        "not-applicable": 3
+      },
+      "groups": 53,
+      "completeSunburstGroups": 45
+    }
+  },
+  "after": {
+    "Empire": {
+      "catalogRows": 95,
+      "plate": {
+        "plated-no-capoff-by-design": 63,
+        "none": 4,
+        "plated-cap-on-only": 26,
+        "plated": 2
+      },
+      "kit": {
+        "live": 86,
+        "candidate": 4,
+        "no-plate": 4,
+        "held": 1
+      },
+      "groups": 11,
+      "completeSunburstGroups": 0
+    },
+    "Circle": {
+      "catalogRows": 209,
+      "plate": {
+        "plated-no-capoff-by-design": 116,
+        "none": 4,
+        "plated": 87,
+        "plated-wrong-size": 2
+      },
+      "kit": {
+        "live": 109,
+        "approved-not-published": 4,
+        "candidate": 57,
+        "no-plate": 4,
+        "stale": 1,
+        "held": 21,
+        "none": 13
+      },
+      "groups": 27,
+      "completeSunburstGroups": 27
+    },
+    "Round": {
+      "catalogRows": 186,
+      "plate": {
+        "plated-no-capoff-by-design": 125,
+        "none": 8,
+        "plated": 14,
+        "plated-cap-on-only": 34,
+        "plated-legacy-source": 3,
+        "plated-wrong-size": 2
+      },
+      "kit": {
+        "live": 104,
+        "held": 22,
+        "no-plate": 8,
+        "stale": 7,
+        "approved-not-published": 8,
+        "none": 37
+      },
+      "groups": 21,
+      "completeSunburstGroups": 0
+    },
+    "Cylinder": {
+      "catalogRows": 443,
+      "plate": {
+        "plated-no-capoff-by-design": 93,
+        "none": 7,
+        "plated": 316,
+        "plated-approved-legacy-source": 27
+      },
+      "kit": {
+        "live": 396,
+        "no-plate": 7,
+        "stale": 24,
+        "held": 13,
+        "not-applicable": 3
+      },
+      "groups": 53,
+      "completeSunburstGroups": 45
+    }
+  },
+  "backendCountsUnchanged": true,
+  "stagedAssetsChecked": 119,
+  "stagedAssetsChanged": [],
+  "localGeneratedCandidates": 11,
+  "publication": "none; new bytes awaiting user review"
+}

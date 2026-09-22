@@ -1,0 +1,300 @@
+{
+  "status": "awaiting-user-visual-approval",
+  "model": "gpt-image-2.5-sunburst",
+  "renderCount": 11,
+  "nativeDimensions": [
+    2080,
+    2288
+  ],
+  "requestedQuality": "high",
+  "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+  "targets": {
+    "50mLShoulderSpanPct": 50,
+    "100mLShoulderSpanPct": 55,
+    "baselinePct": 91
+  },
+  "registration": "Uniform whole-image transform; original native output preserved; no selective component or shadow edits",
+  "landmark": "Flat glass shoulder to glass contact foot, excluding closure and shadow",
+  "maximumMeasurementUncertaintyPx": 4.9976171564733916,
+  "maximumScaleCorrectionPct": 1.610633307271303,
+  "browser": {
+    "status": "pass",
+    "rows": [
+      {
+        "width": 390,
+        "httpStatus": 200,
+        "errors": [],
+        "images": [
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          }
+        ],
+        "overflow": false,
+        "guides": 22
+      },
+      {
+        "width": 1440,
+        "httpStatus": 200,
+        "errors": [],
+        "images": [
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          },
+          {
+            "width": 2080,
+            "height": 2288
+          }
+        ],
+        "overflow": false,
+        "guides": 22
+      }
+    ]
+  },
+  "apiCalls": 11,
+  "publication": "New Empire candidates only; no changes to staged images",
+  "rows": [
+    {
+      "sku": "GBEmp50AnSpGl",
+      "capacityMl": 50,
+      "sourceHashes": {
+        "masterComposite": "068c04584e28ae8fdad039c45e9f69b0b37fcb8d422916178886b5928fe4b38d",
+        "framedInput": "47976f3762f013b643c352ea7249f3ec301abba9b2e1a98ba11c2aefd5ab651d",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "be0945077115ca72f6816803aac4eaa2bb72b51c91c836901385c25c6e917421"
+      },
+      "masterSha256": "73ebced4a2614f55d066f2466197e8fa9d07563f31319d57eb8e60e949beaed3",
+      "nativeSha256": "7756c1e9af3c424d4e802415a7eb682f76480c84f9b425f9af03a497a35a5d8b",
+      "finalSha256": "45b60c7ad00d67896f0442e0c7703edc29e516224ea8c92344ed63e0f3b2a71e",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp50AnSpGl-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp50AnSpGl-2080x2288.png"
+    },
+    {
+      "sku": "GBEmp50AnSpTslGl",
+      "capacityMl": 50,
+      "sourceHashes": {
+        "masterComposite": "6a3f2005cbaccb1328fa19586e1ab5d7788b2298d810ba9cfefae58600d2a3cc",
+        "framedInput": "5da975f6b3e3c049b0134e35a47a5a24e7d45704a5ce5989d581ad69f9e69ef6",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "c98062b3f47834053195717c3f96851a274cd24082111acae924b4e54357fff8"
+      },
+      "masterSha256": "add0c3afdf3cc58c6c05e46154ea712e9feb814f58adee5fb93f344dbf5f6b2e",
+      "nativeSha256": "80399d6f4241a36da4c1d683e77617b0fe890ce56d2ff6a9445684261ba54f78",
+      "finalSha256": "73909356a8fbafa744416869fe20c4cb06ed525764149cc172c463bed2e2bf7f",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp50AnSpTslGl-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp50AnSpTslGl-2080x2288.png"
+    },
+    {
+      "sku": "GBEmp50DrpGl",
+      "capacityMl": 50,
+      "sourceHashes": {
+        "masterComposite": "21aff80b6d64d80c65d575f3274df10abbe2cc9d379e879e22aa63b01361b0a9",
+        "framedInput": "479bc352e212822f196899b963c928329ad4c5d3af3c822355e87cab3517f43a",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "b15789891d147792695459d014595c9bf16a89c8545b53f8d3afbf672af58fe8"
+      },
+      "masterSha256": "7c160d3fc12ec5cad1cc3c8a6a0d96bbdca852e363de7e829586b81cfd7edde2",
+      "nativeSha256": "7ba4cd8e75137fa897fc31cd23f7c8c573fb7e5b7b7781cf424873c6757c8e31",
+      "finalSha256": "cc0b7600e01ccc9fff69cec7a86c7e92eecfb0eca3b4a5e1eb5594155b301c1e",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp50DrpGl-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp50DrpGl-2080x2288.png"
+    },
+    {
+      "sku": "GBEmp50RdcrShnGl",
+      "capacityMl": 50,
+      "sourceHashes": {
+        "masterComposite": "29c075d58a493ad2d31a00300332f8923df7026541234d7469bbbb182557815a",
+        "framedInput": "9b733457ba68d1efcfb65cc077fbc0373d6f92ecde15a0f50644ee007c3c0663",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "becebaa82928e9027e1416c9cafb055f876de374bb73236e959609c158b1d1f9"
+      },
+      "masterSha256": "ba0fb357caf9026ed675c452252d4d3ab437996f0708a47081e9331814a43805",
+      "nativeSha256": "99b462087177ac7148e6520d2c0dac1e3b03f081a0807c54122f02e729f98614",
+      "finalSha256": "0bd6eed9caa427d9cfc1e1335c622a9cbc4b800e28f3cdae587131b45f206233",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp50RdcrShnGl-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp50RdcrShnGl-2080x2288.png"
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "capacityMl": 50,
+      "sourceHashes": {
+        "masterComposite": "03da0f49f43a0aa94212d0b9aeaa15c8f9bcc5f939e00365e3447ddab7bdc0c7",
+        "framedInput": "9264e12b3511499eba7aeba6f198834a977e39cea3e46ba2a56548132adc4f1e",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "16b0e2d454f549311308ed8855a195bf3932ee991b7c0c32358e4da05af4a5d0"
+      },
+      "masterSha256": "d56899d8735557c9b5835d402e98e33766fbc40cb908cf34bf34a4314be371c1",
+      "nativeSha256": "9458dc2e9653f7022d1774e36b20ea92e1194c49c1db7d107fdcc67aebdd1ffc",
+      "finalSha256": "565b535c4096aea75f996aa99514aa4d4b80768993a5970cad273fbdfadf747f",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp50SpryMtGl-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp50SpryMtGl-2080x2288.png"
+    },
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "capacityMl": 50,
+      "sourceHashes": {
+        "masterComposite": "16e0d31d43b51c5136167b5bf3498b33ff949cad85bba54b0b720ebddb0ce726",
+        "framedInput": "d2f246e11a4518180cf7084871c476db4c9b2e6b915bb168ade6674604c0cdaa",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "6a77c3e60ae05f84688d3c68505f09702bff6194cfc79190c2defc83bc9afad2"
+      },
+      "masterSha256": "e49b8f711a5f9e20a9ad4290d141765b50cea862b95443c96a463b1780152cdc",
+      "nativeSha256": "621c421741c05024d6bb2ff33fac0d7c21d4b7da67fad7ad89826692c6870f66",
+      "finalSha256": "ffda90bb9bace3dd137a3e838f735266ecdf2da3943d36b50d947551efe6de84",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/LBEmp50WhtClOvrCp-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/LBEmp50WhtClOvrCp-2080x2288.png"
+    },
+    {
+      "sku": "GBEmp100AnSpGl",
+      "capacityMl": 100,
+      "sourceHashes": {
+        "masterComposite": "e433244f5f81971f45af114da165f756f3aeda890fee2c421bed0276a1c6c80f",
+        "framedInput": "ffb7e66dad0c57e715b2e448c7930854c9e62d7d909bac578be4d32070949555",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "b84f43bc2020c7ec73fdb01e4bc115f6d106f818d3d4318b030a5729f9ad7668"
+      },
+      "masterSha256": "9523540a4eb21ed0664bdcb765fb528011f8af46c9a4c0124d9fff991a05c8af",
+      "nativeSha256": "80afbbedecd437de4f5a5f83c558a8e8908f03cde61bfde89fddbbc7e4e0813c",
+      "finalSha256": "3fbe017a598946b2b5b2c2294e2556d5d5b2c9fcb80cb75d3442cf40031d315e",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp100AnSpGl-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp100AnSpGl-2080x2288.png"
+    },
+    {
+      "sku": "GBEmp100AnSpTslGl",
+      "capacityMl": 100,
+      "sourceHashes": {
+        "masterComposite": "0881148d2c8e28d5859610e401eb0ff420fd37dd9895a55e9a86935ce0186e3f",
+        "framedInput": "28d209243142a5aca5b75d0dfe90beeeb6b2bb8a5a6b6bd14fc5b6fa81f7777a",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "cb657b712506fe6143236888f586e6004dad4ecbcaa13a934ac76013f3d0c256"
+      },
+      "masterSha256": "5a197f8b302cdfaa5503acf1b88a181dce4edb7d5dce3e93f6ff3d0d2f340299",
+      "nativeSha256": "776e25a1b6d65dd56cb497d41cd761466250dfccbe2ec749c4e35b7724ed335e",
+      "finalSha256": "b54ba9c787703d6a8b19f14303c2517d2b2be5ff405cd108c64c40b8d8b8323f",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp100AnSpTslGl-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp100AnSpTslGl-2080x2288.png"
+    },
+    {
+      "sku": "GBEmp100RdcrShnGl",
+      "capacityMl": 100,
+      "sourceHashes": {
+        "masterComposite": "5c17ca5d7077d6c1bf9385dfc56716732d48996047e11175863fc1e60d591375",
+        "framedInput": "564ff58cf28bb1dde3a622a8aae8ebcc70990330c01df9336ef3de882b66b463",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "75664cf10c716d4043fe12c27f26263801e5ccc47feaa20b3750d5ed0a518ae1"
+      },
+      "masterSha256": "e354bf8bc6864c8f25625c2f6a535dff8f49a573db3c9112cf1ed39c5b19b2e5",
+      "nativeSha256": "076f0f555e5431689756d97ed2126ffe2a456e65917f608d8d15eadbb7c6a3c1",
+      "finalSha256": "9ddd65637db34b6c0f0f77364cdf0d03da8bf5fc0f955b249b0a79a6c0b1d660",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp100RdcrShnGl-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp100RdcrShnGl-2080x2288.png"
+    },
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "capacityMl": 100,
+      "sourceHashes": {
+        "masterComposite": "b7107ca7a2ba625c460ca9fbf4cfd47d74e8992b79e0f5fb0909f3c063796786",
+        "framedInput": "0daab91fabce80d8af82cdb8a7f2ab27ab9534381b703b28cb27d942c5293e74",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "64228d17447203b143984d5b2d08074b2e9fa48f2712fddec58ecfb8b77e71db"
+      },
+      "masterSha256": "7fd21f02d1cc611c9ba3aa47d0a0acb19a61142f9da3037b63131fb2229ee313",
+      "nativeSha256": "4b17ae70f520769a10be0a93da891ac8b58cea2ef8306adfec265f4bbe6e31c1",
+      "finalSha256": "8ac2c42b7237ec5f57129a226de07ede5660317fdbe4846a4cc0b870a14c85ba",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp100SpryMtGl-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp100SpryMtGl-2080x2288.png"
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "capacityMl": 100,
+      "sourceHashes": {
+        "masterComposite": "fe19a2691213bd37cab292d5a41e2a7b6fb3826749931e5f10bc676ac4be8bd6",
+        "framedInput": "55d28f545f4e3d2a65d42c2f38e375220846c6dce98fc09b97e480aef0d35050",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "e63814741e58d4376514ad8c9194fe81a2555c9c4b777f38442166243c28d6f3"
+      },
+      "masterSha256": "6ae9f354dcfc959c01f08e07894a06e7fa754c0ff590aaa0b81e91c184587f01",
+      "nativeSha256": "b90d955650540e70ad3bd9b793d6cada3325984dca2e457d289008aba873ad79",
+      "finalSha256": "83d8b8d3b114e15ebc8ae31c9ec94f6f4d0dd1d4bc8731e9ef7d247177e2393f",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/LBEmp100WhtClOvrCp-prompt.txt",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/LBEmp100WhtClOvrCp-2080x2288.png"
+    }
+  ]
+}

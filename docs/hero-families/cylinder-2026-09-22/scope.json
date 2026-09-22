@@ -1,0 +1,45 @@
+{
+  "baseCommit": "e9e99682ebeeb3ffc718f914608c60e4f2a8603e",
+  "currentRegistryCylinderCount": 52,
+  "candidateCount": 59,
+  "coveredGroups": 49,
+  "remainingRegisteredHeroes": [
+    {
+      "sku": "PbClear4ozFlpWh",
+      "groupSlug": "cylinder-118ml-clear",
+      "capacityMl": 114,
+      "action": "outside-approved-glass-pilot"
+    },
+    {
+      "sku": "PbClear8ozFlpWh",
+      "groupSlug": "cylinder-227ml-clear",
+      "capacityMl": 227,
+      "action": "outside-approved-glass-pilot"
+    },
+    {
+      "sku": "PbNat16ozFlpWh",
+      "groupSlug": "cylinder-454ml-clear",
+      "capacityMl": 454,
+      "action": "outside-approved-glass-pilot"
+    }
+  ],
+  "glassPilot": {
+    "scopeGroups": 49,
+    "coveredGroups": 49,
+    "visibleCoveredGroups": 48,
+    "remainingGroups": 0,
+    "remainingExtraRollerVariants": 0,
+    "remainingImages": 0,
+    "scopeLabel": "All glass Cylinder groups from 3.3 through 100 mL, including one hidden legacy duplicate group"
+  },
+  "scopeDecision": "Jordan explicitly included 3.3 mL and 4 mL on September 22; only three larger plastic groups remain outside this glass pilot.",
+  "visibleCandidateCount": 58,
+  "visibleCoveredGroups": 48,
+  "hiddenGroupCandidates": [
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "groupSlug": "cylinder-5.5ml-clear-13-415-finemist",
+      "state": "render-prepared-hidden-group-preserved"
+    }
+  ]
+}

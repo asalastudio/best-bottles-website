@@ -1,0 +1,623 @@
+{
+  "status": "pass",
+  "rows": [
+    {
+      "width": 390,
+      "httpStatus": 200,
+      "errors": [],
+      "images": [
+        {
+          "sku": "GBCrcl15Gl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl15MtlRollGlMatt",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl15RollBlkSh",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl15SpryGlMatt",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl30GlCap",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl30SpryMattGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl50AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl50AnSpTslIvyGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl50DrpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl50RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl50SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBCrcl50LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst50AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst50DrpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst50RdcrIvyLthr",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst50RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst50SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBCrclFrst50LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl100AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl100AnSpTslGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl100RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl100SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBCrcl100LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst100AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst100AnSpTslIvyGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst100RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst100SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBCrclFrst100LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd78AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd78AnSpTslGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd78RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd78SpryCu",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBRnd78LtnCu",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst78AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst78AnSpTslGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst78RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst78SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBRndFrst78LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd128AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd128AnSpTslIvyGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd128DrpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd128RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd128SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBRnd128LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst128AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst128DrpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst128RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst128SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBRndFrst128LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp50AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp50AnSpTslGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp50DrpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp50RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp50SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBEmp50WhtClOvrCp",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp100AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp100AnSpTslGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp100RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp100SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBEmp100WhtClOvrCp",
+          "width": 2080,
+          "height": 2288
+        }
+      ],
+      "overflow": false,
+      "guides": 60
+    },
+    {
+      "width": 1440,
+      "httpStatus": 200,
+      "errors": [],
+      "images": [
+        {
+          "sku": "GBCrcl15Gl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl15MtlRollGlMatt",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl15RollBlkSh",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl15SpryGlMatt",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl30GlCap",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl30SpryMattGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl50AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl50AnSpTslIvyGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl50DrpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl50RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl50SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBCrcl50LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst50AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst50DrpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst50RdcrIvyLthr",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst50RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst50SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBCrclFrst50LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl100AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl100AnSpTslGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl100RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrcl100SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBCrcl100LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst100AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst100AnSpTslIvyGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst100RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBCrclFrst100SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBCrclFrst100LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd78AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd78AnSpTslGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd78RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd78SpryCu",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBRnd78LtnCu",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst78AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst78AnSpTslGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst78RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst78SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBRndFrst78LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd128AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd128AnSpTslIvyGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd128DrpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd128RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRnd128SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBRnd128LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst128AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst128DrpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst128RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBRndFrst128SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBRndFrst128LtnMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp50AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp50AnSpTslGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp50DrpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp50RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp50SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBEmp50WhtClOvrCp",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp100AnSpGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp100AnSpTslGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp100RdcrShnGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "GBEmp100SpryMtGl",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "sku": "LBEmp100WhtClOvrCp",
+          "width": 2080,
+          "height": 2288
+        }
+      ],
+      "overflow": false,
+      "guides": 60
+    }
+  ]
+}

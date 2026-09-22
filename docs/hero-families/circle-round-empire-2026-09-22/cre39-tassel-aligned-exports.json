@@ -1,0 +1,85 @@
+{
+  "status": "technical-checks-complete-user-review-pending",
+  "rows": [
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBCrcl50AnSpTslIvyGl",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "itemName": "Circle design 50 ml, 1.7oz  clear glass bottle  with Ivory vintage style bulb sprayer with tassel and shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance t",
+        "groupSlug": "circle-50ml-clear-18-415-antiquespray-tassel"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/tassel-corrections/circle-fringe-v2/GBCrcl50AnSpTslIvyGl-native-2080x2288.png",
+      "nativeSha256": "d0e16e48bd5223bbf5db6613463b1a73756aaf73ebf5ad932f9dc280122a293f",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/tassel-corrections/aligned/GBCrcl50AnSpTslIvyGl-2080x2288.png",
+      "finalSha256": "85128ac147a41c1b80162a7ee387270a4bb169b350adadc21d0d5ceb0d16cc62",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 54,
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 5.795121951219512,
+      "transform": {
+        "scale": 1.1590243902439024,
+        "x": -52.49560975609755,
+        "y": -123.5434146341463
+      },
+      "transformedArtworkBounds": [
+        24,
+        223.00487804878048,
+        2012.8858536585362,
+        2202.6185365853657
+      ],
+      "presentation": "connected bulb, hose and tassel; no sidecar",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "GBRnd128AnSpTslIvyGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "catalog": {
+        "sku": "GBRnd128AnSpTslIvyGl",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "itemName": "Round design 128 ml, 4.33oz  clear glass bottle  with Ivory vintage style bulb sprayer with tassel and shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance",
+        "groupSlug": "round-128ml-clear-18-415-antiquespray-tassel"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/tassel-corrections/GBRnd128AnSpTslIvyGl-native-2080x2288.png",
+      "nativeSha256": "18d60b942d63ceb029b06955bb6bb98217d7da5afac28961d8a1f19fff15fef4",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/tassel-corrections/aligned/GBRnd128AnSpTslIvyGl-2080x2288.png",
+      "finalSha256": "8cadc09c74ad2bc6035e4ccc6422486263dc2609141d130dc84996b8771ce3b0",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 54,
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 5.9172413793103456,
+      "transform": {
+        "scale": 1.183448275862069,
+        "x": -183.1034482758621,
+        "y": -254.04689655172433
+      },
+      "transformedArtworkBounds": [
+        24,
+        154.24275862068947,
+        1989.7075862068966,
+        2208.7089655172413
+      ],
+      "presentation": "connected bulb, hose and tassel; no sidecar",
+      "status": "aligned-awaiting-user-batch-review"
+    }
+  ]
+}

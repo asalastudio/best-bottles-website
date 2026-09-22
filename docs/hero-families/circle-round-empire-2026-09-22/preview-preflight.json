@@ -1,0 +1,11 @@
+{
+  "deploymentUrl": "https://best-bottles-website-k72ljtqhy-asala.vercel.app",
+  "actualCatalogHtmlContainsNewHeroes": true,
+  "sampleSku": "GBCrcl15Gl",
+  "sampleSha256": "f85d45e29333b0f440896d9df0da5eba81e24510e69551134a39ebfa1dd63a1a",
+  "sampleDimensions": [
+    2080,
+    2288
+  ],
+  "rollbackAliasVerified": "https://best-bottles-website-7zsmhwcv2-asala.vercel.app"
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "sku": "GBCrcl50AnSpTslIvyGl",
+    "centerX": 1235,
+    "closureSeatY": 837,
+    "glassFootY": 1903,
+    "artworkBounds": [
+      66,
+      299,
+      1782,
+      2007
+    ],
+    "uncertaintyPx": 5,
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "evidence": "native-landmark-crops.jpg; Circle V2 body remains visually registered to first native, tassel separately corrected",
+    "scope": "Gold cap/glass junction and actual integral glass foot; exclude tassel and shadow"
+  },
+  {
+    "sku": "GBRnd128AnSpTslIvyGl",
+    "centerX": 1300,
+    "closureSeatY": 930,
+    "glassFootY": 1974,
+    "artworkBounds": [
+      175,
+      345,
+      1836,
+      2081
+    ],
+    "uncertaintyPx": 5,
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "evidence": "native-landmark-crops.jpg; Circle V2 body remains visually registered to first native, tassel separately corrected",
+    "scope": "Gold cap/glass junction and actual integral glass foot; exclude tassel and shadow"
+  }
+]

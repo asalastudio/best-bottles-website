@@ -1,0 +1,445 @@
+{
+  "status": "technical-checks-complete-user-review-pending",
+  "rows": [
+    {
+      "sku": "GBEmp50AnSpGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBEmp50AnSpGl",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "empire-50ml-clear-18-415-antiquespray",
+        "itemName": "Empire design 50 ml, 1.7oz  clear glass bottle  with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty of your"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp50AnSpGl-native-2080x2288.png",
+      "nativeSha256": "7756c1e9af3c424d4e802415a7eb682f76480c84f9b425f9af03a497a35a5d8b",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp50AnSpGl-2080x2288.png",
+      "finalSha256": "45b60c7ad00d67896f0442e0c7703edc29e516224ea8c92344ed63e0f3b2a71e",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 50,
+      "glassFootPct": 91,
+      "closureSeatY": 938.0799999999999,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.991273996509599,
+      "transform": {
+        "scale": 0.9982547993019197,
+        "x": 2.253054101221619,
+        "y": 15.692565445026048
+      },
+      "transformedArtworkBounds": [
+        411.5375218150087,
+        232.31385689354263,
+        1623.4188481675392,
+        2123.0084467713787
+      ],
+      "presentation": "Empty · assembled",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "GBEmp50AnSpTslGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBEmp50AnSpTslGl",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "groupSlug": "empire-50ml-clear-18-415-antiquespray-tassel",
+        "itemName": "Empire design 50 ml, 1.7oz  clear glass bottle  with Gold vintage style bulb sprayer with tassel with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance t"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp50AnSpTslGl-native-2080x2288.png",
+      "nativeSha256": "80399d6f4241a36da4c1d683e77617b0fe890ce56d2ff6a9445684261ba54f78",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp50AnSpTslGl-2080x2288.png",
+      "finalSha256": "73909356a8fbafa744416869fe20c4cb06ed525764149cc172c463bed2e2bf7f",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 50,
+      "glassFootPct": 91,
+      "closureSeatY": 938.0799999999999,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.991273996509599,
+      "transform": {
+        "scale": 0.9982547993019197,
+        "x": 2.6753926701570423,
+        "y": 11.699546247818489
+      },
+      "transformedArtworkBounds": [
+        130.45200698080276,
+        277.2353228621291,
+        1876.3996509598603,
+        2121.011937172775
+      ],
+      "presentation": "Empty · assembled",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "GBEmp50DrpGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBEmp50DrpGl",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Dropper",
+        "groupSlug": "empire-50ml-clear-18-415-dropper",
+        "itemName": "Empire design 50 ml, 1.7oz  clear glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils. Empire design bottle is available in 2 sizes,"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp50DrpGl-native-2080x2288.png",
+      "nativeSha256": "7ba4cd8e75137fa897fc31cd23f7c8c573fb7e5b7b7781cf424873c6757c8e31",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp50DrpGl-2080x2288.png",
+      "finalSha256": "cc0b7600e01ccc9fff69cec7a86c7e92eecfb0eca3b4a5e1eb5594155b301c1e",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 50,
+      "glassFootPct": 91,
+      "closureSeatY": 938.0799999999999,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.973913043478261,
+      "transform": {
+        "scale": 0.9947826086956522,
+        "x": 5.420869565217406,
+        "y": 12.932173913043243
+      },
+      "transformedArtworkBounds": [
+        705.7478260869566,
+        307.3878260869563,
+        1370.262608695652,
+        2119.8817391304347
+      ],
+      "presentation": "Empty · assembled",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "GBEmp50RdcrShnGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBEmp50RdcrShnGl",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Reducer",
+        "groupSlug": "empire-50ml-clear-18-415-reducer",
+        "itemName": "Empire design 50 ml, 1.7oz  clear glass bottle  with reducer and shiny gold cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Empire design bottle is available in 2 sizes, 50ml and 100ml. Price each"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp50RdcrShnGl-native-2080x2288.png",
+      "nativeSha256": "99b462087177ac7148e6520d2c0dac1e3b03f081a0807c54122f02e729f98614",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp50RdcrShnGl-2080x2288.png",
+      "finalSha256": "0bd6eed9caa427d9cfc1e1335c622a9cbc4b800e28f3cdae587131b45f206233",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 50,
+      "glassFootPct": 91,
+      "closureSeatY": 938.0799999999999,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.935289042277826,
+      "transform": {
+        "scale": 0.9870578084555651,
+        "x": 13.459879206212273,
+        "y": 26.038584987057675
+      },
+      "transformedArtworkBounds": [
+        704.4003451251078,
+        589.6485936151854,
+        1373.625539257981,
+        2121.5623123382225
+      ],
+      "presentation": "Empty · capped",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBEmp50SpryMtGl",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump",
+        "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+        "itemName": "Empire design 50 ml, 1.7oz  clear glass bottle  with matte gold spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Empire design bottle is available in 2 sizes, 50ml and 100ml. Price each"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp50SpryMtGl-native-2080x2288.png",
+      "nativeSha256": "9458dc2e9653f7022d1774e36b20ea92e1194c49c1db7d107fdcc67aebdd1ffc",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp50SpryMtGl-2080x2288.png",
+      "finalSha256": "565b535c4096aea75f996aa99514aa4d4b80768993a5970cad273fbdfadf747f",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 50,
+      "glassFootPct": 91,
+      "closureSeatY": 938.0799999999999,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.9523809523809526,
+      "transform": {
+        "scale": 0.9904761904761905,
+        "x": 7.923809523809496,
+        "y": 15.946666666666715
+      },
+      "transformedArtworkBounds": [
+        501.18095238095236,
+        298.232380952381,
+        1602.5904761904762,
+        2123.6800000000003
+      ],
+      "presentation": "Empty · cap beside",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "LBEmp50WhtClOvrCp",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Lotion Pump",
+        "groupSlug": "empire-50ml-clear-18-415-lotionpump",
+        "itemName": "Empire design 50 ml, 1.7oz clear glass bottle with white rectangular and clear over the cap. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Empire design bottle is availab"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/LBEmp50WhtClOvrCp-native-2080x2288.png",
+      "nativeSha256": "621c421741c05024d6bb2ff33fac0d7c21d4b7da67fad7ad89826692c6870f66",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/LBEmp50WhtClOvrCp-2080x2288.png",
+      "finalSha256": "ffda90bb9bace3dd137a3e838f735266ecdf2da3943d36b50d947551efe6de84",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 50,
+      "glassFootPct": 91,
+      "closureSeatY": 938.0799999999999,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.931034482758621,
+      "transform": {
+        "scale": 0.9862068965517241,
+        "x": 14.275862068965546,
+        "y": 20.907586206896667
+      },
+      "transformedArtworkBounds": [
+        700.6758620689656,
+        134.32137931034492,
+        1367.3517241379311,
+        2126.459310344828
+      ],
+      "presentation": "Empty · capped",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "GBEmp100AnSpGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBEmp100AnSpGl",
+        "family": "Empire",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "empire-100ml-clear-18-415-antiquespray",
+        "itemName": "Empire design 100 ml, 3 1/2oz  clear glass bottle  with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty of y"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp100AnSpGl-native-2080x2288.png",
+      "nativeSha256": "80afbbedecd437de4f5a5f83c558a8e8908f03cde61bfde89fddbbc7e4e0813c",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp100AnSpGl-2080x2288.png",
+      "finalSha256": "3fbe017a598946b2b5b2c2294e2556d5d5b2c9fcb80cb75d3442cf40031d315e",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 55,
+      "glassFootPct": 91,
+      "closureSeatY": 823.6799999999998,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.969984202211691,
+      "transform": {
+        "scale": 0.9939968404423382,
+        "x": 7.36587677725108,
+        "y": 6.614597156397849
+      },
+      "transformedArtworkBounds": [
+        442.7364928909952,
+        186.52802527646105,
+        1588.814849921011,
+        2123.827867298578
+      ],
+      "presentation": "Empty · assembled",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "GBEmp100AnSpTslGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBEmp100AnSpTslGl",
+        "family": "Empire",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "groupSlug": "empire-100ml-clear-18-415-antiquespray-tassel",
+        "itemName": "Empire design 100 ml, 3 1/2oz  clear glass bottle  with Gold vintage style bulb sprayer with tassel with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhanc"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp100AnSpTslGl-native-2080x2288.png",
+      "nativeSha256": "776e25a1b6d65dd56cb497d41cd761466250dfccbe2ec749c4e35b7724ed335e",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp100AnSpTslGl-2080x2288.png",
+      "finalSha256": "b54ba9c787703d6a8b19f14303c2517d2b2be5ff405cd108c64c40b8d8b8323f",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 55,
+      "glassFootPct": 91,
+      "closureSeatY": 823.6799999999998,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.9976171564733916,
+      "transform": {
+        "scale": 0.9995234312946784,
+        "x": 0.710087370929251,
+        "y": 7.069356632247491
+      },
+      "transformedArtworkBounds": [
+        166.63097696584586,
+        255.95069102462242,
+        1876.8155679110405,
+        2227.010897537728
+      ],
+      "presentation": "Empty · assembled",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "GBEmp100RdcrShnGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBEmp100RdcrShnGl",
+        "family": "Empire",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Reducer",
+        "groupSlug": "empire-100ml-clear-18-415-reducer",
+        "itemName": "Empire design 100 ml, 3 1/2oz  clear glass bottle  with reducer and shiny gold cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Empire design bottle is available in 2 sizes, 50ml and 100ml. Price each"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp100RdcrShnGl-native-2080x2288.png",
+      "nativeSha256": "076f0f555e5431689756d97ed2126ffe2a456e65917f608d8d15eadbb7c6a3c1",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp100RdcrShnGl-2080x2288.png",
+      "finalSha256": "9ddd65637db34b6c0f0f77364cdf0d03da8bf5fc0f955b249b0a79a6c0b1d660",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 55,
+      "glassFootPct": 91,
+      "closureSeatY": 823.6799999999998,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.9739130434782615,
+      "transform": {
+        "scale": 0.9947826086956523,
+        "x": 5.295652173912945,
+        "y": 10.94260869565187
+      },
+      "transformedArtworkBounds": [
+        654.8886956521739,
+        507.33913043478236,
+        1374.1165217391303,
+        2122.8660869565215
+      ],
+      "presentation": "Empty · capped",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBEmp100SpryMtGl",
+        "family": "Empire",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump",
+        "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+        "itemName": "Empire design 100 ml, 3 1/2oz  clear glass bottle  with matte gold spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Empire design bottle is available in 2 sizes, 50ml and 100ml. Price each"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/GBEmp100SpryMtGl-native-2080x2288.png",
+      "nativeSha256": "4b17ae70f520769a10be0a93da891ac8b58cea2ef8306adfec265f4bbe6e31c1",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/GBEmp100SpryMtGl-2080x2288.png",
+      "finalSha256": "8ac2c42b7237ec5f57129a226de07ede5660317fdbe4846a4cc0b870a14c85ba",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 55,
+      "glassFootPct": 91,
+      "closureSeatY": 823.6799999999998,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.919468334636435,
+      "transform": {
+        "scale": 0.983893666927287,
+        "x": 13.593745113369797,
+        "y": 21.806661454260848
+      },
+      "transformedArtworkBounds": [
+        481.9271305707584,
+        254.00556684910057,
+        1662.5995308835027,
+        2127.339108678655
+      ],
+      "presentation": "Empty · cap beside",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "family": "Empire",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "LBEmp100WhtClOvrCp",
+        "family": "Empire",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Lotion Pump",
+        "groupSlug": "empire-100ml-clear-18-415-lotionpump",
+        "itemName": "Empire design 100 ml, 3 1/2oz clear glass bottle with white rectangular with clear over the cap. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Empire design bottle is ava"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/LBEmp100WhtClOvrCp-native-2080x2288.png",
+      "nativeSha256": "b90d955650540e70ad3bd9b793d6cada3325984dca2e457d289008aba873ad79",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/empire-premium-2026-09-22/aligned/LBEmp100WhtClOvrCp-2080x2288.png",
+      "finalSha256": "83d8b8d3b114e15ebc8ae31c9ec94f6f4d0dd1d4bc8731e9ef7d247177e2393f",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 55,
+      "glassFootPct": 91,
+      "closureSeatY": 823.6799999999998,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.950432730133753,
+      "transform": {
+        "scale": 0.9900865460267506,
+        "x": 10.042328874901628,
+        "y": 13.789205350117754
+      },
+      "transformedArtworkBounds": [
+        651.618410700236,
+        95.96638867033805,
+        1374.3815892997638,
+        2123.6636349331234
+      ],
+      "presentation": "Empty · capped",
+      "status": "aligned-awaiting-user-batch-review"
+    }
+  ]
+}

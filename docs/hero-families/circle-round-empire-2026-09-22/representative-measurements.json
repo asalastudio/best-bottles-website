@@ -1,0 +1,74 @@
+[
+  {
+    "sku": "GBCrcl15SpryGlMatt",
+    "version": "current",
+    "bodyCenterX": 608,
+    "landmarkY": 884,
+    "glassFootY": 1550,
+    "uncertaintyPx": 6,
+    "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance."
+  },
+  {
+    "sku": "GBCrcl30SpryMattGl",
+    "version": "current",
+    "bodyCenterX": 626,
+    "landmarkY": 770,
+    "glassFootY": 1538,
+    "uncertaintyPx": 6,
+    "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance."
+  },
+  {
+    "sku": "GBCrcl50SpryMtGl",
+    "version": "current",
+    "bodyCenterX": 622,
+    "landmarkY": 691,
+    "glassFootY": 1530,
+    "uncertaintyPx": 6,
+    "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance."
+  },
+  {
+    "sku": "GBCrcl100SpryMtGl",
+    "version": "current",
+    "bodyCenterX": 625,
+    "landmarkY": 591,
+    "glassFootY": 1531,
+    "uncertaintyPx": 6,
+    "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance."
+  },
+  {
+    "sku": "GBRnd78SpryCu",
+    "version": "current",
+    "bodyCenterX": 638,
+    "landmarkY": 843,
+    "glassFootY": 1555,
+    "uncertaintyPx": 6,
+    "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance."
+  },
+  {
+    "sku": "GBRnd128SpryMtGl",
+    "version": "current",
+    "bodyCenterX": 639,
+    "landmarkY": 723,
+    "glassFootY": 1555,
+    "uncertaintyPx": 6,
+    "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance."
+  },
+  {
+    "sku": "GBEmp50SpryMtGl",
+    "version": "current",
+    "bodyCenterX": 624,
+    "landmarkY": 754,
+    "glassFootY": 1558,
+    "uncertaintyPx": 6,
+    "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance."
+  },
+  {
+    "sku": "GBEmp100SpryMtGl",
+    "version": "current",
+    "bodyCenterX": 630,
+    "landmarkY": 599,
+    "glassFootY": 1541,
+    "uncertaintyPx": 6,
+    "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance."
+  }
+]

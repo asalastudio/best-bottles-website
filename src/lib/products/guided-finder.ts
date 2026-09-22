@@ -5,7 +5,7 @@ import { resolveCatalogCardPurchaseVariant, type CatalogPurchaseVariant } from "
 import type { CatalogSearchResultShape, CatalogSearchVariantPreviewRow } from "@/lib/catalogSearchFallback";
 import { isCheckoutReady } from "@/lib/checkout";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
-import { getCatalogCardVariantPreviews, getProductCardVariantPreviews, type ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
+import { filterCatalogCardVariants, getCatalogCardVariantPreviews, getProductCardVariantPreviews, type ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
 import type { BrowseContext } from "@/lib/products/focused-shopping";
 import { getCatalogHero, getCatalogHeroProductHref, resolveLiveCatalogCardHero, type CatalogHero } from "@/lib/products/catalog-heroes";
 
@@ -125,7 +125,7 @@ function imageFor(
     })[0]?.imageUrl ?? null;
 }
 
-export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): GuidedFinderFamily[] {
+export function buildGuidedFinderFamilies(result: CatalogSearchResultShape, rollerMaterials: readonly string[] = []): GuidedFinderFamily[] {
     const rowsByGroupId = new Map(result.variantPreviewRows.map((row) => [row.groupId, row]));
     const primarySkuFor = (groupId: string) => {
         const row = result.primarySkus?.find((entry) => entry.groupId === groupId);
@@ -134,7 +134,7 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
     const grouped = new Map<string, GuidedFinderProduct[]>();
 
     for (const group of result.items) {
-        const variants = rowsByGroupId.get(group._id)?.variants ?? [];
+        const variants = filterCatalogCardVariants(rowsByGroupId.get(group._id)?.variants ?? [], rollerMaterials);
         const staticHero = getCatalogHero(group.slug, variants);
         const liveCard = resolveLiveCatalogCardHero({
             heroImageUrl: group.heroImageUrl,
