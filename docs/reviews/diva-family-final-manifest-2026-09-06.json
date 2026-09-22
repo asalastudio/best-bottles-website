@@ -123,18 +123,18 @@
     {
       "sku": "LBDiva30LtnMtGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/LBDiva30LtnMtGl.b910a809c317.png",
-      "assetSha256": "b910a809c317f0a66b8bfee6eb08c194c6f61ede12854c902171fbbc1a64afeb",
-      "priorUrl": "/images/catalog/empty-heroes/LBDiva30LtnMtGl.48ce9c26c017.webp",
+      "url": "/images/catalog/bone-review/LBDiva30LtnMtGl.8fca329d5da1.png",
+      "assetSha256": "8fca329d5da19518519aa2ac662db1a848518f803e41480466de6ba709b0d35a",
+      "priorUrl": "/images/catalog/bone-review/LBDiva30LtnMtGl.b910a809c317.png",
       "priorFraming": {
-        "scale": 0.44108919902912624,
-        "translateXPercent": 33.606184769417474,
-        "translateYPercent": 52.772269417475734
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /14. LBDiva30LtnMtGl.psd",
       "sourcePsdSha256": "e0b9d2a804798af3b58eb7b0656f821c35b6c3cc68ce92047c5bf75ba1da081a",
@@ -198,7 +198,7 @@
         "sourceLeft": 158,
         "sourceRight": 739,
         "outputWidth": 430.1771428571429,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 643.7028571428572,
         "sourceShoulder": 690,
         "outputShoulder": 940.8816326530612,
@@ -248,23 +248,31 @@
           "bottom": 1565
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "b910a809c317f0a66b8bfee6eb08c194c6f61ede12854c902171fbbc1a64afeb",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDiva30SpryMtGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/GBDiva30SpryMtGl.86cb1f0ded93.png",
-      "assetSha256": "86cb1f0ded93e5d0e3486e19c7a984d38a2711b3ea1d3774d691e152674afc7a",
-      "priorUrl": "/images/catalog/empty-heroes/GBDiva30SpryMtGl.0e26e13bf029.webp",
+      "url": "/images/catalog/bone-review/GBDiva30SpryMtGl.9f6dbfaa0b8a.png",
+      "assetSha256": "9f6dbfaa0b8aed20c4d56cd301a7e0d122dfc681f6f9fd131bc134f94a68040b",
+      "priorUrl": "/images/catalog/bone-review/GBDiva30SpryMtGl.86cb1f0ded93.png",
       "priorFraming": {
-        "scale": 0.41680905963302756,
-        "translateXPercent": 34.78646932339449,
-        "translateYPercent": 52.476738427856546
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /13. GBDiva30SpryMtGl.psd",
       "sourcePsdSha256": "cfeef7a50c875ec199e09006eff498c04a22e13fecc5622195bc05a97c37508a",
@@ -328,7 +336,7 @@
         "sourceLeft": 114,
         "sourceRight": 695,
         "outputWidth": 430.1771428571429,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 628.1248979591837,
         "sourceShoulder": 690,
         "outputShoulder": 940.8816326530612,
@@ -378,23 +386,31 @@
           "bottom": 1565
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "86cb1f0ded93e5d0e3486e19c7a984d38a2711b3ea1d3774d691e152674afc7a",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDiva30RdcrShnGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/GBDiva30RdcrShnGl.ad273685647c.png",
-      "assetSha256": "ad273685647c50df9a64d5b0bac14ebd2ae005a0fe1a1cfe77dade11646a642b",
-      "priorUrl": "/images/catalog/empty-heroes/GBDiva30RdcrShnGl.641ba29c8319.webp",
+      "url": "/images/catalog/bone-review/GBDiva30RdcrShnGl.0c6d771b3d71.png",
+      "assetSha256": "0c6d771b3d715935236770e91e11c8394074f2e2d4482a8e9d2f0040dede9c8d",
+      "priorUrl": "/images/catalog/bone-review/GBDiva30RdcrShnGl.ad273685647c.png",
       "priorFraming": {
-        "scale": 0.4092989864864865,
-        "translateXPercent": 34.924153997747744,
-        "translateYPercent": 54.53518120393121
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /1. GBDiva30RdcrShnGl.psd",
       "sourcePsdSha256": "69477579084b409f52540db42163febcccaba09722cdb7791c4806d1bd9c8613",
@@ -448,7 +464,7 @@
         "sourceLeft": 335,
         "sourceRight": 916,
         "outputWidth": 430.1771428571429,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 779.7551020408164,
         "sourceShoulder": 592,
         "outputShoulder": 940.3216326530612,
@@ -491,7 +507,15 @@
           "bottom": 1564
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "ad273685647c50df9a64d5b0bac14ebd2ae005a0fe1a1cfe77dade11646a642b",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDiva46AnSpGl",
@@ -845,18 +869,18 @@
     {
       "sku": "LBDiva46LtnMtGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/LBDiva46LtnMtGl.6a51261211b2.png",
-      "assetSha256": "6a51261211b26b96c532797efa538f03c3f5ad964282cc9d204a4bb7a824e3cd",
-      "priorUrl": "/images/catalog/empty-heroes/LBDiva46LtnMtGl.be41a0a54512.webp",
+      "url": "/images/catalog/bone-review/LBDiva46LtnMtGl.7f25245cf4f5.png",
+      "assetSha256": "7f25245cf4f5bdcabfbc0167cf50a0b9f4904286f389762b54c167afe2037d91",
+      "priorUrl": "/images/catalog/bone-review/LBDiva46LtnMtGl.6a51261211b2.png",
       "priorFraming": {
-        "scale": 0.5231738875103256,
-        "translateXPercent": 28.724261907913426,
-        "translateYPercent": 44.0728876657405
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/12. LBDiva46LtnMtGl.psd",
       "sourcePsdSha256": "329c69a1cbc3f3ef6213bbabca0c67d3e992b995e6dbc60b6cf0f063aeb1623d",
@@ -920,7 +944,7 @@
         "sourceLeft": 46,
         "sourceRight": 694,
         "outputWidth": 490.01142857142855,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 660.412380952381,
         "sourceShoulder": 756,
         "outputShoulder": 851.68,
@@ -970,23 +994,31 @@
           "bottom": 1565
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "6a51261211b26b96c532797efa538f03c3f5ad964282cc9d204a4bb7a824e3cd",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDiva46SpryMtGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/GBDiva46SpryMtGl.81cb5670ab64.png",
-      "assetSha256": "81cb5670ab647c47d02dc3f7226cc054452e7cad21d3ea1afb35016237f79d79",
-      "priorUrl": "/images/catalog/empty-heroes/GBDiva46SpryMtGl.4399d8858ae1.webp",
+      "url": "/images/catalog/bone-review/GBDiva46SpryMtGl.bb34e3f85b32.png",
+      "assetSha256": "bb34e3f85b32c95fa5cffe050b60b38b819476c6f466192cdd12cdd53558275b",
+      "priorUrl": "/images/catalog/bone-review/GBDiva46SpryMtGl.81cb5670ab64.png",
       "priorFraming": {
-        "scale": 0.4956384197466242,
-        "translateXPercent": 30.835314436463864,
-        "translateYPercent": 45.0408010780403
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/11. GBDiva46SpryMtGl.psd",
       "sourcePsdSha256": "8447fac0d94c86b0c163003d98acda896497451405e2abfb9e8e68b6127bb02a",
@@ -1050,7 +1082,7 @@
         "sourceLeft": 29,
         "sourceRight": 677,
         "outputWidth": 490.01142857142855,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 654.5571428571429,
         "sourceShoulder": 752,
         "outputShoulder": 851.6552380952381,
@@ -1100,23 +1132,31 @@
           "bottom": 1564
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "81cb5670ab647c47d02dc3f7226cc054452e7cad21d3ea1afb35016237f79d79",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDiva46RdcrShnGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/GBDiva46RdcrShnGl.abb7ea690f9d.png",
-      "assetSha256": "abb7ea690f9db478ee87110f76cfaee41048c10363c505264fe30cad8d268908",
-      "priorUrl": "/images/catalog/empty-heroes/GBDiva46RdcrShnGl.85f9b7b846b4.webp",
+      "url": "/images/catalog/bone-review/GBDiva46RdcrShnGl.382e9a542b9b.png",
+      "assetSha256": "382e9a542b9b7663619a07cba9a316ef8ace44a6ef555d49b6445941f0d19e6c",
+      "priorUrl": "/images/catalog/bone-review/GBDiva46RdcrShnGl.abb7ea690f9d.png",
       "priorFraming": {
-        "scale": 0.4520222388089213,
-        "translateXPercent": 32.597143805856525,
-        "translateYPercent": 50.5919513792025
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/1. GBDiva46RdcrShnGl.psd",
       "sourcePsdSha256": "3522d32082bd540f774f7e5f31aaf7b0a016e73c9dae99d8ac1c6bd04620b92e",
@@ -1170,7 +1210,7 @@
         "sourceLeft": 211,
         "sourceRight": 859,
         "outputWidth": 490.01142857142855,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 779.1838095238095,
         "sourceShoulder": 519,
         "outputShoulder": 851.4628571428572,
@@ -1213,7 +1253,15 @@
           "bottom": 1564
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "abb7ea690f9db478ee87110f76cfaee41048c10363c505264fe30cad8d268908",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDivaFrst46AnSpGl",
@@ -1567,18 +1615,18 @@
     {
       "sku": "LBDivaFrst46LtnMtGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/LBDivaFrst46LtnMtGl.eae338137280.png",
-      "assetSha256": "eae338137280ddcf994ab3ad6d910a41c2dbe498ed17c5f125fd4c891a160c8c",
-      "priorUrl": "/images/catalog/empty-heroes/LBDivaFrst46LtnMtGl.18708a0bf6f5.webp",
+      "url": "/images/catalog/bone-review/LBDivaFrst46LtnMtGl.23178f015d17.png",
+      "assetSha256": "23178f015d172038f4e9d0100245dce79ac0ddd4ad96ee9650a97d08e1f20645",
+      "priorUrl": "/images/catalog/bone-review/LBDivaFrst46LtnMtGl.eae338137280.png",
       "priorFraming": {
-        "scale": 0.463137539763239,
-        "translateXPercent": 31.62887758939152,
-        "translateYPercent": 47.91417433111687
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/14. LBDivaFrst46LtnMtGl.psd",
       "sourcePsdSha256": "646386bba33e11e8fd20d9d310f120df4b24f577396711789f725cc99459d74d",
@@ -1642,7 +1690,7 @@
         "sourceLeft": 33,
         "sourceRight": 684,
         "outputWidth": 489.8,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 657.3523809523809,
         "sourceShoulder": 755,
         "outputShoulder": 854.047619047619,
@@ -1692,23 +1740,31 @@
           "bottom": 1564
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "eae338137280ddcf994ab3ad6d910a41c2dbe498ed17c5f125fd4c891a160c8c",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDivaFrst46SpryMtGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/GBDivaFrst46SpryMtGl.d776e654fbe4.png",
-      "assetSha256": "d776e654fbe46b9339872317f0cc36f65094b5a1ed407abff3845842e48ad426",
-      "priorUrl": "/images/catalog/empty-heroes/GBDivaFrst46SpryMtGl.c899d330bac9.webp",
+      "url": "/images/catalog/bone-review/GBDivaFrst46SpryMtGl.b851aa15b4e7.png",
+      "assetSha256": "b851aa15b4e790e44de97d67bdfdf3a15600e77a860ef68cf1cda5c263ad1179",
+      "priorUrl": "/images/catalog/bone-review/GBDivaFrst46SpryMtGl.d776e654fbe4.png",
       "priorFraming": {
-        "scale": 0.5136616350101377,
-        "translateXPercent": 30.480857869614766,
-        "translateYPercent": 44.14783268543896
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/13. GBDivaFrst46SpryMtGl.psd",
       "sourcePsdSha256": "5201f33cc353716de08fadc0918e3a3a2405999cb0adb123999529b30c44d9c7",
@@ -1772,7 +1828,7 @@
         "sourceLeft": 25,
         "sourceRight": 676,
         "outputWidth": 489.8,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 654.3333333333333,
         "sourceShoulder": 755,
         "outputShoulder": 854.047619047619,
@@ -1822,23 +1878,31 @@
           "bottom": 1564
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "d776e654fbe46b9339872317f0cc36f65094b5a1ed407abff3845842e48ad426",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDivaFrst46RdcrShnGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/GBDivaFrst46RdcrShnGl.62fa5072dc09.png",
-      "assetSha256": "62fa5072dc099609ed1ec83fcf9689abcdd515fd02506a7c47a4165b19b0870c",
-      "priorUrl": "/images/catalog/empty-heroes/GBDivaFrst46RdcrShnGl.5582979e80fb.webp",
+      "url": "/images/catalog/bone-review/GBDivaFrst46RdcrShnGl.a946c13cffb5.png",
+      "assetSha256": "a946c13cffb564e8d98a493ccbea590342b06eaa559a80c24a9a3630107205f2",
+      "priorUrl": "/images/catalog/bone-review/GBDivaFrst46RdcrShnGl.62fa5072dc09.png",
       "priorFraming": {
-        "scale": 0.5044891058135282,
-        "translateXPercent": 30.829413979085928,
-        "translateYPercent": 46.81898436966375
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/1. GBDivaFrst46RdcrShnGl.psd",
       "sourcePsdSha256": "c2c550d0164d27bd1886d00f3382d54bc7f3708b8316c475ee6b0b898f6249ae",
@@ -1892,7 +1956,7 @@
         "sourceLeft": 203,
         "sourceRight": 854,
         "outputWidth": 489.8,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 780.2571428571429,
         "sourceShoulder": 529,
         "outputShoulder": 854.0095238095238,
@@ -1935,7 +1999,15 @@
           "bottom": 1564
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "62fa5072dc099609ed1ec83fcf9689abcdd515fd02506a7c47a4165b19b0870c",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDiva100AnSpGl",
@@ -2176,18 +2248,18 @@
     {
       "sku": "LBDiva100LtnMtGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/LBDiva100LtnMtGl.9d7aa085ae09.png",
-      "assetSha256": "9d7aa085ae0932de64aa1a6d85cb0cf4b93bb1cb7f02fa21daeb5e3506d274e9",
-      "priorUrl": "/images/catalog/empty-heroes/LBDiva100LtnMtGl.cd3bbeb66d2f.webp",
+      "url": "/images/catalog/bone-review/LBDiva100LtnMtGl.d40c88f6cefc.png",
+      "assetSha256": "d40c88f6cefc777b1099f8f46435d1ee3167f6bf08cd9581b6ffc721ee997b0b",
+      "priorUrl": "/images/catalog/bone-review/LBDiva100LtnMtGl.9d7aa085ae09.png",
       "priorFraming": {
-        "scale": 0.5497560975609757,
-        "translateXPercent": 26.81861788617886,
-        "translateYPercent": 40.52239467849224
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/14. LBDiva100LtnMtGl.psd",
       "sourcePsdSha256": "5a70f9f17551eadc9e3e3aaa9f5857be4b14cd426aa79ce2ff2d82df54a61730",
@@ -2251,7 +2323,7 @@
         "sourceLeft": 55,
         "sourceRight": 896,
         "outputWidth": 639.8773800456969,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 643.4051789794364,
         "sourceShoulder": 737,
         "outputShoulder": 631.7486671744098,
@@ -2301,23 +2373,31 @@
           "bottom": 1566
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "9d7aa085ae0932de64aa1a6d85cb0cf4b93bb1cb7f02fa21daeb5e3506d274e9",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDiva100SpryMtGl",
       "backgroundRemnantCorrection": null,
-      "url": "/images/catalog/bone-review/GBDiva100SpryMtGl.4e08bd8241f6.png",
-      "assetSha256": "4e08bd8241f6627741d2d1b6d9435f4d2804352c92bcc77ed56c9aebe93559a9",
-      "priorUrl": "/images/catalog/empty-heroes/GBDiva100SpryMtGl.13d58791745c.webp",
+      "url": "/images/catalog/bone-review/GBDiva100SpryMtGl.5751b23a5820.png",
+      "assetSha256": "5751b23a58205d9eb542e43959e0331981b9bbe8c5fce9d3e63e8127c5a539ee",
+      "priorUrl": "/images/catalog/bone-review/GBDiva100SpryMtGl.4e08bd8241f6.png",
       "priorFraming": {
-        "scale": 0.5542622950819672,
-        "translateXPercent": 28.014262295081966,
-        "translateYPercent": 40.78047690014904
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/13. GBDiva100SpryMtGl.psd",
       "sourcePsdSha256": "af23b9e289ce3428a314fd21060836bd57f856b4fc6cec06584040fde8f1c922",
@@ -2381,7 +2461,7 @@
         "sourceLeft": 61,
         "sourceRight": 902,
         "outputWidth": 639.8773800456969,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 645.970297029703,
         "sourceShoulder": 737,
         "outputShoulder": 631.7486671744098,
@@ -2431,7 +2511,15 @@
           "bottom": 1566
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "4e08bd8241f6627741d2d1b6d9435f4d2804352c92bcc77ed56c9aebe93559a9",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     },
     {
       "sku": "GBDiva100RdcrShnGl",
@@ -2455,18 +2543,18 @@
         "legacyReferenceSha256": "469cb28893e9f325cf278014d04f7e463eb9461e6b1fc9cbfcc7b4e2601c4508",
         "output": "output/catalog-hero-refresh-2026-09-06/diva-family/identity-audit/GBDiva100RdcrShnGl-corrected-assembly.png"
       },
-      "url": "/images/catalog/bone-review/GBDiva100RdcrShnGl.a484a278a8e4.png",
-      "assetSha256": "a484a278a8e48fa68edb81f9f3d1d031c17f5e01c37b0d1c47bab3e64a496363",
-      "priorUrl": "/images/catalog/empty-heroes/GBDiva100RdcrShnGl.a2cb5dbde8b7.webp",
+      "url": "/images/catalog/bone-review/GBDiva100RdcrShnGl.24ad40d606af.png",
+      "assetSha256": "24ad40d606af57123149fde6477d53db2640aa4435e742429e72ef3229bc3542",
+      "priorUrl": "/images/catalog/bone-review/GBDiva100RdcrShnGl.a484a278a8e4.png",
       "priorFraming": {
-        "scale": 0.4795744680851064,
-        "translateXPercent": 31.85609929078014,
-        "translateYPercent": 46.53036750483559
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
       },
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       },
       "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/1. GBDiva100RdcrShnGl.psd",
       "sourcePsdSha256": "11679a409b0e719bac4915878d176c5541a88490972b3e88bf9f1672f2f95e39",
@@ -2520,7 +2608,7 @@
         "sourceLeft": 240,
         "sourceRight": 1081,
         "outputWidth": 639.8773800456969,
-        "outputBase": 1562,
+        "outputBase": 1561.56,
         "cx": 780.1629855293222,
         "sourceShoulder": 502,
         "outputShoulder": 631.9482102056359,
@@ -2563,7 +2651,15 @@
           "bottom": 1566
         }
       },
-      "integrated": true
+      "integrated": true,
+      "priorAssetSha256": "a484a278a8e48fa68edb81f9f3d1d031c17f5e01c37b0d1c47bab3e64a496363",
+      "supersededBy": {
+        "release": "sunburst-heroes-release-12",
+        "card": "madison-diva-closure-seat-2026-09-21",
+        "approvedBy": "Jordan Richter",
+        "approvedAt": "2026-09-21",
+        "note": "Shoulder-locked (closure-seat) Madison render. url, framing, assetSha256 and body.outputBase describe it; the derivation fields in this row (sourceLayers, sourceAssemblySha256, backgroundRemnantCorrection) describe the prior 2026-09-06 asset now in priorUrl."
+      }
     }
   ],
   "integratedCount": 21,
