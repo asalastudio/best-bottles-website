@@ -1,9 +1,10 @@
 {
   "url": "http://localhost:3050",
-  "checkedAt": "2026-09-22T16:30:36.094Z",
+  "checkedAt": "2026-09-22T16:34:44.109Z",
   "views": [
     {
       "mobile": false,
+      "route": "/catalog",
       "query": "family=Cylinder&capacities=9%20ml",
       "cards": [
         {
@@ -241,6 +242,7 @@
     },
     {
       "mobile": false,
+      "route": "/catalog",
       "query": "family=Cylinder&capacities=28%20ml,50%20ml",
       "cards": [
         {
@@ -324,6 +326,7 @@
     },
     {
       "mobile": false,
+      "route": "/catalog",
       "query": "family=Cylinder&capacities=9%20ml&roller=plastic",
       "cards": [
         {
@@ -385,6 +388,7 @@
     },
     {
       "mobile": false,
+      "route": "/catalog",
       "query": "family=Cylinder&capacities=50%20ml&roller=plastic",
       "cards": [
         {
@@ -401,7 +405,410 @@
       ]
     },
     {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=9%20ml",
+      "cards": [
+        {
+          "sku": "LBCylAmb9LtnMtSl",
+          "group": "cylinder-9ml-amber-17-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylAmb9LtnMtSl.f80deb49076c.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-lotionpump?sku=LBCylAmb9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylAmb9SpryMattSl",
+          "group": "cylinder-9ml-amber-17-415-finemist",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9SpryMattSl.297ea26b8a91.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylAmb9MtlRollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9MtlRollBlkDot.b8ff3a73f388.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCyl9LtnGl",
+          "group": "cylinder-9ml-clear-17-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl9LtnGl.ca2699daa0ba.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-lotionpump?sku=LBCyl9LtnGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCyl9SpryGl",
+          "group": "cylinder-9ml-clear-17-415-finemist",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9SpryGl.3531f92e7360.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9MtlRollBlkDot.963eed913d43.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9GlMattSht",
+          "group": "cylinder-9ml-clear-13-415",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCyl9GlMattSht.e40685c2d5b4.png",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-13-415?sku=GBTallCyl9GlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9SpryGlMatt",
+          "group": "cylinder-9ml-clear-13-415-finemist",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCyl9SpryGlMatt.e7b9c81373fc.png",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-finemist?sku=GBTallCyl9SpryGlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-13-415-rollon",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCyl9MtlRollBlkDot.52046eb24c03.png",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylBlu9LtnMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylBlu9LtnMattSl.d0ec317eb616.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-lotionpump?sku=LBCylBlu9LtnMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylBlu9SpryMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-finemist",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9SpryMattSl.4befc61f1a00.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylBlu9MtlRollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9MtlRollBlkDot.844e9d33753f.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylFrst9LtnMtSl",
+          "group": "cylinder-9ml-frosted-17-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylFrst9LtnMtSl.619922894add.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-lotionpump?sku=LBCylFrst9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylFrst9SpryMattSl",
+          "group": "cylinder-9ml-frosted-17-415-finemist",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9SpryMattSl.d5b42efe1820.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9MtlRollBlkDot.08fa7b4cd8f0.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9GlMattSht",
+          "group": "cylinder-9ml-frosted-13-415",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCylFrst9GlMattSht.338c72fe6e2a.png",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415?sku=GBTallCylFrst9GlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9SpryGlMatt",
+          "group": "cylinder-9ml-frosted-13-415-finemist",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCylFrst9SpryGlMatt.c0c2d412b1bf.png",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-finemist?sku=GBTallCylFrst9SpryGlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-13-415-rollon",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCylFrst9MtlRollBlkDot.1abfa72c9d06.png",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylSwrl9LtnMtSl",
+          "group": "cylinder-9ml-swirl-17-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylSwrl9LtnMtSl.e7f6c9af7f11.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-lotionpump?sku=LBCylSwrl9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylSwrl9SpryMattSl",
+          "group": "cylinder-9ml-swirl-17-415-finemist",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9SpryMattSl.70ebfb3a4550.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylSwrl9MtlRollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9MtlRollBlkDot.cb173e3c3110.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=28%20ml,50%20ml",
+      "cards": [
+        {
+          "sku": "GBMtlRoll28Blk",
+          "group": "cylinder-28ml-clear-16mm-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBMtlRoll28Blk.724c06a6edfa.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-28ml-clear-16mm-rollon?sku=GBMtlRoll28Blk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "LBCyl50LtnMtGl",
+          "group": "cylinder-50ml-clear-18-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl50LtnMtGl.147afe555981.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-lotionpump?sku=LBCyl50LtnMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50SpryMtGl",
+          "group": "cylinder-50ml-clear-18-415-perfumespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50SpryMtGl.88aa74a09984.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-perfumespray?sku=GBCyl50SpryMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50RdcrMtSl",
+          "group": "cylinder-50ml-clear-18-415-reducer",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RdcrMtSl.3ee8e1930780.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-reducer?sku=GBCyl50RdcrMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50MtlRollBlk",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50MtlRollBlk.748d3f4631ca.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50MtlRollBlk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50AnSpMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpMtSl.d9f827180268.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray?sku=GBCyl50AnSpMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50AnSpTslMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpTslMtSl.42c6d85c1a49.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray-tassel?sku=GBCyl50AnSpTslMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=9%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCylAmb9RollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9RollBlkDot.f28dd0c27078.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCyl9RollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9RollBlkDot.52b866cf8bfd.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylBlu9RollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9RollBlkDot.4f9631b0ceb8.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylFrst9RollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9RollBlkDot.d9051dc36960.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylSwrl9RollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9RollBlkDot.26dda713bfb7.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=50%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCyl50RollWht",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RollWht.b558aef1c1f8.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50RollWht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D50%2Bml%26roller%3Dplastic"
+        }
+      ]
+    },
+    {
       "mobile": true,
+      "route": "/catalog",
       "query": "family=Cylinder&capacities=9%20ml",
       "cards": [
         {
@@ -639,6 +1046,7 @@
     },
     {
       "mobile": true,
+      "route": "/catalog",
       "query": "family=Cylinder&capacities=28%20ml,50%20ml",
       "cards": [
         {
@@ -722,6 +1130,7 @@
     },
     {
       "mobile": true,
+      "route": "/catalog",
       "query": "family=Cylinder&capacities=9%20ml&roller=plastic",
       "cards": [
         {
@@ -783,6 +1192,7 @@
     },
     {
       "mobile": true,
+      "route": "/catalog",
       "query": "family=Cylinder&capacities=50%20ml&roller=plastic",
       "cards": [
         {
@@ -795,6 +1205,408 @@
             "height": 195
           },
           "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50RollWht"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=9%20ml",
+      "cards": [
+        {
+          "sku": "LBCylAmb9LtnMtSl",
+          "group": "cylinder-9ml-amber-17-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylAmb9LtnMtSl.f80deb49076c.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-lotionpump?sku=LBCylAmb9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylAmb9SpryMattSl",
+          "group": "cylinder-9ml-amber-17-415-finemist",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9SpryMattSl.297ea26b8a91.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-finemist?sku=GBCylAmb9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylAmb9MtlRollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9MtlRollBlkDot.b8ff3a73f388.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCyl9LtnGl",
+          "group": "cylinder-9ml-clear-17-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl9LtnGl.ca2699daa0ba.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-lotionpump?sku=LBCyl9LtnGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCyl9SpryGl",
+          "group": "cylinder-9ml-clear-17-415-finemist",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9SpryGl.3531f92e7360.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-finemist?sku=GBCyl9SpryGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9MtlRollBlkDot.963eed913d43.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9GlMattSht",
+          "group": "cylinder-9ml-clear-13-415",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCyl9GlMattSht.e40685c2d5b4.png",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-13-415?sku=GBTallCyl9GlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9SpryGlMatt",
+          "group": "cylinder-9ml-clear-13-415-finemist",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCyl9SpryGlMatt.e7b9c81373fc.png",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-finemist?sku=GBTallCyl9SpryGlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCyl9MtlRollBlkDot",
+          "group": "cylinder-9ml-clear-13-415-rollon",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCyl9MtlRollBlkDot.52046eb24c03.png",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-13-415-rollon?sku=GBTallCyl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylBlu9LtnMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylBlu9LtnMattSl.d0ec317eb616.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-lotionpump?sku=LBCylBlu9LtnMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylBlu9SpryMattSl",
+          "group": "cylinder-9ml-cobalt-blue-17-415-finemist",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9SpryMattSl.4befc61f1a00.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-finemist?sku=GBCylBlu9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylBlu9MtlRollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9MtlRollBlkDot.844e9d33753f.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylFrst9LtnMtSl",
+          "group": "cylinder-9ml-frosted-17-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylFrst9LtnMtSl.619922894add.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-lotionpump?sku=LBCylFrst9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylFrst9SpryMattSl",
+          "group": "cylinder-9ml-frosted-17-415-finemist",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9SpryMattSl.d5b42efe1820.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-finemist?sku=GBCylFrst9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9MtlRollBlkDot.08fa7b4cd8f0.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9GlMattSht",
+          "group": "cylinder-9ml-frosted-13-415",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCylFrst9GlMattSht.338c72fe6e2a.png",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415?sku=GBTallCylFrst9GlMattSht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9SpryGlMatt",
+          "group": "cylinder-9ml-frosted-13-415-finemist",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCylFrst9SpryGlMatt.c0c2d412b1bf.png",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-finemist?sku=GBTallCylFrst9SpryGlMatt&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBTallCylFrst9MtlRollBlkDot",
+          "group": "cylinder-9ml-frosted-13-415-rollon",
+          "src": "http://localhost:3050/images/catalog/bone-review/GBTallCylFrst9MtlRollBlkDot.1abfa72c9d06.png",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-13-415-rollon?sku=GBTallCylFrst9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "LBCylSwrl9LtnMtSl",
+          "group": "cylinder-9ml-swirl-17-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCylSwrl9LtnMtSl.e7f6c9af7f11.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-lotionpump?sku=LBCylSwrl9LtnMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylSwrl9SpryMattSl",
+          "group": "cylinder-9ml-swirl-17-415-finemist",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9SpryMattSl.70ebfb3a4550.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-finemist?sku=GBCylSwrl9SpryMattSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        },
+        {
+          "sku": "GBCylSwrl9MtlRollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9MtlRollBlkDot.cb173e3c3110.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9MtlRollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=28%20ml,50%20ml",
+      "cards": [
+        {
+          "sku": "GBMtlRoll28Blk",
+          "group": "cylinder-28ml-clear-16mm-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBMtlRoll28Blk.724c06a6edfa.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-28ml-clear-16mm-rollon?sku=GBMtlRoll28Blk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "LBCyl50LtnMtGl",
+          "group": "cylinder-50ml-clear-18-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl50LtnMtGl.147afe555981.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-lotionpump?sku=LBCyl50LtnMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50SpryMtGl",
+          "group": "cylinder-50ml-clear-18-415-perfumespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50SpryMtGl.88aa74a09984.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-perfumespray?sku=GBCyl50SpryMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50RdcrMtSl",
+          "group": "cylinder-50ml-clear-18-415-reducer",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RdcrMtSl.3ee8e1930780.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-reducer?sku=GBCyl50RdcrMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50MtlRollBlk",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50MtlRollBlk.748d3f4631ca.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50MtlRollBlk&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50AnSpMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpMtSl.d9f827180268.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray?sku=GBCyl50AnSpMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        },
+        {
+          "sku": "GBCyl50AnSpTslMtSl",
+          "group": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50AnSpTslMtSl.42c6d85c1a49.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-18-415-antiquespray-tassel?sku=GBCyl50AnSpTslMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=9%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCylAmb9RollBlkDot",
+          "group": "cylinder-9ml-amber-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylAmb9RollBlkDot.f28dd0c27078.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCyl9RollBlkDot",
+          "group": "cylinder-9ml-clear-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl9RollBlkDot.52b866cf8bfd.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-clear-17-415-rollon?sku=GBCyl9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylBlu9RollBlkDot",
+          "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylBlu9RollBlkDot.4f9631b0ceb8.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-cobalt-blue-17-415-rollon?sku=GBCylBlu9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylFrst9RollBlkDot",
+          "group": "cylinder-9ml-frosted-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylFrst9RollBlkDot.d9051dc36960.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-frosted-17-415-rollon?sku=GBCylFrst9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        },
+        {
+          "sku": "GBCylSwrl9RollBlkDot",
+          "group": "cylinder-9ml-swirl-17-415-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCylSwrl9RollBlkDot.26dda713bfb7.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-9ml-swirl-17-415-rollon?sku=GBCylSwrl9RollBlkDot&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D9%2Bml%26roller%3Dplastic"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=50%20ml&roller=plastic",
+      "cards": [
+        {
+          "sku": "GBCyl50RollWht",
+          "group": "cylinder-50ml-clear-16mm-rollon",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl50RollWht.b558aef1c1f8.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-50ml-clear-16mm-rollon?sku=GBCyl50RollWht&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D50%2Bml%26roller%3Dplastic"
         }
       ]
     }

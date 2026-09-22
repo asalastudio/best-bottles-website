@@ -140,7 +140,7 @@ export default function ApplicationFinderClient({
     const { openPanel: openGracePanel } = useGrace();
     const t = useCopy("catalog");
 
-    const families = useMemo(() => buildGuidedFinderFamilies(activeResult), [activeResult]);
+    const families = useMemo(() => buildGuidedFinderFamilies(activeResult, filters.rollerMaterials), [activeResult, filters.rollerMaterials]);
     const exactFinderUrl = finderUrl(activePathname, activeSearch);
 
     useEffect(() => {
