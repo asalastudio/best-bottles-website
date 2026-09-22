@@ -1,0 +1,25 @@
+{
+  "sku": "GBRndFrst78AnSpGl",
+  "family": "Round",
+  "capacityMl": 78,
+  "decision": "approved",
+  "approvedAt": "2026-09-22T21:23:41.408989+00:00",
+  "userStatement": "All right, this is perfect. Let's lock it in. These are good to go.",
+  "version": "round78-face-v4",
+  "file": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/aligned/GBRndFrst78AnSpGl-2080x2288.png",
+  "sha256": "ae4000ff96f1c5522ff5eba8e1c6978d0b422b134b5ec4de032dbefdbe1c438b",
+  "nativeSha256": "9cf68a5b42c04daa18ab634e2350611820f73fce25065197c2531a021254d496",
+  "canvas": [
+    2080,
+    2288
+  ],
+  "glassSpanPct": 48,
+  "capGlassJunctionFromTopPct": 43,
+  "glassFootFromTopPct": 91,
+  "material": "approved frosted satin",
+  "geometry": "exact Round master with user-approved convex face appearance",
+  "presentation": "gold bulb sprayer attached; integral foot retained",
+  "supersedesSha256": "f8eae5832d8a9fd526194743972780f478dc3d5666ab88e04199f311c817fe29",
+  "publicationState": "not-published",
+  "scope": "Approval of this exact corrected render; prior rejected Circle renders are excluded."
+}

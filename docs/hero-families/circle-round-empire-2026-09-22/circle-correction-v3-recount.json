@@ -1,0 +1,112 @@
+{
+  "beforeGeneratedAt": "2026-09-22T21:19:56.088Z",
+  "afterGeneratedAt": "2026-09-22T21:32:40.101Z",
+  "before": {
+    "Circle": {
+      "catalogRows": 209,
+      "plate": {
+        "plated-no-capoff-by-design": 116,
+        "none": 4,
+        "plated": 87,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 181,
+        "indexed": 28
+      },
+      "kit": {
+        "live": 109,
+        "approved-not-published": 4,
+        "candidate": 57,
+        "no-plate": 4,
+        "stale": 1,
+        "held": 21,
+        "none": 13
+      },
+      "approvedCompletePlates": 38,
+      "groups": 27,
+      "completeSunburstGroups": 27
+    },
+    "Round": {
+      "catalogRows": 186,
+      "plate": {
+        "plated-no-capoff-by-design": 125,
+        "none": 8,
+        "plated": 14,
+        "plated-cap-on-only": 34,
+        "plated-legacy-source": 3,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 165,
+        "indexed": 21
+      },
+      "kit": {
+        "live": 104,
+        "held": 22,
+        "no-plate": 8,
+        "stale": 7,
+        "approved-not-published": 8,
+        "none": 37
+      },
+      "approvedCompletePlates": 18,
+      "groups": 21,
+      "completeSunburstGroups": 0
+    }
+  },
+  "after": {
+    "Circle": {
+      "catalogRows": 209,
+      "plate": {
+        "plated-no-capoff-by-design": 116,
+        "none": 4,
+        "plated": 87,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 181,
+        "indexed": 28
+      },
+      "kit": {
+        "live": 109,
+        "approved-not-published": 4,
+        "candidate": 57,
+        "no-plate": 4,
+        "stale": 1,
+        "held": 21,
+        "none": 13
+      },
+      "approvedCompletePlates": 38,
+      "groups": 27,
+      "completeSunburstGroups": 27
+    },
+    "Round": {
+      "catalogRows": 186,
+      "plate": {
+        "plated-no-capoff-by-design": 125,
+        "none": 8,
+        "plated": 14,
+        "plated-cap-on-only": 34,
+        "plated-legacy-source": 3,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 165,
+        "indexed": 21
+      },
+      "kit": {
+        "live": 104,
+        "held": 22,
+        "no-plate": 8,
+        "stale": 7,
+        "approved-not-published": 8,
+        "none": 37
+      },
+      "approvedCompletePlates": 18,
+      "groups": 21,
+      "completeSunburstGroups": 0
+    }
+  },
+  "backendChange": false,
+  "localChange": "Two new Circle face corrections, native and aligned, awaiting user review. Ten prior approved images unchanged."
+}

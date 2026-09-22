@@ -1,16 +1,21 @@
 import heroRows from "./catalog-heroes.json";
 import pilotRows from "./catalog-hero-pilot.json";
+import crePilotRows from "./catalog-hero-cre-pilot.json";
 
 export type CatalogHero = Omit<(typeof heroRows)[number], "shopifyVariantId"> & { shopifyVariantId: string | null };
-const pilotBySku = new Map(pilotRows.map(hero => [hero.websiteSku, hero]));
+const completePilotRows = [...pilotRows, ...crePilotRows];
+function activePilotRows(): CatalogHero[] {
+    return process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT === "families-2026-09-22"
+        ? completePilotRows : pilotRows;
+}
 
 /** Explicit build opt-in: staging candidates do not become a production release. */
 export function isCatalogHeroPilotEnabled(): boolean {
-    return process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT === "cylinder-2026-09-22";
+    return ["cylinder-2026-09-22", "families-2026-09-22"].includes(process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT ?? "");
 }
 
 function isPilotHero(hero?: CatalogHero | null): boolean {
-    const candidate = hero && pilotBySku.get(hero.websiteSku);
+    const candidate = hero && activePilotRows().find(row => row.websiteSku === hero.websiteSku);
     return Boolean(isCatalogHeroPilotEnabled() && candidate && candidate.url === hero?.url
         && candidate.groupSlug === hero?.groupSlug);
 }
@@ -27,13 +32,13 @@ const verifiedGroupAliases: Readonly<Record<string, string>> = {
 /** Exact SKU lookup only: never borrow another finish or applicator's photo. */
 export function getProductHero(websiteSku?: string | null): CatalogHero | null {
     if (!websiteSku) return null;
-    return (isCatalogHeroPilotEnabled() ? pilotBySku.get(websiteSku) : null) ?? bySku.get(websiteSku) ?? null;
+    return (isCatalogHeroPilotEnabled() ? activePilotRows().find(row => row.websiteSku === websiteSku) : null) ?? bySku.get(websiteSku) ?? null;
 }
 
 /** Only select an assembly still present in the filtered catalog result. */
 export function getCatalogHero(groupSlug: string, variants: readonly { websiteSku?: string | null }[]): CatalogHero | null {
     const resolvedSlug = verifiedGroupAliases[groupSlug] ?? groupSlug;
-    const pilot = isCatalogHeroPilotEnabled() && pilotRows.find(candidate =>
+    const pilot = isCatalogHeroPilotEnabled() && activePilotRows().find(candidate =>
         candidate.groupSlug === resolvedSlug && variants.some(variant => variant.websiteSku === candidate.websiteSku),
     );
     if (pilot) return { ...pilot, groupSlug };

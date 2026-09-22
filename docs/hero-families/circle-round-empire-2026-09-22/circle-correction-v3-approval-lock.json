@@ -1,0 +1,54 @@
+{
+  "approvedAt": "2026-09-22T21:36:08.752462+00:00",
+  "decision": "approved",
+  "rows": [
+    {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "family": "Circle",
+      "capacityMl": 50,
+      "decision": "approved",
+      "approvedAt": "2026-09-22T21:36:08.752462+00:00",
+      "userStatement": "Looks perfect let\u2019s lock those in, can we now are we ready to publish the cylinders the rounds and the empires does that count for everything?",
+      "version": "circle-face-v3",
+      "file": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/circle-corrections-v3/aligned/GBCrclFrst50RdcrIvyLthr-2080x2288.png",
+      "sha256": "fd98f6e65de2998de5148fc5f30b5c6e2171dc661bc2a8c5c5d95a286c895d85",
+      "nativeSha256": "cfca981dd8390353d37dc6ca65f4248c07d279d543405cd1246fb53eccd35241",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "glassSpanPct": 54,
+      "capGlassJunctionFromTopPct": 37,
+      "glassFootFromTopPct": 91,
+      "material": "approved frosted satin",
+      "geometry": "exact Circle master; approved flatter face correction",
+      "presentation": "assembled closure",
+      "publicationState": "not-published",
+      "scope": "Approval of exact corrected Circle render; readiness assessment is separate from publication."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "decision": "approved",
+      "approvedAt": "2026-09-22T21:36:08.752462+00:00",
+      "userStatement": "Looks perfect let\u2019s lock those in, can we now are we ready to publish the cylinders the rounds and the empires does that count for everything?",
+      "version": "circle-face-v3",
+      "file": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/circle-corrections-v3/aligned/GBCrclFrst50AnSpGl-2080x2288.png",
+      "sha256": "cb473a04f649118d5cf2d8d616f6a594c90b89dd144213e65547e5fcffbd6eb7",
+      "nativeSha256": "bfe80cd316155051c47b7f5126095f6332f479afda97fe6ac1e20ae27520d2d1",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "glassSpanPct": 54,
+      "capGlassJunctionFromTopPct": 37,
+      "glassFootFromTopPct": 91,
+      "material": "approved frosted satin",
+      "geometry": "exact Circle master; approved flatter face correction",
+      "presentation": "assembled closure",
+      "publicationState": "not-published",
+      "scope": "Approval of exact corrected Circle render; readiness assessment is separate from publication."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "status": "pass",
+  "rows": [
+    {
+      "width": 390,
+      "httpStatus": 200,
+      "errors": [],
+      "images": [
+        [
+          880,
+          590
+        ],
+        [
+          2080,
+          2288
+        ]
+      ],
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "httpStatus": 200,
+      "errors": [],
+      "images": [
+        [
+          880,
+          590
+        ],
+        [
+          2080,
+          2288
+        ]
+      ],
+      "overflow": false
+    }
+  ]
+}

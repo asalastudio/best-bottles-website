@@ -1,0 +1,52 @@
+[
+  {
+    "sku": "GBCrclFrst50DrpGl",
+    "sha256": "e03307b7e3abf6edcb5bd0a244db36741f253f33014bf612e53bff42603fba58",
+    "unchanged": true
+  },
+  {
+    "sku": "LBCrclFrst50LtnMtGl",
+    "sha256": "7d053c84f0cc96303838f01d78f7a8ab8b98fb2f91c02ef6da17b2d4d5c43da1",
+    "unchanged": true
+  },
+  {
+    "sku": "GBCrclFrst50SpryMtGl",
+    "sha256": "cf1a12fc9c33e87d57e8d4852ff6890dcbefb0123a7f086400761c972cd0e7cf",
+    "unchanged": true
+  },
+  {
+    "sku": "GBCrclFrst50RdcrShnGl",
+    "sha256": "22714069103f6d278df3423cee6c1ac104d9f70a15cbc2b64e3957327ca57f34",
+    "unchanged": true
+  },
+  {
+    "sku": "GBCrclFrst100AnSpGl",
+    "sha256": "879ce3a79bd1d734332849265c980e21965080647348ff5b357503c8ff20a3d0",
+    "unchanged": true
+  },
+  {
+    "sku": "GBCrclFrst100AnSpTslIvyGl",
+    "sha256": "66308b2ffbadaae78bbf0e8fe642699d77ee1ba79b4f6f11717bebbd3e747c18",
+    "unchanged": true
+  },
+  {
+    "sku": "LBCrclFrst100LtnMtGl",
+    "sha256": "ef006d0bd099deea059544e776eafb36868766fdfa0ab7051505dfc69355ab67",
+    "unchanged": true
+  },
+  {
+    "sku": "GBCrclFrst100SpryMtGl",
+    "sha256": "db1127ac3164341d07051d1b647fd36e23dd3244349f4637443dfa632bdbd267",
+    "unchanged": true
+  },
+  {
+    "sku": "GBCrclFrst100RdcrShnGl",
+    "sha256": "87eef8300e4ad958d7bfe63361d3f52be9fdbcbee68b3f23072d7bd26ec3eb96",
+    "unchanged": true
+  },
+  {
+    "sku": "GBRndFrst78AnSpGl",
+    "sha256": "ae4000ff96f1c5522ff5eba8e1c6978d0b422b134b5ec4de032dbefdbe1c438b",
+    "unchanged": true
+  }
+]

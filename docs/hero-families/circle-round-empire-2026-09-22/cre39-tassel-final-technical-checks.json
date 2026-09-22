@@ -1,0 +1,46 @@
+{
+  "rows": [
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "outputArtworkBounds": [
+        24,
+        222,
+        2013,
+        2203
+      ],
+      "glassFootPct": 91,
+      "spanPct": 54,
+      "landmarkUncertaintyPx": 5.795121951219512,
+      "noClipping": true,
+      "presentation": "Connected ivory bulb, hose and tassel; shiny gold hardware retained",
+      "visualAssessment": "Circle retains broad flat face and straight foot; Round retains fuller globe and rounded foot; all strands visible",
+      "finalSha256": "85128ac147a41c1b80162a7ee387270a4bb169b350adadc21d0d5ceb0d16cc62"
+    },
+    {
+      "sku": "GBRnd128AnSpTslIvyGl",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "outputArtworkBounds": [
+        25,
+        154,
+        1990,
+        2208
+      ],
+      "glassFootPct": 91,
+      "spanPct": 54,
+      "landmarkUncertaintyPx": 5.9172413793103456,
+      "noClipping": true,
+      "presentation": "Connected ivory bulb, hose and tassel; shiny gold hardware retained",
+      "visualAssessment": "Circle retains broad flat face and straight foot; Round retains fuller globe and rounded foot; all strands visible",
+      "finalSha256": "8cadc09c74ad2bc6035e4ccc6422486263dc2609141d130dc84996b8771ce3b0"
+    }
+  ],
+  "apiCalls": 3,
+  "notes": "Two final corrections; Circle required one localized fringe retry. All original attempts and input/source hashes preserved. User approval pending."
+}

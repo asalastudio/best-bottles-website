@@ -1,0 +1,7 @@
+{
+  "maskInteriorMeanAbsoluteRgbChange": 9.739,
+  "outsideMaskMeanAbsoluteRgbChange": 4.959,
+  "hardwareReview": "Gold bulb, connection, sprayer and collar visually retained. Generative mask does not imply byte-identical exterior pixels.",
+  "footReview": "Integral foot shape retained visually; native foot position shifted about 2 pixels.",
+  "appearanceReview": "New front-surface shading reads distinctly convex; preserves satin frosted finish. Candidate for user review."
+}

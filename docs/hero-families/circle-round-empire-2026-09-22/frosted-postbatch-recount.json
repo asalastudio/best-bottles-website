@@ -1,0 +1,126 @@
+{
+  "beforeGeneratedAt": "2026-09-22T20:36:18.649Z",
+  "afterGeneratedAt": "2026-09-22T20:52:08.858Z",
+  "before": {
+    "Circle": {
+      "catalogRows": 209,
+      "plate": {
+        "plated-no-capoff-by-design": 116,
+        "none": 4,
+        "plated": 87,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 181,
+        "indexed": 28
+      },
+      "kit": {
+        "live": 109,
+        "approved-not-published": 4,
+        "candidate": 57,
+        "no-plate": 4,
+        "stale": 1,
+        "held": 21,
+        "none": 13
+      },
+      "approvedCompletePlates": 38,
+      "productGroups": 27,
+      "groupsWithIndexedHero": 27,
+      "completeSunburstGroups": 27
+    },
+    "Round": {
+      "catalogRows": 186,
+      "plate": {
+        "plated-no-capoff-by-design": 125,
+        "none": 8,
+        "plated": 14,
+        "plated-cap-on-only": 34,
+        "plated-legacy-source": 3,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 165,
+        "indexed": 21
+      },
+      "kit": {
+        "live": 104,
+        "held": 22,
+        "no-plate": 8,
+        "stale": 7,
+        "approved-not-published": 8,
+        "none": 37
+      },
+      "approvedCompletePlates": 18,
+      "productGroups": 21,
+      "groupsWithIndexedHero": 21,
+      "completeSunburstGroups": 0
+    }
+  },
+  "after": {
+    "Circle": {
+      "catalogRows": 209,
+      "plate": {
+        "plated-no-capoff-by-design": 116,
+        "none": 4,
+        "plated": 87,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 181,
+        "indexed": 28
+      },
+      "kit": {
+        "live": 109,
+        "approved-not-published": 4,
+        "candidate": 57,
+        "no-plate": 4,
+        "stale": 1,
+        "held": 21,
+        "none": 13
+      },
+      "approvedCompletePlates": 38,
+      "productGroups": 27,
+      "groupsWithIndexedHero": 27,
+      "completeSunburstGroups": 27
+    },
+    "Round": {
+      "catalogRows": 186,
+      "plate": {
+        "plated-no-capoff-by-design": 125,
+        "none": 8,
+        "plated": 14,
+        "plated-cap-on-only": 34,
+        "plated-legacy-source": 3,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 165,
+        "indexed": 21
+      },
+      "kit": {
+        "live": 104,
+        "held": 22,
+        "no-plate": 8,
+        "stale": 7,
+        "approved-not-published": 8,
+        "none": 37
+      },
+      "approvedCompletePlates": 18,
+      "productGroups": 21,
+      "groupsWithIndexedHero": 21,
+      "completeSunburstGroups": 0
+    }
+  },
+  "indexedMovement": 0,
+  "localFrostedExportMovement": {
+    "Circle": {
+      "before": 0,
+      "after": 11
+    },
+    "Round": {
+      "before": 0,
+      "after": 10
+    }
+  },
+  "note": "Counts are backend/index status, separate from these new local unapproved export bytes."
+}

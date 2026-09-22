@@ -1,0 +1,17 @@
+{
+  "exactSkus": 21,
+  "families": {
+    "Circle": 11,
+    "Round": 10
+  },
+  "dimensions": [
+    2080,
+    2288
+  ],
+  "baselinePct": 91,
+  "sourceAndInputHashes": "pass",
+  "masterAssemblyVisualReview": "pass",
+  "mappedLandmarkMath": "pass",
+  "state": "prepared-awaiting-renderer-confirmation",
+  "newApiCalls": 0
+}

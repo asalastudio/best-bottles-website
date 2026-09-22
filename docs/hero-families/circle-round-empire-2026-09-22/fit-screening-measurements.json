@@ -1,0 +1,430 @@
+[
+  {
+    "sku": "GBCrcl15SpryGlMatt",
+    "family": "Circle",
+    "capacityMl": 15,
+    "measurement": {
+      "sku": "GBCrcl15SpryGlMatt",
+      "version": "current",
+      "bodyCenterX": 608,
+      "landmarkY": 884,
+      "glassFootY": 1550,
+      "uncertaintyPx": 6,
+      "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance.",
+      "actualSpanPct": 38.81118881118881,
+      "actualFootPct": 90.32634032634033
+    },
+    "artworkBounds": [
+      252,
+      515,
+      1361,
+      1562
+    ],
+    "maximumSafeSpan": 53.33476262240915,
+    "maxTop": 55.982608695652175,
+    "maxWidth": 53.33476262240915,
+    "maxBottom": 441.2832167832169
+  },
+  {
+    "sku": "GBCrcl30SpryMattGl",
+    "family": "Circle",
+    "capacityMl": 30,
+    "measurement": {
+      "sku": "GBCrcl30SpryMattGl",
+      "version": "current",
+      "bodyCenterX": 626,
+      "landmarkY": 770,
+      "glassFootY": 1538,
+      "uncertaintyPx": 6,
+      "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance.",
+      "actualSpanPct": 44.75524475524475,
+      "actualFootPct": 89.62703962703962
+    },
+    "artworkBounds": [
+      258,
+      319,
+      1384,
+      1562
+    ],
+    "maximumSafeSpan": 54.81214109926169,
+    "maxTop": 54.81214109926169,
+    "maxWidth": 60.57459414475401,
+    "maxBottom": 254.43356643356654
+  },
+  {
+    "sku": "GBCrcl50AnSpTslIvyGl",
+    "family": "Circle",
+    "capacityMl": 50,
+    "measurement": {
+      "bodyCenterX": 1050,
+      "landmarkY": 586,
+      "glassFootY": 1412,
+      "uncertaintySourcePx": 10,
+      "method": "Visual measurement from source image with 50 px grid; fit-screening estimate"
+    },
+    "artworkBounds": [
+      30,
+      153,
+      1483,
+      1563
+    ],
+    "maximumSafeSpan": 43.493817440837326,
+    "maxTop": 57.078633836378074,
+    "maxWidth": 50.48729659879006,
+    "maxBottom": 43.493817440837326
+  },
+  {
+    "sku": "GBCrcl50SpryMtGl",
+    "family": "Circle",
+    "capacityMl": 50,
+    "measurement": {
+      "sku": "GBCrcl50SpryMtGl",
+      "version": "current",
+      "bodyCenterX": 622,
+      "landmarkY": 691,
+      "glassFootY": 1530,
+      "uncertaintyPx": 6,
+      "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance.",
+      "actualSpanPct": 48.892773892773896,
+      "actualFootPct": 89.16083916083916
+    },
+    "artworkBounds": [
+      191,
+      234,
+      1405,
+      1561
+    ],
+    "maximumSafeSpan": 56.32175925925926,
+    "maxTop": 56.32175925925926,
+    "maxWidth": 61.37774910427299,
+    "maxBottom": 215.19129257838944
+  },
+  {
+    "sku": "GBCrcl100AnSpTslGl",
+    "family": "Circle",
+    "capacityMl": 100,
+    "measurement": {
+      "bodyCenterX": 1000,
+      "landmarkY": 578,
+      "glassFootY": 1524,
+      "uncertaintySourcePx": 10,
+      "method": "Visual measurement from source image with 50 px grid; fit-screening estimate"
+    },
+    "artworkBounds": [
+      53,
+      175,
+      1479,
+      1560
+    ],
+    "maximumSafeSpan": 58.91681950587982,
+    "maxTop": 61.00963676797628,
+    "maxWidth": 58.91681950587982,
+    "maxBottom": 208.93589743589754
+  },
+  {
+    "sku": "GBCrcl100SpryMtGl",
+    "family": "Circle",
+    "capacityMl": 100,
+    "measurement": {
+      "sku": "GBCrcl100SpryMtGl",
+      "version": "current",
+      "bodyCenterX": 625,
+      "landmarkY": 591,
+      "glassFootY": 1531,
+      "uncertaintyPx": 6,
+      "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance.",
+      "actualSpanPct": 54.77855477855478,
+      "actualFootPct": 89.21911421911422
+    },
+    "artworkBounds": [
+      149,
+      183,
+      1448,
+      1555
+    ],
+    "maximumSafeSpan": 60.667655786350146,
+    "maxTop": 60.667655786350146,
+    "maxWidth": 64.26675710740376,
+    "maxBottom": 311.41608391608406
+  },
+  {
+    "sku": "GBCrclFrst100AnSpTslIvyGl",
+    "family": "Circle",
+    "capacityMl": 100,
+    "measurement": {
+      "bodyCenterX": 1076,
+      "landmarkY": 524,
+      "glassFootY": 1494,
+      "uncertaintySourcePx": 10,
+      "method": "Visual measurement from source image with 50 px grid; fit-screening estimate"
+    },
+    "artworkBounds": [
+      54,
+      107,
+      1497,
+      1563
+    ],
+    "maximumSafeSpan": 59.69982893059816,
+    "maxTop": 60.84354722422495,
+    "maxWidth": 59.69982893059816,
+    "maxBottom": 111.77561568865922
+  },
+  {
+    "sku": "GBEmp50AnSpTslGl",
+    "family": "Empire",
+    "capacityMl": 50,
+    "measurement": {
+      "bodyCenterX": 1160,
+      "landmarkY": 754,
+      "glassFootY": 1550,
+      "uncertaintySourcePx": 10,
+      "method": "Visual measurement from source image with 50 px grid; fit-screening estimate"
+    },
+    "artworkBounds": [
+      191,
+      310,
+      1366,
+      1577
+    ],
+    "maximumSafeSpan": 55.848387096774196,
+    "maxTop": 55.848387096774196,
+    "maxWidth": 60.164856420175575,
+    "maxBottom": 234.4087024087025
+  },
+  {
+    "sku": "LBEmp50WhtClOvrCp",
+    "family": "Empire",
+    "capacityMl": 50,
+    "measurement": {
+      "bodyCenterX": 780,
+      "landmarkY": 754,
+      "glassFootY": 1552,
+      "uncertaintySourcePx": 10,
+      "method": "Visual measurement from source image with 50 px grid; fit-screening estimate"
+    },
+    "artworkBounds": [
+      569,
+      203,
+      988,
+      1577
+    ],
+    "maximumSafeSpan": 51.46478873239437,
+    "maxTop": 51.46478873239437,
+    "maxWidth": 169.14398250913766,
+    "maxBottom": 253.79748251748265
+  },
+  {
+    "sku": "GBEmp50SpryMtGl",
+    "family": "Empire",
+    "capacityMl": 50,
+    "measurement": {
+      "sku": "GBEmp50SpryMtGl",
+      "version": "current",
+      "bodyCenterX": 624,
+      "landmarkY": 754,
+      "glassFootY": 1558,
+      "uncertaintyPx": 6,
+      "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance.",
+      "actualSpanPct": 46.85314685314685,
+      "actualFootPct": 90.79254079254079
+    },
+    "artworkBounds": [
+      417,
+      323,
+      1144,
+      1577
+    ],
+    "maximumSafeSpan": 56.638056680161945,
+    "maxTop": 56.638056680161945,
+    "maxWidth": 98.2176008310809,
+    "maxBottom": 336.45491350754526
+  },
+  {
+    "sku": "GBEmp100AnSpTslGl",
+    "family": "Empire",
+    "capacityMl": 100,
+    "measurement": {
+      "bodyCenterX": 1122,
+      "landmarkY": 598,
+      "glassFootY": 1538,
+      "uncertaintySourcePx": 10,
+      "method": "Visual measurement from source image with 50 px grid; fit-screening estimate"
+    },
+    "artworkBounds": [
+      160,
+      199,
+      1398,
+      1611
+    ],
+    "maximumSafeSpan": 61.07542942494399,
+    "maxTop": 61.07542942494399,
+    "maxWidth": 67.43337438006259,
+    "maxBottom": 102.38337005460298
+  },
+  {
+    "sku": "LBEmp100WhtClOvrCp",
+    "family": "Empire",
+    "capacityMl": 100,
+    "measurement": {
+      "bodyCenterX": 766,
+      "landmarkY": 598,
+      "glassFootY": 1540,
+      "uncertaintySourcePx": 10,
+      "method": "Visual measurement from source image with 50 px grid; fit-screening estimate"
+    },
+    "artworkBounds": [
+      519,
+      75,
+      1041,
+      1577
+    ],
+    "maximumSafeSpan": 55.941296928327645,
+    "maxTop": 55.941296928327645,
+    "maxWidth": 160.2684671650189,
+    "maxBottom": 202.4294084294085
+  },
+  {
+    "sku": "GBEmp100SpryMtGl",
+    "family": "Empire",
+    "capacityMl": 100,
+    "measurement": {
+      "sku": "GBEmp100SpryMtGl",
+      "version": "current",
+      "bodyCenterX": 630,
+      "landmarkY": 599,
+      "glassFootY": 1541,
+      "uncertaintyPx": 6,
+      "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance.",
+      "actualSpanPct": 54.89510489510489,
+      "actualFootPct": 89.8018648018648
+    },
+    "artworkBounds": [
+      391,
+      191,
+      1171,
+      1577
+    ],
+    "maximumSafeSpan": 60.70666666666666,
+    "maxTop": 60.70666666666666,
+    "maxWidth": 107.25658956428188,
+    "maxBottom": 208.05244755244766
+  },
+  {
+    "sku": "GBRnd78AnSpTslGl",
+    "family": "Round",
+    "capacityMl": 78,
+    "measurement": {
+      "bodyCenterX": 984,
+      "landmarkY": 846,
+      "glassFootY": 1548,
+      "uncertaintySourcePx": 10,
+      "method": "Visual measurement from source image with 50 px grid; fit-screening estimate"
+    },
+    "artworkBounds": [
+      87,
+      368,
+      1344,
+      1604
+    ],
+    "maximumSafeSpan": 49.59861141245389,
+    "maxTop": 51.757627118644066,
+    "maxWidth": 49.59861141245389,
+    "maxBottom": 99.67207792207796
+  },
+  {
+    "sku": "GBRnd78SpryCu",
+    "family": "Round",
+    "capacityMl": 78,
+    "measurement": {
+      "sku": "GBRnd78SpryCu",
+      "version": "current",
+      "bodyCenterX": 638,
+      "landmarkY": 843,
+      "glassFootY": 1555,
+      "uncertaintyPx": 6,
+      "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance.",
+      "actualSpanPct": 41.49184149184149,
+      "actualFootPct": 90.61771561771562
+    },
+    "artworkBounds": [
+      267,
+      347,
+      1352,
+      1565
+    ],
+    "maximumSafeSpan": 51.27814569536424,
+    "maxTop": 51.27814569536424,
+    "maxWidth": 58.27978473139763,
+    "maxBottom": 566.1146853146855
+  },
+  {
+    "sku": "GBRndFrst78AnSpTslGl",
+    "family": "Round",
+    "capacityMl": 78,
+    "measurement": {
+      "bodyCenterX": 1050,
+      "landmarkY": 844,
+      "glassFootY": 1548,
+      "uncertaintySourcePx": 10,
+      "method": "Visual measurement from source image with 50 px grid; fit-screening estimate"
+    },
+    "artworkBounds": [
+      166,
+      363,
+      1397,
+      1568
+    ],
+    "maximumSafeSpan": 50.7904767856027,
+    "maxTop": 51.68607594936709,
+    "maxWidth": 50.7904767856027,
+    "maxBottom": 279.87692307692316
+  },
+  {
+    "sku": "GBRnd128AnSpTslIvyGl",
+    "family": "Round",
+    "capacityMl": 128,
+    "measurement": {
+      "bodyCenterX": 1134,
+      "landmarkY": 720,
+      "glassFootY": 1508,
+      "uncertaintySourcePx": 10,
+      "method": "Visual measurement from source image with 50 px grid; fit-screening estimate"
+    },
+    "artworkBounds": [
+      17,
+      276,
+      1537,
+      1570
+    ],
+    "maximumSafeSpan": 46.041589988958414,
+    "maxTop": 55.646103896103895,
+    "maxWidth": 46.041589988958414,
+    "maxBottom": 101.05526731333188
+  },
+  {
+    "sku": "GBRnd128SpryMtGl",
+    "family": "Round",
+    "capacityMl": 128,
+    "measurement": {
+      "sku": "GBRnd128SpryMtGl",
+      "version": "current",
+      "bodyCenterX": 639,
+      "landmarkY": 723,
+      "glassFootY": 1555,
+      "uncertaintyPx": 6,
+      "method": "Full-resolution visual closure-seat/shoulder and glass contact-foot inspection on landmark-details.png; excludes cap top, shadow and sidecar. Approximate review measurement, not final technical clearance.",
+      "actualSpanPct": 48.484848484848484,
+      "actualFootPct": 90.61771561771562
+    },
+    "artworkBounds": [
+      218,
+      322,
+      1374,
+      1566
+    ],
+    "maximumSafeSpan": 58.70559610705596,
+    "maxTop": 58.70559610705596,
+    "maxWidth": 63.919471531928274,
+    "maxBottom": 601.3884297520664
+  }
+]
