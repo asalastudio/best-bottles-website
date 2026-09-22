@@ -39,6 +39,12 @@ function convexStorageImagePatterns() {
 }
 
 const nextConfig: NextConfig = {
+    env: {
+        NEXT_PUBLIC_CATALOG_HERO_PILOT: process.env.NEXT_PUBLIC_CATALOG_HERO_PILOT
+            ?? (process.env.VERCEL_ENV === "preview"
+                && process.env.VERCEL_GIT_COMMIT_REF === "codex/cylinder-hero-staging-2026-09-22"
+                ? "cylinder-2026-09-22" : ""),
+    },
     reactStrictMode: false,
     // Required by the /ingest PostHog proxy below — without it Next 308s
     // PostHog's trailing-slash paths and the requests fail.

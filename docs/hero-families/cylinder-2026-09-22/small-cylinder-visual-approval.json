@@ -1,0 +1,115 @@
+{
+  "batch": "3.3/4/5 ml clear and cobalt",
+  "approvals": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "5e55db395cfa2949adbf40222234652368014b5276de2cd737a9048462df9a7b",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "152036f08d2aec1f5d771613a77d19b20bd4d89061e590cd8f656c3a91c8b921",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "637c8aa197bc4d9c9b68d29493a763637edfefc6dd642282169c5946b22549dc",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "82f24320a8a166bc069a109bee49e6d9cc209e5a403e12ee583be9995c322d1a",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "6e766dc20b0072a7356a2ba6b13f5b93bb8c5aaf83a71cb46bb12a3302171f8c",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "5e3219bdb0d864b9b7e48ee8648573c49178f62b80d3bae70aebc7fb5e8e5e0f",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "164b75e4e50100659376f17ae6592f7159fbbfab4240b7ecea200c0825b11469",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "69235ce9bde8543eae1b735e8a8200160dd3c19a9e7fc6e538791643bbf12a6b",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "6fe305eca91fcdbff3e88a3f23090c2ae98cd31c0c869fd1b4268ac6c759d834",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "e3f6c4057c083c15bfd992d1f48939db28c5c5da3a96705eae77c3704419816c",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "status": "approved",
+      "scope": "visual appearance of current small Cylinder delivery exports shown in guided batch sheet",
+      "userFeedback": "Everything looks good",
+      "date": "2026-09-22",
+      "outputSha256": "9f39c38b64784a8d55b7497ba56f2ab56a57d21d4958f6a55697fbc1886477a4",
+      "reviewSheetSha256": "37e211aaca165cb553b638ba63e84f63ac17182471421eaa261acdd0430b66b9",
+      "excludes": "Technical clearance, exact bone exposure and production publication"
+    }
+  ]
+}

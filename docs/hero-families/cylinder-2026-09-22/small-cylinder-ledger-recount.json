@@ -1,0 +1,66 @@
+{
+  "before": {
+    "skuRecords": 443,
+    "approvedCompletePlates": 436,
+    "heroes": {
+      "none": 381,
+      "indexed": 52,
+      "pending": 10
+    },
+    "plates": {
+      "plated-no-capoff-by-design": 93,
+      "none": 7,
+      "plated": 316,
+      "plated-approved-legacy-source": 27
+    },
+    "kits": {
+      "live": 396,
+      "no-plate": 7,
+      "stale": 24,
+      "held": 13,
+      "not-applicable": 3
+    }
+  },
+  "after": {
+    "skuRecords": 443,
+    "approvedCompletePlates": 436,
+    "heroes": {
+      "none": 381,
+      "indexed": 52,
+      "pending": 10
+    },
+    "plates": {
+      "plated-no-capoff-by-design": 93,
+      "none": 7,
+      "plated": 316,
+      "plated-approved-legacy-source": 27
+    },
+    "kits": {
+      "live": 396,
+      "no-plate": 7,
+      "stale": 24,
+      "held": 13,
+      "not-applicable": 3
+    }
+  },
+  "productionMediaCountsChanged": false,
+  "stagingCandidates": {
+    "before": {
+      "images": 33,
+      "groups": 27
+    },
+    "after": {
+      "images": 44,
+      "groups": 36,
+      "visibleImages": 43,
+      "visibleGroups": 35,
+      "hiddenGroupCandidates": 1
+    }
+  },
+  "plateMeasurements": {
+    "count": 2286,
+    "fetchFailures": 0,
+    "measurementFailures": 0
+  },
+  "note": "Frontend pilot only. Read-only media ledger remains unchanged. Full snapshots are preserved in local-review-archive/family3-4-5/audit."
+}

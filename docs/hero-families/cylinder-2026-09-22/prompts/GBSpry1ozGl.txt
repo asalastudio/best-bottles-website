@@ -1,0 +1,16 @@
+Use case: precise-object-edit
+Asset: Best Bottles premium ecommerce product hero.
+Create one elite, realistic studio photograph of this exact empty Cylinder assembly.
+
+INPUT ROLES
+Image 1 is the user-approved sizing/layout preview, without guides. Preserve its exact bottle silhouette, aspect ratio, camera view and full assembly spacing. Image 2 is the exact user-approved gold product photograph for physical geometry and hardware verification; do not copy its framing. Image 3 is the approved CLEAR GLASS MATERIAL reference only. Borrow no bottle shape, neck, hardware, layout or background from it.
+
+EXACT IDENTITY
+Clear Glass Spray Bottle with Gold Top and Base. Capacity: 1oz (30ml)
+Preserve the exact gold-finish hardware, nozzle, collar and dip tube. Keep the detached cap where present. A reducer bottle remains capped. Preserve the GOLD bottom trim, GOLD spray head and GOLD detached cap. No silver hardware. Image 2 is the user-supplied correct gold product photograph and overrides the older silver catalog image.
+
+MATERIAL AND LIGHTING
+Empty colorless clear glass with convincing transmission, hollow interior, actual wall thickness, restrained dark changing edge reflections and layered refraction at its real weighted base. Replace opaque-white rendering artifacts with optical clear glass, preserving the exact source geometry. No frosting, milky paint, blue/amber tint, liquid or invented thickness. Satin gold stays satin, shiny gold stays polished. Premium restrained ecommerce photography, large diffused key above camera-left, gentle frontal fill, negative fill defining curvature. Seamless matte bone #F5F3EF, no horizon. Tight realistic contact shadows and compact soft cast shadows to the right and slightly behind. No mirror floor, props, labels, text, guide lines, watermark, bloom or harsh sharpening.
+
+LOCKED COMPOSITION
+Portrait 10:11, final delivery 2080 x 2288. Actual glass shoulder/closure seat at 45% from top, base contact at 91% from top: 46% shoulder-to-base span. For this trimmed 30 mL bottle, the visible bottom of its attached gold base is the approved contact anchor; do not remove the gold trim. The bottle neck and applicator extend above the shoulder and do not determine body scale. Body center at 50% of canvas width. Preserve Image 1 framing exactly, all detached cap positions and all bulb/tassel extent. Never stretch width, resize individual components, move the shoulder independently, crop hardware, or substitute components. No guides in the generated image.

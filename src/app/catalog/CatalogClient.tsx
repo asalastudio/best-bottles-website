@@ -53,6 +53,7 @@ import {
 } from "@/lib/catalogRefineModel";
 import {
     getCatalogCardVariantPreviews,
+    filterCatalogCardVariants,
     productCardVariantHref,
     type ProductCardVariantPreview,
     type ProductCardVariantPreviewSource,
@@ -1628,13 +1629,12 @@ export default function CatalogClient({
     const visualApplicatorParam = filters.applicators.length === 1 ? filters.applicators[0] : null;
     const variantPreviewRows = activeResult.variantPreviewRows;
     const variantSourceMap = useMemo(
-        () => new Map(variantPreviewRows.map((row) => [row.groupId, row.variants])),
-        [variantPreviewRows],
+        () => new Map(variantPreviewRows.map((row) => [row.groupId, filterCatalogCardVariants(row.variants, filters.rollerMaterials)])),
+        [variantPreviewRows, filters.rollerMaterials],
     );
     const catalogHeroMap = useMemo(() => {
-        const rowsByGroupId = new Map(variantPreviewRows.map((row) => [row.groupId, row.variants]));
-        return new Map(visibleProducts.map((group) => [group._id, getCatalogHero(group.slug, rowsByGroupId.get(group._id) ?? [])]));
-    }, [variantPreviewRows, visibleProducts]);
+        return new Map(visibleProducts.map((group) => [group._id, getCatalogHero(group.slug, variantSourceMap.get(group._id) ?? [])]));
+    }, [variantSourceMap, visibleProducts]);
     const skuMap = useMemo(() => {
         const next = new Map<string, string>();
         const groupIds = new Set<string>();

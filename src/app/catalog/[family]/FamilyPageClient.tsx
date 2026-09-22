@@ -171,7 +171,7 @@ export default function FamilyPageClient({
         () => buildCylinderApplicationOptions(baseCatalog.facets.applicators),
         [baseCatalog.facets.applicators],
     );
-    const families = useMemo(() => buildGuidedFinderFamilies(activeResult), [activeResult]);
+    const families = useMemo(() => buildGuidedFinderFamilies(activeResult, filters.rollerMaterials), [activeResult, filters.rollerMaterials]);
     const exactFinderUrl = finderUrl(family, activeSearch);
     const finderAnchor = `${familyToSlug(family)}-finder`;
 

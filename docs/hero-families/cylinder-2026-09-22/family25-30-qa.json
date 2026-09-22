@@ -1,0 +1,382 @@
+{
+  "rows": [
+    {
+      "sku": "GBcyl25AnSpIvyGl",
+      "outputSha256": "bfadd47f97fe59970d95fd6c10523a6790424754bc5ba3f19d9449b66cc0823f",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 597,
+        "shoulderY": 580,
+        "footY": 1198,
+        "bodyWidthPx": 285,
+        "shoulderSpanPct": 46.996,
+        "footPct": 91.103,
+        "bodyAspect": 2.1684,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "alignment": {
+        "scale": 1.7215533980582525,
+        "x": 12.23262135922323,
+        "y": 19.65902912621368,
+        "rawFootY": 1198,
+        "rawShoulderY": 580,
+        "rawBodyCenterX": 597,
+        "uncertaintyPx": 6.88621359223301
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247,
+          245,
+          242
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.1684,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBcyl25AnSpTslIvyGl",
+      "outputSha256": "ab184134a30ba22d8de1fa58acc86c48054e848ea5e73de8c16817293c4f2cb9",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 790,
+        "shoulderY": 584,
+        "footY": 1202,
+        "bodyWidthPx": 284,
+        "shoulderSpanPct": 46.996,
+        "footPct": 91.407,
+        "bodyAspect": 2.1761,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "alignment": {
+        "scale": 1.7215533980582525,
+        "x": 12.77281553398052,
+        "y": 12.77281553398052,
+        "rawFootY": 1202,
+        "rawShoulderY": 584,
+        "rawBodyCenterX": 790,
+        "uncertaintyPx": 6.88621359223301
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246,
+          244,
+          240
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.1761,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "outputSha256": "5476f7c122f9b50158c2f7fa7825f74158a18f4215c92edb3ffba5feca9ec467",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 584,
+        "footY": 1198,
+        "bodyWidthPx": 285,
+        "shoulderSpanPct": 46.692,
+        "footPct": 91.103,
+        "bodyAspect": 2.1544,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "alignment": {
+        "scale": 1.732768729641694,
+        "x": 3.8042996742669857,
+        "y": 6.223061889250403,
+        "rawFootY": 1198,
+        "rawShoulderY": 584,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 6.931074918566776
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          245,
+          243,
+          239
+        ],
+        "exactBoneCleared": true,
+        "nativeTransparency": true,
+        "method": "Native generated alpha composited over locked bone canvas; original alpha and product pixels preserved."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.1544,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "outputSha256": "511d21e7dee08a7a6f0107495f909f14f9914a6de1e4f0134572574299a0de71",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 599,
+        "shoulderY": 582,
+        "footY": 1199,
+        "bodyWidthPx": 284,
+        "shoulderSpanPct": 46.92,
+        "footPct": 91.179,
+        "bodyAspect": 2.1725,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "alignment": {
+        "scale": 1.7243435980551054,
+        "x": 7.118184764991838,
+        "y": 14.592025931928674,
+        "rawFootY": 1199,
+        "rawShoulderY": 582,
+        "rawBodyCenterX": 599,
+        "uncertaintyPx": 6.897374392220422
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          248,
+          246,
+          243
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.1725,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "outputSha256": "d5caeec0df284c3b78b27ce7c1f61c3cddfbb55f2ad16a8399f072a299638ec5",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 597,
+        "shoulderY": 581,
+        "footY": 1199,
+        "bodyWidthPx": 278,
+        "shoulderSpanPct": 46.996,
+        "footPct": 91.179,
+        "bodyAspect": 2.223,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "alignment": {
+        "scale": 1.7215533980582525,
+        "x": 12.23262135922323,
+        "y": 17.937475728155277,
+        "rawFootY": 1199,
+        "rawShoulderY": 581,
+        "rawBodyCenterX": 597,
+        "uncertaintyPx": 6.88621359223301
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          248,
+          245,
+          242
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.223,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "outputSha256": "95b60b0cd9cd0532c4a3833bcc8a7904e5118f2ff922b47f17662db4e101b60f",
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 578,
+        "footY": 1200,
+        "bodyWidthPx": 288,
+        "shoulderSpanPct": 47.3,
+        "footPct": 91.255,
+        "bodyAspect": 2.1597,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "alignment": {
+        "scale": 1.7104823151125403,
+        "x": 17.131575562700846,
+        "y": 29.50122186495173,
+        "rawFootY": 1200,
+        "rawShoulderY": 578,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 6.841929260450161
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          245,
+          243,
+          239
+        ],
+        "exactBoneCleared": true,
+        "nativeTransparency": true,
+        "method": "Native generated alpha composited over locked bone canvas; original alpha and product pixels preserved."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.1597,
+        "lockBodyAspect": 2.134,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "outputSha256": "aec2bd4a4e743236b08d82c83132db65ae36593e0f23809da2eadf39f625102e",
+      "lock": {
+        "glassBodyKey": "cylinder:30-standard",
+        "label": "Cylinder 30 ml",
+        "shoulderPct": 46,
+        "bodyAspect": 2.65,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 45,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 592,
+        "footY": 1181,
+        "bodyWidthPx": 216,
+        "shoulderSpanPct": 44.791,
+        "footPct": 89.81,
+        "bodyAspect": 2.7269,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. Gold 30 mL uses attached gold base bottom as approved presentation anchor."
+      },
+      "alignment": {
+        "scale": 1.7868930390492361,
+        "x": -28.562037351443223,
+        "y": -28.24067911714792,
+        "rawFootY": 1181,
+        "rawShoulderY": 592,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 7.1475721561969445
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          249,
+          247,
+          243
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 2.7269,
+        "lockBodyAspect": 2.65,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    }
+  ]
+}
