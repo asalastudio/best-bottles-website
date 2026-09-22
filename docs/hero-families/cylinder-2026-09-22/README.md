@@ -15,6 +15,8 @@
 
 The local audit passes all **43 visible exact images** on both `/catalog` and `/catalog/cylinder` at desktop and mobile sizes, including the plastic roller filter. All 44 original PNG files pass hash/dimension checks, 445 focused tests pass, and TypeScript passes. `small-cylinder-qa.json` preserves measured raw geometry differences (up to 5.92% in the clear short-cap body aspect), landmark uncertainty, target coordinates and background medians. The guided sheet was visually approved; these records do not claim pixel-identical generated geometry or exact bone exposure.
 
+The post-batch recount matches the pre-batch snapshot: 436 complete Cylinder plates, 396 live kits and 52 existing indexed hero rows. The staging candidates are a separate frontend registry. All 2,286 plate measurements completed without fetch or measurement failures. See `small-cylinder-ledger-recount.json`.
+
 ## Locked delivery contract
 
 - Lossless source delivery files: **2080 × 2288**, 10:11. These are uniformly resized from approximately 1196 × 1315 generated images, not native 2080-detail renders. The earlier 33 assets were preserved; the current small-bottle extension used eleven explicitly authorized Sunburst API edits.
