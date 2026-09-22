@@ -1,0 +1,188 @@
+{
+  "baseCommit": "e9e99682ebeeb3ffc718f914608c60e4f2a8603e",
+  "currentRegistryCylinderCount": 52,
+  "candidateCount": 28,
+  "coveredGroups": 22,
+  "remainingRegisteredHeroes": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
+      "capacityMl": 3.3,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "groupSlug": "cylinder-4ml-clear-12mm-finemist",
+      "capacityMl": 4,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "groupSlug": "cylinder-5ml-clear-13-415",
+      "capacityMl": 5,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "groupSlug": "cylinder-5ml-clear-13-415-finemist",
+      "capacityMl": 5,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon",
+      "capacityMl": 5,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+      "capacityMl": 5,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+      "capacityMl": 5,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+      "capacityMl": 5,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "groupSlug": "cylinder-5.5ml-clear-13-415-finemist",
+      "capacityMl": 5,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "groupSlug": "cylinder-9ml-clear-13-415",
+      "capacityMl": 9,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "groupSlug": "cylinder-9ml-clear-13-415-finemist",
+      "capacityMl": 9,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "capacityMl": 9,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "groupSlug": "cylinder-9ml-frosted-13-415",
+      "capacityMl": 9,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlMatt",
+      "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
+      "capacityMl": 9,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+      "capacityMl": 9,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBcyl25AnSpIvyGl",
+      "groupSlug": "cylinder-25ml-clear-18-415-antique",
+      "capacityMl": 25,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBcyl25AnSpTslIvyGl",
+      "groupSlug": "cylinder-25ml-clear-18-415-antiquetassel",
+      "capacityMl": 25,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "groupSlug": "cylinder-25ml-clear-18-415-dropper",
+      "capacityMl": 25,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "groupSlug": "cylinder-25ml-clear-18-415-finemist",
+      "capacityMl": 25,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "groupSlug": "cylinder-25ml-clear-18-415-lotionpump",
+      "capacityMl": 25,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "groupSlug": "cylinder-25ml-clear-18-415-reducer",
+      "capacityMl": 25,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "groupSlug": "cylinder-30ml-clear-18-415-finemist",
+      "capacityMl": 30,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCyl100AnSpMtSl",
+      "groupSlug": "cylinder-100ml-clear-18-415-antiquespray",
+      "capacityMl": 100,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCyl100AnSpTslMtSl",
+      "groupSlug": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+      "capacityMl": 100,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "LBCyl100LtnMtGl",
+      "groupSlug": "cylinder-100ml-clear-18-415-lotionpump",
+      "capacityMl": 100,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCyl100SpryMtGl",
+      "groupSlug": "cylinder-100ml-clear-18-415-perfumespray",
+      "capacityMl": 100,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "GBCyl100RdcrMtSl",
+      "groupSlug": "cylinder-100ml-clear-18-415-reducer",
+      "capacityMl": 100,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "PbClear4ozFlpWh",
+      "groupSlug": "cylinder-118ml-clear",
+      "capacityMl": 114,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "PbClear8ozFlpWh",
+      "groupSlug": "cylinder-227ml-clear",
+      "capacityMl": 227,
+      "action": "audit-existing-before-generation"
+    },
+    {
+      "sku": "PbNat16ozFlpWh",
+      "groupSlug": "cylinder-454ml-clear",
+      "capacityMl": 454,
+      "action": "audit-existing-before-generation"
+    }
+  ]
+}

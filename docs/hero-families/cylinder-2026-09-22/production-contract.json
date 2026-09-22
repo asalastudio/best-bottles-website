@@ -1,0 +1,220 @@
+{
+  "version": "cylinder-production-canvas-2026-09-22-v1",
+  "scopeStatus": "47-hero saved glass registry scope identified; current website group reconciliation still pending",
+  "canvas": {
+    "width": 2080,
+    "height": 2288,
+    "aspect": "10:11",
+    "format": "lossless PNG",
+    "exactDimensionsRequired": true
+  },
+  "baseline": {
+    "normalizedY": 0.91,
+    "targetPixelY": 2082.08,
+    "landmark": "actual glass contact foot, excluding shadow"
+  },
+  "bodies": {
+    "cylinder:100-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:100-standard",
+        "label": "Cylinder 100 ml",
+        "shoulderPct": 67.5,
+        "bodyAspect": 4.184,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 23.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl100AnSpMtSl",
+        "GBCyl100AnSpTslMtSl",
+        "GBCyl100RdcrMtSl",
+        "GBCyl100SpryMtGl",
+        "LBCyl100LtnMtGl"
+      ]
+    },
+    "cylinder:25-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl25DrpGl",
+        "GBCyl25RdcrShnGl",
+        "GBcyl25AnSpIvyGl",
+        "GBcyl25AnSpTslIvyGl",
+        "GBcyl25SpryMtGl",
+        "LBCyl25LtnMtGl"
+      ]
+    },
+    "cylinder:50-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:50-standard",
+        "label": "Cylinder 50 ml 18-415",
+        "shoulderPct": 56,
+        "bodyAspect": 3.167,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 35,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl50AnSpMtSl",
+        "GBCyl50AnSpTslMtSl",
+        "GBCyl50RdcrMtSl",
+        "GBCyl50SpryMtGl",
+        "LBCyl50LtnMtGl"
+      ]
+    },
+    "cylinder:50-rollon": {
+      "lock": {
+        "glassBodyKey": "cylinder:50-rollon",
+        "label": "Cylinder 50 ml 16 mm roll-on",
+        "shoulderPct": 53,
+        "bodyAspect": 2.354,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 38,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl50MtlRollBlk"
+      ]
+    },
+    "cylinder:5-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl5GlMattSht",
+        "GBCyl5MtlRollBlkDot",
+        "GBCyl5SpryBlkMatt",
+        "GBCyl5SprySlMatt",
+        "GBCylBlu5MtlRollBlkDot",
+        "GBCylBlu5SlMattSht",
+        "GBCylBlu5SpryGlMatt"
+      ]
+    },
+    "cylinder:9-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl9MtlRollBlkDot",
+        "GBCyl9SpryGl",
+        "GBCylAmb9MtlRollBlkDot",
+        "GBCylAmb9SpryMattSl",
+        "GBCylBlu9MtlRollBlkDot",
+        "GBCylBlu9SpryMattSl",
+        "GBCylFrst9MtlRollBlkDot",
+        "GBCylFrst9SpryMattSl",
+        "GBCylSwrl9MtlRollBlkDot",
+        "GBCylSwrl9SpryMattSl",
+        "LBCyl9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnMtSl"
+      ]
+    },
+    "cylinder:28-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:28-standard",
+        "label": "Cylinder 28 ml",
+        "shoulderPct": 50.5,
+        "bodyAspect": 2.203,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 40.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBMtlRoll28Blk"
+      ]
+    },
+    "cylinder:30-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:30-standard",
+        "label": "Cylinder 30 ml",
+        "shoulderPct": 46,
+        "bodyAspect": 2.65,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 45,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBSpry1ozGl"
+      ]
+    },
+    "cylinder:9-tall": {
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBTallCyl9GlMattSht",
+        "GBTallCyl9MtlRollBlkDot",
+        "GBTallCyl9SpryGlMatt",
+        "GBTallCylFrst9GlMattSht",
+        "GBTallCylFrst9MtlRollBlkDot",
+        "GBTallCylFrst9SpryGlMatt"
+      ]
+    }
+  },
+  "materialReferences": "Hashed per output in export-manifest.json. Reference controls optical material only.",
+  "geometryAuthority": "Verified exact-SKU BB-PSD-Files-Master complete assembly; uniform transform only.",
+  "generationPolicy": {
+    "noAutoSizeForUnverifiedFinalRender": true,
+    "verifyActualResponseDimensions": true,
+    "nativeDetailAndDeliveryCanvasAreSeparate": true,
+    "sunburstCustomSizePathVerified": false,
+    "cliDryRunFinding": "Bundled CLI rejects 2080x2288 for gpt-image-2.5-sunburst before making a network request. This is a runner constraint; model-native support remains unverified.",
+    "newApiCallsDuringSalvage": 0
+  },
+  "releaseGates": [
+    "Confirm current website group/SKU scope",
+    "Validate body/shoulder/foot against the exact master geometry and agreed target",
+    "Inspect material and hardware fidelity",
+    "Verify exact exposed bone background while preserving glass and shadow",
+    "Review actual website mobile and desktop delivered images",
+    "Approve final export hashes",
+    "Authorize publication separately"
+  ],
+  "largerPlasticScope": "3 larger plastic entries excluded from the proposed 47. Do not assign a 500 mL target to a 454 mL SKU without identity evidence."
+}

@@ -1,0 +1,2508 @@
+{
+  "canvas": {
+    "width": 2080,
+    "height": 2288,
+    "aspectRatio": "10:11",
+    "format": "lossless PNG",
+    "backgroundTarget": "#F5F3EF"
+  },
+  "sourceImagesPreserved": true,
+  "newApiCalls": 0,
+  "rows": [
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "source": "local-review-archive/family9/GBCyl9RollBlkDot-generated.png",
+      "sourceSha256": "26eec6288f6115a5d8dd7e16a1286e6acc74d69ee9ceb806945f3462a1faca2c",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl9RollBlkDot-2080x2288.png",
+      "outputSha256": "52b866cf8bfd8bbd4af8796b2a97468a7f06182904d612b6f53b62a08ea97141",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/9. Clear  (Uncapped)/12. GBCyl9RollBlkDot.psd"
+      ],
+      "masterSha256": "4dcaf8ce4fc56d0a743c1c40dd616e5537df51ba0628e10c03f201cb1ea1c2e0",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "reusedPilotLineage": {
+        "runRecord": "local-review-archive/pilot/rollon-v6-run.json",
+        "actualGenerationInputHashes": [
+          {
+            "file": "GBCyl9RollBlkDot-sized.png",
+            "sha256": "d655d028c136b7f18cc7b729ef631a9e031acad07a6317d2a9131723e6d8bbd2"
+          },
+          {
+            "file": "GBCyl9RollBlkDot-source.png",
+            "sha256": "da969ba179bb46d857f397b252f5cd99a68171c31188917b66b03c053e30da1a"
+          },
+          {
+            "file": "material-reference-clear-v6-primary.jpg",
+            "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+          }
+        ],
+        "masterCompositeIsPixelIdenticalToPilotInput": true,
+        "note": "Listed master is the current verification source; actual generation input hashes are retained separately for the reused pilot."
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl9RollBlkDot.52b866cf8bfd.png",
+      "groupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "priorHero": null,
+      "generationInputHashes": [
+        {
+          "file": "GBCyl9RollBlkDot-sized.png",
+          "sha256": "d655d028c136b7f18cc7b729ef631a9e031acad07a6317d2a9131723e6d8bbd2"
+        },
+        {
+          "file": "GBCyl9RollBlkDot-source.png",
+          "sha256": "6197b731f5a504459fb87a72da4cbcf7e332fb3010f88e2a9f021b2920e98592"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "2de8bd15a0fe5f0ff5e27769bf7704fa0d3061ede414e835f569a5a818a4b1f4",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          245.0,
+          243.0,
+          239.0
+        ],
+        "borderExactBoneFraction": 0.21545201115093587,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "source": "local-review-archive/family9/GBCyl9MtlRollBlkDot-generated.png",
+      "sourceSha256": "a1334bb83de3d03a89961b62300d4e901e8a659a966b49305b4ebef3b2d2a7ce",
+      "sourceSize": [
+        1195,
+        1316
+      ],
+      "output": "exports/GBCyl9MtlRollBlkDot-2080x2288.png",
+      "outputSha256": "963eed913d434848df54618d4ebe961eb8ad6c062ea4d02a0bac661378fd34a9",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/9. Clear  (Uncapped)/2. GBCyl9MtlRollBlkDot.psd"
+      ],
+      "masterSha256": "6a1bfffde891cc903a2f248f0a1706fec811a17e43037b30e141f40dcd1ecede",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl9MtlRollBlkDot.963eed913d43.png",
+      "groupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-clear-17-415-rollon",
+        "websiteSku": "GBCyl9MtlRollBlkDot",
+        "graceSku": "GB-CYL-CLR-9ML-T-02",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343680561444",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl9MtlRollBlkDot.cb58e7801b7b.png",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCyl9MtlRollBlkDot-sized.png",
+          "sha256": "0d262267400240259be5dbb7e791dada36d1253baf7fa0f3b2e281e9fe3b159b"
+        },
+        {
+          "file": "GBCyl9MtlRollBlkDot-source.png",
+          "sha256": "f22d8e07be9ac5630d875973eba790c01059318ce66d9c8c5cf87852e34767ac"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "d230db2ad531455dd3fab851c86dabf2a351a3028327f2a3c4974f2696cb3503",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          249.0,
+          248.0,
+          244.0
+        ],
+        "borderExactBoneFraction": 0.0,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "source": "local-review-archive/family9/GBCyl9SpryGl-generated.png",
+      "sourceSha256": "5e683eebbd1f3b532ed351584bae76af826401c6d655deccec81228ba2f14cec",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl9SpryGl-2080x2288.png",
+      "outputSha256": "3531f92e7360a1e2ee6fbe0e9d687602800a86c54e09ac2290d6a6501001ad46",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/9. Clear  (Uncapped)/21. GBCyl9SpryGl.psd"
+      ],
+      "masterSha256": "884e36cc75dd514a347c7698ec2ff03b6c1760ebc09ad0d2242b528e05d72f5d",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl9SpryGl.3531f92e7360.png",
+      "groupSlug": "cylinder-9ml-clear-17-415-finemist",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-clear-17-415-finemist",
+        "websiteSku": "GBCyl9SpryGl",
+        "graceSku": "GB-CYL-CLR-9ML-T-22",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343623217444",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl9SpryGl.47104e5a4bd1.png",
+        "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCyl9SpryGl-sized.png",
+          "sha256": "dbaa2c8992aff5041fcf6e918f6691f37e461fad268b811c4297a25b158d4f95"
+        },
+        {
+          "file": "GBCyl9SpryGl-source.png",
+          "sha256": "aa2d191280b9a4edd808fdbdda027160241d38a5fe38eb842375d172590bbceb"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "3485a6da5e84602dfeae1076e97cf24f0a50d6d6d8e5a3ed4b5f2cf0a0570ea8",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          248.0,
+          246.0,
+          242.0
+        ],
+        "borderExactBoneFraction": 0.0,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "source": "local-review-archive/family9/LBCyl9LtnGl-generated.png",
+      "sourceSha256": "0dd0fd51d1da5d1263087b182c1375b04692962449f29d1b2499359beea0b95a",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/LBCyl9LtnGl-2080x2288.png",
+      "outputSha256": "ca2699daa0bafa648080372ccd4afba7c23e5b03d55b51ee86071067953e7873",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/9. Clear  (Uncapped)/28. LBCyl9LtnGl.psd"
+      ],
+      "masterSha256": "3ad7b4b9f12e04ebcb5fd6cb0809847694f8c20ad759df58599cee27643991ad",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl9LtnGl.ca2699daa0ba.png",
+      "groupSlug": "cylinder-9ml-clear-17-415-lotionpump",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-clear-17-415-lotionpump",
+        "websiteSku": "LBCyl9LtnGl",
+        "graceSku": "LB-CYL-CLR-9ML-T-02",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343671681316",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/LBCyl9LtnGl.c769559f9236.png",
+        "alt": "9 ml Clear Cylinder Lotion Pump Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "LBCyl9LtnGl-sized.png",
+          "sha256": "13371b5113102fc5f3b87e621a5791932dffccd8ccedb709dabfe3649f41e9a4"
+        },
+        {
+          "file": "LBCyl9LtnGl-source.png",
+          "sha256": "9edc80792058a90d77b56946353e56c32194280a1f9da72acb1b9005db5cad24"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "473580aa8eecffce73f33f9a93322b1d7a3303749ebd4ff985460c023b54e2a3",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246.0,
+          245.0,
+          241.0
+        ],
+        "borderExactBoneFraction": 0.0023894862604540022,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "source": "local-review-archive/family9/GBCylAmb9RollBlkDot-generated.png",
+      "sourceSha256": "8a29b799645b414bda0d1ef42809029da7b287f68e33b459200d51a94633e665",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylAmb9RollBlkDot-2080x2288.png",
+      "outputSha256": "f28dd0c270781bdde3c07ef09bb35320205ab1d63847a2e629e065bfe7f60cd2",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-amber.jpg",
+      "materialReferenceSha256": "0f9725eec4fe541f6d9098d06b7b3585730e40868bb3cb264a22b70afd37d62c",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/3. Amber 9ml (Uncapped)/12. GBCylAmb9RollBlkDot.psd"
+      ],
+      "masterSha256": "e92b0705ea6dece422e2265673f908cbe55045354ed813b1d113fb7bb512d459",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylAmb9RollBlkDot.f28dd0c27078.png",
+      "groupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "priorHero": null,
+      "generationInputHashes": [
+        {
+          "file": "GBCylAmb9RollBlkDot-sized.png",
+          "sha256": "cfa6efac17868640311867161b49728b430f538d4f926aca02162a95d6fad62b"
+        },
+        {
+          "file": "GBCylAmb9RollBlkDot-source.png",
+          "sha256": "82fa77a29cc621effd3e143f0e44db03fabd767f7f76225bab935bf87db879fb"
+        },
+        {
+          "file": "reference-amber.jpg",
+          "sha256": "0f9725eec4fe541f6d9098d06b7b3585730e40868bb3cb264a22b70afd37d62c"
+        }
+      ],
+      "promptSha256": "d1f767fd2def7b2d8454eac7c07a5c0c010927f5c4ce4bb7047d390cbe2142bb",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          245.0,
+          241.0
+        ],
+        "borderExactBoneFraction": 0.0,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "source": "local-review-archive/family9/GBCylAmb9MtlRollBlkDot-generated.png",
+      "sourceSha256": "f9891917e0b38d3a2192bb5cb959fc053f334b94a800b2d7f718482ec9d01890",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylAmb9MtlRollBlkDot-2080x2288.png",
+      "outputSha256": "b8ff3a73f388839110fe4083d31653d869ecf67dab4418400d38b4b20af81a90",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-amber.jpg",
+      "materialReferenceSha256": "0f9725eec4fe541f6d9098d06b7b3585730e40868bb3cb264a22b70afd37d62c",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/3. Amber 9ml (Uncapped)/2. GBCylAmb9MtlRollBlkDot.psd"
+      ],
+      "masterSha256": "f33ed30aa9603932118e53729dd71739918ae6b2d0293c2b87d99421d86bec1c",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylAmb9MtlRollBlkDot.b8ff3a73f388.png",
+      "groupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-amber-17-415-rollon",
+        "websiteSku": "GBCylAmb9MtlRollBlkDot",
+        "graceSku": "GB-CYL-AMB-9ML-MRL-BKDT",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343677088036",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Amber",
+        "url": "/images/catalog/bone-review/GBCylAmb9MtlRollBlkDot.fb2d3fc81c00.png",
+        "alt": "9 ml Amber Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCylAmb9MtlRollBlkDot-sized.png",
+          "sha256": "13c514df50fc2244da1534aaad50ac702bff5bef1f79d3ca8268e9076a28002a"
+        },
+        {
+          "file": "GBCylAmb9MtlRollBlkDot-source.png",
+          "sha256": "840a592ea289500a50d5ccb60ed425f4c968cff604227135a9e6f6038bda2e99"
+        },
+        {
+          "file": "reference-amber.jpg",
+          "sha256": "0f9725eec4fe541f6d9098d06b7b3585730e40868bb3cb264a22b70afd37d62c"
+        }
+      ],
+      "promptSha256": "805fbb17cd17baec71bb0de26306736d8570c8ea375cf5a695e1f4f7677e3278",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          245.0,
+          242.0
+        ],
+        "borderExactBoneFraction": 0.0,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylAmb9SpryMattSl",
+      "source": "local-review-archive/family9/GBCylAmb9SpryMattSl-generated.png",
+      "sourceSha256": "04e6d0edbc5bf0a9ea9300047543b5556b58e21632ab9b086c608cb4f7572a23",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylAmb9SpryMattSl-2080x2288.png",
+      "outputSha256": "297ea26b8a912ae46b3aeb39b65d8d59d6cb85f4dadbcc3f820beb161cef6dc6",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-amber.jpg",
+      "materialReferenceSha256": "0f9725eec4fe541f6d9098d06b7b3585730e40868bb3cb264a22b70afd37d62c",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/3. Amber 9ml (Uncapped)/22. GBCylAmb9SpryMattSl.psd"
+      ],
+      "masterSha256": "543a8c6f839aea72b315643172da38cedc475b1c25908e1e0464095cfcb957b5",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylAmb9SpryMattSl.297ea26b8a91.png",
+      "groupSlug": "cylinder-9ml-amber-17-415-finemist",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-amber-17-415-finemist",
+        "websiteSku": "GBCylAmb9SpryMattSl",
+        "graceSku": "GB-CYL-AMB-9ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343624888612",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Amber",
+        "url": "/images/catalog/bone-review/GBCylAmb9SpryMattSl.e9db7f777469.png",
+        "alt": "9 ml Amber Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCylAmb9SpryMattSl-sized.png",
+          "sha256": "be4d59ff13f65a6059866c730c542b137e337360cc9866fc59992eea7290a37e"
+        },
+        {
+          "file": "GBCylAmb9SpryMattSl-source.png",
+          "sha256": "5aabc2f532a4baa60df861b1aabc336157c3e4b18a976f34ab71593e4ef81058"
+        },
+        {
+          "file": "reference-amber.jpg",
+          "sha256": "0f9725eec4fe541f6d9098d06b7b3585730e40868bb3cb264a22b70afd37d62c"
+        }
+      ],
+      "promptSha256": "fbd04955862c3be558efbeb7af15d7d1a60acd983437bbff8ca7d972cff754d9",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          245.0,
+          244.0,
+          240.0
+        ],
+        "borderExactBoneFraction": 0.025886101154918358,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "source": "local-review-archive/family9/LBCylAmb9LtnMtSl-generated.png",
+      "sourceSha256": "4d9dbb09c2e2243d880dc3c005a57f24e2fbc2ca0eb6fc715896205477b1b571",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/LBCylAmb9LtnMtSl-2080x2288.png",
+      "outputSha256": "f80deb49076c37b6c9bf4baa481d54c55fd509ffa858fe1770d6ad363cd2a971",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-amber.jpg",
+      "materialReferenceSha256": "0f9725eec4fe541f6d9098d06b7b3585730e40868bb3cb264a22b70afd37d62c",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/3. Amber 9ml (Uncapped)/27. LBCylAmb9LtnMtSl.psd"
+      ],
+      "masterSha256": "29ccd97dfe9d695f931f29da9d148db7347ee466c82b542dc6c44543254d36db",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/LBCylAmb9LtnMtSl.f80deb49076c.png",
+      "groupSlug": "cylinder-9ml-amber-17-415-lotionpump",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-amber-17-415-lotionpump",
+        "websiteSku": "LBCylAmb9LtnMtSl",
+        "graceSku": "LB-CYL-AMB-9ML-LPM-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343670075684",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Amber",
+        "url": "/images/catalog/bone-review/LBCylAmb9LtnMtSl.107252b72039.png",
+        "alt": "9 ml Amber Cylinder Lotion Pump Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "LBCylAmb9LtnMtSl-sized.png",
+          "sha256": "703a075c27ec11aac8a1f1ab4f091ca5dfbe94ebd08e242f92312c38db3870e0"
+        },
+        {
+          "file": "LBCylAmb9LtnMtSl-source.png",
+          "sha256": "013a0cc277825f0f709bc739dc250e88b05f717cc9942e54937c653ba0594136"
+        },
+        {
+          "file": "reference-amber.jpg",
+          "sha256": "0f9725eec4fe541f6d9098d06b7b3585730e40868bb3cb264a22b70afd37d62c"
+        }
+      ],
+      "promptSha256": "37736af824af24937b8d95027f739415eb16e4665d534ca2824250ae167f0aed",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246.0,
+          244.0,
+          240.0
+        ],
+        "borderExactBoneFraction": 0.037833532457188374,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "source": "local-review-archive/family9/GBCylBlu9RollBlkDot-generated.png",
+      "sourceSha256": "afa6569fbdd43957f7594602d4ec6c1aaf78ed4d7d53bd6e05c3b762dc0d6712",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylBlu9RollBlkDot-2080x2288.png",
+      "outputSha256": "4f9631b0ceb8342ab7fc497013311f9faa3da724f618ec9fb6ffba1a2b518fcf",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-cobalt.jpg",
+      "materialReferenceSha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/12. GBCylBlu9RollBlkDot.psd"
+      ],
+      "masterSha256": "4ecaaf90381d9123edc60c32828acf3fed036fb930df1f0473128b83941ca139",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu9RollBlkDot.4f9631b0ceb8.png",
+      "groupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "priorHero": null,
+      "generationInputHashes": [
+        {
+          "file": "GBCylBlu9RollBlkDot-sized.png",
+          "sha256": "3d6e1f85ecc9024a9b776fab16ed412249ba9d3803a694a60369b8daa3c90eef"
+        },
+        {
+          "file": "GBCylBlu9RollBlkDot-source.png",
+          "sha256": "581b9493b5d3722d7e7bd691cfaa48754e94d8a42c601280ae052047ad67677c"
+        },
+        {
+          "file": "reference-cobalt.jpg",
+          "sha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33"
+        }
+      ],
+      "promptSha256": "16b9405e83d35417f7c0ddf4750df0e5186777a559cd710f63fa205e30591b0c",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          248.0,
+          247.0,
+          242.0
+        ],
+        "borderExactBoneFraction": 0.0,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "source": "local-review-archive/family9/GBCylBlu9MtlRollBlkDot-generated.png",
+      "sourceSha256": "a3b8bc06061e7638ea1d1ed5fea99681cf3b715f25bd6ff4b411a42213ca8853",
+      "sourceSize": [
+        1195,
+        1316
+      ],
+      "output": "exports/GBCylBlu9MtlRollBlkDot-2080x2288.png",
+      "outputSha256": "844e9d33753f772c682d64802bface45571069e28c2c0b4aeffa694a34e2a199",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-cobalt.jpg",
+      "materialReferenceSha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/2. GBCylBlu9MtlRollBlkDot.psd"
+      ],
+      "masterSha256": "13cd4bd3307fac55bc1fe62f4edecd8d0b361372d676bcd116655ae6b550f8fd",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu9MtlRollBlkDot.844e9d33753f.png",
+      "groupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+        "websiteSku": "GBCylBlu9MtlRollBlkDot",
+        "graceSku": "GB-CYL-BLU-9ML-MRL-BKDT",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343678234916",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Cobalt Blue",
+        "url": "/images/catalog/bone-review/GBCylBlu9MtlRollBlkDot.b0b930f7c899.png",
+        "alt": "9 ml Cobalt Blue Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCylBlu9MtlRollBlkDot-sized.png",
+          "sha256": "b1357b7d88b2ecc38abadd803a917c9cad89097d622044958edaace36852ccae"
+        },
+        {
+          "file": "GBCylBlu9MtlRollBlkDot-source.png",
+          "sha256": "c84201479dca15a8c5c3099e34f80bbbd48867a810d470189f196ac46f6678ef"
+        },
+        {
+          "file": "reference-cobalt.jpg",
+          "sha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33"
+        }
+      ],
+      "promptSha256": "a61da3ef26ec3adc6e3f88239ea5f0e4f288fb5376b4bebc4cd0952ca330f13c",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          246.0,
+          242.0
+        ],
+        "borderExactBoneFraction": 0.0005973715651135006,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylBlu9SpryMattSl",
+      "source": "local-review-archive/family9/GBCylBlu9SpryMattSl-generated.png",
+      "sourceSha256": "3187c26dd67515c1e2c0914ff58aa686962884ceff3c24bfdc11718d97bd9138",
+      "sourceSize": [
+        1195,
+        1316
+      ],
+      "output": "exports/GBCylBlu9SpryMattSl-2080x2288.png",
+      "outputSha256": "4befc61f1a00bb6a0c2c0acbd67d44a4422fd47d1eafa378b19cbf24181b39a0",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-cobalt.jpg",
+      "materialReferenceSha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/22. GBCylBlu9SpryMattSl.psd"
+      ],
+      "masterSha256": "05923a887bb9ab2efee6f8cd39f8ffc7187a992c1fa8d2f0e017662eefe680e9",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu9SpryMattSl.4befc61f1a00.png",
+      "groupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+        "websiteSku": "GBCylBlu9SpryMattSl",
+        "graceSku": "GB-CYL-BLU-9ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343625412900",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Cobalt Blue",
+        "url": "/images/catalog/bone-review/GBCylBlu9SpryMattSl.46c259b79a95.png",
+        "alt": "9 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCylBlu9SpryMattSl-sized.png",
+          "sha256": "02c8854eea9a4dc214c35f4601985e6add4c45146648d7672ee82b9e9560ff2d"
+        },
+        {
+          "file": "GBCylBlu9SpryMattSl-source.png",
+          "sha256": "1cdb4d07bb69e5f7d3436e0e096243ec973078eec4a1abb98293e887a298ae3f"
+        },
+        {
+          "file": "reference-cobalt.jpg",
+          "sha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33"
+        }
+      ],
+      "promptSha256": "9949282e047dfec3ee358acb6dd2a31fe22e75cd4c4dffd9575e1305df3035fb",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246.0,
+          244.0,
+          240.0
+        ],
+        "borderExactBoneFraction": 0.001991238550378335,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "source": "local-review-archive/family9/LBCylBlu9LtnMattSl-generated.png",
+      "sourceSha256": "e679581a211d3b8eb59b5ab859dc2a04443582e8d5e6f19cc2400926fff9c39d",
+      "sourceSize": [
+        1195,
+        1316
+      ],
+      "output": "exports/LBCylBlu9LtnMattSl-2080x2288.png",
+      "outputSha256": "d0ec317eb61603be52ea66981e4a8d5c7a54a8c056c1b57e47d3d2eedf2069e9",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-cobalt.jpg",
+      "materialReferenceSha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/1. Cobalt Blue 9ml  (Uncapped)/27. LBCylBlu9LtnMattSl.psd"
+      ],
+      "masterSha256": "bb74c34b3f8a343b8ae552ca1e0bf8929bdb30cba18fa023e9bfadbdff8171c3",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/LBCylBlu9LtnMattSl.d0ec317eb616.png",
+      "groupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+        "websiteSku": "LBCylBlu9LtnMattSl",
+        "graceSku": "LB-CYL-BLU-9ML-LPM-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343671943460",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Cobalt Blue",
+        "url": "/images/catalog/bone-review/LBCylBlu9LtnMattSl.2cb9fab219f4.png",
+        "alt": "9 ml Cobalt Blue Cylinder Lotion Pump Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "LBCylBlu9LtnMattSl-sized.png",
+          "sha256": "5e6233793a44b270366b2eff0fdaa9632d410c345dfc1e16967099bf8ebfb685"
+        },
+        {
+          "file": "LBCylBlu9LtnMattSl-source.png",
+          "sha256": "a39f064287e84dbb7be800750491ca077059569fd3c25c8fb7a68080acafc1b9"
+        },
+        {
+          "file": "reference-cobalt.jpg",
+          "sha256": "c3df907fff374ea15ef8826302f92d8a0ede6d8bd35cc933b1b747f44900bc33"
+        }
+      ],
+      "promptSha256": "afcc2bedcb8312352ae8f8471319e89b3311922ffa5c1731c199ae1bb1ac5e60",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          246.0,
+          242.0
+        ],
+        "borderExactBoneFraction": 0.0,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "source": "local-review-archive/family9/GBCylFrst9RollBlkDot-generated.png",
+      "sourceSha256": "639e76b592dace60e2e634ee6fd318fd35f7d22f731795f7f11928dd329b404c",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylFrst9RollBlkDot-2080x2288.png",
+      "outputSha256": "d9051dc369601238874b64e0dd58c538ce322c5eb9d90ec98b70280165f3ef57",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-frosted.jpg",
+      "materialReferenceSha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/12. GBCylFrst9RollBlkDot.psd"
+      ],
+      "masterSha256": "2de755467a4aa8b7390495733d9940625e2e99e27045ddab29e9aaf114639182",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylFrst9RollBlkDot.d9051dc36960.png",
+      "groupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "priorHero": null,
+      "generationInputHashes": [
+        {
+          "file": "GBCylFrst9RollBlkDot-sized.png",
+          "sha256": "474b407e7915bdd0cfaa896a6fe19fc11e275d15b915459196c6b93b63241966"
+        },
+        {
+          "file": "GBCylFrst9RollBlkDot-source.png",
+          "sha256": "09d9f627a3eac69d3368f7b03e114067852a10b7415bea1eb28691fffa3fcd47"
+        },
+        {
+          "file": "reference-frosted.jpg",
+          "sha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413"
+        }
+      ],
+      "promptSha256": "cb530fcb715b5a15ed896ecc5652615b0e04c139acbc368c74370ca9042a4ea4",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          245.0,
+          241.0
+        ],
+        "borderExactBoneFraction": 0.00019912385503783353,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "source": "local-review-archive/family9/GBCylFrst9MtlRollBlkDot-generated.png",
+      "sourceSha256": "492e1e47c2663b23a8fb576091c1fc8e4c8c098443321dc26bbe522222e60a45",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylFrst9MtlRollBlkDot-2080x2288.png",
+      "outputSha256": "08fa7b4cd8f023c4b57383584b8659d27bb7119077c441440c7e9310b07d9677",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-frosted.jpg",
+      "materialReferenceSha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/2. GBCylFrst9MtlRollBlkDot.psd"
+      ],
+      "masterSha256": "157cb91192739f38a868ef90cb844705a971b81341bd02c6c0f66ca477a8c8e1",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylFrst9MtlRollBlkDot.08fa7b4cd8f0.png",
+      "groupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-frosted-17-415-rollon",
+        "websiteSku": "GBCylFrst9MtlRollBlkDot",
+        "graceSku": "GB-CYL-FRS-9ML-MRL-BKDT",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343679054116",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Frosted",
+        "url": "/images/catalog/bone-review/GBCylFrst9MtlRollBlkDot.01a8172c9a5c.png",
+        "alt": "9 ml Frosted Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCylFrst9MtlRollBlkDot-sized.png",
+          "sha256": "fda257e738b8cd9df6426002384b262018255f67b2c4dcf5b42f15cd8183223d"
+        },
+        {
+          "file": "GBCylFrst9MtlRollBlkDot-source.png",
+          "sha256": "3f3dd5fcec1bcf3e082471bf94b4c03995bb23479b65290a7ecdb31b5abf25b8"
+        },
+        {
+          "file": "reference-frosted.jpg",
+          "sha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413"
+        }
+      ],
+      "promptSha256": "1c1b14082e0d7565aa1ecac710bb7d8a59e68cd0feb57f850f5cc63918d1bee8",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          246.0,
+          242.0
+        ],
+        "borderExactBoneFraction": 0.002190362405416169,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylFrst9SpryMattSl",
+      "source": "local-review-archive/family9/GBCylFrst9SpryMattSl-generated.png",
+      "sourceSha256": "f95bad6dc4b7a06fc626ec2bfb74780d6fa1a3e3cea8aed292c3dafe4030424e",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylFrst9SpryMattSl-2080x2288.png",
+      "outputSha256": "d5b42efe1820619b0908992355f87abc6e63fbbf5d4d002d128c37b581e089fc",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-frosted.jpg",
+      "materialReferenceSha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/22. GBCylFrst9SpryMattSl.psd"
+      ],
+      "masterSha256": "963be098fd0c896d8a478689317c310df90ac8fb83928b18b1d559bad9dd3e58",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylFrst9SpryMattSl.d5b42efe1820.png",
+      "groupSlug": "cylinder-9ml-frosted-17-415-finemist",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-frosted-17-415-finemist",
+        "websiteSku": "GBCylFrst9SpryMattSl",
+        "graceSku": "GB-CYL-FRS-9ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343626199332",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Frosted",
+        "url": "/images/catalog/bone-review/GBCylFrst9SpryMattSl.518be8013731.png",
+        "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCylFrst9SpryMattSl-sized.png",
+          "sha256": "ff92402ca65c3e003b007a38e34fd85124e24943518950524c27e8dea62cea4f"
+        },
+        {
+          "file": "GBCylFrst9SpryMattSl-source.png",
+          "sha256": "66846d799dd48635d6d696da8faa48a7ffbc4dc5e98d9fde29c7e6f7d31ac8c9"
+        },
+        {
+          "file": "reference-frosted.jpg",
+          "sha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413"
+        }
+      ],
+      "promptSha256": "e21eda8c0b900c22439c0731f48ba3ab34e9cf547e2fff76a1384a80a1c70ef3",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          245.0,
+          242.0
+        ],
+        "borderExactBoneFraction": 0.0,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "source": "local-review-archive/family9/LBCylFrst9LtnMtSl-generated.png",
+      "sourceSha256": "275cbfdd08f8e352e3d9985722b3f63bcf50e02e9f32aa51dc4ef7e58f9bb43a",
+      "sourceSize": [
+        1195,
+        1316
+      ],
+      "output": "exports/LBCylFrst9LtnMtSl-2080x2288.png",
+      "outputSha256": "619922894add3a9ed81b0ac392df7e3f8e528615321f7f1e79bdf41a0760b4dc",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-frosted.jpg",
+      "materialReferenceSha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/5. Frosted 9ml (Uncapped)/27. LBCylFrst9LtnMtSl.psd"
+      ],
+      "masterSha256": "8f2b10cfd5f81b7683a3d8cdaae6736ce495b065f68de61acd2c235da69dbac8",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/LBCylFrst9LtnMtSl.619922894add.png",
+      "groupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+        "websiteSku": "LBCylFrst9LtnMtSl",
+        "graceSku": "LB-CYL-FRS-9ML-LPM-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343672140068",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Frosted",
+        "url": "/images/catalog/bone-review/LBCylFrst9LtnMtSl.0ac172e064b8.png",
+        "alt": "9 ml Frosted Cylinder Lotion Pump Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "LBCylFrst9LtnMtSl-sized.png",
+          "sha256": "ad45c55f88c1362d19c577646fb29707694b28fda4355ede5a0dd80349252b23"
+        },
+        {
+          "file": "LBCylFrst9LtnMtSl-source.png",
+          "sha256": "64013f65789d802708965c825327d28040886d99b67076ae324e1dba143cec8d"
+        },
+        {
+          "file": "reference-frosted.jpg",
+          "sha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413"
+        }
+      ],
+      "promptSha256": "81f6c8a7b476bbf606e2b308359bd6023094f9d45906569cee16940b2b530c8a",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          245.0,
+          242.0
+        ],
+        "borderExactBoneFraction": 0.00039824771007566706,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "source": "local-review-archive/family9/GBCylSwrl9RollBlkDot-generated.png",
+      "sourceSha256": "3e409e9dcbcb72f3f92320930bfe329a02ea3f678ceca1a946dfb0f800f80c8c",
+      "sourceSize": [
+        1195,
+        1316
+      ],
+      "output": "exports/GBCylSwrl9RollBlkDot-2080x2288.png",
+      "outputSha256": "26dda713bfb72d3a4b84d69c17fbc0638011b6bd186764762f9d604cf9c017cf",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/12. GBCylSwrl9RollBlkDot.psd"
+      ],
+      "masterSha256": "dd51de5bb9b7c17ea63e93ce6b46ac79504b276b9f742d7a71702bd770465826",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylSwrl9RollBlkDot.26dda713bfb7.png",
+      "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "priorHero": null,
+      "generationInputHashes": [
+        {
+          "file": "GBCylSwrl9RollBlkDot-sized.png",
+          "sha256": "be202454bdb0a62277ca25fa226d18a485ea43f843fd5d96cb857459999c93ec"
+        },
+        {
+          "file": "GBCylSwrl9RollBlkDot-source.png",
+          "sha256": "289675d71e3b91186678ab76378ccbc661d2a489cc0a29da674894789c3b1d42"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "b8b0f51f8a28a94f2ce1a9d5d0fecf64a5bee5df71ce77cc80b6cd88c94452e5",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246.0,
+          244.0,
+          241.0
+        ],
+        "borderExactBoneFraction": 0.0,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "source": "local-review-archive/family9/GBCylSwrl9MtlRollBlkDot-aligned.png",
+      "sourceSha256": "5ce4c30d23d60b71131ee3d4272e2f2f5c4974cb714f61598f6be166f7ab3456",
+      "sourceSize": [
+        1195,
+        1316
+      ],
+      "output": "exports/GBCylSwrl9MtlRollBlkDot-2080x2288.png",
+      "outputSha256": "cb173e3c31105372170d8de1bad08a5f944f2d8eabace0bd11911e8806d50193",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/2. GBCylSwrl9MtlRollBlkDot.psd"
+      ],
+      "masterSha256": "f8ed088fc8d3417504e4e1aea6085ef38aa9888238f20bf19d0994129b74193c",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylSwrl9MtlRollBlkDot.cb173e3c3110.png",
+      "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+        "websiteSku": "GBCylSwrl9MtlRollBlkDot",
+        "graceSku": "GB-CYL-CLR-9ML-MRL-BKDT-01",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343681216804",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Swirl",
+        "url": "/images/catalog/bone-review/GBCylSwrl9MtlRollBlkDot.46d03e9815ae.png",
+        "alt": "9 ml Swirl Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCylSwrl9MtlRollBlkDot-sized.png",
+          "sha256": "8e68d1468f634cb5cf05e0d8f9030ceed6e0f7eda14a449c441f47e794834dcf"
+        },
+        {
+          "file": "GBCylSwrl9MtlRollBlkDot-source.png",
+          "sha256": "93d36104c9e015b17b4810a61bd3fc1a8de438699587b36ab96daf92f9772524"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "a51ea872d821edc07e7c79dcac45669fa76d5dfa8fe0b0a629453950b289e52f",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          245.0,
+          243.0,
+          239.0
+        ],
+        "borderExactBoneFraction": 0.7765830346475507,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": {
+        "method": "manual landmarks +/- 4px; whole-image uniform correction",
+        "rawFootY": 1170,
+        "rawShoulderY": 560,
+        "rawBodyCenterX": 592,
+        "scale": 0.9384590163934426,
+        "x": 41.932262295081955,
+        "y": 99.5629508196721,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 43.5
+      }
+    },
+    {
+      "sku": "GBCylSwrl9SpryMattSl",
+      "source": "local-review-archive/family9/GBCylSwrl9SpryMattSl-generated.png",
+      "sourceSha256": "5d0d44b31faf77e287b4e8c7bc77d3431223c4dc1c294ec1833d511c3daf5d5f",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCylSwrl9SpryMattSl-2080x2288.png",
+      "outputSha256": "70ebfb3a45505aa4306c600a7e216de0143ab20dabe1b7ff2fbba31735c5eebe",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/22. GBCylSwrl9SpryMattSl.psd"
+      ],
+      "masterSha256": "52e47695956dc45239500a8f1d21d01026c1f5b1aba53ab2ec7451aef29c9f5a",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCylSwrl9SpryMattSl.70ebfb3a4550.png",
+      "groupSlug": "cylinder-9ml-swirl-17-415-finemist",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-swirl-17-415-finemist",
+        "websiteSku": "GBCylSwrl9SpryMattSl",
+        "graceSku": "GB-CYL-CLR-9ML-SPR-MSLV-01",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343690129700",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Swirl",
+        "url": "/images/catalog/bone-review/GBCylSwrl9SpryMattSl.b3bb29415568.png",
+        "alt": "9 ml Swirl Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCylSwrl9SpryMattSl-sized.png",
+          "sha256": "14784e2b93c5e0e5698b58c278bcd880ebf8d64ee9440178ca40a3ca253d5484"
+        },
+        {
+          "file": "GBCylSwrl9SpryMattSl-source.png",
+          "sha256": "5a39f6027a86020ca58e704275fa9daee7972a89246dd25323b6cc321567ed56"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "1c58db91d2ba9b1c63fad10214e9ef1289560932a4ab7817b79fde6190eb9bc8",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          245.0,
+          241.0
+        ],
+        "borderExactBoneFraction": 0.0013938669852648347,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": null
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "source": "local-review-archive/family9/LBCylSwrl9LtnMtSl-aligned.png",
+      "sourceSha256": "8fa8bcf7ba7cc09044f5409aa3a8e97dbc969880aa5ffd396e04ea69055a8016",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/LBCylSwrl9LtnMtSl-2080x2288.png",
+      "outputSha256": "e7f6c9af7f11ffd372806df8218b8fd23e6841ca85e2b93bec7de844d1e68f19",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 1086.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family9/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/3.  17-415 Bottles/7. Swirl 9ml (Uncapped)/27. LBCylSwrl9LtnMtSl.psd"
+      ],
+      "masterSha256": "1e99d7f2f71639dbcb1bad067f862f6a7a895e17688a151f7bf2ac4c766be259",
+      "visualStatus": "Source image visually approved; export needs delivery review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": null,
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/LBCylSwrl9LtnMtSl.e7f6c9af7f11.png",
+      "groupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
+      "priorHero": {
+        "groupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
+        "websiteSku": "LBCylSwrl9LtnMtSl",
+        "graceSku": "LB-CYL-CLR-9ML-LPM-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343674368292",
+        "family": "Cylinder",
+        "capacityMl": 9,
+        "bottleColor": "Swirl",
+        "url": "/images/catalog/bone-review/LBCylSwrl9LtnMtSl.35ebf93e35f0.png",
+        "alt": "9 ml Swirl Cylinder Lotion Pump Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "LBCylSwrl9LtnMtSl-sized.png",
+          "sha256": "e0a70683a28e5b1ac3493f729a7034bd0a64af6bf96bf6c7c79154eb5e261e49"
+        },
+        {
+          "file": "LBCylSwrl9LtnMtSl-source.png",
+          "sha256": "562f8b622a11bcf3ed66d86ad9ac4602c8e88f938299da51bedc953507e9077f"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "90406f562681a7a9a96e77881ea00695ec43fee9e5d401cbcf9cd5488d222d23",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          245.0,
+          243.0,
+          239.0
+        ],
+        "borderExactBoneFraction": 0.7706093189964157,
+        "exactBoneCleared": false
+      },
+      "outputAlignment": {
+        "method": "manual landmarks +/- 4px; whole-image uniform correction",
+        "rawFootY": 1162,
+        "rawShoulderY": 568,
+        "rawBodyCenterX": 598,
+        "scale": 0.9630050505050505,
+        "x": 22.122979797979838,
+        "y": 77.63813131313145,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 43.5
+      }
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "source": "local-review-archive/family28-50/GBMtlRoll28Blk-aligned.png",
+      "sourceSha256": "ebb345c205fb5fa585fdaffe588d2839b06697c2b0dc680a3e606ba662c9f5e9",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBMtlRoll28Blk-2080x2288.png",
+      "outputSha256": "724c06a6edfaa7e1d39c1c48741aa8feb5f30bb3313248ec03bbaf4185810255",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:28-standard",
+        "label": "Cylinder 28 ml",
+        "shoulderPct": 50.5,
+        "bodyAspect": 2.203,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 40.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 926.64,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family28-50/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/13. 16 mm/2. 28ml  Uncapped/1. GBCyl28MtlRollBlk.psd"
+      ],
+      "masterSha256": "50d44a77f0efb65fe6c3b4e569d2138799acbe4a0136fd5708cba59286fb958c",
+      "visualStatus": "Source and export pending visual approval",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": {
+        "shoulderY": 532,
+        "footY": 1202,
+        "bodyCenterX": 526,
+        "bodyWidthPx": 304,
+        "shoulderSpanPct": 50.951,
+        "footPct": 91.407,
+        "method": "threshold landmark estimate, visually inspect before accepting",
+        "uncertaintyPx": 4
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBMtlRoll28Blk.724c06a6edfa.png",
+      "groupSlug": "cylinder-28ml-clear-16mm-rollon",
+      "priorHero": {
+        "groupSlug": "cylinder-28ml-clear-16mm-rollon",
+        "websiteSku": "GBMtlRoll28Blk",
+        "graceSku": "GB-CYL-CLR-28ML-MRL-01",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343614501156",
+        "family": "Cylinder",
+        "capacityMl": 28,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBMtlRoll28Blk.3c55f180f835.png",
+        "alt": "28 ml Clear Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBMtlRoll28Blk-sized.png",
+          "sha256": "c4beba45b5062a6ba37fca9c36b34ae15dd84fbb8e76346cdfc76eda22e86372"
+        },
+        {
+          "file": "GBMtlRoll28Blk-source.png",
+          "sha256": "2374c1e6f45b9c90671ec6842454b2d7ab2483b1cf68bbeda15234d27e114c7c"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "125576401369540a34d92b7bcb527cb6c8180a896608c80aa1d11475a0f788f5",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246.0,
+          244.0,
+          241.0
+        ],
+        "exactBoneCleared": false
+      },
+      "outputAlignment": {
+        "method": "Manual glass-contact landmarks, uncertainty +/-4px. One uniform transform of complete image.",
+        "rawFootY": 1200,
+        "rawShoulderY": 532,
+        "rawBodyCenterX": 597.5,
+        "scale": 0.994124251497006,
+        "x": -67.7492402694611,
+        "y": 3.700898203592942,
+        "targetBodyCenterPct": 44,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 50.5
+      }
+    },
+    {
+      "sku": "GBCyl50AnSpMtSl",
+      "source": "local-review-archive/family28-50/GBCyl50AnSpMtSl-aligned.png",
+      "sourceSha256": "3188c482ef2e0d7bd84c709fca47ff788c6387db919a91b9b1f9865f45ec92ad",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl50AnSpMtSl-2080x2288.png",
+      "outputSha256": "d9f8271802688017176dc0344bf5bc8ceed5ce71feea028131d82afd01c11546",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:50-standard",
+        "label": "Cylinder 50 ml 18-415",
+        "shoulderPct": 56,
+        "bodyAspect": 3.167,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 35,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 800.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family28-50/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/35. GBCyl50AnSpMtSl.psd"
+      ],
+      "masterSha256": "272fbe43b85a81b763f595471229062c8680304f5663d656ba9b08e30ca8a18a",
+      "visualStatus": "Source and export pending visual approval",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": {
+        "shoulderY": 460,
+        "footY": 1201,
+        "bodyCenterX": 598,
+        "bodyWidthPx": 234,
+        "shoulderSpanPct": 56.35,
+        "footPct": 91.331,
+        "method": "threshold landmark estimate, visually inspect before accepting",
+        "uncertaintyPx": 4
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50AnSpMtSl.d9f827180268.png",
+      "groupSlug": "cylinder-50ml-clear-18-415-antiquespray",
+      "priorHero": {
+        "groupSlug": "cylinder-50ml-clear-18-415-antiquespray",
+        "websiteSku": "GBCyl50AnSpMtSl",
+        "graceSku": "GB-CYL-CLR-50ML-ASP-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343668928804",
+        "family": "Cylinder",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl50AnSpMtSl.494c890fa7e1.png",
+        "alt": "50 ml Clear Cylinder Vintage Style Bulb Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCyl50AnSpMtSl-sized.png",
+          "sha256": "d5f9dc1b9d2442e81bdcd701b4c580f27381106fe2504b2d81e07fc5ddd4ed89"
+        },
+        {
+          "file": "GBCyl50AnSpMtSl-source.png",
+          "sha256": "bd0ad6018792b8d5dc1c0395cea2e85db6a94438825a20a66dc422284cb423c0"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "cc961c2a62d38248b4b3daf710e61d0951afb92d4a421088a69ba9e5b31d353f",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          246.0,
+          242.0
+        ],
+        "exactBoneCleared": false
+      },
+      "outputAlignment": {
+        "method": "Manual glass-contact landmarks, uncertainty +/-4px. One uniform transform of complete image.",
+        "rawFootY": 1197,
+        "rawShoulderY": 460,
+        "rawBodyCenterX": 597.5,
+        "scale": 0.9991858887381275,
+        "x": 0.9864314789688251,
+        "y": 0.6244911804615185,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 56
+      }
+    },
+    {
+      "sku": "GBCyl50AnSpTslMtSl",
+      "source": "local-review-archive/family28-50/GBCyl50AnSpTslMtSl-aligned.png",
+      "sourceSha256": "f9f8ffb1551eb558243593dc97af38226390e337334ee73dc9d633d563e83a3a",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl50AnSpTslMtSl-2080x2288.png",
+      "outputSha256": "42c6d85c1a4962486ec0ab7a4cb6a74c3696352bdb0d3debcc56843b6f11055d",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:50-standard",
+        "label": "Cylinder 50 ml 18-415",
+        "shoulderPct": 56,
+        "bodyAspect": 3.167,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 35,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 800.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family28-50/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/21. Tassels/Updated Tassels/49. GBCyl50AnSpTslMtSl.psd"
+      ],
+      "masterSha256": "db3076d27439a8760b47076621a8913aa13c5cc9e4c7f895dba0e5c3af6ca25a",
+      "visualStatus": "Source and export pending visual approval",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": {
+        "shoulderY": 460,
+        "footY": 1202,
+        "bodyCenterX": 705.5,
+        "bodyWidthPx": 235,
+        "shoulderSpanPct": 56.426,
+        "footPct": 91.407,
+        "method": "threshold landmark estimate, visually inspect before accepting",
+        "uncertaintyPx": 4
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50AnSpTslMtSl.42c6d85c1a49.png",
+      "groupSlug": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+      "priorHero": {
+        "groupSlug": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+        "websiteSku": "GBCyl50AnSpTslMtSl",
+        "graceSku": "GB-CYL-CLR-50ML-AST-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343669682468",
+        "family": "Cylinder",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl50AnSpTslMtSl.02c734f02449.png",
+        "alt": "50 ml Clear Cylinder Vintage Style Bulb Spray Bottle with Tassel",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCyl50AnSpTslMtSl-sized.png",
+          "sha256": "93ac10f469cf5871f1e2673fc6ff1fae1ae0c8c437e9daa9a8bd2bf9ee0ccd39"
+        },
+        {
+          "file": "GBCyl50AnSpTslMtSl-source.png",
+          "sha256": "4901cb48b3be5e051e8ff9ab6f7f7950870dd4d56c6ae09cb4bcfa1100a9b7fb"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "fcc04e574d6e49e760c8673b5c1f00074d007e281c0c8bb004465d9b9351c2fa",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          245.0,
+          242.0
+        ],
+        "exactBoneCleared": false
+      },
+      "outputAlignment": {
+        "method": "Manual glass-contact landmarks, uncertainty +/-4px. One uniform transform of complete image.",
+        "rawFootY": 1197,
+        "rawShoulderY": 460,
+        "rawBodyCenterX": 706.5,
+        "scale": 0.9991858887381275,
+        "x": -0.284830393487141,
+        "y": 0.6244911804615185,
+        "targetBodyCenterPct": 59,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 56
+      }
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "source": "local-review-archive/family28-50/GBCyl50MtlRollBlk-aligned.png",
+      "sourceSha256": "a93e6fda8fe547e8b7e95cd64e88aac6f5bdc7e0ebdb5aab24c91b34a65b284f",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl50MtlRollBlk-2080x2288.png",
+      "outputSha256": "748d3f4631ca83399af6e9f40a01d4bd7c58cabf15ce923080a1189916888721",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:50-rollon",
+        "label": "Cylinder 50 ml 16 mm roll-on",
+        "shoulderPct": 53,
+        "bodyAspect": 2.354,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 38,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 869.44,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family28-50/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/13. 16 mm/4. 50ml Uncapped/3. GBCyl50MtlRollBlk.psd"
+      ],
+      "masterSha256": "986851ecd3257d24f5f05d4f84e10b4b408802100b3019829a51c4744f694649",
+      "visualStatus": "Source and export pending visual approval",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": {
+        "shoulderY": 500,
+        "footY": 1203,
+        "bodyCenterX": 537.5,
+        "bodyWidthPx": 295,
+        "shoulderSpanPct": 53.46,
+        "footPct": 91.483,
+        "method": "threshold landmark estimate, visually inspect before accepting",
+        "uncertaintyPx": 4
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50MtlRollBlk.748d3f4631ca.png",
+      "groupSlug": "cylinder-50ml-clear-16mm-rollon",
+      "priorHero": {
+        "groupSlug": "cylinder-50ml-clear-16mm-rollon",
+        "websiteSku": "GBCyl50MtlRollBlk",
+        "graceSku": "GB-CYL-BLK-50ML-MRL-BLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343621382436",
+        "family": "Cylinder",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl50MtlRollBlk.6c0720231863.png",
+        "alt": "50 ml Clear Cylinder Roll-On Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCyl50MtlRollBlk-sized.png",
+          "sha256": "871429c5e168445b2c02c76bb2b02f704700e0759116e14dc2d692e98862c4cc"
+        },
+        {
+          "file": "GBCyl50MtlRollBlk-source.png",
+          "sha256": "97b07572020000ca39011953710d0877c79fe6948a27aac480d9c87ccfd27530"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "1da06a67feb9b3886b5e72bd502bf6453e9b7feb1a33f90efd441cd258d29775",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247.0,
+          245.0,
+          241.0
+        ],
+        "exactBoneCleared": false
+      },
+      "outputAlignment": {
+        "method": "Manual glass-contact landmarks, uncertainty +/-4px. One uniform transform of complete image.",
+        "rawFootY": 1200,
+        "rawShoulderY": 501,
+        "rawBodyCenterX": 596.5,
+        "scale": 0.9970672389127325,
+        "x": -56.550608011444865,
+        "y": 0.1693133047210722,
+        "targetBodyCenterPct": 45,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 53
+      }
+    },
+    {
+      "sku": "GBCyl50RdcrMtSl",
+      "source": "local-review-archive/family28-50/GBCyl50RdcrMtSl-aligned.png",
+      "sourceSha256": "24ac4d464e8f22d9dd600cdc8b962f77794068d54b004b2ea43824aed4dc3965",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl50RdcrMtSl-2080x2288.png",
+      "outputSha256": "3ee8e193078093d96b8fe086599beccd418690ce2b4374d613f7d49bf09fe830",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:50-standard",
+        "label": "Cylinder 50 ml 18-415",
+        "shoulderPct": 56,
+        "bodyAspect": 3.167,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 35,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 800.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family28-50/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/9. GBCyl50RdcrMtSl.psd"
+      ],
+      "masterSha256": "e74bfd9325fdcb699452a1bc4f2d067111d4eeac51f038936421b3f144349985",
+      "visualStatus": "Source and export pending visual approval",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": {
+        "shoulderY": 461,
+        "footY": 1200,
+        "bodyCenterX": 598,
+        "bodyWidthPx": 236,
+        "shoulderSpanPct": 56.198,
+        "footPct": 91.255,
+        "method": "threshold landmark estimate, visually inspect before accepting",
+        "uncertaintyPx": 4
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50RdcrMtSl.3ee8e1930780.png",
+      "groupSlug": "cylinder-50ml-clear-18-415-reducer",
+      "priorHero": {
+        "groupSlug": "cylinder-50ml-clear-18-415-reducer",
+        "websiteSku": "GBCyl50RdcrMtSl",
+        "graceSku": "GB-CYL-CLR-50ML-RDC-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343659262244",
+        "family": "Cylinder",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl50RdcrMtSl.7ab926311e44.png",
+        "alt": "50 ml Clear Cylinder Reducer Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCyl50RdcrMtSl-sized.png",
+          "sha256": "1193293f62d0edf20b1630dd2f1d7f341869fe10b6401202795eea71b79cba23"
+        },
+        {
+          "file": "GBCyl50RdcrMtSl-source.png",
+          "sha256": "2cc18e668891e8e502f167da55348a22c9bedc70eb3c7785c67b1f63efc343fd"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "9e314f9088c21ad8c073c65b89a1b1db1c6978b4c55eeae3d4956ba183fc990a",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246.0,
+          244.0,
+          240.0
+        ],
+        "exactBoneCleared": false
+      },
+      "outputAlignment": {
+        "method": "Manual glass-contact landmarks, uncertainty +/-4px. One uniform transform of complete image.",
+        "rawFootY": 1183,
+        "rawShoulderY": 449,
+        "rawBodyCenterX": 597,
+        "scale": 1.0032697547683924,
+        "x": -0.9520435967302774,
+        "y": 9.7818801089918,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 56
+      }
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "source": "local-review-archive/family28-50/GBCyl50RollWht-aligned.png",
+      "sourceSha256": "9d41282f0af798e324531b7fc14cc7cc894851f344d65b785245e29c9a3ca501",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl50RollWht-2080x2288.png",
+      "outputSha256": "b558aef1c1f8e5569ea7d59ec30a945fc5c490a254a0476b0545a2316138019a",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:50-rollon",
+        "label": "Cylinder 50 ml 16 mm roll-on",
+        "shoulderPct": 53,
+        "bodyAspect": 2.354,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 38,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 869.44,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family28-50/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/13. 16 mm/4. 50ml Uncapped/2. GBCyl50RollWht.psd"
+      ],
+      "masterSha256": "1879bd88979eba638f4fa2469f5dd4b5067f43d4e4f0fb7da0e852d81bb32a3f",
+      "visualStatus": "Source and export pending visual approval",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": {
+        "shoulderY": 500,
+        "footY": 1200,
+        "bodyCenterX": 595.5,
+        "bodyWidthPx": 291,
+        "shoulderSpanPct": 53.232,
+        "footPct": 91.255,
+        "method": "threshold landmark estimate, visually inspect before accepting",
+        "uncertaintyPx": 4
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50RollWht.b558aef1c1f8.png",
+      "groupSlug": "cylinder-50ml-clear-16mm-rollon",
+      "priorHero": null,
+      "generationInputHashes": [
+        {
+          "file": "GBCyl50RollWht-sized.png",
+          "sha256": "5fd6c719d4902cbed091a3cf0e0b93f8ba684e8e60f1702403b43dce3f0bbc09"
+        },
+        {
+          "file": "GBCyl50RollWht-source.png",
+          "sha256": "f39561151a31c1a74feacafcf427746c11d84d221fee00040ba1e9c25cfbb0a7"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "ae4e5407bfade496a1b84ab4bf9745a2311dda01997d01bb172e1c2eae08eea9",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          248.0,
+          247.0,
+          243.0
+        ],
+        "exactBoneCleared": false
+      },
+      "outputAlignment": {
+        "method": "Manual glass-contact landmarks, uncertainty +/-4px. One uniform transform of complete image.",
+        "rawFootY": 1197,
+        "rawShoulderY": 501,
+        "rawBodyCenterX": 594.5,
+        "scale": 1.0013649425287356,
+        "x": 2.6885416666666515,
+        "y": -1.9838362068965125,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 53
+      }
+    },
+    {
+      "sku": "GBCyl50SpryMtGl",
+      "source": "local-review-archive/family28-50/GBCyl50SpryMtGl-aligned.png",
+      "sourceSha256": "9dd6b8a8d497a500f70c666cef60732b314ca2c43352cc6b0b8f318d17d68be3",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl50SpryMtGl-2080x2288.png",
+      "outputSha256": "88aa74a09984ed34d7dc91acb36abc1f9a073bbfb7911dc5e472c9d67b29bd65",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:50-standard",
+        "label": "Cylinder 50 ml 18-415",
+        "shoulderPct": 56,
+        "bodyAspect": 3.167,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 35,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 800.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family28-50/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/13. GBCyl50SpryMtGl.psd"
+      ],
+      "masterSha256": "cda3f10df4a0d093dd9f731a4fb32d8fb68ff04f1c9efbc3d57ae9eee7cc52d5",
+      "visualStatus": "Source and export pending visual approval",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": {
+        "shoulderY": 461,
+        "footY": 1201,
+        "bodyCenterX": 598.5,
+        "bodyWidthPx": 229,
+        "shoulderSpanPct": 56.274,
+        "footPct": 91.331,
+        "method": "threshold landmark estimate, visually inspect before accepting",
+        "uncertaintyPx": 4
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50SpryMtGl.88aa74a09984.png",
+      "groupSlug": "cylinder-50ml-clear-18-415-perfumespray",
+      "priorHero": {
+        "groupSlug": "cylinder-50ml-clear-18-415-perfumespray",
+        "websiteSku": "GBCyl50SpryMtGl",
+        "graceSku": "GB-CYL-CLR-50ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343633801508",
+        "family": "Cylinder",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl50SpryMtGl.9382a0ae9d39.png",
+        "alt": "50 ml Clear Cylinder Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "GBCyl50SpryMtGl-sized.png",
+          "sha256": "1c9a85a3e3c15c92691948d70b4dd0ea76d1ca59b3da5f70266f91de11578b41"
+        },
+        {
+          "file": "GBCyl50SpryMtGl-source.png",
+          "sha256": "83bdd73b4dc2eecfda8d50acb0474df06047ff8c9198b2faae997e5b54a175b1"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "6493a2602f7adcc17e0ef9f96212aa9d7872bbfe0ff5506fc88179609f9c85d5",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246.0,
+          245.0,
+          242.0
+        ],
+        "exactBoneCleared": false
+      },
+      "outputAlignment": {
+        "method": "Manual glass-contact landmarks, uncertainty +/-4px. One uniform transform of complete image.",
+        "rawFootY": 1198,
+        "rawShoulderY": 459,
+        "rawBodyCenterX": 599,
+        "scale": 0.9964817320703653,
+        "x": 1.1074424898512234,
+        "y": 2.8648849797025377,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 56
+      }
+    },
+    {
+      "sku": "LBCyl50LtnMtGl",
+      "source": "local-review-archive/family28-50/LBCyl50LtnMtGl-aligned.png",
+      "sourceSha256": "61091fe0b547fecf97f4d52b185ef87f0630787982044bb74b4e3d2cceeb4053",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/LBCyl50LtnMtGl-2080x2288.png",
+      "outputSha256": "147afe5559811b1e2f7f6469319c70ad9c9586f8c7325751667d3cba6d6a6da4",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "exportMethod": "Uniform Lanczos3 contain resize, centered with at most 2px bone padding; no AI detail synthesis.",
+      "nativeResolution": false,
+      "lock": {
+        "glassBodyKey": "cylinder:50-standard",
+        "label": "Cylinder 50 ml 18-415",
+        "shoulderPct": 56,
+        "bodyAspect": 3.167,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 35,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 800.8,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family28-50/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/14. LBCyl50LtnMtGl.psd"
+      ],
+      "masterSha256": "6917d0d7d73839f2a9cfa48a3f55da705e9bd0c2d0c980d8a76c97f35d475d83",
+      "visualStatus": "Source and export pending visual approval",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "sourceMeasuredOutput": {
+        "shoulderY": 460,
+        "footY": 1199,
+        "bodyCenterX": 598,
+        "bodyWidthPx": 232,
+        "shoulderSpanPct": 56.198,
+        "footPct": 91.179,
+        "method": "threshold landmark estimate, visually inspect before accepting",
+        "uncertaintyPx": 4
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl50LtnMtGl.147afe555981.png",
+      "groupSlug": "cylinder-50ml-clear-18-415-lotionpump",
+      "priorHero": {
+        "groupSlug": "cylinder-50ml-clear-18-415-lotionpump",
+        "websiteSku": "LBCyl50LtnMtGl",
+        "graceSku": "LB-CYL-CLR-50ML-LPM-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343690522916",
+        "family": "Cylinder",
+        "capacityMl": 50,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/LBCyl50LtnMtGl.43c79ce57bdb.png",
+        "alt": "50 ml Clear Cylinder Lotion Pump Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty \u00b7 original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "generationInputHashes": [
+        {
+          "file": "LBCyl50LtnMtGl-sized.png",
+          "sha256": "961698a7b58cd4daccbf89d1d4e782bfded11a6e0803de1528fcfd97b1776522"
+        },
+        {
+          "file": "LBCyl50LtnMtGl-source.png",
+          "sha256": "113e97bea070510c3357983456bfcc686cb90a2cbab23b533efc555304194dc5"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "ac52d42ff5812e23bb410e30ffe15fcd713db3914d3608a7c3b6a82c4788c4c0",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          245.5,
+          243.5,
+          239.5
+        ],
+        "exactBoneCleared": false
+      },
+      "outputAlignment": {
+        "method": "Manual glass-contact landmarks, uncertainty +/-4px. One uniform transform of complete image.",
+        "rawFootY": 1181,
+        "rawShoulderY": 448,
+        "rawBodyCenterX": 601.5,
+        "scale": 1.0046384720327421,
+        "x": -6.290040927694349,
+        "y": 10.171964529331717,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 56
+      }
+    }
+  ],
+  "counts": {
+    "exports": 28,
+    "native2080Renders": 0
+  }
+}

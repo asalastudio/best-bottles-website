@@ -46,6 +46,15 @@ export type ProductCardVariantPreviewSource = {
     shopifySellable?: boolean | null;
 };
 
+function rollerMaterial(variant: ProductCardVariantPreviewSource): string {
+    return normalizeKey(variant.ballMaterial) || (/metal/i.test(variant.applicator ?? "") ? "metal" : /plastic/i.test(variant.applicator ?? "") ? "plastic" : "");
+}
+
+/** Search returns all siblings; apply the same material scope to the hero and purchase row. */
+export function filterCatalogCardVariants<T extends ProductCardVariantPreviewSource>(variants: readonly T[], materials: readonly string[] = []): T[] {
+    return variants.filter(variant => !materials.length || !rollerMaterial(variant) || materials.includes(rollerMaterial(variant)));
+}
+
 export function getProductCardPreviewAccessibleLabel(
     preview: Pick<ProductCardVariantPreview, "id" | "label" | "sku" | "graceSku" | "websiteSku">,
     productTitle: string,
@@ -65,13 +74,11 @@ export function getCatalogCardVariantPreviews(
         rollerMaterials?: string[];
     },
 ): ProductCardVariantPreview[] {
-    const material = (variant: ProductCardVariantPreviewSource) =>
-        normalizeKey(variant.ballMaterial) || (/metal/i.test(variant.applicator ?? "") ? "metal" : /plastic/i.test(variant.applicator ?? "") ? "plastic" : "");
+    const material = rollerMaterial;
     // Some imports repeat glass color in capColor (all frosted tops become
     // "Frosted"). Use exact SKU evidence before finish deduplication.
     const normalized = variants.filter(variant => !isMissingHeroSource(variant)).map(normalizeImportedCapColor);
-    const eligible = normalized.filter((variant) => !options.rollerMaterials?.length
-        || !material(variant) || options.rollerMaterials.includes(material(variant)));
+    const eligible = filterCatalogCardVariants(normalized, options.rollerMaterials);
     const score = (variant: ProductCardVariantPreviewSource) => catalogSearchScore(options.search ?? "", [
         { value: resolveCapFinish(variant), weight: 3 },
         { value: variant.websiteSku, weight: 4 },
