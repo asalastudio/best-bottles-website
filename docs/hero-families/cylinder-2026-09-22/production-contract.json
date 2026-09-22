@@ -1,6 +1,6 @@
 {
-  "version": "cylinder-production-canvas-2026-09-22-v1",
-  "scopeStatus": "47-hero saved glass registry scope identified; current website group reconciliation still pending",
+  "version": "cylinder-production-canvas-2026-09-22-v2",
+  "scopeStatus": "49 glass hero groups from 3.3 through 100 mL; 3.3 mL and 4 mL explicitly included by Jordan on September 22",
   "canvas": {
     "width": 2080,
     "height": 2288,
@@ -195,9 +195,55 @@
         "GBTallCylFrst9MtlRollBlkDot",
         "GBTallCylFrst9SpryGlMatt"
       ]
+    },
+    "cylinder:3.3-sample": {
+      "lock": {
+        "glassBodyKey": "cylinder:3.3-sample",
+        "label": "Cylinder 3.3 ml sample",
+        "shoulderPct": 33.5,
+        "bodyAspect": 2.134765625,
+        "status": "proposed-sizing-review",
+        "lockVersion": "small-cylinder-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 57.5,
+        "landmark": "closure-seat"
+      },
+      "skuMembership": [
+        "GBSpry3mlClBlk"
+      ],
+      "groupMembership": [
+        "cylinder-3.3ml-clear-12mm-finemist"
+      ],
+      "geometrySource": "BB-PSD-Files-Master/17. Additional Bottles/GBSpry3mlClBlk.psd",
+      "geometrySourceSha256": "f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "presentation": "Black spray pump exposed; original clear overcap beside bottle"
+    },
+    "cylinder:4-sample": {
+      "lock": {
+        "glassBodyKey": "cylinder:4-sample",
+        "label": "Cylinder 4 ml sample",
+        "shoulderPct": 34.5,
+        "bodyAspect": 2.7137014314928427,
+        "status": "proposed-sizing-review",
+        "lockVersion": "small-cylinder-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 56.5,
+        "landmark": "closure-seat"
+      },
+      "skuMembership": [
+        "GBSpry4mlClBlk"
+      ],
+      "groupMembership": [
+        "cylinder-4ml-clear-12mm-finemist"
+      ],
+      "geometrySource": "BB-PSD-Files-Master/17. Additional Bottles/GBSpry4mlClBlk..psd",
+      "geometrySourceSha256": "87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "presentation": "Black spray pump exposed; original clear overcap beside bottle"
     }
   },
-  "materialReferences": "Hashed per output in export-manifest.json. Reference controls optical material only.",
+  "materialReferences": "Hashed per output in manifest.json. References control optical material only; new clear sample bottles use the same approved clear reference.",
   "geometryAuthority": "Verified exact-SKU BB-PSD-Files-Master complete assembly; uniform transform only.",
   "generationPolicy": {
     "noAutoSizeForUnverifiedFinalRender": true,

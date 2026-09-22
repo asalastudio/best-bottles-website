@@ -1,0 +1,160 @@
+{
+  "status": "sizing-proof-only-not-generated-or-staged",
+  "canvas": {
+    "width": 2080,
+    "height": 2288
+  },
+  "baselinePct": 91,
+  "interpretation": "Subtract 3 and 2 percentage points from the 5 mL shoulder-to-base span of 36.5%. These are normalized ecommerce display targets, not a literal millimeter scale.",
+  "scopeDecision": "Both sample sizes belong to Cylinder.",
+  "presentationDecision": "Use exact exposed black sprayer and detached clear overcap matching the provided storefront screenshot.",
+  "identityCaveat": "The older master-truth CSV stores 3 mL and cylinder-3ml-clear-12mm-finemist. Its item title, current hero registry and user screenshot identify the product as 3.3 mL. Current website/grace SKU identity is retained; no backend record is renamed.",
+  "materialReference": {
+    "finish": "clear",
+    "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+  },
+  "apiCalls": 0,
+  "rows": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "registry": {
+        "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
+        "websiteSku": "GBSpry3mlClBlk",
+        "graceSku": "GB-SPR-CLR-3ML-BLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343618236708",
+        "family": "Cylinder",
+        "capacityMl": 3.3,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBSpry3mlClBlk.77deedfc5f4b.png",
+        "alt": "3.3 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "masterSource": "17. Additional Bottles/GBSpry3mlClBlk.psd",
+      "masterSha256": "f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06",
+      "preview": "GBSpry3mlClBlk-master.png",
+      "size": [
+        6000,
+        4000
+      ],
+      "shoulderSpanPct": 33.5,
+      "landmarks": {
+        "bodyCenterX": 2451,
+        "shoulderY": 1937,
+        "footY": 3030,
+        "width": 512,
+        "uncertaintyPx": 12,
+        "landmark": "Top of glass at closure seat, foot excludes shadow",
+        "status": "visual source estimate for proposed sizing proof"
+      },
+      "sourceBodyAspect": 2.134765625,
+      "transform": {
+        "scale": 0.7012625800548948,
+        "x": -678.7945837145473,
+        "y": -42.745617566331475
+      },
+      "proofFile": "GBSpry3mlClBlk-size-proof.png",
+      "proofSha256": "279461aa369d0ffc88bf2f1e8c2e8e1c0a7c06b1c77533c8de482282397c810c"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "registry": {
+        "groupSlug": "cylinder-4ml-clear-12mm-finemist",
+        "websiteSku": "GBSpry4mlClBlk",
+        "graceSku": "GB-SPR-CLR-4ML-BLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343618335012",
+        "family": "Cylinder",
+        "capacityMl": 4,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBSpry4mlClBlk.671b25bd39e3.png",
+        "alt": "4 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "masterSource": "17. Additional Bottles/GBSpry4mlClBlk..psd",
+      "masterSha256": "87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626",
+      "preview": "GBSpry4mlClBlk-master.png",
+      "size": [
+        6000,
+        4000
+      ],
+      "shoulderSpanPct": 34.5,
+      "landmarks": {
+        "bodyCenterX": 2454.5,
+        "shoulderY": 1962,
+        "footY": 3289,
+        "width": 489,
+        "uncertaintyPx": 12,
+        "landmark": "Top of glass at closure seat, foot excludes shadow",
+        "status": "visual source estimate for proposed sizing proof"
+      },
+      "sourceBodyAspect": 2.7137014314928427,
+      "transform": {
+        "scale": 0.5948455162019594,
+        "x": -420.04831951770916,
+        "y": 125.63309721175551
+      },
+      "proofFile": "GBSpry4mlClBlk-size-proof.png",
+      "proofSha256": "108d7178062ba9617e3b19c86ddec3a9f83077a003be5f0f015af3fb845991a7"
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "registry": {
+        "groupSlug": "cylinder-5ml-clear-13-415-finemist",
+        "websiteSku": "GBCyl5SprySlMatt",
+        "graceSku": "GB-CYL-CLR-5ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343619842340",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl5SprySlMatt.8047788195b4.png",
+        "alt": "5 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "masterSource": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /8. GBCyl5SprySlMatt.psd",
+      "masterSha256": "fe9067d2e39818ba2567209513c49128e1010c4af9bda61ec7e6bf20e0e3719b",
+      "preview": "GBCyl5SprySlMatt-master.png",
+      "size": [
+        600,
+        975
+      ],
+      "shoulderSpanPct": 36.5,
+      "landmarks": {
+        "bodyCenterX": 169,
+        "shoulderY": 376,
+        "footY": 867,
+        "width": 201,
+        "uncertaintyPx": 4,
+        "landmark": "Top of glass at closure seat, foot excludes shadow",
+        "status": "visual source estimate for proposed sizing proof"
+      },
+      "sourceBodyAspect": 2.442786069651741,
+      "transform": {
+        "scale": 1.7008553971486762,
+        "x": 752.5554378818738,
+        "y": 607.4383706720978
+      },
+      "proofFile": "GBCyl5SprySlMatt-size-proof.png",
+      "proofSha256": "1bcd4837a307d9729b7b8efb91d0a61daab2a7107b5f5e19d371cc699ee1c211"
+    }
+  ]
+}

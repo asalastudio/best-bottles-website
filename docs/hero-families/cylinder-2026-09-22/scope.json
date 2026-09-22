@@ -8,13 +8,15 @@
       "sku": "GBSpry3mlClBlk",
       "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
       "capacityMl": 3.3,
-      "action": "audit-existing-before-generation"
+      "action": "review-proposed-shoulder-scale-then-material-reference-render",
+      "proposedShoulderSpanPct": 33.5
     },
     {
       "sku": "GBSpry4mlClBlk",
       "groupSlug": "cylinder-4ml-clear-12mm-finemist",
       "capacityMl": 4,
-      "action": "audit-existing-before-generation"
+      "action": "review-proposed-shoulder-scale-then-material-reference-render",
+      "proposedShoulderSpanPct": 34.5
     },
     {
       "sku": "GBCyl5GlMattSht",
@@ -156,10 +158,12 @@
     }
   ],
   "glassPilot": {
-    "scopeGroups": 47,
+    "scopeGroups": 49,
     "coveredGroups": 27,
-    "remainingGroups": 20,
+    "remainingGroups": 22,
     "remainingExtraRollerVariants": 4,
-    "remainingImages": 24
-  }
+    "remainingImages": 26,
+    "scopeLabel": "All glass Cylinder groups from 3.3 through 100 mL"
+  },
+  "scopeDecision": "Jordan explicitly included 3.3 mL and 4 mL on September 22; only three larger plastic groups remain outside this glass pilot."
 }

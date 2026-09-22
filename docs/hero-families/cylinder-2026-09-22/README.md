@@ -1,6 +1,6 @@
 # Cylinder staging pilot — September 22, 2026
 
-33 delivery exports cover 27 existing Cylinder catalog groups: twenty standard 9 mL assemblies, eight 28/50 mL assemblies, and five new 100 mL assemblies. Six are additional exact roller variants within those groups. This is a partial family pilot, not completion of the approximately 47 glass heroes in the 5–100 mL scope. `scope.json` records the remaining registered heroes separately, including out-of-scope sizes/materials.
+33 delivery exports cover 27 existing Cylinder catalog groups: twenty standard 9 mL assemblies, eight 28/50 mL assemblies, and five new 100 mL assemblies. Six are additional exact roller variants within those groups. This is a partial family pilot, not completion of the 49 glass heroes in the 3.3–100 mL scope. `scope.json` records the remaining registered heroes separately, including out-of-scope sizes/materials.
 
 ## Locked delivery contract
 
@@ -52,7 +52,15 @@ Five clear-glass assemblies use the same approved material reference (SHA-256 fa
 - Review: [five-image sheet](100ml-sheet.png), [shoulder/base guides](100ml-guided-sheet.png). Raw renders, input references, source composites, and before/after sheet remain preserved in local-review-archive/family100.
 - Reproduce exports with `node scripts/hero-families/export-cylinder-100ml.mjs /path/to/family100`.
 - Verification: 445 focused tests and TypeScript pass. All previous 28 asset hashes are preserved.
-- Scope: 27 of the proposed 47 glass catalog cards have candidates, with 33 exact assembly images including additional rollers. 20 cards plus four extra roller variants remain (24 images).
+- Scope: 27 of the 49 glass catalog cards have candidates, with 33 exact assembly images including additional rollers. 22 cards plus four extra roller variants remain (26 images).
 - Rollback for this extension: point only best-bottles-website.vercel.app back to best-bottles-website-854qqi02k-asala.vercel.app (the verified 28-image pilot).
 
 The expanded all-33 browser audit passes on both `/catalog` and `/catalog/cylinder` at 1440px and 390px: decoded images, exact group/SKU assignments, matching SKU product links, plastic filters, and 10:11 card frames. `local-browser-verification.json` records the full 20-view audit.
+
+## Small Cylinder scope correction
+
+Jordan explicitly includes the 3.3 mL and 4 mL sample sprayers in this family. The glass scope is now **49 catalog groups**, with 27 groups covered by the 33 staging images. **22 groups plus four additional roller variants remain (26 images)**. The existing staging deployment and image bytes are unchanged by this planning update.
+
+Initial shoulder-span proposals are **33.5% for 3.3 mL** and **34.5% for 4 mL**, respectively 3 and 2 percentage points below the 5 mL target of 36.5%. All retain a 91% glass foot and a 2080 × 2288 delivery canvas. Each small bottle has its own physical profile and exact master source; caps and pumps never set glass scale. These normalized display targets intentionally compress physical height differences for ecommerce thumbnails.
+
+[The source sizing proof](3-4-5ml-scale-proof.png) shows the untouched master appearance under one uniform assembly transform. It is not a new premium render or a final approved lock. The source pairs and hashes match the earlier recovered-sprayer audit. Both will use the approved clear-glass material reference in the next generation pass. `small-cylinder-sizing-proposal.json` preserves geometry, measurements, current identities, the older 3 mL metadata discrepancy, and the draft transforms. No image API calls were made for this scope/size proof.
