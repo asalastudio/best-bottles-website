@@ -29,7 +29,6 @@ import { urlFor } from "@/sanity/lib/image";
 import {
     SORT_OPTIONS,
     APPLICATOR_BUCKETS,
-    CATALOG_FAMILIES,
     CAPACITY_RANGES,
     CATEGORY_ORDER,
     COMPONENT_CATEGORIES,
@@ -41,6 +40,8 @@ import {
     EMPTY_FILTERS,
     filtersAreEmpty,
     activeFilterCount,
+    catalogBreadcrumbSteps,
+    catalogResultScopeTitle,
     filtersToParams,
     paramsToFilters,
     catalogSearchRecoverySuggestions,
@@ -63,7 +64,7 @@ import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchC
 import { catalogGroupSkuLabel, resolveCatalogGroupSku } from "@/lib/catalogSearchFallback";
 import { MASTER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { analytics } from "@/lib/analytics";
-import { familyFinderHref } from "@/lib/products/focused-shopping";
+import { familyGuideHref, isFamilyLandingFamily } from "@/lib/products/focused-shopping";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -532,6 +533,7 @@ function FilterSidebarContent({
     toggleCategory,
     onFilterChange,
     onClearAll,
+    onShowAll = onClearAll,
     mobileOptimized = false,
 }: {
     facets: Facets | null;
@@ -542,6 +544,7 @@ function FilterSidebarContent({
     toggleCategory: (cat: string) => void;
     onFilterChange: (patch: Partial<CatalogFilters>) => void;
     onClearAll: () => void;
+    onShowAll?: () => void;
     mobileOptimized?: boolean;
 }) {
     const isComponentCategory = filters.category ? COMPONENT_CATEGORIES.has(filters.category) : false;
@@ -935,7 +938,7 @@ function FilterSidebarContent({
             {shopCollectionSection}
 
             <button
-                onClick={onClearAll}
+                onClick={onShowAll}
                 className={`block min-h-11 text-left text-sm transition-colors w-full mb-6 py-2 border-b border-champagne/30 ${filtersAreEmpty(filters) ? "text-muted-gold font-semibold" : "text-obsidian hover:text-muted-gold"}`}
             >
                 All Products ({totalCount.toLocaleString()})
@@ -1558,6 +1561,7 @@ export default function CatalogClient({
     const pushToUrl = useCallback(
         (f: CatalogFilters, s: SortValue, v: ViewMode, limit?: number) => {
             const params = filtersToParams(f, s, v);
+            if (filtersAreEmpty(f)) params.set("scope", "all");
             if (limit && limit > PAGE_SIZE) params.set("limit", String(limit));
             const qs = params.toString();
             router.push(`${pathname}${qs ? `?${qs}` : ""}`, { scroll: false });
@@ -1787,10 +1791,11 @@ export default function CatalogClient({
 
     const handleClearAll = useCallback(() => {
         setFilters(EMPTY_FILTERS);
+        setSortBy("capacity-asc");
         setVisibleCount(PAGE_SIZE);
         setSearchInput("");
-        pushToUrl(EMPTY_FILTERS, sortBy, viewMode);
-    }, [pushToUrl, sortBy, viewMode]);
+        pushToUrl(EMPTY_FILTERS, "capacity-asc", viewMode);
+    }, [pushToUrl, viewMode]);
 
     const handleClearFacets = useCallback(() => {
         const next = { ...EMPTY_FILTERS, search: filters.search };
@@ -1827,13 +1832,20 @@ export default function CatalogClient({
             setSearchInput(term);
             clearTimeout(searchDebounceRef.current);
             searchDebounceRef.current = setTimeout(() => {
-                // Auto-switch to "best-match" when search is typed; restore "featured" when cleared
-                if (term && sortBy === "featured") setSortBy("best-match");
-                if (!term && sortBy === "best-match") setSortBy("featured");
-                handleFilterChange({ search: term || "" });
+                const nextSort: SortValue = term
+                    ? (sortBy === "capacity-asc" || sortBy === "featured" ? "best-match" : sortBy)
+                    : (sortBy === "best-match" ? "capacity-asc" : sortBy);
+                if (nextSort !== sortBy) setSortBy(nextSort);
+                setFilters((prev) => {
+                    const next = { ...prev, search: term || "" };
+                    setTimeout(() => pushToUrl(next, nextSort, viewMode), 0);
+                    return next;
+                });
+                setVisibleCount(PAGE_SIZE);
+                if (!mobileFilterOpen) window.scrollTo({ top: 0, behavior: "smooth" });
             }, SEARCH_DEBOUNCE_MS);
         },
-        [handleFilterChange, sortBy],
+        [mobileFilterOpen, pushToUrl, sortBy, viewMode],
     );
 
     const toggleCategory = useCallback((cat: string) => {
@@ -1904,9 +1916,7 @@ export default function CatalogClient({
     return (
         <main className="min-h-screen bg-warm-white pt-[82px] lg:pt-[120px]">
             <Navbar variant="catalog" initialSearchValue={filters.search || undefined} hideSearch />
-            <div className="hidden lg:block">
-                <Breadcrumbs steps={[{ label: "Catalog" }]} />
-            </div>
+            <Breadcrumbs steps={catalogBreadcrumbSteps(filters)} />
 
             <div className="max-w-[1720px] mx-auto px-4 sm:px-6 py-4 sm:py-8 max-lg:pt-4 max-lg:pb-3">
 
@@ -2087,6 +2097,7 @@ export default function CatalogClient({
                                         toggleCategory={toggleCategory}
                                         onFilterChange={handleFilterChange}
                                         onClearAll={handleClearFacets}
+                                        onShowAll={handleClearAll}
                                         mobileOptimized
                                     />
                                 </div>
@@ -2136,19 +2147,15 @@ export default function CatalogClient({
                     {/* Product Grid Content */}
                     <div className="flex-1 min-w-0 w-full pb-32 border-l-0 lg:border-l border-champagne/30 lg:pl-6">
 
-                        {selectedFamilyLabel && !filters.shopCollection && CATALOG_FAMILIES.includes(selectedFamilyLabel) && (
-                            <div className="mb-4 flex flex-col gap-3 border border-muted-gold/40 bg-muted-gold/10 p-4 sm:flex-row sm:items-center sm:justify-between">
-                                <div>
-                                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Family finder</p>
-                                    <p className="mt-1 text-sm text-obsidian">Looking for the {selectedFamilyLabel} family page with application cards and exact products?</p>
-                                </div>
+                        {selectedFamilyLabel && isFamilyLandingFamily(selectedFamilyLabel) && (
+                            <p className="mb-4 text-sm text-obsidian">
                                 <Link
-                                    href={familyFinderHref(selectedFamilyLabel)}
-                                    className="inline-flex min-h-11 shrink-0 items-center justify-center bg-obsidian px-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-white hover:bg-muted-gold hover:text-obsidian"
+                                    href={familyGuideHref(selectedFamilyLabel)}
+                                    className="underline underline-offset-4 hover:text-muted-gold"
                                 >
-                                    {`Open the ${selectedFamilyLabel} family page`}
+                                    {`Help me choose a ${selectedFamilyLabel}`}
                                 </Link>
-                            </div>
+                            </p>
                         )}
 
                         <div className="mb-5 hidden lg:flex flex-wrap items-center gap-3">
@@ -2177,6 +2184,10 @@ export default function CatalogClient({
                             <FamilyBanner family={filters.families[0]} />
                         )}
 
+                        <h2 className="mb-3 font-serif text-lg font-medium text-obsidian lg:hidden">
+                            {catalogResultScopeTitle(filters)}
+                        </h2>
+
                         {/* Results Header — sticks directly below fixed navbar */}
                         <div className="sticky top-[136px] lg:top-[100px] z-30 bg-warm-white pt-2 sm:pt-5 pb-2 mb-4 sm:mb-8 border-b-2 border-obsidian hidden lg:block">
                             <div className="flex items-end justify-between gap-2 sm:gap-3">
@@ -2189,15 +2200,7 @@ export default function CatalogClient({
                                                 : "Catalog"}
                                     </p>
                                     <h2 className="font-serif text-lg sm:text-3xl font-medium text-obsidian truncate">
-                                        {filters.search
-                                            ? `"${filters.search}"`
-                                            : filters.applicators.length === 1
-                                                ? `${APPLICATOR_BUCKETS.find((b) => b.value === filters.applicators[0])?.label ?? filters.applicators[0]} Bottles`
-                                                : filters.applicators.length > 1
-                                                    ? `${filters.applicators.map((a) => APPLICATOR_BUCKETS.find((b) => b.value === a)?.label ?? a).join(" & ")} Bottles`
-                                                    : filters.families.length === 1
-                                                        ? filters.families[0]
-                                                        : getShopCollection(filters.shopCollection)?.title || filters.collection || filters.category || "All Products"}
+                                        {catalogResultScopeTitle(filters)}
                                     </h2>
                                 </div>
                                 <div className="flex items-center gap-2 sm:gap-3 shrink-0">

@@ -81,6 +81,7 @@ function serializeFinderSearch(family: string, filters: CatalogFilters, sort: So
     params.delete("families");
     if (application !== "rollon") params.delete("roller");
     if (sort === surface.defaultSort) params.delete("sort");
+    params.set("guide", "1");
     const query = params.toString();
     return query ? `?${query}` : "";
 }

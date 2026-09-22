@@ -90,6 +90,6 @@ describe("catalog Refine states", () => {
             application: "rollon",
             capacities: ["9 ml"],
             rollerMaterials: ["metal"],
-        })).toBe("/catalog/cylinder?applicators=rollon&roller=metal&capacities=9+ml");
+        })).toBe("/catalog?category=Glass+Bottle&applicators=rollon&roller=metal&families=Cylinder&capacities=9+ml&sort=capacity-asc");
     });
 });

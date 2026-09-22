@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import { redirect } from "next/navigation";
 import CatalogClient, { type CatalogSearchResult } from "./CatalogClient";
 import Footer from "@/components/Footer";
 import { api } from "../../../convex/_generated/api";
-import { paramsToFilters } from "@/lib/catalogFilters";
+import { catalogBrowseRedirect, paramsToFilters } from "@/lib/catalogFilters";
 import { getCatalogConvexClient, searchCatalogServer } from "@/lib/catalogServer";
 import { SITE_URL } from "@/lib/seo";
 
@@ -44,6 +45,8 @@ export default async function CatalogPage({
 }) {
     const resolvedSearchParams = await searchParams;
     const urlSearchParams = toURLSearchParams(resolvedSearchParams);
+    const browseRedirect = catalogBrowseRedirect(urlSearchParams);
+    if (browseRedirect) redirect(browseRedirect);
     const initialState = paramsToFilters(urlSearchParams);
     const initialLimit = clampVisibleLimit(urlSearchParams.get("limit"));
     const convex = getCatalogConvexClient();

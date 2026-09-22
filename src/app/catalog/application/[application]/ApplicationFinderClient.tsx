@@ -28,7 +28,7 @@ import {
     conflictingRefinement,
 } from "@/lib/products/guided-finder";
 import {
-    applicationFinderHref,
+    applicationGuidePath,
     parseBrowseContext,
 } from "@/lib/products/focused-shopping";
 
@@ -75,6 +75,7 @@ function serializeFinderSearch(
     params.delete("applicators");
     if (application !== "rollon") params.delete("roller");
     if (sort === surface.defaultSort) params.delete("sort");
+    params.set("guide", "1");
     const query = params.toString();
     return query ? `?${query}` : "";
 }
@@ -315,7 +316,7 @@ export default function ApplicationFinderClient({
             applicators: [],
             rollerMaterials: nextApplication === "rollon" ? filters.rollerMaterials : [],
         };
-        const nextPathname = applicationFinderHref(nextApplication);
+        const nextPathname = applicationGuidePath(nextApplication);
         const nextSort = applicationCatalogSurface(nextApplication).defaultSort;
         const nextSearch = serializeFinderSearch(nextApplication, nextFilters, nextSort);
         void runSearch({

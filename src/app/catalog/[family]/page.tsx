@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Footer from "@/components/Footer";
 import { searchCatalogServer } from "@/lib/catalogServer";
 import { paramsToFilters } from "@/lib/catalogFilters";
 import { buildCatalogSearchArgs } from "@/lib/catalogSearchClient";
 import { familyCatalogSurface } from "@/lib/catalogSurface";
 import { HOME_FAMILY_MOSAIC } from "@/lib/homepageMerchandising";
-import { familyFromSlug, familyToSlug } from "@/lib/products/focused-shopping";
+import { familyFromSlug, familyLandingRedirect, familyToSlug } from "@/lib/products/focused-shopping";
 import { getProductFamilyPageContent } from "@/sanity/lib/queries";
 import { SITE_URL } from "@/lib/seo";
 import FamilyPageClient from "./FamilyPageClient";
@@ -56,8 +56,11 @@ export default async function FamilyLandingPage({
     const family = familyFromSlug(routeSlug);
     if (!family) notFound();
 
-    const surface = familyCatalogSurface(family);
     const urlSearchParams = toURLSearchParams(resolvedSearchParams);
+    const landingRedirect = familyLandingRedirect(family, urlSearchParams);
+    if (landingRedirect) redirect(landingRedirect);
+
+    const surface = familyCatalogSurface(family);
     urlSearchParams.delete("family");
     urlSearchParams.delete("families");
     const parsedState = paramsToFilters(urlSearchParams);

@@ -15,7 +15,7 @@ export const SHOP_COLLECTIONS = [
 ] as const;
 export type ShopCollectionKey = typeof SHOP_COLLECTIONS[number]['key'];
 export function getShopCollection(key: unknown) { return SHOP_COLLECTIONS.find(collection => collection.key === key); }
-export function shopCollectionHref(key: ShopCollectionKey) { return `/catalog?shop=${key}`; }
+export function shopCollectionHref(key: ShopCollectionKey) { return `/catalog?shop=${key}&sort=capacity-asc`; }
 export type CollectionGroup = { category: string; family?: string | null; slug: string; applicatorTypes?: string[] | null };
 export function matchesShopCollection(group: CollectionGroup, key: string): boolean {
     const glass = group.category === 'Glass Bottle';

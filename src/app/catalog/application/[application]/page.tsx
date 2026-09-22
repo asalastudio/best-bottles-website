@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Footer from "@/components/Footer";
 import { buildCatalogSearchArgs } from "@/lib/catalogSearchClient";
 import { searchCatalogServer } from "@/lib/catalogServer";
 import { applicationCatalogSurface } from "@/lib/catalogSurface";
 import { paramsToFilters } from "@/lib/catalogFilters";
-import { parseBrowseContext } from "@/lib/products/focused-shopping";
+import { applicationLandingRedirect, parseBrowseContext } from "@/lib/products/focused-shopping";
 import ApplicationFinderClient from "./ApplicationFinderClient";
 
 export const dynamic = "force-dynamic";
@@ -40,6 +40,8 @@ export default async function ApplicationFinderPage({
     const urlSearchParams = toURLSearchParams(resolvedSearchParams);
     const context = parseBrowseContext(pathname, urlSearchParams);
     if (context.entryMode !== "application" || !context.application) notFound();
+    const landingRedirect = applicationLandingRedirect(pathname, urlSearchParams);
+    if (landingRedirect) redirect(landingRedirect);
 
     const surface = applicationCatalogSurface(context.application);
     const parsedState = paramsToFilters(urlSearchParams);

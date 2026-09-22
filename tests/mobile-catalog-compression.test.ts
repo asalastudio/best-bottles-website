@@ -11,8 +11,9 @@ describe("mobile catalog compression", () => {
         expect(catalog).toContain("lg:pt-[120px]");
     });
 
-    it("hides the mobile breadcrumb and compact title without dropping desktop catalog chrome", () => {
+    it("shows catalog scope breadcrumbs on mobile and keeps the compact title", () => {
         const catalog = read("src/app/catalog/CatalogClient.tsx");
+        expect(catalog).toContain("<Breadcrumbs steps={catalogBreadcrumbSteps(filters)} />");
         expect(catalog).toContain("hidden lg:block");
         expect(catalog).toContain("<span className=\"lg:hidden\">Catalog</span>");
         expect(catalog).toContain("Master Catalog");
