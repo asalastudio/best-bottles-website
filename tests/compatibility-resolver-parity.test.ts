@@ -118,7 +118,7 @@ describe("compatibility resolver parity", () => {
         const chain = [
             "normalizeComponentsByType",
             "selectBestFitmentRule",
-            "filterGroupedComponentsByFitmentRule",
+            "resolveCompatibleComponents",
         ];
 
         for (const source of [matrix, grace, products]) {

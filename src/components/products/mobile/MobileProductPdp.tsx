@@ -27,6 +27,7 @@ import { requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import { shouldHideAssembledPdpLowerStack } from "@/lib/products/assembled-pdp";
 import { focusedProductPresentation } from "@/lib/products/focused-product-presentation";
 import { useCopy } from "@/i18n/useCopy";
 import {
@@ -165,6 +166,15 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         [group.category, group.family],
     );
     const isBottle = productPresentation.kind === "bottle";
+    const hideAssembledLowerStack = shouldHideAssembledPdpLowerStack({
+        category: group.category,
+        family: group.family,
+        assemblyType: selectedVariant?.assemblyType,
+        applicator: selectedVariant?.applicator ?? activeApplicator,
+        itemName: selectedVariant?.itemName ?? displayName,
+        websiteSku: selectedVariant?.websiteSku,
+        graceSku: selectedVariant?.graceSku,
+    });
     const closureBase = useMemo(
         () => isBottle ? closureBaseFromSlug(slug) : "none",
         [isBottle, slug],
@@ -636,6 +646,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             </section>
 
             {/* ── secondary information: compact disclosures, sticky bar stays ── */}
+            {hideAssembledLowerStack ? null : (
             <MobileProductDetails
                 variant={selectedVariant}
                 sku={resolvedSku}
@@ -649,6 +660,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 onAskGrace={onAskGrace ?? (() => {})}
                 onAddComponent={onAddComponent ?? (() => {})}
             />
+            )}
 
             {/* ── sticky Add to Cart: the same variant, price, and qty as above ── */}
             <MobileStickyPurchaseBar

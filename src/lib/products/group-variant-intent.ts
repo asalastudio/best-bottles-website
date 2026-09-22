@@ -97,6 +97,38 @@ export function variantMatchesGroupIntent(
 }
 
 /**
+ * Abbas / ASA-195: 15 ml Clear Square open-mouth is sold with only these
+ * four caps. Other finishes belong on spray / roll-on siblings, not this rail.
+ */
+const SQUARE_15_OPEN_MOUTH_WEBSITE_SKUS = new Set([
+    "GBSqr15WhtSht",
+    "GBSqr15BlkSht",
+    "GBSqr15Gl",
+    "GBSqr15Sl",
+]);
+
+export function isSquare15OpenMouthSlug(slug: string): boolean {
+    return slug === "square-15ml-clear-13-415";
+}
+
+export function isAllowedSquare15OpenMouthFinish(signals: SkuApplicatorSignals): boolean {
+    const websiteSku = signals.websiteSku?.trim();
+    if (websiteSku && SQUARE_15_OPEN_MOUTH_WEBSITE_SKUS.has(websiteSku)) return true;
+    return false;
+}
+
+function applyOpenMouthFinishAllowlist<T extends SkuApplicatorSignals>(
+    slug: string,
+    intent: ApplicatorKind | null,
+    variants: readonly T[],
+): T[] {
+    if (!isSquare15OpenMouthSlug(slug)) return [...variants];
+    if (intent && intent !== "cap") return [...variants];
+    const allowed = variants.filter((variant) => isAllowedSquare15OpenMouthFinish(variant));
+    return allowed.length > 0 ? allowed : [...variants];
+}
+
+/**
  * Keep only variants that belong on this product page. Fail open when the
  * filter would empty the group (unknown SKU vocabulary) so a page still
  * renders; a Cap page with real cap SKUs plus leaked spray rows keeps the caps.
@@ -107,7 +139,9 @@ export function filterVariantsForGroupIntent<T extends SkuApplicatorSignals>(
     applicatorBucket?: string | null,
 ): T[] {
     const intent = groupApplicatorIntent(slug, applicatorBucket);
-    if (!intent) return [...variants];
-    const matched = variants.filter((variant) => variantMatchesGroupIntent(intent, variant));
-    return matched.length > 0 ? matched : [...variants];
+    const matched = intent
+        ? variants.filter((variant) => variantMatchesGroupIntent(intent, variant))
+        : [...variants];
+    const scoped = matched.length > 0 ? matched : [...variants];
+    return applyOpenMouthFinishAllowlist(slug, intent, scoped);
 }

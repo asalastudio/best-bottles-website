@@ -292,7 +292,7 @@ describe("Build Your Bottle route contract", () => {
 
     it("continues to use the shared server compatibility engine", () => {
         expect(matrix).toContain('from "./componentUtils"');
-        for (const resolver of ["normalizeComponentsByType", "selectBestFitmentRule", "filterGroupedComponentsByFitmentRule"]) {
+        for (const resolver of ["normalizeComponentsByType", "selectBestFitmentRule", "resolveCompatibleComponents"]) {
             expect(matrix).toContain(`${resolver}(`);
             expect(componentUtils).toContain(`export function ${resolver}`);
         }

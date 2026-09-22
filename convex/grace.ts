@@ -4,8 +4,8 @@ import { v } from "convex/values";
 import { api } from "./_generated/api";
 import OpenAI from "openai";
 import {
-    filterGroupedComponentsByFitmentRule,
     normalizeComponentsByType,
+    resolveCompatibleComponents,
     selectBestFitmentRule,
 } from "./componentUtils";
 import { buildSystemPrompt, VOICE_MODE_ADDENDUM } from "./gracePrompt";
@@ -770,7 +770,7 @@ export const getBottleComponents = query({
                 .collect()
             : [];
         const matchedFitmentRule = selectBestFitmentRule(fitmentRules, bottle);
-        const reconciled = filterGroupedComponentsByFitmentRule(grouped, matchedFitmentRule);
+        const reconciled = resolveCompatibleComponents(grouped, matchedFitmentRule, bottle);
         const summary: Record<string, Array<{
             graceSku: string;
             websiteSku: string | null;
