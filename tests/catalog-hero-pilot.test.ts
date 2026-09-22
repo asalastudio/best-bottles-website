@@ -9,8 +9,8 @@ const enable = () => vi.stubEnv('NEXT_PUBLIC_CATALOG_HERO_PILOT', 'cylinder-2026
 afterEach(() => vi.unstubAllEnvs());
 describe('Cylinder staging pilot', () => {
  it('preserves every exact export and identity framing', () => {
-  expect(rows).toHaveLength(28);
-  expect(new Set(rows.map(r => r.groupSlug)).size).toBe(22);
+  expect(rows).toHaveLength(33);
+  expect(new Set(rows.map(r => r.groupSlug)).size).toBe(27);
   for (const row of rows) {
    const source = manifest.rows.find(r => r.sku === row.websiteSku)!;
    const bytes = readFileSync(`public${row.url}`);

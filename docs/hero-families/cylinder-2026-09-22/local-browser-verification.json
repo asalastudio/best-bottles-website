@@ -1,6 +1,6 @@
 {
   "url": "http://localhost:3050",
-  "checkedAt": "2026-09-22T16:34:44.109Z",
+  "checkedAt": "2026-09-22T17:17:40.443Z",
   "views": [
     {
       "mobile": false,
@@ -321,6 +321,68 @@
             "height": 289
           },
           "href": "/products/cylinder-50ml-clear-18-415-antiquespray-tassel?sku=GBCyl50AnSpTslMtSl"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog",
+      "query": "family=Cylinder&capacities=100%20ml",
+      "cards": [
+        {
+          "sku": "GBCyl100SpryMtGl",
+          "group": "cylinder-100ml-clear-18-415-perfumespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100SpryMtGl.c238fe44a86e.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-perfumespray?sku=GBCyl100SpryMtGl"
+        },
+        {
+          "sku": "LBCyl100LtnMtGl",
+          "group": "cylinder-100ml-clear-18-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl100LtnMtGl.8ef2159eee21.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-lotionpump?sku=LBCyl100LtnMtGl"
+        },
+        {
+          "sku": "GBCyl100RdcrMtSl",
+          "group": "cylinder-100ml-clear-18-415-reducer",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100RdcrMtSl.e5aec2df54e9.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-reducer?sku=GBCyl100RdcrMtSl"
+        },
+        {
+          "sku": "GBCyl100AnSpMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpMtSl.4c0ef81c3113.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray?sku=GBCyl100AnSpMtSl"
+        },
+        {
+          "sku": "GBCyl100AnSpTslMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpTslMtSl.7c088c6921a3.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 263,
+            "height": 289
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray-tassel?sku=GBCyl100AnSpTslMtSl"
         }
       ]
     },
@@ -723,6 +785,68 @@
             "height": 380
           },
           "href": "/products/cylinder-50ml-clear-18-415-antiquespray-tassel?sku=GBCyl50AnSpTslMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": false,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=100%20ml",
+      "cards": [
+        {
+          "sku": "LBCyl100LtnMtGl",
+          "group": "cylinder-100ml-clear-18-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl100LtnMtGl.8ef2159eee21.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-lotionpump?sku=LBCyl100LtnMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100SpryMtGl",
+          "group": "cylinder-100ml-clear-18-415-perfumespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100SpryMtGl.c238fe44a86e.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-perfumespray?sku=GBCyl100SpryMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100RdcrMtSl",
+          "group": "cylinder-100ml-clear-18-415-reducer",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100RdcrMtSl.e5aec2df54e9.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-reducer?sku=GBCyl100RdcrMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100AnSpMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpMtSl.4c0ef81c3113.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray?sku=GBCyl100AnSpMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100AnSpTslMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpTslMtSl.7c088c6921a3.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 345,
+            "height": 380
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray-tassel?sku=GBCyl100AnSpTslMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
         }
       ]
     },
@@ -1131,6 +1255,68 @@
     {
       "mobile": true,
       "route": "/catalog",
+      "query": "family=Cylinder&capacities=100%20ml",
+      "cards": [
+        {
+          "sku": "GBCyl100SpryMtGl",
+          "group": "cylinder-100ml-clear-18-415-perfumespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100SpryMtGl.c238fe44a86e.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-perfumespray?sku=GBCyl100SpryMtGl"
+        },
+        {
+          "sku": "LBCyl100LtnMtGl",
+          "group": "cylinder-100ml-clear-18-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl100LtnMtGl.8ef2159eee21.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-lotionpump?sku=LBCyl100LtnMtGl"
+        },
+        {
+          "sku": "GBCyl100RdcrMtSl",
+          "group": "cylinder-100ml-clear-18-415-reducer",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100RdcrMtSl.e5aec2df54e9.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-reducer?sku=GBCyl100RdcrMtSl"
+        },
+        {
+          "sku": "GBCyl100AnSpMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpMtSl.4c0ef81c3113.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray?sku=GBCyl100AnSpMtSl"
+        },
+        {
+          "sku": "GBCyl100AnSpTslMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpTslMtSl.7c088c6921a3.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 178,
+            "height": 195
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray-tassel?sku=GBCyl100AnSpTslMtSl"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog",
       "query": "family=Cylinder&capacities=9%20ml&roller=plastic",
       "cards": [
         {
@@ -1527,6 +1713,68 @@
             "height": 191
           },
           "href": "/products/cylinder-50ml-clear-18-415-antiquespray-tassel?sku=GBCyl50AnSpTslMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D28%2Bml%252C50%2Bml"
+        }
+      ]
+    },
+    {
+      "mobile": true,
+      "route": "/catalog/cylinder",
+      "query": "family=Cylinder&capacities=100%20ml",
+      "cards": [
+        {
+          "sku": "LBCyl100LtnMtGl",
+          "group": "cylinder-100ml-clear-18-415-lotionpump",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FLBCyl100LtnMtGl.8ef2159eee21.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-lotionpump?sku=LBCyl100LtnMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100SpryMtGl",
+          "group": "cylinder-100ml-clear-18-415-perfumespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100SpryMtGl.c238fe44a86e.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-perfumespray?sku=GBCyl100SpryMtGl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100RdcrMtSl",
+          "group": "cylinder-100ml-clear-18-415-reducer",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100RdcrMtSl.e5aec2df54e9.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-reducer?sku=GBCyl100RdcrMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100AnSpMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpMtSl.4c0ef81c3113.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray?sku=GBCyl100AnSpMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
+        },
+        {
+          "sku": "GBCyl100AnSpTslMtSl",
+          "group": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+          "src": "http://localhost:3050/_next/image?url=%2Fimages%2Fcatalog%2Fcylinder-pilot-2026-09-22%2FGBCyl100AnSpTslMtSl.7c088c6921a3.png&w=3840&q=75",
+          "loaded": true,
+          "frame": {
+            "width": 174,
+            "height": 191
+          },
+          "href": "/products/cylinder-100ml-clear-18-415-antiquespray-tassel?sku=GBCyl100AnSpTslMtSl&from=%2Fcatalog%2Fcylinder%3Fcapacities%3D100%2Bml"
         }
       ]
     },

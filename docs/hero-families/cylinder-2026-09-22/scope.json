@@ -1,8 +1,8 @@
 {
   "baseCommit": "e9e99682ebeeb3ffc718f914608c60e4f2a8603e",
   "currentRegistryCylinderCount": 52,
-  "candidateCount": 28,
-  "coveredGroups": 22,
+  "candidateCount": 33,
+  "coveredGroups": 27,
   "remainingRegisteredHeroes": [
     {
       "sku": "GBSpry3mlClBlk",
@@ -137,36 +137,6 @@
       "action": "audit-existing-before-generation"
     },
     {
-      "sku": "GBCyl100AnSpMtSl",
-      "groupSlug": "cylinder-100ml-clear-18-415-antiquespray",
-      "capacityMl": 100,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBCyl100AnSpTslMtSl",
-      "groupSlug": "cylinder-100ml-clear-18-415-antiquespray-tassel",
-      "capacityMl": 100,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "LBCyl100LtnMtGl",
-      "groupSlug": "cylinder-100ml-clear-18-415-lotionpump",
-      "capacityMl": 100,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBCyl100SpryMtGl",
-      "groupSlug": "cylinder-100ml-clear-18-415-perfumespray",
-      "capacityMl": 100,
-      "action": "audit-existing-before-generation"
-    },
-    {
-      "sku": "GBCyl100RdcrMtSl",
-      "groupSlug": "cylinder-100ml-clear-18-415-reducer",
-      "capacityMl": 100,
-      "action": "audit-existing-before-generation"
-    },
-    {
       "sku": "PbClear4ozFlpWh",
       "groupSlug": "cylinder-118ml-clear",
       "capacityMl": 114,
@@ -184,5 +154,12 @@
       "capacityMl": 454,
       "action": "audit-existing-before-generation"
     }
-  ]
+  ],
+  "glassPilot": {
+    "scopeGroups": 47,
+    "coveredGroups": 27,
+    "remainingGroups": 20,
+    "remainingExtraRollerVariants": 4,
+    "remainingImages": 24
+  }
 }

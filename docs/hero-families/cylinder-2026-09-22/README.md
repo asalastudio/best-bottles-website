@@ -1,12 +1,12 @@
 # Cylinder staging pilot — September 22, 2026
 
-28 preserved delivery exports cover 22 existing Cylinder catalog groups: twenty standard 9 mL assemblies and eight 28/50 mL assemblies. Six are additional exact roller variants within those groups. This is a partial family pilot, not completion of the approximately 47 glass heroes in the 5–100 mL scope. `scope.json` records the remaining registered heroes separately, including out-of-scope sizes/materials.
+33 delivery exports cover 27 existing Cylinder catalog groups: twenty standard 9 mL assemblies, eight 28/50 mL assemblies, and five new 100 mL assemblies. Six are additional exact roller variants within those groups. This is a partial family pilot, not completion of the approximately 47 glass heroes in the 5–100 mL scope. `scope.json` records the remaining registered heroes separately, including out-of-scope sizes/materials.
 
 ## Locked delivery contract
 
-- Lossless source delivery files: **2080 × 2288**, 10:11. These are uniformly resized from approximately 1196 × 1315 generated images, not native 2080-detail renders. No new API calls were used for this integration.
+- Lossless source delivery files: **2080 × 2288**, 10:11. These are uniformly resized from approximately 1196 × 1315 generated images, not native 2080-detail renders. The initial 28 assets were reused; this extension used five explicitly authorized Sunburst API edits.
 - Glass contact foot target: **91%**, y = **2082.08 px**, excluding the shadow.
-- Shoulder spans, measured upward from the glass foot: standard 9 mL **43.5%**; 28 mL roller **50.5%**; 50 mL roller **53%**; 50 mL 18-415 **56%**. 100 mL remains the 67.5% calibration endpoint; its new images are not part of this batch.
+- Shoulder spans, measured upward from the glass foot: standard 9 mL **43.5%**; 28 mL roller **50.5%**; 50 mL roller **53%**; 50 mL 18-415 **56%**. 100 mL is the **67.5%** calibration endpoint and its five new images are included.
 - One body lock across finishes/applicators of the same body. Different bodies at the same capacity retain separate locks.
 - UI framing is identity: scale 1, x/y translation 0. No CSS enlargement or double application of the shoulder transform.
 - `manifest.json` preserves output/source/master/material/prompt hashes, measurement and alignment records, prior registry entries, and review states. `production-contract.json` retains the larger family contract. Source paths use portable archive labels; source PSDs and material reference photographs remain in the secured source archive.
@@ -39,3 +39,20 @@ Requested shared staging alias: `https://best-bottles-website.vercel.app`. Its p
 - Browser/source-file checks establish integration correctness, not final geometry/material approval. Final visual release gates in the manifest remain open.
 - Follow-up: the same all-28 browser audit also passed on the dedicated Cylinder family finder, desktop and mobile. Family/application finder cards now use the same roller-material scope before selecting heroes and purchase rows. Seventeen focused finder/variant/pilot tests passed.
 - Read-only media ledger refreshed successfully: 2,286 plate images fetched/measured without failures; catalog ledger covered 2,572 SKU rows. Global plate/kit changes are archived locally, not mixed into this family PR. Staging candidates remain separate from approved production hero counts.
+
+## 100 mL extension
+
+Five clear-glass assemblies use the same approved material reference (SHA-256 fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899): vintage bulb sprayer, tassel bulb sprayer, capped reducer, perfume spray, and lotion pump. Exact catalog identities and master PSD hashes are recorded per output; the clear reference controls optical appearance only. Frosted, cobalt and amber retain their matching reference assignments in the existing family manifest.
+
+- Model: gpt-image-2.5-sunburst, quality high, three inputs per edit: framed exact master, original master composite, approved clear material reference. Five calls completed without a generation retry. Prompts are preserved in [prompts](prompts/).
+- Delivery measurements: shoulder y = 537–538 px (target 537.68), foot y = 2082–2085 px (target 2082.08). Manual/threshold landmark uncertainty is approximately ±7 delivery pixels. All product components and shadows move together under one uniform transform.
+- Raw responses are 1196 × 1315 for four images and 1195 × 1316 for the tassel image. Delivery canvas is 2080 × 2288; this does not imply native 2080-pixel detail.
+- Master proportions preserved: the two bulb-source bodies are slightly narrower than the other master composites. This variance remains documented for geometry review; no width stretching was applied.
+- Final visual approval and exact bone exposure remain open. Generated backgrounds are warmer/lighter than #F5F3EF (border medians are recorded); no software shadow or background retouching was applied.
+- Review: [five-image sheet](100ml-sheet.png), [shoulder/base guides](100ml-guided-sheet.png). Raw renders, input references, source composites, and before/after sheet remain preserved in local-review-archive/family100.
+- Reproduce exports with `node scripts/hero-families/export-cylinder-100ml.mjs /path/to/family100`.
+- Verification: 445 focused tests and TypeScript pass. All previous 28 asset hashes are preserved.
+- Scope: 27 of the proposed 47 glass catalog cards have candidates, with 33 exact assembly images including additional rollers. 20 cards plus four extra roller variants remain (24 images).
+- Rollback for this extension: point only best-bottles-website.vercel.app back to best-bottles-website-854qqi02k-asala.vercel.app (the verified 28-image pilot).
+
+The expanded all-33 browser audit passes on both `/catalog` and `/catalog/cylinder` at 1440px and 390px: decoded images, exact group/SKU assignments, matching SKU product links, plastic filters, and 10:11 card frames. `local-browser-verification.json` records the full 20-view audit.

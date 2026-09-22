@@ -7,7 +7,7 @@
     "backgroundTarget": "#F5F3EF"
   },
   "sourceImagesPreserved": true,
-  "newApiCalls": 0,
+  "newApiCalls": 5,
   "rows": [
     {
       "sku": "GBCyl9RollBlkDot",
@@ -87,9 +87,9 @@
       "promptSha256": "2de8bd15a0fe5f0ff5e27769bf7704fa0d3061ede414e835f569a5a818a4b1f4",
       "backgroundQA": {
         "borderMedianRgb": [
-          245.0,
-          243.0,
-          239.0
+          245,
+          243,
+          239
         ],
         "borderExactBoneFraction": 0.21545201115093587,
         "exactBoneCleared": false
@@ -149,7 +149,7 @@
         "alt": "9 ml Clear Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -173,11 +173,11 @@
       "promptSha256": "d230db2ad531455dd3fab851c86dabf2a351a3028327f2a3c4974f2696cb3503",
       "backgroundQA": {
         "borderMedianRgb": [
-          249.0,
-          248.0,
-          244.0
+          249,
+          248,
+          244
         ],
-        "borderExactBoneFraction": 0.0,
+        "borderExactBoneFraction": 0,
         "exactBoneCleared": false
       },
       "outputAlignment": null
@@ -235,7 +235,7 @@
         "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -259,11 +259,11 @@
       "promptSha256": "3485a6da5e84602dfeae1076e97cf24f0a50d6d6d8e5a3ed4b5f2cf0a0570ea8",
       "backgroundQA": {
         "borderMedianRgb": [
-          248.0,
-          246.0,
-          242.0
+          248,
+          246,
+          242
         ],
-        "borderExactBoneFraction": 0.0,
+        "borderExactBoneFraction": 0,
         "exactBoneCleared": false
       },
       "outputAlignment": null
@@ -321,7 +321,7 @@
         "alt": "9 ml Clear Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -345,9 +345,9 @@
       "promptSha256": "473580aa8eecffce73f33f9a93322b1d7a3303749ebd4ff985460c023b54e2a3",
       "backgroundQA": {
         "borderMedianRgb": [
-          246.0,
-          245.0,
-          241.0
+          246,
+          245,
+          241
         ],
         "borderExactBoneFraction": 0.0023894862604540022,
         "exactBoneCleared": false
@@ -413,11 +413,11 @@
       "promptSha256": "d1f767fd2def7b2d8454eac7c07a5c0c010927f5c4ce4bb7047d390cbe2142bb",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          245.0,
-          241.0
+          247,
+          245,
+          241
         ],
-        "borderExactBoneFraction": 0.0,
+        "borderExactBoneFraction": 0,
         "exactBoneCleared": false
       },
       "outputAlignment": null
@@ -475,7 +475,7 @@
         "alt": "9 ml Amber Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -499,11 +499,11 @@
       "promptSha256": "805fbb17cd17baec71bb0de26306736d8570c8ea375cf5a695e1f4f7677e3278",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          245.0,
-          242.0
+          247,
+          245,
+          242
         ],
-        "borderExactBoneFraction": 0.0,
+        "borderExactBoneFraction": 0,
         "exactBoneCleared": false
       },
       "outputAlignment": null
@@ -561,7 +561,7 @@
         "alt": "9 ml Amber Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -585,9 +585,9 @@
       "promptSha256": "fbd04955862c3be558efbeb7af15d7d1a60acd983437bbff8ca7d972cff754d9",
       "backgroundQA": {
         "borderMedianRgb": [
-          245.0,
-          244.0,
-          240.0
+          245,
+          244,
+          240
         ],
         "borderExactBoneFraction": 0.025886101154918358,
         "exactBoneCleared": false
@@ -647,7 +647,7 @@
         "alt": "9 ml Amber Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -671,9 +671,9 @@
       "promptSha256": "37736af824af24937b8d95027f739415eb16e4665d534ca2824250ae167f0aed",
       "backgroundQA": {
         "borderMedianRgb": [
-          246.0,
-          244.0,
-          240.0
+          246,
+          244,
+          240
         ],
         "borderExactBoneFraction": 0.037833532457188374,
         "exactBoneCleared": false
@@ -739,11 +739,11 @@
       "promptSha256": "16b9405e83d35417f7c0ddf4750df0e5186777a559cd710f63fa205e30591b0c",
       "backgroundQA": {
         "borderMedianRgb": [
-          248.0,
-          247.0,
-          242.0
+          248,
+          247,
+          242
         ],
-        "borderExactBoneFraction": 0.0,
+        "borderExactBoneFraction": 0,
         "exactBoneCleared": false
       },
       "outputAlignment": null
@@ -801,7 +801,7 @@
         "alt": "9 ml Cobalt Blue Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -825,9 +825,9 @@
       "promptSha256": "a61da3ef26ec3adc6e3f88239ea5f0e4f288fb5376b4bebc4cd0952ca330f13c",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          246.0,
-          242.0
+          247,
+          246,
+          242
         ],
         "borderExactBoneFraction": 0.0005973715651135006,
         "exactBoneCleared": false
@@ -887,7 +887,7 @@
         "alt": "9 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -911,9 +911,9 @@
       "promptSha256": "9949282e047dfec3ee358acb6dd2a31fe22e75cd4c4dffd9575e1305df3035fb",
       "backgroundQA": {
         "borderMedianRgb": [
-          246.0,
-          244.0,
-          240.0
+          246,
+          244,
+          240
         ],
         "borderExactBoneFraction": 0.001991238550378335,
         "exactBoneCleared": false
@@ -973,7 +973,7 @@
         "alt": "9 ml Cobalt Blue Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -997,11 +997,11 @@
       "promptSha256": "afcc2bedcb8312352ae8f8471319e89b3311922ffa5c1731c199ae1bb1ac5e60",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          246.0,
-          242.0
+          247,
+          246,
+          242
         ],
-        "borderExactBoneFraction": 0.0,
+        "borderExactBoneFraction": 0,
         "exactBoneCleared": false
       },
       "outputAlignment": null
@@ -1065,9 +1065,9 @@
       "promptSha256": "cb530fcb715b5a15ed896ecc5652615b0e04c139acbc368c74370ca9042a4ea4",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          245.0,
-          241.0
+          247,
+          245,
+          241
         ],
         "borderExactBoneFraction": 0.00019912385503783353,
         "exactBoneCleared": false
@@ -1127,7 +1127,7 @@
         "alt": "9 ml Frosted Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1151,9 +1151,9 @@
       "promptSha256": "1c1b14082e0d7565aa1ecac710bb7d8a59e68cd0feb57f850f5cc63918d1bee8",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          246.0,
-          242.0
+          247,
+          246,
+          242
         ],
         "borderExactBoneFraction": 0.002190362405416169,
         "exactBoneCleared": false
@@ -1213,7 +1213,7 @@
         "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1237,11 +1237,11 @@
       "promptSha256": "e21eda8c0b900c22439c0731f48ba3ab34e9cf547e2fff76a1384a80a1c70ef3",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          245.0,
-          242.0
+          247,
+          245,
+          242
         ],
-        "borderExactBoneFraction": 0.0,
+        "borderExactBoneFraction": 0,
         "exactBoneCleared": false
       },
       "outputAlignment": null
@@ -1299,7 +1299,7 @@
         "alt": "9 ml Frosted Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1323,9 +1323,9 @@
       "promptSha256": "81f6c8a7b476bbf606e2b308359bd6023094f9d45906569cee16940b2b530c8a",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          245.0,
-          242.0
+          247,
+          245,
+          242
         ],
         "borderExactBoneFraction": 0.00039824771007566706,
         "exactBoneCleared": false
@@ -1391,11 +1391,11 @@
       "promptSha256": "b8b0f51f8a28a94f2ce1a9d5d0fecf64a5bee5df71ce77cc80b6cd88c94452e5",
       "backgroundQA": {
         "borderMedianRgb": [
-          246.0,
-          244.0,
-          241.0
+          246,
+          244,
+          241
         ],
-        "borderExactBoneFraction": 0.0,
+        "borderExactBoneFraction": 0,
         "exactBoneCleared": false
       },
       "outputAlignment": null
@@ -1453,7 +1453,7 @@
         "alt": "9 ml Swirl Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1477,9 +1477,9 @@
       "promptSha256": "a51ea872d821edc07e7c79dcac45669fa76d5dfa8fe0b0a629453950b289e52f",
       "backgroundQA": {
         "borderMedianRgb": [
-          245.0,
-          243.0,
-          239.0
+          245,
+          243,
+          239
         ],
         "borderExactBoneFraction": 0.7765830346475507,
         "exactBoneCleared": false
@@ -1549,7 +1549,7 @@
         "alt": "9 ml Swirl Cylinder Fine Mist Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1573,9 +1573,9 @@
       "promptSha256": "1c58db91d2ba9b1c63fad10214e9ef1289560932a4ab7817b79fde6190eb9bc8",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          245.0,
-          241.0
+          247,
+          245,
+          241
         ],
         "borderExactBoneFraction": 0.0013938669852648347,
         "exactBoneCleared": false
@@ -1635,7 +1635,7 @@
         "alt": "9 ml Swirl Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1659,9 +1659,9 @@
       "promptSha256": "90406f562681a7a9a96e77881ea00695ec43fee9e5d401cbcf9cd5488d222d23",
       "backgroundQA": {
         "borderMedianRgb": [
-          245.0,
-          243.0,
-          239.0
+          245,
+          243,
+          239
         ],
         "borderExactBoneFraction": 0.7706093189964157,
         "exactBoneCleared": false
@@ -1740,7 +1740,7 @@
         "alt": "28 ml Clear Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1764,9 +1764,9 @@
       "promptSha256": "125576401369540a34d92b7bcb527cb6c8180a896608c80aa1d11475a0f788f5",
       "backgroundQA": {
         "borderMedianRgb": [
-          246.0,
-          244.0,
-          241.0
+          246,
+          244,
+          241
         ],
         "exactBoneCleared": false
       },
@@ -1845,7 +1845,7 @@
         "alt": "50 ml Clear Cylinder Vintage Style Bulb Spray Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1869,9 +1869,9 @@
       "promptSha256": "cc961c2a62d38248b4b3daf710e61d0951afb92d4a421088a69ba9e5b31d353f",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          246.0,
-          242.0
+          247,
+          246,
+          242
         ],
         "exactBoneCleared": false
       },
@@ -1950,7 +1950,7 @@
         "alt": "50 ml Clear Cylinder Vintage Style Bulb Spray Bottle with Tassel",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -1974,9 +1974,9 @@
       "promptSha256": "fcc04e574d6e49e760c8673b5c1f00074d007e281c0c8bb004465d9b9351c2fa",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          245.0,
-          242.0
+          247,
+          245,
+          242
         ],
         "exactBoneCleared": false
       },
@@ -2055,7 +2055,7 @@
         "alt": "50 ml Clear Cylinder Roll-On Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2079,9 +2079,9 @@
       "promptSha256": "1da06a67feb9b3886b5e72bd502bf6453e9b7feb1a33f90efd441cd258d29775",
       "backgroundQA": {
         "borderMedianRgb": [
-          247.0,
-          245.0,
-          241.0
+          247,
+          245,
+          241
         ],
         "exactBoneCleared": false
       },
@@ -2160,7 +2160,7 @@
         "alt": "50 ml Clear Cylinder Reducer Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2184,9 +2184,9 @@
       "promptSha256": "9e314f9088c21ad8c073c65b89a1b1db1c6978b4c55eeae3d4956ba183fc990a",
       "backgroundQA": {
         "borderMedianRgb": [
-          246.0,
-          244.0,
-          240.0
+          246,
+          244,
+          240
         ],
         "exactBoneCleared": false
       },
@@ -2271,9 +2271,9 @@
       "promptSha256": "ae4e5407bfade496a1b84ab4bf9745a2311dda01997d01bb172e1c2eae08eea9",
       "backgroundQA": {
         "borderMedianRgb": [
-          248.0,
-          247.0,
-          243.0
+          248,
+          247,
+          243
         ],
         "exactBoneCleared": false
       },
@@ -2352,7 +2352,7 @@
         "alt": "50 ml Clear Cylinder Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2376,9 +2376,9 @@
       "promptSha256": "6493a2602f7adcc17e0ef9f96212aa9d7872bbfe0ff5506fc88179609f9c85d5",
       "backgroundQA": {
         "borderMedianRgb": [
-          246.0,
-          245.0,
-          242.0
+          246,
+          245,
+          242
         ],
         "exactBoneCleared": false
       },
@@ -2457,7 +2457,7 @@
         "alt": "50 ml Clear Cylinder Lotion Pump Bottle",
         "width": 1560,
         "height": 1716,
-        "presentation": "Empty \u00b7 original assembly",
+        "presentation": "Empty · original assembly",
         "framing": {
           "scale": 1,
           "translateXPercent": 0,
@@ -2499,10 +2499,661 @@
         "targetFootPercent": 91,
         "targetShoulderSpanPercent": 56
       }
+    },
+    {
+      "sku": "GBCyl100AnSpMtSl",
+      "source": "local-review-archive/family100/GBCyl100AnSpMtSl-generated.png",
+      "sourceSha256": "3fe54af66085a654a685f338853c8679c0cad7ab836a11e38c0455655cad94f5",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl100AnSpMtSl-2080x2288.png",
+      "outputSha256": "4c0ef81c3113f329962cf8efdb0329db39539d0bdb1bd5ebee6b8d4b0f571bf6",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow.",
+        "rawFootY": 1199,
+        "rawShoulderY": 308,
+        "rawBodyCenterX": 656.5,
+        "scale": 1.7333333333333334,
+        "x": 6.066666666666833,
+        "y": 3.8133333333330484,
+        "targetBodyCenterPct": 55.00000000000001,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 67.5,
+        "uncertaintyPx": 6.933333333333334
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 656.5,
+        "shoulderY": 308,
+        "footY": 1199,
+        "bodyWidthPx": 203,
+        "shoulderSpanPct": 67.757,
+        "footPct": 91.179,
+        "bodyAspect": 4.389,
+        "uncertaintyPx": 4,
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:100-standard",
+        "label": "Cylinder 100 ml",
+        "shoulderPct": 67.5,
+        "bodyAspect": 4.184,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 23.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 537.68,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family100/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/35. GBCyl100AnSpMtSl.psd"
+      ],
+      "masterSha256": "9bdb5e8a7f2c7c07155d8cdeff3229be25f29676c42e6e1c97a8fe3a110fe315",
+      "generationInputHashes": [
+        {
+          "file": "GBCyl100AnSpMtSl-sized.png",
+          "sha256": "4a32ea1de97b519543f18681eaa7f6a68ab634a205a4a3ee1e75d13030de3838"
+        },
+        {
+          "file": "GBCyl100AnSpMtSl-source-0.png",
+          "sha256": "9f97372b60d0e89a8ce2363d17e939236b28370fc3db9b2f4d8add8b34be5ef8"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "27eaccab3e46d4d4dee8ab990d59d189747c7294e3deaec9395027b00cc35fb7",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          250,
+          248,
+          244
+        ],
+        "exactBoneCleared": false
+      },
+      "masterBodyAspect": 4.378947368421053,
+      "visualStatus": "Agent inspected source fidelity; final export awaits user review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-100ml-clear-18-415-antiquespray",
+      "priorHero": {
+        "groupSlug": "cylinder-100ml-clear-18-415-antiquespray",
+        "websiteSku": "GBCyl100AnSpMtSl",
+        "graceSku": "GB-CYL-CLR-100ML-ASP-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343677546788",
+        "family": "Cylinder",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl100AnSpMtSl.66e782ed123f.png",
+        "alt": "100 ml Clear Cylinder Vintage Style Bulb Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100AnSpMtSl.4c0ef81c3113.png",
+      "measuredFinalOutput": {
+        "width": 2080,
+        "height": 2288,
+        "bodyCenterX": 1144,
+        "shoulderY": 538,
+        "footY": 2083,
+        "bodyWidthPx": 352,
+        "shoulderSpanPct": 67.526,
+        "footPct": 91.04,
+        "bodyAspect": 4.389,
+        "uncertaintyPx": 4,
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow."
+      },
+      "geometryQA": {
+        "generatedVsMasterAspectDeviationPct": 0.22956730769230216,
+        "sourceVarianceNote": "Bulb and tassel master composites are narrower relative to their body height than the other three masters. Exact source proportions preserved; no anisotropic correction."
+      }
+    },
+    {
+      "sku": "GBCyl100AnSpTslMtSl",
+      "source": "local-review-archive/family100/GBCyl100AnSpTslMtSl-generated.png",
+      "sourceSha256": "64d7a05e4de1935c8b799de0f73462cea60521b38a2fbaeaf108aa32fd10e4b5",
+      "sourceSize": [
+        1195,
+        1316
+      ],
+      "output": "exports/GBCyl100AnSpTslMtSl-2080x2288.png",
+      "outputSha256": "7c088c6921a37dfe6da31d584be7dabd21cfd5035624386681f121d4fc88532c",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow.",
+        "rawFootY": 1206,
+        "rawShoulderY": 307,
+        "rawBodyCenterX": 785,
+        "scale": 1.7179087875417132,
+        "x": 3.441601779755274,
+        "y": 10.28200222469377,
+        "targetBodyCenterPct": 65,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 67.5,
+        "uncertaintyPx": 6.871635150166853
+      },
+      "sourceMeasuredOutput": {
+        "width": 1195,
+        "height": 1316,
+        "bodyCenterX": 785,
+        "shoulderY": 307,
+        "footY": 1206,
+        "bodyWidthPx": 206,
+        "shoulderSpanPct": 68.313,
+        "footPct": 91.641,
+        "bodyAspect": 4.364,
+        "uncertaintyPx": 4,
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:100-standard",
+        "label": "Cylinder 100 ml",
+        "shoulderPct": 67.5,
+        "bodyAspect": 4.184,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 23.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 537.68,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family100/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/49. GBCyl100AnSpTslMtSl.psd"
+      ],
+      "masterSha256": "6f40a6eae57f796975d65b3049eb15a59bc834a4e59a14243e7b8d93ae79220d",
+      "generationInputHashes": [
+        {
+          "file": "GBCyl100AnSpTslMtSl-sized.png",
+          "sha256": "abbe28d10bd76ae98487ade614f67203f79449088eea1f64c1f686e874d095be"
+        },
+        {
+          "file": "GBCyl100AnSpTslMtSl-source-0.png",
+          "sha256": "f153f4ae5a6de3dda4af88330645ad3b69b3c9a9508a5701d285e8a65e291fee"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "e4eab511c5f7abed3675399ec46e167c44b6409808fbf157a82a8851b48f47cc",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          248,
+          243
+        ],
+        "exactBoneCleared": false
+      },
+      "masterBodyAspect": 4.3578947368421055,
+      "visualStatus": "Agent inspected source fidelity; final export awaits user review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+      "priorHero": {
+        "groupSlug": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+        "websiteSku": "GBCyl100AnSpTslMtSl",
+        "graceSku": "GB-CYL-CLR-100ML-AST-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343678005540",
+        "family": "Cylinder",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl100AnSpTslMtSl.b7030b78feaa.png",
+        "alt": "100 ml Clear Cylinder Vintage Style Bulb Spray Bottle with Tassel",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100AnSpTslMtSl.7c088c6921a3.png",
+      "measuredFinalOutput": {
+        "width": 2080,
+        "height": 2288,
+        "bodyCenterX": 1352,
+        "shoulderY": 538,
+        "footY": 2085,
+        "bodyWidthPx": 356,
+        "shoulderSpanPct": 67.614,
+        "footPct": 91.128,
+        "bodyAspect": 4.346,
+        "uncertaintyPx": 4,
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow."
+      },
+      "geometryQA": {
+        "generatedVsMasterAspectDeviationPct": 0.140096618357477,
+        "sourceVarianceNote": "Bulb and tassel master composites are narrower relative to their body height than the other three masters. Exact source proportions preserved; no anisotropic correction."
+      }
+    },
+    {
+      "sku": "GBCyl100RdcrMtSl",
+      "source": "local-review-archive/family100/GBCyl100RdcrMtSl-generated.png",
+      "sourceSha256": "40267f608df17e9ed274b8d3aa2ffdd4b9b1334cb68a65e62e3de4bebff70626",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl100RdcrMtSl-2080x2288.png",
+      "outputSha256": "e5aec2df54e996ab8541f1c2dc1791211ef7dc9cfa8bbb147e0d8bacb0ff690b",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow.",
+        "rawFootY": 1197,
+        "rawShoulderY": 308,
+        "rawBodyCenterX": 597.5,
+        "scale": 1.7372328458942634,
+        "x": 2.0033745781774996,
+        "y": 2.6122834645666444,
+        "targetBodyCenterPct": 50,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 67.5,
+        "uncertaintyPx": 6.948931383577054
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 597.5,
+        "shoulderY": 308,
+        "footY": 1197,
+        "bodyWidthPx": 213,
+        "shoulderSpanPct": 67.605,
+        "footPct": 91.027,
+        "bodyAspect": 4.174,
+        "uncertaintyPx": 4,
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:100-standard",
+        "label": "Cylinder 100 ml",
+        "shoulderPct": 67.5,
+        "bodyAspect": 4.184,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 23.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 537.68,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family100/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/9. GBCyl100RdcrMtSl.psd"
+      ],
+      "masterSha256": "a5cd550691a63ef6f96218889e281cce0bb5525429879c5ed763d30774d26c04",
+      "generationInputHashes": [
+        {
+          "file": "GBCyl100RdcrMtSl-sized.png",
+          "sha256": "8520cf34cf40a7170e5b023b7e268b06c54b601de2848aa8015be3b4f9a4a723"
+        },
+        {
+          "file": "GBCyl100RdcrMtSl-source-0.png",
+          "sha256": "5570c7e6ebcf6d7ac38f3bb7b35bd6c5b27debaa8856ce403f718264eff3cf7e"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "ccea74454030baea5362abf646837bc2c6292a96b6b8bf07f333671d81542088",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          250,
+          247,
+          243
+        ],
+        "exactBoneCleared": false
+      },
+      "masterBodyAspect": 4.173824130879345,
+      "visualStatus": "Agent inspected source fidelity; final export awaits user review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-100ml-clear-18-415-reducer",
+      "priorHero": {
+        "groupSlug": "cylinder-100ml-clear-18-415-reducer",
+        "websiteSku": "GBCyl100RdcrMtSl",
+        "graceSku": "GB-CYL-CLR-100ML-RDC-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343623577892",
+        "family": "Cylinder",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl100RdcrMtSl.69bb9ee2fea0.png",
+        "alt": "100 ml Clear Cylinder Reducer Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100RdcrMtSl.e5aec2df54e9.png",
+      "measuredFinalOutput": {
+        "width": 2080,
+        "height": 2288,
+        "bodyCenterX": 1040,
+        "shoulderY": 538,
+        "footY": 2083,
+        "bodyWidthPx": 372,
+        "shoulderSpanPct": 67.526,
+        "footPct": 91.04,
+        "bodyAspect": 4.153,
+        "uncertaintyPx": 4,
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow."
+      },
+      "geometryQA": {
+        "generatedVsMasterAspectDeviationPct": 0.0042136207741405585,
+        "sourceVarianceNote": "Bulb and tassel master composites are narrower relative to their body height than the other three masters. Exact source proportions preserved; no anisotropic correction."
+      }
+    },
+    {
+      "sku": "GBCyl100SpryMtGl",
+      "source": "local-review-archive/family100/GBCyl100SpryMtGl-generated.png",
+      "sourceSha256": "5a71bed7d0e259dfe29699c1bad3282ace6ab95f3f041f4318ac2ebecc92f8c1",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/GBCyl100SpryMtGl-2080x2288.png",
+      "outputSha256": "c238fe44a86e9800c4b32291c131052fee11be6b86ba0f165288288b057bd44d",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow.",
+        "rawFootY": 1197,
+        "rawShoulderY": 308,
+        "rawBodyCenterX": 549.5,
+        "scale": 1.7372328458942634,
+        "x": 2.1905511811022507,
+        "y": 2.6122834645666444,
+        "targetBodyCenterPct": 46,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 67.5,
+        "uncertaintyPx": 6.948931383577054
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 549.5,
+        "shoulderY": 308,
+        "footY": 1197,
+        "bodyWidthPx": 213,
+        "shoulderSpanPct": 67.605,
+        "footPct": 91.027,
+        "bodyAspect": 4.174,
+        "uncertaintyPx": 4,
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:100-standard",
+        "label": "Cylinder 100 ml",
+        "shoulderPct": 67.5,
+        "bodyAspect": 4.184,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 23.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 537.68,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family100/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/13. GBCyl100SpryMtGl.psd"
+      ],
+      "masterSha256": "60a4500e5e018569710fe664121518cffeb2ffd196e574959d8c30b983a198fd",
+      "generationInputHashes": [
+        {
+          "file": "GBCyl100SpryMtGl-sized.png",
+          "sha256": "ac4562e6e06fe01cde8a0347bf6ca627f42ae79f938702cd115d9095405f6c3b"
+        },
+        {
+          "file": "GBCyl100SpryMtGl-source-0.png",
+          "sha256": "c21ccd9976f8ea108cd1ef1905fbd9e66ba6365c154b75e3b64e1c5d446ed89a"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "93de79a351e7a937f1ebce72550d6563166cd1ea7316efb7771f8c92657e380b",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          249,
+          245
+        ],
+        "exactBoneCleared": false
+      },
+      "masterBodyAspect": 4.173824130879345,
+      "visualStatus": "Agent inspected source fidelity; final export awaits user review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-100ml-clear-18-415-perfumespray",
+      "priorHero": {
+        "groupSlug": "cylinder-100ml-clear-18-415-perfumespray",
+        "websiteSku": "GBCyl100SpryMtGl",
+        "graceSku": "GB-CYL-CLR-100ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343648743716",
+        "family": "Cylinder",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl100SpryMtGl.d229ea801914.png",
+        "alt": "100 ml Clear Cylinder Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100SpryMtGl.c238fe44a86e.png",
+      "measuredFinalOutput": {
+        "width": 2080,
+        "height": 2288,
+        "bodyCenterX": 957,
+        "shoulderY": 537,
+        "footY": 2082,
+        "bodyWidthPx": 372,
+        "shoulderSpanPct": 67.526,
+        "footPct": 90.997,
+        "bodyAspect": 4.153,
+        "uncertaintyPx": 4,
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow."
+      },
+      "geometryQA": {
+        "generatedVsMasterAspectDeviationPct": 0.0042136207741405585,
+        "sourceVarianceNote": "Bulb and tassel master composites are narrower relative to their body height than the other three masters. Exact source proportions preserved; no anisotropic correction."
+      }
+    },
+    {
+      "sku": "LBCyl100LtnMtGl",
+      "source": "local-review-archive/family100/LBCyl100LtnMtGl-generated.png",
+      "sourceSha256": "fbef1be2244326cc25581b79d26edf56e00e9fa0e0923ddad01135215cd30578",
+      "sourceSize": [
+        1196,
+        1315
+      ],
+      "output": "exports/LBCyl100LtnMtGl-2080x2288.png",
+      "outputSha256": "8ef2159eee21669d005307f3f4964a09321c9bb9519b8d822cf353e8bece2b62",
+      "outputSize": [
+        2080,
+        2288
+      ],
+      "nativeResolution": false,
+      "exportMethod": "One uniform whole-raster affine transform, Sharp SVG rasterization; border-median padding. No component or shadow editing.",
+      "outputAlignment": {
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow.",
+        "rawFootY": 1196,
+        "rawShoulderY": 309,
+        "rawBodyCenterX": 551,
+        "scale": 1.7411499436302142,
+        "x": -2.5736189402481386,
+        "y": -0.335332581736111,
+        "targetBodyCenterPct": 46,
+        "targetFootPercent": 91,
+        "targetShoulderSpanPercent": 67.5,
+        "uncertaintyPx": 6.964599774520857
+      },
+      "sourceMeasuredOutput": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 551,
+        "shoulderY": 309,
+        "footY": 1196,
+        "bodyWidthPx": 212,
+        "shoulderSpanPct": 67.452,
+        "footPct": 90.951,
+        "bodyAspect": 4.184,
+        "uncertaintyPx": 4,
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow."
+      },
+      "lock": {
+        "glassBodyKey": "cylinder:100-standard",
+        "label": "Cylinder 100 ml",
+        "shoulderPct": 67.5,
+        "bodyAspect": 4.184,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 23.5,
+        "landmark": "shoulder"
+      },
+      "shoulderYTargetPx": 537.68,
+      "footYTargetPx": 2082.08,
+      "materialReference": "local-review-archive/family100/reference-clear.jpg",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "masterSource": [
+        "BB-PSD-Files-Master/2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/14. LBCyl100LtnMtGl.psd"
+      ],
+      "masterSha256": "b4dcbcdae45f1f708f8b05fec3edf2fee3ebaa460c7b17a6a20f6812ea48e6f0",
+      "generationInputHashes": [
+        {
+          "file": "LBCyl100LtnMtGl-sized.png",
+          "sha256": "a13bb8fab7823107867cf28318bccd480afcea81d8353a67decc2365eb3ea5cb"
+        },
+        {
+          "file": "LBCyl100LtnMtGl-source-0.png",
+          "sha256": "b8e5c609e8d4e2e5badc8019dd6806e7f785e862fe2cea23c509c1159aa6339e"
+        },
+        {
+          "file": "reference-clear.jpg",
+          "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+        }
+      ],
+      "promptSha256": "41a8bc88ff266466e4c8d4314605f1b445c8180be27d81a87d9c38a72c9d4b43",
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          249,
+          245
+        ],
+        "exactBoneCleared": false
+      },
+      "masterBodyAspect": 4.173824130879345,
+      "visualStatus": "Agent inspected source fidelity; final export awaits user review",
+      "technicalClearance": false,
+      "publicationApproved": false,
+      "generationModel": "gpt-image-2.5-sunburst",
+      "generationQuality": "high",
+      "generationSize": "auto",
+      "groupSlug": "cylinder-100ml-clear-18-415-lotionpump",
+      "priorHero": {
+        "groupSlug": "cylinder-100ml-clear-18-415-lotionpump",
+        "websiteSku": "LBCyl100LtnMtGl",
+        "graceSku": "LB-CYL-CLR-100ML-LPM-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343610339620",
+        "family": "Cylinder",
+        "capacityMl": 100,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/LBCyl100LtnMtGl.dc478e401485.png",
+        "alt": "100 ml Clear Cylinder Lotion Pump Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "servedUrl": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl100LtnMtGl.8ef2159eee21.png",
+      "measuredFinalOutput": {
+        "width": 2080,
+        "height": 2288,
+        "bodyCenterX": 957,
+        "shoulderY": 538,
+        "footY": 2084,
+        "bodyWidthPx": 370,
+        "shoulderSpanPct": 67.57,
+        "footPct": 91.084,
+        "bodyAspect": 4.178,
+        "uncertaintyPx": 4,
+        "method": "Contrast threshold proposal, checked against visible glass shoulder and contact foot; excludes shadow."
+      },
+      "geometryQA": {
+        "generatedVsMasterAspectDeviationPct": 0.24380205781480146,
+        "sourceVarianceNote": "Bulb and tassel master composites are narrower relative to their body height than the other three masters. Exact source proportions preserved; no anisotropic correction."
+      }
     }
   ],
   "counts": {
     "exports": 28,
     "native2080Renders": 0
-  }
+  },
+  "apiCallNote": "Five new authorized 100 mL edits. Earlier 28 exports are preserved without regeneration."
 }

@@ -14,7 +14,7 @@ try {
   page.on('pageerror',e=>report.errors.push(e.message));
   for(const route of ['/catalog','/catalog/cylinder']) {
   const seen=new Set();
-  for(const query of ['family=Cylinder&capacities=9%20ml','family=Cylinder&capacities=28%20ml,50%20ml','family=Cylinder&capacities=9%20ml&roller=plastic','family=Cylinder&capacities=50%20ml&roller=plastic']) {
+  for(const query of ['family=Cylinder&capacities=9%20ml','family=Cylinder&capacities=28%20ml,50%20ml','family=Cylinder&capacities=100%20ml','family=Cylinder&capacities=9%20ml&roller=plastic','family=Cylinder&capacities=50%20ml&roller=plastic']) {
    const response=await page.goto(`${base}${route}?${query}`,{waitUntil:'networkidle2',timeout:90000});
    assert.equal(response.status(),200);
    await page.waitForSelector('img[data-bb-image-audit="catalog-card"]',{timeout:45000});
@@ -37,11 +37,11 @@ try {
    }
    report.views.push({mobile,route,query,cards});
   }
-  assert.equal(seen.size,28,`Expected all 28 heroes at ${mobile?'mobile':'desktop'} viewport`);
+  assert.equal(seen.size,expected.length,`Expected all ${expected.length} heroes at ${mobile?'mobile':'desktop'} viewport`);
   }
   await page.close();
  }
  assert.deepEqual(report.errors,[]);
  fs.writeFileSync(process.env.REVIEW_REPORT||'/tmp/cylinder-staging-browser.json',JSON.stringify(report,null,2)+'\n');
- console.log('PASS: all 28 exact heroes, master catalog and family finder, both viewports, loaded images, SKU links, material filters, 10:11 frames.');
+ console.log(`PASS: all ${expected.length} exact heroes, master catalog and family finder, both viewports, loaded images, SKU links, material filters, 10:11 frames.`);
 } finally {await browser.close();}
