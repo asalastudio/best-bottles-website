@@ -1,3 +1,5 @@
+> Staging is now assigned to https://best-bottles-website-k72ljtqhy-asala.vercel.app at https://best-bottles-website.vercel.app. All 119 hosted exports match approved hashes and 2080 × 2288 dimensions. All 36 public catalog views and six representative PDP links pass at desktop/mobile widths. See staging-deployment.json for the immutable URL, rollback and exact verification records.
+
 # Circle, Round and Empire approved staging release
 
 Jordan approved the complete family sheets on September 22: “Those look totally good,” followed by “Everything looks awesome. Let's roll forward.” The 60 exact files and three reviewed sheet hashes are frozen in complete-family-approval.json. The existing 59 Cylinder exports are unchanged.
@@ -23,3 +25,18 @@ Rollback: the pre-release alias target was verified as https://best-bottles-webs
 418 focused tests pass, including exact approved bytes, canvas dimensions, unchanged Cylinder behavior, filtered SKU identity, Shopify precedence and original production registry guards. TypeScript passes. The local catalog audit passes all 60 exact heroes across 36 filtered views: both catalog routes, desktop and mobile, decoded images, SKU links, plastic-roller selection, identity framing and no page errors. Deployment and public-byte results are recorded separately as they complete.
 
 The two Empire white lotion-pump images retain their existing clear overcaps. No component or cap state was changed during reuse. Older pending labels in preserved review packets are historical; complete-family-approval.json is the current visual approval. Visual acceptance does not imply pixel-identical generated geometry or a new native resolution for reused source files.
+
+## Verified deployment route for later families
+
+Set both preview variables for the exact family branch **before** pushing. Git-sourced deployments correctly include the tracked asset-ledger inputs. This session's CLI upload omitted three existing imported JSON files despite their presence locally; use the Git-sourced route until that packaging behavior is separately reconciled. A deployment created before a branch variable is saved retains its earlier configuration. A green build alone therefore does not prove hero activation: inspect actual catalog HTML/images before assigning the staging alias.
+
+For this branch, the saved preview-only values are:
+
+```text
+NEXT_PUBLIC_CATALOG_HERO_PILOT=families-2026-09-22
+BB_CONVEX_PREVIEW_DEPLOY=false
+```
+
+The final local PDP link check also passes the Circle 15 mL plastic roller, Round 78 mL frosted bulb sprayer and Empire 50 mL dropper at desktop/mobile widths. Each destination displays the requested exact SKU. The first attempt timed out waiting on initial development-route compilation/network idleness; the warm-route check waits for DOM readiness and the actual SKU instead.
+
+Backend recount after staging integration is unchanged from the completed-image recount: all 2,286 plate measurements succeeded, and family plate/kit/production-hero counts match. The frontend pilot is recorded separately and does not manufacture backend completion.

@@ -1,4 +1,4 @@
-> Current approval: Jordan approved all 60 displayed heroes: “Those look totally good.” Exact bytes, reviewed sheets and body targets are locked in `complete-family-approval.json`. Earlier pending-review statements below are historical. Staging integration is in progress; production publication is separate.
+> Current approval: Jordan approved all 60 displayed heroes: “Those look totally good.” Exact bytes, reviewed sheets and body targets are locked in `complete-family-approval.json`. Earlier pending-review statements below are historical. Staging is deployed and verified; see STAGING-RELEASE.md and staging-deployment.json. Production publication is separate.
 
 > Latest checkpoint: [39-image completion batch](CRE39-COMPLETION.md). All 39 existing images are complete, including both tassel fixes; all 60 family images are ready for review. The sizing proposal below is historical.
 

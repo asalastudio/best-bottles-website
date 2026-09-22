@@ -1,4 +1,4 @@
-> Current approval: Jordan approved all 60 displayed heroes: “Those look totally good.” Exact bytes, reviewed sheets and body targets are locked in `complete-family-approval.json`. Earlier pending-review statements below are historical. Staging integration is in progress; production publication is separate.
+> Current approval: Jordan approved all 60 displayed heroes: “Those look totally good.” Exact bytes, reviewed sheets and body targets are locked in `complete-family-approval.json`. Earlier pending-review statements below are historical. Staging is deployed and verified; see STAGING-RELEASE.md and staging-deployment.json. Production publication is separate.
 
 # Completed 39-image alignment and tassel batch
 
