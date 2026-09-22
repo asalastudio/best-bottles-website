@@ -1,11 +1,11 @@
 {
-  "status": "sizing-approved-material-render-pending",
+  "status": "user-directed-28-percent-adjustment-proof-ready",
   "canvas": {
     "width": 2080,
     "height": 2288
   },
   "baselinePct": 91,
-  "interpretation": "User correction: 3.3 mL must look smaller than 4 mL, and 4 mL smaller than 5 mL. Prior 33.5%/34.5% targets failed this visual ordering. Revised 25%/32.5% targets preserve every source proportion while making both assembly height and body width increase across the three sizes. These are compressed ecommerce display scales, not a literal millimeter scale.",
+  "interpretation": "3.3 mL shoulder span increased from 25% to 28% at user request. The 4 mL remains 32.5% and 5 mL remains 36.5%. Whole-assembly heights still increase across all three; original body proportions remain unchanged. Body widths need not increase across distinct physical shapes.",
   "scopeDecision": "Both sample sizes belong to Cylinder.",
   "presentationDecision": "Use exact exposed black sprayer and detached clear overcap matching the provided storefront screenshot.",
   "identityCaveat": "The older master-truth CSV stores 3 mL and cylinder-3ml-clear-12mm-finemist. Its item title, current hero registry and user screenshot identify the product as 3.3 mL. Current website/grace SKU identity is retained; no backend record is renamed.",
@@ -43,7 +43,7 @@
         6000,
         4000
       ],
-      "shoulderSpanPct": 25,
+      "shoulderSpanPct": 28,
       "landmarks": {
         "bodyCenterX": 2451,
         "shoulderY": 1937,
@@ -55,17 +55,17 @@
       },
       "sourceBodyAspect": 2.134765625,
       "transform": {
-        "scale": 0.5233302836230558,
-        "x": -242.68252516010966,
-        "y": 496.38924062214096
+        "scale": 0.5861299176578225,
+        "x": -396.6044281793229,
+        "y": 306.10634949679775
       },
       "proofFile": "GBSpry3mlClBlk-size-proof.png",
-      "proofSha256": "49775ba33d10473600e75ddb840495593d316bd4fa60faa22cb0c9c0470f8dd4",
+      "proofSha256": "c5247f96837c243e2a81f3c9ca8caf7620e111ad7a21d917b704a60a666254e7",
       "visualProgression": {
         "sourceAssemblyTopY": 1003,
-        "displayAssemblyHeightPx": 1060.79,
-        "displayBodyWidthPx": 267.95,
-        "displayShoulderSpanPx": 572,
+        "displayAssemblyHeightPx": 1188.09,
+        "displayBodyWidthPx": 300.1,
+        "displayShoulderSpanPx": 640.64,
         "glassFootY": 2082.08,
         "method": "Original master outline measurements under a uniform whole-assembly transform"
       }
@@ -186,11 +186,23 @@
     "4ml": 34.5
   },
   "visualProgressionChecked": true,
-  "sizingApproval": {
-    "scope": "relative sizing only",
-    "userFeedback": "That’s better",
+  "approvalHistory": [
+    {
+      "scope": "relative sizing only",
+      "userFeedback": "That’s better",
+      "date": "2026-09-22",
+      "proofSha256": "22165464d78eb00fc2d9ff3f47bb3675b15849752e4ec718563b18df8007252e",
+      "excludes": "Material generation, final output approval, publication"
+    }
+  ],
+  "sizingInstruction": {
+    "scope": "3.3 mL relative sizing only",
+    "userFeedback": "The 3.3 is too small compared to 4ml need to increase it by 3%",
+    "interpretation": "Increase shoulder span by 3 percentage points, from 25% to 28%. Apply one uniform transform to the whole assembly.",
     "date": "2026-09-22",
-    "proofSha256": "22165464d78eb00fc2d9ff3f47bb3675b15849752e4ec718563b18df8007252e",
+    "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
+    "proofVisualReview": "pending",
     "excludes": "Material generation, final output approval, publication"
-  }
+  },
+  "visualProgressionRule": "Whole-assembly height increases from 3.3 to 4 to 5 mL; no body stretching."
 }

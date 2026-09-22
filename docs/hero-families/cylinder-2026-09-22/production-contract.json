@@ -1,5 +1,5 @@
 {
-  "version": "cylinder-production-canvas-2026-09-22-v3",
+  "version": "cylinder-production-canvas-2026-09-22-v4",
   "scopeStatus": "49 glass hero groups from 3.3 through 100 mL; 3.3 mL and 4 mL explicitly included by Jordan on September 22",
   "canvas": {
     "width": 2080,
@@ -200,12 +200,12 @@
       "lock": {
         "glassBodyKey": "cylinder:3.3-sample",
         "label": "Cylinder 3.3 ml sample",
-        "shoulderPct": 25,
+        "shoulderPct": 28,
         "bodyAspect": 2.134765625,
         "status": "locked",
-        "lockVersion": "small-cylinder-size-approved-2026-09-22",
+        "lockVersion": "small-cylinder-user-adjustment-2026-09-22-v3",
         "baselinePct": 91,
-        "shoulderYFromTopPct": 66,
+        "shoulderYFromTopPct": 63,
         "landmark": "closure-seat"
       },
       "skuMembership": [
@@ -220,17 +220,26 @@
       "presentation": "Black spray pump exposed; original clear overcap beside bottle",
       "visualProgression": {
         "sourceAssemblyTopY": 1003,
-        "displayAssemblyHeightPx": 1060.79,
-        "displayBodyWidthPx": 267.95,
-        "displayShoulderSpanPx": 572,
+        "displayAssemblyHeightPx": 1188.09,
+        "displayBodyWidthPx": 300.1,
+        "displayShoulderSpanPx": 640.64,
         "glassFootY": 2082.08,
         "method": "Original master outline measurements under a uniform whole-assembly transform"
       },
-      "sizingApproval": {
+      "previousSizingApproval": {
         "scope": "relative sizing only",
         "userFeedback": "That’s better",
         "date": "2026-09-22",
         "proofSha256": "22165464d78eb00fc2d9ff3f47bb3675b15849752e4ec718563b18df8007252e",
+        "excludes": "Material generation, final output approval, publication"
+      },
+      "sizingInstruction": {
+        "scope": "3.3 mL relative sizing only",
+        "userFeedback": "The 3.3 is too small compared to 4ml need to increase it by 3%",
+        "interpretation": "Increase shoulder span by 3 percentage points, from 25% to 28%. Apply one uniform transform to the whole assembly.",
+        "date": "2026-09-22",
+        "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
+        "proofVisualReview": "pending",
         "excludes": "Material generation, final output approval, publication"
       }
     },

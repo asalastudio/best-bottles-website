@@ -8,8 +8,8 @@
       "sku": "GBSpry3mlClBlk",
       "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
       "capacityMl": 3.3,
-      "action": "material-reference-render-with-approved-sizing",
-      "shoulderSpanPct": 25
+      "action": "material-reference-render-with-user-directed-sizing",
+      "shoulderSpanPct": 28
     },
     {
       "sku": "GBSpry4mlClBlk",
