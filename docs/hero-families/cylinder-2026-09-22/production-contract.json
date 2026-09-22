@@ -1,5 +1,5 @@
 {
-  "version": "cylinder-production-canvas-2026-09-22-v2",
+  "version": "cylinder-production-canvas-2026-09-22-v3",
   "scopeStatus": "49 glass hero groups from 3.3 through 100 mL; 3.3 mL and 4 mL explicitly included by Jordan on September 22",
   "canvas": {
     "width": 2080,
@@ -200,12 +200,12 @@
       "lock": {
         "glassBodyKey": "cylinder:3.3-sample",
         "label": "Cylinder 3.3 ml sample",
-        "shoulderPct": 33.5,
+        "shoulderPct": 25,
         "bodyAspect": 2.134765625,
-        "status": "proposed-sizing-review",
-        "lockVersion": "small-cylinder-proposal-2026-09-22",
+        "status": "locked",
+        "lockVersion": "small-cylinder-size-approved-2026-09-22",
         "baselinePct": 91,
-        "shoulderYFromTopPct": 57.5,
+        "shoulderYFromTopPct": 66,
         "landmark": "closure-seat"
       },
       "skuMembership": [
@@ -217,18 +217,33 @@
       "geometrySource": "BB-PSD-Files-Master/17. Additional Bottles/GBSpry3mlClBlk.psd",
       "geometrySourceSha256": "f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06",
       "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
-      "presentation": "Black spray pump exposed; original clear overcap beside bottle"
+      "presentation": "Black spray pump exposed; original clear overcap beside bottle",
+      "visualProgression": {
+        "sourceAssemblyTopY": 1003,
+        "displayAssemblyHeightPx": 1060.79,
+        "displayBodyWidthPx": 267.95,
+        "displayShoulderSpanPx": 572,
+        "glassFootY": 2082.08,
+        "method": "Original master outline measurements under a uniform whole-assembly transform"
+      },
+      "sizingApproval": {
+        "scope": "relative sizing only",
+        "userFeedback": "That’s better",
+        "date": "2026-09-22",
+        "proofSha256": "22165464d78eb00fc2d9ff3f47bb3675b15849752e4ec718563b18df8007252e",
+        "excludes": "Material generation, final output approval, publication"
+      }
     },
     "cylinder:4-sample": {
       "lock": {
         "glassBodyKey": "cylinder:4-sample",
         "label": "Cylinder 4 ml sample",
-        "shoulderPct": 34.5,
+        "shoulderPct": 32.5,
         "bodyAspect": 2.7137014314928427,
-        "status": "proposed-sizing-review",
-        "lockVersion": "small-cylinder-proposal-2026-09-22",
+        "status": "locked",
+        "lockVersion": "small-cylinder-size-approved-2026-09-22",
         "baselinePct": 91,
-        "shoulderYFromTopPct": 56.5,
+        "shoulderYFromTopPct": 58.5,
         "landmark": "closure-seat"
       },
       "skuMembership": [
@@ -240,7 +255,22 @@
       "geometrySource": "BB-PSD-Files-Master/17. Additional Bottles/GBSpry4mlClBlk..psd",
       "geometrySourceSha256": "87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626",
       "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
-      "presentation": "Black spray pump exposed; original clear overcap beside bottle"
+      "presentation": "Black spray pump exposed; original clear overcap beside bottle",
+      "visualProgression": {
+        "sourceAssemblyTopY": 1025,
+        "displayAssemblyHeightPx": 1268.66,
+        "displayBodyWidthPx": 274.02,
+        "displayShoulderSpanPx": 743.6,
+        "glassFootY": 2082.08,
+        "method": "Original master outline measurements under a uniform whole-assembly transform"
+      },
+      "sizingApproval": {
+        "scope": "relative sizing only",
+        "userFeedback": "That’s better",
+        "date": "2026-09-22",
+        "proofSha256": "22165464d78eb00fc2d9ff3f47bb3675b15849752e4ec718563b18df8007252e",
+        "excludes": "Material generation, final output approval, publication"
+      }
     }
   },
   "materialReferences": "Hashed per output in manifest.json. References control optical material only; new clear sample bottles use the same approved clear reference.",
