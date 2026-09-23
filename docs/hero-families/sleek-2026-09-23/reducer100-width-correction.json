@@ -1,0 +1,182 @@
+{
+  "sku": "GBSlk100RdcrShnGl",
+  "previous": {
+    "sku": "GBSlk100RdcrShnGl",
+    "family": "Sleek",
+    "capacityMl": 100,
+    "material": "clear",
+    "catalog": {
+      "groupSlug": "sleek-100ml-clear-18-415-reducer",
+      "websiteSku": "GBSlk100RdcrShnGl",
+      "graceSku": "GB-SLK-CLR-100ML-RDC-SGLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343648317732",
+      "family": "Sleek",
+      "capacityMl": 100,
+      "bottleColor": "Clear",
+      "url": "/images/catalog/bone-review/GBSlk100RdcrShnGl.8ae83fd8ce2b.png",
+      "alt": "100 ml Clear Sleek Reducer Bottle — Empty · capped",
+      "width": 1560,
+      "height": 1716,
+      "presentation": "Empty · capped",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      },
+      "sha256": "8ae83fd8ce2becbe49518dd78c4fd405291c344e45000b3167b2f2e8fb15fd95",
+      "decodedWidth": 1560,
+      "decodedHeight": 1716,
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/1. GBSlk100RdcrShnGl.psd",
+      "catalogIdentityFound": true,
+      "catalogGroupMatches": true,
+      "plateState": "plated-no-capoff-by-design",
+      "kitState": "live",
+      "previousLockHashMatches": null,
+      "historicalShoulderPercent": null,
+      "historicalBasePercent": null,
+      "historicalException": false,
+      "assessment": "pending visual salvage review",
+      "finalApproval": false,
+      "thumbnail": "GBSlk100RdcrShnGl.jpg"
+    },
+    "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBSlk100RdcrShnGl.8ae83fd8ce2b.png",
+    "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/1. GBSlk100RdcrShnGl.psd",
+    "masterSha256": "b5ec7d2689f123bd80cde8872e5e5bef9ae6bbda7d0d7dc516b4ecc7ee6b41a2",
+    "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/inputs/GBSlk100RdcrShnGl-master.png",
+    "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/inputs/reference-clear.jpg",
+    "scaleReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/shoulder-lock-review-2026-09-23/GBSlk100SpryMtGl-scale-preview.png",
+    "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/GBSlk100RdcrShnGl-prompt.txt",
+    "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/GBSlk100RdcrShnGl-native-2080x2288.png",
+    "target": {
+      "spanPct": 60.5,
+      "upperY": 698,
+      "baseY": 2082,
+      "landmark": "glass shoulder"
+    },
+    "catalogPublicationHold": null,
+    "imageInputs": [
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBSlk100RdcrShnGl.8ae83fd8ce2b.png",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/inputs/GBSlk100RdcrShnGl-master.png",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/inputs/reference-clear.jpg",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/shoulder-lock-review-2026-09-23/GBSlk100SpryMtGl-scale-preview.png"
+    ],
+    "inputSha256": {
+      "currentSource": "8ae83fd8ce2becbe49518dd78c4fd405291c344e45000b3167b2f2e8fb15fd95",
+      "masterComposite": "6c9c88fedc7349fe8df8165664151388db409634b5cfa5f8a32cfafbb72a366f",
+      "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "scaleReference": "125052d8945db02319862a9696a999cfadc976bb8065500f419bffa0882f83d3",
+      "promptFile": "1fe1860031ac4489237a73b38836b6b0a82b037ba918200e9d89229c31b1370a"
+    },
+    "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/aligned/GBSlk100RdcrShnGl-2080x2288.png",
+    "finalSha256": "eadc011f1a693ea2b37ea25221e254ffdee22ea6a917adf30279786286bf7c99",
+    "sourceRenderSha256": "a072229c62ea28269add678602f1c8d62b1a057edd5ccd8264321a6129807864",
+    "alignment": {
+      "sourceLandmarks": {
+        "cx": 179,
+        "upper": 111,
+        "base": 360
+      },
+      "coordinateWidth": 360,
+      "coordinateHeight": 396,
+      "sourceMeasurementUncertaintyPx": 2,
+      "uniformScale": 0.9620018535681186,
+      "left": 45,
+      "top": 81,
+      "bodyCenterXPct": 50,
+      "edgeHits": 0,
+      "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+    },
+    "status": "aligned-review-candidate-not-published"
+  },
+  "selected": {
+    "sku": "GBSlk100RdcrShnGl",
+    "family": "Sleek",
+    "capacityMl": 100,
+    "material": "clear",
+    "catalog": {
+      "groupSlug": "sleek-100ml-clear-18-415-reducer",
+      "websiteSku": "GBSlk100RdcrShnGl",
+      "graceSku": "GB-SLK-CLR-100ML-RDC-SGLD",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343648317732",
+      "family": "Sleek",
+      "capacityMl": 100,
+      "bottleColor": "Clear",
+      "url": "/images/catalog/bone-review/GBSlk100RdcrShnGl.8ae83fd8ce2b.png",
+      "alt": "100 ml Clear Sleek Reducer Bottle — Empty · capped",
+      "width": 1560,
+      "height": 1716,
+      "presentation": "Empty · capped",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      },
+      "sha256": "8ae83fd8ce2becbe49518dd78c4fd405291c344e45000b3167b2f2e8fb15fd95",
+      "decodedWidth": 1560,
+      "decodedHeight": 1716,
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/1. GBSlk100RdcrShnGl.psd",
+      "catalogIdentityFound": true,
+      "catalogGroupMatches": true,
+      "plateState": "plated-no-capoff-by-design",
+      "kitState": "live",
+      "previousLockHashMatches": null,
+      "historicalShoulderPercent": null,
+      "historicalBasePercent": null,
+      "historicalException": false,
+      "assessment": "pending visual salvage review",
+      "finalApproval": false,
+      "thumbnail": "GBSlk100RdcrShnGl.jpg"
+    },
+    "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBSlk100RdcrShnGl.8ae83fd8ce2b.png",
+    "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/1. GBSlk100RdcrShnGl.psd",
+    "masterSha256": "b5ec7d2689f123bd80cde8872e5e5bef9ae6bbda7d0d7dc516b4ecc7ee6b41a2",
+    "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/inputs/GBSlk100RdcrShnGl-master.png",
+    "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/inputs/reference-clear.jpg",
+    "scaleReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/shoulder-lock-review-2026-09-23/GBSlk100SpryMtGl-scale-preview.png",
+    "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/corrections/reducer100-v2/prompt.txt",
+    "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/corrections/reducer100-v2/GBSlk100RdcrShnGl-native-2080x2288.png",
+    "target": {
+      "spanPct": 60.5,
+      "upperY": 698,
+      "baseY": 2082,
+      "landmark": "glass shoulder"
+    },
+    "catalogPublicationHold": null,
+    "imageInputs": [
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/inputs/GBSlk100RdcrShnGl-master.png",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/inputs/reference-clear.jpg",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/shoulder-lock-review-2026-09-23/GBSlk100SpryMtGl-scale-preview.png"
+    ],
+    "inputSha256": {
+      "masterComposite": "6c9c88fedc7349fe8df8165664151388db409634b5cfa5f8a32cfafbb72a366f",
+      "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "promptFile": "11cf67c1305d9de25cdd4fc83cd6e6eda07d74a05853122ded4698a292eacf30",
+      "scaleGuide": "125052d8945db02319862a9696a999cfadc976bb8065500f419bffa0882f83d3"
+    },
+    "scaleGuide": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/shoulder-lock-review-2026-09-23/GBSlk100SpryMtGl-scale-preview.png",
+    "correctionReason": "User rejected original body width. Exact PSD is primary geometry authority; preserve original v1 and other 20 finals.",
+    "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/sleek-2026-09-23/corrections/reducer100-v2/GBSlk100RdcrShnGl-corrected-2080x2288.png",
+    "finalSha256": "f46fdca554a106e53956740a00ed0d6f217a7886230da9f37347a9b92134ab1f",
+    "sourceRenderSha256": "a20cfb5cae0a3942ef5f4b616d27a3eea4b335fc453317e483f2a68666ed217d",
+    "alignment": {
+      "sourceLandmarks": {
+        "cx": 1040,
+        "upper": 492,
+        "base": 2108,
+        "method": "Visual native-image glass shoulder and actual foot, approximately +/-6 pixels; shoulder excludes attached reducer cap."
+      },
+      "coordinateWidth": 2080,
+      "coordinateHeight": 2288,
+      "sourceMeasurementUncertaintyPx": 6,
+      "uniformScale": 0.8564356435643564,
+      "left": 149,
+      "top": 277,
+      "bodyCenterXPct": 50,
+      "edgeHits": 0,
+      "method": "Whole-assembly uniform resampling and translation; no width-only resizing."
+    },
+    "status": "width-corrected-review-candidate-not-published"
+  },
+  "unchangedSiblingHashesVerified": 20,
+  "published": false
+}

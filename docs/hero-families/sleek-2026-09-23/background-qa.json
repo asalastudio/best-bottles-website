@@ -1,0 +1,1770 @@
+{
+  "count": 21,
+  "expectedTotal": 21,
+  "rows": [
+    {
+      "sku": "GBSleek5Gl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "3263510ead57edf9bf9dd28d2edbfa98f78247b11d4bf013a56b89daeae1a2e9",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSleek5MtlRollGlMatt",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "e9cea873008bf85026ee7319940c788f411f4c279370f82833da207c45064046",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "e4fb3f2e58be916efb37a24313e47bf5dfcae2da23843bfb378cd3350f079b8c",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSleek8Gl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "c146b54ea2ac65e155a3580f7c302589b9a0a27f012361f20a9d052a4b6295f3",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSleek8MtlRollGlMatt",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "9f29d4795f7af2b82dbf3726bb960dfac74a159fc82cad6ca00fffb9be387f1c",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "60c365466266a099805f2e134ffd731f928df4c9f7fbab9a5b4eecb7a1866ed2",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            246,
+            244,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            246,
+            244,
+            240
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk30AnSpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "95ca224380d6ce9b57392dd72432deb25081642ce9978a5a6921f5de9dfb3dea",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk30DrpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "ef34e39e907b369032b1fdab98a43e5a9d221234fe71137685f391eead6488a9",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk30RdcrShnGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "d577a1e5373bdff8537931c6599e5885503af32697d3c4f43251e58f062ce6d8",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk30SpryMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "4bbaa5fcf6e1024916cc92d881d4783c98bb7317d927220d1f9901c1ed596424",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            246,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            246,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "LBSlk30LtnMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "4e7f63d5aa6e5638d5a68d2f982431a3cbd65fc779f4a23a93b86a7671628fad",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk50AnSpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "0df795a44844f2d3a851a9e513401b63599a393ae158e8a83898dcfb40d8769f",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk50AnSpTslIvyGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "261dcc49adb3e9662a8b4558521e2ccebbb1f29c6ba671d0c8f23fcc5d67afb6",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk50RdcrShnGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "0e3373c867990660084f2eccdc61dbc74a6c1287987864c0ca68c0864fe69000",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk50SpryMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "b28e5855217c51330e2c747dab31463bc24f4a5e0627e30146e8086a4ad88830",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "LBSlk50LtnMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "8cdeee69fc92404e8daf719dc5579de9ea7e24b3892775432de11a8d8ea2e57c",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk100AnSpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "fcb38308d06e2f158ba5a8bf21b49780b4052acdd575d7fb3fad12aa74638214",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk100AnSpTslIvyGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "39fd0161f75553d88c4d70cdad394d2b5390649997c50dd795a2b8845fe86593",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk100RdcrShnGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "f46fdca554a106e53956740a00ed0d6f217a7886230da9f37347a9b92134ab1f",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBSlk100SpryMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "e22c297f7c54e6c25b63e3f2a9c594c4177f1caafd6b3084319aba373fb67cc9",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "LBSlk100LtnMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "cdcdeb3409a370395c7e48f0ab352a624e735aced2793c0a3043328af0188ebb",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    }
+  ]
+}
