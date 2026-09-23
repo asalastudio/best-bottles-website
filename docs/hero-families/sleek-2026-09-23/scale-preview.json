@@ -1,0 +1,126 @@
+{
+  "family": "Sleek",
+  "rows": [
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "capacityMl": 5,
+      "spanPct": 33,
+      "upperYPercent": 58,
+      "baselinePct": 91,
+      "landmark": "glass shoulder",
+      "sourceSha256": "54c31977c243632658734de13532d5368ec18782109bbb725132c90314fdff70",
+      "sourceUrl": "/images/catalog/bone-review/GBSleek5SpryGlMatt.54c31977c243.png",
+      "sourceLandmarks": {
+        "cx": 154,
+        "shoulder": 228,
+        "base": 358,
+        "coordinateWidth": 360,
+        "coordinateHeight": 396
+      },
+      "transform": {
+        "scale": 1.3403076923076922,
+        "x": 20.768000000000256,
+        "y": 2.8159999999998035
+      },
+      "preview": "output/shoulder-lock-review-2026-09-23/GBSleek5SpryGlMatt-scale-preview.png",
+      "previewSha256": "253b2a522b31a0470b0976854e30575450a28442602c7905bd67e8a5608fa8e6"
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "capacityMl": 8,
+      "spanPct": 43,
+      "upperYPercent": 48,
+      "baselinePct": 91,
+      "landmark": "glass shoulder",
+      "sourceSha256": "8e5aa43acc5884300cdd06b7e39b9d5efbb03a25dcbf98ddb7f68cc66ab88395",
+      "sourceUrl": "/images/catalog/bone-review/GBSleek8SpryGlMatt.8e5aa43acc58.png",
+      "sourceLandmarks": {
+        "cx": 150,
+        "shoulder": 191,
+        "base": 358,
+        "coordinateWidth": 360,
+        "coordinateHeight": 396
+      },
+      "transform": {
+        "scale": 1.3595209580838326,
+        "x": 31.511377245508925,
+        "y": -26.99017964071936
+      },
+      "preview": "output/shoulder-lock-review-2026-09-23/GBSleek8SpryGlMatt-scale-preview.png",
+      "previewSha256": "2b698ad54de3237526cf82cbefe45091dd1da21c9d5b33221fbbd4a00f10e85d"
+    },
+    {
+      "sku": "GBSlk30SpryMtGl",
+      "capacityMl": 30,
+      "spanPct": 47,
+      "upperYPercent": 44,
+      "baselinePct": 91,
+      "landmark": "glass shoulder",
+      "sourceSha256": "daa34888af73fc66a0abfbbb7408a194d64a4916bf63f34af049f771550b0846",
+      "sourceUrl": "/images/catalog/bone-review/GBSlk30SpryMtGl.daa34888af73.png",
+      "sourceLandmarks": {
+        "cx": 160,
+        "shoulder": 171,
+        "base": 358,
+        "coordinateWidth": 360,
+        "coordinateHeight": 396
+      },
+      "transform": {
+        "scale": 1.3270588235294118,
+        "x": -4.8941176470586925,
+        "y": 23.369411764705546
+      },
+      "preview": "output/shoulder-lock-review-2026-09-23/GBSlk30SpryMtGl-scale-preview.png",
+      "previewSha256": "507f37b20e742f1fc314073153a97015b9edd70a7710a87e6d68518518f77918"
+    },
+    {
+      "sku": "GBSlk50SpryMtGl",
+      "capacityMl": 50,
+      "spanPct": 56,
+      "upperYPercent": 35,
+      "baselinePct": 91,
+      "landmark": "glass shoulder",
+      "sourceSha256": "00aa4a4d8030cd5cbd7304b39a962de692fdce323568d6f6347b832db62fd543",
+      "sourceUrl": "/images/catalog/bone-review/GBSlk50SpryMtGl.00aa4a4d8030.png",
+      "sourceLandmarks": {
+        "cx": 160,
+        "shoulder": 139,
+        "base": 358,
+        "coordinateWidth": 360,
+        "coordinateHeight": 396
+      },
+      "transform": {
+        "scale": 1.35013698630137,
+        "x": -20.89497716894971,
+        "y": -12.432511415525369
+      },
+      "preview": "output/shoulder-lock-review-2026-09-23/GBSlk50SpryMtGl-scale-preview.png",
+      "previewSha256": "fa1d72a89d2a7b40ca57dfdcfa79bd48f873d04751b8472aeb0224a916029d31"
+    },
+    {
+      "sku": "GBSlk100SpryMtGl",
+      "capacityMl": 100,
+      "spanPct": 60.5,
+      "upperYPercent": 30.5,
+      "baselinePct": 91,
+      "landmark": "glass shoulder",
+      "sourceSha256": "d49491c9200b7c1471620a802a94662069a6a137692a990b697a05985044b23e",
+      "sourceUrl": "/images/catalog/bone-review/GBSlk100SpryMtGl.d49491c9200b.png",
+      "sourceLandmarks": {
+        "cx": 167,
+        "shoulder": 121,
+        "base": 357,
+        "coordinateWidth": 360,
+        "coordinateHeight": 396
+      },
+      "transform": {
+        "scale": 1.3535593220338984,
+        "x": -64.32576271186451,
+        "y": -11.876271186441045
+      },
+      "preview": "output/shoulder-lock-review-2026-09-23/GBSlk100SpryMtGl-scale-preview.png",
+      "previewSha256": "125052d8945db02319862a9696a999cfadc976bb8065500f419bffa0882f83d3"
+    }
+  ],
+  "sheet": "output/shoulder-lock-review-2026-09-23/sleek-shoulder-locks.png"
+}

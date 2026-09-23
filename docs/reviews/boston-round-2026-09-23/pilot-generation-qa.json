@@ -1,0 +1,291 @@
+{
+  "status": "first-three-rendered-visual-review-complete-awaiting-user-review-and-final-calibration",
+  "rows": [
+    {
+      "sku": "GBBstnAmb15mlBlkCapSht",
+      "sha256": "726582907bca6a85fe712c0e751eb04fbc655510ba015ed63f1b621e2302c905",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "target": {
+        "shoulderPct": 42,
+        "baselinePct": 91,
+        "bodyAspect": 1.947,
+        "bodyCenterXPct": 44,
+        "basis": "Recorded September 20 Boston-specific lock, not capacity-ratio scaling"
+      },
+      "backgroundPatches": [
+        {
+          "region": [
+            960,
+            32,
+            1120,
+            112
+          ],
+          "medianRGB": [
+            245,
+            243,
+            239
+          ],
+          "p95MaxChannelOffset": 1,
+          "exactBonePercent": 30.7890625
+        },
+        {
+          "region": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "medianRGB": [
+            245,
+            243,
+            239
+          ],
+          "p95MaxChannelOffset": 1,
+          "exactBonePercent": 36.19140625
+        },
+        {
+          "region": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "medianRGB": [
+            245,
+            243,
+            239
+          ],
+          "p95MaxChannelOffset": 1,
+          "exactBonePercent": 33.42578125
+        },
+        {
+          "region": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "medianRGB": [
+            245,
+            243,
+            239
+          ],
+          "p95MaxChannelOffset": 1,
+          "exactBonePercent": 31.521875
+        },
+        {
+          "region": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "medianRGB": [
+            245,
+            243,
+            239
+          ],
+          "p95MaxChannelOffset": 1,
+          "exactBonePercent": 33.121875
+        }
+      ],
+      "status": "generated-needs-visual-and-landmark-review"
+    },
+    {
+      "sku": "GBBstn1ozBlkCapSht",
+      "sha256": "cc2f3b5a296606d612c3a61e43fb3655419cb395fc8919fe6dfcb4c147d79793",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "target": {
+        "shoulderPct": 45,
+        "baselinePct": 91,
+        "bodyAspect": 1.727,
+        "bodyCenterXPct": 44,
+        "basis": "Recorded September 20 Boston-specific lock, not capacity-ratio scaling"
+      },
+      "backgroundPatches": [
+        {
+          "region": [
+            960,
+            32,
+            1120,
+            112
+          ],
+          "medianRGB": [
+            245,
+            243,
+            239
+          ],
+          "p95MaxChannelOffset": 1,
+          "exactBonePercent": 34.5859375
+        },
+        {
+          "region": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "medianRGB": [
+            245,
+            243,
+            239
+          ],
+          "p95MaxChannelOffset": 1,
+          "exactBonePercent": 31.921875
+        },
+        {
+          "region": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "medianRGB": [
+            245,
+            243,
+            239
+          ],
+          "p95MaxChannelOffset": 1,
+          "exactBonePercent": 33.5234375
+        },
+        {
+          "region": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "medianRGB": [
+            245,
+            243,
+            239
+          ],
+          "p95MaxChannelOffset": 1,
+          "exactBonePercent": 31.9875
+        },
+        {
+          "region": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "medianRGB": [
+            245,
+            243,
+            239
+          ],
+          "p95MaxChannelOffset": 1,
+          "exactBonePercent": 33.603125
+        }
+      ],
+      "status": "generated-needs-visual-and-landmark-review"
+    },
+    {
+      "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "sha256": "22817aabc2ad91afa7db509bcb99e660530a0bcbd716dff3a8133942dbac8e86",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "target": {
+        "shoulderPct": 52,
+        "baselinePct": 91,
+        "bodyAspect": 1.817,
+        "bodyCenterXPct": 50,
+        "basis": "Recorded September 20 Boston-specific lock, not capacity-ratio scaling"
+      },
+      "backgroundPatches": [
+        {
+          "region": [
+            960,
+            32,
+            1120,
+            112
+          ],
+          "medianRGB": [
+            245,
+            242,
+            237
+          ],
+          "p95MaxChannelOffset": 3,
+          "exactBonePercent": 0.171875
+        },
+        {
+          "region": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "medianRGB": [
+            245,
+            242,
+            238
+          ],
+          "p95MaxChannelOffset": 2,
+          "exactBonePercent": 0.33203125
+        },
+        {
+          "region": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "medianRGB": [
+            245,
+            242,
+            238
+          ],
+          "p95MaxChannelOffset": 2,
+          "exactBonePercent": 0.13671875
+        },
+        {
+          "region": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "medianRGB": [
+            245,
+            242,
+            238
+          ],
+          "p95MaxChannelOffset": 2,
+          "exactBonePercent": 0.6375
+        },
+        {
+          "region": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "medianRGB": [
+            245,
+            242,
+            238
+          ],
+          "p95MaxChannelOffset": 2,
+          "exactBonePercent": 0.184375
+        }
+      ],
+      "status": "generated-needs-visual-and-landmark-review"
+    }
+  ],
+  "visualAssessment": {
+    "all": "Compared with exact master composites: correct Boston body type, short black cap sidecars for amber/clear, assembled black-bulb gold-collar dropper with visible pipette for cobalt. Entire assemblies fit in canvas.",
+    "amber": "Body sits slightly above the 91 percent guide. Needs small baseline registration before final lock.",
+    "clear": "Body and sidecar visually close to target guides; final native landmark measurement remains.",
+    "cobalt": "Complete bulb recovered and unclipped. Slight warm background cast remains; sampled median approximately [245,242,238] vs bone [245,243,239].",
+    "scope": "Three pilot renders only; remaining 26 not generated. No publication or approval lock."
+  }
+}

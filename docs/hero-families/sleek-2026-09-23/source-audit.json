@@ -1,0 +1,229 @@
+{
+  "status": "source-verified-before-generation",
+  "newRenders": 0,
+  "canvas": [
+    2080,
+    2288
+  ],
+  "bone": "#F5F3EF",
+  "baselinePct": 91,
+  "spanPctByCapacity": {
+    "5": 33,
+    "8": 43,
+    "30": 47,
+    "50": 56,
+    "100": 60.5
+  },
+  "rows": [
+    {
+      "sku": "GBSleek5Gl",
+      "capacityMl": 5,
+      "material": "Clear",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 5ml (Capped) PSD/28. GBSleek5Gl.psd",
+      "sourceSha256": "c4c9b79a13543038c0618275a9c3cd39e813818015b5fb9edf0acb65d26065ee",
+      "existingHeroSha256": "e717e8a7f7efcae461367eb6cf74d8b01b97333b01ae26591380a6b67077959e",
+      "groupSlug": "sleek-5ml-clear-13-415",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343628230948"
+    },
+    {
+      "sku": "GBSleek5MtlRollGlMatt",
+      "capacityMl": 5,
+      "material": "Clear",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 5ml (Capped) PSD/16. GBSleek5MtlRollGlMatt.psd",
+      "sourceSha256": "a253189335766b2b6af24a51555f17ff69281b711be1feed41317cd9cf3e55a1",
+      "existingHeroSha256": "41792e8a8939c1430b85ba01fc243aef1644a7314bda31a1187f3ccc422558b8",
+      "groupSlug": "sleek-5ml-clear-13-415-rollon",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343668011300"
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "capacityMl": 5,
+      "material": "Clear",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 5ml (Capped) PSD/7. GBSleek5SpryGlMatt.psd",
+      "sourceSha256": "6ec55b81166c93ad90e75b1d5e0e5598c166f4e73033fbc15dbd032b976c0446",
+      "existingHeroSha256": "54c31977c243632658734de13532d5368ec18782109bbb725132c90314fdff70",
+      "groupSlug": "sleek-5ml-clear-13-415-finemist",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343620890916"
+    },
+    {
+      "sku": "GBSleek8Gl",
+      "capacityMl": 8,
+      "material": "Clear",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/28. GBSleek8Gl.psd",
+      "sourceSha256": "3a5c47b7b3efd87f657782ce40c6c5a39586e13f57f6cdab0681f7e178297272",
+      "existingHeroSha256": "fc86f1468682685ad9ece1f7a624372092debefe4cdc832d1deb1dbd706a40fa",
+      "groupSlug": "sleek-8ml-clear-13-415",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343635636516"
+    },
+    {
+      "sku": "GBSleek8MtlRollGlMatt",
+      "capacityMl": 8,
+      "material": "Clear",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/16. GBSleek8MtlRollGlMatt.psd",
+      "sourceSha256": "914e6c8817b9004c5f0a3dec487303bb2141474d869ff6ad4a272d987bbd4ec4",
+      "existingHeroSha256": "c0905bf7e80252df92d8f8253233781b9d5ccaa74799c01109c7938e91d2ff36",
+      "groupSlug": "sleek-8ml-clear-13-415-rollon",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343676039460"
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "capacityMl": 8,
+      "material": "Clear",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/7. GBSleek8SpryGlMatt.psd",
+      "sourceSha256": "98520f75a0913b677b6edeb5f6d2066fb5ab038bd853134b3a1c77b5bef75889",
+      "existingHeroSha256": "8e5aa43acc5884300cdd06b7e39b9d5efbb03a25dcbf98ddb7f68cc66ab88395",
+      "groupSlug": "sleek-8ml-clear-13-415-finemist",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343622037796"
+    },
+    {
+      "sku": "GBSlk30AnSpGl",
+      "capacityMl": 30,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /11. Sleek 30ml /1. Sleek 30ml PSD/37. GBSlk30AnSpGl.psd",
+      "sourceSha256": "e4910b94c5a1f6f9e94e5c2298c07a12ed0593de7010983ee4cd98dfb9265af5",
+      "existingHeroSha256": "079ae19a06d7cb2ed43a4d8319b46671cf27c107e9fa54a5ef10092141230053",
+      "groupSlug": "sleek-30ml-clear-18-415-antiquespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343660081444"
+    },
+    {
+      "sku": "GBSlk30DrpGl",
+      "capacityMl": 30,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /11. Sleek 30ml /1. Sleek 30ml PSD/44. GBSlk30DrpGl.psd",
+      "sourceSha256": "888acb5673d82465bc2b24753f4bc9f21b1cfa6eab496ba02c98188ca63717e4",
+      "existingHeroSha256": "367a49336c490a51849c724c7fbd3e8c9c907f0b1810da1c72bb44b4f241c4b9",
+      "groupSlug": "sleek-30ml-clear-18-415-dropper",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343642026276"
+    },
+    {
+      "sku": "GBSlk30RdcrShnGl",
+      "capacityMl": 30,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /11. Sleek 30ml /1. Sleek 30ml PSD/1. GBSlk30RdcrShnGl.psd",
+      "sourceSha256": "e35380983d55c70b2f523a89830a1c5e0d0e2d557540f103f157cb4eb62448cc",
+      "existingHeroSha256": "9044a60ec4a4d296bd6b4267058c61713757245aa991d400d845c5d23dc21e1e",
+      "groupSlug": "sleek-30ml-clear-18-415-reducer",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343651791140"
+    },
+    {
+      "sku": "GBSlk30SpryMtGl",
+      "capacityMl": 30,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/11. 30ml  Slk, Ltn & Spry, capped/11. GBSlk30SpryMtGl.psd",
+      "sourceSha256": "09a2a942e8856c017c1064a38320badf50d39fb9c44fb08abca217ed990858c6",
+      "existingHeroSha256": "daa34888af73fc66a0abfbbb7408a194d64a4916bf63f34af049f771550b0846",
+      "groupSlug": "sleek-30ml-clear-18-415-perfumespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343616401700"
+    },
+    {
+      "sku": "LBSlk30LtnMtGl",
+      "capacityMl": 30,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/11. 30ml  Slk, Ltn & Spry, capped/12. LBSlk30LtnMtGl.psd",
+      "sourceSha256": "f7181449709f061520756c4d67e0388ef081c99598fe34db8bfb3afc2baa6943",
+      "existingHeroSha256": "4269e255e38371f0272506c5db2602aa5f6ad586ef446e38932e9082ff2ea7ef",
+      "groupSlug": "sleek-30ml-clear-18-415-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343686590756"
+    },
+    {
+      "sku": "GBSlk50AnSpGl",
+      "capacityMl": 50,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/37. GBSlk50AnSpGl.psd",
+      "sourceSha256": "3c8e741002dee39e02dc8c12bf6ba8bded3780fa0d6f4a429aaa0fc21aece47e",
+      "existingHeroSha256": "811c9dc720202b594383727ee2dbf1da73b1a0e46caba5ec8d8574a1cbb775d2",
+      "groupSlug": "sleek-50ml-clear-18-415-antiquespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611486500"
+    },
+    {
+      "sku": "GBSlk50AnSpTslIvyGl",
+      "capacityMl": 50,
+      "material": "Clear",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBSlk50AnSpTslIvyGl.psd",
+      "sourceSha256": "3cbfa9bb90bddcdc7088a9d07c5b6395f488660c7e415a41d21258df164de960",
+      "existingHeroSha256": "9dfcf9805f407d780117392554854cb34c2d72efdca83d4b0704a874f6987613",
+      "groupSlug": "sleek-50ml-clear-18-415-antiquespray-tassel",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343615779108"
+    },
+    {
+      "sku": "GBSlk50RdcrShnGl",
+      "capacityMl": 50,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/1. GBSlk50RdcrShnGl.psd",
+      "sourceSha256": "ea768af268fe8e8a5b034c78a49de44d5627ae206ac8c4fd29d66845e0562db9",
+      "existingHeroSha256": "298be3899ae8798a19f41e9b4eaf040f61c67cee304c642ec06103a6394dfa70",
+      "groupSlug": "sleek-50ml-clear-18-415-reducer",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343660310820"
+    },
+    {
+      "sku": "GBSlk50SpryMtGl",
+      "capacityMl": 50,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/11. GBSlk50SpryMtGl.psd",
+      "sourceSha256": "c2c45b53d9a4ea4eaca6c74337f3e16b7edae0e43bfdcf3237dc1c525f63d07e",
+      "existingHeroSha256": "00aa4a4d8030cd5cbd7304b39a962de692fdce323568d6f6347b832db62fd543",
+      "groupSlug": "sleek-50ml-clear-18-415-perfumespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343637700900"
+    },
+    {
+      "sku": "LBSlk50LtnMtGl",
+      "capacityMl": 50,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/12. LBSlk50LtnMtGl.psd",
+      "sourceSha256": "e4edd4cd778c4bd78e76ec9858d921ac2edc9e0956efc788fb3aa7cb4aa06f84",
+      "existingHeroSha256": "b430ef92b91dc733215532654b6500876a1f57bc14314e0b2d6bab65c51b2655",
+      "groupSlug": "sleek-50ml-clear-18-415-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343691604260"
+    },
+    {
+      "sku": "GBSlk100AnSpGl",
+      "capacityMl": 100,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/37. GBSlk100AnSpGl.psd",
+      "sourceSha256": "8e39c9f0b694362e2ee7e55e9bfcc189351b2c21c36579f6771a831bb941b9f7",
+      "existingHeroSha256": "378bc40d8fb5657f56259a7eff58cfcca9313660700b98ee52b6446eb3db95fd",
+      "groupSlug": "sleek-100ml-clear-18-415-antiquespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343685443876"
+    },
+    {
+      "sku": "GBSlk100AnSpTslIvyGl",
+      "capacityMl": 100,
+      "material": "Clear",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBSlk100AnSpTslIvyGl.psd",
+      "sourceSha256": "63801f49cce74224d836bef9b0afc2120e51a0f12eba43a30ab85b0081f439fa",
+      "existingHeroSha256": "e96362d4ada288d9b88423a9c6ba67bd4653eda01a0ca821d353cb4e6cfc65fa",
+      "groupSlug": "sleek-100ml-clear-18-415-antiquespray-tassel",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343686230308"
+    },
+    {
+      "sku": "GBSlk100RdcrShnGl",
+      "capacityMl": 100,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/1. GBSlk100RdcrShnGl.psd",
+      "sourceSha256": "b5ec7d2689f123bd80cde8872e5e5bef9ae6bbda7d0d7dc516b4ecc7ee6b41a2",
+      "existingHeroSha256": "8ae83fd8ce2becbe49518dd78c4fd405291c344e45000b3167b2f2e8fb15fd95",
+      "groupSlug": "sleek-100ml-clear-18-415-reducer",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343648317732"
+    },
+    {
+      "sku": "GBSlk100SpryMtGl",
+      "capacityMl": 100,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/11. GBSlk100SpryMtGl.psd",
+      "sourceSha256": "15c8bd6163ac9fa68cf0e44d5c616936417ed45dacaef7519fca5c159402afd8",
+      "existingHeroSha256": "d49491c9200b7c1471620a802a94662069a6a137692a990b697a05985044b23e",
+      "groupSlug": "sleek-100ml-clear-18-415-perfumespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343651594532"
+    },
+    {
+      "sku": "LBSlk100LtnMtGl",
+      "capacityMl": 100,
+      "material": "Clear",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/12. LBSlk100LtnMtGl.psd",
+      "sourceSha256": "8720135b286e277639338eb6fcdda117930fd56f01f7b83de8aee0c880b0e274",
+      "existingHeroSha256": "d00646153e3c3a88ba1ff87baac4d662d1624dd57bc0da29cdaa1456d6cd29f5",
+      "groupSlug": "sleek-100ml-clear-18-415-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343613485348"
+    }
+  ]
+}
