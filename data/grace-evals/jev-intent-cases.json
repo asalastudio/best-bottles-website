@@ -16,7 +16,7 @@
   "not_stated",
   "not_carried"
  ],
- "notes": "expect.family / glassColour are set only when the customer names them; cap and sprayer colours are not glass colours. capacityMl is graded in code with a ±10% tolerance. wants: component_only only when the customer says they already have bottles or asks for parts only; naming just an applicator counts as complete_bottle.",
+ "notes": "expect.family / glassColour are set only when the customer names them; cap and sprayer colours are not glass colours. expect.atomizerFinish / capFinish are graded only when present (omit to skip; null = none named). Finish-only queries (shiny gold, matte black, pink with dots) must be cap_finish or atomizer_finish, never glass and never the Cap/Closure applicator. capacityMl is graded in code with a ±10% tolerance. wants: component_only only when the customer says they already have bottles or asks for parts only; naming just an applicator counts as complete_bottle.",
  "cases": [
   {
    "id": "c001",
@@ -1854,6 +1854,186 @@
    },
    "tags": [
     "common"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c109",
+   "text": "shiny gold",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Shiny Gold",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c110",
+   "text": "matte black",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Matte Black",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c111",
+   "text": "pink with dots",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": "Pink with Dots",
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "atomizer-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c112",
+   "text": "shiny gold cap",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Shiny Gold",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c113",
+   "text": "silver with stars",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": "Silver with Star Patterns",
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "atomizer-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c114",
+   "text": "frosted glass bottles",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": "Frosted",
+    "atomizerFinish": null,
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "glass-colour"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c115",
+   "text": "pink with dots atomizer",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": "Pink with Dots",
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "atomizer-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c116",
+   "text": "matte gold",
+   "split": "tune",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Matte Gold",
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed"
+  },
+  {
+   "id": "c117",
+   "text": "amber glass",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "family": null,
+    "glassColour": "Amber",
+    "atomizerFinish": null,
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle",
+    "tassel": null
+   },
+   "tags": [
+    "finish-only",
+    "glass-colour"
    ],
    "source": "constructed"
   }
