@@ -56,6 +56,24 @@ it("preserves native PSD seating in the assembled preview and chooser tile", () 
     expect(el.querySelector("[data-builder-layer=\"sprayer\"]")?.getAttribute("transform")).toBeNull();
 });
 
+it("does not blend a complete dropper collar or its glass backing into the neck threads", () => {
+    const dropper = structuredClone(config);
+    dropper.fitment = "Dropper";
+    dropper.kit!.parts = [
+        part("body", { left: 399, top: 235, right: 605, bottom: 980 }, 0),
+        part("pipette", { left: 430, top: 90, right: 570, bottom: 900 }, 1),
+    ];
+    act(() => root.render(<BuilderImage config={dropper} parts={previewParts(dropper, "complete")} stage="complete" label="25 ml Cylinder dropper" />));
+    expect((el.querySelector('[data-builder-layer="body"]') as SVGImageElement).style.mixBlendMode).toBe("");
+    expect((el.querySelector('[data-builder-layer="pipette"]') as SVGImageElement).style.mixBlendMode).toBe("");
+    act(() => root.render(<BuilderImage config={dropper} parts={previewParts(dropper, "body")} stage="body" label="bare bottle" />));
+    expect((el.querySelector('[data-chooser-img]') as HTMLElement).style.mixBlendMode).toBe("multiply");
+
+    dropper.color = "Amber";
+    act(() => root.render(<BuilderImage config={dropper} parts={previewParts(dropper, "complete")} stage="complete" label="amber dropper" />));
+    expect((el.querySelector('[data-builder-layer="pipette"]') as SVGImageElement).style.mixBlendMode).toBe("multiply");
+});
+
 it("keeps one camera across body, tall tops, finishes, and cap-on/off views", async () => {
     const { builderBodyFrame, builderPreviewLayout } = await import("@/lib/bottle-builder/preview-layout");
     const tall = structuredClone(config);

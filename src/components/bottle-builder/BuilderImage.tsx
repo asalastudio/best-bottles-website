@@ -6,11 +6,14 @@ import type { BuilderConfiguration, BuilderPart } from "@/lib/bottle-builder/mod
 import { builderBodyFrame, builderPreviewLayout } from "@/lib/bottle-builder/preview-layout";
 import { layerCropStyle, previewFrame } from "@/lib/bottle-builder/preview-frame";
 
-/** Clear glass and the clear dip tube take the stage colour. A dropper's GLASS pipette hangs inside
- * the bottle, so it blends into whatever glass it is in — drawn opaque it read as a white stick
- * (Jordan, 2026-09-20). */
-function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart) {
-    return part.slot === "pipette" || (config.color === "Clear" && (part.slot === "body" || part.slot === "diptube"));
+/** Clear glass and the clear dip tube take the stage colour. A published dropper
+ * part also contains its metal collar; multiplying a clear dropper assembly
+ * exposes the bottle's neck threads through opaque metal. Coloured bottles keep
+ * their existing pipette blend so the glass tube remains translucent. */
+function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart, stage: "body" | "fitment" | "complete") {
+    if (part.slot === "pipette") return config.color !== "Clear";
+    return config.color === "Clear" && (part.slot === "diptube"
+        || (part.slot === "body" && (stage === "body" || config.fitment !== "Dropper")));
 }
 
 /** These are the existing alpha layers on their registered canvas, never
@@ -79,7 +82,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     if (layers.length === 1 && !layers[0].transform) {
         const [{ part }] = layers;
         const crop = layerCropStyle(part.image, { x, y, width, height });
-        const blend: CSSProperties["mixBlendMode"] = blendsIntoGlass(config, part) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined;
+        const blend: CSSProperties["mixBlendMode"] = blendsIntoGlass(config, part, stage) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined;
         // Size is applied once by the frame, equally for a single layer and SVG.
         // layerCropStyle places the layer in percentages of its box, which matches the
         // SVG viewBox only while that box has the frame's own aspect ratio. The SVG
@@ -106,7 +109,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     return wrap(<svg role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" preserveAspectRatio="xMidYMid meet" style={{ display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: expanded ? "visible" : "hidden" }}>
         <title id={titleId}>{label}</title>
         {layers.map(({ part, transform }) => <image key={part.slot} href={part.image.url} width={part.image.width} height={part.image.height} transform={transform}
-            x="0" y="0" style={{ mixBlendMode: blendsIntoGlass(config, part) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
+            x="0" y="0" style={{ mixBlendMode: blendsIntoGlass(config, part, stage) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
             onLoad={markLoaded} onError={() => setFailedUrl(part.image.url)} data-builder-layer={part.slot} />)}
     </svg>);
 }
