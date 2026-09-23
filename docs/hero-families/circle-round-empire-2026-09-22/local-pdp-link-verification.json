@@ -1,0 +1,47 @@
+{
+  "checkedAt": "2026-09-22T22:27:21.215Z",
+  "checks": [
+    {
+      "mobile": false,
+      "sku": "GBCrcl15RollBlkSh",
+      "url": "http://localhost:3053/products/circle-15ml-clear-13-415-rollon?sku=GBCrcl15RollBlkSh",
+      "status": 200,
+      "selectedSkuVisible": true
+    },
+    {
+      "mobile": false,
+      "sku": "GBRndFrst78AnSpGl",
+      "url": "http://localhost:3053/products/round-78ml-frosted-18-415-antiquespray?sku=GBRndFrst78AnSpGl",
+      "status": 200,
+      "selectedSkuVisible": true
+    },
+    {
+      "mobile": false,
+      "sku": "GBEmp50DrpGl",
+      "url": "http://localhost:3053/products/empire-50ml-clear-18-415-dropper?sku=GBEmp50DrpGl",
+      "status": 200,
+      "selectedSkuVisible": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBCrcl15RollBlkSh",
+      "url": "http://localhost:3053/products/circle-15ml-clear-13-415-rollon?sku=GBCrcl15RollBlkSh",
+      "status": 200,
+      "selectedSkuVisible": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBRndFrst78AnSpGl",
+      "url": "http://localhost:3053/products/round-78ml-frosted-18-415-antiquespray?sku=GBRndFrst78AnSpGl",
+      "status": 200,
+      "selectedSkuVisible": true
+    },
+    {
+      "mobile": true,
+      "sku": "GBEmp50DrpGl",
+      "url": "http://localhost:3053/products/empire-50ml-clear-18-415-dropper?sku=GBEmp50DrpGl",
+      "status": 200,
+      "selectedSkuVisible": true
+    }
+  ]
+}

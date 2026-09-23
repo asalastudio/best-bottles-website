@@ -211,3 +211,8 @@ public/assets/hero/**/*.png
 public/assets/hero/*.png
 public/assets/hero/frames/_mask.png
 public/local-kits/
+.env*.local
+
+# Local raw Cylinder generation packages; final PNGs and manifests are versioned.
+/output/imagegen/cylinder-25-30-2026-09-22/
+/output/imagegen/cylinder-9-slim-2026-09-22/

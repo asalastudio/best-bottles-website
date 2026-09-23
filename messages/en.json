@@ -147,6 +147,7 @@
     "loadingMore": "Loading…",
     "showingOf": "Showing {shown} of {total} products",
     "showingAll": "Showing all {total} products",
+    "helpChooseFamily": "Help me choose a {family}",
     "familyFinder": "Family finder",
     "familyFinderBody": "Looking for the {family} family page with application cards and exact products?",
     "openFamilyPage": "Open the {family} family page",

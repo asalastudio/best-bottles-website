@@ -147,6 +147,7 @@
     "loadingMore": "Cargando…",
     "showingOf": "Mostrando {shown} de {total} productos",
     "showingAll": "Mostrando los {total} productos",
+    "helpChooseFamily": "Ayúdame a elegir {family}",
     "familyFinder": "Página de la familia",
     "familyFinderBody": "¿Buscas la página de la familia {family} con tarjetas de aplicador y productos exactos?",
     "openFamilyPage": "Abrir la página de la familia {family}",

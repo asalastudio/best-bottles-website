@@ -1,0 +1,18 @@
+[
+  {
+    "sku": "GBCrclFrst50RdcrIvyLthr",
+    "appearance": "Broader shallow face and defined perimeter now read as Circle; frosted finish retained.",
+    "hardware": "Exact cap/bulb arrangement and finish visually retained; generation is not pixel-identical outside mask.",
+    "insideMaskMeanAbsRgbChange": 11.989,
+    "outsideMaskMeanAbsRgbChange": 3.665,
+    "reviewStatus": "candidate-awaiting-user-review"
+  },
+  {
+    "sku": "GBCrclFrst50AnSpGl",
+    "appearance": "Broader shallow face and defined perimeter now read as Circle; frosted finish retained.",
+    "hardware": "Exact cap/bulb arrangement and finish visually retained; generation is not pixel-identical outside mask.",
+    "insideMaskMeanAbsRgbChange": 11.269,
+    "outsideMaskMeanAbsRgbChange": 5.607,
+    "reviewStatus": "candidate-awaiting-user-review"
+  }
+]

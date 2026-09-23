@@ -9,11 +9,12 @@ import {
 } from "@/lib/catalogSurface";
 
 describe("catalog surface manifests", () => {
-    it("leaves master catalog scope open", () => {
+    it("leaves master catalog scope open and orders browse by capacity", () => {
         expect(applyCatalogSurface(
             { ...EMPTY_FILTERS, capacities: ["9 ml"] },
             MASTER_CATALOG_SURFACE,
         ).families).toEqual([]);
+        expect(MASTER_CATALOG_SURFACE.defaultSort).toBe("capacity-asc");
     });
 
     it("makes Cylinder scope immutable without dropping customer constraints", () => {

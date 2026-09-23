@@ -1,0 +1,408 @@
+[
+  {
+    "sku": "GBCrcl15Gl",
+    "centerX": 633,
+    "landmarkY": 851,
+    "glassFootY": 1551,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-0.jpg"
+  },
+  {
+    "sku": "GBCrcl15SpryGlMatt",
+    "centerX": 608,
+    "landmarkY": 884,
+    "glassFootY": 1554,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-0.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBCrcl15MtlRollGlMatt",
+    "centerX": 571,
+    "landmarkY": 860,
+    "glassFootY": 1541,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-0.jpg"
+  },
+  {
+    "sku": "GBCrcl30GlCap",
+    "centerX": 620,
+    "landmarkY": 764,
+    "glassFootY": 1545,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-0.jpg"
+  },
+  {
+    "sku": "GBCrcl30SpryMattGl",
+    "centerX": 626,
+    "landmarkY": 770,
+    "glassFootY": 1538,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-0.jpg"
+  },
+  {
+    "sku": "GBCrcl50AnSpGl",
+    "centerX": 880,
+    "landmarkY": 698,
+    "glassFootY": 1542,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-0.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBCrcl50AnSpTslIvyGl",
+    "centerX": 1050,
+    "landmarkY": 581,
+    "glassFootY": 1414,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-1.jpg"
+  },
+  {
+    "sku": "GBCrcl50DrpGl",
+    "centerX": 780,
+    "landmarkY": 704,
+    "glassFootY": 1540,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-1.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "LBCrcl50LtnMtGl",
+    "centerX": 626,
+    "landmarkY": 696,
+    "glassFootY": 1536,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-1.jpg"
+  },
+  {
+    "sku": "GBCrcl50SpryMtGl",
+    "centerX": 622,
+    "landmarkY": 691,
+    "glassFootY": 1534,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-1.jpg"
+  },
+  {
+    "sku": "GBCrcl50RdcrShnGl",
+    "centerX": 780,
+    "landmarkY": 688,
+    "glassFootY": 1536,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-1.jpg"
+  },
+  {
+    "sku": "GBCrcl100AnSpGl",
+    "centerX": 807,
+    "landmarkY": 583,
+    "glassFootY": 1529,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-1.jpg"
+  },
+  {
+    "sku": "GBCrcl100AnSpTslGl",
+    "centerX": 1000,
+    "landmarkY": 576,
+    "glassFootY": 1527,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-2.jpg"
+  },
+  {
+    "sku": "LBCrcl100LtnMtGl",
+    "centerX": 635,
+    "landmarkY": 589,
+    "glassFootY": 1534,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-2.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBCrcl100SpryMtGl",
+    "centerX": 625,
+    "landmarkY": 591,
+    "glassFootY": 1532,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-2.jpg"
+  },
+  {
+    "sku": "GBCrcl100RdcrShnGl",
+    "centerX": 780,
+    "landmarkY": 596,
+    "glassFootY": 1534,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-2.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBEmp50AnSpGl",
+    "centerX": 970,
+    "landmarkY": 754,
+    "glassFootY": 1560,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-2.jpg"
+  },
+  {
+    "sku": "GBEmp50AnSpTslGl",
+    "centerX": 1160,
+    "landmarkY": 754,
+    "glassFootY": 1560,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-2.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBEmp50DrpGl",
+    "centerX": 780,
+    "landmarkY": 748,
+    "glassFootY": 1560,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-3.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "LBEmp50WhtClOvrCp",
+    "centerX": 780,
+    "landmarkY": 754,
+    "glassFootY": 1560,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-3.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBEmp50SpryMtGl",
+    "centerX": 624,
+    "landmarkY": 754,
+    "glassFootY": 1559,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-3.jpg"
+  },
+  {
+    "sku": "GBEmp50RdcrShnGl",
+    "centerX": 780,
+    "landmarkY": 754,
+    "glassFootY": 1560,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-3.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBEmp100AnSpGl",
+    "centerX": 920,
+    "landmarkY": 596,
+    "glassFootY": 1538,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-3.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBEmp100AnSpTslGl",
+    "centerX": 1122,
+    "landmarkY": 598,
+    "glassFootY": 1538,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-3.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "LBEmp100WhtClOvrCp",
+    "centerX": 766,
+    "landmarkY": 598,
+    "glassFootY": 1538,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-4.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBEmp100SpryMtGl",
+    "centerX": 630,
+    "landmarkY": 599,
+    "glassFootY": 1538,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-4.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBEmp100RdcrShnGl",
+    "centerX": 765,
+    "landmarkY": 599,
+    "glassFootY": 1538,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-4.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBRnd78AnSpGl",
+    "centerX": 880,
+    "landmarkY": 837,
+    "glassFootY": 1556,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-4.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  },
+  {
+    "sku": "GBRnd78AnSpTslGl",
+    "centerX": 984,
+    "landmarkY": 844,
+    "glassFootY": 1550,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-4.jpg"
+  },
+  {
+    "sku": "LBRnd78LtnCu",
+    "centerX": 645,
+    "landmarkY": 840,
+    "glassFootY": 1554,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-4.jpg"
+  },
+  {
+    "sku": "GBRnd78SpryCu",
+    "centerX": 638,
+    "landmarkY": 841,
+    "glassFootY": 1555,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-5.jpg"
+  },
+  {
+    "sku": "GBRnd78RdcrShnGl",
+    "centerX": 765,
+    "landmarkY": 847,
+    "glassFootY": 1550,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-5.jpg"
+  },
+  {
+    "sku": "GBRnd128AnSpGl",
+    "centerX": 920,
+    "landmarkY": 719,
+    "glassFootY": 1554,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-5.jpg"
+  },
+  {
+    "sku": "GBRnd128AnSpTslIvyGl",
+    "centerX": 1134,
+    "landmarkY": 720,
+    "glassFootY": 1515,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-5.jpg"
+  },
+  {
+    "sku": "GBRnd128DrpGl",
+    "centerX": 780,
+    "landmarkY": 719,
+    "glassFootY": 1554,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-5.jpg"
+  },
+  {
+    "sku": "LBRnd128LtnMtGl",
+    "centerX": 648,
+    "landmarkY": 720,
+    "glassFootY": 1554,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-5.jpg"
+  },
+  {
+    "sku": "GBRnd128SpryMtGl",
+    "centerX": 639,
+    "landmarkY": 721,
+    "glassFootY": 1555,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-6.jpg"
+  },
+  {
+    "sku": "GBRnd128RdcrShnGl",
+    "centerX": 768,
+    "landmarkY": 719,
+    "glassFootY": 1555,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-6.jpg"
+  },
+  {
+    "sku": "GBCrcl15RollBlkSh",
+    "centerX": 560,
+    "landmarkY": 859,
+    "glassFootY": 1544,
+    "uncertaintyPx": 5,
+    "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+    "measurementStatus": "visually-checked-source-seat-and-foot",
+    "sourceCropEvidence": "measure/landmarks-6.jpg",
+    "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+  }
+]

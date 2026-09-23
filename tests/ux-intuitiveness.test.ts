@@ -242,12 +242,12 @@ describe("UX: URL structure and deep linking", () => {
         expect(params.get("neckThreadSizes")).toBeNull();
     });
 
-    it("default sort and view are omitted from URL (cleaner share links)", () => {
-        const params = filtersToParams(EMPTY_FILTERS, "featured", "visual");
-        expect(params.get("sort")).toBeNull();
+    it("writes the browse sort explicitly and still omits the default visual view", () => {
+        const params = filtersToParams(EMPTY_FILTERS, "capacity-asc", "visual");
+        expect(params.get("sort")).toBe("capacity-asc");
         expect(params.get("view")).toBeNull();
-        // URL should be minimal
-        expect(params.toString()).toBe("");
+        expect(params.toString()).toBe("sort=capacity-asc");
+        expect(filtersToParams(EMPTY_FILTERS, "featured", "visual").get("sort")).toBe("featured");
     });
 });
 

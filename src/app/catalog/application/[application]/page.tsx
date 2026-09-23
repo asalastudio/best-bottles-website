@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Footer from "@/components/Footer";
 import { buildCatalogSearchArgs } from "@/lib/catalogSearchClient";
 import { searchCatalogServer } from "@/lib/catalogServer";
 import { applicationCatalogSurface } from "@/lib/catalogSurface";
 import { paramsToFilters } from "@/lib/catalogFilters";
-import { parseBrowseContext } from "@/lib/products/focused-shopping";
+import { applicationLandingRedirect, parseBrowseContext } from "@/lib/products/focused-shopping";
 import ApplicationFinderClient from "./ApplicationFinderClient";
+import { getLocale } from "next-intl/server";
+import { defaultLocale, isLocale, type AppLocale } from "@/i18n/config";
+import { localizeHref } from "@/i18n/paths";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -40,6 +43,12 @@ export default async function ApplicationFinderPage({
     const urlSearchParams = toURLSearchParams(resolvedSearchParams);
     const context = parseBrowseContext(pathname, urlSearchParams);
     if (context.entryMode !== "application" || !context.application) notFound();
+    const landingRedirect = applicationLandingRedirect(pathname, urlSearchParams);
+    if (landingRedirect) {
+        const localeValue = await getLocale();
+        const locale: AppLocale = isLocale(localeValue) ? localeValue : defaultLocale;
+        redirect(localizeHref(locale, landingRedirect));
+    }
 
     const surface = applicationCatalogSurface(context.application);
     const parsedState = paramsToFilters(urlSearchParams);

@@ -1,0 +1,453 @@
+{
+  "rows": [
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "outputSha256": "de9a058d232e6fe82d2030f68fa6b0c965974c03092cca40cf12633f3858d9a6",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 592,
+        "shoulderY": 364,
+        "footY": 1198,
+        "bodyWidthPx": 160,
+        "shoulderSpanPct": 63.422,
+        "footPct": 91.103,
+        "bodyAspect": 5.2125,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "alignment": {
+        "scale": 1.7146282973621103,
+        "x": 24.94004796163074,
+        "y": 27.955299760191792,
+        "rawFootY": 1198,
+        "rawShoulderY": 364,
+        "rawBodyCenterX": 592,
+        "uncertaintyPx": 6.858513189448441
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          252,
+          249,
+          246
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.2125,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": "short sidecar cap too tall",
+      "capProportionQA": {
+        "sourceGoldBounds": [
+          435,
+          166,
+          561,
+          302
+        ],
+        "generatedGoldBounds": [
+          718,
+          1016,
+          855,
+          1192
+        ],
+        "sourceHeightToWidth": 1.078740157480315,
+        "generatedHeightToWidth": 1.2826086956521738,
+        "relativeHeightErrorPct": 18.9,
+        "status": "Current bytes visually accepted and frozen on 2026-09-22; measured proportion finding retained. No corrective API edit executed."
+      }
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "outputSha256": "3753db48a2b7c96b5f08138e8fac1f922dc933cd4b26473aa223c445fd24e869",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 374,
+        "footY": 1201,
+        "bodyWidthPx": 166,
+        "shoulderSpanPct": 62.89,
+        "footPct": 91.331,
+        "bodyAspect": 4.9819,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "alignment": {
+        "scale": 1.7291414752116083,
+        "x": 5.973397823458299,
+        "y": 5.381088270858527,
+        "rawFootY": 1201,
+        "rawShoulderY": 374,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 6.916565900846433
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          254,
+          251,
+          247
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 4.9819,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "outputSha256": "1b0eaaec38d33ce04be95cc63fd152979a5fdb387145e6bbf28ec6de4604ea46",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 374,
+        "footY": 1199,
+        "bodyWidthPx": 166,
+        "shoulderSpanPct": 62.738,
+        "footPct": 91.179,
+        "bodyAspect": 4.9699,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "alignment": {
+        "scale": 1.7333333333333334,
+        "x": 3.466666666666697,
+        "y": 3.8133333333330484,
+        "rawFootY": 1199,
+        "rawShoulderY": 374,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 6.933333333333334
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          251,
+          248,
+          245
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 4.9699,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "outputSha256": "f4e02e5fa3daa2ca3806d2cad17ab1ecf511b6f4c484aa0533bf932dc0feeb49",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 598,
+        "shoulderY": 374,
+        "footY": 1199,
+        "bodyWidthPx": 164,
+        "shoulderSpanPct": 62.738,
+        "footPct": 91.179,
+        "bodyAspect": 5.0305,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "alignment": {
+        "scale": 1.7333333333333334,
+        "x": 3.466666666666697,
+        "y": 3.8133333333330484,
+        "rawFootY": 1199,
+        "rawShoulderY": 374,
+        "rawBodyCenterX": 598,
+        "uncertaintyPx": 6.933333333333334
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          252,
+          249,
+          246
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.0305,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "outputSha256": "2f451bcac06a1b42ac3dd23b0ec78ce3b7f68e518b9fc1ec05869cbfb21e3f57",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 595,
+        "shoulderY": 388,
+        "footY": 1184,
+        "bodyWidthPx": 156,
+        "shoulderSpanPct": 60.532,
+        "footPct": 90.038,
+        "bodyAspect": 5.1026,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "alignment": {
+        "scale": 1.7964824120603016,
+        "x": -28.9070351758794,
+        "y": -44.9551758793973,
+        "rawFootY": 1184,
+        "rawShoulderY": 388,
+        "rawBodyCenterX": 595,
+        "uncertaintyPx": 7.185929648241206
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          247,
+          245,
+          241
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.1026,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlMatt",
+      "outputSha256": "17dd48cae7ff29bb7766968fda8db664bc650f722b5932642a0ac38657940314",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 594,
+        "shoulderY": 374,
+        "footY": 1200,
+        "bodyWidthPx": 153,
+        "shoulderSpanPct": 62.814,
+        "footPct": 91.255,
+        "bodyAspect": 5.3987,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "alignment": {
+        "scale": 1.7312348668280872,
+        "x": 11.646489104116199,
+        "y": 4.598159806295371,
+        "rawFootY": 1200,
+        "rawShoulderY": 374,
+        "rawBodyCenterX": 594,
+        "uncertaintyPx": 6.924939467312349
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          243,
+          238,
+          232
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.3987,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "outputSha256": "4ef0013dc760e5b7cfe223f25e04a0efad1b825be20946c193a0753a30b7d3cc",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1196,
+        "height": 1315,
+        "bodyCenterX": 594,
+        "shoulderY": 374,
+        "footY": 1200,
+        "bodyWidthPx": 154,
+        "shoulderSpanPct": 62.814,
+        "footPct": 91.255,
+        "bodyAspect": 5.3636,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "alignment": {
+        "scale": 1.7312348668280872,
+        "x": 11.646489104116199,
+        "y": 4.598159806295371,
+        "rawFootY": 1200,
+        "rawShoulderY": 374,
+        "rawBodyCenterX": 594,
+        "uncertaintyPx": 6.924939467312349
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          246,
+          242,
+          238
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.3636,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "outputSha256": "35762581bc8415e7e8eb28fbd319dc77a6f5ecbabd56ae1a0f819728e17fa647",
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "measurement": {
+        "width": 1195,
+        "height": 1316,
+        "bodyCenterX": 594,
+        "shoulderY": 376,
+        "footY": 1200,
+        "bodyWidthPx": 154,
+        "shoulderSpanPct": 62.614,
+        "footPct": 91.185,
+        "bodyAspect": 5.3506,
+        "uncertaintyPx": 4,
+        "method": "Full-resolution visual shoulder/closure-seat and foot inspection. Excludes shadow and hardware. The shoulder is the glass body below the neck, never the roller ball or top of threads."
+      },
+      "alignment": {
+        "scale": 1.7354368932038835,
+        "x": 9.150485436893177,
+        "y": -0.44427184466030667,
+        "rawFootY": 1200,
+        "rawShoulderY": 376,
+        "rawBodyCenterX": 594,
+        "uncertaintyPx": 6.941747572815534
+      },
+      "backgroundQA": {
+        "borderMedianRgb": [
+          244,
+          240,
+          235
+        ],
+        "exactBoneCleared": false,
+        "nativeTransparency": false,
+        "method": "Generated opaque background preserved; outer padding uses border median."
+      },
+      "geometryQA": {
+        "generatedBodyAspect": 5.3506,
+        "lockBodyAspect": 5.326,
+        "finalGeometryApproval": false
+      },
+      "technicalHold": null,
+      "capProportionQA": null
+    }
+  ]
+}

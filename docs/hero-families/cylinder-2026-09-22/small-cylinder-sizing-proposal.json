@@ -1,0 +1,221 @@
+{
+  "status": "sizing-approved-material-render-pending",
+  "canvas": {
+    "width": 2080,
+    "height": 2288
+  },
+  "baselinePct": 91,
+  "interpretation": "3.3 mL shoulder span increased from 25% to 28% at user request. The 4 mL remains 32.5% and 5 mL remains 36.5%. Whole-assembly heights still increase across all three; original body proportions remain unchanged. Body widths need not increase across distinct physical shapes.",
+  "scopeDecision": "Both sample sizes belong to Cylinder.",
+  "presentationDecision": "Use exact exposed black sprayer and detached clear overcap matching the provided storefront screenshot.",
+  "identityCaveat": "The older master-truth CSV stores 3 mL and cylinder-3ml-clear-12mm-finemist. Its item title, current hero registry and user screenshot identify the product as 3.3 mL. Current website/grace SKU identity is retained; no backend record is renamed.",
+  "materialReference": {
+    "finish": "clear",
+    "sha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899"
+  },
+  "apiCalls": 0,
+  "rows": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "registry": {
+        "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
+        "websiteSku": "GBSpry3mlClBlk",
+        "graceSku": "GB-SPR-CLR-3ML-BLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343618236708",
+        "family": "Cylinder",
+        "capacityMl": 3.3,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBSpry3mlClBlk.77deedfc5f4b.png",
+        "alt": "3.3 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "masterSource": "17. Additional Bottles/GBSpry3mlClBlk.psd",
+      "masterSha256": "f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06",
+      "preview": "GBSpry3mlClBlk-master.png",
+      "size": [
+        6000,
+        4000
+      ],
+      "shoulderSpanPct": 28,
+      "landmarks": {
+        "bodyCenterX": 2451,
+        "shoulderY": 1937,
+        "footY": 3030,
+        "width": 512,
+        "uncertaintyPx": 12,
+        "landmark": "Top of glass at closure seat, foot excludes shadow",
+        "status": "visual source estimate for proposed sizing proof"
+      },
+      "sourceBodyAspect": 2.134765625,
+      "transform": {
+        "scale": 0.5861299176578225,
+        "x": -396.6044281793229,
+        "y": 306.10634949679775
+      },
+      "proofFile": "GBSpry3mlClBlk-size-proof.png",
+      "proofSha256": "c5247f96837c243e2a81f3c9ca8caf7620e111ad7a21d917b704a60a666254e7",
+      "visualProgression": {
+        "sourceAssemblyTopY": 1003,
+        "displayAssemblyHeightPx": 1188.09,
+        "displayBodyWidthPx": 300.1,
+        "displayShoulderSpanPx": 640.64,
+        "glassFootY": 2082.08,
+        "method": "Original master outline measurements under a uniform whole-assembly transform"
+      }
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "registry": {
+        "groupSlug": "cylinder-4ml-clear-12mm-finemist",
+        "websiteSku": "GBSpry4mlClBlk",
+        "graceSku": "GB-SPR-CLR-4ML-BLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343618335012",
+        "family": "Cylinder",
+        "capacityMl": 4,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBSpry4mlClBlk.671b25bd39e3.png",
+        "alt": "4 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "masterSource": "17. Additional Bottles/GBSpry4mlClBlk..psd",
+      "masterSha256": "87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626",
+      "preview": "GBSpry4mlClBlk-master.png",
+      "size": [
+        6000,
+        4000
+      ],
+      "shoulderSpanPct": 32.5,
+      "landmarks": {
+        "bodyCenterX": 2454.5,
+        "shoulderY": 1962,
+        "footY": 3289,
+        "width": 489,
+        "uncertaintyPx": 12,
+        "landmark": "Top of glass at closure seat, foot excludes shadow",
+        "status": "visual source estimate for proposed sizing proof"
+      },
+      "sourceBodyAspect": 2.7137014314928427,
+      "transform": {
+        "scale": 0.560361718161266,
+        "x": -335.4078372268275,
+        "y": 239.05030896759604
+      },
+      "proofFile": "GBSpry4mlClBlk-size-proof.png",
+      "proofSha256": "5be228d765bfc7a8af2cbb0554c6e7df16b8ef3805102ec0f780eaf78fca7536",
+      "visualProgression": {
+        "sourceAssemblyTopY": 1025,
+        "displayAssemblyHeightPx": 1268.66,
+        "displayBodyWidthPx": 274.02,
+        "displayShoulderSpanPx": 743.6,
+        "glassFootY": 2082.08,
+        "method": "Original master outline measurements under a uniform whole-assembly transform"
+      }
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "registry": {
+        "groupSlug": "cylinder-5ml-clear-13-415-finemist",
+        "websiteSku": "GBCyl5SprySlMatt",
+        "graceSku": "GB-CYL-CLR-5ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343619842340",
+        "family": "Cylinder",
+        "capacityMl": 5,
+        "bottleColor": "Clear",
+        "url": "/images/catalog/bone-review/GBCyl5SprySlMatt.8047788195b4.png",
+        "alt": "5 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 1560,
+        "height": 1716,
+        "presentation": "Empty · original assembly",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        }
+      },
+      "masterSource": "5.  13-415 Bottles/2. Clear 5ml Cylinder/1. Clear 5ml Cly (Uncapped) PSD /8. GBCyl5SprySlMatt.psd",
+      "masterSha256": "fe9067d2e39818ba2567209513c49128e1010c4af9bda61ec7e6bf20e0e3719b",
+      "preview": "GBCyl5SprySlMatt-master.png",
+      "size": [
+        600,
+        975
+      ],
+      "shoulderSpanPct": 36.5,
+      "landmarks": {
+        "bodyCenterX": 169,
+        "shoulderY": 376,
+        "footY": 867,
+        "width": 201,
+        "uncertaintyPx": 4,
+        "landmark": "Top of glass at closure seat, foot excludes shadow",
+        "status": "visual source estimate for proposed sizing proof"
+      },
+      "sourceBodyAspect": 2.442786069651741,
+      "transform": {
+        "scale": 1.7008553971486762,
+        "x": 752.5554378818738,
+        "y": 607.4383706720978
+      },
+      "proofFile": "GBCyl5SprySlMatt-size-proof.png",
+      "proofSha256": "1bcd4837a307d9729b7b8efb91d0a61daab2a7107b5f5e19d371cc699ee1c211",
+      "visualProgression": {
+        "sourceAssemblyTopY": 51,
+        "displayAssemblyHeightPx": 1387.9,
+        "displayBodyWidthPx": 341.87,
+        "displayShoulderSpanPx": 835.12,
+        "glassFootY": 2082.08,
+        "method": "Original master outline measurements under a uniform whole-assembly transform"
+      }
+    }
+  ],
+  "supersededShoulderSpans": {
+    "3.3ml": 33.5,
+    "4ml": 34.5
+  },
+  "visualProgressionChecked": true,
+  "approvalHistory": [
+    {
+      "scope": "relative sizing only",
+      "userFeedback": "That’s better",
+      "date": "2026-09-22",
+      "proofSha256": "22165464d78eb00fc2d9ff3f47bb3675b15849752e4ec718563b18df8007252e",
+      "excludes": "Material generation, final output approval, publication"
+    }
+  ],
+  "sizingInstruction": {
+    "scope": "3.3 mL relative sizing only",
+    "userFeedback": "The 3.3 is too small compared to 4ml need to increase it by 3%",
+    "interpretation": "Increase shoulder span by 3 percentage points, from 25% to 28%. Apply one uniform transform to the whole assembly.",
+    "date": "2026-09-22",
+    "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
+    "proofVisualReview": "approved",
+    "excludes": "Material generation, final output approval, publication"
+  },
+  "visualProgressionRule": "Whole-assembly height increases from 3.3 to 4 to 5 mL; no body stretching.",
+  "sizingApproval": {
+    "scope": "relative sizing only",
+    "userFeedback": "Lock that that’s good",
+    "date": "2026-09-22",
+    "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
+    "shoulderSpansPct": {
+      "3.3ml": 28,
+      "4ml": 32.5,
+      "5ml": 36.5
+    },
+    "baselinePct": 91,
+    "excludes": "Material generation, final rendered output approval, publication"
+  }
+}

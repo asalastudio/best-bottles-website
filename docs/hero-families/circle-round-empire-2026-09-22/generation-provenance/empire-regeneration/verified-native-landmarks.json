@@ -1,0 +1,189 @@
+[
+  {
+    "sku": "GBEmp50AnSpGl",
+    "centerX": 1291,
+    "closureSeatY": 924,
+    "glassFootY": 2070,
+    "artworkBounds": [
+      410,
+      217,
+      1624,
+      2111
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-01.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  },
+  {
+    "sku": "GBEmp50AnSpTslGl",
+    "centerX": 1533,
+    "closureSeatY": 928,
+    "glassFootY": 2074,
+    "artworkBounds": [
+      128,
+      266,
+      1877,
+      2113
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-02.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  },
+  {
+    "sku": "GBEmp50DrpGl",
+    "centerX": 1039,
+    "closureSeatY": 930,
+    "glassFootY": 2080,
+    "artworkBounds": [
+      704,
+      296,
+      1372,
+      2118
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-03.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  },
+  {
+    "sku": "GBEmp50RdcrShnGl",
+    "centerX": 1040,
+    "closureSeatY": 924,
+    "glassFootY": 2083,
+    "artworkBounds": [
+      700,
+      571,
+      1378,
+      2123
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-04.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  },
+  {
+    "sku": "GBEmp50SpryMtGl",
+    "centerX": 832,
+    "closureSeatY": 931,
+    "glassFootY": 2086,
+    "artworkBounds": [
+      498,
+      285,
+      1610,
+      2128
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-05.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  },
+  {
+    "sku": "LBEmp50WhtClOvrCp",
+    "centerX": 1035,
+    "closureSeatY": 930,
+    "glassFootY": 2090,
+    "artworkBounds": [
+      696,
+      115,
+      1372,
+      2135
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-06.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  },
+  {
+    "sku": "GBEmp100AnSpGl",
+    "centerX": 1227,
+    "closureSeatY": 822,
+    "glassFootY": 2088,
+    "artworkBounds": [
+      438,
+      181,
+      1591,
+      2130
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-07.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  },
+  {
+    "sku": "GBEmp100AnSpTslGl",
+    "centerX": 1490,
+    "closureSeatY": 817,
+    "glassFootY": 2076,
+    "artworkBounds": [
+      166,
+      249,
+      1877,
+      2221
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-08.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  },
+  {
+    "sku": "GBEmp100RdcrShnGl",
+    "centerX": 1015,
+    "closureSeatY": 817,
+    "glassFootY": 2082,
+    "artworkBounds": [
+      653,
+      499,
+      1376,
+      2123
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-09.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  },
+  {
+    "sku": "GBEmp100SpryMtGl",
+    "centerX": 844,
+    "closureSeatY": 815,
+    "glassFootY": 2094,
+    "artworkBounds": [
+      476,
+      236,
+      1676,
+      2140
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-10.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  },
+  {
+    "sku": "LBEmp100WhtClOvrCp",
+    "centerX": 1013,
+    "closureSeatY": 818,
+    "glassFootY": 2089,
+    "artworkBounds": [
+      648,
+      83,
+      1378,
+      2131
+    ],
+    "uncertaintyPx": 5,
+    "landmark": "flat-glass-shoulder",
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "sourceCropEvidence": "measure-11.jpg",
+    "method": "Visual inspection of native pixel-coordinate shoulder and contact-foot crops, excluding cast shadows. Legacy closureSeatY field records Empire flat glass shoulder."
+  }
+]

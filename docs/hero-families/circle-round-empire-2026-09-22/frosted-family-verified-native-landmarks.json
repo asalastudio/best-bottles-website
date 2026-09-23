@@ -1,0 +1,863 @@
+[
+  {
+    "sku": "GBCrclFrst50RdcrIvyLthr",
+    "family": "Circle",
+    "capacityMl": 50,
+    "centerX": 1040,
+    "closureSeatY": 848,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2076,
+        -10.49
+      ],
+      [
+        2077,
+        -9.11
+      ],
+      [
+        2075,
+        -6.96
+      ],
+      [
+        2073,
+        -4.77
+      ],
+      [
+        2074,
+        -4.6
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2076,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      400,
+      315,
+      1679,
+      2108
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBCrclFrst50AnSpGl",
+    "family": "Circle",
+    "capacityMl": 50,
+    "centerX": 1195,
+    "closureSeatY": 848,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2081,
+        -4.23
+      ],
+      [
+        2082,
+        -3.75
+      ],
+      [
+        2072,
+        -3.63
+      ],
+      [
+        2080,
+        -2.89
+      ],
+      [
+        2071,
+        -2.44
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2081,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      243,
+      96,
+      1838,
+      2107
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBCrclFrst50DrpGl",
+    "family": "Circle",
+    "capacityMl": 50,
+    "centerX": 1040,
+    "closureSeatY": 845,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2064,
+        -14.35
+      ],
+      [
+        2063,
+        -10.11
+      ],
+      [
+        2065,
+        -10.07
+      ],
+      [
+        2062,
+        -4.94
+      ],
+      [
+        2061,
+        -2.21
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2064,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      404,
+      154,
+      1671,
+      2102
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "LBCrclFrst50LtnMtGl",
+    "family": "Circle",
+    "capacityMl": 50,
+    "centerX": 827,
+    "closureSeatY": 847,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2081,
+        -9.39
+      ],
+      [
+        2080,
+        -7.59
+      ],
+      [
+        2082,
+        -4.98
+      ],
+      [
+        2079,
+        -3.11
+      ],
+      [
+        2051,
+        -2.05
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2081,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      208,
+      168,
+      1913,
+      2107
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBCrclFrst50SpryMtGl",
+    "family": "Circle",
+    "capacityMl": 50,
+    "centerX": 827,
+    "closureSeatY": 845,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2075,
+        -10.14
+      ],
+      [
+        2076,
+        -8.03
+      ],
+      [
+        2074,
+        -5.91
+      ],
+      [
+        2047,
+        -3.72
+      ],
+      [
+        2077,
+        -3.45
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2075,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      185,
+      169,
+      1923,
+      2102
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBCrclFrst50RdcrShnGl",
+    "family": "Circle",
+    "capacityMl": 50,
+    "centerX": 1040,
+    "closureSeatY": 846,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2077,
+        -5.94
+      ],
+      [
+        2076,
+        -5.81
+      ],
+      [
+        2075,
+        -4.98
+      ],
+      [
+        2074,
+        -4.46
+      ],
+      [
+        2078,
+        -4.31
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2077,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      458,
+      510,
+      1519,
+      2110
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBCrclFrst100AnSpGl",
+    "family": "Circle",
+    "capacityMl": 100,
+    "centerX": 1120,
+    "closureSeatY": 756,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 58,
+    "footGradientCandidates": [
+      [
+        2071,
+        -18.16
+      ],
+      [
+        2070,
+        -15.47
+      ],
+      [
+        2072,
+        -9.79
+      ],
+      [
+        2069,
+        -7.35
+      ],
+      [
+        2068,
+        -1.59
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2071,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      318,
+      112,
+      1792,
+      2115
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBCrclFrst100AnSpTslIvyGl",
+    "family": "Circle",
+    "capacityMl": 100,
+    "centerX": 1435,
+    "closureSeatY": 757,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 58,
+    "footGradientCandidates": [
+      [
+        2077,
+        -11.55
+      ],
+      [
+        2076,
+        -11.44
+      ],
+      [
+        2075,
+        -6.53
+      ],
+      [
+        2078,
+        -6.1
+      ],
+      [
+        2074,
+        -3.01
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2077,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      37,
+      189,
+      2010,
+      2177
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "LBCrclFrst100LtnMtGl",
+    "family": "Circle",
+    "capacityMl": 100,
+    "centerX": 859,
+    "closureSeatY": 750,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 58,
+    "footGradientCandidates": [
+      [
+        2060,
+        -10.83
+      ],
+      [
+        2059,
+        -9.91
+      ],
+      [
+        2058,
+        -3.91
+      ],
+      [
+        2061,
+        -3.4
+      ],
+      [
+        2071,
+        -0.7
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2060,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      188,
+      193,
+      1898,
+      2094
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBCrclFrst100SpryMtGl",
+    "family": "Circle",
+    "capacityMl": 100,
+    "centerX": 859,
+    "closureSeatY": 750,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 58,
+    "footGradientCandidates": [
+      [
+        2063,
+        -13.13
+      ],
+      [
+        2064,
+        -11.25
+      ],
+      [
+        2062,
+        -10.76
+      ],
+      [
+        2065,
+        -7.9
+      ],
+      [
+        2061,
+        -5.84
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2063,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      188,
+      189,
+      2003,
+      2107
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBCrclFrst100RdcrShnGl",
+    "family": "Circle",
+    "capacityMl": 100,
+    "centerX": 1060,
+    "closureSeatY": 751,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 58,
+    "footGradientCandidates": [
+      [
+        2055,
+        -9.16
+      ],
+      [
+        2054,
+        -9.02
+      ],
+      [
+        2053,
+        -5.42
+      ],
+      [
+        2056,
+        -5.01
+      ],
+      [
+        2052,
+        -1.81
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2055,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      401,
+      458,
+      1718,
+      2087
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBRndFrst78AnSpGl",
+    "family": "Round",
+    "capacityMl": 78,
+    "centerX": 1195,
+    "closureSeatY": 988,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 48,
+    "footGradientCandidates": [
+      [
+        2084,
+        -17.48
+      ],
+      [
+        2085,
+        -15.58
+      ],
+      [
+        2083,
+        -11.46
+      ],
+      [
+        2086,
+        -6.39
+      ],
+      [
+        2082,
+        -6.31
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2084,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      181,
+      186,
+      1748,
+      2108
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBRndFrst78AnSpTslGl",
+    "family": "Round",
+    "capacityMl": 78,
+    "centerX": 1400,
+    "closureSeatY": 981,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 48,
+    "footGradientCandidates": [
+      [
+        2071,
+        -17.16
+      ],
+      [
+        2072,
+        -16.98
+      ],
+      [
+        2070,
+        -9.43
+      ],
+      [
+        2073,
+        -7.23
+      ],
+      [
+        2069,
+        -3.34
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2071,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      24,
+      237,
+      1935,
+      2109
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "LBRndFrst78LtnMtGl",
+    "family": "Round",
+    "capacityMl": 78,
+    "centerX": 827,
+    "closureSeatY": 981,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 48,
+    "footGradientCandidates": [
+      [
+        2068,
+        -24.27
+      ],
+      [
+        2067,
+        -18.07
+      ],
+      [
+        2069,
+        -14.36
+      ],
+      [
+        2066,
+        -5.97
+      ],
+      [
+        2060,
+        -1.2
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2068,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      244,
+      320,
+      1943,
+      2102
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBRndFrst78SpryMtGl",
+    "family": "Round",
+    "capacityMl": 78,
+    "centerX": 827,
+    "closureSeatY": 980,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 48,
+    "footGradientCandidates": [
+      [
+        2068,
+        -25.37
+      ],
+      [
+        2069,
+        -20.06
+      ],
+      [
+        2067,
+        -13.97
+      ],
+      [
+        2066,
+        -4.3
+      ],
+      [
+        2070,
+        -3.09
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2068,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      267,
+      264,
+      1916,
+      2097
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBRndFrst78RdcrShnGl",
+    "family": "Round",
+    "capacityMl": 78,
+    "centerX": 1040,
+    "closureSeatY": 989,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 48,
+    "footGradientCandidates": [
+      [
+        2067,
+        -5.94
+      ],
+      [
+        2066,
+        -4.24
+      ],
+      [
+        2068,
+        -3.01
+      ],
+      [
+        2062,
+        -1.46
+      ],
+      [
+        2061,
+        -1.35
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2067,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      486,
+      622,
+      1589,
+      2107
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBRndFrst128AnSpGl",
+    "family": "Round",
+    "capacityMl": 128,
+    "centerX": 1179,
+    "closureSeatY": 843,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2071,
+        -9.48
+      ],
+      [
+        2070,
+        -8.07
+      ],
+      [
+        2072,
+        -7.3
+      ],
+      [
+        2069,
+        -5.12
+      ],
+      [
+        2068,
+        -3.28
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2071,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      206,
+      74,
+      1806,
+      2102
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBRndFrst128DrpGl",
+    "family": "Round",
+    "capacityMl": 128,
+    "centerX": 1027,
+    "closureSeatY": 846,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2083,
+        -20.25
+      ],
+      [
+        2084,
+        -19.4
+      ],
+      [
+        2082,
+        -13.61
+      ],
+      [
+        2085,
+        -9.27
+      ],
+      [
+        2081,
+        -6.19
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2083,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      411,
+      215,
+      1631,
+      2104
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "LBRndFrst128LtnMtGl",
+    "family": "Round",
+    "capacityMl": 128,
+    "centerX": 859,
+    "closureSeatY": 844,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2066,
+        -10.21
+      ],
+      [
+        2067,
+        -8.89
+      ],
+      [
+        2065,
+        -6.64
+      ],
+      [
+        2064,
+        -3.68
+      ],
+      [
+        2068,
+        -3.52
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2066,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      251,
+      226,
+      1946,
+      2096
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBRndFrst128SpryMtGl",
+    "family": "Round",
+    "capacityMl": 128,
+    "centerX": 859,
+    "closureSeatY": 838,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2064,
+        -8.05
+      ],
+      [
+        2063,
+        -8.05
+      ],
+      [
+        2065,
+        -6.64
+      ],
+      [
+        2062,
+        -6.41
+      ],
+      [
+        2067,
+        -6.26
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2064,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      228,
+      215,
+      1967,
+      2086
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  },
+  {
+    "sku": "GBRndFrst128RdcrShnGl",
+    "family": "Round",
+    "capacityMl": 128,
+    "centerX": 1040,
+    "closureSeatY": 847,
+    "expectedGlassFootY": 2082.08,
+    "targetSpanPct": 54,
+    "footGradientCandidates": [
+      [
+        2075,
+        -15.83
+      ],
+      [
+        2076,
+        -11.73
+      ],
+      [
+        2074,
+        -10.72
+      ],
+      [
+        2077,
+        -3.92
+      ],
+      [
+        2073,
+        -3.46
+      ]
+    ],
+    "measurementStatus": "visually-checked-native-seat-and-glass-foot",
+    "glassFootY": 2075,
+    "uncertaintyPx": 4,
+    "artworkBounds": [
+      402,
+      482,
+      1669,
+      2104
+    ],
+    "artworkBoundsMethod": "22 RGB distance from median backdrop; connected components over 120 pixels; includes strong shadows"
+  }
+]

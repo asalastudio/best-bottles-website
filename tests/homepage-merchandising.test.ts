@@ -13,11 +13,11 @@ import { renderToStaticMarkup } from "react-dom/server";
 import CollectionShopping, { CollectionGrid } from "@/components/home/CollectionShopping";
 
 describe("family-first homepage merchandising", () => {
-    it("sends every shop-by-family tile to its dedicated landing page", () => {
-        expect(homepageFamilyHref("Cylinder")).toBe("/catalog/cylinder");
-        expect(homepageFamilyHref("Elegant")).toBe("/catalog/elegant");
-        expect(homepageFamilyHref("Circle")).toBe("/catalog/circle");
-        expect(homepageFamilyHref("Boston Round")).toBe("/catalog/boston-round");
+    it("sends every shop-by-family tile into the glass-bottle catalog", () => {
+        expect(homepageFamilyHref("Cylinder")).toBe("/catalog?category=Glass+Bottle&families=Cylinder&sort=capacity-asc");
+        expect(homepageFamilyHref("Elegant")).toBe("/catalog?category=Glass+Bottle&families=Elegant&sort=capacity-asc");
+        expect(homepageFamilyHref("Circle")).toBe("/catalog?category=Glass+Bottle&families=Circle&sort=capacity-asc");
+        expect(homepageFamilyHref("Boston Round")).toBe("/catalog?category=Glass+Bottle&families=Boston+Round&sort=capacity-asc");
     });
 
     it("uses the approved editorial family mosaic", () => {
@@ -58,7 +58,7 @@ describe("family-first homepage merchandising", () => {
 
         const html = renderToStaticMarkup(createElement(CollectionGrid));
         for (const key of ["sample-vials", "roll-on-bottles", "dropper-bottles"]) {
-            expect(html).toContain(`href="/catalog?shop=${key}"`);
+            expect(html).toContain(`href="/catalog?shop=${key}&amp;sort=capacity-asc"`);
         }
     });
 
@@ -73,7 +73,7 @@ describe("family-first homepage merchandising", () => {
 
         const html = renderToStaticMarkup(createElement(CollectionGrid, { all: true }));
         for (const key of ["glass-spray-bottles", "cream-jars", "decorative-bottles"]) {
-            expect(html).toContain(`href="/catalog?shop=${key}"`);
+            expect(html).toContain(`href="/catalog?shop=${key}&amp;sort=capacity-asc"`);
         }
     });
 
@@ -87,7 +87,7 @@ describe("family-first homepage merchandising", () => {
         ]);
 
         const html = renderToStaticMarkup(createElement(CollectionGrid, { all: true }));
-        expect(html).toContain('href="/catalog?shop=accessories-packaging"');
+        expect(html).toContain('href="/catalog?shop=accessories-packaging&amp;sort=capacity-asc"');
     });
 
     it("puts shared search before shopping and families before collections", () => {

@@ -1,0 +1,16 @@
+{
+  "unchangedOriginalSources": 39,
+  "unchangedApprovedFinals": 12,
+  "newUniformlyAlignedCandidates": 37,
+  "tasselRepairsCompleted": 2,
+  "successfulApiCalls": 3,
+  "reviewRows": 60,
+  "byFamily": {
+    "Circle": 28,
+    "Round": 21,
+    "Empire": 11
+  },
+  "apiUploadAuthorized": true,
+  "publication": "none",
+  "all39RequestedOutputsPresent": true
+}

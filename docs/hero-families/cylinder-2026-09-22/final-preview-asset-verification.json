@@ -1,0 +1,141 @@
+{
+  "deployment": "https://best-bottles-website-7zsmhwcv2-asala.vercel.app",
+  "commit": "445fe3ded8326cde77969c1543d831b0ae674dc9",
+  "rows": [
+    {
+      "sku": "GBcyl25AnSpIvyGl",
+      "sha256": "bfadd47f97fe59970d95fd6c10523a6790424754bc5ba3f19d9449b66cc0823f",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25AnSpTslIvyGl",
+      "sha256": "ab184134a30ba22d8de1fa58acc86c48054e848ea5e73de8c16817293c4f2cb9",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "sha256": "5476f7c122f9b50158c2f7fa7825f74158a18f4215c92edb3ffba5feca9ec467",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "sha256": "511d21e7dee08a7a6f0107495f909f14f9914a6de1e4f0134572574299a0de71",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "sha256": "d5caeec0df284c3b78b27ce7c1f61c3cddfbb55f2ad16a8399f072a299638ec5",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "sha256": "95b60b0cd9cd0532c4a3833bcc8a7904e5118f2ff922b47f17662db4e101b60f",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "sha256": "aec2bd4a4e743236b08d82c83132db65ae36593e0f23809da2eadf39f625102e",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "sha256": "de9a058d232e6fe82d2030f68fa6b0c965974c03092cca40cf12633f3858d9a6",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "sha256": "3753db48a2b7c96b5f08138e8fac1f922dc933cd4b26473aa223c445fd24e869",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "sha256": "1b0eaaec38d33ce04be95cc63fd152979a5fdb387145e6bbf28ec6de4604ea46",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "sha256": "f4e02e5fa3daa2ca3806d2cad17ab1ecf511b6f4c484aa0533bf932dc0feeb49",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "sha256": "2f451bcac06a1b42ac3dd23b0ec78ce3b7f68e518b9fc1ec05869cbfb21e3f57",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlMatt",
+      "sha256": "17dd48cae7ff29bb7766968fda8db664bc650f722b5932642a0ac38657940314",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "sha256": "4ef0013dc760e5b7cfe223f25e04a0efad1b825be20946c193a0753a30b7d3cc",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "sha256": "35762581bc8415e7e8eb28fbd319dc77a6f5ecbabd56ae1a0f819728e17fa647",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    }
+  ]
+}

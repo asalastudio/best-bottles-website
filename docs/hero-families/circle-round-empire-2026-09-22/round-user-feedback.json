@@ -1,0 +1,19 @@
+{
+  "sku": "GBRndFrst78AnSpGl",
+  "reason": "User says Round reads too much like Circle",
+  "replacementStatus": "v4-visually-approved-locked",
+  "noOtherRoundApprovalInferred": true,
+  "retryManifest": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v3/manifest.json",
+  "latestCandidate": {
+    "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/aligned/GBRndFrst78AnSpGl-2080x2288.png",
+    "sha256": "ae4000ff96f1c5522ff5eba8e1c6978d0b422b134b5ec4de032dbefdbe1c438b",
+    "source": "new user reference plus localized glass-face mask",
+    "alignment": "48% span, 91% base"
+  },
+  "originalRenderDecision": "changes_requested",
+  "originalRenderSha256": "f8eae5832d8a9fd526194743972780f478dc3d5666ab88e04199f311c817fe29",
+  "decision": "approved-corrected-v4",
+  "approvedSha256": "ae4000ff96f1c5522ff5eba8e1c6978d0b422b134b5ec4de032dbefdbe1c438b",
+  "approvedAt": "2026-09-22T21:23:41.408989+00:00",
+  "approvalLock": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/approval-lock.json"
+}

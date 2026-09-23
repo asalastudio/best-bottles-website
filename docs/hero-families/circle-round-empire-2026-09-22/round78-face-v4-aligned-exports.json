@@ -1,0 +1,46 @@
+{
+  "status": "visually-approved-locked",
+  "rows": [
+    {
+      "sku": "GBRndFrst78AnSpGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "catalog": {
+        "sku": "GBRndFrst78AnSpGl",
+        "family": "Round",
+        "capacityMl": 78,
+        "color": "Frosted",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "round-78ml-frosted-18-415-antiquespray",
+        "graceSku": "GB-RND-FRS-78ML-ASP-GLD"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/GBRndFrst78AnSpGl-native-2080x2288.png",
+      "nativeSha256": "9cf68a5b42c04daa18ab634e2350611820f73fce25065197c2531a021254d496",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v4/aligned/GBRndFrst78AnSpGl-2080x2288.png",
+      "finalSha256": "ae4000ff96f1c5522ff5eba8e1c6978d0b422b134b5ec4de032dbefdbe1c438b",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 48,
+      "glassFootPct": 91,
+      "closureSeatY": 983.8399999999999,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.008175182481752,
+      "transform": {
+        "scale": 1.002043795620438,
+        "x": -2.4423357664234024,
+        "y": -2.1710948905110854
+      },
+      "transformedArtworkBounds": [
+        176.923503649635,
+        178.19678832116776,
+        1748.1281751824818,
+        2109.1351824817516
+      ],
+      "presentation": "assembled closure",
+      "status": "visually-approved-locked",
+      "approvalLock": "approval-lock.json"
+    }
+  ]
+}

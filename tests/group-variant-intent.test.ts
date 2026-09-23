@@ -94,3 +94,52 @@ describe("Cap PDP finish-rail isolation", () => {
         expect(filterVariantsForGroupIntent("unknown-family", onlySpray)).toEqual(onlySpray);
     });
 });
+
+const square15OpenMouth = [
+    { websiteSku: "GBSqr15WhtSht", graceSku: "GB-SQR-CLR-15ML-WHT-S", applicator: null, itemName: "15 ml Clear Square short white cap" },
+    { websiteSku: "GBSqr15BlkSht", graceSku: "GB-SQR-CLR-15ML-S", applicator: null, itemName: "15 ml Clear Square short black cap" },
+    { websiteSku: "GBSqr15Gl", graceSku: "GB-SQR-CLR-15ML-GLD", applicator: null, itemName: "15 ml Clear Square shiny gold cap" },
+    { websiteSku: "GBSqr15Sl", graceSku: "GB-SQR-CLR-15ML-SLV", applicator: null, itemName: "15 ml Clear Square shiny silver cap" },
+];
+
+const square15DisallowedOpenMouth = [
+    { websiteSku: "GBSqr15CuMatt", graceSku: "GB-SQR-CLR-15ML-CPR", applicator: null, itemName: "15 ml Clear Square copper cap" },
+    { websiteSku: "GBSqr15GlMatt", graceSku: "GB-SQR-CLR-15ML-MGLD", applicator: null, itemName: "15 ml Clear Square matte gold cap" },
+    { websiteSku: "GBSqr15SlMatt", graceSku: "GB-SQR-CLR-15ML-MSLV", applicator: null, itemName: "15 ml Clear Square matte silver cap" },
+    { websiteSku: "GBSqr15Blk", graceSku: "GB-SQR-CLR-15ML-BLK", applicator: null, itemName: "15 ml Clear Square plain black cap" },
+];
+
+describe("Square 15 ml open-mouth finish rail (ASA-195)", () => {
+    it("keeps only short white, short black, shiny gold, and shiny silver on the open-mouth page", () => {
+        const kept = filterVariantsForGroupIntent(
+            "square-15ml-clear-13-415",
+            [...square15OpenMouth, ...square15DisallowedOpenMouth, ...leakedSprayAndRoll],
+        );
+        expect(kept.map((row) => row.websiteSku)).toEqual([
+            "GBSqr15WhtSht",
+            "GBSqr15BlkSht",
+            "GBSqr15Gl",
+            "GBSqr15Sl",
+        ]);
+    });
+
+    it("does not narrow Square 15 ml spray or roll-on rails with the open-mouth allowlist", () => {
+        const spray = [
+            { websiteSku: "GBSqr15SpryCuMatt", graceSku: "GB-SQR-CLR-15ML-SPR-MCPR", applicator: "Fine Mist Sprayer", itemName: "Square 15ml matte copper spray" },
+            { websiteSku: "GBSqr15SpryGlSh", graceSku: "GB-SQR-CLR-15ML-SPR-SGLD", applicator: "Fine Mist Sprayer", itemName: "Square 15ml shiny gold spray" },
+        ];
+        expect(filterVariantsForGroupIntent("square-15ml-clear-13-415-finemist", spray).map((row) => row.websiteSku)).toEqual([
+            "GBSqr15SpryCuMatt",
+            "GBSqr15SpryGlSh",
+        ]);
+
+        const rollOn = [
+            { websiteSku: "GBSqr15RollCuMatt", graceSku: "GB-SQR-CLR-15ML-ROL-MCPR", applicator: "Plastic Roller Ball", itemName: "Square 15ml matte copper roll-on" },
+            { websiteSku: "GBSqr15RollBlkSh", graceSku: "GB-SQR-CLR-15ML-ROL-SBLK", applicator: "Plastic Roller Ball", itemName: "Square 15ml shiny black roll-on" },
+        ];
+        expect(filterVariantsForGroupIntent("square-15ml-clear-13-415-rollon", rollOn).map((row) => row.websiteSku)).toEqual([
+            "GBSqr15RollCuMatt",
+            "GBSqr15RollBlkSh",
+        ]);
+    });
+});

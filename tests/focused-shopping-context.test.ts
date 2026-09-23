@@ -15,7 +15,7 @@ describe("focused shopping browse context", () => {
             application: "rollon",
         });
         expect(browseContextToFilters(context)).toMatchObject({ applicators: ["rollon"] });
-        expect(applicationFinderHref("rollon")).toBe("/catalog/application/roll-on");
+        expect(applicationFinderHref("rollon")).toBe("/catalog?applicators=rollon&sort=capacity-asc");
     });
 
     it("round-trips Cylinder Roll-On refinements through canonical URL parameters", () => {
@@ -52,7 +52,7 @@ describe("focused shopping browse context", () => {
     });
 
     it("round-trips Boston Round through a dedicated family landing path", () => {
-        expect(familyFinderHref("Boston Round")).toBe("/catalog/boston-round");
+        expect(familyFinderHref("Boston Round")).toBe("/catalog?category=Glass+Bottle&families=Boston+Round&sort=capacity-asc");
         const context = parseBrowseContext(
             "/catalog/boston-round",
             new URLSearchParams("applicators=dropper&capacities=30+ml"),
