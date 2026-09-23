@@ -1,0 +1,4206 @@
+{
+  "count": 50,
+  "expectedTotal": 50,
+  "rows": [
+    {
+      "sku": "GBBstnAmb15mlBlkCapSht",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "4cae8a5e057ee8591fb995a3e4f04124fd7cf90047ceb8990973a9a2f307aef9",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstn1ozBlkCapSht",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "cc2f3b5a296606d612c3a61e43fb3655419cb395fc8919fe6dfcb4c147d79793",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "0f9f8c5746a7b85353727ac079e960e03bbc647c6b69055496fa3c5c63a7a6cc",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnAmb15mlWhtDropperGlTrim",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "dd8a4e0a58136b445db0fd773ed616a5756e77cc7b35c56c93f70cea35aa926d",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstn15BlkCapSht",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "09868cd2a71e168234caa6c7e7ff067f7b3342a6a41146013e0629beebe30906",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnBlu15BlkCapSht",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "80bc02fb80064b2d811a19d654d5ff995a8a057a0a7331756875fdaf9dd5ba3d",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnBlu15mlBlkDropperSlTrim",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "e1aee47991b99b2beb559bd817ebf2bc8ccfd064d9cde36131cc03a302091473",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            238
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            238
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            238
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnAmb1ozBlkCapSht",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "a2ba5174f6b49acd48fe8e5d0d95c9e65f66edf6e0de1be7afaeeb4931f3661c",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnAmb1ozMtlRollonMattSl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "fd86b63e6d28d2e26a25feac978ff41734d3e39880ae976da9e408966a0b0ebe",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnAmb1ozRollonMattGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "fbab7f330046d5b38a1be9a2622fe78a20eb554aae2c43eb84e13feb36eb588e",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "d1764f56a5d6175b079da58cbe071056cb5e80a44c08d675d6f0054fbca0963b",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstn1ozBlkDrpShnGlTrim",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "2d487c6bb5828e024484f261199051f10c65613baa45f15c0e857331b208d761",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstn1ozMtlRollonMattGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "e8d9f69a93d3aea47833cafc0265bf0c7fbcd91496ab81dd977199f879036979",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstn1ozRollonShBlk",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "94e2767cac1ac447d33a68929551d7eb16c01ab9265b784cb6820b5e1163e49f",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnBlu1ozBlkCapSht",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "c40840151f0912e9866cc6678d64962cc2c146b14f02299d3564263639933ab7",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "91f1ac9d7a2603ac31711fe8708870acbf661414bd7543f81f615e663ae31924",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnBlu1ozMtlRollonMattSl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "dc7af321feff9b38ecd124f759bdfd25d90bf9dab553e610aaf08bae01ed8abb",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            246,
+            244,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            246,
+            243,
+            240
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnBlu1ozRollonMattBlk",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "3da8625f3b0d0201dfdcfe1a8004bdc2653d739d600daa9746437bcb0f94c617",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            246,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkCapSht",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "17f5a50ec7523ddd2887a44e52b7a963a7f15d7435861bd37ae965237ec995c7",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnAmb2ozBlkDropperShnGlTrim",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "7807f303092ee6956971707b895968e6bd45a5da67d87426a2cc1878fd4bce1e",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnAmb2ozMtlRollonMattGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "261c51a1d3cc7ae659a03f6292c937ef3dce4f34c343540571a6378fcb3e51eb",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnAmb2ozRollonMattGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "f8d5be867878a02954968622257f95272dd5098a20ea2a819d8af841e3a4335b",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstn2ozBlkCapSht",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "9755758ef380c7e036b498173048bb18fc18ad5d042fa542abd219560cb6f31e",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstn2ozBlkDrprShnGlTrim",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "0c870d81b7b0734dadb8a7aad8ce9ff5184e5c5311e02be93e50c461a93ca5ed",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstn2ozMtlRollGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "15bd9824eb84625b73bd29d3b78e7caec53722987e92548aa7dfa2dbe82e9890",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            238
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstn2ozRollonMattGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "4bbd744b3315405c99f33a3de5e0e25b429c6885f9ae2ed4849f5b5922f4f388",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnBlu2ozBlkCapSht",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "8a87577aaa7b26437b1726e7b79de4de2d24ad0ae92ee419683b4013785fade7",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnBlu2ozMtlRollonMattSl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "43196502ef641f4a289cc00e6da8a08be05531b9529edd33cf0f5a5d6c2d511c",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBBstnBlu2ozRollonMattGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "f2295d777c748066153b0c9287e9c5a07ac5f5b990ec6f3a3da0110333516848",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            246,
+            244,
+            240
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            246,
+            244,
+            240
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            246,
+            244,
+            240
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva30AnSpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "800616d6d88a367cdcbe1c35c0bfc58531ac59d6967d7bf8afdece174303f07c",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva30RdcrShnGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "f4aad7daa2d2d81dde051e789bc696821161d833c3d6ea38fce266d8fb4aef3c",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva30SpryMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "77d1379385e47b64c59b40bb4dbbc051dd6c6c9ad50fccaa0c6b037173fbd230",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "LBDiva30LtnMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "7e5ebd0bfc2d0dc753aaeb07243988d70b9c45d2ef89533419981384103f2cfc",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva46AnSpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "cff146902751781d9247d40f20473f3821e0e30e3b9559bf03493036cc591c2a",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva46AnSpTslIvyGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "d201bd671150ad20076784bfb2c13cdb608c50dc2466d40389e1379cd62038a3",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva46DrpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "d217971703631382ac48dc22aa581a2407e77905f144ccf6a56cd2fe2be21399",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva46RdcrShnGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "c435f69e23dcedacf8830884a432534d7f1e257b0ce586031a0caae328364a11",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva46SpryMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "3a43b073b7efbacff1f8382f96f6b33a5082ec13e168c9d437e58a0915d8d79b",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "LBDiva46LtnMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "61883994f283e9e5cde66c460eb06f02f281a80355f34383cd60ad531970f220",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDivaFrst46AnSpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "6f101ac8dab66e0ee7757b99b7baa17981e2db8c8f4db5d728f582ba2052b675",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDivaFrst46AnSpTslIvyGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "be65da09058e5aa3d507ace8ae131f6c9d6d9611869427a6020b9747fc2df119",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDivaFrst46DrpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "04181608da8aeb47289fc66bb727f0f30293240119491e23aa88c012327ef267",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": "Catalog identity exists, but intake has no Shopify variant ID and no plate/kit. Reconcile the exact SKU association before publication; source artwork is verified."
+    },
+    {
+      "sku": "GBDivaFrst46RdcrShnGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "3a22c9db00a9478dd004103262555047b987d3e84c81d55063e6db6db5ea1967",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDivaFrst46SpryMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "debe163571d81df7a0c71c271f0b73b4029ca95e7f65335f12cf040a14d170d9",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            238
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "LBDivaFrst46LtnMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "597e30c155c6ffe99c9b8207c1d05354a6f418c9d8ba57b2388465ac6d9c87a3",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva100AnSpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "4367e12baa8527588938eb671f5e58900ba74a74acb826804bacf79550ba7733",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            244,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 2
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva100AnSpTslGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "119c782f6d71c59bb402789d614d872ea453ea90641893d4dd32d3c806d129f3",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            242,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            80,
+            2048,
+            240
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": "Right mid-edge patch intersects glass; sampled verified empty upper-right edge instead.",
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva100RdcrShnGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "76ad64db6b7e30836df21ba09c9fdb50208bdd7354442bd00b53ed0804982178",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "GBDiva100SpryMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "89a35e039bed984c152486cc98dcedd43d647085f7e9b703103fc081fd5e8fcd",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    },
+    {
+      "sku": "LBDiva100LtnMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sha256": "4b6cda8805b29d7363f4bef7d3d752bd356204735d377caceffcb13ac825029a",
+      "backgroundPatches": [
+        {
+          "box": [
+            960,
+            8,
+            1120,
+            64
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 0
+        },
+        {
+          "box": [
+            160,
+            160,
+            320,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1760,
+            160,
+            1920,
+            320
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            32,
+            800,
+            112,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        },
+        {
+          "box": [
+            1968,
+            800,
+            2048,
+            1200
+          ],
+          "median": [
+            245,
+            243,
+            239
+          ],
+          "p95": 1
+        }
+      ],
+      "backgroundSamplingNote": null,
+      "backgroundReviewNeeded": false,
+      "geometryReview": "visual and landmark checks required",
+      "catalogPublicationHold": null
+    }
+  ]
+}
