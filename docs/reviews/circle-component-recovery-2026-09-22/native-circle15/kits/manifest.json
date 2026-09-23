@@ -1,0 +1,1946 @@
+{
+  "rows": [
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15SpryBlkMatt",
+      "websiteSku": "GBCrcl15SpryBlkMatt",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-MBLK",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 480,
+            "top": 504,
+            "right": 534,
+            "bottom": 955
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "sha256": "40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc",
+          "bytes": 9942,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 422,
+            "top": 221,
+            "right": 584,
+            "bottom": 541
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/136b06028e9a0751756a195ab9a7cad8d3b0f539c4ae8b98594c6a9e2d87a74b.sprayer.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/136b06028e9a0751756a195ab9a7cad8d3b0f539c4ae8b98594c6a9e2d87a74b.sprayer.webp",
+          "sha256": "136b06028e9a0751756a195ab9a7cad8d3b0f539c4ae8b98594c6a9e2d87a74b",
+          "bytes": 17884,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 409,
+            "top": 194,
+            "right": 593,
+            "bottom": 534
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/2e36565aab3ca58d2e3c9a0623ee282289ad7c09e6f51387d68ea8fd6b2305d5.overcap.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/2e36565aab3ca58d2e3c9a0623ee282289ad7c09e6f51387d68ea8fd6b2305d5.overcap.webp",
+          "sha256": "2e36565aab3ca58d2e3c9a0623ee282289ad7c09e6f51387d68ea8fd6b2305d5",
+          "bytes": 22380,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "e2358ee077f77cb1cf880a22db9c00bfa836df91a1849104e4ae884f85a52ca5",
+      "source": {
+        "sku": "GBCrcl15SpryBlkMatt",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SPR-MBLK",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/3. GBCrcl15SpryBlkMatt.psd",
+          "sha256": "0169dcf5bf249c84a9a57f0ef0af511a20da99c384c23aa61676653396e826d2"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /3. GBCrcl15SpryBlkMatt.psd",
+          "sha256": "070d8d1074a53dca2da3f97a3740e26ff20fb0db919e9f06ba822496cc447e3f"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          }
+        ],
+        "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "diptube",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "953bee72475263dc1d7583f786e6d91fb70f63e060e81cfae5e5e3979485e5f4"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "a591ea84a45b86679c5d68b4e8f76b0491b50150b11ba5b32c77f9dddc3aba61"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "641b12205efd4f78351213f6579833babe3fe2cd4d859c4d5249150134f7dedb"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 94.67959527824621,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0625,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15SpryBlkSh",
+      "websiteSku": "GBCrcl15SpryBlkSh",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-SBLK",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 480,
+            "top": 504,
+            "right": 534,
+            "bottom": 955
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "sha256": "40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc",
+          "bytes": 9942,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 421,
+            "top": 227,
+            "right": 582,
+            "bottom": 526
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/2ee73bb3aa4f8d51b4a9e37f6e08847660665e4e35309f2f8ac18cff1c6bae0a.sprayer.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/2ee73bb3aa4f8d51b4a9e37f6e08847660665e4e35309f2f8ac18cff1c6bae0a.sprayer.webp",
+          "sha256": "2ee73bb3aa4f8d51b4a9e37f6e08847660665e4e35309f2f8ac18cff1c6bae0a",
+          "bytes": 18468,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 415,
+            "top": 191,
+            "right": 614,
+            "bottom": 533
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/ee6ab969736d266dded4aa4e4320073734b8927eff8a6199fcdb765e580fa1a1.overcap.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/ee6ab969736d266dded4aa4e4320073734b8927eff8a6199fcdb765e580fa1a1.overcap.webp",
+          "sha256": "ee6ab969736d266dded4aa4e4320073734b8927eff8a6199fcdb765e580fa1a1",
+          "bytes": 21054,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "5a54377c0984eff498fbd39ff480c2584e9cddd92b0487f49b91b9c8c701209c",
+      "source": {
+        "sku": "GBCrcl15SpryBlkSh",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SPR-SBLK",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/4. GBCrcl15SpryBlkSh.psd",
+          "sha256": "786cb28e5a115a437bb5fa8397c745bd70875d48be32d67c015e29bcb478b920"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /4. GBCrcl15SpryBlkSh.psd",
+          "sha256": "e075812b66fb5eb33f6574b30374c687ed9223bece627b066d0f6651375a2e34"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          }
+        ],
+        "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "diptube",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "953bee72475263dc1d7583f786e6d91fb70f63e060e81cfae5e5e3979485e5f4"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "02ea4987476242d6fc1a2040316b5431ba95e4a34327cbce08a9925d52590dbe"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "54164d9d665a85b438df59c7f0eeaab03256a789d2b894b9bba67bee19fbce2f"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 94.67959527824621,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0827,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15SpryBluMatt",
+      "websiteSku": "GBCrcl15SpryBluMatt",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-MBLU",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 480,
+            "top": 504,
+            "right": 534,
+            "bottom": 955
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "sha256": "40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc",
+          "bytes": 9942,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 426,
+            "top": 231,
+            "right": 582,
+            "bottom": 529
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/afd92b7418330f151f9910bfd1e0339d3e4edcb41d1c8e2bea4f6dbf79e32ced.sprayer.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/afd92b7418330f151f9910bfd1e0339d3e4edcb41d1c8e2bea4f6dbf79e32ced.sprayer.webp",
+          "sha256": "afd92b7418330f151f9910bfd1e0339d3e4edcb41d1c8e2bea4f6dbf79e32ced",
+          "bytes": 51786,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 414,
+            "top": 190,
+            "right": 592,
+            "bottom": 532
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/0b1f7c10d4fb61f5660b729bcc2f6e2f549072e8612ea035710623e3dc0edfe0.overcap.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/0b1f7c10d4fb61f5660b729bcc2f6e2f549072e8612ea035710623e3dc0edfe0.overcap.webp",
+          "sha256": "0b1f7c10d4fb61f5660b729bcc2f6e2f549072e8612ea035710623e3dc0edfe0",
+          "bytes": 64354,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "8f17bc02ec7993b438f4151ea5fdae95f3143ad054cee31d9cd2bf5ecf15f6af",
+      "source": {
+        "sku": "GBCrcl15SpryBluMatt",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SPR-MBLU",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/5. GBCrcl15SpryBluMatt.psd",
+          "sha256": "71299e6a6444e4181c62aed1a149e0efbb28908a4b3186943f86e79a88f56cd2"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /5. GBCrcl15SpryBluMatt.psd",
+          "sha256": "ed20e9b2fa409ad4e7be7cd3f995194deae8fad9ddc11ffa2f89cfb60889fff7"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          }
+        ],
+        "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "diptube",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "953bee72475263dc1d7583f786e6d91fb70f63e060e81cfae5e5e3979485e5f4"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "45c18f2596ed43fa40b28844b3c263663f9a87c45709695508ae1a61245ab4c2"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "ea9d193d6e1c112e2baaa33c266e88c32c1cc820cff9819dfac09a41aea928aa"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 94.67959527824621,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0995,
+          "tailOver40": 4e-06
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15SpryCuMatt",
+      "websiteSku": "GBCrcl15SpryCuMatt",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-MCPR",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 480,
+            "top": 504,
+            "right": 534,
+            "bottom": 955
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "sha256": "40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc",
+          "bytes": 9942,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 424,
+            "top": 231,
+            "right": 585,
+            "bottom": 528
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/50800b9bcc5116bac81140500817dd0989c7eb2f0b1dac2d11a067a618fc27f2.sprayer.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/50800b9bcc5116bac81140500817dd0989c7eb2f0b1dac2d11a067a618fc27f2.sprayer.webp",
+          "sha256": "50800b9bcc5116bac81140500817dd0989c7eb2f0b1dac2d11a067a618fc27f2",
+          "bytes": 49652,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 412,
+            "top": 193,
+            "right": 595,
+            "bottom": 537
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/870094e204dd0d5eb45133c5350658c628818a751fda6b26178935237a0e4d53.overcap.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/870094e204dd0d5eb45133c5350658c628818a751fda6b26178935237a0e4d53.overcap.webp",
+          "sha256": "870094e204dd0d5eb45133c5350658c628818a751fda6b26178935237a0e4d53",
+          "bytes": 61774,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "7115d684b11f68c90d7ebbc8762cac659ec199e32e63a0a793256a35678fbc3d",
+      "source": {
+        "sku": "GBCrcl15SpryCuMatt",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SPR-MCPR",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/30. GBCrcl15SpryCuMatt.psd",
+          "sha256": "fb96da8a8eeadb668a979024d4fd40466fa9511b0eedefadf280dd9db920b236"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /30. GBCrcl15SpryCuMatt.psd",
+          "sha256": "c5d641fc594ece035eb2400401a82c86c34999210856311a2121bf1bc5c1cb91"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 4
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4,
+                "reviewedProductBox": [
+                  0,
+                  58,
+                  203,
+                  442
+                ]
+              }
+            ]
+          }
+        ],
+        "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "diptube",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "953bee72475263dc1d7583f786e6d91fb70f63e060e81cfae5e5e3979485e5f4"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 4,
+          "pixelHash": "781068ee384c41668b33dc180914911a85490a12e264e0d0813c7d4400f50a4a"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "a042085ff61b7f825ed395f39fa6851b6a7845eb42d7f7ccb67388a46c91ad2f"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 94.67959527824621,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.062,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15SpryGlMatt",
+      "websiteSku": "GBCrcl15SpryGlMatt",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-MGLD",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 480,
+            "top": 504,
+            "right": 534,
+            "bottom": 955
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "sha256": "40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc",
+          "bytes": 9942,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 428,
+            "top": 233,
+            "right": 586,
+            "bottom": 532
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/6282f4d58bed16fb2cea92ac59203b6bc7b2d36124f84cce83aef3a0c7411586.sprayer.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/6282f4d58bed16fb2cea92ac59203b6bc7b2d36124f84cce83aef3a0c7411586.sprayer.webp",
+          "sha256": "6282f4d58bed16fb2cea92ac59203b6bc7b2d36124f84cce83aef3a0c7411586",
+          "bytes": 59570,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 414,
+            "top": 193,
+            "right": 595,
+            "bottom": 536
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/efc8a53a061e859a51bf7cbef4da73f5b6c40e053ea0e61c790c37937485b552.overcap.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/efc8a53a061e859a51bf7cbef4da73f5b6c40e053ea0e61c790c37937485b552.overcap.webp",
+          "sha256": "efc8a53a061e859a51bf7cbef4da73f5b6c40e053ea0e61c790c37937485b552",
+          "bytes": 66314,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "9272b5db567233e9c0f2edc43dd3df66e3815b1287bacf29dfa6625bf8af8a39",
+      "source": {
+        "sku": "GBCrcl15SpryGlMatt",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SPR-MGLD",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/7. GBCrcl15SpryGlMatt.psd",
+          "sha256": "e81ef96379e5a7325b143e8e588d993d6595f1f88fb86317f824f6c8ba8f0356"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /7. GBCrcl15SpryGlMatt.psd",
+          "sha256": "041037558d58fd58177483dc66ca736b0b9fe77c966381d4780832bb62a7f4b9"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          }
+        ],
+        "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "diptube",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "953bee72475263dc1d7583f786e6d91fb70f63e060e81cfae5e5e3979485e5f4"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "974c2088e8e09919b5667e33a4fd164e451b0a0068b819764847b2d8a4527107"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "2d2c2fe4a6ea17496e9a1dbd147845d908199432cec880aeb7eb6e94b88a8d02"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 94.67959527824621,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0612,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15SpryGlSh",
+      "websiteSku": "GBCrcl15SpryGlSh",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-SGLD",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 480,
+            "top": 504,
+            "right": 534,
+            "bottom": 955
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "sha256": "40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc",
+          "bytes": 9942,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 419,
+            "top": 228,
+            "right": 583,
+            "bottom": 533
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/cb15097adbd652bb72e0333f27ceca641a47de935c2c6f595a4c18f95b9d63ae.sprayer.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/cb15097adbd652bb72e0333f27ceca641a47de935c2c6f595a4c18f95b9d63ae.sprayer.webp",
+          "sha256": "cb15097adbd652bb72e0333f27ceca641a47de935c2c6f595a4c18f95b9d63ae",
+          "bytes": 75474,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 415,
+            "top": 194,
+            "right": 592,
+            "bottom": 537
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/35455395bea0d276e826c05d2897e68c0493fd0a93a3358ae124ae9028803f08.overcap.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/35455395bea0d276e826c05d2897e68c0493fd0a93a3358ae124ae9028803f08.overcap.webp",
+          "sha256": "35455395bea0d276e826c05d2897e68c0493fd0a93a3358ae124ae9028803f08",
+          "bytes": 70374,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "51eabb27d7938bc7e401cff5cbc1092ffb0d9171d0c47908d027cedd6885d3d2",
+      "source": {
+        "sku": "GBCrcl15SpryGlSh",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SPR-SGLD",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/6. GBCrcl15SpryGlSh.psd",
+          "sha256": "f5135bd4d78a7379628da19e2f8ff8d8e7c6320ec910a7d16d6998ba60a504db"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /6. GBCrcl15SpryGlSh.psd",
+          "sha256": "510efbec08a9d6e81215b20974cc18db67ead1cc5460b0bc2423738cfa5a5371"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          }
+        ],
+        "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "diptube",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "953bee72475263dc1d7583f786e6d91fb70f63e060e81cfae5e5e3979485e5f4"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "a9c007e4d2c85f9daf043f9d203d61ca754e2aabda881715ba65471da138a0ec"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "e475a6ea199b7eb387a24f57c0d82106c91a9d61e0147a18112dc53ad6d91850"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 94.67959527824621,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0659,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15SprySlMatt",
+      "websiteSku": "GBCrcl15SprySlMatt",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-MSLV",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 480,
+            "top": 504,
+            "right": 534,
+            "bottom": 955
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "sha256": "40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc",
+          "bytes": 9942,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 418,
+            "top": 231,
+            "right": 584,
+            "bottom": 529
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/b41c387957b0735e4bae8eac82927c3aeda3863fe21321abb02c075f4d357e45.sprayer.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/b41c387957b0735e4bae8eac82927c3aeda3863fe21321abb02c075f4d357e45.sprayer.webp",
+          "sha256": "b41c387957b0735e4bae8eac82927c3aeda3863fe21321abb02c075f4d357e45",
+          "bytes": 18624,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 407,
+            "top": 191,
+            "right": 587,
+            "bottom": 535
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/f80b6207e503b78f96a5a61a56af53db4bfa5db5ba3d5094ef13e2e0712ce59e.overcap.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/f80b6207e503b78f96a5a61a56af53db4bfa5db5ba3d5094ef13e2e0712ce59e.overcap.webp",
+          "sha256": "f80b6207e503b78f96a5a61a56af53db4bfa5db5ba3d5094ef13e2e0712ce59e",
+          "bytes": 19730,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "966448d348d7782e39416ffacebace24f00a9fd207408bf128f1a7557555fd69",
+      "source": {
+        "sku": "GBCrcl15SprySlMatt",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SPR-MSLV",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/8. GBCrcl15SprySlMatt.psd",
+          "sha256": "6964641a47c6a5841ece281dbbdf7eab3b8184a9e90258ce23d00cf40822d9ea"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /8. GBCrcl15SprySlMatt.psd",
+          "sha256": "0c703539753aec686f14e0688013fa6e8e081f5d2a7e0c561a63a12ef13bcd47"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          }
+        ],
+        "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "diptube",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "953bee72475263dc1d7583f786e6d91fb70f63e060e81cfae5e5e3979485e5f4"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "fef48e3f218856eec0b565ed1197debb75ee597584c9a06804d80e194530740d"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "8ccc22727fbb35a61cda188b7e27126133222f0625aeda19076a6204112a5c42"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 94.67959527824621,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0679,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15SprySlSh",
+      "websiteSku": "GBCrcl15SprySlSh",
+      "graceSku": "GB-CIR-CLR-15ML-SPR-SSLV",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 480,
+            "top": 504,
+            "right": 534,
+            "bottom": 955
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc.diptube.webp",
+          "sha256": "40ae06b60c3dc66758e3ad293929fc9ce8fbdfd24d09c62c33c1aad9ef4ceafc",
+          "bytes": 9942,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 423,
+            "top": 231,
+            "right": 586,
+            "bottom": 532
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/a217c396d69f98328a399d2b2f253538b2156c3bd6ddf5dada32df6f5dd0315a.sprayer.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/a217c396d69f98328a399d2b2f253538b2156c3bd6ddf5dada32df6f5dd0315a.sprayer.webp",
+          "sha256": "a217c396d69f98328a399d2b2f253538b2156c3bd6ddf5dada32df6f5dd0315a",
+          "bytes": 31602,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 419,
+            "top": 194,
+            "right": 593,
+            "bottom": 535
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/8a3f5c7ff4a4786f6ca695cc9bdd9213439fe0eba2e4fcaefafe10a3ae5889f4.overcap.webp",
+          "storeKey": "kits/circle-component-recovery-2026-09-22/8a3f5c7ff4a4786f6ca695cc9bdd9213439fe0eba2e4fcaefafe10a3ae5889f4.overcap.webp",
+          "sha256": "8a3f5c7ff4a4786f6ca695cc9bdd9213439fe0eba2e4fcaefafe10a3ae5889f4",
+          "bytes": 24498,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "904193fe88c9dc16982a72207196fec005cb7c7f19135b8d2fca3c64d1ce70c9",
+      "source": {
+        "sku": "GBCrcl15SprySlSh",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SPR-SSLV",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/9. GBCrcl15SprySlSh copy.psd",
+          "sha256": "e2a3ce1f7793ccf9361e224c62347d2d6d4fb8260508c214c28ac609c92b8fa5"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /9. GBCrcl15SprySlSh copy.psd",
+          "sha256": "175387ef15a4703e9a495fa2145251dbdd9d472cc6f8fd2818a999834fdd8b23"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          }
+        ],
+        "review": "Native glass and dip tube from exact capped source; exposed mechanism translated from identical uncapped glass; matching cap remains separate. Uniform scale only."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "diptube",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "953bee72475263dc1d7583f786e6d91fb70f63e060e81cfae5e5e3979485e5f4"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "708c7e721eb10c5591ca89fa5e99d3d715249774a68d668f75fa2b540cffdade"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "0e6e7e402170a337dd709e2ffdf0f19a2d69446c5f204b01ef453deaf2c3c0b6"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 94.67959527824621,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0684,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    }
+  ]
+}

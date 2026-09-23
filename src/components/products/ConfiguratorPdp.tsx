@@ -139,7 +139,7 @@ export default function ConfiguratorPdp({
   onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
   heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false, kitQuery, selectedGraceSku,
-  productPresentation, applicator, catalogFamily, localKitPilot,
+  productPresentation, applicator, catalogFamily, localKitPilot, localComponentPreviewSku,
 }: {
   currentSlug: string;
   /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
@@ -162,6 +162,8 @@ export default function ConfiguratorPdp({
   applicator?: string | null;
   catalogFamily?: string | null;
   localKitPilot?: LocalKitPilot;
+  /** Exact SKU admitted by the server's loopback-only component review. */
+  localComponentPreviewSku?: string;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
@@ -433,7 +435,8 @@ export default function ConfiguratorPdp({
     && kitParts?.some(part => REMOVABLE_KIT_SLOTS.has(part.slot));
   const wantedPlate = (capOff && plateImageCapOff) ? plateImageCapOff : plateImage;
   const plate = wantedPlate && !brokenPlates.has(wantedPlate) ? wantedPlate : null;
-  const showKitLayers = kitReady && (Boolean(pilot) || exploded || preferKitPair || !plate);
+  const reviewingComponents = Boolean(localComponentPreviewSku && localComponentPreviewSku === kit?.sku);
+  const showKitLayers = kitReady && (reviewingComponents || Boolean(pilot) || exploded || preferKitPair || !plate);
   const slugParts = parseProductSlug(currentSlug);
   const capacityMl = slugParts?.capacityMl ?? capacityMlFromSlug(currentSlug);
   const stageTransform = exploded

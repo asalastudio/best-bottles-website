@@ -9,7 +9,9 @@ describe("exact catalog assemblies without a separately sold loose component", (
             components: {}, shopifyVariantId: "assembly-variant", shopifySellable: true, stockStatus: "In Stock", webPrice1pc: 1 } as unknown as CatalogRow;
         expect(catalogIncludedAssembly(row)).toEqual(source);
         expect(compatibleFinishComponent(row)?.websiteSku).toBe(source.websiteSku);
-        expect(isBuilderCandidate(row)).toBe(true);
+        const excludedFromChooser = source.family === "Cylinder" && ([3.3, 4].includes(source.capacityMl)
+            || ([28, 50].includes(source.capacityMl) && source.neckThreadSize === "16mm"));
+        expect(isBuilderCandidate(row)).toBe(!excludedFromChooser);
         for (const change of [{ graceSku: "different" }, { websiteSku: "another" }, { capacityMl: 60 },
             { color: "Frosted" }, { neckThreadSize: "13-415" }, { category: "Component" },
             { capColor: "not-the-selected-finish" }]) {

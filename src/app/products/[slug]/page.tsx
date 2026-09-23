@@ -1,4 +1,5 @@
 import { readKitPilot } from "../../../../scripts/asset-ledger/kit-pilot.mjs";
+import { localPdpComponentKits } from "@/lib/paper-doll/local-component-kits";
 import { hasCatalogSourceHold } from "@/lib/products/catalog-listing-visibility";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -210,6 +211,7 @@ export default async function ProductPage({
     ]);
     const group = data?.group;
     const variant = primaryVariant;
+    const localComponentKits = localPdpComponentKits((await headers()).get('host'), resolvedSearchParams.assetPreview, data?.variants ?? []);
     const localAssetPreview = localBostonPreview(process.env.NODE_ENV, (await headers()).get('host'), resolvedSearchParams.assetPreview) && group?.family === 'Boston Round';
     const completion = localAssetPreview ? await readCompletion(process.cwd()) : null;
     const displayedPlates = localAssetPreview ? previewPlates(completion, group?._id, data?.variants ?? [], platesBySku) : platesBySku;
@@ -274,6 +276,7 @@ export default async function ProductPage({
                 siblingGroups={siblingGroups}
                 platesBySku={localAssetPreview ? pilot.plates : platesBySku}
                 localKits={pilot.kits}
+                localComponentKits={localComponentKits}
                 localAssetPreview={localAssetPreview}
                 localAssetVersion={completion ? `${completion.token}:${completion.revision}` : ''}
             />

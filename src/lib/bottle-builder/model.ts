@@ -156,6 +156,11 @@ export function assessBuilderConfiguration(row: CatalogRow, kit: BuilderKit | nu
  * loose component on top of an assembly that already includes that component.
  */
 export function isBuilderCandidate(row: CatalogRow): boolean {
+    // These complete assemblies remain catalog/PDP products. The chooser
+    // excludes the small sprays and 16 mm jumbo rollers (Jordan, 2026-09-22).
+    // Keep the separate standard 50 ml / 18-415 Cylinder available.
+    if (row.family === "Cylinder" && ((row.capacityMl === 3.3 || row.capacityMl === 4)
+        || ([28, 50].includes(row.capacityMl ?? 0) && row.neckThreadSize === "16mm"))) return false;
     return (row.resolution !== "unknown" || Boolean(catalogIncludedAssembly(row)))
         && !/__RETIRED__/i.test(row.websiteSku ?? "")
         && Boolean(compatibleFinishComponent(row))

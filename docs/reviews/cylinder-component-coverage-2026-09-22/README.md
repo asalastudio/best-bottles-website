@@ -3,6 +3,11 @@
 Status: local implementation and review candidates; not deployed. No catalog,
 Shopify, hero-release, or hosted kit index writes were made for this batch.
 
+The later [Circle follow-up](../circle-component-recovery-2026-09-22/README.md)
+records the separately applied nine-kit/26-product Circle repair and the four
+requested Cylinder Builder exclusions. Counts below are the original audit
+snapshot, before those chooser exclusions; they remain relevant to PDP artwork.
+
 ## Compatibility correction
 
 All 436 current Cylinder catalog rows were assessed. There are 432 supported

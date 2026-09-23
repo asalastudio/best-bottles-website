@@ -47,7 +47,8 @@ def main():
             continue
         print(f'{r["sku"]}: rendering native 2080x2288', flush=True)
         started = time.time()
-        api.edit(Path(r['promptFile']).read_text(), r.get('imageInputs', [r['framedInput'], r['masterComposite'], r['materialReference']]), str(out), mask=r.get('maskFile'), size='2080x2288', quality='high')
+        image_inputs = r.get('imageInputs') or [r['framedInput'], r['masterComposite'], r['materialReference']]
+        api.edit(Path(r['promptFile']).read_text(), image_inputs, str(out), mask=r.get('maskFile'), size='2080x2288', quality='high')
         raw = out.read_bytes()
         assert raw[:8] == b'\x89PNG\r\n\x1a\n', 'Output is not PNG'
         dimensions = list(struct.unpack('>II', raw[16:24]))
