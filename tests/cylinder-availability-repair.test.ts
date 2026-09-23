@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { planCylinderAvailability } from "../convex/repairCylinderAvailability";
-import proposal from "../docs/reviews/cylinder-component-coverage-2026-09-22/stock-reconciliation.json";
+import proposal from "../convex/cylinder-stock-reconciliation.json";
 import type { Doc } from "../convex/_generated/dataModel";
 
 describe("source-reviewed Cylinder stock reconciliation", () => {

@@ -1,7 +1,9 @@
 import { internalMutation } from "./_generated/server";
 import type { Doc } from "./_generated/dataModel";
 import { v } from "convex/values";
-import proposal from "../docs/reviews/cylinder-component-coverage-2026-09-22/stock-reconciliation.json";
+// Must live under convex/: .vercelignore drops docs/, and Next typecheck
+// still compiles this file (it only ignores *.test.* diagnostics).
+import proposal from "./cylinder-stock-reconciliation.json";
 
 export function planCylinderAvailability(product: Doc<"products">, source: typeof proposal.rows[number]) {
     for (const field of ["websiteSku", "graceSku", "family", "capacityMl", "color", "neckThreadSize", "applicator"] as const)
