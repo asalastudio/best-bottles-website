@@ -82,6 +82,8 @@
 .previewEmpty { flex: 1; display: grid; align-content: center; justify-items: center; gap: 16px; color: var(--quiet); min-height: 420px; font-size: 13px; }
 .summary { position: sticky; top: 126px; padding: 23px 20px 18px; }
 .summaryHeading { display: flex; align-items: center; justify-content: space-between; padding-bottom: 16px; }
+.summaryNextAction { margin: 0 0 16px; }
+.summaryNextAction .primary { width: 100%; }
 .summaryHeading h2 { font-family: var(--font-brand); font-size: 28px; line-height: 1.1; letter-spacing: -.025em;text-transform:none;letter-spacing:0}
 .summaryLine { display: flex; align-items: flex-start; gap: 10px; border-top: 1px solid #eeece7; padding: 16px 0; }
 .summaryNumber { margin-top: 1px; flex-shrink: 0; width: 24px; height: 24px; display: grid; place-items: center; border: 1px solid #ddd5c7; border-radius: 50%; color: #9a9387; font-size: 10px; }
@@ -116,13 +118,25 @@
 .primary, .secondary { min-height: 46px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 3px; padding: 10px 14px; font-size: 12px; font-weight: 500; transition: background-color .15s; text-align: center; }
 .primary { background: #9a783e; color: #fff; border: 1px solid #9a783e; }
 .primary:hover { background: #876631; }
-.nextStepCue { animation: fitmentPulse 1s ease-out 2; }
-.nextStepCue > svg { animation: fitmentArrow 1s ease-in-out 2; }
+/* A single warm reflection announces an available next step, then settles. */
+.nextStepCue {
+    background-image: linear-gradient(110deg, transparent 40%, #fff3d638 48%, #fff8e861 50%, #fff3d638 52%, transparent 60%);
+    background-size: 250% 100%;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    animation: brassReady 1.05s cubic-bezier(.22,.61,.36,1) 1;
+}
+@media (prefers-reduced-motion: reduce) {
+    .nextStepCue { animation: none; background-image: none; }
+}
 .nextStepHint { display: flex; align-items: flex-start; gap: 8px; margin-top: 18px; color: #806336; font-size: 11px; line-height: 1.7; }
 .nextStepHint > svg { flex-shrink: 0; margin-top: 2px; }
 .nextStepHint strong { font-weight: 600; }
-@keyframes fitmentPulse { 0%, 100% { box-shadow: 0 0 0 0 #a17c3c00; } 35% { box-shadow: 0 0 0 5px #a17c3c30; } }
-@keyframes fitmentArrow { 0%, 100% { transform: translateX(0); } 40% { transform: translateX(4px); } }
+@keyframes brassReady {
+    0% { background-color: #c3b18e; background-position: 100% 0; box-shadow: 0 0 0 0 #a17c3c00; }
+    35% { background-color: #9a783e; box-shadow: 0 0 0 3px #a17c3c18; }
+    100% { background-color: #9a783e; background-position: 0% 0; box-shadow: 0 0 0 0 #a17c3c00; }
+}
 .secondary { border: 1px solid #c1a573; color: #806336; background: #fff; }
 .assurance { display: flex; gap: 8px; align-items: center; font-size: 10px; line-height: 1.4; margin-top: 18px; }
 .assurance > svg { flex-shrink: 0; color: #a17c3c; }
@@ -342,9 +356,99 @@
 .glassSection h3:focus { outline: none; }
 .singleGlass { display: grid; grid-template-columns: minmax(120px, 180px); }
 .singleGlass .option { min-height: 48px; justify-content: center; padding: 12px 32px; }
-.componentThumb { display: grid; justify-items: center; align-items: end; height: 140px; padding: 8px 8px 12px; }
+.componentThumb { display: grid; grid-template: minmax(0, 1fr) / minmax(0, 1fr); place-items: center; height: 140px; padding: 8px 8px 12px; }
 .coverControl { display: flex; align-items: center; justify-content: center; gap: 12px; padding: 0 16px 16px; flex-wrap: wrap; font-size: 12px; }
 .coverControl button { min-height: 44px; padding: 8px 12px; border: 1px solid #c9c1b3; border-radius: 4px; text-decoration: underline; text-underline-offset: 3px; }
 @media(max-width: 639px) { .coverControl { grid-column: 1 / -1; font-size: 13px; } .steps button { font-size: 12px; gap: 4px; } }
 
 .familyPending { margin: 6px 0 0; font-size: 13px; color: #71572f; }
+
+/* Desktop layout study: dedicate more width to the customer's next choice.
+ * The option list scrolls independently; heading and navigation stay visible. */
+@media (min-width: 1100px) {
+    .builder { padding: 20px 28px 28px; }
+    .header { gap: 24px; margin-bottom: 18px; }
+    .header h1 { font-size: clamp(34px, 2.8vw, 44px); }
+    .header p { margin-top: 7px; }
+    .backLink { margin-bottom: 8px; }
+    .steps { gap: 10px; }
+    .steps button { font-size: 14px; gap: 8px; }
+    .steps button > span { width: 34px; height: 34px; font-size: 15px; }
+    .steps button:not(:last-child)::after { width: 16px; }
+    .filters { padding: 10px 16px; margin-bottom: 16px; }
+    .filters select { height: 34px; }
+    .workspace { --panel-height: calc(100dvh - 152px); grid-template-columns: minmax(0, 1.48fr) minmax(0, 1.08fr) minmax(260px, .8fr); gap: 14px; }
+    .builder[data-current-step="0"] .workspace { --panel-height: calc(100dvh - 364px); }
+    .options { display: flex; flex-direction: column; height: max(320px, var(--panel-height)); min-height: 0; max-height: 900px; padding: 0; overflow: hidden; }
+    .options { margin-inline-start: 12px; }
+    .optionHeader { flex: 0 0 auto; padding: 18px 22px 14px; margin: 0; border-bottom: 1px solid var(--line); }
+    .optionHeader h2 { font-size: 28px; margin-top: 5px; }
+    .optionHeader p { font-size: 12px; }
+    .optionToolbar { margin: 0; }
+    .startOver { min-height: 36px; font-size: 12px; padding: 6px 10px; }
+    .optionFieldset { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-gutter: stable; padding: 16px 18px 18px 22px; scroll-padding: 8px; }
+    .optionFooter { flex: 0 0 auto; display: flex; align-items: center; gap: 18px; border-top: 1px solid var(--line); padding: 14px 22px; background: white; }
+    .optionFooter .previous { margin: 0; min-height: 46px; font-size: 13px; flex-shrink: 0; }
+    .optionFooter .optionAction { flex: 1; position: static; margin: 0; padding: 0; background: none; }
+    .optionFooter .primary { font-size: 13px; min-height: 46px; }
+    .optionFooter:empty { display: none; }
+    .bottleGrid, .colorGrid, .closureGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
+    .fitmentGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .fitmentGrid .option { padding: 12px 10px 14px; }
+    .fitmentGrid .optionDescription { display: none; }
+    .bottleThumb { height: 98px; }
+    .colorThumb { height: 88px; margin-bottom: 7px; }
+    .componentThumb { height: 152px; padding: 10px; }
+    .closureThumb { height: 82px; padding: 5px 8px 7px; }
+    .option { padding: 9px 7px 11px; }
+    .option strong, .closureGrid .option strong { font-size: 12px; }
+    .neckBadge { white-space: nowrap; font-size: 10px; padding: 5px 7px; }
+    .optionDescription { font-size: 10px; line-height: 1.4; }
+    .compatibilityContext { padding: 10px 12px; margin-bottom: 13px; }
+    .compatibilityContext strong, .compatibilityContext span span { font-size: 11px; }
+    .selectedFitment { padding: 10px 12px; }
+    .selectedFitment strong { font-size: 13px; margin: 1px 0; }
+    .closureSection > p { margin: 4px 0 11px; }
+    .glassSection { margin-top: 18px; padding-top: 16px; }
+    .glassSection h3 { font-size: 22px; margin-bottom: 12px; }
+    .nextStepHint { margin-top: 14px; }
+    .includedCover { margin-top: 14px; padding: 10px 12px; }
+    .includedCoverImage { height: 54px; }
+    .preview { min-height: 0; height: max(320px, var(--panel-height)); max-height: 900px; }
+    .previewHeader { padding: 18px 16px 0; }
+    .previewHeader > span:first-child { font-size: 8px; letter-spacing: .1em; }
+    .previewHeader .liveDot { font-size: 8px; }
+    .previewImage { height: 0; min-height: 0; flex: 1 1 auto; padding: 10px 12px 0; }
+    .previewEmpty { min-height: 0; }
+    .previewCaption { padding: 16px 14px 20px; }
+    .previewCaption h2 { font-size: 26px; }
+    .previewCaption p { line-height: 1.5; }
+    .coverControl { flex: 0 0 auto; padding: 0 12px 16px; gap: 8px; font-size: 11px; }
+    .coverControl button { min-height: 36px; }
+    .summary { padding: 20px 18px 18px; max-height: max(320px, var(--panel-height)); overflow-y: auto; }
+    .summaryHeading { padding-bottom: 12px; }
+    .summaryHeading h2 { font-size: 26px; }
+    .summaryLine { padding: 12px 0; gap: 8px; }
+    .summaryLabel { font-size: 10px; }
+    .summaryLine strong { font-size: 12px; }
+    .summaryLine > button { min-height: 32px; }
+    .purchaseHint { font-size: 11px; }
+}
+@media (min-width: 1100px) and (max-width: 1279px) {
+    .builder { padding-inline: 18px; }
+    .header { flex-wrap: nowrap; gap: 18px; }
+    .header h1 { font-size: 32px; }
+    .steps { gap: 7px; }
+    .steps button { gap: 5px; font-size: 12px; }
+    .steps button:not(:last-child)::after { display: none; }
+    .workspace { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) 248px; gap: 12px; }
+    .bottleGrid, .colorGrid, .closureGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .fitmentGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .optionHeader { padding-inline: 16px; }
+    .optionHeader h2 { font-size: 25px; }
+    .optionFieldset { padding-inline: 16px 12px; }
+    .optionFooter { padding-inline: 16px; }
+    .previewHeader .liveDot { display: none; }
+}
+
+.linerNote { padding: 10px 12px; border-left: 2px solid var(--gold); background: #f5f3ef; color: #514a3e; font-size: 12px; line-height: 1.6; margin: 10px 0 14px; }

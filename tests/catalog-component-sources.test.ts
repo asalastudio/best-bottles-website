@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { catalogComponentPool } from "../convex/catalogComponentSources";
+import { catalogComponentPool, indexCatalogComponentPools } from "../convex/catalogComponentSources";
 import { resolveCompatibleComponents } from "../convex/componentUtils";
 import type { Doc } from "../convex/_generated/dataModel";
 
@@ -11,6 +11,7 @@ const donor = { ...bottle, websiteSku: "LBCyl25LtnMtSl", components: { Sprayer: 
 describe("catalog component sources for one Cylinder body", () => {
     it("recovers the existing catalog relationship for another assembly of the same bottle", () => {
         const pool = catalogComponentPool(bottle, [bottle, donor]);
+        expect(catalogComponentPool(bottle, [bottle, donor], indexCatalogComponentPools([bottle, donor]))).toEqual(pool);
         expect(pool.grouped.Sprayer.map(p => p.graceSku)).toEqual([part.graceSku]);
         expect(pool.sources).toEqual([donor.websiteSku]);
         expect(bottle.components).toEqual([]);

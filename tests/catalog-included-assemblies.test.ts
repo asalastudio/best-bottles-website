@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import assemblies from "../convex/catalog-included-assemblies.json";
+import caps13_415 from "../convex/catalog-included-13-415-caps.json";
 import { catalogIncludedAssembly } from "../convex/catalogIncludedAssemblies";
 import { compatibleFinishComponent, isBuilderCandidate, type CatalogRow } from "@/lib/bottle-builder/model";
 
@@ -22,5 +23,32 @@ describe("exact catalog assemblies without a separately sold loose component", (
             expect(isBuilderCandidate({ ...row, ...change })).toBe(false);
         expect(row.components).toEqual({});
         expect(row.shopifyVariantId).toBe("assembly-variant");
+    });
+});
+
+describe("reviewed short and tall 13-415 cap assemblies", () => {
+    it("keeps eight distinct lined finishes for each tall-nine glass material", () => {
+        for (const color of ["Clear", "Frosted"]) {
+            const finishes = caps13_415.filter(row => row.capacityMl === 9 && row.color === color).map(row => row.finish);
+            expect(finishes).toHaveLength(8);
+            expect(new Set(finishes).size).toBe(8);
+            expect(finishes.filter(label => label.startsWith("Short Lined "))).toHaveLength(6);
+            expect(finishes).toContain("Tall Regular Shiny Gold");
+            expect(finishes).toContain("Tall Regular Shiny Silver");
+        }
+    });
+    it("admits the six lined short caps and white ribbed cap only on their exact listed bottle SKUs", () => {
+        expect(caps13_415).toHaveLength(30); // 14 five-ml and 16 tall-nine-ml assemblies
+        for (const source of caps13_415) {
+            const row = { ...source, category: "Glass Bottle", itemName: "Listed cap assembly", resolution: "unknown",
+                components: {}, shopifyVariantId: "assembly-variant", shopifySellable: true,
+                stockStatus: "In Stock", webPrice1pc: 1 } as unknown as CatalogRow;
+            expect(catalogIncludedAssembly(row)).toEqual(source);
+            expect(compatibleFinishComponent(row)?.websiteSku).toBe(source.websiteSku);
+            expect(isBuilderCandidate(row)).toBe(true);
+            for (const drift of [{ websiteSku: "another" }, { neckThreadSize: "17-415" }, { color: "Amber" },
+                { capColor: "Short Ribbed Black" }, { graceSku: "another" }])
+                expect(catalogIncludedAssembly({ ...row, ...drift })).toBeNull();
+        }
     });
 });

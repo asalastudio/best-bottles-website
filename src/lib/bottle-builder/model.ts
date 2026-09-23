@@ -6,6 +6,7 @@ import type { api } from "../../../convex/_generated/api";
 import type { CartItem } from "@/components/CartProvider";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
+import cleanedTallNineBodies from "./tall9-cleaned-bodies.generated.json";
 import bodyMedia from "./bodies.generated.json";
 import assemblyMedia from "./circle-assemblies.generated.json";
 import fitmentMedia from "./fitments.generated.json";
@@ -66,6 +67,27 @@ export const emptySelection = (): BuilderSelection => ({ bodyId: null, color: nu
 const slug = (s: string) => s.trim().toLowerCase().replace(/\s+/g, "-");
 const closureSlots = new Set(["cap", "overcap"]);
 export const isClosurePart = (part: BuilderPart) => closureSlots.has(part.slot);
+
+/** The exact legacy SKU is printed as 5 mL in the source specification and
+ * shares the 5 mL Cylinder mould. Its imported 5.5 mL group must not create a
+ * second physical bottle in the builder while the catalog migration rolls out.
+ * Do not infer this alias from capacity or neck for any sibling SKU. */
+export function reviewedCylinderFiveMlRow(row: CatalogRow): CatalogRow {
+    if (row.websiteSku !== "GBCyl5SpryBlkMatt" || row.graceSku !== "GB-CYL-CLR-5ML-SPR-MBLK"
+        || row.family !== "Cylinder" || row.color !== "Clear" || row.neckThreadSize !== "13-415"
+        || row.applicator !== "Fine Mist Sprayer" || row.capacityMl !== 5.5
+        || row.productGroupSlug !== "cylinder-5.5ml-clear-13-415-finemist") return row;
+    return { ...row, capacityMl: 5, capacity: "5 ml",
+        productGroupSlug: "cylinder-5ml-clear-13-415-finemist" };
+}
+
+export function reviewed13_415CylinderCapLabel(row: CatalogRow, fitment: string, closure: string): string {
+    if (row.family !== "Cylinder" || row.capacityMl !== 5 || row.neckThreadSize !== "13-415" || fitment !== "Screw Cap") return closure;
+    if (["GBCyl5Gl", "GBCyl5Sl", "GBCylBlu5Gl", "GBCylBlu5Sl"].includes(row.websiteSku ?? "")) {
+        return closure.replace(/^Regular\s+/i, "Tall Lined ");
+    }
+    return /^Short (?!Ribbed)/i.test(closure) ? closure.replace(/^Short /i, "Short Lined ") : closure;
+}
 
 /** Join the selected assembly to a real, active component returned by matrix.
  * Neck equality and another finish on a complete SKU are not sufficient.
@@ -212,7 +234,11 @@ export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, pr
     const { family, color, capacityMl, neckThreadSize: neck } = row;
     // Fail closed on catalog/asset identity drift, including capacity aliases.
     const suffix = `-${slug(color!)}-${slug(neck!)}`;
-    if (!kit.familyId.endsWith(suffix) || !kit.familyId.includes(`-${capacityMl}ml-`)) return null;
+    const reviewedFiveMlKitAlias = row.websiteSku === "GBCyl5SpryBlkMatt"
+        && row.graceSku === "GB-CYL-CLR-5ML-SPR-MBLK" && family === "Cylinder"
+        && capacityMl === 5 && color === "Clear" && neck === "13-415"
+        && kit.familyId === "cylinder-5.5ml-clear-13-415";
+    if (!kit.familyId.endsWith(suffix) || (!kit.familyId.includes(`-${capacityMl}ml-`) && !reviewedFiveMlKitAlias)) return null;
     // Short Cylinder 5.5 ml is an unresolved imported identity, not a new body.
     if (family === "Cylinder" && capacityMl === 5.5) return null;
     const fitment = capOnly ? "Screw Cap" : app === "Metal Roller Ball" ? "Metal Roller"
@@ -266,6 +292,10 @@ export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | n
         if (!tall && /^Tall\s+/i.test(closure)) closure = closure.replace(/^Tall\s+/i, "");
         if (!tall && /\bshort\b/i.test(capName) && !/\bShort\b/i.test(closure)) closure = `Short ${closure}`;
     }
+    // The 13-415 source sheet separates ribbed, short lined, and tall lined
+    // caps. Do not call the six short lined finishes "metal caps"; "Regular"
+    // obscured the tall/short distinction in the imported catalogue.
+    closure = reviewed13_415CylinderCapLabel(row, fitment, closure);
     if (/vintage|bulb/i.test(fitment)) {
         // Ivory bulb with a shiny gold or shiny silver collar; jeweled ring variants.
         const collar = description.match(/\b((?:shiny|matte|matt)\s+)?(gold|silver)\s+collar\b/i);
@@ -386,6 +416,7 @@ export function deriveBuilder(bodies: BuilderBody[], state: BuilderSelection) {
     const fitments = [...new Set(colored.map(config => config.fitment))];
     const fitment = fitments.includes(state.fitment ?? "") ? state.fitment : null;
     const fitted = colored.filter(config => config.fitment === fitment);
+    if (fitment === "Screw Cap" && body?.neck === "13-415") fitted.sort((a, b) => a.closure.localeCompare(b.closure));
     const closures = [...new Set(fitted.map(config => config.closure))];
     const closure = closures.includes(state.closure ?? "") ? state.closure : null;
     const matches = fitted.filter(config => config.closure === closure);
@@ -429,7 +460,12 @@ export function previewParts(config: BuilderConfiguration, stage: "body" | "fitm
     }
     return parts.filter(part => stage === "complete" || part.slot === "body"
         || (stage === "fitment" && (!isClosurePart(part) || /^(Screw|Tear-off) Cap$/.test(config.fitment))))
-        .sort((a, b) => a.zOrder - b.zOrder);
+        .sort((a, b) => a.zOrder - b.zOrder)
+        .map(part => {
+            if (config.family !== "Cylinder" || config.capacityMl !== 9 || config.neck !== "13-415" || config.color !== "Frosted" || part.slot !== "body") return part;
+            const image = (cleanedTallNineBodies as Record<string, BuilderPart["image"]>)[part.image.sha256];
+            return image ? { ...part, image } : part;
+        });
 }
 
 export function builderCartItem(config: BuilderConfiguration, quantity: number): CartItem {

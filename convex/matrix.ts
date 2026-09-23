@@ -37,7 +37,7 @@ import {
     resolveCompatibleComponents,
     selectBestFitmentRule,
 } from "./componentUtils";
-import { catalogComponentPool, addReviewedCatalogComponent, reviewedCatalogLink, applyStaffComponentCorrections } from "./catalogComponentSources";
+import { catalogComponentPool, indexCatalogComponentPools, addReviewedCatalogComponent, reviewedCatalogLink, applyStaffComponentCorrections } from "./catalogComponentSources";
 import { catalogIncludedAssembly } from "./catalogIncludedAssemblies";
 
 /** How a row's component list came to be — carried to the UI so it can show
@@ -117,6 +117,10 @@ export const getFamilyRows = query({
             .query("products")
             .withIndex("by_family", (q) => q.eq("family", args.family))
             .take(MAX_ROWS);
+        // Cylinder has hundreds of variants. Index physical-body donors once
+        // instead of normalizing every sibling's imported components again for
+        // each output row, which can exceed Convex's one-second query limit.
+        const componentPoolIndex = indexCatalogComponentPools(bottles);
 
         // Fitment rules are keyed by thread, so fetch each thread ONCE rather
         // than per row. A family is one or two threads; without this a 400-row
@@ -173,7 +177,7 @@ export const getFamilyRows = query({
         const rows = await Promise.all(bottles.map(async (b) => {
             const thread = (b.neckThreadSize ?? "").toString().trim();
             const link = reviewedCatalogLink(b);
-            const { grouped, sources } = applyStaffComponentCorrections(b, addReviewedCatalogComponent(b, catalogComponentPool(b, bottles),
+            const { grouped, sources } = applyStaffComponentCorrections(b, addReviewedCatalogComponent(b, catalogComponentPool(b, bottles, componentPoolIndex),
                 link ? componentProducts.get(link.componentGraceSku) ?? null : null));
             const rule = selectBestFitmentRule(rulesByThread.get(thread) ?? [], b);
             const resolved = resolveCompatibleComponents(grouped, rule, b);

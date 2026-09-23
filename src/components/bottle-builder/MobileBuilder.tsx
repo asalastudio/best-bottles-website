@@ -1,6 +1,6 @@
 "use client";
 
-import { fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitment-copy";
+import { capLinerNote, fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitment-copy";
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, DotsThree, Minus, Plus, SlidersHorizontal, X, ArrowsOutSimple } from "@/components/icons";
@@ -221,6 +221,7 @@ export default function MobileBuilder(p: Props) {
             </div></fieldset>
             {!visible.length && <div className={styles.empty}><p>No bottles match these filters.</p><button onClick={clearFilters}>Clear filters</button><Link href={`/catalog?families=${encodeURIComponent(p.family)}`}>Browse catalog</Link></div>}
         </>}
+        {stage === 3 && capLinerNote(body?.neck, fitment) && <p className={styles.included}>{capLinerNote(body?.neck, fitment)}</p>}
         {stage > 0 && stage < 4 && <>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>{stages[stage]}</legend>
                 {stage === 1 && <div className={styles.glassGrid}>{p.current.colors.map(c => { const example = body!.configurations.find(item => item.color === c)!; return <Choice key={c} name={`${id}-glass`} value={c} selected={color === c} label={c} onSelect={() => choose({ color: c })}>

@@ -4,7 +4,7 @@ import tallRollers from "@/lib/bottle-builder/rollers.generated.json";
 import cobaltRollers from "@/lib/bottle-builder/rollers-cobalt.generated.json";
 import {
     builderCartItem, builderOrder, catalogConfigurationFromRow, chooserSourceRows, clearBodyPreview, compatibleFinishComponent, configurationFromRow, deriveBuilder, emptySelection,
-    groupBuilderBodies, resolveBuilderConfigurations, previewParts, reconcileSelection, selectBuilderBody, type BuilderConfiguration, type BuilderKit, type CatalogRow,
+    groupBuilderBodies, resolveBuilderConfigurations, reviewed13_415CylinderCapLabel, reviewedCylinderFiveMlRow, previewParts, reconcileSelection, selectBuilderBody, type BuilderConfiguration, type BuilderKit, type CatalogRow,
 } from "@/lib/bottle-builder/model";
 import { slimBuilderBodies } from "@/lib/bottle-builder/payload";
 
@@ -48,6 +48,35 @@ function configuration(overrides: Partial<CatalogRow> = {}): BuilderConfiguratio
 }
 
 describe("builder catalog boundary", () => {
+    it("places the exact matte-black 5 mL Cylinder in the existing body with its complete source kit", () => {
+        const { row: imported, kit } = fixture({
+            websiteSku: "GBCyl5SpryBlkMatt", graceSku: "GB-CYL-CLR-5ML-SPR-MBLK",
+            family: "Cylinder", color: "Clear", capacityMl: 5.5, capacity: "5.5 ml (1/6 oz)",
+            neckThreadSize: "13-415", applicator: "Fine Mist Sprayer", capColor: "Matte Black",
+            productGroupSlug: "cylinder-5.5ml-clear-13-415-finemist",
+            components: { Sprayer: [{ websiteSku: "CP13-415SpryBlkMt", graceSku: "CMP-CAP-BLK-13-415-01",
+                itemName: "Matte black fine mist sprayer", imageUrl: null, capColor: "Matte Black",
+                stockStatus: "In Stock", shopifyVariantId: "gid://shopify/ProductVariant/2", shopifySellable: true,
+                webPrice1pc: .65, webPrice12pc: .62, productGroupSlug: null }] },
+        }, ["body", "diptube", "sprayer", "overcap"]);
+        const row = reviewedCylinderFiveMlRow(imported);
+        expect(row.capacityMl).toBe(5);
+        expect(row.productGroupSlug).toBe("cylinder-5ml-clear-13-415-finemist");
+        expect(reviewedCylinderFiveMlRow({ ...imported, neckThreadSize: "17-415" })).toEqual({ ...imported, neckThreadSize: "17-415" });
+        const configuration = configurationFromRow(row, kit);
+        expect(configuration?.bodyId).toBe("cylinder-5ml|13-415|Glass Bottle");
+        expect(configuration?.fitment).toBe("Fine Mist Sprayer");
+        expect(configuration?.closure).toBe("Matte Black");
+        expect(configuration?.kit?.parts.map(part => part.slot)).toEqual(["body", "diptube", "sprayer", "overcap"]);
+        expect(configurationFromRow({ ...row, websiteSku: "Other5MlSpray" }, kit)).toBeNull();
+    });
+    it("distinguishes the 13-415 tall liner caps from short lined and ribbed caps", () => {
+        const cap = (websiteSku: string, closure: string) => reviewed13_415CylinderCapLabel(
+            fixture({ websiteSku, capacityMl: 5, neckThreadSize: "13-415" }).row, "Screw Cap", closure);
+        expect(cap("GBCyl5Gl", "Regular Shiny Gold Cap")).toBe("Tall Lined Shiny Gold Cap");
+        expect(cap("GBCyl5GlSht", "Short Shiny Gold Cap")).toBe("Short Lined Shiny Gold Cap");
+        expect(cap("GBCyl5BlkSht", "Short Ribbed Black Cap")).toBe("Short Ribbed Black Cap");
+    });
     it("restores every reviewed metal roller only on its exact registered body", () => {
         expect(Object.keys(restoredRollers)).toHaveLength(27);
         for (const [sku, restored] of Object.entries(restoredRollers)) {

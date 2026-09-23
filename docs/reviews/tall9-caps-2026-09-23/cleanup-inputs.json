@@ -1,0 +1,246 @@
+{
+  "rows": [
+    {
+      "websiteSku": "GBTallCylFrst9BlkShSht",
+      "color": "Frosted",
+      "applicator": null
+    },
+    {
+      "websiteSku": "GBTallCylFrst9CuSht",
+      "color": "Frosted",
+      "applicator": null
+    },
+    {
+      "websiteSku": "GBTallCylFrst9GlMattSht",
+      "color": "Frosted",
+      "applicator": null
+    },
+    {
+      "websiteSku": "GBTallCylFrst9GlSht",
+      "color": "Frosted",
+      "applicator": null
+    },
+    {
+      "websiteSku": "GBTallCylFrst9SlMattSht",
+      "color": "Frosted",
+      "applicator": null
+    },
+    {
+      "websiteSku": "GBTallCylFrst9SlSht",
+      "color": "Frosted",
+      "applicator": null
+    }
+  ],
+  "kits": {
+    "GBTallCylFrst9BlkShSht": {
+      "parts": [
+        {
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "bounds": {
+            "bottom": 1061,
+            "left": 424,
+            "right": 583,
+            "top": 199
+          },
+          "derivation": "background-matte",
+          "explodeIndex": 0,
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "bytes": 9198,
+            "height": 1100,
+            "key": "kits/cylinder-master/fa25400fd6051f88d34df7dd6953ee1fccf4bd457e3638f387d2b98ad2e3ee2f.body.webp",
+            "sha256": "fa25400fd6051f88d34df7dd6953ee1fccf4bd457e3638f387d2b98ad2e3ee2f",
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/fa25400fd6051f88d34df7dd6953ee1fccf4bd457e3638f387d2b98ad2e3ee2f.body.webp",
+            "width": 1000
+          },
+          "image2x": null,
+          "mask": null,
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0
+        }
+      ]
+    },
+    "GBTallCylFrst9CuSht": {
+      "parts": [
+        {
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "bounds": {
+            "bottom": 1061,
+            "left": 421,
+            "right": 583,
+            "top": 199
+          },
+          "derivation": "background-matte",
+          "explodeIndex": 0,
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "bytes": 8680,
+            "height": 1100,
+            "key": "kits/cylinder-master/785cfb96d5a0db45578213a9a23ffc30607ca32639a82e5656d083a10061d272.body.webp",
+            "sha256": "785cfb96d5a0db45578213a9a23ffc30607ca32639a82e5656d083a10061d272",
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/785cfb96d5a0db45578213a9a23ffc30607ca32639a82e5656d083a10061d272.body.webp",
+            "width": 1000
+          },
+          "image2x": null,
+          "mask": null,
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0
+        }
+      ]
+    },
+    "GBTallCylFrst9GlMattSht": {
+      "parts": [
+        {
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "bounds": {
+            "bottom": 1059,
+            "left": 421,
+            "right": 583,
+            "top": 199
+          },
+          "derivation": "background-matte",
+          "explodeIndex": 0,
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "bytes": 8576,
+            "height": 1100,
+            "key": "kits/cylinder-master/ebb09fbd6702dc444ba12422001fcc84d0fc6c1dfd7b1cbab630260f750853d8.body.webp",
+            "sha256": "ebb09fbd6702dc444ba12422001fcc84d0fc6c1dfd7b1cbab630260f750853d8",
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/ebb09fbd6702dc444ba12422001fcc84d0fc6c1dfd7b1cbab630260f750853d8.body.webp",
+            "width": 1000
+          },
+          "image2x": null,
+          "mask": null,
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0
+        }
+      ]
+    },
+    "GBTallCylFrst9GlSht": {
+      "parts": [
+        {
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "bounds": {
+            "bottom": 1059,
+            "left": 421,
+            "right": 583,
+            "top": 199
+          },
+          "derivation": "background-matte",
+          "explodeIndex": 0,
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "bytes": 8638,
+            "height": 1100,
+            "key": "kits/cylinder-master/fec131bc7f6dae6d80307270ba1b52046d133144fb5b08728b573a42928a0d5b.body.webp",
+            "sha256": "fec131bc7f6dae6d80307270ba1b52046d133144fb5b08728b573a42928a0d5b",
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/fec131bc7f6dae6d80307270ba1b52046d133144fb5b08728b573a42928a0d5b.body.webp",
+            "width": 1000
+          },
+          "image2x": null,
+          "mask": null,
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0
+        }
+      ]
+    },
+    "GBTallCylFrst9SlMattSht": {
+      "parts": [
+        {
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "bounds": {
+            "bottom": 1061,
+            "left": 424,
+            "right": 585,
+            "top": 199
+          },
+          "derivation": "background-matte",
+          "explodeIndex": 0,
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "bytes": 9482,
+            "height": 1100,
+            "key": "kits/cylinder-master/8529067371ec259bc3cda750a284ec512c37de2ed338b0504f4fa3eec341559c.body.webp",
+            "sha256": "8529067371ec259bc3cda750a284ec512c37de2ed338b0504f4fa3eec341559c",
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/8529067371ec259bc3cda750a284ec512c37de2ed338b0504f4fa3eec341559c.body.webp",
+            "width": 1000
+          },
+          "image2x": null,
+          "mask": null,
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0
+        }
+      ]
+    },
+    "GBTallCylFrst9SlSht": {
+      "parts": [
+        {
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "bounds": {
+            "bottom": 1059,
+            "left": 424,
+            "right": 583,
+            "top": 199
+          },
+          "derivation": "background-matte",
+          "explodeIndex": 0,
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": {
+            "bytes": 9348,
+            "height": 1100,
+            "key": "kits/cylinder-master/84d5843a6c92195ed84a3f8751dbcc9b0c4407b72d5d13824dfce1e20e8fc325.body.webp",
+            "sha256": "84d5843a6c92195ed84a3f8751dbcc9b0c4407b72d5d13824dfce1e20e8fc325",
+            "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/84d5843a6c92195ed84a3f8751dbcc9b0c4407b72d5d13824dfce1e20e8fc325.body.webp",
+            "width": 1000
+          },
+          "image2x": null,
+          "mask": null,
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0
+        }
+      ]
+    }
+  }
+}

@@ -14,6 +14,8 @@ import { displayImageUrl, isOptimizableImageUrl } from "@/lib/products/optimizab
  * exposes the bottle's neck threads through opaque metal. Measured sources split
  * the two materials below. Unmeasured sources keep their existing behaviour. */
 function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart, stage: "body" | "fitment" | "complete", splitDropper: boolean) {
+    if (part.slot === "diptube" && config.family === "Cylinder" && config.capacityMl === 9
+        && config.neck === "13-415" && config.color === "Frosted") return true;
     if (part.slot === "pipette") return config.color !== "Clear";
     return config.color === "Clear" && (part.slot === "diptube"
         || (part.slot === "body" && (stage === "body" || config.fitment !== "Dropper" || splitDropper)));

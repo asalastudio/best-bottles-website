@@ -14,3 +14,10 @@ export function fitmentContents(fitment: string | null) {
     if (fitment === "Plastic Roller") return "Includes your bottle, plastic roller, and selected roller cap.";
     return `Your bottle, ${fitment ? displayApplicatorName(fitment).toLowerCase() : "selected fitment"}, and selected finish are included in one complete combination.`;
 }
+
+/** The reviewed 13-415 screw-cap set distinguishes lined smooth caps from ribbed caps. */
+export function capLinerNote(neck: string | undefined, fitment: string | null) {
+    return neck === "13-415" && fitment === "Screw Cap"
+        ? "The six short smooth caps and the tall shiny gold and silver caps include liners. Short ribbed black and white caps are listed separately. No roller is included."
+        : null;
+}

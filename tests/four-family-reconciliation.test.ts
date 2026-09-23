@@ -8,6 +8,7 @@ import schema from "../convex/schema";
 import { api } from "../convex/_generated/api";
 import type { Doc } from "../convex/_generated/dataModel";
 import links from "../convex/catalog-component-links.json";
+import { catalogIncludedAssembly } from "../convex/catalogIncludedAssemblies";
 import { compatibleFinishComponent } from "@/lib/bottle-builder/model";
 
 const modules = import.meta.glob("../convex/**/*.ts");
@@ -38,7 +39,10 @@ describe("four-family catalog reconciliation", () => {
                 expect(pdp, row.websiteSku!).not.toBeNull();
                 expect(identity(pdp!.components), row.websiteSku!).toEqual(identity(row.components));
                 const source = links.find(link => link.assemblySku === row.websiteSku);
-                if (source) expect(compatibleFinishComponent(row)?.websiteSku, row.websiteSku!).toBe(source.componentSku);
+                if (source) {
+                    expect(Object.values(row.components).flat().some(part => part.websiteSku === source.componentSku), row.websiteSku!).toBe(true);
+                    expect(compatibleFinishComponent(row)?.websiteSku, row.websiteSku!).toBe(catalogIncludedAssembly(row)?.websiteSku ?? source.componentSku);
+                }
                 for (const part of Object.values(row.components).flat()) {
                     expect(part.websiteSku, row.websiteSku!).not.toMatch(/__RETIRED__/);
                     const exact = fixture.products.find(p => p.graceSku === part.graceSku)!;
