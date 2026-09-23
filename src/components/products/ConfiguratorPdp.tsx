@@ -268,8 +268,8 @@ export default function ConfiguratorPdp({
   const targetParts = useMemo(() => {
     if (!kit?.parts?.length) return null;
     const parts = orderExplodedOvercap([...kit.parts].sort((a, b) => a.zOrder - b.zOrder));
-    return pilot || assembledOnly || withCap ? parts : withDetachedCapOffsets(parts);
-  }, [kit, withCap, assembledOnly, pilot]);
+    return pilot || assembledOnly || withCap || exploded ? parts : withDetachedCapOffsets(parts);
+  }, [kit, withCap, assembledOnly, pilot, exploded]);
   // What is actually on screen: a fully decoded set owned by the current kit.
   // The synchronous SKU gate below prevents an old state value from painting
   // between render and effect cleanup during a variant transition.

@@ -1,0 +1,600 @@
+{
+  "status": "Read-only proposal; no catalog writes executed",
+  "kitRoles": [
+    {
+      "sku": "GBCrclFrst100AnSpTslBlk",
+      "plateSha256": "dd1e16aa5aedec741e6df64413bf0a20373dc0e7690e7e1907850f6b838b9f5e",
+      "currentParts": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/6281819bd5c0fdcdfa67496272406d81a997f6a976b77771670716a2e87c37ea.body.webp",
+          "local": "assets/4ff4e7b3d413f4e3ced06ee37d208bfb00bc51d188cecb3ab001ec328daf443d.webp",
+          "sha256": "6281819bd5c0fdcdfa67496272406d81a997f6a976b77771670716a2e87c37ea",
+          "bounds": {
+            "bottom": 829,
+            "left": 240,
+            "right": 646,
+            "top": 351
+          }
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/95c5ddab42d093e78537648da2dbc6ddd260e22b94322c1e6f1275cb8de2321a.sprayer.webp",
+          "local": "assets/82ff9e48014b495f29e507c7ed4a852de2a47c758b0ef4b904641821a2379ecf.webp",
+          "sha256": "95c5ddab42d093e78537648da2dbc6ddd260e22b94322c1e6f1275cb8de2321a",
+          "bounds": {
+            "bottom": 790,
+            "left": 454,
+            "right": 761,
+            "top": 480
+          }
+        }
+      ],
+      "sourceCandidates": [
+        "21. Tassels/Updated Tassels/48. GBCrclFrst100AnSpTslBlk.psd",
+        "21. Tassels/Original Tassels/48. GBCrclFrst100AnSpTslBlk.psd",
+        "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/48. GBCrclFrst100AnSpTslBlk.psd"
+      ],
+      "proposedAction": "Reidentify glass as body and integrated hose/bulb/tassel as sprayer from exact source; recompute body/seat/axis anchors and component bounds, then compare native-resolution assembled composite with indexed plate. Do not merely rename slots without re-rigging."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "plateSha256": "dc2ebfd397071acd5499af7134925de2755bee3b32dd920b4ffe25fe4b2d8365",
+      "currentParts": [
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/40a1ced20f1004ac3c02740b06ef80d46b98b99283a98cbbed4dac17eebd3651.sprayer.webp",
+          "local": "assets/cb91732fdf119bdd2ff0d2eaea13ffc7f5466d1bc91df0784d3dbea252c828fd.webp",
+          "sha256": "40a1ced20f1004ac3c02740b06ef80d46b98b99283a98cbbed4dac17eebd3651",
+          "bounds": {
+            "bottom": 780,
+            "left": 433,
+            "right": 740,
+            "top": 469
+          }
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/e2195cb4cd79192e2e2759b06012856f0242e48604d56e11edb81cf732576e20.body.webp",
+          "local": "assets/ae8dbbb4a42ed9cddb0b8b206e2254b47203181053dc95183401f3bca0e5a149.webp",
+          "sha256": "e2195cb4cd79192e2e2759b06012856f0242e48604d56e11edb81cf732576e20",
+          "bounds": {
+            "bottom": 801,
+            "left": 261,
+            "right": 625,
+            "top": 339
+          }
+        }
+      ],
+      "sourceCandidates": [
+        "21. Tassels/Updated Tassels/43. GBCrclFrst100AnSpTslIvyGl.psd",
+        "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/43. GBCrclFrst100AnSpTslIvyGl.psd"
+      ],
+      "proposedAction": "Reidentify glass as body and integrated hose/bulb/tassel as sprayer from exact source; recompute body/seat/axis anchors and component bounds, then compare native-resolution assembled composite with indexed plate. Do not merely rename slots without re-rigging."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvySl",
+      "plateSha256": "a24cf3266c346c98807a3fef6d8171a93524c3e48d59d678388da786b786e044",
+      "currentParts": [
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/c4b2f41b8aededff012491cc0a5ccb74a6897685d8957e6ef8d6b9315598024e.sprayer.webp",
+          "local": "assets/390ca91f5fba34e73cf24a52bffbf0212a7c275de27dc533019633525e5cc16b.webp",
+          "sha256": "c4b2f41b8aededff012491cc0a5ccb74a6897685d8957e6ef8d6b9315598024e",
+          "bounds": {
+            "bottom": 777,
+            "left": 438,
+            "right": 745,
+            "top": 467
+          }
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/4b9a707d45ecc9fd99a9e94d447814dfae9b81faf68f385e89167a0db0df6df7.body.webp",
+          "local": "assets/13392bcfff97317fe172bc494acbc53a853bc9cc161a60e8986830c58cc18f34.webp",
+          "sha256": "4b9a707d45ecc9fd99a9e94d447814dfae9b81faf68f385e89167a0db0df6df7",
+          "bounds": {
+            "bottom": 804,
+            "left": 257,
+            "right": 632,
+            "top": 334
+          }
+        }
+      ],
+      "sourceCandidates": [
+        "21. Tassels/Updated Tassels/44. GBCrclFrst100AnSpTslIvySl.psd",
+        "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/44. GBCrclFrst100AnSpTslIvySl.psd"
+      ],
+      "proposedAction": "Reidentify glass as body and integrated hose/bulb/tassel as sprayer from exact source; recompute body/seat/axis anchors and component bounds, then compare native-resolution assembled composite with indexed plate. Do not merely rename slots without re-rigging."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslGl",
+      "plateSha256": "240b148a750ea4d387bdb223d8d3bc177d81aa469673a8bd71606a27748341a0",
+      "currentParts": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/a0b8e63760445b667a74a8001980dce510f2e0a0d90b852b6575255dc2513c15.body.webp",
+          "local": "assets/171fe350d9ec0f1760ef1c6ac88763396346fe7040f2cdd44e6b74817089d293.webp",
+          "sha256": "a0b8e63760445b667a74a8001980dce510f2e0a0d90b852b6575255dc2513c15",
+          "bounds": {
+            "bottom": 808,
+            "left": 265,
+            "right": 617,
+            "top": 343
+          }
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/8ddc6d2a1a1f71bf5aa671323f6246067fdbb9ed8eb11e4a31fe93966677aa5e.sprayer.webp",
+          "local": "assets/9bcb4017daff9e229fb5c90d559c93b4f8076ddf6dd93a821b997841d2498b7c.webp",
+          "sha256": "8ddc6d2a1a1f71bf5aa671323f6246067fdbb9ed8eb11e4a31fe93966677aa5e",
+          "bounds": {
+            "bottom": 781,
+            "left": 429,
+            "right": 735,
+            "top": 471
+          }
+        }
+      ],
+      "sourceCandidates": [
+        "21. Tassels/Updated Tassels/50. GBCrclFrst100AnSpTslGl.psd",
+        "21. Tassels/Original Tassels/50. GBCrclFrst100AnSpTslGl.psd",
+        "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/50. GBCrclFrst100AnSpTslGl.psd"
+      ],
+      "proposedAction": "Reidentify glass as body and integrated hose/bulb/tassel as sprayer from exact source; recompute body/seat/axis anchors and component bounds, then compare native-resolution assembled composite with indexed plate. Do not merely rename slots without re-rigging."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslLvn",
+      "plateSha256": "11ae9c129d16bdaf970060179d78a49bc808b2152eca789ffeed9176b6bc0649",
+      "currentParts": [
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/f9f9e860b0bc96f64a9430cdb35536f7e3889589d9307a1ef7edab01843433bb.sprayer.webp",
+          "local": "assets/7ff1fa13091532644c72746bc638b739831371e01e4968831243210127c938ef.webp",
+          "sha256": "f9f9e860b0bc96f64a9430cdb35536f7e3889589d9307a1ef7edab01843433bb",
+          "bounds": {
+            "bottom": 773,
+            "left": 432,
+            "right": 738,
+            "top": 400
+          }
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/7af69c6a4bc0c91dc4e72e7bc9bf36aa0f2dabc63084ba2e6aaefefa3f7d9825.body.webp",
+          "local": "assets/521b6043ee8878a801f6b3a929581e1c49486dd56400b3d9c6d4981b5a706da3.webp",
+          "sha256": "7af69c6a4bc0c91dc4e72e7bc9bf36aa0f2dabc63084ba2e6aaefefa3f7d9825",
+          "bounds": {
+            "bottom": 806,
+            "left": 261,
+            "right": 619,
+            "top": 335
+          }
+        }
+      ],
+      "sourceCandidates": [
+        "21. Tassels/Updated Tassels/42. GBCrclFrst100AnSpTslLvn.psd",
+        "21. Tassels/Original Tassels/42. GBCrclFrst100AnSpTslLvn.psd",
+        "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/42. GBCrclFrst100AnSpTslLvn.psd"
+      ],
+      "proposedAction": "Reidentify glass as body and integrated hose/bulb/tassel as sprayer from exact source; recompute body/seat/axis anchors and component bounds, then compare native-resolution assembled composite with indexed plate. Do not merely rename slots without re-rigging."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslPnk",
+      "plateSha256": "414cdce5f6a5985a8d3ce7194836473f0175a618878987aef09056291f70e6f5",
+      "currentParts": [
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/2cbd66c859ff7b7bc42d41bd9d37502bc6fdb2fc5bd653264c78185af39402b0.sprayer.webp",
+          "local": "assets/e092599d2063844ebf7928d7090d4c7f0c8e455d550400cd66ef25b1cce589de.webp",
+          "sha256": "2cbd66c859ff7b7bc42d41bd9d37502bc6fdb2fc5bd653264c78185af39402b0",
+          "bounds": {
+            "bottom": 780,
+            "left": 433,
+            "right": 740,
+            "top": 469
+          }
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3d472c8986dacf945c04bea844dcef9467af547f2c1b8204f2d4d1031e743af7.body.webp",
+          "local": "assets/32320dc82afc3c517aa8fdbcb4eb369b618f97ce916090348b88815cca6c68ca.webp",
+          "sha256": "3d472c8986dacf945c04bea844dcef9467af547f2c1b8204f2d4d1031e743af7",
+          "bounds": {
+            "bottom": 808,
+            "left": 261,
+            "right": 623,
+            "top": 341
+          }
+        }
+      ],
+      "sourceCandidates": [
+        "21. Tassels/Updated Tassels/46. GBCrclFrst100AnSpTslPnk.psd",
+        "21. Tassels/Original Tassels/46. GBCrclFrst100AnSpTslPnk.psd",
+        "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/46. GBCrclFrst100AnSpTslPnk.psd"
+      ],
+      "proposedAction": "Reidentify glass as body and integrated hose/bulb/tassel as sprayer from exact source; recompute body/seat/axis anchors and component bounds, then compare native-resolution assembled composite with indexed plate. Do not merely rename slots without re-rigging."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslWht",
+      "plateSha256": "c7361865ecbab27ea40d55a75fe681bada39b46489ce416c27e8c087b56d15a7",
+      "currentParts": [
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/83764c76583fabaa1d0f3f2a7c894a61e87beb463226d0086ed45251238e4f6f.sprayer.webp",
+          "local": "assets/a2f33d1a0f8beca6ea4cb7d8ce431b13e994d642a8b242419b4031e49fecdb6c.webp",
+          "sha256": "83764c76583fabaa1d0f3f2a7c894a61e87beb463226d0086ed45251238e4f6f",
+          "bounds": {
+            "bottom": 810,
+            "left": 407,
+            "right": 879,
+            "top": 332
+          }
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/3c71ca57b863ddd7baab846046c42dcf5203cbecee89e5186dea6d429551bdc4.body.webp",
+          "local": "assets/51f7f6fcce15883c3cbd5d78f774b4e0a272f17dcc75ddd78857d3d79655fa0f.webp",
+          "sha256": "3c71ca57b863ddd7baab846046c42dcf5203cbecee89e5186dea6d429551bdc4",
+          "bounds": {
+            "bottom": 870,
+            "left": 119,
+            "right": 704,
+            "top": 129
+          }
+        }
+      ],
+      "sourceCandidates": [
+        "21. Tassels/Updated Tassels/45. GBCrclFrst100AnSpTslWht.psd",
+        "21. Tassels/Original Tassels/45. GBCrclFrst100AnSpTslWht.psd",
+        "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/45. GBCrclFrst100AnSpTslWht.psd"
+      ],
+      "proposedAction": "Reidentify glass as body and integrated hose/bulb/tassel as sprayer from exact source; recompute body/seat/axis anchors and component bounds, then compare native-resolution assembled composite with indexed plate. Do not merely rename slots without re-rigging."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslMtSl",
+      "plateSha256": "f99e97e06433e1b845c56f6113aecfbfcb687c23705a3272f46b82045890aa66",
+      "currentParts": [
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/8ab9feff5d34fc1afc78a223d45f27a2a3a8394433a2a2390ee23e9a5018da65.body.webp",
+          "local": "assets/7484a9d28027e0376441a9316a397cd11b28382da3824ec52f17afe408a7feb9.webp",
+          "sha256": "8ab9feff5d34fc1afc78a223d45f27a2a3a8394433a2a2390ee23e9a5018da65",
+          "bounds": {
+            "bottom": 924,
+            "left": 131,
+            "right": 690,
+            "top": 204
+          }
+        },
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/723d1adaeea2d08021ae82f6dc23f5437fdb425b4cff308eb0fe1eeaa06297c5.sprayer.webp",
+          "local": "assets/aca2da2fe9490c4b78eed79315d6b4c865e15d149081c818f482930899f34671.webp",
+          "sha256": "723d1adaeea2d08021ae82f6dc23f5437fdb425b4cff308eb0fe1eeaa06297c5",
+          "bounds": {
+            "bottom": 883,
+            "left": 397,
+            "right": 869,
+            "top": 405
+          }
+        }
+      ],
+      "sourceCandidates": [
+        "21. Tassels/Updated Tassels/49. GBCrclFrst100AnSpTslMtSl.psd",
+        "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/49. GBCrclFrst100AnSpTslMtSl.psd"
+      ],
+      "proposedAction": "Reidentify glass as body and integrated hose/bulb/tassel as sprayer from exact source; recompute body/seat/axis anchors and component bounds, then compare native-resolution assembled composite with indexed plate. Do not merely rename slots without re-rigging."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "plateSha256": "4c167cdd382574aae1fd7ff88f153266f20800e1b351b8738c0f0f26d406acf4",
+      "currentParts": [
+        {
+          "slot": "sprayer",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/dba987dd8d9ae70a617f5cd5185cc669f70e5b9acfc1ca56aadb34a4a76861ce.sprayer.webp",
+          "local": "assets/a3599dc41305612d8800b0a4e3ace39c0c261e97a391c0a06d9f462d0df078f9.webp",
+          "sha256": "dba987dd8d9ae70a617f5cd5185cc669f70e5b9acfc1ca56aadb34a4a76861ce",
+          "bounds": {
+            "bottom": 744,
+            "left": 454,
+            "right": 833,
+            "top": 271
+          }
+        },
+        {
+          "slot": "diptube",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/01d4acce99dcf5d568772186055e749ca9791fc737e907d989ae92e629dadd43.diptube.webp",
+          "local": "assets/e3841c4ec6c90396203094b8d38479948f9e49c59e45af78b0c3f889e5f637d7.webp",
+          "sha256": "01d4acce99dcf5d568772186055e749ca9791fc737e907d989ae92e629dadd43",
+          "bounds": {
+            "bottom": 703,
+            "left": 625,
+            "right": 662,
+            "top": 319
+          }
+        },
+        {
+          "slot": "body",
+          "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/master-parts/67a634c085080bad9dcbe23472e43c026e6b11570bbc73962241220cf275b03a.body.webp",
+          "local": "assets/6665fc4768831792ff93d58a6fe9523f4b7ada2035788274ef3fa814cee6c0c3.webp",
+          "sha256": "67a634c085080bad9dcbe23472e43c026e6b11570bbc73962241220cf275b03a",
+          "bounds": {
+            "bottom": 801,
+            "left": 169,
+            "right": 694,
+            "top": 182
+          }
+        }
+      ],
+      "sourceCandidates": [
+        "21. Tassels/Updated Tassels/49. GBCrcl50AnSpTslMtSl.psd",
+        "21. Tassels/Original Tassels/49. GBCrcl50AnSpTslMtSl.psd",
+        "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/49. GBCrcl50AnSpTslMtSl.psd"
+      ],
+      "proposedAction": "Reidentify glass as body and integrated hose/bulb/tassel as sprayer from exact source; recompute body/seat/axis anchors and component bounds, then compare native-resolution assembled composite with indexed plate. Do not merely rename slots without re-rigging."
+    }
+  ],
+  "pdpMembership": [
+    {
+      "sku": "GBCrclFrst100AnSpTslBlk",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": true,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-black-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvySl",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": true,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslLvn",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": true,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-lavender-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslPnk",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": true,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-pink-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslRed",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": true,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslWht",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": true,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-white-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "fromGroup": "circle-50ml-clear-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-clear-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": true,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "fromGroup": "circle-50ml-clear-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-clear-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": true,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-glass-bottle-matte-silver-vintage-style-sprayer-with-tassel-matte-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslBlk",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-black-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslGl",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-gold-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvyGl",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvySl",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslLvn",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-lavender-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslMtSl",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-matte-silver-vintage-style-sprayer-with-tassel-matte-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslPnk",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-pink-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslRed",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslWht",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslRed",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslGl",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-gold-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslIvyGl",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslIvySl",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslLvn",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-lavender-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslPnk",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-pink-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslWht",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-white-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslMtSl",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-matte-silver-vintage-style-sprayer-with-tassel-matte-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslBlk",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "targetGroupExists": false,
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-black-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "proposedAction": "Correct exact SKU applicator and product-group membership; create the target group if absent. Preserve plain-bulb variants and existing intent filtering."
+    }
+  ]
+}

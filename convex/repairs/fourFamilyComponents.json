@@ -1,0 +1,1474 @@
+{
+  "version": "four-family-components-2026-09-22",
+  "kitRoles": [
+    {
+      "sku": "GBCrclFrst100AnSpTslBlk",
+      "familyId": "circle-100ml-frosted-18-415",
+      "plateSha256": "dd1e16aa5aedec741e6df64413bf0a20373dc0e7690e7e1907850f6b838b9f5e",
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "before": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 808,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 790
+        },
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 829,
+              "left": 240,
+              "right": 646,
+              "top": 351
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "6281819bd5c0fdcdfa67496272406d81a997f6a976b77771670716a2e87c37ea"
+          },
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 790,
+              "left": 454,
+              "right": 761,
+              "top": 480
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": -463
+            },
+            "sha256": "95c5ddab42d093e78537648da2dbc6ddd260e22b94322c1e6f1275cb8de2321a"
+          }
+        ]
+      },
+      "after": {
+        "anchors": {
+          "axisX": 607.5,
+          "baselineY": 790,
+          "neckAxisX": 607.5,
+          "pxPerMm": null,
+          "seatY": 480
+        },
+        "parts": [
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 829,
+              "left": 240,
+              "right": 646,
+              "top": 351
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": -232,
+              "dy": 0
+            },
+            "sha256": "6281819bd5c0fdcdfa67496272406d81a997f6a976b77771670716a2e87c37ea"
+          },
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 790,
+              "left": 454,
+              "right": 761,
+              "top": 480
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "95c5ddab42d093e78537648da2dbc6ddd260e22b94322c1e6f1275cb8de2321a"
+          }
+        ]
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "familyId": "circle-100ml-frosted-18-415",
+      "plateSha256": "dc2ebfd397071acd5499af7134925de2755bee3b32dd920b4ffe25fe4b2d8365",
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "before": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 808,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 780
+        },
+        "parts": [
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 780,
+              "left": 433,
+              "right": 740,
+              "top": 469
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": -461
+            },
+            "sha256": "40a1ced20f1004ac3c02740b06ef80d46b98b99283a98cbbed4dac17eebd3651"
+          },
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 801,
+              "left": 261,
+              "right": 625,
+              "top": 339
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "e2195cb4cd79192e2e2759b06012856f0242e48604d56e11edb81cf732576e20"
+          }
+        ]
+      },
+      "after": {
+        "anchors": {
+          "axisX": 586.5,
+          "baselineY": 780,
+          "neckAxisX": 586.5,
+          "pxPerMm": null,
+          "seatY": 469
+        },
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 780,
+              "left": 433,
+              "right": 740,
+              "top": 469
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "40a1ced20f1004ac3c02740b06ef80d46b98b99283a98cbbed4dac17eebd3651"
+          },
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 801,
+              "left": 261,
+              "right": 625,
+              "top": 339
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": -232,
+              "dy": 0
+            },
+            "sha256": "e2195cb4cd79192e2e2759b06012856f0242e48604d56e11edb81cf732576e20"
+          }
+        ]
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvySl",
+      "familyId": "circle-100ml-frosted-18-415",
+      "plateSha256": "a24cf3266c346c98807a3fef6d8171a93524c3e48d59d678388da786b786e044",
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "before": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 808,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 777
+        },
+        "parts": [
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 777,
+              "left": 438,
+              "right": 745,
+              "top": 467
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": -459
+            },
+            "sha256": "c4b2f41b8aededff012491cc0a5ccb74a6897685d8957e6ef8d6b9315598024e"
+          },
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 804,
+              "left": 257,
+              "right": 632,
+              "top": 334
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "4b9a707d45ecc9fd99a9e94d447814dfae9b81faf68f385e89167a0db0df6df7"
+          }
+        ]
+      },
+      "after": {
+        "anchors": {
+          "axisX": 591.5,
+          "baselineY": 777,
+          "neckAxisX": 591.5,
+          "pxPerMm": null,
+          "seatY": 467
+        },
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 777,
+              "left": 438,
+              "right": 745,
+              "top": 467
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "c4b2f41b8aededff012491cc0a5ccb74a6897685d8957e6ef8d6b9315598024e"
+          },
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 804,
+              "left": 257,
+              "right": 632,
+              "top": 334
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": -234,
+              "dy": 0
+            },
+            "sha256": "4b9a707d45ecc9fd99a9e94d447814dfae9b81faf68f385e89167a0db0df6df7"
+          }
+        ]
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslGl",
+      "familyId": "circle-100ml-frosted-18-415",
+      "plateSha256": "240b148a750ea4d387bdb223d8d3bc177d81aa469673a8bd71606a27748341a0",
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "before": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 808,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 781
+        },
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 808,
+              "left": 265,
+              "right": 617,
+              "top": 343
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "a0b8e63760445b667a74a8001980dce510f2e0a0d90b852b6575255dc2513c15"
+          },
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 781,
+              "left": 429,
+              "right": 735,
+              "top": 471
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": -462
+            },
+            "sha256": "8ddc6d2a1a1f71bf5aa671323f6246067fdbb9ed8eb11e4a31fe93966677aa5e"
+          }
+        ]
+      },
+      "after": {
+        "anchors": {
+          "axisX": 582.0,
+          "baselineY": 781,
+          "neckAxisX": 582.0,
+          "pxPerMm": null,
+          "seatY": 471
+        },
+        "parts": [
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 808,
+              "left": 265,
+              "right": 617,
+              "top": 343
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": -228,
+              "dy": 0
+            },
+            "sha256": "a0b8e63760445b667a74a8001980dce510f2e0a0d90b852b6575255dc2513c15"
+          },
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 781,
+              "left": 429,
+              "right": 735,
+              "top": 471
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "8ddc6d2a1a1f71bf5aa671323f6246067fdbb9ed8eb11e4a31fe93966677aa5e"
+          }
+        ]
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslLvn",
+      "familyId": "circle-100ml-frosted-18-415",
+      "plateSha256": "11ae9c129d16bdaf970060179d78a49bc808b2152eca789ffeed9176b6bc0649",
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "before": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 808,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 773
+        },
+        "parts": [
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 773,
+              "left": 432,
+              "right": 738,
+              "top": 400
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 211,
+              "dy": 0
+            },
+            "sha256": "f9f9e860b0bc96f64a9430cdb35536f7e3889589d9307a1ef7edab01843433bb"
+          },
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 806,
+              "left": 261,
+              "right": 619,
+              "top": 335
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "7af69c6a4bc0c91dc4e72e7bc9bf36aa0f2dabc63084ba2e6aaefefa3f7d9825"
+          }
+        ]
+      },
+      "after": {
+        "anchors": {
+          "axisX": 585.0,
+          "baselineY": 773,
+          "neckAxisX": 585.0,
+          "pxPerMm": null,
+          "seatY": 400
+        },
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 773,
+              "left": 432,
+              "right": 738,
+              "top": 400
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "f9f9e860b0bc96f64a9430cdb35536f7e3889589d9307a1ef7edab01843433bb"
+          },
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 806,
+              "left": 261,
+              "right": 619,
+              "top": 335
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": -227,
+              "dy": 0
+            },
+            "sha256": "7af69c6a4bc0c91dc4e72e7bc9bf36aa0f2dabc63084ba2e6aaefefa3f7d9825"
+          }
+        ]
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslPnk",
+      "familyId": "circle-100ml-frosted-18-415",
+      "plateSha256": "414cdce5f6a5985a8d3ce7194836473f0175a618878987aef09056291f70e6f5",
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "before": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 808,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 780
+        },
+        "parts": [
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 780,
+              "left": 433,
+              "right": 740,
+              "top": 469
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": -461
+            },
+            "sha256": "2cbd66c859ff7b7bc42d41bd9d37502bc6fdb2fc5bd653264c78185af39402b0"
+          },
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 808,
+              "left": 261,
+              "right": 623,
+              "top": 341
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "3d472c8986dacf945c04bea844dcef9467af547f2c1b8204f2d4d1031e743af7"
+          }
+        ]
+      },
+      "after": {
+        "anchors": {
+          "axisX": 586.5,
+          "baselineY": 780,
+          "neckAxisX": 586.5,
+          "pxPerMm": null,
+          "seatY": 469
+        },
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 780,
+              "left": 433,
+              "right": 740,
+              "top": 469
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "2cbd66c859ff7b7bc42d41bd9d37502bc6fdb2fc5bd653264c78185af39402b0"
+          },
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 808,
+              "left": 261,
+              "right": 623,
+              "top": 341
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": -230,
+              "dy": 0
+            },
+            "sha256": "3d472c8986dacf945c04bea844dcef9467af547f2c1b8204f2d4d1031e743af7"
+          }
+        ]
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslWht",
+      "familyId": "circle-100ml-frosted-18-415",
+      "plateSha256": "c7361865ecbab27ea40d55a75fe681bada39b46489ce416c27e8c087b56d15a7",
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "before": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 808,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 810
+        },
+        "parts": [
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 810,
+              "left": 407,
+              "right": 879,
+              "top": 332
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": -705
+            },
+            "sha256": "83764c76583fabaa1d0f3f2a7c894a61e87beb463226d0086ed45251238e4f6f"
+          },
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 870,
+              "left": 119,
+              "right": 704,
+              "top": 129
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "3c71ca57b863ddd7baab846046c42dcf5203cbecee89e5186dea6d429551bdc4"
+          }
+        ]
+      },
+      "after": {
+        "anchors": {
+          "axisX": 643.0,
+          "baselineY": 810,
+          "neckAxisX": 643.0,
+          "pxPerMm": null,
+          "seatY": 332
+        },
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 810,
+              "left": 407,
+              "right": 879,
+              "top": 332
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "83764c76583fabaa1d0f3f2a7c894a61e87beb463226d0086ed45251238e4f6f"
+          },
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 870,
+              "left": 119,
+              "right": 704,
+              "top": 129
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": -337,
+              "dy": 0
+            },
+            "sha256": "3c71ca57b863ddd7baab846046c42dcf5203cbecee89e5186dea6d429551bdc4"
+          }
+        ]
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslMtSl",
+      "familyId": "circle-100ml-frosted-18-415",
+      "plateSha256": "f99e97e06433e1b845c56f6113aecfbfcb687c23705a3272f46b82045890aa66",
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "before": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 808,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 883
+        },
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 924,
+              "left": 131,
+              "right": 690,
+              "top": 204
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "8ab9feff5d34fc1afc78a223d45f27a2a3a8394433a2a2390ee23e9a5018da65"
+          },
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 883,
+              "left": 397,
+              "right": 869,
+              "top": 405
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": -703
+            },
+            "sha256": "723d1adaeea2d08021ae82f6dc23f5437fdb425b4cff308eb0fe1eeaa06297c5"
+          }
+        ]
+      },
+      "after": {
+        "anchors": {
+          "axisX": 633.0,
+          "baselineY": 883,
+          "neckAxisX": 633.0,
+          "pxPerMm": null,
+          "seatY": 405
+        },
+        "parts": [
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 924,
+              "left": 131,
+              "right": 690,
+              "top": 204
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": -333,
+              "dy": 0
+            },
+            "sha256": "8ab9feff5d34fc1afc78a223d45f27a2a3a8394433a2a2390ee23e9a5018da65"
+          },
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 883,
+              "left": 397,
+              "right": 869,
+              "top": 405
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "723d1adaeea2d08021ae82f6dc23f5437fdb425b4cff308eb0fe1eeaa06297c5"
+          }
+        ]
+      }
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "familyId": "circle-50ml-clear-18-415",
+      "plateSha256": "4c167cdd382574aae1fd7ff88f153266f20800e1b351b8738c0f0f26d406acf4",
+      "canvas": {
+        "height": 1100,
+        "width": 1000
+      },
+      "before": {
+        "anchors": {
+          "axisX": 500,
+          "baselineY": 801,
+          "neckAxisX": 500,
+          "pxPerMm": null,
+          "seatY": 744
+        },
+        "parts": [
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 744,
+              "left": 454,
+              "right": 833,
+              "top": 271
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 264,
+              "dy": 0
+            },
+            "sha256": "dba987dd8d9ae70a617f5cd5185cc669f70e5b9acfc1ca56aadb34a4a76861ce"
+          },
+          {
+            "slot": "diptube",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 2,
+            "bounds": {
+              "bottom": 703,
+              "left": 625,
+              "right": 662,
+              "top": 319
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 496,
+              "dy": 0
+            },
+            "sha256": "01d4acce99dcf5d568772186055e749ca9791fc737e907d989ae92e629dadd43"
+          },
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 2,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 801,
+              "left": 169,
+              "right": 694,
+              "top": 182
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "67a634c085080bad9dcbe23472e43c026e6b11570bbc73962241220cf275b03a"
+          }
+        ]
+      },
+      "after": {
+        "anchors": {
+          "axisX": 643.5,
+          "baselineY": 744,
+          "neckAxisX": 641.5,
+          "pxPerMm": null,
+          "seatY": 271
+        },
+        "parts": [
+          {
+            "slot": "body",
+            "variantKey": null,
+            "zOrder": 0,
+            "explodeIndex": 0,
+            "bounds": {
+              "bottom": 744,
+              "left": 454,
+              "right": 833,
+              "top": 271
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 0,
+              "dy": 0
+            },
+            "sha256": "dba987dd8d9ae70a617f5cd5185cc669f70e5b9acfc1ca56aadb34a4a76861ce"
+          },
+          {
+            "slot": "diptube",
+            "variantKey": null,
+            "zOrder": 1,
+            "explodeIndex": 2,
+            "bounds": {
+              "bottom": 703,
+              "left": 625,
+              "right": 662,
+              "top": 319
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": 248,
+              "dy": 0
+            },
+            "sha256": "01d4acce99dcf5d568772186055e749ca9791fc737e907d989ae92e629dadd43"
+          },
+          {
+            "slot": "sprayer",
+            "variantKey": null,
+            "zOrder": 2,
+            "explodeIndex": 1,
+            "bounds": {
+              "bottom": 801,
+              "left": 169,
+              "right": 694,
+              "top": 182
+            },
+            "assembled": {
+              "x": 0,
+              "y": 0
+            },
+            "exploded": {
+              "dx": -280,
+              "dy": 0
+            },
+            "sha256": "67a634c085080bad9dcbe23472e43c026e6b11570bbc73962241220cf275b03a"
+          }
+        ]
+      }
+    }
+  ],
+  "membership": [
+    {
+      "sku": "GBCrclFrst100AnSpTslBlk",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-black-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-100ML-ASP-01",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvySl",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-100ML-ASP-02",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslLvn",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-lavender-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-100ML-ASP-03",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslPnk",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-pink-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-100ML-ASP-04",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslRed",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-100ML-ASP-05",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslWht",
+      "fromGroup": "circle-100ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-100-ml-frosted-glass-bottle-white-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-100ML-ASP-06",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "fromGroup": "circle-50ml-clear-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-clear-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-ASP-02",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "fromGroup": "circle-50ml-clear-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-clear-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-glass-bottle-matte-silver-vintage-style-sprayer-with-tassel-matte-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-ASP-01",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslBlk",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-black-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-01",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslGl",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-gold-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-02",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvyGl",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-03",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvySl",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-04",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslLvn",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-lavender-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-05",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslMtSl",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-matte-silver-vintage-style-sprayer-with-tassel-matte-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-06",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslPnk",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-pink-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-07",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslRed",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-08",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslWht",
+      "fromGroup": "circle-50ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "circle-50ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-09",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslRed",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-RND-FRS-128ML-ASP-08",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslGl",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-gold-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "identity": {
+        "graceSku": "GB-RND-FRS-128ML-ASP-02",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslIvyGl",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "identity": {
+        "graceSku": "GB-RND-FRS-128ML-ASP-03",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslIvySl",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-RND-FRS-128ML-ASP-04",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslLvn",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-lavender-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-RND-FRS-128ML-ASP-05",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslPnk",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-pink-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "identity": {
+        "graceSku": "GB-RND-FRS-128ML-ASP-07",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslWht",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-white-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-RND-FRS-128ML-ASP-09",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslMtSl",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-matte-silver-vintage-style-sprayer-with-tassel-matte-silver-collar",
+      "identity": {
+        "graceSku": "GB-RND-FRS-128ML-ASP-06",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpTslBlk",
+      "fromGroup": "round-128ml-frosted-18-415-antiquespray",
+      "fromApplicator": "Vintage Bulb Sprayer",
+      "proposedGroup": "round-128ml-frosted-18-415-antiquespray-tassel",
+      "proposedApplicator": "Vintage Bulb Sprayer with Tassel",
+      "legacyWitness": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-black-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "identity": {
+        "graceSku": "GB-RND-FRS-128ML-ASP-01",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Frosted",
+        "neckThreadSize": "18-415"
+      }
+    }
+  ]
+}

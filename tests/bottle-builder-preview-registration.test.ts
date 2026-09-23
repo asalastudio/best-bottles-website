@@ -10,6 +10,13 @@ function config(id: string, left: number, top = 235, height = 745): BuilderConfi
 }
 
 describe('vintage bottle registration', () => {
+    it('keeps a legacy combined diptube/pump layer in its existing draw order', () => {
+        const reference = config('reference', 400);
+        const source = config('covered-pump', 430);
+        source.kit!.parts[1].slot = 'diptube';
+        const result = registerVintagePreview(source, source.kit!.parts, reference)!;
+        expect(result.layers.map(layer => layer.part.slot)).toEqual(['body', 'diptube']);
+    });
     it('holds the same glass and viewport across offset and differently framed finishes', () => {
         const reference = config('bare', 400, 200, 800);
         // Source offsets reproduce the varying 50 ml vintage-kit registrations.

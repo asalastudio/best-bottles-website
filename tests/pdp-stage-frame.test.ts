@@ -86,7 +86,7 @@ describe("CAP OFF compositing", () => {
         expect(bottom).toBeLessThanOrEqual(1060);
     });
 
-    it("parks a cap with no recorded offset to the right of the body", () => {
+    it("parks a cap to the right with its foot aligned to the glass", () => {
         const cap = {
             slot: "cap",
             bounds: { left: 400, top: 80, right: 600, bottom: 280 },
@@ -94,12 +94,25 @@ describe("CAP OFF compositing", () => {
         };
         const offset = detachedCapOffset(cap, { left: 200, top: 200, right: 800, bottom: 1000 });
         expect(offset.dx).toBeGreaterThan(0);
-        expect(offset.dy).toBe(0);
+        expect(cap.bounds.bottom + offset.dy).toBe(1000);
         const parked = withDetachedCapOffsets([
             { slot: "body", bounds: { left: 200, top: 200, right: 800, bottom: 1000 }, exploded: { dx: 0, dy: 0 } },
             cap,
         ]);
         expect(parked[1]?.exploded.dx).toBe(offset.dx);
+    });
+
+    it("does not reuse an upward exploded offset for a grounded cap-off sidecar", () => {
+        const body = { slot: "body", bounds: { left: 350, top: 157, right: 650, bottom: 1060 }, exploded: { dx: 0, dy: 0 } };
+        const cap = { slot: "overcap", bounds: { left: 427, top: 71, right: 575, bottom: 295 }, exploded: { dx: 320, dy: -885 } };
+        const pump = { slot: "pump", bounds: { left: 430, top: 90, right: 570, bottom: 300 }, exploded: { dx: 0, dy: -1131 } };
+        const original = structuredClone([body, cap, pump]);
+        const parked = withDetachedCapOffsets([body, cap, pump]);
+        expect(parked[1].bounds.bottom + parked[1].exploded.dy).toBe(body.bounds.bottom);
+        expect(parked[1].bounds.left + parked[1].exploded.dx).toBeGreaterThan(body.bounds.right);
+        expect(parked[0]).toBe(body);
+        expect(parked[2]).toBe(pump);
+        expect([body, cap, pump]).toEqual(original);
     });
 
     it("is a no-op CSS transform when scale is identity", () => {
