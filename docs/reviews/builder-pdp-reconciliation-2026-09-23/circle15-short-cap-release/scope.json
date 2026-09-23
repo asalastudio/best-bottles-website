@@ -1,0 +1,35 @@
+{
+  "target": "https://precise-raccoon-123.convex.cloud",
+  "rows": [
+    {
+      "sku": "GBCrcl15CuSht",
+      "operation": "insert",
+      "batch": "docs/reviews/builder-pdp-reconciliation-2026-09-23/circle15-short-caps"
+    },
+    {
+      "sku": "GBCrcl15GlMattSht",
+      "operation": "insert",
+      "batch": "docs/reviews/builder-pdp-reconciliation-2026-09-23/circle15-short-caps"
+    },
+    {
+      "sku": "GBCrcl15SlMattSht",
+      "operation": "insert",
+      "batch": "docs/reviews/builder-pdp-reconciliation-2026-09-23/circle15-short-caps"
+    },
+    {
+      "sku": "GBCrcl15BlkShSht",
+      "operation": "insert",
+      "batch": "docs/reviews/builder-pdp-reconciliation-2026-09-23/circle15-short-caps"
+    },
+    {
+      "sku": "GBCrcl15GlSht",
+      "operation": "insert",
+      "batch": "docs/reviews/builder-pdp-reconciliation-2026-09-23/circle15-short-caps"
+    },
+    {
+      "sku": "GBCrcl15SlSht",
+      "operation": "insert",
+      "batch": "docs/reviews/builder-pdp-reconciliation-2026-09-23/circle15-short-caps"
+    }
+  ]
+}

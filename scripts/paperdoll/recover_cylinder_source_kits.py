@@ -138,7 +138,7 @@ def main():
         for part in parts:
             im = Image.open(dest / part['image']).convert('RGBA')
             on.alpha_composite(im)
-            if part['slot'] != 'overcap':
+            if part['slot'] not in ('cap', 'overcap'):
                 off.alpha_composite(im)
             else:
                 b = part['bounds']

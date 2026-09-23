@@ -12,7 +12,8 @@
     "componentGraceSku": "CMP-CAP-SBLK-13-415",
     "componentName": "Short shiny black or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-black-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-shiny-black-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-shiny-black-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCylBlu5CuSht",
@@ -27,7 +28,8 @@
     "componentGraceSku": "CMP-CLS-MTCP-S-13-415",
     "componentName": "Short matte copper or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-copper-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-matte-copper-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-matte-copper-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCylBlu5GlMattSht",
@@ -42,7 +44,8 @@
     "componentGraceSku": "CMP-CLS-MTGD-S-13-415",
     "componentName": "Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-gold-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-matte-gold-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-matte-gold-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCylBlu5SlMattSht",
@@ -57,7 +60,8 @@
     "componentGraceSku": "CMP-CLS-MTSL-S-13-415",
     "componentName": "Short matte silver or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-silver-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-matte-silver-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-matte-silver-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCylBlu5GlSht",
@@ -72,7 +76,8 @@
     "componentGraceSku": "CMP-CLS-SHGD-S-13-415",
     "componentName": "Short shiny gold or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-gold-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-shiny-gold-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-shiny-gold-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCylBlu5SlSht",
@@ -87,7 +92,8 @@
     "componentGraceSku": "CMP-CLS-SHSL-S-13-415-02",
     "componentName": "Short shiny silver or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-silver-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-shiny-silver-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-shiny-silver-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCyl5BlkShSht",
@@ -102,7 +108,8 @@
     "componentGraceSku": "CMP-CAP-SBLK-13-415",
     "componentName": "Short shiny black or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-black-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-black-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-black-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCyl5CuSht",
@@ -117,7 +124,8 @@
     "componentGraceSku": "CMP-CLS-MTCP-S-13-415",
     "componentName": "Short matte copper or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-copper-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-copper-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-copper-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCyl5GlMattSht",
@@ -132,7 +140,8 @@
     "componentGraceSku": "CMP-CLS-MTGD-S-13-415",
     "componentName": "Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-gold-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-gold-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-gold-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCyl5GlSht",
@@ -147,7 +156,8 @@
     "componentGraceSku": "CMP-CLS-SHGD-S-13-415",
     "componentName": "Short shiny gold or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-gold-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-gold-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-gold-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCyl5SlMattSht",
@@ -162,7 +172,8 @@
     "componentGraceSku": "CMP-CLS-MTSL-S-13-415",
     "componentName": "Short matte silver or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-silver-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-silver-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-matte-silver-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBCyl5SlSht",
@@ -177,7 +188,8 @@
     "componentGraceSku": "CMP-CLS-SHSL-S-13-415-02",
     "componentName": "Short shiny silver or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-silver-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-silver-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-short-shiny-silver-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCyl9BlkShSht",
@@ -192,7 +204,8 @@
     "componentGraceSku": "CMP-CAP-SBLK-13-415",
     "componentName": "Short shiny black or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-black-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-black-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-black-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCyl9CuSht",
@@ -207,7 +220,8 @@
     "componentGraceSku": "CMP-CLS-MTCP-S-13-415",
     "componentName": "Short matte copper or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-copper-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-matte-copper-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-matte-copper-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCyl9GlMattSht",
@@ -222,7 +236,8 @@
     "componentGraceSku": "CMP-CLS-MTGD-S-13-415",
     "componentName": "Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-gold-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-short--bottle-short-matte-gold-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-short--bottle-short-matte-gold-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCyl9GlSht",
@@ -237,7 +252,8 @@
     "componentGraceSku": "CMP-CLS-SHGD-S-13-415",
     "componentName": "Short shiny gold or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-gold-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-gold-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-gold-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCyl9SlMattSht",
@@ -252,7 +268,8 @@
     "componentGraceSku": "CMP-CLS-MTSL-S-13-415",
     "componentName": "Short matte silver or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-silver-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-matte-silver-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-matte-silver-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCyl9SlSht",
@@ -267,7 +284,8 @@
     "componentGraceSku": "CMP-CLS-SHSL-S-13-415-02",
     "componentName": "Short shiny silver or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-silver-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-silver-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-short-shiny-silver-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCylFrst9BlkShSht",
@@ -282,7 +300,8 @@
     "componentGraceSku": "CMP-CAP-SBLK-13-415",
     "componentName": "Short shiny black or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-black-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-black-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-black-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCylFrst9CuSht",
@@ -297,7 +316,8 @@
     "componentGraceSku": "CMP-CLS-MTCP-S-13-415",
     "componentName": "Short matte copper or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-copper-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-copper-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-copper-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCylFrst9GlMattSht",
@@ -312,7 +332,8 @@
     "componentGraceSku": "CMP-CLS-MTGD-S-13-415",
     "componentName": "Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-gold-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-gold-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-gold-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCylFrst9GlSht",
@@ -327,7 +348,8 @@
     "componentGraceSku": "CMP-CLS-SHGD-S-13-415",
     "componentName": "Short shiny gold or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-gold-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-gold-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-gold-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCylFrst9SlMattSht",
@@ -342,7 +364,8 @@
     "componentGraceSku": "CMP-CLS-MTSL-S-13-415",
     "componentName": "Short matte silver or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-silver-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-silver-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-matte-silver-cap",
+    "componentType": "Cap"
   },
   {
     "assemblySku": "GBTallCylFrst9SlSht",
@@ -357,6 +380,476 @@
     "componentGraceSku": "CMP-CLS-SHSL-S-13-415-02",
     "componentName": "Short shiny silver or closure for glass bottle with foam liner. Thread size 13-415",
     "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-silver-Color-13-415",
-    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-silver-cap"
+    "assemblySourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-short-shiny-silver-cap",
+    "componentType": "Cap"
+  },
+  {
+    "assemblySku": "GBCrclFrst50AnSpTslBlk",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-ASP-01",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Vintage Bulb Sprayer with Tassel",
+    "finish": "Frosted",
+    "componentSku": "AnSpTsl18-415Blk",
+    "componentGraceSku": "CMP-SPR-BKSLWH-18-415-02",
+    "componentName": "Black Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
+    "componentType": "Sprayer",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-Black-Tassel",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-black-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+    "assemblySourceSha256": "331a434a596d634dc5d1107e69a03d763bad58f8ba5b351efa9a3e50e2aac8cd",
+    "componentSourceSha256": "30200a76c7cf14b179d1377413b1682a8b9c1cf7fb917f46338b9077c653be41",
+    "checkedAt": "2026-09-23T05:46:14.233Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50AnSpTslGl",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-ASP-02",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Vintage Bulb Sprayer with Tassel",
+    "finish": "Frosted",
+    "componentSku": "CP18-415AnSpTslGl",
+    "componentGraceSku": "CMP-SPR-GLD-18415-TSL",
+    "componentName": "Gold Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
+    "componentType": "Sprayer",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-gold-Tassel",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-gold-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+    "assemblySourceSha256": "f2ff4ca1c94a05abfe78a4ac6b14af401d7dbff994c8b590ffed6362114d0aed",
+    "componentSourceSha256": "287b35fbdd0bc7ad5dda32cd5b87f204da0e7defe78d52057691ed63ba0c6572",
+    "checkedAt": "2026-09-23T05:46:14.294Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50AnSpTslIvyGl",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-ASP-03",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Vintage Bulb Sprayer with Tassel",
+    "finish": "Frosted",
+    "componentSku": "AnSpTsl18-415IvyGl",
+    "componentGraceSku": "CMP-SPR-GDIVSLWH-18-415-02",
+    "componentName": "Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings and tassel. Thread Size 18-415",
+    "componentType": "Sprayer",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-ivory-gold-Tassel",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+    "assemblySourceSha256": "021e602b8305266138f8b2eb8484d728b4275233533172c9bc659164fa37e9fe",
+    "componentSourceSha256": "204c51d75ff77f469a896263e927487753378e383e2fd5f895a84c9eef460ff4",
+    "checkedAt": "2026-09-23T05:46:14.284Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50AnSpTslIvySl",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-ASP-04",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Vintage Bulb Sprayer with Tassel",
+    "finish": "Frosted",
+    "componentSku": "AnSpTsl18-415IvySl",
+    "componentGraceSku": "CMP-SPR-IVSLWH-18-415-02",
+    "componentName": "Ivory Silver Antique or Vintage style bulb sprayer with silver fittings and tassel. Thread Size 18-415",
+    "componentType": "Sprayer",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-ivory-silver-Tassel",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+    "assemblySourceSha256": "e18566c107b06b3994ce4860e5f76fe32ec3eba1950ab06b8bde2202643f0980",
+    "componentSourceSha256": "9c9abd0aaf5b6089e5d84583b16f0c13f61c1626e2e0e194b50022a942e0f81f",
+    "checkedAt": "2026-09-23T05:46:14.302Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50AnSpTslLvn",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-ASP-05",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Vintage Bulb Sprayer with Tassel",
+    "finish": "Frosted",
+    "componentSku": "AnSpTsl18-415Lvn",
+    "componentGraceSku": "CMP-SPR-LVSLWH-18-415-02",
+    "componentName": "Lavender Antique or Vintage style bulb sprayer with silver fittings and tassel. Thread Size 18-415",
+    "componentType": "Sprayer",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-lavender-Tassel",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-lavender-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+    "assemblySourceSha256": "194885e56cb484db497e39aa6c5ec9d17a24a4c12dfb0a744131b233a5493534",
+    "componentSourceSha256": "accc9a4cdd1cad592b5c8806927821ec8708284774ee298cb182843f21d9b3ac",
+    "checkedAt": "2026-09-23T05:46:14.378Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50AnSpTslMtSl",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-ASP-06",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Vintage Bulb Sprayer with Tassel",
+    "finish": "Frosted",
+    "componentSku": "AnSpTsl18-415MtS",
+    "componentGraceSku": "CMP-SPR-MTSLWH-18-415-02",
+    "componentName": "Matte Silver Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
+    "componentType": "Sprayer",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-matte-silver-Tassel",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-matte-silver-vintage-style-sprayer-with-tassel-matte-silver-collar",
+    "assemblySourceSha256": "315239a0885b1871003bcdeb41dad7e13ac14d11f23e974ec86c12cb86865cb0",
+    "componentSourceSha256": "2cbed749f43fd4713a2534a9b1dfa247c3c1147b1587b6bd8da782d6c8b56f06",
+    "checkedAt": "2026-09-23T05:46:14.455Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50AnSpTslPnk",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-ASP-07",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Vintage Bulb Sprayer with Tassel",
+    "finish": "Frosted",
+    "componentSku": "AnSpTsl18-415Pnk",
+    "componentGraceSku": "CMP-SPR-GDPKSLWH-18-415-02",
+    "componentName": "Pink, Antique or Vintage style bulb sprayer with Gold fittings and tassel. Thread Size 18-415",
+    "componentType": "Sprayer",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-pink-Tassel",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-pink-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+    "assemblySourceSha256": "f4b5b70b1cb5b203be34fc3d7c70e1318386d3d1e713e17ca601ec18ecf5f83c",
+    "componentSourceSha256": "4215c3560af3bc9e9d1c5b80b85218007344512ccfbd02f361f993a99d8896d7",
+    "checkedAt": "2026-09-23T05:46:14.460Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50AnSpTslRed",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-ASP-08",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Vintage Bulb Sprayer with Tassel",
+    "finish": "Frosted",
+    "componentSku": "AnSpTsl18-415Red",
+    "componentGraceSku": "CMP-SPR-RDSLWH-18-415-02",
+    "componentName": "Red, Antique or Vintage style bulb sprayer with Silver fittings and tassel. Thread Size 18-415",
+    "componentType": "Sprayer",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-red-Tassel",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+    "assemblySourceSha256": "ed6923961bc0ee25b475eaad2ee5f6695e0074988439c18142893cc3597a7eeb",
+    "componentSourceSha256": "027bae9a4f0533454df5c3cc14456a898e8066e5aa8c4c8efd34c40f65f3dd73",
+    "checkedAt": "2026-09-23T05:46:14.456Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50AnSpTslWht",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-ASP-09",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Vintage Bulb Sprayer with Tassel",
+    "finish": "Frosted",
+    "componentSku": "AnSpTsl18-415Wht",
+    "componentGraceSku": "CMP-SPR-SLWH-18-415-04",
+    "componentName": "White Antique or Vintage style bulb sprayer with silver fittings and tassel. Thread Size 18-415",
+    "componentType": "Sprayer",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-white-Tassel",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+    "assemblySourceSha256": "701b7c35f6782c04f4df5ad61518ecdb16e0e2c79baad452f16c25400fe31347",
+    "componentSourceSha256": "6327c8ebf5a50c697a7439467e63e380caa934a66d492ede0d19d3953a2a70d8",
+    "checkedAt": "2026-09-23T05:46:14.534Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50DrpSl",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-DRP-SLV",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Dropper",
+    "finish": "Silver",
+    "componentSku": "Drp18-415Sl",
+    "componentGraceSku": "CMP-DRP-SSLV-18415",
+    "componentName": "White rubber bulb dropper with shiny silver collar cap. Thread size 18-415",
+    "componentType": "Dropper",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-silver-trim-glass-Pipette",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-silver-collar-cap",
+    "assemblySourceSha256": "c64a5db5a53822c5ed1d3fc5f0c02e7bbbe69ff0fb16aa7d3572dfbbaf9b6aed",
+    "componentSourceSha256": "41087391d29ca16ed8dcb8d921962e730ed5f9a7a1e236776c8ed3a1fdf3a8a6",
+    "checkedAt": "2026-09-23T05:46:13.909Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50DrpGl",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-DRP-SGLD",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Dropper",
+    "finish": "Shiny Gold",
+    "componentSku": "Drp18-415Gl",
+    "componentGraceSku": "CMP-DRP-SGLD-18415",
+    "componentName": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+    "componentType": "Dropper",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+    "assemblySourceSha256": "bad66b5d553f7f5cb42c17dfc7b3780dbb4024734926939db5bf9dae53558df6",
+    "componentSourceSha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+    "checkedAt": "2026-09-23T05:46:13.944Z"
+  },
+  {
+    "assemblySku": "GBCrclFrst50DrpCu",
+    "assemblyGraceSku": "GB-CIR-FRS-50ML-DRP-CPR",
+    "family": "Circle",
+    "capacityMl": 50,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Dropper",
+    "finish": "Copper",
+    "componentSku": "Drp18-415Cu",
+    "componentGraceSku": "CMP-DRP-CPR-18415",
+    "componentName": "White rubber bulb dropper with shiny copper collar cap. Thread size 18-415",
+    "componentType": "Dropper",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-copper-trim-glass-Pipette",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-copper-collar-cap",
+    "assemblySourceSha256": "00b0b92d0f58be795c02f319ae1ed30514a969c67d39c2698eda1bf16a9c1212",
+    "componentSourceSha256": "0a48b962dc515420d5c787338b44d20bb655236e0afcd763d49ee0c84c761831",
+    "checkedAt": "2026-09-23T05:46:14.127Z"
+  },
+  {
+    "assemblySku": "GBRnd128DrpSl",
+    "assemblyGraceSku": "GB-RND-CLR-128ML-DRP-SLV",
+    "family": "Round",
+    "capacityMl": 128,
+    "color": "Clear",
+    "neck": "18-415",
+    "applicator": "Dropper",
+    "finish": "Silver",
+    "componentSku": "Drp18-415Sl",
+    "componentGraceSku": "CMP-DRP-SSLV-18415",
+    "componentName": "White rubber bulb dropper with shiny silver collar cap. Thread size 18-415",
+    "componentType": "Dropper",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-silver-trim-glass-Pipette",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/round-design-128-ml-glass-bottle-white-dropper-shiny-silver-collar-cap",
+    "assemblySourceSha256": "67d6fc4a454ee13fe382cbdcf19c9aa7f2f4a72c0bd6960c86566e33d1a4e4cf",
+    "componentSourceSha256": "41087391d29ca16ed8dcb8d921962e730ed5f9a7a1e236776c8ed3a1fdf3a8a6",
+    "checkedAt": "2026-09-23T05:46:15.476Z"
+  },
+  {
+    "assemblySku": "GBRnd128DrpGl",
+    "assemblyGraceSku": "GB-RND-CLR-128ML-DRP-GLD",
+    "family": "Round",
+    "capacityMl": 128,
+    "color": "Clear",
+    "neck": "18-415",
+    "applicator": "Dropper",
+    "finish": "Gold",
+    "componentSku": "Drp18-415Gl",
+    "componentGraceSku": "CMP-DRP-SGLD-18415",
+    "componentName": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+    "componentType": "Dropper",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/round-design-128-ml-glass-bottle-white-dropper-shiny-gold-collar-cap",
+    "assemblySourceSha256": "2f1726258d5833f463b1a2046238ec2f727f67a2b6e24f4e74ce8500565f50fd",
+    "componentSourceSha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+    "checkedAt": "2026-09-23T05:46:15.496Z"
+  },
+  {
+    "assemblySku": "GBRnd128DrpCu",
+    "assemblyGraceSku": "GB-RND-CLR-128ML-DRP-CPR",
+    "family": "Round",
+    "capacityMl": 128,
+    "color": "Clear",
+    "neck": "18-415",
+    "applicator": "Dropper",
+    "finish": "Copper",
+    "componentSku": "Drp18-415Cu",
+    "componentGraceSku": "CMP-DRP-CPR-18415",
+    "componentName": "White rubber bulb dropper with shiny copper collar cap. Thread size 18-415",
+    "componentType": "Dropper",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-copper-trim-glass-Pipette",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/round-design-128-ml-glass-bottle-white-dropper-shiny-copper-collar-cap",
+    "assemblySourceSha256": "12ea053bb5f701f39b0a3849717a345c1e4b2e30a62c9a19f57df95ae3ac8782",
+    "componentSourceSha256": "0a48b962dc515420d5c787338b44d20bb655236e0afcd763d49ee0c84c761831",
+    "checkedAt": "2026-09-23T05:46:15.712Z"
+  },
+  {
+    "assemblySku": "GBRndFrst128DrpSl",
+    "assemblyGraceSku": "GB-RND-FRS-128ML-DRP-SLV",
+    "family": "Round",
+    "capacityMl": 128,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Dropper",
+    "finish": "Silver",
+    "componentSku": "Drp18-415Sl",
+    "componentGraceSku": "CMP-DRP-SSLV-18415",
+    "componentName": "White rubber bulb dropper with shiny silver collar cap. Thread size 18-415",
+    "componentType": "Dropper",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-silver-trim-glass-Pipette",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-white-dropper-shiny-silver-collar-cap",
+    "assemblySourceSha256": "5bfc0bacf5d5973017b7ebd530be54b3c21795b9d84d0ef728fae8b54929da8d",
+    "componentSourceSha256": "41087391d29ca16ed8dcb8d921962e730ed5f9a7a1e236776c8ed3a1fdf3a8a6",
+    "checkedAt": "2026-09-23T05:46:15.534Z"
+  },
+  {
+    "assemblySku": "GBRndFrst128DrpGl",
+    "assemblyGraceSku": "GB-RND-FRS-12ML-DRP-SGLD",
+    "family": "Round",
+    "capacityMl": 128,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Dropper",
+    "finish": "Shiny Gold",
+    "componentSku": "Drp18-415Gl",
+    "componentGraceSku": "CMP-DRP-SGLD-18415",
+    "componentName": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+    "componentType": "Dropper",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+    "assemblySourceSha256": "1093781fd448dfc095e0dc1bb8aaadea5515024013b63f49ec94f18c0ee5f4f9",
+    "componentSourceSha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+    "checkedAt": "2026-09-23T05:46:15.660Z"
+  },
+  {
+    "assemblySku": "GBRndFrst128DrpCu",
+    "assemblyGraceSku": "GB-RND-FRS-128ML-DRP-CPR",
+    "family": "Round",
+    "capacityMl": 128,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Dropper",
+    "finish": "Copper",
+    "componentSku": "Drp18-415Cu",
+    "componentGraceSku": "CMP-DRP-CPR-18415",
+    "componentName": "White rubber bulb dropper with shiny copper collar cap. Thread size 18-415",
+    "componentType": "Dropper",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-copper-trim-glass-Pipette",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-white-dropper-shiny-copper-collar-cap",
+    "assemblySourceSha256": "241983904995dcac98cd06358592b4240611c2d69ba9a500cf3366eec286f514",
+    "componentSourceSha256": "0a48b962dc515420d5c787338b44d20bb655236e0afcd763d49ee0c84c761831",
+    "checkedAt": "2026-09-23T05:46:15.840Z"
+  },
+  {
+    "assemblySku": "GBRndFrst128AnSpTslIvyGl",
+    "assemblyGraceSku": "GB-RND-FRS-128ML-ASP-03",
+    "family": "Round",
+    "capacityMl": 128,
+    "color": "Frosted",
+    "neck": "18-415",
+    "applicator": "Vintage Bulb Sprayer with Tassel",
+    "finish": "Frosted",
+    "componentSku": "AnSpTsl18-415IvyGl",
+    "componentGraceSku": "CMP-SPR-GDIVSLWH-18-415-02",
+    "componentName": "Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings and tassel. Thread Size 18-415",
+    "componentType": "Sprayer",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-ivory-gold-Tassel",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+    "assemblySourceSha256": "d2e7328d1da5bac81fa172df327156d01809c197e7ae4a40ce83c48489b878f3",
+    "componentSourceSha256": "204c51d75ff77f469a896263e927487753378e383e2fd5f895a84c9eef460ff4",
+    "checkedAt": "2026-09-23T05:46:15.496Z"
+  },
+  {
+    "assemblySku": "GBCrcl15CuSht",
+    "assemblyGraceSku": "GB-CIR-CLR-15ML-MCPR-S",
+    "family": "Circle",
+    "capacityMl": 15,
+    "color": "Clear",
+    "neck": "13-415",
+    "applicator": null,
+    "finish": "Matte Copper",
+    "componentSku": "CP13-415CuSht",
+    "componentGraceSku": "CMP-CLS-MTCP-S-13-415",
+    "componentName": "Short matte copper or closure for glass bottle with foam liner. Thread size 13-415",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-copper-Color-13-415",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-matte-copper-cap",
+    "componentType": "Cap",
+    "assemblySourceSha256": "13de2fa1625112c60ebbdeabbb35911f49ed03697fc6be7e06c7373314e56f50",
+    "checkedAt": "2026-09-23T05:50:25.314Z"
+  },
+  {
+    "assemblySku": "GBCrcl15GlMattSht",
+    "assemblyGraceSku": "GB-CIR-CLR-15ML-MGLD-S",
+    "family": "Circle",
+    "capacityMl": 15,
+    "color": "Clear",
+    "neck": "13-415",
+    "applicator": null,
+    "finish": "Matte Gold",
+    "componentSku": "CP13-415GlMattSht",
+    "componentGraceSku": "CMP-CLS-MTGD-S-13-415",
+    "componentName": "Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-gold-Color-13-415",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-matte-gold-cap",
+    "componentType": "Cap",
+    "assemblySourceSha256": "abc24240fb7b70d3427a3fb57c030068cf231e919d8d1ccf3614b46bc0c88b36",
+    "checkedAt": "2026-09-23T05:50:25.495Z"
+  },
+  {
+    "assemblySku": "GBCrcl15SlMattSht",
+    "assemblyGraceSku": "GB-CIR-CLR-15ML-MSLV-S",
+    "family": "Circle",
+    "capacityMl": 15,
+    "color": "Clear",
+    "neck": "13-415",
+    "applicator": null,
+    "finish": "Matte Silver",
+    "componentSku": "CP13-415SlMattSht",
+    "componentGraceSku": "CMP-CLS-MTSL-S-13-415",
+    "componentName": "Short matte silver or closure for glass bottle with foam liner. Thread size 13-415",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-matte-silver-Color-13-415",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-matte-silver-cap",
+    "componentType": "Cap",
+    "assemblySourceSha256": "a1ff9e39bb5b121f07436c6d9b9f03484994783a98db8235183dd813028de13e",
+    "checkedAt": "2026-09-23T05:50:25.648Z"
+  },
+  {
+    "assemblySku": "GBCrcl15BlkShSht",
+    "assemblyGraceSku": "GB-CIR-CLR-15ML-SBLK-S",
+    "family": "Circle",
+    "capacityMl": 15,
+    "color": "Clear",
+    "neck": "13-415",
+    "applicator": null,
+    "finish": "Shiny Black",
+    "componentSku": "CP13-415BlkShShtMtl",
+    "componentGraceSku": "CMP-CAP-SBLK-13-415",
+    "componentName": "Short shiny black or closure for glass bottle with foam liner. Thread size 13-415",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-black-Color-13-415",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-shiny-black-cap",
+    "componentType": "Cap",
+    "assemblySourceSha256": "ee38197bf8816c29e878f72b8bc6a9f0fb8a8788132877fc0ca2096a172f7694",
+    "checkedAt": "2026-09-23T05:50:25.815Z"
+  },
+  {
+    "assemblySku": "GBCrcl15GlSht",
+    "assemblyGraceSku": "GB-CIR-CLR-15ML-SGLD-S",
+    "family": "Circle",
+    "capacityMl": 15,
+    "color": "Clear",
+    "neck": "13-415",
+    "applicator": null,
+    "finish": "Shiny Gold",
+    "componentSku": "CP13-415GlSht",
+    "componentGraceSku": "CMP-CLS-SHGD-S-13-415",
+    "componentName": "Short shiny gold or closure for glass bottle with foam liner. Thread size 13-415",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-gold-Color-13-415",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-shiny-gold-cap",
+    "componentType": "Cap",
+    "assemblySourceSha256": "dd656ea4f271fcff310231f93b1cef768e9c89b5483a631fa08bb1d95d09ff0a",
+    "checkedAt": "2026-09-23T05:50:25.973Z"
+  },
+  {
+    "assemblySku": "GBCrcl15SlSht",
+    "assemblyGraceSku": "GB-CIR-CLR-15ML-SSLV-S",
+    "family": "Circle",
+    "capacityMl": 15,
+    "color": "Clear",
+    "neck": "13-415",
+    "applicator": null,
+    "finish": "Shiny Silver",
+    "componentSku": "CP13-415SlSht",
+    "componentGraceSku": "CMP-CLS-SHSL-S-13-415-02",
+    "componentName": "Short shiny silver or closure for glass bottle with foam liner. Thread size 13-415",
+    "componentSourceUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-silver-Color-13-415",
+    "assemblySourceUrl": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-shiny-silver-cap",
+    "componentType": "Cap",
+    "assemblySourceSha256": "67acb2b36105f7a4714213d90130a19ef18c1aa2bc3514713facf1883892305a",
+    "checkedAt": "2026-09-23T05:50:26.146Z"
   }
 ]

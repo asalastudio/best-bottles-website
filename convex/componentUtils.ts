@@ -1,3 +1,5 @@
+import { reviewedCatalogLink } from "./catalogComponentEvidence";
+
 type RawComponent = Record<string, unknown>;
 
 export interface NormalizedComponent {
@@ -85,6 +87,8 @@ export function normalizeComponentsByType(
 }
 
 type BottleLike = {
+    reviewedComponentCorrections?: Array<{ componentGraceSku: string; componentType: string }>;
+    capColor?: string | null;
     family?: string | null;
     capacityMl?: number | null;
     capacity?: string | null;
@@ -298,6 +302,22 @@ export function resolveCompatibleComponents(
     fitmentRule: FitmentRuleLike | null,
     bottle: BottleLike,
 ): Record<string, NormalizedComponent[]> {
-    const byThread = filterGroupedComponentsByFitmentRule(grouped, fitmentRule);
+    const byThread = { ...filterGroupedComponentsByFitmentRule(grouped, fitmentRule) };
+    // Current exact-assembly evidence wins over an older family rule that
+    // accidentally omitted this included hardware type. Do not widen the rule
+    // to other finishes or bottles; occupancy checks still run last.
+    const link = reviewedCatalogLink(bottle);
+    if (link) {
+        const part = grouped[link.componentType]?.find(item => item.graceSku === link.componentGraceSku);
+        if (part && !byThread[link.componentType]?.some(item => item.graceSku === part.graceSku)) {
+            byThread[link.componentType] = [...(byThread[link.componentType] ?? []), part];
+        }
+    }
+    for (const correction of bottle.reviewedComponentCorrections ?? []) {
+        const part = grouped[correction.componentType]?.find(item => item.graceSku === correction.componentGraceSku);
+        if (part && !byThread[correction.componentType]?.some(item => item.graceSku === part.graceSku)) {
+            byThread[correction.componentType] = [...(byThread[correction.componentType] ?? []), part];
+        }
+    }
     return applyApplicatorCompatibilityRules(byThread, grouped, bottle);
 }

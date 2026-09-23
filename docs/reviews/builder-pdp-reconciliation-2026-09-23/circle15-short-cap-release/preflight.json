@@ -1,0 +1,26 @@
+{
+  "target": "https://precise-raccoon-123.convex.cloud",
+  "insertionIndexCheck": "blocked_remote_index_check",
+  "readyToApply": false,
+  "insertions": [
+    "GBCrcl15CuSht",
+    "GBCrcl15GlMattSht",
+    "GBCrcl15SlMattSht",
+    "GBCrcl15BlkShSht",
+    "GBCrcl15GlSht",
+    "GBCrcl15SlSht"
+  ],
+  "at": "2026-09-23T16:26:23.512Z",
+  "skus": [
+    "GBCrcl15CuSht",
+    "GBCrcl15GlMattSht",
+    "GBCrcl15SlMattSht",
+    "GBCrcl15BlkShSht",
+    "GBCrcl15GlSht",
+    "GBCrcl15SlSht"
+  ],
+  "assets": 31,
+  "sourceFiles": 12,
+  "rawPlateBodyScale": "Source registration retained; UI framing remains capacity-specific.",
+  "held": []
+}

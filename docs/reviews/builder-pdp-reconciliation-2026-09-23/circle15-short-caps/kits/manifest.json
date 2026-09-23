@@ -1,0 +1,958 @@
+{
+  "rows": [
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15CuSht",
+      "websiteSku": "GBCrcl15CuSht",
+      "graceSku": "GB-CIR-CLR-15ML-MCPR-S",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 416,
+            "top": 322,
+            "right": 605,
+            "bottom": 525
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/16ad7877d2ba90ef654dde0b04951daa2dd4ec4af96e9a282b38bbfe5392c61d.cap.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/16ad7877d2ba90ef654dde0b04951daa2dd4ec4af96e9a282b38bbfe5392c61d.cap.webp",
+          "sha256": "16ad7877d2ba90ef654dde0b04951daa2dd4ec4af96e9a282b38bbfe5392c61d",
+          "bytes": 35312,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "fe29189b6fc48a7a58abd3f0fcaab62cc9c22665e072305e5e7695a7bc1c0a91",
+      "source": {
+        "sku": "GBCrcl15CuSht",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-MCPR-S",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": null
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/36. GBCrcl15CuSht.psd",
+          "sha256": "0da9789950352504440b6d680e2b515eaca1de7ba4672ee69c00a9d9d5f49e39"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /36. GBCrcl15CuSht.psd",
+          "sha256": "22b07420581b320e0e4a2bc006ed2484f479271a8fcc398e76b160a5013bd0e2"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "cap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          }
+        ],
+        "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 1,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "cap",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "03b6c8193d273e7712ef5b846348c958abe8073b925283acd3fb6dcc1fc099c4"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 187.63069139966274,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "reviewedBodyRetouchDifference": null,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0527,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15GlMattSht",
+      "websiteSku": "GBCrcl15GlMattSht",
+      "graceSku": "GB-CIR-CLR-15ML-MGLD-S",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 418,
+            "top": 347,
+            "right": 588,
+            "bottom": 525
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/a08f4830508e4a2ea2c8256b65c338a17cafd1cac90bd706802be492651b32d8.cap.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/a08f4830508e4a2ea2c8256b65c338a17cafd1cac90bd706802be492651b32d8.cap.webp",
+          "sha256": "a08f4830508e4a2ea2c8256b65c338a17cafd1cac90bd706802be492651b32d8",
+          "bytes": 32638,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "db69a7ebbca356d9aac7934359351136f34fa9bc6ab668855c8cfec5a79d7d77",
+      "source": {
+        "sku": "GBCrcl15GlMattSht",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-MGLD-S",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": null
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/31. GBCrcl15GlMattSht.psd",
+          "sha256": "4cecf617d3c7cb0afa84bc3b60b5d4a783528c7c0725553b4d770f56a1581bdf"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /31. GBCrcl15GlMattSht.psd",
+          "sha256": "0060bfad5a8c956f40a7e5c1e2c8ab8d8dd80c5c09ff9e09301ef24724702768"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "cap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          }
+        ],
+        "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 1,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "cap",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "12f8aac2b7d33a2ed7372581d82b5cd1e884347ace893db74a23edd33b5a1732"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 187.63069139966274,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "reviewedBodyRetouchDifference": null,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0571,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15SlMattSht",
+      "websiteSku": "GBCrcl15SlMattSht",
+      "graceSku": "GB-CIR-CLR-15ML-MSLV-S",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420,
+            "top": 357,
+            "right": 588,
+            "bottom": 530
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/9ebd066567bc793baa8207442774dd5e0789f215aa801b28c1b22a8e6ed3e90b.cap.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/9ebd066567bc793baa8207442774dd5e0789f215aa801b28c1b22a8e6ed3e90b.cap.webp",
+          "sha256": "9ebd066567bc793baa8207442774dd5e0789f215aa801b28c1b22a8e6ed3e90b",
+          "bytes": 12534,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "b701630b713962dd6f93b7641d044aa0bcacd091975bec68d57a2cdb96752518",
+      "source": {
+        "sku": "GBCrcl15SlMattSht",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-MSLV-S",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": null
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/34. GBCrcl15SlMattSht.psd",
+          "sha256": "a973db4591bbe5baf528f039541a58e1a66c4a84a5a9a45d62fb5dd2f1af89b1"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /34. GBCrcl15SlMattSht.psd",
+          "sha256": "a456fcc7b13cd79e8ba04e4ee0d50f2c68e5d7bc62a4552cefd9d4c05124e22b"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "cap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          }
+        ],
+        "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 1,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "cap",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "0c0648f4c87c09aa429b1c38a153e04df3acccc41b9a94a36e1b9c44af8398b0"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 187.63069139966274,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "reviewedBodyRetouchDifference": null,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0575,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15BlkShSht",
+      "websiteSku": "GBCrcl15BlkShSht",
+      "graceSku": "GB-CIR-CLR-15ML-SBLK-S",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419,
+            "top": 353,
+            "right": 586,
+            "bottom": 528
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/963479a6800c953a33b0282cce8373c0e5187fad33f4c8a31547c761983437f2.cap.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/963479a6800c953a33b0282cce8373c0e5187fad33f4c8a31547c761983437f2.cap.webp",
+          "sha256": "963479a6800c953a33b0282cce8373c0e5187fad33f4c8a31547c761983437f2",
+          "bytes": 11082,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "3ea9da0aa0099ca10bc6b7e3a17ab39abdcca81367709ea1365939867243ed59",
+      "source": {
+        "sku": "GBCrcl15BlkShSht",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SBLK-S",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": null
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/35. GBCrcl15BlkShSht.psd",
+          "sha256": "5903164f65f73f7a13a4dab9d2550df09e200a3858d49fde10947a7453c3ee1f"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /35. GBCrcl15BlkShSht.psd",
+          "sha256": "c3fd5a9ae20613fea1da528adcfe5e063e26c38cf924a08a78e8f6f55a6553a8"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "cap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          }
+        ],
+        "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 1,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "cap",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "0ec292ef26351171cc15e63d5293cfa9bf4c740b3ee1dc734241c5cb1e231365"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 187.63069139966274,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "reviewedBodyRetouchDifference": null,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0462,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15GlSht",
+      "websiteSku": "GBCrcl15GlSht",
+      "graceSku": "GB-CIR-CLR-15ML-SGLD-S",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 419,
+            "top": 345,
+            "right": 588,
+            "bottom": 527
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/443181c078927ed2efe06d13538feead2199b96e47ed5026e51c16b328464f12.cap.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/443181c078927ed2efe06d13538feead2199b96e47ed5026e51c16b328464f12.cap.webp",
+          "sha256": "443181c078927ed2efe06d13538feead2199b96e47ed5026e51c16b328464f12",
+          "bytes": 35030,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "59cd1587cb5281ebae00d02f52b7ce1e0b487239f2a42870e2013c548be4e199",
+      "source": {
+        "sku": "GBCrcl15GlSht",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SGLD-S",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": null
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/32. GBCrcl15GlSht.psd",
+          "sha256": "e0578856a988769259203c322621698a3faa60bed7108bade44b10d694c07686"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /32. GBCrcl15GlSht.psd",
+          "sha256": "0773fa3b7d22a90e5f4bed2341421f6d043cc2924100ead043aa91f560242171"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "cap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          }
+        ],
+        "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 1,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "cap",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "fefb874007da5c5a11e0c0d2f7b1c862d2e32e089dd4a93a13060de183e6b457"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 187.63069139966274,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "reviewedBodyRetouchDifference": null,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0511,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCrcl15SlSht",
+      "websiteSku": "GBCrcl15SlSht",
+      "graceSku": "GB-CIR-CLR-15ML-SSLV-S",
+      "familyId": "circle-15ml-clear-13-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 401,
+        "baselineY": 1056,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 235,
+            "top": 401,
+            "right": 765,
+            "bottom": 1056
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd.body.webp",
+          "sha256": "3c9b45a9b71cf82f65c1c2991926d1c80654290a8ca85434142e1094601464fd",
+          "bytes": 111382,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "cap",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 420,
+            "top": 348,
+            "right": 588,
+            "bottom": 527
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/6fea29ac2e159052abe1dad67a6ed649d2917c1452cd44e370eab8806be4b4cf.cap.webp",
+          "storeKey": "kits/circle15-short-cap-reconciliation-2026-09-23/6fea29ac2e159052abe1dad67a6ed649d2917c1452cd44e370eab8806be4b4cf.cap.webp",
+          "sha256": "6fea29ac2e159052abe1dad67a6ed649d2917c1452cd44e370eab8806be4b4cf",
+          "bytes": 14716,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "8f44f926187ec30d8ea37825688cde90b4860ce5f84c6699a2bb42b4a46ce46f",
+      "source": {
+        "sku": "GBCrcl15SlSht",
+        "identity": {
+          "graceSku": "GB-CIR-CLR-15ML-SSLV-S",
+          "family": "Circle",
+          "capacityMl": 15,
+          "color": "Clear",
+          "neckThreadSize": "13-415",
+          "category": "Glass Bottle",
+          "applicator": null
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/33. GBCrcl15SlSht.psd",
+          "sha256": "b2965197df25ee29d702089b38fd113eb58286f462c73e1f6e71654564bc1910"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /33. GBCrcl15SlSht.psd",
+          "sha256": "398b0ebf79cf2d92f9607ee630a5cd1709d249ef1f0f35ec0885e931e633ac76"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 530,
+        "baselineY": 1056,
+        "familyId": "circle-15ml-clear-13-415",
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "on",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "cap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 2
+              }
+            ]
+          }
+        ],
+        "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "on",
+          "index": 1,
+          "pixelHash": "890091926c14c69df3b7540952f0a55c4e64f8e1d9f5081504798cceabc56764"
+        },
+        {
+          "slot": "cap",
+          "source": "on",
+          "index": 2,
+          "pixelHash": "bba7bb716a20ad4f7b85bd4616b7cb64b89a55048b4ba9e8fd89967b05751ff1"
+        }
+      ],
+      "transform": {
+        "scale": 0.893760539629005,
+        "x": 187.63069139966274,
+        "y": 167.60202360876895
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "reviewedBodyRetouchDifference": null,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.0541,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    }
+  ]
+}

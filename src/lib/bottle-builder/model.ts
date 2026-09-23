@@ -72,12 +72,20 @@ export const isClosurePart = (part: BuilderPart) => closureSlots.has(part.slot);
  * Standalone component publication is independent of the complete assembly's
  * eligibility, checked by isBuilderCandidate and again at cart preflight. */
 export function compatibleFinishComponent(row: CatalogRow) {
+    const correction = row.reviewedComponentCorrections?.find(c => c.reviewCaseId === row.websiteSku);
+    if (correction) {
+        const matches = (row.components[correction.componentType] ?? []).filter(part => part.graceSku === correction.componentGraceSku
+            && part.websiteSku === correction.componentSku && !/out of stock|discontinued|unavailable/i.test(part.stockStatus ?? ""));
+        if (matches.length !== 1) return null;
+        return { websiteSku: matches[0].websiteSku!, imageUrl: matches[0].imageUrl ?? null, name: matches[0].itemName };
+    }
     const included = catalogIncludedAssembly(row);
     if (included) return { websiteSku: included.websiteSku, imageUrl: null,
         name: `${included.finish} ${included.fitment} included with this bottle` };
     const source = sourceComponentLink(row);
     if (!source && sourceComponentLinks.some(link => link.assemblySku === row.websiteSku)) return null;
-    const exact = exactComponentMatches[row.websiteSku ?? ""] ?? source;
+    // Exact current source witnesses supersede older generated metadata.
+    const exact = source ?? exactComponentMatches[row.websiteSku ?? ""];
     if (exact && (row.family !== exact.family || row.capacityMl !== exact.capacityMl || row.color !== exact.color
         || row.neckThreadSize !== exact.neck || (row.applicator ?? null) !== exact.applicator)) return null;
     const app = row.applicator ?? "";
@@ -248,6 +256,7 @@ export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | n
     const name = getCustomerFacingProductName({ variant: row });
     const finishComponent = compatibleFinishComponent(row)!;
     let closure = included?.finish ?? name.variantLabel ?? row.capColor?.trim() ?? "Standard finish";
+    if (row.reviewedComponentCorrections?.some(c => c.reviewCaseId === row.websiteSku)) closure = getFinishFromWebsiteSku(finishComponent.websiteSku)?.label ?? finishComponent.name;
     // Tall or short is the listed cap's own name ("Tall Matt Silver caps" vs
     // "Short Matt Silver caps"); the row's capStyle says Tall on both Diva 46 reducers.
     const capName = finishComponent.name;

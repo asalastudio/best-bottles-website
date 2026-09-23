@@ -1,0 +1,581 @@
+{
+  "checkedAt": "2026-09-23T06:19:17.932Z",
+  "environment": "Local frontend, current read-only Convex data, 15 local review kits; no deployment or artwork publication",
+  "families": [
+    {
+      "family": "Circle",
+      "rows": 220,
+      "visible": 219,
+      "bodies": 4,
+      "missing": [
+        "GBCrclFrst50RdcrIvyLthr"
+      ]
+    },
+    {
+      "family": "Cylinder",
+      "rows": 436,
+      "visible": 416,
+      "bodies": 6,
+      "missing": [
+        "GBMtlRoll28Wht",
+        "GBSpry3mlClBlk",
+        "GBSpry4mlClBlk",
+        "GBCyl5SpryBlkMatt",
+        "GBCyl50MtlRollWht",
+        "GBCyl1ozRollWht",
+        "GBSpry1ozGl",
+        "GBSpry1ozSl",
+        "GBCyl50RollWht",
+        "GBSpry3mlClWht",
+        "GBSpry4mlClWh",
+        "GBRoll28Blk",
+        "GBCyl50RollBlk",
+        "GBMtlRoll28Blk",
+        "GBCyl50MtlRollBlk",
+        "PbClear8ozFlpWh",
+        "PbClear4ozFlpWh",
+        "PbNat16ozFlpWh",
+        "GBCylSwrl9MtlRollWht",
+        "GBCylSwrl9RollWht"
+      ]
+    },
+    {
+      "family": "Empire",
+      "rows": 91,
+      "visible": 91,
+      "bodies": 2,
+      "missing": []
+    },
+    {
+      "family": "Round",
+      "rows": 178,
+      "visible": 178,
+      "bodies": 2,
+      "missing": []
+    }
+  ],
+  "purchase-validation-new": {
+    "checkedAt": "2026-09-23T06:14:44.131Z",
+    "cases": [
+      {
+        "sku": "GBCrclFrst50DrpCu",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50DrpGl",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50DrpSl",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15MtlRollGlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15MtlRollCuMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15MtlRollBlkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15MtlRollBlkSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15MtlRollSlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15MtlRollPinkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15MtlRollGlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15MtlRollSlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15MtlRollSlDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15RollBlkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15RollCuMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15RollGlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15RollSlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15RollPinkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15RollBlkSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15RollGlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15RollSlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15RollSlDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl50RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl50RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl100RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst100RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl100RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst100RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15SpryBlkMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl9RollBlkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu9RollPnkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl9RollPnkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCylSwrl9RollMattGl",
+        "status": 200
+      },
+      {
+        "sku": "GBCylSwrl9RollMattCu",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu9RollSlDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCylSwrl9RollShBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBCylSwrl9RollShnGl",
+        "status": 200
+      },
+      {
+        "sku": "GBCylSwrl9RollMattSl",
+        "status": 200
+      },
+      {
+        "sku": "GBCylSwrl9RollShnSl",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5MtlRollGlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5MtlRollCuMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5MtlRollBlkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5MtlRollSlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5MtlRollBlkSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5MtlRollPinkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5MtlRollGlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5MtlRollSlDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5MtlRollSlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5RollBlkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5RollCuMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5RollGlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5RollSlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5RollPinkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5RollBlkSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5RollGlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5RollSlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5MtlRollBlkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5MtlRollCuMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5RollSlDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5MtlRollGlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5MtlRollSlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5MtlRollPinkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5MtlRollBlkSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5MtlRollGlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5MtlRollSlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5MtlRollSlDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5RollBlkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5RollCuMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5RollSlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5RollGlMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5RollPinkDot",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5RollBlkSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5RollGlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5RollSlSh",
+        "status": 200
+      },
+      {
+        "sku": "GBCylBlu5RollSlDot",
+        "status": 200
+      },
+      {
+        "sku": "GBcyl25RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl50RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBcyl25RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl50RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl100RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl100RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBCyl5SpryBluMatt",
+        "status": 200
+      },
+      {
+        "sku": "GBEmp50RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBEmp50RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "LBEmp50WhtClOvrCp",
+        "status": 200
+      },
+      {
+        "sku": "GBEmp100RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBEmp100RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "LBEmp100WhtClOvrCp",
+        "status": 200
+      },
+      {
+        "sku": "GBEmp50DrpCu",
+        "status": 200
+      },
+      {
+        "sku": "LBRnd78LtnClOvrCap",
+        "status": 200
+      },
+      {
+        "sku": "LBRnd78LtnShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "LBRnd78LtnMtSl",
+        "status": 200
+      },
+      {
+        "sku": "LBRnd78LtnShnGl",
+        "status": 200
+      },
+      {
+        "sku": "LBRnd78LtnShnSl",
+        "status": 200
+      },
+      {
+        "sku": "GBRnd78AnSpTslLvn",
+        "status": 200
+      },
+      {
+        "sku": "GBRnd78AnSpTslMtSl",
+        "status": 200
+      },
+      {
+        "sku": "GBRnd78AnSpTslPnk",
+        "status": 200
+      },
+      {
+        "sku": "GBRnd128DrpGl",
+        "status": 200
+      },
+      {
+        "sku": "GBRnd128DrpSl",
+        "status": 200
+      },
+      {
+        "sku": "GBRnd128DrpCu",
+        "status": 200
+      },
+      {
+        "sku": "GBRndFrst128DrpCu",
+        "status": 200
+      },
+      {
+        "sku": "GBRndFrst128DrpGl",
+        "status": 200
+      },
+      {
+        "sku": "GBRndFrst128DrpSl",
+        "status": 200
+      },
+      {
+        "sku": "GBRnd78RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBRnd78RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBRndFrst78RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBRndFrst78RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBRnd128RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBRnd128RdcrShnBlkTall",
+        "status": 200
+      },
+      {
+        "sku": "GBRndFrst128RdcrShnBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBRndFrst128RdcrShnBlkTall",
+        "status": 200
+      }
+    ]
+  },
+  "purchase-validation-local-artwork": {
+    "checkedAt": "2026-09-23T06:19:46.843Z",
+    "cases": [
+      {
+        "sku": "GBCrcl15CuSht",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15SlMattSht",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15GlMattSht",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15GlSht",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15BlkShSht",
+        "status": 200
+      },
+      {
+        "sku": "GBCrcl15SlSht",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50AnSpTslBlk",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50AnSpTslGl",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50AnSpTslIvyGl",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50AnSpTslIvySl",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50AnSpTslLvn",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50AnSpTslMtSl",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50AnSpTslPnk",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50AnSpTslRed",
+        "status": 200
+      },
+      {
+        "sku": "GBCrclFrst50AnSpTslWht",
+        "status": 200
+      }
+    ]
+  },
+  "fixture": {
+    "path": "tests/fixtures/four-family-reconciliation.json.gz",
+    "sha256": "ba12b9361f75c412dab919746f846c6acd3051a71aa41b7b818d954271210238",
+    "products": 1082,
+    "fitmentRules": 63
+  }
+}

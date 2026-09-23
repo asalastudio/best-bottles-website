@@ -13,7 +13,7 @@ describe("exact catalog assemblies without a separately sold loose component", (
             || ([28, 50].includes(source.capacityMl) && source.neckThreadSize === "16mm"));
         expect(isBuilderCandidate(row)).toBe(!excludedFromChooser);
         for (const change of [{ graceSku: "different" }, { websiteSku: "another" }, { capacityMl: 60 },
-            { color: "Frosted" }, { neckThreadSize: "13-415" }, { category: "Component" },
+            { color: source.color === "Frosted" ? "Clear" : "Frosted" }, { neckThreadSize: "13-415" }, { category: "Component" },
             { capColor: "not-the-selected-finish" }]) {
             expect(catalogIncludedAssembly({ ...row, ...change })).toBeNull();
             expect(isBuilderCandidate({ ...row, ...change })).toBe(false);

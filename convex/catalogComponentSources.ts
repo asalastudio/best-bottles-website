@@ -1,9 +1,10 @@
 import type { Doc } from "./_generated/dataModel";
 import type { QueryCtx } from "./_generated/server";
 import { normalizeComponentsByType, type NormalizedComponent } from "./componentUtils";
-import reviewedLinks from "./catalog-component-links.json";
+import { reviewedCatalogLink } from "./catalogComponentEvidence";
+export { reviewedCatalogLink } from "./catalogComponentEvidence";
 
-type Bottle = Pick<Doc<"products">, "family" | "capacityMl" | "color" | "neckThreadSize" | "category" | "shape" | "websiteSku" | "components" | "graceSku" | "applicator" | "capColor">;
+type Bottle = Pick<Doc<"products">, "family" | "capacityMl" | "color" | "neckThreadSize" | "category" | "shape" | "websiteSku" | "components" | "graceSku" | "applicator" | "capColor" | "reviewedComponentCorrections">;
 const text = (value: string | null | undefined) => (value ?? "").trim().toLowerCase();
 
 /** A component list belongs to the physical bottle, not one finish SKU.
@@ -48,13 +49,7 @@ export function catalogComponentPool(bottle: Bottle, siblings: readonly Bottle[]
     return { grouped, sources };
 }
 
-export function reviewedCatalogLink(bottle: Bottle) {
-    return reviewedLinks.find(link => link.assemblySku === bottle.websiteSku && link.assemblyGraceSku === bottle.graceSku
-        && link.family === bottle.family && link.capacityMl === bottle.capacityMl && link.color === bottle.color
-        && link.neck === bottle.neckThreadSize && link.applicator === bottle.applicator && link.finish === bottle.capColor);
-}
-
-/** Exact source evidence supplements a missing cap relationship. It does not
+/** Exact source evidence supplements a missing component relationship. It does not
  * make a loose component sellable or change a complete assembly's inventory. */
 export function addReviewedCatalogComponent(bottle: Bottle, pool: ReturnType<typeof catalogComponentPool>, part: Doc<"products"> | null) {
     const link = reviewedCatalogLink(bottle);
@@ -63,7 +58,7 @@ export function addReviewedCatalogComponent(bottle: Bottle, pool: ReturnType<typ
         || (part.websiteSku !== link.componentSku && !(part.websiteSku === ""
             && part.productUrl === link.componentSourceUrl && part.itemName === link.componentName))) return pool;
     if (Object.values(pool.grouped).flat().some(item => item.graceSku === part.graceSku)) return pool;
-    return { grouped: { ...pool.grouped, Cap: [...(pool.grouped.Cap ?? []), {
+    return { grouped: { ...pool.grouped, [link.componentType]: [...(pool.grouped[link.componentType] ?? []), {
         graceSku: part.graceSku, websiteSku: link.componentSku, itemName: part.itemName,
         imageUrl: part.imageUrl ?? null, webPrice1pc: part.webPrice1pc, webPrice12pc: part.webPrice12pc,
         capColor: part.capColor, stockStatus: part.stockStatus,
@@ -71,10 +66,23 @@ export function addReviewedCatalogComponent(bottle: Bottle, pool: ReturnType<typ
 }
 
 export async function loadCatalogComponentPool(ctx: QueryCtx, bottle: Doc<"products">) {
-    if (!cylinderBodyKey(bottle)) return catalogComponentPool(bottle, []);
-    const siblings = await ctx.db.query("products").withIndex("by_family", q => q.eq("family", bottle.family)).take(1201);
+    const siblings = cylinderBodyKey(bottle)
+        ? await ctx.db.query("products").withIndex("by_family", q => q.eq("family", bottle.family)).take(1201) : [];
     if (siblings.length > 1200) throw new Error("Cylinder component source query truncated");
     const link = reviewedCatalogLink(bottle);
     const part = link ? await ctx.db.query("products").withIndex("by_graceSku", q => q.eq("graceSku", link.componentGraceSku)).unique() : null;
-    return addReviewedCatalogComponent(bottle, catalogComponentPool(bottle, siblings), part);
+    return applyStaffComponentCorrections(bottle, addReviewedCatalogComponent(bottle, catalogComponentPool(bottle, siblings), part));
+}
+
+/** Exact SKU-scoped staff corrections run after legacy/source supplementation so
+ * an old static link or sibling donor cannot silently reintroduce a replaced part. */
+export function applyStaffComponentCorrections(bottle: Bottle, pool: ReturnType<typeof catalogComponentPool>) {
+    if (!bottle.reviewedComponentCorrections?.length) return pool;
+    const grouped = Object.fromEntries(Object.entries(pool.grouped).map(([kind, parts]) => [kind, [...parts]]));
+    for (const correction of bottle.reviewedComponentCorrections) {
+        for (const kind of Object.keys(grouped)) grouped[kind] = grouped[kind].filter(part => part.graceSku !== correction.replaceGraceSku && part.graceSku !== correction.componentGraceSku);
+        (grouped[correction.componentType] ??= []).push({ graceSku: correction.componentGraceSku, websiteSku: correction.componentSku,
+            itemName: correction.itemName, imageUrl: null, webPrice1pc: null, webPrice12pc: null, capColor: null, stockStatus: null });
+    }
+    return { grouped, sources: [...pool.sources, ...bottle.reviewedComponentCorrections.map(c => c.sourceUrl)] };
 }

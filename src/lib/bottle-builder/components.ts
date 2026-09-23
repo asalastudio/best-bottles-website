@@ -15,6 +15,7 @@ export type ActiveComponent = {
  * Current matrix relationships take precedence. No catalog records are modified. */
 function restoreSourceLink(row: CatalogRow, products: Map<string, ActiveComponent | null>): CatalogRow {
     const link = sourceComponentLink(row);
+    if (link && row.reviewedComponentCorrections?.some(c => c.replaceGraceSku === link.componentGraceSku)) return row;
     if (!link || Object.values(row.components).flat().some(part => part.graceSku === link.componentGraceSku
         || part.websiteSku === link.componentSku)) return row;
     const active = products.get(link.componentGraceSku);
@@ -27,7 +28,7 @@ function restoreSourceLink(row: CatalogRow, products: Map<string, ActiveComponen
     if (active.websiteSku !== link.componentSku && !blankSourceMatch) return row;
     return { ...row, resolution: row.resolution === "unknown" ? "source_verified" : row.resolution,
         compatibilitySources: [link.assemblySourceUrl, link.componentSourceUrl],
-        components: { ...row.components, Cap: [...(row.components.Cap ?? []), { websiteSku: link.componentSku, graceSku: active.graceSku,
+        components: { ...row.components, [link.componentType]: [...(row.components[link.componentType] ?? []), { websiteSku: link.componentSku, graceSku: active.graceSku,
             itemName: active.itemName ?? link.componentName, imageUrl: active.imageUrl ?? null,
             shopifyVariantId: active.shopifyVariantId, shopifySellable: active.shopifySellable ?? null,
             stockStatus: active.stockStatus ?? null, capColor: link.finish, productGroupSlug: null,

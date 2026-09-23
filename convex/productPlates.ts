@@ -34,7 +34,7 @@ const viewV = v.object({
     thumb: v.union(plateAsset, v.null()),
 });
 
-const plateRowV = v.object({
+export const plateRowV = v.object({
     sku: v.string(),
     websiteSku: v.union(v.string(), v.null()),
     graceSku: v.union(v.string(), v.null()),
@@ -295,7 +295,7 @@ export const productPresence = query({
 });
 
 /**
- * The only delete path. Publishing never deletes; `scripts/paperdoll/prune.mjs`
+ * The general pruning path. Native insertion rollback separately removes only exact release pairs; `scripts/paperdoll/prune.mjs`
  * calls this explicitly (dry-run by default) for rows the integrity sweep has
  * named. Objects in the store are never touched — keys are content-addressed
  * and a later publish reuses them.

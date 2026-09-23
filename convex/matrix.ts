@@ -30,13 +30,14 @@
  * that does not fit it.
  */
 import { query } from "./_generated/server";
+import { createComponentProductResolver } from "./catalogComponentProducts";
 import { v } from "convex/values";
 import {
     normalizeComponentsByType,
     resolveCompatibleComponents,
     selectBestFitmentRule,
 } from "./componentUtils";
-import { catalogComponentPool, addReviewedCatalogComponent, reviewedCatalogLink } from "./catalogComponentSources";
+import { catalogComponentPool, addReviewedCatalogComponent, reviewedCatalogLink, applyStaffComponentCorrections } from "./catalogComponentSources";
 import { catalogIncludedAssembly } from "./catalogIncludedAssemblies";
 
 /** How a row's component list came to be — carried to the UI so it can show
@@ -135,6 +136,7 @@ export const getFamilyRows = query({
         // component SKU rather than once per bottle/component occurrence.
         const componentSkus = new Set<string>();
         for (const bottle of bottles) {
+            for (const correction of bottle.reviewedComponentCorrections ?? []) componentSkus.add(correction.componentGraceSku);
             const sourceLink = reviewedCatalogLink(bottle);
             if (sourceLink) componentSkus.add(sourceLink.componentGraceSku);
             for (const components of Object.values(normalizeComponentsByType(bottle.components))) {
@@ -167,11 +169,12 @@ export const getFamilyRows = query({
             return groupId ? productGroups.get(String(groupId))?.slug ?? null : null;
         };
 
+        const resolveProduct = createComponentProductResolver(ctx);
         const rows = await Promise.all(bottles.map(async (b) => {
             const thread = (b.neckThreadSize ?? "").toString().trim();
             const link = reviewedCatalogLink(b);
-            const { grouped, sources } = addReviewedCatalogComponent(b, catalogComponentPool(b, bottles),
-                link ? componentProducts.get(link.componentGraceSku) ?? null : null);
+            const { grouped, sources } = applyStaffComponentCorrections(b, addReviewedCatalogComponent(b, catalogComponentPool(b, bottles),
+                link ? componentProducts.get(link.componentGraceSku) ?? null : null));
             const rule = selectBestFitmentRule(rulesByThread.get(thread) ?? [], b);
             const resolved = resolveCompatibleComponents(grouped, rule, b);
 
@@ -184,19 +187,13 @@ export const getFamilyRows = query({
             // eligibility. Enrich the already-resolved list without changing
             // its fitment decision.
             const resolvedForCart = Object.fromEntries(await Promise.all(
-                Object.entries(resolved).map(async ([type, components]) => [
-                    type,
-                    components.map((component) => {
-                        const product = componentProducts.get(component.graceSku) ?? null;
-                        return {
-                            ...component,
-                            websiteSku: product?.websiteSku || component.websiteSku || null,
-                            productGroupSlug: product ? productGroupSlug(product) : null,
-                            shopifyVariantId: product?.shopifyVariantId ?? null,
-                            shopifySellable: product?.shopifySellable ?? null,
-                        };
-                    }),
-                ] as const),
+                Object.entries(resolved).map(async ([type, components]) => {
+                    const matched = await Promise.all(components.map(item => resolveProduct(item, thread)));
+                    return [type, await Promise.all(matched.filter(item => item !== null).map(async ({ productGroupId, ...item }) => {
+                        const group = productGroupId ? productGroups.get(String(productGroupId)) ?? await ctx.db.get(productGroupId) : null;
+                        return { ...item, productGroupSlug: group?.slug ?? null };
+                    }))] as const;
+                }),
             ));
 
             return {
@@ -231,6 +228,7 @@ export const getFamilyRows = query({
                 shopifyVariantId: b.shopifyVariantId ?? null,
                 shopifySellable: b.shopifySellable ?? null,
                 components: resolvedForCart,
+                ...(b.reviewedComponentCorrections?.length ? { reviewedComponentCorrections: b.reviewedComponentCorrections } : {}),
                 includedAssembly: catalogIncludedAssembly(b),
                 resolution,
                 // Bottle Only is an EXPLICIT choice, never inferred from an

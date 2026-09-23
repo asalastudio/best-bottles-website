@@ -10,24 +10,10 @@ import { readLocalComponentKits } from "../paper-doll/local-component-kits";
 
 const client = () => new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
-// Existing read-only APIs keep this frontend branch independent of a backend
-// deployment. Bounded requests and a short cache avoid reloading every kit on navigation.
-const cachedKit = unstable_cache(async (websiteSku: string, graceSku: string) =>
-    client().query(api.productKits.forSku, { websiteSku, graceSku }), ["bottle-builder-kit-v1"], { revalidate: 300 });
-
 // Local preview of kits that are extracted but not yet published: BUILDER_LOCAL_KITS
 // names a kits.json staged by scripts/paperdoll/local-kit-overlay.mjs, whose part
 // URLs live under public/local-kits/. Never set in production; nothing here writes.
 const localKits = readLocalComponentKits;
-
-/** Every kit read goes through here so a locally staged kit is seen wherever a
- * published one would be. */
-async function kitFor(websiteSku: string | null, graceSku: string | null): Promise<BuilderKit | null> {
-    const local = localKits();
-    const staged = local && ((websiteSku && local[websiteSku]) || (graceSku && local[graceSku]));
-    if (staged) return staged;
-    return cachedKit(websiteSku ?? "", graceSku ?? "");
-}
 
 // Raw matrix rows repeat compatibility lists and can exceed Next's 2 MB cache
 // entry limit. Cache the slim family workspace and individual image kits.
@@ -39,7 +25,7 @@ export const loadBuilderFamily = unstable_cache(async (family: string) => {
     const data = await familyRows(family);
     if (data.truncated) throw new Error(`Builder family exceeds catalog query limit: ${family}`);
     return slimBuilderBodies(await loadBuilderBodies(data.rows));
-}, ["bottle-builder-family-chooser-v1"], { revalidate: 300 });
+}, ["bottle-builder-family-chooser-v2"], { revalidate: 300, tags: ["bottle-components"] });
 
 export const loadBuilderFamilies = unstable_cache(async () => {
     const families = await client().query(api.matrix.listFamilies, {});
@@ -60,7 +46,7 @@ export const loadBuilderFamilies = unstable_cache(async () => {
         }
     }));
     return available.filter(family => family !== null);
-}, ["bottle-builder-families-bare-v5"], { revalidate: 300 });
+}, ["bottle-builder-families-bare-v6"], { revalidate: 300, tags: ["bottle-components"] });
 
 async function loadKitsForRows(rows: Array<{ websiteSku: string | null; graceSku: string | null }>): Promise<Map<string, BuilderKit | null>> {
     const result = new Map<string, BuilderKit | null>();
@@ -159,6 +145,14 @@ export async function loadBuilderBodies(rows: CatalogRow[]) {
     const candidates = resolved.filter(isBuilderCandidate);
     const chooserReady = loadChooserKits(candidates);
     const [plateUrls, { own, proofs }] = await Promise.all([loadPlateUrls(convex, candidates), chooserReady]);
+    // A newly recovered finish can have a complete exact kit before it has a
+    // standalone plate. The chooser's one-kit-per-glass optimization must not
+    // hide those finishes merely because another SKU supplied its bare body.
+    const withoutPlate = candidates.filter((row, index) => !plateUrls[index] && !own.has(row.websiteSku!));
+    if (withoutPlate.length) {
+        const extra = await loadKitsForRows(withoutPlate);
+        for (const [sku, kit] of extra) own.set(sku, kit);
+    }
     const configurations = candidates.map(row => own.get(row.websiteSku!) ?? own.get(row.graceSku!) ?? null);
     const listingProofs = candidates.map(row => proofs.get(chooserGroupKey(row)) ?? null);
     const bodies = groupBuilderBodies(resolveBuilderConfigurations(candidates, configurations, plateUrls, listingProofs).filter(config => config !== null));
@@ -182,8 +176,13 @@ export async function freshConfiguration(family: string, sku: string) {
     if (data.truncated) return null;
     const target = data.rows.filter(row => row.websiteSku === sku);
     if (target.length !== 1) return null;
-    const rows = await resolveListedComponents(data.rows.filter(row => row.capacityMl === target[0].capacityMl
-        && row.color === target[0].color && row.neckThreadSize === target[0].neckThreadSize), async sku => (await convex.query(api.products.lookupSku, { sku }))?.product ?? null);
-    const kits = await Promise.all(rows.map(row => kitFor(row.websiteSku ?? null, row.graceSku ?? null)));
-    return resolveBuilderConfigurations(rows, kits, await loadPlateUrls(convex, rows)).find(config => config?.id === sku) ?? null;
+    // Rebuild this physical bottle through the same uncached catalog/media
+    // resolver as the chooser. Requiring a full per-SKU kit here rejected
+    // valid listed finishes that use an exact plate and a sibling bare body.
+    // Grouping also rejects ambiguous selection tuples instead of choosing
+    // an arbitrary SKU during purchase validation.
+    const bodyId = builderBodyIdentity(target[0]).bodyId;
+    const rows = data.rows.filter(row => builderBodyIdentity(row).bodyId === bodyId);
+    const bodies = await loadBuilderBodies(rows);
+    return bodies.flatMap(body => body.configurations).find(config => config.id === sku) ?? null;
 }

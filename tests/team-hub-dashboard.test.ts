@@ -72,6 +72,7 @@ describe("Team Hub dashboard catalog", () => {
             "/team/products",
             "/team/products/new",
             "/team/asset-ledger",
+            "/team/components",
             "/studio",
             "/executive",
             "/grace-workspace",

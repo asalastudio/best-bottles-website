@@ -1,0 +1,820 @@
+[
+  {
+    "id": "GBCrclFrst50DrpGl",
+    "kind": "catalog",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50DrpGl",
+      "name": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415",
+      "family": "Circle",
+      "capacityMl": 50,
+      "glass": "Frosted",
+      "applicator": "Dropper",
+      "finish": "Shiny Gold Collar"
+    },
+    "proposed": {
+      "sku": "Drp18-415Gl",
+      "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Dropper"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "sha256": "bad66b5d553f7f5cb42c17dfc7b3780dbb4024734926939db5bf9dae53558df6",
+      "capturedAt": "2026-09-23T05:46:13.944Z",
+      "itemSku": "GBCrclFrst50DrpGl",
+      "description": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+      "sha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+      "capturedAt": "2026-09-23T05:46:18.051Z",
+      "itemSku": "Drp18-415Gl",
+      "description": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415"
+    }
+  },
+  {
+    "id": "GBCrclFrst50AnSpTslGl",
+    "kind": "catalog",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50AnSpTslGl",
+      "name": "Circle design 50 ml, 1.7oz  frosted glass bottle  with Gold vintage style bulb sprayer with tasseland shiny gold collar cap. For use with co",
+      "neck": "18-415",
+      "family": "Circle",
+      "capacityMl": 50,
+      "glass": "Frosted",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "finish": "Gold"
+    },
+    "proposed": {
+      "sku": "CP18-415AnSpTslGl",
+      "name": "Gold Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Vintage Bulb Sprayer with Tassel"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-gold-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "sha256": "f2ff4ca1c94a05abfe78a4ac6b14af401d7dbff994c8b590ffed6362114d0aed",
+      "capturedAt": "2026-09-23T05:46:14.294Z",
+      "itemSku": "GBCrclFrst50AnSpTslGl",
+      "description": "Circle design 50 ml, 1.7oz  frosted glass bottle  with Gold vintage style bulb sprayer with tasseland shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance t",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-gold-Tassel",
+      "sha256": "287b35fbdd0bc7ad5dda32cd5b87f204da0e7defe78d52057691ed63ba0c6572",
+      "capturedAt": "2026-09-23T05:46:17.208Z",
+      "itemSku": "AnSpTsl18-415Gold",
+      "description": "CP18-415AnSpTslGl Gold Antique or Vintage style bulb sprayer with tassel and Gold fittings. Ships along with a travel cap,  Filled bottle with sprayer can leak during shipping, use travel cap to prevent leaks. Thread Size 18-415",
+      "neck": "18-415"
+    }
+  },
+  {
+    "id": "GBCrcl15GlMattSht",
+    "kind": "catalog",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrcl15GlMattSht",
+      "name": "Circle design 15ml, 1/2oz Clear glass bottle with short matte gold cap.",
+      "neck": "13-415",
+      "family": "Circle",
+      "capacityMl": 15,
+      "glass": "Clear",
+      "applicator": "Screw Cap",
+      "finish": "Short Matte Gold"
+    },
+    "proposed": {
+      "sku": "CP13-415GlMattSht",
+      "name": "Short matte Gold or closure for glass bottle with foam liner. Thread size 13-415",
+      "neck": "13-415",
+      "category": "Component",
+      "role": "Screw Cap"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-15-ml-bottle-short-matte-gold-cap",
+      "sha256": "abc24240fb7b70d3427a3fb57c030068cf231e919d8d1ccf3614b46bc0c88b36",
+      "capturedAt": "2026-09-23T05:50:25.495Z",
+      "itemSku": "GBCrcl15GlMattSht",
+      "description": "Circle design 15ml, 1/2oz Clear glass bottle with short matte gold cap.",
+      "neck": "13-415"
+    },
+    "componentSource": null
+  },
+  {
+    "id": "GBRnd128DrpGl",
+    "kind": "catalog",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBRnd128DrpGl",
+      "name": "Round design 128 ml, 4.33oz  clear glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Round design bottle is available in 2 sizes -",
+      "neck": "18-415",
+      "family": "Round",
+      "capacityMl": 128,
+      "glass": "Clear",
+      "applicator": "Dropper",
+      "finish": "Gold Collar"
+    },
+    "proposed": {
+      "sku": "Drp18-415Gl",
+      "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Dropper"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/round-design-128-ml-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "sha256": "2f1726258d5833f463b1a2046238ec2f727f67a2b6e24f4e74ce8500565f50fd",
+      "capturedAt": "2026-09-23T05:46:15.496Z",
+      "itemSku": "GBRnd128DrpGl",
+      "description": "Round design 128 ml, 4.33oz  clear glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Round design bottle is available in 2 sizes -",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+      "sha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+      "capturedAt": "2026-09-23T05:46:18.051Z",
+      "itemSku": "Drp18-415Gl",
+      "description": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415"
+    }
+  },
+  {
+    "id": "GBRndFrst128AnSpTslIvyGl",
+    "kind": "catalog",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBRndFrst128AnSpTslIvyGl",
+      "name": "Round design 128 ml, 4.33oz frosted glass bottle with Ivory vintage style bulb sprayer with tassel and shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance",
+      "neck": "18-415",
+      "family": "Round",
+      "capacityMl": 128,
+      "glass": "Frosted",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "finish": "Ivory + Gold"
+    },
+    "proposed": {
+      "sku": "AnSpTsl18-415IvyGl",
+      "name": "Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings and tassel. Thread Size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Vintage Bulb Sprayer with Tassel"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/round-design-128-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "sha256": "d2e7328d1da5bac81fa172df327156d01809c197e7ae4a40ce83c48489b878f3",
+      "capturedAt": "2026-09-23T05:46:15.496Z",
+      "itemSku": "GBRndFrst128AnSpTslIvyGl",
+      "description": "Round design 128 ml, 4.33oz frosted glass bottle with Ivory vintage style bulb sprayer with tassel and shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-ivory-gold-Tassel",
+      "sha256": "204c51d75ff77f469a896263e927487753378e383e2fd5f895a84c9eef460ff4",
+      "capturedAt": "2026-09-23T05:46:16.352Z",
+      "itemSku": "AnSpTsl18-415IvyGl",
+      "description": "Ivory Gold Antique or Vintage style bulb sprayer with Gold fittings and tassel. Thread Size 18-415",
+      "neck": "18-415"
+    }
+  },
+  {
+    "id": "GBCyl9SpryBlk",
+    "kind": "catalog",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCyl9SpryBlk",
+      "name": "Cylinder design 9ml,1/3 oz clear glass bottle with fine mist sprayer with black trim and plastic overcap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+      "neck": "17-415",
+      "family": "Cylinder",
+      "capacityMl": 9,
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "finish": "Black"
+    },
+    "proposed": {
+      "sku": "Spry17-415Blk",
+      "name": "Shiny black collar sprayer, Thread size 17-415",
+      "neck": "17-415",
+      "category": "Component",
+      "role": "Fine Mist Sprayer"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-sprayer-black-trim-and-cap",
+      "sha256": "4d34bd3f814ea542e4167262a0cf664d71f25489ef3fb3a253edf1f653ec615b",
+      "capturedAt": "2026-09-23T15:35:36.217225Z",
+      "itemSku": "GBCyl9SpryBlk",
+      "description": "Cylinder design 9ml,1/3 oz clear glass bottle with fine mist sprayer with black trim and plastic overcap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each",
+      "neck": "17-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/spray-top-black-trim-color-17-415",
+      "sha256": "7287f6c1c39a1f948f356d0f1ccaaa930a244fde6dd312ac70e0fcaaa5334120",
+      "capturedAt": "2026-09-23T15:35:36.799535Z",
+      "itemSku": "Spry17-415Blk",
+      "description": "Shiny black collar sprayer. Metal shell collar over plastic sprayer, Thread size 17-415",
+      "neck": "17-415"
+    }
+  },
+  {
+    "id": "GBCyl5SpryGlMatt",
+    "kind": "catalog",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCyl5SpryGlMatt",
+      "name": "5 ml Clear Cylinder Fine Mist Spray Bottle \u2014 GB-CYL-CLR-5ML-SPR-MGLD",
+      "neck": "13-415",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "applicator": "Fine Mist Sprayer",
+      "finish": "Matte Gold"
+    },
+    "proposed": {
+      "sku": "CP13-415SpryGlMt",
+      "name": "Matte gold Fine Mist Sprayer, Thread size 13-415",
+      "neck": "13-415",
+      "category": "Component",
+      "role": "Fine Mist Sprayer"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-matte-gold-spray",
+      "sha256": "3f9c56348ef8e6e3464720e4e0ff66ede35fc8556911b8e48fae0d91da7b17b0",
+      "capturedAt": "2026-09-23T15:35:37.375427Z",
+      "itemSku": "GBCyl5SpryGlMatt",
+      "description": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with matte gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, Small sized bottle for decants, promotion, samples and travel accessory. Price each",
+      "neck": "13-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/spray-top-matte-gold-13-415",
+      "sha256": "d40e005a8ca8b0378b228b7af4b433dee8e275cdc07dd271a12068e3f9ecadef",
+      "capturedAt": "2026-09-23T15:35:37.968530Z",
+      "itemSku": "CP13-415SpryGlMt",
+      "description": "Matte gold collar sprayer. Metal shell collar over plastic sprayer, Thread size 13-415",
+      "neck": "13-415"
+    }
+  },
+  {
+    "id": "GBCyl5MtlRollBlkDot",
+    "kind": "catalog",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "name": "5 ml Clear Cylinder Roll-On Bottle \u2014 GB-CYL-CLR-5ML-MRL-BKDT",
+      "neck": "13-415",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "applicator": "Metal Roller",
+      "finish": "Black with Dots Cap"
+    },
+    "proposed": {
+      "sku": "CPRoll13-415BlackDot",
+      "name": "Shiny black cap with dots or closure for rollon bottles, Threadsize 13-415",
+      "neck": "13-415",
+      "category": "Component",
+      "role": "Metal Roller"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-metal-roller-ball-plug-black-shiny-cap-with-dots",
+      "sha256": "22cb01bc53562d1dc78ad777742b83f5435c212e10da904926fa3e9386966101",
+      "capturedAt": "2026-09-23T15:35:38.617294Z",
+      "itemSku": "GBCyl5MtlRollBlkDot",
+      "description": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with metal roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, Small sized bottle for decants, promotion, sample",
+      "neck": "13-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Caps-lids-top-roll-on-bottle-Black-dot-Color-13-415",
+      "sha256": "fd26fda9652bf560f4bb7c93eab4a17e8f7c7d0b8357fd991eee21b7db311a44",
+      "capturedAt": "2026-09-23T15:35:39.190442Z",
+      "itemSku": "CPRoll13-415BlackDot",
+      "description": "Shiny black cap with dots cap or closure for rollon bottles. Metal shell cap with plastic insert that has special features for pressing on roller ball. Thread size 13-415",
+      "neck": "13-415"
+    }
+  },
+  {
+    "id": "GBCyl5RollBlkDot",
+    "kind": "catalog",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCyl5RollBlkDot",
+      "name": "5 ml Clear Cylinder Roll-On Bottle \u2014 GB-CYL-CLR-5ML-ROL-BKDT",
+      "neck": "13-415",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "applicator": "Plastic Roller",
+      "finish": "Black with Dots Cap"
+    },
+    "proposed": {
+      "sku": "CPRoll13-415BlackDot",
+      "name": "Shiny black cap with dots or closure for rollon bottles, Threadsize 13-415",
+      "neck": "13-415",
+      "category": "Component",
+      "role": "Plastic Roller"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-plastic-roller-ball-plug-black-shiny-cap-with-dots",
+      "sha256": "47a266371374459f26c44203dbe1d1c26783a0df3ecb6bbd375619377fbb59f3",
+      "capturedAt": "2026-09-23T15:35:39.812773Z",
+      "itemSku": "GBCyl5RollBlkDot",
+      "description": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with plastic roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, Small sized bottle for decants, promotion, samp",
+      "neck": "13-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Caps-lids-top-roll-on-bottle-Black-dot-Color-13-415",
+      "sha256": "fd26fda9652bf560f4bb7c93eab4a17e8f7c7d0b8357fd991eee21b7db311a44",
+      "capturedAt": "2026-09-23T15:35:39.190442Z",
+      "itemSku": "CPRoll13-415BlackDot",
+      "description": "Shiny black cap with dots cap or closure for rollon bottles. Metal shell cap with plastic insert that has special features for pressing on roller ball. Thread size 13-415",
+      "neck": "13-415"
+    }
+  },
+  {
+    "id": "GBEmp50AnSpGl",
+    "kind": "catalog",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBEmp50AnSpGl",
+      "name": "Empire design 50 ml, 1.7oz  clear glass bottle  with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty of your",
+      "neck": "18-415",
+      "family": "Empire",
+      "capacityMl": 50,
+      "glass": "Clear",
+      "applicator": "Vintage Bulb Sprayer",
+      "finish": "Gold"
+    },
+    "proposed": {
+      "sku": "AnSp18-415Gl",
+      "name": "Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Vintage Bulb Sprayer"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/empire-design-50-ml-glass-bottle-gold-vintage-style-sprayer-shiny-gold-collar-cap",
+      "sha256": "fb4adb3b26892c97ead64bbb522798fe85c568da2048e7ffc1177f613a9276c2",
+      "capturedAt": "2026-09-23T15:35:40.413304Z",
+      "itemSku": "GBEmp50AnSpGl",
+      "description": "Empire design 50 ml, 1.7oz  clear glass bottle  with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty of your",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-gold",
+      "sha256": "09ec10cddaab9b4796f2891156f6c4d835d104b168c7ed5bfbfc855a70eae56c",
+      "capturedAt": "2026-09-23T15:35:41.015695Z",
+      "itemSku": "AnSp18-415Gl",
+      "description": "Gold Antique or Vintage style bulb sprayer with Gold fittings. Thread Size 18-415",
+      "neck": "18-415"
+    }
+  },
+  {
+    "id": "LBEmp50WhtClOvrCp",
+    "kind": "catalog",
+    "mode": "complete_assembly",
+    "bottle": {
+      "sku": "LBEmp50WhtClOvrCp",
+      "name": "Empire design 50 ml, 1.7oz clear glass bottle with white rectangular and clear over the cap. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Empire design bottle is availab",
+      "neck": "18-415",
+      "family": "Empire",
+      "capacityMl": 50,
+      "glass": "Clear",
+      "applicator": "Lotion Pump",
+      "finish": "White rectangular pump, clear overcap"
+    },
+    "proposed": {
+      "sku": "LBEmp50WhtClOvrCp",
+      "name": "White rectangular pump, clear overcap Lotion Pump",
+      "neck": "18-415",
+      "category": "Glass Bottle",
+      "role": "Lotion Pump"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/empire-design-50-ml-glass-bottle-white-rectangular-clear-over-the-cap",
+      "sha256": "0270e53aba31a5113e106026f2e6b3bc07f48736ee32428dacc3f38901aae606",
+      "capturedAt": "2026-09-23T05:46:15.284Z",
+      "itemSku": "LBEmp50WhtClOvrCp",
+      "description": "Empire design 50 ml, 1.7oz clear glass bottle with white rectangular and clear over the cap. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Empire design bottle is availab",
+      "neck": "18-415"
+    },
+    "componentSource": null
+  },
+  {
+    "id": "GBEmp100RdcrShnBlk",
+    "kind": "catalog",
+    "mode": "complete_assembly",
+    "bottle": {
+      "sku": "GBEmp100RdcrShnBlk",
+      "name": "Empire design 100 ml, 3 1/2oz  clear glass bottle  with reducer and black shiny cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Empire design bottle is available in 2 sizes, 50ml and 100ml. Price each",
+      "neck": "18-415",
+      "family": "Empire",
+      "capacityMl": 100,
+      "glass": "Clear",
+      "applicator": "Reducer",
+      "finish": "Shiny Black"
+    },
+    "proposed": {
+      "sku": "GBEmp100RdcrShnBlk",
+      "name": "Shiny Black Reducer",
+      "neck": "18-415",
+      "category": "Glass Bottle",
+      "role": "Reducer"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/empire-design-100-ml-glass-bottle-reducer-black-shiny-cap",
+      "sha256": "f39e551e72f024f18272a4a06935b74d1f4cce19962a536b0f773ef472b1283f",
+      "capturedAt": "2026-09-23T05:46:15.318Z",
+      "itemSku": "GBEmp100RdcrShnBlk",
+      "description": "Empire design 100 ml, 3 1/2oz  clear glass bottle  with reducer and black shiny cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Empire design bottle is available in 2 sizes, 50ml and 100ml. Price each",
+      "neck": "18-415"
+    },
+    "componentSource": null
+  },
+  {
+    "id": "control-wrong-neck",
+    "kind": "control",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50DrpGl",
+      "name": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415",
+      "family": "Circle",
+      "capacityMl": 50,
+      "glass": "Frosted",
+      "applicator": "Dropper",
+      "finish": "Shiny Gold"
+    },
+    "proposed": {
+      "sku": "Drp18-415Gl",
+      "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "13-415",
+      "category": "Component",
+      "role": "Dropper"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "sha256": "bad66b5d553f7f5cb42c17dfc7b3780dbb4024734926939db5bf9dae53558df6",
+      "capturedAt": "2026-09-23T05:46:13.944Z",
+      "itemSku": "GBCrclFrst50DrpGl",
+      "description": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+      "sha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+      "capturedAt": "2026-09-23T05:46:18.051Z",
+      "itemSku": "Drp18-415Gl",
+      "description": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415"
+    },
+    "expected": "review"
+  },
+  {
+    "id": "control-wrong-source-sku",
+    "kind": "control",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50DrpGl",
+      "name": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415",
+      "family": "Circle",
+      "capacityMl": 50,
+      "glass": "Frosted",
+      "applicator": "Dropper",
+      "finish": "Shiny Gold"
+    },
+    "proposed": {
+      "sku": "Drp18-415Gl",
+      "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Dropper"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "sha256": "bad66b5d553f7f5cb42c17dfc7b3780dbb4024734926939db5bf9dae53558df6",
+      "capturedAt": "2026-09-23T05:46:13.944Z",
+      "itemSku": "NOT-THE-BOTTLE",
+      "description": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+      "sha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+      "capturedAt": "2026-09-23T05:46:18.051Z",
+      "itemSku": "Drp18-415Gl",
+      "description": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415"
+    },
+    "expected": "review"
+  },
+  {
+    "id": "control-missing-source",
+    "kind": "control",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50DrpGl",
+      "name": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415",
+      "family": "Circle",
+      "capacityMl": 50,
+      "glass": "Frosted",
+      "applicator": "Dropper",
+      "finish": "Shiny Gold"
+    },
+    "proposed": {
+      "sku": "Drp18-415Gl",
+      "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Dropper"
+    },
+    "assemblySource": null,
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+      "sha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+      "capturedAt": "2026-09-23T05:46:18.051Z",
+      "itemSku": "Drp18-415Gl",
+      "description": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415"
+    },
+    "expected": "review"
+  },
+  {
+    "id": "control-assembled-as-loose-part",
+    "kind": "control",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50DrpGl",
+      "name": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415",
+      "family": "Circle",
+      "capacityMl": 50,
+      "glass": "Frosted",
+      "applicator": "Dropper",
+      "finish": "Shiny Gold"
+    },
+    "proposed": {
+      "sku": "Drp18-415Gl",
+      "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415",
+      "category": "Glass Bottle",
+      "role": "Dropper"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "sha256": "bad66b5d553f7f5cb42c17dfc7b3780dbb4024734926939db5bf9dae53558df6",
+      "capturedAt": "2026-09-23T05:46:13.944Z",
+      "itemSku": "GBCrclFrst50DrpGl",
+      "description": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+      "sha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+      "capturedAt": "2026-09-23T05:46:18.051Z",
+      "itemSku": "Drp18-415Gl",
+      "description": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415"
+    },
+    "expected": "review"
+  },
+  {
+    "id": "control-tassel-instead-of-dropper",
+    "kind": "control",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50DrpGl",
+      "name": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415",
+      "family": "Circle",
+      "capacityMl": 50,
+      "glass": "Frosted",
+      "applicator": "Dropper",
+      "finish": "Shiny Gold"
+    },
+    "proposed": {
+      "sku": "CP18-415AnSpTslGl",
+      "name": "Gold Antique or Vintage style bulb sprayer with tassel. Thread Size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Vintage Bulb Sprayer with Tassel"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "sha256": "bad66b5d553f7f5cb42c17dfc7b3780dbb4024734926939db5bf9dae53558df6",
+      "capturedAt": "2026-09-23T05:46:13.944Z",
+      "itemSku": "GBCrclFrst50DrpGl",
+      "description": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Vintage-antique-bulb-sprayer-gold-Tassel",
+      "sha256": "287b35fbdd0bc7ad5dda32cd5b87f204da0e7defe78d52057691ed63ba0c6572",
+      "capturedAt": "2026-09-23T05:46:17.208Z",
+      "itemSku": "AnSpTsl18-415Gold",
+      "description": "CP18-415AnSpTslGl Gold Antique or Vintage style bulb sprayer with tassel and Gold fittings. Ships along with a travel cap,  Filled bottle with sprayer can leak during shipping, use travel cap to prevent leaks. Thread Size 18-415",
+      "neck": "18-415"
+    },
+    "expected": "review"
+  },
+  {
+    "id": "control-silver-instead-of-gold",
+    "kind": "control",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50DrpGl",
+      "name": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415",
+      "family": "Circle",
+      "capacityMl": 50,
+      "glass": "Frosted",
+      "applicator": "Dropper",
+      "finish": "Shiny Gold"
+    },
+    "proposed": {
+      "sku": "Drp18-415Sl",
+      "name": "White rubber bulb dropper with shiny silver collar cap. Thread size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Dropper"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "sha256": "bad66b5d553f7f5cb42c17dfc7b3780dbb4024734926939db5bf9dae53558df6",
+      "capturedAt": "2026-09-23T05:46:13.944Z",
+      "itemSku": "GBCrclFrst50DrpGl",
+      "description": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-silver-trim-glass-Pipette",
+      "sha256": "41087391d29ca16ed8dcb8d921962e730ed5f9a7a1e236776c8ed3a1fdf3a8a6",
+      "capturedAt": "2026-09-23T05:46:18.071Z",
+      "itemSku": "Drp18-415Sl",
+      "description": "White rubber bulb dropper with shiny silver collar cap. Thread size 18-415",
+      "neck": "18-415"
+    },
+    "expected": "review"
+  },
+  {
+    "id": "control-round-instead-of-circle",
+    "kind": "control",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50DrpGl",
+      "name": "Round design 50 ml frosted glass dropper bottle",
+      "neck": "18-415",
+      "family": "Round",
+      "capacityMl": 50,
+      "glass": "Frosted",
+      "applicator": "Dropper",
+      "finish": "Shiny Gold"
+    },
+    "proposed": {
+      "sku": "Drp18-415Gl",
+      "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Dropper"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "sha256": "bad66b5d553f7f5cb42c17dfc7b3780dbb4024734926939db5bf9dae53558df6",
+      "capturedAt": "2026-09-23T05:46:13.944Z",
+      "itemSku": "GBCrclFrst50DrpGl",
+      "description": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+      "sha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+      "capturedAt": "2026-09-23T05:46:18.051Z",
+      "itemSku": "Drp18-415Gl",
+      "description": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415"
+    },
+    "expected": "review"
+  },
+  {
+    "id": "control-clear-instead-of-frosted",
+    "kind": "control",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50DrpGl",
+      "name": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415",
+      "family": "Circle",
+      "capacityMl": 50,
+      "glass": "Clear",
+      "applicator": "Dropper",
+      "finish": "Shiny Gold"
+    },
+    "proposed": {
+      "sku": "Drp18-415Gl",
+      "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Dropper"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "sha256": "bad66b5d553f7f5cb42c17dfc7b3780dbb4024734926939db5bf9dae53558df6",
+      "capturedAt": "2026-09-23T05:46:13.944Z",
+      "itemSku": "GBCrclFrst50DrpGl",
+      "description": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+      "sha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+      "capturedAt": "2026-09-23T05:46:18.051Z",
+      "itemSku": "Drp18-415Gl",
+      "description": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415"
+    },
+    "expected": "review"
+  },
+  {
+    "id": "control-insufficient-description",
+    "kind": "control",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCrclFrst50DrpGl",
+      "name": "Circle design 50 ml, 1.7oz  frosted glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles availab",
+      "neck": "18-415",
+      "family": "Circle",
+      "capacityMl": 50,
+      "glass": "Frosted",
+      "applicator": "Dropper",
+      "finish": "Shiny Gold"
+    },
+    "proposed": {
+      "sku": "Drp18-415Gl",
+      "name": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415",
+      "category": "Component",
+      "role": "Dropper"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "sha256": "bad66b5d553f7f5cb42c17dfc7b3780dbb4024734926939db5bf9dae53558df6",
+      "capturedAt": "2026-09-23T05:46:13.944Z",
+      "itemSku": "GBCrclFrst50DrpGl",
+      "description": "Glass bottle. See catalog for details.",
+      "neck": "18-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Dropper-white-rubber-bulb-gold-trim-glass-Pipette",
+      "sha256": "3cb9cff82a4780615c6823e533c43e4da4d9eac0cda93d200ac6bdd39409faf8",
+      "capturedAt": "2026-09-23T05:46:18.051Z",
+      "itemSku": "Drp18-415Gl",
+      "description": "White rubber bulb dropper with shiny gold collar cap. Thread size 18-415",
+      "neck": "18-415"
+    },
+    "expected": "review"
+  },
+  {
+    "id": "control-plastic-instead-of-metal",
+    "kind": "control",
+    "mode": "component",
+    "bottle": {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "name": "5 ml Clear Cylinder Roll-On Bottle \u2014 GB-CYL-CLR-5ML-MRL-BKDT",
+      "neck": "13-415",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "applicator": "Plastic Roller Ball",
+      "finish": "Black with Dots Cap"
+    },
+    "proposed": {
+      "sku": "CPRoll13-415BlackDot",
+      "name": "Shiny black cap with dots or closure for rollon bottles, Threadsize 13-415",
+      "neck": "13-415",
+      "category": "Component",
+      "role": "Plastic Roller Ball"
+    },
+    "assemblySource": {
+      "url": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-metal-roller-ball-plug-black-shiny-cap-with-dots",
+      "sha256": "22cb01bc53562d1dc78ad777742b83f5435c212e10da904926fa3e9386966101",
+      "capturedAt": "2026-09-23T15:35:38.617294Z",
+      "itemSku": "GBCyl5MtlRollBlkDot",
+      "description": "Cylinder design 5.5ml, 1/6oz Clear glass bottle with metal roller ball plug and black shiny cap with dots. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, Small sized bottle for decants, promotion, sample",
+      "neck": "13-415"
+    },
+    "componentSource": {
+      "url": "https://www.bestbottles.com/product/Caps-lids-top-roll-on-bottle-Black-dot-Color-13-415",
+      "sha256": "fd26fda9652bf560f4bb7c93eab4a17e8f7c7d0b8357fd991eee21b7db311a44",
+      "capturedAt": "2026-09-23T15:35:39.190442Z",
+      "itemSku": "CPRoll13-415BlackDot",
+      "description": "Shiny black cap with dots cap or closure for rollon bottles. Metal shell cap with plastic insert that has special features for pressing on roller ball. Thread size 13-415",
+      "neck": "13-415"
+    },
+    "expected": "review"
+  }
+]
