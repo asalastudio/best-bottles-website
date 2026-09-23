@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { resolveListedComponents, type ActiveComponent } from "@/lib/bottle-builder/components";
 import { compatibleFinishComponent, isBuilderCandidate, type CatalogRow } from "@/lib/bottle-builder/model";
 import { sourceComponentLinks } from "@/lib/bottle-builder/source-component-links";
+import { catalogIncludedAssembly } from "../convex/catalogIncludedAssemblies";
 
 function fixture(index = 0) {
     const link = sourceComponentLinks[index];
@@ -18,9 +19,8 @@ function fixture(index = 0) {
 }
 
 describe("source-reviewed missing component links", () => {
-    // The first twelve Cylinder 5 ml assemblies now have exact included-cap
-    // witnesses, so they remain orderable without inventing a loose part.
-    // This test covers source links that still depend on a verified loose SKU.
+    // Exercise the remaining source links, including tall 9 ml bottles whose
+    // exact included-cap witnesses now make the loose SKU optional for ordering.
     it.each(sourceComponentLinks.map((link, i) => [link.assemblySku, i] as const).filter(([, i]) => i >= 12))(
         "restores only the exact included component for %s", async (_, index) => {
         const { link, row, component } = fixture(index);
@@ -28,7 +28,8 @@ describe("source-reviewed missing component links", () => {
         const [resolved] = await resolveListedComponents([row], async sku => sku === component.graceSku ? component : null);
         expect(resolved.resolution).toBe("source_verified");
         expect(resolved.compatibilitySources).toEqual([link.assemblySourceUrl, link.componentSourceUrl]);
-        expect(compatibleFinishComponent(resolved)?.websiteSku).toBe(link.componentSku);
+        expect(resolved.components[link.componentType][0].websiteSku).toBe(link.componentSku);
+        expect(compatibleFinishComponent(resolved)?.websiteSku).toBe(catalogIncludedAssembly(row)?.websiteSku ?? link.componentSku);
         expect(isBuilderCandidate(resolved)).toBe(true);
         expect(resolved.shopifyVariantId).toBe("assembly-variant");
         expect(resolved.components[link.componentType][0].shopifySellable).toBe(false);
@@ -56,7 +57,10 @@ describe("source-reviewed missing component links", () => {
             { ...component, productUrl: "https://example.com/unverified" }, { ...component, itemName: "Different cap" }]) {
             const [result] = await resolveListedComponents([row], async () => replacement);
             expect(result).toEqual(row);
-            expect(isBuilderCandidate(result)).toBe(false);
+            // A rejected loose-part lookup must not remove a separately verified
+            // complete assembly. It still cannot create a component relationship.
+            expect(result.components).toEqual({});
+            expect(isBuilderCandidate(result)).toBe(Boolean(catalogIncludedAssembly(row)));
         }
     });
     it("supplements a missing exact cap without changing the original matrix evidence", async () => {
@@ -71,7 +75,8 @@ describe("source-reviewed missing component links", () => {
         expect(resolved.resolution).toBe("fitment_rule");
         expect(resolved.components.Cap[0]).toEqual(other);
         expect(resolved.components.Cap).toHaveLength(2);
-        expect(compatibleFinishComponent(resolved)?.websiteSku).toBe(component.websiteSku);
+        expect(resolved.components.Cap[1].websiteSku).toBe(component.websiteSku);
+        expect(compatibleFinishComponent(resolved)?.websiteSku).toBe(catalogIncludedAssembly(row)?.websiteSku ?? component.websiteSku);
         expect(input.components.Cap).toEqual([other]);
     });
 });
