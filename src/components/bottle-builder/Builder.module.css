@@ -434,3 +434,5 @@
     .optionFooter { padding-inline: 16px; }
     .previewHeader .liveDot { display: none; }
 }
+
+.linerNote { padding: 10px 12px; border-left: 2px solid var(--gold); background: #f5f3ef; color: #514a3e; font-size: 12px; line-height: 1.6; margin: 10px 0 14px; }

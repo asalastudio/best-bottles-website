@@ -1,0 +1,128 @@
+[
+  {
+    "sku": "GBTallCylFrst9BlkShSht",
+    "source": {
+      "bytes": 9198,
+      "height": 1100,
+      "key": "kits/cylinder-master/fa25400fd6051f88d34df7dd6953ee1fccf4bd457e3638f387d2b98ad2e3ee2f.body.webp",
+      "sha256": "fa25400fd6051f88d34df7dd6953ee1fccf4bd457e3638f387d2b98ad2e3ee2f",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/fa25400fd6051f88d34df7dd6953ee1fccf4bd457e3638f387d2b98ad2e3ee2f.body.webp",
+      "width": 1000
+    },
+    "output": {
+      "bytes": 20610,
+      "height": 1100,
+      "key": "images/bottle-builder/tall9-cleanup/GBTallCylFrst9BlkShSht.webp",
+      "sha256": "7c68bdd79e8895632c569dd73a78e35882bf566a8a6f91a5f3b367f856273db9",
+      "url": "/images/bottle-builder/tall9-cleanup/GBTallCylFrst9BlkShSht.webp",
+      "width": 1000
+    },
+    "removedMattePixels": 14007,
+    "protectedAboveY": 300
+  },
+  {
+    "sku": "GBTallCylFrst9CuSht",
+    "source": {
+      "bytes": 8680,
+      "height": 1100,
+      "key": "kits/cylinder-master/785cfb96d5a0db45578213a9a23ffc30607ca32639a82e5656d083a10061d272.body.webp",
+      "sha256": "785cfb96d5a0db45578213a9a23ffc30607ca32639a82e5656d083a10061d272",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/785cfb96d5a0db45578213a9a23ffc30607ca32639a82e5656d083a10061d272.body.webp",
+      "width": 1000
+    },
+    "output": {
+      "bytes": 18000,
+      "height": 1100,
+      "key": "images/bottle-builder/tall9-cleanup/GBTallCylFrst9CuSht.webp",
+      "sha256": "ea5b0a1fe7baf6458acdf190a94ea4fde81b29afc7fc0290ec46121fe317c743",
+      "url": "/images/bottle-builder/tall9-cleanup/GBTallCylFrst9CuSht.webp",
+      "width": 1000
+    },
+    "removedMattePixels": 14816,
+    "protectedAboveY": 300
+  },
+  {
+    "sku": "GBTallCylFrst9GlMattSht",
+    "source": {
+      "bytes": 8576,
+      "height": 1100,
+      "key": "kits/cylinder-master/ebb09fbd6702dc444ba12422001fcc84d0fc6c1dfd7b1cbab630260f750853d8.body.webp",
+      "sha256": "ebb09fbd6702dc444ba12422001fcc84d0fc6c1dfd7b1cbab630260f750853d8",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/ebb09fbd6702dc444ba12422001fcc84d0fc6c1dfd7b1cbab630260f750853d8.body.webp",
+      "width": 1000
+    },
+    "output": {
+      "bytes": 17948,
+      "height": 1100,
+      "key": "images/bottle-builder/tall9-cleanup/GBTallCylFrst9GlMattSht.webp",
+      "sha256": "7cc783e4794ef132ff0228e9d3aef01e1381c06d18f83b33c44b597ffdf04936",
+      "url": "/images/bottle-builder/tall9-cleanup/GBTallCylFrst9GlMattSht.webp",
+      "width": 1000
+    },
+    "removedMattePixels": 14805,
+    "protectedAboveY": 300
+  },
+  {
+    "sku": "GBTallCylFrst9GlSht",
+    "source": {
+      "bytes": 8638,
+      "height": 1100,
+      "key": "kits/cylinder-master/fec131bc7f6dae6d80307270ba1b52046d133144fb5b08728b573a42928a0d5b.body.webp",
+      "sha256": "fec131bc7f6dae6d80307270ba1b52046d133144fb5b08728b573a42928a0d5b",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/fec131bc7f6dae6d80307270ba1b52046d133144fb5b08728b573a42928a0d5b.body.webp",
+      "width": 1000
+    },
+    "output": {
+      "bytes": 19514,
+      "height": 1100,
+      "key": "images/bottle-builder/tall9-cleanup/GBTallCylFrst9GlSht.webp",
+      "sha256": "5fd19d0565ec355955e1fe0ad2abea4cd6e4bd3aa332404e6002a2161af1de8e",
+      "url": "/images/bottle-builder/tall9-cleanup/GBTallCylFrst9GlSht.webp",
+      "width": 1000
+    },
+    "removedMattePixels": 14766,
+    "protectedAboveY": 300
+  },
+  {
+    "sku": "GBTallCylFrst9SlMattSht",
+    "source": {
+      "bytes": 9482,
+      "height": 1100,
+      "key": "kits/cylinder-master/8529067371ec259bc3cda750a284ec512c37de2ed338b0504f4fa3eec341559c.body.webp",
+      "sha256": "8529067371ec259bc3cda750a284ec512c37de2ed338b0504f4fa3eec341559c",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/8529067371ec259bc3cda750a284ec512c37de2ed338b0504f4fa3eec341559c.body.webp",
+      "width": 1000
+    },
+    "output": {
+      "bytes": 23386,
+      "height": 1100,
+      "key": "images/bottle-builder/tall9-cleanup/GBTallCylFrst9SlMattSht.webp",
+      "sha256": "98d9456ad9cb61bfac0917c88e6dd218e2f998023946d219f90673126a946f25",
+      "url": "/images/bottle-builder/tall9-cleanup/GBTallCylFrst9SlMattSht.webp",
+      "width": 1000
+    },
+    "removedMattePixels": 14760,
+    "protectedAboveY": 300
+  },
+  {
+    "sku": "GBTallCylFrst9SlSht",
+    "source": {
+      "bytes": 9348,
+      "height": 1100,
+      "key": "kits/cylinder-master/84d5843a6c92195ed84a3f8751dbcc9b0c4407b72d5d13824dfce1e20e8fc325.body.webp",
+      "sha256": "84d5843a6c92195ed84a3f8751dbcc9b0c4407b72d5d13824dfce1e20e8fc325",
+      "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/84d5843a6c92195ed84a3f8751dbcc9b0c4407b72d5d13824dfce1e20e8fc325.body.webp",
+      "width": 1000
+    },
+    "output": {
+      "bytes": 21244,
+      "height": 1100,
+      "key": "images/bottle-builder/tall9-cleanup/GBTallCylFrst9SlSht.webp",
+      "sha256": "9bc146da66b68594f895838a128ed09db9da192414b4e4fe65bd39567ea758e1",
+      "url": "/images/bottle-builder/tall9-cleanup/GBTallCylFrst9SlSht.webp",
+      "width": 1000
+    },
+    "removedMattePixels": 13936,
+    "protectedAboveY": 300
+  }
+]

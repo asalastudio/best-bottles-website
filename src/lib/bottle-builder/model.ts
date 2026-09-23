@@ -6,6 +6,7 @@ import type { api } from "../../../convex/_generated/api";
 import type { CartItem } from "@/components/CartProvider";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
+import cleanedTallNineBodies from "./tall9-cleaned-bodies.generated.json";
 import bodyMedia from "./bodies.generated.json";
 import assemblyMedia from "./circle-assemblies.generated.json";
 import fitmentMedia from "./fitments.generated.json";
@@ -415,6 +416,7 @@ export function deriveBuilder(bodies: BuilderBody[], state: BuilderSelection) {
     const fitments = [...new Set(colored.map(config => config.fitment))];
     const fitment = fitments.includes(state.fitment ?? "") ? state.fitment : null;
     const fitted = colored.filter(config => config.fitment === fitment);
+    if (fitment === "Screw Cap" && body?.neck === "13-415") fitted.sort((a, b) => a.closure.localeCompare(b.closure));
     const closures = [...new Set(fitted.map(config => config.closure))];
     const closure = closures.includes(state.closure ?? "") ? state.closure : null;
     const matches = fitted.filter(config => config.closure === closure);
@@ -458,7 +460,12 @@ export function previewParts(config: BuilderConfiguration, stage: "body" | "fitm
     }
     return parts.filter(part => stage === "complete" || part.slot === "body"
         || (stage === "fitment" && (!isClosurePart(part) || /^(Screw|Tear-off) Cap$/.test(config.fitment))))
-        .sort((a, b) => a.zOrder - b.zOrder);
+        .sort((a, b) => a.zOrder - b.zOrder)
+        .map(part => {
+            if (config.family !== "Cylinder" || config.capacityMl !== 9 || config.neck !== "13-415" || config.color !== "Frosted" || part.slot !== "body") return part;
+            const image = (cleanedTallNineBodies as Record<string, BuilderPart["image"]>)[part.image.sha256];
+            return image ? { ...part, image } : part;
+        });
 }
 
 export function builderCartItem(config: BuilderConfiguration, quantity: number): CartItem {

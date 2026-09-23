@@ -152,3 +152,11 @@ it("shares the body size across material photos without substituting their glass
     expect(widths[0]).toBeCloseTo(widths[1],10);
     expect(layouts[1].layers.find(l=>l.part.slot==="body")!.part.image.url).toContain("frosted.example");
 });
+
+
+it("blends only the clear tube through tall-nine frosted glass, keeping its finish opaque", () => {
+    const frosted = { ...config, capacityMl: 9, neck: "13-415", color: "Frosted" };
+    act(() => root.render(<BuilderImage config={frosted} parts={previewParts(frosted, "complete")} stage="complete" label="frosted tall cylinder" />));
+    expect((el.querySelector('[data-builder-layer="diptube"]') as SVGImageElement).style.mixBlendMode).toBe("multiply");
+    for (const slot of ["body", "sprayer", "overcap"]) expect((el.querySelector(`[data-builder-layer="${slot}"]`) as SVGImageElement).style.mixBlendMode).toBe("");
+});

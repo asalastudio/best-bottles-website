@@ -27,8 +27,18 @@ describe("exact catalog assemblies without a separately sold loose component", (
 });
 
 describe("reviewed short and tall 13-415 cap assemblies", () => {
+    it("keeps eight distinct lined finishes for each tall-nine glass material", () => {
+        for (const color of ["Clear", "Frosted"]) {
+            const finishes = caps13_415.filter(row => row.capacityMl === 9 && row.color === color).map(row => row.finish);
+            expect(finishes).toHaveLength(8);
+            expect(new Set(finishes).size).toBe(8);
+            expect(finishes.filter(label => label.startsWith("Short Lined "))).toHaveLength(6);
+            expect(finishes).toContain("Tall Regular Shiny Gold");
+            expect(finishes).toContain("Tall Regular Shiny Silver");
+        }
+    });
     it("admits the six lined short caps and white ribbed cap only on their exact listed bottle SKUs", () => {
-        expect(caps13_415).toHaveLength(14); // clear and cobalt glass × seven short caps
+        expect(caps13_415).toHaveLength(30); // 14 five-ml and 16 tall-nine-ml assemblies
         for (const source of caps13_415) {
             const row = { ...source, category: "Glass Bottle", itemName: "Listed cap assembly", resolution: "unknown",
                 components: {}, shopifyVariantId: "assembly-variant", shopifySellable: true,
