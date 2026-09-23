@@ -118,13 +118,25 @@
 .primary, .secondary { min-height: 46px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; border-radius: 3px; padding: 10px 14px; font-size: 12px; font-weight: 500; transition: background-color .15s; text-align: center; }
 .primary { background: #9a783e; color: #fff; border: 1px solid #9a783e; }
 .primary:hover { background: #876631; }
-.nextStepCue { animation: fitmentPulse 1s ease-out 2; }
-.nextStepCue > svg { animation: fitmentArrow 1s ease-in-out 2; }
+/* A single warm reflection announces an available next step, then settles. */
+.nextStepCue {
+    background-image: linear-gradient(110deg, transparent 40%, #fff3d638 48%, #fff8e861 50%, #fff3d638 52%, transparent 60%);
+    background-size: 250% 100%;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    animation: brassReady 1.05s cubic-bezier(.22,.61,.36,1) 1;
+}
+@media (prefers-reduced-motion: reduce) {
+    .nextStepCue { animation: none; background-image: none; }
+}
 .nextStepHint { display: flex; align-items: flex-start; gap: 8px; margin-top: 18px; color: #806336; font-size: 11px; line-height: 1.7; }
 .nextStepHint > svg { flex-shrink: 0; margin-top: 2px; }
 .nextStepHint strong { font-weight: 600; }
-@keyframes fitmentPulse { 0%, 100% { box-shadow: 0 0 0 0 #a17c3c00; } 35% { box-shadow: 0 0 0 5px #a17c3c30; } }
-@keyframes fitmentArrow { 0%, 100% { transform: translateX(0); } 40% { transform: translateX(4px); } }
+@keyframes brassReady {
+    0% { background-color: #c3b18e; background-position: 100% 0; box-shadow: 0 0 0 0 #a17c3c00; }
+    35% { background-color: #9a783e; box-shadow: 0 0 0 3px #a17c3c18; }
+    100% { background-color: #9a783e; background-position: 0% 0; box-shadow: 0 0 0 0 #a17c3c00; }
+}
 .secondary { border: 1px solid #c1a573; color: #806336; background: #fff; }
 .assurance { display: flex; gap: 8px; align-items: center; font-size: 10px; line-height: 1.4; margin-top: 18px; }
 .assurance > svg { flex-shrink: 0; color: #a17c3c; }

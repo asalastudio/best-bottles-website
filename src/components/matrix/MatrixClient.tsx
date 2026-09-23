@@ -222,7 +222,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         : step === 1 ? /Roller|Cap|Reducer/.test(fitment ?? "") ? "Choose Your Caps"
             : fitment ? `Choose Your ${finishLabel.replace(/\b\w/g, letter => letter.toUpperCase())}` : "Choose Your Finish"
         : "Review Your Bottle";
-    const action = step < 3 ? <button key={`${step}-${step === 0 ? color : ""}`} className={`${styles.primary} ${fitmentReady ? styles.nextStepCue : ""}`} disabled={!canContinue || pending} onClick={continueBuild}>
+    const action = step < 3 ? <button key={`${step}-${body?.id}-${step === 0 ? color : step === 1 ? fitment : closure}`} className={`${styles.primary} ${canContinue && !pending ? styles.nextStepCue : ""}`} disabled={!canContinue || pending} onClick={continueBuild}>
             {nextActionLabel} <ArrowRight size={17} />
         </button> : <button className={styles.primary} disabled={!order.canAdd || adding || !isCartHydrated} onClick={addToCart}>
             {adding ? "Checking your bottle…" : "Add to Cart"} {!adding && <ShoppingBag size={17} />}
