@@ -15,6 +15,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { useCallback, useId, useMemo, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent } from "react";
 import { X } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
+import { displayImageUrl } from "@/lib/products/optimizable-image";
 import type { MobileViewModeOption, ProductViewMode } from "@/lib/products/mobile-pdp-view-modes";
 import {
     IDENTITY_TRANSFORM,
@@ -248,7 +249,7 @@ export default function MobileProductViewer({
                                 <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} className="[&_img]:pointer-events-none" family={family} capacityMl={capacityMl} color={color} hasCapOffPlate={hasCapOffPlate} view={viewMode === "capOff" ? "capOff" : "assembled"} />
                             ) : fallbackImageUrl ? (
                                 // eslint-disable-next-line @next/next/no-img-element
-                                <img src={fallbackImageUrl} alt={alt} draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-contain object-center" />
+                                <img src={displayImageUrl(fallbackImageUrl)} alt={alt} draggable={false} className="pointer-events-none absolute inset-0 h-full w-full object-contain object-center" />
                             ) : (
                                 <div className="absolute inset-0 bg-linen" aria-hidden />
                             )}

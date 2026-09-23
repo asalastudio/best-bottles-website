@@ -16,6 +16,7 @@ import Link from "next/link";
 import { forwardRef, useLayoutEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
 import { ArrowLeft, ArrowsOutSimple, ShoppingBag } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
+import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { mobilePdpToolbarPaddingTop } from "@/lib/products/mobile-pdp-chrome";
 
 const subscribeToHydration = () => () => {};
@@ -106,7 +107,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                     <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} family={family} capacityMl={capacityMl} color={color} hasCapOffPlate={hasCapOffPlate} view={view} />
                 ) : fallbackImageUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={fallbackImageUrl} alt={alt} className="absolute inset-0 h-full w-full object-contain object-center" />
+                    <img src={displayImageUrl(fallbackImageUrl, 828)} alt={alt} className="absolute inset-0 h-full w-full object-contain object-center" />
                 ) : (
                     <div className="absolute inset-0 bg-linen" aria-hidden />
                 )}

@@ -12,6 +12,7 @@ import Link from "next/link";
 import type { RefObject } from "react";
 import { Check, ShoppingBag } from "@/components/icons";
 import { STICKY_CTA_ANIMATION_MS, stickyCtaFacts } from "@/lib/products/mobile-pdp-sticky-cta";
+import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { useRegion } from "@/components/RegionProvider";
 
 export type MobileStickyPurchaseBarProps = {
@@ -59,7 +60,7 @@ export default function MobileStickyPurchaseBar({
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-[3px] bg-white ring-1 ring-champagne/70">
                     {thumbUrl ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={thumbUrl} alt="" decoding="async" className="h-full w-full object-contain" />
+                        <img src={displayImageUrl(thumbUrl, 640)} alt="" decoding="async" loading="lazy" className="h-full w-full object-contain" />
                     ) : (
                         <ShoppingBag className="h-5 w-5 text-champagne" aria-hidden />
                     )}

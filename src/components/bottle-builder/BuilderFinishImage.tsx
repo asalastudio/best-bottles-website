@@ -8,6 +8,7 @@ import { isClosurePart, type BuilderConfiguration } from "@/lib/bottle-builder/m
 import BuilderImage from "./BuilderImage";
 import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import componentCutouts from "@/lib/bottle-builder/component-cutouts.generated.json";
+import { displayImageUrl } from "@/lib/products/optimizable-image";
 
 /** Show the actual photographed finish, never a whole bottle in a cap tile. */
 export default function BuilderFinishImage({ config }: { config: BuilderConfiguration }) {
@@ -37,7 +38,7 @@ export default function BuilderFinishImage({ config }: { config: BuilderConfigur
     const frame = catalogCapPhotoFrame(url);
     // Component photos are already published at their own native aspect ratio.
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={url} alt={config.closure} loading="lazy" onError={() => setFailed(current => new Set([...current, url]))}
+    return <img src={displayImageUrl(url, 640)} alt={config.closure} loading="lazy" onError={() => setFailed(current => new Set([...current, url]))}
         style={frame ? { position: "absolute", maxWidth: "none", ...frame }
             : { width: "100%", height: "100%", objectFit: "contain" }} />;
 }

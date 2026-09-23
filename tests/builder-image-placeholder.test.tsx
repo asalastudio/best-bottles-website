@@ -24,11 +24,12 @@ beforeEach(() => {
 afterEach(() => { act(() => root.unmount()); el.remove(); vi.unstubAllGlobals(); });
 
 it("shows a slate placeholder until the chooser image loads, then reveals the bottle", async () => {
-    await act(async () => root.render(<BuilderImage config={config} parts={[]} label="9 ml Cylinder" placeholder priority />));
+    await act(async () => root.render(<BuilderImage config={config} parts={[]} label="9 ml Cylinder" thumbnail placeholder priority />));
     const thumb = el.querySelector("[data-builder-thumb]")!;
     expect(thumb.getAttribute("data-loaded")).toBe("false");
     expect(thumb.querySelector("[data-slate]")).toBeTruthy();
-    expect(el.querySelector("img")?.getAttribute("src")).toBe("/body.webp");
+    expect(el.querySelector("img")?.getAttribute("src")).toContain("/_next/image?url=%2Fbody.webp");
+    expect(el.querySelector("img")?.getAttribute("srcset")).toContain("w=384");
     expect(el.querySelector("img")?.getAttribute("fetchpriority") ?? el.querySelector("img")?.getAttribute("fetchPriority")).toBe("high");
     await act(async () => { el.querySelector("img")!.dispatchEvent(new Event("load")); });
     expect(el.querySelector("[data-builder-thumb]")?.getAttribute("data-loaded")).toBe("true");

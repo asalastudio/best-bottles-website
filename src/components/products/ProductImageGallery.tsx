@@ -38,6 +38,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Package } from "@/components/icons";
 import { resolveImageWithFallback } from "@/lib/products/image-fallback";
+import { isOptimizableImageUrl } from "@/lib/products/optimizable-image";
 
 export type GalleryImage = {
     url: string;
@@ -79,10 +80,6 @@ interface ProductImageGalleryProps {
     onActiveChange?: (index: number, image: GalleryImage) => void;
     /** Approved local or remote image shown when a catalog image cannot load. */
     fallbackUrl?: string;
-}
-
-function isRemoteProductImageUrl(value: string): boolean {
-    return /^https?:\/\//i.test(value);
 }
 
 export default function ProductImageGallery({
@@ -195,7 +192,7 @@ export default function ProductImageGallery({
                             data-bb-shopify-variant-id={activeImage.auditMeta?.shopifyVariantId ?? undefined}
                             sizes="(min-width: 1024px) 50vw, 100vw"
                             className={`object-contain ${mainPadding}`}
-                            unoptimized={isRemoteProductImageUrl(activeDisplayUrl)}
+                            unoptimized={!isOptimizableImageUrl(activeDisplayUrl)}
                             onError={() => markImageFailed(activeDisplayUrl)}
                         />
                     ) : (
@@ -260,7 +257,7 @@ export default function ProductImageGallery({
                                         data-bb-website-sku={img.auditMeta?.websiteSku ?? undefined}
                                         data-bb-shopify-variant-id={img.auditMeta?.shopifyVariantId ?? undefined}
                                         className="object-contain p-1.5"
-                                        unoptimized={isRemoteProductImageUrl(displayUrl)}
+                                        unoptimized={!isOptimizableImageUrl(displayUrl)}
                                         onError={() => markImageFailed(displayUrl)}
                                     />
                                 ) : (
@@ -307,7 +304,7 @@ export default function ProductImageGallery({
                                 height={1200}
                                 sizes="100vw"
                                 className="max-w-full max-h-[80vh] object-contain"
-                                unoptimized={isRemoteProductImageUrl(activeDisplayUrl)}
+                                unoptimized={!isOptimizableImageUrl(activeDisplayUrl)}
                                 onError={() => {
                                     markImageFailed(activeDisplayUrl);
                                     setLightboxOpen(false);

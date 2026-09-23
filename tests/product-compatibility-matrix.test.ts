@@ -321,7 +321,7 @@ describe("Build Your Bottle route contract", () => {
         expect(page).toContain('alternates: { canonical: `${SITE_URL}/matrix` }');
         expect(page).toContain('{ name: "Build Your Bottle", url: `${SITE_URL}/matrix` }');
         expect(page).toContain("preferMobile");
-        expect(page).toContain("rel=\"preload\"");
+        expect(page).not.toContain("rel=\"preload\"");
     });
 
     it("continues to use the shared server compatibility engine", () => {
