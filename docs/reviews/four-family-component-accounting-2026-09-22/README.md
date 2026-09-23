@@ -77,7 +77,8 @@ now resolve the existing record by its exact website SKU.
 - Circle/Round fused and missing-part flags require image inspection. A part can
   legitimately contain a roller or tube without exposing a separate named layer.
 - Follow-up: [18 clear 5 mL roller labels were repaired](../cylinder-clear-5ml-rollers-2026-09-22/README.md)
-  after this snapshot; 27 of the original 45 proposals remain unapplied.
+  after this snapshot. The subsequent [catalog orderability sweep](../catalog-orderability-2026-09-22/README.md)
+  reconciled the remaining current-catalog out-of-stock labels against exact Shopify orderability.
   Intentional Builder exclusions
   (3.3/4 mL and 16mm 28/50 mL bodies), stock and unresolved compatibility explain
   some hidden configurations; hidden does not automatically mean a media defect.
