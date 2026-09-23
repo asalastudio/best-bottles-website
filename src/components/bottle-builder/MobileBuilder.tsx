@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowRight, Check, DotsThree, Minus, Plus, SlidersHorizontal
 import { displayApplicatorName } from "@/lib/catalogFilters";
 import { bareGlassPreview, builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderSelection } from "@/lib/bottle-builder/model";
 import { CHOOSER_PRIORITY_TILES } from "@/lib/bottle-builder/mobile-request";
+import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { checkoutMinimum } from "@/lib/checkout";
 import BuilderImage from "./BuilderImage";
 import BuilderFinishImage from "./BuilderFinishImage";
@@ -232,7 +233,7 @@ export default function MobileBuilder(p: Props) {
                     <div className={styles.finishThumb}><BuilderFinishImage config={c} /></div><strong>{shortFinishLabel(c.closure)}</strong>
                 </Choice>)}{unavailable.map(c => <Choice key={c.id} name={`${id}-finish`} value={c.id} selected={false} label={`${c.closure} — Out of stock`} onSelect={() => {}} disabled>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <div className={styles.finishThumb}><img src={c.imageUrl} alt={c.closure} loading="lazy" onError={e => { e.currentTarget.hidden = true; }} /></div><strong>{shortFinishLabel(c.closure)}</strong><span>Out of stock</span>
+                    <div className={styles.finishThumb}><img src={displayImageUrl(c.imageUrl, 640)} alt={c.closure} loading="lazy" onError={e => { e.currentTarget.hidden = true; }} /></div><strong>{shortFinishLabel(c.closure)}</strong><span>Out of stock</span>
                 </Choice>)}</div>}
             </fieldset>
             {stage === 3 && p.hasIncludedCover && <p className={styles.included}>Matching overcap included: <strong>{closure}</strong>. Supplied with this {fitment?.includes("Pump") ? "pump" : "sprayer"}; it cannot be mixed and matched.</p>}

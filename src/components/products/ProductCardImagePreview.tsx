@@ -279,7 +279,6 @@ export default function ProductCardImagePreview({
                         src={resolvedImageUrl}
                         alt={resolvedImageAlt ?? productTitle}
                         fill
-                        unoptimized={isStudioHero && resolvedImageUrl.endsWith(".png") && !resolvedImageUrl.startsWith("/images/catalog/cylinder-pilot-2026-09-22/")}
                         data-bb-image-audit={auditMeta?.surface}
                         data-bb-family={auditMeta?.family ?? undefined}
                         data-bb-product-group-slug={auditMeta?.productGroupSlug ?? undefined}

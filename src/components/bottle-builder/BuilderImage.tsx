@@ -1,10 +1,12 @@
 "use client";
 
 import { useId, useState, type CSSProperties, type ReactNode } from "react";
+import Image from "next/image";
 import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import type { BuilderConfiguration, BuilderPart } from "@/lib/bottle-builder/model";
 import { builderBodyFrame, builderPreviewLayout } from "@/lib/bottle-builder/preview-layout";
 import { layerCropStyle, previewFrame } from "@/lib/bottle-builder/preview-frame";
+import { displayImageUrl, isOptimizableImageUrl } from "@/lib/products/optimizable-image";
 
 /** Clear glass and the clear dip tube take the stage colour. A dropper's GLASS pipette hangs inside
  * the bottle, so it blends into whatever glass it is in — drawn opaque it read as a white stick
@@ -63,9 +65,12 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
 
     if (!kit) {
         if (!fallbackUrl || failedUrl === fallbackUrl) return <span role="img" aria-label={label}>Image unavailable</span>;
-        // Reviewed original body layer until a complete finish is selected.
-        // eslint-disable-next-line @next/next/no-img-element
-        return wrap(<img src={fallbackUrl} alt={label} {...imgProps} data-builder-layer={stage === "complete" ? "assembly" : "body"}
+        // The body or exact assembly keeps its registered frame while Next
+        // delivers a display-sized copy instead of the source-resolution file.
+        const dimensions = stage === "complete" ? { width: 1000, height: 1100 } : config.bodyImage ?? { width: 1000, height: 1100 };
+        return wrap(<Image src={fallbackUrl} alt={label} {...imgProps} width={dimensions.width} height={dimensions.height}
+            sizes={thumbnail ? "(max-width: 640px) 42vw, 220px" : "(max-width: 640px) 90vw, 520px"}
+            unoptimized={!isOptimizableImageUrl(fallbackUrl)} data-builder-layer={stage === "complete" ? "assembly" : "body"}
             onError={() => setFailedUrl(fallbackUrl)} style={{ width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", objectFit: "contain", objectPosition: "center", mixBlendMode: config.color === "Clear" && stage !== "complete" ? "multiply" : undefined, transform: expanded ? undefined : `scale(${Math.min(1, scale) * .88})`, transformOrigin: expanded ? "center center" : "bottom center" }} />);
     }
     const failed = layers.some(({ part }) => part.image.url === failedUrl);
@@ -96,8 +101,9 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         return wrap(<span data-chooser-img style={{ containerType: "size", display: "grid", placeItems: "center", width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", overflow: "hidden", mixBlendMode: blend }}>
             <span data-chooser-frame style={{ position: "relative", display: "block", overflow: "hidden", width: `min(100cqw, calc(100cqh * ${ratio}))`, height: `min(100cqh, calc(100cqw / ${ratio}))` }}>
             <span style={{ position: "absolute", inset: 0 }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={part.image.url} alt={label} {...imgProps} data-builder-layer={part.slot}
+                <Image src={part.image.url} alt={label} {...imgProps} width={part.image.width} height={part.image.height}
+                    sizes={thumbnail ? "(max-width: 640px) 42vw, 220px" : "(max-width: 640px) 90vw, 520px"}
+                    unoptimized={!isOptimizableImageUrl(part.image.url)} data-builder-layer={part.slot}
                     onError={() => setFailedUrl(part.image.url)} style={crop} />
             </span>
             </span>
@@ -105,7 +111,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     }
     return wrap(<svg role="img" aria-labelledby={titleId} viewBox={`${x} ${y} ${width} ${height}`} width="400" height="520" preserveAspectRatio="xMidYMid meet" style={{ display: "block", width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", margin: expanded ? "0 auto" : undefined, overflow: expanded ? "visible" : "hidden" }}>
         <title id={titleId}>{label}</title>
-        {layers.map(({ part, transform }) => <image key={part.slot} href={part.image.url} width={part.image.width} height={part.image.height} transform={transform}
+        {layers.map(({ part, transform }) => <image key={part.slot} href={displayImageUrl(part.image.url, thumbnail ? 640 : 1200)} width={part.image.width} height={part.image.height} transform={transform}
             x="0" y="0" style={{ mixBlendMode: blendsIntoGlass(config, part) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined }}
             onLoad={markLoaded} onError={() => setFailedUrl(part.image.url)} data-builder-layer={part.slot} />)}
     </svg>);

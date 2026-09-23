@@ -20,6 +20,7 @@ import RefineSection from "@/components/catalog/RefineSection";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
 import { getCatalogHero, getCatalogHeroProductHref, resolveLiveCatalogCardHero, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { isOptimizableImageUrl } from "@/lib/products/optimizable-image";
 import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
 import CatalogCardPurchase from "@/components/catalog/CatalogCardPurchase";
 import { resolveCatalogCardPurchaseVariant } from "@/lib/products/catalog-card-purchase";
@@ -114,7 +115,7 @@ function FamilyBanner({ family }: { family: string }) {
                 fill
                 className="object-cover object-center"
                 sizes="100vw"
-                unoptimized
+                unoptimized={!isOptimizableImageUrl(imgUrl)}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-obsidian/60 via-obsidian/20 to-transparent" />
             <div className="absolute bottom-5 left-6">
@@ -1084,7 +1085,7 @@ function LineItemRow({
                                 data-bb-website-sku={primaryWebsiteSku ?? sku}
                                 className="object-contain p-1"
                                 sizes="56px"
-                                unoptimized
+                                unoptimized={!isOptimizableImageUrl(thumbnailUrl)}
                             />
                         ) : (
                             <Package className="w-6 h-6 text-champagne" strokeWidth={1} />
@@ -1251,7 +1252,7 @@ function LineItemMobileCard({
                             fill
                             className="object-contain"
                             sizes="112px"
-                            unoptimized
+                            unoptimized={!isOptimizableImageUrl(thumbnailUrl)}
                             priority={index === 0}
                         />
                     ) : (

@@ -11,7 +11,7 @@ import { loadBuilderEntry } from "@/lib/bottle-builder/entry";
 import MatrixClient from "@/components/matrix/MatrixClient";
 import { loadBuilderFamilies, loadBuilderFamily } from "@/lib/bottle-builder/server";
 import { slimBuilderBodies } from "@/lib/bottle-builder/payload";
-import { CHOOSER_PRIORITY_TILES, chooserPreloadUrls, preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
+import { preferMobileRequest } from "@/lib/bottle-builder/mobile-request";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
@@ -44,9 +44,7 @@ async function Builder({ familyParam, collection }: { familyParam?: string; coll
     const preferMobile = preferMobileRequest(await headers());
     const entry = await loadBuilderEntry(familyParam, { family: loadBuilderFamily, families: loadBuilderFamilies });
     const bodies = slimBuilderBodies(builderCollectionBodies(entry.bodies, collection));
-    const preloads = chooserPreloadUrls(bodies, CHOOSER_PRIORITY_TILES);
     return <>
-        {preloads.map(href => <link key={href} rel="preload" as="image" href={href} fetchPriority="high" />)}
         <MatrixClient key={`${entry.openFamily}:${collection ?? "all"}`} {...entry} bodies={bodies} preferMobile={preferMobile} />
     </>;
 }

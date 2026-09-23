@@ -54,6 +54,7 @@ import {
 } from "@/lib/products/pdp-stage-modes";
 import type { PdpAnalyticsDimension } from "@/lib/products/pdp-analytics";
 import { decodeImage } from "@/lib/paper-doll/decode-image";
+import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { viewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
 
 /**
@@ -284,7 +285,7 @@ export default function ConfiguratorPdp({
     // otherwise keep showing the PREVIOUS bottle, which is worse than a flat plate.
     if (!kit?.sku || !targetParts?.length) { setShownKit(null); return; }
     let cancelled = false;
-    Promise.all(targetParts.map((part) => decodeImage(part.image.url)))
+    Promise.all(targetParts.map((part) => decodeImage(displayImageUrl(part.image.url))))
       .then(() => { if (!cancelled) setShownKit({ sku: kit.sku, parts: targetParts }); })
       .catch(() => { if (!cancelled) setShownKit(null); });   // fall back to the plate
     return () => { cancelled = true; };
@@ -485,7 +486,7 @@ export default function ConfiguratorPdp({
               mounted made every colourway change refetch a plate nobody sees. */}
           {!showKitLayers && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img key={plate!} src={plate!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
+            <img key={plate!} src={displayImageUrl(plate!)} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
                  width={1000} height={1100} decoding="async"
                  onError={() => markPlateBroken(plate!)}
                  className="absolute inset-0 h-full w-full object-contain" />
@@ -495,7 +496,7 @@ export default function ConfiguratorPdp({
               construction, which is what keeps the bottle still. */}
           {showKitLayers && kitParts?.map((part) => (
             // eslint-disable-next-line @next/next/no-img-element
-            <img key={part.slot} src={part.image.url}
+            <img key={part.slot} src={displayImageUrl(part.image.url)}
                  alt={part.slot === "body" ? `${groupTitle} bottle` : `${part.slot} — ${part.variantKey ?? ""}`}
                  width={part.image.width} height={part.image.height} decoding="async"
                  style={{
@@ -515,7 +516,7 @@ export default function ConfiguratorPdp({
         </div>
       ) : showPhoto ? (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={photoFallback!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
+        <img src={displayImageUrl(photoFallback!)} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
              className="h-full w-full object-contain" />
       ) : showLive3d && fam ? (
         <Bottle3DViewer
@@ -659,7 +660,7 @@ export default function ConfiguratorPdp({
                         style={photo ? undefined : capSwatchStyle?.(name)}>
                   {photo && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={photo} alt="" decoding="async"
+                    <img src={displayImageUrl(photo, 640)} alt="" decoding="async" loading="lazy"
                          className="h-full w-full object-contain scale-[1.9] translate-y-[4%]" />
                   )}
                 </button>
@@ -861,7 +862,7 @@ export default function ConfiguratorPdp({
                     style={{ background: GLASS_TILE[g.id] ?? "#e9edeb" }}>
                 {swatch ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={swatch} alt={g.label} className="absolute inset-0 h-full w-full object-cover" />
+                  <img src={displayImageUrl(swatch, 640)} alt={g.label} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
                 ) : (
                   <span className="absolute inset-0 flex items-center justify-center">
                     <BottleGlyph className="h-8 w-8 text-obsidian/25" />

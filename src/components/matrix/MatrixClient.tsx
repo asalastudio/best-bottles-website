@@ -25,6 +25,7 @@ import {
 } from "@/lib/bottle-builder/model";
 import hasIncludedCovers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import { CHOOSER_PRIORITY_TILES } from "@/lib/bottle-builder/mobile-request";
+import { displayImageUrl } from "@/lib/products/optimizable-image";
 import styles from "@/components/bottle-builder/Builder.module.css";
 
 const money = (value: number | null) => value == null ? "—" : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
@@ -300,7 +301,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                             </Option>)}{unavailableFinishes.map(option => <button type="button" disabled key={option.id} className={`${styles.option} ${styles.unavailableOption}`} aria-label={`${option.closure} — Out of stock`}>
                                 <div className={styles.closureThumb}>
                                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                                    <img src={option.imageUrl} alt="" loading="lazy" />
+                                    <img src={displayImageUrl(option.imageUrl, 640)} alt="" loading="lazy" />
                                 </div><strong>{option.closure}</strong><small>Out of stock</small>
                             </button>)}</div>
                         </div>
