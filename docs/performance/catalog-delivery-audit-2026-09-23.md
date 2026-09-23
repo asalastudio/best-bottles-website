@@ -45,10 +45,24 @@ registration.
 
 ## Release checks and next measurement
 
-Check the catalog grid, one PDP with a plate, one with a decoded kit, and the
-builder on desktop and mobile. Confirm the chosen image URL resolves to the
-correct SKU and that caps, dip tubes, and shadows remain aligned. On the preview
-deployment, record image request count, transferred bytes, LCP, and Convex
-query time for a cold and warm catalog, PDP, and builder load. The builder's
-decoded HTML is a separate payload-reduction opportunity; do not trim its
-configuration data until exact selection and cart behavior are checked.
+The PR preview's default Cylinder builder returned 65,118 compressed bytes and
+643,834 decoded HTML bytes on one first request. A second request returned
+66,588 compressed bytes. The production route returned 72,746 compressed and
+750,541 decoded HTML bytes in one request. These are point samples from
+different deployments and catalog states, not a controlled speed comparison.
+About 576 KB of the preview's decoded HTML was serialized Next Flight state;
+reducing the first-page configuration payload remains the clearest next target.
+The six initial Cylinder chooser body images loaded, and a sampled direct Blob
+WebP transferred 22,984 bytes.
+
+On the PR preview, a 50 mL clear Cylinder with 18-415 neck, perfume sprayer,
+and matte-gold finish rendered with its dip tube and cap sidecar. The cap toggle
+rendered the closed assembly. The review showed 12 units at $2.70 each, and
+Add to Cart produced the exact SKU `GB-CYL-CLR-50ML-SPR-MGLD` at $32.40. The
+test item was removed afterward. This verifies this path through cart, not
+checkout or every family and fitment combination.
+
+Complete desktop/mobile visual checks across the catalog grid and PDP plate and
+kit paths. Record image request count, transferred bytes, LCP, and Convex query
+time under repeatable cold and warm loads before claiming a speed improvement.
+Any builder payload reduction must preserve exact selection and cart behavior.

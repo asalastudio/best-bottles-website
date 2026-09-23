@@ -139,14 +139,15 @@ describe("Build Your Bottle first-paint contract", () => {
         const familiesFn = server.slice(server.indexOf("export const loadBuilderFamilies"), server.indexOf("async function loadKitsForRows"));
         expect(familiesFn).not.toContain("loadBuilderFamily(");
         expect(page).toContain("slimBuilderBodies");
-        expect(page).toContain("chooserPreloadUrls(bodies, CHOOSER_PRIORITY_TILES)");
-        expect(page).toContain('fetchPriority="high"');
+        expect(page).not.toContain("chooserPreloadUrls(bodies, CHOOSER_PRIORITY_TILES)");
+        expect(page).not.toContain('rel="preload"');
         expect(client).toContain("useBuilderKits");
         expect(client).toContain("thumbnail placeholder");
         expect(client).toContain("priority={index < CHOOSER_PRIORITY_TILES}");
         expect(mobile).toContain("priority={index < CHOOSER_PRIORITY_TILES}");
         const image = readFileSync("src/components/bottle-builder/BuilderImage.tsx", "utf8");
         expect(image).toContain("data-chooser-img");
+        expect(image).toContain('fetchPriority: "high"');
         expect(image).not.toContain("IntersectionObserver");
         expect(image).not.toContain('fetchPriority: "low"');
         expect(image).not.toContain('fetchPriority="low"');
