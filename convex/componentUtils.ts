@@ -1,4 +1,5 @@
 import { reviewedCatalogLink } from "./catalogComponentEvidence";
+import { reviewed13_415Component } from "./component13_415Catalog";
 
 type RawComponent = Record<string, unknown>;
 
@@ -29,6 +30,10 @@ function toNumberOrNull(value: unknown): number | null {
 }
 
 export function inferComponentType(graceSku: string, itemName?: string): string {
+    const reviewed = reviewed13_415Component(graceSku);
+    if (reviewed?.kind === "fine-mist") return "Sprayer";
+    if (reviewed?.kind.startsWith("roll-on-")) return "Roll-On Cap";
+    if (reviewed && ["short-ribbed", "short-lined", "tall-lined"].includes(reviewed.kind)) return "Cap";
     const sku = graceSku.toUpperCase();
     const name = (itemName ?? "").toLowerCase();
     if (sku.includes("DRP")) return "Dropper";
@@ -48,9 +53,12 @@ export function inferComponentType(graceSku: string, itemName?: string): string 
 export function normalizeComponent(value: unknown): NormalizedComponent {
     const item = asRecord(value) ?? {};
     const graceSku = toStringOrEmpty(item.graceSku) || toStringOrEmpty(item.grace_sku);
+    const websiteSku = toStringOrEmpty(item.websiteSku) || toStringOrEmpty(item.website_sku) || null;
+    const reviewed = reviewed13_415Component(graceSku, websiteSku);
     const itemName = toStringOrEmpty(item.itemName) || toStringOrEmpty(item.item_name);
     return {
-        graceSku,
+        graceSku: reviewed?.graceSku ?? graceSku,
+        ...(reviewed ? { websiteSku: reviewed.websiteSku } : websiteSku ? { websiteSku } : {}),
         itemName,
         imageUrl: toStringOrEmpty(item.imageUrl) || toStringOrEmpty(item.image_url) || null,
         webPrice1pc: toNumberOrNull(item.webPrice1pc) ?? toNumberOrNull(item.web_price_1pc) ?? toNumberOrNull(item.price_1),
@@ -64,13 +72,24 @@ export function normalizeComponentsByType(
     components: unknown,
 ): Record<string, NormalizedComponent[]> {
     const grouped: Record<string, NormalizedComponent[]> = {};
+    const add = (type: string, value: unknown) => {
+        const normalized = normalizeComponent(value);
+        const reviewed = reviewed13_415Component(normalized.graceSku, normalized.websiteSku);
+        // Several current fine-mist products were imported under "Short Cap";
+        // older duplicates were imported under "Sprayer". The exact active SKU
+        // identifies one sprayer and must not create two selectable finishes.
+        const canonicalType = reviewed?.kind === "fine-mist" ? "Sprayer"
+            : reviewed?.kind?.startsWith("roll-on-") ? "Roll-On Cap"
+                : reviewed && (reviewed.kind === "short-ribbed" || reviewed.kind === "short-lined" || reviewed.kind === "tall-lined") ? "Cap" : type;
+        const bucket = grouped[canonicalType] ??= [];
+        if (!bucket.some(part => part.graceSku === normalized.graceSku)) bucket.push(normalized);
+    };
 
     if (Array.isArray(components)) {
         for (const raw of components) {
             const normalized = normalizeComponent(raw);
             const type = inferComponentType(normalized.graceSku, normalized.itemName);
-            if (!grouped[type]) grouped[type] = [];
-            grouped[type].push(normalized);
+            add(type, raw);
         }
         return grouped;
     }
@@ -80,7 +99,7 @@ export function normalizeComponentsByType(
 
     for (const [type, items] of Object.entries(map)) {
         if (!Array.isArray(items)) continue;
-        grouped[type] = items.map((item) => normalizeComponent(item));
+        for (const item of items) add(type, item);
     }
 
     return grouped;
@@ -302,22 +321,31 @@ export function resolveCompatibleComponents(
     fitmentRule: FitmentRuleLike | null,
     bottle: BottleLike,
 ): Record<string, NormalizedComponent[]> {
-    const byThread = { ...filterGroupedComponentsByFitmentRule(grouped, fitmentRule) };
+    // The reviewed 13-415 sheet is an exact component set. Imported legacy
+    // edges contain dozens of unrelated/generic caps and sprayers; matching a
+    // thread alone cannot make them part of this finish. Keep other mechanism
+    // types under their existing rules and require an exact witness for these.
+    const reviewedGroup = normalizeText(bottle.neckThreadSize) === "13-415"
+        ? Object.fromEntries(Object.entries(grouped).map(([type, items]) => [type,
+            ["Cap", "Short Cap", "Tall Cap", "Roll-On Cap", "Sprayer"].includes(type)
+                ? items.filter(item => Boolean(reviewed13_415Component(item.graceSku, item.websiteSku))) : items]))
+        : grouped;
+    const byThread = { ...filterGroupedComponentsByFitmentRule(reviewedGroup, fitmentRule) };
     // Current exact-assembly evidence wins over an older family rule that
     // accidentally omitted this included hardware type. Do not widen the rule
     // to other finishes or bottles; occupancy checks still run last.
     const link = reviewedCatalogLink(bottle);
     if (link) {
-        const part = grouped[link.componentType]?.find(item => item.graceSku === link.componentGraceSku);
+        const part = reviewedGroup[link.componentType]?.find(item => item.graceSku === link.componentGraceSku);
         if (part && !byThread[link.componentType]?.some(item => item.graceSku === part.graceSku)) {
             byThread[link.componentType] = [...(byThread[link.componentType] ?? []), part];
         }
     }
     for (const correction of bottle.reviewedComponentCorrections ?? []) {
-        const part = grouped[correction.componentType]?.find(item => item.graceSku === correction.componentGraceSku);
+        const part = reviewedGroup[correction.componentType]?.find(item => item.graceSku === correction.componentGraceSku);
         if (part && !byThread[correction.componentType]?.some(item => item.graceSku === part.graceSku)) {
             byThread[correction.componentType] = [...(byThread[correction.componentType] ?? []), part];
         }
     }
-    return applyApplicatorCompatibilityRules(byThread, grouped, bottle);
+    return applyApplicatorCompatibilityRules(byThread, reviewedGroup, bottle);
 }

@@ -67,6 +67,27 @@ const slug = (s: string) => s.trim().toLowerCase().replace(/\s+/g, "-");
 const closureSlots = new Set(["cap", "overcap"]);
 export const isClosurePart = (part: BuilderPart) => closureSlots.has(part.slot);
 
+/** The exact legacy SKU is printed as 5 mL in the source specification and
+ * shares the 5 mL Cylinder mould. Its imported 5.5 mL group must not create a
+ * second physical bottle in the builder while the catalog migration rolls out.
+ * Do not infer this alias from capacity or neck for any sibling SKU. */
+export function reviewedCylinderFiveMlRow(row: CatalogRow): CatalogRow {
+    if (row.websiteSku !== "GBCyl5SpryBlkMatt" || row.graceSku !== "GB-CYL-CLR-5ML-SPR-MBLK"
+        || row.family !== "Cylinder" || row.color !== "Clear" || row.neckThreadSize !== "13-415"
+        || row.applicator !== "Fine Mist Sprayer" || row.capacityMl !== 5.5
+        || row.productGroupSlug !== "cylinder-5.5ml-clear-13-415-finemist") return row;
+    return { ...row, capacityMl: 5, capacity: "5 ml",
+        productGroupSlug: "cylinder-5ml-clear-13-415-finemist" };
+}
+
+export function reviewed13_415CylinderCapLabel(row: CatalogRow, fitment: string, closure: string): string {
+    if (row.family !== "Cylinder" || row.capacityMl !== 5 || row.neckThreadSize !== "13-415" || fitment !== "Screw Cap") return closure;
+    if (["GBCyl5Gl", "GBCyl5Sl", "GBCylBlu5Gl", "GBCylBlu5Sl"].includes(row.websiteSku ?? "")) {
+        return closure.replace(/^Regular\s+/i, "Tall Lined ");
+    }
+    return /^Short (?!Ribbed)/i.test(closure) ? closure.replace(/^Short /i, "Short Lined ") : closure;
+}
+
 /** Join the selected assembly to a real, active component returned by matrix.
  * Neck equality and another finish on a complete SKU are not sufficient.
  * Standalone component publication is independent of the complete assembly's
@@ -212,7 +233,11 @@ export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, pr
     const { family, color, capacityMl, neckThreadSize: neck } = row;
     // Fail closed on catalog/asset identity drift, including capacity aliases.
     const suffix = `-${slug(color!)}-${slug(neck!)}`;
-    if (!kit.familyId.endsWith(suffix) || !kit.familyId.includes(`-${capacityMl}ml-`)) return null;
+    const reviewedFiveMlKitAlias = row.websiteSku === "GBCyl5SpryBlkMatt"
+        && row.graceSku === "GB-CYL-CLR-5ML-SPR-MBLK" && family === "Cylinder"
+        && capacityMl === 5 && color === "Clear" && neck === "13-415"
+        && kit.familyId === "cylinder-5.5ml-clear-13-415";
+    if (!kit.familyId.endsWith(suffix) || (!kit.familyId.includes(`-${capacityMl}ml-`) && !reviewedFiveMlKitAlias)) return null;
     // Short Cylinder 5.5 ml is an unresolved imported identity, not a new body.
     if (family === "Cylinder" && capacityMl === 5.5) return null;
     const fitment = capOnly ? "Screw Cap" : app === "Metal Roller Ball" ? "Metal Roller"
@@ -266,6 +291,10 @@ export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | n
         if (!tall && /^Tall\s+/i.test(closure)) closure = closure.replace(/^Tall\s+/i, "");
         if (!tall && /\bshort\b/i.test(capName) && !/\bShort\b/i.test(closure)) closure = `Short ${closure}`;
     }
+    // The 13-415 source sheet separates ribbed, short lined, and tall lined
+    // caps. Do not call the six short lined finishes "metal caps"; "Regular"
+    // obscured the tall/short distinction in the imported catalogue.
+    closure = reviewed13_415CylinderCapLabel(row, fitment, closure);
     if (/vintage|bulb/i.test(fitment)) {
         // Ivory bulb with a shiny gold or shiny silver collar; jeweled ring variants.
         const collar = description.match(/\b((?:shiny|matte|matt)\s+)?(gold|silver)\s+collar\b/i);

@@ -10,7 +10,7 @@ function fixture(index = 0) {
         capColor: link.finish, itemName: link.componentType === "Sprayer" ? "Bottle with tassel sprayer" : "Bottle with included component", category: "Glass Bottle",
         resolution: "unknown", components: {}, shopifySellable: true, shopifyVariantId: "assembly-variant", webPrice1pc: 1,
     } as CatalogRow;
-    const component: ActiveComponent = { websiteSku: index === 0 ? "" : link.componentSku,
+    const component: ActiveComponent = { websiteSku: index === 12 ? "" : link.componentSku,
         graceSku: link.componentGraceSku, neckThreadSize: link.neck, category: "Component",
         productUrl: link.componentSourceUrl, itemName: link.componentName, shopifyVariantId: "loose-part-variant",
         shopifySellable: false, stockStatus: "In Stock" };
@@ -18,7 +18,11 @@ function fixture(index = 0) {
 }
 
 describe("source-reviewed missing component links", () => {
-    it.each(sourceComponentLinks.map((link, i) => [link.assemblySku, i] as const))("restores only the exact included component for %s", async (_, index) => {
+    // The first twelve Cylinder 5 ml assemblies now have exact included-cap
+    // witnesses, so they remain orderable without inventing a loose part.
+    // This test covers source links that still depend on a verified loose SKU.
+    it.each(sourceComponentLinks.map((link, i) => [link.assemblySku, i] as const).filter(([, i]) => i >= 12))(
+        "restores only the exact included component for %s", async (_, index) => {
         const { link, row, component } = fixture(index);
         const before = structuredClone(row);
         const [resolved] = await resolveListedComponents([row], async sku => sku === component.graceSku ? component : null);
@@ -32,10 +36,10 @@ describe("source-reviewed missing component links", () => {
         expect(row).toEqual(before);
     });
     it("rejects changed bottle identity and preserves authoritative relationships", async () => {
-        const { row, component } = fixture();
+        const { row, component } = fixture(12);
         for (const change of [{ websiteSku: "another-bottle" }, { graceSku: "another-record" }, { family: "Circle" },
-            { capacityMl: 9 }, { color: "Clear" }, { neckThreadSize: "17-415" }, { applicator: "Metal Roller Ball" },
-            { capColor: "Shiny Black" },
+            { capacityMl: 8 }, { color: "Cobalt Blue" }, { neckThreadSize: "17-415" }, { applicator: "Metal Roller Ball" },
+            { capColor: "Matte Gold" },
             { components: { Cap: [{ websiteSku: component.websiteSku, graceSku: component.graceSku }] } }]) {
             const input = { ...row, ...change } as CatalogRow;
             const [result] = await resolveListedComponents([input], async () => component);
@@ -43,7 +47,7 @@ describe("source-reviewed missing component links", () => {
         }
     });
     it("rejects missing, retired, wrong and unavailable component records", async () => {
-        const { row, component } = fixture();
+        const { row, component } = fixture(12);
         for (const replacement of [null, { ...component, websiteSku: "wrong" },
             { ...component, websiteSku: "CP13-415BlkShShtMtl__RETIRED__old" },
             { ...component, graceSku: "wrong" }, { ...component, neckThreadSize: "18-415" },
@@ -56,7 +60,7 @@ describe("source-reviewed missing component links", () => {
         }
     });
     it("supplements a missing exact cap without changing the original matrix evidence", async () => {
-        const { row, component } = fixture(1);
+        const { row, component } = fixture(13);
         const other: CatalogRow["components"][string][number] = {
             websiteSku: "CP13-415GlSh", graceSku: "other-cap", itemName: "Shiny gold cap",
             productGroupSlug: null, shopifyVariantId: null, shopifySellable: null,
