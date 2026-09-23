@@ -10,6 +10,7 @@ import { familyFinderHref } from '@/lib/products/focused-shopping';
 import { SHOP_COLLECTIONS, featuredCollectionCards, shopCollectionHref } from '@/lib/shopCollections';
 import { ImmersiveHeroArt } from './ImmersiveHeroArt';
 import EmpireFitmentHero from './EmpireFitmentHero';
+import StoneHeroArt from './StoneHeroArt';
 import LocaleLink from '@/components/LocaleLink';
 import { localizeCollectionName, localizeCollectionSubtitle, localizeFamilyName } from '@/i18n/catalogCopy';
 import { useAppLocale, useCopy } from '@/i18n/useCopy';
@@ -69,8 +70,11 @@ const DEMO_HOTSPOTS: NonNullable<HomepageData['heroHotspots']> = [
 export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSlides']; hotspots?:HomepageData['heroHotspots']}) {
     const [index,setIndex]=useState(0);
     const heroVideo=useRef<HTMLVideoElement>(null);
-    // The Empire niche scene is the hero (approved 2026-09-14). ?hero=water shows the previous water scene.
-    const fitmentHero=useSyncExternalStore(()=>()=>{}, ()=>new URLSearchParams(window.location.search).get('hero')!=='water', ()=>true);
+    // Keep previous scenes available for comparison while using the selected stone photograph.
+    const scene=useSyncExternalStore(()=>()=>{}, ()=>{
+        const requested=new URLSearchParams(window.location.search).get('hero');
+        return requested==='water' ? 'empire-water' : requested==='niche' ? 'empire-niche' : 'diva-circle-stone';
+    }, ()=>'diva-circle-stone');
     // ?hotspots=demo previews the hotspot design on the niche hero before any are placed in Sanity.
     const demoHotspots=useSyncExternalStore(()=>()=>{}, ()=>new URLSearchParams(window.location.search).get('hotspots')==='demo', ()=>false);
     const heroHotspots=hotspots?.length ? hotspots : demoHotspots ? DEMO_HOTSPOTS : undefined;
@@ -87,8 +91,8 @@ export function ShoppingHero({ slides, hotspots }: {slides?:HomepageData['heroSl
         return()=>preference.removeEventListener('change',sync);
     }, [slide]);
     const t = useCopy('home');
-    return <section className={styles.hero} data-scene={!slide ? (fitmentHero ? "empire-niche" : "empire-water") : undefined} aria-label={t("featuredBottles")}>
-        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (fitmentHero ? <EmpireFitmentHero hotspots={heroHotspots}/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage style bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
+    return <section className={styles.hero} data-scene={!slide ? scene : undefined} aria-label={t("featuredBottles")}>
+        {slide?.mediaType==='video' && slide.video?.asset?.url ? <video ref={heroVideo} className={styles.heroArt} src={slide.video.asset.url} poster={cmsImage(slide.videoPoster,1800)} autoPlay muted loop playsInline/> : !slide ? (scene==='diva-circle-stone' ? <StoneHeroArt/> : scene==='empire-niche' ? <EmpireFitmentHero hotspots={heroHotspots}/> : <ImmersiveHeroArt/>) : <picture><source media="(max-width:640px)" srcSet={mobile}/><img className={styles.heroArt} src={desktop} alt="Glass perfume bottles with red vintage style bulb sprayers on a stone platform" fetchPriority="high"/></picture>}
         <div className={styles.heroCopy}>
             <h1>{slide?.headline || <><span>{t("headlineA")}</span><span>{t("headlineB")}</span></>}</h1>
             <p className={styles.heroLead}>{slide?.subheadline || t("lead")}</p>
