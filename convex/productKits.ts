@@ -56,7 +56,7 @@ const anchorsV = v.object({
     pxPerMm: v.union(v.number(), v.null()),
 });
 
-const kitRowV = v.object({
+export const kitRowV = v.object({
     sku: v.string(),
     websiteSku: v.union(v.string(), v.null()),
     graceSku: v.union(v.string(), v.null()),

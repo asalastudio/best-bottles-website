@@ -2,6 +2,7 @@ import { describe, it, expect } from "vitest";
 import { readFileSync } from "node:fs";
 import {
   validateRecovery,
+  recoveryOperation,
   assertPlateUnchanged,
   assertKitUnchanged,
 } from "../scripts/paperdoll/publish-native-recovery.mjs";
@@ -13,6 +14,16 @@ const row = JSON.parse(
 ).rows[0];
 const product = { ...row.source.identity, websiteSku: row.sku };
 describe("native component publication gates", () => {
+  it("requires explicit insertion with absent before-images", () => {
+    expect(recoveryOperation({ sku: "A", operation: "insert" }, null, null)).toBe("insert");
+    expect(() => recoveryOperation({ sku: "A" }, null, null)).toThrow("must be explicit");
+    expect(() => recoveryOperation({ sku: "A", operation: "insert" }, {}, null)).toThrow("absent");
+    expect(() => recoveryOperation({ sku: "A", operation: "insert" }, null, {})).toThrow("absent");
+    expect(() => recoveryOperation({ sku: "A", operation: "typo" }, {}, null)).toThrow("Unknown");
+    expect(() => assertPlateUnchanged(null, null)).not.toThrow();
+    expect(() => assertPlateUnchanged(null, { image: "later" })).toThrow();
+    expect(() => assertKitUnchanged(null, null, null)).not.toThrow();
+  });
   it("protects a kit changed by a concurrent release, including matching-plate changes", () => {
     const old = {
       sku: "A",

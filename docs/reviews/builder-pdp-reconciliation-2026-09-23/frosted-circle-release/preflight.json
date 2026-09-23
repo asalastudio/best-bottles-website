@@ -1,0 +1,32 @@
+{
+  "target": "https://precise-raccoon-123.convex.cloud",
+  "insertionIndexCheck": "blocked_remote_index_check",
+  "readyToApply": false,
+  "insertions": [
+    "GBCrclFrst50AnSpTslBlk",
+    "GBCrclFrst50AnSpTslGl",
+    "GBCrclFrst50AnSpTslIvyGl",
+    "GBCrclFrst50AnSpTslIvySl",
+    "GBCrclFrst50AnSpTslLvn",
+    "GBCrclFrst50AnSpTslMtSl",
+    "GBCrclFrst50AnSpTslPnk",
+    "GBCrclFrst50AnSpTslRed",
+    "GBCrclFrst50AnSpTslWht"
+  ],
+  "at": "2026-09-23T16:24:46.372Z",
+  "skus": [
+    "GBCrclFrst50AnSpTslBlk",
+    "GBCrclFrst50AnSpTslGl",
+    "GBCrclFrst50AnSpTslIvyGl",
+    "GBCrclFrst50AnSpTslIvySl",
+    "GBCrclFrst50AnSpTslLvn",
+    "GBCrclFrst50AnSpTslMtSl",
+    "GBCrclFrst50AnSpTslPnk",
+    "GBCrclFrst50AnSpTslRed",
+    "GBCrclFrst50AnSpTslWht"
+  ],
+  "assets": 53,
+  "sourceFiles": 9,
+  "rawPlateBodyScale": "Source registration retained; UI framing remains capacity-specific.",
+  "held": []
+}

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /** Release exact, source-audited native kit/plate pairs. Dry-run by default.
- * Requires scoped full before-images; originals and hero registries are never changed.
+ * Requires scoped before-images (explicit absence for inserts); originals and heroes stay unchanged.
  * --release DIR --target URL [--apply | --rollback]
  * Credentials are supplied through the environment, never stored in receipts.
  */
@@ -80,7 +80,17 @@ export function validateRecovery(row, product) {
   if (new Set(row.parts.map((p) => p.slot)).size !== row.parts.length)
     throw Error("Duplicate part slots: " + row.sku);
 }
+export function recoveryOperation(entry, oldPlate, oldKit) {
+  if (entry.operation === "insert") {
+    if (oldPlate || oldKit) throw Error("Insertion requires absent plate AND kit backups: " + entry.sku);
+    return "insert";
+  }
+  if (entry.operation && entry.operation !== "update") throw Error("Unknown recovery operation");
+  if (!oldPlate) throw Error("Missing plate backup; insertion must be explicit: " + entry.sku);
+  return "update";
+}
 export function assertPlateUnchanged(old, live) {
+  if (!old && !live) return;
   if (
     !old ||
     !live ||
@@ -111,12 +121,12 @@ export function assertKitUnchanged(old, plate, live) {
     "three",
   ];
   const expected =
-    old && old.plateSha256 === plate.front.sha256 ? pick(old, keys) : null;
+    old && plate && old.plateSha256 === plate.front.sha256 ? pick(old, keys) : null;
   if (
     live?.conflicts?.length ||
     stable(expected) !== stable(live ? pick(live, keys) : null)
   )
-    throw Error("Published kit drift: " + plate.sku);
+    throw Error("Published kit drift: " + (plate?.sku ?? "new insertion"));
 }
 export async function run(args = process.argv.slice(2)) {
   if (args.includes("--apply") && args.includes("--rollback"))
@@ -133,7 +143,7 @@ export async function run(args = process.argv.slice(2)) {
   if ([beforePlates, beforeKits].some((x) => x.target !== target))
     throw Error("Backup target mismatch");
   const skus = scope.rows.map((r) => r.sku);
-  if (new Set(skus).size !== skus.length || !skus.length)
+  if (new Set(skus).size !== skus.length || !skus.length || skus.length > 50)
     throw Error("Invalid scope");
   const oldPlates = new Map(),
     oldKits = new Map();
@@ -145,8 +155,10 @@ export async function run(args = process.argv.slice(2)) {
       if (map.has(row.sku)) throw Error("Duplicate index " + row.sku);
       map.set(row.sku, row);
     }
-  if (skus.some((s) => !oldPlates.has(s)))
-    throw Error("Every recovery requires an existing plate for rollback");
+  for (const map of [oldPlates, oldKits])
+    if ([...map.keys()].some(sku => !skus.includes(sku))) throw Error("Backup contains out-of-scope SKU");
+  const operations = new Map(scope.rows.map(entry => [entry.sku,
+    recoveryOperation(entry, oldPlates.get(entry.sku), oldKits.get(entry.sku))]));
   const client = new ConvexHttpClient(target),
     writeToken = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
   const mutate = async (name, rows) => {
@@ -158,8 +170,19 @@ export async function run(args = process.argv.slice(2)) {
   if (args.includes("--rollback")) {
     if (!writeToken) throw Error("Write token required");
     const payload = await read(path.join(dir, "publication-payload.json"));
+    if (payload.target !== target || payload.rows.length !== skus.length ||
+      new Set(payload.rows.map(row => row.sku)).size !== skus.length ||
+      payload.rows.some(row => !operations.has(row.sku) || row.plate?.sku !== row.sku || row.kit?.sku !== row.sku)) throw Error("Rollback payload scope mismatch");
     const rollback = [];
     for (const row of payload.rows) {
+      if (operations.get(row.sku) === "insert") {
+        await client.mutation("nativeMediaRelease:rollbackInsertedPair", {
+          writeToken, plate: row.plate, kit: row.kit,
+        });
+        rollback.push(row.sku);
+        await save(path.join(dir, "rollback-receipt.json"), { target, restored: rollback, at: new Date().toISOString() });
+        continue;
+      }
       const live = (
         await client.query("productPlates:forSkus", { skus: [row.sku] })
       ).plates[row.sku];
@@ -295,7 +318,7 @@ export async function run(args = process.argv.slice(2)) {
     }
     const builder = {
       name: "publish-native-recovery.mjs",
-      version: "1.0.0",
+      version: "1.1.0",
       builtAt: Date.now(),
     };
     const shared = {
@@ -313,10 +336,12 @@ export async function run(args = process.argv.slice(2)) {
       : "desktop-master";
     prepared.push({
       sku: r.sku,
+      identity: r.source.identity,
+      operation: operations.get(r.sku),
       plate: {
         ...shared,
         ...plateAssets,
-        views: oldPlates.get(r.sku).views.filter((v) => v.source === "photo"),
+        views: (oldPlates.get(r.sku)?.views ?? []).filter((v) => v.source === "photo"),
         source: {
           library,
           path: r.source.on.path,
@@ -356,13 +381,34 @@ export async function run(args = process.argv.slice(2)) {
   const currentKits = await client.query("productKits:forSkus", {
     pairs: skus.map((sku) => ({
       websiteSku: sku,
-      graceSku: oldPlates.get(sku).graceSku,
+      graceSku: prepared.find(row => row.sku === sku).kit.graceSku,
     })),
   });
   for (const sku of skus)
     assertKitUnchanged(oldKits.get(sku), oldPlates.get(sku), currentKits[sku]);
+  const insertions = prepared.filter(row => row.operation === "insert");
+  // This query also catches unpublished kits and Grace aliases hidden from storefront queries.
+  // It must be deployed before an insertion release. Dry-run reports unavailable capability honestly.
+  let insertionIndexCheck = "not_needed";
+  if (insertions.length) {
+    try {
+      await client.query("nativeMediaRelease:checkInsertions", {
+        rows: insertions.map(row => ({ sku: row.sku, graceSku: row.kit.graceSku })),
+      });
+      insertionIndexCheck = "passed";
+    } catch (error) {
+      if (args.includes("--apply")) throw error;
+      // A production backend may redact missing-function errors. Never treat an
+      // unavailable check (including a network error) as proof of index absence.
+      insertionIndexCheck = "blocked_remote_index_check";
+      console.warn("Insertion index check not cleared:", error.message);
+    }
+  }
   const plan = {
     target,
+    insertionIndexCheck,
+    readyToApply: insertionIndexCheck !== "blocked_remote_index_check",
+    insertions: insertions.map(row => row.sku),
     at: new Date().toISOString(),
     skus,
     assets: assets.size,
@@ -381,7 +427,10 @@ export async function run(args = process.argv.slice(2)) {
     sources.size,
     "hashed sources",
   );
-  if (!args.includes("--apply")) return;
+  if (!args.includes("--apply")) {
+    if (!plan.readyToApply) process.exitCode = 2;
+    return;
+  }
   if (!writeToken) throw Error("Write token required");
   const store = createBlobStore(),
     locations = new Map(),
@@ -443,10 +492,15 @@ export async function run(args = process.argv.slice(2)) {
       graceSku: row.kit.graceSku,
     });
     assertKitUnchanged(oldKits.get(row.sku), oldPlates.get(row.sku), liveKit);
-    // New kit stays hidden until its matching plate is installed. A failure leaves
-    // the old photograph available, never a mismatched assembly.
-    await mutate("productKits:upsertMany", [row.kit]);
-    await mutate("productPlates:upsertMany", [row.plate]);
+    if (row.operation === "insert") {
+      await client.mutation("nativeMediaRelease:insertPair", {
+        writeToken, plate: row.plate, kit: row.kit, identity: row.identity,
+      });
+    } else {
+      // Existing kit stays hidden until its matching plate is installed.
+      await mutate("productKits:upsertMany", [row.kit]);
+      await mutate("productPlates:upsertMany", [row.plate]);
+    }
     const served = await client.query("productKits:forSku", {
       websiteSku: row.sku,
       graceSku: row.kit.graceSku,

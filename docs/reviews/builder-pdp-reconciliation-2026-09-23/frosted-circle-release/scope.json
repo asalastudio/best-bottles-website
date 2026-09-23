@@ -3,39 +3,48 @@
   "rows": [
     {
       "sku": "GBCrclFrst50AnSpTslBlk",
-      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50",
+      "operation": "insert"
     },
     {
       "sku": "GBCrclFrst50AnSpTslGl",
-      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50",
+      "operation": "insert"
     },
     {
       "sku": "GBCrclFrst50AnSpTslIvyGl",
-      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50",
+      "operation": "insert"
     },
     {
       "sku": "GBCrclFrst50AnSpTslIvySl",
-      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50",
+      "operation": "insert"
     },
     {
       "sku": "GBCrclFrst50AnSpTslLvn",
-      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50",
+      "operation": "insert"
     },
     {
       "sku": "GBCrclFrst50AnSpTslMtSl",
-      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50",
+      "operation": "insert"
     },
     {
       "sku": "GBCrclFrst50AnSpTslPnk",
-      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50",
+      "operation": "insert"
     },
     {
       "sku": "GBCrclFrst50AnSpTslRed",
-      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50",
+      "operation": "insert"
     },
     {
       "sku": "GBCrclFrst50AnSpTslWht",
-      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50",
+      "operation": "insert"
     }
   ]
 }

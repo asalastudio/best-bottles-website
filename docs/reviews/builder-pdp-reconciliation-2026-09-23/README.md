@@ -66,15 +66,24 @@ The regression fixture contains 1,082 product records and 63 fitment rules;
 its SHA256 is recorded there. The 49 supporting current legacy-page receipts and
 gzip-compressed HTML are retained in this directory.
 
+## September 23 closeout update
+
+Jordan confirmed Empire and Round are verified. The new
+[release closeout](RELEASE-CLOSEOUT.md) records guarded insertion/rollback support
+for all 15 Circle pairs and the refreshed 36-row colored 9 mL artwork audit.
+Circle preflights passed source and existing public-index checks but are not
+publication clearance: the new backend check is unavailable and scoped publishing
+credentials are absent. No remote writes were made.
+
 ## Remaining gates
 
 - Publish the 15 Circle kits and their matching plates together, then deploy
   the frontend and Convex query changes. None of those writes has happened.
-- The nine frosted tassels have **no existing plate index rows**. The existing
-  recovery publisher correctly rejects them because it requires before-images
-  for updates. `frosted-circle-release/` contains the scoped empty before-images;
-  it is preparation evidence, not a completed or publish-ready release. A guarded
-  new-insert release with a rollback path is needed; do not bypass the publisher.
+- The nine frosted tassels and six short caps have **no existing exact plate/kit
+  index rows** in the preserved before-images. The publisher now supports explicit
+  insertion with atomic pair publication and exact rollback. Both scoped dry-runs
+  remain blocked on the new backend index check; deploy the aligned backend and
+  rerun before applying. See `RELEASE-CLOSEOUT.md`.
 - A full Vercel production-environment download was rejected by automatic
   approval review because it could expose unrelated production credentials.
   It was not executed. Use an approved scoped release/deployment mechanism;
