@@ -809,9 +809,14 @@ describe("atomizer and cap finish taxonomies", () => {
 
     it("detects cap finishes with Cap labels", () => {
         expect(detectCapFinish("shiny gold cap")).toBe("Shiny Gold");
+        expect(detectCapFinish("shiny gold")).toBe("Shiny Gold");
+        expect(detectCapFinish("matte black")).toBe("Matte Black");
         expect(displayCapFinishLabel("Shiny Gold")).toBe("Shiny Gold Cap");
         expect(detectCapFinish("black with dots on the cap")).toBe("Black with Dots");
         expect(detectCanonicalGlassColor("matte black cap on clear bottle")).toBe("Clear");
+        expect(detectCanonicalGlassColor("shiny gold")).toBeNull();
+        expect(detectCanonicalGlassColor("matte black")).toBeNull();
+        expect(detectCanonicalGlassColor("pink with dots")).toBeNull();
     });
 
     it("keeps bare green/blue as glass when no finish context", () => {

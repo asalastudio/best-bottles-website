@@ -11,6 +11,7 @@ import {
     type IntentSearchArgs,
 } from "./jevIntent";
 import { displayCapFinishLabel } from "../catalogFilters";
+import { shouldSuppressCapApplicatorFilter } from "./finishOnlyIntent";
 
 export type SearchCatalogArgs = {
     searchTerm: string;
@@ -63,16 +64,24 @@ export async function enrichSearchCatalogWithJev(
         answers = result.answers;
     }
 
+    const request = (options.requestText ?? params.searchTerm ?? "").trim();
     const jev = intentToSearchArgs(answers, {
         minConfidence: options.minConfidence ?? 0.6,
         useCaseTable: options.useCaseTable ?? true,
+        requestText: request,
     });
+
+    const inheritedApplicator = jev.applicatorFilter ?? params.applicatorFilter;
+    const dropInheritedCap =
+        !jev.applicatorFilter
+        && shouldSuppressCapApplicatorFilter(request)
+        && (inheritedApplicator ?? "").split(",").some((value) => value.trim() === "Cap/Closure");
 
     const next: SearchCatalogArgs = {
         searchTerm: params.searchTerm,
         categoryLimit: params.categoryLimit,
         familyLimit: jev.familyLimit ?? params.familyLimit,
-        applicatorFilter: jev.applicatorFilter ?? params.applicatorFilter,
+        applicatorFilter: dropInheritedCap ? undefined : inheritedApplicator,
     };
 
     if (jev.glassColour) {

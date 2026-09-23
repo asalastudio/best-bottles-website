@@ -1,0 +1,178 @@
+{
+  "sku": "GBCyl9SpryShSl",
+  "websiteSku": "GBCyl9SpryShSl",
+  "graceSku": "GB-CYL-CLR-9ML-T-25",
+  "familyId": "cylinder-9ml-clear-17-415",
+  "status": "review",
+  "publishable": false,
+  "plateSha256": "9f20b4ba5b14b7bdc436d9ee9ef618f411b9d9fdbc76a164302dd7f8fdffcc2b",
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "parts": [
+    {
+      "assembled": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bounds": {
+        "bottom": 1054.0,
+        "left": 402.0,
+        "right": 617.0,
+        "top": 278.0
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0.0,
+      "exploded": {
+        "dx": 0.0,
+        "dy": 0.0
+      },
+      "image": {
+        "bytes": 19690.0,
+        "height": 1100.0,
+        "key": "kits/cylinder-master/b3152b4f03ee583a9a7518e5ce63181752c8251a4e9b9a17ad0560c55ecffb1c.body.webp",
+        "sha256": "b3152b4f03ee583a9a7518e5ce63181752c8251a4e9b9a17ad0560c55ecffb1c",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/b3152b4f03ee583a9a7518e5ce63181752c8251a4e9b9a17ad0560c55ecffb1c.body.webp",
+        "width": 1000.0
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "body",
+      "variantKey": null,
+      "zOrder": 0
+    },
+    {
+      "assembled": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bounds": {
+        "bottom": 278.0,
+        "left": 424.0,
+        "right": 581.0,
+        "top": 80.0
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 3.0,
+      "exploded": {
+        "dx": 0.0,
+        "dy": -477.0
+      },
+      "image": {
+        "bytes": 5954.0,
+        "height": 1100.0,
+        "key": "kits/cylinder-master/d596686c70ea0f474344d47f21c4fdd407266985aaa4138eaf480251881ee35e.sprayer.webp",
+        "sha256": "d596686c70ea0f474344d47f21c4fdd407266985aaa4138eaf480251881ee35e",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/d596686c70ea0f474344d47f21c4fdd407266985aaa4138eaf480251881ee35e.sprayer.webp",
+        "width": 1000.0
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "sprayer",
+      "variantKey": null,
+      "zOrder": 1
+    },
+    {
+      "assembled": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bounds": {
+        "bottom": 429.0,
+        "left": 406.0,
+        "right": 603.0,
+        "top": 265.0
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 1.0,
+      "exploded": {
+        "dx": 0.0,
+        "dy": -175.0
+      },
+      "image": {
+        "bytes": 6250.0,
+        "height": 1100.0,
+        "key": "kits/cylinder-master/869d41820f27e71cc672ee9eef3415d3817d3cf336b8874babad1e6edb7ced9c.collar.webp",
+        "sha256": "869d41820f27e71cc672ee9eef3415d3817d3cf336b8874babad1e6edb7ced9c",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/869d41820f27e71cc672ee9eef3415d3817d3cf336b8874babad1e6edb7ced9c.collar.webp",
+        "width": 1000.0
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "collar",
+      "variantKey": null,
+      "zOrder": 2
+    },
+    {
+      "assembled": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "bounds": {
+        "bottom": 289.0,
+        "left": 406.0,
+        "right": 594.0,
+        "top": 45.0
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 2.0,
+      "exploded": {
+        "dx": 0.0,
+        "dy": -220.0
+      },
+      "image": {
+        "bytes": 6588.0,
+        "height": 1100.0,
+        "key": "kits/cylinder-master/1dde2df887b09e3cc622ba249d8c92b6a63ac109d44c04d7ce004c28f430d4e6.overcap.webp",
+        "sha256": "1dde2df887b09e3cc622ba249d8c92b6a63ac109d44c04d7ce004c28f430d4e6",
+        "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/1dde2df887b09e3cc622ba249d8c92b6a63ac109d44c04d7ce004c28f430d4e6.overcap.webp",
+        "width": 1000.0
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "overcap",
+      "variantKey": null,
+      "zOrder": 3
+    }
+  ],
+  "completeness": "full",
+  "three": null,
+  "source": {
+    "library": "published-sibling-reuse",
+    "path": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/cylinder-9ml-clear-17-415/GBCyl9SpryShSl/9f20b4ba5b14b7bdc436d9ee9ef618f411b9d9fdbc76a164302dd7f8fdffcc2b.front-on-1000x1100.webp",
+    "releaseVersion": "9f20b4ba5b14b7bdc436d9ee9ef618f411b9d9fdbc76a164302dd7f8fdffcc2b"
+  },
+  "gates": {
+    "parity": {
+      "ok": false,
+      "visualReviewBand": false,
+      "mean": 44.8342,
+      "tailOver40": 0.295953
+    }
+  },
+  "anchors": {
+    "axisX": 500,
+    "neckAxisX": 500,
+    "seatY": 278.0,
+    "baselineY": 1054.0,
+    "pxPerMm": null
+  },
+  "builder": {
+    "name": "build_sibling_reuse_kits.py",
+    "version": "1.0.0",
+    "builtAt": 1789710953966
+  },
+  "donors": {
+    "bodyDonor": "GBCyl9SpryBlk",
+    "closureDonor": "GBCylBlu9SpryShSl",
+    "closureSlots": [
+      "overcap"
+    ]
+  },
+  "notes": [
+    "Reuses already published photographic parts. No new pixels were created.",
+    "Body/fitment from GBCyl9SpryBlk; closure from GBCylBlu9SpryShSl."
+  ],
+  "reason": "assembled parity failed {'ok': False, 'visualReviewBand': False, 'mean': 44.8342, 'tailOver40': 0.295953}"
+}
