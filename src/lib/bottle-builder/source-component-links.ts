@@ -1,4 +1,4 @@
-import links from "./source-component-links.json";
+import links from "../../../convex/catalog-component-links.json";
 import type { CatalogRow } from "./model";
 
 /** Reviewed complete-assembly evidence, never a thread-wide compatibility rule.

@@ -1,0 +1,437 @@
+sku,capacityMl,neck,glass,fitment,finish,catalogCandidate,structuralConfigurationReady,structuralBlockers,componentSku,artworkWarnings,localRecovery,stockReconciliationPending,releaseStatus
+LBCyl100LtnClOvrCap,100,18-415,Clear,Lotion Pump,Clear Overcap,True,True,,Ltn18-415MtSlCl,,,False,not deployed
+GBMtlRoll28Wht,28,16mm,Clear,Metal Roller Ball,White,True,True,,GBMtlRoll28Wht,,,False,not deployed
+GBSpry3mlClBlk,3.3,12mm,Clear,Fine Mist Sprayer,Clear,True,False,media_or_configuration_invalid,GBSpry3mlClBlk,,,False,not deployed
+GBSpry4mlClBlk,4,12mm,Clear,Fine Mist Sprayer,Clear,True,True,,GBSpry4mlClBlk,,,False,not deployed
+GBCyl5SpryBlkMatt,5.5,13-415,Clear,Fine Mist Sprayer,Matte Black,False,False,assembly_stock_unavailable,CP13-415SpryBlkMt,,,False,not deployed
+GBCyl5Sl,5,13-415,Clear,Cap/Closure,Regular Shiny Silver,True,True,,CP13-415Sl,,,False,not deployed
+GBCyl50MtlRollWht,50,16mm,Clear,Metal Roller Ball,White,True,True,,GBCyl50MtlRollWht,,,False,not deployed
+GBCyl5Gl,5,13-415,Clear,Cap/Closure,Regular Shiny Gold,True,True,,CP13-415Gl,,,False,not deployed
+GBCyl9SpryBlk,9,17-415,Clear,Fine Mist Sprayer,Clear,True,True,,Spry17-415Blk,missing_dip_tube,9ml Desktop native kit,False,not deployed
+GBCyl100RdcrShnGl,100,18-415,Clear,Reducer,Shiny Gold,True,True,,CP18-415ShnGl,,,False,not deployed
+GBCylAmb9SpryBlk,9,17-415,Amber,Fine Mist Sprayer,Black,True,True,,Spry17-415Blk,missing_dip_tube,,False,not deployed
+GBCyl100RdcrShnBlkTall,100,18-415,Clear,Reducer,Tall Shiny Black,True,True,,CP18-415ShnBlkTall,,,False,not deployed
+GBCylBlu5Sl,5,13-415,Cobalt Blue,Cap/Closure,Regular Shiny Silver,True,True,,CP13-415Sl,,,False,not deployed
+GBCyl100RdcrShnBlk,100,18-415,Clear,Reducer,Shiny Black,True,True,,GBCyl100RdcrShnBlk,,,False,not deployed
+GBCylBlu9SpryBlk,9,17-415,Cobalt Blue,Fine Mist Sprayer,Black,True,True,,Spry17-415Blk,missing_dip_tube,,False,not deployed
+GBCylBlu5WhtSht,5,13-415,Cobalt Blue,Cap/Closure,Short Ribbed White,True,True,,CP13-415WhtSht,,,False,not deployed
+GBCyl100RdcrBrwnLthr,100,18-415,Clear,Reducer,Brown Leather,True,True,,CP18-415BrwnLthr,,,False,not deployed
+GBCylFrst9SpryBlk,9,17-415,Frosted,Fine Mist Sprayer,Black,True,True,,Spry17-415Blk,missing_dip_tube,,False,not deployed
+GBCylBlu5Gl,5,13-415,Cobalt Blue,Cap/Closure,Regular Shiny Gold,True,True,,CP13-415Gl,,,False,not deployed
+GBCyl100RdcrLBrwnLthr,100,18-415,Clear,Reducer,Light Brown Leather,True,True,,CP18-415LBrwnLthr,,,False,not deployed
+GBCyl100RdcrShnSl,100,18-415,Clear,Reducer,Shiny Silver,True,True,,CP18-415ShnSl,,,False,not deployed
+GBCyl100RdcrMtSlTall,100,18-415,Clear,Reducer,Tall Matte Silver,True,True,,CP18-415MtSlTall,,,False,not deployed
+GBTallCyl9SpryBlkMatt,9,13-415,Clear,Fine Mist Sprayer,Matte Black,True,True,,CP13-415SpryBlkMt,,,False,not deployed
+GBCyl100RdcrMtSl,100,18-415,Clear,Reducer,Matte Silver,True,True,,CP18-415MtSl,,,False,not deployed
+GBTallCylFrst9SpryBlkMatt,9,13-415,Frosted,Fine Mist Sprayer,Frosted,True,True,,CP13-415SpryBlkMt,,,False,not deployed
+GBCyl100RdcrWht,100,18-415,Clear,Reducer,White,True,True,,CP18-415Wh,,,False,not deployed
+GBCyl100RdcrIvyLthr,100,18-415,Clear,Reducer,Ivory Leather,True,True,,CP18-415LIvyLthr,,,False,not deployed
+GBCyl100RdcrPnkLthr,100,18-415,Clear,Reducer,Pink Leather,True,True,,CP18-415LPnkLthr,,,False,not deployed
+GBCyl50SpryMtGl,50,18-415,Clear,Perfume Spray Pump,Matte Gold,True,True,,Spry18-415MtGl,,,False,not deployed
+GBCyl50SpryShnGl,50,18-415,Clear,Perfume Spray Pump,Shiny Gold,True,True,,Spry18-415ShnGl,,,False,not deployed
+GBCyl50SpryShnBlk,50,18-415,Clear,Perfume Spray Pump,Shiny Black,True,True,,Spry18-415ShnBlk,,,False,not deployed
+GBCyl50SpryMtSl,50,18-415,Clear,Perfume Spray Pump,Matte Silver,True,True,,Spry18-415MtSl,,,False,not deployed
+GBCyl50SpryShnSl,50,18-415,Clear,Perfume Spray Pump,Shiny Silver,True,True,,Spry18-415ShnSl,,,False,not deployed
+GBTallCyl9Gl,9,13-415,Clear,,Gold,True,True,,CP13-415Gl,,,False,not deployed
+GBTallCyl9Sl,9,13-415,Clear,,Silver,True,True,,CP13-415Sl,,,False,not deployed
+GBCyl1ozRollWht,28,16mm,Clear,Plastic Roller Ball,White,True,True,,GBCyl1ozRollWht,,,False,not deployed
+GBTallCylFrst9WhtSht,9,13-415,Frosted,,Short Ribbed White,True,True,,CP13-415WhtSht,,,False,not deployed
+GBTallCylFrst9Gl,9,13-415,Frosted,,Shiny Gold,True,True,,CP13-415Gl,,,False,not deployed
+GBTallCylFrst9Sl,9,13-415,Frosted,,Shiny Silver,True,True,,CP13-415Sl,,,False,not deployed
+GBSpry1ozGl,30,18-415,Clear,,Shiny Gold,True,False,media_or_configuration_invalid,GBSpry1ozGl,,,False,not deployed
+GBSpry1ozSl,30,18-415,Clear,,Silver,True,False,media_or_configuration_invalid,GBSpry1ozSl,,,False,not deployed
+GBCyl50RollWht,50,16mm,Clear,Plastic Roller Ball,White,True,True,,GBCyl50RollWht,,,False,not deployed
+GBCyl50SpryCu,50,18-415,Clear,Perfume Spray Pump,Copper,True,True,,Spry18-415Cu,,,False,not deployed
+GBCyl100SpryCu,100,18-415,Clear,Perfume Spray Pump,Copper,True,True,,Spry18-415Cu,,,False,not deployed
+GBCyl5MtlRollBlkSh,5,13-415,Clear,Metal Roller Ball,Shiny Black,False,False,assembly_stock_unavailable,CPRoll13-415BlkSh,,,True,not deployed
+GBCyl5MtlRollCuMatt,5,13-415,Clear,Metal Roller Ball,Matte Copper,False,False,assembly_stock_unavailable,CPRoll13-415Cu,,,True,not deployed
+GBCyl5MtlRollGlMatt,5,13-415,Clear,Metal Roller Ball,Matte Gold,False,False,assembly_stock_unavailable,CPRoll13-415GlMt,,,True,not deployed
+GBCyl5MtlRollGlSh,5,13-415,Clear,Metal Roller Ball,Shiny Gold,False,False,assembly_stock_unavailable,CPRoll13-415GlSh,,,True,not deployed
+GBCyl5MtlRollPinkDot,5,13-415,Clear,Metal Roller Ball,Pink with Dots,False,False,assembly_stock_unavailable,CPRoll13-415PinkDot,,,True,not deployed
+GBCyl5MtlRollSlDot,5,13-415,Clear,Metal Roller Ball,Silver with Dots,False,False,assembly_stock_unavailable,CPRoll13-415SlDot,,,True,not deployed
+GBCyl5MtlRollSlMatt,5,13-415,Clear,Metal Roller Ball,Matte Silver,False,False,assembly_stock_unavailable,CPRoll13-415SlMt,,,True,not deployed
+GBCyl5MtlRollSlSh,5,13-415,Clear,Metal Roller Ball,Shiny Silver,False,False,assembly_stock_unavailable,CPRoll13-415SlSh,,,True,not deployed
+GBCyl50RdcrBlkLthr,50,18-415,Clear,Reducer,Black Leather,True,True,,CP18-415BlkLthr,,,False,not deployed
+GBSpry3mlClWht,3.3,12mm,Clear,Fine Mist Sprayer,Clear,True,True,,GBSpry3mlClWht,,,False,not deployed
+GBCylBlu5MtlRollBlkSh,5,13-415,Cobalt Blue,Metal Roller Ball,Shiny Black,True,True,,CPRoll13-415BlkSh,,,False,not deployed
+GBSpry4mlClWh,4,12mm,Clear,Fine Mist Sprayer,Clear,True,True,,GBSpry4mlClWh,,,False,not deployed
+GBCylBlu5MtlRollCuMatt,5,13-415,Cobalt Blue,Metal Roller Ball,Matte Copper,True,True,,CPRoll13-415Cu,,,False,not deployed
+GBCyl5SprySlMatt,5,13-415,Clear,Fine Mist Sprayer,Matte Silver,False,False,assembly_stock_unavailable,CP13-415SprySlMt,,,True,not deployed
+GBCylBlu5MtlRollGlMatt,5,13-415,Cobalt Blue,Metal Roller Ball,Matte Gold,True,True,,CPRoll13-415GlMt,,,False,not deployed
+GBCyl5SpryBlkSh,5,13-415,Clear,Fine Mist Sprayer,Shiny Black,False,False,assembly_stock_unavailable,CP13-415SpryBlkSh,,,True,not deployed
+GBCylBlu5MtlRollGlSh,5,13-415,Cobalt Blue,Metal Roller Ball,Shiny Gold,True,True,,CPRoll13-415GlSh,,,False,not deployed
+GBCyl5SpryGlSh,5,13-415,Clear,Fine Mist Sprayer,Shiny Gold,False,False,assembly_stock_unavailable,CP13-415SpryGlSh,,,True,not deployed
+GBCyl100SpryMtGl,100,18-415,Clear,Perfume Spray Pump,Matte Gold,True,True,,Spry18-415MtGl,,,False,not deployed
+GBCylBlu5MtlRollPinkDot,5,13-415,Cobalt Blue,Metal Roller Ball,Pink with Dots,True,True,,CPRoll13-415PinkDot,,,False,not deployed
+GBCyl5SprySlSh,5,13-415,Clear,Fine Mist Sprayer,Shiny Silver,False,False,assembly_stock_unavailable,CP13-415SprySlSh,,,True,not deployed
+GBCyl100SpryShnGl,100,18-415,Clear,Perfume Spray Pump,Shiny Gold,True,True,,Spry18-415ShnGl,,,False,not deployed
+GBCylBlu5MtlRollSlDot,5,13-415,Cobalt Blue,Metal Roller Ball,Silver with Dots,True,True,,CPRoll13-415SlDot,,,False,not deployed
+GBCyl5SpryBluMatt,5,13-415,Clear,Fine Mist Sprayer,Matte Blue,False,False,assembly_stock_unavailable,CP13-415SpryBluMt,,,True,not deployed
+GBCyl100SpryShnBlk,100,18-415,Clear,Perfume Spray Pump,Shiny Black,True,True,,Spry18-415ShnBlk,,,False,not deployed
+GBCylBlu5MtlRollSlMatt,5,13-415,Cobalt Blue,Metal Roller Ball,Matte Silver,True,True,,CPRoll13-415SlMt,,,False,not deployed
+GBCyl5SpryCuMatt,5,13-415,Clear,Fine Mist Sprayer,Matte Copper,False,False,assembly_stock_unavailable,CP13-415SpryCuMt,,,True,not deployed
+GBCyl100SpryMtSl,100,18-415,Clear,Perfume Spray Pump,Matte Silver,True,True,,Spry18-415MtSl,,,False,not deployed
+GBCylBlu5MtlRollSlSh,5,13-415,Cobalt Blue,Metal Roller Ball,Shiny Silver,True,True,,CPRoll13-415SlSh,,,False,not deployed
+GBCyl5SpryGlMatt,5,13-415,Clear,Fine Mist Sprayer,Matte Gold,False,False,assembly_stock_unavailable,CP13-415SpryGlMt,,,True,not deployed
+GBCyl100SpryShnSl,100,18-415,Clear,Perfume Spray Pump,Shiny Silver,True,True,,Spry18-415ShnSl,,,False,not deployed
+GBCyl100RdcrBlkLthr,100,18-415,Clear,Reducer,Black Leather,True,True,,CP18-415BlkLthr,,,False,not deployed
+GBCyl50AnSpBlk,50,18-415,Clear,Vintage Bulb Sprayer,Black,True,True,,AnSp18-415Blk,,,False,not deployed
+GBCyl50AnSpTslBlk,50,18-415,Clear,Vintage Bulb Sprayer with Tassel,Black,True,True,,AnSpTsl18-415Blk,,,False,not deployed
+LBCylAmb9LtnGl,9,17-415,Amber,Lotion Pump,Gold,True,True,,Ltn17-415Gl,missing_dip_tube,,False,not deployed
+GBCylBlu5SprySlSh,5,13-415,Cobalt Blue,Fine Mist Sprayer,Shiny Silver,True,True,,CP13-415SprySlSh,,,False,not deployed
+LBCylAmb9LtnMtSl,9,17-415,Amber,Lotion Pump,Matte Silver,True,True,,Ltn17-415MattSl,missing_dip_tube,,False,not deployed
+GBCylBlu5SpryBlkSh,5,13-415,Cobalt Blue,Fine Mist Sprayer,Shiny Black,True,True,,CP13-415SpryBlkSh,,,False,not deployed
+LBCyl9LtnMtSl,9,17-415,Clear,Lotion Pump,Clear,True,True,,Ltn17-415MattSl,missing_dip_tube,9ml Desktop native kit,False,not deployed
+GBCylBlu5SpryGlSh,5,13-415,Cobalt Blue,Fine Mist Sprayer,Shiny Gold,True,True,,CP13-415SpryGlSh,,,False,not deployed
+LBCyl9LtnGl,9,17-415,Clear,Lotion Pump,Clear,True,True,,Ltn17-415Gl,missing_dip_tube,9ml Desktop native kit,False,not deployed
+GBCylBlu5SpryGlMatt,5,13-415,Cobalt Blue,Fine Mist Sprayer,Matte Gold,True,True,,CP13-415SpryGlMt,,,False,not deployed
+GBCylBlu5SpryBluMatt,5,13-415,Cobalt Blue,Fine Mist Sprayer,Matte Blue,True,True,,CP13-415SpryBluMt,,,False,not deployed
+GBCylBlu5SpryCuMatt,5,13-415,Cobalt Blue,Fine Mist Sprayer,Matte Copper,True,True,,CP13-415SpryCuMt,,,False,not deployed
+LBCylBlu9LtnMattSl,9,17-415,Cobalt Blue,Lotion Pump,Matte Silver,True,True,,Ltn17-415MattSl,missing_dip_tube,,False,not deployed
+GBCylBlu5SprySlMatt,5,13-415,Cobalt Blue,Fine Mist Sprayer,Matte Silver,True,True,,CP13-415SprySlMt,,,False,not deployed
+LBCylBlu9LtnGl,9,17-415,Cobalt Blue,Lotion Pump,Gold,True,True,,Ltn17-415Gl,missing_dip_tube,,False,not deployed
+LBCylFrst9LtnMtSl,9,17-415,Frosted,Lotion Pump,Matte Silver,True,True,,Ltn17-415MattSl,missing_dip_tube,,False,not deployed
+LBCylFrst9LtnGl,9,17-415,Frosted,Lotion Pump,Gold,True,True,,Ltn17-415Gl,missing_dip_tube,,False,not deployed
+LBCylSwrl9LtnMtSl,9,17-415,Swirl,Lotion Pump,Matte Silver,True,True,,Ltn17-415MattSl,missing_dip_tube,,False,not deployed
+LBCylSwrl9LtnGl,9,17-415,Swirl,Lotion Pump,Gold,True,True,,Ltn17-415Gl,missing_dip_tube,,False,not deployed
+GBCyl5RollBlkDot,5,13-415,Clear,Plastic Roller Ball,Black with Dots,False,False,assembly_stock_unavailable,CPRoll13-415BlackDot,,,True,not deployed
+GBCyl5RollSlSh,5,13-415,Clear,Plastic Roller Ball,Shiny Silver,False,False,assembly_stock_unavailable,CPRoll13-415SlSh,,,True,not deployed
+LBCyl25LtnMtGl,25,18-415,Clear,Lotion Pump,Matte Gold,True,True,,Ltn18-415MtGl,missing_exposed_mechanism,25ml paired source kit,False,not deployed
+LBCyl25LtnShnGl,25,18-415,Clear,Lotion Pump,Shiny Gold,True,True,,Ltn18-415ShnGl,missing_exposed_mechanism,25ml paired source kit,False,not deployed
+GBCyl5RollBlkSh,5,13-415,Clear,Plastic Roller Ball,Shiny Black,False,False,assembly_stock_unavailable,CPRoll13-415BlkSh,,,True,not deployed
+GBCylBlu5RollBlkDot,5,13-415,Cobalt Blue,Plastic Roller Ball,Black with Dots,True,True,,CPRoll13-415BlackDot,,,False,not deployed
+LBCyl25LtnShnBlk,25,18-415,Clear,Lotion Pump,Shiny Black,True,True,,Ltn18-415ShnBlk,missing_exposed_mechanism,25ml paired source kit,False,not deployed
+GBCyl5RollGlSh,5,13-415,Clear,Plastic Roller Ball,Shiny Gold,False,False,assembly_stock_unavailable,CPRoll13-415GlSh,,,True,not deployed
+LBCyl25LtnMtSl,25,18-415,Clear,Lotion Pump,Matte Silver,True,True,,Ltn18-415MtSl,missing_exposed_mechanism,25ml paired source kit,False,not deployed
+GBCyl5RollSlDot,5,13-415,Clear,Plastic Roller Ball,Silver with Dots,False,False,assembly_stock_unavailable,CPRoll13-415SlDot,,,True,not deployed
+LBCyl25LtnShnSl,25,18-415,Clear,Lotion Pump,Shiny Silver,True,True,,Ltn18-415ShnSl,missing_exposed_mechanism,25ml paired source kit,False,not deployed
+GBCyl5RollPinkDot,5,13-415,Clear,Plastic Roller Ball,Pink with Dots,False,False,assembly_stock_unavailable,CPRoll13-415PinkDot,,,True,not deployed
+LBCyl25LtnCu,25,18-415,Clear,Lotion Pump,Copper,True,True,,Ltn18-415Cu,,,False,not deployed
+GBCyl5RollCuMatt,5,13-415,Clear,Plastic Roller Ball,Matte Copper,False,False,assembly_stock_unavailable,CPRoll13-415Cu,,,True,not deployed
+GBCylAmb9RollBlkDot,9,17-415,Amber,Plastic Roller Ball,Black Dotted,False,False,assembly_stock_unavailable,CpRoll17-415BlkDot,,,True,not deployed
+GBCyl100AnSpBlk,100,18-415,Clear,Vintage Bulb Sprayer,Black,True,True,,AnSp18-415Blk,,,False,not deployed
+GBCyl5RollGlMatt,5,13-415,Clear,Plastic Roller Ball,Matte Gold,False,False,assembly_stock_unavailable,CPRoll13-415GlMt,,,True,not deployed
+GBCyl100AnSpTslBlk,100,18-415,Clear,Vintage Bulb Sprayer with Tassel,Black,True,True,,AnSpTsl18-415Blk,,,False,not deployed
+GBCyl5RollSlMatt,5,13-415,Clear,Plastic Roller Ball,Matte Silver,False,False,assembly_stock_unavailable,CPRoll13-415SlMt,,,True,not deployed
+GBCylBlu9RollBlkDot,9,17-415,Cobalt Blue,Plastic Roller Ball,Black Dotted,True,True,,CpRoll17-415BlkDot,,,False,not deployed
+GBCylFrst9RollBlkDot,9,17-415,Frosted,Plastic Roller Ball,Black Dotted,True,True,,CpRoll17-415BlkDot,,,False,not deployed
+GBCyl9RollBlkDot,9,17-415,Clear,Plastic Roller Ball,Black with Dots,True,False,media_or_configuration_invalid,CpRoll17-415BlkDot,,candidate-needs-visual-review,False,not deployed
+GBCylSwrl9RollBlkDot,9,17-415,Swirl,Plastic Roller Ball,Black Dotted,True,True,,CpRoll17-415BlkDot,,,False,not deployed
+GBTallCyl9RollBlkDot,9,13-415,Clear,Plastic Roller Ball,Black with Dots,True,True,,CPRoll13-415BlackDot,,,False,not deployed
+GBTallCylFrst9RollBlkDot,9,13-415,Frosted,Plastic Roller Ball,Black with Dots,True,True,,CPRoll13-415BlackDot,,,False,not deployed
+GBCyl9MtlRollMattSl,9,17-415,Clear,Metal Roller Ball,Matte Silver,True,True,,CpRoll17-415MattSl,,,False,not deployed
+GBCyl9MtlRollSlDot,9,17-415,Clear,Metal Roller Ball,Silver with Dots,True,True,,CpRoll17-415SlDot,,,False,not deployed
+GBCyl9MtlRollPnkDot,9,17-415,Clear,Metal Roller Ball,Pink with Dots,True,True,,CpRoll17-415PnkDot,,,False,not deployed
+GBCylBlu5RollGlSh,5,13-415,Cobalt Blue,Plastic Roller Ball,Shiny Gold,True,True,,CPRoll13-415GlSh,,,False,not deployed
+GBCyl9MtlRollMattGl,9,17-415,Clear,Metal Roller Ball,Matte Gold,True,True,,CpRoll17-415MattGl,,,False,not deployed
+GBCylBlu5RollSlSh,5,13-415,Cobalt Blue,Plastic Roller Ball,Shiny Silver,True,True,,CPRoll13-415SlSh,,,False,not deployed
+GBCyl9MtlRollShnGl,9,17-415,Clear,Metal Roller Ball,Shiny Gold,True,True,,CpRoll17-415ShnGl,,,False,not deployed
+GBCylBlu5RollBlkSh,5,13-415,Cobalt Blue,Plastic Roller Ball,Shiny Black,True,True,,CPRoll13-415BlkSh,,,False,not deployed
+GBCyl9MtlRollShnSl,9,17-415,Clear,Metal Roller Ball,Shiny Silver,True,True,,CpRoll17-415ShnSl,,,False,not deployed
+GBCylBlu5RollGlMatt,5,13-415,Cobalt Blue,Plastic Roller Ball,Matte Gold,True,True,,CPRoll13-415GlMt,,,False,not deployed
+GBCyl9MtlRollMattCu,9,17-415,Clear,Metal Roller Ball,Matte Copper,True,True,,CpRoll17-415Cu,,,False,not deployed
+GBCylBlu5RollPinkDot,5,13-415,Cobalt Blue,Plastic Roller Ball,Pink with Dots,True,True,,CPRoll13-415PinkDot,,,False,not deployed
+GBCyl9MtlRollShBlk,9,17-415,Clear,Metal Roller Ball,Shiny Black,True,True,,CpRoll17-415ShnBlk,,,False,not deployed
+GBCylBlu5RollSlDot,5,13-415,Cobalt Blue,Plastic Roller Ball,Silver with Dots,True,True,,CPRoll13-415SlDot,,,False,not deployed
+GBCyl9MtlRollWht,9,17-415,Clear,Metal Roller Ball,White,True,True,,CpRoll17-415White,,,False,not deployed
+GBCylBlu5RollCuMatt,5,13-415,Cobalt Blue,Plastic Roller Ball,Matte Copper,True,True,,CPRoll13-415Cu,,,False,not deployed
+GBCylAmb9MtlRollWht,9,17-415,Amber,Metal Roller Ball,White,False,False,assembly_stock_unavailable,CpRoll17-415White,,,True,not deployed
+GBCylBlu5RollSlMatt,5,13-415,Cobalt Blue,Plastic Roller Ball,Matte Silver,True,True,,CPRoll13-415SlMt,,,False,not deployed
+GBCylAmb9MtlRollMattCu,9,17-415,Amber,Metal Roller Ball,Matte Copper,False,False,assembly_stock_unavailable,CpRoll17-415Cu,,,True,not deployed
+GBCyl9SpryMattSl,9,17-415,Clear,Fine Mist Sprayer,Clear,True,True,,Spry17-415MattSl,missing_dip_tube,9ml Desktop native kit,False,not deployed
+GBCylAmb9MtlRollMattGl,9,17-415,Amber,Metal Roller Ball,Matte Gold,False,False,assembly_stock_unavailable,CpRoll17-415MattGl,,,True,not deployed
+GBCyl9SpryGl,9,17-415,Clear,Fine Mist Sprayer,Clear,True,True,,Spry17-415Gl,missing_dip_tube,9ml Desktop native kit,False,not deployed
+GBCylAmb9MtlRollMattSl,9,17-415,Amber,Metal Roller Ball,Matte Silver,False,False,assembly_stock_unavailable,CpRoll17-415MattSl,,,True,not deployed
+GBCyl9SpryShSl,9,17-415,Clear,Fine Mist Sprayer,Clear,True,False,media_or_configuration_invalid,Spry17-415ShnSl,missing_complete_kit,9ml Desktop native kit,False,not deployed
+GBRoll28Blk,28,16mm,Clear,Plastic Roller Ball,Black,True,True,,GBRoll28Blk,,,False,not deployed
+GBCylAmb9MtlRollPnkDot,9,17-415,Amber,Metal Roller Ball,Pink Dotted,False,False,assembly_stock_unavailable,CpRoll17-415PnkDot,,,True,not deployed
+GBCyl9SpryRd,9,17-415,Clear,Fine Mist Sprayer,Clear,True,True,,Spry17-415Red,missing_dip_tube,9ml Desktop native kit,False,not deployed
+GBCylAmb9MtlRollShBlk,9,17-415,Amber,Metal Roller Ball,Shiny Black,False,False,assembly_stock_unavailable,CpRoll17-415ShnBlk,,,True,not deployed
+GBCyl9SpryTur,9,17-415,Clear,Fine Mist Sprayer,Clear,True,True,,Spry17-415Tur,missing_dip_tube,9ml Desktop native kit,False,not deployed
+GBCylAmb9MtlRollShnGl,9,17-415,Amber,Metal Roller Ball,Shiny Gold,False,False,assembly_stock_unavailable,CpRoll17-415ShnGl,,,True,not deployed
+GBCylAmb9SpryGl,9,17-415,Amber,Fine Mist Sprayer,Gold,True,True,,Spry17-415Gl,missing_dip_tube,,False,not deployed
+GBCylAmb9MtlRollShnSl,9,17-415,Amber,Metal Roller Ball,Shiny Silver,False,False,assembly_stock_unavailable,CpRoll17-415ShnSl,,,True,not deployed
+GBCylAmb9SpryMattSl,9,17-415,Amber,Fine Mist Sprayer,Matte Silver,True,True,,Spry17-415MattSl,missing_dip_tube,,False,not deployed
+GBCyl50RollBlk,50,16mm,Clear,Plastic Roller Ball,Black,True,True,,GBCyl50RollBlk,,,False,not deployed
+GBCylAmb9MtlRollSlDot,9,17-415,Amber,Metal Roller Ball,Silver Dotted,False,False,assembly_stock_unavailable,CpRoll17-415SlDot,,,True,not deployed
+GBCylAmb9SpryShSl,9,17-415,Amber,Fine Mist Sprayer,Shiny Silver,True,True,,Spry17-415ShnSl,missing_dip_tube,,False,not deployed
+GBCylAmb9SpryTur,9,17-415,Amber,Fine Mist Sprayer,Turquoise,True,True,,Spry17-415Tur,missing_dip_tube,,False,not deployed
+GBCylAmb9SpryRd,9,17-415,Amber,Fine Mist Sprayer,Red,True,True,,Spry17-415Red,missing_dip_tube,,False,not deployed
+GBCyl5MtlRollBlkDot,5,13-415,Clear,Metal Roller Ball,Black with Dots,False,False,assembly_stock_unavailable,CPRoll13-415BlackDot,,,True,not deployed
+GBCylBlu5MtlRollBlkDot,5,13-415,Cobalt Blue,Metal Roller Ball,Black with Dots,True,True,,CPRoll13-415BlackDot,,,False,not deployed
+GBCyl100AnSpLvn,100,18-415,Clear,Vintage Bulb Sprayer,Lavender,True,True,,AnSp18-415Lvn,,,False,not deployed
+GBCylBlu9SpryTur,9,17-415,Cobalt Blue,Fine Mist Sprayer,Turquoise,True,True,,Spry17-415Tur,missing_dip_tube,,False,not deployed
+GBCyl100AnSpPnk,100,18-415,Clear,Vintage Bulb Sprayer,Pink,True,True,,CP18-415AnSpPnk,,,False,not deployed
+GBCylBlu9SpryMattSl,9,17-415,Cobalt Blue,Fine Mist Sprayer,Matte Silver,True,True,,Spry17-415MattSl,missing_dip_tube,,False,not deployed
+GBCyl100AnSpMtSl,100,18-415,Clear,Vintage Bulb Sprayer,Matte Silver,True,True,,AnSp18-415MtSl,,,False,not deployed
+GBCylBlu9MtlRollMattSl,9,17-415,Cobalt Blue,Metal Roller Ball,Matte Silver,True,True,,CpRoll17-415MattSl,,,False,not deployed
+GBCylBlu9SpryGl,9,17-415,Cobalt Blue,Fine Mist Sprayer,Gold,True,True,,Spry17-415Gl,missing_dip_tube,,False,not deployed
+GBCyl100AnSpIvySl,100,18-415,Clear,Vintage Bulb Sprayer,Ivory Silver,True,True,,AnSp18-415IvySl,,,False,not deployed
+GBCyl9MtlRollBlkDot,9,17-415,Clear,Metal Roller Ball,Black with Dots,True,True,,CpRoll17-415BlkDot,,,False,not deployed
+GBCylBlu9MtlRollSlDot,9,17-415,Cobalt Blue,Metal Roller Ball,Silver Dotted,True,True,,CpRoll17-415SlDot,,,False,not deployed
+GBCylBlu9SpryShSl,9,17-415,Cobalt Blue,Fine Mist Sprayer,Shiny Silver,True,True,,Spry17-415ShnSl,missing_dip_tube,,False,not deployed
+GBCyl100AnSpGl,100,18-415,Clear,Vintage Bulb Sprayer,Gold,True,True,,AnSp18-415Gl,,,False,not deployed
+GBCylAmb9MtlRollBlkDot,9,17-415,Amber,Metal Roller Ball,Black Dotted,False,False,assembly_stock_unavailable,CpRoll17-415BlkDot,,,True,not deployed
+GBCylBlu9MtlRollPnkDot,9,17-415,Cobalt Blue,Metal Roller Ball,Pink Dotted,True,True,,CpRoll17-415PnkDot,,,False,not deployed
+GBCylBlu9SpryRd,9,17-415,Cobalt Blue,Fine Mist Sprayer,Red,True,True,,Spry17-415Red,missing_dip_tube,,False,not deployed
+GBCyl100AnSpIvyGl,100,18-415,Clear,Vintage Bulb Sprayer,Ivory Gold,True,True,,AnSp18-415IvyGl,,,False,not deployed
+GBCylBlu9MtlRollMattGl,9,17-415,Cobalt Blue,Metal Roller Ball,Matte Gold,True,True,,CpRoll17-415MattGl,,,False,not deployed
+GBCylFrst9SpryGl,9,17-415,Frosted,Fine Mist Sprayer,Gold,True,True,,Spry17-415Gl,missing_dip_tube,,False,not deployed
+GBCyl100AnSpWht,100,18-415,Clear,Vintage Bulb Sprayer,White,True,True,,AnSp18-415Wht,,,False,not deployed
+GBCylBlu9MtlRollBlkDot,9,17-415,Cobalt Blue,Metal Roller Ball,Black Dotted,True,True,,CpRoll17-415BlkDot,,,False,not deployed
+GBCylBlu9MtlRollShnGl,9,17-415,Cobalt Blue,Metal Roller Ball,Shiny Gold,True,True,,CpRoll17-415ShnGl,,,False,not deployed
+GBCylFrst9SpryMattSl,9,17-415,Frosted,Fine Mist Sprayer,Matte Silver,True,True,,Spry17-415MattSl,missing_dip_tube,,False,not deployed
+GBCyl100AnSpRed,100,18-415,Clear,Vintage Bulb Sprayer,Red,True,True,,AnSp18-415Red,,,False,not deployed
+GBCylFrst9MtlRollBlkDot,9,17-415,Frosted,Metal Roller Ball,Black Dotted,True,True,,CpRoll17-415BlkDot,,,False,not deployed
+GBCylFrst9SpryShSl,9,17-415,Frosted,Fine Mist Sprayer,Shiny Silver,True,True,,Spry17-415ShnSl,missing_dip_tube,,False,not deployed
+GBCylBlu9MtlRollShnSl,9,17-415,Cobalt Blue,Metal Roller Ball,Shiny Silver,True,True,,CpRoll17-415ShnSl,,,False,not deployed
+GBCyl100AnSpTslLvn,100,18-415,Clear,Vintage Bulb Sprayer with Tassel,Lavender,True,True,,AnSpTsl18-415Lvn,,,False,not deployed
+GBCylSwrl9MtlRollBlkDot,9,17-415,Swirl,Metal Roller Ball,Black Dotted,True,True,,CpRoll17-415BlkDot,,,False,not deployed
+GBCylBlu9MtlRollMattCu,9,17-415,Cobalt Blue,Metal Roller Ball,Matte Copper,True,True,,CpRoll17-415Cu,,,False,not deployed
+GBCylFrst9SpryTur,9,17-415,Frosted,Fine Mist Sprayer,Turquoise,True,True,,Spry17-415Tur,missing_dip_tube,,False,not deployed
+GBCyl100AnSpTslIvyGl,100,18-415,Clear,Vintage Bulb Sprayer with Tassel,Ivory Gold,True,True,,AnSpTsl18-415IvyGl,,,False,not deployed
+GBTallCyl9MtlRollBlkDot,9,13-415,Clear,Metal Roller Ball,Black with Dots,True,True,,CPRoll13-415BlackDot,,,False,not deployed
+GBCylBlu9MtlRollShBlk,9,17-415,Cobalt Blue,Metal Roller Ball,Shiny Black,True,True,,CpRoll17-415ShnBlk,,,False,not deployed
+GBCylFrst9SpryRd,9,17-415,Frosted,Fine Mist Sprayer,Red,True,True,,Spry17-415Red,missing_dip_tube,,False,not deployed
+GBCyl100AnSpTslIvySl,100,18-415,Clear,Vintage Bulb Sprayer with Tassel,Ivory Silver,True,True,,AnSpTsl18-415IvySl,,,False,not deployed
+GBTallCylFrst9MtlRollBlkDot,9,13-415,Frosted,Metal Roller Ball,Black with Dots,True,True,,CPRoll13-415BlackDot,,,False,not deployed
+GBCylBlu9MtlRollWht,9,17-415,Cobalt Blue,Metal Roller Ball,White,True,True,,CpRoll17-415White,,,False,not deployed
+GBCylSwrl9SpryGl,9,17-415,Swirl,Fine Mist Sprayer,Gold,True,True,,Spry17-415Gl,missing_dip_tube,,False,not deployed
+GBCyl100AnSpTslWht,100,18-415,Clear,Vintage Bulb Sprayer with Tassel,White,True,True,,AnSpTsl18-415Wht,,,False,not deployed
+GBCylFrst9MtlRollWht,9,17-415,Frosted,Metal Roller Ball,White,True,True,,CpRoll17-415White,,,False,not deployed
+GBCylSwrl9SpryMattSl,9,17-415,Swirl,Fine Mist Sprayer,Matte Silver,True,True,,Spry17-415MattSl,missing_dip_tube,,False,not deployed
+GBCyl100AnSpTslPnk,100,18-415,Clear,Vintage Bulb Sprayer with Tassel,Pink,True,True,,AnSpTsl18-415Pnk,,,False,not deployed
+GBCylFrst9MtlRollMattCu,9,17-415,Frosted,Metal Roller Ball,Matte Copper,True,True,,CpRoll17-415Cu,,,False,not deployed
+GBCylSwrl9SpryShSl,9,17-415,Swirl,Fine Mist Sprayer,Shiny Silver,True,True,,Spry17-415ShnSl,missing_dip_tube,,False,not deployed
+GBCyl100AnSpTslRed,100,18-415,Clear,Vintage Bulb Sprayer with Tassel,Red,True,True,,AnSpTsl18-415Red,,,False,not deployed
+GBCylFrst9MtlRollMattSl,9,17-415,Frosted,Metal Roller Ball,Matte Silver,True,True,,CpRoll17-415MattSl,,,False,not deployed
+GBCylSwrl9SpryRd,9,17-415,Swirl,Fine Mist Sprayer,Red,True,True,,Spry17-415Red,missing_dip_tube,,False,not deployed
+GBCyl100AnSpTslMtSl,100,18-415,Clear,Vintage Bulb Sprayer with Tassel,Matte Silver,True,True,,AnSpTsl18-415MtS,,,False,not deployed
+GBCylFrst9MtlRollSlDot,9,17-415,Frosted,Metal Roller Ball,Silver Dotted,True,True,,CpRoll17-415SlDot,,,False,not deployed
+GBCylSwrl9SpryTur,9,17-415,Swirl,Fine Mist Sprayer,Clear,True,True,,Spry17-415Tur,missing_dip_tube,,False,not deployed
+GBCyl100AnSpTslGl,100,18-415,Clear,Vintage Bulb Sprayer with Tassel,Gold,True,True,,CP18-415AnSpTslGl,,,False,not deployed
+GBCylFrst9MtlRollPnkDot,9,17-415,Frosted,Metal Roller Ball,Pink Dotted,True,True,,CpRoll17-415PnkDot,,,False,not deployed
+GBTallCyl9SpryBluMatt,9,13-415,Clear,Fine Mist Sprayer,Matte Blue,True,True,,CP13-415SpryBluMt,,,False,not deployed
+GBCylFrst9MtlRollMattGl,9,17-415,Frosted,Metal Roller Ball,Matte Gold,True,True,,CpRoll17-415MattGl,,,False,not deployed
+GBTallCyl9SpryCuMatt,9,13-415,Clear,Fine Mist Sprayer,Matte Copper,True,True,,CP13-415SpryCuMt,,,False,not deployed
+LBCyl50LtnMtGl,50,18-415,Clear,Lotion Pump,Matte Gold,True,True,,Ltn18-415MtGl,,,False,not deployed
+GBCylFrst9MtlRollShnGl,9,17-415,Frosted,Metal Roller Ball,Shiny Gold,True,True,,CpRoll17-415ShnGl,,,False,not deployed
+GBTallCyl9SpryBlkSh,9,13-415,Clear,Fine Mist Sprayer,Shiny Black,True,True,,CP13-415SpryBlkSh,,,False,not deployed
+LBCyl50LtnShnGl,50,18-415,Clear,Lotion Pump,Shiny Gold,True,True,,Ltn18-415ShnGl,,,False,not deployed
+GBCylAmb9RollWht,9,17-415,Amber,Plastic Roller Ball,White,False,False,assembly_stock_unavailable,CpRoll17-415White,,,True,not deployed
+GBCylFrst9MtlRollShnSl,9,17-415,Frosted,Metal Roller Ball,Shiny Silver,True,True,,CpRoll17-415ShnSl,,,False,not deployed
+GBTallCyl9SpryGlMatt,9,13-415,Clear,Fine Mist Sprayer,Matte Gold,True,True,,CP13-415SpryGlMt,,,False,not deployed
+LBCyl50LtnShnBlk,50,18-415,Clear,Lotion Pump,Shiny Black,True,True,,Ltn18-415ShnBlk,,,False,not deployed
+GBCylAmb9RollMattCu,9,17-415,Amber,Plastic Roller Ball,Matte Copper,False,False,assembly_stock_unavailable,CpRoll17-415Cu,,,True,not deployed
+GBCylFrst9MtlRollShBlk,9,17-415,Frosted,Metal Roller Ball,Shiny Black,True,True,,CpRoll17-415ShnBlk,,,False,not deployed
+GBTallCyl9SpryGlSh,9,13-415,Clear,Fine Mist Sprayer,Shiny Gold,True,True,,CP13-415SpryGlSh,,,False,not deployed
+LBCyl50LtnMtSl,50,18-415,Clear,Lotion Pump,Matte Silver,True,True,,Ltn18-415MtSl,,,False,not deployed
+GBCylAmb9RollMattGl,9,17-415,Amber,Plastic Roller Ball,Matte Gold,False,False,assembly_stock_unavailable,CpRoll17-415MattGl,,,True,not deployed
+GBCylSwrl9MtlRollMattSl,9,17-415,Swirl,Metal Roller Ball,Matte Silver,True,True,,CpRoll17-415MattSl,,,False,not deployed
+GBTallCyl9SprySlMatt,9,13-415,Clear,Fine Mist Sprayer,Matte Silver,True,True,,CP13-415SprySlMt,,,False,not deployed
+LBCyl50LtnShnSl,50,18-415,Clear,Lotion Pump,Shiny Silver,True,True,,Ltn18-415ShnSl,,,False,not deployed
+GBCylAmb9RollMattSl,9,17-415,Amber,Plastic Roller Ball,Matte Silver,False,False,assembly_stock_unavailable,CpRoll17-415MattSl,,,True,not deployed
+GBCylSwrl9MtlRollSlDot,9,17-415,Swirl,Metal Roller Ball,Silver Dotted,True,True,,CpRoll17-415SlDot,,,False,not deployed
+GBTallCyl9SprySlSh,9,13-415,Clear,Fine Mist Sprayer,Shiny Silver,True,True,,CP13-415SprySlSh,,,False,not deployed
+LBCyl50LtnCu,50,18-415,Clear,Lotion Pump,Copper,True,True,,Ltn18-415Cu,,,False,not deployed
+GBCylAmb9RollPnkDot,9,17-415,Amber,Plastic Roller Ball,Pink Dotted,False,False,assembly_stock_unavailable,CpRoll17-415PnkDot,,,True,not deployed
+GBCylSwrl9MtlRollPnkDot,9,17-415,Swirl,Metal Roller Ball,Pink Dotted,True,True,,CpRoll17-415PnkDot,,,False,not deployed
+GBTallCylFrst9SpryBlkSh,9,13-415,Frosted,Fine Mist Sprayer,Frosted,True,True,,CP13-415SpryBlkSh,,,False,not deployed
+GBMtlRoll28Blk,28,16mm,Clear,Metal Roller Ball,Black,True,True,,GBMtlRoll28Blk,,,False,not deployed
+GBCylAmb9RollShBlk,9,17-415,Amber,Plastic Roller Ball,Shiny Black,False,False,assembly_stock_unavailable,CpRoll17-415ShnBlk,,,True,not deployed
+GBCylSwrl9MtlRollMattGl,9,17-415,Swirl,Metal Roller Ball,Matte Gold,True,True,,CpRoll17-415MattGl,,,False,not deployed
+GBTallCylFrst9SpryBluMatt,9,13-415,Frosted,Fine Mist Sprayer,Frosted,True,True,,CP13-415SpryBluMt,,,False,not deployed
+GBCylSwrl9MtlRollShnGl,9,17-415,Swirl,Metal Roller Ball,Shiny Gold,True,True,,CpRoll17-415ShnGl,,,False,not deployed
+GBCylAmb9RollShnGl,9,17-415,Amber,Plastic Roller Ball,Shiny Gold,False,False,assembly_stock_unavailable,CpRoll17-415ShnGl,,,True,not deployed
+GBTallCylFrst9SpryGlSh,9,13-415,Frosted,Fine Mist Sprayer,Frosted,True,True,,CP13-415SpryGlSh,,,False,not deployed
+GBCylAmb9RollShnSl,9,17-415,Amber,Plastic Roller Ball,Shiny Silver,False,False,assembly_stock_unavailable,CpRoll17-415ShnSl,,,True,not deployed
+GBCylSwrl9MtlRollShnSl,9,17-415,Swirl,Metal Roller Ball,Shiny Silver,True,True,,CpRoll17-415ShnSl,,,False,not deployed
+GBTallCylFrst9SpryGlMatt,9,13-415,Frosted,Fine Mist Sprayer,Frosted,True,True,,CP13-415SpryGlMt,,,False,not deployed
+GBCylSwrl9MtlRollMattCu,9,17-415,Swirl,Metal Roller Ball,Matte Copper,True,True,,CpRoll17-415Cu,,,False,not deployed
+GBCylAmb9RollSlDot,9,17-415,Amber,Plastic Roller Ball,Silver Dotted,False,False,assembly_stock_unavailable,CpRoll17-415SlDot,,,True,not deployed
+GBTallCylFrst9SprySlMatt,9,13-415,Frosted,Fine Mist Sprayer,Frosted,True,True,,CP13-415SprySlMt,,,False,not deployed
+GBCyl50MtlRollBlk,50,16mm,Clear,Metal Roller Ball,Black,True,True,,GBCyl50MtlRollBlk,,,False,not deployed
+GBCyl50RdcrShnGl,50,18-415,Clear,Reducer,Shiny Gold,True,True,,CP18-415ShnGl,,,False,not deployed
+GBCylSwrl9MtlRollShBlk,9,17-415,Swirl,Metal Roller Ball,Shiny Black,True,True,,CpRoll17-415ShnBlk,,,False,not deployed
+GBTallCylFrst9SprySlSh,9,13-415,Frosted,Fine Mist Sprayer,Frosted,True,True,,CP13-415SprySlSh,,,False,not deployed
+GBCyl50RdcrShnBlkTall,50,18-415,Clear,Reducer,Tall Shiny Black,True,True,,CP18-415ShnBlkTall,,,False,not deployed
+GBTallCylFrst9SpryCuMatt,9,13-415,Frosted,Fine Mist Sprayer,Frosted,True,True,,CP13-415SpryCuMt,,,False,not deployed
+GBCyl50RdcrShnBlk,50,18-415,Clear,Reducer,Shiny Black,True,True,,GBCyl50RdcrShnBlk,,,False,not deployed
+GBTallCyl9MtlRollBlkSh,9,13-415,Clear,Metal Roller Ball,Shiny Black,True,True,,CPRoll13-415BlkSh,,,False,not deployed
+GBCyl50RdcrBrwnLthr,50,18-415,Clear,Reducer,Brown Leather,True,True,,CP18-415BrwnLthr,,,False,not deployed
+GBTallCyl9MtlRollCuMatt,9,13-415,Clear,Metal Roller Ball,Matte Copper,True,True,,CPRoll13-415Cu,,,False,not deployed
+GBCyl50RdcrLBrwnLthr,50,18-415,Clear,Reducer,Light Brown Leather,True,True,,CP18-415LBrwnLthr,,,False,not deployed
+GBTallCyl9MtlRollGlMatt,9,13-415,Clear,Metal Roller Ball,Matte Gold,True,True,,CPRoll13-415GlMt,,,False,not deployed
+GBCyl50RdcrShnSl,50,18-415,Clear,Reducer,Shiny Silver,True,True,,CP18-415ShnSl,,,False,not deployed
+GBTallCyl9MtlRollGlSh,9,13-415,Clear,Metal Roller Ball,Shiny Gold,True,True,,CPRoll13-415GlSh,,,False,not deployed
+GBCyl50RdcrMtSlTall,50,18-415,Clear,Reducer,Tall Matte Silver,True,True,,CP18-415MtSlTall,,,False,not deployed
+GBTallCyl9MtlRollPinkDot,9,13-415,Clear,Metal Roller Ball,Pink Dotted,True,True,,CPRoll13-415PinkDot,,,False,not deployed
+GBCyl50RdcrMtSl,50,18-415,Clear,Reducer,Matte Silver,True,True,,CP18-415MtSl,,,False,not deployed
+GBTallCyl9MtlRollSlDot,9,13-415,Clear,Metal Roller Ball,Silver Dotted,True,True,,CPRoll13-415SlDot,,,False,not deployed
+GBCylBlu9RollWht,9,17-415,Cobalt Blue,Plastic Roller Ball,White,True,True,,CpRoll17-415White,,,False,not deployed
+GBCyl50RdcrWht,50,18-415,Clear,Reducer,White,True,True,,CP18-415Wh,,,False,not deployed
+GBTallCyl9MtlRollSlMatt,9,13-415,Clear,Metal Roller Ball,Matte Silver,True,True,,CPRoll13-415SlMt,,,False,not deployed
+GBCylBlu9RollShBlk,9,17-415,Cobalt Blue,Plastic Roller Ball,Shiny Black,True,True,,CpRoll17-415ShnBlk,,,False,not deployed
+GBCyl50RdcrPnkLthr,50,18-415,Clear,Reducer,Pink Leather,True,True,,CP18-415LPnkLthr,,,False,not deployed
+GBTallCyl9MtlRollSlSh,9,13-415,Clear,Metal Roller Ball,Shiny Silver,True,True,,CPRoll13-415SlSh,,,False,not deployed
+GBCylBlu9RollShnGl,9,17-415,Cobalt Blue,Plastic Roller Ball,Shiny Gold,True,True,,CpRoll17-415ShnGl,,,False,not deployed
+GBCyl50RdcrIvyLthr,50,18-415,Clear,Reducer,Ivory Leather,True,True,,CP18-415LIvyLthr,,,False,not deployed
+GBTallCylFrst9MtlRollSlDot,9,13-415,Frosted,Metal Roller Ball,Silver with Dots,True,True,,CPRoll13-415SlDot,,,False,not deployed
+GBCylBlu9RollShnSl,9,17-415,Cobalt Blue,Plastic Roller Ball,Shiny Silver,True,True,,CpRoll17-415ShnSl,,,False,not deployed
+GBTallCylFrst9MtlRollPinkDot,9,13-415,Frosted,Metal Roller Ball,Pink with Dots,True,True,,CPRoll13-415PinkDot,,,False,not deployed
+GBCylBlu9RollPnkDot,9,17-415,Cobalt Blue,Plastic Roller Ball,Pink Dotted,True,False,media_or_configuration_invalid,CpRoll17-415PnkDot,,hold,False,not deployed
+GBTallCylFrst9MtlRollSlMatt,9,13-415,Frosted,Metal Roller Ball,Matte Silver,True,True,,CPRoll13-415SlMt,,,False,not deployed
+GBCylBlu9RollMattSl,9,17-415,Cobalt Blue,Plastic Roller Ball,Matte Silver,True,True,,CpRoll17-415MattSl,,,False,not deployed
+GBTallCylFrst9MtlRollGlMatt,9,13-415,Frosted,Metal Roller Ball,Matte Gold,True,True,,CPRoll13-415GlMt,,,False,not deployed
+GBCylBlu9RollSlDot,9,17-415,Cobalt Blue,Plastic Roller Ball,Silver Dotted,True,False,media_or_configuration_invalid,CpRoll17-415SlDot,,candidate-needs-visual-review,False,not deployed
+GBTallCylFrst9MtlRollGlSh,9,13-415,Frosted,Metal Roller Ball,Shiny Gold,True,True,,CPRoll13-415GlSh,,,False,not deployed
+GBCylBlu9RollMattGl,9,17-415,Cobalt Blue,Plastic Roller Ball,Matte Gold,True,True,,CpRoll17-415MattGl,,,False,not deployed
+GBTallCylFrst9MtlRollSlSh,9,13-415,Frosted,Metal Roller Ball,Shiny Silver,True,True,,CPRoll13-415SlSh,,,False,not deployed
+GBCylBlu9RollMattCu,9,17-415,Cobalt Blue,Plastic Roller Ball,Matte Copper,True,True,,CpRoll17-415Cu,,,False,not deployed
+GBTallCylFrst9MtlRollCuMatt,9,13-415,Frosted,Metal Roller Ball,Matte Copper,True,True,,CPRoll13-415Cu,,,False,not deployed
+GBCylFrst9RollShBlk,9,17-415,Frosted,Plastic Roller Ball,Shiny Black,True,True,,CpRoll17-415ShnBlk,,,False,not deployed
+GBTallCylFrst9MtlRollBlkSh,9,13-415,Frosted,Metal Roller Ball,Shiny Black,True,True,,CPRoll13-415BlkSh,,,False,not deployed
+GBCylFrst9RollShnGl,9,17-415,Frosted,Plastic Roller Ball,Shiny Gold,True,True,,CpRoll17-415ShnGl,,,False,not deployed
+GBCylFrst9RollShnSl,9,17-415,Frosted,Plastic Roller Ball,Shiny Silver,True,True,,CpRoll17-415ShnSl,,,False,not deployed
+GBCylFrst9RollPnkDot,9,17-415,Frosted,Plastic Roller Ball,Pink Dotted,True,True,,CpRoll17-415PnkDot,,,False,not deployed
+GBCylFrst9RollSlDot,9,17-415,Frosted,Plastic Roller Ball,Silver Dotted,True,True,,CpRoll17-415SlDot,,,False,not deployed
+GBCylFrst9RollMattSl,9,17-415,Frosted,Plastic Roller Ball,Matte Silver,True,True,,CpRoll17-415MattSl,,,False,not deployed
+GBCylFrst9RollMattGl,9,17-415,Frosted,Plastic Roller Ball,Matte Gold,True,True,,CpRoll17-415MattGl,,,False,not deployed
+GBCylFrst9RollMattCu,9,17-415,Frosted,Plastic Roller Ball,Matte Copper,True,True,,CpRoll17-415Cu,,,False,not deployed
+GBCylFrst9RollWht,9,17-415,Frosted,Plastic Roller Ball,White,True,True,,CpRoll17-415White,,,False,not deployed
+GBCyl9RollShnSl,9,17-415,Clear,Plastic Roller Ball,Shiny Silver,True,True,,CpRoll17-415ShnSl,,,False,not deployed
+GBCyl9RollWht,9,17-415,Clear,Plastic Roller Ball,White,True,True,,CpRoll17-415White,,,False,not deployed
+GBCyl9RollShnGl,9,17-415,Clear,Plastic Roller Ball,Shiny Gold,True,True,,CpRoll17-415ShnGl,,,False,not deployed
+GBCyl9RollShBlk,9,17-415,Clear,Plastic Roller Ball,Shiny Black,True,True,,CpRoll17-415ShnBlk,,,False,not deployed
+GBCyl9RollMattCu,9,17-415,Clear,Plastic Roller Ball,Matte Copper,True,True,,CpRoll17-415Cu,,,False,not deployed
+GBCyl9RollSlDot,9,17-415,Clear,Plastic Roller Ball,Silver with Dots,True,True,,CpRoll17-415SlDot,,,False,not deployed
+GBCyl9RollPnkDot,9,17-415,Clear,Plastic Roller Ball,Pink with Dots,True,False,media_or_configuration_invalid,CpRoll17-415PnkDot,,candidate-needs-visual-review,False,not deployed
+GBCyl9RollMattSl,9,17-415,Clear,Plastic Roller Ball,Matte Silver,True,True,,CpRoll17-415MattSl,,,False,not deployed
+GBCyl9RollMattGl,9,17-415,Clear,Plastic Roller Ball,Matte Gold,True,True,,CpRoll17-415MattGl,,,False,not deployed
+GBCylSwrl9RollShnSl,9,17-415,Swirl,Plastic Roller Ball,Shiny Silver,True,False,media_or_configuration_invalid,CpRoll17-415ShnSl,,candidate-needs-visual-review,False,not deployed
+GBCylSwrl9RollShnGl,9,17-415,Swirl,Plastic Roller Ball,Shiny Gold,True,False,media_or_configuration_invalid,CpRoll17-415ShnGl,,candidate-needs-visual-review,False,not deployed
+GBCylSwrl9RollShBlk,9,17-415,Swirl,Plastic Roller Ball,Shiny Black,True,False,media_or_configuration_invalid,CpRoll17-415ShnBlk,,candidate-needs-visual-review,False,not deployed
+GBCylSwrl9RollMattCu,9,17-415,Swirl,Plastic Roller Ball,Matte Copper,True,False,media_or_configuration_invalid,CpRoll17-415Cu,,candidate-needs-visual-review,False,not deployed
+GBCylSwrl9RollPnkDot,9,17-415,Swirl,Plastic Roller Ball,Pink Dotted,True,True,,CpRoll17-415PnkDot,,,False,not deployed
+GBCylSwrl9RollSlDot,9,17-415,Swirl,Plastic Roller Ball,Silver Dotted,True,True,,CpRoll17-415SlDot,,,False,not deployed
+GBCylSwrl9RollMattSl,9,17-415,Swirl,Plastic Roller Ball,Matte Silver,True,False,media_or_configuration_invalid,CpRoll17-415MattSl,,candidate-needs-visual-review,False,not deployed
+GBCylSwrl9RollMattGl,9,17-415,Swirl,Plastic Roller Ball,Matte Gold,True,False,media_or_configuration_invalid,CpRoll17-415MattGl,,candidate-needs-visual-review,False,not deployed
+GBTallCyl9RollBlkSh,9,13-415,Clear,Plastic Roller Ball,Shiny Black,True,True,,CPRoll13-415BlkSh,,,False,not deployed
+GBTallCyl9RollCuMatt,9,13-415,Clear,Plastic Roller Ball,Matte Copper,True,True,,CPRoll13-415Cu,,,False,not deployed
+GBTallCyl9RollGlMatt,9,13-415,Clear,Plastic Roller Ball,Matte Gold,True,True,,CPRoll13-415GlMt,,,False,not deployed
+GBTallCyl9RollGlSh,9,13-415,Clear,Plastic Roller Ball,Shiny Gold,True,True,,CPRoll13-415GlSh,,,False,not deployed
+GBTallCyl9RollPinkDot,9,13-415,Clear,Plastic Roller Ball,Pink Dotted,True,True,,CPRoll13-415PinkDot,,,False,not deployed
+GBTallCyl9RollSlDot,9,13-415,Clear,Plastic Roller Ball,Silver Dotted,True,True,,CPRoll13-415SlDot,,,False,not deployed
+GBTallCyl9RollSlMatt,9,13-415,Clear,Plastic Roller Ball,Matte Silver,True,True,,CPRoll13-415SlMt,,,False,not deployed
+GBTallCyl9RollSlSh,9,13-415,Clear,Plastic Roller Ball,Shiny Silver,True,True,,CPRoll13-415SlSh,,,False,not deployed
+GBTallCylFrst9RollSlDot,9,13-415,Frosted,Plastic Roller Ball,Silver with Dots,True,True,,CPRoll13-415SlDot,,,False,not deployed
+GBTallCylFrst9RollPinkDot,9,13-415,Frosted,Plastic Roller Ball,Pink with Dots,True,True,,CPRoll13-415PinkDot,,,False,not deployed
+GBTallCylFrst9RollSlMatt,9,13-415,Frosted,Plastic Roller Ball,Matte Silver,True,True,,CPRoll13-415SlMt,,,False,not deployed
+GBCyl5BlkSht,5,13-415,Clear,Cap/Closure,Short Ribbed Black,True,True,,CP13-415BlkSht,,,False,not deployed
+GBTallCylFrst9RollGlMatt,9,13-415,Frosted,Plastic Roller Ball,Matte Gold,True,True,,CPRoll13-415GlMt,,,False,not deployed
+GBTallCylFrst9RollGlSh,9,13-415,Frosted,Plastic Roller Ball,Shiny Gold,True,True,,CPRoll13-415GlSh,,,False,not deployed
+GBCylBlu5BlkSht,5,13-415,Cobalt Blue,Cap/Closure,Short Ribbed Black,True,True,,CP13-415BlkSht,,,False,not deployed
+GBTallCylFrst9RollSlSh,9,13-415,Frosted,Plastic Roller Ball,Shiny Silver,True,True,,CPRoll13-415SlSh,,,False,not deployed
+GBTallCylFrst9RollCuMatt,9,13-415,Frosted,Plastic Roller Ball,Matte Copper,True,True,,CPRoll13-415Cu,,,False,not deployed
+GBTallCylFrst9RollBlkSh,9,13-415,Frosted,Plastic Roller Ball,Shiny Black,True,True,,CPRoll13-415BlkSh,,,False,not deployed
+GBTallCyl9BlkSht,9,13-415,Clear,,Short Ribbed Black,True,True,,CP13-415BlkSht,,,False,not deployed
+GBTallCylFrst9BlkSht,9,13-415,Frosted,,Short Ribbed Black,True,True,,CP13-415BlkSht,,,False,not deployed
+LBCyl100LtnShnBlk,100,18-415,Clear,Lotion Pump,Shiny Black,True,True,,Ltn18-415ShnBlk,,,False,not deployed
+LBCyl100LtnShnGl,100,18-415,Clear,Lotion Pump,Shiny Gold,True,True,,Ltn18-415ShnGl,,,False,not deployed
+LBCyl100LtnShnSl,100,18-415,Clear,Lotion Pump,Shiny Silver,True,True,,Ltn18-415ShnSl,,,False,not deployed
+LBCyl100LtnMtGl,100,18-415,Clear,Lotion Pump,Matte Gold,True,True,,Ltn18-415MtGl,,,False,not deployed
+LBCyl100LtnMtSl,100,18-415,Clear,Lotion Pump,Matte Silver,True,True,,Ltn18-415MtSl,,,False,not deployed
+LBCyl100LtnCu,100,18-415,Clear,Lotion Pump,Copper,True,True,,Ltn18-415Cu,,,False,not deployed
+LBCylAmb9LtnBlk,9,17-415,Amber,Lotion Pump,Black,True,True,,Ltn17-415Blk,missing_dip_tube,,False,not deployed
+GBCyl50AnSpLvn,50,18-415,Clear,Vintage Bulb Sprayer,Lavender,True,True,,AnSp18-415Lvn,,,False,not deployed
+LBCyl9LtnBlk,9,17-415,Clear,Lotion Pump,Clear,True,True,,Ltn17-415Blk,missing_dip_tube,9ml Desktop native kit,False,not deployed
+GBCyl50AnSpPnk,50,18-415,Clear,Vintage Bulb Sprayer,Pink,True,True,,CP18-415AnSpPnk,,,False,not deployed
+GBCyl50AnSpMtSl,50,18-415,Clear,Vintage Bulb Sprayer,Matte Silver,True,True,,AnSp18-415MtSl,,,False,not deployed
+LBCylBlu9LtnBlk,9,17-415,Cobalt Blue,Lotion Pump,Black,True,True,,Ltn17-415Blk,missing_dip_tube,,False,not deployed
+GBCyl50AnSpIvySl,50,18-415,Clear,Vintage Bulb Sprayer,Ivory Silver,True,True,,AnSp18-415IvySl,,,False,not deployed
+LBCylFrst9LtnBlk,9,17-415,Frosted,Lotion Pump,Black,True,True,,Ltn17-415Blk,missing_dip_tube,,False,not deployed
+GBCyl50AnSpGl,50,18-415,Clear,Vintage Bulb Sprayer,Gold,True,True,,AnSp18-415Gl,,,False,not deployed
+GBCyl50AnSpIvyGl,50,18-415,Clear,Vintage Bulb Sprayer,Ivory Gold,True,True,,AnSp18-415IvyGl,,,False,not deployed
+GBCyl50AnSpWht,50,18-415,Clear,Vintage Bulb Sprayer,White,True,True,,AnSp18-415Wht,,,False,not deployed
+GBCyl50AnSpRed,50,18-415,Clear,Vintage Bulb Sprayer,Red,True,True,,AnSp18-415Red,,,False,not deployed
+GBCyl50AnSpTslLvn,50,18-415,Clear,Vintage Bulb Sprayer with Tassel,Lavender,True,True,,AnSpTsl18-415Lvn,,,False,not deployed
+LBcyl25LtnClOvrCap,25,18-415,Clear,Lotion Pump,Clear,True,True,,Ltn18-415MtSlCl,,,False,not deployed
+GBCyl50AnSpTslIvyGl,50,18-415,Clear,Vintage Bulb Sprayer with Tassel,Ivory Gold,True,True,,AnSpTsl18-415IvyGl,,,False,not deployed
+GBCyl50AnSpTslIvySl,50,18-415,Clear,Vintage Bulb Sprayer with Tassel,Ivory Silver,True,True,,AnSpTsl18-415IvySl,,,False,not deployed
+GBCyl50AnSpTslWht,50,18-415,Clear,Vintage Bulb Sprayer with Tassel,White,True,True,,AnSpTsl18-415Wht,,,False,not deployed
+GBCyl50AnSpTslPnk,50,18-415,Clear,Vintage Bulb Sprayer with Tassel,Pink,True,True,,AnSpTsl18-415Pnk,,,False,not deployed
+GBCyl50AnSpTslRed,50,18-415,Clear,Vintage Bulb Sprayer with Tassel,Red,True,True,,AnSpTsl18-415Red,,,False,not deployed
+GBCyl50AnSpTslMtSl,50,18-415,Clear,Vintage Bulb Sprayer with Tassel,Matte Silver,True,True,,AnSpTsl18-415MtS,,,False,not deployed
+GBCyl50AnSpTslGl,50,18-415,Clear,Vintage Bulb Sprayer with Tassel,Gold,True,True,,CP18-415AnSpTslGl,,,False,not deployed
+LBCyl50LtnClOvrCap,50,18-415,Clear,Lotion Pump,Clear Overcap,True,True,,Ltn18-415MtSlCl,,,False,not deployed
+GBCylSwrl9SpryBlk,9,17-415,Swirl,Fine Mist Sprayer,Black,True,True,,Spry17-415Blk,missing_dip_tube,,False,not deployed
+LBCylSwrl9LtnBlk,9,17-415,Swirl,Lotion Pump,Black,True,True,,Ltn17-415Blk,missing_dip_tube,,False,not deployed
+PbClear8ozFlpWh,227,,Clear,N/A,White,False,False,missing_bottle_component_links; exact_component_unresolved,,,,False,not deployed
+PbClear4ozFlpWh,114,,Clear,N/A,White,False,False,missing_bottle_component_links; exact_component_unresolved,,,,False,not deployed
+GBCylBlu5BlkShSht,5,13-415,Cobalt Blue,Cap/Closure,Short Shiny Black,True,True,,CP13-415BlkShShtMtl,,,False,not deployed
+PbNat16ozFlpWh,454,,Clear,N/A,White,False,False,missing_bottle_component_links; exact_component_unresolved,,,,False,not deployed
+GBcyl25SpryShnBlk,25,18-415,Clear,Fine Mist Sprayer,Shiny Black,True,True,,Spry18-415ShnBlk,missing_exposed_mechanism,25ml paired source kit,False,not deployed
+GBCyl5WhtSht,5,13-415,Clear,Cap/Closure,Short Ribbed White,True,True,,CP13-415WhtSht,,,False,not deployed
+GBCylSwrl9MtlRollWht,9,17-415,Swirl,Plastic Roller Ball,White,True,True,,CpRoll17-415White,,,False,not deployed
+GBCylSwrl9RollWht,9,17-415,Swirl,Plastic Roller Ball,White,True,False,media_or_configuration_invalid,CpRoll17-415White,,candidate-needs-visual-review,False,not deployed
+GBTallCyl9WhtSht,9,13-415,Clear,,Short Ribbed White,True,True,,CP13-415WhtSht,,,False,not deployed
+GBCylBlu5CuSht,5,13-415,Cobalt Blue,Cap/Closure,Short Matte Copper,True,True,,CP13-415CuSht,,,False,not deployed
+GBCylBlu5GlMattSht,5,13-415,Cobalt Blue,Cap/Closure,Short Matte Gold,True,True,,CP13-415GlMattSht,,,False,not deployed
+GBCylBlu5SlMattSht,5,13-415,Cobalt Blue,Cap/Closure,Short Matte Silver,True,True,,CP13-415SlMattSht,,,False,not deployed
+GBCylBlu5GlSht,5,13-415,Cobalt Blue,Cap/Closure,Short Shiny Gold,True,True,,CP13-415GlSht,,,False,not deployed
+GBCylBlu5SlSht,5,13-415,Cobalt Blue,Cap/Closure,Short Shiny Silver,True,True,,CP13-415SlSht,,,False,not deployed
+GBCyl5CuSht,5,13-415,Clear,Cap/Closure,Short Matte Copper,True,True,,CP13-415CuSht,,,False,not deployed
+GBCyl5GlMattSht,5,13-415,Clear,Cap/Closure,Short Matte Gold,True,True,,CP13-415GlMattSht,,,False,not deployed
+GBCyl5SlMattSht,5,13-415,Clear,Cap/Closure,Short Matte Silver,True,True,,CP13-415SlMattSht,,,False,not deployed
+GBCyl5BlkShSht,5,13-415,Clear,Cap/Closure,Short Shiny Black,True,True,,CP13-415BlkShShtMtl,,,False,not deployed
+GBCyl5GlSht,5,13-415,Clear,Cap/Closure,Short Shiny Gold,True,True,,CP13-415GlSht,,,False,not deployed
+GBCyl5SlSht,5,13-415,Clear,Cap/Closure,Short Shiny Silver,True,True,,CP13-415SlSht,,,False,not deployed
+GBTallCylFrst9CuSht,9,13-415,Frosted,,Matte Copper,True,True,,CP13-415CuSht,,,False,not deployed
+GBTallCylFrst9GlMattSht,9,13-415,Frosted,,Matte Gold,True,True,,CP13-415GlMattSht,,,False,not deployed
+GBTallCylFrst9SlMattSht,9,13-415,Frosted,,Matte Silver,True,True,,CP13-415SlMattSht,,,False,not deployed
+GBTallCylFrst9BlkShSht,9,13-415,Frosted,,Shiny Black,True,True,,CP13-415BlkShShtMtl,,,False,not deployed
+GBTallCylFrst9GlSht,9,13-415,Frosted,,Shiny Gold,True,True,,CP13-415GlSht,,,False,not deployed
+GBTallCylFrst9SlSht,9,13-415,Frosted,,Shiny Silver,True,True,,CP13-415SlSht,,,False,not deployed
+GBTallCyl9CuSht,9,13-415,Clear,,Matte Copper,True,True,,CP13-415CuSht,,,False,not deployed
+GBTallCyl9SlMattSht,9,13-415,Clear,,Matte Silver,True,True,,CP13-415SlMattSht,,,False,not deployed
+GBTallCyl9BlkShSht,9,13-415,Clear,,Shiny Black,True,True,,CP13-415BlkShShtMtl,,,False,not deployed
+GBTallCyl9GlSht,9,13-415,Clear,,Shiny Gold,True,True,,CP13-415GlSht,,,False,not deployed
+GBTallCyl9SlSht,9,13-415,Clear,,Shiny Silver,True,True,,CP13-415SlSht,,,False,not deployed
+GBTallCyl9GlMattSht,9,13-415,Clear,,Matte Gold,True,True,,CP13-415GlMattSht,,,False,not deployed
+GBCyl25AnSpBlk,25,18-415,Clear,Vintage Bulb Sprayer,Black / Shiny Silver Collar,True,True,,AnSp18-415Blk,,,False,not deployed
+GBCyl25AnSpGl,25,18-415,Clear,Vintage Bulb Sprayer,Gold / Shiny Gold Collar,True,True,,AnSp18-415Gl,,,False,not deployed
+GBCyl25AnSpTslIvySl,25,18-415,Clear,Vintage Bulb Sprayer with Tassel,Ivory / Shiny Silver Collar,True,True,,AnSpTsl18-415IvySl,,,False,not deployed
+GBCyl25AnSpTslMtSl,25,18-415,Clear,Vintage Bulb Sprayer with Tassel,Matte Silver / Matte Silver Collar,True,True,,AnSpTsl18-415MtS,,,False,not deployed
+GBCyl25AnSpTslRed,25,18-415,Clear,Vintage Bulb Sprayer with Tassel,Red / Shiny Silver Collar,True,True,,AnSpTsl18-415Red,,,False,not deployed
+GBCyl25AnSpTslWht,25,18-415,Clear,Vintage Bulb Sprayer with Tassel,White / Shiny Silver Collar,True,True,,AnSpTsl18-415Wht,,,False,not deployed
+GBCyl25DrpCu,25,18-415,Clear,Dropper,Matte Copper,True,True,,Drp18-415Cu,,,False,not deployed
+GBCyl25DrpGl,25,18-415,Clear,Dropper,Shiny Gold,True,True,,Drp18-415Gl,,,False,not deployed
+GBCyl25DrpSl,25,18-415,Clear,Dropper,Shiny Silver,True,True,,Drp18-415Sl,,,False,not deployed
+GBCyl25RdcrIvyLthr,25,18-415,Clear,Reducer,Ivory Faux Leather,True,True,,CP18-415LIvyLthr,,,False,not deployed
+GBCyl25RdcrShnGl,25,18-415,Clear,Reducer,Shiny Gold,True,True,,CP18-415ShnGl,,,False,not deployed
+GBcyl25AnSpIvyGl,25,18-415,Clear,Vintage Bulb Sprayer,Ivory / Shiny Gold Collar,True,True,,AnSp18-415IvyGl,,,False,not deployed
+GBcyl25AnSpIvySl,25,18-415,Clear,Vintage Bulb Sprayer,Ivory / Shiny Silver Collar,True,True,,AnSp18-415IvySl,,,False,not deployed
+GBcyl25AnSpLvn,25,18-415,Clear,Vintage Bulb Sprayer,Lavender / Shiny Silver Collar,True,True,,AnSp18-415Lvn,,,False,not deployed
+GBcyl25AnSpMtSl,25,18-415,Clear,Vintage Bulb Sprayer,Matte Silver / Matte Silver Collar,True,True,,AnSp18-415MtSl,,,False,not deployed
+GBcyl25AnSpPnk,25,18-415,Clear,Vintage Bulb Sprayer,Pink / Shiny Gold Collar,True,True,,CP18-415AnSpPnk,,,False,not deployed
+GBcyl25AnSpRed,25,18-415,Clear,Vintage Bulb Sprayer,Red / Shiny Silver Collar,True,True,,AnSp18-415Red,,,False,not deployed
+GBcyl25AnSpTslBlk,25,18-415,Clear,Vintage Bulb Sprayer with Tassel,Black / Shiny Silver Collar,True,True,,AnSpTsl18-415Blk,,,False,not deployed
+GBcyl25AnSpTslGl,25,18-415,Clear,Vintage Bulb Sprayer with Tassel,Gold / Shiny Gold Collar,True,True,,CP18-415AnSpTslGl,,,False,not deployed
+GBcyl25AnSpTslIvyGl,25,18-415,Clear,Vintage Bulb Sprayer with Tassel,Ivory / Shiny Gold Collar,True,True,,AnSpTsl18-415IvyGl,,,False,not deployed
+GBcyl25AnSpTslLvn,25,18-415,Clear,Vintage Bulb Sprayer with Tassel,Lavender / Shiny Silver Collar,True,True,,AnSpTsl18-415Lvn,,,False,not deployed
+GBcyl25AnSpTslPnk,25,18-415,Clear,Vintage Bulb Sprayer with Tassel,Pink / Shiny Gold Collar,True,True,,AnSpTsl18-415Pnk,,,False,not deployed
+GBcyl25AnSpWht,25,18-415,Clear,Vintage Bulb Sprayer,White / Shiny Silver Collar,True,True,,AnSp18-415Wht,,,False,not deployed
+GBcyl25RdcrBlkLthr,25,18-415,Clear,Reducer,Black Faux Leather,True,True,,CP18-415BlkLthr,,,False,not deployed
+GBcyl25RdcrBrwnLthr,25,18-415,Clear,Reducer,Brown Faux Leather,True,True,,CP18-415BrwnLthr,,,False,not deployed
+GBcyl25RdcrLBrwnLthr,25,18-415,Clear,Reducer,Light Brown Faux Leather,True,True,,CP18-415LBrwnLthr,,,False,not deployed
+GBcyl25RdcrMtSl,25,18-415,Clear,Reducer,Matte Silver,True,True,,CP18-415MtSl,,,False,not deployed
+GBcyl25RdcrMtSlTall,25,18-415,Clear,Reducer,Tall Matte Silver,True,True,,CP18-415MtSlTall,,,False,not deployed
+GBcyl25RdcrPnkLthr,25,18-415,Clear,Reducer,Pink Faux Leather,True,True,,CP18-415LPnkLthr,,,False,not deployed
+GBcyl25RdcrShnBlk,25,18-415,Clear,Reducer,Shiny Black,True,True,,GBcyl25RdcrShnBlk,,,False,not deployed
+GBcyl25RdcrShnBlkTall,25,18-415,Clear,Reducer,Tall Shiny Black,True,True,,CP18-415ShnBlkTall,,,False,not deployed
+GBcyl25RdcrShnSl,25,18-415,Clear,Reducer,Shiny Silver,True,True,,CP18-415ShnSl,,,False,not deployed
+GBcyl25RdcrWht,25,18-415,Clear,Reducer,White,True,True,,CP18-415Wh,,,False,not deployed
+GBcyl25SpryCu,25,18-415,Clear,Fine Mist Sprayer,Matte Copper,True,True,,Spry18-415Cu,,,False,not deployed
+GBcyl25SpryMtGl,25,18-415,Clear,Fine Mist Sprayer,Matte Gold,True,True,,Spry18-415MtGl,missing_exposed_mechanism,25ml paired source kit,False,not deployed
+GBcyl25SpryShnGl,25,18-415,Clear,Fine Mist Sprayer,Shiny Gold,True,True,,Spry18-415ShnGl,missing_exposed_mechanism,25ml paired source kit,False,not deployed
+GBcyl25SpryShnSl,25,18-415,Clear,Fine Mist Sprayer,Shiny Silver,True,True,,Spry18-415ShnSl,missing_exposed_mechanism,25ml paired source kit,False,not deployed

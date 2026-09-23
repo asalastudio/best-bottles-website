@@ -35,6 +35,7 @@
 /.superpowers/
 
 # Local scratch and generated test outputs
+/output/cylinder-fitment-repair/
 /tmp/
 /topaz-test/
 /ziOGLQ3X

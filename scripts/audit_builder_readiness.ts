@@ -1,7 +1,7 @@
 /** Read-only audit for every family using the requested necks, including families
  * absent from the customer family picker. No catalog, publication, or media writes.
  * npx tsx scripts/audit_builder_readiness.ts --url PUBLIC_CONVEX_URL --legacy --out /tmp/builder-readiness
- * Optional --family Cylinder, --threads 13-415,17-415,18-415, --check.
+ * Optional --family Cylinder, --all-necks (includes 12mm/16mm), --threads 13-415,17-415,18-415, --check.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -26,8 +26,8 @@ async function main() {
     const arg = (name: string) => { const i = process.argv.indexOf(name); return i < 0 ? undefined : process.argv[i + 1]; };
     const url = arg("--url") ?? process.env.NEXT_PUBLIC_CONVEX_URL;
     if (!url) throw Error("A public Convex URL is required");
-    const threads = (arg("--threads") ?? "13-415,17-415,18-415").split(",").map(t => t.trim());
-    if (threads.some(t => !/^\d+-\d+$/.test(t))) throw Error("Use exact comma-separated neck threads");
+    let threads = (arg("--threads") ?? "13-415,17-415,18-415").split(",").map(t => t.trim());
+    if (threads.some(t => !/^(\d+-\d+|\d+mm)$/.test(t))) throw Error("Use exact comma-separated neck sizes");
     const out = path.resolve(arg("--out") ?? "data/audits/builder-readiness"); fs.mkdirSync(out, { recursive: true });
     const client = new ConvexHttpClient(url);
     const inventory: Product[] = []; let cursor: string | null = null;
@@ -38,6 +38,8 @@ async function main() {
         if (cursor === page.continueCursor) throw Error("Catalog pagination did not advance");
         cursor = page.continueCursor;
     } while (true);
+    if (process.argv.includes("--all-necks")) threads = [...new Set(inventory.filter(p => (!arg("--family") || p.family === arg("--family"))
+        && /bottle|vial/i.test(p.category ?? "")).map(p => p.neckThreadSize ?? ""))].sort();
     const scoped = inventory.filter(p => threads.includes(p.neckThreadSize ?? "") && /bottle|vial/i.test(p.category ?? "")
         && (!arg("--family") || p.family === arg("--family")));
     const families = [...new Set(scoped.map(p => p.family).filter((f): f is string => Boolean(f)))].sort();

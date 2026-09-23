@@ -2,6 +2,7 @@ import "server-only";
 import { unstable_cache } from "next/cache";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
+import { catalogIncludedAssembly } from "../../../convex/catalogIncludedAssemblies";
 import { builderBodyIdentity, chooserGroupKey, chooserSourceRows, resolveBuilderConfigurations, type BuilderKit, groupBuilderBodies, isBuilderCandidate, type CatalogRow } from "./model";
 import { resolveListedComponents, unavailableVintageFinishes, type ActiveComponent } from "./components";
 import { bareChooserKit, slimBuilderBodies } from "./payload";
@@ -136,7 +137,7 @@ async function loadChooserKits(candidates: CatalogRow[]): Promise<{
     const missed: CatalogRow[] = [];
     for (const row of primary) {
         const kit = own.get(row.websiteSku!) ?? own.get(row.graceSku!) ?? null;
-        const proof = kit ? bareChooserKit(kit) : undefined;
+        const proof = kit && (!catalogIncludedAssembly(row) || kit.completeness === "full") ? bareChooserKit(kit) : undefined;
         if (proof) proofs.set(chooserGroupKey(row), proof);
         else missed.push(row);
     }
@@ -150,7 +151,7 @@ async function loadChooserKits(candidates: CatalogRow[]): Promise<{
             const key = chooserGroupKey(row);
             if (proofs.has(key)) continue;
             const kit = extra.get(row.websiteSku!) ?? extra.get(row.graceSku!) ?? null;
-            const proof = kit ? bareChooserKit(kit) : undefined;
+            const proof = kit && (!catalogIncludedAssembly(row) || kit.completeness === "full") ? bareChooserKit(kit) : undefined;
             if (proof) proofs.set(key, proof);
         }
     }

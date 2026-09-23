@@ -5,10 +5,11 @@ import { verifyWriteToken } from "./writeToken";
 import { isLegacyProductRouteAlias } from "../src/lib/products/legacy-product-route-overrides";
 import type { Doc, Id } from "./_generated/dataModel";
 import {
-    normalizeComponentsByType,
     resolveCompatibleComponents,
     selectBestFitmentRule,
 } from "./componentUtils";
+import { loadCatalogComponentPool } from "./catalogComponentSources";
+import { catalogIncludedAssembly } from "./catalogIncludedAssemblies";
 import { buildFamilyPageData } from "../src/lib/products/family-page-data";
 import { buildFocusedPdpRelations } from "../src/lib/products/pdp-relations";
 import {
@@ -521,7 +522,7 @@ export const getCompatibleFitments = query({
         if (!bottle) return { bottle: null, components: null };
 
         const bottleThread = (bottle.neckThreadSize ?? "").toString().trim();
-        const grouped = normalizeComponentsByType(bottle.components);
+        const { grouped } = await loadCatalogComponentPool(ctx, bottle);
         const fitmentRules = bottleThread
             ? await ctx.db
                 .query("fitments")
@@ -562,7 +563,7 @@ export const getCompatibleFitments = query({
                             .first();
                         return {
                             graceSku: item.graceSku,
-                            websiteSku: product?.websiteSku ?? null,
+                            websiteSku: product?.websiteSku || item.websiteSku || null,
                             itemName: item.itemName,
                             shopifyVariantId: product?.shopifyVariantId ?? null,
                             checkoutEligible: Boolean(product?.shopifyVariantId),
@@ -579,6 +580,7 @@ export const getCompatibleFitments = query({
         return {
             bottle,
             components: Object.fromEntries(componentEntries),
+            includedAssembly: catalogIncludedAssembly(bottle),
         };
     },
 });

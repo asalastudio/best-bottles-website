@@ -4,10 +4,10 @@ import { v } from "convex/values";
 import { api } from "./_generated/api";
 import OpenAI from "openai";
 import {
-    normalizeComponentsByType,
     resolveCompatibleComponents,
     selectBestFitmentRule,
 } from "./componentUtils";
+import { loadCatalogComponentPool } from "./catalogComponentSources";
 import { buildSystemPrompt, VOICE_MODE_ADDENDUM } from "./gracePrompt";
 import {
     GRACE_TOOLS,
@@ -766,7 +766,7 @@ export const getBottleComponents = query({
 
         if (!bottle) return null;
 
-        const grouped = normalizeComponentsByType(bottle.components);
+        const { grouped } = await loadCatalogComponentPool(ctx, bottle);
         const bottleThread = (bottle.neckThreadSize ?? "").toString().trim();
         const fitmentRules = bottleThread
             ? await ctx.db
@@ -796,7 +796,7 @@ export const getBottleComponents = query({
                     .first();
                 return {
                     graceSku: item.graceSku,
-                    websiteSku: product?.websiteSku ?? null,
+                    websiteSku: product?.websiteSku || item.websiteSku || null,
                     itemName: item.itemName,
                     imageUrl: product?.imageUrl ?? item.imageUrl,
                     shopifyVariantId: product?.shopifyVariantId ?? null,

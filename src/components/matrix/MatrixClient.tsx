@@ -305,8 +305,8 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                             </button>)}</div>
                         </div>
                         {configuration && hasIncludedCover && <div className={styles.includedCover}>
-                            {configuration.kit?.parts.some(p => p.slot === "overcap") && <div className={styles.includedCoverImage}><BuilderImage config={configuration} parts={configuration.kit.parts.filter(p => p.slot === "overcap")} stage="complete" thumbnail label={`${closure} included overcap`} /></div>}
-                            <div><strong>Included overcap: {closure}</strong><p>Comes with this {fitment?.includes("Pump") ? "pump" : "sprayer"}. The finish is matched and cannot be changed separately.</p></div><CheckCircle size={20} />
+                            {configuration.kit?.parts.some(p => p.slot === "overcap") && <div className={styles.includedCoverImage}><BuilderImage config={configuration} parts={configuration.kit.parts.filter(p => p.slot === "overcap")} stage="complete" thumbnail label="Included overcap" /></div>}
+                            <div><strong>Included overcap</strong><p>Comes with this {fitment?.includes("Pump") ? "pump" : "sprayer"} and cannot be selected separately.</p></div><CheckCircle size={20} />
                         </div>}
                     </>}
                 </>}
