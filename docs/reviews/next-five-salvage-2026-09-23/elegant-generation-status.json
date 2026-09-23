@@ -1,0 +1,31 @@
+{
+  "generatedUnique": 31,
+  "alignedExports": 31,
+  "totalElegant": 33,
+  "held": [],
+  "visualReview": "User approved all 31 renders and the five cleaned backgrounds. Final delivered bytes locked in docs/hero-families/elegant-2026-09-23/approval.json.",
+  "technicalChecks": [
+    "31 PNG dimensions 2080x2288",
+    "31 native/final SHA pairs match receipts",
+    "31 measured landmarks transformed to approved capacity spans and 91 percent glass-foot baseline",
+    "33 original source bytes unchanged"
+  ],
+  "uncertainty": "12 native pixels, less than 13 after uniform alignment",
+  "published": false,
+  "reviewUrl": "http://localhost:3065/aligned.html",
+  "httpStatus": 200,
+  "remainingToRender": [
+    "GBElg30SpryMattGl",
+    "GBElgFrst30SpryMattGl"
+  ],
+  "nozzleDecision": "Existing/source nozzle color approved; two 30 mL render inputs ready. Latest user scope completed: five background cleanups, 26 unchanged.",
+  "backgroundCleanup": {
+    "count": 5,
+    "unchanged": 26,
+    "status": "approved and locked",
+    "target": "#F5F3EF",
+    "reviewUrl": "http://localhost:3065/background-cleanup/v2/",
+    "manifest": "output/imagegen/elegant-2026-09-23/background-cleanup/v2/merged-family-exports.json",
+    "apiCalls": 0
+  }
+}

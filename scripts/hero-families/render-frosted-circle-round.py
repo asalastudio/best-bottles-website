@@ -53,6 +53,8 @@ def main():
         assert raw[:8] == b'\x89PNG\r\n\x1a\n', 'Output is not PNG'
         dimensions = list(struct.unpack('>II', raw[16:24]))
         result = {'sku': r['sku'], 'model': data['model'], 'requestedSize': [2080, 2288], 'nativeSize': dimensions, 'elapsedSeconds': round(time.time()-started, 1), 'inputSha256': r['inputSha256'], 'masterSha256': r['masterSha256'], 'outputSha256': digest(out), 'status': 'rendered-needs-geometry-and-material-review' if dimensions == [2080,2288] else 'held-native-resolution-mismatch'}
+        result['backgroundStandard'] = {'hex': api.BACKGROUND_STANDARD['hex'], 'colorSpace': api.BACKGROUND_STANDARD['colorSpace'], 'sha256': digest(api.BACKGROUND_STANDARD_PATH), 'pixelReview': 'required-not-yet-performed'}
+        result['effectivePromptSha256'] = hashlib.sha256(api.generation_prompt(Path(r['promptFile']).read_text()).encode()).hexdigest()
         record.write_text(json.dumps(result, indent=2)+'\n')
         print(json.dumps(result | {'inputSha256': 'recorded'}), flush=True)
         if dimensions != [2080, 2288]:

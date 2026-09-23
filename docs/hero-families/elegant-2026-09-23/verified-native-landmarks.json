@@ -1,0 +1,498 @@
+[
+  {
+    "sku": "GBElg15Gl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "79deb369829bd9a96ac4aac016ea108155a3fe97b55de77c240abb676c853486",
+    "glassShoulderY": 1188,
+    "glassFootY": 2068,
+    "centerX": 901.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg15MinarCu",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "6fde0858968c10f13769cd68f121e5355136d1d8dcf958ea40f3fb5aa9d4e4fe",
+    "glassShoulderY": 1133,
+    "glassFootY": 2031,
+    "centerX": 925.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg15MtlRollGlMatt",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "2b58b7d0ad53364b76e8b438892d0d9f2b261d56b3751584de832cb516690ff0",
+    "glassShoulderY": 1192,
+    "glassFootY": 2071,
+    "centerX": 912.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg15SpryGlMatt",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "f4dc4ff3552324c461cb85965191ceeb20057ba0cf37fffee28834b075afcfc6",
+    "glassShoulderY": 1143,
+    "glassFootY": 2004,
+    "centerX": 913.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst15Gl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "2afad4b3062ba1b08776a90cff105b306e859f91a93272c381b222d8922e123d",
+    "glassShoulderY": 1181,
+    "glassFootY": 2065,
+    "centerX": 905.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst15MtlRollGlSh",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "46f5720c4f792be986a2edfbf6c3483ee54ef96fb97b65b817badd72a04a5a77",
+    "glassShoulderY": 1176,
+    "glassFootY": 2069,
+    "centerX": 918.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst15SpryGlSh",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "20d2fb9211f315fcd3fa30860e9c86a73e6c7532ef816f30e22d3cd28839917a",
+    "glassShoulderY": 1182,
+    "glassFootY": 2071,
+    "centerX": 913.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg30GlCap",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "d8f10662dc23a9ff871938280a74049a4b3bd9bf1ba1202b79b6d54e3be70808",
+    "glassShoulderY": 1103,
+    "glassFootY": 2068,
+    "centerX": 911.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst30GlCap",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "d1776831b43aca94816970f445e309aff588aa3d320486d9d539cd66e35917e4",
+    "glassShoulderY": 1094,
+    "glassFootY": 2074,
+    "centerX": 968.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg60AnSpGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "2daa90e4ccaab2070a6482f64c2352a86f346b7b2b5396df448c89f10ac6ab1e",
+    "glassShoulderY": 1003,
+    "glassFootY": 2080,
+    "centerX": 1247.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg60AnSpTslIvyGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "b9d765434bfe7985a3b35cbb70a2e5031352dd0f82e21db16692133f3f5c5ca9",
+    "glassShoulderY": 930,
+    "glassFootY": 2024,
+    "centerX": 1386.0,
+    "artworkBounds": [
+      50,
+      100,
+      1970,
+      2180
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg60DrpGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "c8413d3a3dd7ff4195854a1d22b86cbd5628f6c71c1f3236c85536969ea9756a",
+    "glassShoulderY": 978,
+    "glassFootY": 2050,
+    "centerX": 880.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg60RdcrShnGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "f795d64cb506c556f40091e3beb1dbdcbe8dc575394fc927425b6273a8295cd2",
+    "glassShoulderY": 998,
+    "glassFootY": 2065,
+    "centerX": 925.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg60SpryMtGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "ba3694a9f9e850d35c1c4844bb3c486529531af2952fd3a16ad50a8874248039",
+    "glassShoulderY": 994,
+    "glassFootY": 2068,
+    "centerX": 886.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "LBElg60LtnMtGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "569ddb5f1ff983de488711f659b45641376c0e4202e54a6a25395910e51f0135",
+    "glassShoulderY": 976,
+    "glassFootY": 2068,
+    "centerX": 914.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst60AnSpGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "281524c6211e2d2cd961c59b62da192c26515e3d00b0d6df702d52463c19938d",
+    "glassShoulderY": 983,
+    "glassFootY": 2085,
+    "centerX": 1256.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst60DrpGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "6b5f413a61c74ca836ca073c017e3f6c2b44707066f9134a403b31cbbf05aa52",
+    "glassShoulderY": 980,
+    "glassFootY": 2059,
+    "centerX": 916.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst60RdcrShnGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "e87098f92a313c76bd38bf112c51e8d235b0147e8fc49aad9972cc60327f7aa3",
+    "glassShoulderY": 931,
+    "glassFootY": 2014,
+    "centerX": 916.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst60SpryMtGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "9545d0bf85ccd0d8ed1371779b23f1d54408474db265b88605f1c7012c35d45b",
+    "glassShoulderY": 988,
+    "glassFootY": 2074,
+    "centerX": 944.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "LBElgFrst60LtnMtGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "93bd6062f059921256495613d4c25a6be8e25e71cc9beb136285219e5169dc7b",
+    "glassShoulderY": 1014,
+    "glassFootY": 2054,
+    "centerX": 946.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg100AnSpGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "9657aa143da9c1140cc9b885bc1fc3d7a78fa68080cef199b21c84520771be63",
+    "glassShoulderY": 781,
+    "glassFootY": 2087,
+    "centerX": 1243.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg100RdcrShnGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "3e8fceb03761d3a14dfce24a83359377ea9140cd1dc96745a3d45123eac7fc1a",
+    "glassShoulderY": 776,
+    "glassFootY": 2065,
+    "centerX": 914.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElg100SpryMtGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "893dd8a7a9ca3c7f780c9bfffd27e24cd8e6241423e21f0f02da34dcf3b836b8",
+    "glassShoulderY": 779,
+    "glassFootY": 2067,
+    "centerX": 915.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "LBElg100LtnMtGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "1624f43be6bc6582feb958a7ae8830c5a786f045441c72b399c9f35d152174f5",
+    "glassShoulderY": 757,
+    "glassFootY": 2071,
+    "centerX": 915.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst100AnSpGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "1fdf5c30f1727caaddf8da93aaf3a8ab6a71f1f7f83fc45d670cdddcf78a37f0",
+    "glassShoulderY": 765,
+    "glassFootY": 2081,
+    "centerX": 1240.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst100RdcrShnGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "65b7f1c6a64901a619c1e072365e1efb21b6c3cf4d112334febb3f309186e668",
+    "glassShoulderY": 769,
+    "glassFootY": 2070,
+    "centerX": 917.5,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst100SpryMtGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "23669b0349cafa62e9a88d78cbeba9651edcfc355db560a26eb72e37f7b8a5cb",
+    "glassShoulderY": 782,
+    "glassFootY": 2056,
+    "centerX": 914.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "LBElgFrst100LtnMtGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "d4557f1040b1261f17945b5033484db3c84407c0a28168cf71ced143cecd9997",
+    "glassShoulderY": 780,
+    "glassFootY": 2063,
+    "centerX": 912.0,
+    "artworkBounds": [
+      200,
+      120,
+      1900,
+      2170
+    ],
+    "uncertaintyPx": 12,
+    "method": "Inspected full scene plus native-coordinate shoulder and glass-foot crops. Conservative bounds include all hardware. Glass landmarks exclude the cast shadow. Uncertainty reflects rounded and translucent edges."
+  },
+  {
+    "sku": "GBElgFrst60AnSpTslGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "305bf69fcef7cf6b16e864bbfe2fdf2afac74111efab4f01ed75124bb9efee41",
+    "glassShoulderY": 980,
+    "glassFootY": 2082,
+    "centerX": 1354.5,
+    "artworkBounds": [
+      45,
+      100,
+      1990,
+      2190
+    ],
+    "uncertaintyPx": 12,
+    "method": "Full native render and shoulder/foot crop visually inspected. Complete fringe present."
+  },
+  {
+    "sku": "GBElg100AnSpTslIvyGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "7d609e078af086826f1813351deb5131393d941e2daf851af93029da8a6f4f25",
+    "glassShoulderY": 770,
+    "glassFootY": 2067,
+    "centerX": 1349.0,
+    "artworkBounds": [
+      45,
+      100,
+      1990,
+      2190
+    ],
+    "uncertaintyPx": 12,
+    "method": "Full native render and shoulder/foot crop visually inspected. Complete fringe present. Clear 100 mL shoulder moved from interior refraction peak to outer glass shoulder at y770."
+  },
+  {
+    "sku": "GBElgFrst100AnSpTslGl",
+    "measurementStatus": "visually-checked-native-shoulder-and-glass-foot",
+    "nativeSha256": "29e9da457035f87bf9b3321a1e196040daa65878217d64c7233256709c14679b",
+    "glassShoulderY": 750,
+    "glassFootY": 2058,
+    "centerX": 1437.5,
+    "artworkBounds": [
+      45,
+      100,
+      1990,
+      2190
+    ],
+    "uncertaintyPx": 12,
+    "method": "Full native render and shoulder/foot crop visually inspected. Complete fringe present."
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-09-23T16:54:38.551Z",
+  "endpoint": "https://precise-raccoon-123.convex.cloud",
+  "families": [
+    {
+      "family": "Elegant",
+      "catalogVariants": 269,
+      "liveGroups": 33,
+      "registryImages": 33,
+      "missingGroupHeroes": [],
+      "unmatchedHeroSkus": [],
+      "groupsWithExternalHero": []
+    },
+    {
+      "family": "Boston Round",
+      "catalogVariants": 124,
+      "liveGroups": 23,
+      "registryImages": 29,
+      "missingGroupHeroes": [],
+      "unmatchedHeroSkus": [],
+      "groupsWithExternalHero": []
+    },
+    {
+      "family": "Slim",
+      "catalogVariants": 123,
+      "liveGroups": 15,
+      "registryImages": 15,
+      "missingGroupHeroes": [],
+      "unmatchedHeroSkus": [],
+      "groupsWithExternalHero": []
+    },
+    {
+      "family": "Sleek",
+      "catalogVariants": 198,
+      "liveGroups": 21,
+      "registryImages": 21,
+      "missingGroupHeroes": [],
+      "unmatchedHeroSkus": [],
+      "groupsWithExternalHero": []
+    },
+    {
+      "family": "Diva",
+      "catalogVariants": 176,
+      "liveGroups": 21,
+      "registryImages": 21,
+      "missingGroupHeroes": [],
+      "unmatchedHeroSkus": [
+        "GBDivaFrst46DrpGl"
+      ],
+      "groupsWithExternalHero": []
+    }
+  ]
+}
