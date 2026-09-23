@@ -100,6 +100,10 @@ type Expect = {
     familySkip?: boolean;
     glassColour: string | null;
     colourSkip?: boolean;
+    /** Omit to skip grading. `null` means none named. */
+    atomizerFinish?: string | null;
+    /** Omit to skip grading. `null` means none named. */
+    capFinish?: string | null;
     capacityMl: number | null;
     /** "unclear" is not graded. */
     wants: "complete_bottle" | "component_only" | "unclear";
@@ -187,6 +191,12 @@ function gradeValue(expected: string | null, got: string | null): Outcome {
     if (!expected) return got ? "false_filter" : "correct_none";
     if (!got) return "missed";
     return expected.toLowerCase() === got.toLowerCase() ? "correct" : "wrong";
+}
+
+/** `undefined` on the label means the field is not graded for that case. */
+function gradeOptionalFinish(expected: string | null | undefined, got: string | null): Outcome | null {
+    if (expected === undefined) return null;
+    return gradeValue(expected, got);
 }
 
 // ─── Retrieval grading ────────────────────────────────────────────────────────
@@ -337,8 +347,8 @@ const results = await pool(cases, CONCURRENCY, async (c) => {
     };
 
     const jev = await jevFor(c.text);
-    const jevArgs = "answers" in jev ? intentToSearchArgs(jev.answers, { minConfidence: THRESHOLD }) : null;
-    const jevTableArgs = "answers" in jev ? intentToSearchArgs(jev.answers, { minConfidence: THRESHOLD, useCaseTable: true }) : null;
+    const jevArgs = "answers" in jev ? intentToSearchArgs(jev.answers, { minConfidence: THRESHOLD, requestText: c.text }) : null;
+    const jevTableArgs = "answers" in jev ? intentToSearchArgs(jev.answers, { minConfidence: THRESHOLD, useCaseTable: true, requestText: c.text }) : null;
 
     let grace: { args: Record<string, string | null>; ms: number } | { error: string } | null = null;
     if (WITH_GRACE) grace = await graceArgsFor(c.text);
@@ -384,6 +394,12 @@ const results = await pool(cases, CONCURRENCY, async (c) => {
             rules: gradeValue(c.expect.glassColour, rules.colour),
             jev: jevArgs ? gradeValue(c.expect.glassColour, jevArgs.glassColour ?? null) : null,
         },
+        atomizerFinish: {
+            jev: jevArgs ? gradeOptionalFinish(c.expect.atomizerFinish, jevArgs.atomizerFinish ?? null) : null,
+        },
+        capFinish: {
+            jev: jevArgs ? gradeOptionalFinish(c.expect.capFinish, jevArgs.capFinish ?? null) : null,
+        },
         wants: "answers" in jev && c.expect.wants !== "unclear" ? (jev.answers.wants.choice === c.expect.wants ? "correct" : "wrong") : null,
     };
 
@@ -405,6 +421,12 @@ const results = await pool(cases, CONCURRENCY, async (c) => {
                 applicator: `${jev.answers.applicator.choice} @ ${jev.answers.applicator.confidence.toFixed(2)}`,
                 family: `${jev.answers.family.choice} @ ${jev.answers.family.confidence.toFixed(2)}`,
                 colour: `${jev.answers.glass_colour.choice} @ ${jev.answers.glass_colour.confidence.toFixed(2)}`,
+                atomizerFinish: jev.answers.atomizer_finish
+                    ? `${jev.answers.atomizer_finish.choice} @ ${jev.answers.atomizer_finish.confidence.toFixed(2)}`
+                    : null,
+                capFinish: jev.answers.cap_finish
+                    ? `${jev.answers.cap_finish.choice} @ ${jev.answers.cap_finish.confidence.toFixed(2)}`
+                    : null,
                 wants: `${jev.answers.wants.choice} @ ${jev.answers.wants.confidence.toFixed(2)}`,
                 tassel: jev.answers.tassel.noul,
                 decisions: jevArgs?.decisions,
@@ -434,7 +456,7 @@ saveCache();
 type R = (typeof results)[number];
 const pct = (n: number, d: number) => (d ? `${Math.round((100 * n) / d)}%` : "—");
 
-function intentSummary(rows: R[], field: "applicator" | "family" | "colour", arm: "rules" | "jev" | "grace") {
+function intentSummary(rows: R[], field: "applicator" | "family" | "colour" | "atomizerFinish" | "capFinish", arm: "rules" | "jev" | "grace") {
     const outcomes = rows.map((r) => (r.intent[field] as Record<string, Outcome | null>)[arm]).filter((o): o is Outcome => Boolean(o));
     const count = (o: Outcome) => outcomes.filter((x) => x === o).length;
     const right = count("correct") + count("correct_none");
@@ -481,11 +503,17 @@ for (const split of ["tune", "holdout", "all"] as const) {
     if (!rows.length) continue;
     say(`\n══ ${split.toUpperCase()} (${rows.length} cases) ══`);
     say("Understanding the request (share of cases right; 'harmful' = a filter that hides the right products):");
-    for (const field of ["applicator", "family", "colour"] as const) {
-        const arms = field === "colour" ? (["rules", "jev"] as const) : WITH_GRACE ? (["rules", "jev", "grace"] as const) : (["rules", "jev"] as const);
+    for (const field of ["applicator", "family", "colour", "atomizerFinish", "capFinish"] as const) {
+        const finishField = field === "atomizerFinish" || field === "capFinish";
+        const arms = finishField
+            ? (["jev"] as const)
+            : field === "colour"
+                ? (["rules", "jev"] as const)
+                : WITH_GRACE ? (["rules", "jev", "grace"] as const) : (["rules", "jev"] as const);
         for (const arm of arms) {
             const s = intentSummary(rows, field, arm);
-            say(`  ${field.padEnd(10)} ${arm.padEnd(6)} ${s.accuracy.padStart(4)}  (${s.right}/${s.n})  harmful ${s.harmful}  missed ${s.missed}   [${s.detail}]`);
+            if (finishField && s.n === 0) continue;
+            say(`  ${field.padEnd(14)} ${arm.padEnd(6)} ${s.accuracy.padStart(4)}  (${s.right}/${s.n})  harmful ${s.harmful}  missed ${s.missed}   [${s.detail}]`);
         }
     }
     const wantsRows = rows.filter((r) => r.intent.wants);
@@ -510,7 +538,7 @@ say(`\nCases where even the ideal filters found nothing matching (catalogue gap 
 say("\nJev applicator understanding by confidence threshold (all cases, no extra calls):");
 for (const t of [0.5, 0.6, 0.7, 0.8, 0.9]) {
     const outcomes = results.filter((r) => "raw" in r.jev).map((r) => {
-        const args = intentToSearchArgs((r.jev as { raw: GraceIntentAnswers }).raw, { minConfidence: t });
+        const args = intentToSearchArgs((r.jev as { raw: GraceIntentAnswers }).raw, { minConfidence: t, requestText: r.case.text });
         return gradeApplicator(r.case.expect, args.applicatorFilter ? new Set(args.applicatorFilter.split(",")) : null);
     }).filter((o): o is Outcome => o !== null);
     const right = outcomes.filter((o) => o === "correct" || o === "correct_none").length;

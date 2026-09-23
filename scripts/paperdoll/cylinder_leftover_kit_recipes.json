@@ -1,0 +1,97 @@
+{
+  "generatedFor": "13 plated Cylinder SKUs with no usable production kit",
+  "rule": "Reuse already published kit parts from the same glass family. Body and fitment come from a same-applicator sibling. The removable closure comes from the metal-roller or same-finish sibling that already carries that cap. No new pixels.",
+  "recipes": [
+    {
+      "websiteSku": "GBCyl9RollBlkDot",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "bodyDonor": "GBCyl9RollShBlk",
+      "closureDonor": "GBCyl9MtlRollBlkDot",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBCyl9RollPnkDot",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "bodyDonor": "GBCyl9RollWht",
+      "closureDonor": "GBCyl9MtlRollPnkDot",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBCyl9SpryShSl",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "bodyDonor": "GBCyl9SpryBlk",
+      "closureDonor": "GBCylBlu9SpryShSl",
+      "closureSlots": ["overcap"]
+    },
+    {
+      "websiteSku": "GBCylBlu9RollPnkDot",
+      "familyId": "cylinder-9ml-cobalt-blue-17-415",
+      "bodyDonor": "GBCylBlu9RollWht",
+      "closureDonor": "GBCylBlu9MtlRollPnkDot",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBCylBlu9RollSlDot",
+      "familyId": "cylinder-9ml-cobalt-blue-17-415",
+      "bodyDonor": "GBCylBlu9RollShnSl",
+      "closureDonor": "GBCylBlu9MtlRollSlDot",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollMattCu",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "bodyDonor": "GBCylSwrl9RollPnkDot",
+      "closureDonor": "GBCylSwrl9MtlRollMattCu",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollMattGl",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "bodyDonor": "GBCylSwrl9RollPnkDot",
+      "closureDonor": "GBCylSwrl9MtlRollMattGl",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollMattSl",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "bodyDonor": "GBCylSwrl9RollPnkDot",
+      "closureDonor": "GBCylSwrl9MtlRollMattSl",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollShBlk",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "bodyDonor": "GBCylSwrl9RollSlDot",
+      "closureDonor": "GBCylSwrl9MtlRollShBlk",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollShnGl",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "bodyDonor": "GBCylSwrl9RollSlDot",
+      "closureDonor": "GBCylSwrl9MtlRollShnGl",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollShnSl",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "bodyDonor": "GBCylSwrl9RollSlDot",
+      "closureDonor": "GBCylSwrl9MtlRollShnSl",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBCylSwrl9RollWht",
+      "familyId": "cylinder-9ml-swirl-17-415",
+      "bodyDonor": "GBCylSwrl9RollBlkDot",
+      "closureDonor": "GBCylSwrl9MtlRollWht",
+      "closureSlots": ["cap"]
+    },
+    {
+      "websiteSku": "GBSpry3mlClBlk",
+      "familyId": "cylinder-3.3ml-clear-12mm",
+      "bodyDonor": "GBSpry3mlClWht",
+      "closureDonor": "GBCyl9SpryBlk",
+      "closureSlots": ["overcap"]
+    }
+  ]
+}

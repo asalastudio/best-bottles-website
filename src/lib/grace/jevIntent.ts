@@ -19,6 +19,11 @@ import {
     CATALOG_FAMILIES,
     displayCapFinishLabel,
 } from "../catalogFilters";
+import {
+    classifyNamedFinish,
+    isFinishOnlyRequest,
+    shouldSuppressCapApplicatorFilter,
+} from "./finishOnlyIntent";
 import { applicatorsForUseCase } from "./useCaseApplicators";
 
 export const JEV_ENDPOINT = "https://api.typesafe.ai/v1/systemone";
@@ -124,7 +129,7 @@ export function buildGraceIntentQuestions() {
             type: "choice",
             instructions: {
                 question: "Which single dispensing applicator or closure type does the customer ask for in `request`?",
-                focus: "Judge only what the customer states or clearly describes. Do not infer an applicator from the liquid they will use. A type the customer rejects (\"not a roller\") is not the one they want.",
+                focus: "Judge only what the customer states or clearly describes. Do not infer an applicator from the liquid they will use. A type the customer rejects (\"not a roller\") is not the one they want. Finish or colour words alone (shiny gold, matte black, pink with dots, gold, silver) are never an applicator — those belong on cap_finish or atomizer_finish, and this question is not_stated.",
             },
             criteria: {
                 rollon: { what: "A rolling ball that applies liquid to skin", examples: ["roll-on", "roller bottle", "rollerball", "ball applicator", "role on (a misheard roll-on)"] },
@@ -133,10 +138,10 @@ export function buildGraceIntentQuestions() {
                 lotionpump: { what: "A pump that dispenses a dose of lotion, cream, serum or foundation", not_for: "A pump that sprays a mist", examples: ["lotion pump", "treatment pump", "serum pump", "cream dispenser"] },
                 dropper: { what: "A squeeze-bulb dropper with a glass or plastic pipette", not_for: "A plastic insert in the neck, even when it is called a dropper insert, dropper orifice, dropper tip or euro dropper", examples: ["glass dropper", "pipette", "eye dropper", "tincture bottle"] },
                 reducer: { what: "A plastic insert in the bottle neck that limits flow to drops or a splash, with no bulb or pipette", examples: ["orifice reducer", "euro dropper (may be transcribed as 'your oh dropper')", "dropper insert", "dropper orifice", "dripper insert", "reducer cap", "splash-on bottle"] },
-                cap: { what: "A plain screw cap or lid with no dispensing part", examples: ["screw cap", "lid", "a bottle with a black cap"] },
+                cap: { what: "A plain screw cap or lid named as the product or closure type", not_for: "Finish-only colour words with no cap/lid/screw product: shiny gold, matte black, pink with dots, gold, silver. Those are cap_finish or atomizer_finish. A metal travel atomizer body colour is never this.", examples: ["screw cap", "lid", "a bottle with a black cap", "replacement caps"] },
                 stopper: { what: "A glass stopper, glass rod, wand or dabber", examples: ["glass stopper", "dabber", "glass wand"] },
                 several: "The customer asks for two or more different applicator types at once, or offers alternatives",
-                not_stated: "The customer does not state or describe any applicator or closure type",
+                not_stated: "The customer does not state or describe any applicator or closure type. Finish-only requests such as shiny gold, matte black, or pink with dots belong here.",
                 not_carried: { what: "Something a glass perfume-bottle store does not sell, even when it is closure-related", examples: ["airless or vacuum pump", "trigger sprayer", "foaming pump", "squeeze tube", "crimp-on perfume pump or crimping tool", "press-fit or O-ring sprayer", "child-resistant closure", "candle jar", "reed diffuser bottle", "labels, boxes or shrink bands"] },
             },
         },
@@ -160,7 +165,7 @@ export function buildGraceIntentQuestions() {
             type: "choice",
             instructions: {
                 question: "Which metal travel/purse atomizer body finish does the customer ask for in `request`?",
-                focus: "Only for coloured metal-shell perfume atomizers (5–10 ml travel/purse). Not glass bottles. Not bottle caps. Prefer this when they say atomizer, travel atomizer, purse spray, or name finishes like pink with dots or silver with stars on an atomizer.",
+                focus: "Only for coloured metal-shell perfume atomizers (5–10 ml travel/purse). Not glass bottles. Not bottle caps. Prefer this when they say atomizer, travel atomizer, purse spray, or name decorated finishes like pink with dots or silver with stars — those are never glass and not the Cap/Closure applicator.",
             },
             criteria: atomizerFinishCriteria,
         },
@@ -168,7 +173,7 @@ export function buildGraceIntentQuestions() {
             type: "choice",
             instructions: {
                 question: "Which bottle cap or closure finish does the customer ask for in `request`?",
-                focus: "Cap/closure colour or decoration on a glass bottle (shiny gold cap, matte black cap, pink with dots cap). Not bottle glass. Not the body finish of a metal travel atomizer — use atomizer_finish for those. When both a glass colour and a cap colour appear, put glass in glass_colour and the cap here.",
+                focus: "Cap/closure colour or decoration on a glass bottle (shiny gold, matte black, shiny gold cap). Not bottle glass. Not the body finish of a metal travel atomizer — use atomizer_finish for those. When the request is only a finish with no glass, family, or named applicator, choose the finish here and leave applicator as not_stated. When both a glass colour and a cap colour appear, put glass in glass_colour and the cap here.",
             },
             criteria: capFinishCriteria,
         },
@@ -282,20 +287,26 @@ export type IntentSearchArgs = {
  * With `useCaseTable`, a request that names no applicator but a confident use case
  * ("10 ml bottle for attar") gets the applicators from the reviewed use-case table.
  */
-export function intentToSearchArgs(answers: GraceIntentAnswers, options: { minConfidence?: number; useCaseTable?: boolean } = {}): IntentSearchArgs {
+export function intentToSearchArgs(answers: GraceIntentAnswers, options: { minConfidence?: number; useCaseTable?: boolean; requestText?: string } = {}): IntentSearchArgs {
     const min = options.minConfidence ?? 0.6;
     const args: IntentSearchArgs = { decisions: { applicator: "", family: "", glassColour: "", atomizerFinish: "", capFinish: "" } };
+    const requestText = options.requestText?.trim() ?? "";
+    const suppressCapFromFinish = requestText.length > 0 && shouldSuppressCapApplicatorFilter(requestText);
 
     const applicator = answers.applicator;
     if (applicator.confidence < min) {
         args.decisions.applicator = `unsure (${applicator.choice} @ ${applicator.confidence.toFixed(2)})`;
     } else if (isFilterableApplicatorIntent(applicator.choice)) {
-        let values = [...APPLICATOR_INTENT_FILTER_VALUES[applicator.choice]];
-        if (applicator.choice === "bulb_spray" && answers.tassel.noul >= 0.7) {
-            values = values.filter((value) => value.endsWith("with Tassel"));
+        if (applicator.choice === "cap" && suppressCapFromFinish) {
+            args.decisions.applicator = "no filter (finish-only; Cap/Closure applicator suppressed)";
+        } else {
+            let values = [...APPLICATOR_INTENT_FILTER_VALUES[applicator.choice]];
+            if (applicator.choice === "bulb_spray" && answers.tassel.noul >= 0.7) {
+                values = values.filter((value) => value.endsWith("with Tassel"));
+            }
+            args.applicatorFilter = values.join(",");
+            args.decisions.applicator = `filter ${applicator.choice}`;
         }
-        args.applicatorFilter = values.join(",");
-        args.decisions.applicator = `filter ${applicator.choice}`;
     } else if (
         options.useCaseTable
         && applicator.choice === "not_stated"
@@ -352,6 +363,37 @@ export function intentToSearchArgs(answers: GraceIntentAnswers, options: { minCo
     } else {
         args.capFinish = capFinish.choice;
         args.decisions.capFinish = displayCapFinishLabel(capFinish.choice);
+    }
+
+    if (requestText && isFinishOnlyRequest(requestText)) {
+        const named = classifyNamedFinish(requestText);
+        if (named?.kind === "atomizer" && named.atomizerFinish) {
+            if (!args.atomizerFinish) {
+                args.atomizerFinish = named.atomizerFinish;
+                args.decisions.atomizerFinish = `${named.atomizerFinish} (finish-only)`;
+            }
+            if (args.capFinish) {
+                args.decisions.capFinish = `cleared (atomizer finish ${named.atomizerFinish})`;
+                delete args.capFinish;
+            }
+            if (args.glassColour) {
+                args.decisions.glassColour = `cleared (atomizer finish ${named.atomizerFinish})`;
+                delete args.glassColour;
+            }
+        } else if (named?.kind === "cap" && named.capFinish) {
+            if (!args.capFinish) {
+                args.capFinish = named.capFinish;
+                args.decisions.capFinish = `${displayCapFinishLabel(named.capFinish)} (finish-only)`;
+            }
+            if (args.atomizerFinish) {
+                args.decisions.atomizerFinish = `cleared (cap finish ${named.capFinish})`;
+                delete args.atomizerFinish;
+            }
+            if (args.glassColour) {
+                args.decisions.glassColour = `cleared (cap finish ${named.capFinish})`;
+                delete args.glassColour;
+            }
+        }
     }
 
     return args;
