@@ -56,6 +56,58 @@ it("preserves native PSD seating in the assembled preview and chooser tile", () 
     expect(el.querySelector("[data-builder-layer=\"sprayer\"]")?.getAttribute("transform")).toBeNull();
 });
 
+it("does not blend a complete dropper collar or its glass backing into the neck threads", () => {
+    const dropper = structuredClone(config);
+    dropper.fitment = "Dropper";
+    dropper.kit!.parts = [
+        part("body", { left: 399, top: 235, right: 605, bottom: 980 }, 0),
+        part("pipette", { left: 430, top: 90, right: 570, bottom: 900 }, 1),
+    ];
+    act(() => root.render(<BuilderImage config={dropper} parts={previewParts(dropper, "complete")} stage="complete" label="25 ml Cylinder dropper" />));
+    expect((el.querySelector('[data-builder-layer="body"]') as SVGImageElement).style.mixBlendMode).toBe("");
+    expect((el.querySelector('[data-builder-layer="pipette"]') as SVGImageElement).style.mixBlendMode).toBe("");
+    act(() => root.render(<BuilderImage config={dropper} parts={previewParts(dropper, "body")} stage="body" label="bare bottle" />));
+    expect((el.querySelector('[data-chooser-img]') as HTMLElement).style.mixBlendMode).toBe("multiply");
+
+    dropper.color = "Amber";
+    act(() => root.render(<BuilderImage config={dropper} parts={previewParts(dropper, "complete")} stage="complete" label="amber dropper" />));
+    expect((el.querySelector('[data-builder-layer="pipette"]') as SVGImageElement).style.mixBlendMode).toBe("multiply");
+});
+
+it.each([
+    ["silver", "5e82aaa7e8696571b0c3de135c4a9e5c1264c411ddfd21aa5e41345e68a07dd1", 416],
+    ["copper", "a599761e47d1c0c797db9c79f29fc6338860475d61e61a678f6a09402f9ffc22", 418],
+    ["gold", "ad4df4d26db119752fa301f818f074132ee636b50f21920eefd7f4680bbb6b69", 418],
+] as const)("keeps the measured %s collar opaque and lets the glass take the backdrop", (_, sha256, splitY) => {
+    const dropper = structuredClone(config);
+    dropper.fitment = "Dropper";
+    const pipette = part("pipette", { left: 398, top: 99, right: 595, bottom: 916 }, 1);
+    pipette.image.sha256 = sha256;
+    dropper.kit!.parts = [dropper.kit!.parts[0], pipette];
+    const reference = structuredClone(dropper);
+    reference.id = "reference";
+    reference.kit!.parts[0].bounds.right += 40;
+    for (const stage of ["fitment", "complete"] as const) {
+        act(() => root.render(<BuilderImage config={dropper} parts={previewParts(dropper, stage)} bodyReference={reference} stage={stage} label="dropper" />));
+        const opaque = el.querySelector('[data-builder-material="opaque"]') as SVGImageElement;
+        const glass = el.querySelector('[data-builder-material="glass"]') as SVGImageElement;
+        expect(opaque.style.mixBlendMode).toBe("");
+        expect(glass.style.mixBlendMode).toBe("multiply");
+        expect((el.querySelector('[data-builder-layer="body"]') as SVGImageElement).style.mixBlendMode).toBe("multiply");
+        expect(opaque.getAttribute("href")).toBe(glass.getAttribute("href"));
+        expect(opaque.parentElement).toBe(glass.parentElement);
+        expect(opaque.parentElement?.getAttribute("transform")).toContain("scale(");
+        const clips = opaque.parentElement!.querySelectorAll("clipPath rect");
+        expect(clips[0].getAttribute("height")).toBe(String(splitY));
+        expect(clips[1].getAttribute("y")).toBe(String(splitY));
+        expect(Number(clips[1].getAttribute("height")) + splitY).toBe(pipette.image.height);
+    }
+    // Updated artwork must never inherit a measurement from an earlier file.
+    pipette.image.sha256 = "replacement-artwork";
+    act(() => root.render(<BuilderImage config={dropper} parts={previewParts(dropper, "complete")} stage="complete" label="replacement" />));
+    expect(el.querySelector('[data-builder-material="glass"]')).toBeNull();
+});
+
 it("keeps one camera across body, tall tops, finishes, and cap-on/off views", async () => {
     const { builderBodyFrame, builderPreviewLayout } = await import("@/lib/bottle-builder/preview-layout");
     const tall = structuredClone(config);
