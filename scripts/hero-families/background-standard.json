@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "name": "Best Bottles bone",
+  "colorSpace": "sRGB",
+  "hex": "#F5F3EF",
+  "rgb": [245, 243, 239],
+  "prompt": "BEST BOTTLES BACKGROUND STANDARD: Use one seamless, uniform bone backdrop in sRGB #F5F3EF, RGB(245, 243, 239). Match this exact color across the empty background and all unobstructed canvas edges. No background gradient, vignette, spotlight, horizon, texture, added noise, warm cast or gray cast. Preserve physically natural soft contact/drop shadows and their smooth falloff into the bone surface; the shadow itself is allowed to darken the background. Preserve the approved bottle geometry, material, reflections, components, framing and scale. This background instruction overrides any conflicting background styling in the supplied references or earlier prompt text.",
+  "reviewRequirement": "Check output pixels in unobstructed background regions and inspect on the exact bone website canvas. Exclude products, glass/refraction, edge antialiasing and natural shadows from flat-color sampling. Prompt compliance alone is not a pixel-color pass. Do not globally recolor the bottle or erase shadows to meet the target."
+}

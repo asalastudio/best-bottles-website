@@ -1,0 +1,69 @@
+{
+  "target": "#F5F3EF",
+  "originalsUnchanged": 31,
+  "selectedOriginalsUnchanged": 26,
+  "cleaned": 5,
+  "published": false,
+  "rows": [
+    {
+      "sku": "GBElgFrst60AnSpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sampledBackgroundPixels": 128000,
+      "exactBonePercent": 100,
+      "protectedArtworkPixelsChanged": 0,
+      "spatialTransformApplied": false,
+      "visualCheck": "Bottle, edge transitions and localized shadow checked"
+    },
+    {
+      "sku": "GBElg15Gl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sampledBackgroundPixels": 128000,
+      "exactBonePercent": 100,
+      "protectedArtworkPixelsChanged": 0,
+      "spatialTransformApplied": false,
+      "visualCheck": "Bottle, edge transitions and localized shadow checked"
+    },
+    {
+      "sku": "GBElg60SpryMtGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sampledBackgroundPixels": 128000,
+      "exactBonePercent": 100,
+      "protectedArtworkPixelsChanged": 0,
+      "spatialTransformApplied": false,
+      "visualCheck": "Bottle, edge transitions and localized shadow checked"
+    },
+    {
+      "sku": "GBElgFrst60DrpGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sampledBackgroundPixels": 128000,
+      "exactBonePercent": 100,
+      "protectedArtworkPixelsChanged": 0,
+      "spatialTransformApplied": false,
+      "visualCheck": "Bottle, edge transitions and localized shadow checked"
+    },
+    {
+      "sku": "GBElgFrst100AnSpTslGl",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "sampledBackgroundPixels": 128000,
+      "exactBonePercent": 100,
+      "protectedArtworkPixelsChanged": 0,
+      "spatialTransformApplied": false,
+      "visualCheck": "Bottle, edge transitions and localized shadow checked"
+    }
+  ]
+}

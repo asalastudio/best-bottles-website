@@ -1,0 +1,1757 @@
+{
+  "model": "gpt-image-2.5-sunburst",
+  "quality": "high",
+  "requestedSize": [
+    2080,
+    2288
+  ],
+  "generationAuthorizedBy": "User requested regeneration of all 33 Elegant images with Sunburst 2.5; Small through Extra Large, no Extra Small",
+  "targets": {
+    "15": [
+      "Small",
+      39
+    ],
+    "30": [
+      "Medium",
+      43
+    ],
+    "60": [
+      "Large",
+      47
+    ],
+    "100": [
+      "Extra Large",
+      57
+    ]
+  },
+  "rows": [
+    {
+      "sku": "GBElg15Gl",
+      "family": "Elegant",
+      "capacityMl": 15,
+      "catalog": {
+        "websiteSku": "GBElg15Gl",
+        "graceSku": "GB-ELG-CLR-15ML-GLD-T",
+        "groupSlug": "elegant-15ml-clear-13-415",
+        "color": "Clear",
+        "applicator": null
+      },
+      "target": {
+        "tier": "Small",
+        "shoulderPct": 39,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 52,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 89,
+        "right": 185,
+        "shoulder": 171.20192307692307,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3292219689860123,
+        "x": -31.737730705635045,
+        "y": 6.420142110202505
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg15Gl.606f68e31a2f.png",
+      "currentSha256": "606f68e31a2f5fcc3dcb37484f7b4ae62c916182990ea7519792c4912b14db0e",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Elegant 15ml (Capped) PSD/28. GBElg15Gl.psd",
+      "masterSha256": "f257a519647cad323c273c7ea302073c6cd4128149b1e950eea08512f7eaa329",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg15Gl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg15Gl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg15Gl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg15Gl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "3e01109658d581094698bbc353afd75b9f1eb8a955ffbf182367ea624f0bb97b",
+        "masterComposite": "4b70085ed9d0f5f58ef3896736a3a29b4fc0b8b75081d13a0c7272c90ae6396f",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "bad37d241fd90fd8e56293c871dd8beee44661254e24ea1db8490cd3d3155c40"
+      }
+    },
+    {
+      "sku": "GBElg15MinarCu",
+      "family": "Elegant",
+      "capacityMl": 15,
+      "catalog": {
+        "websiteSku": "GBElg15MinarCu",
+        "graceSku": "GB-ELG-CLR-15ML-MNR-MCPR",
+        "groupSlug": "elegant-15ml-clear-13-415-capclosure",
+        "color": "Clear",
+        "applicator": "Cap/Closure"
+      },
+      "target": {
+        "tier": "Small",
+        "shoulderPct": 39,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 52,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 84,
+        "right": 214,
+        "shoulder": 116,
+        "base": 307,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "frameTransform": {
+        "scale": 0.8984293193717277,
+        "x": 219.09696335078547,
+        "y": 647.8274345549739
+      },
+      "sourceEvidence": "user-reviewed legacy minaret hero; no verified master PSD found",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg15MinarCu.f961d5f6f03c.png",
+      "currentSha256": "f961d5f6f03c3760179deacf66650162d89a3a94fbc50d0bb1f6b258ed444d43",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg15MinarCu.f961d5f6f03c.png",
+      "masterSha256": "f961d5f6f03c3760179deacf66650162d89a3a94fbc50d0bb1f6b258ed444d43",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg15MinarCu-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg15MinarCu-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg15MinarCu-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg15MinarCu-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "8d079a095c87ed0150d81f8877fb1571890a042652340708f92329ec66c36a9e",
+        "masterComposite": "f961d5f6f03c3760179deacf66650162d89a3a94fbc50d0bb1f6b258ed444d43",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "fc5aee13eb8260b318a26ff9e8998f9671c4e85c073284b0cc194c6b23f805ea",
+        "bareBodyReference": "606f68e31a2f5fcc3dcb37484f7b4ae62c916182990ea7519792c4912b14db0e"
+      },
+      "bareBodyReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg15Gl.606f68e31a2f.png",
+      "imageInputs": [
+        "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg15MinarCu-framed.png",
+        "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg15MinarCu-master.png",
+        "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+        "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg15Gl.606f68e31a2f.png"
+      ]
+    },
+    {
+      "sku": "GBElg15MtlRollGlMatt",
+      "family": "Elegant",
+      "capacityMl": 15,
+      "catalog": {
+        "websiteSku": "GBElg15MtlRollGlMatt",
+        "graceSku": "GB-ELG-CLR-15ML-MRL-MGLD",
+        "groupSlug": "elegant-15ml-clear-13-415-rollon",
+        "color": "Clear",
+        "applicator": "Metal Roller Ball"
+      },
+      "target": {
+        "tier": "Small",
+        "shoulderPct": 39,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 52,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 91,
+        "right": 187,
+        "shoulder": 171.4903846153846,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3321986832086714,
+        "x": -47.71320822322764,
+        "y": 1.7718242486671443
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg15MtlRollGlMatt.0427e5c7fe26.png",
+      "currentSha256": "0427e5c7fe26288f8ad2d4ee89745cdb2fe77e1f4d9baf953e4c69a21b4de88d",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Elegant 15ml (Capped) PSD/16. GBElg15MtlRollGlMatt.psd",
+      "masterSha256": "2c0d8757b01d7405e493ce04f080c65a00a6690e930ebf26e5fc6b7d15cfe12b",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg15MtlRollGlMatt-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg15MtlRollGlMatt-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg15MtlRollGlMatt-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg15MtlRollGlMatt-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "d060068b2927a22bcdfa6971853a80678d95054d80c7922dca7df8d60f909ac3",
+        "masterComposite": "ccf6dc5f3ee8884f1ca5b67deae1a888246901e58984eaad4869647f920bf438",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "bad37d241fd90fd8e56293c871dd8beee44661254e24ea1db8490cd3d3155c40"
+      }
+    },
+    {
+      "sku": "GBElg15SpryGlMatt",
+      "family": "Elegant",
+      "capacityMl": 15,
+      "catalog": {
+        "websiteSku": "GBElg15SpryGlMatt",
+        "graceSku": "GB-ELG-CLR-15ML-SPR-MGLD",
+        "groupSlug": "elegant-15ml-clear-13-415-finemist",
+        "color": "Clear",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "target": {
+        "tier": "Small",
+        "shoulderPct": 39,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 52,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 89,
+        "right": 182,
+        "shoulder": 171.6346153846154,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3336920455564525,
+        "x": -24.5194152990764,
+        "y": -0.5601506591337966
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg15SpryGlMatt.c13b50b78fc2.png",
+      "currentSha256": "c13b50b78fc2fa4e8f70d490c4b3ad74f9bd92dddecd6c8b5c0436cd577f1d41",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Elegant 15ml (Capped) PSD/7. GBElg15SpryGlMatt.psd",
+      "masterSha256": "5412492f250e4dad4dbe1f5c171c102d71d3025b0158308d852015aca23befae",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg15SpryGlMatt-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg15SpryGlMatt-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg15SpryGlMatt-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg15SpryGlMatt-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "c4dac131ae770e75a8095124fd882161f6753f06ed051803419b7e6cb4aa3ff2",
+        "masterComposite": "156e70bd2f474bceae5e930b8818aeae09f0f5ff59b5b8f752c44c59f3275191",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "bad37d241fd90fd8e56293c871dd8beee44661254e24ea1db8490cd3d3155c40"
+      }
+    },
+    {
+      "sku": "GBElgFrst15Gl",
+      "family": "Elegant",
+      "capacityMl": 15,
+      "catalog": {
+        "websiteSku": "GBElgFrst15Gl",
+        "graceSku": "GB-ELG-FRS-15ML-SGLD-T",
+        "groupSlug": "elegant-15ml-frosted-13-415",
+        "color": "Frosted",
+        "applicator": null
+      },
+      "target": {
+        "tier": "Small",
+        "shoulderPct": 39,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 52,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 47,
+        "right": 165,
+        "shoulder": 125,
+        "base": 288,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "frameTransform": {
+        "scale": 1.0527607361963192,
+        "x": 334.91828220858883,
+        "y": 505.46552147239254
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst15Gl.fdcf2781a005.png",
+      "currentSha256": "fdcf2781a005f197f931ca084fbbde16a405a27bf0c79a0e56561a6f51834ce4",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/28. GBElgFrst15Gl.psd",
+      "masterSha256": "fa87eac27d15639effe1d3e83fc9c279d9e263d51f19439e5e55988e38327801",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst15Gl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst15Gl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst15Gl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst15Gl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "d60b631b0dffa507ce9e2343d977e1d6e3aefb9f711d27de98c74e50f32067df",
+        "masterComposite": "9a6e136b6e8fd54fcaeaf9d30469292696b451475ebbc7b26113d6e127aafd0b",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "67e267479b543cabbb8f1630bc71fcc1184cbfa3b89617f81f345f326e9fa3c0"
+      }
+    },
+    {
+      "sku": "GBElgFrst15MtlRollGlSh",
+      "family": "Elegant",
+      "capacityMl": 15,
+      "catalog": {
+        "websiteSku": "GBElgFrst15MtlRollGlSh",
+        "graceSku": "GB-ELG-FRS-15ML-MRL-SGLD-02",
+        "groupSlug": "elegant-15ml-frosted-13-415-rollon",
+        "color": "Frosted",
+        "applicator": "Metal Roller Ball"
+      },
+      "target": {
+        "tier": "Small",
+        "shoulderPct": 39,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 52,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 93,
+        "right": 188,
+        "shoulder": 171.6346153846154,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3336920455564525,
+        "x": -59.195408483544156,
+        "y": -0.5601506591337966
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst15MtlRollGlSh.1c38a997ef56.png",
+      "currentSha256": "1c38a997ef5633b8aec15e991a25c6e4ea29465dbdcbc42f5acbf9f03b77be39",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/18. GBElgFrst15MtlRollGlSh.psd",
+      "masterSha256": "9355414883122d99335b3815c24b038ad200e1c833c004ff729be0cdb8605e0a",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst15MtlRollGlSh-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst15MtlRollGlSh-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst15MtlRollGlSh-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst15MtlRollGlSh-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "33ddac94af97cae5c9ac01515814cb87c10802f6751844f4fe2d4a60933fd946",
+        "masterComposite": "1beca2c5aca9c07424c75c20242c5589cc3c2ce4e36dcb48b84e611070656209",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "67e267479b543cabbb8f1630bc71fcc1184cbfa3b89617f81f345f326e9fa3c0"
+      }
+    },
+    {
+      "sku": "GBElgFrst15SpryGlSh",
+      "family": "Elegant",
+      "capacityMl": 15,
+      "catalog": {
+        "websiteSku": "GBElgFrst15SpryGlSh",
+        "graceSku": "GB-ELG-FRS-15ML-SPR-SGLD-02",
+        "groupSlug": "elegant-15ml-frosted-13-415-finemist",
+        "color": "Frosted",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "target": {
+        "tier": "Small",
+        "shoulderPct": 39,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 52,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 54,
+        "right": 163,
+        "shoulder": 130,
+        "base": 282,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "frameTransform": {
+        "scale": 1.128947368421053,
+        "x": 278.2478947368419,
+        "y": 426.59157894736813
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst15SpryGlSh.1f7c6da3946e.png",
+      "currentSha256": "1f7c6da3946eaf860f7e0b0e66d391e444cf814cc5f1a4b3be952e95ece119b1",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/6. GBElgFrst15SpryGlSh.psd",
+      "masterSha256": "d8496c796a5f8e2ff097099c2b9af02f44d0590474cb7865738c7be147c33e32",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst15SpryGlSh-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst15SpryGlSh-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst15SpryGlSh-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst15SpryGlSh-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "0047d37beeac6d02459f6b5103f55b5118ec20569bed1b114e443257f709932f",
+        "masterComposite": "94c2d88ed10ec7639bc05f11d43fad68860cfe72913f0ec40e105694f725a23a",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "67e267479b543cabbb8f1630bc71fcc1184cbfa3b89617f81f345f326e9fa3c0"
+      }
+    },
+    {
+      "sku": "GBElg30GlCap",
+      "family": "Elegant",
+      "capacityMl": 30,
+      "catalog": {
+        "websiteSku": "GBElg30GlCap",
+        "graceSku": "GB-ELG-CLR-30ML-SGLD-T",
+        "groupSlug": "elegant-30ml-clear-15-415",
+        "color": "Clear",
+        "applicator": null
+      },
+      "target": {
+        "tier": "Medium",
+        "shoulderPct": 43,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 48,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 94,
+        "right": 198,
+        "shoulder": 159.08653846153845,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3398156092113684,
+        "x": -101.98801051327098,
+        "y": -10.122462720104522
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg30GlCap.bf3b6e5845cb.png",
+      "currentSha256": "bf3b6e5845cb65ea58a872c0d254df4fd61c69cb0894941ac13e5ac413525dbb",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/7. GBElg30GlCap..psd",
+      "masterSha256": "b76c6e3dd575259604c84b5e73dc4d59e2a749eeaa813227038509af038977ab",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg30GlCap-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg30GlCap-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg30GlCap-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg30GlCap-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "32ca4b7db84f0d0bb9ccdd833622c565da2542f3e2efeae2837fec1b3dd48588",
+        "masterComposite": "61c98cc685a7937c3e7c970e0c3f07665b25331ffb0878e0c4351d43bb11fd36",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "39270234ea01672dfcdd25783906ecb0c39cbceefd495c25e765f624060e3a73"
+      }
+    },
+    {
+      "sku": "GBElg30SpryMattGl",
+      "family": "Elegant",
+      "capacityMl": 30,
+      "catalog": {
+        "websiteSku": "GBElg30SpryMattGl",
+        "graceSku": "GB-ELG-CLR-30ML-SPR-MGLD",
+        "groupSlug": "elegant-30ml-clear-15-415-perfumespray",
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump"
+      },
+      "target": {
+        "tier": "Medium",
+        "shoulderPct": 43,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 48,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 99,
+        "right": 202,
+        "shoulder": 158.36538461538458,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.33300815651844,
+        "x": -128.01218329133098,
+        "y": 0.5077831070648244
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg30SpryMattGl.56f862f7d4e6.png",
+      "currentSha256": "56f862f7d4e6db6427a6863c53dc481b4d6e9984d6cb47ee30270396e3c6c51d",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/4.  15-415 Bottles/5. Elegant Clear 30ml - Capped/Elegant Clear 30/5. GBElg30SpryMattGl.psd",
+      "masterSha256": "e2422ea30404581d22ebc6abfabbaa23cdeee7cfa6c6bd738fa563f91bab66a2",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg30SpryMattGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg30SpryMattGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg30SpryMattGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg30SpryMattGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "00e7e975db178cae8adf9cb43da901694671632cccdbe6cf6526685b9a1e3c59",
+        "masterComposite": "e9986be43eff98cd73e7d0344add657fafb399389ccd28eb9158866b1e12ed12",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "39270234ea01672dfcdd25783906ecb0c39cbceefd495c25e765f624060e3a73"
+      }
+    },
+    {
+      "sku": "GBElgFrst30GlCap",
+      "family": "Elegant",
+      "capacityMl": 30,
+      "catalog": {
+        "websiteSku": "GBElgFrst30GlCap",
+        "graceSku": "GB-ELG-FRS-30ML-GLD-T",
+        "groupSlug": "elegant-30ml-frosted-15-415",
+        "color": "Frosted",
+        "applicator": null
+      },
+      "target": {
+        "tier": "Medium",
+        "shoulderPct": 43,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 48,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 47,
+        "right": 181,
+        "shoulder": 108,
+        "base": 302,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "frameTransform": {
+        "scale": 0.9752577319587629,
+        "x": 337.0672164948454,
+        "y": 550.5352577319586
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst30GlCap.27216e5cab5e.png",
+      "currentSha256": "27216e5cab5e7fcf220f9d6ff4ca201fa61e0760f9aa361fa48d01c35aa4550e",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/4.  15-415 Bottles/7. Elegant Frosted 30ml - Capped/Elegant Frst 30/7. GBElgFrst30GlCap.psd",
+      "masterSha256": "62d09a3816911eba0a913acb700dcf5f07a924f2f5509131ee6623f57c1b9414",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst30GlCap-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst30GlCap-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst30GlCap-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst30GlCap-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "4fcad09deb91509010151cb155d9a7861b1e58099e2e53c1e369782db9f8ff77",
+        "masterComposite": "dc5dac5e895cd37705467cecc6a62eee0f301d216749d174c95a6060af65c89f",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "8a8c84a62cfcf229c0765b7274838957cafb2627110713e4b517142830b40232"
+      }
+    },
+    {
+      "sku": "GBElgFrst30SpryMattGl",
+      "family": "Elegant",
+      "capacityMl": 30,
+      "catalog": {
+        "websiteSku": "GBElgFrst30SpryMattGl",
+        "graceSku": "GB-ELG-FRS-30ML-SPR-MGLD",
+        "groupSlug": "elegant-30ml-frosted-15-415-perfumespray",
+        "color": "Frosted",
+        "applicator": "Perfume Spray Pump"
+      },
+      "target": {
+        "tier": "Medium",
+        "shoulderPct": 43,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 48,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 92,
+        "right": 192,
+        "shoulder": 158.36538461538458,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.33300815651844,
+        "x": -69.09322277321598,
+        "y": 0.5077831070648244
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst30SpryMattGl.0969c9847c60.png",
+      "currentSha256": "0969c9847c60271e3777b3b4a95fac5aa238cb1a836b0104978a58ecd21fa6b6",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/4.  15-415 Bottles/7. Elegant Frosted 30ml - Capped/Elegant Frst 30/5. GBElgFrst30SpryMattGl.psd",
+      "masterSha256": "746424b2cbc8682057f246e3a0274ca3b2e624ec2eb59a0572d063d3b2979cbb",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst30SpryMattGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst30SpryMattGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst30SpryMattGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst30SpryMattGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "111d2546c9a4044bac72db12def382e4b3b9b946e322b5fec650a74f59ea9a25",
+        "masterComposite": "a9ba9a27edca37ad9e4f520de6693bdd6e02a5178a10a02418d3cda5f1489ce2",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "8a8c84a62cfcf229c0765b7274838957cafb2627110713e4b517142830b40232"
+      }
+    },
+    {
+      "sku": "GBElg60AnSpGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "GBElg60AnSpGl",
+        "graceSku": "GB-ELG-CLR-60ML-ASP-SGLD",
+        "groupSlug": "elegant-60ml-clear-18-415-antiquespray",
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 60,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 99,
+        "right": 228,
+        "shoulder": 139,
+        "base": 299,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "frameTransform": {
+        "scale": 1.2925,
+        "x": 149.11649999999986,
+        "y": 72.50099999999998
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg60AnSpGl.6e9b2869631f.png",
+      "currentSha256": "6e9b2869631f92b0a2ad953945b8f0805604df6c88e845087ceb7e5ddea18726",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/37. GBElg60AnSpGl.psd",
+      "masterSha256": "87c0506ed38f4ad41a910d7af5dc7e58aec1f92e7568511ff716f22ba7457d14",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg60AnSpGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg60AnSpGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg60AnSpGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg60AnSpGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "2eb226a792902aa738e49407df6e800f72bd66188f19dc771935344573af8d8d",
+        "masterComposite": "5022560237a764924f44061c9aa581b9ce666b46c4ffeaf688c4e07a3646c393",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "3bc4adaf9237ec04c8a80dcc7e954fb5aeb709ce93b12aed4a315cfa1e73e8f7"
+      }
+    },
+    {
+      "sku": "GBElg60AnSpTslIvyGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "GBElg60AnSpTslIvyGl",
+        "graceSku": "GB-ELG-CLR-60ML-AST-IVGD",
+        "groupSlug": "elegant-60ml-clear-18-415-antiquespray-tassel",
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 60,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 145,
+        "right": 261,
+        "shoulder": 138,
+        "base": 289,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "frameTransform": {
+        "scale": 1.3695364238410594,
+        "x": -197.68264900662234,
+        "y": 23.940662251655795
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg60AnSpTslIvyGl.e70e54e718e2.png",
+      "currentSha256": "e70e54e718e265534412dbff633b1d5f5c01be33850d31a74896255ca739831e",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/43. GBElg60AnSpTslIvyGl.psd",
+      "masterSha256": "befa7dec7289a4c973faa90b095b98c500d01d0fe57e55c534bfc28708340620",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg60AnSpTslIvyGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg60AnSpTslIvyGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg60AnSpTslIvyGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg60AnSpTslIvyGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "f91664b6a37b543137c41c87d5c3c360b9d58585dd630f5210b857070ff2c867",
+        "masterComposite": "8e56dde4dece57cc0b9a61a4682ea4c435e93330faa6d2626bec16c87cfb8392",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "3bc4adaf9237ec04c8a80dcc7e954fb5aeb709ce93b12aed4a315cfa1e73e8f7"
+      }
+    },
+    {
+      "sku": "GBElg60DrpGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "GBElg60DrpGl",
+        "graceSku": "GB-ELG-CLR-60ML-DRP-GLD",
+        "groupSlug": "elegant-60ml-clear-18-415-dropper",
+        "color": "Clear",
+        "applicator": "Dropper"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 92,
+        "right": 208,
+        "shoulder": 145.2403846153846,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3336805943123613,
+        "x": -125.07086356364175,
+        "y": -0.5422688544108496
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg60DrpGl.c5bc920673f7.png",
+      "currentSha256": "c5bc920673f720acadd4d3fc0271a50519952a45af0b12cf67f012e1ce4edc1b",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/52. GBElg60DrpGl.psd",
+      "masterSha256": "1c3f34beb04001df72ca4bd09875a567af9e965be65270fadf97c7c11c387aff",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg60DrpGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg60DrpGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg60DrpGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg60DrpGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "bcc29c98373834a67a16b374bfca146125092a443076b5918cbef63e17b29e0a",
+        "masterComposite": "ff7c9f27e47069fdcfd21039d23340a2a1cfa7d6ee07349b0fd473f56bdd1dba",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "04d20a0451ba6a6dfe51489b3c6afe4450e1d7582a45cc59e63a4f1e2e9eeea0"
+      }
+    },
+    {
+      "sku": "GBElg60RdcrShnGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "GBElg60RdcrShnGl",
+        "graceSku": "GB-ELG-CLR-60ML-RDC-SGLD",
+        "groupSlug": "elegant-60ml-clear-18-415-reducer",
+        "color": "Clear",
+        "applicator": "Reducer"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 84,
+        "right": 206,
+        "shoulder": 145.09615384615384,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3324412063539266,
+        "x": -89.46066959086056,
+        "y": 1.3931098059624674
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg60RdcrShnGl.7c948bb18ab7.png",
+      "currentSha256": "7c948bb18ab72afd3bba16fb46a889232afe89f44f47a3742c0fe944d2dc11a9",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/1. GBElg60RdcrShnGl.psd",
+      "masterSha256": "44bd6d7d6908d0c7adc579d75de2a5e0e857c23b8a13b090705f719757984691",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg60RdcrShnGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg60RdcrShnGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg60RdcrShnGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg60RdcrShnGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "9ffd916cd42b29f923bb27958ec70a75978c406147a123dba38ce621cfb60a21",
+        "masterComposite": "0128be92434e8daaa5d4a284bd07028f18b4d37d9b39016b7ff816e652d78bb0",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "04d20a0451ba6a6dfe51489b3c6afe4450e1d7582a45cc59e63a4f1e2e9eeea0"
+      }
+    },
+    {
+      "sku": "GBElg60SpryMtGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "GBElg60SpryMtGl",
+        "graceSku": "GB-ELG-CLR-60ML-SPR-MGLD",
+        "groupSlug": "elegant-60ml-clear-18-415-perfumespray",
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 78,
+        "right": 205,
+        "shoulder": 145.2403846153846,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3336805943123613,
+        "x": -66.12218129503549,
+        "y": -0.5422688544108496
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg60SpryMtGl.327ce5ee6993.png",
+      "currentSha256": "327ce5ee69937ff43a0b517959043ae72cc341554092ad5c726d3ae8ea1c4ff6",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/11. GBElg60SpryMtGl.psd",
+      "masterSha256": "34a707ca7ad8688bed53007849ece31b2fc1ff1dfcb0c70603f9cd67e5d23943",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg60SpryMtGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg60SpryMtGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg60SpryMtGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg60SpryMtGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "67e84e5ee195121c7bf1bcb97aaf2fdb8f9e223d3030b89357c4446440eabb59",
+        "masterComposite": "4a668e9403687cafe2e15defe81c2ce75b910133a51661519faae8d565333692",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "04d20a0451ba6a6dfe51489b3c6afe4450e1d7582a45cc59e63a4f1e2e9eeea0"
+      }
+    },
+    {
+      "sku": "LBElg60LtnMtGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "LBElg60LtnMtGl",
+        "graceSku": "LB-ELG-CLR-60ML-LPM-MGLD",
+        "groupSlug": "elegant-60ml-clear-18-415-lotionpump",
+        "color": "Clear",
+        "applicator": "Lotion Pump"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 82,
+        "right": 206,
+        "shoulder": 145.2403846153846,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3336805943123613,
+        "x": -83.46002902109603,
+        "y": -0.5422688544108496
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/LBElg60LtnMtGl.8ff5a70f3b95.png",
+      "currentSha256": "8ff5a70f3b958b35dc9026ec5ba717ff617667cf81387a81a6894a84c79a5d80",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/17.  60ml Eleg, Ltn & Spry, capped/12. LBElg60LtnMtGl.psd",
+      "masterSha256": "f78228f0c8c0a44f17ca729bea8c446b183a01bd59b8d73ab344b1a352b5f32a",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/LBElg60LtnMtGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/LBElg60LtnMtGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/LBElg60LtnMtGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/LBElg60LtnMtGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "4f1327326de365c3f2b4a70490654dd8c38a53cd67bfa31596cb483430a13252",
+        "masterComposite": "5545f65fa2eae93c0704b1b0a956b56a66f5c646a2d415193598b53514baa78e",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "04d20a0451ba6a6dfe51489b3c6afe4450e1d7582a45cc59e63a4f1e2e9eeea0"
+      }
+    },
+    {
+      "sku": "GBElgFrst60AnSpGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "GBElgFrst60AnSpGl",
+        "graceSku": "GB-ELG-FRS-60ML-ASP-GLD",
+        "groupSlug": "elegant-60ml-frosted-18-415-antiquespray",
+        "color": "Frosted",
+        "applicator": "Vintage Bulb Sprayer"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 60,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 141,
+        "right": 284,
+        "shoulder": 176,
+        "base": 360,
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "uncertaintyPx": 3,
+        "method": "Initial visual framing measurement on exact hashed preview; final generated image must be remeasured"
+      },
+      "frameTransform": {
+        "scale": 1.3486956521739129,
+        "x": 6.076086956521976,
+        "y": -21.885217391304195
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst60AnSpGl.4c33d203bdfc.png",
+      "currentSha256": "4c33d203bdfc6d09c526f49031f74f62bd89525fdffebec2b456e259352c1b10",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/37. GBElgFrst60AnSpGl.psd",
+      "masterSha256": "2477d89def1389d323623add964b4836c6d09f9c20060f6f6be6fa8579b689d1",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst60AnSpGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst60AnSpGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst60AnSpGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst60AnSpGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "0bf7d6b64e80886bf7049b61d3e7cd2b56c6b5554b64bd29834d34611d829596",
+        "masterComposite": "3ae2560f431f74222ecff0a53d2b5be575e8786bf57bae7e78a057ee4b759a93",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "41b6f2da7f9d11535e95c904862aa65eacb1b1bca081cc925fbfb2c34983e8e5"
+      }
+    },
+    {
+      "sku": "GBElgFrst60AnSpTslGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "GBElgFrst60AnSpTslGl",
+        "graceSku": "GB-ELG-FRS-60ML-AST-GLD",
+        "groupSlug": "elegant-60ml-frosted-18-415-antiquespray-tassel",
+        "color": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 60,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 192,
+        "right": 339,
+        "shoulder": 176,
+        "base": 360,
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "uncertaintyPx": 3,
+        "method": "Initial visual framing measurement on exact hashed preview; final generated image must be remeasured"
+      },
+      "frameTransform": {
+        "scale": 1.3486956521739129,
+        "x": -303.67434782608666,
+        "y": -21.885217391304195
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst60AnSpTslGl.b147f12fc5dd.png",
+      "currentSha256": "b147f12fc5dd49afce8e82283e743a47317e83187521b91648ad3b22cfcdbb21",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/50. GBElgFrst60AnSpTslGl.psd",
+      "masterSha256": "ced990e044ad06d884ae6122ea8f56044adfc2a45bca2b7f359a1ce1969a099c",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst60AnSpTslGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst60AnSpTslGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst60AnSpTslGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst60AnSpTslGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "25ccc214c656533f9ebd72f63696886d907b360e42f7755d1108dec2a90b4f7a",
+        "masterComposite": "d337b4d0b815f5509f3ad648e999938e1c8374a1d6f3d65adbc27326dd9b5f5c",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "41b6f2da7f9d11535e95c904862aa65eacb1b1bca081cc925fbfb2c34983e8e5"
+      }
+    },
+    {
+      "sku": "GBElgFrst60DrpGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "GBElgFrst60DrpGl",
+        "graceSku": "GB-ELG-FRS-60ML-DRP-GLD",
+        "groupSlug": "elegant-60ml-frosted-18-415-dropper",
+        "color": "Frosted",
+        "applicator": "Dropper"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 88,
+        "right": 211,
+        "shoulder": 145.52884615384616,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3361663001205253,
+        "x": -123.53568171369625,
+        "y": -4.42384761620724
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst60DrpGl.8a8ba665e1f6.png",
+      "currentSha256": "8a8ba665e1f64c65e3e34c1a4f89b47dc42614662f99b6e81cf8c9e3c6eaa564",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/52. GBElgFrst60DrpGl.psd",
+      "masterSha256": "2221efffab7dd3d506ea564e9351900f73a7371f6b7cc7e7c80716b728357327",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst60DrpGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst60DrpGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst60DrpGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst60DrpGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "37f1621c9dc7c212af359da4e0562b62266f55f34aaf288109303687e7a27fed",
+        "masterComposite": "d3f48eb7eeb26ba5de275ba0b0a553b627484b74b60c04503e91d5d12fb944d8",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "a92a141d22f0b73c4fd044a2afb50ebe27ea77ea4526b9247a5f966de1dd4086"
+      }
+    },
+    {
+      "sku": "GBElgFrst60RdcrShnGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "GBElgFrst60RdcrShnGl",
+        "graceSku": "GB-ELG-FRS-60ML-RDC-SGLD",
+        "groupSlug": "elegant-60ml-frosted-18-415-reducer",
+        "color": "Frosted",
+        "applicator": "Reducer"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 53,
+        "right": 192,
+        "shoulder": 100,
+        "base": 290,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "frameTransform": {
+        "scale": 1.088421052631579,
+        "x": 221.87578947368422,
+        "y": 440.7410526315789
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst60RdcrShnGl.93bd088c5609.png",
+      "currentSha256": "93bd088c56091f939e2e5249c4c5bdbe6b663b07ad257998e82c124563d5eef4",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/1. GBElgFrst60RdcrShnGl.psd",
+      "masterSha256": "015a6d5a0ac94d4458d2c96141fd2c60743f3bc05235ea1da849a8622fb859fe",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst60RdcrShnGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst60RdcrShnGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst60RdcrShnGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst60RdcrShnGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "ff5ef6d7eb5d51c9e1f9700098a118b13dc9276e245c839ef34a123ceddfd228",
+        "masterComposite": "ae2ca35ca74f0c3e5f7ac495b1001c84800d42b126c4073d6057438eaa97d1f9",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "a92a141d22f0b73c4fd044a2afb50ebe27ea77ea4526b9247a5f966de1dd4086"
+      }
+    },
+    {
+      "sku": "GBElgFrst60SpryMtGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "GBElgFrst60SpryMtGl",
+        "graceSku": "GB-ELG-FRS-60ML-SPR-MGLD",
+        "groupSlug": "elegant-60ml-frosted-18-415-perfumespray",
+        "color": "Frosted",
+        "applicator": "Perfume Spray Pump"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 60,
+        "right": 184,
+        "shoulder": 128,
+        "base": 303,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "frameTransform": {
+        "scale": 1.1817142857142855,
+        "x": 165.52045714285737,
+        "y": 220.17097142857165
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst60SpryMtGl.2d19706db9b3.png",
+      "currentSha256": "2d19706db9b322fda7f6c39d788d974fe10cee94312fe98ad9ae16866c6d8977",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/11. GBElgFrst60SpryMtGl.psd",
+      "masterSha256": "a3409013c720d6f489d5a296c8a4b671131a9ea07721d0ec21023262a916a018",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst60SpryMtGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst60SpryMtGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst60SpryMtGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst60SpryMtGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "acb45a21cda780f05dbfbe15b5fa925d19cfb233f0837d93d8115623fda4a104",
+        "masterComposite": "1d8e3d7521fb250e778df58732bf7658c571104d32a19f469447a307e964d781",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "a92a141d22f0b73c4fd044a2afb50ebe27ea77ea4526b9247a5f966de1dd4086"
+      }
+    },
+    {
+      "sku": "LBElgFrst60LtnMtGl",
+      "family": "Elegant",
+      "capacityMl": 60,
+      "catalog": {
+        "websiteSku": "LBElgFrst60LtnMtGl",
+        "graceSku": "LB-ELG-FRS-60ML-LPM-MGLD",
+        "groupSlug": "elegant-60ml-frosted-18-415-lotionpump",
+        "color": "Frosted",
+        "applicator": "Lotion Pump"
+      },
+      "target": {
+        "tier": "Large",
+        "shoulderPct": 47,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 79,
+        "right": 208,
+        "shoulder": 145.2403846153846,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3336805943123613,
+        "x": -79.99245947588406,
+        "y": -0.5422688544108496
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/LBElgFrst60LtnMtGl.fa9835735740.png",
+      "currentSha256": "fa98357357403a8a27fef35e35128f32a24fa335f4681f531c9dc67ddb8b80a4",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/12. LBElgFrst60LtnMtGl.psd",
+      "masterSha256": "a3409013c720d6f489d5a296c8a4b671131a9ea07721d0ec21023262a916a018",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/LBElgFrst60LtnMtGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/LBElgFrst60LtnMtGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/LBElgFrst60LtnMtGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/LBElgFrst60LtnMtGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "5cd1223967e29423f8528715a999d68c6da3782e2ad83dc7b3a1a9437c917a43",
+        "masterComposite": "13d71881c5d5197ec84228e331c0c8d1c72f3f6adbfc54c5035b6a273fbf1c47",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "a92a141d22f0b73c4fd044a2afb50ebe27ea77ea4526b9247a5f966de1dd4086"
+      }
+    },
+    {
+      "sku": "GBElg100AnSpGl",
+      "family": "Elegant",
+      "capacityMl": 100,
+      "catalog": {
+        "websiteSku": "GBElg100AnSpGl",
+        "graceSku": "GB-ELG-CLR-100ML-ASP-GLD",
+        "groupSlug": "elegant-100ml-clear-18-415-antiquespray",
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer"
+      },
+      "target": {
+        "tier": "Extra Large",
+        "shoulderPct": 57,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 34,
+        "bodyCenterXPct": 60,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 90,
+        "right": 213,
+        "shoulder": 117,
+        "base": 307,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "frameTransform": {
+        "scale": 1.3199999999999998,
+        "x": 208.10400000000027,
+        "y": -25.16800000000012
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg100AnSpGl.d9c06609d87f.png",
+      "currentSha256": "d9c06609d87f239704d58ce451a194bea88721a8ae6bca7791df3cbfcb936c5c",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/37. GBElg100AnSpGl.psd",
+      "masterSha256": "2fabcec8049ceb5a8a318ab9c077982dba393c6df1dadfb9d24ac5dbcb480d75",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg100AnSpGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg100AnSpGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg100AnSpGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg100AnSpGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "5ef39cff8c4ff6ca753b0bcd3e5aba4336844137b931348c57d10efa47c0f572",
+        "masterComposite": "3e10694c10a65fceb1da8a9ba269dc03586683148b8b5ae731479ead43e16716",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "a5a394f3b9757ecd0853281223cfdb2c7903f439adfd17bb2b068eeaa76521ef"
+      }
+    },
+    {
+      "sku": "GBElg100AnSpTslIvyGl",
+      "family": "Elegant",
+      "capacityMl": 100,
+      "catalog": {
+        "websiteSku": "GBElg100AnSpTslIvyGl",
+        "graceSku": "GB-ELG-CLR-100ML-AST-IVGD",
+        "groupSlug": "elegant-100ml-clear-18-415-antiquespray-tassel",
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "target": {
+        "tier": "Extra Large",
+        "shoulderPct": 57,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 34,
+        "bodyCenterXPct": 60,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 127,
+        "right": 220,
+        "shoulder": 122,
+        "base": 269,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "frameTransform": {
+        "scale": 1.706122448979592,
+        "x": -291.2636734693881,
+        "y": -304.44408163265325
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg100AnSpTslIvyGl.cf5378c6bbd2.png",
+      "currentSha256": "cf5378c6bbd2707b275462284f9779004bf00af79d02031eed658a8107d510da",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/43. GBElg100AnSpTslIvyGl.psd",
+      "masterSha256": "e5cb0a72dacab75aedda217aa8d5eefecd3302556aa418854e4b2ce1de6ac1b1",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg100AnSpTslIvyGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg100AnSpTslIvyGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg100AnSpTslIvyGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg100AnSpTslIvyGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "1483cee208216ada25dc7757b9815a23378b565a53147873fbfce5d395554d7f",
+        "masterComposite": "aaa5c40e755d5e8a449c3111f81a0dc5ab04d8ea45c4d1eebd6b69a987097808",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "a5a394f3b9757ecd0853281223cfdb2c7903f439adfd17bb2b068eeaa76521ef"
+      }
+    },
+    {
+      "sku": "GBElg100RdcrShnGl",
+      "family": "Elegant",
+      "capacityMl": 100,
+      "catalog": {
+        "websiteSku": "GBElg100RdcrShnGl",
+        "graceSku": "GB-ELG-CLR-100ML-RDC-SGLD",
+        "groupSlug": "elegant-100ml-clear-18-415-reducer",
+        "color": "Clear",
+        "applicator": "Reducer"
+      },
+      "target": {
+        "tier": "Extra Large",
+        "shoulderPct": 57,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 34,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 86,
+        "right": 216,
+        "shoulder": 112.21153846153847,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3334151279062636,
+        "x": -131.79755843199814,
+        "y": -0.12772713330514307
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg100RdcrShnGl.4fb67b497593.png",
+      "currentSha256": "4fb67b497593177f5425252fb52e28a0dc75f7179183f734e8367f25caed6e8a",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/1. GBElg100RdcrShnGl.psd",
+      "masterSha256": "cdb2727c631f4fbff290e0752c9b82c0fe663edd6792b29f370f541c5032fb63",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg100RdcrShnGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg100RdcrShnGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg100RdcrShnGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg100RdcrShnGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "c9831f1cdfdd7d0408a075d7696f00a63c43d401d608ed54168afa15aef33ac2",
+        "masterComposite": "eec8fa766fccf3d162d12d75eb5d230e6930cc5c30417819e052aa63e35f4304",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "6e34dfe7296b5ba2b7238145ef73a00de8b10dd1b151aa30594c464c11898adf"
+      }
+    },
+    {
+      "sku": "GBElg100SpryMtGl",
+      "family": "Elegant",
+      "capacityMl": 100,
+      "catalog": {
+        "websiteSku": "GBElg100SpryMtGl",
+        "graceSku": "GB-ELG-CLR-100ML-SPR-MGLD",
+        "groupSlug": "elegant-100ml-clear-18-415-perfumespray",
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump"
+      },
+      "target": {
+        "tier": "Extra Large",
+        "shoulderPct": 57,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 34,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 75,
+        "right": 208,
+        "shoulder": 112.0673076923077,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3323934164955407,
+        "x": -65.17507585741885,
+        "y": 1.4677365372235727
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElg100SpryMtGl.22aa5d8690e9.png",
+      "currentSha256": "22aa5d8690e95d04872a5d5d00ec9d0f7a4f24e526ded1c4756cccfb10386ee2",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/18.  100ml Elegant, Ltn & Spry, capped/11. GBElg100SpryMtGl.psd",
+      "masterSha256": "629ddfe220f0d62bd8e94948072c368eca54d2ea350d163596c089299ea862ef",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg100SpryMtGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElg100SpryMtGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg100SpryMtGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElg100SpryMtGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "ae5c0037dc3f3f87a0985e22046783c2b7f93d5f342bc66ad9992fdb062ce417",
+        "masterComposite": "4dd00c2e7993a4217702b8eb57a73e70f802fe0aa68ef7d7385eaad02b7f9da7",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "6e34dfe7296b5ba2b7238145ef73a00de8b10dd1b151aa30594c464c11898adf"
+      }
+    },
+    {
+      "sku": "LBElg100LtnMtGl",
+      "family": "Elegant",
+      "capacityMl": 100,
+      "catalog": {
+        "websiteSku": "LBElg100LtnMtGl",
+        "graceSku": "LB-ELG-CLR-100ML-LPM-MGLD",
+        "groupSlug": "elegant-100ml-clear-18-415-lotionpump",
+        "color": "Clear",
+        "applicator": "Lotion Pump"
+      },
+      "target": {
+        "tier": "Extra Large",
+        "shoulderPct": 57,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 34,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 81,
+        "right": 205,
+        "shoulder": 112.21153846153847,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3334151279062636,
+        "x": -76.32748911109763,
+        "y": -0.12772713330514307
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/LBElg100LtnMtGl.21f1ab404ec2.png",
+      "currentSha256": "21f1ab404ec29ba7372c3e76a5b5d61938f58ed692cf925e51643d1c8cc09c4c",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/18.  100ml Elegant, Ltn & Spry, capped/12. LBElg100LtnMtGl.psd",
+      "masterSha256": "1bc8e143c6bd176112a5fa3365250fd70baae13a9c85bdaaa3f6a12e4ed788c1",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/LBElg100LtnMtGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/LBElg100LtnMtGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/clear-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/LBElg100LtnMtGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/LBElg100LtnMtGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "57fbfe9386f1cae07ad79188234fb2eff0fced22fa322dcc88bb9330d3093155",
+        "masterComposite": "03b9b9b7b55d49d8b7d36e83244c8b213b77a0981e18dc7ef3c69130d9bfc137",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "6e34dfe7296b5ba2b7238145ef73a00de8b10dd1b151aa30594c464c11898adf"
+      }
+    },
+    {
+      "sku": "GBElgFrst100AnSpGl",
+      "family": "Elegant",
+      "capacityMl": 100,
+      "catalog": {
+        "websiteSku": "GBElgFrst100AnSpGl",
+        "graceSku": "GB-ELG-FRS-100ML-ASP-GLD",
+        "groupSlug": "elegant-100ml-frosted-18-415-antiquespray",
+        "color": "Frosted",
+        "applicator": "Vintage Bulb Sprayer"
+      },
+      "target": {
+        "tier": "Extra Large",
+        "shoulderPct": 57,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 34,
+        "bodyCenterXPct": 60,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 131,
+        "right": 281,
+        "shoulder": 133,
+        "base": 360,
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "uncertaintyPx": 3,
+        "method": "Initial visual framing measurement on exact hashed preview; final generated image must be remeasured"
+      },
+      "frameTransform": {
+        "scale": 1.3258149779735684,
+        "x": 64.4891629955946,
+        "y": 13.80863436123309
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst100AnSpGl.cb6986a3907b.png",
+      "currentSha256": "cb6986a3907be4bdef771e8f7c7341f6d167c9cde07f7f675064a1b2c4883051",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/37. GBElgFrst100AnSpGl.psd",
+      "masterSha256": "0c2fff311dbf9ab28691234d82741b2f2a215b4eaec1fa3589668e68bf39ae04",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst100AnSpGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst100AnSpGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst100AnSpGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst100AnSpGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "8904480b99081b985f5c8c41d6c6365e0fa3cd75f42ba0c0f6a504904971d6fe",
+        "masterComposite": "192a3de8a4ef99f10a89867a1eaef9585bc58150c4827bc89c526cce2e2253a3",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "39b63de6294568838d76a65a74e24bbc87e2248fc8bcc392a7863bbf1289adb8"
+      }
+    },
+    {
+      "sku": "GBElgFrst100AnSpTslGl",
+      "family": "Elegant",
+      "capacityMl": 100,
+      "catalog": {
+        "websiteSku": "GBElgFrst100AnSpTslGl",
+        "graceSku": "GB-ELG-FRS-100ML-AST-GLD",
+        "groupSlug": "elegant-100ml-frosted-18-415-antiquespray-tassel",
+        "color": "Frosted",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "target": {
+        "tier": "Extra Large",
+        "shoulderPct": 57,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 34,
+        "bodyCenterXPct": 60,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 180,
+        "right": 330,
+        "shoulder": 133,
+        "base": 360,
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "uncertaintyPx": 3,
+        "method": "Initial visual framing measurement on exact hashed preview; final generated image must be remeasured"
+      },
+      "frameTransform": {
+        "scale": 1.3258149779735684,
+        "x": -217.025550660793,
+        "y": 13.80863436123309
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst100AnSpTslGl.46f1bd0f1804.png",
+      "currentSha256": "46f1bd0f1804e53b73711dd1ef2015b23a56732ce737dbe41981df37dc4e1af7",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/50. GBElgFrst100AnSpTslGl.psd",
+      "masterSha256": "41b1029ebe823204d3f7bce6bdc587e71acc2080d0e7f92ff9fc9efb32469a61",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst100AnSpTslGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst100AnSpTslGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst100AnSpTslGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst100AnSpTslGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "b9e87c8362572d8723181d0902e5907c7a2fd58742208f7774fee725e3320beb",
+        "masterComposite": "d411ad63dfd7109d1bd08ef421a08c2a22b915ddef06e97ff9147e12e5d1037e",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "39b63de6294568838d76a65a74e24bbc87e2248fc8bcc392a7863bbf1289adb8"
+      }
+    },
+    {
+      "sku": "GBElgFrst100RdcrShnGl",
+      "family": "Elegant",
+      "capacityMl": 100,
+      "catalog": {
+        "websiteSku": "GBElgFrst100RdcrShnGl",
+        "graceSku": "GB-ELG-FRS-100ML-RDC-SGLD",
+        "groupSlug": "elegant-100ml-frosted-18-415-reducer",
+        "color": "Frosted",
+        "applicator": "Reducer"
+      },
+      "target": {
+        "tier": "Extra Large",
+        "shoulderPct": 57,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 34,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 87,
+        "right": 219,
+        "shoulder": 112.21153846153847,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3334151279062636,
+        "x": -145.6650757622233,
+        "y": -0.12772713330514307
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst100RdcrShnGl.7a99e01fc3ca.png",
+      "currentSha256": "7a99e01fc3caf4db1d412affa653ea7b4f15c2f349a3eeb34ed722cafc2d8e0d",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/1. GBElgFrst100RdcrShnGl.psd",
+      "masterSha256": "e1638ee686ecbcbea03e511125dcd8ebd2b8f44e5cacf5f8a698a92a6a8029b6",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst100RdcrShnGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst100RdcrShnGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst100RdcrShnGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst100RdcrShnGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "9b78ab07a032aa38ab8f9a67e154aa817b9ed83c108c17b338ccd2a60570f279",
+        "masterComposite": "0e8b53acc30dd5a3ed6349b9eeb08dd68699ce9b859256673f6e5cf4319f254b",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "b87d2fad317a2c0ea1afea0df29401cd3595a267d40eb0f755dd3fc110579900"
+      }
+    },
+    {
+      "sku": "GBElgFrst100SpryMtGl",
+      "family": "Elegant",
+      "capacityMl": 100,
+      "catalog": {
+        "websiteSku": "GBElgFrst100SpryMtGl",
+        "graceSku": "GB-ELG-FRS-100ML-SPR-MGLD",
+        "groupSlug": "elegant-100ml-frosted-18-415-perfumespray",
+        "color": "Frosted",
+        "applicator": "Perfume Spray Pump"
+      },
+      "target": {
+        "tier": "Extra Large",
+        "shoulderPct": 57,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 34,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 81,
+        "right": 207,
+        "shoulder": 112.21153846153847,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3334151279062636,
+        "x": -83.2612477762101,
+        "y": -0.12772713330514307
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/GBElgFrst100SpryMtGl.2c0f6b858911.png",
+      "currentSha256": "2c0f6b858911a1d1598f31776d8d88de142c901d8f15182ec86bdf05ef426646",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/11. GBElgFrst100SpryMtGl.psd",
+      "masterSha256": "7fd4a74e7c2b637b1b5fc95288a00685478c580bd6011e2779dad017092eba3a",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst100SpryMtGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/GBElgFrst100SpryMtGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst100SpryMtGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/GBElgFrst100SpryMtGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "6f23538eed2a9164242723b65ecf405ed7438b5841a3415089518b04ebddae57",
+        "masterComposite": "0a61727706220187c4bfd3e107fab9875dcd80846d4dfe4d3fea92aa5f274664",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "b87d2fad317a2c0ea1afea0df29401cd3595a267d40eb0f755dd3fc110579900"
+      }
+    },
+    {
+      "sku": "LBElgFrst100LtnMtGl",
+      "family": "Elegant",
+      "capacityMl": 100,
+      "catalog": {
+        "websiteSku": "LBElgFrst100LtnMtGl",
+        "graceSku": "LB-ELG-FRS-100ML-LPM-MGLD",
+        "groupSlug": "elegant-100ml-frosted-18-415-lotionpump",
+        "color": "Frosted",
+        "applicator": "Lotion Pump"
+      },
+      "target": {
+        "tier": "Extra Large",
+        "shoulderPct": 57,
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 34,
+        "bodyCenterXPct": 44,
+        "landmark": "glass shoulder",
+        "basis": "previously recorded Elegant-specific source-body targets, applied to user-requested S/M/L/XL sequence"
+      },
+      "sourceMeasurement": {
+        "left": 83,
+        "right": 210,
+        "shoulder": 112.21153846153847,
+        "base": 300.3,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Measured by the Madison rig on the 2080x2288 master it seated (detected_shoulder_y_px); the deliverable is that master at 0.75. The shoulder lock is baked into the pixels, so no catalogue nudge is applied."
+      },
+      "frameTransform": {
+        "scale": 1.3334151279062636,
+        "x": -100.5956444389916,
+        "y": -0.12772713330514307
+      },
+      "sourceEvidence": "exact catalog-mapped master PSD merged preview; visual review required",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/public/images/catalog/bone-review/LBElgFrst100LtnMtGl.2c855b0ea9e3.png",
+      "currentSha256": "2c855b0ea9e39c1652d6a9c5723a1f50f0ef16b6e3a28118f77649c22c3d438d",
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/12. LBElgFrst100LtnMtGl.psd",
+      "masterSha256": "7ad59bd4144db6860fff584ad2b75f1e1a63ef006da48da3f524850c2f741d04",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/LBElgFrst100LtnMtGl-master.png",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/LBElgFrst100LtnMtGl-framed.png",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/inputs/frosted-material-reference.jpg",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/LBElgFrst100LtnMtGl-prompt.txt",
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/elegant-2026-09-23/LBElgFrst100LtnMtGl-native-2080x2288.png",
+      "state": "prepared-needs-input-geometry-check",
+      "inputSha256": {
+        "framedInput": "3f19878137c5ae93942967c884b3f91feb5d3b70164d76223a2986f5d1026d51",
+        "masterComposite": "a84ee73d9412ea9926923941b810154a5dea267e3b5eb4170f2673479f6eb29c",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "b87d2fad317a2c0ea1afea0df29401cd3595a267d40eb0f755dd3fc110579900"
+      }
+    }
+  ]
+}
