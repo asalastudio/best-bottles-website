@@ -1,4 +1,4 @@
-import { detectCatalogFamily } from "../src/lib/catalogFilters";
+import { canonicalGlassColor, detectCatalogFamily } from "../src/lib/catalogFilters";
 import { query, mutation, internalMutation, action } from "./_generated/server";
 import { v } from "convex/values";
 import { api } from "./_generated/api";
@@ -39,6 +39,11 @@ import {
     buildCanonicalProductGroup,
     buildCanonicalProductVariant,
 } from "../src/lib/canonicalProduct";
+import {
+    classifyGraceIntent,
+    type GraceIntentAnswers,
+} from "../src/lib/grace/jevIntent";
+import { enrichSearchCatalogWithJev } from "../src/lib/grace/enrichSearchCatalogWithJev";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // GRACE AI TOOL QUERIES
@@ -218,7 +223,7 @@ export const searchCatalog = query({
                 groupHits = groupHits.filter((g) => g.capacityMl === detectedCapMl);
             }
             if (detectedColor) {
-                groupHits = groupHits.filter((g) => g.color === detectedColor);
+                groupHits = groupHits.filter((g) => canonicalGlassColor(g.color) === detectedColor);
             }
 
             // Adjacent-size expansion: when an exact family+capacity match fails,
@@ -271,13 +276,13 @@ export const searchCatalog = query({
                         (detectedFamily && a.family === detectedFamily ? 3 : 0) +
                         (isPrimary.has(a.family) ? 2 : 0) +
                         (detectedCapMl !== null && a.capacityMl === detectedCapMl ? 3 : 0) +
-                        (detectedColor && a.color === detectedColor ? 4 : 0) +
+                        (detectedColor && canonicalGlassColor(a.color) === detectedColor ? 4 : 0) +
                         intentBoost(a);
                     const scoreB =
                         (detectedFamily && b.family === detectedFamily ? 3 : 0) +
                         (isPrimary.has(b.family) ? 2 : 0) +
                         (detectedCapMl !== null && b.capacityMl === detectedCapMl ? 3 : 0) +
-                        (detectedColor && b.color === detectedColor ? 4 : 0) +
+                        (detectedColor && canonicalGlassColor(b.color) === detectedColor ? 4 : 0) +
                         intentBoost(b);
                     return scoreB - scoreA;
                 });
@@ -1128,6 +1133,24 @@ export const askGrace = action({
 
         const openai = new OpenAI({ apiKey });
 
+        // ── 0. Jev intent (TypeSafe) — classify the latest customer request once ──
+        // Fills applicatorFilter / familyLimit / glass / atomizer+cap finishes on searchCatalog when confident.
+        // Missing key or Jev errors never block Grace.
+        let jevAnswers: GraceIntentAnswers | null = null;
+        const typesafeKey = process.env.TYPESAFE_API_KEY;
+        const lastUserMessage = [...args.messages].reverse().find((m) => m.role === "user")?.content?.trim() ?? "";
+        if (typesafeKey && lastUserMessage) {
+            const classified = await classifyGraceIntent(
+                { request: lastUserMessage },
+                { apiKey: typesafeKey, timeoutMs: isVoice ? 2000 : 2500 },
+            );
+            if (classified.ok) {
+                jevAnswers = classified.answers;
+            } else {
+                console.warn("[Grace/Jev] classify failed:", classified.error);
+            }
+        }
+
         // ── 1. Build system prompt (self-contained constitution, no DB fetch) ──
         // Constitution comes FIRST so the model cannot be overridden by a
         // caller-supplied pageContextBlock. Page context is clearly delimited
@@ -1225,22 +1248,46 @@ export const askGrace = action({
                                     familyLimit?: string | null;
                                     applicatorFilter?: string | null;
                                 };
+                                let searchTerm = input.searchTerm;
+                                let familyLimit = input.familyLimit ?? undefined;
+                                let applicatorFilter = input.applicatorFilter ?? undefined;
+                                let categoryLimit = input.categoryLimit ?? undefined;
+                                if (jevAnswers) {
+                                    const enriched = await enrichSearchCatalogWithJev(
+                                        {
+                                            searchTerm,
+                                            categoryLimit,
+                                            familyLimit,
+                                            applicatorFilter,
+                                        },
+                                        {
+                                            requestText: lastUserMessage,
+                                            cachedAnswers: jevAnswers,
+                                            minConfidence: 0.6,
+                                            useCaseTable: true,
+                                        },
+                                    );
+                                    searchTerm = enriched.args.searchTerm;
+                                    categoryLimit = enriched.args.categoryLimit;
+                                    familyLimit = enriched.args.familyLimit;
+                                    applicatorFilter = enriched.args.applicatorFilter;
+                                }
                                 const data = await ctx.runQuery(api.grace.searchCatalog, {
-                                    searchTerm: input.searchTerm,
-                                    categoryLimit: input.categoryLimit ?? undefined,
-                                    familyLimit: input.familyLimit ?? undefined,
-                                    applicatorFilter: input.applicatorFilter ?? undefined,
+                                    searchTerm,
+                                    categoryLimit,
+                                    familyLimit,
+                                    applicatorFilter,
                                 });
                                 result = data.length > 0
                                     ? buildSearchCatalogToolResult(
                                         {
-                                            searchTerm: input.searchTerm,
-                                            familyLimit: input.familyLimit ?? undefined,
-                                            applicatorFilter: input.applicatorFilter ?? undefined,
+                                            searchTerm,
+                                            familyLimit,
+                                            applicatorFilter,
                                         },
                                         data,
                                     )
-                                    : `No products found for that search. Try a broader term.${emptySearchCatalogHint(input.searchTerm)}`;
+                                    : `No products found for that search. Try a broader term.${emptySearchCatalogHint(searchTerm)}`;
                             } else if (name === "getFamilyOverview") {
                                 const input = parsedArgs as { family: string };
                                 const data = await ctx.runQuery(api.grace.getFamilyOverview, {

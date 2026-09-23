@@ -32,8 +32,12 @@ const CLOSURE_TOKEN_KIND: Record<string, ApplicatorKind> = {
     lotionpump: "pump",
     dropper: "dropper",
     reducer: "reducer",
+    // Product-group slug suffixes (Convex data) — unchanged
     antiquespray: "antique",
     "antiquespray-tassel": "antiqueTassel",
+    // Refine / catalog filter bucket slugs (post rename)
+    vintagestyle: "antique",
+    "vintagestyle-tassel": "antiqueTassel",
     capclosure: "cap",
 };
 
@@ -44,6 +48,10 @@ const BUCKET_KIND: Record<string, ApplicatorKind> = {
     lotionpump: "pump",
     dropper: "dropper",
     reducer: "reducer",
+    // Catalog filter buckets
+    vintagestyle: "antique",
+    "vintagestyle-tassel": "antiqueTassel",
+    // Prior bucket slugs still recognized
     antiquespray: "antique",
     "antiquespray-tassel": "antiqueTassel",
     capclosure: "cap",

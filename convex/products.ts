@@ -13,6 +13,7 @@ import { buildFamilyPageData } from "../src/lib/products/family-page-data";
 import { buildFocusedPdpRelations } from "../src/lib/products/pdp-relations";
 import {
     APPLICATOR_BUCKETS,
+    BOTTLE_CATEGORIES,
     COMPONENT_CATEGORIES,
     canonicalGlassColor,
     catalogSearchMatches,
@@ -909,8 +910,16 @@ export const searchCatalog = query({
             }
             if (!skipKeys.has("colors") && filters.colors.length > 0) {
                 // Rows still say "Blue"/"Cobalt" for some groups; match on the canonical label.
-                const colorSet = new Set(filters.colors.map((color) => canonicalGlassColor(color)));
-                rows = rows.filter((group) => colorSet.has(canonicalGlassColor(group.color)));
+                // Non-canonical colours (Black/White/…) canonicalize to null and never match.
+                const colorSet = new Set(
+                    filters.colors
+                        .map((color) => canonicalGlassColor(color))
+                        .filter((color): color is string => Boolean(color)),
+                );
+                rows = rows.filter((group) => {
+                    const color = canonicalGlassColor(group.color);
+                    return color != null && colorSet.has(color);
+                });
             }
             if (!skipKeys.has("capacities") && filters.capacities.length > 0) {
                 const selectedMls = new Set(filters.capacities.map(parseCapacityMl).filter((value): value is number => value != null));
@@ -974,7 +983,11 @@ export const searchCatalog = query({
             applicators: applicatorCounts,
             rollerMaterials,
             families: countByCatalogGroup(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
-            colors: countByCatalogGroup(colorFacetBase, (group) => canonicalGlassColor(group.color)),
+            // Glass colour facet: bottle/jar categories only; non-canonical colours dropped.
+            colors: countByCatalogGroup(
+                colorFacetBase.filter((group) => BOTTLE_CATEGORIES.has(group.category)),
+                (group) => canonicalGlassColor(group.color),
+            ),
             capacities,
             neckThreadSizes: countByCatalogGroup(threadFacetBase, (group) => group.neckThreadSize),
             componentTypes: countByCatalogGroup(result, (group) => classifyCatalogComponentType(group.displayName, group.family)),
@@ -2255,7 +2268,7 @@ export const setVariantImages = mutation({
 });
 
 // Applicator bucket suffixes in slugs (e.g. cylinder-5ml-clear-13-415-spray ends with -spray)
-const APPLICATOR_BUCKET_SUFFIXES = ["-spray", "-finemist", "-perfumespray", "-antiquespray", "-antiquespray-tassel", "-rollon", "-dropper", "-lotionpump", "-reducer", "-glasswand", "-glassapplicator", "-capclosure"] as const;
+const APPLICATOR_BUCKET_SUFFIXES = ["-spray", "-finemist", "-perfumespray", "-vintagestyle-tassel", "-vintagestyle", "-antiquespray-tassel", "-antiquespray", "-rollon", "-dropper", "-lotionpump", "-reducer", "-glasswand", "-glassapplicator", "-capclosure"] as const;
 
 // Cylinder 5ml roll-on: only Clear and cobalt-blue glass (no Amber — 5ml Amber is Tulip-shaped only)
 const CYLINDER_5ML_ROLLON_ALLOWED = new Set(["Clear", "Blue", "Cobalt", "Cobalt Blue"]);

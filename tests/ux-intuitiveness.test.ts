@@ -189,14 +189,14 @@ describe("UX: Applicator bucket coverage (no orphaned products)", () => {
     it("spray-related buckets don't overlap (user doesn't see duplicates)", () => {
         const finemist = APPLICATOR_BUCKETS.find((b) => b.value === "finemist")!;
         const perfumespray = APPLICATOR_BUCKETS.find((b) => b.value === "perfumespray")!;
-        const antiquespray = APPLICATOR_BUCKETS.find((b) => b.value === "antiquespray")!;
-        const tasseled = APPLICATOR_BUCKETS.find((b) => b.value === "antiquespray-tassel")!;
+        const vintageStyle = APPLICATOR_BUCKETS.find((b) => b.value === "vintagestyle")!;
+        const tasseled = APPLICATOR_BUCKETS.find((b) => b.value === "vintagestyle-tassel")!;
 
         // No product value should appear in more than one spray bucket
         const allSprayValues = [
             ...finemist.productValues,
             ...perfumespray.productValues,
-            ...antiquespray.productValues,
+            ...vintageStyle.productValues,
             ...tasseled.productValues,
         ];
         const unique = new Set(allSprayValues);
@@ -205,8 +205,8 @@ describe("UX: Applicator bucket coverage (no orphaned products)", () => {
 
     it("vintage bulb spray with/without tassel are separate buckets", () => {
         // User should be able to filter specifically for tasseled vintage sprays
-        const plain = APPLICATOR_BUCKETS.find((b) => b.value === "antiquespray")!;
-        const tassel = APPLICATOR_BUCKETS.find((b) => b.value === "antiquespray-tassel")!;
+        const plain = APPLICATOR_BUCKETS.find((b) => b.value === "vintagestyle")!;
+        const tassel = APPLICATOR_BUCKETS.find((b) => b.value === "vintagestyle-tassel")!;
 
         expect(plain).toBeDefined();
         expect(tassel).toBeDefined();

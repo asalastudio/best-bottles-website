@@ -179,10 +179,10 @@ function productEvidence(variant?: CustomerFacingNameVariantInput | null, group?
 
 function productTypeFromEvidence(evidence: string): { label: string; source: string } | null {
     if (/\b(ast|tassel)\b/i.test(evidence) || /ansptsl|tassel/.test(evidence)) {
-        return { label: "Vintage Style Bulb Spray Bottle with Tassel", source: "tassel sprayer evidence" };
+        return { label: "Vintage Style Bulb Sprayer Bottle with Tassel", source: "tassel sprayer evidence" };
     }
     if (/\b(asp)\b/i.test(evidence) || /ansp|vintage|antique|bulb/.test(evidence)) {
-        return { label: "Vintage Style Bulb Spray Bottle", source: "vintage style bulb sprayer evidence" };
+        return { label: "Vintage Style Bulb Sprayer Bottle", source: "vintage style bulb sprayer evidence" };
     }
     if (/\b(spr)\b/i.test(evidence) || /spry|perfume spray|spray pump|fine mist|sprayer/.test(evidence)) {
         return { label: "Perfume Spray Bottle", source: "spray evidence" };

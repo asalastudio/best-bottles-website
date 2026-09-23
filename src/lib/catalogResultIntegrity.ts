@@ -40,8 +40,13 @@ function violatesFilters(group: AuditableCatalogGroup, filters: CatalogFilters):
     }
     if (filters.colors.length > 0) {
         // Rows may still say "Blue"/"Cobalt"; compare on the canonical label the filter uses.
-        const wanted = new Set(filters.colors.map((color) => canonicalGlassColor(color)));
-        if (!wanted.has(canonicalGlassColor(group.color))) return true;
+        const wanted = new Set(
+            filters.colors
+                .map((color) => canonicalGlassColor(color))
+                .filter((color): color is string => Boolean(color)),
+        );
+        const groupColor = canonicalGlassColor(group.color);
+        if (groupColor == null || !wanted.has(groupColor)) return true;
     }
     if (filters.neckThreadSizes.length > 0 && (
         !group.neckThreadSize || !filters.neckThreadSizes.includes(group.neckThreadSize)

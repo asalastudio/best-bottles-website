@@ -14,8 +14,8 @@ export const APPLICATOR_BUCKETS = [
     { value: "reducer", label: "Reducer", productValues: ["Reducer"] },
     { value: "dropper", label: "Dropper", productValues: ["Dropper"] },
     { value: "lotionpump", label: "Lotion Pump", productValues: ["Lotion Pump"] },
-    { value: "antiquespray", label: "Vintage Style Bulb Spray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
-    { value: "antiquespray-tassel", label: "Vintage Style Bulb Spray with Tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
+    { value: "vintagestyle", label: "Vintage Style Bulb Sprayer", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
+    { value: "vintagestyle-tassel", label: "Vintage Style Bulb Sprayer with Tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
     // Bottles sold with a plain screw cap and no dispensing applicator. 95 of
     // 362 catalogue groups carry this value (2026-09-02 dev snapshot), so
     // without a bucket the Product Type facet could not reach a quarter of the
@@ -120,10 +120,15 @@ export function detectCatalogFamily(text: string): string | null {
  * Raw rows still say "Blue" or "Cobalt" for some groups; `canonicalGlassColor`
  * folds those into the canonical label so a Grace refine of ["Cobalt Blue"]
  * and a sidebar tick of "Cobalt Blue" match the same rows.
+ * Non-glass values (Black, White, Gold, Silver, Lavender, …) return null so
+ * they never appear as glass-colour facets, URL params, or filter matches.
+ * Cap/finish recovery suggestions still handle black/white/gold/silver separately.
  */
 export const CANONICAL_GLASS_COLORS = [
-    "Clear", "Frosted", "Amber", "Cobalt Blue", "Green", "Swirl", "White", "Black", "Gold", "Silver",
+    "Clear", "Frosted", "Amber", "Cobalt Blue", "Green", "Swirl",
 ] as const;
+
+const CANONICAL_GLASS_COLOR_SET: ReadonlySet<string> = new Set(CANONICAL_GLASS_COLORS);
 
 const GLASS_COLOR_ALIASES: Record<string, string> = {
     blue: "Cobalt Blue",
@@ -136,25 +141,199 @@ const GLASS_COLOR_ALIASES: Record<string, string> = {
     clear: "Clear",
     green: "Green",
     swirl: "Swirl",
-    white: "White",
-    black: "Black",
-    gold: "Gold",
-    silver: "Silver",
 };
 
 export function canonicalGlassColor(value: string | null | undefined): string | null {
     if (!value) return null;
     const trimmed = value.trim();
     if (!trimmed) return null;
-    return GLASS_COLOR_ALIASES[trimmed.toLowerCase()] ?? trimmed;
+    const aliased = GLASS_COLOR_ALIASES[trimmed.toLowerCase()];
+    if (aliased) return aliased;
+    // Exact canonical label (any casing) — never pass through unknown colours.
+    const exact = CANONICAL_GLASS_COLORS.find((color) => color.toLowerCase() === trimmed.toLowerCase());
+    return exact && CANONICAL_GLASS_COLOR_SET.has(exact) ? exact : null;
 }
 
-/** Detect a canonical glass colour inside free text (longest alias first). */
+
+/**
+ * Metal-shell perfume atomizer body finishes (travel / purse atomizers).
+ * These are NOT glass colours — never fold them into CANONICAL_GLASS_COLORS.
+ */
+export const ATOMIZER_FINISHES = [
+    "Black",
+    "Black with Dots",
+    "Blue",
+    "Gold",
+    "Pink",
+    "Pink with Dots",
+    "Red",
+    "Silver",
+    "Silver with Dots",
+    "Silver Plain",
+    "Silver Gold",
+    "Silver Slim",
+    "Silver with Star Patterns",
+    "Green",
+    "Lavender",
+] as const;
+
+export type AtomizerFinish = (typeof ATOMIZER_FINISHES)[number];
+
+/** Cap / closure finish vocabulary (products.capColor and customer copy). */
+export const CAP_FINISHES = [
+    "Black",
+    "Shiny Black",
+    "Matte Black",
+    "Black with Dots",
+    "White",
+    "Gold",
+    "Shiny Gold",
+    "Matte Gold",
+    "Silver",
+    "Shiny Silver",
+    "Matte Silver",
+    "Silver with Dots",
+    "Pink",
+    "Pink with Dots",
+    "Rose Gold",
+    "Copper",
+    "Matte Copper",
+    "Lavender",
+    "Red",
+    "Green",
+    "Blue",
+    "Turquoise",
+    "Natural",
+    "Clear",
+    "Brown Leather",
+    "Light Brown Leather",
+    "Pink Leather",
+    "Black Leather",
+    "Ivory Leather",
+] as const;
+
+export type CapFinish = (typeof CAP_FINISHES)[number];
+
+const ATOMIZER_FINISH_ALIASES: Record<string, AtomizerFinish> = {
+    "black with dots": "Black with Dots",
+    "black dots": "Black with Dots",
+    "dotted black": "Black with Dots",
+    "pink with dots": "Pink with Dots",
+    "pink dots": "Pink with Dots",
+    "dotted pink": "Pink with Dots",
+    "silver with dots": "Silver with Dots",
+    "silver dots": "Silver with Dots",
+    "dotted silver": "Silver with Dots",
+    "silver plain": "Silver Plain",
+    "plain silver": "Silver Plain",
+    "silver gold": "Silver Gold",
+    "gold silver": "Silver Gold",
+    "silver slim": "Silver Slim",
+    "slim silver": "Silver Slim",
+    "silver with star patterns": "Silver with Star Patterns",
+    "silver with stars": "Silver with Star Patterns",
+    "silver stars": "Silver with Star Patterns",
+    "star pattern": "Silver with Star Patterns",
+    "stars": "Silver with Star Patterns",
+};
+
+const CAP_FINISH_ALIASES: Record<string, CapFinish> = {
+    "shiny gold": "Shiny Gold",
+    "shiny silver": "Shiny Silver",
+    "shiny black": "Shiny Black",
+    "matte black": "Matte Black",
+    "matte gold": "Matte Gold",
+    "matte silver": "Matte Silver",
+    "matte copper": "Matte Copper",
+    "black with dots": "Black with Dots",
+    "black dots": "Black with Dots",
+    "dotted black": "Black with Dots",
+    "pink with dots": "Pink with Dots",
+    "pink dots": "Pink with Dots",
+    "dotted pink": "Pink with Dots",
+    "silver with dots": "Silver with Dots",
+    "silver dots": "Silver with Dots",
+    "rose gold": "Rose Gold",
+    "brown leather": "Brown Leather",
+    "light brown leather": "Light Brown Leather",
+    "pink leather": "Pink Leather",
+    "black leather": "Black Leather",
+    "ivory leather": "Ivory Leather",
+};
+
+function matchListedFinish<T extends string>(
+    text: string,
+    canonical: readonly T[],
+    aliases: Record<string, T>,
+): T | null {
+    const lower = text.toLowerCase();
+    const aliasKeys = Object.keys(aliases).sort((a, b) => b.length - a.length);
+    for (const key of aliasKeys) {
+        const escaped = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        if (new RegExp(`\\b${escaped}\\b`).test(lower)) {
+            return aliases[key];
+        }
+    }
+    const named = [...canonical].sort((a, b) => b.length - a.length);
+    for (const finish of named) {
+        const token = finish.toLowerCase();
+        const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        if (new RegExp(`\\b${escaped}\\b`).test(lower)) {
+            return finish;
+        }
+    }
+    return null;
+}
+
+/** Detect a metal atomizer body finish in free text (longest match first). */
+export function detectAtomizerFinish(text: string): AtomizerFinish | null {
+    return matchListedFinish(text, ATOMIZER_FINISHES, ATOMIZER_FINISH_ALIASES);
+}
+
+/** Detect a cap/closure finish in free text (longest match first). */
+export function detectCapFinish(text: string): CapFinish | null {
+    return matchListedFinish(text, CAP_FINISHES, CAP_FINISH_ALIASES);
+}
+
+/** Customer-facing cap label — always ends with Cap so it never reads as glass. */
+export function displayCapFinishLabel(finish: string): string {
+    const trimmed = finish.trim();
+    if (!trimmed) return trimmed;
+    if (/\bcap\b/i.test(trimmed)) return trimmed;
+    return `${trimmed} Cap`;
+}
+
+/** True when the phrase is a finish/trim colour, never a glass colour. */
+export function isNonGlassFinishTerm(text: string): boolean {
+    const lower = text.toLowerCase();
+    if (detectAtomizerFinish(lower) || detectCapFinish(lower)) return true;
+    return /\b(dots?|stars?|tassel|shiny|matte|leather|atomizer|atomiser)\b/.test(lower)
+        && !/\b(frosted|amber|swirl|flint)\b/.test(lower);
+}
+
+/** Detect a canonical glass colour inside free text (longest alias first).
+ * Finish / atomizer / cap colour phrases never count as glass by themselves.
+ */
 export function detectCanonicalGlassColor(text: string): string | null {
     const lower = text.toLowerCase();
     const aliases = Object.keys(GLASS_COLOR_ALIASES).sort((a, b) => b.length - a.length);
     const hit = aliases.find((alias) => new RegExp(`\\b${alias}\\b`).test(lower));
-    return hit ? GLASS_COLOR_ALIASES[hit] : null;
+    if (!hit) return null;
+
+    const hasGlassNoun = /\b(glass|frosted|amber|swirl|flint|cobalt|clear)\b/.test(lower);
+    const atomizerContext = /\b(atomizer|atomiser|travel mist|purse\s+spray|metal\s+shell)\b/.test(lower);
+    const decoratedFinish = /\b(with\s+dots?|dotted|with\s+stars?|star\s+patterns?|shiny|matte|leather)\b/.test(lower);
+    const capContext = /\b(cap|lid|closure|collar|plug|trim)\b/.test(lower);
+
+    // Coloured metal atomizers: "green atomizer" is a finish, not Green glass.
+    if (atomizerContext && !hasGlassNoun) return null;
+    // Decorated finishes alone are never glass ("pink with dots", "shiny gold").
+    if (decoratedFinish && !hasGlassNoun) return null;
+    // Cap colour requests without a glass word ("matte black cap") are not glass.
+    // Still allow "clear bottle with matte black cap" via hasGlassNoun / clear.
+    if (capContext && detectCapFinish(lower) && !hasGlassNoun) return null;
+
+    return GLASS_COLOR_ALIASES[hit];
 }
 
 /** "30ml", "30 ml (1 oz)", " 30 ML " → "30 ml" — the exact facet label. Non-ml strings pass through trimmed. */
@@ -199,17 +378,31 @@ export function displayApplicatorName(value: string): string {
     return value
         .replace(/\bVintage Bulb\b/g, "Vintage Style Bulb")
         .replace(/\bvintage bulb\b/g, "vintage style bulb")
-        .replace(/\bVINTAGE BULB\b/g, "VINTAGE STYLE BULB");
+        .replace(/\bVINTAGE BULB\b/g, "VINTAGE STYLE BULB")
+        // Prefer "Sprayer" so UI copy never sounds like fine-mist spray or an atomizer.
+        .replace(/\bVintage Style Bulb Spray\b(?!er)/g, "Vintage Style Bulb Sprayer")
+        .replace(/\bvintage style bulb spray\b(?!er)/g, "vintage style bulb sprayer");
 }
 
-/** Historic UI labels still accepted in URLs and Grace refine after the vintage-style rename. */
+/** Historic UI labels and prior bucket slugs still accepted in URLs and Grace refine. */
 const LEGACY_APPLICATOR_LABEL_TOKENS: Record<string, ApplicatorBucket> = {
-    vintagebulbspray: "antiquespray",
-    vintagebulbspraywithtassel: "antiquespray-tassel",
-    vintagebulbspraybottle: "antiquespray",
-    vintagebulbspraybottlewithtassel: "antiquespray-tassel",
-    vintagebulbspraybottles: "antiquespray",
-    vintagebulbsprayers: "antiquespray",
+    // Prior refine/URL bucket slugs (pre vintagestyle rename)
+    antiquespray: "vintagestyle",
+    antiquespraytassel: "vintagestyle-tassel",
+    // Customer-facing / product-value tokens
+    vintagebulbspray: "vintagestyle",
+    vintagestylebulbsprayer: "vintagestyle",
+    vintagebulbsprayer: "vintagestyle",
+    vintagebulbspraywithtassel: "vintagestyle-tassel",
+    vintagestylebulbsprayerwithtassel: "vintagestyle-tassel",
+    vintagebulbsprayerwithtassel: "vintagestyle-tassel",
+    vintagebulbspraybottle: "vintagestyle",
+    vintagebulbspraybottlewithtassel: "vintagestyle-tassel",
+    vintagebulbspraybottles: "vintagestyle",
+    vintagebulbsprayers: "vintagestyle",
+    antiquesprayer: "vintagestyle",
+    antiquebulbsprayer: "vintagestyle",
+    antiquebulbsprayerwithtassel: "vintagestyle-tassel",
 };
 
 function applicatorLookupToken(token: string): string {
@@ -425,6 +618,9 @@ export function catalogSearchRecoverySuggestions(query: string): string[] {
     if (/\bdropper\b|\bpipette\b/.test(normalized)) add("dropper");
     if (/\bamber\b|\bbrown\b/.test(normalized)) add("amber glass bottle");
     if (/\bblack\b/.test(normalized)) add("black cap");
+    if (/\bwhite\b/.test(normalized)) add("white cap");
+    if (/\bgold\b/.test(normalized)) add("gold cap");
+    if (/\bsilver\b/.test(normalized)) add("silver cap");
     if (/\bessential\b|\boil\b|\bperfume\b|\bfragrance\b/.test(normalized)) add("essential oil bottle");
 
     add("10 ml roll-on");

@@ -301,7 +301,7 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
     } else if (/roll[\s-]?on|roller/.test(queryText)) {
         qs.set("applicators", "rollon");
     } else if (/(bulb|vintage|antique).*(spray|sprayer)/.test(queryText)) {
-        qs.set("applicators", "antiquespray,antiquespray-tassel");
+        qs.set("applicators", "vintagestyle,vintagestyle-tassel");
     } else if (/dropper|pipette/.test(queryText)) {
         qs.set("applicators", "dropper");
     } else if (/lotion\s*pump/.test(queryText)) {
