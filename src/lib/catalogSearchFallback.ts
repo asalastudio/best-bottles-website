@@ -3,7 +3,6 @@ import {
     APPLICATOR_BUCKETS,
     BOTTLE_CATEGORIES,
     COMPONENT_CATEGORIES,
-    FAMILY_ORDER,
     type CatalogFilters,
     type RollerMaterial,
     type SortValue,
@@ -16,6 +15,7 @@ import {
     catalogSearchScore,
     classifyComponentType,
     capacitySelectionMatches,
+    sortCatalogFeatured,
 } from "@/lib/catalogFilters";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { isVisibleCatalogGroup, isMissingHeroSource } from "@/lib/products/catalog-listing-visibility";
@@ -184,8 +184,15 @@ export function buildCatalogSearchResult(input: {
             rows = rows.filter((group) => group.family != null && set.has(group.family));
         }
         if (!skipKeys.has("colors") && filters.colors.length > 0) {
-            const set = new Set(filters.colors.map((color) => canonicalGlassColor(color)));
-            rows = rows.filter((group) => set.has(canonicalGlassColor(group.color)));
+            const set = new Set(
+                filters.colors
+                    .map((color) => canonicalGlassColor(color))
+                    .filter((color): color is string => Boolean(color)),
+            );
+            rows = rows.filter((group) => {
+                const color = canonicalGlassColor(group.color);
+                return color != null && set.has(color);
+            });
         }
         if (!skipKeys.has("capacities") && filters.capacities.length > 0) {
             rows = rows.filter((group) => capacitySelectionMatches(group.capacityMl, filters.capacities));
@@ -238,7 +245,10 @@ export function buildCatalogSearchResult(input: {
         applicators,
         rollerMaterials,
         families: countBy(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
-        colors: countBy(colorFacetBase, (group) => canonicalGlassColor(group.color)),
+        colors: countBy(
+            colorFacetBase.filter((group) => BOTTLE_CATEGORIES.has(group.category)),
+            (group) => canonicalGlassColor(group.color),
+        ),
         capacities,
         neckThreadSizes: countBy(threadFacetBase, (group) => group.neckThreadSize),
         componentTypes: countBy(result, (group) => classifyComponentType(group.displayName, group.family)),
@@ -246,7 +256,7 @@ export function buildCatalogSearchResult(input: {
             ? { min: Math.min(...priceFloors), max: Math.max(...priceCeilings, ...priceFloors) }
             : { min: 0, max: 0 },
     };
-    const sorted = [...result];
+    let sorted = [...result];
     if (input.sort === "best-match" && filters.search) {
         const score = (group: CatalogSearchGroup) => catalogSearchScore(filters.search, [
             { value: group.displayName, weight: 5 },
@@ -269,20 +279,7 @@ export function buildCatalogSearchResult(input: {
     else if (input.sort === "variants-desc") sorted.sort((a, b) => (b.variantCount ?? 0) - (a.variantCount ?? 0));
     else if (input.sort === "capacity-asc") sorted.sort((a, b) => (a.capacityMl ?? Infinity) - (b.capacityMl ?? Infinity));
     else if (input.sort === "capacity-desc") sorted.sort((a, b) => (b.capacityMl ?? -Infinity) - (a.capacityMl ?? -Infinity));
-    else {
-        const familyIdx = (family: string | null) => {
-            if (!family) return FAMILY_ORDER.length;
-            const index = FAMILY_ORDER.indexOf(family);
-            return index >= 0 ? index : FAMILY_ORDER.length;
-        };
-        sorted.sort((a, b) => {
-            const categoryDelta = (BOTTLE_CATEGORIES.has(a.category) ? 0 : 1) - (BOTTLE_CATEGORIES.has(b.category) ? 0 : 1);
-            if (categoryDelta !== 0) return categoryDelta;
-            const familyDelta = familyIdx(a.family) - familyIdx(b.family);
-            if (familyDelta !== 0) return familyDelta;
-            return (a.capacityMl ?? 99999) - (b.capacityMl ?? 99999);
-        });
-    }
+    else sorted = sortCatalogFeatured(sorted);
     const offset = Math.max(0, Number(input.cursor ?? 0) || 0);
     const limit = Math.min(Math.max(input.limit, 1), 240);
     const items = sorted.slice(offset, offset + limit);

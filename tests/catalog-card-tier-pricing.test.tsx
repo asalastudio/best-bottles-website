@@ -245,16 +245,34 @@ describe("tier pricing dialog on the catalog card", () => {
         expect($("catalog-card-add")).not.toBeNull();
     });
 
-    it("routes unsellable assemblies to a quote and unpriced groups to the product page", () => {
+    it("disables Add to cart when Shopify will not checkout, and never offers a quote CTA", () => {
         card({ shopifySellable: false });
-        expect(el.querySelector('[data-testid="catalog-card-add"]')).toBeNull();
-        const quote = $("catalog-card-quote") as HTMLAnchorElement;
-        expect(quote.getAttribute("href")).toContain("/request-quote?products=");
-        expect(quote.getAttribute("href")).toContain(encodeURIComponent("SKU: CYL5-ROLL-BLK"));
-        expect($("catalog-card-tier-toggle")).not.toBeNull();
-        expect($("catalog-card-dialog-quote")).not.toBeNull();
-        act(() => root.unmount()); el.remove();
+        expect(el.querySelector('[data-testid="catalog-card-quote"]')).toBeNull();
+        expect(el.querySelector('[data-testid="catalog-card-quote-compact"]')).toBeNull();
+        expect(el.querySelector('[data-testid="catalog-card-dialog-quote"]')).toBeNull();
+        expect($("catalog-card-purchase").dataset.state).toBe("unavailable");
+        expect($("catalog-card-add").textContent).toBe("Unavailable");
+        expect(($("catalog-card-add") as HTMLButtonElement).disabled).toBe(true);
+        expect($("catalog-card-stock").textContent).toMatch(/Unavailable/i);
+        click($("catalog-card-add"));
+        expect(addItems).not.toHaveBeenCalled();
+    });
 
+    it("marks sold-out cards and blocks add to cart", () => {
+        card({ stockStatus: "Out of Stock" });
+        expect($("catalog-card-purchase").dataset.state).toBe("sold-out");
+        expect($("catalog-card-stock").textContent).toMatch(/Out of stock/i);
+        expect($("catalog-card-stock").textContent).not.toMatch(/confirm delivery/i);
+        expect(el.querySelector('[data-testid="catalog-card-quote"]')).toBeNull();
+        expect($("catalog-card-add").textContent).toBe("Out of stock");
+        expect(($("catalog-card-add") as HTMLButtonElement).disabled).toBe(true);
+        expect(($("catalog-card-add-compact") as HTMLButtonElement).disabled).toBe(true);
+        click($("catalog-card-add"));
+        click($("catalog-card-add-compact"));
+        expect(addItems).not.toHaveBeenCalled();
+    });
+
+    it("routes unpriced groups to the product page", () => {
         card({ webPrice1pc: null });
         expect($("catalog-card-purchase").dataset.state).toBe("unpriced");
         expect($("catalog-card-price").textContent).toBe("From $0.53/ea");

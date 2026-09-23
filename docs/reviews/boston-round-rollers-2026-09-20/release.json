@@ -1,0 +1,75 @@
+{
+ "schemaVersion": 1,
+ "release": "boston-round-rollers-2026-09-20",
+ "batch": "dist/paper-doll/boston-rollers-2026-09-20",
+ "approvedBy": "Jordan Richter — saw the cap-off before/after sheet and gave the ship phrase in chat 2026-09-20: 'ship Boston Round corrected rollers 2026-09-20'",
+ "approvedAt": "2026-09-20T03:10:28.945Z",
+ "shipPhrase": "ship Boston Round corrected rollers 2026-09-20",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 13,
+  "approved": 13,
+  "setAside": 0,
+  "notExtracted": 0
+ },
+ "reviewSheet": "/reviews/builder-review-2026-09-19/boston-roller-set-before-after.jpg",
+ "reviewSheetSha256": "f71afa8f9cc913e269f3ede48e1026722fdec8e443e1a54f3cad8fc22c601cae",
+ "rows": [
+  {
+   "sku": "GBBstnAmb1ozMtlRollonMattBlk",
+   "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0"
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonMattGl",
+   "plateSha256": "a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d"
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonMattSl",
+   "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68"
+  },
+  {
+   "sku": "GBBstnAmb1ozMtlRollonShnBlk",
+   "plateSha256": "6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db"
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonMattBlk",
+   "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0"
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonMattGl",
+   "plateSha256": "ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81"
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonMattSl",
+   "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68"
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonShnBlk",
+   "plateSha256": "184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17"
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonGl",
+   "plateSha256": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d"
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonMattBlk",
+   "plateSha256": "2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608"
+  },
+  {
+   "sku": "GBBstnAmb2ozMtlRollonMattGl",
+   "plateSha256": "c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490"
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonShnSl",
+   "plateSha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec"
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonGl",
+   "plateSha256": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "e473f296fd5ebb8ca9b8f5c867d4f10811bb2c93806d21a57392ba9cb3dcb39e"
+}

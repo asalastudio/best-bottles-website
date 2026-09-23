@@ -1,0 +1,1852 @@
+{
+  "storePrefix": "kits/circle-component-recovery-2026-09-22",
+  "rows": [
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-SPR-MSLV",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/24. GBCrcl50SpryMtSl.psd",
+        "sha256": "a88a14ef47afd87d3cb02de7f6aadaa747ea5142f05c9151e84369ee11be40e3"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/23. GBCrcl50SpryMtSl.psd",
+        "sha256": "8cdc48afb42ca9625044a5ab2d7b0cb350f6fa2f8945f98712b73b9245f58312"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedTransparentRgbDifference": true
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-SPR-MGLD",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/11. GBCrcl50SpryMtGl.psd",
+        "sha256": "9b5ed6da1ee227f8c4295c478e4fced35dda65d3930aba122291e8649058ed55"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/13. GBCrcl50SpryMtGl.psd",
+        "sha256": "b44413c01b22976c92c2094b849671623f7333f55cc3e6b7cce2be7ade1db519"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedBodyRetouchDifference": {
+        "minAlphaIoU": 0.99,
+        "maxMeanError": 2,
+        "observedAlphaIoU": 1,
+        "observedMeanError": 0.06251819187332634
+      }
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-SPR-SGLD",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/17. GBCrcl50SpryShnGl.psd",
+        "sha256": "d219b33af0ec906a19f7af8634627198d51633de5fea4b19fc4a5893c08a20e9"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/15. GBCrcl50SpryShnGl.psd",
+        "sha256": "f4be6337928cdc28ebf6fca846fd0d55966859140de91688a3d3436072741098"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedBodyRetouchDifference": {
+        "minAlphaIoU": 0.99,
+        "maxMeanError": 2,
+        "observedAlphaIoU": 0.9970406171134708,
+        "observedMeanError": 1.1791764094254926
+      }
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-SPR-SBLK",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/21. GBCrcl50SpryShnBlk.psd",
+        "sha256": "9be05172ad3dfe64b6804abeb6b24640b315b080b24eedf36819f1fabf4129db"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/19. GBCrcl50SpryShnBlk.psd",
+        "sha256": "1596976634391082ef17f123c392f2a0b43ac18be602492a01516bdbe1f50c3f"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedTransparentRgbDifference": true
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-SPR-SSLV",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/30. GBCrcl50SpryShnSl.psd",
+        "sha256": "a62c5ef473597007a6835d18339329d81bc85a2c0576e5d8f2e0dc5e5a6c6874"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/29. GBCrcl50SpryShnSl.psd",
+        "sha256": "b868b71fc36b28ef2028109855a9b727a54c9f629ad05f1b5927a864cfb1885e"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedBodyRetouchDifference": {
+        "minAlphaIoU": 0.99,
+        "maxMeanError": 2,
+        "observedAlphaIoU": 0.9970406171134708,
+        "observedMeanError": 1.0939638555775475
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-SPR-MGLD",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/11. GBCrclFrst50SpryMtGl.psd",
+        "sha256": "45bc177ddb2b41eca68ffc27993cf2c549cb0fe7d0e443aac185a89830f25939"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/13. GBCrclFrst50SpryMtGl.psd",
+        "sha256": "25f8a45a411d0da265aa79582895111289a07acc5fc2049410c2bad8a36153f7"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedTransparentRgbDifference": true
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-SPR-SGLD",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/17. GBCrclFrst50SpryShnGl.psd",
+        "sha256": "caa31bc270d2b8d196456e8ca5255167103ce49e45340a181720c57e69ef9cd8"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/15. GBCrclFrst50SpryShnGl.psd",
+        "sha256": "4dff9b4cf71f47060be7d11743362c73948b8c79e51753900c4a8171c1175742"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedBodyRetouchDifference": {
+        "minAlphaIoU": 0.99,
+        "maxMeanError": 2,
+        "observedAlphaIoU": 0.997125483421948,
+        "observedMeanError": 0.5028130767537548
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-SPR-SBLK",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/21. GBCrclFrst50SpryShnBlk.psd",
+        "sha256": "3a85706f520304647b4813d1fe5493d08ac17d4f5a5efd589a4ab28643d88f07"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/19. GBCrclFrst50SpryShnBlk.psd",
+        "sha256": "499090e6e16d9202251085c1b92d08512a0ff62499e02c35e75f11ef9ce097f7"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedTransparentRgbDifference": true
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-SPR-MSLV",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/24. GBCrclFrst50SpryMtSl.psd",
+        "sha256": "10ccb80838056fd4505e4bb49b5fbdfa27a101324c09b36b73301060dfed48b7"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/23. GBCrclFrst50SpryMtSl.psd",
+        "sha256": "ad8d7cc4600c17d94c5e08c609feb3170453f3f38f53f2c7e53f2fef0d3b3558"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedBodyRetouchDifference": {
+        "minAlphaIoU": 0.99,
+        "maxMeanError": 2,
+        "observedAlphaIoU": 0.9974616523382064,
+        "observedMeanError": 0.6021692290760088
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-SPR-SSLV",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/30. GBCrclFrst50SpryShnSl.psd",
+        "sha256": "7b760ffa5f5d66be8933ac2cf97923babe3d02983d3cd3d7778433fb4483c90e"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/29. GBCrclFrst50SpryShnSl.psd",
+        "sha256": "5376647bbb783d9e32e8d9ff8e4a9ec9f38aec07ae789600c8c45bd4f2a4d867"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedBodyRetouchDifference": {
+        "minAlphaIoU": 0.99,
+        "maxMeanError": 2,
+        "observedAlphaIoU": 0.9974761328624401,
+        "observedMeanError": 0.6019313313804839
+      }
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-SPR-CPR",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/56. GBCrcl50SpryCu.psd",
+        "sha256": "5616c1b00976716d55c0cf226b0ca4b99ebf1fe525c985c5cf44f5dad147effb"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/57. GBCrcl50SpryCu.psd",
+        "sha256": "2c27ddf6edc2661e6fe059694c4788a483872e0fbce76b101b9e18a6e7d1dcb4"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4,
+              "reviewedProductBox": [
+                3,
+                89,
+                340,
+                669
+              ]
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedTransparentRgbDifference": true
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-SPR-CPR",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Perfume Spray Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/56. GBCrclFrst50SpryCu.psd",
+        "sha256": "ad1a22165b3b7a477f25ad3977904049283cb50851b1c71f3e383d80fdafbe53"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/57. GBCrclFrst50SpryCu.psd",
+        "sha256": "dd097b58a1f5b83386be9e45c70101194e140a3964d49487a6f1388df0408800"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 530,
+      "axisX": 500,
+      "baselineY": 1056,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4,
+              "reviewedProductBox": [
+                3,
+                89,
+                340,
+                669
+              ]
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale.",
+      "reviewedBodyRetouchDifference": {
+        "minAlphaIoU": 0.99,
+        "maxMeanError": 2,
+        "observedAlphaIoU": 0.9972497552955992,
+        "observedMeanError": 0.5002053031714049
+      }
+    },
+    {
+      "sku": "GBCrcl50AnSpTslBlk",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-AST-BLK",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/48. GBCrcl50AnSpTslBlk.psd",
+        "sha256": "153d50212121d8148832e37168886efa512f6f287be1d3fc508baeadfcf06a83"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/48. GBCrcl50AnSpTslBlk.psd",
+        "sha256": "153d50212121d8148832e37168886efa512f6f287be1d3fc508baeadfcf06a83"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslLvn",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-AST-LVN",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/42. GBCrcl50AnSpTslLvn.psd",
+        "sha256": "0f9d3ca4b433defaab1f7860552704b5d4bc88b93b64918ae5f75b9d6c072854"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/42. GBCrcl50AnSpTslLvn.psd",
+        "sha256": "0f9d3ca4b433defaab1f7860552704b5d4bc88b93b64918ae5f75b9d6c072854"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-AST-IVGD",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/43. GBCrcl50AnSpTslIvyGl.psd",
+        "sha256": "9066bbd9860752e2470661504b861d3292397463155a994aadc0ae148101803d"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/43. GBCrcl50AnSpTslIvyGl.psd",
+        "sha256": "9066bbd9860752e2470661504b861d3292397463155a994aadc0ae148101803d"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvySl",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-AST-IVSL",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/44. GBCrcl50AnSpTslIvySl.psd",
+        "sha256": "f40dacba126418f0803e7ca64b09cd8cc378d1f410046627cc752a1b3312b1cd"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/44. GBCrcl50AnSpTslIvySl.psd",
+        "sha256": "f40dacba126418f0803e7ca64b09cd8cc378d1f410046627cc752a1b3312b1cd"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslWht",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-AST-WHT",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/45. GBCrcl50AnSpTslWht.psd",
+        "sha256": "2887dabd234da23ca72b0000f2990c6167c06261a3c381b5506124dd0235bebc"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/45. GBCrcl50AnSpTslWht.psd",
+        "sha256": "2887dabd234da23ca72b0000f2990c6167c06261a3c381b5506124dd0235bebc"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslPnk",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-AST-PNK",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/46. GBCrcl50AnSpTslPnk.psd",
+        "sha256": "a08dda605b2166101b0451a0fc3adc3d07e730f8ca75fc03383dcc0f72c17f15"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/46. GBCrcl50AnSpTslPnk.psd",
+        "sha256": "a08dda605b2166101b0451a0fc3adc3d07e730f8ca75fc03383dcc0f72c17f15"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslRed",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-ASP-02",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/47. GBCrcl50AnSpTslRed.psd",
+        "sha256": "0058d11d8f0fbcf1ec0ac5d4e0b919f3bf1eae912455d6b24a8c5ec02ac0aa66"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/47. GBCrcl50AnSpTslRed.psd",
+        "sha256": "0058d11d8f0fbcf1ec0ac5d4e0b919f3bf1eae912455d6b24a8c5ec02ac0aa66"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslMtSl",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-ASP-01",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/49. GBCrcl50AnSpTslMtSl.psd",
+        "sha256": "810159ef64089a3f1ce67b4a084d9397814a4278dc7bcbe0fe540210d6ccb312"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/49. GBCrcl50AnSpTslMtSl.psd",
+        "sha256": "810159ef64089a3f1ce67b4a084d9397814a4278dc7bcbe0fe540210d6ccb312"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-50ML-AST-GLD",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/50. GBCrcl50AnSpTslGl.psd",
+        "sha256": "9904d4c165ba67d7a0540fb2bbec6dca8bec2e250978fd2464be3d954f422d37"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/50. GBCrcl50AnSpTslGl.psd",
+        "sha256": "9904d4c165ba67d7a0540fb2bbec6dca8bec2e250978fd2464be3d954f422d37"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-clear-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslBlk",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-01",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/48. GBCrclFrst50AnSpTslBlk.psd",
+        "sha256": "98fc29bdd430f1a1996dbbe318ea896fa849b4761b84664ce0f22741b2f845fb"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/48. GBCrclFrst50AnSpTslBlk.psd",
+        "sha256": "98fc29bdd430f1a1996dbbe318ea896fa849b4761b84664ce0f22741b2f845fb"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslGl",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-02",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/50. GBCrclFrst50AnSpTslGl.psd",
+        "sha256": "00510cd03a9046a850e1977690f5ccd112db262fe9afff480b26848924779a75"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/50. GBCrclFrst50AnSpTslGl.psd",
+        "sha256": "00510cd03a9046a850e1977690f5ccd112db262fe9afff480b26848924779a75"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvyGl",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-03",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/43. GBCrclFrst50AnSpTslIvyGl.psd",
+        "sha256": "7b484cf800ab037b11cb2eacfd3a6ea9b020f61a31ad16c4a6edc35788c06258"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/43. GBCrclFrst50AnSpTslIvyGl.psd",
+        "sha256": "7b484cf800ab037b11cb2eacfd3a6ea9b020f61a31ad16c4a6edc35788c06258"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvySl",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-04",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/44. GBCrclFrst50AnSpTslIvySl.psd",
+        "sha256": "8b8eef5791c4d9a881c4a32b1c1fd576a7ef465c6465ab8b366ae4e802e5f05e"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/44. GBCrclFrst50AnSpTslIvySl.psd",
+        "sha256": "8b8eef5791c4d9a881c4a32b1c1fd576a7ef465c6465ab8b366ae4e802e5f05e"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslLvn",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-05",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/42. GBCrclFrst50AnSpTslLvn.psd",
+        "sha256": "85dbe0aa37d7952b4301cc7b57902cfd809013c5e354fbf25a1626b82b54ec30"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/42. GBCrclFrst50AnSpTslLvn.psd",
+        "sha256": "85dbe0aa37d7952b4301cc7b57902cfd809013c5e354fbf25a1626b82b54ec30"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslMtSl",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-06",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/49. GBCrclFrst50AnSpTslMtSl.psd",
+        "sha256": "18b3de1c872d21f3cd350f9a454137e815eb7c74f01566f6f3353430c0765354"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/49. GBCrclFrst50AnSpTslMtSl.psd",
+        "sha256": "18b3de1c872d21f3cd350f9a454137e815eb7c74f01566f6f3353430c0765354"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslPnk",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-07",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/46. GBCrclFrst50AnSpTslPnk.psd",
+        "sha256": "726d065d4d79296ef02d7d447c8a5c5d9cdda7256b29c588c15b73b74b8f8a0f"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/46. GBCrclFrst50AnSpTslPnk.psd",
+        "sha256": "726d065d4d79296ef02d7d447c8a5c5d9cdda7256b29c588c15b73b74b8f8a0f"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslRed",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-08",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/47. GBCrclFrst50AnSpTslRed.psd",
+        "sha256": "9305773ab2d0e9e95703104f810c1f00e0e8268cfde91958d9b0fb3269c41135"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/47. GBCrclFrst50AnSpTslRed.psd",
+        "sha256": "9305773ab2d0e9e95703104f810c1f00e0e8268cfde91958d9b0fb3269c41135"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslWht",
+      "identity": {
+        "graceSku": "GB-CIR-FRS-50ML-ASP-09",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Vintage Bulb Sprayer with Tassel"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/45. GBCrclFrst50AnSpTslWht.psd",
+        "sha256": "99e64d77b97b20d113b4512afdcb85a16802a758729e44ec913561af8ef17045"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/45. GBCrclFrst50AnSpTslWht.psd",
+        "sha256": "99e64d77b97b20d113b4512afdcb85a16802a758729e44ec913561af8ef17045"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 300,
+      "axisX": 680,
+      "baselineY": 850,
+      "familyId": "circle-50ml-frosted-18-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "review": "Exact native Circle master layers; integrated bulb/hose/tassel retained as one sprayer. Sprayer overcaps use native cap-on source, with sidecar off. One uniform scale."
+    }
+  ]
+}

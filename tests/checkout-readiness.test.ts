@@ -16,7 +16,13 @@ describe("checkout readiness helpers", () => {
         expect(isCheckoutReady({ graceSku: "B", checkoutEligible: false })).toBe(false);
         expect(isCheckoutReady({ graceSku: "C" })).toBe(false);
         expect(isCheckoutReady({ graceSku: "D", shopifyVariantId: "gid://shopify/ProductVariant/123" })).toBe(true);
-        expect(isCheckoutReady({ graceSku: "E", checkoutEligible: false, shopifyVariantId: "gid://shopify/ProductVariant/456" })).toBe(true);
+        expect(isCheckoutReady({ graceSku: "E", checkoutEligible: false, shopifyVariantId: "gid://shopify/ProductVariant/456" })).toBe(false);
+        expect(isCheckoutReady({
+            graceSku: "F",
+            checkoutEligible: true,
+            shopifyVariantId: "gid://shopify/ProductVariant/789",
+            stockStatus: "Out of Stock",
+        })).toBe(false);
     });
 
     it("splits verified checkout items from quote-only items", () => {
@@ -103,6 +109,7 @@ describe("checkout buying-path guardrails", () => {
         expect(cartProvider).toContain("Boolean(shopifyVariantId) || item.checkoutEligible === true");
         // Sellability must veto a stale variant ID rather than the other way round.
         expect(cartProvider).toContain("shopifySellable === false");
+        expect(cartProvider).toContain("item.checkoutEligible === false");
         expect(route).toContain("normalizeShopifyVariantId(item.shopifyVariantId)");
         expect(route).toContain("resolveCheckoutVariantsByIds");
         expect(route).toContain("const directCheckoutItems = matchingDirectItems.flatMap");

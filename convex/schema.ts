@@ -36,6 +36,13 @@ export default defineSchema({
     productGroups: defineTable({
         slug: v.string(),                                    // e.g. "cylinder-9ml-clear" — stable URL key
         displayName: v.string(),                             // e.g. "Cylinder 9ml Clear" — for search
+        /**
+         * A name a staff member typed in the Team Hub to REPLACE the generated one. Empty for almost
+         * every product: customer-facing names are composed from attributes (capacity, colour, family,
+         * product type) so 2,480 SKUs read as one catalogue. `displayName` is NOT this: it holds
+         * imported legacy text and is only a fallback; making it win would re-title the shop overnight.
+         */
+        customName: v.optional(v.union(v.string(), v.null())),
         family: v.string(),
         capacity: v.union(v.string(), v.null()),             // human-readable e.g. "9 ml"
         capacityMl: v.union(v.number(), v.null()),
@@ -249,6 +256,10 @@ export default defineSchema({
         shopifyVariantId: v.optional(v.union(v.string(), v.null())),        // Shopify variant GID
         shopifyInventoryItemId: v.optional(v.union(v.string(), v.null())),  // Shopify inventory item GID
         shopifyUpdatedAt: v.optional(v.number()),                           // Last webhook sync timestamp
+        /** From the product webhook, so an inventory-level webhook can tell a real stock-out from an
+         * untracked or oversellable variant sitting at zero. Undefined = no product webhook seen yet. */
+        shopifyInventoryTracked: v.optional(v.union(v.boolean(), v.null())),
+        shopifyInventoryPolicy: v.optional(v.union(v.string(), v.null())),
         /**
          * Whether Shopify will actually SELL this variant right now.
          *
@@ -280,6 +291,7 @@ export default defineSchema({
         .index("by_graceSku", ["graceSku"])           // Grace internal lookup
         .index("by_category", ["category"])
         .index("by_family", ["family"])
+        .index("by_collection", ["bottleCollection"])   // getCatalogProducts collection filter
         .index("by_neckThreadSize", ["neckThreadSize"])
         .index("by_productGroupId", ["productGroupId"]) // Used by getProductGroup to avoid full table scan
         .index("by_shopifyVariantId", ["shopifyVariantId"]) // Webhook sync: inventory updates
@@ -1122,4 +1134,28 @@ export default defineSchema({
         buildId: v.string(),
     })
         .index("by_familyId", ["familyId"]),
+
+    /**
+     * Every Team Hub edit to a catalogue row: who, when, the value before and after.
+     * One entry per field, so a single field can be reverted without touching the rest.
+     * Values are JSON strings: a name, a status and a five-rung price ladder share one column.
+     */
+    catalogChangeLog: defineTable({
+        targetType: v.union(v.literal("product"), v.literal("group")),
+        targetId: v.string(),                       // products / productGroups _id
+        label: v.string(),                          // website SKU or group slug, for reading the log
+        field: v.string(),
+        before: v.string(),
+        after: v.string(),
+        actorId: v.string(),
+        actorEmail: v.union(v.string(), v.null()),
+        at: v.number(),
+        source: v.string(),                         // "team-hub" | "team-hub-revert"
+        revertOf: v.optional(v.id("catalogChangeLog")),
+        revertedBy: v.optional(v.id("catalogChangeLog")),
+        /** Set when the edit changed the 1-piece price, which Shopify must charge too. */
+        shopifyPush: v.optional(v.object({ status: v.union(v.literal("ok"), v.literal("failed"), v.literal("off")), detail: v.union(v.string(), v.null()), at: v.number() })),
+    })
+        .index("by_target", ["targetType", "targetId", "at"])
+        .index("by_at", ["at"]),
 });

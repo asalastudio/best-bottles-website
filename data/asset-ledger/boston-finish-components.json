@@ -1,0 +1,986 @@
+{
+ "GBBstn1ozMtlRollonMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozMtlRollonShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozMtlRollonMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozMtlRollonGl": {
+  "finish": "CPRoll20-400TallShnGl",
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozMtlRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozMtlRollonMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozMtlRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozMtlRollonMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozMtlRollonShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozMtlRollonShnBlk": {
+  "finish": "CPRoll20-400TallShnBlk",
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozMtlRollonMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozMtlRollonShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozMtlRollonMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Metal Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozMtlRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Metal Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozMtlRollGl": {
+  "finish": null,
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstn2ozMtlRollMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozMtlRollMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozMtlRollMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozMtlRollShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozMtlRollonMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozMtlRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozMtlRollonMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozMtlRollonShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozMtlRollonMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Metal Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozMtlRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Metal Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozMtlRollonMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozMtlRollonShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Metal Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb15mlBlkDropperSlTrim": {
+  "finish": "Drp18-40015mlShnSlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnAmb15mlWhtDropper": {
+  "finish": "Drp18-40015mlWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnAmb15mlWhtDropperGlTrim": {
+  "finish": "Drp18-40015mlShnGlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnAmb15mlWhtDropperSlTrim": {
+  "finish": "Drp18-40015mlShnSlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnAmb15mlBlkDropperGlTrim": {
+  "finish": "Drp18-40015mlShnGlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnBlu15WhtDrpr": {
+  "finish": "Drp18-40015mlWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnBlu15WhtDrprSlTrim": {
+  "finish": "Drp18-40015mlShnSlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnBlu15WhtDrprGlTrim": {
+  "finish": "Drp18-40015mlShnGlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnBlu15mlBlkDropperSlTrim": {
+  "finish": "Drp18-40015mlShnSlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnBlu15BlkDrprGlTrim": {
+  "finish": "Drp18-40015mlShnGlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstn1ozWhtDrp": {
+  "finish": "Drp20-4001ozWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozBlkDrpShnGlTrim": {
+  "finish": "Drp20-4001ozShnGlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozWhtDrpShnGlTrim": {
+  "finish": "Drp20-4001ozlShnGlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozRollonShBlk": {
+  "finish": "CPRoll20-400TallShnBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozWhtDrpShnSlTrim": {
+  "finish": "Drp20-4001ozlShnSlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozRollonShGl": {
+  "finish": "CPRoll20-400TallShnGl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozBlkDrpShnGl": {
+  "finish": "Drp20-4001ozShnGlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozRollonMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozWhtDropper": {
+  "finish": "Drp20-4001ozWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozRollonShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozWhtDropperShnGlTrim": {
+  "finish": "Drp20-4001ozlShnGlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozWhtDrprShnSlTrim": {
+  "finish": "Drp20-4001ozlShnSlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozBlkDropperShnGlTrim": {
+  "finish": "Drp20-4001ozShnGlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozRollonMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozWhtDropper": {
+  "finish": "Drp20-4001ozWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozRollonMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozWhtDropperShnGlTrim": {
+  "finish": "Drp20-4001ozlShnGlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozRollonShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozWhtDropperShnSlTrim": {
+  "finish": "Drp20-4001ozlShnSlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozRollonShnBlk": {
+  "finish": "CPRoll20-400TallShnBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozRollonMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozRollonMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozRollonShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozRollonShnBlk": {
+  "finish": "CPRoll20-400TallShnBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozRollShnBlk": {
+  "finish": "CPRoll20-400TallShnBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozRollMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozRollMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozRollShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozRollonMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozRollonMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozWhtDrpr": {
+  "finish": "Drp20-4002ozWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozRollonShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozBlkDrprShnGlTrim": {
+  "finish": null,
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnAmb2ozRollonShnBlk": {
+  "finish": "CPRoll20-400TallShnBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozWhtDrprShnSlTrim": {
+  "finish": null,
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnBlu2ozRollonMattGl": {
+  "finish": "CPRoll20-400TallMattGl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozBlkDrprShnSlTrim": {
+  "finish": "Drp20-4002ozShnSlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozRollonMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozWhtDrprShnGlTrim": {
+  "finish": "Drp20-4002ozlShnGlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozRollonMattSl": {
+  "finish": "CPRoll20-400TallMattSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozBlkDropperShnGlTrim": {
+  "finish": "Drp20-4002ozShnGlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozRollonShnSl": {
+  "finish": "CPRoll20-400TallShnSl",
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozBlkDrprShnSlTrim": {
+  "finish": "Drp20-4002ozShnSlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozRollonShnBlk": {
+  "finish": "CPRoll20-400TallShnBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozWhtDrpr": {
+  "finish": "Drp20-4002ozWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozWhtDropperShnGlTrim": {
+  "finish": "Drp20-4002ozlShnGlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozWhtDropperShnSlTrim": {
+  "finish": "Drp20-4002ozlShnSlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozBlkDropperShnGlTrim": {
+  "finish": "Drp20-4002ozShnGlTrimBlkBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozWhtDropper": {
+  "finish": "Drp20-4002ozWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozWhtDropperShnGlTrim": {
+  "finish": "Drp20-4002ozlShnGlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozWhtDropperShnSlTrim": {
+  "finish": "Drp20-4002ozlShnSlTrimWhiteBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn15BlkCapSht": {
+  "finish": "18-400CpShortBlk",
+  "applicator": null,
+  "color": "Clear",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnAmb15mlBlkCapSht": {
+  "finish": "18-400CpShortBlk",
+  "applicator": null,
+  "color": "Amber",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstnBlu15BlkCapSht": {
+  "finish": "18-400CpShortBlk",
+  "applicator": null,
+  "color": "Cobalt Blue",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": true
+ },
+ "GBBstn1ozBlkCapSht": {
+  "finish": "20-400cp1ozShortBlk",
+  "applicator": null,
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozBlkCapSht": {
+  "finish": "20-400cp1ozShortBlk",
+  "applicator": null,
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozBlkCapSht": {
+  "finish": "20-400cp1ozShortBlk",
+  "applicator": null,
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozBlkCapSht": {
+  "finish": "20-400Cp2ozShortBlk",
+  "applicator": null,
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozBlkCapSht": {
+  "finish": "20-400Cp2ozShortBlk",
+  "applicator": null,
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu2ozBlkCapSht": {
+  "finish": "20-400Cp2ozShortBlk",
+  "applicator": null,
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn1ozRollonMattBlk": {
+  "finish": "CPRoll20-400TallMattBlk",
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozRollonGl": {
+  "finish": null,
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnBlu1ozRollonGl": {
+  "finish": null,
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstn2ozRollGl": {
+  "finish": null,
+  "applicator": "Plastic Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnAmb2ozRollonGl": {
+  "finish": null,
+  "applicator": "Plastic Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnBlu2ozRollonGl": {
+  "finish": null,
+  "applicator": "Plastic Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstn1ozMtlRollonBlk": {
+  "finish": null,
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnAmb1ozMtlRollonGl": {
+  "finish": null,
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnBlu1ozMtlRollonGl": {
+  "finish": null,
+  "applicator": "Metal Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstn2ozMtlRollBlk": {
+  "finish": null,
+  "applicator": "Metal Roller Ball",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnAmb2ozMtlRollonGl": {
+  "finish": null,
+  "applicator": "Metal Roller Ball",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnBlu2ozMtlRollonGl": {
+  "finish": null,
+  "applicator": "Metal Roller Ball",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnAmb15mlBlkDropper": {
+  "finish": null,
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": false
+ },
+ "GBBstnBlu15BlkDrpr": {
+  "finish": null,
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": false
+ },
+ "GBBstn1ozBlkDrp": {
+  "finish": "Drp20-4001ozBlckBulb",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb1ozBlkDropper": {
+  "finish": "Drp20-4001ozBlckBulb",
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnBlu1ozBlkDropper": {
+  "finish": "Drp20-4001ozBlckBulb",
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 30,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstn2ozBlkDrpr": {
+  "finish": "Drp20-4002ozBlckBulb",
+  "applicator": "Dropper",
+  "color": "Clear",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": true
+ },
+ "GBBstnAmb2ozBlkDrpr": {
+  "finish": null,
+  "applicator": "Dropper",
+  "color": "Amber",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstnBlu2ozBlkDropper": {
+  "finish": null,
+  "applicator": "Dropper",
+  "color": "Cobalt Blue",
+  "capacityMl": 60,
+  "neck": "20-400",
+  "candidate": false
+ },
+ "GBBstn15BlkDrp": {
+  "finish": null,
+  "applicator": "N/A",
+  "color": "Clear",
+  "capacityMl": 15,
+  "neck": "18-400",
+  "candidate": false
+ }
+}

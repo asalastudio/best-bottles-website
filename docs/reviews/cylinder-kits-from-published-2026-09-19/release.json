@@ -1,0 +1,20 @@
+{
+ "schemaVersion": 1,
+ "release": "cylinder-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/cylinder",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "shipPhrase": "ship Cylinder kit release 2026-09-19",
+ "published": [],
+ "counts": {
+  "extractedCandidates": 0,
+  "approved": 0,
+  "setAside": 0,
+  "notExtracted": 13
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/cylinder-kits.jpg",
+ "reviewSheetSha256": "70b1f11914e5047386bc6a5d875d94168409659a5cfbd26d4684a03a12ab83c3",
+ "rows": [],
+ "setAside": [],
+ "approvalSha256": "f1b1490a417423be329bbcd4269d188c6f8200b148aec1c36cccc3814bb7116e"
+}

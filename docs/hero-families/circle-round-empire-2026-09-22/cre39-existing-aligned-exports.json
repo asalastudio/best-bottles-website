@@ -1,0 +1,2542 @@
+{
+  "rows": [
+    {
+      "sku": "GBCrcl15Gl",
+      "family": "Circle",
+      "capacityMl": 15,
+      "catalog": {
+        "sku": "GBCrcl15Gl",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "applicator": null,
+        "groupSlug": "circle-15ml-clear-13-415",
+        "itemName": "Circle design 15ml, 1/2oz Clear glass bottle with shiny gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl15Gl.bd0ae9e1f474.png",
+      "sourceSha256": "bd0ae9e1f4748d1c117c0fae4956ce3e010602beb8ee1807ab2fa75c33a4952d",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "bd0ae9e1f4748d1c117c0fae4956ce3e010602beb8ee1807ab2fa75c33a4952d",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:21:57.750Z"
+      },
+      "masterSourceRecorded": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/28. GBCrcl15Gl.psd",
+      "targetSpanPct": 44.625,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl15Gl",
+        "centerX": 633,
+        "landmarkY": 851,
+        "glassFootY": 1551,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-0.jpg"
+      },
+      "sourceArtworkBounds": [
+        286,
+        682,
+        1380,
+        1559
+      ],
+      "transform": {
+        "scale": 1.4586,
+        "x": -79.29379999999992,
+        "y": -180.20859999999993
+      },
+      "outputArtworkBounds": [
+        337.86580000000004,
+        814.5566,
+        1933.5742,
+        2093.7488
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl15Gl-2080x2288.png",
+      "finalSha256": "f85d45e29333b0f440896d9df0da5eba81e24510e69551134a39ebfa1dd63a1a",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 1061.06,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.292999999999999,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "family": "Circle",
+      "capacityMl": 15,
+      "catalog": {
+        "sku": "GBCrcl15SpryGlMatt",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "applicator": "Fine Mist Sprayer",
+        "groupSlug": "circle-15ml-clear-13-415-finemist",
+        "itemName": "Circle design 15ml, 1/2oz Clear glass bottle with matte gold spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl15SpryGlMatt.4abc2162d678.png",
+      "sourceSha256": "4abc2162d678817f81e7338535fa2339e7d9107822e58dcf19fbdbcf5e987642",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "4abc2162d678817f81e7338535fa2339e7d9107822e58dcf19fbdbcf5e987642",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:21:59.760Z"
+      },
+      "masterSourceRecorded": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/7. GBCrcl15SpryGlMatt.psd",
+      "targetSpanPct": 44.625,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl15SpryGlMatt",
+        "centerX": 608,
+        "landmarkY": 884,
+        "glassFootY": 1554,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-0.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        252,
+        515,
+        1361,
+        1562
+      ],
+      "transform": {
+        "scale": 1.523910447761194,
+        "x": -115.87088557213929,
+        "y": -286.07683582089567
+      },
+      "outputArtworkBounds": [
+        268.1545472636816,
+        498.7370447761192,
+        1958.1712338308457,
+        2094.2712835820894
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl15SpryGlMatt-2080x2288.png",
+      "finalSha256": "f2dde5199378fabb6d4ee04ff27fd6b36db91fc18bb4d45d8aff9404a9210f03",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 1061.06,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.61955223880597,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl15MtlRollGlMatt",
+      "family": "Circle",
+      "capacityMl": 15,
+      "catalog": {
+        "sku": "GBCrcl15MtlRollGlMatt",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "applicator": "Metal Roller Ball",
+        "groupSlug": "circle-15ml-clear-13-415-rollon",
+        "itemName": "Circle design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and matte gold cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price eac"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl15MtlRollGlMatt.a5ef1cec6db7.png",
+      "sourceSha256": "a5ef1cec6db749aa663d0f6f01d8f2c42577da220a01e2e05a372239400eff43",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "a5ef1cec6db749aa663d0f6f01d8f2c42577da220a01e2e05a372239400eff43",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:21:58.420Z"
+      },
+      "masterSourceRecorded": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/16. GBCrcl15MtlRollGlMatt.psd",
+      "targetSpanPct": 44.625,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl15MtlRollGlMatt",
+        "centerX": 571,
+        "landmarkY": 860,
+        "glassFootY": 1541,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-0.jpg"
+      },
+      "sourceArtworkBounds": [
+        238,
+        586,
+        1336,
+        1557
+      ],
+      "transform": {
+        "scale": 1.499295154185022,
+        "x": -94.76419970631412,
+        "y": -228.33383259911898
+      },
+      "outputArtworkBounds": [
+        262.0680469897211,
+        650.2531277533038,
+        1908.2941262848753,
+        2106.06872246696
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl15MtlRollGlMatt-2080x2288.png",
+      "finalSha256": "c2f83051ea3190b7abb0d5b1afc1ea4f4abfb5cd0981261a58bc311c37a7238f",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 1061.06,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.49647577092511,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl30GlCap",
+      "family": "Circle",
+      "capacityMl": 30,
+      "catalog": {
+        "sku": "GBCrcl30GlCap",
+        "family": "Circle",
+        "capacityMl": 30,
+        "color": "Clear",
+        "applicator": null,
+        "groupSlug": "circle-30ml-clear-15-415",
+        "itemName": "Circle design 30 ml, clear glass bottle with shiny gold and cap. For use with cologne, perfume or fragrance oil, after shave and beard oils. Price each Classic, Circle design is a family of bottles availabel in many sizes. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl30GlCap.73169e784ffd.png",
+      "sourceSha256": "73169e784ffd11ca53be695fd2e7694e14690c2dc1f0dcb4e5271154e045f6a5",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "73169e784ffd11ca53be695fd2e7694e14690c2dc1f0dcb4e5271154e045f6a5",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:22:12.729Z"
+      },
+      "masterSourceRecorded": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/7. GBCrcl30GlCap..psd",
+      "targetSpanPct": 46,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl30GlCap",
+        "centerX": 620,
+        "landmarkY": 764,
+        "glassFootY": 1545,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-0.jpg"
+      },
+      "sourceArtworkBounds": [
+        244,
+        584,
+        1380,
+        1561
+      ],
+      "transform": {
+        "scale": 1.3476056338028168,
+        "x": -8.848826291079831,
+        "y": 0.02929577464783506
+      },
+      "outputArtworkBounds": [
+        319.96694835680745,
+        787.0309859154929,
+        1850.8469483568074,
+        2103.6416901408447
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl30GlCap-2080x2288.png",
+      "finalSha256": "7ac83374d256e9df90d498739930aecd27163c1183c0eca7d0427ced2aecd92a",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 1029.6,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 6.738028169014084,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl30SpryMattGl",
+      "family": "Circle",
+      "capacityMl": 30,
+      "catalog": {
+        "sku": "GBCrcl30SpryMattGl",
+        "family": "Circle",
+        "capacityMl": 30,
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump",
+        "groupSlug": "circle-30ml-clear-15-415-perfumespray",
+        "itemName": "Circle design 30 ml, clear glass bottle with sprayer and matte gold cap. For use with cologne, perfume, air freshner, face and body spray, or room spray. Classic, Circle design is a family of bottles availabel in many sizes. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl30SpryMattGl.267edc5e626c.png",
+      "sourceSha256": "267edc5e626c770cb5ffa91a025e7c523ab54da432a5bcce5d3b9abfb3251f92",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "267edc5e626c770cb5ffa91a025e7c523ab54da432a5bcce5d3b9abfb3251f92",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:22:13.313Z"
+      },
+      "masterSourceRecorded": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/5. GBCrcl30SpryMattGl.psd",
+      "targetSpanPct": 46,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl30SpryMattGl",
+        "centerX": 626,
+        "landmarkY": 770,
+        "glassFootY": 1538,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-0.jpg"
+      },
+      "sourceArtworkBounds": [
+        258,
+        319,
+        1384,
+        1562
+      ],
+      "transform": {
+        "scale": 1.3704166666666666,
+        "x": -23.214166666666642,
+        "y": -25.620833333333394
+      },
+      "outputArtworkBounds": [
+        330.35333333333335,
+        411.54208333333327,
+        1873.4424999999999,
+        2114.97
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl30SpryMattGl-2080x2288.png",
+      "finalSha256": "1d0022c51c9d222a3ee550c51ab74420f797c0461cc38eddae9369cf6a9153a3",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 1029.6,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 6.852083333333333,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl50AnSpGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBCrcl50AnSpGl",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "circle-50ml-clear-18-415-antiquespray",
+        "itemName": "Circle design 50 ml, 1.7oz  clear glass bottle  with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty of your"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl50AnSpGl.300d01758f98.png",
+      "sourceSha256": "300d01758f982aac210468f690a6e19655e1861405e69b4cbf997a85b45315b8",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "300d01758f982aac210468f690a6e19655e1861405e69b4cbf997a85b45315b8",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:22:14.067Z"
+      },
+      "masterSourceRecorded": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/37. GBCrcl50AnSpGl.psd",
+      "targetSpanPct": 54,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl50AnSpGl",
+        "centerX": 880,
+        "landmarkY": 698,
+        "glassFootY": 1542,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-0.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        235,
+        188,
+        1325,
+        1561
+      ],
+      "transform": {
+        "scale": 1.4638862559241705,
+        "x": -114.88657187993681,
+        "y": -175.23260663507108
+      },
+      "outputArtworkBounds": [
+        229.12669826224328,
+        99.97800947867296,
+        1824.7627172195891,
+        2109.8938388625593
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl50AnSpGl-2080x2288.png",
+      "finalSha256": "2c0ef5604292f7836ed202911b728b2e13459711ba429bb659575dff0dd292e6",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.3194312796208525,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl50DrpGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBCrcl50DrpGl",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Dropper",
+        "groupSlug": "circle-50ml-clear-18-415-dropper",
+        "itemName": "Circle design 50 ml, 1.7oz  clear glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Circle design is a famiily of bottles available"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl50DrpGl.0e6daa55097b.png",
+      "sourceSha256": "0e6daa55097b7817b76344a4f951fdd4721647acefa40c14e2140a90f1058ebc",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "0e6daa55097b7817b76344a4f951fdd4721647acefa40c14e2140a90f1058ebc",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:23:04.942Z"
+      },
+      "masterSourceRecorded": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/52. GBCrcl50DrpGl.psd",
+      "targetSpanPct": 54,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl50DrpGl",
+        "centerX": 780,
+        "landmarkY": 704,
+        "glassFootY": 1540,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-1.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        343,
+        233,
+        1254,
+        1563
+      ],
+      "transform": {
+        "scale": 1.4778947368421052,
+        "x": -112.75789473684199,
+        "y": -193.87789473684188
+      },
+      "outputArtworkBounds": [
+        394.1600000000001,
+        150.47157894736864,
+        1740.5221052631578,
+        2116.0715789473684
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl50DrpGl-2080x2288.png",
+      "finalSha256": "8a9da5b0d6c8820ebe7d4c2e8e48d15dc053c6f36f3fd869d6aa25458afc0246",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.389473684210525,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "LBCrcl50LtnMtGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "LBCrcl50LtnMtGl",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Lotion Pump",
+        "groupSlug": "circle-50ml-clear-18-415-lotionpump",
+        "itemName": "Circle design 50 ml, 1.7oz clear glass bottle with matte gold lotion pump. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Circle design is a famiily of bottles available i"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/LBCrcl50LtnMtGl.0a9d66084dc5.png",
+      "sourceSha256": "0a9d66084dc5ffd66d02d6cbc37b4aabb87e78013d89d65ca1d4bb4225d3d0ce",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "0a9d66084dc5ffd66d02d6cbc37b4aabb87e78013d89d65ca1d4bb4225d3d0ce",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:24:43.792Z"
+      },
+      "masterSourceRecorded": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/12. LBCrcl50LtnMtGl.psd",
+      "targetSpanPct": 54,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "LBCrcl50LtnMtGl",
+        "centerX": 626,
+        "landmarkY": 696,
+        "glassFootY": 1536,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-1.jpg"
+      },
+      "sourceArtworkBounds": [
+        187,
+        237,
+        1424,
+        1561
+      ],
+      "transform": {
+        "scale": 1.4708571428571429,
+        "x": -86.08990476190479,
+        "y": -177.15657142857162
+      },
+      "outputArtworkBounds": [
+        188.96038095238094,
+        171.43657142857126,
+        2008.4106666666664,
+        2118.851428571428
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/LBCrcl50LtnMtGl-2080x2288.png",
+      "finalSha256": "0d65f37b7203165390add470d2497747dd2f8708c8fc8592d1ad845ad4a55bd2",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.354285714285714,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBCrcl50SpryMtGl",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump",
+        "groupSlug": "circle-50ml-clear-18-415-perfumespray",
+        "itemName": "Circle design 50 ml, 1.7oz  clear glass bottle  with matte gold spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray. Circle design is a famiily of bottles available in 15ml, 30ml, 50ml and 100ml size. Price ea"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl50SpryMtGl.bdd15bd979b8.png",
+      "sourceSha256": "bdd15bd979b8693a9efabd3f67508f050e11f9abd71ba22666330e6e503e23ab",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "bdd15bd979b8693a9efabd3f67508f050e11f9abd71ba22666330e6e503e23ab",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:23:02.072Z"
+      },
+      "masterSourceRecorded": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/11. GBCrcl50SpryMtGl.psd",
+      "targetSpanPct": 54,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl50SpryMtGl",
+        "centerX": 622,
+        "landmarkY": 691,
+        "glassFootY": 1534,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-1.jpg"
+      },
+      "sourceArtworkBounds": [
+        191,
+        234,
+        1405,
+        1561
+      ],
+      "transform": {
+        "scale": 1.4656227758007117,
+        "x": -82.28403321470932,
+        "y": -166.1853380782918
+      },
+      "outputArtworkBounds": [
+        197.6499169632266,
+        176.77039145907474,
+        1976.9159667852905,
+        2121.651814946619
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl50SpryMtGl-2080x2288.png",
+      "finalSha256": "9b911e5dbbe5de4ad96a9e678a70b94550d7522a81ab92dd4c147d2115253a98",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.328113879003558,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl50RdcrShnGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBCrcl50RdcrShnGl",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Reducer",
+        "groupSlug": "circle-50ml-clear-18-415-reducer",
+        "itemName": "Circle design 50 ml, 1.7oz  clear glass bottle  with reducer and shiny gold cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Circle design is a famiily of bottles available in 15ml, 30ml, 50ml and 100ml size. Pri"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl50RdcrShnGl.50c74f388d2b.png",
+      "sourceSha256": "50c74f388d2b86be373f140a625fff82be1bccdd05b42725ab21c7802016efa5",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "50c74f388d2b86be373f140a625fff82be1bccdd05b42725ab21c7802016efa5",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:23:04.214Z"
+      },
+      "masterSourceRecorded": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/1. GBCrcl50RdcrShnGl.psd",
+      "targetSpanPct": 54,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl50RdcrShnGl",
+        "centerX": 780,
+        "landmarkY": 688,
+        "glassFootY": 1536,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-1.jpg"
+      },
+      "sourceArtworkBounds": [
+        344,
+        458,
+        1217,
+        1559
+      ],
+      "transform": {
+        "scale": 1.4569811320754718,
+        "x": -96.44528301886794,
+        "y": -155.8430188679249
+      },
+      "outputArtworkBounds": [
+        404.7562264150943,
+        511.4543396226411,
+        1676.7007547169812,
+        2115.5905660377357
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · capped",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl50RdcrShnGl-2080x2288.png",
+      "finalSha256": "c00fce84ada75991eaf1f14352a839a585391d0140e21c1403f93d465fe10338",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.284905660377358,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl100AnSpGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBCrcl100AnSpGl",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "circle-100ml-clear-18-415-antiquespray",
+        "itemName": "Circle design 100 ml, 3 1/2oz  clear glass bottle  with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty of y"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl100AnSpGl.3a2c2437214d.png",
+      "sourceSha256": "3a2c2437214d6378e9664a2f30179861c93b73b88f6218d1c5ca1a773ef135c7",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "3a2c2437214d6378e9664a2f30179861c93b73b88f6218d1c5ca1a773ef135c7",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:21:49.150Z"
+      },
+      "masterSourceRecorded": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/37. GBCrcl100AnSpGl.psd",
+      "targetSpanPct": 58,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl100AnSpGl",
+        "centerX": 807,
+        "landmarkY": 583,
+        "glassFootY": 1529,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-1.jpg"
+      },
+      "sourceArtworkBounds": [
+        242,
+        136,
+        1298,
+        1562
+      ],
+      "transform": {
+        "scale": 1.4027906976744187,
+        "x": -56.05209302325579,
+        "y": -62.78697674418618
+      },
+      "outputArtworkBounds": [
+        283.4232558139535,
+        127.99255813953476,
+        1764.7702325581397,
+        2128.3720930232557
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl100AnSpGl-2080x2288.png",
+      "finalSha256": "8228b5f240a363e7c4cab0abfce0ef67b0a742549eb68c7a3574c8000cea2a5c",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 755.04,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.013953488372094,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl100AnSpTslGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBCrcl100AnSpTslGl",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "groupSlug": "circle-100ml-clear-18-415-antiquespray-tassel",
+        "itemName": "Circle design 100 ml, 3 1/2oz  clear glass bottle  with Gold vintage style bulb sprayer with tasseland shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl100AnSpTslGl.2c000bcb5058.png",
+      "sourceSha256": "2c000bcb5058fe4c1131514ea4b90c6bdf4724288cd6b27575cefb28541d26c1",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "2c000bcb5058fe4c1131514ea4b90c6bdf4724288cd6b27575cefb28541d26c1",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:21:49.771Z"
+      },
+      "masterSourceRecorded": "21. Tassels/Updated Tassels/50. GBCrcl100AnSpTslGl.psd",
+      "targetSpanPct": 58,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl100AnSpTslGl",
+        "centerX": 1000,
+        "landmarkY": 576,
+        "glassFootY": 1527,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-2.jpg"
+      },
+      "sourceArtworkBounds": [
+        53,
+        175,
+        1479,
+        1560
+      ],
+      "transform": {
+        "scale": 1.3954153522607782,
+        "x": -41.95701366982124,
+        "y": -48.71924290220841
+      },
+      "outputArtworkBounds": [
+        32,
+        195.47844374342776,
+        2021.8622923238695,
+        2128.1287066246055
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl100AnSpTslGl-2080x2288.png",
+      "finalSha256": "b41e9e6bd0276c400ca292616efccc9acaea6918b98cf2ee0be8adf7ecf4b7eb",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 755.04,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 6.977076761303891,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "LBCrcl100LtnMtGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "LBCrcl100LtnMtGl",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Lotion Pump",
+        "groupSlug": "circle-100ml-clear-18-415-lotionpump",
+        "itemName": "Circle design 100 ml, 3 1/2oz clear glass bottle with matte gold lotion pump. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Circle design is a famiily of bottles availabl"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/LBCrcl100LtnMtGl.6d2b895243c4.png",
+      "sourceSha256": "6d2b895243c48234dfcd48c82983d74fd60081f2141b1f44e7c3ef81378dca02",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "6d2b895243c48234dfcd48c82983d74fd60081f2141b1f44e7c3ef81378dca02",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:24:37.239Z"
+      },
+      "masterSourceRecorded": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/12. LBCrcl100LtnMtGl.psd",
+      "targetSpanPct": 58,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "LBCrcl100LtnMtGl",
+        "centerX": 635,
+        "landmarkY": 589,
+        "glassFootY": 1534,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-2.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        165,
+        181,
+        1427,
+        1561
+      ],
+      "transform": {
+        "scale": 1.4042751322751323,
+        "x": -45.04804232804236,
+        "y": -72.07805291005297
+      },
+      "outputArtworkBounds": [
+        186.65735449735448,
+        182.095746031746,
+        1958.8525714285715,
+        2119.9954285714284
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/LBCrcl100LtnMtGl-2080x2288.png",
+      "finalSha256": "5daeea49fca6b05c703d0cbc5d1ed9f254760cd36bba266c768887a846e13b12",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 755.04,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.021375661375662,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl100SpryMtGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBCrcl100SpryMtGl",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump",
+        "groupSlug": "circle-100ml-clear-18-415-perfumespray",
+        "itemName": "Circle design 100 ml, 3 1/2oz  clear glass bottle  with matte gold spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray. Circle design is a famiily of bottles available in 15ml, 30ml, 50ml and 100ml size. Price"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl100SpryMtGl.ad83dd72f222.png",
+      "sourceSha256": "ad83dd72f22218660742b344514f19faf4b7f9fb2db7a955e9b533928d8cf992",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "ad83dd72f22218660742b344514f19faf4b7f9fb2db7a955e9b533928d8cf992",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:21:51.058Z"
+      },
+      "masterSourceRecorded": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/11. GBCrcl100SpryMtGl.psd",
+      "targetSpanPct": 58,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl100SpryMtGl",
+        "centerX": 625,
+        "landmarkY": 591,
+        "glassFootY": 1532,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-2.jpg"
+      },
+      "sourceArtworkBounds": [
+        149,
+        183,
+        1448,
+        1555
+      ],
+      "transform": {
+        "scale": 1.4102444208289053,
+        "x": -48.06942968473243,
+        "y": -78.41445270988288
+      },
+      "outputArtworkBounds": [
+        162.05698901877446,
+        179.6602763018068,
+        1993.9644916755224,
+        2114.515621679065
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl100SpryMtGl-2080x2288.png",
+      "finalSha256": "692f630844310cf5eac343e9d18b3fb017374e4a27cbabd9962c44ef7b4b9d27",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 755.04,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.051222104144527,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl100RdcrShnGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBCrcl100RdcrShnGl",
+        "family": "Circle",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Reducer",
+        "groupSlug": "circle-100ml-clear-18-415-reducer",
+        "itemName": "Circle design 100 ml, 3 1/2oz  clear glass bottle  with reducer and shiny gold cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Circle design is a famiily of bottles available in 15ml, 30ml, 50ml and 100ml size."
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl100RdcrShnGl.c3a382b30482.png",
+      "sourceSha256": "c3a382b304822d2ebdfc5247d132a3d2045b12bb8d235a6b213eadeeb7157fe6",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "c3a382b304822d2ebdfc5247d132a3d2045b12bb8d235a6b213eadeeb7157fe6",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:21:50.382Z"
+      },
+      "masterSourceRecorded": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/1. GBCrcl100RdcrShnGl.psd",
+      "targetSpanPct": 58,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl100RdcrShnGl",
+        "centerX": 780,
+        "landmarkY": 596,
+        "glassFootY": 1534,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-2.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        305,
+        389,
+        1257,
+        1563
+      ],
+      "transform": {
+        "scale": 1.4147547974413646,
+        "x": -63.50874200426438,
+        "y": -88.15385927505349
+      },
+      "outputArtworkBounds": [
+        367.9914712153518,
+        462.18575692963736,
+        1714.8380383795309,
+        2123.1078891257994
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · capped",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl100RdcrShnGl-2080x2288.png",
+      "finalSha256": "9ad6a5ebcbec5750fb37c0bad82a9a0a351c355054232a35e266a5ceca21d9c4",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 755.04,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.073773987206823,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBEmp50AnSpGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBEmp50AnSpGl",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "empire-50ml-clear-18-415-antiquespray",
+        "itemName": "Empire design 50 ml, 1.7oz  clear glass bottle  with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty of your"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBEmp50AnSpGl.e441205f0179.png",
+      "sourceSha256": "e441205f01797057ab01c73028482dd76ef239a62917b4a7519c813ffe192ffa",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/37. GBEmp50AnSpGl.psd",
+      "targetSpanPct": 50,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBEmp50AnSpGl",
+        "centerX": 970,
+        "landmarkY": 754,
+        "glassFootY": 1560,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-2.jpg"
+      },
+      "sourceArtworkBounds": [
+        377,
+        277,
+        1182,
+        1577
+      ],
+      "transform": {
+        "scale": 1.4193548387096775,
+        "x": -83.44086021505382,
+        "y": -132.11354838709713
+      },
+      "outputArtworkBounds": [
+        451.6559139784946,
+        261.04774193548354,
+        1594.236559139785,
+        2106.2090322580643
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBEmp50AnSpGl-2080x2288.png",
+      "finalSha256": "47976f3762f013b643c352ea7249f3ec301abba9b2e1a98ba11c2aefd5ab651d",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 938.08,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.096774193548388,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBEmp50AnSpTslGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBEmp50AnSpTslGl",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "groupSlug": "empire-50ml-clear-18-415-antiquespray-tassel",
+        "itemName": "Empire design 50 ml, 1.7oz  clear glass bottle  with Gold vintage style bulb sprayer with tassel with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance t"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBEmp50AnSpTslGl.02fd6b63e562.png",
+      "sourceSha256": "02fd6b63e5621048b6900595967aca43356a7c066f06fa5309ce97a273bbd320",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/50. GBEmp50AnSpTslGl.psd",
+      "targetSpanPct": 50,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBEmp50AnSpTslGl",
+        "centerX": 1160,
+        "landmarkY": 754,
+        "glassFootY": 1560,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-2.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        191,
+        310,
+        1366,
+        1577
+      ],
+      "transform": {
+        "scale": 1.4193548387096775,
+        "x": -99.78494623655911,
+        "y": -132.11354838709713
+      },
+      "outputArtworkBounds": [
+        171.3118279569893,
+        307.8864516129029,
+        1839.0537634408604,
+        2106.2090322580643
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBEmp50AnSpTslGl-2080x2288.png",
+      "finalSha256": "5da975f6b3e3c049b0134e35a47a5a24e7d45704a5ce5989d581ad69f9e69ef6",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 938.08,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.096774193548388,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBEmp50DrpGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBEmp50DrpGl",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Dropper",
+        "groupSlug": "empire-50ml-clear-18-415-dropper",
+        "itemName": "Empire design 50 ml, 1.7oz  clear glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils. Empire design bottle is available in 2 sizes,"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBEmp50DrpGl.7d886a6cdf1e.png",
+      "sourceSha256": "7d886a6cdf1e75e6f29e3027dc45298aa708e7243af0b5e61ba28a048a293efd",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/52. GBEmp50DrpGl.psd",
+      "targetSpanPct": 50,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBEmp50DrpGl",
+        "centerX": 780,
+        "landmarkY": 748,
+        "glassFootY": 1560,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-3.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        569,
+        313,
+        989,
+        1577
+      ],
+      "transform": {
+        "scale": 1.4088669950738917,
+        "x": -58.91625615763542,
+        "y": -115.7525123152709
+      },
+      "outputArtworkBounds": [
+        742.729064039409,
+        325.2228571428572,
+        1334.4532019704434,
+        2106.0307389162563
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBEmp50DrpGl-2080x2288.png",
+      "finalSha256": "479bc352e212822f196899b963c928329ad4c5d3af3c822355e87cab3517f43a",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 938.08,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.044334975369458,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "LBEmp50WhtClOvrCp",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Lotion Pump",
+        "groupSlug": "empire-50ml-clear-18-415-lotionpump",
+        "itemName": "Empire design 50 ml, 1.7oz clear glass bottle with white rectangular and clear over the cap. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Empire design bottle is availab"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/LBEmp50WhtClOvrCp.49a6f2e62f03.png",
+      "sourceSha256": "49a6f2e62f032f7b20481e464927de9694bba8a845faeb020c7f23d08a36e00d",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/56. LBEmp50WhtClOvrCp.psd",
+      "targetSpanPct": 50,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "LBEmp50WhtClOvrCp",
+        "centerX": 780,
+        "landmarkY": 754,
+        "glassFootY": 1560,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-3.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        569,
+        203,
+        988,
+        1577
+      ],
+      "transform": {
+        "scale": 1.4193548387096775,
+        "x": -67.09677419354853,
+        "y": -132.11354838709713
+      },
+      "outputArtworkBounds": [
+        740.5161290322579,
+        156.0154838709674,
+        1335.225806451613,
+        2106.2090322580643
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · capped",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/LBEmp50WhtClOvrCp-2080x2288.png",
+      "finalSha256": "d2f246e11a4518180cf7084871c476db4c9b2e6b915bb168ade6674604c0cdaa",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 938.08,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.096774193548388,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBEmp50SpryMtGl",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump",
+        "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+        "itemName": "Empire design 50 ml, 1.7oz  clear glass bottle  with matte gold spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Empire design bottle is available in 2 sizes, 50ml and 100ml. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBEmp50SpryMtGl.9fe529e763bc.png",
+      "sourceSha256": "9fe529e763bcfdcab008f27dd922dbea327ce908f4b70af1001e0b03675f1080",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/11. GBEmp50SpryMtGl.psd",
+      "targetSpanPct": 50,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBEmp50SpryMtGl",
+        "centerX": 624,
+        "landmarkY": 754,
+        "glassFootY": 1559,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-3.jpg"
+      },
+      "sourceArtworkBounds": [
+        417,
+        323,
+        1144,
+        1577
+      ],
+      "transform": {
+        "scale": 1.4211180124223604,
+        "x": -54.7776397515529,
+        "y": -133.44298136645966
+      },
+      "outputArtworkBounds": [
+        537.8285714285714,
+        325.57813664596273,
+        1570.9813664596275,
+        2107.6601242236025
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBEmp50SpryMtGl-2080x2288.png",
+      "finalSha256": "9264e12b3511499eba7aeba6f198834a977e39cea3e46ba2a56548132adc4f1e",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 938.08,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.105590062111801,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBEmp50RdcrShnGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBEmp50RdcrShnGl",
+        "family": "Empire",
+        "capacityMl": 50,
+        "color": "Clear",
+        "applicator": "Reducer",
+        "groupSlug": "empire-50ml-clear-18-415-reducer",
+        "itemName": "Empire design 50 ml, 1.7oz  clear glass bottle  with reducer and shiny gold cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Empire design bottle is available in 2 sizes, 50ml and 100ml. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBEmp50RdcrShnGl.9215b4d6a062.png",
+      "sourceSha256": "9215b4d6a0623ab798d735559d898797b718be98f73dfc2738ea54d4699a67de",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/1. GBEmp50RdcrShnGl...psd",
+      "targetSpanPct": 50,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBEmp50RdcrShnGl",
+        "centerX": 780,
+        "landmarkY": 754,
+        "glassFootY": 1560,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-3.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        570,
+        534,
+        990,
+        1577
+      ],
+      "transform": {
+        "scale": 1.4193548387096775,
+        "x": -67.09677419354853,
+        "y": -132.11354838709713
+      },
+      "outputArtworkBounds": [
+        741.9354838709677,
+        625.8219354838707,
+        1338.0645161290322,
+        2106.2090322580643
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · capped",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBEmp50RdcrShnGl-2080x2288.png",
+      "finalSha256": "9b733457ba68d1efcfb65cc077fbc0373d6f92ecde15a0f50644ee007c3c0663",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 938.08,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.096774193548388,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBEmp100AnSpGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBEmp100AnSpGl",
+        "family": "Empire",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "empire-100ml-clear-18-415-antiquespray",
+        "itemName": "Empire design 100 ml, 3 1/2oz  clear glass bottle  with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty of y"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBEmp100AnSpGl.9bd7af0c9dc7.png",
+      "sourceSha256": "9bd7af0c9dc7e810baa2312faef835c52d75d9bbf17feb608a010c99a6debb16",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /22. Empire Bottle 100ml/1. Empire 100ml PSD/37. GBEmp100AnSpGl.psd",
+      "targetSpanPct": 55,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBEmp100AnSpGl",
+        "centerX": 920,
+        "landmarkY": 596,
+        "glassFootY": 1538,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-3.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        359,
+        145,
+        1199,
+        1577
+      ],
+      "transform": {
+        "scale": 1.3358811040339704,
+        "x": -2.3439490445859974,
+        "y": 27.49486199575358
+      },
+      "outputArtworkBounds": [
+        477.2373673036094,
+        221.19762208067928,
+        1599.3774946921446,
+        2134.1793630573247
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBEmp100AnSpGl-2080x2288.png",
+      "finalSha256": "ffb7e66dad0c57e715b2e448c7930854c9e62d7d909bac578be4d32070949555",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 823.68,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 6.679405520169852,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBEmp100AnSpTslGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBEmp100AnSpTslGl",
+        "family": "Empire",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "groupSlug": "empire-100ml-clear-18-415-antiquespray-tassel",
+        "itemName": "Empire design 100 ml, 3 1/2oz  clear glass bottle  with Gold vintage style bulb sprayer with tassel with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhanc"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBEmp100AnSpTslGl.3212b05eabbc.png",
+      "sourceSha256": "3212b05eabbcd03cbdc3270387476077b9d0d9796aa9ded494199a6b964ecc79",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "21. Tassels/Updated Tassels/50. GBEmp100AnSpTslGl.psd",
+      "targetSpanPct": 55,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBEmp100AnSpTslGl",
+        "centerX": 1122,
+        "landmarkY": 598,
+        "glassFootY": 1538,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-3.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        160,
+        199,
+        1398,
+        1611
+      ],
+      "transform": {
+        "scale": 1.3387234042553193,
+        "x": -6.047659574468298,
+        "y": 23.123404255318746
+      },
+      "outputArtworkBounds": [
+        208.14808510638278,
+        289.5293617021273,
+        1865.4876595744681,
+        2179.8068085106383
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBEmp100AnSpTslGl-2080x2288.png",
+      "finalSha256": "28d209243142a5aca5b75d0dfe90beeeb6b2bb8a5a6b6bd14fc5b6fa81f7777a",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 823.68,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 6.693617021276596,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "family": "Empire",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "LBEmp100WhtClOvrCp",
+        "family": "Empire",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Lotion Pump",
+        "groupSlug": "empire-100ml-clear-18-415-lotionpump",
+        "itemName": "Empire design 100 ml, 3 1/2oz clear glass bottle with white rectangular with clear over the cap. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Empire design bottle is ava"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/LBEmp100WhtClOvrCp.48ccc5df1efe.png",
+      "sourceSha256": "48ccc5df1efea66bec820dabcad535f2eb38c9808a5841094255ddb0bc391d80",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/51. LBEmp100WhtClOvrCp.psd",
+      "targetSpanPct": 55,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "LBEmp100WhtClOvrCp",
+        "centerX": 766,
+        "landmarkY": 598,
+        "glassFootY": 1538,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-4.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        519,
+        75,
+        1041,
+        1577
+      ],
+      "transform": {
+        "scale": 1.3387234042553193,
+        "x": -4.128794326241291,
+        "y": 23.123404255318746
+      },
+      "outputArtworkBounds": [
+        690.6686524822694,
+        123.52765957446769,
+        1389.482269503546,
+        2134.290212765957
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · capped",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/LBEmp100WhtClOvrCp-2080x2288.png",
+      "finalSha256": "55d28f545f4e3d2a65d42c2f38e375220846c6dce98fc09b97e480aef0d35050",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 823.68,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 6.693617021276596,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBEmp100SpryMtGl",
+        "family": "Empire",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump",
+        "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+        "itemName": "Empire design 100 ml, 3 1/2oz  clear glass bottle  with matte gold spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Empire design bottle is available in 2 sizes, 50ml and 100ml. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBEmp100SpryMtGl.08bb78aa3e9c.png",
+      "sourceSha256": "08bb78aa3e9c10a996c6705ddeaf4cd45889f475dc5bf3598e40463641f67073",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/11. GBEmp100SpryMtGl.psd",
+      "targetSpanPct": 55,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBEmp100SpryMtGl",
+        "centerX": 630,
+        "landmarkY": 599,
+        "glassFootY": 1538,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-4.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        391,
+        191,
+        1171,
+        1577
+      ],
+      "transform": {
+        "scale": 1.3401490947816828,
+        "x": -4.293929712460113,
+        "y": 20.930692225771963
+      },
+      "outputArtworkBounds": [
+        519.7043663471778,
+        276.8991693290734,
+        1565.0206602768903,
+        2134.345814696486
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBEmp100SpryMtGl-2080x2288.png",
+      "finalSha256": "0daab91fabce80d8af82cdb8a7f2ab27ab9534381b703b28cb27d942c5293e74",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 823.68,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 6.700745473908414,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBEmp100RdcrShnGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "catalog": {
+        "sku": "GBEmp100RdcrShnGl",
+        "family": "Empire",
+        "capacityMl": 100,
+        "color": "Clear",
+        "applicator": "Reducer",
+        "groupSlug": "empire-100ml-clear-18-415-reducer",
+        "itemName": "Empire design 100 ml, 3 1/2oz  clear glass bottle  with reducer and shiny gold cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Empire design bottle is available in 2 sizes, 50ml and 100ml. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBEmp100RdcrShnGl.8ce6d101fb1a.png",
+      "sourceSha256": "8ce6d101fb1abfa62b6c8cfd74fa2cff33e236b9d8bd4ba7ecc9d94e2eaecff5",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /22. Empire Bottle 100ml/1. Empire 100ml PSD/1. GBEmp100RdcrShnGl.psd",
+      "targetSpanPct": 55,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBEmp100RdcrShnGl",
+        "centerX": 765,
+        "landmarkY": 599,
+        "glassFootY": 1538,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-4.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        519,
+        390,
+        1040,
+        1577
+      ],
+      "transform": {
+        "scale": 1.3401490947816828,
+        "x": -5.214057507987263,
+        "y": 20.930692225771963
+      },
+      "outputArtworkBounds": [
+        690.3233226837061,
+        543.5888391906283,
+        1388.5410010649628,
+        2134.345814696486
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · capped",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBEmp100RdcrShnGl-2080x2288.png",
+      "finalSha256": "564ff58cf28bb1dde3a622a8aae8ebcc70990330c01df9336ef3de882b66b463",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 823.68,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 6.700745473908414,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBRnd78AnSpGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "catalog": {
+        "sku": "GBRnd78AnSpGl",
+        "family": "Round",
+        "capacityMl": 78,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "round-78ml-clear-18-415-antiquespray",
+        "itemName": "Round design 78 ml, 2.65oz  clear glass bottle  with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty of your"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRnd78AnSpGl.premium-aligned-v4.png",
+      "sourceSha256": "392576d442ed93c3ba570eeb0f27ba231eb147ee9253591b35b74b2a3736142e",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /9. Round 78ml/1. Round 78ml PSD/37. GBRnd78AnSpGl.psd",
+      "targetSpanPct": 48,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBRnd78AnSpGl",
+        "centerX": 880,
+        "landmarkY": 837,
+        "glassFootY": 1556,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-4.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        246,
+        336,
+        1249,
+        1565
+      ],
+      "transform": {
+        "scale": 1.5274547983310154,
+        "x": -170.82688919796033,
+        "y": -294.6396662030602
+      },
+      "outputArtworkBounds": [
+        204.92699119146948,
+        218.58514603616095,
+        1736.964153917478,
+        2095.827093184979
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBRnd78AnSpGl-2080x2288.png",
+      "finalSha256": "8e40a4048bbdfd8114ffa78e5cba39351c9fa7278c2695764777cf967a72986a",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 983.84,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.637273991655077,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBRnd78AnSpTslGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "catalog": {
+        "sku": "GBRnd78AnSpTslGl",
+        "family": "Round",
+        "capacityMl": 78,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer with Tassel",
+        "groupSlug": "round-78ml-clear-18-415-antiquespray-tassel",
+        "itemName": "Round design 78 ml, 2.65oz  clear glass bottle  with Gold vintage style bulb sprayer with tasseland shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRnd78AnSpTslGl.premium-aligned-v4.png",
+      "sourceSha256": "22349e1705d7a988a75c44bc988192990c2ac74cadd7ddca21506510ead7eb14",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "21. Tassels/Updated Tassels/50. GBRnd78AnSpTslGl.psd",
+      "targetSpanPct": 48,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBRnd78AnSpTslGl",
+        "centerX": 984,
+        "landmarkY": 844,
+        "glassFootY": 1550,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-4.jpg"
+      },
+      "sourceArtworkBounds": [
+        87,
+        368,
+        1344,
+        1604
+      ],
+      "transform": {
+        "scale": 1.5555807365439094,
+        "x": -103.33552407932012,
+        "y": -329.07014164305974
+      },
+      "outputArtworkBounds": [
+        32,
+        243.3835694050989,
+        1987.3649858356941,
+        2166.081359773371
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBRnd78AnSpTslGl-2080x2288.png",
+      "finalSha256": "f370c30412cb284df12ee86fff43d60c25ea71d47129407a4b750de7a1b0b476",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 983.84,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.777903682719547,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "LBRnd78LtnCu",
+      "family": "Round",
+      "capacityMl": 78,
+      "catalog": {
+        "sku": "LBRnd78LtnCu",
+        "family": "Round",
+        "capacityMl": 78,
+        "color": "Clear",
+        "applicator": "Lotion Pump",
+        "groupSlug": "round-78ml-clear-18-415-lotionpump",
+        "itemName": "Round design 78 ml, 2.65oz clear glass bottle with matte copper lotion pump. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Round design bottle is available in 2 sizes - 7"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/LBRnd78LtnCu.premium-aligned-v4.png",
+      "sourceSha256": "cb47f93f4e7da88161ce975bc7d996940f2b83c7116d05b4251735cbfb42da07",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /9. Round 78ml/1. Round 78ml PSD/2. Round 78ml (Capped)/56. LBRnd78LtnCu.psd",
+      "targetSpanPct": 48,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "LBRnd78LtnCu",
+        "centerX": 645,
+        "landmarkY": 840,
+        "glassFootY": 1554,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-4.jpg"
+      },
+      "sourceArtworkBounds": [
+        275,
+        341,
+        1364,
+        1567
+      ],
+      "transform": {
+        "scale": 1.5381512605042016,
+        "x": -132.10756302520997,
+        "y": -308.2070588235292
+      },
+      "outputArtworkBounds": [
+        290.88403361344547,
+        216.30252100840357,
+        1965.9307563025213,
+        2102.0759663865547
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/LBRnd78LtnCu-2080x2288.png",
+      "finalSha256": "126a7866e19ff986be2d1998685668671605bf8c101911bc18a43bd0ebed92b1",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 983.84,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.690756302521008,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBRnd78SpryCu",
+      "family": "Round",
+      "capacityMl": 78,
+      "catalog": {
+        "sku": "GBRnd78SpryCu",
+        "family": "Round",
+        "capacityMl": 78,
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump",
+        "groupSlug": "round-78ml-clear-18-415-perfumespray",
+        "itemName": "Round design 78 ml, 2.65oz  clear glass bottle  with matte copper spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray. Round design bottle is available in 2 sizes - 78ml and 128 ml. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRnd78SpryCu.premium-aligned-v4.png",
+      "sourceSha256": "25a105686caf7404a5267f2f6e030c6f171ce38b8c439c051fa5f79095fce466",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /9. Round 78ml/1. Round 78ml PSD/56. GBRnd78SpryCu.psd",
+      "targetSpanPct": 48,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBRnd78SpryCu",
+        "centerX": 638,
+        "landmarkY": 841,
+        "glassFootY": 1555,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-5.jpg"
+      },
+      "sourceArtworkBounds": [
+        267,
+        347,
+        1352,
+        1565
+      ],
+      "transform": {
+        "scale": 1.5381512605042016,
+        "x": -130.67383753501394,
+        "y": -309.7452100840337
+      },
+      "outputArtworkBounds": [
+        280.0125490196079,
+        223.9932773109242,
+        1948.9066666666665,
+        2097.4615126050417
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBRnd78SpryCu-2080x2288.png",
+      "finalSha256": "2da76c836a2cb15d45d876338dd2e19dbbfda8b67f230078629e09040b308aeb",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 983.84,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.690756302521008,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBRnd78RdcrShnGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "catalog": {
+        "sku": "GBRnd78RdcrShnGl",
+        "family": "Round",
+        "capacityMl": 78,
+        "color": "Clear",
+        "applicator": "Reducer",
+        "groupSlug": "round-78ml-clear-18-415-reducer",
+        "itemName": "Round design 78 ml, 2.65oz  clear glass bottle  with reducer and shiny gold cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Round design bottle is available in 2 sizes - 78ml and 128 ml. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRnd78RdcrShnGl.premium-aligned-v4.png",
+      "sourceSha256": "69459c58b057d2b0c41ee80b28a15ee72fbf8b551aa771d4ef941f57c79fbb02",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /9. Round 78ml/1. Round 78ml PSD/1. GBRnd78RdcrShnGl..psd",
+      "targetSpanPct": 48,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBRnd78RdcrShnGl",
+        "centerX": 765,
+        "landmarkY": 847,
+        "glassFootY": 1550,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-5.jpg"
+      },
+      "sourceArtworkBounds": [
+        405,
+        623,
+        1140,
+        1566
+      ],
+      "transform": {
+        "scale": 1.5622190611664295,
+        "x": -175.09758179231858,
+        "y": -339.3595448079659
+      },
+      "outputArtworkBounds": [
+        457.60113798008535,
+        633.9029302987196,
+        1605.832147937411,
+        2107.0755049786626
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · capped",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBRnd78RdcrShnGl-2080x2288.png",
+      "finalSha256": "54b95288d65aa71dbaf11a804a88cbb93cb1b44b3545be4550fd2b55d4818cee",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 983.84,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.811095305832147,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBRnd128AnSpGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "catalog": {
+        "sku": "GBRnd128AnSpGl",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Clear",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "round-128ml-clear-18-415-antiquespray",
+        "itemName": "Round design 128 ml, 4.33oz  clear glass bottle  with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty of you"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpGl.premium-aligned-v4.png",
+      "sourceSha256": "a4f0225c54bff8e8ad8ccd886ecd866123ae36da35127989ac32d0dab965d4b7",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/37. GBRnd128AnSpGl.psd",
+      "targetSpanPct": 54,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBRnd128AnSpGl",
+        "centerX": 920,
+        "landmarkY": 719,
+        "glassFootY": 1554,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-5.jpg"
+      },
+      "sourceArtworkBounds": [
+        245,
+        187,
+        1335,
+        1566
+      ],
+      "transform": {
+        "scale": 1.4796646706586827,
+        "x": -134.6248303393213,
+        "y": -217.3188982035931
+      },
+      "outputArtworkBounds": [
+        227.89301397205594,
+        59.37839520958056,
+        1840.7275049900202,
+        2099.835976047904
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBRnd128AnSpGl-2080x2288.png",
+      "finalSha256": "5f06c621264099601febe52298d042176b3b7be41e43503b7c052318288d28d6",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.398323353293414,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBRnd128DrpGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "catalog": {
+        "sku": "GBRnd128DrpGl",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Clear",
+        "applicator": "Dropper",
+        "groupSlug": "round-128ml-clear-18-415-dropper",
+        "itemName": "Round design 128 ml, 4.33oz  clear glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils.Round design bottle is available in 2 sizes -"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRnd128DrpGl.premium-aligned-v4.png",
+      "sourceSha256": "2deae72d9a69c288311ddabec544f3e3c15fcc3454be2a336ccbd987760634ee",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/52. GBRnd128DrpGl.psd",
+      "targetSpanPct": 54,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBRnd128DrpGl",
+        "centerX": 780,
+        "landmarkY": 719,
+        "glassFootY": 1554,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-5.jpg"
+      },
+      "sourceArtworkBounds": [
+        344,
+        208,
+        1215,
+        1565
+      ],
+      "transform": {
+        "scale": 1.4796646706586827,
+        "x": -114.13844311377238,
+        "y": -217.3188982035931
+      },
+      "outputArtworkBounds": [
+        394.8662035928145,
+        90.45135329341286,
+        1683.654131736527,
+        2098.356311377245
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · assembled",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBRnd128DrpGl-2080x2288.png",
+      "finalSha256": "d73735b18ebbed862d775ae0eea02624053dc198bd579ff8b234fc0aee90511a",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.398323353293414,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "LBRnd128LtnMtGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "catalog": {
+        "sku": "LBRnd128LtnMtGl",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Clear",
+        "applicator": "Lotion Pump",
+        "groupSlug": "round-128ml-clear-18-415-lotionpump",
+        "itemName": "Round design 128 ml, 4.33oz clear glass bottle with matte gold lotion pump. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Round design bottle is available in 2 sizes - 78"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/LBRnd128LtnMtGl.premium-aligned-v4.png",
+      "sourceSha256": "9938c0e16d437cafe47eee9b0c78ae0d668d6de81a8dc4fa178719ab69a4b321",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/7.  128ml Round, Ltn & Spry, capped/12. LBRnd128LtnMtGl.psd",
+      "targetSpanPct": 54,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "LBRnd128LtnMtGl",
+        "centerX": 648,
+        "landmarkY": 720,
+        "glassFootY": 1554,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-5.jpg"
+      },
+      "sourceArtworkBounds": [
+        249,
+        277,
+        1388,
+        1568
+      ],
+      "transform": {
+        "scale": 1.4814388489208632,
+        "x": -95.97237410071932,
+        "y": -220.0759712230215
+      },
+      "outputArtworkBounds": [
+        272.9058992805756,
+        190.28258992805763,
+        1960.264748201439,
+        2102.820143884892
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/LBRnd128LtnMtGl-2080x2288.png",
+      "finalSha256": "03526c3eb1fd5427bedb2d25cfcdfcb82542f6c64270341036afc43a7edc03cb",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.407194244604316,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBRnd128SpryMtGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "catalog": {
+        "sku": "GBRnd128SpryMtGl",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Clear",
+        "applicator": "Perfume Spray Pump",
+        "groupSlug": "round-128ml-clear-18-415-perfumespray",
+        "itemName": "Round design 128 ml, 4.33oz  clear glass bottle  with matte gold spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray. Round design bottle is available in 2 sizes - 78ml and 128 ml. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRnd128SpryMtGl.premium-aligned-v4.png",
+      "sourceSha256": "ef7de4b520ecead6018c9d6b46784718aa2b2e64ecba8c3afc2bcb8a0a9c7151",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/7.  128ml Round, Ltn & Spry, capped/11. GBRnd128SpryMtGl.psd",
+      "targetSpanPct": 54,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBRnd128SpryMtGl",
+        "centerX": 639,
+        "landmarkY": 721,
+        "glassFootY": 1555,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-6.jpg"
+      },
+      "sourceArtworkBounds": [
+        218,
+        322,
+        1374,
+        1566
+      ],
+      "transform": {
+        "scale": 1.4814388489208632,
+        "x": -94.63942446043154,
+        "y": -221.5574100719423
+      },
+      "outputArtworkBounds": [
+        228.31424460431663,
+        255.46589928057568,
+        1940.8575539568346,
+        2098.3758273381295
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBRnd128SpryMtGl-2080x2288.png",
+      "finalSha256": "3b739a7147e45c9d7a807c82a2cecfb31d28b40a119bbd8e50a1c1f5beebef3f",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.407194244604316,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBRnd128RdcrShnGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "catalog": {
+        "sku": "GBRnd128RdcrShnGl",
+        "family": "Round",
+        "capacityMl": 128,
+        "color": "Clear",
+        "applicator": "Reducer",
+        "groupSlug": "round-128ml-clear-18-415-reducer",
+        "itemName": "Round design 128 ml, 4.33oz  clear glass bottle  with reducer and shiny gold cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Round design bottle is available in 2 sizes - 78ml and 128 ml. Price each"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRnd128RdcrShnGl.premium-aligned-v4.png",
+      "sourceSha256": "1c8efc76ab8168fb86ae2fa819672886af5083d432b9ac83d045a22cb8f6f44c",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": null,
+      "masterSourceRecorded": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/1. GBRnd128RdcrShnGl.psd",
+      "targetSpanPct": 54,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBRnd128RdcrShnGl",
+        "centerX": 768,
+        "landmarkY": 719,
+        "glassFootY": 1555,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-6.jpg"
+      },
+      "sourceArtworkBounds": [
+        346,
+        465,
+        1205,
+        1564
+      ],
+      "transform": {
+        "scale": 1.4778947368421052,
+        "x": -111.02315789473687,
+        "y": -216.04631578947374
+      },
+      "outputArtworkBounds": [
+        400.32842105263154,
+        471.1747368421052,
+        1669.84,
+        2095.3810526315788
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · capped",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBRnd128RdcrShnGl-2080x2288.png",
+      "finalSha256": "f8b8a66ea40c232d51e4eabfceef06c6b3c321b02508c57ef9f2e9983c8c2c9a",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.389473684210525,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    },
+    {
+      "sku": "GBCrcl15RollBlkSh",
+      "family": "Circle",
+      "capacityMl": 15,
+      "catalog": {
+        "sku": "GBCrcl15RollBlkSh",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "applicator": "Plastic Roller Ball",
+        "groupSlug": "circle-15ml-clear-13-415-rollon",
+        "itemName": "Circle design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and black shiny cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Price"
+      },
+      "sourcePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/bone-review/GBCrcl15RollBlkSh.2c830a1e23cd.png",
+      "sourceSha256": "2c830a1e23cd99f63edf9c3fd5cbcaf23f0c2d647ee31e3ade5a5f5dcb2c5bc1",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceApproval": {
+        "status": "approved",
+        "sha256": "2c830a1e23cd99f63edf9c3fd5cbcaf23f0c2d647ee31e3ade5a5f5dcb2c5bc1",
+        "collection": "r6-circle-settled-2026-09-11",
+        "updatedAt": "2026-09-12T02:21:59.150Z"
+      },
+      "masterSourceRecorded": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/25. GBCrcl15RollBlkSh.psd",
+      "targetSpanPct": 44.625,
+      "baselinePct": 91,
+      "sourceMeasurement": {
+        "sku": "GBCrcl15RollBlkSh",
+        "centerX": 560,
+        "landmarkY": 859,
+        "glassFootY": 1544,
+        "uncertaintyPx": 5,
+        "method": "Visual shoulder/closure-seat and glass-contact-foot inspection; full-resolution crops exclude shadows and removable caps",
+        "measurementStatus": "visually-checked-source-seat-and-foot",
+        "sourceCropEvidence": "measure/landmarks-6.jpg",
+        "refinement": "Final crop review supported by center-foot luminance edge profile; outer glass contact boundary excludes cast shadow and internal refraction."
+      },
+      "sourceArtworkBounds": [
+        218,
+        572,
+        1339,
+        1561
+      ],
+      "transform": {
+        "scale": 1.4905401459854015,
+        "x": -88.03581508515822,
+        "y": -219.31398540145983
+      },
+      "outputArtworkBounds": [
+        236.90193673965933,
+        633.2749781021898,
+        1907.7974403892945,
+        2107.419182481752
+      ],
+      "fitIssues": [],
+      "action": "uniform-whole-image-alignment",
+      "presentation": "Empty · cap beside",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/cre-final39/aligned/GBCrcl15RollBlkSh-2080x2288.png",
+      "finalSha256": "153c7917b071369b1a940890716e56ba78769ba8d28b1f1ad5aa2f12f347306c",
+      "size": [
+        2080,
+        2288
+      ],
+      "glassFootPct": 91,
+      "closureSeatY": 1061.06,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 7.452700729927008,
+      "reviewDecision": "awaiting-user-review",
+      "nativeDetail": "Preserved existing 1560x1716 source; 2080x2288 delivery export"
+    }
+  ]
+}

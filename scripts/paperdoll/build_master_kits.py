@@ -10,6 +10,7 @@ python3 scripts/paperdoll/build_master_kits.py --batch dist/paper-doll/cylinder-
 """
 from __future__ import annotations
 import argparse
+import re
 import hashlib
 import json
 import sys
@@ -24,6 +25,7 @@ sys.path.insert(0,str(HERE))
 from family_batch import checked_source, MASTER
 from build_plates import validate_front_source
 from build_cyl9_kits import alpha_gate, save_part
+from matte import strip_white_ground
 
 SLOTS={'body','fitment','roller','cap','overcap','sprayer','pump','diptube','collar','bulb','tassel','reducer','pipette'}
 
@@ -32,21 +34,31 @@ def digest_image(im):
 
 def layer_inventory(psd):
     out=[]
+    ADJUSTMENTS={'blackandwhite','brightnesscontrast','curves','levels','huesaturation','colorbalance','exposure','vibrance','photofilter','selectivecolor','channelmixer','gradientmap','posterize','threshold','invert','solidcolorfill','gradientfill','patternfill'}
     for i,l in enumerate(psd.descendants()):
         if l.is_group(): continue
-        if l.kind != 'pixel':
-            raise ValueError(f'non-pixel layer {i} requires source review')
-        if not l.is_visible():
-            raise ValueError(f'hidden layer {i} requires source review')
-        if l.opacity != 255 or str(l.blend_mode.value) not in ("b'norm'",'norm'):
+        if l.kind in ADJUSTMENTS:
+            # an adjustment layer is not a part: it colours whatever sits below it and is
+            # applied to every slot composite so each part matches the plate's colour
+            out.append({'index':i,'name':l.name,'kind':l.kind,'adjustment':True,'visible':l.is_visible(),'bounds':[0,0,0,0],'background':False,'pixelHash':f'adjustment:{i}','size':[0,0]}); continue
+        if l.kind not in ('pixel','shape'):
+            raise ValueError(f'{l.kind} layer {i} requires source review')
+        visible=l.is_visible()
+        if (l.kind=='pixel' and l.opacity != 255) or str(l.blend_mode.value) not in ("b'norm'",'norm'):
             raise ValueError(f'layer {i} blending/opacity requires source review')
         im=l.topil()
         if im is None: continue
-        alpha=np.asarray(im.convert('RGBA').getchannel('A'))
+        rgba=np.asarray(im.convert('RGBA')); alpha=rgba[...,3]
         fraction=im.width*im.height/(psd.width*psd.height)
-        background=(fraction>=0.98 and float((alpha>=250).mean())>=0.98)
-        out.append({'index':i,'name':l.name,'bounds':list(l.bbox),'background':background,
-                    'pixelHash':digest_image(im),'size':list(im.size)})
+        # a background is a full-canvas, opaque, blank white sheet; a photograph
+        # of the glass that still carries its white studio ground is as large and
+        # as opaque, but it is not blank (the cobalt 60 ml Boston bodies)
+        blank=float((rgba[...,:3].min(axis=2)>=245).mean())>=0.98
+        background=(fraction>=0.98 and float((alpha>=250).mean())>=0.98 and blank)
+        # a hidden layer contributes nothing to the plate; it is recorded here and
+        # must be named in the part map's exclusions, or the kit stays in review
+        out.append({'index':i,'name':l.name,'kind':l.kind,'bounds':list(l.bbox),'background':background,'visible':visible,
+                    'pixelHash':digest_image(im),'size':list(im.size),'opacity':int(l.opacity)})
     return out
 
 def validate_part_map(mapping,foreground,source_sha):
@@ -57,9 +69,24 @@ def validate_part_map(mapping,foreground,source_sha):
     parts=mapping.get('parts',{})
     if 'body' not in parts or len(parts)<2 or set(parts)-SLOTS:
         raise ValueError('part map needs a body and valid physical component slots')
+    # explicit exclusions: hidden alternatives, or a visible layer the reviewer
+    # names with evidence (an unused twin body fully covered by the body above it);
+    # the plate parity gate still has to pass without it
+    excluded=mapping.get('exclude',{})
+    if isinstance(excluded,list): excluded={str(i):'' for i in excluded}
+    foreground=[l for l in foreground if not l.get('adjustment')]
+    by_index={l['index']:l for l in foreground}
+    for key,evidence in excluded.items():
+        i=int(key); layer=by_index.get(i)
+        if layer is None: raise ValueError(f'excluded layer {i} is not a foreground layer')
+        if layer.get('visible',True) and not evidence: raise ValueError(f'excluding visible layer {i} requires evidence')
+    hidden=[l['index'] for l in foreground if not l.get('visible',True) and str(l['index']) not in excluded]
+    if hidden: raise ValueError(f'hidden layer {hidden[0]} requires source review')
     assigned=[i for ids in parts.values() for i in ids]
-    if any(not ids for ids in parts.values()) or len(assigned)!=len(set(assigned)) or set(assigned)!={l['index'] for l in foreground}:
+    expected={l['index'] for l in foreground}-{int(k) for k in excluded}
+    if any(not ids for ids in parts.values()) or len(assigned)!=len(set(assigned)) or set(assigned)!=expected:
         raise ValueError('part map must cover each foreground layer exactly once')
+    if any(not by_index[i].get('visible',True) for i in assigned): raise ValueError('a hidden layer cannot be a part')
     return parts
 
 def automatic_cap_map(product,foreground,off_psd):
@@ -74,13 +101,26 @@ def automatic_cap_map(product,foreground,off_psd):
         raise ValueError('cap layer not independently confirmed in uncapped source')
     return {'body':[body['index']],'cap':[cap['index']]}
 
-def parity(composite,plate):
+_WAIVERS=None
+def parity_waiver(sku):
+    """Jordan's per-SKU rulings (data/paper-doll/parity-waivers.json). Never a change to the gate itself."""
+    global _WAIVERS
+    if _WAIVERS is None:
+        f=Path(__file__).resolve().parents[2]/'data/paper-doll/parity-waivers.json'
+        _WAIVERS=json.loads(f.read_text()) if f.exists() else {'skus':[]}
+    return _WAIVERS if sku and sku in _WAIVERS['skus'] else None
+
+def parity(composite,plate,sku=None):
     a=np.asarray(composite.convert('RGB')).astype(np.int16);b=np.asarray(plate.convert('RGB')).astype(np.int16)
     ink=(a.min(axis=2)<245)|(b.min(axis=2)<245)
     if not ink.any(): return {'ok':False,'reason':'empty composite'}
     diff=np.abs(a-b).max(axis=2)[ink]
     mean=float(np.abs(a-b)[ink].mean());tail=float((diff>40).mean())
-    return {'ok':mean<=6 and tail<=.01,'mean':round(mean,4),'tailOver40':round(tail,6)}
+    result={'ok':mean<=6 and tail<=.01,'mean':round(mean,4),'tailOver40':round(tail,6)}
+    waiver=None if result['ok'] else parity_waiver(sku)
+    if waiver and mean<=waiver['ceiling']['mean'] and tail<=waiver['ceiling']['tailOver40']:
+        result.update(ok=True,waived={'gate':'mean<=6 and tail<=0.01','ceiling':waiver['ceiling'],'grantedBy':waiver['grantedBy']})
+    return result
 
 def place_exploded(parts):
     """Separate the photographed parts without cropping or hiding overlap."""
@@ -157,7 +197,12 @@ def render_exploded(parts, output):
     return exploded
 
 def main():
-    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--batch',type=Path,required=True);ap.add_argument('--part-map',type=Path);ap.add_argument('--sku',action='append');args=ap.parse_args()
+    ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--batch',type=Path,required=True);ap.add_argument('--part-map',type=Path);ap.add_argument('--sku',action='append')
+    # --aliases: {sku: {sourceBasename, evidence}} — a source whose basename is not
+    # the SKU, accepted only because an already-published plate for that SKU names
+    # this exact file and hash (the plate index is the crosswalk, never the name)
+    ap.add_argument('--aliases',type=Path);args=ap.parse_args()
+    aliases=json.loads(args.aliases.read_text()) if args.aliases else {}
     batch=args.batch.resolve(); plates=batch/'plates'; output=batch/'kits';output.mkdir(exist_ok=True)
     manifest=json.loads((plates/'manifest.json').read_text());xref=json.loads((batch/'input/xref.json').read_text());qualified={r['websiteSku'] for r in xref['products'] if r['publishable'] and r.get('kitApplicability')!='notApplicable'}
     catalog=json.loads((batch/'input/convex-snapshot.json').read_text()); products={p['websiteSku']:p for p in catalog['products']}
@@ -169,12 +214,17 @@ def main():
         record={'sku':sku,'familyId':row['familyId'],'status':'review','publishable':False,'parts':[]}
         try:
             if not row['publishable']:raise ValueError('plate registration failed')
-            src=row['plate'];path=checked_source(MASTER/src['sourceRelPath']);validate_front_source({'relPath':src['sourceRelPath']},sku)
+            src=row['plate'];path=checked_source(MASTER/src['sourceRelPath'])
+            alias=aliases.get(sku); stem=re.sub(r'^\s*\d+[.-]?\s*','',Path(src['sourceRelPath']).stem).rstrip('.').strip()
+            if alias and alias.get('sourceBasename')==stem: validate_front_source({'relPath':src['sourceRelPath']},stem); record['sourceAlias']=alias
+            else: validate_front_source({'relPath':src['sourceRelPath']},sku)
             source_sha=hashlib.sha256(path.read_bytes()).hexdigest()
             if source_sha!=src['sourceSha256']:raise ValueError('source hash drift')
             plate_path=plates/src['key'];plate_bytes=plate_path.read_bytes()
             if hashlib.sha256(plate_bytes).hexdigest()!=src['sha256']:raise ValueError('plate hash drift')
             psd=PSDImage.open(path);layers=layer_inventory(psd);foreground=[l for l in layers if not l['background']]
+            adjustments={l['index'] for l in layers if l.get('adjustment') and l.get('visible',True)}
+            if sku not in maps and any(not l.get('visible',True) and not l.get('adjustment') for l in foreground): raise ValueError(f"hidden layer {next(l['index'] for l in foreground if not l.get('visible',True))} requires source review")
             record.update({'sourcePath':src['sourceRelPath'],'sourceSha256':source_sha,'layers':layers,'applicator':products[sku].get('applicator')})
             if sku in maps:
                 parts=validate_part_map(maps[sku],foreground,source_sha); mapping_evidence=maps[sku]
@@ -193,8 +243,14 @@ def main():
             ordered=sorted(parts.items(),key=lambda kv:min(kv[1])); previous=-1
             for slot,ids in ordered:
                 if min(ids)<=previous:raise ValueError('interleaved physical-part layers need review')
-                previous=max(ids); selected={id(all_layers[i]) for i in ids}
+                previous=max(ids); selected={id(all_layers[i]) for i in list(ids)+sorted(adjustments)}
                 im=psd.composite(force=True,ignore_preview=True,alpha=0.0,color=1.0,layer_filter=lambda l:l.is_group() or id(l) in selected).convert('RGBA')
+                # a photographed layer with its white studio ground still baked in:
+                # the reviewer asks for the ground to be stripped (matte), never
+                # for clear or frosted glass
+                derivation='psd-layer'; ground_px=0
+                if mapping_evidence.get('matte',{}).get(slot)=='white-ground':
+                    im,ground_px=strip_white_ground(im); derivation='background-matte'
                 transformed=im.transform((1000,1100),Image.Transform.AFFINE,(1/scale,0,-ox/scale,0,1/scale,-oy/scale),resample=Image.Resampling.BICUBIC)
                 ok,gate=alpha_gate(np.asarray(transformed));gates.append({'slot':slot,'ok':ok,**gate})
                 if not ok:raise ValueError(f'{slot} alpha gate failed: {gate}')
@@ -206,9 +262,9 @@ def main():
                 part_rows.append({'slot':slot,'variantKey':None,'zOrder':len(part_rows),'explodeIndex':explode_index,
                   'image':f'parts/{name}','storeKey':f"kits/master-parts/{name}",**asset,'width':1000,'height':1100,
                   'bounds':{'left':bbox[0],'top':bbox[1],'right':bbox[2],'bottom':bbox[3]},'assembled':{'x':0,'y':0},
-                  'exploded':{'dx':0,'dy':0},'derivation':'psd-layer','sourceLayerIndices':ids})
+                  'exploded':{'dx':0,'dy':0},'derivation':derivation,'sourceLayerIndices':ids,'whiteGroundPixelsDropped':ground_px})
             place_exploded(part_rows)
-            pg=parity(composite,Image.open(plate_path))
+            pg=parity(composite,Image.open(plate_path),sku)
             if not pg['ok']:raise ValueError(f'plate parity failed: {pg}')
             sku_dir=output/row['familyId']/sku;sku_dir.mkdir(parents=True,exist_ok=True);composite.convert('RGB').save(sku_dir/'assembled.webp',quality=90)
             exploded=render_exploded(part_rows,output)

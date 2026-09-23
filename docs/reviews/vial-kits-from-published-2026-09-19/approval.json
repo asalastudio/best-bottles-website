@@ -1,0 +1,29 @@
+{
+ "release": "vial-kits-2026-09-19",
+ "ship": "ship Vial kit release 2026-09-19",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:24.393Z",
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-19T12:37:24.394Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/vial-kits.jpg",
+ "skus": {
+  "GB09BlackCapApp": "bf4ed5d6035e4be1c16bb76dbbe3c586589d6858aab84100621619e15ca3c9c1",
+  "GB09BlackCapSht": "4897b6e25d86ad355084858973dc7408eb265fc8a3243d8db6c5d74b6cc8d16f",
+  "GBV1DrmBlkDropper": "dcfbfacb47fe85ad6b72208079bf71a3137c6e7a6d8c1c98541cfa86881fc820",
+  "GBVAmb1DrmBlackCapSht": "e1f5e5ed54b6c6af53c1fbccf548d2c53e0fe8f11fe1f978b4dd074b0a63d5e5",
+  "GBVAmb1DrmWhtCapSht": "65dbf78fe158c8cc45cecea1e38145760f5290aa3d54f8e48e902b25b6eb38b2",
+  "GBVAmb2BlackCap": "dff12ef49b4f43d8fb8f140cc02a6c236be7b22ec9682b2175d765cf6e823102",
+  "GBVAmb2WhtCap": "94555813a3be242d72bcb9ac4e2e035733e7514bbc93b5f92f45f06817bf8cf0",
+  "GBVBlu1DrmBlackCapSht": "0279c9b86717090609106ee89bddc61f82902bab72c6d27bf6ccc351b4caab7a",
+  "GBVBlu1DrmBlkDropper": "565d7bb8f3316ccb3001215e8cfbe50b626f346d28d1e56abe5067a6d64d36e9",
+  "GBVBlu1DrmWhtCapSht": "8311ba758d36e2affb9ffc081f712fe4b483b60825b5e7163f18bc7d70649bde",
+  "GBVGr1DrmBlackCapSht": "e970441d21236e1fbcf5125de43d30944aa00bca167f7ce3a8b9f2811dd3e2df",
+  "GBVGr1DrmBlkDropper": "59f7b8e86e65c77b5a43c78dc21d81d88b4933fe8bf8f310387cccb1dda555fc",
+  "GBVGr1DrmWhtCapSht": "3632d2c30afa43ac370dd930f43fbfad3a430f9b82fdf32b5b475a3684d8577d",
+  "GBVialClr2mlBlackCap": "2c2522ffc06da3eb084ba920364e1735d4a78db63e359a97369b6b631cf79820",
+  "GBVialClr2mlWhtCap": "94967ea010feb494787f7f1eea51590060e5c20fbcfc9ddb32798c72ce5e3abe"
+ },
+ "setAside": [],
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
+}

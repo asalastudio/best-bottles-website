@@ -1,0 +1,599 @@
+{
+  "url": "https://best-bottles-website.vercel.app",
+  "deployment": "https://best-bottles-website-7zsmhwcv2-asala.vercel.app",
+  "deploymentId": "dpl_H496bJEznHhXXwemEsmxBA8HZYZc",
+  "commit": "445fe3ded8326cde77969c1543d831b0ae674dc9",
+  "checkedAt": "2026-09-22T19:41:02.474782+00:00",
+  "rows": [
+    {
+      "sku": "GBCyl9RollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl9RollBlkDot.52b866cf8bfd.png",
+      "sha256": "52b866cf8bfd8bbd4af8796b2a97468a7f06182904d612b6f53b62a08ea97141",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl9MtlRollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl9MtlRollBlkDot.963eed913d43.png",
+      "sha256": "963eed913d434848df54618d4ebe961eb8ad6c062ea4d02a0bac661378fd34a9",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl9SpryGl.3531f92e7360.png",
+      "sha256": "3531f92e7360a1e2ee6fbe0e9d687602800a86c54e09ac2290d6a6501001ad46",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl9LtnGl.ca2699daa0ba.png",
+      "sha256": "ca2699daa0bafa648080372ccd4afba7c23e5b03d55b51ee86071067953e7873",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9RollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylAmb9RollBlkDot.f28dd0c27078.png",
+      "sha256": "f28dd0c270781bdde3c07ef09bb35320205ab1d63847a2e629e065bfe7f60cd2",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9MtlRollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylAmb9MtlRollBlkDot.b8ff3a73f388.png",
+      "sha256": "b8ff3a73f388839110fe4083d31653d869ecf67dab4418400d38b4b20af81a90",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylAmb9SpryMattSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylAmb9SpryMattSl.297ea26b8a91.png",
+      "sha256": "297ea26b8a912ae46b3aeb39b65d8d59d6cb85f4dadbcc3f820beb161cef6dc6",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "LBCylAmb9LtnMtSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/LBCylAmb9LtnMtSl.f80deb49076c.png",
+      "sha256": "f80deb49076c37b6c9bf4baa481d54c55fd509ffa858fe1770d6ad363cd2a971",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9RollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu9RollBlkDot.4f9631b0ceb8.png",
+      "sha256": "4f9631b0ceb8342ab7fc497013311f9faa3da724f618ec9fb6ffba1a2b518fcf",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9MtlRollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu9MtlRollBlkDot.844e9d33753f.png",
+      "sha256": "844e9d33753f772c682d64802bface45571069e28c2c0b4aeffa694a34e2a199",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu9SpryMattSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu9SpryMattSl.4befc61f1a00.png",
+      "sha256": "4befc61f1a00bb6a0c2c0acbd67d44a4422fd47d1eafa378b19cbf24181b39a0",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/LBCylBlu9LtnMattSl.d0ec317eb616.png",
+      "sha256": "d0ec317eb61603be52ea66981e4a8d5c7a54a8c056c1b57e47d3d2eedf2069e9",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9RollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylFrst9RollBlkDot.d9051dc36960.png",
+      "sha256": "d9051dc369601238874b64e0dd58c538ce322c5eb9d90ec98b70280165f3ef57",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9MtlRollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylFrst9MtlRollBlkDot.08fa7b4cd8f0.png",
+      "sha256": "08fa7b4cd8f023c4b57383584b8659d27bb7119077c441440c7e9310b07d9677",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylFrst9SpryMattSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylFrst9SpryMattSl.d5b42efe1820.png",
+      "sha256": "d5b42efe1820619b0908992355f87abc6e63fbbf5d4d002d128c37b581e089fc",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "LBCylFrst9LtnMtSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/LBCylFrst9LtnMtSl.619922894add.png",
+      "sha256": "619922894add3a9ed81b0ac392df7e3f8e528615321f7f1e79bdf41a0760b4dc",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9RollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylSwrl9RollBlkDot.26dda713bfb7.png",
+      "sha256": "26dda713bfb72d3a4b84d69c17fbc0638011b6bd186764762f9d604cf9c017cf",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylSwrl9MtlRollBlkDot.cb173e3c3110.png",
+      "sha256": "cb173e3c31105372170d8de1bad08a5f944f2d8eabace0bd11911e8806d50193",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylSwrl9SpryMattSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylSwrl9SpryMattSl.70ebfb3a4550.png",
+      "sha256": "70ebfb3a45505aa4306c600a7e216de0143ab20dabe1b7ff2fbba31735c5eebe",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "LBCylSwrl9LtnMtSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/LBCylSwrl9LtnMtSl.e7f6c9af7f11.png",
+      "sha256": "e7f6c9af7f11ffd372806df8218b8fd23e6841ca85e2b93bec7de844d1e68f19",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBMtlRoll28Blk",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBMtlRoll28Blk.724c06a6edfa.png",
+      "sha256": "724c06a6edfaa7e1d39c1c48741aa8feb5f30bb3313248ec03bbaf4185810255",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50AnSpMtSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50AnSpMtSl.d9f827180268.png",
+      "sha256": "d9f8271802688017176dc0344bf5bc8ceed5ce71feea028131d82afd01c11546",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50AnSpTslMtSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50AnSpTslMtSl.42c6d85c1a49.png",
+      "sha256": "42c6d85c1a4962486ec0ab7a4cb6a74c3696352bdb0d3debcc56843b6f11055d",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50MtlRollBlk",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50MtlRollBlk.748d3f4631ca.png",
+      "sha256": "748d3f4631ca83399af6e9f40a01d4bd7c58cabf15ce923080a1189916888721",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50RdcrMtSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50RdcrMtSl.3ee8e1930780.png",
+      "sha256": "3ee8e193078093d96b8fe086599beccd418690ce2b4374d613f7d49bf09fe830",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50RollWht",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50RollWht.b558aef1c1f8.png",
+      "sha256": "b558aef1c1f8e5569ea7d59ec30a945fc5c490a254a0476b0545a2316138019a",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl50SpryMtGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl50SpryMtGl.88aa74a09984.png",
+      "sha256": "88aa74a09984ed34d7dc91acb36abc1f9a073bbfb7911dc5e472c9d67b29bd65",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "LBCyl50LtnMtGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl50LtnMtGl.147afe555981.png",
+      "sha256": "147afe5559811b1e2f7f6469319c70ad9c9586f8c7325751667d3cba6d6a6da4",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl100AnSpMtSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100AnSpMtSl.4c0ef81c3113.png",
+      "sha256": "4c0ef81c3113f329962cf8efdb0329db39539d0bdb1bd5ebee6b8d4b0f571bf6",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl100AnSpTslMtSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100AnSpTslMtSl.7c088c6921a3.png",
+      "sha256": "7c088c6921a37dfe6da31d584be7dabd21cfd5035624386681f121d4fc88532c",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl100RdcrMtSl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100RdcrMtSl.e5aec2df54e9.png",
+      "sha256": "e5aec2df54e996ab8541f1c2dc1791211ef7dc9cfa8bbb147e0d8bacb0ff690b",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl100SpryMtGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl100SpryMtGl.c238fe44a86e.png",
+      "sha256": "c238fe44a86e9800c4b32291c131052fee11be6b86ba0f165288288b057bd44d",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "LBCyl100LtnMtGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl100LtnMtGl.8ef2159eee21.png",
+      "sha256": "8ef2159eee21669d005307f3f4964a09321c9bb9519b8d822cf353e8bece2b62",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBSpry3mlClBlk.5e55db395cfa.png",
+      "sha256": "5e55db395cfa2949adbf40222234652368014b5276de2cd737a9048462df9a7b",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBSpry4mlClBlk.152036f08d2a.png",
+      "sha256": "152036f08d2aec1f5d771613a77d19b20bd4d89061e590cd8f656c3a91c8b921",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5GlMattSht.637c8aa197bc.png",
+      "sha256": "637c8aa197bc4d9c9b68d29493a763637edfefc6dd642282169c5946b22549dc",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SprySlMatt",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5SprySlMatt.82f24320a8a1.png",
+      "sha256": "82f24320a8a166bc069a109bee49e6d9cc209e5a403e12ee583be9995c322d1a",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5MtlRollBlkDot.6e766dc20b00.png",
+      "sha256": "6e766dc20b0072a7356a2ba6b13f5b93bb8c5aaf83a71cb46bb12a3302171f8c",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5RollBlkDot.5e3219bdb0d8.png",
+      "sha256": "5e3219bdb0d864b9b7e48ee8648573c49178f62b80d3bae70aebc7fb5e8e5e0f",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5SlMattSht.164b75e4e501.png",
+      "sha256": "164b75e4e50100659376f17ae6592f7159fbbfab4240b7ecea200c0825b11469",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5SpryGlMatt",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5SpryGlMatt.69235ce9bde8.png",
+      "sha256": "69235ce9bde8543eae1b735e8a8200160dd3c19a9e7fc6e538791643bbf12a6b",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5MtlRollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5MtlRollBlkDot.6fe305eca91f.png",
+      "sha256": "6fe305eca91fcdbff3e88a3f23090c2ae98cd31c0c869fd1b4268ac6c759d834",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCylBlu5RollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCylBlu5RollBlkDot.e3f6c4057c08.png",
+      "sha256": "e3f6c4057c083c15bfd992d1f48939db28c5c5da3a96705eae77c3704419816c",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl5SpryBlkMatt.9f39c38b6478.png",
+      "sha256": "9f39c38b64784a8d55b7497ba56f2ab56a57d21d4958f6a55697fbc1886477a4",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25AnSpIvyGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25AnSpIvyGl.bfadd47f97fe.png",
+      "sha256": "bfadd47f97fe59970d95fd6c10523a6790424754bc5ba3f19d9449b66cc0823f",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25AnSpTslIvyGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25AnSpTslIvyGl.ab184134a30b.png",
+      "sha256": "ab184134a30ba22d8de1fa58acc86c48054e848ea5e73de8c16817293c4f2cb9",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25DrpGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl25DrpGl.5476f7c122f9.png",
+      "sha256": "5476f7c122f9b50158c2f7fa7825f74158a18f4215c92edb3ffba5feca9ec467",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBcyl25SpryMtGl.511d21e7dee0.png",
+      "sha256": "511d21e7dee08a7a6f0107495f909f14f9914a6de1e4f0134572574299a0de71",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/LBCyl25LtnMtGl.d5caeec0df28.png",
+      "sha256": "d5caeec0df284c3b78b27ce7c1f61c3cddfbb55f2ad16a8399f072a299638ec5",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBCyl25RdcrShnGl.95b60b0cd9cd.png",
+      "sha256": "95b60b0cd9cd0532c4a3833bcc8a7904e5118f2ff922b47f17662db4e101b60f",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBSpry1ozGl",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBSpry1ozGl.aec2bd4a4e74.png",
+      "sha256": "aec2bd4a4e743236b08d82c83132db65ae36593e0f23809da2eadf39f625102e",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9GlMattSht.de9a058d232e.png",
+      "sha256": "de9a058d232e6fe82d2030f68fa6b0c965974c03092cca40cf12633f3858d9a6",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9SpryGlMatt.3753db48a2b7.png",
+      "sha256": "3753db48a2b7c96b5f08138e8fac1f922dc933cd4b26473aa223c445fd24e869",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9MtlRollBlkDot.1b0eaaec38d3.png",
+      "sha256": "1b0eaaec38d33ce04be95cc63fd152979a5fdb387145e6bbf28ec6de4604ea46",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCyl9RollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCyl9RollBlkDot.f4e02e5fa3da.png",
+      "sha256": "f4e02e5fa3daa2ca3806d2cad17ab1ecf511b6f4c484aa0533bf932dc0feeb49",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9GlMattSht.2f451bcac06a.png",
+      "sha256": "2f451bcac06a1b42ac3dd23b0ec78ce3b7f68e518b9fc1ec05869cbfb21e3f57",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlMatt",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9SpryGlMatt.17dd48cae7ff.png",
+      "sha256": "17dd48cae7ff29bb7766968fda8db664bc650f722b5932642a0ac38657940314",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9MtlRollBlkDot.4ef0013dc760.png",
+      "sha256": "4ef0013dc760e5b7cfe223f25e04a0efad1b825be20946c193a0753a30b7d3cc",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    },
+    {
+      "sku": "GBTallCylFrst9RollBlkDot",
+      "url": "/images/catalog/cylinder-pilot-2026-09-22/GBTallCylFrst9RollBlkDot.35762581bc84.png",
+      "sha256": "35762581bc8415e7e8eb28fbd319dc77a6f5ecbabd56ae1a0f819728e17fa647",
+      "dimensions": [
+        2080,
+        2288
+      ],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+# Runs the Grace vs Jev intent eval when Grace-related paths change.
+# Default mode: rules + Jev + ideal (no --grace-model), so OPENAI_API_KEY is not required.
+#
+# Required GitHub Actions secrets:
+#   TYPESAFE_API_KEY          — TypeSafe/Jev API key (script hard-fails without it)
+#   NEXT_PUBLIC_CONVEX_URL    — Convex deployment URL used for read-only searchCatalog
+#                             (public URL; can also be a repository variable)
+#
+# Optional:
+#   OPENAI_API_KEY            — only if you switch the run step to --grace-model / --grace-voice
+#
+# Note: There is no rules-only CLI mode. The script always requires TYPESAFE_API_KEY
+# and NEXT_PUBLIC_CONVEX_URL (see scripts/grace-jev-intent-eval.mts). It also
+# readFileSyncs .env.local at startup, so CI creates an empty stub and injects
+# secrets via env instead.
+name: Grace Jev intent eval
+
+on:
+  pull_request:
+    paths:
+      - "src/lib/grace/**"
+      - "src/lib/catalogFilters.ts"
+      - "convex/grace.ts"
+      - "convex/graceSearchUtils.ts"
+      - "convex/graceToolDefs.ts"
+      - "convex/gracePrompt.ts"
+      - "scripts/grace-jev-intent-eval.mts"
+      - "data/grace-evals/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/grace-jev-intent-eval.yml"
+  push:
+    branches: [main]
+    paths:
+      - "src/lib/grace/**"
+      - "src/lib/catalogFilters.ts"
+      - "convex/grace.ts"
+      - "convex/graceSearchUtils.ts"
+      - "convex/graceToolDefs.ts"
+      - "convex/gracePrompt.ts"
+      - "scripts/grace-jev-intent-eval.mts"
+      - "data/grace-evals/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/grace-jev-intent-eval.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: grace-jev-intent-eval-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    # Fail fast with a clear message if secrets are missing rather than
+    # letting the script throw after npm ci.
+    env:
+      TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+      NEXT_PUBLIC_CONVEX_URL: ${{ secrets.NEXT_PUBLIC_CONVEX_URL }}
+    steps:
+      - name: Check required secrets
+        run: |
+          missing=0
+          if [ -z "$TYPESAFE_API_KEY" ]; then
+            echo "::error::TYPESAFE_API_KEY secret is required (script has no rules-only mode)."
+            missing=1
+          fi
+          if [ -z "$NEXT_PUBLIC_CONVEX_URL" ]; then
+            echo "::error::NEXT_PUBLIC_CONVEX_URL secret is required (Convex searchCatalog URL)."
+            missing=1
+          fi
+          if [ "$missing" -ne 0 ]; then
+            echo "Add the secrets under repo Settings → Secrets and variables → Actions."
+            echo "OPENAI_API_KEY is NOT required for the default (non --grace-model) run."
+            exit 1
+          fi
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.17.0
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Script always readFileSyncs .env.local; env vars above take precedence.
+      - name: Stub .env.local
+        run: touch .env.local
+
+      - name: Run Grace Jev intent eval
+        # Default arms: rules, jev, ideal, jev+table (no OpenAI / --grace-model).
+        run: npm run eval:grace:jev
+
+      - name: Upload eval results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grace-jev-intent-eval-results
+          path: data/grace-evals/results/
+          if-no-files-found: ignore
+          retention-days: 14

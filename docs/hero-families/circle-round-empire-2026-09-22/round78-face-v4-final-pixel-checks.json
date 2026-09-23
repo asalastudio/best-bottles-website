@@ -1,0 +1,22 @@
+{
+  "status": "pass",
+  "method": "Remeasured rendered PNG pixels using collar boundary and local glass-foot gradient; original landmarks visually checked. Tolerance 4 px.",
+  "count": 1,
+  "rows": [
+    {
+      "sku": "GBRndFrst78AnSpGl",
+      "measuredSeatY": 984,
+      "targetSeatY": 983.8399999999999,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.16,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    }
+  ]
+}

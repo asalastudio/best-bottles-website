@@ -1,0 +1,2183 @@
+{
+  "rows": [
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBcyl25SpryMtGl",
+      "websiteSku": "GBcyl25SpryMtGl",
+      "graceSku": "GBcyl25SpryMtGl",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 289,
+        "baselineY": 1001,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 359,
+            "top": 289,
+            "right": 641,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/b6f9a12b9c2bd99e90f0d6b7e956ff701cc052b6c2c3f62415290cb38df4a941.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/b6f9a12b9c2bd99e90f0d6b7e956ff701cc052b6c2c3f62415290cb38df4a941.body.webp",
+          "sha256": "b6f9a12b9c2bd99e90f0d6b7e956ff701cc052b6c2c3f62415290cb38df4a941",
+          "bytes": 52206,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 474,
+            "top": 418,
+            "right": 594,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/891804b41c38f0872584d453190c572b7d499999387f72c188ab02dd9e8eaa6f.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/891804b41c38f0872584d453190c572b7d499999387f72c188ab02dd9e8eaa6f.diptube.webp",
+          "sha256": "891804b41c38f0872584d453190c572b7d499999387f72c188ab02dd9e8eaa6f",
+          "bytes": 10142,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 403,
+            "top": 86,
+            "right": 594,
+            "bottom": 426
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/c02d063b82d3e380debf69635b28c089d4fed1abbd6e30fc3bd87da765afcf8c.sprayer.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/c02d063b82d3e380debf69635b28c089d4fed1abbd6e30fc3bd87da765afcf8c.sprayer.webp",
+          "sha256": "c02d063b82d3e380debf69635b28c089d4fed1abbd6e30fc3bd87da765afcf8c",
+          "bytes": 57678,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 392,
+            "top": 64,
+            "right": 601,
+            "bottom": 424
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/4a21de8f1dad2a9cc1c58909fdf780971cb7cca8b21d311fca1f0af63f8f7e21.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/4a21de8f1dad2a9cc1c58909fdf780971cb7cca8b21d311fca1f0af63f8f7e21.overcap.webp",
+          "sha256": "4a21de8f1dad2a9cc1c58909fdf780971cb7cca8b21d311fca1f0af63f8f7e21",
+          "bytes": 73986,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "19bb7c59c7f2909a9c24f40cdca6518f4a1b983a3677798cfbc35a603a5b8a00",
+      "source": {
+        "sku": "GBcyl25SpryMtGl",
+        "familyId": "cylinder-25ml-clear-18-415",
+        "identity": {
+          "graceSku": "GBcyl25SpryMtGl",
+          "family": "Cylinder",
+          "capacityMl": 25,
+          "color": "Clear",
+          "neckThreadSize": "18-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /11. GBCyl30SpryMtGl.psd",
+          "sha256": "c083ce55cc06275d3405f62d27da66deaaf199ef6c4d4ff52e1fe7babc21cf3d"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /13. GBCyl30SpryMtGl.psd",
+          "sha256": "a8c64929c3651d54563f20b880e678d8773541b8c3f6b5415411727cbcd36540"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 282,
+        "baselineY": 1001,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 4
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "7fbfb31d3251070cf8bde7f3b1ddf9ef88bb0d4648aba1e4b60d26711b82138f"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "f2fae7918837c99d5f590eba3381a47de4039f1248ca7e65d8a8d8d4c237d5f9"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 4,
+          "pixelHash": "a34ddd9f35484fc4e9bb519a80cc47ee980a23be744dc05a4967d5f58fea5783"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "88ae38e84790bcd17f5e0d88749a869dc790d4e7e1c54f119a7787249aacc114"
+        }
+      ],
+      "transform": {
+        "scale": 0.6170678336980306,
+        "x": -33.45514223194755,
+        "y": -39.99343544857766
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.333,
+          "tailOver40": 0.002294
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "LBCyl25LtnMtGl",
+      "websiteSku": "LBCyl25LtnMtGl",
+      "graceSku": "LB-CYL-CLR-25ML-LPM-MGLD",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 289,
+        "baselineY": 1001,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 359,
+            "top": 289,
+            "right": 641,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "sha256": "882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066",
+          "bytes": 42356,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 447,
+            "top": 420,
+            "right": 538,
+            "bottom": 935
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/2415a6af89854fcd64f67e3e40b14b6587c3774e9c6b39a1d64047c11c90e48d.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/2415a6af89854fcd64f67e3e40b14b6587c3774e9c6b39a1d64047c11c90e48d.diptube.webp",
+          "sha256": "2415a6af89854fcd64f67e3e40b14b6587c3774e9c6b39a1d64047c11c90e48d",
+          "bytes": 17562,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 401,
+            "top": 84,
+            "right": 592,
+            "bottom": 423
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/b64e04c630f22b33110908ee0aa50d368fe11a4252ae211e8fa6ac5f07dfbd15.pump.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/b64e04c630f22b33110908ee0aa50d368fe11a4252ae211e8fa6ac5f07dfbd15.pump.webp",
+          "sha256": "b64e04c630f22b33110908ee0aa50d368fe11a4252ae211e8fa6ac5f07dfbd15",
+          "bytes": 57132,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 393,
+            "top": 63,
+            "right": 602,
+            "bottom": 423
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/107073e5fa4fae302693894eae80510fa3f95c132d035c79e4de2917d31c6741.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/107073e5fa4fae302693894eae80510fa3f95c132d035c79e4de2917d31c6741.overcap.webp",
+          "sha256": "107073e5fa4fae302693894eae80510fa3f95c132d035c79e4de2917d31c6741",
+          "bytes": 74126,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "33dbef13d7b6f4228974a83ea6de6cd0e0ae8d105d55a321ea576956d287181a",
+      "source": {
+        "sku": "LBCyl25LtnMtGl",
+        "familyId": "cylinder-25ml-clear-18-415",
+        "identity": {
+          "graceSku": "LB-CYL-CLR-25ML-LPM-MGLD",
+          "family": "Cylinder",
+          "capacityMl": 25,
+          "color": "Clear",
+          "neckThreadSize": "18-415",
+          "category": "Glass Bottle",
+          "applicator": "Lotion Pump"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /12. LBCyl30LtnMtGl.psd",
+          "sha256": "e2a4710503f3c508e33e6b9626fb38e1fe3b79d242d676e0f83552c0b76502ff"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+          "sha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5"
+        },
+        "onBody": 2,
+        "offBody": 2,
+        "bodyWidth": 282,
+        "baselineY": 1001,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "pump",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body.",
+        "reviewedTransparentRgbDifference": "Identical alpha and identical RGBA at every alpha > 0 pixel; only zero-alpha hidden RGB differs. Revalidate exact equivalence at extraction."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "3b14841ae01e2bb7c8983151338f914431d3bddbced896fee2c716148fe844a9"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "edf376952430f2d39f2ccaec280985d1de35dcc26180ceee274ad9f30d37f7b9"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "af0313ee46f401cf5a064c4331f8a0a6d06c0f71d160447e91ce7eb77c5ce3c4"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "587bca6146202f301b313014d4852a7e927b97d7ac484e24f77ef04e0360cf07"
+        }
+      ],
+      "transform": {
+        "scale": 0.6170678336980306,
+        "x": -33.45514223194755,
+        "y": -39.99343544857766
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": true,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.3878,
+          "tailOver40": 0.001608
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBcyl25SpryShnGl",
+      "websiteSku": "GBcyl25SpryShnGl",
+      "graceSku": "GBcyl25SpryShnGl",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 289,
+        "baselineY": 1001,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 359,
+            "top": 289,
+            "right": 641,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "sha256": "882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066",
+          "bytes": 42356,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 471,
+            "top": 419,
+            "right": 574,
+            "bottom": 928
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/b81d34c6218fbdbeeb5115cc29051f966a8b9a7fd5c000b503d85b214ba80204.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/b81d34c6218fbdbeeb5115cc29051f966a8b9a7fd5c000b503d85b214ba80204.diptube.webp",
+          "sha256": "b81d34c6218fbdbeeb5115cc29051f966a8b9a7fd5c000b503d85b214ba80204",
+          "bytes": 9518,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 399,
+            "top": 84,
+            "right": 592,
+            "bottom": 421
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/96f71c21a3e00065dbe3bdd8270c26aeb34a7661ced3d6e6d27ab1bca01c76ec.sprayer.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/96f71c21a3e00065dbe3bdd8270c26aeb34a7661ced3d6e6d27ab1bca01c76ec.sprayer.webp",
+          "sha256": "96f71c21a3e00065dbe3bdd8270c26aeb34a7661ced3d6e6d27ab1bca01c76ec",
+          "bytes": 63774,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 396,
+            "top": 62,
+            "right": 599,
+            "bottom": 420
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/becacd3a2e1cca5a63c7c6a86b16a7955430e9bcae8564c7c1131c8e35423143.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/becacd3a2e1cca5a63c7c6a86b16a7955430e9bcae8564c7c1131c8e35423143.overcap.webp",
+          "sha256": "becacd3a2e1cca5a63c7c6a86b16a7955430e9bcae8564c7c1131c8e35423143",
+          "bytes": 77232,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "dbe5f5451f1d35e8f7e733c389a5ce6859160924dedc1d49c51d996268dfe09c",
+      "source": {
+        "sku": "GBcyl25SpryShnGl",
+        "familyId": "cylinder-25ml-clear-18-415",
+        "identity": {
+          "graceSku": "GBcyl25SpryShnGl",
+          "family": "Cylinder",
+          "capacityMl": 25,
+          "color": "Clear",
+          "neckThreadSize": "18-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /17. GBCyl30SpryShnGl.psd",
+          "sha256": "5a281408f731823a7b3a4c16f859edc044aa5564d0401fe51a5a1c5a05a91293"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /15. GBCyl30SpryShnGl.psd",
+          "sha256": "c65d4e80312c416a1d7990ca66df2e08eee78123fa4f396e8d13a1bcfdd371ac"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 282,
+        "baselineY": 1001,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "d5bb3173dfdb8b4464a309937e9ce284062087f962fae5b0605d1c5680020ff0"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "424baa74fec1dc71d4c83cc9555751acbc2f00a75ee8e5d40c8a9af9c6fca865"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "c1b56e29828292ccce80c654547de104689277a6e2cdaa68f7b1d36cbcb88232"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "808006ebebde62e484483c7075448fd8b667fc2ba5d223123965c5899397c803"
+        }
+      ],
+      "transform": {
+        "scale": 0.6170678336980306,
+        "x": -33.45514223194755,
+        "y": -39.99343544857766
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.2654,
+          "tailOver40": 0.001456
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "LBCyl25LtnShnGl",
+      "websiteSku": "LBCyl25LtnShnGl",
+      "graceSku": "LB-CYL-CLR-25ML-LPM-SGLD",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 289,
+        "baselineY": 1001,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 359,
+            "top": 289,
+            "right": 641,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "sha256": "882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066",
+          "bytes": 42356,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 446,
+            "top": 417,
+            "right": 538,
+            "bottom": 938
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/7136fc49246ce128f4fff347c82a22165ca76f5c2dc31e82af967fd082362194.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/7136fc49246ce128f4fff347c82a22165ca76f5c2dc31e82af967fd082362194.diptube.webp",
+          "sha256": "7136fc49246ce128f4fff347c82a22165ca76f5c2dc31e82af967fd082362194",
+          "bytes": 18078,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 404,
+            "top": 83,
+            "right": 595,
+            "bottom": 420
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/d0468d4ff9d5e51c1673957d662fb01cc299e9bde641b98806bdf91350870f2a.pump.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/d0468d4ff9d5e51c1673957d662fb01cc299e9bde641b98806bdf91350870f2a.pump.webp",
+          "sha256": "d0468d4ff9d5e51c1673957d662fb01cc299e9bde641b98806bdf91350870f2a",
+          "bytes": 64372,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 395,
+            "top": 63,
+            "right": 599,
+            "bottom": 423
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/5948fbfa3a7b30926cc3c7db8951565fa2277ef319e836548d38013c78772487.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/5948fbfa3a7b30926cc3c7db8951565fa2277ef319e836548d38013c78772487.overcap.webp",
+          "sha256": "5948fbfa3a7b30926cc3c7db8951565fa2277ef319e836548d38013c78772487",
+          "bytes": 77890,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "1abdf1491939981e2957f7d2903b04c346673204804a748ee01657f755330b55",
+      "source": {
+        "sku": "LBCyl25LtnShnGl",
+        "familyId": "cylinder-25ml-clear-18-415",
+        "identity": {
+          "graceSku": "LB-CYL-CLR-25ML-LPM-SGLD",
+          "family": "Cylinder",
+          "capacityMl": 25,
+          "color": "Clear",
+          "neckThreadSize": "18-415",
+          "category": "Glass Bottle",
+          "applicator": "Lotion Pump"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /18. LBCyl30LtnShnGl.psd",
+          "sha256": "a077a05091634b17c95280747d3d7fc9d3b4f56dcb3fba47753e408b68a41d06"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /16. LBCyl30LtnShnGl.psd",
+          "sha256": "4985b85ec53478bf6d48fbdf64b0bafce84c03bffe03665ab4c90e32d973a72b"
+        },
+        "onBody": 2,
+        "offBody": 2,
+        "bodyWidth": 282,
+        "baselineY": 1001,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "pump",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "d5bb3173dfdb8b4464a309937e9ce284062087f962fae5b0605d1c5680020ff0"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "7952afb7d9a8bd9453776390084118d0e130719510de44ddd438c9cfde9c5a9e"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "ed47dcaca5824803588a17ce7dedd44ba4c5c9edc84c3b0b09f802d1ffcd9ae5"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "c835a0ceb99a3e30f10ea7ce7d4e5f15a16924dc99533c8512ea8acf78a50be6"
+        }
+      ],
+      "transform": {
+        "scale": 0.6170678336980306,
+        "x": -33.45514223194755,
+        "y": -39.99343544857766
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 1.5155,
+          "tailOver40": 0.00619
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBcyl25SpryShnBlk",
+      "websiteSku": "GBcyl25SpryShnBlk",
+      "graceSku": "GB-CYL-CLR-25ML-SPR-SBLK",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 289,
+        "baselineY": 1001,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 359,
+            "top": 289,
+            "right": 641,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "sha256": "882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066",
+          "bytes": 42356,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 471,
+            "top": 419,
+            "right": 570,
+            "bottom": 929
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/514da1248232938abb8c81a72cf8f381eaeb7724d596e38986a66579e733c70b.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/514da1248232938abb8c81a72cf8f381eaeb7724d596e38986a66579e733c70b.diptube.webp",
+          "sha256": "514da1248232938abb8c81a72cf8f381eaeb7724d596e38986a66579e733c70b",
+          "bytes": 9568,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 403,
+            "top": 84,
+            "right": 591,
+            "bottom": 423
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/fe0774d09dc3631a6b912a389aac89b1b865546b46faa45a48c570f41d1dbe87.sprayer.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/fe0774d09dc3631a6b912a389aac89b1b865546b46faa45a48c570f41d1dbe87.sprayer.webp",
+          "sha256": "fe0774d09dc3631a6b912a389aac89b1b865546b46faa45a48c570f41d1dbe87",
+          "bytes": 21952,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 394,
+            "top": 65,
+            "right": 598,
+            "bottom": 421
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/e72d1c65479b60bc1477b564d7eef8614bee6f6d0f1008789d5ca8012bcdfc89.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/e72d1c65479b60bc1477b564d7eef8614bee6f6d0f1008789d5ca8012bcdfc89.overcap.webp",
+          "sha256": "e72d1c65479b60bc1477b564d7eef8614bee6f6d0f1008789d5ca8012bcdfc89",
+          "bytes": 26630,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "65ebf847fb6a92aa9ff9af685ec68cd2d4f1c41b0d73fd9a412ba121b1523728",
+      "source": {
+        "sku": "GBcyl25SpryShnBlk",
+        "familyId": "cylinder-25ml-clear-18-415",
+        "identity": {
+          "graceSku": "GB-CYL-CLR-25ML-SPR-SBLK",
+          "family": "Cylinder",
+          "capacityMl": 25,
+          "color": "Clear",
+          "neckThreadSize": "18-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /21. GBCyl30SpryShnBlk.psd",
+          "sha256": "5ef3c12a6513444a76a1640ba47b42ba2cd0b3fc80f52a14ccf71e2ab5f869b0"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /19. GBCyl30SpryShnBlk.psd",
+          "sha256": "bdd76b61438bcbd0ebc6c5d868913b56a34c5447ed25b7bbb5bb96db3eaa30f2"
+        },
+        "onBody": 2,
+        "offBody": 2,
+        "bodyWidth": 282,
+        "baselineY": 1001,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "d5bb3173dfdb8b4464a309937e9ce284062087f962fae5b0605d1c5680020ff0"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "5b2254db36cf8083d009c941bc2497270c19eda9db16c59701f23d8b6fd9cc1d"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "be11be88b6046b9ee742e9865689350b39aa4065df7c89ebbd1e6e146d5748d2"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "6c285b0da5a74aee48aee4c8494f5eeb1929c1ae57ea03490e3b7e80dbb7e74d"
+        }
+      ],
+      "transform": {
+        "scale": 0.6170678336980306,
+        "x": -33.45514223194755,
+        "y": -39.99343544857766
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.1874,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "LBCyl25LtnShnBlk",
+      "websiteSku": "LBCyl25LtnShnBlk",
+      "graceSku": "LB-CYL-CLR-25ML-LPM-SBLK",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 289,
+        "baselineY": 1001,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 359,
+            "top": 289,
+            "right": 641,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "sha256": "882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066",
+          "bytes": 42356,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 448,
+            "top": 421,
+            "right": 538,
+            "bottom": 936
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/603536b3b7175f0b8b996d32e82684d0e3f41782fef71c6e784ca86960dd3b21.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/603536b3b7175f0b8b996d32e82684d0e3f41782fef71c6e784ca86960dd3b21.diptube.webp",
+          "sha256": "603536b3b7175f0b8b996d32e82684d0e3f41782fef71c6e784ca86960dd3b21",
+          "bytes": 17806,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 408,
+            "top": 89,
+            "right": 592,
+            "bottom": 419
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/7a04a69ecdba27b0b79602bf78321cd7ff8a3ec9b8a62824e780c0ad29c0de20.pump.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/7a04a69ecdba27b0b79602bf78321cd7ff8a3ec9b8a62824e780c0ad29c0de20.pump.webp",
+          "sha256": "7a04a69ecdba27b0b79602bf78321cd7ff8a3ec9b8a62824e780c0ad29c0de20",
+          "bytes": 20978,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 395,
+            "top": 63,
+            "right": 598,
+            "bottom": 419
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/a82b6013f6bb50a4f1909d190d48c754a7f0c7939f58ff3d9cf5978475a6c3fe.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/a82b6013f6bb50a4f1909d190d48c754a7f0c7939f58ff3d9cf5978475a6c3fe.overcap.webp",
+          "sha256": "a82b6013f6bb50a4f1909d190d48c754a7f0c7939f58ff3d9cf5978475a6c3fe",
+          "bytes": 26732,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "c1fded370f7bcbe1bdcd418b7fa9e98e5cf7e947704a4efa0f0033b154dd8fd9",
+      "source": {
+        "sku": "LBCyl25LtnShnBlk",
+        "familyId": "cylinder-25ml-clear-18-415",
+        "identity": {
+          "graceSku": "LB-CYL-CLR-25ML-LPM-SBLK",
+          "family": "Cylinder",
+          "capacityMl": 25,
+          "color": "Clear",
+          "neckThreadSize": "18-415",
+          "category": "Glass Bottle",
+          "applicator": "Lotion Pump"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /22. LBCyl30LtnShnBlk.psd",
+          "sha256": "f53e985f60d35c26316864cdf4609d670baa9406c38a583be19d557398d1aa01"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /20. LBCyl30LtnShnBlk.psd",
+          "sha256": "2af926fc12934b5d2964590e8378ff7cb30fd46bf91fab3f37c21506ae2965cf"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 282,
+        "baselineY": 1001,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "pump",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "d5bb3173dfdb8b4464a309937e9ce284062087f962fae5b0605d1c5680020ff0"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "cfc9c2ea0f2e26bdcd192750dbaabcd724a881f7f05cb5c2c15eaa4f0add6f10"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "69045a7524330f182fc5f962feb53ea9182240182246428e9e6f91d3aebb4ee0"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "665e40d6bc42e3db1de96ab0848ac29dabe6e5d1d5f0d25c135250cdbbc346e7"
+        }
+      ],
+      "transform": {
+        "scale": 0.6170678336980306,
+        "x": -33.45514223194755,
+        "y": -39.99343544857766
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.773,
+          "tailOver40": 0.001595
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "LBCyl25LtnMtSl",
+      "websiteSku": "LBCyl25LtnMtSl",
+      "graceSku": "LB-CYL-CLR-25ML-LPM-MSLV",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 289,
+        "baselineY": 1001,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 359,
+            "top": 289,
+            "right": 641,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "sha256": "882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066",
+          "bytes": 42356,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 447,
+            "top": 422,
+            "right": 538,
+            "bottom": 944
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/f51bda42be9525155690860c5abe4d8a3aecbab313c2835386d8af07c1feb5d1.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/f51bda42be9525155690860c5abe4d8a3aecbab313c2835386d8af07c1feb5d1.diptube.webp",
+          "sha256": "f51bda42be9525155690860c5abe4d8a3aecbab313c2835386d8af07c1feb5d1",
+          "bytes": 17902,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 404,
+            "top": 89,
+            "right": 587,
+            "bottom": 422
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/66a461834bd62f302334d69716020aab0355fffceb63a30289b2270260003b8e.pump.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/66a461834bd62f302334d69716020aab0355fffceb63a30289b2270260003b8e.pump.webp",
+          "sha256": "66a461834bd62f302334d69716020aab0355fffceb63a30289b2270260003b8e",
+          "bytes": 21400,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 390,
+            "top": 63,
+            "right": 597,
+            "bottom": 424
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/a6e5fdf70608a8a74ae30acc6f0c4945d5e5fcb9a63b42376b33bfaa5d9ea72c.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/a6e5fdf70608a8a74ae30acc6f0c4945d5e5fcb9a63b42376b33bfaa5d9ea72c.overcap.webp",
+          "sha256": "a6e5fdf70608a8a74ae30acc6f0c4945d5e5fcb9a63b42376b33bfaa5d9ea72c",
+          "bytes": 23070,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "f695b734b2c069d157796c97ad5a28bdc7da4e4cde6a14f9eea284133c122d87",
+      "source": {
+        "sku": "LBCyl25LtnMtSl",
+        "familyId": "cylinder-25ml-clear-18-415",
+        "identity": {
+          "graceSku": "LB-CYL-CLR-25ML-LPM-MSLV",
+          "family": "Cylinder",
+          "capacityMl": 25,
+          "color": "Clear",
+          "neckThreadSize": "18-415",
+          "category": "Glass Bottle",
+          "applicator": "Lotion Pump"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /26. LBCyl30LtnMtSl.psd",
+          "sha256": "973c846e68c646b4c95d229ee16bab1550fa5c12cf5d85f27ebd471a261002e2"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /25. LBCyl30LtnMtSl.psd",
+          "sha256": "815c464eb64d4b23b425e992b425a6fe7a323f20ea0675e8e2607f1b85775e8f"
+        },
+        "onBody": 2,
+        "offBody": 2,
+        "bodyWidth": 282,
+        "baselineY": 1001,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "pump",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "d5bb3173dfdb8b4464a309937e9ce284062087f962fae5b0605d1c5680020ff0"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "b442651b382f632094104f50c81ae497fe2211e18156c1548cbfc23b10ea9233"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "8dff30a0d14595af6c40bfa7458f1d688dcae4b0a0b9c688efd9b3d5176cac48"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "22c87c3d6d8709e4b4c4123493206d1214ee553abc9e0c7786a6bca5e9ce74d4"
+        }
+      ],
+      "transform": {
+        "scale": 0.6170678336980306,
+        "x": -33.45514223194755,
+        "y": -39.99343544857766
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 1.2063,
+          "tailOver40": 0.005449
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBcyl25SpryShnSl",
+      "websiteSku": "GBcyl25SpryShnSl",
+      "graceSku": "GBcyl25SpryShnSl",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 289,
+        "baselineY": 1001,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 359,
+            "top": 289,
+            "right": 641,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "sha256": "882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066",
+          "bytes": 42356,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 472,
+            "top": 417,
+            "right": 574,
+            "bottom": 924
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/5092832f95ab2025bdac16ca8a73cd20da4d8f7bd960c7a20c4564fb3f611a61.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/5092832f95ab2025bdac16ca8a73cd20da4d8f7bd960c7a20c4564fb3f611a61.diptube.webp",
+          "sha256": "5092832f95ab2025bdac16ca8a73cd20da4d8f7bd960c7a20c4564fb3f611a61",
+          "bytes": 9378,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 406,
+            "top": 89,
+            "right": 590,
+            "bottom": 420
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/4cbb7004eab3e03c3efcc92e8f069c461b8f2c5adcc344336d5980bbb7a2c433.sprayer.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/4cbb7004eab3e03c3efcc92e8f069c461b8f2c5adcc344336d5980bbb7a2c433.sprayer.webp",
+          "sha256": "4cbb7004eab3e03c3efcc92e8f069c461b8f2c5adcc344336d5980bbb7a2c433",
+          "bytes": 22072,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 391,
+            "top": 62,
+            "right": 600,
+            "bottom": 425
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/c9aedd57e60aa28cd0439f407c408d3b44d4ebd7144e5471dbfacd1ccf561ee2.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/c9aedd57e60aa28cd0439f407c408d3b44d4ebd7144e5471dbfacd1ccf561ee2.overcap.webp",
+          "sha256": "c9aedd57e60aa28cd0439f407c408d3b44d4ebd7144e5471dbfacd1ccf561ee2",
+          "bytes": 25332,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "6dbaf0fa22c933c30818a89277bcc24a3f00893cfb2e5be0dcc24b6e77af4b1a",
+      "source": {
+        "sku": "GBcyl25SpryShnSl",
+        "familyId": "cylinder-25ml-clear-18-415",
+        "identity": {
+          "graceSku": "GBcyl25SpryShnSl",
+          "family": "Cylinder",
+          "capacityMl": 25,
+          "color": "Clear",
+          "neckThreadSize": "18-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /30. GBCyl30SpryShnSl.psd",
+          "sha256": "f1175e1ef02b2fa3a3bac26b0ef7faa3475a9dabae201afbde4afbe55ee01f1e"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /29. GBCyl30SpryShnSl.psd",
+          "sha256": "8ce97a8d818448f456cd1872c3c83d396f1bfc0b6b711374594a971bd01fd8d9"
+        },
+        "onBody": 2,
+        "offBody": 2,
+        "bodyWidth": 282,
+        "baselineY": 1001,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "d5bb3173dfdb8b4464a309937e9ce284062087f962fae5b0605d1c5680020ff0"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "2e52dbd9cdd35c862524d661687cc8ebb9420b3c072b59aa9f935b804b13ccf3"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "de64b2525ba8fd38fff1b8fde7e29569023c8f4dcf82252e44055c3a6bcb48cf"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "61221da32e7f3198952c53ffb0b8891120e700a593c2d7bedfaed2e5ff62b082"
+        }
+      ],
+      "transform": {
+        "scale": 0.6170678336980306,
+        "x": -33.45514223194755,
+        "y": -39.99343544857766
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.4039,
+          "tailOver40": 0.001358
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "LBCyl25LtnShnSl",
+      "websiteSku": "LBCyl25LtnShnSl",
+      "graceSku": "LB-CYL-CLR-25ML-LPM-SSLV",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 289,
+        "baselineY": 1001,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 359,
+            "top": 289,
+            "right": 641,
+            "bottom": 1001
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066.body.webp",
+          "sha256": "882f57cbb34ec9d0390bca5324df9020e61f1beba2939e3e5c7ecfe752299066",
+          "bytes": 42356,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 447,
+            "top": 420,
+            "right": 538,
+            "bottom": 936
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/5eb7297ef51dacba7a2c1ff24bdf773916fa1e874bccd972e30a9b22a19577c5.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/5eb7297ef51dacba7a2c1ff24bdf773916fa1e874bccd972e30a9b22a19577c5.diptube.webp",
+          "sha256": "5eb7297ef51dacba7a2c1ff24bdf773916fa1e874bccd972e30a9b22a19577c5",
+          "bytes": 17786,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 409,
+            "top": 98,
+            "right": 591,
+            "bottom": 424
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/ccde5c7da483ddb32a27eaa1b92db1245cb554a947cc848eeb2d6e947202a854.pump.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/ccde5c7da483ddb32a27eaa1b92db1245cb554a947cc848eeb2d6e947202a854.pump.webp",
+          "sha256": "ccde5c7da483ddb32a27eaa1b92db1245cb554a947cc848eeb2d6e947202a854",
+          "bytes": 21474,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 394,
+            "top": 63,
+            "right": 604,
+            "bottom": 426
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/5b98c2a4dc951c1e0e753c957a5846f491004fda626f6ae18b2faed488d1d6cb.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/5b98c2a4dc951c1e0e753c957a5846f491004fda626f6ae18b2faed488d1d6cb.overcap.webp",
+          "sha256": "5b98c2a4dc951c1e0e753c957a5846f491004fda626f6ae18b2faed488d1d6cb",
+          "bytes": 25514,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "928354fd51c39c34d2964edaa1923194946792ba272cff77713b0a78e2c04dee",
+      "source": {
+        "sku": "LBCyl25LtnShnSl",
+        "familyId": "cylinder-25ml-clear-18-415",
+        "identity": {
+          "graceSku": "LB-CYL-CLR-25ML-LPM-SSLV",
+          "family": "Cylinder",
+          "capacityMl": 25,
+          "color": "Clear",
+          "neckThreadSize": "18-415",
+          "category": "Glass Bottle",
+          "applicator": "Lotion Pump"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /32. LBCyl30LtnShnSl.psd",
+          "sha256": "c2cde435bd5ecf0f6ff2bad4d992769946e27b2bff26f2a421655cba5a57aded"
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /31. LBCyl30LtnShnSl.psd",
+          "sha256": "29f353b3e4b709b340cdda279e45c91eced8e299d61c82e13dee2fb83c457e81"
+        },
+        "onBody": 2,
+        "offBody": 1,
+        "bodyWidth": 282,
+        "baselineY": 1001,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "pump",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "d5bb3173dfdb8b4464a309937e9ce284062087f962fae5b0605d1c5680020ff0"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "c8405e4e505b93b362f1ebefee9e66a4793fd12e1ae2568f68bb95b7611d9dce"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "646d5d0955944f977a8afa8f8752ba75f900bddd2933863996cb28ae146a7a5f"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "de5407dc2fdc4b19211bffe946b6bed90642fc0278b571535ab374b1c9ea9e43"
+        }
+      ],
+      "transform": {
+        "scale": 0.6170678336980306,
+        "x": -33.45514223194755,
+        "y": -39.99343544857766
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 1.216,
+          "tailOver40": 0.003645
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    }
+  ]
+}

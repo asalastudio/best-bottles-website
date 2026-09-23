@@ -2,6 +2,8 @@ type RawComponent = Record<string, unknown>;
 
 export interface NormalizedComponent {
     graceSku: string;
+    /** Exact source-verified canonical identity for an imported blank SKU. */
+    websiteSku?: string;
     itemName: string;
     imageUrl: string | null;
     webPrice1pc: number | null;
@@ -89,7 +91,61 @@ type BottleLike = {
     itemName?: string | null;
     color?: string | null;
     neckThreadSize?: string | null;
+    applicator?: string | null;
+    websiteSku?: string | null;
+    graceSku?: string | null;
 };
+
+/** Lined screw caps occupy the open mouth. They will not seat on a roll-on plug. */
+const LINED_CAP_TYPES = new Set([
+    "Cap",
+    "Short Cap",
+    "Tall Cap",
+    "Short Cap with Liner",
+    "Tall Cap with Liner",
+]);
+
+const SPRAYER_TYPES = new Set([
+    "Sprayer",
+    "Antique Bulb Sprayer",
+    "Bulb Sprayer",
+]);
+
+const ROLL_ON_SAFE_TYPES = new Set([
+    "Roll-On Cap",
+    "Roller",
+    "Plastic Roller",
+    "Metal Roller",
+]);
+
+/**
+ * Applicator × component matrix shared by PDP, Matrix / Build Your Bottle,
+ * and Grace getBottleComponents. Thread match is necessary but not sufficient.
+ *
+ *  - Roll-on plugged: only roll-on caps / rollers. Lined caps and sprayers
+ *    cannot seat over the plug (ASA-194).
+ *  - 18-415 liner cap (not roll-on): orifice reducer is required pairing.
+ */
+export function isRollOnPluggedBottle(bottle: BottleLike): boolean {
+    const applicator = normalizeText(bottle.applicator);
+    if (applicator.includes("bottle only")) return false;
+    if (/(roll-?on|roller)/.test(applicator)) return true;
+    const website = bottle.websiteSku ?? "";
+    if (/MtlRoll|Roll/i.test(website) && !/CPRoll/i.test(website)) return true;
+    const grace = (bottle.graceSku ?? "").toUpperCase();
+    if (/-(?:MRL|ROL|RON)-/.test(grace)) return true;
+    return /(roll-?on|roller)/.test(normalizeText(bottle.itemName));
+}
+
+export function needsReducerWithLinerCap(bottle: BottleLike): boolean {
+    if (normalizeText(bottle.neckThreadSize) !== "18-415") return false;
+    if (isRollOnPluggedBottle(bottle)) return false;
+    const applicator = normalizeText(bottle.applicator);
+    if (applicator.includes("spray") || applicator.includes("pump") || applicator.includes("dropper")) {
+        return false;
+    }
+    return true;
+}
 
 type FitmentRuleLike = {
     threadSize?: string | null;
@@ -209,4 +265,39 @@ export function filterGroupedComponentsByFitmentRule(
     return Object.fromEntries(
         Object.entries(grouped).filter(([type]) => allowedTypes.has(type)),
     );
+}
+
+export function applyApplicatorCompatibilityRules(
+    filtered: Record<string, NormalizedComponent[]>,
+    original: Record<string, NormalizedComponent[]>,
+    bottle: BottleLike,
+): Record<string, NormalizedComponent[]> {
+    let next: Record<string, NormalizedComponent[]> = { ...filtered };
+
+    if (isRollOnPluggedBottle(bottle)) {
+        next = Object.fromEntries(
+            Object.entries(next).filter(([type]) => (
+                ROLL_ON_SAFE_TYPES.has(type)
+                && !LINED_CAP_TYPES.has(type)
+                && !SPRAYER_TYPES.has(type)
+            )),
+        );
+        return next;
+    }
+
+    if (needsReducerWithLinerCap(bottle) && (original.Reducer?.length ?? 0) > 0 && !next.Reducer?.length) {
+        next = { ...next, Reducer: original.Reducer };
+    }
+
+    return next;
+}
+
+/** Thread fitment first, then applicator occupancy / reducer pairing. */
+export function resolveCompatibleComponents(
+    grouped: Record<string, NormalizedComponent[]>,
+    fitmentRule: FitmentRuleLike | null,
+    bottle: BottleLike,
+): Record<string, NormalizedComponent[]> {
+    const byThread = filterGroupedComponentsByFitmentRule(grouped, fitmentRule);
+    return applyApplicatorCompatibilityRules(byThread, grouped, bottle);
 }

@@ -1,0 +1,177 @@
+[
+  {
+    "sku": "GBCrcl15Gl",
+    "familyId": "circle-15ml-clear-13-415",
+    "capacityMl": 15,
+    "publishedPlateScale": 0.775,
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-15ml-clear-13-415/GBCrcl15Gl/423e002960d5e9de71ff6ac2a5c18992fb49a7f2ed10119f7f05cf9db1207fa7.front-on-1000x1100.webp",
+    "candidate": "docs/reviews/circle-pdp-reframe-2026-09-20/candidates/GBCrcl15Gl.front-on-1000x1100.webp",
+    "before": {
+      "midW": 57.5,
+      "fillH": 88.64,
+      "bbox": [
+        175,
+        64,
+        824,
+        1039
+      ]
+    },
+    "after": {
+      "midW": 44.6,
+      "fillH": 68.55,
+      "bbox": [
+        248,
+        174,
+        750,
+        928
+      ]
+    },
+    "targetMidBodyWidthPercent": 46.3,
+    "margins": {
+      "L": 24.8,
+      "T": 15.82,
+      "R": 25.0,
+      "B": 15.64
+    }
+  },
+  {
+    "sku": "GBCrcl15Sl",
+    "familyId": "circle-15ml-clear-13-415",
+    "capacityMl": 15,
+    "publishedPlateScale": 0.775,
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-15ml-clear-13-415/GBCrcl15Sl/33ef6a1e7b41c6becd1773c122a0fc792c19ff38a87b2f782c0d7d433486967e.front-on-1000x1100.webp",
+    "candidate": "docs/reviews/circle-pdp-reframe-2026-09-20/candidates/GBCrcl15Sl.front-on-1000x1100.webp",
+    "before": {
+      "midW": 57.4,
+      "fillH": 88.55,
+      "bbox": [
+        177,
+        64,
+        825,
+        1038
+      ]
+    },
+    "after": {
+      "midW": 44.4,
+      "fillH": 68.64,
+      "bbox": [
+        249,
+        173,
+        751,
+        928
+      ]
+    },
+    "targetMidBodyWidthPercent": 46.3,
+    "margins": {
+      "L": 24.9,
+      "T": 15.73,
+      "R": 24.9,
+      "B": 15.64
+    }
+  },
+  {
+    "sku": "GBCrcl15BlkSht",
+    "familyId": "circle-15ml-clear-13-415",
+    "capacityMl": 15,
+    "publishedPlateScale": 0.775,
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-15ml-clear-13-415/GBCrcl15BlkSht/b8a8ee2331568d88796323adece1fb341bef813f40702296297e06cb93e88868.front-on-1000x1100.webp",
+    "candidate": "docs/reviews/circle-pdp-reframe-2026-09-20/candidates/GBCrcl15BlkSht.front-on-1000x1100.webp",
+    "before": {
+      "midW": 62.9,
+      "fillH": 75.09,
+      "bbox": [
+        172,
+        212,
+        820,
+        1038
+      ]
+    },
+    "after": {
+      "midW": 48.8,
+      "fillH": 58.09,
+      "bbox": [
+        245,
+        289,
+        747,
+        928
+      ]
+    },
+    "targetMidBodyWidthPercent": 46.3,
+    "margins": {
+      "L": 24.5,
+      "T": 26.27,
+      "R": 25.3,
+      "B": 15.64
+    }
+  },
+  {
+    "sku": "GBCrcl15WhtSht",
+    "familyId": "circle-15ml-clear-13-415",
+    "capacityMl": 15,
+    "publishedPlateScale": 0.775,
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-15ml-clear-13-415/GBCrcl15WhtSht/dad123e0bf37f998351bed8a7fec713f7a76eb56261fac393ff1552a98ceddb7.front-on-1000x1100.webp",
+    "candidate": "docs/reviews/circle-pdp-reframe-2026-09-20/candidates/GBCrcl15WhtSht.front-on-1000x1100.webp",
+    "before": {
+      "midW": 63.3,
+      "fillH": 74.73,
+      "bbox": [
+        174,
+        216,
+        824,
+        1038
+      ]
+    },
+    "after": {
+      "midW": 48.8,
+      "fillH": 57.82,
+      "bbox": [
+        247,
+        292,
+        749,
+        928
+      ]
+    },
+    "targetMidBodyWidthPercent": 46.3,
+    "margins": {
+      "L": 24.7,
+      "T": 26.55,
+      "R": 25.1,
+      "B": 15.64
+    }
+  },
+  {
+    "sku": "GBCrcl30GlCap",
+    "familyId": "circle-30ml-clear-15-415",
+    "capacityMl": 30,
+    "publishedPlateScale": 0.954,
+    "sourceUrl": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/plates/circle-30ml-clear-15-415/GBCrcl30GlCap/ecb095f90cfcbb799198936a1d95d686d5fd559710e14247df72784351b93d7c.front-on-1000x1100.webp",
+    "candidate": "docs/reviews/circle-pdp-reframe-2026-09-20/candidates/GBCrcl30GlCap.front-on-1000x1100.webp",
+    "before": {
+      "midW": 57.6,
+      "fillH": 92.18,
+      "bbox": [
+        186,
+        43,
+        831,
+        1057
+      ]
+    },
+    "after": {
+      "midW": 54.9,
+      "fillH": 87.91,
+      "bbox": [
+        199,
+        66,
+        816,
+        1033
+      ]
+    },
+    "targetMidBodyWidthPercent": 53.7,
+    "margins": {
+      "L": 19.9,
+      "T": 6.0,
+      "R": 18.4,
+      "B": 6.09
+    }
+  }
+]

@@ -9,6 +9,8 @@ export type CustomerFacingNameGroupInput = {
     slug?: string | null;
     neckThreadSize?: string | null;
     displayName?: string | null;
+    /** Staff override from the Team Hub; replaces the generated base name. */
+    customName?: string | null;
     family?: string | null;
     capacity?: string | null;
     capacityMl?: number | null;
@@ -177,10 +179,10 @@ function productEvidence(variant?: CustomerFacingNameVariantInput | null, group?
 
 function productTypeFromEvidence(evidence: string): { label: string; source: string } | null {
     if (/\b(ast|tassel)\b/i.test(evidence) || /ansptsl|tassel/.test(evidence)) {
-        return { label: "Vintage Style Bulb Spray Bottle with Tassel", source: "tassel sprayer evidence" };
+        return { label: "Vintage Style Bulb Sprayer Bottle with Tassel", source: "tassel sprayer evidence" };
     }
     if (/\b(asp)\b/i.test(evidence) || /ansp|vintage|antique|bulb/.test(evidence)) {
-        return { label: "Vintage Style Bulb Spray Bottle", source: "vintage style bulb sprayer evidence" };
+        return { label: "Vintage Style Bulb Sprayer Bottle", source: "vintage style bulb sprayer evidence" };
     }
     if (/\b(spr)\b/i.test(evidence) || /spry|perfume spray|spray pump|fine mist|sprayer/.test(evidence)) {
         return { label: "Perfume Spray Bottle", source: "spray evidence" };
@@ -322,16 +324,21 @@ function buildFallback(args: CustomerFacingNameArgs): CustomerFacingProductName 
 }
 
 export function getCustomerFacingProductName(args: CustomerFacingNameArgs): CustomerFacingProductName {
-    const baseName = composeBaseName(args.group, args.variant);
+    // A name staff typed on purpose wins over the generated one, as written. The SKU's finish is still
+    // appended ("… - Shiny Gold"), so the variants of one product stay told apart the way they are now.
+    const custom = clean(args.group?.customName);
+    const baseName = custom ?? composeBaseName(args.group, args.variant);
     if (!baseName) return buildFallback(args);
 
     const evidence = productEvidence(args.variant, args.group);
     const resolvedType = productTypeFromEvidence(evidence);
     const productType = resolvedType?.label ?? "Bottle";
     const finish = finishSuffix(productType, resolveFinish(args.variant), args.variant);
-    const displayName = displayApplicatorName(`${baseName} ${productType}${finish ? ` - ${finish}` : ""}`.replace(/\s+/g, " ").trim());
+    const displayName = custom
+        ? `${custom}${finish ? ` - ${finish}` : ""}`
+        : displayApplicatorName(`${baseName} ${productType}${finish ? ` - ${finish}` : ""}`.replace(/\s+/g, " ").trim());
     const variantLabel = finish ?? (resolvedType ? productType : null);
-    const confidence: CustomerFacingNameConfidence = args.variant && resolvedType ? "high" : resolvedType ? "medium" : "fallback";
+    const confidence: CustomerFacingNameConfidence = custom || (args.variant && resolvedType) ? "high" : resolvedType ? "medium" : "fallback";
 
     if (confidence === "fallback" && clean(args.fallbackName)) {
         return buildFallback(args);
@@ -344,6 +351,6 @@ export function getCustomerFacingProductName(args: CustomerFacingNameArgs): Cust
         seoName: displayName,
         altText: displayName,
         confidence,
-        sourceReason: resolvedType?.source ?? "base bottle fields",
+        sourceReason: custom ? "staff custom name" : resolvedType?.source ?? "base bottle fields",
     };
 }

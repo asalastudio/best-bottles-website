@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { attachBuilderKits, slimBuilderBodies } from "@/lib/bottle-builder/payload";
 import { chooserPreloadUrls } from "@/lib/bottle-builder/mobile-request";
-import type { BuilderBody, BuilderConfiguration, BuilderKit } from "@/lib/bottle-builder/model";
+import { bareGlassPreview, clearBodyPreview, previewParts, type BuilderBody, type BuilderConfiguration, type BuilderKit } from "@/lib/bottle-builder/model";
 
 const kit = (sku: string, extra: Partial<BuilderKit> = {}): BuilderKit => ({
     sku, familyId: "cylinder-9ml-clear-17-415", completeness: "full", conflicts: [],
@@ -53,6 +53,65 @@ describe("builder first-paint payload", () => {
         expect(chooserPreloadUrls(slim)).toEqual(["https://example.com/Cylinder9MetalBlack-chooser.webp"]);
     });
 
+    it("survives being slimmed twice, which is what production does", () => {
+        // loadBuilderFamily slims what it caches; the /matrix page slims what it
+        // renders. The second pass sees `kit: null`, and before this fix it replaced
+        // the bare-glass layer with undefined — so every Cylinder tile read
+        // "Image unavailable" on the live site while a single pass tested green.
+        const clear = config("Cylinder50SprayBlack", { bodyImage: null });
+        const once = slimBuilderBodies([body([clear])]);
+        const twice = slimBuilderBodies(once);
+        expect(once[0]!.configurations[0]!.chooserKit?.parts.map(part => part.slot)).toEqual(["body"]);
+        expect(twice[0]!.configurations[0]!.chooserKit).toEqual(once[0]!.configurations[0]!.chooserKit);
+        expect(previewParts(clearBodyPreview(twice[0]!), "body").map(part => part.slot)).toEqual(["body"]);
+        expect(JSON.stringify(twice)).toBe(JSON.stringify(once));
+    });
+
+    it("keeps one bare-glass layer per colour when a family has no reviewed body image", () => {
+        // Cylinder ships no reviewed 50 ml body webp, so before this the chooser
+        // tile had a null kit and a null bodyImage and drew "Image unavailable".
+        const clear = config("Cylinder50SprayBlack", { bodyImage: null });
+        const slim = slimBuilderBodies([body([
+            clear,
+            config("Cylinder50SprayGold", { closure: "Gold", bodyImage: null }),
+            config("Cylinder50SprayFrost", { color: "Frosted", bodyImage: null }),
+        ])]);
+        const [first, second, frosted] = slim[0]!.configurations;
+        expect(first!.kit).toBeNull();
+        expect(first!.chooserKit?.parts.map(part => part.slot)).toEqual(["body"]);
+        expect(first!.chooserKit?.parts[0]!.image.url).toBe("https://example.com/Cylinder50SprayBlack-body.webp");
+        expect(first!.chooserKit?.three).toBeNull();
+        expect(first!.chooserKit?.plateSha256).toBe("");
+        expect(first!.chooserKit?.conflicts).toEqual([]);
+        // Only the first configuration of each colour is ever drawn by the chooser.
+        expect(second!.chooserKit).toBeUndefined();
+        expect(frosted!.chooserKit?.parts.map(part => part.slot)).toEqual(["body"]);
+        // Still not a kit catalog: no sibling layers, no 2x, no mask.
+        expect(JSON.stringify(slim)).not.toContain("-body@2x.webp");
+        expect(JSON.stringify(slim)).not.toContain("-mask.webp");
+        expect(previewParts(clearBodyPreview(slim[0]!), "body").map(part => part.slot)).toEqual(["body"]);
+        expect(chooserPreloadUrls(slim)).toEqual(["https://example.com/Cylinder50SprayBlack-body.webp"]);
+    });
+
+    it("prefers the reviewed body image and never layers a borrowed kit over it", () => {
+        const slim = slimBuilderBodies([body([config("Cylinder9MetalBlack")])]);
+        expect(slim[0]!.configurations[0]!.chooserKit).toBeUndefined();
+        const tile = clearBodyPreview(slim[0]!);
+        expect(tile.bodyImage?.url).toBe("https://example.com/Cylinder9MetalBlack-chooser.webp");
+        expect(previewParts(tile, "body")).toEqual([]);
+    });
+
+    it("draws a clear tile from the reviewed clear image, not a coloured body layer", () => {
+        const amber = config("Cylinder9Amber", { color: "Amber", bodyImage: null });
+        const slim = slimBuilderBodies([body([amber])]);
+        expect(slim[0]!.configurations[0]!.chooserKit).toBeDefined();
+        // clearBodyPreview finds no reviewed Clear image for this fixture body and
+        // keeps the amber configuration, borrowed layer and all.
+        expect(clearBodyPreview(slim[0]!).color).toBe("Amber");
+        // A configuration carrying a reviewed image drops the borrowed layer.
+        expect(bareGlassPreview({ ...slim[0]!.configurations[0]!, bodyImage: { url: "https://example.com/reviewed.webp", width: 400, height: 520 } }).chooserKit).toBeUndefined();
+    });
+
     it("restores only the selected bottle's kits without changing compatible choices", () => {
         const preview = kit("Cylinder9MetalGold");
         const slim = slimBuilderBodies([body([
@@ -72,9 +131,26 @@ describe("Build Your Bottle first-paint contract", () => {
         const page = readFileSync("src/app/matrix/page.tsx", "utf8");
         const server = readFileSync("src/lib/bottle-builder/server.ts", "utf8");
         const client = readFileSync("src/components/matrix/MatrixClient.tsx", "utf8");
+        const mobile = readFileSync("src/components/bottle-builder/MobileBuilder.tsx", "utf8");
         expect(server).toMatch(/loadBuilderFamily\s*=\s*unstable_cache/);
         expect(server).toContain("slimBuilderBodies");
+        expect(server).toContain("chooserSourceRows");
+        expect(server).toContain("productKits.forSkus");
+        const familiesFn = server.slice(server.indexOf("export const loadBuilderFamilies"), server.indexOf("async function loadKitsForRows"));
+        expect(familiesFn).not.toContain("loadBuilderFamily(");
         expect(page).toContain("slimBuilderBodies");
+        expect(page).toContain("chooserPreloadUrls(bodies, CHOOSER_PRIORITY_TILES)");
+        expect(page).toContain('fetchPriority="high"');
         expect(client).toContain("useBuilderKits");
+        expect(client).toContain("thumbnail placeholder");
+        expect(client).toContain("priority={index < CHOOSER_PRIORITY_TILES}");
+        expect(mobile).toContain("priority={index < CHOOSER_PRIORITY_TILES}");
+        const image = readFileSync("src/components/bottle-builder/BuilderImage.tsx", "utf8");
+        expect(image).toContain("data-chooser-img");
+        expect(image).not.toContain("IntersectionObserver");
+        expect(image).not.toContain('fetchPriority: "low"');
+        expect(image).not.toContain('fetchPriority="low"');
+        // Post-fit zoom is covered by the rendered-image regression tests;
+        // the first-paint contract does not prescribe a CSS implementation.
     });
 });

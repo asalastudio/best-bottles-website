@@ -1,0 +1,322 @@
+{
+  "status": "pass",
+  "method": "Remeasured rendered PNG pixels using collar boundary and local glass-foot gradient; original landmarks visually checked. Tolerance 4 px.",
+  "count": 21,
+  "rows": [
+    {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "measuredSeatY": 846,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": -0.56,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBCrclFrst50AnSpGl",
+      "measuredSeatY": 847,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.44,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBCrclFrst50DrpGl",
+      "measuredSeatY": 847,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.44,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "LBCrclFrst50LtnMtGl",
+      "measuredSeatY": 847,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.44,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "measuredSeatY": 847,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.44,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBCrclFrst50RdcrShnGl",
+      "measuredSeatY": 847,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.44,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBCrclFrst100AnSpGl",
+      "measuredSeatY": 755,
+      "targetSeatY": 755.04,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": -0.04,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "measuredSeatY": 755,
+      "targetSeatY": 755.04,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": -0.04,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "LBCrclFrst100LtnMtGl",
+      "measuredSeatY": 755,
+      "targetSeatY": 755.04,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": -0.04,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBCrclFrst100SpryMtGl",
+      "measuredSeatY": 755,
+      "targetSeatY": 755.04,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": -0.04,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnGl",
+      "measuredSeatY": 755,
+      "targetSeatY": 755.04,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": -0.04,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBRndFrst78AnSpGl",
+      "measuredSeatY": 983,
+      "targetSeatY": 983.8399999999999,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": -0.84,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBRndFrst78AnSpTslGl",
+      "measuredSeatY": 984,
+      "targetSeatY": 983.8399999999999,
+      "measuredFootY": 2083,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.16,
+      "footErrorPx": 0.92,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "LBRndFrst78LtnMtGl",
+      "measuredSeatY": 984,
+      "targetSeatY": 983.8399999999999,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.16,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "measuredSeatY": 984,
+      "targetSeatY": 983.8399999999999,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.16,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBRndFrst78RdcrShnGl",
+      "measuredSeatY": 984,
+      "targetSeatY": 983.8399999999999,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.16,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBRndFrst128AnSpGl",
+      "measuredSeatY": 847,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.44,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBRndFrst128DrpGl",
+      "measuredSeatY": 847,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.44,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "LBRndFrst128LtnMtGl",
+      "measuredSeatY": 847,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.44,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBRndFrst128SpryMtGl",
+      "measuredSeatY": 847,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.44,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    },
+    {
+      "sku": "GBRndFrst128RdcrShnGl",
+      "measuredSeatY": 847,
+      "targetSeatY": 846.56,
+      "measuredFootY": 2082,
+      "targetFootY": 2082.08,
+      "seatErrorPx": 0.44,
+      "footErrorPx": -0.08,
+      "size": [
+        2080,
+        2288
+      ],
+      "hashVerified": true,
+      "pass": true
+    }
+  ]
+}

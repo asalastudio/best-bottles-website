@@ -1,0 +1,140 @@
+{
+ "schemaVersion": 1,
+ "release": "flair-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/flair",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:17.053Z",
+ "shipPhrase": "ship Flair kit release 2026-09-19",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 29,
+  "approved": 29,
+  "setAside": 0,
+  "notExtracted": 1
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/flair-kits.jpg",
+ "reviewSheetSha256": "cf029cb815c20043363903fd4c954d2a68288625be8f657b015a2ec94d2e7482",
+ "rows": [
+  {
+   "sku": "GBFlair15BlkSht",
+   "plateSha256": "4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07"
+  },
+  {
+   "sku": "GBFlair15Gl",
+   "plateSha256": "2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80"
+  },
+  {
+   "sku": "GBFlair15MtlRollBlkDot",
+   "plateSha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457"
+  },
+  {
+   "sku": "GBFlair15MtlRollBlkSh",
+   "plateSha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab"
+  },
+  {
+   "sku": "GBFlair15MtlRollCuMatt",
+   "plateSha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799"
+  },
+  {
+   "sku": "GBFlair15MtlRollGlMatt",
+   "plateSha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a"
+  },
+  {
+   "sku": "GBFlair15MtlRollGlSh",
+   "plateSha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0"
+  },
+  {
+   "sku": "GBFlair15MtlRollPinkDot",
+   "plateSha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0"
+  },
+  {
+   "sku": "GBFlair15MtlRollSlDot",
+   "plateSha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600"
+  },
+  {
+   "sku": "GBFlair15MtlRollSlMatt",
+   "plateSha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3"
+  },
+  {
+   "sku": "GBFlair15MtlRollSlSh",
+   "plateSha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d"
+  },
+  {
+   "sku": "GBFlair15RollBlkDot",
+   "plateSha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457"
+  },
+  {
+   "sku": "GBFlair15RollBlkSh",
+   "plateSha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab"
+  },
+  {
+   "sku": "GBFlair15RollCuMatt",
+   "plateSha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799"
+  },
+  {
+   "sku": "GBFlair15RollGlMatt",
+   "plateSha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a"
+  },
+  {
+   "sku": "GBFlair15RollGlSh",
+   "plateSha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0"
+  },
+  {
+   "sku": "GBFlair15RollPinkDot",
+   "plateSha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0"
+  },
+  {
+   "sku": "GBFlair15RollSlDot",
+   "plateSha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600"
+  },
+  {
+   "sku": "GBFlair15RollSlMatt",
+   "plateSha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3"
+  },
+  {
+   "sku": "GBFlair15RollSlSh",
+   "plateSha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d"
+  },
+  {
+   "sku": "GBFlair15Sl",
+   "plateSha256": "fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e"
+  },
+  {
+   "sku": "GBFlair15SpryBlkMatt",
+   "plateSha256": "e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006"
+  },
+  {
+   "sku": "GBFlair15SpryBlkSh",
+   "plateSha256": "72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952"
+  },
+  {
+   "sku": "GBFlair15SpryBluMatt",
+   "plateSha256": "392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e"
+  },
+  {
+   "sku": "GBFlair15SpryGlMatt",
+   "plateSha256": "f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354"
+  },
+  {
+   "sku": "GBFlair15SpryGlSh",
+   "plateSha256": "19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2"
+  },
+  {
+   "sku": "GBFlair15SprySlMatt",
+   "plateSha256": "87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb"
+  },
+  {
+   "sku": "GBFlair15SprySlSh",
+   "plateSha256": "e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e"
+  },
+  {
+   "sku": "GBFlair15WhtSht",
+   "plateSha256": "6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "80142e6108d69ec01c541dfa11557463362d362bffe9315dc5ad858b4b6c98d8"
+}

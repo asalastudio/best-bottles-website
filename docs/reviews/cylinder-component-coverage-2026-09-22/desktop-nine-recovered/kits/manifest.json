@@ -1,0 +1,2618 @@
+{
+  "rows": [
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCyl9SpryBlk",
+      "websiteSku": "GBCyl9SpryBlk",
+      "graceSku": "GB-CYL-CLR-9ML-T-21",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 276,
+        "baselineY": 1054,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 607,
+            "bottom": 1054
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "sha256": "8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56",
+          "bytes": 42802,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 461,
+            "top": 429,
+            "right": 531,
+            "bottom": 996
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/f2e2c202ecde1d367595a39ccf24654f9e35ff5a4afb03fe7d3a4c9b43113aa7.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/f2e2c202ecde1d367595a39ccf24654f9e35ff5a4afb03fe7d3a4c9b43113aa7.diptube.webp",
+          "sha256": "f2e2c202ecde1d367595a39ccf24654f9e35ff5a4afb03fe7d3a4c9b43113aa7",
+          "bytes": 13538,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 413,
+            "top": 81,
+            "right": 571,
+            "bottom": 279
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/393d181a5a8316b390f30c9ef2f8a9892d5c4fdf845961c865da9c890b3479cd.sprayer.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/393d181a5a8316b390f30c9ef2f8a9892d5c4fdf845961c865da9c890b3479cd.sprayer.webp",
+          "sha256": "393d181a5a8316b390f30c9ef2f8a9892d5c4fdf845961c865da9c890b3479cd",
+          "bytes": 28356,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 403,
+            "top": 49,
+            "right": 575,
+            "bottom": 275
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca.overcap.webp",
+          "sha256": "f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca",
+          "bytes": 33788,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 396,
+            "top": 265,
+            "right": 593,
+            "bottom": 430
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -440
+          },
+          "image": "parts/b487738cdc754db20c44817ba5850024678ade8cb9810733700d5eb7f03d15cd.collar.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/b487738cdc754db20c44817ba5850024678ade8cb9810733700d5eb7f03d15cd.collar.webp",
+          "sha256": "b487738cdc754db20c44817ba5850024678ade8cb9810733700d5eb7f03d15cd",
+          "bytes": 14306,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "260da6e2e35d88534cd662a5d2cd51fab86677ba9095902d52d8093584f60fe6",
+      "source": {
+        "sku": "GBCyl9SpryBlk",
+        "identity": {
+          "graceSku": "GB-CYL-CLR-9ML-T-21",
+          "family": "Cylinder",
+          "capacityMl": 9,
+          "color": "Clear",
+          "neckThreadSize": "17-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryBlk.psd",
+          "sha256": "f899bcf0290c780f0212de4e1c56f1b98d4c32e544c5b14689169c6c13506179",
+          "reviewedOpacity": {
+            "4": 201
+          }
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryBlk.psd",
+          "sha256": "8ea64a5c9820b55f7f070d9801a1d0ad6ec11b6e7c4922c3135c1bc2e8317a32"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 215,
+        "baselineY": 1054,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          },
+          {
+            "slot": "collar",
+            "layers": [
+              {
+                "source": "on",
+                "index": 5
+              }
+            ]
+          }
+        ],
+        "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+        "familyId": "cylinder-9ml-clear-17-415",
+        "registrationReview": "Use the capped-source actuator and collar. The uncapped PSD shifts them upward 3px; using on positions preserves original assembled parity."
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "83292fa249172bc1a2d9048e14eafd8467e06d76fbddf8aad9c52e0141fab20f"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "858cc7388427423efdba1b58117236fc89595572048b4cd73ea6fb2e06c4981f"
+        },
+        {
+          "slot": "sprayer",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "b7dad7ed86b1b6c2e4f32fe5c3152b53de92c1552196f80ce2c5a5b7c6a2de5e"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "3edebfd5805f7db5f239f0510ee189d7994fe1fff4836f3570495e7f2a05196f"
+        },
+        {
+          "slot": "collar",
+          "source": "on",
+          "index": 5,
+          "pixelHash": "a0d07d0b89442169c21af772755810afaa56c39f9fedf4e2a4e70c174e62fb95"
+        }
+      ],
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 290.52371541501975,
+        "y": -236.0
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.3065,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCyl9SpryShSl",
+      "websiteSku": "GBCyl9SpryShSl",
+      "graceSku": "GB-CYL-CLR-9ML-T-25",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 276,
+        "baselineY": 1054,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 607,
+            "bottom": 1054
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/a77aac6c94987e460727297be9f82d5dce0f76baf80617a93aa6628aec70b8a1.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/a77aac6c94987e460727297be9f82d5dce0f76baf80617a93aa6628aec70b8a1.body.webp",
+          "sha256": "a77aac6c94987e460727297be9f82d5dce0f76baf80617a93aa6628aec70b8a1",
+          "bytes": 43066,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 463,
+            "top": 430,
+            "right": 536,
+            "bottom": 997
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/b7ed2d043cf9aad24236c5e7b9a955fee213c032944762423aebd0ad5e07f474.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/b7ed2d043cf9aad24236c5e7b9a955fee213c032944762423aebd0ad5e07f474.diptube.webp",
+          "sha256": "b7ed2d043cf9aad24236c5e7b9a955fee213c032944762423aebd0ad5e07f474",
+          "bytes": 13680,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 415,
+            "top": 77,
+            "right": 573,
+            "bottom": 275
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/056455119ff7ff35c0219cae04b0af8980a1f30538940b6765c247d53c462644.sprayer.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/056455119ff7ff35c0219cae04b0af8980a1f30538940b6765c247d53c462644.sprayer.webp",
+          "sha256": "056455119ff7ff35c0219cae04b0af8980a1f30538940b6765c247d53c462644",
+          "bytes": 28204,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 406,
+            "top": 52,
+            "right": 577,
+            "bottom": 278
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/e49a66300da79c31eb677d48ed06bb27dbb0ed9d2c9e8be381912d4410bdb745.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/e49a66300da79c31eb677d48ed06bb27dbb0ed9d2c9e8be381912d4410bdb745.overcap.webp",
+          "sha256": "e49a66300da79c31eb677d48ed06bb27dbb0ed9d2c9e8be381912d4410bdb745",
+          "bytes": 33998,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 398,
+            "top": 262,
+            "right": 595,
+            "bottom": 426
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -440
+          },
+          "image": "parts/a5746a4f837e1cc6a85be6eed46110528db4529e73e8f10cbe49b6d33488f297.collar.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/a5746a4f837e1cc6a85be6eed46110528db4529e73e8f10cbe49b6d33488f297.collar.webp",
+          "sha256": "a5746a4f837e1cc6a85be6eed46110528db4529e73e8f10cbe49b6d33488f297",
+          "bytes": 14910,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "c415b81586c5c1c710f6acf269a5f11d0f029470110810b52e8712ff3e615ff8",
+      "source": {
+        "sku": "GBCyl9SpryShSl",
+        "identity": {
+          "graceSku": "GB-CYL-CLR-9ML-T-25",
+          "family": "Cylinder",
+          "capacityMl": 9,
+          "color": "Clear",
+          "neckThreadSize": "17-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryShSl.psd",
+          "sha256": "28dc8ec437c10188b61f5fa00ebe353d680774430cf6dcdaaefd10b3adac722f",
+          "reviewedOpacity": {
+            "3": 201
+          }
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryShSl.psd",
+          "sha256": "8a4163a56514be7e8efeeb91d27e7229e3d1f8a83efca2ebeb9861567a116817"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 215,
+        "baselineY": 1054,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 5
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "collar",
+            "layers": [
+              {
+                "source": "off",
+                "index": 4
+              }
+            ]
+          }
+        ],
+        "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+        "familyId": "cylinder-9ml-clear-17-415"
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "400026221f2ef8b5364cc1ab54e766c8be2084f4f40a5df335400738d389acb1"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 5,
+          "pixelHash": "a8bd3002f21c015771d428320b70b061b41fae258a2f7dd4b915a9e3ddc590c6"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "b7dad7ed86b1b6c2e4f32fe5c3152b53de92c1552196f80ce2c5a5b7c6a2de5e"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "3edebfd5805f7db5f239f0510ee189d7994fe1fff4836f3570495e7f2a05196f"
+        },
+        {
+          "slot": "collar",
+          "source": "off",
+          "index": 4,
+          "pixelHash": "5bcabc2a49e707a37a00d2f546402c851cf6d653cb1535c7781c915c0f2950b0"
+        }
+      ],
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 293.07312252964425,
+        "y": -233.4505928853755
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.326,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCyl9SpryGl",
+      "websiteSku": "GBCyl9SpryGl",
+      "graceSku": "GB-CYL-CLR-9ML-T-22",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 276,
+        "baselineY": 1054,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 607,
+            "bottom": 1054
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/a77aac6c94987e460727297be9f82d5dce0f76baf80617a93aa6628aec70b8a1.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/a77aac6c94987e460727297be9f82d5dce0f76baf80617a93aa6628aec70b8a1.body.webp",
+          "sha256": "a77aac6c94987e460727297be9f82d5dce0f76baf80617a93aa6628aec70b8a1",
+          "bytes": 43066,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 463,
+            "top": 430,
+            "right": 536,
+            "bottom": 997
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/b7ed2d043cf9aad24236c5e7b9a955fee213c032944762423aebd0ad5e07f474.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/b7ed2d043cf9aad24236c5e7b9a955fee213c032944762423aebd0ad5e07f474.diptube.webp",
+          "sha256": "b7ed2d043cf9aad24236c5e7b9a955fee213c032944762423aebd0ad5e07f474",
+          "bytes": 13680,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 416,
+            "top": 76,
+            "right": 574,
+            "bottom": 275
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/26512facf4c82602b1a954eaff1760fc652fd76a5eb926b0c2a3717e173de356.sprayer.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/26512facf4c82602b1a954eaff1760fc652fd76a5eb926b0c2a3717e173de356.sprayer.webp",
+          "sha256": "26512facf4c82602b1a954eaff1760fc652fd76a5eb926b0c2a3717e173de356",
+          "bytes": 28292,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 406,
+            "top": 52,
+            "right": 577,
+            "bottom": 278
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/e49a66300da79c31eb677d48ed06bb27dbb0ed9d2c9e8be381912d4410bdb745.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/e49a66300da79c31eb677d48ed06bb27dbb0ed9d2c9e8be381912d4410bdb745.overcap.webp",
+          "sha256": "e49a66300da79c31eb677d48ed06bb27dbb0ed9d2c9e8be381912d4410bdb745",
+          "bytes": 33998,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 400,
+            "top": 263,
+            "right": 595,
+            "bottom": 427
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -440
+          },
+          "image": "parts/6624b67ef9fbdb9ae736a78e335c23c6668e56453aa64dcb2abea7ec1e670fdb.collar.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/6624b67ef9fbdb9ae736a78e335c23c6668e56453aa64dcb2abea7ec1e670fdb.collar.webp",
+          "sha256": "6624b67ef9fbdb9ae736a78e335c23c6668e56453aa64dcb2abea7ec1e670fdb",
+          "bytes": 37000,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "06b451da711aa44ebd48f09075f394656d2d7c856a5f1c3d5711833792a02a2e",
+      "source": {
+        "sku": "GBCyl9SpryGl",
+        "identity": {
+          "graceSku": "GB-CYL-CLR-9ML-T-22",
+          "family": "Cylinder",
+          "capacityMl": 9,
+          "color": "Clear",
+          "neckThreadSize": "17-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryGl.psd",
+          "sha256": "6afbd479266839dfc4c04fc6ff415b39d46ca5289f40b5eeaf822cb614731a88",
+          "reviewedOpacity": {
+            "6": 201
+          }
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryGl.psd",
+          "sha256": "8da3f35751fe8b2b442d7b58042851c378d4dd1e25ab3c8746875dc448fb37a1"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 215,
+        "baselineY": 1054,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 6
+              }
+            ]
+          },
+          {
+            "slot": "collar",
+            "layers": [
+              {
+                "source": "off",
+                "index": 6
+              }
+            ]
+          }
+        ],
+        "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+        "familyId": "cylinder-9ml-clear-17-415"
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "400026221f2ef8b5364cc1ab54e766c8be2084f4f40a5df335400738d389acb1"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "a8bd3002f21c015771d428320b70b061b41fae258a2f7dd4b915a9e3ddc590c6"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "b7dad7ed86b1b6c2e4f32fe5c3152b53de92c1552196f80ce2c5a5b7c6a2de5e"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 6,
+          "pixelHash": "3edebfd5805f7db5f239f0510ee189d7994fe1fff4836f3570495e7f2a05196f"
+        },
+        {
+          "slot": "collar",
+          "source": "off",
+          "index": 6,
+          "pixelHash": "801fb0eed37339e998cf63ee69d63e8faca71de78a9ac8fbbdf38a97306fa8e2"
+        }
+      ],
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 293.07312252964425,
+        "y": -233.4505928853755
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.3122,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCyl9SpryMattSl",
+      "websiteSku": "GBCyl9SpryMattSl",
+      "graceSku": "GB-CYL-CLR-9ML-T-23",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 276,
+        "baselineY": 1054,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 607,
+            "bottom": 1054
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "sha256": "8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56",
+          "bytes": 42802,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 461,
+            "top": 429,
+            "right": 531,
+            "bottom": 996
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/f2e2c202ecde1d367595a39ccf24654f9e35ff5a4afb03fe7d3a4c9b43113aa7.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/f2e2c202ecde1d367595a39ccf24654f9e35ff5a4afb03fe7d3a4c9b43113aa7.diptube.webp",
+          "sha256": "f2e2c202ecde1d367595a39ccf24654f9e35ff5a4afb03fe7d3a4c9b43113aa7",
+          "bytes": 13538,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 414,
+            "top": 73,
+            "right": 572,
+            "bottom": 271
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/eee02bcaeeb7f07883b206f5fd11fb2d5daccf83f14674a28a794a67f4459cf5.sprayer.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/eee02bcaeeb7f07883b206f5fd11fb2d5daccf83f14674a28a794a67f4459cf5.sprayer.webp",
+          "sha256": "eee02bcaeeb7f07883b206f5fd11fb2d5daccf83f14674a28a794a67f4459cf5",
+          "bytes": 28208,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 403,
+            "top": 49,
+            "right": 575,
+            "bottom": 275
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca.overcap.webp",
+          "sha256": "f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca",
+          "bytes": 33788,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 397,
+            "top": 261,
+            "right": 592,
+            "bottom": 426
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -440
+          },
+          "image": "parts/0f820de4b8055a0b1c81d0b775768bd85ba131c1e4ce57481e1e6c7e3b590096.collar.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/0f820de4b8055a0b1c81d0b775768bd85ba131c1e4ce57481e1e6c7e3b590096.collar.webp",
+          "sha256": "0f820de4b8055a0b1c81d0b775768bd85ba131c1e4ce57481e1e6c7e3b590096",
+          "bytes": 13786,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "8859d6eac3a75b3ddb8c9754aa27f3c68ae4876824c7596e19044870c79c28ae",
+      "source": {
+        "sku": "GBCyl9SpryMattSl",
+        "identity": {
+          "graceSku": "GB-CYL-CLR-9ML-T-23",
+          "family": "Cylinder",
+          "capacityMl": 9,
+          "color": "Clear",
+          "neckThreadSize": "17-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryMattSl.psd",
+          "sha256": "34e46ec9dc2a30d101ddfacc5c584c6ff28a19f82545d6c5a2a36a02bd35edb5",
+          "reviewedOpacity": {
+            "4": 201
+          }
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryMattSl.psd",
+          "sha256": "d2b67914f6e208515fb054e403018932534a4b20a48df850c53148fdba44739f"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 215,
+        "baselineY": 1054,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          },
+          {
+            "slot": "collar",
+            "layers": [
+              {
+                "source": "off",
+                "index": 4
+              }
+            ]
+          }
+        ],
+        "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+        "familyId": "cylinder-9ml-clear-17-415"
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "83292fa249172bc1a2d9048e14eafd8467e06d76fbddf8aad9c52e0141fab20f"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "858cc7388427423efdba1b58117236fc89595572048b4cd73ea6fb2e06c4981f"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "b7dad7ed86b1b6c2e4f32fe5c3152b53de92c1552196f80ce2c5a5b7c6a2de5e"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "3edebfd5805f7db5f239f0510ee189d7994fe1fff4836f3570495e7f2a05196f"
+        },
+        {
+          "slot": "collar",
+          "source": "off",
+          "index": 4,
+          "pixelHash": "3823a9c55a56fac508e7cbf3b78cb752115662143c0f992f01a068c8369c8bc3"
+        }
+      ],
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 290.52371541501975,
+        "y": -236.0
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.2975,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCyl9SpryTur",
+      "websiteSku": "GBCyl9SpryTur",
+      "graceSku": "GB-CYL-CLR-9ML-T-26",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 276,
+        "baselineY": 1054,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 607,
+            "bottom": 1054
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "sha256": "8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56",
+          "bytes": 42802,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 461,
+            "top": 427,
+            "right": 531,
+            "bottom": 994
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/45ecde522a5eef972b3bd06c2aef53d92f6306dc1dbb8f535ad6a49bae7afc93.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/45ecde522a5eef972b3bd06c2aef53d92f6306dc1dbb8f535ad6a49bae7afc93.diptube.webp",
+          "sha256": "45ecde522a5eef972b3bd06c2aef53d92f6306dc1dbb8f535ad6a49bae7afc93",
+          "bytes": 13616,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 414,
+            "top": 75,
+            "right": 572,
+            "bottom": 274
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/41678282f96b13fa37c0c363328cbaa9dc0e2e5ce24547f44188b8eef7278ab0.sprayer.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/41678282f96b13fa37c0c363328cbaa9dc0e2e5ce24547f44188b8eef7278ab0.sprayer.webp",
+          "sha256": "41678282f96b13fa37c0c363328cbaa9dc0e2e5ce24547f44188b8eef7278ab0",
+          "bytes": 28132,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 403,
+            "top": 46,
+            "right": 575,
+            "bottom": 272
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/2a2cffcee82a172e12440db322bc153b9301045031ac0b9a241b6a57156ebb42.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/2a2cffcee82a172e12440db322bc153b9301045031ac0b9a241b6a57156ebb42.overcap.webp",
+          "sha256": "2a2cffcee82a172e12440db322bc153b9301045031ac0b9a241b6a57156ebb42",
+          "bytes": 33620,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 399,
+            "top": 256,
+            "right": 604,
+            "bottom": 427
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -440
+          },
+          "image": "parts/2ff6736e6f5692d21925e05348c542861f835aac0f4639a98c91d43191eeec54.collar.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/2ff6736e6f5692d21925e05348c542861f835aac0f4639a98c91d43191eeec54.collar.webp",
+          "sha256": "2ff6736e6f5692d21925e05348c542861f835aac0f4639a98c91d43191eeec54",
+          "bytes": 36900,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "848ece27c7d4e96ec219ed6e548032506d95a5e8bf7f2c0d2592ab2d85c1af74",
+      "source": {
+        "sku": "GBCyl9SpryTur",
+        "identity": {
+          "graceSku": "GB-CYL-CLR-9ML-T-26",
+          "family": "Cylinder",
+          "capacityMl": 9,
+          "color": "Clear",
+          "neckThreadSize": "17-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryTur.psd",
+          "sha256": "a07ed6884f1b26866946b4278422599885b80ba1adc910325bb33dfa84220fe8",
+          "reviewedOpacity": {
+            "3": 201
+          }
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryTur.psd",
+          "sha256": "455a01574006f69d00a350eea0c7456ec5b05e85a00374555cfad1f9853aeb11"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 215,
+        "baselineY": 1054,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 4
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "collar",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+        "familyId": "cylinder-9ml-clear-17-415"
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "83292fa249172bc1a2d9048e14eafd8467e06d76fbddf8aad9c52e0141fab20f"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 4,
+          "pixelHash": "a8bd3002f21c015771d428320b70b061b41fae258a2f7dd4b915a9e3ddc590c6"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "36344bd9b178dc2b608528b7caf3bbf71a02e15fb0fc16f01ef2a34e6b23a4f5"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 3,
+          "pixelHash": "6294e38333e74c674165230cdd05eaefac8f3180aa0b641583f48851d1bc8cf9"
+        },
+        {
+          "slot": "collar",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "663a735ae47d3bdbd0322ca14fd7df625ccf50ea1f77badda5be24b298edefbb"
+        }
+      ],
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 290.52371541501975,
+        "y": -236.0
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.3035,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "GBCyl9SpryRd",
+      "websiteSku": "GBCyl9SpryRd",
+      "graceSku": "GB-CYL-CLR-9ML-T-24",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 276,
+        "baselineY": 1054,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 607,
+            "bottom": 1054
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "sha256": "8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56",
+          "bytes": 42802,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 461,
+            "top": 427,
+            "right": 531,
+            "bottom": 994
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/45ecde522a5eef972b3bd06c2aef53d92f6306dc1dbb8f535ad6a49bae7afc93.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/45ecde522a5eef972b3bd06c2aef53d92f6306dc1dbb8f535ad6a49bae7afc93.diptube.webp",
+          "sha256": "45ecde522a5eef972b3bd06c2aef53d92f6306dc1dbb8f535ad6a49bae7afc93",
+          "bytes": 13616,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "sprayer",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 414,
+            "top": 75,
+            "right": 572,
+            "bottom": 273
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/3e26ad457ec932ba8e5246c12a26a64624b2eab4fb9f9f30e8be5565707c8f8b.sprayer.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/3e26ad457ec932ba8e5246c12a26a64624b2eab4fb9f9f30e8be5565707c8f8b.sprayer.webp",
+          "sha256": "3e26ad457ec932ba8e5246c12a26a64624b2eab4fb9f9f30e8be5565707c8f8b",
+          "bytes": 28036,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 403,
+            "top": 49,
+            "right": 575,
+            "bottom": 275
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca.overcap.webp",
+          "sha256": "f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca",
+          "bytes": 33788,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 396,
+            "top": 262,
+            "right": 591,
+            "bottom": 427
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -440
+          },
+          "image": "parts/06e82eaa6deee0d7b2cbd260bda34592ed380b40c1ce59220b28830e742a6b2e.collar.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/06e82eaa6deee0d7b2cbd260bda34592ed380b40c1ce59220b28830e742a6b2e.collar.webp",
+          "sha256": "06e82eaa6deee0d7b2cbd260bda34592ed380b40c1ce59220b28830e742a6b2e",
+          "bytes": 40622,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "66f7edcdf9f0b4208bda2610815777fd352c82aacd57eb72304d8cee2f18b749",
+      "source": {
+        "sku": "GBCyl9SpryRd",
+        "identity": {
+          "graceSku": "GB-CYL-CLR-9ML-T-24",
+          "family": "Cylinder",
+          "capacityMl": 9,
+          "color": "Clear",
+          "neckThreadSize": "17-415",
+          "category": "Glass Bottle",
+          "applicator": "Fine Mist Sprayer"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/GBCyl9SpryRd.psd",
+          "sha256": "ba94b373861319e7e0c493030946d3f7f2a3765672db17d72b52c7315d596db5",
+          "reviewedOpacity": {
+            "4": 201
+          }
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/GBCyl9SpryRd.psd",
+          "sha256": "7bf2e3ca001ff5e15aa12060091d23a2e50069a12401795ae9a46cc8ec9b1ad5"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 215,
+        "baselineY": 1054,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          },
+          {
+            "slot": "sprayer",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          },
+          {
+            "slot": "collar",
+            "layers": [
+              {
+                "source": "off",
+                "index": 4
+              }
+            ]
+          }
+        ],
+        "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+        "familyId": "cylinder-9ml-clear-17-415"
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "83292fa249172bc1a2d9048e14eafd8467e06d76fbddf8aad9c52e0141fab20f"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "a8bd3002f21c015771d428320b70b061b41fae258a2f7dd4b915a9e3ddc590c6"
+        },
+        {
+          "slot": "sprayer",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "36344bd9b178dc2b608528b7caf3bbf71a02e15fb0fc16f01ef2a34e6b23a4f5"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "3edebfd5805f7db5f239f0510ee189d7994fe1fff4836f3570495e7f2a05196f"
+        },
+        {
+          "slot": "collar",
+          "source": "off",
+          "index": 4,
+          "pixelHash": "2aac4285d06e050eaa00694de44eda8d2f4cfbc4517f487e2d453049aa6f2dd1"
+        }
+      ],
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 290.52371541501975,
+        "y": -236.0
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.2919,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "LBCyl9LtnBlk",
+      "websiteSku": "LBCyl9LtnBlk",
+      "graceSku": "LB-CYL-CLR-9ML-T-01",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 276,
+        "baselineY": 1054,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 607,
+            "bottom": 1054
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "sha256": "8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56",
+          "bytes": 42802,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 464,
+            "top": 429,
+            "right": 532,
+            "bottom": 992
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/b7ed4b3b8c7b43e68cf5983fb69709d6ac486f888cb1631ae83f50efbe552a96.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/b7ed4b3b8c7b43e68cf5983fb69709d6ac486f888cb1631ae83f50efbe552a96.diptube.webp",
+          "sha256": "b7ed4b3b8c7b43e68cf5983fb69709d6ac486f888cb1631ae83f50efbe552a96",
+          "bytes": 18862,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 414,
+            "top": 79,
+            "right": 572,
+            "bottom": 277
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/622cde1cdf48c95befb5e4f82d0b6009adc091d01dceed40d3b46fcc0d35ddea.pump.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/622cde1cdf48c95befb5e4f82d0b6009adc091d01dceed40d3b46fcc0d35ddea.pump.webp",
+          "sha256": "622cde1cdf48c95befb5e4f82d0b6009adc091d01dceed40d3b46fcc0d35ddea",
+          "bytes": 27890,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 404,
+            "top": 47,
+            "right": 575,
+            "bottom": 273
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/1d66790727f578335e168d197b289954274fe8ba20f984a018503271098d1b17.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/1d66790727f578335e168d197b289954274fe8ba20f984a018503271098d1b17.overcap.webp",
+          "sha256": "1d66790727f578335e168d197b289954274fe8ba20f984a018503271098d1b17",
+          "bytes": 33516,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 397,
+            "top": 265,
+            "right": 594,
+            "bottom": 430
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -440
+          },
+          "image": "parts/de876f4f3f190766d8d5848048a00b284c0cde4963edc3456287b2a986b7c2de.collar.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/de876f4f3f190766d8d5848048a00b284c0cde4963edc3456287b2a986b7c2de.collar.webp",
+          "sha256": "de876f4f3f190766d8d5848048a00b284c0cde4963edc3456287b2a986b7c2de",
+          "bytes": 14954,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "9cc1f8748703aea3ce8b4369f63d18c9fabac16ad3ec88fabf80de22b20ffeb0",
+      "source": {
+        "sku": "LBCyl9LtnBlk",
+        "identity": {
+          "graceSku": "LB-CYL-CLR-9ML-T-01",
+          "family": "Cylinder",
+          "capacityMl": 9,
+          "color": "Clear",
+          "neckThreadSize": "17-415",
+          "category": "Glass Bottle",
+          "applicator": "Lotion Pump"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/LBCyl9LtnBlk.psd",
+          "sha256": "76108612ea7364e56221eff4c6d3f7ddc567e58bcfbec53f2705ddaac0d67ff3",
+          "reviewedOpacity": {
+            "5": 201
+          }
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/LBCyl9LtnBlk.psd",
+          "sha256": "337253f8b50325601701713995b0f1b3387b34ff0bac337da52efdf8aeb13945"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 215,
+        "baselineY": 1054,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 6
+              }
+            ]
+          },
+          {
+            "slot": "pump",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              },
+              {
+                "source": "off",
+                "index": 5
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 5
+              }
+            ]
+          },
+          {
+            "slot": "collar",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+        "familyId": "cylinder-9ml-clear-17-415"
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "83292fa249172bc1a2d9048e14eafd8467e06d76fbddf8aad9c52e0141fab20f"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 6,
+          "pixelHash": "5febb2fafb47300a056f1ae683e5f8bb00c3f52cda61f895bcd5162365e53ab3"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "40dc55db1e5f4da2e9dfbe9bcb43b1c000a55ab4e08ed50b5284a805166ad8ef"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 5,
+          "pixelHash": "680d34a9b5bbd9ed76607d33ccc4acd0e0b43e6af9bd5884a260b9bf80d672b3"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 5,
+          "pixelHash": "3edebfd5805f7db5f239f0510ee189d7994fe1fff4836f3570495e7f2a05196f"
+        },
+        {
+          "slot": "collar",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "12df13eaf3d5d7495cac9088a9a8a73984a7b31a9f661a0da6bc6ae438bcc9e6"
+        }
+      ],
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 290.52371541501975,
+        "y": -236.0
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.5011,
+          "tailOver40": 0.001782
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "LBCyl9LtnMtSl",
+      "websiteSku": "LBCyl9LtnMtSl",
+      "graceSku": "LB-CYL-CLR-9ML-T-03",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 276,
+        "baselineY": 1054,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 607,
+            "bottom": 1054
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56.body.webp",
+          "sha256": "8cfeb6cd68364863bc4ee178ce4fb3b8c4f165dedb4a6f98f4c209af877aea56",
+          "bytes": 42802,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 464,
+            "top": 429,
+            "right": 532,
+            "bottom": 992
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/b7ed4b3b8c7b43e68cf5983fb69709d6ac486f888cb1631ae83f50efbe552a96.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/b7ed4b3b8c7b43e68cf5983fb69709d6ac486f888cb1631ae83f50efbe552a96.diptube.webp",
+          "sha256": "b7ed4b3b8c7b43e68cf5983fb69709d6ac486f888cb1631ae83f50efbe552a96",
+          "bytes": 18862,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 414,
+            "top": 73,
+            "right": 572,
+            "bottom": 271
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/3e92c9e72e74e8d5fde3c75d749dde37bf2f37649f7f6cb8d9f642c54d2356e0.pump.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/3e92c9e72e74e8d5fde3c75d749dde37bf2f37649f7f6cb8d9f642c54d2356e0.pump.webp",
+          "sha256": "3e92c9e72e74e8d5fde3c75d749dde37bf2f37649f7f6cb8d9f642c54d2356e0",
+          "bytes": 27976,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 403,
+            "top": 49,
+            "right": 575,
+            "bottom": 275
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca.overcap.webp",
+          "sha256": "f20423ca97b0a84129245ee3425d18e265f6655a3235982e40a5174863cce3ca",
+          "bytes": 33788,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 397,
+            "top": 261,
+            "right": 592,
+            "bottom": 426
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -440
+          },
+          "image": "parts/0f820de4b8055a0b1c81d0b775768bd85ba131c1e4ce57481e1e6c7e3b590096.collar.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/0f820de4b8055a0b1c81d0b775768bd85ba131c1e4ce57481e1e6c7e3b590096.collar.webp",
+          "sha256": "0f820de4b8055a0b1c81d0b775768bd85ba131c1e4ce57481e1e6c7e3b590096",
+          "bytes": 13786,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "8061efbc953cea4115ba3ee801f047c7c2329be1cee5d371a84e1a11f3ffb9f6",
+      "source": {
+        "sku": "LBCyl9LtnMtSl",
+        "identity": {
+          "graceSku": "LB-CYL-CLR-9ML-T-03",
+          "family": "Cylinder",
+          "capacityMl": 9,
+          "color": "Clear",
+          "neckThreadSize": "17-415",
+          "category": "Glass Bottle",
+          "applicator": "Lotion Pump"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/LBCyl9LtnMtSl.psd",
+          "sha256": "4598e9f40b7c052605abfa8ae3cf1a950bfbe2cad38f4f23ccb140e52606dbe5",
+          "reviewedOpacity": {
+            "4": 201
+          }
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/LBCyl9LtnMtSl.psd",
+          "sha256": "ddefa4babbaf431eed464b84228ec03202452df8d01213bf317e519389b45748"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 215,
+        "baselineY": 1054,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 6
+              }
+            ]
+          },
+          {
+            "slot": "pump",
+            "layers": [
+              {
+                "source": "off",
+                "index": 2
+              },
+              {
+                "source": "off",
+                "index": 5
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 4
+              }
+            ]
+          },
+          {
+            "slot": "collar",
+            "layers": [
+              {
+                "source": "off",
+                "index": 3
+              }
+            ]
+          }
+        ],
+        "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+        "familyId": "cylinder-9ml-clear-17-415"
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "83292fa249172bc1a2d9048e14eafd8467e06d76fbddf8aad9c52e0141fab20f"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 6,
+          "pixelHash": "5febb2fafb47300a056f1ae683e5f8bb00c3f52cda61f895bcd5162365e53ab3"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 2,
+          "pixelHash": "b7dad7ed86b1b6c2e4f32fe5c3152b53de92c1552196f80ce2c5a5b7c6a2de5e"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 5,
+          "pixelHash": "06e1193c6a7e35615d700018b7d8f0287c4887922434c006e5153cdb36bf2015"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 4,
+          "pixelHash": "3edebfd5805f7db5f239f0510ee189d7994fe1fff4836f3570495e7f2a05196f"
+        },
+        {
+          "slot": "collar",
+          "source": "off",
+          "index": 3,
+          "pixelHash": "3823a9c55a56fac508e7cbf3b78cb752115662143c0f992f01a068c8369c8bc3"
+        }
+      ],
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 290.52371541501975,
+        "y": -236.0
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.3119,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    },
+    {
+      "status": "candidate",
+      "publishable": false,
+      "sku": "LBCyl9LtnGl",
+      "websiteSku": "LBCyl9LtnGl",
+      "graceSku": "LB-CYL-CLR-9ML-T-02",
+      "familyId": "cylinder-9ml-clear-17-415",
+      "completeness": "full",
+      "canvas": {
+        "width": 1000,
+        "height": 1100
+      },
+      "anchors": {
+        "axisX": 500,
+        "neckAxisX": 500,
+        "seatY": 276,
+        "baselineY": 1054,
+        "pxPerMm": null
+      },
+      "parts": [
+        {
+          "slot": "body",
+          "variantKey": null,
+          "zOrder": 0,
+          "explodeIndex": 0,
+          "bounds": {
+            "left": 392,
+            "top": 276,
+            "right": 607,
+            "bottom": 1054
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": 0
+          },
+          "image": "parts/a77aac6c94987e460727297be9f82d5dce0f76baf80617a93aa6628aec70b8a1.body.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/a77aac6c94987e460727297be9f82d5dce0f76baf80617a93aa6628aec70b8a1.body.webp",
+          "sha256": "a77aac6c94987e460727297be9f82d5dce0f76baf80617a93aa6628aec70b8a1",
+          "bytes": 43066,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "diptube",
+          "variantKey": null,
+          "zOrder": 1,
+          "explodeIndex": 1,
+          "bounds": {
+            "left": 466,
+            "top": 432,
+            "right": 535,
+            "bottom": 996
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -110
+          },
+          "image": "parts/2c2ca2a346cef7bd73d9633be1d3e68f11965e66bf78232ef3aa147ca37f7eb6.diptube.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/2c2ca2a346cef7bd73d9633be1d3e68f11965e66bf78232ef3aa147ca37f7eb6.diptube.webp",
+          "sha256": "2c2ca2a346cef7bd73d9633be1d3e68f11965e66bf78232ef3aa147ca37f7eb6",
+          "bytes": 18558,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "pump",
+          "variantKey": null,
+          "zOrder": 2,
+          "explodeIndex": 2,
+          "bounds": {
+            "left": 417,
+            "top": 76,
+            "right": 575,
+            "bottom": 275
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -220
+          },
+          "image": "parts/16a927c2f3f70e4f5094f4708e89af48a7e911dbcb732129c2337f622d270a7a.pump.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/16a927c2f3f70e4f5094f4708e89af48a7e911dbcb732129c2337f622d270a7a.pump.webp",
+          "sha256": "16a927c2f3f70e4f5094f4708e89af48a7e911dbcb732129c2337f622d270a7a",
+          "bytes": 28398,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "overcap",
+          "variantKey": null,
+          "zOrder": 3,
+          "explodeIndex": 3,
+          "bounds": {
+            "left": 406,
+            "top": 51,
+            "right": 578,
+            "bottom": 276
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -330
+          },
+          "image": "parts/af092d28af9c22b2510446b4a4652193f805a598109aba3fe215400729c33dce.overcap.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/af092d28af9c22b2510446b4a4652193f805a598109aba3fe215400729c33dce.overcap.webp",
+          "sha256": "af092d28af9c22b2510446b4a4652193f805a598109aba3fe215400729c33dce",
+          "bytes": 33368,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        },
+        {
+          "slot": "collar",
+          "variantKey": null,
+          "zOrder": 4,
+          "explodeIndex": 4,
+          "bounds": {
+            "left": 400,
+            "top": 261,
+            "right": 597,
+            "bottom": 426
+          },
+          "assembled": {
+            "x": 0,
+            "y": 0
+          },
+          "exploded": {
+            "dx": 0,
+            "dy": -440
+          },
+          "image": "parts/74379c58df098737e24f6ccf0728514c7d756851ea7f348fe06f746655640c9d.collar.webp",
+          "storeKey": "kits/cylinder-component-recovery-2026-09-22/74379c58df098737e24f6ccf0728514c7d756851ea7f348fe06f746655640c9d.collar.webp",
+          "sha256": "74379c58df098737e24f6ccf0728514c7d756851ea7f348fe06f746655640c9d",
+          "bytes": 36412,
+          "width": 1000,
+          "height": 1100,
+          "derivation": "psd-layer"
+        }
+      ],
+      "three": null,
+      "plateSha256": "5a5b34f378896a823cd7fbf77f930bccd3a5e1464aa25e06af247abc0b6464d0",
+      "source": {
+        "sku": "LBCyl9LtnGl",
+        "identity": {
+          "graceSku": "LB-CYL-CLR-9ML-T-02",
+          "family": "Cylinder",
+          "capacityMl": 9,
+          "color": "Clear",
+          "neckThreadSize": "17-415",
+          "category": "Glass Bottle",
+          "applicator": "Lotion Pump"
+        },
+        "on": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Capped/LBCyl9LtnGl.psd",
+          "sha256": "71687a14440ae1dc860cc18bf46d0770840af955df41876ad259b07210c0f575",
+          "reviewedOpacity": {
+            "7": 201
+          }
+        },
+        "off": {
+          "path": "/Users/jordanrichter/Desktop/Best Bottles/17-415 Bottles/Uncapped/LBCyl9LtnGl.psd",
+          "sha256": "433df6a940415c5ade9536980df022eb26ec2c262291a0bc1a99f9b7d88aa7c0"
+        },
+        "onBody": 1,
+        "offBody": 1,
+        "bodyWidth": 215,
+        "baselineY": 1054,
+        "parts": [
+          {
+            "slot": "body",
+            "layers": [
+              {
+                "source": "off",
+                "index": 1
+              }
+            ]
+          },
+          {
+            "slot": "diptube",
+            "layers": [
+              {
+                "source": "off",
+                "index": 8
+              }
+            ]
+          },
+          {
+            "slot": "pump",
+            "layers": [
+              {
+                "source": "off",
+                "index": 5
+              },
+              {
+                "source": "off",
+                "index": 7
+              }
+            ]
+          },
+          {
+            "slot": "overcap",
+            "layers": [
+              {
+                "source": "on",
+                "index": 7
+              }
+            ]
+          },
+          {
+            "slot": "collar",
+            "layers": [
+              {
+                "source": "off",
+                "index": 6
+              }
+            ]
+          }
+        ],
+        "overcapReview": "Native transparent overcap opacity is 201/255 in every capped Desktop PSD; retain it in exported alpha.",
+        "familyId": "cylinder-9ml-clear-17-415"
+      },
+      "layerEvidence": [
+        {
+          "slot": "body",
+          "source": "off",
+          "index": 1,
+          "pixelHash": "400026221f2ef8b5364cc1ab54e766c8be2084f4f40a5df335400738d389acb1"
+        },
+        {
+          "slot": "diptube",
+          "source": "off",
+          "index": 8,
+          "pixelHash": "5febb2fafb47300a056f1ae683e5f8bb00c3f52cda61f895bcd5162365e53ab3"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 5,
+          "pixelHash": "b7dad7ed86b1b6c2e4f32fe5c3152b53de92c1552196f80ce2c5a5b7c6a2de5e"
+        },
+        {
+          "slot": "pump",
+          "source": "off",
+          "index": 7,
+          "pixelHash": "8616125f0716fe54c09ea06cab51d9cb181e09bbb6151164c12b76befc1120d6"
+        },
+        {
+          "slot": "overcap",
+          "source": "on",
+          "index": 7,
+          "pixelHash": "6a9cd4578f42909ff33d17c06f67d7663cff1376f8c20d9b04787831dd5f3a43"
+        },
+        {
+          "slot": "collar",
+          "source": "off",
+          "index": 6,
+          "pixelHash": "f6c813a8cca42116e09d65f9dae01c6dfa99ed361269ce7c81c4057115dba7f9"
+        }
+      ],
+      "transform": {
+        "scale": 0.849802371541502,
+        "x": 293.07312252964425,
+        "y": -233.4505928853755
+      },
+      "gates": {
+        "bodyVisiblePixelsIdenticalAcrossPair": true,
+        "ignoredOnlyZeroAlphaRgbDifference": false,
+        "alphaAndCanvas": true,
+        "sourceParity": {
+          "ok": true,
+          "mean": 0.378,
+          "tailOver40": 0.0
+        }
+      },
+      "notes": [
+        "Native source pixels; body and all hardware receive one uniform transform.",
+        "Off-canvas Photoshop scrap is clipped by its original PSD canvas.",
+        "Review candidates only. No hero, hosted index, catalog, or inventory changes."
+      ]
+    }
+  ]
+}

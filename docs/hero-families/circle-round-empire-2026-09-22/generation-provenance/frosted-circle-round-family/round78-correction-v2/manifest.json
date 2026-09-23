@@ -1,0 +1,75 @@
+{
+  "state": "held-insufficient-visible-correction",
+  "model": "gpt-image-2.5-sunburst",
+  "requestedSize": "2080x2288",
+  "quality": "high",
+  "rows": [
+    {
+      "sku": "GBRndFrst78AnSpGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "catalog": {
+        "sku": "GBRndFrst78AnSpGl",
+        "family": "Round",
+        "capacityMl": 78,
+        "color": "Frosted",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "round-78ml-frosted-18-415-antiquespray",
+        "graceSku": "GB-RND-FRS-78ML-ASP-GLD"
+      },
+      "target": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /8. Round 78ml Frosted/1. Round Frst 78ml Psd/37. GBRndFrst78AnSpGl.psd",
+      "masterSha256": "3537f343494b9afac0c6c1576c4cfac86c1c42ecbc1580fd00d5f3fb437aade5",
+      "masterComposite": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/inputs/GBRndFrst78AnSpGl-master.png",
+      "currentSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/cylinder-hero-staging-2026-09-22/public/images/catalog/round-enhancement/aligned-v4/GBRndFrst78AnSpGl.premium-aligned-v4.png",
+      "currentSha256": "18fa3af6e86540071cc5a0b34c33c53ca1df7db58aabe2fbab302438a9386cda",
+      "state": "user-requested-correction",
+      "presentation": "assembled closure",
+      "sourceSize": [
+        1560,
+        1716
+      ],
+      "sourceMeasurement": {
+        "centerX": 896,
+        "closureSeatY": 846,
+        "glassFootY": 1549,
+        "uncertaintyPx": 8,
+        "method": "Visually checked grid; seat refined using collar color within body axis ROI, foot excludes shadow"
+      },
+      "frameTransform": {
+        "scale": 1.5622190611664295,
+        "x": -205.08161213845415,
+        "y": -337.7973257467993
+      },
+      "inputArtworkBounds": [
+        248,
+        335,
+        1250,
+        1565
+      ],
+      "masterVisualCheck": "exact catalog SKU, assembly, material, hardware and cap state inspected in master sheet",
+      "framedInput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/aligned/GBRndFrst78AnSpGl-2080x2288.png",
+      "promptFile": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v2/GBRndFrst78AnSpGl-prompt.txt",
+      "materialReference": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/inputs/frosted-material-reference.jpg",
+      "inputSha256": {
+        "framedInput": "f8eae5832d8a9fd526194743972780f478dc3d5666ab88e04199f311c817fe29",
+        "masterComposite": "6610b11c5a780d0ed5c11d9db27c36ee8ae0fe66b70c4114bf4f3aaf52ef9bd2",
+        "materialReference": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+        "promptFile": "542a3c1f74202000ccccdb58e6ac8863a15bee04d9b96087f48a79f5866e3a84"
+      },
+      "rawOutput": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/round78-correction-v2/GBRndFrst78AnSpGl-native-2080x2288.png",
+      "supersedesSha256": "f8eae5832d8a9fd526194743972780f478dc3d5666ab88e04199f311c817fe29"
+    }
+  ],
+  "authorization": "User explicitly requested redo of this exact Round image. Uses the existing exact master and approved frosted reference; no additional sibling payload."
+}

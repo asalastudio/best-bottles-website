@@ -1,0 +1,76 @@
+{
+ "schemaVersion": 1,
+ "release": "cream-jar-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/cream-jar",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:13.233Z",
+ "shipPhrase": "ship Cream Jar kit release 2026-09-19",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 13,
+  "approved": 13,
+  "setAside": 0,
+  "notExtracted": 3
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/cream-jar-kits.jpg",
+ "reviewSheetSha256": "f78077038bdb4e2f437bc9691996864a4d12a11d5b79a08c4f9748e803cf1a7a",
+ "rows": [
+  {
+   "sku": "CJAmb30SlCap",
+   "plateSha256": "704b5eeedbe6a3aa6739aab974865d201af490e69bc6f23e527f88b9f7623245"
+  },
+  {
+   "sku": "CJAmb40SlCap",
+   "plateSha256": "bd713b37839d4c4046ff5cd4f36a78acba3b6677556d3866020f2e9e35b3da28"
+  },
+  {
+   "sku": "CJAmb5mlBlkCap",
+   "plateSha256": "76482c15c4d850b424d78e8bb71f218e61e4da2ca69831445d45f5d67bc35abb"
+  },
+  {
+   "sku": "CJAmb5mlSlCap",
+   "plateSha256": "9b91e9bb215b99dd29723ab6d54bc60909a643f187b250c5553eae85b525e2cd"
+  },
+  {
+   "sku": "CJClr15Pnk",
+   "plateSha256": "67c197151ff7ec37c168039ba1d15b966650debc727cf448eb2fb50e5fb64aad"
+  },
+  {
+   "sku": "CJClr15Wht",
+   "plateSha256": "a656f0f7068d446ce21bca32be731e4de1d58611da5a1493e0d5cc6514116978"
+  },
+  {
+   "sku": "CJClr5mlClrCap",
+   "plateSha256": "7b042904666f895b38459b886b57180aa2f9e721be49c8b78a35f3907279cfd1"
+  },
+  {
+   "sku": "CJFrst30BlkCap",
+   "plateSha256": "f2fdb520bd15cd05605a81478345c61134802285c84a59f25011cff3b28210b4"
+  },
+  {
+   "sku": "CJFrst30SlCap",
+   "plateSha256": "2bc8d7b0953eddd2d24b87f2e762e6c27ce83a25478a49ec8a63f56f5eedf8b3"
+  },
+  {
+   "sku": "CJFrst40BlkCap",
+   "plateSha256": "37101af9d09242577be6b04b1b8a9e0b2d0ff312f22eb93c2aa5c81dbc8c2a48"
+  },
+  {
+   "sku": "CJFrst40SlCap",
+   "plateSha256": "31b0d4a63ab2bdd8b03a0429d5acb257480f36114720e780e2082bec59d296e0"
+  },
+  {
+   "sku": "CJWhite20",
+   "plateSha256": "5189ed3a55ab26c95b869ce4f1e4ff8c8bdc9f81ad160f8b207ddc818923aa9a"
+  },
+  {
+   "sku": "CJWhitePlsSlFr2oz",
+   "plateSha256": "372dcc72ac5362404e7953b0a7698a25ad37a05496d460c31be21fd92bce6f45"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "bc245335b95488be6128e8865f2034cd6da6972a6ee7fae3d7630c02456dcf98"
+}

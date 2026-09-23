@@ -43,6 +43,10 @@
 .selectionCheck { position: absolute; top: 6px; right: 6px; width: 19px; height: 19px; background: var(--gold); color: #fff; border-radius: 50%; display: grid; place-items: center; }
 .bottleThumb { width: 100%; height: 125px; margin: 0 0 6px; }
 .colorThumb { width: 100%; height: 142px; background: #eeebe5; border-radius: 3px; margin-bottom: 10px; }
+.bottleThumb [data-slate], .colorThumb [data-slate] { position: absolute; inset: 10px 16%; border-radius: 4px; background: linear-gradient(105deg, #b7c0c9 0%, #e4e9ee 42%, #b7c0c9 86%); background-size: 220% 100%; animation: builderSlateSweep 1.3s ease-in-out infinite; pointer-events: none; z-index: 0; }
+.bottleThumb [data-chooser-img], .bottleThumb img, .bottleThumb svg, .colorThumb [data-chooser-img], .colorThumb img, .colorThumb svg { position: relative; z-index: 1; }
+@keyframes builderSlateSweep { to { background-position: 220% 0; } }
+@media (prefers-reduced-motion: reduce) { .bottleThumb [data-slate], .colorThumb [data-slate] { animation: none; opacity: .7; } }
 .componentThumb { position: relative; width: 100%; height: 110px; padding: 8px; overflow: hidden; }
 .fitmentGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .componentThumb > img { mix-blend-mode: multiply; }
@@ -59,6 +63,8 @@
 .liveDot { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #69695f; white-space: nowrap; }
 .liveDot::before { content: ''; height: 4px; width: 4px; border-radius: 100%; background: #79836a; }
 .previewImage { width: 100%; height: 450px; padding: 8px 20px 0; }
+/* A configuration with no layered kit shows its whole plate, rendered on a white 1000×1100 canvas. Until its kit exists the stage goes white behind it so the canvas does not read as a box (2026-09-16). */
+.previewImage.plateStage { background: #fff; border-radius: 4px; }
 .includedCover { display: flex; align-items: center; gap: 12px; margin-top: 20px; padding: 14px; border: 1px solid var(--line); border-radius: 4px; background: #f5f3ef; }
 .includedCoverImage { flex: 0 0 54px; height: 72px; }
 .includedCover > div:not(.includedCoverImage) { flex: 1; min-width: 0; }
@@ -219,7 +225,11 @@
 @media (prefers-reduced-motion: reduce) { .builder * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 
 /* Keep the current decision and its next action together. */
-.optionAction { margin-top: 24px; }
+/* The next-step button stays in view while the options column scrolls: the
+ * shopper is looking at the preview and never reaches a button below the fold
+ * (Jordan, 2026-09-16). */
+.optionAction { position: sticky; bottom: 0; z-index: 2; margin: 24px -20px 0; padding: 14px 20px 20px; background: linear-gradient(#ffffff00, #fff 26%); }
+.options > .optionAction { margin-bottom: -24px; }
 .optionDescription { margin-top: 8px; font-size: 11px; line-height: 1.5; color: var(--quiet); }
 .selectedFitment { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px; border: 1px solid var(--line); border-radius: 4px; background: #fcfaf6; }
 .selectedFitment span, .selectedFitment small { display: block; font-size: 11px; color: var(--quiet); line-height: 1.6; }

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, DotsThree, Minus, Plus, SlidersHorizontal, X, ArrowsOutSimple } from "@/components/icons";
 import { displayApplicatorName } from "@/lib/catalogFilters";
 import { bareGlassPreview, builderOrder, clearBodyPreview, deriveBuilder, MAX_QUANTITY, previewParts, type BuilderBody, type BuilderSelection } from "@/lib/bottle-builder/model";
+import { CHOOSER_PRIORITY_TILES } from "@/lib/bottle-builder/mobile-request";
 import { checkoutMinimum } from "@/lib/checkout";
 import BuilderImage from "./BuilderImage";
 import BuilderFinishImage from "./BuilderFinishImage";
@@ -58,23 +59,26 @@ export default function MobileBuilder(p: Props) {
     const id = useId();
     const busy = p.pending || p.adding;
     const canAdvance = [Boolean(body), Boolean(color), Boolean(fitment), Boolean(configuration), p.order.canAdd && p.hydrated][stage];
+    // A bottle with one glass has no glass stage: the colour is taken as read
+    // and the Glass step is passed over in either direction.
+    const skipGlass = Boolean(body) && p.current.colors.length === 1;
     const blockedLabel = p.pending ? "Loading compatible choices…" : stage === 0 ? "Select a bottle to continue"
-        : stage === 1 ? "Select glass to continue" : stage === 2 ? "Select a fitment to continue"
+        : stage === 1 ? "Select your glass color to continue" : stage === 2 ? "Select a fitment to continue"
         : stage === 3 ? "Select a finish to continue"
         : !p.order.validQuantity ? "Enter a whole-number quantity from 1 to 1,000,000."
         : !p.hydrated ? "Loading your cart…" : "This combination is unavailable. Edit your choices to continue.";
     const finishLabel = /Roller/.test(fitment ?? "") ? "Roller cap" : /Pump/.test(fitment ?? "") ? "Pump finish" : /Sprayer/.test(fitment ?? "") ? "Sprayer finish" : "Cap finish";
     const preview = configuration ?? p.current.fitted[0] ?? p.current.colored[0] ?? body?.configurations[0];
     const previewStage = stage < 2 || !fitment ? "body" : stage === 2 ? "fitment" : configuration ? "complete" : "fitment";
-    const parts = preview ? previewParts(preview, previewStage).filter(part => !(p.hasIncludedCover && !p.showCover && part.slot === "overcap")) : [];
-    const bodyReference = p.current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full") ?? p.current.colored[0] ?? body?.configurations[0];
+    const parts = preview ? previewParts(preview, previewStage) : [];
+    const bodyReference = p.current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full") ?? p.current.colored.find(c => c.kit?.completeness === "full" && c.fitment !== "Reducer") ?? p.current.colored.find(c => c.kit?.completeness === "full") ?? p.current.colored[0] ?? body?.configurations[0];
     const unavailable = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === fitment) ?? [];
     const visible = p.bodies.filter(b => (!p.size || b.capacityMl === Number(p.size)) && (!p.neck || b.neck === p.neck) && (!p.application || b.configurations.some(c => c.fitment === p.application)));
     const activeFilters = Boolean(p.size || p.neck || p.application);
     const showBar = !p.lastAdded;
     const forwardLabel = stage === 4
         ? p.adding ? "Checking your bottle…" : `Add to cart · ${money(p.order.total)}`
-        : canAdvance ? ["Continue to glass", "Continue to fitment", "Continue to finish", "Review bottle"][stage]
+        : canAdvance ? (stage === 0 && skipGlass ? "Continue to fitment" : ["Continue to glass", "Continue to fitment", "Continue to finish", "Review bottle"][stage])
         : blockedLabel;
 
     useEffect(() => {
@@ -131,8 +135,9 @@ export default function MobileBuilder(p: Props) {
     useEffect(() => {
         if (p.lastAdded) root.current?.querySelector<HTMLElement>("[role=status]")?.focus();
     }, [p.lastAdded]);
-    function go(next: number) {
+    function go(target: number) {
         if (busy) return;
+        const next = skipGlass && target === 1 ? (stage < 1 ? 2 : 0) : target;
         p.onStage(next); setNotice(""); setMoreOpen(false);
         requestAnimationFrame(() => {
             heading.current?.focus({ preventScroll: true });
@@ -162,7 +167,7 @@ export default function MobileBuilder(p: Props) {
     function closeFilters() { filters.current?.close(); setFilterOpen(false); filterTrigger.current?.focus(); }
     function closePreview() { setPreviewZoom(1); }
     const clearFilters = () => { p.onFilter("size", ""); p.onFilter("neck", ""); p.onFilter("application", ""); };
-    const previewImage = (expandedView = false) => preview && <BuilderImage config={preview} parts={parts} stage={previewStage} expanded={expandedView} scale={/Vintage|Tassel/.test(fitment ?? "") ? 1 : 1.18} showCover={p.showCover} bodyReference={bodyReference}
+    const previewImage = (expandedView = false) => preview && <BuilderImage config={preview} parts={parts} stage={previewStage} expanded={expandedView} showCover={p.showCover} bodyReference={bodyReference} frameConfigurations={body?.configurations}
         label={`${body?.capacityMl} ml ${stage < 2 ? preview.color : color} ${body?.profileLabel}${stage >= 2 && fitment ? ` with ${displayApplicatorName(fitment)}` : " bottle"}${stage >= 3 && closure ? `, ${closure}` : ""}`} />;
 
     return <div ref={root} className={styles.mobile} data-mobile-builder data-stage={stage} data-keyboard={keyboardOpen} data-large-text={largeText} data-confirm={Boolean(p.lastAdded)} aria-busy={busy}
@@ -197,7 +202,7 @@ export default function MobileBuilder(p: Props) {
         </div>}
         {stage === 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{titles[stage]}</h1>}
         {stage > 0 && preview && <section className={styles.preview} aria-label="Live bottle preview">
-            <div className={styles.previewImage}>{previewImage()}</div>
+            <div className={`${styles.previewImage} ${previewStage === "complete" && !preview.kit && preview.photoUrl ? styles.plateStage : ""}`}>{previewImage()}</div>
             <button ref={expandTrigger} className={styles.expand} aria-label="Expand bottle preview" onClick={() => { setPreviewZoom(1); expanded.current?.showModal(); }}><ArrowsOutSimple size={18} /></button>
             {stage >= 3 && p.hasIncludedCover && <button className={styles.coverToggle} aria-pressed={p.showCover} onClick={p.onCover}>{p.showCover ? "Hide overcap" : "Show included overcap"}</button>}
         </section>}
@@ -209,7 +214,7 @@ export default function MobileBuilder(p: Props) {
             </div><p className={styles.count}>{visible.length} bottle {visible.length === 1 ? "option" : "options"}</p>
             <fieldset disabled={busy} className={styles.group}><legend className={styles.srOnly}>Bottle</legend><div className={styles.bottleGrid}>
                 {visible.map((b, index) => <Choice key={b.id} name={`${id}-bottle`} value={b.id} selected={body?.id === b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} onSelect={() => choose({ bodyId: b.id })}>
-                    <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} scale={1.08 * Math.max(.55, p.chooserScale(b))} label={`${b.capacityMl} ml ${b.profileLabel}`} thumbnail placeholder priority={index < 4} /></div>
+                    <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} scale={1.08 * Math.max(.55, p.chooserScale(b))} label={`${b.capacityMl} ml ${b.profileLabel}`} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
                     <strong>{b.capacityMl} ml</strong>{b.profileLabel !== b.family && <span>{b.profileLabel}</span>}<span>Neck: {b.neck}</span>
                 </Choice>)}
             </div></fieldset>
@@ -221,7 +226,7 @@ export default function MobileBuilder(p: Props) {
                     <div className={styles.glassThumb}><BuilderImage config={bareGlassPreview(example)} parts={previewParts(bareGlassPreview(example), "body")} label={`${c} bottle`} thumbnail placeholder /></div><strong>{c}</strong>
                 </Choice>; })}</div>}
                 {stage === 2 && <div className={styles.fitmentGrid}>{p.current.fitments.map(f => { return <Choice key={f} name={`${id}-fitment`} value={f} selected={fitment === f} label={displayApplicatorName(f)} onSelect={() => choose({ fitment: f })}>
-                    <div className={styles.componentThumb}><FitmentIllustration fitment={f} /></div><strong>{displayApplicatorName(f)}</strong>{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}
+                    <div className={styles.componentThumb}><FitmentIllustration fitment={f} neck={body?.neck} /></div><strong>{displayApplicatorName(f)}</strong>{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}
                 </Choice>; })}</div>}
                 {stage === 3 && <div className={styles.finishGrid}>{p.current.fitted.map(c => <Choice key={c.id} name={`${id}-finish`} value={c.closure} selected={closure === c.closure} label={c.closure} onSelect={() => choose({ closure: c.closure })}>
                     <div className={styles.finishThumb}><BuilderFinishImage config={c} /></div><strong>{shortFinishLabel(c.closure)}</strong>

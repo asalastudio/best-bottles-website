@@ -1,0 +1,13 @@
+{
+ "release": "apothecary-kits-2026-09-19",
+ "ship": "ship Apothecary kit release 2026-09-19",
+ "approvedBy": "PENDING — Jordan Richter",
+ "approvedAt": null,
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-19T10:16:57.367Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/apothecary-kits.jpg",
+ "skus": {},
+ "setAside": [],
+ "note": "PREPARED, NOT APPROVED. Every row is an extracted candidate that passed its gates and registers to the plate published here. Publication waits on Jordan seeing the named review sheet and giving the ship phrase."
+}

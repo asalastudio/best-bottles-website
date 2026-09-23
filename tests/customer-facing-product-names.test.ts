@@ -73,7 +73,7 @@ describe("customer-facing product names", () => {
                     capColor: "Clear",
                 },
             }).displayName,
-        ).toBe("46 ml Clear Diva Vintage Style Bulb Spray Bottle - Lavender");
+        ).toBe("46 ml Clear Diva Vintage Style Bulb Sprayer Bottle - Lavender");
 
         expect(
             getCustomerFacingProductName({
@@ -86,7 +86,7 @@ describe("customer-facing product names", () => {
                     capColor: "White",
                 },
             }).displayName,
-        ).toBe("46 ml Clear Diva Vintage Style Bulb Spray Bottle with Tassel - White");
+        ).toBe("46 ml Clear Diva Vintage Style Bulb Sprayer Bottle with Tassel - White");
     });
 
     it("adds component-specific finish language for reducers, droppers, and roll-ons", () => {
@@ -178,6 +178,21 @@ describe("customer-facing product names", () => {
         ).toBe("Pink with Dots Cap");
     });
 
+    it("lets a staff custom name replace the generated base, keeps each SKU's finish, and ignores a stored displayName", () => {
+        const variant = { itemName: "Shiny Black Perfume Spray", graceSku: "GB-DVA-CLR-46ML-SPR-SBLK", websiteSku: "GBDiva46SpryShnBlk", applicator: "Perfume Spray", capColor: "Shiny Black" };
+        // the stored displayName never wins: it is imported legacy text, and only a fallback
+        expect(getCustomerFacingProductName({ group: { ...divaGroup, displayName: "Some Imported Title" }, variant }).displayName)
+            .toBe("46 ml Clear Diva Perfume Spray Bottle - Shiny Black");
+        const named = getCustomerFacingProductName({ group: { ...divaGroup, customName: "  Diva Atelier Spray, 46 ml " }, variant });
+        expect(named).toMatchObject({ displayName: "Diva Atelier Spray, 46 ml - Shiny Black", variantLabel: "Shiny Black", confidence: "high", sourceReason: "staff custom name" });
+        // the catalogue card has no SKU: the custom name stands alone
+        expect(getCustomerFacingProductName({ group: { ...divaGroup, customName: "Diva Atelier Spray, 46 ml" } }).displayName).toBe("Diva Atelier Spray, 46 ml");
+        // cleared or blank means "not set"
+        for (const customName of [null, "", "   "]) {
+            expect(getCustomerFacingProductName({ group: { ...divaGroup, customName }, variant }).displayName).toBe("46 ml Clear Diva Perfume Spray Bottle - Shiny Black");
+        }
+    });
+
     it("keeps plain bottle fallback conservative", () => {
         expect(
             getCustomerFacingProductName({
@@ -209,6 +224,6 @@ describe("customer-facing product names", () => {
             getCustomerFacingProductName({
                 fallbackName: "46 ml Clear Diva Vintage Bulb Spray Bottle - Lavender",
             }).displayName,
-        ).toBe("46 ml Clear Diva Vintage Style Bulb Spray Bottle - Lavender");
+        ).toBe("46 ml Clear Diva Vintage Style Bulb Sprayer Bottle - Lavender");
     });
 });

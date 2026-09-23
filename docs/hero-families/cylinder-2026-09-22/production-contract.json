@@ -1,0 +1,335 @@
+{
+  "version": "cylinder-production-canvas-2026-09-22-v5",
+  "scopeStatus": "49 glass hero groups from 3.3 through 100 mL; 3.3 mL and 4 mL explicitly included by Jordan on September 22",
+  "canvas": {
+    "width": 2080,
+    "height": 2288,
+    "aspect": "10:11",
+    "format": "lossless PNG",
+    "exactDimensionsRequired": true
+  },
+  "baseline": {
+    "normalizedY": 0.91,
+    "targetPixelY": 2082.08,
+    "landmark": "actual glass contact foot, excluding shadow"
+  },
+  "bodies": {
+    "cylinder:100-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:100-standard",
+        "label": "Cylinder 100 ml",
+        "shoulderPct": 67.5,
+        "bodyAspect": 4.184,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 23.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl100AnSpMtSl",
+        "GBCyl100AnSpTslMtSl",
+        "GBCyl100RdcrMtSl",
+        "GBCyl100SpryMtGl",
+        "LBCyl100LtnMtGl"
+      ]
+    },
+    "cylinder:25-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:25-standard",
+        "label": "Cylinder 25 ml",
+        "shoulderPct": 46.5,
+        "bodyAspect": 2.134,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 44.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl25DrpGl",
+        "GBCyl25RdcrShnGl",
+        "GBcyl25AnSpIvyGl",
+        "GBcyl25AnSpTslIvyGl",
+        "GBcyl25SpryMtGl",
+        "LBCyl25LtnMtGl"
+      ]
+    },
+    "cylinder:50-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:50-standard",
+        "label": "Cylinder 50 ml 18-415",
+        "shoulderPct": 56,
+        "bodyAspect": 3.167,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 35,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl50AnSpMtSl",
+        "GBCyl50AnSpTslMtSl",
+        "GBCyl50RdcrMtSl",
+        "GBCyl50SpryMtGl",
+        "LBCyl50LtnMtGl"
+      ]
+    },
+    "cylinder:50-rollon": {
+      "lock": {
+        "glassBodyKey": "cylinder:50-rollon",
+        "label": "Cylinder 50 ml 16 mm roll-on",
+        "shoulderPct": 53,
+        "bodyAspect": 2.354,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 38,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl50MtlRollBlk"
+      ]
+    },
+    "cylinder:5-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:5-standard",
+        "label": "Cylinder 5 ml",
+        "shoulderPct": 36.5,
+        "bodyAspect": 2.362,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 54.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl5GlMattSht",
+        "GBCyl5MtlRollBlkDot",
+        "GBCyl5SpryBlkMatt",
+        "GBCyl5SprySlMatt",
+        "GBCylBlu5MtlRollBlkDot",
+        "GBCylBlu5SlMattSht",
+        "GBCylBlu5SpryGlMatt",
+        "GBCyl5RollBlkDot",
+        "GBCylBlu5RollBlkDot"
+      ]
+    },
+    "cylinder:9-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:9-standard",
+        "label": "Cylinder 9 ml",
+        "shoulderPct": 43.5,
+        "bodyAspect": 3.127,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 47.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBCyl9MtlRollBlkDot",
+        "GBCyl9SpryGl",
+        "GBCylAmb9MtlRollBlkDot",
+        "GBCylAmb9SpryMattSl",
+        "GBCylBlu9MtlRollBlkDot",
+        "GBCylBlu9SpryMattSl",
+        "GBCylFrst9MtlRollBlkDot",
+        "GBCylFrst9SpryMattSl",
+        "GBCylSwrl9MtlRollBlkDot",
+        "GBCylSwrl9SpryMattSl",
+        "LBCyl9LtnGl",
+        "LBCylAmb9LtnMtSl",
+        "LBCylBlu9LtnMattSl",
+        "LBCylFrst9LtnMtSl",
+        "LBCylSwrl9LtnMtSl"
+      ]
+    },
+    "cylinder:28-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:28-standard",
+        "label": "Cylinder 28 ml",
+        "shoulderPct": 50.5,
+        "bodyAspect": 2.203,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 40.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBMtlRoll28Blk"
+      ]
+    },
+    "cylinder:30-standard": {
+      "lock": {
+        "glassBodyKey": "cylinder:30-standard",
+        "label": "Cylinder 30 ml",
+        "shoulderPct": 46,
+        "bodyAspect": 2.65,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 45,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBSpry1ozGl"
+      ]
+    },
+    "cylinder:9-tall": {
+      "lock": {
+        "glassBodyKey": "cylinder:9-tall",
+        "label": "Cylinder 9 ml tall",
+        "shoulderPct": 62.5,
+        "bodyAspect": 5.326,
+        "status": "locked",
+        "lockVersion": "shoulder-lock-2026-09-07",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 28.5,
+        "landmark": "shoulder"
+      },
+      "skuMembership": [
+        "GBTallCyl9GlMattSht",
+        "GBTallCyl9MtlRollBlkDot",
+        "GBTallCyl9SpryGlMatt",
+        "GBTallCylFrst9GlMattSht",
+        "GBTallCylFrst9MtlRollBlkDot",
+        "GBTallCylFrst9SpryGlMatt",
+        "GBTallCyl9RollBlkDot",
+        "GBTallCylFrst9RollBlkDot"
+      ]
+    },
+    "cylinder:3.3-sample": {
+      "lock": {
+        "glassBodyKey": "cylinder:3.3-sample",
+        "label": "Cylinder 3.3 ml sample",
+        "shoulderPct": 28,
+        "bodyAspect": 2.134765625,
+        "status": "locked",
+        "lockVersion": "small-cylinder-final-size-approved-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 63,
+        "landmark": "closure-seat"
+      },
+      "skuMembership": [
+        "GBSpry3mlClBlk"
+      ],
+      "groupMembership": [
+        "cylinder-3.3ml-clear-12mm-finemist"
+      ],
+      "geometrySource": "BB-PSD-Files-Master/17. Additional Bottles/GBSpry3mlClBlk.psd",
+      "geometrySourceSha256": "f8f97de4b7d606d1bf3198444fcb986d79a682adc28b34f67ce4f0d283016e06",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "presentation": "Black spray pump exposed; original clear overcap beside bottle",
+      "visualProgression": {
+        "sourceAssemblyTopY": 1003,
+        "displayAssemblyHeightPx": 1188.09,
+        "displayBodyWidthPx": 300.1,
+        "displayShoulderSpanPx": 640.64,
+        "glassFootY": 2082.08,
+        "method": "Original master outline measurements under a uniform whole-assembly transform"
+      },
+      "previousSizingApproval": {
+        "scope": "relative sizing only",
+        "userFeedback": "That’s better",
+        "date": "2026-09-22",
+        "proofSha256": "22165464d78eb00fc2d9ff3f47bb3675b15849752e4ec718563b18df8007252e",
+        "excludes": "Material generation, final output approval, publication"
+      },
+      "sizingInstruction": {
+        "scope": "3.3 mL relative sizing only",
+        "userFeedback": "The 3.3 is too small compared to 4ml need to increase it by 3%",
+        "interpretation": "Increase shoulder span by 3 percentage points, from 25% to 28%. Apply one uniform transform to the whole assembly.",
+        "date": "2026-09-22",
+        "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
+        "proofVisualReview": "approved",
+        "excludes": "Material generation, final output approval, publication"
+      },
+      "sizingApproval": {
+        "scope": "relative sizing only",
+        "userFeedback": "Lock that that’s good",
+        "date": "2026-09-22",
+        "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
+        "shoulderSpansPct": {
+          "3.3ml": 28,
+          "4ml": 32.5,
+          "5ml": 36.5
+        },
+        "baselinePct": 91,
+        "excludes": "Material generation, final rendered output approval, publication"
+      }
+    },
+    "cylinder:4-sample": {
+      "lock": {
+        "glassBodyKey": "cylinder:4-sample",
+        "label": "Cylinder 4 ml sample",
+        "shoulderPct": 32.5,
+        "bodyAspect": 2.7137014314928427,
+        "status": "locked",
+        "lockVersion": "small-cylinder-final-size-approved-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 58.5,
+        "landmark": "closure-seat"
+      },
+      "skuMembership": [
+        "GBSpry4mlClBlk"
+      ],
+      "groupMembership": [
+        "cylinder-4ml-clear-12mm-finemist"
+      ],
+      "geometrySource": "BB-PSD-Files-Master/17. Additional Bottles/GBSpry4mlClBlk..psd",
+      "geometrySourceSha256": "87e55004a60f0aa97b7b240ea410a803422206986b978e11d7e09bb13f0d7626",
+      "materialReferenceSha256": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+      "presentation": "Black spray pump exposed; original clear overcap beside bottle",
+      "visualProgression": {
+        "sourceAssemblyTopY": 1025,
+        "displayAssemblyHeightPx": 1268.66,
+        "displayBodyWidthPx": 274.02,
+        "displayShoulderSpanPx": 743.6,
+        "glassFootY": 2082.08,
+        "method": "Original master outline measurements under a uniform whole-assembly transform"
+      },
+      "sizingApproval": {
+        "scope": "relative sizing only",
+        "userFeedback": "Lock that that’s good",
+        "date": "2026-09-22",
+        "proofSha256": "0edefce0007e695403b1f6b0f17d23dc13eba3d49e9db15929a0185271ac9d86",
+        "shoulderSpansPct": {
+          "3.3ml": 28,
+          "4ml": 32.5,
+          "5ml": 36.5
+        },
+        "baselinePct": 91,
+        "excludes": "Material generation, final rendered output approval, publication"
+      }
+    }
+  },
+  "materialReferences": "Hashed per output in manifest.json. References control optical material only; new clear sample bottles use the same approved clear reference.",
+  "geometryAuthority": "Exact-SKU master PSD assemblies with documented accepted legacy short-cap plate exceptions for 5 mL and 9 mL Slim. Slim exposed necks also use verified approved cap-off plates. 30 mL gold sprayer uses the user-approved exact gold product photograph. Source authority controls identity; generated geometry remains subject to recorded QA. Exports apply uniform whole-raster transforms only.",
+  "generationPolicy": {
+    "noAutoSizeForUnverifiedFinalRender": true,
+    "verifyActualResponseDimensions": true,
+    "nativeDetailAndDeliveryCanvasAreSeparate": true,
+    "sunburstCustomSizePathVerified": false,
+    "cliDryRunFinding": "Bundled CLI rejects 2080x2288 for gpt-image-2.5-sunburst before making a network request. This is a runner constraint; model-native support remains unverified.",
+    "newApiCallsDuringSalvage": 0
+  },
+  "releaseGates": [
+    "Confirm current website group/SKU scope",
+    "Validate body/shoulder/foot against the exact master geometry and agreed target",
+    "Inspect material and hardware fidelity",
+    "Verify exact exposed bone background while preserving glass and shadow",
+    "Review actual website mobile and desktop delivered images",
+    "Approve final export hashes",
+    "Authorize publication separately"
+  ],
+  "largerPlasticScope": "3 larger plastic entries excluded from the proposed 47. Do not assign a 500 mL target to a 454 mL SKU without identity evidence.",
+  "baselineExceptions": [
+    {
+      "sku": "GBSpry1ozGl",
+      "anchor": "Attached gold base contact bottom; glass foot obscured",
+      "approval": "User approved gold source and shoulder-lock preview"
+    }
+  ]
+}

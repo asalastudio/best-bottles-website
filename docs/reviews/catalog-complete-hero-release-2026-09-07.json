@@ -5,7 +5,7 @@
   "additionalJarClosurePackaging": 57,
   "replacementSetTotal": 391,
   "retainedAlternateSkus": 0,
-  "registryTotal": 391,
+  "registryTotal": 399,
   "missingSourceProductRecords": 25,
   "baselinePercent": 91,
   "background": "#F5F3EF",
@@ -15,19 +15,19 @@
     {
       "websiteSku": "GBElgFrst15MtlRollGlSh",
       "groupSlug": "elegant-15ml-frosted-13-415-rollon",
-      "url": "/images/catalog/bone-review/GBElgFrst15MtlRollGlSh.732dca1b149d.png",
-      "sha256": "732dca1b149d8e4f090f755e437eefd3d1c73b299f2b412e3b68d47cc245eb15",
+      "url": "/images/catalog/bone-review/GBElgFrst15MtlRollGlSh.1c38a997ef56.png",
+      "sha256": "1c38a997ef5633b8aec15e991a25c6e4ea29465dbdcbc42f5acbf9f03b77be39",
       "framing": {
-        "scale": 1.0192155169641597,
-        "translateXPercent": -0.621037342553258,
-        "translateYPercent": 1.7414289688963152
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "LBCylFrst9LtnMtSl",
       "groupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBCylFrst9LtnMtSl.93c5568f6725.png",
-      "sha256": "93c5568f6725a8ac4c5790ea8cb1fc5d9cabf27f2396844576ba198127204c39",
+      "url": "/images/catalog/bone-review/LBCylFrst9LtnMtSl.0ac172e064b8.png",
+      "sha256": "0ac172e064b80dd565eb7f4ac1ed6069eebd572087e2685fbfd381dfa29f06d0",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -37,12 +37,12 @@
     {
       "websiteSku": "GBElg15Gl",
       "groupSlug": "elegant-15ml-clear-13-415",
-      "url": "/images/catalog/bone-review/GBElg15Gl.d1e93ae6da16.png",
-      "sha256": "d1e93ae6da16b30974bbbf35bcee4deebd6e9909c99bf472106c78c8c210c21e",
+      "url": "/images/catalog/bone-review/GBElg15Gl.606f68e31a2f.png",
+      "sha256": "606f68e31a2f5fcc3dcb37484f7b4ae62c916182990ea7519792c4912b14db0e",
       "framing": {
-        "scale": 1.005625976737971,
-        "translateXPercent": -0.11369450744221865,
-        "translateYPercent": 4.150483827175236
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
@@ -59,23 +59,23 @@
     {
       "websiteSku": "GBElg15SpryGlMatt",
       "groupSlug": "elegant-15ml-clear-13-415-finemist",
-      "url": "/images/catalog/bone-review/GBElg15SpryGlMatt.76740d442960.png",
-      "sha256": "76740d442960f6463280369c9b8162dd5f0a11b48a49978387b77ec0493c6ad1",
+      "url": "/images/catalog/bone-review/GBElg15SpryGlMatt.c13b50b78fc2.png",
+      "sha256": "c13b50b78fc2fa4e8f70d490c4b3ad74f9bd92dddecd6c8b5c0436cd577f1d41",
       "framing": {
-        "scale": 0.9669480545557412,
-        "translateXPercent": -0.7647728641764076,
-        "translateYPercent": 5.439747899916227
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBElg15MtlRollGlMatt",
       "groupSlug": "elegant-15ml-clear-13-415-rollon",
-      "url": "/images/catalog/bone-review/GBElg15MtlRollGlMatt.92981d5c1ff8.png",
-      "sha256": "92981d5c1ff852ad119b1a774365c98f3333ddeba6b5dd5af5519c6b8ac0d763",
+      "url": "/images/catalog/bone-review/GBElg15MtlRollGlMatt.0427e5c7fe26.png",
+      "sha256": "0427e5c7fe26288f8ad2d4ee89745cdb2fe77e1f4d9baf953e4c69a21b4de88d",
       "framing": {
-        "scale": 0.9731864291012621,
-        "translateXPercent": 0.854085330386269,
-        "translateYPercent": 5.182651251979607
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
@@ -103,23 +103,23 @@
     {
       "websiteSku": "GBElg30GlCap",
       "groupSlug": "elegant-30ml-clear-15-415",
-      "url": "/images/catalog/bone-review/GBElg30GlCap.910d81f5b19b.png",
-      "sha256": "910d81f5b19ba5113bb2b2534d21ece9d27a14401705fc7324ba290d671d99d1",
+      "url": "/images/catalog/bone-review/GBElg30GlCap.bf3b6e5845cb.png",
+      "sha256": "bf3b6e5845cb65ea58a872c0d254df4fd61c69cb0894941ac13e5ac413525dbb",
       "framing": {
-        "scale": 0.9468292387132478,
-        "translateXPercent": 3.1319526836942444,
-        "translateYPercent": 6.646122369183388
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBElg30SpryMattGl",
       "groupSlug": "elegant-30ml-clear-15-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBElg30SpryMattGl.0033ecf8cbd8.png",
-      "sha256": "0033ecf8cbd87de10c08ce59120added41348ad8f460f68f24041aeac59427f7",
+      "url": "/images/catalog/bone-review/GBElg30SpryMattGl.56f862f7d4e6.png",
+      "sha256": "56f862f7d4e6db6427a6863c53dc481b4d6e9984d6cb47ee30270396e3c6c51d",
       "framing": {
-        "scale": 1.1146217620295196,
-        "translateXPercent": -6.845709863505498,
-        "translateYPercent": -6.276081049848983
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
@@ -136,12 +136,12 @@
     {
       "websiteSku": "GBElgFrst30SpryMattGl",
       "groupSlug": "elegant-30ml-frosted-15-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBElgFrst30SpryMattGl.3e2e913f861c.png",
-      "sha256": "3e2e913f861c235600d91a060250ed267f320920e48a1d76146831163881146a",
+      "url": "/images/catalog/bone-review/GBElgFrst30SpryMattGl.0969c9847c60.png",
+      "sha256": "0969c9847c60271e3777b3b4a95fac5aa238cb1a836b0104978a58ecd21fa6b6",
       "framing": {
-        "scale": 1.0545523257524796,
-        "translateXPercent": -3.7821686133764487,
-        "translateYPercent": -2.951025385220916
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
@@ -169,45 +169,45 @@
     {
       "websiteSku": "GBElg60DrpGl",
       "groupSlug": "elegant-60ml-clear-18-415-dropper",
-      "url": "/images/catalog/bone-review/GBElg60DrpGl.1047ee299697.png",
-      "sha256": "1047ee299697de667fcae57cbb30374d2c82f98e83e4ea6a50b73bba422bc358",
+      "url": "/images/catalog/bone-review/GBElg60DrpGl.c5bc920673f7.png",
+      "sha256": "c5bc920673f720acadd4d3fc0271a50519952a45af0b12cf67f012e1ce4edc1b",
       "framing": {
-        "scale": 1.0339278860696428,
-        "translateXPercent": -2.9026435038967193,
-        "translateYPercent": -2.366821226895027
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "LBElg60LtnMtGl",
       "groupSlug": "elegant-60ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBElg60LtnMtGl.b5928974d71b.png",
-      "sha256": "b5928974d71b309b71df68158fa6085c01f7d77808f94289644a4e6a9f2063d8",
+      "url": "/images/catalog/bone-review/LBElg60LtnMtGl.8ff5a70f3b95.png",
+      "sha256": "8ff5a70f3b958b35dc9026ec5ba717ff617667cf81387a81a6894a84c79a5d80",
       "framing": {
-        "scale": 1.0106935515512239,
-        "translateXPercent": -2.7245136059221835,
-        "translateYPercent": -0.5749611860048276
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBElg60SpryMtGl",
       "groupSlug": "elegant-60ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBElg60SpryMtGl.1e06f28a2917.png",
-      "sha256": "1e06f28a2917d68dadc243d7e98d3fc77f01f5942c1f305a23122316c839a441",
+      "url": "/images/catalog/bone-review/GBElg60SpryMtGl.327ce5ee6993.png",
+      "sha256": "327ce5ee69937ff43a0b517959043ae72cc341554092ad5c726d3ae8ea1c4ff6",
       "framing": {
-        "scale": 1.0399043478388315,
-        "translateXPercent": -3.5550739136998146,
-        "translateYPercent": -1.6460237165504452
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBElg60RdcrShnGl",
       "groupSlug": "elegant-60ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBElg60RdcrShnGl.52334a32c416.png",
-      "sha256": "52334a32c4160bece0c4ebe97cfded659d21d9ffd7392cedc3fe23d6aced7f85",
+      "url": "/images/catalog/bone-review/GBElg60RdcrShnGl.7c948bb18ab7.png",
+      "sha256": "7c948bb18ab72afd3bba16fb46a889232afe89f44f47a3742c0fe944d2dc11a9",
       "framing": {
-        "scale": 0.9620505463963521,
-        "translateXPercent": 1.2561056492515021,
-        "translateYPercent": 7.330755510377855
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
@@ -235,23 +235,23 @@
     {
       "websiteSku": "GBElgFrst60DrpGl",
       "groupSlug": "elegant-60ml-frosted-18-415-dropper",
-      "url": "/images/catalog/bone-review/GBElgFrst60DrpGl.7926e95f57c6.png",
-      "sha256": "7926e95f57c6195411b9b55b8095a7e2cfc02c078657167ee96f4da78bd222eb",
+      "url": "/images/catalog/bone-review/GBElgFrst60DrpGl.8a8ba665e1f6.png",
+      "sha256": "8a8ba665e1f64c65e3e34c1a4f89b47dc42614662f99b6e81cf8c9e3c6eaa564",
       "framing": {
-        "scale": 1.08375573600071,
-        "translateXPercent": -9.787191436039166,
-        "translateYPercent": -5.881194581881658
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "LBElgFrst60LtnMtGl",
       "groupSlug": "elegant-60ml-frosted-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBElgFrst60LtnMtGl.39fe92012388.png",
-      "sha256": "39fe920123886d5a3d4dec7d0176d89abbed5fe94031c8d0c42f0c0055cac0d2",
+      "url": "/images/catalog/bone-review/LBElgFrst60LtnMtGl.fa9835735740.png",
+      "sha256": "fa98357357403a8a27fef35e35128f32a24fa335f4681f531c9dc67ddb8b80a4",
       "framing": {
-        "scale": 1.0969722693665722,
-        "translateXPercent": -7.7738728533061305,
-        "translateYPercent": -5.400593368577574
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
@@ -301,34 +301,34 @@
     {
       "websiteSku": "LBElg100LtnMtGl",
       "groupSlug": "elegant-100ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBElg100LtnMtGl.c590ba70cd2a.png",
-      "sha256": "c590ba70cd2ab621c6befc882aa460c8c7cf2ddf64e7c3b224bbd08c127e3b34",
+      "url": "/images/catalog/bone-review/LBElg100LtnMtGl.21f1ab404ec2.png",
+      "sha256": "21f1ab404ec29ba7372c3e76a5b5d61938f58ed692cf925e51643d1c8cc09c4c",
       "framing": {
-        "scale": 1.0164227141236837,
-        "translateXPercent": -4.209211419929801,
-        "translateYPercent": -2.9420993356738023
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBElg100SpryMtGl",
       "groupSlug": "elegant-100ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBElg100SpryMtGl.e440498f470d.png",
-      "sha256": "e440498f470dd469a62dabf4d7ea9569c6a3d2120a794a72b0870da28b25cee7",
+      "url": "/images/catalog/bone-review/GBElg100SpryMtGl.22aa5d8690e9.png",
+      "sha256": "22aa5d8690e95d04872a5d5d00ec9d0f7a4f24e526ded1c4756cccfb10386ee2",
       "framing": {
-        "scale": 1.037488469856817,
-        "translateXPercent": -2.04733823781698,
-        "translateYPercent": -3.6315240687581536
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBElg100RdcrShnGl",
       "groupSlug": "elegant-100ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBElg100RdcrShnGl.9dcfb2348294.png",
-      "sha256": "9dcfb2348294ba08c67d881244182162ef1b445689562d438a51366824a9eb28",
+      "url": "/images/catalog/bone-review/GBElg100RdcrShnGl.4fb67b497593.png",
+      "sha256": "4fb67b497593177f5425252fb52e28a0dc75f7179183f734e8367f25caed6e8a",
       "framing": {
-        "scale": 0.9863806634599295,
-        "translateXPercent": -1.784984831646291,
-        "translateYPercent": 4.318062908066807
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
@@ -356,34 +356,34 @@
     {
       "websiteSku": "LBElgFrst100LtnMtGl",
       "groupSlug": "elegant-100ml-frosted-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBElgFrst100LtnMtGl.63d4f80fa9cf.png",
-      "sha256": "63d4f80fa9cf7e96a1ebe4233495198b992b52fd20618bdfb9827524987d66b7",
+      "url": "/images/catalog/bone-review/LBElgFrst100LtnMtGl.2c855b0ea9e3.png",
+      "sha256": "2c855b0ea9e39c1652d6a9c5723a1f50f0ef16b6e3a28118f77649c22c3d438d",
       "framing": {
-        "scale": 1.199013620852489,
-        "translateXPercent": -10.350352249575295,
-        "translateYPercent": -14.731201111537686
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBElgFrst100SpryMtGl",
       "groupSlug": "elegant-100ml-frosted-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBElgFrst100SpryMtGl.6d10b6f53ae5.png",
-      "sha256": "6d10b6f53ae57a5b609eb46e6c69b95d887b3a8b22f2337c94e72bc2b1d04021",
+      "url": "/images/catalog/bone-review/GBElgFrst100SpryMtGl.2c0f6b858911.png",
+      "sha256": "2c0f6b858911a1d1598f31776d8d88de142c901d8f15182ec86bdf05ef426646",
       "framing": {
-        "scale": 1.1918766350140815,
-        "translateXPercent": -14.559984396596079,
-        "translateYPercent": -8.684227655723191
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBElgFrst100RdcrShnGl",
       "groupSlug": "elegant-100ml-frosted-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBElgFrst100RdcrShnGl.a6c8aab37cc0.png",
-      "sha256": "a6c8aab37cc0e273921ec8d187ba4661d02a0536adb996955b3ea9c16466c6ce",
+      "url": "/images/catalog/bone-review/GBElgFrst100RdcrShnGl.7a99e01fc3ca.png",
+      "sha256": "7a99e01fc3caf4db1d412affa653ea7b4f15c2f349a3eeb34ed722cafc2d8e0d",
       "framing": {
-        "scale": 1.021608544297784,
-        "translateXPercent": -6.018201845661828,
-        "translateYPercent": -0.944768986800554
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
       }
     },
     {
@@ -686,23 +686,23 @@
     {
       "websiteSku": "GBSleek5Gl",
       "groupSlug": "sleek-5ml-clear-13-415",
-      "url": "/images/catalog/bone-review/GBSleek5Gl.fa8b27135f4c.png",
-      "sha256": "fa8b27135f4c0ee2de10a962fbfcb634918567a879565cee120f36ed3a7d6e7d",
+      "url": "/images/catalog/bone-review/GBSleek5Gl.e717e8a7f7ef.png",
+      "sha256": "e717e8a7f7efcae461367eb6cf74d8b01b97333b01ae26591380a6b67077959e",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSleek5SpryGlMatt",
       "groupSlug": "sleek-5ml-clear-13-415-finemist",
-      "url": "/images/catalog/bone-review/GBSleek5SpryGlMatt.c1982838a6a5.png",
-      "sha256": "c1982838a6a521c9d98ca9c9335a0ee46ee9052dbae97f7446d6bc8444dca032",
+      "url": "/images/catalog/bone-review/GBSleek5SpryGlMatt.54c31977c243.png",
+      "sha256": "54c31977c243632658734de13532d5368ec18782109bbb725132c90314fdff70",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -719,34 +719,34 @@
     {
       "websiteSku": "GBSleek8Gl",
       "groupSlug": "sleek-8ml-clear-13-415",
-      "url": "/images/catalog/bone-review/GBSleek8Gl.d235f2b3c981.png",
-      "sha256": "d235f2b3c981439363db28f5efe2235d3114523aaefc771ef90fbe94f65eb1da",
+      "url": "/images/catalog/bone-review/GBSleek8Gl.fc86f1468682.png",
+      "sha256": "fc86f1468682685ad9ece1f7a624372092debefe4cdc832d1deb1dbd706a40fa",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSleek8SpryGlMatt",
       "groupSlug": "sleek-8ml-clear-13-415-finemist",
-      "url": "/images/catalog/bone-review/GBSleek8SpryGlMatt.816d257ed308.png",
-      "sha256": "816d257ed308f396020230111cf48d3e598b5d745527ff2425dcde152c8f50fa",
+      "url": "/images/catalog/bone-review/GBSleek8SpryGlMatt.8e5aa43acc58.png",
+      "sha256": "8e5aa43acc5884300cdd06b7e39b9d5efbb03a25dcbf98ddb7f68cc66ab88395",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSleek8MtlRollGlMatt",
       "groupSlug": "sleek-8ml-clear-13-415-rollon",
-      "url": "/images/catalog/bone-review/GBSleek8MtlRollGlMatt.1a840f62a7b0.png",
-      "sha256": "1a840f62a7b092d794adf2dee9c2db4b6386973abec5b93bd390e23ec26f8f29",
+      "url": "/images/catalog/bone-review/GBSleek8MtlRollGlMatt.c0905bf7e802.png",
+      "sha256": "c0905bf7e80252df92d8f8253233781b9d5ccaa74799c01109c7938e91d2ff36",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -763,45 +763,45 @@
     {
       "websiteSku": "GBSlk30DrpGl",
       "groupSlug": "sleek-30ml-clear-18-415-dropper",
-      "url": "/images/catalog/bone-review/GBSlk30DrpGl.416875205a1e.png",
-      "sha256": "416875205a1ec86bc8e1b66764e930ef928a4091bdc3c5513c00c347988429c1",
+      "url": "/images/catalog/bone-review/GBSlk30DrpGl.367a49336c49.png",
+      "sha256": "367a49336c490a51849c724c7fbd3e8c9c907f0b1810da1c72bb44b4f241c4b9",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "LBSlk30LtnMtGl",
       "groupSlug": "sleek-30ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBSlk30LtnMtGl.0375e534b4e4.png",
-      "sha256": "0375e534b4e4cda5d98f618ba529346a78f434eccbf29b9ddd7b4715ed69b6bf",
+      "url": "/images/catalog/bone-review/LBSlk30LtnMtGl.4269e255e383.png",
+      "sha256": "4269e255e38371f0272506c5db2602aa5f6ad586ef446e38932e9082ff2ea7ef",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSlk30SpryMtGl",
       "groupSlug": "sleek-30ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBSlk30SpryMtGl.86c4e280834b.png",
-      "sha256": "86c4e280834ba7cc7d6b614661617048a10de98725721b6ebe758bf1ae366e05",
+      "url": "/images/catalog/bone-review/GBSlk30SpryMtGl.daa34888af73.png",
+      "sha256": "daa34888af73fc66a0abfbbb7408a194d64a4916bf63f34af049f771550b0846",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSlk30RdcrShnGl",
       "groupSlug": "sleek-30ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBSlk30RdcrShnGl.afcc119d9ce7.png",
-      "sha256": "afcc119d9ce7002eff13dcbb5932ee24154baab6ec95bc1fc044c7dfdec2a8b1",
+      "url": "/images/catalog/bone-review/GBSlk30RdcrShnGl.9044a60ec4a4.png",
+      "sha256": "9044a60ec4a4d296bd6b4267058c61713757245aa991d400d845c5d23dc21e1e",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -829,34 +829,34 @@
     {
       "websiteSku": "LBSlk50LtnMtGl",
       "groupSlug": "sleek-50ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBSlk50LtnMtGl.9bfb9e145810.png",
-      "sha256": "9bfb9e145810eb1a7ab1f891225c4a0254673a6442906d836e55c1c69f08356e",
+      "url": "/images/catalog/bone-review/LBSlk50LtnMtGl.b430ef92b91d.png",
+      "sha256": "b430ef92b91dc733215532654b6500876a1f57bc14314e0b2d6bab65c51b2655",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSlk50SpryMtGl",
       "groupSlug": "sleek-50ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBSlk50SpryMtGl.b177860b34fb.png",
-      "sha256": "b177860b34fbc3854f5f8ad9fdecb8e0a039c764bfadabc8729717b39f865174",
+      "url": "/images/catalog/bone-review/GBSlk50SpryMtGl.00aa4a4d8030.png",
+      "sha256": "00aa4a4d8030cd5cbd7304b39a962de692fdce323568d6f6347b832db62fd543",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSlk50RdcrShnGl",
       "groupSlug": "sleek-50ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBSlk50RdcrShnGl.e9addddaa5a0.png",
-      "sha256": "e9addddaa5a04a45dff1b316c95c84e95285bb4910a2a03959d4130ceb810b52",
+      "url": "/images/catalog/bone-review/GBSlk50RdcrShnGl.298be3899ae8.png",
+      "sha256": "298be3899ae8798a19f41e9b4eaf040f61c67cee304c642ec06103a6394dfa70",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -884,34 +884,34 @@
     {
       "websiteSku": "LBSlk100LtnMtGl",
       "groupSlug": "sleek-100ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBSlk100LtnMtGl.7627f0de10fc.png",
-      "sha256": "7627f0de10fca7906773f9e37ef9e6188dfa7c6b13d13456dddb213e7ada5a9c",
+      "url": "/images/catalog/bone-review/LBSlk100LtnMtGl.d00646153e3c.png",
+      "sha256": "d00646153e3c3a88ba1ff87baac4d662d1624dd57bc0da29cdaa1456d6cd29f5",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSlk100SpryMtGl",
       "groupSlug": "sleek-100ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBSlk100SpryMtGl.5e30e40315e5.png",
-      "sha256": "5e30e40315e5eee7c12ce769e8b2a48de519d0462cf8549f6c5b2b03ef5d8eae",
+      "url": "/images/catalog/bone-review/GBSlk100SpryMtGl.d49491c9200b.png",
+      "sha256": "d49491c9200b7c1471620a802a94662069a6a137692a990b697a05985044b23e",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSlk100RdcrShnGl",
       "groupSlug": "sleek-100ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBSlk100RdcrShnGl.fb3baa6ad65f.png",
-      "sha256": "fb3baa6ad65f369200065b28d7bc84f030b9c2a3309ce0e0eb3296f798aa1e82",
+      "url": "/images/catalog/bone-review/GBSlk100RdcrShnGl.8ae83fd8ce2b.png",
+      "sha256": "8ae83fd8ce2becbe49518dd78c4fd405291c344e45000b3167b2f2e8fb15fd95",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -950,8 +950,8 @@
     {
       "websiteSku": "GBCyl5SprySlMatt",
       "groupSlug": "cylinder-5ml-clear-13-415-finemist",
-      "url": "/images/catalog/bone-review/GBCyl5SprySlMatt.a067cd68f4d5.png",
-      "sha256": "a067cd68f4d50fac9a29f4a7ed839bc050530ec443c74f354bf361fa9e723947",
+      "url": "/images/catalog/bone-review/GBCyl5SprySlMatt.8047788195b4.png",
+      "sha256": "8047788195b4bfa1be6b21b4c8132b22f1e28a5519796db7092b0c6b50cabaf4",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -961,8 +961,8 @@
     {
       "websiteSku": "GBCyl5MtlRollBlkDot",
       "groupSlug": "cylinder-5ml-clear-13-415-rollon",
-      "url": "/images/catalog/bone-review/GBCyl5MtlRollBlkDot.43c5466f3133.png",
-      "sha256": "43c5466f313383f599473da648fa3b25869353b7de012f5aef9056fffc8781f9",
+      "url": "/images/catalog/bone-review/GBCyl5MtlRollBlkDot.8251a0ed0f79.png",
+      "sha256": "8251a0ed0f795a0c1c3f24a55653c7fcdd322d4f7a5eab8d9efc084cf86faefd",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -983,8 +983,8 @@
     {
       "websiteSku": "GBCylBlu5SpryGlMatt",
       "groupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
-      "url": "/images/catalog/bone-review/GBCylBlu5SpryGlMatt.0b12dca26124.png",
-      "sha256": "0b12dca26124fad9c3e82280de2498c00aab18a7fd2a97b57c625388d4fcdeea",
+      "url": "/images/catalog/bone-review/GBCylBlu5SpryGlMatt.66e394377db7.png",
+      "sha256": "66e394377db7cb7d8e19571d0fb2129248890176ea2e5b0bf4a119f0b1fdbbf1",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -994,8 +994,8 @@
     {
       "websiteSku": "GBCylBlu5MtlRollBlkDot",
       "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon",
-      "url": "/images/catalog/bone-review/GBCylBlu5MtlRollBlkDot.1c81a5c87e4b.png",
-      "sha256": "1c81a5c87e4b5015173334f803908182fb8124f1fba969b0e345a754a084fbfd",
+      "url": "/images/catalog/bone-review/GBCylBlu5MtlRollBlkDot.51afa03846c9.png",
+      "sha256": "51afa03846c9fcc92996b174bc412953b86a47ff5b3a76d522b3b3c8453a60c3",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1016,8 +1016,8 @@
     {
       "websiteSku": "GBCylAmb9SpryMattSl",
       "groupSlug": "cylinder-9ml-amber-17-415-finemist",
-      "url": "/images/catalog/bone-review/GBCylAmb9SpryMattSl.d91df8882a7d.png",
-      "sha256": "d91df8882a7d27191a18f0d3ba5e1b0c6708ec394f44a7b47e9db3981b56fc56",
+      "url": "/images/catalog/bone-review/GBCylAmb9SpryMattSl.e9db7f777469.png",
+      "sha256": "e9db7f7774693ae670b8fc3cf7e580820b869ba55a05f535899c0a8504b004e3",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1027,8 +1027,8 @@
     {
       "websiteSku": "LBCylAmb9LtnMtSl",
       "groupSlug": "cylinder-9ml-amber-17-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBCylAmb9LtnMtSl.8c7a4aff08fb.png",
-      "sha256": "8c7a4aff08fb32d65e3af1690728398fa00c736f02c315de1b53f31e4a264e6d",
+      "url": "/images/catalog/bone-review/LBCylAmb9LtnMtSl.107252b72039.png",
+      "sha256": "107252b720394b4680120f4b3faf8aee819a762bc1876c9b03f6d3f0dca50fa8",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1038,8 +1038,8 @@
     {
       "websiteSku": "GBCylAmb9MtlRollBlkDot",
       "groupSlug": "cylinder-9ml-amber-17-415-rollon",
-      "url": "/images/catalog/bone-review/GBCylAmb9MtlRollBlkDot.31fb6ef65e95.png",
-      "sha256": "31fb6ef65e9580ddf6e5eead488ff92b9d5a223c0f3d4e4b93a6adfae44baafa",
+      "url": "/images/catalog/bone-review/GBCylAmb9MtlRollBlkDot.fb2d3fc81c00.png",
+      "sha256": "fb2d3fc81c000ac4d954754500ce1eb35a2d0aeee212d1cd149dd0723023437d",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1060,8 +1060,8 @@
     {
       "websiteSku": "GBTallCyl9SpryGlMatt",
       "groupSlug": "cylinder-9ml-clear-13-415-finemist",
-      "url": "/images/catalog/bone-review/GBTallCyl9SpryGlMatt.0dc7aa85686c.png",
-      "sha256": "0dc7aa85686c443f51c8cb31ade4bb4119317bf29a6b5daecd8398f79716afe9",
+      "url": "/images/catalog/bone-review/GBTallCyl9SpryGlMatt.e7b9c81373fc.png",
+      "sha256": "e7b9c81373fc328f6c1c7b21435f617730766bffc854da124c72bd9d49d32046",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1071,8 +1071,8 @@
     {
       "websiteSku": "GBTallCyl9MtlRollBlkDot",
       "groupSlug": "cylinder-9ml-clear-13-415-rollon",
-      "url": "/images/catalog/bone-review/GBTallCyl9MtlRollBlkDot.1ef88751e989.png",
-      "sha256": "1ef88751e989854b2c12ae37fd86cc8473c26006aa43dd8318b92da45abfa852",
+      "url": "/images/catalog/bone-review/GBTallCyl9MtlRollBlkDot.52046eb24c03.png",
+      "sha256": "52046eb24c034937df430accd27f5c28d86856d20e11cbe6b420ec722d0c1352",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1082,8 +1082,8 @@
     {
       "websiteSku": "GBCyl9SpryGl",
       "groupSlug": "cylinder-9ml-clear-17-415-finemist",
-      "url": "/images/catalog/bone-review/GBCyl9SpryGl.962edd3d8ddf.png",
-      "sha256": "962edd3d8ddf9b9aa23b1db31985349ae3e0fc166ed8c56b6227e3538c9f26a7",
+      "url": "/images/catalog/bone-review/GBCyl9SpryGl.47104e5a4bd1.png",
+      "sha256": "47104e5a4bd133b5759dd74f03da5520ec8d1778dbfbca8ca949a05f96998e4b",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1093,8 +1093,8 @@
     {
       "websiteSku": "LBCyl9LtnGl",
       "groupSlug": "cylinder-9ml-clear-17-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBCyl9LtnGl.fa208b7e87a8.png",
-      "sha256": "fa208b7e87a8a257365c131544c9255e52e6953592cdb17691d539b4cb04cd2a",
+      "url": "/images/catalog/bone-review/LBCyl9LtnGl.c769559f9236.png",
+      "sha256": "c769559f923641b4332bb6b7193718b067bd4b0d687376990d6cb5ba5b57cae7",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1104,8 +1104,8 @@
     {
       "websiteSku": "GBCyl9MtlRollBlkDot",
       "groupSlug": "cylinder-9ml-clear-17-415-rollon",
-      "url": "/images/catalog/bone-review/GBCyl9MtlRollBlkDot.6b4baefd407e.png",
-      "sha256": "6b4baefd407e3d001e6f821f72584c0d996b855cf423cb0cacd8f5a7d8540b42",
+      "url": "/images/catalog/bone-review/GBCyl9MtlRollBlkDot.cb58e7801b7b.png",
+      "sha256": "cb58e7801b7b99ecc4ef3435ad15220c18a3155421d73e092a4a026667f99bd0",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1115,8 +1115,8 @@
     {
       "websiteSku": "GBCylBlu9SpryMattSl",
       "groupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
-      "url": "/images/catalog/bone-review/GBCylBlu9SpryMattSl.9bb845a44ab9.png",
-      "sha256": "9bb845a44ab92a78db867a34d23bfff622a58b3916c905c2b2c46d55c056b3be",
+      "url": "/images/catalog/bone-review/GBCylBlu9SpryMattSl.46c259b79a95.png",
+      "sha256": "46c259b79a95187979fd62fa05512d1f4984cc920fb7a956fca4cdc0f93623f3",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1126,8 +1126,8 @@
     {
       "websiteSku": "LBCylBlu9LtnMattSl",
       "groupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBCylBlu9LtnMattSl.cf288458fdc2.png",
-      "sha256": "cf288458fdc23c5edabb59f653d401157174434bbdf5f47f58bd6a2b7ea19d54",
+      "url": "/images/catalog/bone-review/LBCylBlu9LtnMattSl.2cb9fab219f4.png",
+      "sha256": "2cb9fab219f44e670887a71eb53b0ef9b4be045f7da78da34211c30ca773e21a",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1137,8 +1137,8 @@
     {
       "websiteSku": "GBCylBlu9MtlRollBlkDot",
       "groupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
-      "url": "/images/catalog/bone-review/GBCylBlu9MtlRollBlkDot.526fc1cddb1e.png",
-      "sha256": "526fc1cddb1e1a499c394f64518c23927d5313007331af3d8ab31cc58ea4adb2",
+      "url": "/images/catalog/bone-review/GBCylBlu9MtlRollBlkDot.b0b930f7c899.png",
+      "sha256": "b0b930f7c8999367ed0b48ca0f108ef3f7d34c1c60846b3cc81f03c70bc4658b",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1159,8 +1159,8 @@
     {
       "websiteSku": "GBTallCylFrst9SpryGlMatt",
       "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
-      "url": "/images/catalog/bone-review/GBTallCylFrst9SpryGlMatt.d61e3f717e16.png",
-      "sha256": "d61e3f717e1637d25cdd0175745268b030e70cf843deebd12970b9ab8b1167e7",
+      "url": "/images/catalog/bone-review/GBTallCylFrst9SpryGlMatt.c0c2d412b1bf.png",
+      "sha256": "c0c2d412b1bf3a8a224beb5db708061979606bbf7ecab2469f5c09983292449e",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1181,8 +1181,8 @@
     {
       "websiteSku": "GBCylFrst9SpryMattSl",
       "groupSlug": "cylinder-9ml-frosted-17-415-finemist",
-      "url": "/images/catalog/bone-review/GBCylFrst9SpryMattSl.d763a5f0868e.png",
-      "sha256": "d763a5f0868e6de33d3178fb35887dcd7dea56950d95770f71a7976d654f5976",
+      "url": "/images/catalog/bone-review/GBCylFrst9SpryMattSl.518be8013731.png",
+      "sha256": "518be8013731dc49b216a893eb67ac5e1fb7e73f032bdd7903bd8e75c16ad190",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1192,8 +1192,8 @@
     {
       "websiteSku": "GBCylFrst9MtlRollBlkDot",
       "groupSlug": "cylinder-9ml-frosted-17-415-rollon",
-      "url": "/images/catalog/bone-review/GBCylFrst9MtlRollBlkDot.adf3825cd872.png",
-      "sha256": "adf3825cd872b86468712a0d72523ca33a0abaa29fdd4cde124b396a50dd4877",
+      "url": "/images/catalog/bone-review/GBCylFrst9MtlRollBlkDot.01a8172c9a5c.png",
+      "sha256": "01a8172c9a5c00b695731d6e70a454967b03ee6e9011bcc8636e11308edf6072",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1203,8 +1203,8 @@
     {
       "websiteSku": "GBCylSwrl9SpryMattSl",
       "groupSlug": "cylinder-9ml-swirl-17-415-finemist",
-      "url": "/images/catalog/bone-review/GBCylSwrl9SpryMattSl.6e1b56a26b68.png",
-      "sha256": "6e1b56a26b6862369d727b05cdbb52fae1be15e1107537d8733d63c1a3d5ee41",
+      "url": "/images/catalog/bone-review/GBCylSwrl9SpryMattSl.b3bb29415568.png",
+      "sha256": "b3bb294155683b4b4c2f466ccce941189ef518a69cbb22dad1045c02fb2f4223",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1214,8 +1214,8 @@
     {
       "websiteSku": "LBCylSwrl9LtnMtSl",
       "groupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBCylSwrl9LtnMtSl.c241a70036e0.png",
-      "sha256": "c241a70036e0281f76896ea043c01d5b52e76d0c434d2abf864be93c2812b43a",
+      "url": "/images/catalog/bone-review/LBCylSwrl9LtnMtSl.35ebf93e35f0.png",
+      "sha256": "35ebf93e35f09a2eb5d78bf21642322018646e900993aab626d3db3eab916280",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1225,8 +1225,8 @@
     {
       "websiteSku": "GBCylSwrl9MtlRollBlkDot",
       "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
-      "url": "/images/catalog/bone-review/GBCylSwrl9MtlRollBlkDot.290c80d6826f.png",
-      "sha256": "290c80d6826f56db9e19608b366dc7a7c2cec1ad334475728beab038c320dc2c",
+      "url": "/images/catalog/bone-review/GBCylSwrl9MtlRollBlkDot.46d03e9815ae.png",
+      "sha256": "46d03e9815ae19dc13026eb1fa578c9dd2d7945c75a17fb972d893c0a9888b5f",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1280,8 +1280,8 @@
     {
       "websiteSku": "LBCyl25LtnMtGl",
       "groupSlug": "cylinder-25ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBCyl25LtnMtGl.3e0de763dca4.png",
-      "sha256": "3e0de763dca42ec4a18a259d3c12c7e1dcfa96fa359f7ab273bcb7df12fbc8d2",
+      "url": "/images/catalog/bone-review/LBCyl25LtnMtGl.9debc8949bdf.png",
+      "sha256": "9debc8949bdf8066b83dae0e2d5ad9b3f7fb251f7462bef4fd037a30c5187c1b",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1302,8 +1302,8 @@
     {
       "websiteSku": "GBMtlRoll28Blk",
       "groupSlug": "cylinder-28ml-clear-16mm-rollon",
-      "url": "/images/catalog/bone-review/GBMtlRoll28Blk.20dfa7ef83e5.png",
-      "sha256": "20dfa7ef83e5384a28b7ed459a44facbc207bbff533c07c2b319f182891649a8",
+      "url": "/images/catalog/bone-review/GBMtlRoll28Blk.3c55f180f835.png",
+      "sha256": "3c55f180f835e8a9d239e10930f467dc607fe38b1d66ccc3974aabfce18a4e07",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1324,8 +1324,8 @@
     {
       "websiteSku": "GBCyl50MtlRollBlk",
       "groupSlug": "cylinder-50ml-clear-16mm-rollon",
-      "url": "/images/catalog/bone-review/GBCyl50MtlRollBlk.98fc2d434ae0.png",
-      "sha256": "98fc2d434ae018c189ca1decdc71494a29d4d63ada45dcd93387d33a54f20a2b",
+      "url": "/images/catalog/bone-review/GBCyl50MtlRollBlk.6c0720231863.png",
+      "sha256": "6c0720231863db520f41f40b55560e6ec5f5f9b85e38f5943107dffaa25f3c23",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1357,8 +1357,8 @@
     {
       "websiteSku": "LBCyl50LtnMtGl",
       "groupSlug": "cylinder-50ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBCyl50LtnMtGl.246ec05cf50a.png",
-      "sha256": "246ec05cf50affa752b986dfdc7f6f04c1299244c4d22be63314c41b11a7fabf",
+      "url": "/images/catalog/bone-review/LBCyl50LtnMtGl.43c79ce57bdb.png",
+      "sha256": "43c79ce57bdbefa0d2634e1a0fbff2a0cc15949a333d21ff6b5fb90d43fab198",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1368,8 +1368,8 @@
     {
       "websiteSku": "GBCyl50SpryMtGl",
       "groupSlug": "cylinder-50ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBCyl50SpryMtGl.9519998d7b13.png",
-      "sha256": "9519998d7b132582ffd4569641a8112c2298b280c6ec58bac4729927002ec8ad",
+      "url": "/images/catalog/bone-review/GBCyl50SpryMtGl.9382a0ae9d39.png",
+      "sha256": "9382a0ae9d398fc52941233c3297945ea2f6b82420cdce6dc7641fd0a4142135",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1379,8 +1379,8 @@
     {
       "websiteSku": "GBCyl50RdcrMtSl",
       "groupSlug": "cylinder-50ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBCyl50RdcrMtSl.982b6e3272c8.png",
-      "sha256": "982b6e3272c8268fe81870e8b84e60d3d7342127b5c86963344d0b9e48e54072",
+      "url": "/images/catalog/bone-review/GBCyl50RdcrMtSl.7ab926311e44.png",
+      "sha256": "7ab926311e4450c3c0ff4f5df1c2a863c492053678bbf6b0dbb4f16fc895fac6",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1412,8 +1412,8 @@
     {
       "websiteSku": "LBCyl100LtnMtGl",
       "groupSlug": "cylinder-100ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBCyl100LtnMtGl.1bf89f7a3737.png",
-      "sha256": "1bf89f7a37375cb41bdff15ef38af1d284aa4c068ca31e443ea6d3d1bd79eafd",
+      "url": "/images/catalog/bone-review/LBCyl100LtnMtGl.dc478e401485.png",
+      "sha256": "dc478e401485e6aa8b91e08f46b0c912092a9b1b237541aab842c1e540582474",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1423,8 +1423,8 @@
     {
       "websiteSku": "GBCyl100SpryMtGl",
       "groupSlug": "cylinder-100ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBCyl100SpryMtGl.bece4449129a.png",
-      "sha256": "bece4449129a450070125bd48c88a50f27407b690940d4d439c49f684f48117f",
+      "url": "/images/catalog/bone-review/GBCyl100SpryMtGl.d229ea801914.png",
+      "sha256": "d229ea80191458f41dd84ca4b55806f9dcd2c023c624402d66be82ec9740f7ae",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1434,8 +1434,8 @@
     {
       "websiteSku": "GBCyl100RdcrMtSl",
       "groupSlug": "cylinder-100ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBCyl100RdcrMtSl.b0f64b705b70.png",
-      "sha256": "b0f64b705b70cc4c148c061f01c088042e632dd1ef1d1f6bb08eef48bd33867e",
+      "url": "/images/catalog/bone-review/GBCyl100RdcrMtSl.69bb9ee2fea0.png",
+      "sha256": "69bb9ee2fea029ccc50ec72406483b6c2128da8435a94d7b70042e83e0101c17",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -1489,34 +1489,34 @@
     {
       "websiteSku": "LBDiva30LtnMtGl",
       "groupSlug": "diva-30ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBDiva30LtnMtGl.b910a809c317.png",
-      "sha256": "b910a809c317f0a66b8bfee6eb08c194c6f61ede12854c902171fbbc1a64afeb",
+      "url": "/images/catalog/bone-review/LBDiva30LtnMtGl.8fca329d5da1.png",
+      "sha256": "8fca329d5da19518519aa2ac662db1a848518f803e41480466de6ba709b0d35a",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBDiva30SpryMtGl",
       "groupSlug": "diva-30ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBDiva30SpryMtGl.86cb1f0ded93.png",
-      "sha256": "86cb1f0ded93e5d0e3486e19c7a984d38a2711b3ea1d3774d691e152674afc7a",
+      "url": "/images/catalog/bone-review/GBDiva30SpryMtGl.9f6dbfaa0b8a.png",
+      "sha256": "9f6dbfaa0b8aed20c4d56cd301a7e0d122dfc681f6f9fd131bc134f94a68040b",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBDiva30RdcrShnGl",
       "groupSlug": "diva-30ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBDiva30RdcrShnGl.ad273685647c.png",
-      "sha256": "ad273685647c50df9a64d5b0bac14ebd2ae005a0fe1a1cfe77dade11646a642b",
+      "url": "/images/catalog/bone-review/GBDiva30RdcrShnGl.0c6d771b3d71.png",
+      "sha256": "0c6d771b3d715935236770e91e11c8394074f2e2d4482a8e9d2f0040dede9c8d",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -1555,34 +1555,34 @@
     {
       "websiteSku": "LBDiva46LtnMtGl",
       "groupSlug": "diva-46ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBDiva46LtnMtGl.6a51261211b2.png",
-      "sha256": "6a51261211b26b96c532797efa538f03c3f5ad964282cc9d204a4bb7a824e3cd",
+      "url": "/images/catalog/bone-review/LBDiva46LtnMtGl.7f25245cf4f5.png",
+      "sha256": "7f25245cf4f5bdcabfbc0167cf50a0b9f4904286f389762b54c167afe2037d91",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBDiva46SpryMtGl",
       "groupSlug": "diva-46ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBDiva46SpryMtGl.81cb5670ab64.png",
-      "sha256": "81cb5670ab647c47d02dc3f7226cc054452e7cad21d3ea1afb35016237f79d79",
+      "url": "/images/catalog/bone-review/GBDiva46SpryMtGl.bb34e3f85b32.png",
+      "sha256": "bb34e3f85b32c95fa5cffe050b60b38b819476c6f466192cdd12cdd53558275b",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBDiva46RdcrShnGl",
       "groupSlug": "diva-46ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBDiva46RdcrShnGl.abb7ea690f9d.png",
-      "sha256": "abb7ea690f9db478ee87110f76cfaee41048c10363c505264fe30cad8d268908",
+      "url": "/images/catalog/bone-review/GBDiva46RdcrShnGl.382e9a542b9b.png",
+      "sha256": "382e9a542b9b7663619a07cba9a316ef8ace44a6ef555d49b6445941f0d19e6c",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -1621,34 +1621,34 @@
     {
       "websiteSku": "LBDivaFrst46LtnMtGl",
       "groupSlug": "diva-46ml-frosted-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBDivaFrst46LtnMtGl.eae338137280.png",
-      "sha256": "eae338137280ddcf994ab3ad6d910a41c2dbe498ed17c5f125fd4c891a160c8c",
+      "url": "/images/catalog/bone-review/LBDivaFrst46LtnMtGl.23178f015d17.png",
+      "sha256": "23178f015d172038f4e9d0100245dce79ac0ddd4ad96ee9650a97d08e1f20645",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBDivaFrst46SpryMtGl",
       "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBDivaFrst46SpryMtGl.d776e654fbe4.png",
-      "sha256": "d776e654fbe46b9339872317f0cc36f65094b5a1ed407abff3845842e48ad426",
+      "url": "/images/catalog/bone-review/GBDivaFrst46SpryMtGl.b851aa15b4e7.png",
+      "sha256": "b851aa15b4e790e44de97d67bdfdf3a15600e77a860ef68cf1cda5c263ad1179",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBDivaFrst46RdcrShnGl",
       "groupSlug": "diva-46ml-frosted-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBDivaFrst46RdcrShnGl.62fa5072dc09.png",
-      "sha256": "62fa5072dc099609ed1ec83fcf9689abcdd515fd02506a7c47a4165b19b0870c",
+      "url": "/images/catalog/bone-review/GBDivaFrst46RdcrShnGl.a946c13cffb5.png",
+      "sha256": "a946c13cffb564e8d98a493ccbea590342b06eaa559a80c24a9a3630107205f2",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -1676,34 +1676,34 @@
     {
       "websiteSku": "LBDiva100LtnMtGl",
       "groupSlug": "diva-100ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBDiva100LtnMtGl.9d7aa085ae09.png",
-      "sha256": "9d7aa085ae0932de64aa1a6d85cb0cf4b93bb1cb7f02fa21daeb5e3506d274e9",
+      "url": "/images/catalog/bone-review/LBDiva100LtnMtGl.d40c88f6cefc.png",
+      "sha256": "d40c88f6cefc777b1099f8f46435d1ee3167f6bf08cd9581b6ffc721ee997b0b",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBDiva100SpryMtGl",
       "groupSlug": "diva-100ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBDiva100SpryMtGl.4e08bd8241f6.png",
-      "sha256": "4e08bd8241f6627741d2d1b6d9435f4d2804352c92bcc77ed56c9aebe93559a9",
+      "url": "/images/catalog/bone-review/GBDiva100SpryMtGl.5751b23a5820.png",
+      "sha256": "5751b23a58205d9eb542e43959e0331981b9bbe8c5fce9d3e63e8127c5a539ee",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBDiva100RdcrShnGl",
       "groupSlug": "diva-100ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBDiva100RdcrShnGl.a484a278a8e4.png",
-      "sha256": "a484a278a8e48fa68edb81f9f3d1d031c17f5e01c37b0d1c47bab3e64a496363",
+      "url": "/images/catalog/bone-review/GBDiva100RdcrShnGl.24ad40d606af.png",
+      "sha256": "24ad40d606af57123149fde6477d53db2640aa4435e742429e72ef3229bc3542",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -2479,8 +2479,8 @@
     {
       "websiteSku": "GBBstn15BlkCapSht",
       "groupSlug": "boston-round-15ml-clear-18-400",
-      "url": "/images/catalog/bone-review/GBBstn15BlkCapSht.871d96733ee5.png",
-      "sha256": "871d96733ee510ba8bc62bb7b997746b718be9523e35efdad81462cf283dfc40",
+      "url": "/images/catalog/bone-review/GBBstn15BlkCapSht.2950e8ed333d.png",
+      "sha256": "2950e8ed333dd90d112dda13955f5a43e79d48e2655bf2f174cc58bf6bb0bf3d",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2490,8 +2490,8 @@
     {
       "websiteSku": "GBBstnAmb15mlBlkCapSht",
       "groupSlug": "boston-round-15ml-amber-18-400",
-      "url": "/images/catalog/bone-review/GBBstnAmb15mlBlkCapSht.7f3b89f726c9.png",
-      "sha256": "7f3b89f726c9bfa9c6010fdae80aa64aca18d5d6e7341d4af73fea87ffc7fb4b",
+      "url": "/images/catalog/bone-review/GBBstnAmb15mlBlkCapSht.74ef9f8c19bd.png",
+      "sha256": "74ef9f8c19bd16f5e693fda7444dc60a0072ad11cad4eafcb23cf61e1f8770de",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2512,8 +2512,8 @@
     {
       "websiteSku": "GBBstnBlu15BlkCapSht",
       "groupSlug": "boston-round-15ml-cobalt-blue-18-400",
-      "url": "/images/catalog/bone-review/GBBstnBlu15BlkCapSht.a79ca8c075a4.png",
-      "sha256": "a79ca8c075a42407e25fde99196e8762e7634573ff10406d9c869b4e1e23f202",
+      "url": "/images/catalog/bone-review/GBBstnBlu15BlkCapSht.3796b5354ac1.png",
+      "sha256": "3796b5354ac156244bd51dd4d69dabe1433bd7281bbf3c3b45baea4452a1ac85",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2523,8 +2523,8 @@
     {
       "websiteSku": "GBBstnBlu15mlBlkDropperSlTrim",
       "groupSlug": "boston-round-15ml-cobalt-blue-18-400-dropper",
-      "url": "/images/catalog/bone-review/GBBstnBlu15mlBlkDropperSlTrim.b70a912a72ea.png",
-      "sha256": "b70a912a72eab5190d1398d83b28b33136d03c8ad1041fe82ab0b263d9ddf139",
+      "url": "/images/catalog/bone-review/GBBstnBlu15mlBlkDropperSlTrim.11b77d8853ad.png",
+      "sha256": "11b77d8853adee726eee6dcab103e9227b5843428b034e921ef51cc512ae87f7",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2534,8 +2534,8 @@
     {
       "websiteSku": "GBBstn1ozBlkCapSht",
       "groupSlug": "boston-round-30ml-clear-20-400",
-      "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.d1ca21c8a1dd.png",
-      "sha256": "d1ca21c8a1dde2a9f2ee035cbde57e3f2bff31b5d7a8c83b99371a1f04df5401",
+      "url": "/images/catalog/bone-review/GBBstn1ozBlkCapSht.bee6983f3c20.png",
+      "sha256": "bee6983f3c20fbf9798b6ff6b1a1efb9501c1e63c013b15f1886bf320333b07a",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2545,8 +2545,8 @@
     {
       "websiteSku": "GBBstn1ozBlkDrpShnGlTrim",
       "groupSlug": "boston-round-30ml-clear-20-400-dropper",
-      "url": "/images/catalog/bone-review/GBBstn1ozBlkDrpShnGlTrim.79bb5e58e363.png",
-      "sha256": "79bb5e58e3630bd2ecccefe8d68c17bd7077129c1c854f933b64267219adefeb",
+      "url": "/images/catalog/bone-review/GBBstn1ozBlkDrpShnGlTrim.9fb60b03f9c2.png",
+      "sha256": "9fb60b03f9c268486af45ebcb66442fe302cdefbecaadc84dc9ef01c4a197a2e",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2556,8 +2556,8 @@
     {
       "websiteSku": "GBBstn1ozMtlRollonMattGl",
       "groupSlug": "boston-round-30ml-clear-20-400-rollon",
-      "url": "/images/catalog/bone-review/GBBstn1ozMtlRollonMattGl.b33035d30ec2.png",
-      "sha256": "b33035d30ec2b2540378481cd172836ae442c412aeaf499533935ec968341d5c",
+      "url": "/images/catalog/bone-review/GBBstn1ozMtlRollonMattGl.465eb5f70474.png",
+      "sha256": "465eb5f70474fd3154b3122d3c3aef9bf70b4ca861f62444623cc5a785d3aebe",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2567,8 +2567,8 @@
     {
       "websiteSku": "GBBstnAmb1ozBlkCapSht",
       "groupSlug": "boston-round-30ml-amber-20-400",
-      "url": "/images/catalog/bone-review/GBBstnAmb1ozBlkCapSht.862068a58da1.png",
-      "sha256": "862068a58da1641185d127450dcd5496e19cca80f47f6d9f79f53cf96aba421e",
+      "url": "/images/catalog/bone-review/GBBstnAmb1ozBlkCapSht.d78eb5c51d51.png",
+      "sha256": "d78eb5c51d51bf772107e4a43223cc53931693279a2b03bfb4eea4b21d197c13",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2578,8 +2578,8 @@
     {
       "websiteSku": "GBBstnAmb1ozMtlRollonMattSl",
       "groupSlug": "boston-round-30ml-amber-20-400-rollon",
-      "url": "/images/catalog/bone-review/GBBstnAmb1ozMtlRollonMattSl.c8abdf0ac6d2.png",
-      "sha256": "c8abdf0ac6d2471ae3e259798caeb96b64fdd00f2b62e619c14d86fa0412a4f8",
+      "url": "/images/catalog/bone-review/GBBstnAmb1ozMtlRollonMattSl.7ba7fe260cc5.png",
+      "sha256": "7ba7fe260cc52ecb67e7f61863eec2a76ef9a6aeca59588f46178bc9f276e618",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2600,8 +2600,8 @@
     {
       "websiteSku": "GBBstnBlu1ozBlkCapSht",
       "groupSlug": "boston-round-30ml-cobalt-blue-20-400",
-      "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkCapSht.8b395c7b718d.png",
-      "sha256": "8b395c7b718dfa095cb2a39d981f1d525c2e38745c7712167e13d49389a7e42a",
+      "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkCapSht.b161834b0d15.png",
+      "sha256": "b161834b0d150d0818f7bdd55d8d125a1a019020e9db27908c324b10a034a17c",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2611,8 +2611,8 @@
     {
       "websiteSku": "GBBstnBlu1ozBlkDropperShnGlTrim",
       "groupSlug": "boston-round-30ml-cobalt-blue-20-400-dropper",
-      "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkDropperShnGlTrim.036590a86c6e.png",
-      "sha256": "036590a86c6e4929a61628aa6f3bb72fced37e2a3f5ec1722ab7a4ca9fedda77",
+      "url": "/images/catalog/bone-review/GBBstnBlu1ozBlkDropperShnGlTrim.0c9474732e41.png",
+      "sha256": "0c9474732e4103687d6a343ac96365d6f0d8e2b02079d7525f67602100acb317",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2622,8 +2622,8 @@
     {
       "websiteSku": "GBBstnBlu1ozMtlRollonMattSl",
       "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
-      "url": "/images/catalog/bone-review/GBBstnBlu1ozMtlRollonMattSl.679b1224b48f.png",
-      "sha256": "679b1224b48f482565bdf69b6d09fe3205e9e5f735fa311d130a6adf5b02886d",
+      "url": "/images/catalog/bone-review/GBBstnBlu1ozMtlRollonMattSl.7ec0ad44ff0e.png",
+      "sha256": "7ec0ad44ff0e3a06d085ee04924d45d5cb4f0ac6767f47dd9eb85868cc56f5df",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2655,8 +2655,8 @@
     {
       "websiteSku": "GBBstn2ozRollonMattGl",
       "groupSlug": "boston-round-60ml-clear-20-400-rollon",
-      "url": "/images/catalog/bone-review/GBBstn2ozRollonMattGl.4727d62681e8.png",
-      "sha256": "4727d62681e859f8b1b3a9bc2176104deeb4dc6170c8798e55e325690d8467fc",
+      "url": "/images/catalog/bone-review/GBBstn2ozRollonMattGl.9646a007f4e1.png",
+      "sha256": "9646a007f4e1f15fa5e89eda0d3dc7ece0d02dafeb2818fc907b076df893a290",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2666,8 +2666,8 @@
     {
       "websiteSku": "GBBstnAmb2ozBlkCapSht",
       "groupSlug": "boston-round-60ml-amber-20-400",
-      "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkCapSht.1ed776afb876.png",
-      "sha256": "1ed776afb876d9efcc3ac0c9cef518802dc518d3a3b21d696e2db8e7295689ea",
+      "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkCapSht.907029bd6e73.png",
+      "sha256": "907029bd6e73c9e16901efa15e9f858f41094efc2c13e11a8141cb2c33abd6a5",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2677,8 +2677,8 @@
     {
       "websiteSku": "GBBstnAmb2ozBlkDropperShnGlTrim",
       "groupSlug": "boston-round-60ml-amber-20-400-dropper",
-      "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkDropperShnGlTrim.b8fb228d863e.png",
-      "sha256": "b8fb228d863ee858ce20e6e5b5a31ed38550b9574a6e4e13004b55c2527073b5",
+      "url": "/images/catalog/bone-review/GBBstnAmb2ozBlkDropperShnGlTrim.1713a8a88ff6.png",
+      "sha256": "1713a8a88ff6726a2404ef434fc7603a215f7278f2bcc9dfe2a463fd3b1cf90a",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2688,8 +2688,8 @@
     {
       "websiteSku": "GBBstnAmb2ozMtlRollonMattGl",
       "groupSlug": "boston-round-60ml-amber-20-400-rollon",
-      "url": "/images/catalog/bone-review/GBBstnAmb2ozMtlRollonMattGl.45ed3646a6be.png",
-      "sha256": "45ed3646a6bea88e4f5b7088a0dd413cc77221829655743ec0e473a45cefa87a",
+      "url": "/images/catalog/bone-review/GBBstnAmb2ozMtlRollonMattGl.a19a8ca83fa3.png",
+      "sha256": "a19a8ca83fa39012edc481e465514f017cc0e3a3eddd265458938fe1fe3097b0",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2699,8 +2699,8 @@
     {
       "websiteSku": "GBBstnBlu2ozBlkCapSht",
       "groupSlug": "boston-round-60ml-cobalt-blue-20-400",
-      "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkCapSht.289623853ece.png",
-      "sha256": "289623853ece3f8a30aaebd41cef8c7f309912a91c02b78c13a12a69380ecc02",
+      "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkCapSht.b9bc619220d0.png",
+      "sha256": "b9bc619220d0d830932b8a03bf632f8559f7a2940db537d58b8159e4a1394a9e",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2710,8 +2710,8 @@
     {
       "websiteSku": "GBBstnBlu2ozBlkDropperShnGlTrim",
       "groupSlug": "boston-round-60ml-cobalt-blue-20-400-dropper",
-      "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkDropperShnGlTrim.650b424ffa6e.png",
-      "sha256": "650b424ffa6e448dedb5f0be7b14d5eb48a735ad6c71264f1fe4f76dae971bd7",
+      "url": "/images/catalog/bone-review/GBBstnBlu2ozBlkDropperShnGlTrim.c10dd92aebcf.png",
+      "sha256": "c10dd92aebcf789125ce68aa5ecc33c091bcf0e7c734f7b91259dc72b280493f",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -2721,8 +2721,8 @@
     {
       "websiteSku": "GBBstnBlu2ozMtlRollonMattSl",
       "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
-      "url": "/images/catalog/bone-review/GBBstnBlu2ozMtlRollonMattSl.23530986302f.png",
-      "sha256": "23530986302fbba3adcc405e4ddd41e55f00a4858b87c68807baa761e4aca399",
+      "url": "/images/catalog/bone-review/GBBstnBlu2ozMtlRollonMattSl.f9c91fcd1aeb.png",
+      "sha256": "f9c91fcd1aeb7e182903fc4008ac88e2c183bc3aa7db77ca960ecff305af9d33",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
@@ -3216,45 +3216,45 @@
     {
       "websiteSku": "GBSlm30DrpCu",
       "groupSlug": "slim-30ml-clear-18-415-dropper",
-      "url": "/images/catalog/bone-review/GBSlm30DrpCu.35214193ea74.png",
-      "sha256": "35214193ea74f9f4653103d02ec89396c445b70fa2fdc46404473c76626fb111",
+      "url": "/images/catalog/bone-review/GBSlm30DrpCu.4e3bfb652ee4.png",
+      "sha256": "4e3bfb652ee402500e41db4d58ed3c03759303f5932a5eadf9181e9f6b271c63",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSlm30RdcrShnGl",
       "groupSlug": "slim-30ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBSlm30RdcrShnGl.d501b452834d.png",
-      "sha256": "d501b452834d721e42a81816d9ed7a6da08d6b265db52ecc58efe26df945be84",
+      "url": "/images/catalog/bone-review/GBSlm30RdcrShnGl.c0496d1464b7.png",
+      "sha256": "c0496d1464b76085953d1d4862c1001c66bf453c1b901dcab10a7637725c2095",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSlm30SpryMtGl",
       "groupSlug": "slim-30ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBSlm30SpryMtGl.81d65c16cd06.png",
-      "sha256": "81d65c16cd06a769965c9c629a85627c6139a522fbac14f91389e72958cab237",
+      "url": "/images/catalog/bone-review/GBSlm30SpryMtGl.ca579aa1c2d5.png",
+      "sha256": "ca579aa1c2d5b23fdae6c7f775905be5c34f1a859610634b74d4673bd071ea68",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "LBSlm30LtnMtGl",
       "groupSlug": "slim-30ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBSlm30LtnMtGl.f81d8b9a9fc3.png",
-      "sha256": "f81d8b9a9fc3c0b0adbec62d6067af5cc6503f86a6b6e09b2788313ddf672db1",
+      "url": "/images/catalog/bone-review/LBSlm30LtnMtGl.b3930f478f76.png",
+      "sha256": "b3930f478f764134bfdff84374f2dfd6eef391e223fa342451fd8d57cf707a01",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -3282,34 +3282,34 @@
     {
       "websiteSku": "GBSlm50RdcrShnGl",
       "groupSlug": "slim-50ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBSlm50RdcrShnGl.aca7b5058e45.png",
-      "sha256": "aca7b5058e4559c16097fe952c6997e03727d9917f72e8e4484fdee381f8d6d6",
+      "url": "/images/catalog/bone-review/GBSlm50RdcrShnGl.6e604323df19.png",
+      "sha256": "6e604323df19d0a340a1204c9bdd13a886ccb6fc741b2705c75f69a1b5ccded0",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSlm50SpryMtGl",
       "groupSlug": "slim-50ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBSlm50SpryMtGl.18da1937c994.png",
-      "sha256": "18da1937c99482f9edf6ee7a3536869989e145943cb07c3a7e7da731aa4e5351",
+      "url": "/images/catalog/bone-review/GBSlm50SpryMtGl.e43a195e1ebf.png",
+      "sha256": "e43a195e1ebf6980aef1e8575253122ae3262f5922bb4b83feca4200d0817177",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "LBSlm50LtnMtGl",
       "groupSlug": "slim-50ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBSlm50LtnMtGl.699f3d4ef36b.png",
-      "sha256": "699f3d4ef36bc1a26663285d9a6a94104dc425e5ddf62466fd59f24bc81c2c7d",
+      "url": "/images/catalog/bone-review/LBSlm50LtnMtGl.0886230965ad.png",
+      "sha256": "0886230965adc4b40b8572565ddc1b9cc0487ec53bf4ace05ffa3bd1e227383c",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -3337,34 +3337,34 @@
     {
       "websiteSku": "GBSlm100RdcrShnGl",
       "groupSlug": "slim-100ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBSlm100RdcrShnGl.52d3627059cd.png",
-      "sha256": "52d3627059cd652b8b01e95358263c0d91db3ae7282f39902b5ed18ee695e9b1",
+      "url": "/images/catalog/bone-review/GBSlm100RdcrShnGl.4ac6bfb08113.png",
+      "sha256": "4ac6bfb081130759c2e6ceaeb0736f165c8ed270a4436aaefca05d7a9bb37112",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "GBSlm100SpryMtGl",
       "groupSlug": "slim-100ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBSlm100SpryMtGl.21a8a30dd591.png",
-      "sha256": "21a8a30dd5914839793aa7184cd82afc1904fd1ee293ea7c12f5d3a7acbddf13",
+      "url": "/images/catalog/bone-review/GBSlm100SpryMtGl.7c7926c351c8.png",
+      "sha256": "7c7926c351c881f9210415ec33a13a8c2c94fbf1cc4bf50b85d75ec9e0d50579",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
       "websiteSku": "LBSlm100LtnMtGl",
       "groupSlug": "slim-100ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBSlm100LtnMtGl.511093c4de7b.png",
-      "sha256": "511093c4de7b721286bbe8106e70ed4546ef69e0849bfb1d74d13d1957837be5",
+      "url": "/images/catalog/bone-review/LBSlm100LtnMtGl.81d480036eaa.png",
+      "sha256": "81d480036eaac17748f9f55822b7649614f6f70425fbf08e2e1b5075dc0ec6d6",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "translateYPercent": 0
       }
     },
     {
@@ -4307,6 +4307,94 @@
       "groupSlug": "vintage-bulb-sprayer",
       "url": "/images/catalog/bone-review/AntqSprBulbLavender.0af70b666c7c.png",
       "sha256": "0af70b666c7c6d57080856e0700770c760cccbd82a1bd01ee163af9cc5e154ab",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBell10RollBlkDot",
+      "groupSlug": "bell-10ml-clear-13-415-rollon",
+      "url": "/images/catalog/bone-review/GBBell10RollBlkDot.2551a792cd98.png",
+      "sha256": "2551a792cd982de9fb9f68af5bf2149cfd1d777312e124dc185eac324b34a21e",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstn1ozRollonShBlk",
+      "groupSlug": "boston-round-30ml-clear-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstn1ozRollonShBlk.2a923f5d21f8.png",
+      "sha256": "2a923f5d21f818efa63b1d46d1c8bde10fbdbe79cca0bc18b890481c0aa55244",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstn2ozMtlRollGl",
+      "groupSlug": "boston-round-60ml-clear-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstn2ozMtlRollGl.cb4a33cbfcf3.png",
+      "sha256": "cb4a33cbfcf38f4c9a659c09cd570cd1ba9c93923cf0db192bf1d10c30c57784",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozRollonMattGl",
+      "groupSlug": "boston-round-30ml-amber-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstnAmb1ozRollonMattGl.1265d93107af.png",
+      "sha256": "1265d93107afd5b09c3c347726d83cf11d17b5430b068a6b9615ad81dc7e243d",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozRollonMattGl",
+      "groupSlug": "boston-round-60ml-amber-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstnAmb2ozRollonMattGl.5b727e39ed91.png",
+      "sha256": "5b727e39ed91c9b84bb50b110f0774725b25d0d02323db23a223e47f732ae1c4",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozRollonMattBlk",
+      "groupSlug": "boston-round-30ml-cobalt-blue-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstnBlu1ozRollonMattBlk.538c7caa02ec.png",
+      "sha256": "538c7caa02ec82a0e8b331664979d10178da2bed6e1f5f1993ab38fdffc3d75f",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBBstnBlu2ozRollonMattGl",
+      "groupSlug": "boston-round-60ml-cobalt-blue-20-400-rollon",
+      "url": "/images/catalog/bone-review/GBBstnBlu2ozRollonMattGl.4752f301b07b.png",
+      "sha256": "4752f301b07b2a9befb4d45c9da7d785400e7ead2ada66cf9717a76ab34e85e5",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "websiteSku": "GBCrcl15RollBlkSh",
+      "groupSlug": "circle-15ml-clear-13-415-rollon",
+      "url": "/images/catalog/bone-review/GBCrcl15RollBlkSh.2c830a1e23cd.png",
+      "sha256": "2c830a1e23cd99f63edf9c3fd5cbcaf23f0c2d647ee31e3ade5a5f5dcb2c5bc1",
       "framing": {
         "scale": 1,
         "translateXPercent": 0,

@@ -33,6 +33,8 @@ export interface CartItem {
     shopifyVariantId?: string | null;
     /** False when Shopify will refuse the sale (DRAFT/unpublished product). */
     shopifySellable?: boolean | null;
+    /** Catalog stock label. Sold-out lines stay in the cart as quote-only. */
+    stockStatus?: string | null;
     websiteSku?: string | null;
     variantId?: string | null;
     productGroupSlug?: string | null;
@@ -157,7 +159,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
                     // A synced `false` is authoritative — a DRAFT Shopify
                     // product 410s at checkout regardless of variant ID.
                     const shopifySellable = item.shopifySellable ?? existing.shopifySellable ?? undefined;
-                    const checkoutEligible = shopifySellable === false
+                    const stockStatus = item.stockStatus ?? existing.stockStatus ?? undefined;
+                    // Explicit false (sold-out / quote-only) wins over a stored
+                    // variant ID so the drawer minimum matches the resolver.
+                    const checkoutEligible = shopifySellable === false || item.checkoutEligible === false
                         ? false
                         : Boolean(shopifyVariantId) || item.checkoutEligible === true || existing.checkoutEligible === true;
 
@@ -175,6 +180,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                         unitPrice: activePrice,
                         checkoutEligible,
                         shopifySellable,
+                        stockStatus,
                         shopifyVariantId,
                         websiteSku,
                         webPrice1pc,
@@ -184,7 +190,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                     });
                 } else {
                     const shopifyVariantId = item.shopifyVariantId ?? null;
-                    const checkoutEligible = item.shopifySellable === false
+                    const checkoutEligible = item.shopifySellable === false || item.checkoutEligible === false
                         ? false
                         : Boolean(shopifyVariantId) || item.checkoutEligible === true;
                     const activePrice = resolveUnitPrice(item.quantity, {

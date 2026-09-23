@@ -1,0 +1,128 @@
+{
+ "schemaVersion": 1,
+ "release": "empire-kits-2026-09-19",
+ "batch": "dist/paper-doll/kits-from-published-2026-09-19/families/empire",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:16.491Z",
+ "shipPhrase": "ship Empire kit release 2026-09-19",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 26,
+  "approved": 26,
+  "setAside": 0,
+  "notExtracted": 5
+ },
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/empire-kits.jpg",
+ "reviewSheetSha256": "40a8c25c21fdfc26b1c30b43da83db76573eef1eaf32689df80dc44034778cd4",
+ "rows": [
+  {
+   "sku": "GBEmp100SpryCu",
+   "plateSha256": "aa7171806c0ee3aa17262b81f8c888531b72f0f8b238b38e311b89694a67af7c"
+  },
+  {
+   "sku": "GBEmp100SpryMtGl",
+   "plateSha256": "b4da3bcd5e0536655921406d05af7a66a91170bc0e6befef7565058cad5f4fd5"
+  },
+  {
+   "sku": "GBEmp100SpryMtSl",
+   "plateSha256": "bd19fed351825361ff194940fc08e89aeadeac7f3ed056443354f5832f296cf2"
+  },
+  {
+   "sku": "GBEmp100SpryShnBlk",
+   "plateSha256": "29d65773f4d81a27bc806146558b69e1899dd7696b7216cdded645e8a7d54dc0"
+  },
+  {
+   "sku": "GBEmp100SpryShnGl",
+   "plateSha256": "2770295f0415833567388e08f10d0ebcef7d2ded2ace5bc0c7f66a2d1e2abb9a"
+  },
+  {
+   "sku": "GBEmp100SpryShnSl",
+   "plateSha256": "b84b62f2d6c7149531e7c5c4ade4de28d430ae899765096b97db0ae67060a55b"
+  },
+  {
+   "sku": "GBEmp50SpryCu",
+   "plateSha256": "385070db40284d964fca82246c573eaf0a43a76f3e53b79e05f3f3aff547aa93"
+  },
+  {
+   "sku": "GBEmp50SpryMtGl",
+   "plateSha256": "7079bd317b9ca4f8c46f7fabb2661ceed72c370a5a459234dc4836d6197c2f3e"
+  },
+  {
+   "sku": "GBEmp50SpryMtSl",
+   "plateSha256": "2b0d0a1e1226a62db94043193fd4bef284ccb0588abd6dff7cd7b7ab89ae745f"
+  },
+  {
+   "sku": "GBEmp50SpryShnBlk",
+   "plateSha256": "cf05d9f456d8a86e4525e463ecf7ba4963202b9f3922b90cc9596532b5c4c98b"
+  },
+  {
+   "sku": "GBEmp50SpryShnGl",
+   "plateSha256": "ea56df690042583773f99b549dc28b6b8ce28a5a951f13ad8581dcfa24cd5773"
+  },
+  {
+   "sku": "GBEmp50SpryShnSl",
+   "plateSha256": "54d63addf5d68072c43aae8de2dadfba1f0261bf3103c199233ac6826ca5d7b5"
+  },
+  {
+   "sku": "LBEmp100LtnClOvrCap",
+   "plateSha256": "1a2989d7e9b117fa81b7eb19ec5f94f4643e229bc0fa1cdc968eee7744e9ea18"
+  },
+  {
+   "sku": "LBEmp100LtnCu",
+   "plateSha256": "6c3dee210bd4c028b3e73b1683401298c486f8ddc9c6c144d6fdcb5e1de1a344"
+  },
+  {
+   "sku": "LBEmp100LtnMtGl",
+   "plateSha256": "3a0d43e5b79c7c8ff345aa19976248abcd753a3bc1781eb62b3752cd967692fc"
+  },
+  {
+   "sku": "LBEmp100LtnMtSl",
+   "plateSha256": "ff0fd01aa91e7d27f3addb84dd0a71d84605ef8904441580a7a25dfa60b273ae"
+  },
+  {
+   "sku": "LBEmp100LtnShnBlk",
+   "plateSha256": "4535e5c6bd72f2c758c022bec1c12cb62b12618cc83da88587b0d903a53e4a2c"
+  },
+  {
+   "sku": "LBEmp100LtnShnGl",
+   "plateSha256": "5f54c88be524f3134eab4b4d2da3191491119cb5879323728f424e74c8142923"
+  },
+  {
+   "sku": "LBEmp100LtnShnSl",
+   "plateSha256": "db68e2455d6cb6e93c1a8ac5a90f83ddf1d4a698ed5ab8fcd7265b48a5d942d6"
+  },
+  {
+   "sku": "LBEmp50LtnClOvrCap",
+   "plateSha256": "1fd51f2315b06cf1bc7626939f720ece8e627b20e724e3728d748fcf895a608a"
+  },
+  {
+   "sku": "LBEmp50LtnCu",
+   "plateSha256": "272f112a4a2213acfcb51bb95bace98671b94ea9159d7f9d3a37c42cfc677ca9"
+  },
+  {
+   "sku": "LBEmp50LtnMtGl",
+   "plateSha256": "ee57cc850ff0ce8c05cb2a4911ff0b5a44ddf073a3e56ae97b445818a300ec75"
+  },
+  {
+   "sku": "LBEmp50LtnMtSl",
+   "plateSha256": "930ac23798b40601ce07c4854f9679800747b152aad6afc4774113c9a0b28c77"
+  },
+  {
+   "sku": "LBEmp50LtnShnBlk",
+   "plateSha256": "901523e6ee03867a7f32a1098d212cb0f094e6d2a225b46162f64b082f154771"
+  },
+  {
+   "sku": "LBEmp50LtnShnGl",
+   "plateSha256": "92bfde12e8a982ff757393f8853f36fefcae692154d6a524c68d6c59371a988f"
+  },
+  {
+   "sku": "LBEmp50LtnShnSl",
+   "plateSha256": "a3e8ecff333f96e9b79e622f415ef218bf56e8b855079d929b8c795d0058873a"
+  }
+ ],
+ "setAside": [],
+ "approvalSha256": "9228c0f33be373a028d2be61ed4c333299d5581f1ba2cade2b26a476764538d9"
+}

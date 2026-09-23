@@ -1,0 +1,16 @@
+{
+ "release": "atomizer-kits-2026-09-19",
+ "ship": "ship Atomizer kit release 2026-09-19",
+ "approvedBy": "Jordan Richter — authorised publication in chat 2026-09-19: 'ok lets ship The 621 prepared kits', with the contact sheets named at public/reviews/kit-completion-2026-09-19/",
+ "approvedAt": "2026-09-19T12:37:11.026Z",
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-19T12:37:11.028Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "/reviews/kit-completion-2026-09-19/atomizer-kits.jpg",
+ "skus": {
+  "GBAtom10Blk": "a2d38a2811ed3a24f2e68084190371f0bb641eb4eaf86a31544d094d2e0238e5",
+  "GBAtom5Sl": "d0f0b547002723458f59fce5c08e9c161e30bd7f6ffc98f329abe2700a57a01c"
+ },
+ "setAside": [],
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
+}

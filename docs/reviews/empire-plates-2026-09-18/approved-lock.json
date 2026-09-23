@@ -1,0 +1,647 @@
+{
+ "schemaVersion": 1,
+ "release": "Empire plates 2026-09-18",
+ "approvedAt": "2026-09-19T05:06:37.421Z",
+ "actor": "Jordan · approved the Empire contact sheet in chat (\"perfect\")",
+ "approvalId": "25f7147d-e8d9-4735-b392-989a2e1e111e",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/empire-new-plates.jpg",
+ "reviewPacketSha256": "86edb4737be2fafa5e51aa98cbc597de050ee6c2bbd3efb419659ef07211a357",
+ "approvalFile": "dist/paper-doll/empire-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "403c5746f5b5fd791bbe2db1d32e4f3d66734888054109d2b58c3ed7fca02f5a",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "LBEmp100LtnClOvrCap",
+   "graceSku": "LB-EMP-CLR-100ML-LPM-COCP",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/LBEmp100LtnClOvrCap.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/LBEmp100LtnClOvrCap/1a2989d7e9b117fa81b7eb19ec5f94f4643e229bc0fa1cdc968eee7744e9ea18.front-on-1000x1100.webp",
+    "sha256": "1a2989d7e9b117fa81b7eb19ec5f94f4643e229bc0fa1cdc968eee7744e9ea18",
+    "bytes": 15004,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "94ccdceb5feec8230dd1ad4067eaa3bb734fd1db7366e015717d254f26c34abd",
+    "bytes": 1370
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/28. LBEmp100LtnClOvrCap.psd",
+    "sha256": "cdefc24bbd068559d0cb42543ed3b0a9c531bfd34484fbaa7ad15b127d93145b"
+   }
+  },
+  {
+   "sku": "LBEmp100LtnCu",
+   "graceSku": "LB-EMP-CLR-100ML-LPM-CPR",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/LBEmp100LtnCu.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/LBEmp100LtnCu/6c3dee210bd4c028b3e73b1683401298c486f8ddc9c6c144d6fdcb5e1de1a344.front-on-1000x1100.webp",
+    "sha256": "6c3dee210bd4c028b3e73b1683401298c486f8ddc9c6c144d6fdcb5e1de1a344",
+    "bytes": 13014,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "77badb2d7c2b2c249a8925b672b6dabf9fef27b750db0f3f892f54510f382b87",
+    "bytes": 1348
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/58. LBEmp100LtnCu.psd",
+    "sha256": "1dec5f3117c8749944734d7ca2b4ba09b7fa2748aba22c44c93660bbc42553e4"
+   }
+  },
+  {
+   "sku": "LBEmp100LtnMtGl",
+   "graceSku": "LB-EMP-CLR-100ML-LPM-MGLD",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/LBEmp100LtnMtGl.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/LBEmp100LtnMtGl/3a0d43e5b79c7c8ff345aa19976248abcd753a3bc1781eb62b3752cd967692fc.front-on-1000x1100.webp",
+    "sha256": "3a0d43e5b79c7c8ff345aa19976248abcd753a3bc1781eb62b3752cd967692fc",
+    "bytes": 12472,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "1df8780622d1df23c68e088c073ea428d3775b8c05896d076f93a14ae8f38c5d",
+    "bytes": 1340
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/12. LBEmp100LtnMtGl.psd",
+    "sha256": "a2600c07a392b9acf3f87d54f12c096d8b9b59494816989316798e8bf4d8948b"
+   }
+  },
+  {
+   "sku": "LBEmp100LtnMtSl",
+   "graceSku": "LB-EMP-CLR-100ML-LPM-MSLV",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/LBEmp100LtnMtSl.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/LBEmp100LtnMtSl/ff0fd01aa91e7d27f3addb84dd0a71d84605ef8904441580a7a25dfa60b273ae.front-on-1000x1100.webp",
+    "sha256": "ff0fd01aa91e7d27f3addb84dd0a71d84605ef8904441580a7a25dfa60b273ae",
+    "bytes": 11652,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "82ccbe3817e7fa6ae637729300e74d343db81e3cb2e2afed1fa6d2dfc5015682",
+    "bytes": 1266
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/26. LBEmp100LtnMtSl.psd",
+    "sha256": "a95e1627c43e39cf7d710fbcdf18797deec030de71e9bdd30c20d82500a2c610"
+   }
+  },
+  {
+   "sku": "LBEmp100LtnShnBlk",
+   "graceSku": "LB-EMP-CLR-100ML-LPM-SBLK",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/LBEmp100LtnShnBlk.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/LBEmp100LtnShnBlk/4535e5c6bd72f2c758c022bec1c12cb62b12618cc83da88587b0d903a53e4a2c.front-on-1000x1100.webp",
+    "sha256": "4535e5c6bd72f2c758c022bec1c12cb62b12618cc83da88587b0d903a53e4a2c",
+    "bytes": 12504,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "cd815d53bfec106e893efd403618df549a6ff75258eead8474b59864b159c482",
+    "bytes": 1296
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/22. LBEmp100LtnShnBlk.psd",
+    "sha256": "4b3e0a4e5a050c085dfb9662b2a60648446d516cf6c2dd6b1cffdb08bba83f49"
+   }
+  },
+  {
+   "sku": "LBEmp100LtnShnGl",
+   "graceSku": "LB-EMP-CLR-100ML-LPM-SGLD",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/LBEmp100LtnShnGl.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/LBEmp100LtnShnGl/5f54c88be524f3134eab4b4d2da3191491119cb5879323728f424e74c8142923.front-on-1000x1100.webp",
+    "sha256": "5f54c88be524f3134eab4b4d2da3191491119cb5879323728f424e74c8142923",
+    "bytes": 14034,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "24aaef69e986dd7097afbaddaff325c92a6e94fc5af2de7ae3fc083e09b25023",
+    "bytes": 1488
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/18. LBEmp100LtnShnGl.psd",
+    "sha256": "1dd253e8b584a5a893538dcfe2d8dcb6c9009ac1b838cfee317446605eec1647"
+   }
+  },
+  {
+   "sku": "LBEmp100LtnShnSl",
+   "graceSku": "LB-EMP-CLR-100ML-LPM-SSLV",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/LBEmp100LtnShnSl.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/LBEmp100LtnShnSl/db68e2455d6cb6e93c1a8ac5a90f83ddf1d4a698ed5ab8fcd7265b48a5d942d6.front-on-1000x1100.webp",
+    "sha256": "db68e2455d6cb6e93c1a8ac5a90f83ddf1d4a698ed5ab8fcd7265b48a5d942d6",
+    "bytes": 13190,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "501debe99016846906d14d4717d7e2e8f8b2513a5bd85f3de7450ed6c0c2bae4",
+    "bytes": 1240
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/32. LBEmp100LtnShnSl.psd",
+    "sha256": "19cb0a399ccffd916170ca0a16b3382be606d47f65c8dd94c505443ae005b705"
+   }
+  },
+  {
+   "sku": "GBEmp100SpryCu",
+   "graceSku": "GB-EMP-CLR-100ML-SPR-CPR",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/GBEmp100SpryCu.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/GBEmp100SpryCu/aa7171806c0ee3aa17262b81f8c888531b72f0f8b238b38e311b89694a67af7c.front-on-1000x1100.webp",
+    "sha256": "aa7171806c0ee3aa17262b81f8c888531b72f0f8b238b38e311b89694a67af7c",
+    "bytes": 12420,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "077cc61a67ab77cc626140bac7a40842ab126c18b46a3a1a0a2d105dc27cc64a",
+    "bytes": 1222
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/55. GBEmp100SpryCu.psd",
+    "sha256": "a37f4827975caf2d38920a8364d60e30f9b7eae30121494bf4fd23f2fbcb6a70"
+   }
+  },
+  {
+   "sku": "GBEmp100SpryMtGl",
+   "graceSku": "GB-EMP-CLR-100ML-SPR-MGLD",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/GBEmp100SpryMtGl.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/GBEmp100SpryMtGl/b4da3bcd5e0536655921406d05af7a66a91170bc0e6befef7565058cad5f4fd5.front-on-1000x1100.webp",
+    "sha256": "b4da3bcd5e0536655921406d05af7a66a91170bc0e6befef7565058cad5f4fd5",
+    "bytes": 11892,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "3f536485aa3290e9df35e34bae37b0974556ee9a1debc2fc3d8c8512a52360f7",
+    "bytes": 1228
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/11. GBEmp100SpryMtGl.psd",
+    "sha256": "7fd21f02d1cc611c9ba3aa47d0a0acb19a61142f9da3037b63131fb2229ee313"
+   }
+  },
+  {
+   "sku": "GBEmp100SpryMtSl",
+   "graceSku": "GB-EMP-CLR-100ML-SPR-MSLV",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/GBEmp100SpryMtSl.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/GBEmp100SpryMtSl/bd19fed351825361ff194940fc08e89aeadeac7f3ed056443354f5832f296cf2.front-on-1000x1100.webp",
+    "sha256": "bd19fed351825361ff194940fc08e89aeadeac7f3ed056443354f5832f296cf2",
+    "bytes": 10996,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "d1aeae13a15c4b7f2a38ac03f647aca5e5bccb78a005205b2397aef93b465b33",
+    "bytes": 1136
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/24. GBEmp100SpryMtSl.psd",
+    "sha256": "02a29f5699cc4413b84ace97f7297ffc66758890442281e6366c1ed6ca639d0d"
+   }
+  },
+  {
+   "sku": "GBEmp100SpryShnBlk",
+   "graceSku": "GB-EMP-CLR-100ML-SPR-SBLK",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/GBEmp100SpryShnBlk.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/GBEmp100SpryShnBlk/29d65773f4d81a27bc806146558b69e1899dd7696b7216cdded645e8a7d54dc0.front-on-1000x1100.webp",
+    "sha256": "29d65773f4d81a27bc806146558b69e1899dd7696b7216cdded645e8a7d54dc0",
+    "bytes": 12072,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "bbbecb7455e91a060fc1133fa78f00d241390aa4ec9052772501b6817af6b2d8",
+    "bytes": 1180
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/21. GBEmp100SpryShnBlk.psd",
+    "sha256": "9c68b802dbd97a76c5262fd46836fe67b58f67eaf5971c686662583a67ac6f0d"
+   }
+  },
+  {
+   "sku": "GBEmp100SpryShnGl",
+   "graceSku": "GB-EMP-CLR-100ML-SPR-SGLD",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/GBEmp100SpryShnGl.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/GBEmp100SpryShnGl/2770295f0415833567388e08f10d0ebcef7d2ded2ace5bc0c7f66a2d1e2abb9a.front-on-1000x1100.webp",
+    "sha256": "2770295f0415833567388e08f10d0ebcef7d2ded2ace5bc0c7f66a2d1e2abb9a",
+    "bytes": 13538,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "4df576797f2919cf9de77c92583e136b0728438f5681420c5991f55b7b4958f9",
+    "bytes": 1370
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/17. GBEmp100SpryShnGl.psd",
+    "sha256": "dc6087f575351ec3eb05ac9dcdffdef3e2301ae344a329735e885881cbf3d097"
+   }
+  },
+  {
+   "sku": "GBEmp100SpryShnSl",
+   "graceSku": "GB-EMP-CLR-100ML-SPR-SSLV",
+   "familyId": "empire-100ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-100ml-clear-18-415/GBEmp100SpryShnSl.front-on.webp",
+    "storeKey": "plates/empire-100ml-clear-18-415/GBEmp100SpryShnSl/b84b62f2d6c7149531e7c5c4ade4de28d430ae899765096b97db0ae67060a55b.front-on-1000x1100.webp",
+    "sha256": "b84b62f2d6c7149531e7c5c4ade4de28d430ae899765096b97db0ae67060a55b",
+    "bytes": 12832,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "c868c0a4e5ffa2c9c87b23d6588624d74ba74a3f7f70cce50a887a99cdd1327c",
+    "bytes": 1080
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/22.  100 Empire, Ltn & Spry, capped/30. GBEmp100SpryShnSl.psd",
+    "sha256": "eafd4eff6098d59373b4505a882644038745af471956627767575638a54570c9"
+   }
+  },
+  {
+   "sku": "LBEmp50LtnClOvrCap",
+   "graceSku": "LB-EMP-CLR-50ML-LPM-COCP",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/LBEmp50LtnClOvrCap.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/LBEmp50LtnClOvrCap/1fd51f2315b06cf1bc7626939f720ece8e627b20e724e3728d748fcf895a608a.front-on-1000x1100.webp",
+    "sha256": "1fd51f2315b06cf1bc7626939f720ece8e627b20e724e3728d748fcf895a608a",
+    "bytes": 14144,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "ac83812812aeebf244af903be936b028fb4f7f5ff99b8f494a43da9bcdd2c409",
+    "bytes": 1402
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/28. LBEmp50LtnClOvrCap.psd",
+    "sha256": "f86ac96649bf892d120ae495b38861106c249d604e7c613ad8474140c3978be4"
+   }
+  },
+  {
+   "sku": "LBEmp50LtnCu",
+   "graceSku": "LB-EMP-CLR-50ML-LPM-CPR",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/LBEmp50LtnCu.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/LBEmp50LtnCu/272f112a4a2213acfcb51bb95bace98671b94ea9159d7f9d3a37c42cfc677ca9.front-on-1000x1100.webp",
+    "sha256": "272f112a4a2213acfcb51bb95bace98671b94ea9159d7f9d3a37c42cfc677ca9",
+    "bytes": 12790,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "53445018962ce388bbf8db2775898809887db05ff4f520d720e86b69715aaa58",
+    "bytes": 1364
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/61. LBEmp50LtnCu.psd",
+    "sha256": "96a3aa4811b2997bd431a1622a71e378966a7fc4d969f4e44d851fd8d2a71976"
+   }
+  },
+  {
+   "sku": "LBEmp50LtnMtGl",
+   "graceSku": "LB-EMP-CLR-50ML-LPM-MGLD",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/LBEmp50LtnMtGl.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/LBEmp50LtnMtGl/ee57cc850ff0ce8c05cb2a4911ff0b5a44ddf073a3e56ae97b445818a300ec75.front-on-1000x1100.webp",
+    "sha256": "ee57cc850ff0ce8c05cb2a4911ff0b5a44ddf073a3e56ae97b445818a300ec75",
+    "bytes": 12326,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "03e273cd4e8aee15519d909c4962106f131999d1307d8c67926d28dd7fa5ff99",
+    "bytes": 1274
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/12. LBEmp50LtnMtGl.psd",
+    "sha256": "2b49610054805d146edb860fd1ac3b02b5d199c59b3d9a7f98c79698e2e91f0c"
+   }
+  },
+  {
+   "sku": "LBEmp50LtnMtSl",
+   "graceSku": "LB-EMP-CLR-50ML-LPM-MSLV",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/LBEmp50LtnMtSl.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/LBEmp50LtnMtSl/930ac23798b40601ce07c4854f9679800747b152aad6afc4774113c9a0b28c77.front-on-1000x1100.webp",
+    "sha256": "930ac23798b40601ce07c4854f9679800747b152aad6afc4774113c9a0b28c77",
+    "bytes": 11324,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "b96a3d99df462081ea177d816b616d14820e4c5ca4e59fc044ffa29489a92dfc",
+    "bytes": 1200
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/26. LBEmp50LtnMtSl.psd",
+    "sha256": "5657d3ac140bff7729cf2053c0a84254a26186177d16a47514bea280d5a93421"
+   }
+  },
+  {
+   "sku": "LBEmp50LtnShnBlk",
+   "graceSku": "LB-EMP-CLR-50ML-LPM-SBLK",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/LBEmp50LtnShnBlk.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/LBEmp50LtnShnBlk/901523e6ee03867a7f32a1098d212cb0f094e6d2a225b46162f64b082f154771.front-on-1000x1100.webp",
+    "sha256": "901523e6ee03867a7f32a1098d212cb0f094e6d2a225b46162f64b082f154771",
+    "bytes": 12304,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "ac9aa2f882d5aa43fb36950f086258de2881b4ec778f85128ffa7a817f37d6fd",
+    "bytes": 1266
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/22. LBEmp50LtnShnBlk.psd",
+    "sha256": "9c1fb39747a6555d0d04551fbeaf6cea48f14cff7696b7014743efbd169da25a"
+   }
+  },
+  {
+   "sku": "LBEmp50LtnShnGl",
+   "graceSku": "LB-EMP-CLR-50ML-LPM-SGLD",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/LBEmp50LtnShnGl.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/LBEmp50LtnShnGl/92bfde12e8a982ff757393f8853f36fefcae692154d6a524c68d6c59371a988f.front-on-1000x1100.webp",
+    "sha256": "92bfde12e8a982ff757393f8853f36fefcae692154d6a524c68d6c59371a988f",
+    "bytes": 13998,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "1f916c69b5990f09d00f0c7d25e683f2288ec7e8df3d3320e24a1feaa8f22163",
+    "bytes": 1454
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/18. LBEmp50LtnShnGl.psd",
+    "sha256": "afa7462caa7a9a718d726c8148b8d7994472751d0d3351b66c42f67241ffb173"
+   }
+  },
+  {
+   "sku": "LBEmp50LtnShnSl",
+   "graceSku": "LB-EMP-CLR-50ML-LPM-SSLV",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Lotion Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/LBEmp50LtnShnSl.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/LBEmp50LtnShnSl/a3e8ecff333f96e9b79e622f415ef218bf56e8b855079d929b8c795d0058873a.front-on-1000x1100.webp",
+    "sha256": "a3e8ecff333f96e9b79e622f415ef218bf56e8b855079d929b8c795d0058873a",
+    "bytes": 13174,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "7af8f0a3da811c20dc64ffcbb2a0bf0e2f105a7b815363805a4e9584395c3a7c",
+    "bytes": 1302
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/32. LBEmp50LtnShnSl.psd",
+    "sha256": "815ffc84313cfbb42f444d8a768c1c6b75e1067a74c0743e333c5aeb94ab8018"
+   }
+  },
+  {
+   "sku": "GBEmp50SpryCu",
+   "graceSku": "GB-EMP-CLR-50ML-SPR-CPR",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/GBEmp50SpryCu.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/GBEmp50SpryCu/385070db40284d964fca82246c573eaf0a43a76f3e53b79e05f3f3aff547aa93.front-on-1000x1100.webp",
+    "sha256": "385070db40284d964fca82246c573eaf0a43a76f3e53b79e05f3f3aff547aa93",
+    "bytes": 12494,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "19c4aff00794f884a451676cffceb3d225d40c0fe8ff72584e0f87034f6e7c72",
+    "bytes": 1228
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/58. GBEmp50SpryCu.psd",
+    "sha256": "6b70e41f2b50c0dab8c04ebbeb3f7a39bf2c5a4462f12bef548e4298d4c24f0c"
+   }
+  },
+  {
+   "sku": "GBEmp50SpryMtGl",
+   "graceSku": "GB-EMP-CLR-50ML-SPR-MGLD",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/GBEmp50SpryMtGl.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/GBEmp50SpryMtGl/7079bd317b9ca4f8c46f7fabb2661ceed72c370a5a459234dc4836d6197c2f3e.front-on-1000x1100.webp",
+    "sha256": "7079bd317b9ca4f8c46f7fabb2661ceed72c370a5a459234dc4836d6197c2f3e",
+    "bytes": 11956,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "1b906ccfaad65a8ce7962c3f47e4936111281e0fd2d1abbe42fa591052c6bff3",
+    "bytes": 1160
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/11. GBEmp50SpryMtGl.psd",
+    "sha256": "d56899d8735557c9b5835d402e98e33766fbc40cb908cf34bf34a4314be371c1"
+   }
+  },
+  {
+   "sku": "GBEmp50SpryMtSl",
+   "graceSku": "GB-EMP-CLR-50ML-SPR-MSLV",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/GBEmp50SpryMtSl.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/GBEmp50SpryMtSl/2b0d0a1e1226a62db94043193fd4bef284ccb0588abd6dff7cd7b7ab89ae745f.front-on-1000x1100.webp",
+    "sha256": "2b0d0a1e1226a62db94043193fd4bef284ccb0588abd6dff7cd7b7ab89ae745f",
+    "bytes": 10708,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "79353066677277c62f87b5ded295f7ca596b808d643477a5d6f4e40bd4112094",
+    "bytes": 1102
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/24. GBEmp50SpryMtSl.psd",
+    "sha256": "159ade841e6db927ae1f1e0332e0c0ed2e534447aa93a9fbbe99b53560d41daa"
+   }
+  },
+  {
+   "sku": "GBEmp50SpryShnBlk",
+   "graceSku": "GB-EMP-CLR-50ML-SPR-SBLK",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/GBEmp50SpryShnBlk.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/GBEmp50SpryShnBlk/cf05d9f456d8a86e4525e463ecf7ba4963202b9f3922b90cc9596532b5c4c98b.front-on-1000x1100.webp",
+    "sha256": "cf05d9f456d8a86e4525e463ecf7ba4963202b9f3922b90cc9596532b5c4c98b",
+    "bytes": 12022,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "4a692392f525db64b4ff4d7f8fc435ca4e04d86e25e354a7e796a5bec496376b",
+    "bytes": 1162
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/21. GBEmp50SpryShnBlk.psd",
+    "sha256": "7f2749c3a00c18a46e2ac2c904bc57f19751cd423e69ba978caa93e330f50b79"
+   }
+  },
+  {
+   "sku": "GBEmp50SpryShnGl",
+   "graceSku": "GB-EMP-CLR-50ML-SPR-SGLD",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/GBEmp50SpryShnGl.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/GBEmp50SpryShnGl/ea56df690042583773f99b549dc28b6b8ce28a5a951f13ad8581dcfa24cd5773.front-on-1000x1100.webp",
+    "sha256": "ea56df690042583773f99b549dc28b6b8ce28a5a951f13ad8581dcfa24cd5773",
+    "bytes": 13778,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "cc4886e5d5dc03977fa48a8daa301583d01f714de29755602b385a32c24f858b",
+    "bytes": 1368
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/17. GBEmp50SpryShnGl.psd",
+    "sha256": "f6a0858ff2363db9b6df35bf7ddd742248a09a8373d47c3d72d6ce219b300f06"
+   }
+  },
+  {
+   "sku": "GBEmp50SpryShnSl",
+   "graceSku": "GB-EMP-CLR-50ML-SPR-SSLV",
+   "familyId": "empire-50ml-clear-18-415",
+   "closure": "Perfume Spray Pump",
+   "plate": {
+    "key": "empire-50ml-clear-18-415/GBEmp50SpryShnSl.front-on.webp",
+    "storeKey": "plates/empire-50ml-clear-18-415/GBEmp50SpryShnSl/54d63addf5d68072c43aae8de2dadfba1f0261bf3103c199233ac6826ca5d7b5.front-on-1000x1100.webp",
+    "sha256": "54d63addf5d68072c43aae8de2dadfba1f0261bf3103c199233ac6826ca5d7b5",
+    "bytes": 13114,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "289ff7a8887a17bfda8948a771bdb499fec8ce22d22cc3711c73431b81cb426c",
+    "bytes": 1206
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/21.  50 Empire, Ltn & Spry, capped/30. GBEmp50SpryShnSl.psd",
+    "sha256": "ed2518f2c951bba670baf236cf4521bf7b25d0f5fcd32db87c0aaa78759f2344"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 87,
+  "alreadyLiveAndExcluded": 61
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}

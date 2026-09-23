@@ -1,0 +1,298 @@
+{
+  "checkedAt": "2026-09-22",
+  "count": 36,
+  "evidenceSheets": [
+    "cylinder-reducer-review-1.jpg",
+    "cylinder-reducer-review-2.jpg"
+  ],
+  "rows": [
+    {
+      "sku": "GBCyl100RdcrShnGl",
+      "plateSha256": "0cdc41b90f8901516d0cdf6044e578beb0ae17f3ad20f2e8b4372cf780e8fd52",
+      "partSha256": "dab29659821ed04eb9d966c9c099e54e5f55601eb2e61b350a6f2599a96b3504",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrShnBlkTall",
+      "plateSha256": "65011ea00cde7879f32cd9410a46263e31d24287c1f2dc91598cdf2c352dedca",
+      "partSha256": "4a3f5cf1e401136c2521dd312caa8552c83b222e8157abe0ef19d716321428e7",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrShnBlk",
+      "plateSha256": "3f2fbd2f683cba28a7a24db995fb195c04cbc93c24f5a8d98c35c54052f75175",
+      "partSha256": "e9fd2dad20ba7feea657288d1b8410c181a3994588b43bceb89e1bffc7bf13f5",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrBrwnLthr",
+      "plateSha256": "e51523f656d6a6fa359b8153b430fbdaf316f93861818c4fab809904e74c5d28",
+      "partSha256": "21808745054d54ffca50f7038354365bed6b753f9bd3a8791da3c3044e76fdb1",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrLBrwnLthr",
+      "plateSha256": "972c64df931436a66f2fb34c0cf8f614ea535eef095e83b2c3f217171d55a1dc",
+      "partSha256": "94a4d8b3b4f1fb73ab6ea9b4c3011dee2c271c56f32c2169177cc6105daa0ccc",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrShnSl",
+      "plateSha256": "41a0525b1fd286339dc8adeaa438617956be395ee62360390ccae4102d16bf95",
+      "partSha256": "bf4696c3d9e696b01bd7ce900aa92d03a1cc716312099ff61cdcd06ae3825098",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrMtSlTall",
+      "plateSha256": "76cb0f9f099bb15672f5c61b91b4779c26fd58a24eaf2fa7ecc06d68dc449481",
+      "partSha256": "ae971229c1629b10cddd370855c826e9a803ba97052d7422b5ff478ee1f7ce64",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrMtSl",
+      "plateSha256": "6c7521ec559f74f341c26c557103f8d04be1d6f231883cb029421039e8407c07",
+      "partSha256": "1e3978adf24c33be661fc9c41d273478c31344bf8bb3b9cecfc35ab9549bdd91",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrWht",
+      "plateSha256": "c2fe04a80229f8091ef475fe7fffb7499e0fd905da748f15c8a93f6c392fbb97",
+      "partSha256": "1df326b9d639c501b27cdd690b4c1461e88808c483022d1922d29956d174620a",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrIvyLthr",
+      "plateSha256": "9a20ed26ff0172a1449a3b1d65077ae2ee7600e63255e81b6ae7c7903ed50730",
+      "partSha256": "f2258268db6254903bdfca9d36590b7e83bdedeed9d2fc2e980592c0ee8a7a76",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrPnkLthr",
+      "plateSha256": "d8cb8e2b743433188810c31a50505ceec026e9a6323bb1375f91666add31fdf6",
+      "partSha256": "4662fec0819d161bbffd7f66d2478d9c5d319194539296f6465ec7cc3854503b",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrBlkLthr",
+      "plateSha256": "a190daade148335c982bb03f6c734ec7c3c4e51b6eee311e52a1a2779a7b2f5c",
+      "partSha256": "70603e60c07b276f602692f3dda18bbffcb2439ce2ccf69d4a78253bb66794f2",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl100RdcrBlkLthr",
+      "plateSha256": "8e1180dae8f4e8c9b0223877b33ffc6b98207cefec296373cdd733c667b94669",
+      "partSha256": "b3a3a4aea45f9f94a0ee8e97fdb145fb6cb13c626988c3fa78892befad40ed8c",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrShnGl",
+      "plateSha256": "f717a99eb23d3c1669ef8b486810923dd05aff93310e9814034c801829d1ece7",
+      "partSha256": "1276d1e06e3147849ba51abe190befdd33c63a86550be74a0ef6944df90bf8bb",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrShnBlkTall",
+      "plateSha256": "4785d3abc5e6abbd465c70138cbae4226887879c9e4e36fef95418981dc1c4e7",
+      "partSha256": "3898d7c52ad81567b44453386db3524dd250e3644893776fcf06ef1c9325139c",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrShnBlk",
+      "plateSha256": "ca9715710f4e82a25d316ea2c2575dd206790ad6d35f566ad137f97fba02ea4d",
+      "partSha256": "25e3f20f6b2dd9585d81535547a0ef682b9df91b82c03a9cc6f16ea5e40b482b",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrBrwnLthr",
+      "plateSha256": "7eed0e8e15ea47f35261140e27caa1cf257ee941e79116da71efa73a7e07624f",
+      "partSha256": "2533d79ef228be4cbf1da4de711e0b8a394cff8b9e1f4e4d9b1a8c5411503e3a",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrLBrwnLthr",
+      "plateSha256": "7912327344267193d2a664b49eb0221b12cf4a0b0975b5f9c06c3a6151c57210",
+      "partSha256": "472dab33adbc6a595b53c272d59ceee203b0f66a569cd902beb34fcd53977abc",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrShnSl",
+      "plateSha256": "5394d5c7c58200a949bad0ba4b7cd63df5398b858282e039e35ccbc700cafc14",
+      "partSha256": "ed449b1c8eaa0c128e0c305837feb92487a789b4090db10d187377080aea1fdc",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrMtSlTall",
+      "plateSha256": "1a89572896e5ed3cc532894ed981aaa8a2de91f3d1a0f3993e2a34200eea065f",
+      "partSha256": "fe5ba75a9b4ff9cae47d64ca5af9335967c8a60c26f8e9a18b00da795b06dca8",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrMtSl",
+      "plateSha256": "aa79a483dda058fde7f62cf3248d400aa11db5f8464bfebcd567f54bb5296d2e",
+      "partSha256": "3d99fe3ee791194772135017137892e736c6ee2d7094117cf43a984509cfb12b",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrWht",
+      "plateSha256": "177a91bc05d8f77f231620120636ab1ef37d35bb6a8dbbc8ce6c8a092850baaa",
+      "partSha256": "a2bceb86d5287abe42c15cba57a13ca3a6dde13b7ada9decf4460fbecf2278e6",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrPnkLthr",
+      "plateSha256": "f0d31b7d5a486e5f7d8f7d147c5423b611a457eab82c3bf2c2ae6ac0fb40d469",
+      "partSha256": "583d51896b60e99ce38c1c8cf895a47f7bd1cac7d5aa1fa03ef7c3cc3e05a1ca",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl50RdcrIvyLthr",
+      "plateSha256": "56a8eb9199ebe435c4e0fa9eb46c9ad2f3ac17b1e3d19f3289ee74b54567474a",
+      "partSha256": "fa117f8efe9a01d85c8c82735a1c441a45489215bcd7c5cef0e7cbae30727046",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl25RdcrIvyLthr",
+      "plateSha256": "1f4e682f174f6a86cf5fbad813e956f0fa7610483b6bf6e97dbd3c39f5342727",
+      "partSha256": "40518bca4716afd3805b8dff0d4ad40de6573d185681d6728184092de0fd5298",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBCyl25RdcrShnGl",
+      "plateSha256": "9fc5e30d5c646fb053d936f852842572df423166676938c901242b011fbab5cd",
+      "partSha256": "692879a26612e3643c397c152bf85c32279c7383dfccf86b608eefe0e86bda7b",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBcyl25RdcrBlkLthr",
+      "plateSha256": "eae158e4bedc78b9fa908a9d138e606adc4a3907e501ab3a958ef77fdad87de0",
+      "partSha256": "aad5370fb7d72b3c5e9388a4253f539e2ad84b0fc3d82fdc3909486b9a371109",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBcyl25RdcrBrwnLthr",
+      "plateSha256": "20f0efd2ad772a387a77669370f16dd412752236cd961fb3567fa73be0064379",
+      "partSha256": "ad0641b9c3a2ffe372be4fb2da073db637d83b3419046f5c70c02516f89a17a2",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBcyl25RdcrLBrwnLthr",
+      "plateSha256": "29a6102c39abb3b68273cd612f6453c0ad5997196106bf92076ba870928afd60",
+      "partSha256": "3b8cfbf5129048763b13ad765d18b0be2a0e8efd417ef3d8e506d607cc240257",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBcyl25RdcrMtSl",
+      "plateSha256": "7603cf3cea8f7c85b3ba9bc024b3d4ef13ad8cf5ed1a63efa642c0bee04aa859",
+      "partSha256": "5439a9e6d4c04c8059f5f0558c35636a4ada110df7bec45f32823d11b6277d91",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBcyl25RdcrMtSlTall",
+      "plateSha256": "4c6371d9314b4a7d20d51cbf52198c12d21ff91411ca1ad440dae3198a7a92dc",
+      "partSha256": "a077294f28a5996e21c124d9fbd65399fdb092d5851fa38dd61fa9f91108f643",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBcyl25RdcrPnkLthr",
+      "plateSha256": "2815b7cf073c6ec2261eccc89459029763ba632a84b82e6e8620be07e062351e",
+      "partSha256": "cc39dee1298e1273cd5d95ebe3c0277a4c6c4002f5440c9ab376ce09b98a9bf1",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBcyl25RdcrShnBlk",
+      "plateSha256": "09092609dbf9a91e3cfab7a1970175c147c48476005ce74da6b80ca21affd99f",
+      "partSha256": "f571e5d2bfd602b8e79008619aed72beec09cf382eac97ed3c0d0687a24d80ad",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBcyl25RdcrShnBlkTall",
+      "plateSha256": "bc7ee5afbc94b222309b177be007f9be1cee412df66e9dc3958c8feeb65cdef9",
+      "partSha256": "f8ef70d50ad8e78195a335149abbf8ac62d3706ac3d9491964d66a4e9d6dfa0d",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBcyl25RdcrShnSl",
+      "plateSha256": "5772b8c6f1652977d1cb46141682fbdeeb6eac8af989b3f49fa3f600e2277a96",
+      "partSha256": "afe69ce0bd6b48f4993c97259a7f8ec99ab1aca2b502a56c5c718e61a7971bc2",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    },
+    {
+      "sku": "GBcyl25RdcrWht",
+      "plateSha256": "a2a0939d9056112faeb4c33bba5b7245ab631d019501a168124e4e285636ebac",
+      "partSha256": "f899fb33686d097f39a440209a37432e8a30c0a8547d7b38b8fce19d43cbab04",
+      "observedRole": "removable cap",
+      "currentSlot": "fitment",
+      "status": "Visually reviewed from exact hashed asset; live refresh, metadata repair and cap-off checks still pending"
+    }
+  ]
+}

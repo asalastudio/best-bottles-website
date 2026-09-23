@@ -1,0 +1,104 @@
+{
+ "schemaVersion": 1,
+ "release": "Vial alias plates 2026-09-18",
+ "approvedAt": "2026-09-19T07:12:21.197Z",
+ "actor": "Jordan · confirmed each file is the same product from the name-confirmation sheet (\"Yes, those are clean matches\")",
+ "approvalId": "68fa1055-27a1-475e-9581-c103b696e43b",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/name-confirmations.jpg",
+ "reviewPacketSha256": "79ff3adfca213b0614f33369470c5bf248772771ef76008f78538b883cb48a28",
+ "approvalFile": "dist/paper-doll/vial-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "8cced9bf93d7f13a27ae175900aa1a3b36fee700861cb8eaa501304d8be041a2",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "GBVAmb1DrmBlkDrpr",
+   "graceSku": "GB-VIA-CLR-3ML-02",
+   "familyId": "vial-4ml-amber-13-425",
+   "closure": "Dropper",
+   "plate": {
+    "key": "vial-4ml-amber-13-425/GBVAmb1DrmBlkDrpr.front-on.webp",
+    "storeKey": "plates/vial-4ml-amber-13-425/GBVAmb1DrmBlkDrpr/c6ea22945790dde75b0c711165b54171d4b40b8970b8036307fb36733bf5472e.front-on-1000x1100.webp",
+    "sha256": "c6ea22945790dde75b0c711165b54171d4b40b8970b8036307fb36733bf5472e",
+    "bytes": 15788,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "f69a309fcbd78c8561abf19bdfa8b7fd32759d13c64ed4c8ceb10d3227c3596c",
+    "bytes": 1584
+   },
+   "capOff": {
+    "sha256": "75fb51f2277bdd0e98ac699774bb9d7122e9d57c40ff7ec57610f4fb8e594494"
+   },
+   "source": {
+    "library": "master",
+    "path": "5.  13-415 Bottles/21. 1 Dram/1. 1 Dram/1.  Amber 1 Dram (capped)/2. GBVialAmb1DrmBlkDropper.psd",
+    "sha256": "b28c7748f732f3bb235ae2cd382d838afe0726fdbcc116481076e1581eda75e0"
+   }
+  },
+  {
+   "sku": "GBV1DrmBlackCapSht",
+   "graceSku": "GB-VIA-CLR-3ML-S-01",
+   "familyId": "vial-4ml-clear-13-425",
+   "closure": null,
+   "plate": {
+    "key": "vial-4ml-clear-13-425/GBV1DrmBlackCapSht.front-on.webp",
+    "storeKey": "plates/vial-4ml-clear-13-425/GBV1DrmBlackCapSht/3af2db78b0c406a05213fc89500cfebc6677cccb2d15f963f76cbd991093eb65.front-on-1000x1100.webp",
+    "sha256": "3af2db78b0c406a05213fc89500cfebc6677cccb2d15f963f76cbd991093eb65",
+    "bytes": 11196,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "c39c7b2660f4e4e739d693494f4ef7dfebf22c7c1280fc212f1aa864c489bb21",
+    "bytes": 1126
+   },
+   "capOff": {
+    "sha256": "a61b14cf68f94aa595fe68fd262c9ded33a21ac0d4ed1cc7be2848c3ef271c8b"
+   },
+   "source": {
+    "library": "master",
+    "path": "12. Vials/0. All Vials/Capped/GBVial1DrmBlackCapSht copy.psd",
+    "sha256": "90357325262886bfcbbf1e01afc4e8559fd244171674b24e2f284e9d29cddd91"
+   }
+  },
+  {
+   "sku": "GBV1DrmWhtCapSht",
+   "graceSku": "GB-VIA-CLR-3ML-S-02",
+   "familyId": "vial-4ml-clear-13-425",
+   "closure": null,
+   "plate": {
+    "key": "vial-4ml-clear-13-425/GBV1DrmWhtCapSht.front-on.webp",
+    "storeKey": "plates/vial-4ml-clear-13-425/GBV1DrmWhtCapSht/f276d7fbb8e2593bb125f00d75505258afa23fcaa19711da500557fa676a2ab2.front-on-1000x1100.webp",
+    "sha256": "f276d7fbb8e2593bb125f00d75505258afa23fcaa19711da500557fa676a2ab2",
+    "bytes": 8490,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "22710512827d8e2a3dcabff60d809375c4dcfd583a9fbd09ebb54c3932ec13cf",
+    "bytes": 828
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "12. Vials/0. All Vials/Capped/GBVial1DrmWhtCapSht copy.psd",
+    "sha256": "ca7635d04e4cbc03fd1b09a8aff0eca64468e3f6f62a9ebbe9003995bd311476"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 21,
+  "alreadyLiveAndExcluded": 18
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase.",
+ "preparedManifest": {
+  "file": "docs/reviews/vial-alias-plates-2026-09-18/prepared-manifest.json",
+  "sha256": "8cced9bf93d7f13a27ae175900aa1a3b36fee700861cb8eaa501304d8be041a2",
+  "copiedFrom": "dist/paper-doll/vial-plates-2026-09-18/plates/manifest.json"
+ }
+}

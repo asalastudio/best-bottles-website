@@ -19,7 +19,7 @@ const D = JSON.parse(readFileSync("data/asset-ledger/finish-component-diag.json"
 const P = JSON.parse(readFileSync("data/asset-ledger/dev-products-dump.json", "utf8")) as any[];
 const L = JSON.parse(readFileSync("data/legacy/legacy-catalog.json", "utf8")).rows as any[];
 const bySku = new Map(S.map(r => [r.sku, r]));
-const SRC = JSON.parse(readFileSync("src/lib/bottle-builder/source-component-links.json", "utf8"));
+const SRC = JSON.parse(readFileSync("convex/catalog-component-links.json", "utf8"));
 const sourceLinked = new Set(((Array.isArray(SRC) ? SRC : SRC.links ?? Object.values(SRC)) as any[]).map(l => l.assemblySku));
 const PP = JSON.parse(readFileSync("data/asset-ledger/prod-products-dump.json", "utf8")) as any[];
 const prodName = new Map(PP.filter(p => p.websiteSku).map(p => [p.websiteSku, p.itemName ?? ""]));

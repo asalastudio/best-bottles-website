@@ -35,6 +35,7 @@
 /.superpowers/
 
 # Local scratch and generated test outputs
+/output/cylinder-fitment-repair/
 /tmp/
 /topaz-test/
 /ziOGLQ3X
@@ -211,3 +212,15 @@ public/assets/cards/*.png
 public/assets/hero/**/*.png
 public/assets/hero/*.png
 public/assets/hero/frames/_mask.png
+public/local-kits/
+.env*.local
+
+# Local raw Cylinder generation packages; final PNGs and manifests are versioned.
+/output/imagegen/cylinder-25-30-2026-09-22/
+/output/imagegen/cylinder-9-slim-2026-09-22/
+
+# Local four-family component repair snapshots and browser captures.
+/data/repairs/four-family-components-2026-09-22/production-before.json
+/data/repairs/four-family-components-2026-09-22/local-kits.json
+/output/four-family-component-cleanup/
+/output/imagegen/circle15-fixed-body-pilot/

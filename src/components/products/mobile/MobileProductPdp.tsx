@@ -27,6 +27,7 @@ import { requiresAssembledClosure } from "@/lib/products/closure-presentation";
 import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import { shouldHideAssembledPdpLowerStack } from "@/lib/products/assembled-pdp";
 import { focusedProductPresentation } from "@/lib/products/focused-product-presentation";
 import { useCopy } from "@/i18n/useCopy";
 import {
@@ -47,6 +48,7 @@ import {
 } from "@/lib/products/mobile-pdp-view-modes";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { closureBaseFromSlug, useClosureThumbnails } from "@/lib/products/use-closure-thumbnails";
+import { capacityMlFromSlug } from "@/lib/products/group-variant-intent";
 import { useViewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import {
@@ -86,6 +88,7 @@ export type MobileProductPdpProps = {
     group: {
         family?: string | null;
         capacity?: string | null;
+        capacityMl?: number | null;
         color?: string | null;
         category?: string | null;
         neckThreadSize?: string | null;
@@ -117,6 +120,7 @@ export type MobileProductPdpProps = {
     capOptionPhotoKeys: Record<string, string[]>;
     capOptionThumbnails?: Record<string, string>;
     localKits?: Record<string, LocalKitPilot>;
+    localComponentPreviewSku?: string;
     resolveCapFinish: (variant: ProductVariant) => { label: string; swatchName: string };
     variantSku: (variant: ProductVariant) => string | null;
     onCommitVariant: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string; applicator?: string }) => void;
@@ -154,7 +158,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         addedFlash, onAddToCart, quoteHref, qty, onQtyChange, cartCount, backHref, cartAnchorRef, glassOptions,
         rollerOptions, activeApplicator, capOptions, activeCapOption, capOptionPhotoKeys, capOptionThumbnails, resolveCapFinish, variantSku,
         onCommitVariant, onCommitGlass, onPickerOpenChange, onAskGrace, description, relations, initialCompatibility,
-        volumePricing, onAddComponent, localKits = {},
+        volumePricing, onAddComponent, localKits = {}, localComponentPreviewSku,
     } = props;
 
     const isMobile = useViewportIsMobile();
@@ -163,6 +167,15 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         [group.category, group.family],
     );
     const isBottle = productPresentation.kind === "bottle";
+    const hideAssembledLowerStack = shouldHideAssembledPdpLowerStack({
+        category: group.category,
+        family: group.family,
+        assemblyType: selectedVariant?.assemblyType,
+        applicator: selectedVariant?.applicator ?? activeApplicator,
+        itemName: selectedVariant?.itemName ?? displayName,
+        websiteSku: selectedVariant?.websiteSku,
+        graceSku: selectedVariant?.graceSku,
+    });
     const closureBase = useMemo(
         () => isBottle ? closureBaseFromSlug(slug) : "none",
         [isBottle, slug],
@@ -259,10 +272,14 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const viewMode = coerceMobileViewMode(picker.viewMode, viewCaps);
 
     const plateUrlFor = (view: ProductViewMode): string | null => {
-        const wanted = view === "capOff" && shownPlate?.imageCapOff ? shownPlate.imageCapOff : shownPlate?.image ?? null;
+        const wanted = view === "capOff" && shownPlate?.imageCapOff
+            ? shownPlate.imageCapOff
+            : shownPlate?.image ?? null;
         return wanted && !brokenPlates.has(wanted) ? wanted : null;
     };
     const decodedPlate = useDecodedPlate(plateUrlFor(viewMode), markPlateBroken);
+    const preferKitPair = !assembledOnly && !shownPlate?.imageCapOff && kitHasRemovableCap(shownKit);
+    const reviewingComponents = Boolean(localComponentPreviewSku && localComponentPreviewSku === shownKit?.sku);
     const fallbackImageUrl = skuImageFallbacks[shownVariant?.websiteSku ?? ""] ?? shownVariant?.imageUrl ?? group.heroImageUrl ?? null;
 
     /* ── expanded viewer (same configured bottle, its own cap state) ─────── */
@@ -527,9 +544,10 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             <style dangerouslySetInnerHTML={{ __html: chromeCss }} />
 
             <MobileProductHero
+                hasCapOffPlate={Boolean(shownPlate?.imageCapOff)}
                 ref={heroRef}
                 plateUrl={decodedPlate.url}
-                kitParts={pilot ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
+                kitParts={reviewingComponents || pilot || preferKitPair ? kitPartsWithCap : decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
                 fallbackImageUrl={decodedPlate.url ? null : fallbackImageUrl}
                 alt={`${displayName}${previewingLabel ? ` — previewing ${previewingLabel}` : ""}`}
                 backHref={backHref}
@@ -538,6 +556,10 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 onPlateError={markPlateBroken}
                 onViewLarger={openViewer}
                 overlay={null}
+                family={group.family}
+                capacityMl={group.capacityMl ?? capacityMlFromSlug(slug)}
+                color={group.color}
+                view={viewMode === "capOff" ? "capOff" : "assembled"}
             />
 
             {/* Configure sits under the bottle, before the title, so first-time
@@ -628,6 +650,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             </section>
 
             {/* ── secondary information: compact disclosures, sticky bar stays ── */}
+            {hideAssembledLowerStack ? null : (
             <MobileProductDetails
                 variant={selectedVariant}
                 sku={resolvedSku}
@@ -641,6 +664,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 onAskGrace={onAskGrace ?? (() => {})}
                 onAddComponent={onAddComponent ?? (() => {})}
             />
+            )}
 
             {/* ── sticky Add to Cart: the same variant, price, and qty as above ── */}
             <MobileStickyPurchaseBar
@@ -660,6 +684,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             {/* ── expanded viewer: same configured bottle, Cap On | Cap Off ──── */}
             <MobileProductViewer
+                hasCapOffPlate={Boolean(shownPlate?.imageCapOff)}
                 open={viewerOpen}
                 onClose={closeViewer}
                 title={displayName}
@@ -668,11 +693,14 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 viewModes={viewModes}
                 onViewModeChange={changeViewerView}
                 plateUrl={viewerPlate.url}
-                kitParts={pilot ? viewerKitParts : viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
+                kitParts={reviewingComponents || pilot || preferKitPair ? viewerKitParts : viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
                 fallbackImageUrl={viewerPlate.url ? null : fallbackImageUrl}
                 alt={displayName}
                 onPlateError={markPlateBroken}
                 onRestoreFocus={restoreViewerFocus}
+                family={group.family}
+                capacityMl={group.capacityMl ?? capacityMlFromSlug(slug)}
+                color={group.color}
             />
 
             {/* ── the picker ───────────────────────────────────────────────── */}

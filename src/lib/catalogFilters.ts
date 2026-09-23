@@ -14,8 +14,8 @@ export const APPLICATOR_BUCKETS = [
     { value: "reducer", label: "Reducer", productValues: ["Reducer"] },
     { value: "dropper", label: "Dropper", productValues: ["Dropper"] },
     { value: "lotionpump", label: "Lotion Pump", productValues: ["Lotion Pump"] },
-    { value: "antiquespray", label: "Vintage Style Bulb Spray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
-    { value: "antiquespray-tassel", label: "Vintage Style Bulb Spray with Tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
+    { value: "vintagestyle", label: "Vintage Style Bulb Sprayer", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
+    { value: "vintagestyle-tassel", label: "Vintage Style Bulb Sprayer with Tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
     // Bottles sold with a plain screw cap and no dispensing applicator. 95 of
     // 362 catalogue groups carry this value (2026-09-02 dev snapshot), so
     // without a bucket the Product Type facet could not reach a quarter of the
@@ -74,9 +74,10 @@ export type CatalogCategoryValue = (typeof CATALOG_CATEGORY_VALUES)[number];
 /** Sidebar order for the Categories facet; categories present in data but absent here render last. */
 export const CATEGORY_ORDER: readonly string[] = CATALOG_CATEGORY_VALUES;
 
-/** Categories whose groups are bottles/jars — sorted first under "By Design Family". */
+/** Categories whose groups are bottles/jars — shown first under Featured. */
 export const BOTTLE_CATEGORIES: ReadonlySet<string> = new Set([
-    "Glass Bottle", "Glass Jar", "Cream Jar", "Aluminum Bottle", "Plastic Bottle", "Roll-On Bottle", "Lotion Bottle",
+    "Glass Bottle", "Glass Jar", "Cream Jar", "Aluminum Bottle", "Plastic Bottle",
+    "Metal Atomizer", "Roll-On Bottle", "Lotion Bottle",
 ]);
 
 /** Categories that are components/packaging — excluded from the Design Families facet. */
@@ -85,7 +86,7 @@ export const COMPONENT_CATEGORIES: ReadonlySet<string> = new Set([
     "Packaging", "Packaging Supply", "Tool", "Gift Box", "Gift Bag",
 ]);
 
-/** Bottle design families in "By Design Family" order. Families absent here sort last. */
+/** Bottle design families in merchandising order. Featured interleaves these so the first screen mixes families. */
 export const FAMILY_ORDER: readonly string[] = [
     "Cylinder", "Elegant", "Circle", "Sleek", "Diva", "Empire", "Boston Round",
     "Slim", "Diamond", "Royal", "Round", "Square", "Rectangle", "Flair",
@@ -119,10 +120,15 @@ export function detectCatalogFamily(text: string): string | null {
  * Raw rows still say "Blue" or "Cobalt" for some groups; `canonicalGlassColor`
  * folds those into the canonical label so a Grace refine of ["Cobalt Blue"]
  * and a sidebar tick of "Cobalt Blue" match the same rows.
+ * Non-glass values (Black, White, Gold, Silver, Lavender, …) return null so
+ * they never appear as glass-colour facets, URL params, or filter matches.
+ * Cap/finish recovery suggestions still handle black/white/gold/silver separately.
  */
 export const CANONICAL_GLASS_COLORS = [
-    "Clear", "Frosted", "Amber", "Cobalt Blue", "Green", "Swirl", "White", "Black", "Gold", "Silver",
+    "Clear", "Frosted", "Amber", "Cobalt Blue", "Green", "Swirl",
 ] as const;
+
+const CANONICAL_GLASS_COLOR_SET: ReadonlySet<string> = new Set(CANONICAL_GLASS_COLORS);
 
 const GLASS_COLOR_ALIASES: Record<string, string> = {
     blue: "Cobalt Blue",
@@ -135,25 +141,199 @@ const GLASS_COLOR_ALIASES: Record<string, string> = {
     clear: "Clear",
     green: "Green",
     swirl: "Swirl",
-    white: "White",
-    black: "Black",
-    gold: "Gold",
-    silver: "Silver",
 };
 
 export function canonicalGlassColor(value: string | null | undefined): string | null {
     if (!value) return null;
     const trimmed = value.trim();
     if (!trimmed) return null;
-    return GLASS_COLOR_ALIASES[trimmed.toLowerCase()] ?? trimmed;
+    const aliased = GLASS_COLOR_ALIASES[trimmed.toLowerCase()];
+    if (aliased) return aliased;
+    // Exact canonical label (any casing) — never pass through unknown colours.
+    const exact = CANONICAL_GLASS_COLORS.find((color) => color.toLowerCase() === trimmed.toLowerCase());
+    return exact && CANONICAL_GLASS_COLOR_SET.has(exact) ? exact : null;
 }
 
-/** Detect a canonical glass colour inside free text (longest alias first). */
+
+/**
+ * Metal-shell perfume atomizer body finishes (travel / purse atomizers).
+ * These are NOT glass colours — never fold them into CANONICAL_GLASS_COLORS.
+ */
+export const ATOMIZER_FINISHES = [
+    "Black",
+    "Black with Dots",
+    "Blue",
+    "Gold",
+    "Pink",
+    "Pink with Dots",
+    "Red",
+    "Silver",
+    "Silver with Dots",
+    "Silver Plain",
+    "Silver Gold",
+    "Silver Slim",
+    "Silver with Star Patterns",
+    "Green",
+    "Lavender",
+] as const;
+
+export type AtomizerFinish = (typeof ATOMIZER_FINISHES)[number];
+
+/** Cap / closure finish vocabulary (products.capColor and customer copy). */
+export const CAP_FINISHES = [
+    "Black",
+    "Shiny Black",
+    "Matte Black",
+    "Black with Dots",
+    "White",
+    "Gold",
+    "Shiny Gold",
+    "Matte Gold",
+    "Silver",
+    "Shiny Silver",
+    "Matte Silver",
+    "Silver with Dots",
+    "Pink",
+    "Pink with Dots",
+    "Rose Gold",
+    "Copper",
+    "Matte Copper",
+    "Lavender",
+    "Red",
+    "Green",
+    "Blue",
+    "Turquoise",
+    "Natural",
+    "Clear",
+    "Brown Leather",
+    "Light Brown Leather",
+    "Pink Leather",
+    "Black Leather",
+    "Ivory Leather",
+] as const;
+
+export type CapFinish = (typeof CAP_FINISHES)[number];
+
+const ATOMIZER_FINISH_ALIASES: Record<string, AtomizerFinish> = {
+    "black with dots": "Black with Dots",
+    "black dots": "Black with Dots",
+    "dotted black": "Black with Dots",
+    "pink with dots": "Pink with Dots",
+    "pink dots": "Pink with Dots",
+    "dotted pink": "Pink with Dots",
+    "silver with dots": "Silver with Dots",
+    "silver dots": "Silver with Dots",
+    "dotted silver": "Silver with Dots",
+    "silver plain": "Silver Plain",
+    "plain silver": "Silver Plain",
+    "silver gold": "Silver Gold",
+    "gold silver": "Silver Gold",
+    "silver slim": "Silver Slim",
+    "slim silver": "Silver Slim",
+    "silver with star patterns": "Silver with Star Patterns",
+    "silver with stars": "Silver with Star Patterns",
+    "silver stars": "Silver with Star Patterns",
+    "star pattern": "Silver with Star Patterns",
+    "stars": "Silver with Star Patterns",
+};
+
+const CAP_FINISH_ALIASES: Record<string, CapFinish> = {
+    "shiny gold": "Shiny Gold",
+    "shiny silver": "Shiny Silver",
+    "shiny black": "Shiny Black",
+    "matte black": "Matte Black",
+    "matte gold": "Matte Gold",
+    "matte silver": "Matte Silver",
+    "matte copper": "Matte Copper",
+    "black with dots": "Black with Dots",
+    "black dots": "Black with Dots",
+    "dotted black": "Black with Dots",
+    "pink with dots": "Pink with Dots",
+    "pink dots": "Pink with Dots",
+    "dotted pink": "Pink with Dots",
+    "silver with dots": "Silver with Dots",
+    "silver dots": "Silver with Dots",
+    "rose gold": "Rose Gold",
+    "brown leather": "Brown Leather",
+    "light brown leather": "Light Brown Leather",
+    "pink leather": "Pink Leather",
+    "black leather": "Black Leather",
+    "ivory leather": "Ivory Leather",
+};
+
+function matchListedFinish<T extends string>(
+    text: string,
+    canonical: readonly T[],
+    aliases: Record<string, T>,
+): T | null {
+    const lower = text.toLowerCase();
+    const aliasKeys = Object.keys(aliases).sort((a, b) => b.length - a.length);
+    for (const key of aliasKeys) {
+        const escaped = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        if (new RegExp(`\\b${escaped}\\b`).test(lower)) {
+            return aliases[key];
+        }
+    }
+    const named = [...canonical].sort((a, b) => b.length - a.length);
+    for (const finish of named) {
+        const token = finish.toLowerCase();
+        const escaped = token.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        if (new RegExp(`\\b${escaped}\\b`).test(lower)) {
+            return finish;
+        }
+    }
+    return null;
+}
+
+/** Detect a metal atomizer body finish in free text (longest match first). */
+export function detectAtomizerFinish(text: string): AtomizerFinish | null {
+    return matchListedFinish(text, ATOMIZER_FINISHES, ATOMIZER_FINISH_ALIASES);
+}
+
+/** Detect a cap/closure finish in free text (longest match first). */
+export function detectCapFinish(text: string): CapFinish | null {
+    return matchListedFinish(text, CAP_FINISHES, CAP_FINISH_ALIASES);
+}
+
+/** Customer-facing cap label — always ends with Cap so it never reads as glass. */
+export function displayCapFinishLabel(finish: string): string {
+    const trimmed = finish.trim();
+    if (!trimmed) return trimmed;
+    if (/\bcap\b/i.test(trimmed)) return trimmed;
+    return `${trimmed} Cap`;
+}
+
+/** True when the phrase is a finish/trim colour, never a glass colour. */
+export function isNonGlassFinishTerm(text: string): boolean {
+    const lower = text.toLowerCase();
+    if (detectAtomizerFinish(lower) || detectCapFinish(lower)) return true;
+    return /\b(dots?|stars?|tassel|shiny|matte|leather|atomizer|atomiser)\b/.test(lower)
+        && !/\b(frosted|amber|swirl|flint)\b/.test(lower);
+}
+
+/** Detect a canonical glass colour inside free text (longest alias first).
+ * Finish / atomizer / cap colour phrases never count as glass by themselves.
+ */
 export function detectCanonicalGlassColor(text: string): string | null {
     const lower = text.toLowerCase();
     const aliases = Object.keys(GLASS_COLOR_ALIASES).sort((a, b) => b.length - a.length);
     const hit = aliases.find((alias) => new RegExp(`\\b${alias}\\b`).test(lower));
-    return hit ? GLASS_COLOR_ALIASES[hit] : null;
+    if (!hit) return null;
+
+    const hasGlassNoun = /\b(glass|frosted|amber|swirl|flint|cobalt|clear)\b/.test(lower);
+    const atomizerContext = /\b(atomizer|atomiser|travel mist|purse\s+spray|metal\s+shell)\b/.test(lower);
+    const decoratedFinish = /\b(with\s+dots?|dotted|with\s+stars?|star\s+patterns?|shiny|matte|leather)\b/.test(lower);
+    const capContext = /\b(cap|lid|closure|collar|plug|trim)\b/.test(lower);
+
+    // Coloured metal atomizers: "green atomizer" is a finish, not Green glass.
+    if (atomizerContext && !hasGlassNoun) return null;
+    // Decorated finishes alone are never glass ("pink with dots", "shiny gold").
+    if (decoratedFinish && !hasGlassNoun) return null;
+    // Cap colour requests without a glass word ("matte black cap") are not glass.
+    // Still allow "clear bottle with matte black cap" via hasGlassNoun / clear.
+    if (capContext && detectCapFinish(lower) && !hasGlassNoun) return null;
+
+    return GLASS_COLOR_ALIASES[hit];
 }
 
 /** "30ml", "30 ml (1 oz)", " 30 ML " → "30 ml" — the exact facet label. Non-ml strings pass through trimmed. */
@@ -198,17 +378,31 @@ export function displayApplicatorName(value: string): string {
     return value
         .replace(/\bVintage Bulb\b/g, "Vintage Style Bulb")
         .replace(/\bvintage bulb\b/g, "vintage style bulb")
-        .replace(/\bVINTAGE BULB\b/g, "VINTAGE STYLE BULB");
+        .replace(/\bVINTAGE BULB\b/g, "VINTAGE STYLE BULB")
+        // Prefer "Sprayer" so UI copy never sounds like fine-mist spray or an atomizer.
+        .replace(/\bVintage Style Bulb Spray\b(?!er)/g, "Vintage Style Bulb Sprayer")
+        .replace(/\bvintage style bulb spray\b(?!er)/g, "vintage style bulb sprayer");
 }
 
-/** Historic UI labels still accepted in URLs and Grace refine after the vintage-style rename. */
+/** Historic UI labels and prior bucket slugs still accepted in URLs and Grace refine. */
 const LEGACY_APPLICATOR_LABEL_TOKENS: Record<string, ApplicatorBucket> = {
-    vintagebulbspray: "antiquespray",
-    vintagebulbspraywithtassel: "antiquespray-tassel",
-    vintagebulbspraybottle: "antiquespray",
-    vintagebulbspraybottlewithtassel: "antiquespray-tassel",
-    vintagebulbspraybottles: "antiquespray",
-    vintagebulbsprayers: "antiquespray",
+    // Prior refine/URL bucket slugs (pre vintagestyle rename)
+    antiquespray: "vintagestyle",
+    antiquespraytassel: "vintagestyle-tassel",
+    // Customer-facing / product-value tokens
+    vintagebulbspray: "vintagestyle",
+    vintagestylebulbsprayer: "vintagestyle",
+    vintagebulbsprayer: "vintagestyle",
+    vintagebulbspraywithtassel: "vintagestyle-tassel",
+    vintagestylebulbsprayerwithtassel: "vintagestyle-tassel",
+    vintagebulbsprayerwithtassel: "vintagestyle-tassel",
+    vintagebulbspraybottle: "vintagestyle",
+    vintagebulbspraybottlewithtassel: "vintagestyle-tassel",
+    vintagebulbspraybottles: "vintagestyle",
+    vintagebulbsprayers: "vintagestyle",
+    antiquesprayer: "vintagestyle",
+    antiquebulbsprayer: "vintagestyle",
+    antiquebulbsprayerwithtassel: "vintagestyle-tassel",
 };
 
 function applicatorLookupToken(token: string): string {
@@ -424,6 +618,9 @@ export function catalogSearchRecoverySuggestions(query: string): string[] {
     if (/\bdropper\b|\bpipette\b/.test(normalized)) add("dropper");
     if (/\bamber\b|\bbrown\b/.test(normalized)) add("amber glass bottle");
     if (/\bblack\b/.test(normalized)) add("black cap");
+    if (/\bwhite\b/.test(normalized)) add("white cap");
+    if (/\bgold\b/.test(normalized)) add("gold cap");
+    if (/\bsilver\b/.test(normalized)) add("silver cap");
     if (/\bessential\b|\boil\b|\bperfume\b|\bfragrance\b/.test(normalized)) add("essential oil bottle");
 
     add("10 ml roll-on");
@@ -473,7 +670,7 @@ export function normalizeRollerMaterials(values: readonly string[]): RollerMater
 }
 
 export const SORT_OPTIONS = [
-    { value: "featured", label: "By Design Family" },
+    { value: "featured", label: "Featured" },
     { value: "best-match", label: "Best Match" },
     { value: "price-asc", label: "Price: Low to High" },
     { value: "price-desc", label: "Price: High to Low" },
@@ -485,6 +682,79 @@ export const SORT_OPTIONS = [
 ] as const;
 
 export type SortValue = (typeof SORT_OPTIONS)[number]["value"];
+
+/** Shopper-facing sort menu. Family/collection stay filters; Most Variants stays URL-compatible only. */
+export function catalogSortMenuOptions(hasSearch: boolean): Array<(typeof SORT_OPTIONS)[number]> {
+    return SORT_OPTIONS.filter((option) => {
+        if (option.value === "variants-desc") return false;
+        if (option.value === "best-match") return hasSearch;
+        return true;
+    });
+}
+
+export interface FeaturedSortable {
+    family: string | null;
+    category: string;
+    capacityMl?: number | null;
+    displayName?: string | null;
+    slug?: string | null;
+}
+
+function compareFeaturedWithinFamily(a: FeaturedSortable, b: FeaturedSortable): number {
+    const capacityDelta = (a.capacityMl ?? 99999) - (b.capacityMl ?? 99999);
+    if (capacityDelta !== 0) return capacityDelta;
+    const nameDelta = (a.displayName ?? "").localeCompare(b.displayName ?? "");
+    if (nameDelta !== 0) return nameDelta;
+    return (a.slug ?? "").localeCompare(b.slug ?? "");
+}
+
+/** Diversity-based Featured: one product from each family before repeating, bottles before components. */
+export function sortCatalogFeatured<T extends FeaturedSortable>(items: readonly T[]): T[] {
+    const bottles: T[] = [];
+    const components: T[] = [];
+    for (const item of items) {
+        if (BOTTLE_CATEGORIES.has(item.category)) bottles.push(item);
+        else components.push(item);
+    }
+
+    const queues = new Map<string, T[]>();
+    for (const item of bottles) {
+        const key = item.family ?? "";
+        const queue = queues.get(key);
+        if (queue) queue.push(item);
+        else queues.set(key, [item]);
+    }
+    for (const queue of queues.values()) {
+        queue.sort(compareFeaturedWithinFamily);
+    }
+
+    const familyKeys = [
+        ...FAMILY_ORDER.filter((family) => queues.has(family)),
+        ...[...queues.keys()].filter((family) => !FAMILY_ORDER.includes(family)).sort((a, b) => a.localeCompare(b)),
+    ];
+
+    const interleaved: T[] = [];
+    let remaining = bottles.length;
+    while (remaining > 0) {
+        let progressed = false;
+        for (const key of familyKeys) {
+            const next = queues.get(key)?.shift();
+            if (!next) continue;
+            interleaved.push(next);
+            remaining -= 1;
+            progressed = true;
+        }
+        if (!progressed) break;
+    }
+
+    components.sort((a, b) => {
+        const familyDelta = (a.family ?? "").localeCompare(b.family ?? "");
+        if (familyDelta !== 0) return familyDelta;
+        return compareFeaturedWithinFamily(a, b);
+    });
+
+    return [...interleaved, ...components];
+}
 
 export const VIEW_MODES = ["visual", "line"] as const;
 export type ViewMode = (typeof VIEW_MODES)[number];
@@ -608,14 +878,17 @@ export function filtersToParams(f: CatalogFilters, sort: SortValue, view: ViewMo
     if (f.priceMin !== null) p.set("priceMin", String(f.priceMin));
     if (f.priceMax !== null) p.set("priceMax", String(f.priceMax));
     if (f.search) p.set("search", f.search);
-    if (sort !== "featured") p.set("sort", sort);
+    // Every sort is written explicitly. An omitted sort parses as capacity-asc.
+    p.set("sort", sort);
     if (view !== "visual") p.set("view", view);
     return p;
 }
 
+export const GLASS_BOTTLE_BROWSE_HREF = "/catalog?category=Glass+Bottle&sort=capacity-asc";
+
 export function catalogHref(
     partial: Partial<CatalogFilters> = {},
-    sort: SortValue = "featured",
+    sort: SortValue = "capacity-asc",
 ): string {
     const qs = filtersToParams({ ...EMPTY_FILTERS, ...partial }, sort).toString();
     return qs ? `/catalog?${qs}` : "/catalog";
@@ -664,7 +937,79 @@ export function paramsToFilters(sp: URLSearchParams): { filters: CatalogFilters;
             priceMax: getNonNegativeNumberParam(sp, "priceMax"),
             search,
         },
-        sort: sortParam || (search ? "best-match" : "featured"),
+        sort: sortParam || (search ? "best-match" : "capacity-asc"),
         view,
     };
+}
+
+function hasNarrowingParam(sp: URLSearchParams): boolean {
+    return CATALOG_FACET_PARAM_KEYS.some((key) => sp.getAll(key).some((value) => value.trim() !== ""));
+}
+
+/**
+ * Bare /catalog (Shop Bottles, tab bar, Full catalog) becomes a shareable
+ * glass-bottle list ordered smallest capacity first. Search, an explicit
+ * sort, any facet, and scope=all stay put so All products and header search
+ * are not bounced back into that department.
+ */
+export function catalogBrowseRedirect(sp: URLSearchParams): string | null {
+    if (sp.get("scope") === "all") return null;
+    if ((sp.get("search") || "").trim()) return null;
+    if (sp.get("sort")?.trim()) return null;
+    if (hasNarrowingParam(sp)) return null;
+
+    const params = new URLSearchParams();
+    params.set("category", "Glass Bottle");
+    params.set("sort", "capacity-asc");
+    if (sp.get("view") === "line") params.set("view", "line");
+    const limit = sp.get("limit")?.trim();
+    if (limit) params.set("limit", limit);
+    if (sp.get("grace") === "1") params.set("grace", "1");
+    return `/catalog?${params.toString()}`;
+}
+
+export function catalogCategoryScopeLabel(category: string): string {
+    return category === "Glass Bottle" ? "Glass bottles" : category;
+}
+
+export function catalogResultScopeTitle(filters: CatalogFilters): string {
+    if (filters.search) return `"${filters.search}"`;
+    if (filters.applicators.length === 1) {
+        const label = APPLICATOR_BUCKETS.find((bucket) => bucket.value === filters.applicators[0])?.label ?? filters.applicators[0];
+        return `${label} Bottles`;
+    }
+    if (filters.applicators.length > 1) {
+        return `${filters.applicators.map((value) => APPLICATOR_BUCKETS.find((bucket) => bucket.value === value)?.label ?? value).join(" & ")} Bottles`;
+    }
+    if (filters.families.length === 1) return filters.families[0] ?? "All products";
+    const shopTitle = getShopCollection(filters.shopCollection)?.title;
+    if (shopTitle) return shopTitle;
+    if (filters.collection) return filters.collection;
+    if (filters.category) return catalogCategoryScopeLabel(filters.category);
+    return "All products";
+}
+
+export function catalogBreadcrumbSteps(filters: CatalogFilters): Array<{ label: string; href?: string }> {
+    const steps: Array<{ label: string; href?: string }> = [];
+    if (filters.category) {
+        const params = new URLSearchParams();
+        params.set("category", filters.category);
+        params.set("sort", "capacity-asc");
+        steps.push({
+            label: catalogCategoryScopeLabel(filters.category),
+            href: `/catalog?${params.toString()}`,
+        });
+    }
+    const shopTitle = getShopCollection(filters.shopCollection)?.title;
+    if (shopTitle) steps.push({ label: shopTitle });
+    if (filters.families.length === 1 && filters.families[0]) {
+        steps.push({ label: filters.families[0] });
+    } else if (!filters.category && !shopTitle && filters.applicators.length === 1) {
+        const label = APPLICATOR_BUCKETS.find((bucket) => bucket.value === filters.applicators[0])?.label ?? filters.applicators[0];
+        steps.push({ label: `${label} Bottles` });
+    }
+    if (steps.length === 0) steps.push({ label: "All products" });
+    const last = steps[steps.length - 1];
+    if (last) steps[steps.length - 1] = { label: last.label };
+    return steps;
 }

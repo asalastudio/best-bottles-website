@@ -1,0 +1,667 @@
+{
+ "schemaVersion": 1,
+ "release": "diva-master-kits-2026-09-16",
+ "batch": "dist/paper-doll/diva-2026-09-16",
+ "approvedBy": "Jordan Richter — approved the kit contact sheet in chat 2026-09-16 ('looks good' / 'These all look fantastic'); authorised publication 2026-09-19 ('process all the kits… push them to production')",
+ "approvedAt": "2026-09-19T07:28:30.436Z",
+ "shipPhrase": "ship Diva kit release 2026-09-16",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 151,
+  "approved": 129,
+  "setAside": 22,
+  "notExtracted": 22
+ },
+ "reviewSheet": "/reviews/builder-bodies-2026-09-14/diva-kits-2026-09-16.jpg",
+ "reviewSheetSha256": "6ecc8fcdd6dc98561ce7fc50bd630ec21f99da65c9c884fe09f7b21d90ef408d",
+ "rows": [
+  {
+   "sku": "GBDiva30SpryMtGl",
+   "plateSha256": "ed1c23f239a6e3ff6516406b341f4580b6ffc0e8e9e4c1347a349525f42b88dc"
+  },
+  {
+   "sku": "LBDiva30LtnClOvrCap",
+   "plateSha256": "2c187b575a821bb6bec154bdce6aee5c48237bb0d17c0ddde0baf0585f4ba955"
+  },
+  {
+   "sku": "LBDiva30LtnCu",
+   "plateSha256": "433ad7fb7b34725191d43cdbf896c10254ae4ce750429cb42f3599433b9cef33"
+  },
+  {
+   "sku": "GBDiva30SpryMtSl",
+   "plateSha256": "665a0f8e75d0d8a1fd930271d393dd0fb02844d0b3523a38082c7c8a128da730"
+  },
+  {
+   "sku": "GBDiva30SpryShnBlk",
+   "plateSha256": "429fce49f45dbc7c3592200fb4f939cf7eda95c63dc14fdd2a1467917fc0115d"
+  },
+  {
+   "sku": "GBDiva30SpryShnGl",
+   "plateSha256": "6d1fbc181bc84d391e2f079c954d1026b8b0b18e86949769a723314c7fcd742d"
+  },
+  {
+   "sku": "GBDiva30SpryCu",
+   "plateSha256": "433ad7fb7b34725191d43cdbf896c10254ae4ce750429cb42f3599433b9cef33"
+  },
+  {
+   "sku": "GBDiva30SpryShnSl",
+   "plateSha256": "625ab9b7a7652eeba75ae11a8426a04c2d9997840ced11225a341c97372d3d8b"
+  },
+  {
+   "sku": "GBDiva30AnSpBlk",
+   "plateSha256": "c18ecfc9d46ffd866757e4e8945d7a922fe0d65774c07a3caccd55a76185b33e"
+  },
+  {
+   "sku": "GBDiva30AnSpGl",
+   "plateSha256": "d91fec44c5e5094046206d935c691b908568ca5656210a364af2537d774b6628"
+  },
+  {
+   "sku": "GBDiva30AnSpIvyGl",
+   "plateSha256": "86a1f623ae93d70fe4bd836f057fd12889347d45135cc1cde4153aed79cc5d2a"
+  },
+  {
+   "sku": "GBDiva30AnSpIvySl",
+   "plateSha256": "04b25af18e0e5207d06be7e62e4046cf3f5e4b3710b6154c9524db7749dc0192"
+  },
+  {
+   "sku": "GBDiva30AnSpLvn",
+   "plateSha256": "8744cd8b258e6e9cda84534893ce5eb248eed8f5a7824759f75176768c7c8d0f"
+  },
+  {
+   "sku": "GBDiva30AnSpMtSl",
+   "plateSha256": "b1aa756ff66a77b4d8ea56febe6ad79a6f89cbadc78788967141a7b7b083f367"
+  },
+  {
+   "sku": "GBDiva30AnSpPnk",
+   "plateSha256": "8107928dae0a2ea4cdd7edb2294c76549b5790b4f6fc6786daa50c3e8da0fc6b"
+  },
+  {
+   "sku": "GBDiva30AnSpRed",
+   "plateSha256": "4894c1ab567efe9a91c6e423b27bf4f170f034eb986815c5655c7ca999f8bc6e"
+  },
+  {
+   "sku": "GBDiva30AnSpWht",
+   "plateSha256": "580d468edd472770385942eb812d65a9e63cb147041b552f37d4c6d9597131c7"
+  },
+  {
+   "sku": "GBDiva30RdcrBlkLthr",
+   "plateSha256": "df6e6c036e0a302008d5def0905282580c2babb862b39d8539f50488a1bd70ec"
+  },
+  {
+   "sku": "GBDiva30RdcrIvyLthr",
+   "plateSha256": "36c8301efdb9c3aae88709f032ed29649f56880197a65d026dc5359e60567113"
+  },
+  {
+   "sku": "GBDiva30RdcrLBrwnLthr",
+   "plateSha256": "e940505ec5578065c77ca2b9ba2d77543efb2c48bfcba78faff844ce1b9dfcd3"
+  },
+  {
+   "sku": "GBDiva30RdcrMtSl",
+   "plateSha256": "28f3460afc48e073e1003022e63c9366cde9c39e12f24bb7eac7ede30cd0f198"
+  },
+  {
+   "sku": "GBDiva30RdcrMtSlTall",
+   "plateSha256": "75a74a6ca70ea6542b91785d9a5414e217d60af5f9096da4787dc1d94c6c5b66"
+  },
+  {
+   "sku": "GBDiva30RdcrPnkLthr",
+   "plateSha256": "cb7a4f8a4952245a4c25388ba6a71c617dcc5f22dcb804161b6dd43cc93f1bc5"
+  },
+  {
+   "sku": "GBDiva30RdcrShnBlk",
+   "plateSha256": "dffb99f4ec45ccf11692ca5c3542fe7e38e1aa7012c052885e4180ad9c5d68da"
+  },
+  {
+   "sku": "GBDiva30RdcrShnBlkTall",
+   "plateSha256": "591a03b9085babcb4a11c828d64e8e849321da9fa0692c46648be83fce347a39"
+  },
+  {
+   "sku": "GBDiva30RdcrShnGl",
+   "plateSha256": "fec28055d13adc23baa9fae9545750fe5ba6b6689a21cb77eab87aa89db92937"
+  },
+  {
+   "sku": "GBDiva30RdcrShnSl",
+   "plateSha256": "bcc9adf4a5105bf4e36fe97615c4d4ccbe82f7e5b4dc9881df1b16ef0fc11cbd"
+  },
+  {
+   "sku": "GBDiva30RdcrWht",
+   "plateSha256": "10dffa68632c0ee018af2d749fc694c7e97aebb13552e130afd83204c890b59e"
+  },
+  {
+   "sku": "LBDiva46LtnClOvrCap",
+   "plateSha256": "19bb4fb5d88c411dd8ca870055b267eb403878e70276573d51be00d1f2d7dff3"
+  },
+  {
+   "sku": "LBDiva46LtnCu",
+   "plateSha256": "0c97a75bb99a18c60b4b5c0c683b5f15725942222fe27392996ccc022f88bbe3"
+  },
+  {
+   "sku": "LBDiva46LtnShnGl",
+   "plateSha256": "def15443d3ce48b3bd9c31437594aeef7dd14fc95dc3961bcc28d020960b3d61"
+  },
+  {
+   "sku": "GBDiva46AnSpBlk",
+   "plateSha256": "b1f2d689ca88ce5da030eacfb5bf2893529f124b6d16513ca24612e4c518af4b"
+  },
+  {
+   "sku": "GBDiva46AnSpGl",
+   "plateSha256": "8a06c24f4b354862bbb655e77fd03b7f9293c9e24dbb748ab233902999a72c83"
+  },
+  {
+   "sku": "GBDiva46AnSpIvyGl",
+   "plateSha256": "9d8fda5d6780a901bf741af5d1df099398fd5bb7e1754560f0a015d373b2ccb8"
+  },
+  {
+   "sku": "GBDiva46AnSpIvySl",
+   "plateSha256": "07f10ed45eb8ec9cb6967ebd79b8d3777c5d6c85ef6245b67d9e23bee768eece"
+  },
+  {
+   "sku": "GBDiva46AnSpLvn",
+   "plateSha256": "6da6753ad8706f3713b44bf50eafb950a5a1a6e34ec5c2ab3a6d9c76e2111ee4"
+  },
+  {
+   "sku": "GBDiva46AnSpMtSl",
+   "plateSha256": "d7b61bd7bd555d13d2f7ced5268dafc399f52db53b1ce64d644c33fbb4e7b34e"
+  },
+  {
+   "sku": "GBDiva46AnSpPnk",
+   "plateSha256": "7698ad5f4761fa6996e2adb0f8192452bfaac3b7e5606778c546aae304ffdd05"
+  },
+  {
+   "sku": "GBDiva46AnSpRed",
+   "plateSha256": "7900ade43c65c8a211c1f45e63fd44c84d3bea4d8351ecfe66e39351646008e5"
+  },
+  {
+   "sku": "GBDiva46AnSpWht",
+   "plateSha256": "2aa3a4671e903f829e4156c64f2d0449fe2170531957b3b4388a8b5c1ebc66a1"
+  },
+  {
+   "sku": "GBDiva46AnSpWhtRng",
+   "plateSha256": "56606a3c2d47d6ef181bd074b7a5ab57d28698323ea200cc8f7fa0df3655854e"
+  },
+  {
+   "sku": "GBDiva46RdcrBlkLthr",
+   "plateSha256": "d683e2ae2c4ed9d9283eb772e2d321f39b4d4a39006b85a3201e490018475375"
+  },
+  {
+   "sku": "GBDiva46RdcrBrwnLthr",
+   "plateSha256": "32f80c66f546158e3421903c274bb1de7ed4e50472c8fc65007fef067307681a"
+  },
+  {
+   "sku": "GBDiva46RdcrIvyLthr",
+   "plateSha256": "fea4d4cdfcb3c4d60794a9b3f51f0bc96962362bee3f854ffad038d7b28377a6"
+  },
+  {
+   "sku": "GBDiva46RdcrLBrwnLthr",
+   "plateSha256": "74d1dd3307008f0ba59fef51c719ff83df991d200aa6d742c5d16055c760bb6e"
+  },
+  {
+   "sku": "GBDiva46RdcrMtSl",
+   "plateSha256": "eae586789f16300568477a31381c36c1b36571e07d9c3c6322a2cbe7a1b30bb4"
+  },
+  {
+   "sku": "GBDiva46RdcrMtSlTall",
+   "plateSha256": "e24ad102d7b0d41ae3e012f57d65dec38885f715784b25d215517e325d1e400e"
+  },
+  {
+   "sku": "GBDiva46RdcrPnkLthr",
+   "plateSha256": "08e62922852f959735de94c9c66149a5a5ad2cacf5bf2ceeb3364d494c9b34e3"
+  },
+  {
+   "sku": "GBDiva46RdcrShnBlk",
+   "plateSha256": "a7f221f0b8d6e8b7c636b86e509690c8a5cc9f87babb7c9c90cd39a144714a4c"
+  },
+  {
+   "sku": "GBDiva46RdcrShnBlkTall",
+   "plateSha256": "c2d9c23cdf8cf32c337e8195ccc7461624f31cee30d092f7daf47e3913f52bdd"
+  },
+  {
+   "sku": "GBDiva46RdcrShnGl",
+   "plateSha256": "f0c345709ed632160cec6bdedfebe86335d3b9e87a2061130120e3b0229edaed"
+  },
+  {
+   "sku": "GBDiva46RdcrShnSl",
+   "plateSha256": "8b8ce205d809276e103f78c31fcf35c9da6b0724cd62f9876e0ca3cf0e32e1c9"
+  },
+  {
+   "sku": "GBDiva46RdcrWht",
+   "plateSha256": "2cb6523702ef42d4f60b31c3d471ea3b3e6315333d364678444ebe92eb260036"
+  },
+  {
+   "sku": "GBDiva46DrpCu",
+   "plateSha256": "da13f9837c0f59dfc1e180296b768b1b5353cdc446287c10bff614e126e49e34"
+  },
+  {
+   "sku": "GBDiva46DrpGl",
+   "plateSha256": "8e5a1c6e8d091d3f2f13407552ff1548016d5dd3870d9e645fc1122af5c46102"
+  },
+  {
+   "sku": "GBDiva46DrpSl",
+   "plateSha256": "7056cdc6160beb56da157cef00dcbba35c9758022233022eb17a92606fa72517"
+  },
+  {
+   "sku": "GBDiva46AnSpTslWhtRng",
+   "plateSha256": "bee242dc308562827a56efddc0057353ad2560cbd07c6655d21568e84657b026"
+  },
+  {
+   "sku": "GBDiva46AnSpTslIvyGl",
+   "plateSha256": "1ec0859d41c106a7ba4be940026b0d42f61d098d75b88ac4612d0b44177b04bd"
+  },
+  {
+   "sku": "GBDiva46AnSpTslIvySl",
+   "plateSha256": "82b94ddbaa977c169ca6cb696002279a2ecd2727b5135dd2f19cd486bfb2cae5"
+  },
+  {
+   "sku": "GBDiva46AnSpTslMtSl",
+   "plateSha256": "be7483400d97495b2a3835f40ad18b3d1bf7990ca3e6061efcaf4296da75a2f6"
+  },
+  {
+   "sku": "GBDiva46AnSpTslPnk",
+   "plateSha256": "199814537e10b19f50e4166e76fb61fdcd5fb3850460d94c150f99d6ae19707c"
+  },
+  {
+   "sku": "GBDiva46AnSpTslWht",
+   "plateSha256": "85af25db6b80410573e81743d4e66dbf83458d2aa2ea2e7151c1b739629fd25a"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpBlk",
+   "plateSha256": "c5cfd852f2dabc6ac49ae0429e8a77b6d5362f1c15a24cdfe9be80504dbf19f9"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpGl",
+   "plateSha256": "15e1bc243e291b1adbf02c60bacdb76020161b57b8d7f4d7ab92a71c6a192930"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpIvyGl",
+   "plateSha256": "6c2bf665583dfbc763d67cebbf219b08d9c12f9a6043d094c989e1f0b068517b"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpIvySl",
+   "plateSha256": "c048cc211c4a730d2ebc260e8d7cae64fc6b9302f89be4e32e615aa225758406"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpLvn",
+   "plateSha256": "2f5862b83feae38eec508d213575b2a56c4e4d3b2cee68f97d7b890a9efa9039"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpMtSl",
+   "plateSha256": "4751dda49e96b98e17ea93ad8e7b4bd16e1a95ca441d9e9c7da25fc14479f4b6"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpPnk",
+   "plateSha256": "28ff930bcaa11e3c787078ef2af17e549ecb610b924f7972cad7653d06adca17"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpRed",
+   "plateSha256": "1313930e4c194739c977f9d84e5c3161e06166036379d01c3f6cac5befcda115"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpWht",
+   "plateSha256": "df3f407694da0864b66c15c1c6aeae858ab54187508757b68d35004135144650"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrBlkLthr",
+   "plateSha256": "2d61bc0a984a7ab14ff0c308a47675f4708389dc892c8f91e8f9428b4eb2a0f1"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrBrwnLthr",
+   "plateSha256": "4d6bfd33a04515d28f96a4b00f4b11307929fd6590cc37fb91f66e849ca4c1ec"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrIvyLthr",
+   "plateSha256": "3b3a91a4831e3b91f1e51d0013b028eb1ec1c141b5d7a1cf206a746f71f7abee"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrLBrwnLthr",
+   "plateSha256": "af5712ee4d39b7ecb40826a596ac27df14b3b4523530a4424b03f248dd5ae7f5"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrMtSl",
+   "plateSha256": "f9e8ac39ab4413613fac813030418acd0c6f6a8acedbfa56ca38fb2ba595aef8"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrMtSlTall",
+   "plateSha256": "fcd48a543cd88baec224298ae23cd889e59aea2ac281422a8b9b011605c77472"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrPnkLthr",
+   "plateSha256": "4dff7e084954a109845f252eda744fb8682abb869fcfd0a8e85e28b3b6d13120"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnBlk",
+   "plateSha256": "cb4036fa8f141ae32ab2b3b0fe371788641ec9b12e9e6fec224d3b14b859ba4c"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnBlkTall",
+   "plateSha256": "6b4f0882336a330c492ae5844e36b2268b47fe1efd6ea5573502a81938237531"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnGl",
+   "plateSha256": "3b1cd26b7531a45a174d94e4f56698f43b1d08f6a1dc63bf9c1f65ede6da3b5a"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrShnSl",
+   "plateSha256": "062aaa2e53814870f31080132cb76bf19abe463e286df7821d2cb2df4c448782"
+  },
+  {
+   "sku": "GBDivaFrst46RdcrWht",
+   "plateSha256": "f350cf48517ad7f19204698c1ce3a021e20fb5aaa1e1b5757b7d9c1881b17d26"
+  },
+  {
+   "sku": "LBDivaFrst46LtnClOvrCap",
+   "plateSha256": "48632c71b214252d5631f1d760cf182526217e95fbd158376666c458b488812e"
+  },
+  {
+   "sku": "LBDivaFrst46LtnCu",
+   "plateSha256": "a6d2945791d9cc53dd0a30b5e64924a89a05ce7c4b4a76633c9305656b4649de"
+  },
+  {
+   "sku": "LBDivaFrst46LtnMtGl",
+   "plateSha256": "9b2c288151a65b572fb16c628ae1e583695abefb725e0b011300ca5d2dab2d97"
+  },
+  {
+   "sku": "LBDivaFrst46LtnMtSl",
+   "plateSha256": "3a3399362e22b4c2bfd11d98d0a02e121797dd1b759fbd6f9d7de24d2094fe81"
+  },
+  {
+   "sku": "LBDivaFrst46LtnShnBlk",
+   "plateSha256": "587189e9346203d78d886e69071bc3ab4a268822bf5d92d3d32ed1f0848477f8"
+  },
+  {
+   "sku": "LBDivaFrst46LtnShnGl",
+   "plateSha256": "a4da64533a6ed19cb822d8d8925843080ef4610c24a0700e7f83736f651e17af"
+  },
+  {
+   "sku": "LBDivaFrst46LtnShnSl",
+   "plateSha256": "b44378419fab084a7028beb251842e847dd3f768144fc701fadb6cbd17215db4"
+  },
+  {
+   "sku": "GBDivaFrst46SpryMtGl",
+   "plateSha256": "ef90571e0b613867f4ce46ab2b386b395af607c018771c1d379e3c460c945276"
+  },
+  {
+   "sku": "GBDivaFrst46SpryMtSl",
+   "plateSha256": "cf2e57335eb74285b36fb15bb9eccf6155d1b44e48396d6c7e2f7ac7961758ff"
+  },
+  {
+   "sku": "GBDivaFrst46SpryShnBlk",
+   "plateSha256": "40d13fbc2aeb1bcd11af8a4dce308488fb2a68ba96aca2fe825099f4747465ea"
+  },
+  {
+   "sku": "GBDivaFrst46SpryShnGl",
+   "plateSha256": "b732ebfe651662140e7414af231eb8540240a787ec34bb18a733ca2d418330ae"
+  },
+  {
+   "sku": "GBDivaFrst46SpryShnSl",
+   "plateSha256": "8ac22b7c37c8db515e4a1f5ca5d241ab7898cedea9305289097dcd8d2b056024"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslIvyGl",
+   "plateSha256": "3f5cb5937cf4f634652deb5c74ba37114ce74e513a9d73a17d9d7c99e9d74213"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslIvySl",
+   "plateSha256": "c0425b86cbd4f636b8159bffa9959447ff21d3fc9af9d891ca6ffe6aab61a887"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslLvn",
+   "plateSha256": "16b1c8027b873ebb71431ff05840055ca4e3ea22a0f045b8f313a099dc26986f"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslPnk",
+   "plateSha256": "5eaed147694f9ae7f7319586e70613aa10363e06e3dbfb623c89f1782066a4f3"
+  },
+  {
+   "sku": "GBDivaFrst46AnSpTslWht",
+   "plateSha256": "d89b9d6a6a22d9a8260e0a5f6123cb6159b805a773241b7d4c7d547da10fc97e"
+  },
+  {
+   "sku": "GBDiva100SpryShnSl",
+   "plateSha256": "cadb3c4cff46f8e54fecb7a25c6d9217d36a0afccc9187e544d925a3a7702cf8"
+  },
+  {
+   "sku": "GBDiva100SpryCu",
+   "plateSha256": "efa60bf6016933360b215bc299999f2a93f1c7d20a7917b956d65f443b091a94"
+  },
+  {
+   "sku": "LBDiva100LtnClOvrCap",
+   "plateSha256": "885e9552372987cff7b02ed151dec3565e06d0551cef81d56563344ae1e9f34c"
+  },
+  {
+   "sku": "GBDiva100SpryMtSl",
+   "plateSha256": "7bd940d7bebde8c8c24ba78c14993217b43bcc069832a72b39364da09f4d8b28"
+  },
+  {
+   "sku": "GBDiva100SpryShnGl",
+   "plateSha256": "61b01c9523ba3b63bf2e3d0a57a9e69e4d8e612e7604c951d11fc256fa7fd7eb"
+  },
+  {
+   "sku": "GBDiva100SpryMtGl",
+   "plateSha256": "9020795f58c411a1633bb430446df904ce0801d15122ba216b3d10420c236940"
+  },
+  {
+   "sku": "GBDiva100SpryShnBlk",
+   "plateSha256": "410c75332829d1ab830cf9a3d193242d6858d1658e6c24f11d47478c3c3dae4f"
+  },
+  {
+   "sku": "GBDiva100AnSpBlk",
+   "plateSha256": "5450534acb0b9b36c9dd8143ace37393826b7b27876f5e9e4ecd2d29fe73f67d"
+  },
+  {
+   "sku": "GBDiva100AnSpGl",
+   "plateSha256": "60e5ee6caceceae99aa356b0c8fb3fc18e9184e8b05e54905948e963b2f1472b"
+  },
+  {
+   "sku": "GBDiva100AnSpIvyGl",
+   "plateSha256": "1f7ce43385623875757126f65738d449b7938ce33b5da4f132f1db8cad1516c3"
+  },
+  {
+   "sku": "GBDiva100AnSpIvySl",
+   "plateSha256": "07bff55d9f70c1619eec8437242aecf0e6ffb11afd5bdf94b4702311c1406671"
+  },
+  {
+   "sku": "GBDiva100AnSpLvn",
+   "plateSha256": "889282c25a2359e31d60357173ae732dde9d867aa09f240174a167a850a92b1e"
+  },
+  {
+   "sku": "GBDiva100AnSpMtSl",
+   "plateSha256": "135262f358e3f9069b880b6f54812734b15fcccbc041401e2f3bdfa7592854e5"
+  },
+  {
+   "sku": "GBDiva100AnSpRed",
+   "plateSha256": "010eb102f932e0158f5dc4b92db8289e5ee43259558aaaabfc33f973f5511757"
+  },
+  {
+   "sku": "GBDiva100AnSpTslGl",
+   "plateSha256": "c67e18bf083e28779f5d55ece6b832234f4ec8779d2917422c727ac58ff7913b"
+  },
+  {
+   "sku": "GBDiva100AnSpTslIvyGl",
+   "plateSha256": "9598416c7072b86d806477b30a02f74f85f86d89946b91ba2dd85ff88d0e3577"
+  },
+  {
+   "sku": "GBDiva100AnSpTslMtSl",
+   "plateSha256": "152220d8e03b90525c3f4da90e9f1854569878b99d56d7dced45e3f7544db82c"
+  },
+  {
+   "sku": "GBDiva100AnSpWht",
+   "plateSha256": "ae18b533c2d0c200dcac9787a8d676599b90c8e8941613266d37a0a2be90bd5b"
+  },
+  {
+   "sku": "GBDiva100RdcrBlkLthr",
+   "plateSha256": "4dee75c3834f1bf3a62a43f7e398942030d39b7b4589e4626b48d9bcf1a82836"
+  },
+  {
+   "sku": "GBDiva100RdcrBrwnLthr",
+   "plateSha256": "cdba4db845aed40ffc23efb65682378818a4e78bba2c3a8221ca0e5e279a19ad"
+  },
+  {
+   "sku": "GBDiva100RdcrIvyLthr",
+   "plateSha256": "95a8c516af2c36211bf2356b7a3c9c9d565a16d078139f2047b6fb1fb8537051"
+  },
+  {
+   "sku": "GBDiva100RdcrLBrwnLthr",
+   "plateSha256": "808529f819b73eb4175586004382b1df064f2710b8203e6e2e9bb16f1e96aceb"
+  },
+  {
+   "sku": "GBDiva100RdcrMtSl",
+   "plateSha256": "2db966f5d6c70331ecb4a23813b35730b2ba627916b677747477c17c271acff7"
+  },
+  {
+   "sku": "GBDiva100RdcrMtSlTall",
+   "plateSha256": "1ec22d13ffae3f1f0b20d4092a18ab5bd813b2c073f1cb26fb4f748b89e80617"
+  },
+  {
+   "sku": "GBDiva100RdcrPnkLthr",
+   "plateSha256": "cd70ff3c8f45ef6aa8be79e9673c81771e14dffbf4c8b51441bc5567cae2f597"
+  },
+  {
+   "sku": "GBDiva100RdcrShnBlkTall",
+   "plateSha256": "7c276a1b72af2a5ef1bd9b334ffe4abb0c176a4ad2d357bde88087802b4815fa"
+  },
+  {
+   "sku": "GBDiva100RdcrShnGl",
+   "plateSha256": "c08d3c296df38a44e5f2344a30ed37941efc34b4827c50c298ed387644e40a1c"
+  },
+  {
+   "sku": "GBDiva100RdcrShnSl",
+   "plateSha256": "b47501f5f4824a84b86c9c4c5c06945c9eb50f8e1757ddeb3a7d6ca0ef3006a2"
+  },
+  {
+   "sku": "GBDiva100RdcrWht",
+   "plateSha256": "f991c48518346dccf3c22d5c225f2e1afd44196dcfe5ca74d18bf8a91c572a44"
+  }
+ ],
+ "setAside": [
+  {
+   "sku": "LBDiva30LtnMtSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "cdcaf8eb21b8490ac65d0cb5aefc47b93eb161f7e724e3823cdc9fa7e1baffa2",
+   "currentPlate": "665a0f8e75d0d8a1fd930271d393dd0fb02844d0b3523a38082c7c8a128da730"
+  },
+  {
+   "sku": "LBDiva30LtnMtGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "7d1ca4d7d74588e7f74689e9008bcd378f5d13d2d99d2165cd52f89e07b76b9f",
+   "currentPlate": "ed1c23f239a6e3ff6516406b341f4580b6ffc0e8e9e4c1347a349525f42b88dc"
+  },
+  {
+   "sku": "LBDiva30LtnShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "c0dca7bea6a6de82fd17672e9f16028d179e405cb8886afde396592a95758c94",
+   "currentPlate": "625ab9b7a7652eeba75ae11a8426a04c2d9997840ced11225a341c97372d3d8b"
+  },
+  {
+   "sku": "LBDiva30LtnShnGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "c73de09cbf4ed66c4a01097c12d205c4ce0fce1af803e3a9313d7b65f105b3ae",
+   "currentPlate": "6d1fbc181bc84d391e2f079c954d1026b8b0b18e86949769a723314c7fcd742d"
+  },
+  {
+   "sku": "LBDiva30LtnShnBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "b4e7e4a779466a129f7f174e9fa11a2f1c389c72519e0371710ac58d7847ccb1",
+   "currentPlate": "429fce49f45dbc7c3592200fb4f939cf7eda95c63dc14fdd2a1467917fc0115d"
+  },
+  {
+   "sku": "GBDiva46SpryMtGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "cc85272526a85fd7537fa36378a969b1632b2e953f92f46b696154aea51d98c2",
+   "currentPlate": "be8e99b06889191503e5354b12e0673235646576d784cc6393b43fef75879377"
+  },
+  {
+   "sku": "GBDiva46SpryMtSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "eba0af07332f9aa4abf16fbffcd693daaadcdfa07c42c16cb59d3f4b7b950cb6",
+   "currentPlate": "3ae6c6bd917c40182062718f2081221716f3e676370c530ad37298e605fdb6ee"
+  },
+  {
+   "sku": "GBDiva46SpryShnBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "6795d0cfc6001f0dc40f83f354db790e1bd527fee3a540dc422dac4a35462b0e",
+   "currentPlate": "e64fbb91d7789ca3ff7df4c145bc86c5b82cab4a0b4a7e69cc0932f86d5a5586"
+  },
+  {
+   "sku": "GBDiva46SpryShnGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "73bafb338d4ebadb6a1cb115b76fae9ee8f460f5db436d0047dfc9cfdc9c7e6b",
+   "currentPlate": "def15443d3ce48b3bd9c31437594aeef7dd14fc95dc3961bcc28d020960b3d61"
+  },
+  {
+   "sku": "GBDiva46SpryShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "e2c0e9c6f39e9ad5bdf3cf21c95fd086da9c6c2176e964f5570ed9f14458514d",
+   "currentPlate": "0d049f4880de469c21fd15e1aef11ef3c3c7b901b94d6c1013784cb223a3606f"
+  },
+  {
+   "sku": "LBDiva46LtnMtGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "cc85272526a85fd7537fa36378a969b1632b2e953f92f46b696154aea51d98c2",
+   "currentPlate": "be8e99b06889191503e5354b12e0673235646576d784cc6393b43fef75879377"
+  },
+  {
+   "sku": "LBDiva46LtnMtSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "eba0af07332f9aa4abf16fbffcd693daaadcdfa07c42c16cb59d3f4b7b950cb6",
+   "currentPlate": "3ae6c6bd917c40182062718f2081221716f3e676370c530ad37298e605fdb6ee"
+  },
+  {
+   "sku": "LBDiva46LtnShnBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "6795d0cfc6001f0dc40f83f354db790e1bd527fee3a540dc422dac4a35462b0e",
+   "currentPlate": "e64fbb91d7789ca3ff7df4c145bc86c5b82cab4a0b4a7e69cc0932f86d5a5586"
+  },
+  {
+   "sku": "LBDiva46LtnShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "e2c0e9c6f39e9ad5bdf3cf21c95fd086da9c6c2176e964f5570ed9f14458514d",
+   "currentPlate": "0d049f4880de469c21fd15e1aef11ef3c3c7b901b94d6c1013784cb223a3606f"
+  },
+  {
+   "sku": "GBDivaFrst46DrpCu",
+   "why": "no plate published here"
+  },
+  {
+   "sku": "GBDivaFrst46DrpGl",
+   "why": "no plate published here"
+  },
+  {
+   "sku": "GBDivaFrst46DrpSl",
+   "why": "no plate published here"
+  },
+  {
+   "sku": "LBDiva100LtnShnBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "6a014775281a9f70e823d6f8e64a389d3f615d97940e9d8006803c9e81ca73b0",
+   "currentPlate": "410c75332829d1ab830cf9a3d193242d6858d1658e6c24f11d47478c3c3dae4f"
+  },
+  {
+   "sku": "LBDiva100LtnMtSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "0a8fd0ce05628bfb697f58ca0efc53b94bba1c287b1a687f5cce65c905c705f7",
+   "currentPlate": "7bd940d7bebde8c8c24ba78c14993217b43bcc069832a72b39364da09f4d8b28"
+  },
+  {
+   "sku": "LBDiva100LtnMtGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "5ad6bf14b1d973ea21920c68e51720b2d965cde3ef703d3a27e4ac7a5dbef780",
+   "currentPlate": "9020795f58c411a1633bb430446df904ce0801d15122ba216b3d10420c236940"
+  },
+  {
+   "sku": "LBDiva100LtnShnGl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "0e3121523b6feffb69be76492a73fa3cdc9bd309cda585eabe371d9b1ee24ccf",
+   "currentPlate": "61b01c9523ba3b63bf2e3d0a57a9e69e4d8e612e7604c951d11fc256fa7fd7eb"
+  },
+  {
+   "sku": "LBDiva100LtnShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "153b7c66593503eb2e36cf72b8fdb87fd3379782ff76f64725dce6211c1e5ecb",
+   "currentPlate": "cadb3c4cff46f8e54fecb7a25c6d9217d36a0afccc9187e544d925a3a7702cf8"
+  }
+ ],
+ "approvalSha256": "d9a53b4a846257d7922b17beb9b8ddf3adb4cd6be09e853006e68474e9f9ef16"
+}

@@ -55,6 +55,36 @@ afterEach(() => {
 });
 
 describe("focused PDP mobile purchase surface", () => {
+    it("shows exact local-review components in both Photo cap states without opting another SKU into review", async () => {
+        const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
+        installInstantImageDecode();
+        sessionStorage.removeItem("bb:pdp-stage");
+        const container = document.createElement("div");
+        containers.push(container);
+        document.body.append(container);
+        const root = createRoot(container);
+        const props = {
+            currentSlug: "circle-50ml-frosted-18-415-perfumespray", groupTitle: "Circle 50 mL", capacityLabel: "Frosted glass",
+            qty: 1, priceEach: 2.5, websiteSku: "CIRCLE-COPPER", selectedGraceSku: "GRACE-COPPER",
+            plateImage: "https://example.test/capped.webp", plateImageCapOff: "https://example.test/off.webp",
+            kitQuery: kitFor("CIRCLE-COPPER", "https://example.test/recovered-body.webp"),
+            localComponentPreviewSku: "CIRCLE-COPPER",
+        };
+        await act(async () => { root.render(createElement(ConfiguratorPdp, props)); });
+        expect(container.querySelector('img[src="https://example.test/recovered-body.webp"]')).not.toBeNull();
+        expect(container.querySelector('img[src="https://example.test/off.webp"]')).toBeNull();
+        const before = container.querySelector<HTMLElement>('[data-pdp-stage-frame]')!.style.transform;
+        await act(async () => { container.querySelector<HTMLButtonElement>('[aria-label="Cap on or off"]')!.click(); });
+        expect(container.querySelector('img[src="https://example.test/recovered-body.webp"]')).not.toBeNull();
+        expect(container.querySelector('img[src="https://example.test/capped.webp"]')).toBeNull();
+        expect(container.querySelector<HTMLElement>('[data-pdp-stage-frame]')!.style.transform).toBe(before);
+        await act(async () => {
+            root.render(createElement(ConfiguratorPdp, { ...props, localComponentPreviewSku: "A-DIFFERENT-SKU" }));
+        });
+        expect(container.querySelector('img[src="https://example.test/recovered-body.webp"]')).toBeNull();
+        expect(container.querySelector('img[src="https://example.test/capped.webp"]')).not.toBeNull();
+        await act(async () => { root.unmount(); });
+    });
     it("keeps exact cap-on and cap-off photographs after kit decode and reserves kit layers for exploded mode", async () => {
         const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
         installInstantImageDecode();

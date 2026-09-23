@@ -1,0 +1,527 @@
+{
+  "status": "two-pilot-material-previews-generated-awaiting-review",
+  "referenceSha256": "75b68d6e07d5dc75addd2603ea9b224fb64e574dcffabad6b821f4545062d413",
+  "reference": "references/frosted-material-user-reference.jpg",
+  "modelIntent": "Continue existing approved Sunburst API workflow; no model substitution",
+  "canvas": [
+    2080,
+    2288
+  ],
+  "glassFootPct": 91,
+  "geometryAuthority": "exact SKU source plus exact master PSD composite; resolve before generation",
+  "scope": {
+    "Circle": 11,
+    "Round": 10
+  },
+  "rows": [
+    {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "groupSlug": "circle-50ml-frosted-18-400-reducer",
+      "family": "Circle",
+      "capacityMl": 50,
+      "sourceSha256": "11c9a0f73f42fcd3974977ce76a5c32b3966b5e9ae28dc5b0a3fc144974a1689",
+      "bodyTarget": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpGl",
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray",
+      "family": "Circle",
+      "capacityMl": 50,
+      "sourceSha256": "046e7ab96b6c620a9a41c22999483f638c20ae6e2f2b5be285d88345e0de8c0e",
+      "bodyTarget": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst50DrpGl",
+      "groupSlug": "circle-50ml-frosted-18-415-dropper",
+      "family": "Circle",
+      "capacityMl": 50,
+      "sourceSha256": "00e37fa4d37d254fa82980cead0cae44e650451093994025786d0873bae27b11",
+      "bodyTarget": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "LBCrclFrst50LtnMtGl",
+      "groupSlug": "circle-50ml-frosted-18-415-lotionpump",
+      "family": "Circle",
+      "capacityMl": 50,
+      "sourceSha256": "b01840f43e1f8fb7bb9978866d4b1944ec5b5b37656d44bca909cd0a0a442b1d",
+      "bodyTarget": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "groupSlug": "circle-50ml-frosted-18-415-perfumespray",
+      "family": "Circle",
+      "capacityMl": 50,
+      "sourceSha256": "e325119c30a5db7c4f15ed8b8b97611e38ff0256716e2ba1e80760f089677848",
+      "bodyTarget": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": true
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrShnGl",
+      "groupSlug": "circle-50ml-frosted-18-415-reducer",
+      "family": "Circle",
+      "capacityMl": 50,
+      "sourceSha256": "4456263fddc1a3ebc797c143dc097e4eed4f7a38b6f5fb0df2a218693fa53507",
+      "bodyTarget": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpGl",
+      "groupSlug": "circle-100ml-frosted-18-415-antiquespray",
+      "family": "Circle",
+      "capacityMl": 100,
+      "sourceSha256": "221434785dd42a219267d705f2ae60b30944f180765b937d532eb824d0ea7e7d",
+      "bodyTarget": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "groupSlug": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "family": "Circle",
+      "capacityMl": 100,
+      "sourceSha256": "e3bc47848c6e2986be30c8386215b0fce6b9f3caba151a1a0969f64508d16cdd",
+      "bodyTarget": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "LBCrclFrst100LtnMtGl",
+      "groupSlug": "circle-100ml-frosted-18-415-lotionpump",
+      "family": "Circle",
+      "capacityMl": 100,
+      "sourceSha256": "cb81c881af6ea286c74d55345d1fb60ecc729576d83743b8d6a7bb8f046a9806",
+      "bodyTarget": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst100SpryMtGl",
+      "groupSlug": "circle-100ml-frosted-18-415-perfumespray",
+      "family": "Circle",
+      "capacityMl": 100,
+      "sourceSha256": "51a21c13e4b772e4984f313c003c096528e405b45b036c8ac962b78aebf3c88d",
+      "bodyTarget": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnGl",
+      "groupSlug": "circle-100ml-frosted-18-415-reducer",
+      "family": "Circle",
+      "capacityMl": 100,
+      "sourceSha256": "25795f39b7c80a352cfc8548544761513f608f722491b38ef8191c6f49488836",
+      "bodyTarget": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst78AnSpGl",
+      "groupSlug": "round-78ml-frosted-18-415-antiquespray",
+      "family": "Round",
+      "capacityMl": 78,
+      "sourceSha256": "18fa3af6e86540071cc5a0b34c33c53ca1df7db58aabe2fbab302438a9386cda",
+      "bodyTarget": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst78AnSpTslGl",
+      "groupSlug": "round-78ml-frosted-18-415-antiquespray-tassel",
+      "family": "Round",
+      "capacityMl": 78,
+      "sourceSha256": "ed278d3368644f33c971ddc59a627791be3c8a4540a44929b8ba47b0d8426aff",
+      "bodyTarget": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "LBRndFrst78LtnMtGl",
+      "groupSlug": "round-78ml-frosted-18-415-lotionpump",
+      "family": "Round",
+      "capacityMl": 78,
+      "sourceSha256": "a4f98fb38c9c6df6bb2db29676c7f2027fc9242b88d1be382a6ad175bc82967d",
+      "bodyTarget": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+      "family": "Round",
+      "capacityMl": 78,
+      "sourceSha256": "60a46193b2bca04ecc9679db2b8803b1e4ae58e96167aa81d64dbe47942783a4",
+      "bodyTarget": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": true
+      }
+    },
+    {
+      "sku": "GBRndFrst78RdcrShnGl",
+      "groupSlug": "round-78ml-frosted-18-415-reducer",
+      "family": "Round",
+      "capacityMl": 78,
+      "sourceSha256": "496a1ad3f57dcd39d477e084b366009eb2a992eab555d105260b659b2b94fa6c",
+      "bodyTarget": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpGl",
+      "groupSlug": "round-128ml-frosted-18-415-antiquespray",
+      "family": "Round",
+      "capacityMl": 128,
+      "sourceSha256": "a4ff3271d15ab43bf469eef85bb671b05d7f0b838f33732e54eb9891ea54acba",
+      "bodyTarget": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst128DrpGl",
+      "groupSlug": "round-128ml-frosted-18-415-dropper",
+      "family": "Round",
+      "capacityMl": 128,
+      "sourceSha256": "ca3f28ed8038f9fa01ad9dfaf48abf50b33fbf8d4cfa41e5393d1c726d849f28",
+      "bodyTarget": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "LBRndFrst128LtnMtGl",
+      "groupSlug": "round-128ml-frosted-18-415-lotionpump",
+      "family": "Round",
+      "capacityMl": 128,
+      "sourceSha256": "5fd38ec3e9c6958c9186492dc87ce48d4a5c54f3d3b0ab37a7dede7293cea2f5",
+      "bodyTarget": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst128SpryMtGl",
+      "groupSlug": "round-128ml-frosted-18-415-perfumespray",
+      "family": "Round",
+      "capacityMl": 128,
+      "sourceSha256": "2feeb760c0b3c2723dfc93b6c1fda0d0e6a919fac616b85b1b2da8a38985aa10",
+      "bodyTarget": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst128RdcrShnGl",
+      "groupSlug": "round-128ml-frosted-18-415-reducer",
+      "family": "Round",
+      "capacityMl": 128,
+      "sourceSha256": "10424f63f52e13edba9ed6c71af2b6dbbab62c615f92b44263dbdd0827f61f00",
+      "bodyTarget": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    }
+  ],
+  "generatedPilotSkus": [
+    "GBCrclFrst50SpryMtGl",
+    "GBRndFrst78SpryMtGl"
+  ],
+  "remainingNotGenerated": 19
+}

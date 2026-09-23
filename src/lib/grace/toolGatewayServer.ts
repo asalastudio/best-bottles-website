@@ -1,6 +1,7 @@
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import { resolveSearchCatalogParameters } from "@/lib/graceToolParamUtils";
+import { enrichSearchCatalogWithJev } from "@/lib/grace/enrichSearchCatalogWithJev";
 import {
     VERIFIED_9ML_CYLINDER_ROLLON_COLORS,
     buildSearchCatalogToolResult,
@@ -117,7 +118,30 @@ export async function executeGraceServerTool({
 
         switch (tool_name) {
             case "searchCatalog": {
-                const searchParams = resolveSearchCatalogParameters(parameters);
+                const resolved = resolveSearchCatalogParameters(parameters);
+                const jevEnrichment = await enrichSearchCatalogWithJev({
+                    searchTerm: resolved.searchTerm,
+                    categoryLimit: resolved.categoryLimit,
+                    familyLimit: resolved.familyLimit,
+                    applicatorFilter: resolved.applicatorFilter,
+                }, {
+                    requestText: typeof parameters.customerRequest === "string"
+                        ? parameters.customerRequest
+                        : resolved.searchTerm,
+                    timeoutMs: 2500,
+                    useCaseTable: true,
+                });
+                const searchParams = {
+                    searchTerm: jevEnrichment.args.searchTerm,
+                    categoryLimit: jevEnrichment.args.categoryLimit,
+                    familyLimit: jevEnrichment.args.familyLimit,
+                    applicatorFilter: jevEnrichment.args.applicatorFilter,
+                };
+                if (jevEnrichment.applied) {
+                    console.info("[Grace/Jev] searchCatalog filters", jevEnrichment.decisions, `${jevEnrichment.ms ?? "?"}ms`);
+                } else if (jevEnrichment.error && jevEnrichment.error !== "TYPESAFE_API_KEY not set") {
+                    console.warn("[Grace/Jev] skipped:", jevEnrichment.error);
+                }
                 const returnRaw = wantsRawSearchCatalogResult(parameters);
                 const refineState = parameters.refineState as GraceRefineState | undefined;
                 if (refineState?.filters && refineState.sort && refineState.view) {

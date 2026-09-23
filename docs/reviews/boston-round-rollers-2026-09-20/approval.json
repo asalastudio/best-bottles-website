@@ -1,0 +1,27 @@
+{
+ "release": "boston-round-rollers-2026-09-20",
+ "ship": "ship Boston Round corrected rollers 2026-09-20",
+ "approvedBy": "Jordan Richter — saw the cap-off before/after sheet and gave the ship phrase in chat 2026-09-20: 'ship Boston Round corrected rollers 2026-09-20'",
+ "approvedAt": "2026-09-20T03:10:28.945Z",
+ "preparedBy": "reissue-kit-approval.mjs (Claude Opus 5)",
+ "preparedAt": "2026-09-20T03:10:28.945Z",
+ "verifiedAgainst": "https://precise-raccoon-123.convex.cloud",
+ "reviewSheet": "/reviews/builder-review-2026-09-19/boston-roller-set-before-after.jpg",
+ "skus": {
+  "GBBstnAmb1ozMtlRollonMattBlk": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+  "GBBstnAmb1ozMtlRollonMattGl": "a77ff9999dea782f13ce14c1479116b296da4a5196cc697a4d83eed6ab7c6c3d",
+  "GBBstnAmb1ozMtlRollonMattSl": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+  "GBBstnAmb1ozMtlRollonShnBlk": "6cedf7227ec064de77bba2cf25d6981785918fa7490775fb15ef195d4efca6db",
+  "GBBstnAmb1ozRollonMattBlk": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+  "GBBstnAmb1ozRollonMattGl": "ac72badff5c321207c6fe8e71be17aab160f2eda6427c35bef927d83cb11ef81",
+  "GBBstnAmb1ozRollonMattSl": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+  "GBBstnAmb1ozRollonShnBlk": "184424a4073aefc26b5c36e886c398d69e529eae868913beab450f2c97384e17",
+  "GBBstnAmb2ozMtlRollonGl": "b0a50b890de4b04bfb422c3e8e1e54ca9df9af049786c62b20ed36327453251d",
+  "GBBstnAmb2ozMtlRollonMattBlk": "2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608",
+  "GBBstnAmb2ozMtlRollonMattGl": "c8a7aafafbc7dec2bffc12c818df30e056391bb6844296d8747d91401bfca490",
+  "GBBstnAmb1ozRollonShnSl": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec",
+  "GBBstnAmb1ozRollonGl": "eceb3b6fd028736f77be0686027e7483266579f6080ab8fcf27b12cb0e513176"
+ },
+ "setAside": [],
+ "note": "Re-issued against the published plates. The set-aside rows keep their review; their kits must be re-cut from the plate that replaced the one they were registered to."
+}

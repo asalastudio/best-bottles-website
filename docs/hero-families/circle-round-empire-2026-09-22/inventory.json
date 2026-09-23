@@ -1,0 +1,1296 @@
+{
+  "activeReview": {
+    "status": "proposed-not-published",
+    "userInstruction": "Adjust to work; do not force Cylinder height pattern where it will not work",
+    "canvas": [
+      2080,
+      2288
+    ],
+    "basePct": 91,
+    "targets": {
+      "Circle:15": 44.625,
+      "Circle:30": 46,
+      "Circle:50": 54,
+      "Circle:100": 58,
+      "Round:78": 48,
+      "Round:128": 54,
+      "Empire:50": 50,
+      "Empire:100": 55
+    },
+    "measuredCount": 18,
+    "candidateCount": 16,
+    "held": [
+      "GBCrcl50AnSpTslIvyGl",
+      "GBRnd128AnSpTslIvyGl"
+    ],
+    "unmeasuredCount": 42
+  },
+  "rows": [
+    {
+      "sku": "GBCrcl15Gl",
+      "family": "Circle",
+      "capacityMl": 15,
+      "groupSlug": "circle-15ml-clear-13-415",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:15-standard",
+        "label": "Circle 15 ml",
+        "shoulderPct": 44.625,
+        "bodyAspect": 1.006,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 46.375,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "bd0ae9e1f4748d1c117c0fae4956ce3e010602beb8ee1807ab2fa75c33a4952d",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "family": "Circle",
+      "capacityMl": 15,
+      "groupSlug": "circle-15ml-clear-13-415-finemist",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:15-standard",
+        "label": "Circle 15 ml",
+        "shoulderPct": 44.625,
+        "bodyAspect": 1.006,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 46.375,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "4abc2162d678817f81e7338535fa2339e7d9107822e58dcf19fbdbcf5e987642",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBCrcl15MtlRollGlMatt",
+      "family": "Circle",
+      "capacityMl": 15,
+      "groupSlug": "circle-15ml-clear-13-415-rollon",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:15-standard",
+        "label": "Circle 15 ml",
+        "shoulderPct": 44.625,
+        "bodyAspect": 1.006,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 46.375,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "a5ef1cec6db749aa663d0f6f01d8f2c42577da220a01e2e05a372239400eff43",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBCrcl30GlCap",
+      "family": "Circle",
+      "capacityMl": 30,
+      "groupSlug": "circle-30ml-clear-15-415",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:30-standard",
+        "label": "Circle 30 ml",
+        "shoulderPct": 46,
+        "bodyAspect": 1.026,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 45,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "73169e784ffd11ca53be695fd2e7694e14690c2dc1f0dcb4e5271154e045f6a5",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBCrcl30SpryMattGl",
+      "family": "Circle",
+      "capacityMl": 30,
+      "groupSlug": "circle-30ml-clear-15-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:30-standard",
+        "label": "Circle 30 ml",
+        "shoulderPct": 46,
+        "bodyAspect": 1.026,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 45,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "267edc5e626c770cb5ffa91a025e7c523ab54da432a5bcce5d3b9abfb3251f92",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBCrcl50AnSpGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-clear-18-415-antiquespray",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "300d01758f982aac210468f690a6e19655e1861405e69b4cbf997a85b45315b8",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-clear-18-415-antiquespray-tassel",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "78d4c9ed55be7020c6e815a07d90784e1b1dd23faf5bbfcd98b771039f5bcad0",
+      "status": "composition-repair-required"
+    },
+    {
+      "sku": "GBCrcl50DrpGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-clear-18-415-dropper",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "0e6daa55097b7817b76344a4f951fdd4721647acefa40c14e2140a90f1058ebc",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "LBCrcl50LtnMtGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-clear-18-415-lotionpump",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "0a9d66084dc5ffd66d02d6cbc37b4aabb87e78013d89d65ca1d4bb4225d3d0ce",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-clear-18-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "bdd15bd979b8693a9efabd3f67508f050e11f9abd71ba22666330e6e503e23ab",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBCrcl50RdcrShnGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-clear-18-415-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "50c74f388d2b86be373f140a625fff82be1bccdd05b42725ab21c7802016efa5",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-frosted-18-400-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "11c9a0f73f42fcd3974977ce76a5c32b3966b5e9ae28dc5b0a3fc144974a1689",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-frosted-18-415-antiquespray",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "046e7ab96b6c620a9a41c22999483f638c20ae6e2f2b5be285d88345e0de8c0e",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst50DrpGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-frosted-18-415-dropper",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "00e37fa4d37d254fa82980cead0cae44e650451093994025786d0873bae27b11",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "LBCrclFrst50LtnMtGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-frosted-18-415-lotionpump",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "b01840f43e1f8fb7bb9978866d4b1944ec5b5b37656d44bca909cd0a0a442b1d",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-frosted-18-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "e325119c30a5db7c4f15ed8b8b97611e38ff0256716e2ba1e80760f089677848",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": true
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrShnGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "groupSlug": "circle-50ml-frosted-18-415-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:50-standard",
+        "label": "Circle 50 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.951,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "4456263fddc1a3ebc797c143dc097e4eed4f7a38b6f5fb0df2a218693fa53507",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrcl100AnSpGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "groupSlug": "circle-100ml-clear-18-415-antiquespray",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "3a2c2437214d6378e9664a2f30179861c93b73b88f6218d1c5ca1a773ef135c7",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBCrcl100AnSpTslGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "groupSlug": "circle-100ml-clear-18-415-antiquespray-tassel",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "2c000bcb5058fe4c1131514ea4b90c6bdf4724288cd6b27575cefb28541d26c1",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "LBCrcl100LtnMtGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "groupSlug": "circle-100ml-clear-18-415-lotionpump",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "6d2b895243c48234dfcd48c82983d74fd60081f2141b1f44e7c3ef81378dca02",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBCrcl100SpryMtGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "groupSlug": "circle-100ml-clear-18-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "ad83dd72f22218660742b344514f19faf4b7f9fb2db7a955e9b533928d8cf992",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBCrcl100RdcrShnGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "groupSlug": "circle-100ml-clear-18-415-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "c3a382b304822d2ebdfc5247d132a3d2045b12bb8d235a6b213eadeeb7157fe6",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBCrclFrst100AnSpGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "groupSlug": "circle-100ml-frosted-18-415-antiquespray",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "221434785dd42a219267d705f2ae60b30944f180765b937d532eb824d0ea7e7d",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "groupSlug": "circle-100ml-frosted-18-415-antiquespray-tassel",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "e3bc47848c6e2986be30c8386215b0fce6b9f3caba151a1a0969f64508d16cdd",
+      "status": "sizing-candidate",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "LBCrclFrst100LtnMtGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "groupSlug": "circle-100ml-frosted-18-415-lotionpump",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "cb81c881af6ea286c74d55345d1fb60ecc729576d83743b8d6a7bb8f046a9806",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst100SpryMtGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "groupSlug": "circle-100ml-frosted-18-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "51a21c13e4b772e4984f313c003c096528e405b45b036c8ac962b78aebf3c88d",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnGl",
+      "family": "Circle",
+      "capacityMl": 100,
+      "groupSlug": "circle-100ml-frosted-18-415-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:100-standard",
+        "label": "Circle 100 ml",
+        "shoulderPct": 58,
+        "bodyAspect": 0.98,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 33,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "25795f39b7c80a352cfc8548544761513f608f722491b38ef8191c6f49488836",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-rerender-required",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBEmp50AnSpGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "groupSlug": "empire-50ml-clear-18-415-antiquespray",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:50-standard",
+        "label": "Empire 50 ml",
+        "shoulderPct": 50,
+        "bodyAspect": 1.95,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 41,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "e441205f01797057ab01c73028482dd76ef239a62917b4a7519c813ffe192ffa",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBEmp50AnSpTslGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "groupSlug": "empire-50ml-clear-18-415-antiquespray-tassel",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:50-standard",
+        "label": "Empire 50 ml",
+        "shoulderPct": 50,
+        "bodyAspect": 1.95,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 41,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "02fd6b63e5621048b6900595967aca43356a7c066f06fa5309ce97a273bbd320",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBEmp50DrpGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "groupSlug": "empire-50ml-clear-18-415-dropper",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:50-standard",
+        "label": "Empire 50 ml",
+        "shoulderPct": 50,
+        "bodyAspect": 1.95,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 41,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "7d886a6cdf1e75e6f29e3027dc45298aa708e7243af0b5e61ba28a048a293efd",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "LBEmp50WhtClOvrCp",
+      "family": "Empire",
+      "capacityMl": 50,
+      "groupSlug": "empire-50ml-clear-18-415-lotionpump",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:50-standard",
+        "label": "Empire 50 ml",
+        "shoulderPct": 50,
+        "bodyAspect": 1.95,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 41,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "49a6f2e62f032f7b20481e464927de9694bba8a845faeb020c7f23d08a36e00d",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBEmp50SpryMtGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:50-standard",
+        "label": "Empire 50 ml",
+        "shoulderPct": 50,
+        "bodyAspect": 1.95,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 41,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "9fe529e763bcfdcab008f27dd922dbea327ce908f4b70af1001e0b03675f1080",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBEmp50RdcrShnGl",
+      "family": "Empire",
+      "capacityMl": 50,
+      "groupSlug": "empire-50ml-clear-18-415-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:50-standard",
+        "label": "Empire 50 ml",
+        "shoulderPct": 50,
+        "bodyAspect": 1.95,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 41,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "9215b4d6a0623ab798d735559d898797b718be98f73dfc2738ea54d4699a67de",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBEmp100AnSpGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "groupSlug": "empire-100ml-clear-18-415-antiquespray",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:100-standard",
+        "label": "Empire 100 ml",
+        "shoulderPct": 55,
+        "bodyAspect": 1.973,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 36,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "9bd7af0c9dc7e810baa2312faef835c52d75d9bbf17feb608a010c99a6debb16",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBEmp100AnSpTslGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "groupSlug": "empire-100ml-clear-18-415-antiquespray-tassel",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:100-standard",
+        "label": "Empire 100 ml",
+        "shoulderPct": 55,
+        "bodyAspect": 1.973,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 36,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "3212b05eabbcd03cbdc3270387476077b9d0d9796aa9ded494199a6b964ecc79",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "LBEmp100WhtClOvrCp",
+      "family": "Empire",
+      "capacityMl": 100,
+      "groupSlug": "empire-100ml-clear-18-415-lotionpump",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:100-standard",
+        "label": "Empire 100 ml",
+        "shoulderPct": 55,
+        "bodyAspect": 1.973,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 36,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "48ccc5df1efea66bec820dabcad535f2eb38c9808a5841094255ddb0bc391d80",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBEmp100SpryMtGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:100-standard",
+        "label": "Empire 100 ml",
+        "shoulderPct": 55,
+        "bodyAspect": 1.973,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 36,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "08bb78aa3e9c10a996c6705ddeaf4cd45889f475dc5bf3598e40463641f67073",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBEmp100RdcrShnGl",
+      "family": "Empire",
+      "capacityMl": 100,
+      "groupSlug": "empire-100ml-clear-18-415-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "empire:100-standard",
+        "label": "Empire 100 ml",
+        "shoulderPct": 55,
+        "bodyAspect": 1.973,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 36,
+        "landmark": "shoulder"
+      },
+      "sourceSha256": "8ce6d101fb1abfa62b6c8cfd74fa2cff33e236b9d8bd4ba7ecc9d94e2eaecff5",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBRnd78AnSpGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "groupSlug": "round-78ml-clear-18-415-antiquespray",
+      "activeReviewLock": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "392576d442ed93c3ba570eeb0f27ba231eb147ee9253591b35b74b2a3736142e",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBRnd78AnSpTslGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "groupSlug": "round-78ml-clear-18-415-antiquespray-tassel",
+      "activeReviewLock": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "22349e1705d7a988a75c44bc988192990c2ac74cadd7ddca21506510ead7eb14",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "LBRnd78LtnCu",
+      "family": "Round",
+      "capacityMl": 78,
+      "groupSlug": "round-78ml-clear-18-415-lotionpump",
+      "activeReviewLock": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "cb47f93f4e7da88161ce975bc7d996940f2b83c7116d05b4251735cbfb42da07",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBRnd78SpryCu",
+      "family": "Round",
+      "capacityMl": 78,
+      "groupSlug": "round-78ml-clear-18-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "25a105686caf7404a5267f2f6e030c6f171ce38b8c439c051fa5f79095fce466",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBRnd78RdcrShnGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "groupSlug": "round-78ml-clear-18-415-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "69459c58b057d2b0c41ee80b28a15ee72fbf8b551aa771d4ef941f57c79fbb02",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBRndFrst78AnSpGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "groupSlug": "round-78ml-frosted-18-415-antiquespray",
+      "activeReviewLock": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "18fa3af6e86540071cc5a0b34c33c53ca1df7db58aabe2fbab302438a9386cda",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst78AnSpTslGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "groupSlug": "round-78ml-frosted-18-415-antiquespray-tassel",
+      "activeReviewLock": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "ed278d3368644f33c971ddc59a627791be3c8a4540a44929b8ba47b0d8426aff",
+      "status": "sizing-candidate",
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "LBRndFrst78LtnMtGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "groupSlug": "round-78ml-frosted-18-415-lotionpump",
+      "activeReviewLock": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "a4f98fb38c9c6df6bb2db29676c7f2027fc9242b88d1be382a6ad175bc82967d",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "groupSlug": "round-78ml-frosted-18-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "60a46193b2bca04ecc9679db2b8803b1e4ae58e96167aa81d64dbe47942783a4",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": true
+      }
+    },
+    {
+      "sku": "GBRndFrst78RdcrShnGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "groupSlug": "round-78ml-frosted-18-415-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "round:78-standard",
+        "label": "Round 78 ml",
+        "shoulderPct": 48,
+        "bodyAspect": 0.961,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 43,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "496a1ad3f57dcd39d477e084b366009eb2a992eab555d105260b659b2b94fa6c",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRnd128AnSpGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-clear-18-415-antiquespray",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "a4f0225c54bff8e8ad8ccd886ecd866123ae36da35127989ac32d0dab965d4b7",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBRnd128AnSpTslIvyGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-clear-18-415-antiquespray-tassel",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "be1038c43fe3a434106bd29cc5c3a98fcf1f3266ea54daf5e6f4b36bbaaf44d9",
+      "status": "composition-repair-required"
+    },
+    {
+      "sku": "GBRnd128DrpGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-clear-18-415-dropper",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "2deae72d9a69c288311ddabec544f3e3c15fcc3454be2a336ccbd987760634ee",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "LBRnd128LtnMtGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-clear-18-415-lotionpump",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "9938c0e16d437cafe47eee9b0c78ae0d668d6de81a8dc4fa178719ab69a4b321",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBRnd128SpryMtGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-clear-18-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "ef7de4b520ecead6018c9d6b46784718aa2b2e64ecba8c3afc2bcb8a0a9c7151",
+      "status": "sizing-candidate"
+    },
+    {
+      "sku": "GBRnd128RdcrShnGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-clear-18-415-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "1c8efc76ab8168fb86ae2fa819672886af5083d432b9ac83d045a22cb8f6f44c",
+      "status": "measurement-pending"
+    },
+    {
+      "sku": "GBRndFrst128AnSpGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-frosted-18-415-antiquespray",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "a4ff3271d15ab43bf469eef85bb671b05d7f0b838f33732e54eb9891ea54acba",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst128DrpGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-frosted-18-415-dropper",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "ca3f28ed8038f9fa01ad9dfaf48abf50b33fbf8d4cfa41e5393d1c726d849f28",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "LBRndFrst128LtnMtGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-frosted-18-415-lotionpump",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "5fd38ec3e9c6958c9186492dc87ce48d4a5c54f3d3b0ab37a7dede7293cea2f5",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst128SpryMtGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-frosted-18-415-perfumespray",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "2feeb760c0b3c2723dfc93b6c1fda0d0e6a919fac616b85b1b2da8a38985aa10",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBRndFrst128RdcrShnGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "groupSlug": "round-128ml-frosted-18-415-reducer",
+      "activeReviewLock": {
+        "glassBodyKey": "round:128-standard",
+        "label": "Round 128 ml",
+        "shoulderPct": 54,
+        "bodyAspect": 0.979,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 37,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "10424f63f52e13edba9ed6c71af2b6dbbab62c615f92b44263dbdd0827f61f00",
+      "status": "measurement-pending",
+      "materialReview": {
+        "status": "material-pilot-and-review",
+        "reference": "references/frosted-material-user-reference.jpg",
+        "referenceRole": "Frosted material only; exact SKU source and master PSD govern geometry and components",
+        "pilot": false
+      }
+    },
+    {
+      "sku": "GBCrcl15RollBlkSh",
+      "family": "Circle",
+      "capacityMl": 15,
+      "groupSlug": "circle-15ml-clear-13-415-rollon",
+      "activeReviewLock": {
+        "glassBodyKey": "circle:15-standard",
+        "label": "Circle 15 ml",
+        "shoulderPct": 44.625,
+        "bodyAspect": 1.006,
+        "status": "proposed",
+        "lockVersion": "body-fit-proposal-2026-09-22",
+        "baselinePct": 91,
+        "shoulderYFromTopPct": 46.375,
+        "landmark": "closure-seat"
+      },
+      "sourceSha256": "2c830a1e23cd99f63edf9c3fd5cbcaf23f0c2d647ee31e3ade5a5f5dcb2c5bc1",
+      "status": "measurement-pending"
+    }
+  ]
+}

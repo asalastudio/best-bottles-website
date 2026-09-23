@@ -1,0 +1,204 @@
+{
+  "beforeGeneratedAt": "2026-09-22T21:58:40.360Z",
+  "afterGeneratedAt": "2026-09-22T22:11:57.763Z",
+  "before": {
+    "Circle": {
+      "catalogRows": 209,
+      "plate": {
+        "plated-no-capoff-by-design": 116,
+        "none": 4,
+        "plated": 87,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 181,
+        "indexed": 28
+      },
+      "kit": {
+        "live": 109,
+        "approved-not-published": 4,
+        "candidate": 57,
+        "no-plate": 4,
+        "stale": 1,
+        "held": 21,
+        "none": 13
+      },
+      "approvedCompletePlates": 38,
+      "groups": 27,
+      "completeSunburstGroups": 27
+    },
+    "Round": {
+      "catalogRows": 186,
+      "plate": {
+        "plated-no-capoff-by-design": 125,
+        "none": 8,
+        "plated": 14,
+        "plated-cap-on-only": 34,
+        "plated-legacy-source": 3,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 165,
+        "indexed": 21
+      },
+      "kit": {
+        "live": 104,
+        "held": 22,
+        "no-plate": 8,
+        "stale": 7,
+        "approved-not-published": 8,
+        "none": 37
+      },
+      "approvedCompletePlates": 18,
+      "groups": 21,
+      "completeSunburstGroups": 0
+    },
+    "Empire": {
+      "catalogRows": 95,
+      "plate": {
+        "plated-no-capoff-by-design": 63,
+        "none": 4,
+        "plated-cap-on-only": 26,
+        "plated": 2
+      },
+      "hero": {
+        "none": 84,
+        "indexed": 11
+      },
+      "kit": {
+        "live": 86,
+        "candidate": 4,
+        "no-plate": 4,
+        "held": 1
+      },
+      "approvedCompletePlates": 19,
+      "groups": 11,
+      "completeSunburstGroups": 0
+    },
+    "Cylinder": {
+      "catalogRows": 443,
+      "plate": {
+        "plated-no-capoff-by-design": 93,
+        "none": 7,
+        "plated": 316,
+        "plated-approved-legacy-source": 27
+      },
+      "hero": {
+        "none": 381,
+        "indexed": 52,
+        "pending": 10
+      },
+      "kit": {
+        "live": 396,
+        "no-plate": 7,
+        "stale": 24,
+        "held": 13,
+        "not-applicable": 3
+      },
+      "approvedCompletePlates": 436,
+      "groups": 53,
+      "completeSunburstGroups": 45
+    }
+  },
+  "after": {
+    "Circle": {
+      "catalogRows": 209,
+      "plate": {
+        "plated-no-capoff-by-design": 116,
+        "none": 4,
+        "plated": 87,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 181,
+        "indexed": 28
+      },
+      "kit": {
+        "live": 109,
+        "approved-not-published": 4,
+        "candidate": 57,
+        "no-plate": 4,
+        "stale": 1,
+        "held": 21,
+        "none": 13
+      },
+      "approvedCompletePlates": 38,
+      "groups": 27,
+      "completeSunburstGroups": 27
+    },
+    "Round": {
+      "catalogRows": 186,
+      "plate": {
+        "plated-no-capoff-by-design": 125,
+        "none": 8,
+        "plated": 14,
+        "plated-cap-on-only": 34,
+        "plated-legacy-source": 3,
+        "plated-wrong-size": 2
+      },
+      "hero": {
+        "none": 165,
+        "indexed": 21
+      },
+      "kit": {
+        "live": 104,
+        "held": 22,
+        "no-plate": 8,
+        "stale": 7,
+        "approved-not-published": 8,
+        "none": 37
+      },
+      "approvedCompletePlates": 18,
+      "groups": 21,
+      "completeSunburstGroups": 0
+    },
+    "Empire": {
+      "catalogRows": 95,
+      "plate": {
+        "plated-no-capoff-by-design": 63,
+        "none": 4,
+        "plated-cap-on-only": 26,
+        "plated": 2
+      },
+      "hero": {
+        "none": 84,
+        "indexed": 11
+      },
+      "kit": {
+        "live": 86,
+        "candidate": 4,
+        "no-plate": 4,
+        "held": 1
+      },
+      "approvedCompletePlates": 19,
+      "groups": 11,
+      "completeSunburstGroups": 0
+    },
+    "Cylinder": {
+      "catalogRows": 443,
+      "plate": {
+        "plated-no-capoff-by-design": 93,
+        "none": 7,
+        "plated": 316,
+        "plated-approved-legacy-source": 27
+      },
+      "hero": {
+        "none": 381,
+        "indexed": 52,
+        "pending": 10
+      },
+      "kit": {
+        "live": 396,
+        "no-plate": 7,
+        "stale": 24,
+        "held": 13,
+        "not-applicable": 3
+      },
+      "approvedCompletePlates": 436,
+      "groups": 53,
+      "completeSunburstGroups": 45
+    }
+  },
+  "backendChange": false,
+  "localChange": "60 exact-byte-approved family heroes added to frontend staging registry; production registry and backend assets unchanged."
+}

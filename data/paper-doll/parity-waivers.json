@@ -1,0 +1,19 @@
+{
+ "note": "Per-SKU waivers of the plate parity gate (mean <= 6/255, tail>40 <= 1 %). The gate itself is unchanged for every other SKU. A waiver is Jordan's ruling, quoted, and still has a ceiling: a SKU beyond it fails as before.",
+ "ceiling": {
+  "mean": 8.0,
+  "tailOver40": 0.04
+ },
+ "grantedBy": "Jordan Richter, in chat 2026-09-20: \"Okay, relax the gate for those six SKUs. We're fine.\"",
+ "why": "Saturated / mirror finishes whose published plates sit ~0.1 % off uniform scale; best placement lands just outside the gate (mean 5.7-6.9, tail 0.5-2.4 %). Without a kit the builder falls back to the white product photograph.",
+ "skus": [
+  "GBEmp50AnSpPnk",
+  "GBEmp50AnSpTslPnk",
+  "GBEmp100AnSpTslGl",
+  "GBEmp100AnSpTslPnk",
+  "GBEmp100AnSpTslRed",
+  "GBEmp50DrpSl"
+ ],
+ "ceilingNote": "Tail ceiling is 4 %, not 3 %: GBEmp50DrpSl's placement solve lands at 3.25 % because the solver composites the PSD flat and does not apply its 'Black & White 1' adjustment layer, so the mirror collar differs in colour, not position. The kit extractor DOES apply adjustments, and the five sibling kits cut under this waiver all passed the UNWAIVED kit gate (mean 4.1-4.4, tail < 0.4 %).",
+ "lesson": "2026-09-20: under this waiver GBEmp50DrpSl cut with a GOLD collar against a SILVER plate (tail 3.9 %). A waived row is never published unseen; that kit was rebuilt with the PSD's Black & White adjustment applied and passes the STANDARD gate (mean 2.14, tail 0.02 %). The waiver now matters only to the placement solve."
+}

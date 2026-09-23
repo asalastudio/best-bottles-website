@@ -1,0 +1,95 @@
+{
+ "schemaVersion": 1,
+ "release": "Diva plates 2026-09-18",
+ "approvedAt": "2026-09-19T06:28:26.474Z",
+ "actor": "Jordan · approved in chat (\"I approve the 32\"), from the legacy and small-family contact sheets",
+ "approvalId": "baeac338-3bdf-48d3-987e-1985fa0d6acd",
+ "reviewPacket": "public/reviews/plate-completion-2026-09-18/tail-new-plates.jpg",
+ "reviewPacketSha256": "76c43d55ae87e79021806638f279590452fd6cc9951bcf9a0f6f5c12b095f05c",
+ "approvalFile": "dist/paper-doll/diva-plates-2026-09-18/plates/manifest.json",
+ "approvalFileSha256": "bf691c693667480cffea99a1a8f684fff55cc8c984904c7cd8f699ebf4a1001f",
+ "visualApproved": true,
+ "legacySourcesAccepted": false,
+ "publicationAuthorized": false,
+ "indexingAuthorized": false,
+ "rows": [
+  {
+   "sku": "GBDivaFrst46DrpCu",
+   "graceSku": "GB-DVA-FRS-46ML-DRP-CPR",
+   "familyId": "diva-46ml-frosted-18-415",
+   "closure": "Dropper",
+   "plate": {
+    "key": "diva-46ml-frosted-18-415/GBDivaFrst46DrpCu.front-on.webp",
+    "storeKey": "plates/diva-46ml-frosted-18-415/GBDivaFrst46DrpCu/aa2fcd50230f3c41c55bc35b9b52bf383a571698264691efdc73de872054996a.front-on-1000x1100.webp",
+    "sha256": "aa2fcd50230f3c41c55bc35b9b52bf383a571698264691efdc73de872054996a",
+    "bytes": 12552,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "1540c746518ae3022fc414ff0a02413fbb337b2e41d4ec75fb8115ab2de65f08",
+    "bytes": 1276
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/53. GBDivaFrst46DrpCu.psd",
+    "sha256": "f6bca836e7713fb008084d273a1db8d86648d97d645573775f91a9ee2f459166"
+   }
+  },
+  {
+   "sku": "GBDivaFrst46DrpGl",
+   "graceSku": "GB-DVA-FRS-46ML-DRP-GLD",
+   "familyId": "diva-46ml-frosted-18-415",
+   "closure": "Dropper",
+   "plate": {
+    "key": "diva-46ml-frosted-18-415/GBDivaFrst46DrpGl.front-on.webp",
+    "storeKey": "plates/diva-46ml-frosted-18-415/GBDivaFrst46DrpGl/c7d16447da9ee0858407de9e0b7bca861630fb13113c351085bd4fdca8064ee4.front-on-1000x1100.webp",
+    "sha256": "c7d16447da9ee0858407de9e0b7bca861630fb13113c351085bd4fdca8064ee4",
+    "bytes": 12330,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "9c63ecb0fcd3b92e8c8cbec01908db0d710521e5e534301549275adb4974271c",
+    "bytes": 1238
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/52. GBDivaFrst46DrpGl.psd",
+    "sha256": "e0288bda07c634e4ce823bf816ff09124252cd7944c1ece5733c5d670df9acba"
+   }
+  },
+  {
+   "sku": "GBDivaFrst46DrpSl",
+   "graceSku": "GB-DVA-FRS-46ML-DRP-SLV",
+   "familyId": "diva-46ml-frosted-18-415",
+   "closure": "Dropper",
+   "plate": {
+    "key": "diva-46ml-frosted-18-415/GBDivaFrst46DrpSl.front-on.webp",
+    "storeKey": "plates/diva-46ml-frosted-18-415/GBDivaFrst46DrpSl/a801ec96097dd7da4b7a0d82191298c95076c54bb98ff443149921f5e70ba52c.front-on-1000x1100.webp",
+    "sha256": "a801ec96097dd7da4b7a0d82191298c95076c54bb98ff443149921f5e70ba52c",
+    "bytes": 11166,
+    "width": 1000,
+    "height": 1100
+   },
+   "thumb": {
+    "sha256": "26d151decc2052cc774a5c54dec341dea1d8dfad5cb0880a77fe9979e22b5d22",
+    "bytes": 1086
+   },
+   "capOff": null,
+   "source": {
+    "library": "master",
+    "path": "2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/51. GBDivaFrst46DrpSl.psd",
+    "sha256": "2343ec5914c58c6cf752eba7bc49cd816aa1ad7471addd3fa0bc547cb1e40686"
+   }
+  }
+ ],
+ "scope": {
+  "renderedInBatch": 138,
+  "alreadyLiveAndExcluded": 135
+ },
+ "frontSourcePins": [],
+ "note": "Approves the rendered plate bytes after review. Publishing is a separate step and needs a release-specific ship phrase."
+}

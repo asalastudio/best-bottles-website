@@ -1,0 +1,85 @@
+{
+  "status": "technical-checks-complete-user-review-pending",
+  "rows": [
+    {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "family": "Circle",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBCrclFrst50RdcrIvyLthr",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "applicator": "Reducer",
+        "groupSlug": "circle-50ml-frosted-18-400-reducer",
+        "graceSku": "GB-CIR-FRS-50ML-RDC-IVR"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/circle-corrections-v3/GBCrclFrst50RdcrIvyLthr-native-2080x2288.png",
+      "nativeSha256": "cfca981dd8390353d37dc6ca65f4248c07d279d543405cd1246fb53eccd35241",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/circle-corrections-v3/aligned/GBCrclFrst50RdcrIvyLthr-2080x2288.png",
+      "finalSha256": "fd98f6e65de2998de5148fc5f30b5c6e2171dc661bc2a8c5c5d95a286c895d85",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 54,
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.008175182481752,
+      "transform": {
+        "scale": 1.002043795620438,
+        "x": -2.1255474452555134,
+        "y": -2.1710948905110854
+      },
+      "transformedArtworkBounds": [
+        441.7798540145985,
+        309.46452554744513,
+        1678.301897810219,
+        2114.145401459854
+      ],
+      "presentation": "assembled closure",
+      "status": "aligned-awaiting-user-batch-review"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpGl",
+      "family": "Circle",
+      "capacityMl": 50,
+      "catalog": {
+        "sku": "GBCrclFrst50AnSpGl",
+        "family": "Circle",
+        "capacityMl": 50,
+        "color": "Frosted",
+        "applicator": "Vintage Bulb Sprayer",
+        "groupSlug": "circle-50ml-frosted-18-415-antiquespray",
+        "graceSku": "GB-CIR-FRS-50ML-ASP-SGLD"
+      },
+      "nativePath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/circle-corrections-v3/GBCrclFrst50AnSpGl-native-2080x2288.png",
+      "nativeSha256": "bfe80cd316155051c47b7f5126095f6332f479afda97fe6ac1e20ae27520d2d1",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/circle-round-empire-scale-2026-09-22/output/imagegen/frosted-circle-round-family/circle-corrections-v3/aligned/GBCrclFrst50AnSpGl-2080x2288.png",
+      "finalSha256": "cb473a04f649118d5cf2d8d616f6a594c90b89dd144213e65547e5fcffbd6eb7",
+      "size": [
+        2080,
+        2288
+      ],
+      "targetSpanPct": 54,
+      "glassFootPct": 91,
+      "closureSeatY": 846.56,
+      "glassFootY": 2082.08,
+      "measurementUncertaintyPx": 4.004927066450567,
+      "transform": {
+        "scale": 1.0012317666126418,
+        "x": -1.4719611021069434,
+        "y": -1.483306320907559
+      },
+      "transformedArtworkBounds": [
+        240.82612641815237,
+        92.63247974068076,
+        1918.89056726094,
+        2111.1157212317667
+      ],
+      "presentation": "assembled closure",
+      "status": "aligned-awaiting-user-batch-review"
+    }
+  ]
+}

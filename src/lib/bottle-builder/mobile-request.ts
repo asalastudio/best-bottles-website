@@ -14,6 +14,10 @@ export function chooserImageUrl(body: BuilderBody) {
     return previewParts(preview, "body")[0]?.image.url ?? preview.bodyImage?.url;
 }
 
-export function chooserPreloadUrls(bodies: BuilderBody[], count = 4) {
+/** Mobile 2-column chooser keeps about 12 tiles in or at the first viewport.
+ * Those must start immediately — lazy + fetchPriority=low left tiles 8–12 blank. */
+export const CHOOSER_PRIORITY_TILES = 12;
+
+export function chooserPreloadUrls(bodies: BuilderBody[], count = CHOOSER_PRIORITY_TILES) {
     return [...new Set(bodies.map(chooserImageUrl).filter((url): url is string => Boolean(url)))].slice(0, count);
 }

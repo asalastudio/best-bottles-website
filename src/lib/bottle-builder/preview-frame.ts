@@ -11,7 +11,11 @@ export function previewFrame(anchors: { axisX: number; seatY: number; baselineY:
     const bottom = Math.max(...bounds.map(b => b.bottom));
     const size = Math.max(right - left, bottom - top);
     if (thumbnail) {
-        const edge = size * 1.22;
+        // Scale < 1 adds padding so a 5 ml tile stays smaller than 100 ml.
+        // Scale > 1 is ignored: the bottle already fills the square, and a CSS
+        // zoom from the baseline clipped the neck on 50/100 ml Cylinder.
+        const fit = Math.min(1, Math.max(0.2, scale));
+        const edge = size * 1.22 / fit;
         return { x: (left + right - edge) / 2, y: (top + bottom - edge) / 2, width: edge, height: edge };
     }
     const pad = size * .06;
@@ -25,4 +29,21 @@ export function previewFrame(anchors: { axisX: number; seatY: number; baselineY:
     const y = Math.min(anchors.baselineY - bodyHeight * 1.43 / scale, top - pad);
     return { x, y, width: Math.max(anchors.axisX + bodyHeight * .55 / scale, right + pad) - x,
         height: Math.max(anchors.baselineY + bodyHeight * .10 / scale, bottom + pad) - y };
+}
+
+/** CSS crop that matches an SVG viewBox over a registered full-canvas layer.
+ * Chooser tiles use this so a real <img> can fetch with preload/priority. */
+export function layerCropStyle(image: { width: number; height: number }, frame: { x: number; y: number; width: number; height: number }) {
+    if (!(frame.width > 0 && frame.height > 0 && image.width > 0 && image.height > 0)) {
+        return { position: "absolute" as const, inset: 0, width: "100%", height: "100%", objectFit: "contain" as const };
+    }
+    return {
+        position: "absolute" as const,
+        left: `${(-frame.x / frame.width) * 100}%`,
+        top: `${(-frame.y / frame.height) * 100}%`,
+        width: `${(image.width / frame.width) * 100}%`,
+        height: `${(image.height / frame.height) * 100}%`,
+        maxWidth: "none",
+        maxHeight: "none",
+    };
 }

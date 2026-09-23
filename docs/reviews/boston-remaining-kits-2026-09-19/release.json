@@ -1,0 +1,175 @@
+{
+ "schemaVersion": 1,
+ "release": "boston-round-master-kits-2026-09-16b",
+ "batch": "dist/paper-doll/boston-remaining-2026-09-16",
+ "approvedBy": "Jordan Richter — approved the kit contact sheet in chat 2026-09-16 ('looks good' / 'These all look fantastic'); authorised publication 2026-09-19 ('process all the kits… push them to production')",
+ "approvedAt": "2026-09-19T07:28:35.126Z",
+ "shipPhrase": "ship Boston Round kit release 2026-09-16",
+ "published": [
+  "https://precise-raccoon-123.convex.cloud",
+  "https://helpful-elephant-638.convex.cloud"
+ ],
+ "counts": {
+  "extractedCandidates": 35,
+  "approved": 30,
+  "setAside": 5,
+  "notExtracted": 3
+ },
+ "reviewSheet": "/reviews/builder-bodies-2026-09-14/boston-kits-remaining-2026-09-16.jpg",
+ "reviewSheetSha256": "9b6332bb8a8f51b10edde009cae27033451181e62d919bceaac9cf8f2cc06c07",
+ "rows": [
+  {
+   "sku": "GBBstnBlu1ozMtlRollonMattGl",
+   "plateSha256": "4799515eec5ada9ed18e8de3eb70808247e5b9272c07e763a1af1e5253c1c5ef"
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonMattBlk",
+   "plateSha256": "4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e"
+  },
+  {
+   "sku": "GBBstn2ozMtlRollMattBlk",
+   "plateSha256": "556b0172825f4f47ab1e50094988da9298509aa23bc3c0656cc3195b1a206bb9"
+  },
+  {
+   "sku": "GBBstn2ozMtlRollMattGl",
+   "plateSha256": "2b3a4ce3bda89464e4afdc97a2a39296da62eefb69f4438afc68e538e5e7397d"
+  },
+  {
+   "sku": "GBBstn2ozMtlRollMattSl",
+   "plateSha256": "de0d35a247be2fd43524796e8bde18fd33b5f5852a78de32d6c582d3a470325f"
+  },
+  {
+   "sku": "GBBstn2ozMtlRollShnSl",
+   "plateSha256": "123ba06d412f58b56b9dba23f02cebbba5869b0b61dbaa46287d8aded84b700f"
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrpr",
+   "plateSha256": "7782b3e777e4b7939824a4fed23c8e06f0a421bbd3cf5fc198be1e433337b8d8"
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrprSlTrim",
+   "plateSha256": "457dad7e863f884944e4bcbffd8e2741f9321b0b0c09b0d1e045d1e1462e21df"
+  },
+  {
+   "sku": "GBBstnBlu15WhtDrprGlTrim",
+   "plateSha256": "485e8f3749c330c0f935c0f7cc54c32f7657ea5340b3d5d141e6f0631a41a4c0"
+  },
+  {
+   "sku": "GBBstnBlu15BlkDrprGlTrim",
+   "plateSha256": "41dbe631293965471c6ab8e75064d6628a575445cc308e068c2b4da53c994691"
+  },
+  {
+   "sku": "GBBstn1ozRollonShBlk",
+   "plateSha256": "7a99f7eb8222325c93d27e0bce026ec7d7e665f9ea9896a7be8f208e85b0db36"
+  },
+  {
+   "sku": "GBBstnAmb1ozBlkDrpShnGl",
+   "plateSha256": "eede7f75bcc91a119549097d5ae4ff297af552a3fa4b6b43cfebd56458b1117b"
+  },
+  {
+   "sku": "GBBstn1ozRollonMattSl",
+   "plateSha256": "5281a79a8bb61fe83fcd82fa1da127db364656b27cbf86f6a020abdeef9ff93c"
+  },
+  {
+   "sku": "GBBstn1ozRollonMattGl",
+   "plateSha256": "2b7b878aeccf671fc969db6487739f54bc5427ba2e6251031c8a09f571f9a6ea"
+  },
+  {
+   "sku": "GBBstnAmb1ozWhtDrprShnSlTrim",
+   "plateSha256": "49fd3c9ed236b8488a6ef1af2c289177ed62d47d530911ee3c517bababde2f11"
+  },
+  {
+   "sku": "GBBstnAmb1ozRollonShnSl",
+   "plateSha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec"
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonShnSl",
+   "plateSha256": "7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8"
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonShnBlk",
+   "plateSha256": "2ec2df24211a89f4d516f16784c1c6f7dae3ebd74883576106d2c437392332ba"
+  },
+  {
+   "sku": "GBBstn2ozRollMattBlk",
+   "plateSha256": "556b0172825f4f47ab1e50094988da9298509aa23bc3c0656cc3195b1a206bb9"
+  },
+  {
+   "sku": "GBBstn2ozRollMattSl",
+   "plateSha256": "de0d35a247be2fd43524796e8bde18fd33b5f5852a78de32d6c582d3a470325f"
+  },
+  {
+   "sku": "GBBstn2ozRollShnSl",
+   "plateSha256": "7e108a83cd184a7da117d1bbeff18193606bb17d87a4bb4cf09f25f797d3d5a8"
+  },
+  {
+   "sku": "GBBstn2ozWhtDrpr",
+   "plateSha256": "2a75455fdb57f5ae52e5af240d778e20c81cd112a3e9600f401ea2c4191777b8"
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonMattSl",
+   "plateSha256": "4e9f63b507952b493213212f434c614b7db1c4cb9a073035be4ad791b664ac8d"
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonShnSl",
+   "plateSha256": "2e906a46a61ff78b9d522587672ea08d955051f355d0cac906c800ecf89968a1"
+  },
+  {
+   "sku": "GBBstn2ozBlkDrprShnSlTrim",
+   "plateSha256": "d8d93b599048b7f5829321c5cf4c75f12e39ad7d6585b19dbc8b9881fffedb4e"
+  },
+  {
+   "sku": "GBBstn2ozWhtDrprShnGlTrim",
+   "plateSha256": "f2d3bbb82d080159853768c8d33b43c1be097b33f046fc9c6444d02f1693c934"
+  },
+  {
+   "sku": "GBBstnAmb2ozBlkDrprShnSlTrim",
+   "plateSha256": "b5c53d07b91f1f5f981f5720346f532ed709b128df9de1718ba06229a5df12ab"
+  },
+  {
+   "sku": "GBBstnAmb2ozWhtDrpr",
+   "plateSha256": "0d88413b896801dbc72410b604d4dd69c569ff52a6db812e2335b016793880b3"
+  },
+  {
+   "sku": "GBBstn1ozRollonMattBlk",
+   "plateSha256": "4d6a124492e706bb5ac125cc5878657b30d408e05f06a6faac0ef920cbb76d61"
+  },
+  {
+   "sku": "GBBstn2ozBlkDrpr",
+   "plateSha256": "791e2a93680ad213d7b484bdad0767b7a3c34e2883d36b7c49b7a63976c9b6a9"
+  }
+ ],
+ "setAside": [
+  {
+   "sku": "GBBstnBlu1ozMtlRollonMattSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "a7aca4642d16d4db5d0609f75da1c98ebe2c385d80d6bb24407b616ffb9bc450",
+   "currentPlate": "388327c194991b041ae962332f1c03c5d02a7e843cb996eaf708dbbb904ecfcc"
+  },
+  {
+   "sku": "GBBstnBlu1ozMtlRollonShnSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "f2abb0662a7bb737fafba90a39c97c9b1f5c8909b3e735cc4f14267982f44f23",
+   "currentPlate": "7b7a7e080c86a52ba6d1ec7084b8da4bc7d94dcc924e70502cd84cb4237d48e8"
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonMattBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "887194d0a724313d926749c3f9a28155f0027f980a929d6ca60d61d0a8b935a9",
+   "currentPlate": "4d7b2f05ae2ce258f757e2572f02f1cc9535cbcf3971f1f4197c2e55082fa31e"
+  },
+  {
+   "sku": "GBBstnBlu1ozRollonMattSl",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "a7aca4642d16d4db5d0609f75da1c98ebe2c385d80d6bb24407b616ffb9bc450",
+   "currentPlate": "388327c194991b041ae962332f1c03c5d02a7e843cb996eaf708dbbb904ecfcc"
+  },
+  {
+   "sku": "GBBstnAmb2ozRollonMattBlk",
+   "why": "plate re-rendered since the kit was cut",
+   "approvedPlate": "e32df289ad8ac2d971526288605620a372320799ecf2e3ef38375fab89f4c867",
+   "currentPlate": "2654ed988127e1128bab75c76a1aa11375679bc534cab08a76913e7aa89bb608"
+  }
+ ],
+ "approvalSha256": "c2b5f58201b4aa101028656a9645e34dfe47575b4c5738933c4889dc97c7281a"
+}

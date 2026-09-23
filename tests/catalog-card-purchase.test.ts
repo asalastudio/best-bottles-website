@@ -5,6 +5,8 @@ import {
     catalogCardStartingPrice,
     catalogCardTiers,
     catalogTierLabel,
+    catalogVariantOrderBlocked,
+    catalogVariantSoldOut,
     describeCatalogTier,
     isCatalogVariantPurchasable,
     parseCatalogQuantity,
@@ -70,18 +72,36 @@ describe("resolveCatalogCardPurchaseVariant", () => {
     });
 });
 
-describe("isCatalogVariantPurchasable mirrors the PDP add-to-cart gate", () => {
+describe("isCatalogVariantPurchasable is the catalog Add to cart gate", () => {
     const variant = resolveCatalogCardPurchaseVariant([black], { productTitle: "x" })!;
 
-    it("needs stock, a Shopify-sellable variant, and a 1-unit price", () => {
+    it("needs a priced, orderable assembly — sold-out and Shopify-unavailable cannot add", () => {
         expect(isCatalogVariantPurchasable(variant)).toBe(true);
         expect(isCatalogVariantPurchasable({ ...variant, stockStatus: "Available to order" })).toBe(true);
+        expect(isCatalogVariantPurchasable({ ...variant, stockStatus: null })).toBe(true);
+        expect(isCatalogVariantPurchasable({ ...variant, shopifyVariantId: null, shopifySellable: null })).toBe(true);
         expect(isCatalogVariantPurchasable({ ...variant, stockStatus: "Out of Stock" })).toBe(false);
-        expect(isCatalogVariantPurchasable({ ...variant, stockStatus: null })).toBe(false);
+        expect(isCatalogVariantPurchasable({ ...variant, stockStatus: "Sold Out" })).toBe(false);
         expect(isCatalogVariantPurchasable({ ...variant, shopifySellable: false })).toBe(false);
-        expect(isCatalogVariantPurchasable({ ...variant, shopifyVariantId: null, shopifySellable: null })).toBe(false);
         expect(isCatalogVariantPurchasable({ ...variant, webPrice1pc: null })).toBe(false);
+        expect(isCatalogVariantPurchasable({ ...variant, webPrice1pc: 0 })).toBe(false);
         expect(isCatalogVariantPurchasable(null)).toBe(false);
+        expect(catalogVariantOrderBlocked({ ...variant, stockStatus: "Out of Stock" })).toBe(true);
+        expect(catalogVariantOrderBlocked({ ...variant, shopifySellable: false })).toBe(true);
+        expect(catalogVariantOrderBlocked(variant)).toBe(false);
+    });
+});
+
+describe("catalogVariantSoldOut", () => {
+    it("is true only when stock status is an explicit out-of-stock value", () => {
+        expect(catalogVariantSoldOut({ stockStatus: "Out of Stock" })).toBe(true);
+        expect(catalogVariantSoldOut({ stockStatus: "Sold Out" })).toBe(true);
+        expect(catalogVariantSoldOut({ stockStatus: "In Stock" })).toBe(false);
+        expect(catalogVariantSoldOut({ stockStatus: "Available to order" })).toBe(false);
+        expect(catalogVariantSoldOut({ stockStatus: "Discontinued" })).toBe(false);
+        expect(catalogVariantSoldOut({ stockStatus: "Lead time applies" })).toBe(false);
+        expect(catalogVariantSoldOut({ stockStatus: null })).toBe(false);
+        expect(catalogVariantSoldOut({ stockStatus: "" })).toBe(false);
     });
 });
 
@@ -148,10 +168,31 @@ describe("buildCatalogCartItem", () => {
             webPrice1pc: 0.92,
             priceTiers: ladder,
             checkoutEligible: true,
+            stockStatus: "In Stock",
             shopifyVariantId: "gid://shopify/ProductVariant/1",
             productGroupSlug: "cylinder-5ml-clear-roll-on",
             capColor: "Black",
             neckThreadSize: "13-415",
+        });
+    });
+
+    it("does not mark a sold-out or Shopify-unavailable assembly checkout-eligible", () => {
+        const soldOut = resolveCatalogCardPurchaseVariant([{ ...black, stockStatus: "Out of Stock" }], { productTitle: "x" })!;
+        const draft = resolveCatalogCardPurchaseVariant([{ ...black, shopifySellable: false }], { productTitle: "x" })!;
+        expect(isCatalogVariantPurchasable(soldOut)).toBe(false);
+        expect(isCatalogVariantPurchasable(draft)).toBe(false);
+        expect(buildCatalogCartItem(soldOut, 1, {
+            title: "5 ml Clear Cylinder Roll-On Bottle",
+            productGroupSlug: "cylinder-5ml-clear-roll-on",
+            family: "Cylinder",
+            capacity: "5 ml",
+            color: "Clear",
+            category: "Bottle",
+            neckThreadSize: "13-415",
+        })).toMatchObject({
+            graceSku: "CYL5-ROLL-BLK",
+            checkoutEligible: false,
+            stockStatus: "Out of Stock",
         });
     });
 });

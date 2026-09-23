@@ -1,0 +1,582 @@
+{
+  "review": "Exposed mechanism candidates. Source capped and uncapped pairs use identical bare body pixels. Output pending visual review.",
+  "rows": [
+    {
+      "sku": "GBcyl25SpryMtGl",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "identity": {
+        "graceSku": "GBcyl25SpryMtGl",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /11. GBCyl30SpryMtGl.psd",
+        "sha256": "c083ce55cc06275d3405f62d27da66deaaf199ef6c4d4ff52e1fe7babc21cf3d"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /13. GBCyl30SpryMtGl.psd",
+        "sha256": "a8c64929c3651d54563f20b880e678d8773541b8c3f6b5415411727cbcd36540"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 282,
+      "baselineY": 1001,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 4
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+    },
+    {
+      "sku": "LBCyl25LtnMtGl",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "identity": {
+        "graceSku": "LB-CYL-CLR-25ML-LPM-MGLD",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Lotion Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /12. LBCyl30LtnMtGl.psd",
+        "sha256": "e2a4710503f3c508e33e6b9626fb38e1fe3b79d242d676e0f83552c0b76502ff"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /14. LBCyl30LtnMtGl.psd",
+        "sha256": "0bacc024e36fc8554fd56fff6fbbdf496629e5a8c97af450f632e8128de488d5"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 282,
+      "baselineY": 1001,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body.",
+      "reviewedTransparentRgbDifference": "Identical alpha and identical RGBA at every alpha > 0 pixel; only zero-alpha hidden RGB differs. Revalidate exact equivalence at extraction."
+    },
+    {
+      "sku": "GBcyl25SpryShnGl",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "identity": {
+        "graceSku": "GBcyl25SpryShnGl",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /17. GBCyl30SpryShnGl.psd",
+        "sha256": "5a281408f731823a7b3a4c16f859edc044aa5564d0401fe51a5a1c5a05a91293"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /15. GBCyl30SpryShnGl.psd",
+        "sha256": "c65d4e80312c416a1d7990ca66df2e08eee78123fa4f396e8d13a1bcfdd371ac"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 282,
+      "baselineY": 1001,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+    },
+    {
+      "sku": "LBCyl25LtnShnGl",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "identity": {
+        "graceSku": "LB-CYL-CLR-25ML-LPM-SGLD",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Lotion Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /18. LBCyl30LtnShnGl.psd",
+        "sha256": "a077a05091634b17c95280747d3d7fc9d3b4f56dcb3fba47753e408b68a41d06"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /16. LBCyl30LtnShnGl.psd",
+        "sha256": "4985b85ec53478bf6d48fbdf64b0bafce84c03bffe03665ab4c90e32d973a72b"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 282,
+      "baselineY": 1001,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+    },
+    {
+      "sku": "GBcyl25SpryShnBlk",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "identity": {
+        "graceSku": "GB-CYL-CLR-25ML-SPR-SBLK",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /21. GBCyl30SpryShnBlk.psd",
+        "sha256": "5ef3c12a6513444a76a1640ba47b42ba2cd0b3fc80f52a14ccf71e2ab5f869b0"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /19. GBCyl30SpryShnBlk.psd",
+        "sha256": "bdd76b61438bcbd0ebc6c5d868913b56a34c5447ed25b7bbb5bb96db3eaa30f2"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 282,
+      "baselineY": 1001,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+    },
+    {
+      "sku": "LBCyl25LtnShnBlk",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "identity": {
+        "graceSku": "LB-CYL-CLR-25ML-LPM-SBLK",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Lotion Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /22. LBCyl30LtnShnBlk.psd",
+        "sha256": "f53e985f60d35c26316864cdf4609d670baa9406c38a583be19d557398d1aa01"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /20. LBCyl30LtnShnBlk.psd",
+        "sha256": "2af926fc12934b5d2964590e8378ff7cb30fd46bf91fab3f37c21506ae2965cf"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 282,
+      "baselineY": 1001,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+    },
+    {
+      "sku": "LBCyl25LtnMtSl",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "identity": {
+        "graceSku": "LB-CYL-CLR-25ML-LPM-MSLV",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Lotion Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /26. LBCyl30LtnMtSl.psd",
+        "sha256": "973c846e68c646b4c95d229ee16bab1550fa5c12cf5d85f27ebd471a261002e2"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /25. LBCyl30LtnMtSl.psd",
+        "sha256": "815c464eb64d4b23b425e992b425a6fe7a323f20ea0675e8e2607f1b85775e8f"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 282,
+      "baselineY": 1001,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+    },
+    {
+      "sku": "GBcyl25SpryShnSl",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "identity": {
+        "graceSku": "GBcyl25SpryShnSl",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Fine Mist Sprayer"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /30. GBCyl30SpryShnSl.psd",
+        "sha256": "f1175e1ef02b2fa3a3bac26b0ef7faa3475a9dabae201afbde4afbe55ee01f1e"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /29. GBCyl30SpryShnSl.psd",
+        "sha256": "8ce97a8d818448f456cd1872c3c83d396f1bfc0b6b711374594a971bd01fd8d9"
+      },
+      "onBody": 2,
+      "offBody": 2,
+      "bodyWidth": 282,
+      "baselineY": 1001,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+    },
+    {
+      "sku": "LBCyl25LtnShnSl",
+      "familyId": "cylinder-25ml-clear-18-415",
+      "identity": {
+        "graceSku": "LB-CYL-CLR-25ML-LPM-SSLV",
+        "family": "Cylinder",
+        "capacityMl": 25,
+        "color": "Clear",
+        "neckThreadSize": "18-415",
+        "category": "Glass Bottle",
+        "applicator": "Lotion Pump"
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /32. LBCyl30LtnShnSl.psd",
+        "sha256": "c2cde435bd5ecf0f6ff2bad4d992769946e27b2bff26f2a421655cba5a57aded"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /31. LBCyl30LtnShnSl.psd",
+        "sha256": "29f353b3e4b709b340cdda279e45c91eced8e299d61c82e13dee2fb83c457e81"
+      },
+      "onBody": 2,
+      "offBody": 1,
+      "bodyWidth": 282,
+      "baselineY": 1001,
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "off",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "diptube",
+          "layers": [
+            {
+              "source": "off",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "off",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "sourceCrosswalk": "Catalog 25 mL; source parent folder Cylindrical 25ml. Historical PSD basenames say 30ml. Not the metal-decorated 30ml body."
+    }
+  ]
+}
