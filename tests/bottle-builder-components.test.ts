@@ -7,6 +7,22 @@ const active: ActiveComponent = { websiteSku: sku, graceSku: "CURRENT", neckThre
 const row = { family: "Circle", capacityMl: 15, category: "Glass Bottle", color: "Clear", neckThreadSize: "13-415", websiteSku: "GBCrcl15SpryBlkMatt", graceSku: "BOTTLE", itemName: "Circle 15 ml spray", applicator: "Fine Mist Sprayer", capColor: "Matte Black", webPrice1pc: 1, shopifyVariantId: "bottle-variant", shopifySellable: true, resolution: "bottle_listed", productGroupSlug: "circle-15ml-clear-13-415-finemist", components: { Sprayer: [part] } } as unknown as CatalogRow;
 
 describe("builder listed component replacement", () => {
+    it.each(["IvyGl", "Lvn", "Red"])("shows the listed unavailable %s bulb without enabling purchase", suffix => {
+        const component = { ...part, websiteSku: `AnSp18-415${suffix}`, graceSku: `CURRENT-${suffix}`, stockStatus: "Out of Stock", imageUrl: "https://example.com/bulb.png" };
+        const vintage: CatalogRow = { ...row, family: "Cylinder", capacityMl: 25, neckThreadSize: "18-415", websiteSku: `GBcyl25AnSp${suffix}`, applicator: "Vintage Bulb Sprayer", components: { Sprayer: [component] } };
+        const options = unavailableVintageFinishes(vintage, new Map());
+        expect(options).toHaveLength(1);
+        expect(options[0].imageUrl).toBe(`/images/bottle-builder/components/AnSp18-415${suffix}.png`);
+        expect(assessBuilderConfiguration(vintage).configuration).toBeNull();
+        for (const change of [
+            { stockStatus: "In Stock" }, { stockStatus: "Discontinued" },
+            { websiteSku: `AnSp13-415${suffix}` }, { websiteSku: `AnSpTsl18-415${suffix}` },
+            { websiteSku: "AnSp18-415Gl" }, { graceSku: "" }, { imageUrl: null },
+        ]) expect(unavailableVintageFinishes({ ...vintage, components: { Sprayer: [{ ...component, ...change }] } }, new Map())).toEqual([]);
+        expect(unavailableVintageFinishes({ ...vintage, components: {} }, new Map())).toEqual([]);
+        expect(unavailableVintageFinishes({ ...vintage, components: { Sprayer: [component, component] } }, new Map())).toEqual([]);
+        expect(unavailableVintageFinishes({ ...vintage, resolution: "unknown" }, new Map())).toEqual([]);
+    });
     it("restores an active exact alias for an assembly without publishing the loose part", async () => {
         const unpublished = { ...active, shopifySellable: false };
         const restored = restoreListedComponent(part, unpublished, "13-415");

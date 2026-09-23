@@ -44,11 +44,17 @@ export function unavailableVintageFinishes(row: CatalogRow, activeBySku: Map<str
     const finish = getFinishFromWebsiteSku(row.websiteSku)?.label;
     const prefix = /Tassel/.test(row.applicator!) ? /^AnSpTsl/i : /^AnSp(?!Tsl)/i;
     const matches = (row.components.Sprayer ?? []).flatMap(part => {
-        const sku = listedReplacementSku(part);
-        const active = sku ? activeBySku.get(sku) : null;
+        const replacementSku = listedReplacementSku(part);
+        const sku = replacementSku ?? part.websiteSku;
+        // Current matrix relationships already identify the included component.
+        // Retired aliases still require an independently resolved replacement.
+        const active = replacementSku ? activeBySku.get(replacementSku) : part;
+        const neckMatches = replacementSku
+            ? (active as ActiveComponent | undefined)?.neckThreadSize === row.neckThreadSize
+            : sku?.match(/^AnSp(?:Tsl)?(\d+-\d+)/i)?.[1] === row.neckThreadSize;
         if (!sku || !prefix.test(sku) || !active || active.websiteSku !== sku
-            || !active.graceSku || active.graceSku === part.graceSku || /__RETIRED__/i.test(active.websiteSku)
-            || active.neckThreadSize !== row.neckThreadSize || !/^out of stock$/i.test(active.stockStatus ?? "")
+            || !active.graceSku || (replacementSku && active.graceSku === part.graceSku) || /__RETIRED__/i.test(active.websiteSku)
+            || !neckMatches || !/^out of stock$/i.test(active.stockStatus ?? "")
             || !active.imageUrl || !finish || getFinishFromWebsiteSku(sku)?.label !== finish) return [];
         const imageUrl = (componentCutouts as Record<string, { url: string }>)[sku]?.url ?? active.imageUrl;
         return [{ id: row.websiteSku!, color: row.color!, fitment: row.applicator!, closure: finish, imageUrl }];
