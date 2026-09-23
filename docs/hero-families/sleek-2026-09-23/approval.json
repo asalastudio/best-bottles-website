@@ -1,0 +1,1027 @@
+{
+  "status": "visually-approved-and-locked",
+  "approvedCount": 21,
+  "catalogEligibleCount": 21,
+  "canvas": [
+    2080,
+    2288
+  ],
+  "bone": "#F5F3EF",
+  "published": false,
+  "approvalBasis": "User approved the full Sleek family including the regenerated narrower 100 mL reducer and requested commit and PR.",
+  "activation": "Existing families-2026-09-22 build flag. No deployment performed.",
+  "generationCount": 22,
+  "selectedCount": 21,
+  "rows": [
+    {
+      "sku": "GBSleek5Gl",
+      "family": "Sleek",
+      "capacityMl": 5,
+      "material": "clear",
+      "groupSlug": "sleek-5ml-clear-13-415",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343628230948",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSleek5Gl.3263510ead57.png",
+      "sha256": "3263510ead57edf9bf9dd28d2edbfa98f78247b11d4bf013a56b89daeae1a2e9",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 30,
+      "targetUpperY": 1396,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 5ml (Capped) PSD/28. GBSleek5Gl.psd",
+      "masterSha256": "c4c9b79a13543038c0618275a9c3cd39e813818015b5fb9edf0acb65d26065ee",
+      "sourceRenderSha256": "cfd1e9d8df1fee25b617ab3176cce01e4d5b4890153fed10035e011f5f576ba9",
+      "inputSha256": {
+        "currentSource": "e717e8a7f7efcae461367eb6cf74d8b01b97333b01ae26591380a6b67077959e",
+        "masterComposite": "84e15c7adfa80679df9f40462c2b5edb5537169711889eac065db69341b9c920",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "522f4b29dd2585e07cb332b4c3af88b0f4297e5fe1c821fdbe05a39063b1d921",
+        "promptFile": "356c473b78273b16b751d49ff06f6aedec2b28fef1315726c8682f84be3472ec"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 154,
+          "upper": 229,
+          "base": 358
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.9203935599284437,
+        "left": 96,
+        "top": 178,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSleek5MtlRollGlMatt",
+      "family": "Sleek",
+      "capacityMl": 5,
+      "material": "clear",
+      "groupSlug": "sleek-5ml-clear-13-415-rollon",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343668011300",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSleek5MtlRollGlMatt.e9cea873008b.png",
+      "sha256": "e9cea873008bf85026ee7319940c788f411f4c279370f82833da207c45064046",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 30,
+      "targetUpperY": 1396,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 5ml (Capped) PSD/16. GBSleek5MtlRollGlMatt.psd",
+      "masterSha256": "a253189335766b2b6af24a51555f17ff69281b711be1feed41317cd9cf3e55a1",
+      "sourceRenderSha256": "4fc706be9685b50ff80a6df28f6a1892d15117113f67287821ba792d8b8e22be",
+      "inputSha256": {
+        "currentSource": "41792e8a8939c1430b85ba01fc243aef1644a7314bda31a1187f3ccc422558b8",
+        "masterComposite": "462791aa4245bb831d1283df35c45e9c24a1d072db5b1aec1fa61ed976420848",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "522f4b29dd2585e07cb332b4c3af88b0f4297e5fe1c821fdbe05a39063b1d921",
+        "promptFile": "85e73253a3db926974c7d03c045ef7d3e83f9246b2a024ea88848ad9101d47a7"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 159,
+          "upper": 248,
+          "base": 354
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 1.1201015965166907,
+        "left": -114,
+        "top": -209,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSleek5SpryGlMatt",
+      "family": "Sleek",
+      "capacityMl": 5,
+      "material": "clear",
+      "groupSlug": "sleek-5ml-clear-13-415-finemist",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343620890916",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSleek5SpryGlMatt.e4fb3f2e58be.png",
+      "sha256": "e4fb3f2e58be916efb37a24313e47bf5dfcae2da23843bfb378cd3350f079b8c",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 30,
+      "targetUpperY": 1396,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 5ml (Capped) PSD/7. GBSleek5SpryGlMatt.psd",
+      "masterSha256": "6ec55b81166c93ad90e75b1d5e0e5598c166f4e73033fbc15dbd032b976c0446",
+      "sourceRenderSha256": "1effd1ff230cc85df6b786d853825a27095dc616d44fe0c3a55fb293d7a28804",
+      "inputSha256": {
+        "currentSource": "54c31977c243632658734de13532d5368ec18782109bbb725132c90314fdff70",
+        "masterComposite": "840b42b0bb80e756316a82876b48cc6a329cfd3e3a651c34f689fbf017e82506",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "522f4b29dd2585e07cb332b4c3af88b0f4297e5fe1c821fdbe05a39063b1d921",
+        "promptFile": "efcbd754db7b22785d0a602ae11892f8dcbaf3963352fc14c8a1d1b8840c02c0"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 154,
+          "upper": 229,
+          "base": 358
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.9203935599284437,
+        "left": 96,
+        "top": 178,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSleek8Gl",
+      "family": "Sleek",
+      "capacityMl": 8,
+      "material": "clear",
+      "groupSlug": "sleek-8ml-clear-13-415",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343635636516",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSleek8Gl.c146b54ea2ac.png",
+      "sha256": "c146b54ea2ac65e155a3580f7c302589b9a0a27f012361f20a9d052a4b6295f3",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 43,
+      "targetUpperY": 1098,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/28. GBSleek8Gl.psd",
+      "masterSha256": "3a5c47b7b3efd87f657782ce40c6c5a39586e13f57f6cdab0681f7e178297272",
+      "sourceRenderSha256": "2b5cd8896b1ef1745cdb6d2fd3f60543e0c95f83e77bac15f3f8029492db5f57",
+      "inputSha256": {
+        "currentSource": "fc86f1468682685ad9ece1f7a624372092debefe4cdc832d1deb1dbd706a40fa",
+        "masterComposite": "c7f20a52ffd3a8811c96826fe929372ccebc6f1da0f5b35d7f3fd916bfdeb009",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "2b698ad54de3237526cf82cbefe45091dd1da21c9d5b33221fbbd4a00f10e85d",
+        "promptFile": "e3da048c69a0ccd038a6bb491118c45a4a92519ef37ecd00c26dd675b5b9654b"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 160,
+          "upper": 189,
+          "base": 357
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 1.0137362637362637,
+        "left": -22,
+        "top": -9,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSleek8MtlRollGlMatt",
+      "family": "Sleek",
+      "capacityMl": 8,
+      "material": "clear",
+      "groupSlug": "sleek-8ml-clear-13-415-rollon",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343676039460",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSleek8MtlRollGlMatt.9f29d4795f7a.png",
+      "sha256": "9f29d4795f7af2b82dbf3726bb960dfac74a159fc82cad6ca00fffb9be387f1c",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 43,
+      "targetUpperY": 1098,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/16. GBSleek8MtlRollGlMatt.psd",
+      "masterSha256": "914e6c8817b9004c5f0a3dec487303bb2141474d869ff6ad4a272d987bbd4ec4",
+      "sourceRenderSha256": "c5eb048f4c2d9696b51deb37e2bff98d203b89b79fbb85b374b5d4050afaa336",
+      "inputSha256": {
+        "currentSource": "c0905bf7e80252df92d8f8253233781b9d5ccaa74799c01109c7938e91d2ff36",
+        "masterComposite": "60aa09648beedd822e4df9e8d553e5fbd1ce2006c029754a2586b536fe5e87ad",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "2b698ad54de3237526cf82cbefe45091dd1da21c9d5b33221fbbd4a00f10e85d",
+        "promptFile": "7b6cc33147b4d8246ee8664d195d03745ae38005502f69e8aa8057ee3286a8f4"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 159,
+          "upper": 159,
+          "base": 350
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.891663310511478,
+        "left": 96,
+        "top": 279,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSleek8SpryGlMatt",
+      "family": "Sleek",
+      "capacityMl": 8,
+      "material": "clear",
+      "groupSlug": "sleek-8ml-clear-13-415-finemist",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343622037796",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSleek8SpryGlMatt.60c365466266.png",
+      "sha256": "60c365466266a099805f2e134ffd731f928df4c9f7fbab9a5b4eecb7a1866ed2",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 43,
+      "targetUpperY": 1098,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/7. GBSleek8SpryGlMatt.psd",
+      "masterSha256": "98520f75a0913b677b6edeb5f6d2066fb5ab038bd853134b3a1c77b5bef75889",
+      "sourceRenderSha256": "95dfcbc7553cf07e7fcb570dc5be9c5ebf409093329b374a62e075039362b592",
+      "inputSha256": {
+        "currentSource": "8e5aa43acc5884300cdd06b7e39b9d5efbb03a25dcbf98ddb7f68cc66ab88395",
+        "masterComposite": "cbfa94d657c375d34c8cc7ef75ae42de4fa9c0afbca606ae57df6ee5f17e2eda",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "2b698ad54de3237526cf82cbefe45091dd1da21c9d5b33221fbbd4a00f10e85d",
+        "promptFile": "e614da877b19e3f272ceff3c3fe9251e7cf88b047e6076d17e7102ff405c41af"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 159,
+          "upper": 184,
+          "base": 352
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 1.0137362637362637,
+        "left": -16,
+        "top": 20,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk30AnSpGl",
+      "family": "Sleek",
+      "capacityMl": 30,
+      "material": "clear",
+      "groupSlug": "sleek-30ml-clear-18-415-antiquespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343660081444",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk30AnSpGl.95ca224380d6.png",
+      "sha256": "95ca224380d6ce9b57392dd72432deb25081642ce9978a5a6921f5de9dfb3dea",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 47,
+      "targetUpperY": 1007,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /11. Sleek 30ml /1. Sleek 30ml PSD/37. GBSlk30AnSpGl.psd",
+      "masterSha256": "e4910b94c5a1f6f9e94e5c2298c07a12ed0593de7010983ee4cd98dfb9265af5",
+      "sourceRenderSha256": "c46083aed017596432c2c96c0e8ceb283f6c44baa205514ac4da48fd10f600db",
+      "inputSha256": {
+        "currentSource": "079ae19a06d7cb2ed43a4d8319b46671cf27c107e9fa54a5ef10092141230053",
+        "masterComposite": "f2baac19288333e79a2732079528595a35fb6e27a3084f10225cce1bd50b604a",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "507f37b20e742f1fc314073153a97015b9edd70a7710a87e6d68518518f77918",
+        "promptFile": "7b2e8db2008f88c0fee7e7433febf5ffa464c4f8de2691086e8c0cedf9fc85dd"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 197,
+          "upper": 174,
+          "base": 356
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 1.022295012679628,
+        "left": 1,
+        "top": -21,
+        "bodyCenterXPct": 56.00000000000001,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk30DrpGl",
+      "family": "Sleek",
+      "capacityMl": 30,
+      "material": "clear",
+      "groupSlug": "sleek-30ml-clear-18-415-dropper",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343642026276",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk30DrpGl.ef34e39e907b.png",
+      "sha256": "ef34e39e907b369032b1fdab98a43e5a9d221234fe71137685f391eead6488a9",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 47,
+      "targetUpperY": 1007,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /11. Sleek 30ml /1. Sleek 30ml PSD/44. GBSlk30DrpGl.psd",
+      "masterSha256": "888acb5673d82465bc2b24753f4bc9f21b1cfa6eab496ba02c98188ca63717e4",
+      "sourceRenderSha256": "5b85c3fde4a47a4a62183211794bf16d8d8a16c31b34e8920ad10825c5900725",
+      "inputSha256": {
+        "currentSource": "367a49336c490a51849c724c7fbd3e8c9c907f0b1810da1c72bb44b4f241c4b9",
+        "masterComposite": "f13a94fb9e7e7412ac3559051e857e710d536d4b12acd5ebbb7453b46f19683d",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "507f37b20e742f1fc314073153a97015b9edd70a7710a87e6d68518518f77918",
+        "promptFile": "36b3851889d1143de83e1e44d1e8a61920fba5461d9b93b2bf997e4cf1db4d56"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 179,
+          "upper": 157,
+          "base": 356
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.9349632779281022,
+        "left": 73,
+        "top": 159,
+        "bodyCenterXPct": 50,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk30RdcrShnGl",
+      "family": "Sleek",
+      "capacityMl": 30,
+      "material": "clear",
+      "groupSlug": "sleek-30ml-clear-18-415-reducer",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343651791140",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk30RdcrShnGl.d577a1e5373b.png",
+      "sha256": "d577a1e5373bdff8537931c6599e5885503af32697d3c4f43251e58f062ce6d8",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 47,
+      "targetUpperY": 1007,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /11. Sleek 30ml /1. Sleek 30ml PSD/1. GBSlk30RdcrShnGl.psd",
+      "masterSha256": "e35380983d55c70b2f523a89830a1c5e0d0e2d557540f103f157cb4eb62448cc",
+      "sourceRenderSha256": "616bd80cdc5cd153f478b3e1a4b56c9a0d3d621db64538750cabb5961a6e5804",
+      "inputSha256": {
+        "currentSource": "9044a60ec4a4d296bd6b4267058c61713757245aa991d400d845c5d23dc21e1e",
+        "masterComposite": "2b3f839941e6754868d6b73ae38128fc31456cf08ad78816578031f400ae5c3a",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "507f37b20e742f1fc314073153a97015b9edd70a7710a87e6d68518518f77918",
+        "promptFile": "80e5f4a9539eb0a25e1f0a0ba66314aac619ae5813e54bf9c758d224da2b9616"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 179,
+          "upper": 151,
+          "base": 351
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.9302884615384615,
+        "left": 78,
+        "top": 195,
+        "bodyCenterXPct": 50,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk30SpryMtGl",
+      "family": "Sleek",
+      "capacityMl": 30,
+      "material": "clear",
+      "groupSlug": "sleek-30ml-clear-18-415-perfumespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343616401700",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk30SpryMtGl.4bbaa5fcf6e1.png",
+      "sha256": "4bbaa5fcf6e1024916cc92d881d4783c98bb7317d927220d1f9901c1ed596424",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 47,
+      "targetUpperY": 1007,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/11. 30ml  Slk, Ltn & Spry, capped/11. GBSlk30SpryMtGl.psd",
+      "masterSha256": "09a2a942e8856c017c1064a38320badf50d39fb9c44fb08abca217ed990858c6",
+      "sourceRenderSha256": "50a59d3a032fd56b8da73a664cb93f08c0ac653deab96d666b17b8c6537844ee",
+      "inputSha256": {
+        "currentSource": "daa34888af73fc66a0abfbbb7408a194d64a4916bf63f34af049f771550b0846",
+        "masterComposite": "ee6244a68aa3397cfb0622825421e761332eb3e94142f97e04e910b9c3a7a12d",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "507f37b20e742f1fc314073153a97015b9edd70a7710a87e6d68518518f77918",
+        "promptFile": "141180dbabefab02308cc6c66df4a227fd0e0d113f6d8c3e4150cd8f758facb3"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 160,
+          "upper": 171,
+          "base": 356
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 1.0057172557172558,
+        "left": -15,
+        "top": 13,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "LBSlk30LtnMtGl",
+      "family": "Sleek",
+      "capacityMl": 30,
+      "material": "clear",
+      "groupSlug": "sleek-30ml-clear-18-415-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343686590756",
+      "url": "/images/catalog/sleek-approved-2026-09-23/LBSlk30LtnMtGl.4e7f63d5aa6e.png",
+      "sha256": "4e7f63d5aa6e5638d5a68d2f982431a3cbd65fc779f4a23a93b86a7671628fad",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 47,
+      "targetUpperY": 1007,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/11. 30ml  Slk, Ltn & Spry, capped/12. LBSlk30LtnMtGl.psd",
+      "masterSha256": "f7181449709f061520756c4d67e0388ef081c99598fe34db8bfb3afc2baa6943",
+      "sourceRenderSha256": "eae753f745904d3baa1d1c09df9ce425ee37784e7bc42295a058ecc938098306",
+      "inputSha256": {
+        "currentSource": "4269e255e38371f0272506c5db2602aa5f6ad586ef446e38932e9082ff2ea7ef",
+        "masterComposite": "5564e15c68b2ba71829990bf0caa53290b33c3de664d5e62b5ef88d28ac2e886",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "507f37b20e742f1fc314073153a97015b9edd70a7710a87e6d68518518f77918",
+        "promptFile": "36bf32376e4b571fbd01f6ca1ba79edd594752dc17a85539b21e7a84f1c77604"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 158,
+          "upper": 175,
+          "base": 358
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 1.0167087011349307,
+        "left": -13,
+        "top": -21,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk50AnSpGl",
+      "family": "Sleek",
+      "capacityMl": 50,
+      "material": "clear",
+      "groupSlug": "sleek-50ml-clear-18-415-antiquespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343611486500",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk50AnSpGl.0df795a44844.png",
+      "sha256": "0df795a44844f2d3a851a9e513401b63599a393ae158e8a83898dcfb40d8769f",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 56,
+      "targetUpperY": 801,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/37. GBSlk50AnSpGl.psd",
+      "masterSha256": "3c8e741002dee39e02dc8c12bf6ba8bded3780fa0d6f4a429aaa0fc21aece47e",
+      "sourceRenderSha256": "c6ca5b92702b01f7e5877bed452ee5bfc584f12065352d6e89accf99c47a4127",
+      "inputSha256": {
+        "currentSource": "811c9dc720202b594383727ee2dbf1da73b1a0e46caba5ec8d8574a1cbb775d2",
+        "masterComposite": "5a53ee4a616a8fa37a8a78d4c28906d95405de6390e76f209d06ca811f317df0",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "fa1d72a89d2a7b40ca57dfdcfa79bd48f873d04751b8472aeb0224a916029d31",
+        "promptFile": "3bfd855b69395055ac3962673fc5dad862efc4caa80948f9d18baf2870eca69e"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 187,
+          "upper": 127,
+          "base": 358
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.9597902097902097,
+        "left": 128,
+        "top": 97,
+        "bodyCenterXPct": 56.00000000000001,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk50AnSpTslIvyGl",
+      "family": "Sleek",
+      "capacityMl": 50,
+      "material": "clear",
+      "groupSlug": "sleek-50ml-clear-18-415-antiquespray-tassel",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343615779108",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk50AnSpTslIvyGl.261dcc49adb3.png",
+      "sha256": "261dcc49adb3e9662a8b4558521e2ccebbb1f29c6ba671d0c8f23fcc5d67afb6",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 56,
+      "targetUpperY": 801,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/43. GBSlk50AnSpTslIvyGl.psd",
+      "masterSha256": "3cbfa9bb90bddcdc7088a9d07c5b6395f488660c7e415a41d21258df164de960",
+      "sourceRenderSha256": "c521d265d36015316d54df45c30b5f26a653433f3e851b12616a7bf3ff5db0e0",
+      "inputSha256": {
+        "currentSource": "9dfcf9805f407d780117392554854cb34c2d72efdca83d4b0704a874f6987613",
+        "masterComposite": "38221dfbaada88c5ca465de748278dde5f166102d3bd38f8fcdca5fd4011abd2",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "fa1d72a89d2a7b40ca57dfdcfa79bd48f873d04751b8472aeb0224a916029d31",
+        "promptFile": "502fa4b40b720f3da77f8a026a40e255d8aa400266293dbdaac64fc5bef07c9b"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 212,
+          "upper": 105,
+          "base": 357,
+          "targetCxPct": 66
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.8798076923076923,
+        "left": 295,
+        "top": 267,
+        "bodyCenterXPct": 66,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk50RdcrShnGl",
+      "family": "Sleek",
+      "capacityMl": 50,
+      "material": "clear",
+      "groupSlug": "sleek-50ml-clear-18-415-reducer",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343660310820",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk50RdcrShnGl.0e3373c86799.png",
+      "sha256": "0e3373c867990660084f2eccdc61dbc74a6c1287987864c0ca68c0864fe69000",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 56,
+      "targetUpperY": 801,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/1. GBSlk50RdcrShnGl.psd",
+      "masterSha256": "ea768af268fe8e8a5b034c78a49de44d5627ae206ac8c4fd29d66845e0562db9",
+      "sourceRenderSha256": "10366fcc900fb70d2c43b3cef7cd30a3181154e9d5521666a979962f093a59e9",
+      "inputSha256": {
+        "currentSource": "298be3899ae8798a19f41e9b4eaf040f61c67cee304c642ec06103a6394dfa70",
+        "masterComposite": "43d062161e1040853c16d3a8055467bce85f80f3ecdd5df4593af1010372b731",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "fa1d72a89d2a7b40ca57dfdcfa79bd48f873d04751b8472aeb0224a916029d31",
+        "promptFile": "9f1f3717c26cb968c9af9a26089f1e7e4e27a5cae83cb22c838cf043ce3efd46"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 163,
+          "upper": 141,
+          "base": 358
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 1.021712158808933,
+        "left": 78,
+        "top": -31,
+        "bodyCenterXPct": 50,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk50SpryMtGl",
+      "family": "Sleek",
+      "capacityMl": 50,
+      "material": "clear",
+      "groupSlug": "sleek-50ml-clear-18-415-perfumespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343637700900",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk50SpryMtGl.b28e5855217c.png",
+      "sha256": "b28e5855217c51330e2c747dab31463bc24f4a5e0627e30146e8086a4ad88830",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 56,
+      "targetUpperY": 801,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/11. GBSlk50SpryMtGl.psd",
+      "masterSha256": "c2c45b53d9a4ea4eaca6c74337f3e16b7edae0e43bfdcf3237dc1c525f63d07e",
+      "sourceRenderSha256": "88937cd7cf49196b195128b3389252bea62bca20cc89945d1ee3e415e6fad30d",
+      "inputSha256": {
+        "currentSource": "00aa4a4d8030cd5cbd7304b39a962de692fdce323568d6f6347b832db62fd543",
+        "masterComposite": "7b944106dc7dde04a35780806883196b6f14fc2957f5da56f9d25e488588583d",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "fa1d72a89d2a7b40ca57dfdcfa79bd48f873d04751b8472aeb0224a916029d31",
+        "promptFile": "d6402e535f1289e3ca5517519522b04082433c5d4a53c85a9f06fba3bfd68928"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 160,
+          "upper": 132,
+          "base": 361
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.9681726570372858,
+        "left": 20,
+        "top": 63,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "LBSlk50LtnMtGl",
+      "family": "Sleek",
+      "capacityMl": 50,
+      "material": "clear",
+      "groupSlug": "sleek-50ml-clear-18-415-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343691604260",
+      "url": "/images/catalog/sleek-approved-2026-09-23/LBSlk50LtnMtGl.8cdeee69fc92.png",
+      "sha256": "8cdeee69fc92404e8daf719dc5579de9ea7e24b3892775432de11a8d8ea2e57c",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 56,
+      "targetUpperY": 801,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/12. LBSlk50LtnMtGl.psd",
+      "masterSha256": "e4edd4cd778c4bd78e76ec9858d921ac2edc9e0956efc788fb3aa7cb4aa06f84",
+      "sourceRenderSha256": "3ffc15662d7c191656ead0952fe6c15edc2756617c4972a44e4297035a89acc7",
+      "inputSha256": {
+        "currentSource": "b430ef92b91dc733215532654b6500876a1f57bc14314e0b2d6bab65c51b2655",
+        "masterComposite": "e55f520364fbd39778e559ff92a20b08120bfb43ed3963f1c255a79effc1b859",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "fa1d72a89d2a7b40ca57dfdcfa79bd48f873d04751b8472aeb0224a916029d31",
+        "promptFile": "6a1f3899da9d7ad73edac261546b54b31110ff7e18c3ebaa327d4e750ed67915"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 159,
+          "upper": 126,
+          "base": 353
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.9767028126058964,
+        "left": 18,
+        "top": 90,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk100AnSpGl",
+      "family": "Sleek",
+      "capacityMl": 100,
+      "material": "clear",
+      "groupSlug": "sleek-100ml-clear-18-415-antiquespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343685443876",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk100AnSpGl.fcb38308d06e.png",
+      "sha256": "fcb38308d06e2f158ba5a8bf21b49780b4052acdd575d7fb3fad12aa74638214",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 60.5,
+      "targetUpperY": 698,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/37. GBSlk100AnSpGl.psd",
+      "masterSha256": "8e39c9f0b694362e2ee7e55e9bfcc189351b2c21c36579f6771a831bb941b9f7",
+      "sourceRenderSha256": "f723df02588cb32c9e0e26cead54bb60f9b7e6b6286a52ee5a5cbe521f8a4bb9",
+      "inputSha256": {
+        "currentSource": "378bc40d8fb5657f56259a7eff58cfcca9313660700b98ee52b6446eb3db95fd",
+        "masterComposite": "df77441bd5e22d456a27e53f3eb47a999f252b515d07b96b97ad35cd71a5e6f6",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "125052d8945db02319862a9696a999cfadc976bb8065500f419bffa0882f83d3",
+        "promptFile": "c814f0082fa1af2574cac342cc29a79e764e780ce70633d9699fa666a08e5d4d"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 200,
+          "upper": 111,
+          "base": 359
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.9658808933002481,
+        "left": 49,
+        "top": 79,
+        "bodyCenterXPct": 56.00000000000001,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk100AnSpTslIvyGl",
+      "family": "Sleek",
+      "capacityMl": 100,
+      "material": "clear",
+      "groupSlug": "sleek-100ml-clear-18-415-antiquespray-tassel",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343686230308",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk100AnSpTslIvyGl.39fd0161f755.png",
+      "sha256": "39fd0161f75553d88c4d70cdad394d2b5390649997c50dd795a2b8845fe86593",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 60.5,
+      "targetUpperY": 698,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/43. GBSlk100AnSpTslIvyGl.psd",
+      "masterSha256": "63801f49cce74224d836bef9b0afc2120e51a0f12eba43a30ab85b0081f439fa",
+      "sourceRenderSha256": "0f4ae2f87804d0e8ba20d34631e8d143fa992772b8dc6167de649ecb45b56ff8",
+      "inputSha256": {
+        "currentSource": "e96362d4ada288d9b88423a9c6ba67bd4653eda01a0ca821d353cb4e6cfc65fa",
+        "masterComposite": "b0515ee416c16a2dc2ebd42f9750e32bd3844a41e514f7ddf35c225d7079adb9",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "125052d8945db02319862a9696a999cfadc976bb8065500f419bffa0882f83d3",
+        "promptFile": "db8f8c7c7b495fceb687ce18e7b0827b703ac823781f22fb5945505bb65b3994"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 230,
+          "upper": 100,
+          "base": 363,
+          "targetCxPct": 68
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 0.9107926294238081,
+        "left": 204,
+        "top": 172,
+        "bodyCenterXPct": 68,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "GBSlk100RdcrShnGl",
+      "family": "Sleek",
+      "capacityMl": 100,
+      "material": "clear",
+      "groupSlug": "sleek-100ml-clear-18-415-reducer",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343648317732",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk100RdcrShnGl.f46fdca554a1.png",
+      "sha256": "f46fdca554a106e53956740a00ed0d6f217a7886230da9f37347a9b92134ab1f",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 60.5,
+      "targetUpperY": 698,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/1. GBSlk100RdcrShnGl.psd",
+      "masterSha256": "b5ec7d2689f123bd80cde8872e5e5bef9ae6bbda7d0d7dc516b4ecc7ee6b41a2",
+      "sourceRenderSha256": "a20cfb5cae0a3942ef5f4b616d27a3eea4b335fc453317e483f2a68666ed217d",
+      "inputSha256": {
+        "masterComposite": "6c9c88fedc7349fe8df8165664151388db409634b5cfa5f8a32cfafbb72a366f",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "promptFile": "11cf67c1305d9de25cdd4fc83cd6e6eda07d74a05853122ded4698a292eacf30",
+        "scaleGuide": "125052d8945db02319862a9696a999cfadc976bb8065500f419bffa0882f83d3"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 1040,
+          "upper": 492,
+          "base": 2108,
+          "method": "Visual native-image glass shoulder and actual foot, approximately +/-6 pixels; shoulder excludes attached reducer cap."
+        },
+        "coordinateWidth": 2080,
+        "coordinateHeight": 2288,
+        "sourceMeasurementUncertaintyPx": 6,
+        "uniformScale": 0.8564356435643564,
+        "left": 149,
+        "top": 277,
+        "bodyCenterXPct": 50,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation; no width-only resizing."
+      }
+    },
+    {
+      "sku": "GBSlk100SpryMtGl",
+      "family": "Sleek",
+      "capacityMl": 100,
+      "material": "clear",
+      "groupSlug": "sleek-100ml-clear-18-415-perfumespray",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343651594532",
+      "url": "/images/catalog/sleek-approved-2026-09-23/GBSlk100SpryMtGl.e22c297f7c54.png",
+      "sha256": "e22c297f7c54e6c25b63e3f2a9c594c4177f1caafd6b3084319aba373fb67cc9",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 60.5,
+      "targetUpperY": 698,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/11. GBSlk100SpryMtGl.psd",
+      "masterSha256": "15c8bd6163ac9fa68cf0e44d5c616936417ed45dacaef7519fca5c159402afd8",
+      "sourceRenderSha256": "0864103c8b4d2846cf21ea6f57423788276b1c446f3e79f452ced51358e24b3a",
+      "inputSha256": {
+        "currentSource": "d49491c9200b7c1471620a802a94662069a6a137692a990b697a05985044b23e",
+        "masterComposite": "c884ed37eeba45373d551f5943ed6a118d1725c4c35f6f0190f0559f2eebb7dd",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "125052d8945db02319862a9696a999cfadc976bb8065500f419bffa0882f83d3",
+        "promptFile": "6d45d852412940db4558a53f3aafce210610a1f4a2df82a7c8466fdc35bce897"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 168,
+          "upper": 123,
+          "base": 357
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 1.0236686390532543,
+        "left": -78,
+        "top": -29,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    },
+    {
+      "sku": "LBSlk100LtnMtGl",
+      "family": "Sleek",
+      "capacityMl": 100,
+      "material": "clear",
+      "groupSlug": "sleek-100ml-clear-18-415-lotionpump",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343613485348",
+      "url": "/images/catalog/sleek-approved-2026-09-23/LBSlk100LtnMtGl.cdcdeb3409a3.png",
+      "sha256": "cdcdeb3409a370395c7e48f0ab352a624e735aced2793c0a3043328af0188ebb",
+      "canvas": [
+        2080,
+        2288
+      ],
+      "baselinePct": 91,
+      "upperLandmark": "glass shoulder",
+      "spanPct": 60.5,
+      "targetUpperY": 698,
+      "targetBaseY": 2082,
+      "visualDecision": "approved",
+      "approvalDate": "2026-09-23",
+      "catalogEligible": true,
+      "masterSource": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/12. LBSlk100LtnMtGl.psd",
+      "masterSha256": "8720135b286e277639338eb6fcdda117930fd56f01f7b83de8aee0c880b0e274",
+      "sourceRenderSha256": "cf785a2c0749b102bc64b94b5c11bca4b87b7263b56f11fa3ec8540281e3939e",
+      "inputSha256": {
+        "currentSource": "d00646153e3c3a88ba1ff87baac4d662d1624dd57bc0da29cdaa1456d6cd29f5",
+        "masterComposite": "40c18482a9b2af0a8e58ef5b0ed3a66f3234d3cafb6e8d5fef44afb428357def",
+        "materialReference": "fa254eb2959610df9a61e1d32ddeeadb30f67e62d1194858448b971080982899",
+        "scaleReference": "125052d8945db02319862a9696a999cfadc976bb8065500f419bffa0882f83d3",
+        "promptFile": "5b2909511b2acf35846815513275e73a8f100b856cc24c9c9e81618c701b3349"
+      },
+      "alignment": {
+        "sourceLandmarks": {
+          "cx": 162,
+          "upper": 120,
+          "base": 355
+        },
+        "coordinateWidth": 360,
+        "coordinateHeight": 396,
+        "sourceMeasurementUncertaintyPx": 2,
+        "uniformScale": 1.0193126022913257,
+        "left": -39,
+        "top": -9,
+        "bodyCenterXPct": 44,
+        "edgeHits": 0,
+        "method": "Whole-assembly uniform resampling and translation onto 2080x2288 bone canvas. Product proportions, hardware relationship and source shadows preserved."
+      }
+    }
+  ]
+}
