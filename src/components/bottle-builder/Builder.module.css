@@ -348,3 +348,89 @@
 @media(max-width: 639px) { .coverControl { grid-column: 1 / -1; font-size: 13px; } .steps button { font-size: 12px; gap: 4px; } }
 
 .familyPending { margin: 6px 0 0; font-size: 13px; color: #71572f; }
+
+/* Desktop layout study: dedicate more width to the customer's next choice.
+ * The option list scrolls independently; heading and navigation stay visible. */
+@media (min-width: 1100px) {
+    .builder { padding: 20px 28px 28px; }
+    .header { gap: 24px; margin-bottom: 18px; }
+    .header h1 { font-size: clamp(34px, 2.8vw, 44px); }
+    .header p { margin-top: 7px; }
+    .backLink { margin-bottom: 8px; }
+    .steps { gap: 10px; }
+    .steps button { font-size: 14px; gap: 8px; }
+    .steps button > span { width: 34px; height: 34px; font-size: 15px; }
+    .steps button:not(:last-child)::after { width: 16px; }
+    .filters { padding: 10px 16px; margin-bottom: 16px; }
+    .filters select { height: 34px; }
+    .workspace { --panel-height: calc(100dvh - 152px); grid-template-columns: minmax(0, 1.48fr) minmax(0, 1.08fr) minmax(260px, .8fr); gap: 14px; }
+    .builder[data-current-step="0"] .workspace { --panel-height: calc(100dvh - 364px); }
+    .options { display: flex; flex-direction: column; height: max(320px, var(--panel-height)); min-height: 0; max-height: 900px; padding: 0; overflow: hidden; }
+    .optionHeader { flex: 0 0 auto; padding: 18px 22px 14px; margin: 0; border-bottom: 1px solid var(--line); }
+    .optionHeader h2 { font-size: 28px; margin-top: 5px; }
+    .optionHeader p { font-size: 12px; }
+    .optionToolbar { margin: 0; }
+    .startOver { min-height: 36px; font-size: 12px; padding: 6px 10px; }
+    .optionFieldset { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-gutter: stable; padding: 16px 18px 18px 22px; scroll-padding: 8px; }
+    .optionFooter { flex: 0 0 auto; display: flex; align-items: center; gap: 18px; border-top: 1px solid var(--line); padding: 14px 22px; background: white; }
+    .optionFooter .previous { margin: 0; min-height: 46px; font-size: 13px; flex-shrink: 0; }
+    .optionFooter .optionAction { flex: 1; position: static; margin: 0; padding: 0; background: none; }
+    .optionFooter .primary { font-size: 13px; min-height: 46px; }
+    .optionFooter:empty { display: none; }
+    .bottleGrid, .colorGrid, .closureGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; }
+    .fitmentGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+    .fitmentGrid .optionDescription { display: none; }
+    .bottleThumb { height: 98px; }
+    .colorThumb { height: 88px; margin-bottom: 7px; }
+    .componentThumb { height: 84px; padding: 6px 8px 10px; }
+    .closureThumb { height: 82px; padding: 5px 8px 7px; }
+    .option { padding: 9px 7px 11px; }
+    .option strong, .closureGrid .option strong { font-size: 12px; }
+    .neckBadge { white-space: nowrap; font-size: 10px; padding: 5px 7px; }
+    .optionDescription { font-size: 10px; line-height: 1.4; }
+    .compatibilityContext { padding: 10px 12px; margin-bottom: 13px; }
+    .compatibilityContext strong, .compatibilityContext span span { font-size: 11px; }
+    .selectedFitment { padding: 10px 12px; }
+    .selectedFitment strong { font-size: 13px; margin: 1px 0; }
+    .closureSection > p { margin: 4px 0 11px; }
+    .glassSection { margin-top: 18px; padding-top: 16px; }
+    .glassSection h3 { font-size: 22px; margin-bottom: 12px; }
+    .nextStepHint { margin-top: 14px; }
+    .includedCover { margin-top: 14px; padding: 10px 12px; }
+    .includedCoverImage { height: 54px; }
+    .preview { min-height: 0; height: max(320px, var(--panel-height)); max-height: 900px; }
+    .previewHeader { padding: 18px 16px 0; }
+    .previewHeader > span:first-child { font-size: 8px; letter-spacing: .1em; }
+    .previewHeader .liveDot { font-size: 8px; }
+    .previewImage { height: 0; min-height: 0; flex: 1 1 auto; padding: 10px 12px 0; }
+    .previewEmpty { min-height: 0; }
+    .previewCaption { padding: 16px 14px 20px; }
+    .previewCaption h2 { font-size: 26px; }
+    .previewCaption p { line-height: 1.5; }
+    .coverControl { flex: 0 0 auto; padding: 0 12px 16px; gap: 8px; font-size: 11px; }
+    .coverControl button { min-height: 36px; }
+    .summary { padding: 20px 18px 18px; max-height: max(320px, var(--panel-height)); overflow-y: auto; }
+    .summaryHeading { padding-bottom: 12px; }
+    .summaryHeading h2 { font-size: 26px; }
+    .summaryLine { padding: 12px 0; gap: 8px; }
+    .summaryLabel { font-size: 10px; }
+    .summaryLine strong { font-size: 12px; }
+    .summaryLine > button { min-height: 32px; }
+    .purchaseHint { font-size: 11px; }
+}
+@media (min-width: 1100px) and (max-width: 1279px) {
+    .builder { padding-inline: 18px; }
+    .header { flex-wrap: nowrap; gap: 18px; }
+    .header h1 { font-size: 32px; }
+    .steps { gap: 7px; }
+    .steps button { gap: 5px; font-size: 12px; }
+    .steps button:not(:last-child)::after { display: none; }
+    .workspace { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) 248px; gap: 12px; }
+    .bottleGrid, .colorGrid, .closureGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .fitmentGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .optionHeader { padding-inline: 16px; }
+    .optionHeader h2 { font-size: 25px; }
+    .optionFieldset { padding-inline: 16px 12px; }
+    .optionFooter { padding-inline: 16px; }
+    .previewHeader .liveDot { display: none; }
+}

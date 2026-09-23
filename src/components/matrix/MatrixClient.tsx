@@ -106,6 +106,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
     const confirmation = useRef<HTMLDivElement>(null);
     const [error, setError] = useState("");
     const optionHeading = useRef<HTMLHeadingElement>(null);
+    const optionsScroller = useRef<HTMLFieldSetElement>(null);
     const tracked = useRef(false);
     useEffect(() => {
         if (tracked.current) return;
@@ -158,6 +159,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
         if (adding) return;
         setStep(next); setMobileStage(next === 0 ? 0 : next + 1); setPreviewExpanded(false); setLastAdded(null); setError("");
         requestAnimationFrame(() => {
+            if (optionsScroller.current) optionsScroller.current.scrollTop = 0;
             const heading = next === 3 && window.matchMedia("(max-width: 639px)").matches ? reviewHeading.current : optionHeading.current;
             heading?.focus({ preventScroll: true });
             document.getElementById("builder-workspace")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" });
@@ -267,7 +269,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
             <section className={styles.options} aria-label="Bottle options">
                 <div className={styles.optionHeader}><div className={styles.optionToolbar}><span className={styles.eyebrow}>Step {step + 1} of 4</span><button type="button" className={styles.startOver} onClick={reset} disabled={adding}>Start over</button></div>
                     <h2 tabIndex={-1} ref={optionHeading}>{titles[step]}</h2><p>{subtitles[step]}</p></div>
-                <fieldset aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
+                <fieldset ref={optionsScroller} aria-label={titles[step]} disabled={adding || pending} className={styles.optionFieldset}>
                 {step === 0 && <div className={styles.bottleGrid}>
                     {visibleBodies.map((b, index) => <Option key={b.id} label={`${b.capacityMl} ml, ${b.neck} neck${b.profileLabel !== b.family ? `, ${b.profileLabel}` : ""}`} selected={body?.id === b.id} onClick={() => chooseBottle(b)}>
                         <div className={styles.bottleThumb}><BuilderImage config={clearBodyPreview(b)} parts={previewParts(clearBodyPreview(b), "body")} label={`${b.capacityMl} ml ${b.family} bottle`} scale={chooserScale(b, bodies)} thumbnail placeholder priority={index < CHOOSER_PRIORITY_TILES} /></div>
@@ -317,8 +319,10 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                             <p className={styles.small}>Set your quantity in Your Build. We’ll check current availability before adding.</p>
                 </div>}
                 </fieldset>
-                {step < 3 && <div className={styles.optionAction}>{action}</div>}
-                {step > 0 && <button className={styles.previous} onClick={() => goTo(step - 1)} disabled={adding}><ArrowLeft size={15} /> {steps[step - 1]}</button>}
+                <div className={styles.optionFooter}>
+                    {step > 0 && <button className={styles.previous} onClick={() => goTo(step - 1)} disabled={adding}><ArrowLeft size={15} /> Back</button>}
+                    {step < 3 && <div className={styles.optionAction}>{action}</div>}
+                </div>
             </section>
             <section className={styles.preview} aria-label="Live bottle preview" data-preview-stage={previewStage} data-expanded={previewExpanded}>
                 <div className={styles.previewHeader}><span>YOUR BOTTLE, TAKING SHAPE</span><span className={styles.liveDot}>{preview ? "Your bottle preview" : "Live preview"}</span></div>
