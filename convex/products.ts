@@ -5,8 +5,8 @@ import { verifyWriteToken } from "./writeToken";
 import { isLegacyProductRouteAlias } from "../src/lib/products/legacy-product-route-overrides";
 import type { Doc, Id } from "./_generated/dataModel";
 import {
-    filterGroupedComponentsByFitmentRule,
     normalizeComponentsByType,
+    resolveCompatibleComponents,
     selectBestFitmentRule,
 } from "./componentUtils";
 import { buildFamilyPageData } from "../src/lib/products/family-page-data";
@@ -528,7 +528,7 @@ export const getCompatibleFitments = query({
                 .collect()
             : [];
         const matchedFitmentRule = selectBestFitmentRule(fitmentRules, bottle);
-        const reconciled = filterGroupedComponentsByFitmentRule(grouped, matchedFitmentRule);
+        const reconciled = resolveCompatibleComponents(grouped, matchedFitmentRule, bottle);
         const isPlasticBottlePdp = (bottle.category ?? "") === "Plastic Bottle";
 
         // 2. Filter components by thread — 18-400 caps don't fit 17-415 bottles, etc.

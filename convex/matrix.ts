@@ -8,9 +8,9 @@
  *
  * NOT A FIFTH COMPATIBILITY ENGINE. Component resolution already lives in
  * convex/componentUtils.ts and is shared by grace.ts and products.ts. This
- * composes the same three calls in the same order —
+ * composes the same calls in the same order —
  *   normalizeComponentsByType -> selectBestFitmentRule ->
- *   filterGroupedComponentsByFitmentRule
+ *   resolveCompatibleComponents
  * — so a fitment fix lands everywhere at once. If the matrix ever disagrees
  * with the PDP about what fits, that is a bug in one shared function rather
  * than a difference of opinion between two implementations.
@@ -33,8 +33,8 @@ import { query } from "./_generated/server";
 import { v } from "convex/values";
 import {
     normalizeComponentsByType,
+    resolveCompatibleComponents,
     selectBestFitmentRule,
-    filterGroupedComponentsByFitmentRule,
 } from "./componentUtils";
 
 /** How a row's component list came to be — carried to the UI so it can show
@@ -167,7 +167,7 @@ export const getFamilyRows = query({
             const thread = (b.neckThreadSize ?? "").toString().trim();
             const grouped = normalizeComponentsByType(b.components);
             const rule = selectBestFitmentRule(rulesByThread.get(thread) ?? [], b);
-            const resolved = filterGroupedComponentsByFitmentRule(grouped, rule);
+            const resolved = resolveCompatibleComponents(grouped, rule, b);
 
             const listed = Object.values(grouped).reduce((n, xs) => n + xs.length, 0);
             const resolution: Resolution =
