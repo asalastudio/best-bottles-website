@@ -3399,6 +3399,72 @@
    "source": "research:community",
    "url": null,
    "whyHard": "Logistics"
+  },
+  {
+   "id": "k176",
+   "text": "Do you have anything in shiny gold?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Shiny Gold",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed",
+   "url": null,
+   "whyHard": "Finish-only; must not route to Cap/Closure applicator"
+  },
+  {
+   "id": "k177",
+   "text": "I want the matte black ones",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": null,
+    "capFinish": "Matte Black",
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "finish-only",
+    "cap-finish"
+   ],
+   "source": "constructed",
+   "url": null,
+   "whyHard": "Finish-only colour words with no applicator"
+  },
+  {
+   "id": "k178",
+   "text": "Anything in pink with dots?",
+   "split": "holdout",
+   "expect": {
+    "applicator": "not_stated",
+    "tassel": null,
+    "family": null,
+    "glassColour": null,
+    "atomizerFinish": "Pink with Dots",
+    "capFinish": null,
+    "capacityMl": null,
+    "wants": "complete_bottle"
+   },
+   "tags": [
+    "finish-only",
+    "atomizer-finish"
+   ],
+   "source": "constructed",
+   "url": null,
+   "whyHard": "Decorated atomizer finish without naming a family"
   }
  ]
 }
