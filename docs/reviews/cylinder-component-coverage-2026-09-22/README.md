@@ -1,7 +1,6 @@
 # Cylinder catalog components and source artwork
 
-Status: local implementation and review candidates; not deployed. No catalog,
-Shopify, hero-release, or hosted kit index writes were made for this batch.
+Release update: the 18 recovered Cylinder kit/plate pairs are now published to the shared staging backend. See [the scoped release receipt](../component-release-2026-09-22/README.md). PR #230 is merged. The original audit/preparation snapshot below remains historical; its remaining artwork and stock conflicts are tracked in the follow-up four-family ledger.
 
 The later [Circle follow-up](../circle-component-recovery-2026-09-22/README.md)
 records the separately applied nine-kit/26-product Circle repair and the four

@@ -1,6 +1,10 @@
 # Circle component recovery and fixed-body pilot
 
-## Release state
+## Release update
+
+Twenty-nine Circle kits from this recovery were published with their matching cap-on/off plates to the shared staging backend on September 22. Nine frosted Circle 50 mL tassel candidates remain held. See [the scoped release receipt](../component-release-2026-09-22/README.md) for the 47-SKU Cylinder/Circle release, rollback snapshots, and hosted verification. The historical preparation notes below describe the earlier local-only state.
+
+## Original preparation state
 
 - The previously deployed `repairFourFamilyComponents:run` mutation was applied
   to `precise-raccoon-123`: nine reversed Circle kit roles, 26 tassel product
