@@ -1,0 +1,3 @@
+query ShopIdentity { shop { name myshopifyDomain } currentAppInstallation { accessScopes { handle } } }
+query AllProducts($cursor: String) { products(first: 100, after: $cursor) { nodes { id title handle status publishedAt onlineStoreUrl tags } pageInfo { hasNextPage endCursor } } }
+query AllVariants($cursor: String) { productVariants(first: 100, after: $cursor) { nodes { id sku price availableForSale inventoryQuantity inventoryPolicy inventoryItem { tracked } product { id } } pageInfo { hasNextPage endCursor } } }

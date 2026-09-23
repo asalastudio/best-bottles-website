@@ -26,3 +26,7 @@ Add to Cart button. No cart or checkout was submitted in this check.
 This resolves 18 of the prior 45 disputed stock labels. It does not clear the
 remaining 27 labels or the rest of the component artwork backlog. The previous
 four-family ledger remains a historical snapshot taken before this repair.
+
+Follow-up: the [catalog-wide availability sweep](../catalog-orderability-2026-09-22/README.md)
+resolved the remaining current-catalog stock labels. This receipt remains the
+earlier 18-record snapshot.
