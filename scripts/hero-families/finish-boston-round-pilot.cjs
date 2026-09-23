@@ -1,0 +1,25 @@
+// Approved local finishing: translate complete assemblies; correct cobalt backdrop only.
+const fs=require('fs'),path=require('path'),sharp=require('sharp'),crypto=require('crypto');
+const root=path.resolve('output/imagegen/boston-round-2026-09-23'),out=path.join(root,'finishing/v1'),W=2080,H=2288,bone=[245,243,239];fs.mkdirSync(out,{recursive:true});
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'pilot-manifest.json'))),hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+const smooth=v=>{v=Math.max(0,Math.min(1,v));return v*v*(3-2*v)};
+function solve(a,b){const m=a.map((r,i)=>[...r,b[i]]),n=b.length;for(let k=0;k<n;k++){let p=k;for(let i=k+1;i<n;i++)if(Math.abs(m[i][k])>Math.abs(m[p][k]))p=i;[m[k],m[p]]=[m[p],m[k]];const v=m[k][k];for(let j=k;j<=n;j++)m[k][j]/=v;for(let i=0;i<n;i++)if(i!==k){const f=m[i][k];for(let j=k;j<=n;j++)m[i][j]-=f*m[k][j];}}return m.map(r=>r[n]);}
+const terms=(x,y)=>[1,x,y,x*x,x*y,y*y],dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0);
+(async()=>{const rows=[];for(const r of manifest.rows){const receipt=JSON.parse(fs.readFileSync(r.rawOutput.replace('.png','.render.json')));if(hash(r.rawOutput)!==receipt.outputSha256)throw Error('Original hash '+r.sku);const {data:src,info}=await sharp(r.rawOutput).removeAlpha().raw().toBuffer({resolveWithObject:true});if(info.width!==W||info.height!==H)throw Error('Canvas');let working=Buffer.from(src),delta=0,method='Unchanged original',extra={};
+if(r.sku.includes('Amb15')){delta=13;method='Complete image translated downward 13 integer pixels; no resizing or recoloring';extra={measuredSourceFootY:2069,measuredFinalFootY:2082,measurementUncertaintyPx:3};}
+if(r.sku.includes('Blu2oz')){
+ delta=-19;method='Cobalt background finished to bone with localized source shadow residual; complete assembly translated upward 19 integer pixels';
+ const hard=Buffer.alloc(W*H);let bounds=[];
+ for(let y=75;y<=2103;y++){let x0=W,x1=-1;for(let x=650;x<1440;x++){const i=(y*W+x)*3;if(Math.max(...bone.map((v,c)=>Math.abs(src[i+c]-v)))>35){x0=Math.min(x0,x);x1=x;}}if(x1>=x0){x0=Math.max(0,x0-2);x1=Math.min(W-1,x1+2);hard.fill(255,y*W+x0,y*W+x1+1);bounds.push([y,x0,x1]);}}
+ const feather=await sharp(hard,{raw:{width:W,height:H,channels:1}}).blur(4).greyscale().raw().toBuffer();const protect=Buffer.alloc(W*H);for(let p=0;p<protect.length;p++)protect[p]=Math.max(hard[p],feather[p]);
+ await sharp(protect,{raw:{width:W,height:H,channels:1}}).png().toFile(path.join(out,'cobalt-artwork-protection.png'));
+ let samples=[];for(let y=30;y<1900;y+=24)for(let x=30;x<W-30;x+=24){const p=y*W+x;if(protect[p]>0)continue;const c=[src[p*3],src[p*3+1],src[p*3+2]];if(Math.max(...c.map((v,i)=>Math.abs(v-bone[i])))>12)continue;samples.push([terms((x-W/2)/W,(y-H/2)/H),c]);}
+ const a=Array.from({length:6},()=>Array(6).fill(0)),b=Array.from({length:3},()=>Array(6).fill(0));for(const [t,c]of samples)for(let i=0;i<6;i++){for(let j=0;j<6;j++)a[i][j]+=t[i]*t[j];for(let ch=0;ch<3;ch++)b[ch][i]+=t[i]*c[ch];}const coefficients=b.map(c=>solve(a,c));let preserved=0,changed=0;
+ for(let y=0;y<H;y++)for(let x=0;x<W;x++){const p=y*W+x,i=p*3,alpha=protect[p]/255,rad=Math.sqrt(((x-1040)/700)**2+((y-2100)/150)**2),shadow=smooth((1-rad)/.35),t=terms((x-W/2)/W,(y-H/2)/H);for(let ch=0;ch<3;ch++){const field=dot(coefficients[ch],t),floor=bone[ch]+shadow*(src[i+ch]-field);working[i+ch]=Math.round(Math.max(0,Math.min(255,alpha*src[i+ch]+(1-alpha)*floor)));}if(hard[p]===255){preserved++;if(working[i]!==src[i]||working[i+1]!==src[i+1]||working[i+2]!==src[i+2])changed++;}}
+ if(changed)throw Error('Cobalt interior changed');extra={measuredSourceFootY:2101,measuredFinalFootY:2082,measurementUncertaintyPx:3,protectedArtworkPixels:preserved,protectedArtworkPixelsChanged:changed,backgroundFitSamples:samples.length,backgroundFit:coefficients};
+}
+let final=r.rawOutput;if(delta){const shifted=Buffer.alloc(src.length);for(let i=0;i<shifted.length;i+=3){shifted[i]=245;shifted[i+1]=243;shifted[i+2]=239;}const sourceTop=Math.max(0,-delta),destTop=Math.max(0,delta),height=H-Math.abs(delta);working.copy(shifted,destTop*W*3,sourceTop*W*3,(sourceTop+height)*W*3);final=path.join(out,r.sku+'-finished-2080x2288.png');await sharp(shifted,{raw:{width:W,height:H,channels:3}}).png().toFile(final);if(r.sku.includes('Amb15')){if(!shifted.subarray(delta*W*3).equals(src.subarray(0,(H-delta)*W*3)))throw Error('Amber changed while translating');extra.shiftedPixelsUnchanged=true;}}
+rows.push({...r,originalSha256:receipt.outputSha256,finalPath:final,finalSha256:hash(final),finishing:{method,translateYPx:delta,scale:1,...extra},status:'finished-awaiting-user-review'});
+}
+for(const r of rows)if(hash(r.rawOutput)!==r.originalSha256)throw Error('Original overwritten');fs.writeFileSync(path.join(out,'finished-manifest.json'),JSON.stringify({rows,canvas:[W,H],bone:'#F5F3EF',changed:2,unchanged:1,apiCalls:0,published:false},null,2)+'\n');console.log(rows.map(r=>({sku:r.sku,delta:r.finishing.translateYPx,protectedChanged:r.finishing.protectedArtworkPixelsChanged,amberPixelsPreserved:r.finishing.shiftedPixelsUnchanged})));
+})();

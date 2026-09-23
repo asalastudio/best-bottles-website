@@ -1,0 +1,159 @@
+{
+  "changed": 2,
+  "unchanged": 1,
+  "apiCalls": 0,
+  "canvas": [
+    2080,
+    2288
+  ],
+  "bone": "#F5F3EF",
+  "rows": [
+    {
+      "sku": "GBBstnAmb15mlBlkCapSht",
+      "originalSha256": "726582907bca6a85fe712c0e751eb04fbc655510ba015ed63f1b621e2302c905",
+      "finalSha256": "4cae8a5e057ee8591fb995a3e4f04124fd7cf90047ceb8990973a9a2f307aef9",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/boston-round-2026-09-23/finishing/v1/GBBstnAmb15mlBlkCapSht-finished-2080x2288.png",
+      "finishing": {
+        "method": "Complete image translated downward 13 integer pixels; no resizing or recoloring",
+        "translateYPx": 13,
+        "scale": 1,
+        "measuredSourceFootY": 2069,
+        "measuredFinalFootY": 2082,
+        "measurementUncertaintyPx": 3,
+        "shiftedPixelsUnchanged": true
+      }
+    },
+    {
+      "sku": "GBBstn1ozBlkCapSht",
+      "originalSha256": "cc2f3b5a296606d612c3a61e43fb3655419cb395fc8919fe6dfcb4c147d79793",
+      "finalSha256": "cc2f3b5a296606d612c3a61e43fb3655419cb395fc8919fe6dfcb4c147d79793",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/boston-round-2026-09-23/GBBstn1ozBlkCapSht-native-2080x2288.png",
+      "finishing": {
+        "method": "Unchanged original",
+        "translateYPx": 0,
+        "scale": 1
+      }
+    },
+    {
+      "sku": "GBBstnBlu2ozBlkDropperShnGlTrim",
+      "originalSha256": "22817aabc2ad91afa7db509bcb99e660530a0bcbd716dff3a8133942dbac8e86",
+      "finalSha256": "0f9f8c5746a7b85353727ac079e960e03bbc647c6b69055496fa3c5c63a7a6cc",
+      "finalPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/next-five-family-review-2026-09-23/output/imagegen/boston-round-2026-09-23/finishing/v1/GBBstnBlu2ozBlkDropperShnGlTrim-finished-2080x2288.png",
+      "finishing": {
+        "method": "Cobalt background finished to bone with localized source shadow residual; complete assembly translated upward 19 integer pixels",
+        "translateYPx": -19,
+        "scale": 1,
+        "measuredSourceFootY": 2101,
+        "measuredFinalFootY": 2082,
+        "measurementUncertaintyPx": 3,
+        "protectedArtworkPixels": 1043391,
+        "protectedArtworkPixelsChanged": 0,
+        "backgroundFitSamples": 4972,
+        "backgroundFit": [
+          [
+            244.59067479007524,
+            -0.012755220855202528,
+            0.048720077699459546,
+            0.2862254587166918,
+            0.05377202130711677,
+            0.5254213223240365
+          ],
+          [
+            241.98598930015058,
+            -0.022788977375662524,
+            0.13494006432743502,
+            0.35937667333860873,
+            0.17369844660326605,
+            0.7180445898311264
+          ],
+          [
+            237.53567507161702,
+            -0.02711384334566809,
+            0.10443165580774144,
+            0.3847475945276283,
+            0.08618250473059376,
+            0.48436281128015213
+          ]
+        ]
+      }
+    }
+  ],
+  "backgroundChecks": [
+    {
+      "region": [
+        960,
+        8,
+        1120,
+        64
+      ],
+      "medianRGB": [
+        245,
+        243,
+        239
+      ],
+      "p95MaxChannelOffset": 0,
+      "exactBonePercent": 100
+    },
+    {
+      "region": [
+        160,
+        160,
+        320,
+        320
+      ],
+      "medianRGB": [
+        245,
+        243,
+        239
+      ],
+      "p95MaxChannelOffset": 0,
+      "exactBonePercent": 100
+    },
+    {
+      "region": [
+        1760,
+        160,
+        1920,
+        320
+      ],
+      "medianRGB": [
+        245,
+        243,
+        239
+      ],
+      "p95MaxChannelOffset": 0,
+      "exactBonePercent": 100
+    },
+    {
+      "region": [
+        32,
+        800,
+        112,
+        1200
+      ],
+      "medianRGB": [
+        245,
+        243,
+        239
+      ],
+      "p95MaxChannelOffset": 0,
+      "exactBonePercent": 100
+    },
+    {
+      "region": [
+        1968,
+        800,
+        2048,
+        1200
+      ],
+      "medianRGB": [
+        245,
+        243,
+        239
+      ],
+      "p95MaxChannelOffset": 0,
+      "exactBonePercent": 100
+    }
+  ],
+  "status": "finishing-complete-awaiting-user-review"
+}
