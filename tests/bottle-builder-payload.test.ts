@@ -150,6 +150,7 @@ describe("Build Your Bottle first-paint contract", () => {
         expect(image).not.toContain("IntersectionObserver");
         expect(image).not.toContain('fetchPriority: "low"');
         expect(image).not.toContain('fetchPriority="low"');
-        expect(image).toContain("!expanded && !thumbnail");
+        // Post-fit zoom is covered by the rendered-image regression tests;
+        // the first-paint contract does not prescribe a CSS implementation.
     });
 });

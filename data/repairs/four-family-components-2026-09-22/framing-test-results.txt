@@ -1,0 +1,16 @@
+RUN  v3.2.4 /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/pdp-component-cleanup-2026-09-22
+
+ ✓ tests/bottle-builder-preview-frame.test.ts (6 tests) 3ms
+ ✓ tests/pdp-selected-kit-truth.test.ts (2 tests) 2ms
+ ✓ tests/bottle-builder-preview-registration.test.ts (11 tests) 6ms
+ ✓ tests/kit-frame.test.ts (3 tests) 3ms
+ ✓ tests/pdp-stage-frame.test.ts (13 tests) 5ms
+ ✓ tests/mobile-pdp-models.test.ts (42 tests) 34ms
+ ✓ tests/bottle-builder-preview-seat.test.tsx (3 tests) 28ms
+ ✓ tests/bottle-builder-chooser-image.test.tsx (7 tests) 42ms
+ ✓ tests/pdp-stage-modes.test.ts (11 tests) 9ms
+
+ Test Files  9 passed (9)
+      Tests  98 passed (98)
+   Start at  17:49:34
+   Duration  1.78s (transform 375ms, setup 0ms, collect 2.28s, tests 131ms, environment 467ms, prepare 554ms)

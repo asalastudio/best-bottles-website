@@ -57,3 +57,48 @@ it("applies the neck-seat transform on the assembled preview, not the chooser ti
     act(() => root.render(<BuilderImage config={config} parts={previewParts(config, "complete")} stage="complete" thumbnail label="tile" />));
     expect(el.querySelector("[data-builder-layer=\"sprayer\"]")?.getAttribute("transform")).toBeNull();
 });
+
+it("keeps one camera across body, tall tops, finishes, and cap-on/off views", async () => {
+    const { builderBodyFrame, builderPreviewLayout } = await import("@/lib/bottle-builder/preview-layout");
+    const tall = structuredClone(config);
+    tall.id = "tall-finish";
+    tall.kit!.parts.find(p => p.slot === "overcap")!.bounds.top = -250;
+    const wide = structuredClone(config);
+    wide.id = "wide-tassel";
+    wide.kit!.parts.find(p => p.slot === "sprayer")!.bounds = {left:-250,top:10,right:570,bottom:1000};
+    const candidates = [config, tall, wide];
+    let locked: ReturnType<typeof builderBodyFrame> | undefined;
+    for (const selected of candidates) for (const stage of ["body", "fitment", "complete"] as const) for (const showCover of [false, true]) {
+        const layout = builderPreviewLayout(selected, previewParts(selected, stage), {stage,showCover,bodyReference:config})!;
+        const frame = builderBodyFrame(selected,candidates,config,layout);
+        if (!locked) locked=frame;
+        expect(frame).toEqual(locked);
+        for (const layer of layout.layers) {
+            expect(layer.bounds.left).toBeGreaterThan(frame.x);
+            expect(layer.bounds.right).toBeLessThan(frame.x+frame.width);
+            expect(layer.bounds.top).toBeGreaterThan(frame.y);
+            expect(layer.bounds.bottom).toBeLessThan(frame.y+frame.height);
+        }
+        expect(layout.layers.find(l=>l.part.slot==="body")!.bounds).toEqual(kit.parts[0].bounds);
+    }
+    // Another capacity must not make this bottle's frame smaller.
+    const unrelated=structuredClone(tall); unrelated.capacityMl=100; unrelated.kit!.parts[0].bounds.top=-5000;
+    const layout=builderPreviewLayout(config,previewParts(config,"complete"),{stage:"complete",bodyReference:config})!;
+    expect(builderBodyFrame(config,[...candidates,unrelated],config,layout)).toEqual(locked);
+});
+
+it("shares the body size across material photos without substituting their glass pixels", async () => {
+    const { builderBodyFrame, builderPreviewLayout } = await import("@/lib/bottle-builder/preview-layout");
+    const frosted=structuredClone(config); frosted.id="frosted"; frosted.color="Frosted";
+    for(const part of frosted.kit!.parts) {
+        part.bounds={left:part.bounds.left*1.4+30,right:part.bounds.right*1.4+30,top:part.bounds.top*1.4,bottom:part.bounds.bottom*1.4};
+        part.image.url=part.image.url.replace("blob.example","frosted.example");
+    }
+    frosted.kit!.anchors={...frosted.kit!.anchors,axisX:kit.anchors.axisX*1.4+30,seatY:kit.anchors.seatY*1.4,baselineY:kit.anchors.baselineY*1.4};
+    const candidates=[config,frosted];
+    const layouts=candidates.map(c=>builderPreviewLayout(c,previewParts(c,"complete"),{stage:"complete",bodyReference:c})!);
+    const frames=candidates.map((c,i)=>builderBodyFrame(c,candidates,c,layouts[i]));
+    const widths=layouts.map((l,i)=>{const b=l.layers.find(l=>l.part.slot==="body")!.bounds;return (b.right-b.left)/frames[i].width;});
+    expect(widths[0]).toBeCloseTo(widths[1],10);
+    expect(layouts[1].layers.find(l=>l.part.slot==="body")!.part.image.url).toContain("frosted.example");
+});

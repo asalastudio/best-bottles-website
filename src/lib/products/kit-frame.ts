@@ -3,7 +3,6 @@ type PartBounds = { bounds: { left: number; top: number; right: number; bottom: 
 export const REMOVABLE_KIT_SLOTS: ReadonlySet<string> = new Set(["cap", "overcap"]);
 
 const DETACHED_CAP_GAP_PX = 24;
-const RECORDED_OFFSET_EPSILON = 8;
 
 /** Legacy kits sorted by photographed bounds can put an overcap below its pump.
  * Reorder only that closure stack, preserving its envelope and all other parts.
@@ -46,21 +45,18 @@ export function explodedKitFrame(parts: readonly PartBounds[], width = 1000, hei
 
 /**
  * CAP OFF layout: keep the removable cap in the stack, parked beside the
- * bottle. Recorded exploded offsets win when they already move the cap;
- * otherwise park it to the right of the body. The bottle bounds are unchanged
+ * bottle, with its foot on the glass baseline. Exploded offsets describe a
+ * lifted component stack, so they must not position the cap in this view.
+ * The bottle bounds are unchanged
  * — the detached cap must not force the glass larger.
  */
 export function detachedCapOffset<T extends PartBounds>(
     part: T,
     body: { left: number; right: number; top: number; bottom: number } | null,
 ): { dx: number; dy: number } {
-    const recorded = part.exploded;
-    if (Math.abs(recorded.dx) > RECORDED_OFFSET_EPSILON || Math.abs(recorded.dy) > RECORDED_OFFSET_EPSILON) {
-        return recorded;
-    }
-    if (!body) return recorded;
+    if (!body) return part.exploded;
     const dx = body.right + DETACHED_CAP_GAP_PX - part.bounds.left;
-    return { dx, dy: 0 };
+    return { dx, dy: body.bottom - part.bounds.bottom };
 }
 
 export function withDetachedCapOffsets<T extends PartBounds>(parts: readonly T[]): T[] {

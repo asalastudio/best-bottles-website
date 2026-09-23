@@ -35,6 +35,7 @@ import { useQuery } from "convex/react";
 import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
+import PdpPhotoCanvas from "./PdpPhotoCanvas";
 import { explodedKitFrame, orderExplodedOvercap, REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
 import { capacityMlFromSlug, parseProductSlug } from "@/lib/products/group-variant-intent";
 import { pdpStageFrame, pdpStageTransformCss } from "@/lib/products/pdp-stage-frame";
@@ -268,8 +269,8 @@ export default function ConfiguratorPdp({
   const targetParts = useMemo(() => {
     if (!kit?.parts?.length) return null;
     const parts = orderExplodedOvercap([...kit.parts].sort((a, b) => a.zOrder - b.zOrder));
-    return pilot || assembledOnly || withCap ? parts : withDetachedCapOffsets(parts);
-  }, [kit, withCap, assembledOnly, pilot]);
+    return pilot || assembledOnly || withCap || exploded ? parts : withDetachedCapOffsets(parts);
+  }, [kit, withCap, assembledOnly, pilot, exploded]);
   // What is actually on screen: a fully decoded set owned by the current kit.
   // The synchronous SKU gate below prevents an old state value from painting
   // between render and effect cleanup during a variant transition.
@@ -426,12 +427,13 @@ export default function ConfiguratorPdp({
   // the plate for the selected SKU; cap-off plate when the cap is lifted
   const capOff = !assembledOnly && !withCap;
   // Exact recovered CAP OFF photographs stay on stage. Kit parking is only
-  // for colourways that have no cap-off raster — Circle Cap, and anyone else
-  // still waiting on a beside-cap plate.
-  const preferKitCapOff = capOff && kitReady && !plateImageCapOff;
+  // for colourways that have no cap-off raster. Keep those kits in BOTH cap
+  // states so toggling a cap cannot swap sources and resize the glass.
+  const preferKitPair = !assembledOnly && kitReady && !plateImageCapOff
+    && kitParts?.some(part => REMOVABLE_KIT_SLOTS.has(part.slot));
   const wantedPlate = (capOff && plateImageCapOff) ? plateImageCapOff : plateImage;
   const plate = wantedPlate && !brokenPlates.has(wantedPlate) ? wantedPlate : null;
-  const showKitLayers = kitReady && (Boolean(pilot) || exploded || preferKitCapOff || !plate);
+  const showKitLayers = kitReady && (Boolean(pilot) || exploded || preferKitPair || !plate);
   const slugParts = parseProductSlug(currentSlug);
   const capacityMl = slugParts?.capacityMl ?? capacityMlFromSlug(currentSlug);
   const stageTransform = exploded
@@ -442,6 +444,7 @@ export default function ConfiguratorPdp({
         color: slugParts?.color,
         view: capOff ? "capOff" : "assembled",
         parts: showKitLayers ? kitParts : null,
+        hasCapOffPlate: Boolean(plateImageCapOff),
       }));
   // A photo-only family (no approved geometry) never shows 3D; otherwise the
   // customer opens it. A plate outranks the catalogue photo: it is the exact
@@ -470,6 +473,7 @@ export default function ConfiguratorPdp({
           {/* Capacity standard + CAP OFF fit from pdp-capacity-standards.json.
               Circle 15 ml glass is locked smaller than 30 ml; a detached cap
               may shrink the composition but never grow the bottle. */}
+          <PdpPhotoCanvas>
           <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
                style={{ transformOrigin: "0 0", transform: stageTransform }}
                data-pdp-stage-frame="">
@@ -504,11 +508,12 @@ export default function ConfiguratorPdp({
                             motion-reduce:transition-none motion-reduce:duration-0" />
           ))}
           </div>
+          </PdpPhotoCanvas>
         </div>
       ) : showPhoto ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={photoFallback!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
-             className="h-full w-full object-cover" />
+             className="h-full w-full object-contain" />
       ) : showLive3d && fam ? (
         <Bottle3DViewer
           bodyId={fam.bodyForGlass?.[glass] ?? fam.bodyDefault}

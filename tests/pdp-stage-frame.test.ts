@@ -86,7 +86,7 @@ describe("CAP OFF compositing", () => {
         expect(bottom).toBeLessThanOrEqual(1060);
     });
 
-    it("parks a cap with no recorded offset to the right of the body", () => {
+    it("parks a cap to the right with its foot aligned to the glass", () => {
         const cap = {
             slot: "cap",
             bounds: { left: 400, top: 80, right: 600, bottom: 280 },
@@ -94,12 +94,25 @@ describe("CAP OFF compositing", () => {
         };
         const offset = detachedCapOffset(cap, { left: 200, top: 200, right: 800, bottom: 1000 });
         expect(offset.dx).toBeGreaterThan(0);
-        expect(offset.dy).toBe(0);
+        expect(cap.bounds.bottom + offset.dy).toBe(1000);
         const parked = withDetachedCapOffsets([
             { slot: "body", bounds: { left: 200, top: 200, right: 800, bottom: 1000 }, exploded: { dx: 0, dy: 0 } },
             cap,
         ]);
         expect(parked[1]?.exploded.dx).toBe(offset.dx);
+    });
+
+    it("does not reuse an upward exploded offset for a grounded cap-off sidecar", () => {
+        const body = { slot: "body", bounds: { left: 350, top: 157, right: 650, bottom: 1060 }, exploded: { dx: 0, dy: 0 } };
+        const cap = { slot: "overcap", bounds: { left: 427, top: 71, right: 575, bottom: 295 }, exploded: { dx: 320, dy: -885 } };
+        const pump = { slot: "pump", bounds: { left: 430, top: 90, right: 570, bottom: 300 }, exploded: { dx: 0, dy: -1131 } };
+        const original = structuredClone([body, cap, pump]);
+        const parked = withDetachedCapOffsets([body, cap, pump]);
+        expect(parked[1].bounds.bottom + parked[1].exploded.dy).toBe(body.bounds.bottom);
+        expect(parked[1].bounds.left + parked[1].exploded.dx).toBeGreaterThan(body.bounds.right);
+        expect(parked[0]).toBe(body);
+        expect(parked[2]).toBe(pump);
+        expect([body, cap, pump]).toEqual(original);
     });
 
     it("is a no-op CSS transform when scale is identity", () => {
@@ -127,4 +140,29 @@ describe("scale inversions and overflow", () => {
         expect(55.4 * 0.8).toBeLessThan(50.1);
         expect(pdpPublishedPlateScale("Elegant", 100, "clear")).toBe(0.95);
     });
+});
+
+it("reserves identical framing for assembled and sidecar views without using the sprayer's exploded offset", () => {
+    const parts = [
+        {slot:"body",bounds:{left:300,top:300,right:700,bottom:1050},exploded:{dx:0,dy:0}},
+        {slot:"sprayer",bounds:{left:450,top:100,right:550,bottom:310},exploded:{dx:0,dy:-2000}},
+        {slot:"overcap",bounds:{left:440,top:80,right:560,bottom:320},exploded:{dx:300,dy:-2800}},
+    ];
+    const on=pdpStageFrame({view:"assembled",parts});
+    const parked=withDetachedCapOffsets(parts);
+    const off=pdpStageFrame({view:"capOff",parts:parked});
+    expect(off).toEqual(on);
+    expect(on.scale).toBeGreaterThan(.9);
+    for (const part of parked) {
+        const delta=part.slot==="overcap"?part.exploded:{dx:0,dy:0};
+        expect((part.bounds.left+delta.dx)*on.scale+on.x*10).toBeGreaterThanOrEqual(40);
+        expect((part.bounds.right+delta.dx)*on.scale+on.x*10).toBeLessThanOrEqual(960);
+        expect((part.bounds.top+delta.dy)*on.scale+on.y*11).toBeGreaterThanOrEqual(44);
+        expect((part.bounds.bottom+delta.dy)*on.scale+on.y*11).toBeLessThanOrEqual(1056);
+    }
+});
+
+it("does not zoom a paired photograph when the cap is toggled", () => {
+    const common={family:"Circle",capacityMl:100,hasCapOffPlate:true};
+    expect(pdpStageFrame({...common,view:"assembled"})).toEqual(pdpStageFrame({...common,view:"capOff"}));
 });

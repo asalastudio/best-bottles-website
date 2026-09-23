@@ -3,7 +3,7 @@
 import { useId, useState, type CSSProperties, type ReactNode } from "react";
 import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
 import type { BuilderConfiguration, BuilderPart } from "@/lib/bottle-builder/model";
-import { canonicalBody, registerVintagePreview, seatPreviewLayers } from "@/lib/bottle-builder/preview-registration";
+import { builderBodyFrame, builderPreviewLayout } from "@/lib/bottle-builder/preview-layout";
 import { layerCropStyle, previewFrame } from "@/lib/bottle-builder/preview-frame";
 
 /** Clear glass and the clear dip tube take the stage colour. A dropper's GLASS pipette hangs inside
@@ -15,7 +15,7 @@ function blendsIntoGlass(config: BuilderConfiguration, part: BuilderPart) {
 
 /** These are the existing alpha layers on their registered canvas, never
  * independently resized parts. Only the viewport changes for thumbnails. */
-export default function BuilderImage({ config, parts, label, thumbnail = false, expanded = false, scale = 1, stage = "body", showCover = false, bodyReference, placeholder = false, priority = false }: {
+export default function BuilderImage({ config, parts, label, thumbnail = false, expanded = false, scale = 1, stage = "body", showCover = false, bodyReference, frameConfigurations, placeholder = false, priority = false }: {
     config: BuilderConfiguration;
     parts: BuilderPart[];
     label: string;
@@ -24,6 +24,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     stage?: "body" | "fitment" | "complete";
     showCover?: boolean;
     bodyReference?: BuilderConfiguration;
+    frameConfigurations?: readonly BuilderConfiguration[];
     /** Relative chooser size; preserves all layer registration and the baseline. */
     scale?: number;
     /** Slate sits behind the layer until it paints — chooser tiles. */
@@ -35,26 +36,8 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
     const kit = stage === "body" ? config.previewKit ?? config.kit ?? config.chooserKit : config.kit;
     const exposed = (exposedSprayers as Record<string, { url: string }>)[config.id];
     const fallbackUrl = !kit ? (stage === "complete" && config.photoUrl ? (!showCover && exposed ? exposed.url : config.photoUrl) : config.bodyImage?.url) : undefined;
-    // a bottle with one fixed body shows that body everywhere, chooser tiles included
-    const registration = kit && (!thumbnail || canonicalBody(config)) ? registerVintagePreview(config, parts, bodyReference) : null;
-    let layers = kit ? registration?.layers ?? parts.map(part => ({ part, bounds: part.bounds, transform: undefined })) : [];
-    if (kit && !thumbnail && stage !== "body") {
-        layers = seatPreviewLayers(layers, registration?.anchors ?? kit.anchors);
-    }
-    // A pump or sprayer is shown working, its overcap standing on the ground
-    // beside the bottle so the shopper sees what comes with it (Jordan,
-    // 2026-09-16). Display only: the assembled registration is untouched.
-    if (kit && !thumbnail && !showCover && stage !== "body" && layers.some(l => l.part.slot === "overcap") && layers.some(l => !["body", "overcap", "diptube"].includes(l.part.slot))) {
-        const body = layers.find(l => l.part.slot === "body");
-        const baseline = registration?.groundY ?? kit.anchors.baselineY;
-        layers = layers.map(l => {
-            if (l.part.slot !== "overcap" || !body) return l;
-            const gap = Math.max(18, (body.bounds.right - body.bounds.left) * .08);
-            const dx = body.bounds.right + gap - l.bounds.left, dy = baseline - l.bounds.bottom;
-            return { ...l, bounds: { left: l.bounds.left + dx, right: l.bounds.right + dx, top: l.bounds.top + dy, bottom: l.bounds.bottom + dy },
-                transform: `translate(${dx} ${dy})${l.transform ? ` ${l.transform}` : ""}` };
-        });
-    }
+    const layout = builderPreviewLayout(config, parts, { stage, thumbnail, showCover, bodyReference });
+    const layers = layout?.layers ?? [];
     const urls = kit ? layers.map(({ part }) => part.image.url) : fallbackUrl ? [fallbackUrl] : [];
     const [failedUrl, setFailedUrl] = useState<string | null>(null);
     const urlKey = urls.join("|");
@@ -83,22 +66,21 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         // Reviewed original body layer until a complete finish is selected.
         // eslint-disable-next-line @next/next/no-img-element
         return wrap(<img src={fallbackUrl} alt={label} {...imgProps} data-builder-layer={stage === "complete" ? "assembly" : "body"}
-            onError={() => setFailedUrl(fallbackUrl)} style={{ width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", objectFit: "contain", objectPosition: "center", mixBlendMode: config.color === "Clear" && stage !== "complete" ? "multiply" : undefined, transform: expanded ? undefined : `scale(${scale * .88})`, transformOrigin: expanded ? "center center" : "bottom center" }} />);
+            onError={() => setFailedUrl(fallbackUrl)} style={{ width: expanded ? "auto" : "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", objectFit: "contain", objectPosition: "center", mixBlendMode: config.color === "Clear" && stage !== "complete" ? "multiply" : undefined, transform: expanded ? undefined : `scale(${Math.min(1, scale) * .88})`, transformOrigin: expanded ? "center center" : "bottom center" }} />);
     }
     const failed = layers.some(({ part }) => part.image.url === failedUrl);
     if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
-    const { x, y, width, height } = previewFrame(registration?.anchors ?? kit.anchors,
-        layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
+    const { x, y, width, height } = !thumbnail && frameConfigurations?.length && layout
+        ? builderBodyFrame(config, frameConfigurations, bodyReference, layout, { expanded })
+        : previewFrame(layout?.anchors ?? kit.anchors, layers.map(layer => layer.bounds), { scale, thumbnail, expanded });
     // A single registered body layer is the chooser tile. <img> fetches in
     // parallel with preload/priority; SVG <image href> waits on hydrate and
     // does not honor loading or fetchPriority — Cylinder tiles sat blank.
-    if (layers.length === 1) {
+    if (layers.length === 1 && !layers[0].transform) {
         const [{ part }] = layers;
         const crop = layerCropStyle(part.image, { x, y, width, height });
         const blend: CSSProperties["mixBlendMode"] = blendsIntoGlass(config, part) || part.image.url.startsWith("/images/bottle-builder/rollers/") ? "multiply" : undefined;
-        // Thumbnail size lives in the crop (previewFrame), not a CSS zoom.
-        // Zooming a tight crop from the baseline cut the 100 ml Cylinder neck.
-        const zoom = !expanded && !thumbnail ? scale * .88 : undefined;
+        // Size is applied once by the frame, equally for a single layer and SVG.
         // layerCropStyle places the layer in percentages of its box, which matches the
         // SVG viewBox only while that box has the frame's own aspect ratio. The SVG
         // this replaced letterboxed (preserveAspectRatio "meet"); CSS has no such
@@ -113,7 +95,7 @@ export default function BuilderImage({ config, parts, label, thumbnail = false, 
         // every clear bottle drew as an opaque white block.
         return wrap(<span data-chooser-img style={{ containerType: "size", display: "grid", placeItems: "center", width: "100%", height: "100%", maxWidth: "100%", maxHeight: "100%", overflow: "hidden", mixBlendMode: blend }}>
             <span data-chooser-frame style={{ position: "relative", display: "block", overflow: "hidden", width: `min(100cqw, calc(100cqh * ${ratio}))`, height: `min(100cqh, calc(100cqw / ${ratio}))` }}>
-            <span style={{ position: "absolute", inset: 0, transform: zoom ? `scale(${zoom})` : undefined, transformOrigin: "bottom center" }}>
+            <span style={{ position: "absolute", inset: 0 }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={part.image.url} alt={label} {...imgProps} data-builder-layer={part.slot}
                     onError={() => setFailedUrl(part.image.url)} style={crop} />

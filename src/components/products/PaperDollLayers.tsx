@@ -10,6 +10,7 @@
  * Shared by the mobile hero; the desktop configurator stage keeps its own
  * inline copy of the same contract (exploded transforms, 3D) untouched.
  */
+import PdpPhotoCanvas from "./PdpPhotoCanvas";
 import { useEffect, useMemo, useState } from "react";
 import type { FunctionReturnType } from "convex/server";
 import type { api } from "../../../convex/_generated/api";
@@ -98,19 +99,22 @@ type PaperDollLayersProps = {
     capacityMl?: number | null;
     color?: string | null;
     view?: Exclude<PdpStageView, "exploded">;
+    hasCapOffPlate?: boolean;
 };
 
-export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError, className, family, capacityMl, color, view = "assembled" }: PaperDollLayersProps) {
+export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError, className, family, capacityMl, color, view = "assembled", hasCapOffPlate }: PaperDollLayersProps) {
     const stacked = Boolean(kitParts?.length);
     const stageTransform = pdpStageTransformCss(pdpStageFrame({
         family,
         capacityMl,
         color,
         view,
+        hasCapOffPlate,
         parts: stacked ? kitParts : null,
     }));
     return (
         <div className={`relative h-full w-full bg-white ${className ?? ""}`} data-paper-doll={stacked ? "kit" : "plate"}>
+            <PdpPhotoCanvas>
             <div className="absolute inset-0" style={{ transformOrigin: "0 0", transform: stageTransform }} data-pdp-stage-frame="">
             {!stacked && plateUrl ? (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -144,6 +148,7 @@ export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError,
                 />
             ))}
             </div>
+            </PdpPhotoCanvas>
         </div>
     );
 }

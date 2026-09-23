@@ -216,3 +216,8 @@ public/local-kits/
 # Local raw Cylinder generation packages; final PNGs and manifests are versioned.
 /output/imagegen/cylinder-25-30-2026-09-22/
 /output/imagegen/cylinder-9-slim-2026-09-22/
+
+# Local four-family component repair snapshots and browser captures.
+/data/repairs/four-family-components-2026-09-22/production-before.json
+/data/repairs/four-family-components-2026-09-22/local-kits.json
+/output/four-family-component-cleanup/

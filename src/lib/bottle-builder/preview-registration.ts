@@ -15,6 +15,21 @@ export function canonicalBody(config: Pick<BuilderConfiguration, "family" | "cap
 type Bounds = { left: number; top: number; right: number; bottom: number };
 export type PreviewLayer = { part: BuilderPart; bounds: Bounds; transform?: string };
 
+/** A replacement bare body includes neck pixels hidden in the source photo.
+ * Paint that glass before external hardware. Preserve other relative orders:
+ * old kits can contain a combined pump in a generically named diptube layer.
+ */
+function orderRegisteredLayers(layers: PreviewLayer[]): PreviewLayer[] {
+    const hardware = new Set(["sprayer", "pump", "cap", "overcap", "collar", "bulb", "tassel", "roller", "fitment", "reducer"]);
+    const bodyIndex = layers.findIndex(layer => layer.part.slot === "body");
+    const hardwareIndex = layers.findIndex(layer => hardware.has(layer.part.slot));
+    if (bodyIndex < 0 || hardwareIndex < 0 || bodyIndex < hardwareIndex) return layers;
+    const reordered = [...layers];
+    const [body] = reordered.splice(bodyIndex, 1);
+    reordered.splice(hardwareIndex, 0, body);
+    return reordered;
+}
+
 const FITTED_SLOTS = new Set(["sprayer", "pump", "overcap"]);
 /** Vintage bulb/hose and tassel tops are wider than the glass; leave them. */
 const MAX_FITTED_WIDTH_RATIO = 1.25;
@@ -86,19 +101,19 @@ export function registerVintagePreview(
         return {
             anchors: { ...canonical.anchors, axisX: (fixed.bounds.left + fixed.bounds.right) / 2 },
             groundY: canonical.groundY,                      // measured on the glass itself
-            layers: parts.map(part => part.slot === "body"
+            layers: orderRegisteredLayers(parts.map(part => part.slot === "body"
                 ? { part: fixed, bounds: fixed.bounds, transform: undefined }
                 : { part, bounds: { left: part.bounds.left * scale + x, top: part.bounds.top * scale + y,
                     right: part.bounds.right * scale + x, bottom: part.bounds.bottom * scale + y },
-                    transform: `translate(${x} ${y}) scale(${scale})` }),
+                    transform: `translate(${x} ${y}) scale(${scale})` })),
         };
     }
     const referenceKit = reference?.previewKit ?? reference?.kit;
     if (!reference || config.id === reference.id
         || config.bodyId !== reference.bodyId || config.family !== reference.family
         || config.capacityMl !== reference.capacityMl || config.color !== reference.color
-        || config.neck !== reference.neck || config.kit?.completeness !== "full"
-        || referenceKit?.completeness !== "full") return null;
+        || config.neck !== reference.neck || !config.kit
+        || !referenceKit) return null;
     const body = parts.find(part => part.slot === "body");
     const fixedBody = referenceKit.parts.find(part => part.slot === "body");
     if (!body || !fixedBody) return null;
@@ -107,6 +122,9 @@ export function registerVintagePreview(
     const sourceWidth = source.right - source.left;
     const targetWidth = target.right - target.left;
     if (sourceWidth <= 0 || targetWidth <= 0) return null;
+    // Cap-split kits keep their photographed glass and receive only the same
+    // uniform transform as the hardware. Never replace a partial body with a
+    // bare layer that could expose pixels its source closure covered.
     // Neck pixels can be cropped differently beneath each photographed collar.
     // Glass diameter and baseline stay physical landmarks across those crops.
     const scale = targetWidth / sourceWidth;
@@ -119,10 +137,10 @@ export function registerVintagePreview(
         // trustworthy for this: the 2026-09-16 Empire kits all record 979 while their
         // glass ends at 1060, which stood a sidecar overcap 80 px above the ground.
         groundY: config.kit.anchors.baselineY * scale + y,
-        layers: parts.map(part => part.slot === "body"
+        layers: orderRegisteredLayers(parts.map(part => part.slot === "body" && config.kit!.completeness === "full" && referenceKit.completeness === "full"
             ? { part: fixedBody, bounds: fixedBody.bounds, transform: undefined }
             : { part, bounds: { left: part.bounds.left * scale + x, top: part.bounds.top * scale + y,
                 right: part.bounds.right * scale + x, bottom: part.bounds.bottom * scale + y },
-                transform: `translate(${x} ${y}) scale(${scale})` }),
+                transform: `translate(${x} ${y}) scale(${scale})` })),
     };
 }
