@@ -77,7 +77,8 @@ export function compatibleFinishComponent(row: CatalogRow) {
         name: `${included.finish} ${included.fitment} included with this bottle` };
     const source = sourceComponentLink(row);
     if (!source && sourceComponentLinks.some(link => link.assemblySku === row.websiteSku)) return null;
-    const exact = exactComponentMatches[row.websiteSku ?? ""] ?? source;
+    // Exact current source witnesses supersede older generated metadata.
+    const exact = source ?? exactComponentMatches[row.websiteSku ?? ""];
     if (exact && (row.family !== exact.family || row.capacityMl !== exact.capacityMl || row.color !== exact.color
         || row.neckThreadSize !== exact.neck || (row.applicator ?? null) !== exact.applicator)) return null;
     const app = row.applicator ?? "";

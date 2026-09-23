@@ -30,6 +30,7 @@
  * that does not fit it.
  */
 import { query } from "./_generated/server";
+import { createComponentProductResolver } from "./catalogComponentProducts";
 import { v } from "convex/values";
 import {
     normalizeComponentsByType,
@@ -167,6 +168,7 @@ export const getFamilyRows = query({
             return groupId ? productGroups.get(String(groupId))?.slug ?? null : null;
         };
 
+        const resolveProduct = createComponentProductResolver(ctx);
         const rows = await Promise.all(bottles.map(async (b) => {
             const thread = (b.neckThreadSize ?? "").toString().trim();
             const link = reviewedCatalogLink(b);
@@ -184,19 +186,13 @@ export const getFamilyRows = query({
             // eligibility. Enrich the already-resolved list without changing
             // its fitment decision.
             const resolvedForCart = Object.fromEntries(await Promise.all(
-                Object.entries(resolved).map(async ([type, components]) => [
-                    type,
-                    components.map((component) => {
-                        const product = componentProducts.get(component.graceSku) ?? null;
-                        return {
-                            ...component,
-                            websiteSku: product?.websiteSku || component.websiteSku || null,
-                            productGroupSlug: product ? productGroupSlug(product) : null,
-                            shopifyVariantId: product?.shopifyVariantId ?? null,
-                            shopifySellable: product?.shopifySellable ?? null,
-                        };
-                    }),
-                ] as const),
+                Object.entries(resolved).map(async ([type, components]) => {
+                    const matched = await Promise.all(components.map(item => resolveProduct(item, thread)));
+                    return [type, await Promise.all(matched.filter(item => item !== null).map(async ({ productGroupId, ...item }) => {
+                        const group = productGroupId ? productGroups.get(String(productGroupId)) ?? await ctx.db.get(productGroupId) : null;
+                        return { ...item, productGroupSlug: group?.slug ?? null };
+                    }))] as const;
+                }),
             ));
 
             return {

@@ -7,7 +7,7 @@ function fixture(index = 0) {
     const link = sourceComponentLinks[index];
     const row = { websiteSku: link.assemblySku, graceSku: link.assemblyGraceSku, family: link.family,
         capacityMl: link.capacityMl, color: link.color, neckThreadSize: link.neck, applicator: link.applicator,
-        capColor: link.finish, itemName: "5 ml blue bottle with short cap", category: "Glass Bottle",
+        capColor: link.finish, itemName: link.componentType === "Sprayer" ? "Bottle with tassel sprayer" : "Bottle with included component", category: "Glass Bottle",
         resolution: "unknown", components: {}, shopifySellable: true, shopifyVariantId: "assembly-variant", webPrice1pc: 1,
     } as CatalogRow;
     const component: ActiveComponent = { websiteSku: index === 0 ? "" : link.componentSku,
@@ -17,8 +17,8 @@ function fixture(index = 0) {
     return { link, row, component };
 }
 
-describe("source-reviewed missing short-cap links", () => {
-    it.each(sourceComponentLinks.map((link, i) => [link.assemblySku, i] as const))("restores only the exact included cap for %s", async (_, index) => {
+describe("source-reviewed missing component links", () => {
+    it.each(sourceComponentLinks.map((link, i) => [link.assemblySku, i] as const))("restores only the exact included component for %s", async (_, index) => {
         const { link, row, component } = fixture(index);
         const before = structuredClone(row);
         const [resolved] = await resolveListedComponents([row], async sku => sku === component.graceSku ? component : null);
@@ -27,7 +27,7 @@ describe("source-reviewed missing short-cap links", () => {
         expect(compatibleFinishComponent(resolved)?.websiteSku).toBe(link.componentSku);
         expect(isBuilderCandidate(resolved)).toBe(true);
         expect(resolved.shopifyVariantId).toBe("assembly-variant");
-        expect(resolved.components.Cap[0].shopifySellable).toBe(false);
+        expect(resolved.components[link.componentType][0].shopifySellable).toBe(false);
         expect(isBuilderCandidate({ ...resolved, shopifySellable: false })).toBe(false);
         expect(row).toEqual(before);
     });

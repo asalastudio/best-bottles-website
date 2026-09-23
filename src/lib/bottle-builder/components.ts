@@ -27,7 +27,7 @@ function restoreSourceLink(row: CatalogRow, products: Map<string, ActiveComponen
     if (active.websiteSku !== link.componentSku && !blankSourceMatch) return row;
     return { ...row, resolution: row.resolution === "unknown" ? "source_verified" : row.resolution,
         compatibilitySources: [link.assemblySourceUrl, link.componentSourceUrl],
-        components: { ...row.components, Cap: [...(row.components.Cap ?? []), { websiteSku: link.componentSku, graceSku: active.graceSku,
+        components: { ...row.components, [link.componentType]: [...(row.components[link.componentType] ?? []), { websiteSku: link.componentSku, graceSku: active.graceSku,
             itemName: active.itemName ?? link.componentName, imageUrl: active.imageUrl ?? null,
             shopifyVariantId: active.shopifyVariantId, shopifySellable: active.shopifySellable ?? null,
             stockStatus: active.stockStatus ?? null, capColor: link.finish, productGroupSlug: null,

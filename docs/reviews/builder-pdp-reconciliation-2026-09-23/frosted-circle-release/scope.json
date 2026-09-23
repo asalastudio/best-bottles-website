@@ -1,0 +1,41 @@
+{
+  "target": "https://precise-raccoon-123.convex.cloud",
+  "rows": [
+    {
+      "sku": "GBCrclFrst50AnSpTslBlk",
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslGl",
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvyGl",
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslIvySl",
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslLvn",
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslMtSl",
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslPnk",
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslRed",
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpTslWht",
+      "batch": "docs/reviews/circle-component-recovery-2026-09-22/native-circle50"
+    }
+  ]
+}

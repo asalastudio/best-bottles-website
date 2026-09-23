@@ -7,6 +7,7 @@ import {
     resolveCompatibleComponents,
     selectBestFitmentRule,
 } from "./componentUtils";
+import { createComponentProductResolver } from "./catalogComponentProducts";
 import { loadCatalogComponentPool } from "./catalogComponentSources";
 import { buildSystemPrompt, VOICE_MODE_ADDENDUM } from "./gracePrompt";
 import {
@@ -788,25 +789,13 @@ export const getBottleComponents = query({
             capColor: string | null;
             stockStatus: string | null;
         }>> = {};
+        const resolveProduct = createComponentProductResolver(ctx);
         for (const [type, items] of Object.entries(reconciled)) {
-            summary[type] = await Promise.all(items.map(async (item) => {
-                const product = await ctx.db
-                    .query("products")
-                    .withIndex("by_graceSku", (q) => q.eq("graceSku", item.graceSku))
-                    .first();
-                return {
-                    graceSku: item.graceSku,
-                    websiteSku: product?.websiteSku || item.websiteSku || null,
-                    itemName: item.itemName,
-                    imageUrl: product?.imageUrl ?? item.imageUrl,
-                    shopifyVariantId: product?.shopifyVariantId ?? null,
-                    shopifySellable: product?.shopifySellable ?? null,
-                    webPrice1pc: item.webPrice1pc,
-                    webPrice12pc: item.webPrice12pc,
-                    capColor: item.capColor,
-                    stockStatus: item.stockStatus,
-                };
-            }));
+            const resolved = await Promise.all(items.map(item => resolveProduct(item, bottleThread)));
+            summary[type] = resolved.filter(item => item !== null).map(({ productGroupId, ...item }) => {
+                void productGroupId;
+                return item;
+            });
         }
 
         return {

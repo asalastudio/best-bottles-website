@@ -1,0 +1,281 @@
+{
+  "rows": [
+    {
+      "sku": "GBCrcl15CuSht",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-MCPR-S",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": null
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/36. GBCrcl15CuSht.psd",
+        "sha256": "0da9789950352504440b6d680e2b515eaca1de7ba4672ee69c00a9d9d5f49e39"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /36. GBCrcl15CuSht.psd",
+        "sha256": "22b07420581b320e0e4a2bc006ed2484f479271a8fcc398e76b160a5013bd0e2"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ],
+      "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+    },
+    {
+      "sku": "GBCrcl15GlMattSht",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-MGLD-S",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": null
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/31. GBCrcl15GlMattSht.psd",
+        "sha256": "4cecf617d3c7cb0afa84bc3b60b5d4a783528c7c0725553b4d770f56a1581bdf"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /31. GBCrcl15GlMattSht.psd",
+        "sha256": "0060bfad5a8c956f40a7e5c1e2c8ab8d8dd80c5c09ff9e09301ef24724702768"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ],
+      "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+    },
+    {
+      "sku": "GBCrcl15SlMattSht",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-MSLV-S",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": null
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/34. GBCrcl15SlMattSht.psd",
+        "sha256": "a973db4591bbe5baf528f039541a58e1a66c4a84a5a9a45d62fb5dd2f1af89b1"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /34. GBCrcl15SlMattSht.psd",
+        "sha256": "a456fcc7b13cd79e8ba04e4ee0d50f2c68e5d7bc62a4552cefd9d4c05124e22b"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ],
+      "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+    },
+    {
+      "sku": "GBCrcl15BlkShSht",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SBLK-S",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": null
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/35. GBCrcl15BlkShSht.psd",
+        "sha256": "5903164f65f73f7a13a4dab9d2550df09e200a3858d49fde10947a7453c3ee1f"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /35. GBCrcl15BlkShSht.psd",
+        "sha256": "c3fd5a9ae20613fea1da528adcfe5e063e26c38cf924a08a78e8f6f55a6553a8"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ],
+      "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+    },
+    {
+      "sku": "GBCrcl15GlSht",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SGLD-S",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": null
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/32. GBCrcl15GlSht.psd",
+        "sha256": "e0578856a988769259203c322621698a3faa60bed7108bade44b10d694c07686"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /32. GBCrcl15GlSht.psd",
+        "sha256": "0773fa3b7d22a90e5f4bed2341421f6d043cc2924100ead043aa91f560242171"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ],
+      "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+    },
+    {
+      "sku": "GBCrcl15SlSht",
+      "identity": {
+        "graceSku": "GB-CIR-CLR-15ML-SSLV-S",
+        "family": "Circle",
+        "capacityMl": 15,
+        "color": "Clear",
+        "neckThreadSize": "13-415",
+        "category": "Glass Bottle",
+        "applicator": null
+      },
+      "on": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/33. GBCrcl15SlSht.psd",
+        "sha256": "b2965197df25ee29d702089b38fd113eb58286f462c73e1f6e71654564bc1910"
+      },
+      "off": {
+        "path": "/Users/jordanrichter/Desktop/Best Bottles/4. Short Caps 13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /33. GBCrcl15SlSht.psd",
+        "sha256": "398b0ebf79cf2d92f9607ee630a5cd1709d249ef1f0f35ec0885e931e633ac76"
+      },
+      "onBody": 1,
+      "offBody": 1,
+      "bodyWidth": 530,
+      "baselineY": 1056,
+      "familyId": "circle-15ml-clear-13-415",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "cap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            }
+          ]
+        }
+      ],
+      "review": "Exact Desktop Circle 15 mL short-cap masters, identified against current bestbottles.com source. One uniform transform; native cap-on geometry and cap-off sidecar. Body-pair and source parity gates required."
+    }
+  ],
+  "storePrefix": "kits/circle15-short-cap-reconciliation-2026-09-23"
+}
