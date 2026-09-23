@@ -126,7 +126,9 @@ const out = {
   inventoryUntrackedSkus: rows.length - trackedCount,
 };
 
-const dir = resolve(REPO, "data/audits/launch-readiness-2026-07-29");
+const outputIndex = process.argv.indexOf("--out");
+if (outputIndex >= 0 && !process.argv[outputIndex + 1]) throw new Error("--out requires a directory");
+const dir = resolve(REPO, outputIndex >= 0 ? process.argv[outputIndex + 1] : "data/audits/launch-readiness-2026-07-29");
 mkdirSync(dir, { recursive: true });
 writeFileSync(resolve(dir, "shopify-sellability-prod.json"), JSON.stringify(out, null, 2));
 writeFileSync(resolve(dir, "shopify-blocked-skus-prod.json"), JSON.stringify(blocked, null, 2));

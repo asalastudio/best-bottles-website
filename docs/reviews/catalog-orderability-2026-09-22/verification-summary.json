@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-09-23T04:42:17.471Z",
+  "shopifyProducts": 366,
+  "shopifyVariants": 2634,
+  "activeParents": 353,
+  "draftParentsHeld": 13,
+  "draftVariantsHeld": 53,
+  "currentCatalogVariantsVerified": 2476,
+  "currentCatalogOutOfStock": 0,
+  "stockLabelCorrectionsThisBatch": 28,
+  "priorClear5mlRollerCorrections": 18,
+  "shopifyMutations": 0,
+  "inventoryQuantityChanges": 0,
+  "inventoryPolicyChanges": 0,
+  "retiredWebsiteAliasesUnchanged": 2,
+  "referenceOnlyVialPlugsWithoutCheckout": 2,
+  "onlyTrackedUnavailableVariant": "TEST-SVC",
+  "snapshots": {
+    "before-full-audit.json.gz": {
+      "uncompressedSha256": "219042ddc03fb1b0f79a157b1b5f6e90eb7b40ad782295444ee1a4a97d6c4cea",
+      "bytes": 34824951
+    },
+    "after-full-audit.json.gz": {
+      "uncompressedSha256": "249fc4b67871b9a3721e3ccba0a25a443123646de0bbe2101919d1d15adc26aa",
+      "bytes": 34827653
+    }
+  },
+  "uiCheck": {
+    "url": "https://best-bottles-website.vercel.app/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9MtlRollWht",
+    "websiteSku": "GBCylAmb9MtlRollWht",
+    "graceSku": "GB-CYL-AMB-9ML-MRL-WHT",
+    "stockLabel": "Available to order",
+    "quantity": 100,
+    "unitPrice": 0.66,
+    "total": 66,
+    "reachedShopifyCheckout": true,
+    "orderPlaced": false,
+    "personalOrPaymentDetailsEntered": false,
+    "siteCartEmptyAfterCheckoutHandoff": true
+  }
+}

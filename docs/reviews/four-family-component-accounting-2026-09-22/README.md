@@ -76,7 +76,10 @@ now resolve the existing record by its exact website SKU.
 - Nine frosted Circle 50 mL tassels still have unresolved exact compatibility.
 - Circle/Round fused and missing-part flags require image inspection. A part can
   legitimately contain a roller or tube without exposing a separate named layer.
-- The 45 disputed stock proposals remain unapplied. Intentional Builder exclusions
+- Follow-up: [18 clear 5 mL roller labels were repaired](../cylinder-clear-5ml-rollers-2026-09-22/README.md)
+  after this snapshot. The subsequent [catalog orderability sweep](../catalog-orderability-2026-09-22/README.md)
+  reconciled the remaining current-catalog out-of-stock labels against exact Shopify orderability.
+  Intentional Builder exclusions
   (3.3/4 mL and 16mm 28/50 mL bodies), stock and unresolved compatibility explain
   some hidden configurations; hidden does not automatically mean a media defect.
 - Legacy checking covered 913 product pages linked from the catalog and their

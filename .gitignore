@@ -225,3 +225,9 @@ public/local-kits/
 /output/four-family-component-cleanup/
 /output/imagegen/circle15-fixed-body-pilot/
 /output/component-release-2026-09-22/
+
+# Local Shopify audit and guarded stock-label run scratch
+/output/shopify-activation-2026-09-22/
+
+# Local inventory import snapshots; verified release evidence lives under docs/reviews.
+/output/shopify-inventory-2026-09-22/

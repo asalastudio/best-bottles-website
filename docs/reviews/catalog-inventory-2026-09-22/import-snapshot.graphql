@@ -1,0 +1,11 @@
+query ImportSnapshot($cursor: String, $location: ID!) {
+ productVariants(first: 75, after: $cursor) {
+  pageInfo { hasNextPage endCursor }
+  nodes {
+   id sku title price compareAtPrice barcode taxable inventoryPolicy inventoryQuantity selectedOptions { name value }
+   image { id url }
+   product { id title handle status publishedAt descriptionHtml vendor productType tags }
+   inventoryItem { id tracked requiresShipping measurement { weight { value unit } } inventoryLevel(locationId: $location) { id quantities(names: ["available", "on_hand", "committed", "reserved"]) { name quantity } } }
+  }
+ }
+}

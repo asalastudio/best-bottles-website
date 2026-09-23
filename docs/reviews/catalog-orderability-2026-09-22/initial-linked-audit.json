@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-09-23T04:36:37.732Z",
+  "deployment": "https://precise-raccoon-123.convex.cloud",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "checkoutReadySkus": 2479,
+  "verifiedInShopify": 2478,
+  "trulySellable": 2478,
+  "blocked": 1,
+  "byProblem": {
+    "VARIANT_MISSING": 1
+  },
+  "byFamilyBlocked": {
+    "(none)": 1
+  },
+  "inventoryTrackedSkus": 0,
+  "inventoryUntrackedSkus": 2479
+}

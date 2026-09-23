@@ -1,0 +1,459 @@
+[
+  {
+    "id": "gid://shopify/Product/10489531695396",
+    "title": "5 ml Clear Cylinder Bottle",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "GBCyl5WhtSht",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453505316",
+        "reason": "SUPERSEDED_VARIANT_ID",
+        "currentMatches": [
+          {
+            "graceSku": "GB-CYL-WHT-5ML-WHT-S",
+            "websiteSku": "GBCyl5WhtSht",
+            "shopifyVariantId": "gid://shopify/ProductVariant/56194667610404"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489531728164",
+    "title": "Cylinder 9 ml Clear",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "GBCylSwrl9MtlRollWht",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453538084",
+        "reason": "SUPERSEDED_VARIANT_ID",
+        "currentMatches": [
+          {
+            "graceSku": "GB-CYL-WHT-9ML-MRL-WHT",
+            "websiteSku": "GBCylSwrl9MtlRollWht",
+            "shopifyVariantId": "gid://shopify/ProductVariant/56194670919972"
+          }
+        ]
+      },
+      {
+        "sku": "GBCylSwrl9RollWht",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453570852",
+        "reason": "SUPERSEDED_VARIANT_ID",
+        "currentMatches": [
+          {
+            "graceSku": "GB-CYL-WHT-9ML-ROL-WHT",
+            "websiteSku": "GBCylSwrl9RollWht",
+            "shopifyVariantId": "gid://shopify/ProductVariant/56194670952740"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489531760932",
+    "title": "9 ml Clear Tall Cylinder Bottle",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "GBTallCyl9WhtSht",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453603620",
+        "reason": "SUPERSEDED_VARIANT_ID",
+        "currentMatches": [
+          {
+            "graceSku": "GB-CYL-WHT-9ML-WHT-S",
+            "websiteSku": "GBTallCyl9WhtSht",
+            "shopifyVariantId": "gid://shopify/ProductVariant/56194668560676"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489531859236",
+    "title": "Cap/Closure Blue",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "CMP-CAP-13-415",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453701924",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489531892004",
+    "title": "Cap/Closure Black",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "CMP-CAP-BLK-13-415-01",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453734692",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "CMP-CAP-BLK-13-415-02",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453767460",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489531924772",
+    "title": "Cap/Closure Gold",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "CMP-CAP-SGLD-13-415-02",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453800228",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "CMP-CAP-SGLD-13-415-03",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453832996",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489531957540",
+    "title": "Cap/Closure Silver",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "CMP-CAP-SLV-13-415-02",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453865764",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "CMP-CAP-SLV-13-415-03",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453898532",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489531990308",
+    "title": "5 ml White Cylinder Bottle with Cap",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "GB-CYL-WHT-5ML-WHT-S",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453931300",
+        "reason": "SUPERSEDED_VARIANT_ID",
+        "currentMatches": [
+          {
+            "graceSku": "GB-CYL-WHT-5ML-WHT-S",
+            "websiteSku": "GBCyl5WhtSht",
+            "shopifyVariantId": "gid://shopify/ProductVariant/56194667610404"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489532023076",
+    "title": "9 ml White Cylinder Roll-On Bottle",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "GB-CYL-WHT-9ML-MRL-WHT",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453964068",
+        "reason": "SUPERSEDED_VARIANT_ID",
+        "currentMatches": [
+          {
+            "graceSku": "GB-CYL-WHT-9ML-MRL-WHT",
+            "websiteSku": "GBCylSwrl9MtlRollWht",
+            "shopifyVariantId": "gid://shopify/ProductVariant/56194670919972"
+          }
+        ]
+      },
+      {
+        "sku": "GB-CYL-WHT-9ML-ROL-WHT",
+        "draftVariantId": "gid://shopify/ProductVariant/54056453996836",
+        "reason": "SUPERSEDED_VARIANT_ID",
+        "currentMatches": [
+          {
+            "graceSku": "GB-CYL-WHT-9ML-ROL-WHT",
+            "websiteSku": "GBCylSwrl9RollWht",
+            "shopifyVariantId": "gid://shopify/ProductVariant/56194670952740"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489532055844",
+    "title": "9 ml White Cylinder Bottle with Cap",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "GB-CYL-WHT-9ML-WHT-S",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454029604",
+        "reason": "SUPERSEDED_VARIANT_ID",
+        "currentMatches": [
+          {
+            "graceSku": "GB-CYL-WHT-9ML-WHT-S",
+            "websiteSku": "GBTallCyl9WhtSht",
+            "shopifyVariantId": "gid://shopify/ProductVariant/56194668560676"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489532088612",
+    "title": "100 ml Clear Elegant Fine Mist Spray Bottle",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "GB-ELG-CLR-100ML-ASP-WHT-02",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454062372",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489532121380",
+    "title": "60 ml Clear Elegant Fine Mist Spray Bottle",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "GB-ELG-CLR-60ML-ASP-WHT-02",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454095140",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/10489532154148",
+    "title": "46 ml Clear Diva Bottle with Cap",
+    "status": "DRAFT",
+    "variants": [
+      {
+        "sku": "GB-DVA-CLR-46ML-01",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454127908",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-02",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454160676",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-03",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454193444",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-04",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454226212",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-05",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454258980",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-06",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454291748",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-12",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454324516",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-13",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454357284",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-14",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454390052",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-15",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454422820",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-16",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454455588",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-17",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454488356",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-18",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454521124",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-19",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454553892",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-20",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454586660",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-21",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454619428",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-22",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454652196",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-23",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454684964",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-24",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454717732",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-25",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454750500",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-26",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454783268",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-27",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454816036",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-28",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454848804",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-29",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454881572",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-30",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454914340",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-31",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454947108",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-32",
+        "draftVariantId": "gid://shopify/ProductVariant/54056454979876",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-33",
+        "draftVariantId": "gid://shopify/ProductVariant/54056455012644",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-34",
+        "draftVariantId": "gid://shopify/ProductVariant/54056455045412",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-35",
+        "draftVariantId": "gid://shopify/ProductVariant/54056455078180",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-36",
+        "draftVariantId": "gid://shopify/ProductVariant/54056455110948",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-37",
+        "draftVariantId": "gid://shopify/ProductVariant/54056455143716",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-38",
+        "draftVariantId": "gid://shopify/ProductVariant/54056455176484",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-39",
+        "draftVariantId": "gid://shopify/ProductVariant/54056455209252",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-40",
+        "draftVariantId": "gid://shopify/ProductVariant/54056455242020",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      },
+      {
+        "sku": "GB-DVA-CLR-46ML-T-41",
+        "draftVariantId": "gid://shopify/ProductVariant/54056455274788",
+        "reason": "NO_CURRENT_CATALOG_SKU",
+        "currentMatches": []
+      }
+    ]
+  }
+]

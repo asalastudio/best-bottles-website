@@ -1,0 +1,654 @@
+{
+  "target": "https://precise-raccoon-123.convex.cloud",
+  "checkedAt": "2026-09-23T04:32:33.949Z",
+  "visible": 18,
+  "byFitment": {
+    "Metal Roller Ball": 9,
+    "Plastic Roller Ball": 9
+  },
+  "report": [
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SBLK",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Metal Roller Ball",
+      "finish": "Shiny Black",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415BlkSh",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5MtlRollCuMatt",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-MCPR",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Metal Roller Ball",
+      "finish": "Matte Copper",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415Cu",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-MGLD",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Metal Roller Ball",
+      "finish": "Matte Gold",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415GlMt",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "full",
+        "conflicts": [],
+        "slots": [
+          "roller",
+          "body",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5MtlRollGlSh",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SGLD",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Metal Roller Ball",
+      "finish": "Shiny Gold",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415GlSh",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5MtlRollPinkDot",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-PKDT",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Metal Roller Ball",
+      "finish": "Pink with Dots",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415PinkDot",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5MtlRollSlDot",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SLDT",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Metal Roller Ball",
+      "finish": "Silver with Dots",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415SlDot",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5MtlRollSlMatt",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-MSLV",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Metal Roller Ball",
+      "finish": "Matte Silver",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415SlMt",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5MtlRollSlSh",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SSLV",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Metal Roller Ball",
+      "finish": "Shiny Silver",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415SlSh",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-BKDT",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Plastic Roller Ball",
+      "finish": "Black with Dots",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415BlackDot",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "full",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "roller",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SSLV",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Plastic Roller Ball",
+      "finish": "Shiny Silver",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415SlSh",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "roller",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SBLK",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Plastic Roller Ball",
+      "finish": "Shiny Black",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415BlkSh",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "roller",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SGLD",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Plastic Roller Ball",
+      "finish": "Shiny Gold",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415GlSh",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "roller",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5RollSlDot",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SLDT",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Plastic Roller Ball",
+      "finish": "Silver with Dots",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415SlDot",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "roller",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-PKDT",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Plastic Roller Ball",
+      "finish": "Pink with Dots",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415PinkDot",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "roller",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MCPR",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Plastic Roller Ball",
+      "finish": "Matte Copper",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415Cu",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "roller",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MGLD",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Plastic Roller Ball",
+      "finish": "Matte Gold",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415GlMt",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "full",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "roller",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MSLV",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Plastic Roller Ball",
+      "finish": "Matte Silver",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415SlMt",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "capSplit",
+        "conflicts": [],
+        "slots": [
+          "body",
+          "roller",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-BKDT",
+      "family": "Cylinder",
+      "capacityMl": 5,
+      "glass": "Clear",
+      "neck": "13-415",
+      "fitment": "Metal Roller Ball",
+      "finish": "Black with Dots",
+      "visible": true,
+      "blockers": [],
+      "componentSku": "CPRoll13-415BlackDot",
+      "catalogCandidate": true,
+      "artworkWarnings": [],
+      "includedAssemblySource": null,
+      "componentStandaloneSellable": true,
+      "compatibilitySources": [],
+      "kit": {
+        "completeness": "full",
+        "conflicts": [],
+        "slots": [
+          "roller",
+          "body",
+          "cap"
+        ],
+        "familyId": "cylinder-5ml-clear-13-415"
+      },
+      "assemblySellable": true,
+      "stockStatus": "Available to order"
+    }
+  ],
+  "pdps": [
+    {
+      "sku": "GBCyl5MtlRollBlkSh",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SBLK",
+      "componentSku": "CPRoll13-415BlkSh",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5MtlRollCuMatt",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-MCPR",
+      "componentSku": "CPRoll13-415Cu",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-MGLD",
+      "componentSku": "CPRoll13-415GlMt",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5MtlRollGlSh",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SGLD",
+      "componentSku": "CPRoll13-415GlSh",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5MtlRollPinkDot",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-PKDT",
+      "componentSku": "CPRoll13-415PinkDot",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlDot",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SLDT",
+      "componentSku": "CPRoll13-415SlDot",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlMatt",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-MSLV",
+      "componentSku": "CPRoll13-415SlMt",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5MtlRollSlSh",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-SSLV",
+      "componentSku": "CPRoll13-415SlSh",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5RollBlkDot",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-BKDT",
+      "componentSku": "CPRoll13-415BlackDot",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5RollSlSh",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SSLV",
+      "componentSku": "CPRoll13-415SlSh",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5RollBlkSh",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SBLK",
+      "componentSku": "CPRoll13-415BlkSh",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5RollGlSh",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SGLD",
+      "componentSku": "CPRoll13-415GlSh",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5RollSlDot",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-SLDT",
+      "componentSku": "CPRoll13-415SlDot",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5RollPinkDot",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-PKDT",
+      "componentSku": "CPRoll13-415PinkDot",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5RollCuMatt",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MCPR",
+      "componentSku": "CPRoll13-415Cu",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5RollGlMatt",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MGLD",
+      "componentSku": "CPRoll13-415GlMt",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5RollSlMatt",
+      "graceSku": "GB-CYL-CLR-5ML-ROL-MSLV",
+      "componentSku": "CPRoll13-415SlMt",
+      "matched": true
+    },
+    {
+      "sku": "GBCyl5MtlRollBlkDot",
+      "graceSku": "GB-CYL-CLR-5ML-MRL-BKDT",
+      "componentSku": "CPRoll13-415BlackDot",
+      "matched": true
+    }
+  ]
+}
