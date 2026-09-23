@@ -15,6 +15,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { FunctionReturnType } from "convex/server";
 import type { api } from "../../../convex/_generated/api";
 import { decodeImage } from "@/lib/paper-doll/decode-image";
+import { displayImageUrl } from "@/lib/products/optimizable-image";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
 import { REMOVABLE_KIT_SLOTS, withDetachedCapOffsets } from "@/lib/products/kit-frame";
 import { pdpStageFrame, pdpStageTransformCss, type PdpStageView } from "@/lib/products/pdp-stage-frame";
@@ -54,7 +55,7 @@ export function useDecodedKitParts(
     useEffect(() => {
         if (kitQuery === undefined || !kit?.sku || !targetParts?.length) return;
         let cancelled = false;
-        Promise.all(targetParts.map((part) => decodeImage(part.image.url)))
+        Promise.all(targetParts.map((part) => decodeImage(displayImageUrl(part.image.url))))
             .then(() => { if (!cancelled) setDecoded({ sku: kit.sku, parts: targetParts }); })
             .catch(() => { /* fall back to the plate */ });
         return () => { cancelled = true; };
@@ -77,7 +78,7 @@ export function useDecodedPlate(
     useEffect(() => {
         if (!wanted) return;
         let cancelled = false;
-        decodeImage(wanted)
+        decodeImage(displayImageUrl(wanted))
             .then(() => { if (!cancelled) setDecoded(wanted); })
             .catch(() => { if (!cancelled) onError?.(wanted); });
         return () => { cancelled = true; };
@@ -120,7 +121,7 @@ export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError,
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                     key={plateUrl}
-                    src={plateUrl}
+                    src={displayImageUrl(plateUrl)}
                     alt={alt}
                     width={1000}
                     height={1100}
@@ -133,7 +134,7 @@ export default function PaperDollLayers({ plateUrl, kitParts, alt, onPlateError,
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                     key={part.slot}
-                    src={part.image.url}
+                    src={displayImageUrl(part.image.url)}
                     alt={part.slot === "body" ? alt : `${part.slot} — ${part.variantKey ?? ""}`}
                     width={part.image.width}
                     height={part.image.height}

@@ -1,5 +1,6 @@
 import { getShopCollection } from "./shopCollections";
 import { ConvexHttpClient } from "convex/browser";
+import { unstable_cache } from "next/cache";
 import { api } from "../../convex/_generated/api";
 import {
     buildCatalogSearchResult,
@@ -92,27 +93,32 @@ type CatalogVisibilitySnapshot = {
     primarySkus: CatalogSearchResultShape["primarySkus"];
     variantPreviewRows: CatalogSearchResultShape["variantPreviewRows"];
 };
-let visibilitySnapshot: { expiresAt: number; promise: Promise<CatalogVisibilitySnapshot> } | null = null;
-
 // The backend paginates before the storefront's source holds. Read lightweight
 // global metadata so counts and facets include holds outside the current page.
-async function getCatalogVisibilitySnapshot(convex: ConvexHttpClient): Promise<CatalogVisibilitySnapshot> {
-    if (visibilitySnapshot && visibilitySnapshot.expiresAt > Date.now()) return visibilitySnapshot.promise;
-    const promise = (async () => {
+// Cache this across serverless instances for the same 30 seconds previously
+// used by the process-local promise; otherwise each cold instance repeats two
+// full catalog metadata reads even when its filtered search is already fast.
+const loadCatalogVisibilitySnapshot = unstable_cache(
+    async (convexUrl: string): Promise<CatalogVisibilitySnapshot> => {
+        const convex = new ConvexHttpClient(convexUrl);
         const [groups, primarySkus] = await Promise.all([
             convex.query(api.products.getAllCatalogGroups, {}),
             convex.query(api.products.getCatalogGroupPrimarySkus, {}),
         ]);
+        const missingSourceIds = new Set(primarySkus.filter(isMissingHeroSource).map(row => row.groupId));
         const affectedIds = groups.filter(group => group.slug === "lotion-bottle-30ml-clear"
-            || primarySkus.some(row => row.groupId === group._id && isMissingHeroSource(row))).map(group => group._id);
+            || missingSourceIds.has(group._id)).map(group => group._id);
         const variantPreviewRows = affectedIds.length ? await convex.query(api.products.getCatalogGroupVariantPreviewData, { groupIds: affectedIds }) : [];
         return { groups, primarySkus, variantPreviewRows } as CatalogVisibilitySnapshot;
-    })();
-    visibilitySnapshot = { expiresAt: Date.now() + 30_000, promise };
-    try { return await promise; } catch (error) {
-        if (visibilitySnapshot?.promise === promise) visibilitySnapshot = null;
-        throw error;
-    }
+    },
+    ["catalog-visibility-snapshot-v2"],
+    { revalidate: 30, tags: ["catalog-visibility"] },
+);
+
+async function getCatalogVisibilitySnapshot(): Promise<CatalogVisibilitySnapshot> {
+    const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
+    if (!convexUrl) throw new Error("NEXT_PUBLIC_CONVEX_URL is required to render catalog data.");
+    return loadCatalogVisibilitySnapshot(convexUrl);
 }
 
 export function applyVisibleCatalogSummary(
@@ -170,14 +176,14 @@ export async function searchCatalogServer(args: CatalogSearchArgs): Promise<Cata
     };
     if (!shopCollection) try {
         const result = await convex.query(api.products.searchCatalog, convexArgs) as CatalogSearchResultShape;
-        const [enriched, snapshot] = await Promise.all([withCatalogMediaPreviewRows(convex, result), getCatalogVisibilitySnapshot(convex)]);
+        const [enriched, snapshot] = await Promise.all([withCatalogMediaPreviewRows(convex, result), getCatalogVisibilitySnapshot()]);
         return applyVisibleCatalogSummary(sanitizeCatalogResult(enriched), snapshot, normalizedArgs);
     } catch (error) {
         const message = error instanceof Error ? error.message : "";
         if (!message.includes("products:searchCatalog")) throw error;
     }
 
-    const snapshot = await getCatalogVisibilitySnapshot(convex);
+    const snapshot = await getCatalogVisibilitySnapshot();
     const preliminary = buildCatalogSearchResult({ ...snapshot, ...normalizedArgs });
     const rows = await convex.query(api.products.getCatalogGroupVariantPreviewData, {
         groupIds: preliminary.items.map(group => group._id),
