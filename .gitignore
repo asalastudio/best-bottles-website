@@ -228,3 +228,6 @@ public/local-kits/
 
 # Local Shopify audit and guarded stock-label run scratch
 /output/shopify-activation-2026-09-22/
+
+# Local inventory import snapshots; verified release evidence lives under docs/reviews.
+/output/shopify-inventory-2026-09-22/
