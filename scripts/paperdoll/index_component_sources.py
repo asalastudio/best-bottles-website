@@ -66,7 +66,7 @@ def main():
                           for role in ["component", "assembly"]], "rows": rows}
     (args.out / "source-candidates.json").write_text(json.dumps(report, indent=2) + "\n")
     with (args.out / "source-candidates.csv").open("w", newline="") as f:
-        writer = csv.writer(f)
+        writer = csv.writer(f, lineterminator="\n")
         writer.writerow(["role", "sku", "family", "status", "desktopCandidates", "clientCandidates", "sourceUrl"])
         for r in rows:
             writer.writerow([r["role"], r["sku"], r["family"], r["status"],

@@ -63,7 +63,8 @@ The exact legacy page, existing Grace SKU `CMP-CAP-SBLK-13-415`, product URL and
 Shopify variant established the match. Only `websiteSku` was populated; no
 price, inventory, checkout ID or source artwork changed. The
 [receipt](short-black-cap-repair.json) preserves the before-image and reversal.
-The hashed HTML is retained in `source-html/`. Four short-black-cap assemblies
+The exact HTML bytes are retained gzip-compressed in `source-html/`; each filename
+is the SHA256 of its uncompressed contents. Four short-black-cap assemblies
 now resolve the existing record by its exact website SKU.
 
 ## Remaining work and limits
