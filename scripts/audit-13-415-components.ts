@@ -7,6 +7,7 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { config } from "dotenv";
 import { ConvexHttpClient } from "convex/browser";
+import type { FunctionReturnType } from "convex/server";
 import { api } from "../convex/_generated/api";
 import { COMPONENTS_13_415 } from "../convex/component13_415Catalog";
 
@@ -59,15 +60,29 @@ for (const material of ["Plastic", "Metal"]) {
     components.push(["roller-insert", "", "", "unverified_loose_sku", "", `${material} roller insert`, "", "", "Sheet identifies the part, but no exact standalone 13-415 SKU was verified"]);
 }
 const bottles: string[][] = [["format", "example_sku", "catalog_status", "family", "neck", "category", "review_note"]];
+const matrixCoverage: string[][] = [["format", "example_sku", "matrix_status", "caps", "fine_mist_sprayers", "roll_on_caps", "metal_roller_inserts", "plastic_roller_inserts", "review_note"]];
+const familyRows = new Map<string, FunctionReturnType<typeof api.matrix.getFamilyRows>>();
 for (const [format, sku] of examples) {
     const found = await product(sku);
     const status = !found ? "missing" : found.neckThreadSize !== "13-415" || found.category !== "Glass Bottle" ? "identity_mismatch" : "cataloged";
     bottles.push([format, sku, status, found?.family ?? "", found?.neckThreadSize ?? "", found?.category ?? "", "Example identity check only; component seating and tube length need exact assembly evidence"]);
+    const family = found?.family;
+    if (!family) {
+        matrixCoverage.push([format, sku, "missing_bottle", "", "", "", "", "", ""]);
+        continue;
+    }
+    if (!familyRows.has(family)) familyRows.set(family, await client.query(api.matrix.getFamilyRows, { family }));
+    const row = familyRows.get(family)?.rows.find(candidate => candidate.websiteSku === sku);
+    const parts = row?.components ?? {};
+    const count = (kind: string) => String(parts[kind]?.length ?? 0);
+    matrixCoverage.push([format, sku, row ? "served" : "missing_matrix_row", count("Cap"), count("Sprayer"), count("Roll-On Cap"), count("Metal Roller"), count("Plastic Roller"),
+        row && Object.values(parts).every(items => items.length === 0) ? "No component choices; exact assembly/component identity needs review" : "Served counts do not prove every exact assembly seats correctly"]);
 }
 await mkdir(out, { recursive: true });
 await Promise.all([
     writeFile(path.join(out, "components.csv"), csv(components)),
     writeFile(path.join(out, "bottle-formats.csv"), csv(bottles)),
+    writeFile(path.join(out, "matrix-coverage.csv"), csv(matrixCoverage)),
     writeFile(path.join(out, "snapshot.json"), JSON.stringify({ checkedAt: new Date().toISOString(), endpoint, componentCount: components.length - 1, formatCount: bottles.length - 1 }, null, 2) + "\n"),
 ]);
 process.stdout.write(`${components.length - 1} component/material rows and ${bottles.length - 1} bottle formats checked in ${out}\n`);
