@@ -1,0 +1,183 @@
+{
+  "target": "https://precise-raccoon-123.convex.cloud",
+  "source": {
+    "url": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-black-Color-13-415",
+    "sha256": "c095a22aafbb69311df0b1a00937e4f741d28fd57742698ffd33bd8037c2bf41"
+  },
+  "before": {
+    "_creationTime": 1772669957398.878,
+    "_id": "kd72vv8z4ddjpfkrk7mz96g5y582bz4e",
+    "applicator": "N/A",
+    "ballMaterial": null,
+    "bottleCollection": null,
+    "bottleWeightG": null,
+    "capColor": null,
+    "capHeight": null,
+    "capStyle": null,
+    "capacity": "0.0 ml",
+    "capacityMl": 0,
+    "capacityOz": null,
+    "caseQuantity": null,
+    "category": "Component",
+    "color": "Clear",
+    "components": [],
+    "dataGrade": "B",
+    "diameter": null,
+    "family": "Cap/Component",
+    "fitmentStatus": "unmapped",
+    "graceDescription": null,
+    "graceSku": "CMP-CAP-SBLK-13-415",
+    "heightWithCap": "17 ±0.5 mm Item Diameter: 17 ±",
+    "heightWithoutCap": null,
+    "imageUrl": null,
+    "itemDescription": "Short shiny black or closure for glass bottle with foam liner. Thread size 13-415",
+    "itemName": "Short shiny black or closure for glass bottle with foam liner. Thread size 13-415",
+    "neckThreadSize": "13-415",
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "totalPrice": 0.28,
+        "unitPrice": 0.28
+      },
+      {
+        "minQty": 12,
+        "totalPrice": 3.19,
+        "unitPrice": 0.27
+      },
+      {
+        "minQty": 144,
+        "totalPrice": 36.29,
+        "unitPrice": 0.25
+      },
+      {
+        "minQty": 3168,
+        "totalPrice": 753.98,
+        "unitPrice": 0.24
+      },
+      {
+        "minQty": 15840,
+        "totalPrice": 3459.46,
+        "unitPrice": 0.22
+      }
+    ],
+    "priceTiersSyncedAt": 1786051817908,
+    "productGroupId": "kh77adqb0a1xs5tbbpkaaass718drcz4",
+    "productId": null,
+    "productUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-black-Color-13-415",
+    "qbPrice": null,
+    "shape": null,
+    "shopifyInventoryItemId": "gid://shopify/InventoryItem/55366017024292",
+    "shopifySellable": true,
+    "shopifySellableCheckedAt": 1789933402537,
+    "shopifySellableReason": null,
+    "shopifyUpdatedAt": 1777047712257,
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343626461476",
+    "stockStatus": "In Stock",
+    "trimColor": null,
+    "verified": false,
+    "webPrice10pc": null,
+    "webPrice12pc": 0.27,
+    "webPrice1pc": 0.28,
+    "websiteSku": ""
+  },
+  "patch": {
+    "patches": [
+      {
+        "id": "kd72vv8z4ddjpfkrk7mz96g5y582bz4e",
+        "fields": {
+          "websiteSku": "CP13-415BlkShShtMtl"
+        }
+      }
+    ]
+  },
+  "rollback": {
+    "patches": [
+      {
+        "id": "kd72vv8z4ddjpfkrk7mz96g5y582bz4e",
+        "fields": {
+          "websiteSku": ""
+        }
+      }
+    ]
+  },
+  "result": {
+    "patched": 1
+  },
+  "after": {
+    "_creationTime": 1772669957398.878,
+    "_id": "kd72vv8z4ddjpfkrk7mz96g5y582bz4e",
+    "applicator": "N/A",
+    "ballMaterial": null,
+    "bottleCollection": null,
+    "bottleWeightG": null,
+    "capColor": null,
+    "capHeight": null,
+    "capStyle": null,
+    "capacity": "0.0 ml",
+    "capacityMl": 0,
+    "capacityOz": null,
+    "caseQuantity": null,
+    "category": "Component",
+    "color": "Clear",
+    "components": [],
+    "dataGrade": "B",
+    "diameter": null,
+    "family": "Cap/Component",
+    "fitmentStatus": "unmapped",
+    "graceDescription": null,
+    "graceSku": "CMP-CAP-SBLK-13-415",
+    "heightWithCap": "17 ±0.5 mm Item Diameter: 17 ±",
+    "heightWithoutCap": null,
+    "imageUrl": null,
+    "itemDescription": "Short shiny black or closure for glass bottle with foam liner. Thread size 13-415",
+    "itemName": "Short shiny black or closure for glass bottle with foam liner. Thread size 13-415",
+    "neckThreadSize": "13-415",
+    "priceTiers": [
+      {
+        "minQty": 1,
+        "totalPrice": 0.28,
+        "unitPrice": 0.28
+      },
+      {
+        "minQty": 12,
+        "totalPrice": 3.19,
+        "unitPrice": 0.27
+      },
+      {
+        "minQty": 144,
+        "totalPrice": 36.29,
+        "unitPrice": 0.25
+      },
+      {
+        "minQty": 3168,
+        "totalPrice": 753.98,
+        "unitPrice": 0.24
+      },
+      {
+        "minQty": 15840,
+        "totalPrice": 3459.46,
+        "unitPrice": 0.22
+      }
+    ],
+    "priceTiersSyncedAt": 1786051817908,
+    "productGroupId": "kh77adqb0a1xs5tbbpkaaass718drcz4",
+    "productId": null,
+    "productUrl": "https://www.bestbottles.com/product/Short-Caps-lids-top-bottle-shiny-black-Color-13-415",
+    "qbPrice": null,
+    "shape": null,
+    "shopifyInventoryItemId": "gid://shopify/InventoryItem/55366017024292",
+    "shopifySellable": true,
+    "shopifySellableCheckedAt": 1789933402537,
+    "shopifySellableReason": null,
+    "shopifyUpdatedAt": 1777047712257,
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343626461476",
+    "stockStatus": "In Stock",
+    "trimColor": null,
+    "verified": false,
+    "webPrice10pc": null,
+    "webPrice12pc": 0.27,
+    "webPrice1pc": 0.28,
+    "websiteSku": "CP13-415BlkShShtMtl"
+  },
+  "appliedAt": "2026-09-23T04:10:00.998Z"
+}

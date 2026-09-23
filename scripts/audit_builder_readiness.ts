@@ -1,7 +1,7 @@
 /** Read-only audit for every family using the requested necks, including families
  * absent from the customer family picker. No catalog, publication, or media writes.
  * npx tsx scripts/audit_builder_readiness.ts --url PUBLIC_CONVEX_URL --legacy --out /tmp/builder-readiness
- * Optional --family Cylinder, --all-necks (includes 12mm/16mm), --threads 13-415,17-415,18-415, --check.
+ * Optional --family Cylinder,Circle,Round,Empire, --all-necks (includes 12mm/16mm), --threads 13-415,17-415,18-415, --check.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -28,6 +28,8 @@ async function main() {
     if (!url) throw Error("A public Convex URL is required");
     let threads = (arg("--threads") ?? "13-415,17-415,18-415").split(",").map(t => t.trim());
     if (threads.some(t => !/^(\d+-\d+|\d+mm)$/.test(t))) throw Error("Use exact comma-separated neck sizes");
+    const requestedFamilies = new Set((arg("--family") ?? "").split(",").map(f => f.trim()).filter(Boolean));
+    const familyInScope = (family: string | undefined) => !requestedFamilies.size || requestedFamilies.has(family ?? "");
     const out = path.resolve(arg("--out") ?? "data/audits/builder-readiness"); fs.mkdirSync(out, { recursive: true });
     const client = new ConvexHttpClient(url);
     const inventory: Product[] = []; let cursor: string | null = null;
@@ -38,13 +40,14 @@ async function main() {
         if (cursor === page.continueCursor) throw Error("Catalog pagination did not advance");
         cursor = page.continueCursor;
     } while (true);
-    if (process.argv.includes("--all-necks")) threads = [...new Set(inventory.filter(p => (!arg("--family") || p.family === arg("--family"))
+    if (process.argv.includes("--all-necks")) threads = [...new Set(inventory.filter(p => familyInScope(p.family)
         && /bottle|vial/i.test(p.category ?? "")).map(p => p.neckThreadSize ?? ""))].sort();
     const scoped = inventory.filter(p => threads.includes(p.neckThreadSize ?? "") && /bottle|vial/i.test(p.category ?? "")
-        && (!arg("--family") || p.family === arg("--family")));
+        && familyInScope(p.family));
     const families = [...new Set(scoped.map(p => p.family).filter((f): f is string => Boolean(f)))].sort();
     const bySku = new Map<string, Product[]>();
     for (const p of inventory) for (const key of new Set([p.websiteSku, p.graceSku].filter((key): key is string => Boolean(key)))) bySku.set(key, [...(bySku.get(key) ?? []), p]);
+    const familyInputs: unknown[] = [];
     const records: (ReturnType<typeof auditFamilyReadiness>[number] & {
         sourceUrl: string | null; assemblySellableReason: string | null; componentSellableReason: string | null;
     })[] = [];
@@ -59,6 +62,7 @@ async function main() {
         // Fetch kits even for rejected candidates so commerce cannot mask kit status.
         const kits = await parallel(rows, 8, row => client.query(api.productKits.forSku,
             { websiteSku: row.websiteSku ?? null, graceSku: row.graceSku ?? null })) as (BuilderKit | null)[];
+        familyInputs.push({ family, rows, kits });
         const audit = auditFamilyReadiness(rows, kits).map(r => ({ ...r,
             sourceUrl: bySku.get(r.sku ?? "")?.[0]?.productUrl ?? null,
             assemblySellableReason: bySku.get(r.sku ?? "")?.[0]?.shopifySellableReason ?? null,
@@ -67,6 +71,7 @@ async function main() {
         records.push(...audit);
         console.log(`${family}: ${audit.filter(r => r.visible).length}/${audit.length} visible`);
     }
+    if (process.argv.includes("--write-inputs")) fs.writeFileSync(path.join(out, "audit-inputs.json"), JSON.stringify({ checkedAt: new Date().toISOString(), endpoint: url, families: familyInputs }, null, 2) + "\n");
     const sourcePages: { url: string; sku?: string; neck?: string; family?: string; glass?: string; capacityMl?: number; sha256?: string; hasPurchase?: boolean; stockUnavailable?: boolean; error?: string }[] = [];
     const priorSource = process.argv.includes("--reuse-source") ? JSON.parse(fs.readFileSync(path.join(out, "readiness.json"), "utf8")) as { checkedAt: string; sourcePages: typeof sourcePages } : null;
     const sourceCache = new Map(priorSource?.sourcePages.map(p => [p.url, p.sha256]));
